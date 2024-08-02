@@ -1,0 +1,1094 @@
+# yaml-language-server: $schema=.schema.yaml
+title: Virological assessment of hospitalized patients with COVID-2019
+doi: 10.1038/s41586-020-2196-x
+description: >
+  The authors conducted a virological analysis of nine linked cases of COVID-19 in
+  Munich in early 2020. They quantified SARS-CoV-2 RNA gene copies in throat swabs and
+  RNA concentrations in stool and sputum samples. Abundances were quantified using
+  RT-qPCR assays targeting the E and RdRP genes as described in
+  10.2807/1560-7917.ES.2020.25.3.2000045.
+analytes:
+  stool:
+    description: >
+      RNA gene copy concentration in stool samples. The authors report that "stool
+      samples were taken and shipped in native conditions," suggesting that results
+      reported as gene copies per gram refer to wet weight.
+    limit_of_quantification: 100
+    limit_of_detection: unknown
+    specimen: stool
+  sputum:
+    description: >
+      RNA gene copy concentration in sputum samples. Results are reported as gene copies
+      per mL.
+    limit_of_quantification: 100
+    limit_of_detection: unknown
+    specimen: sputum
+  throat_swab:
+    description: >
+      Number of gene copies per throat swab.
+    limit_of_quantification: 100
+    limit_of_detection: unknown
+    specimen: throat_swab
+participants:
+- measurements:
+  - analyte: sputum
+    time: 4
+    value: 1501607.864283418
+  - analyte: sputum
+    time: 5
+    value: 266466197.21909598
+  - analyte: sputum
+    time: 6
+    value: 429901652.26021963
+  - analyte: sputum
+    time: 7
+    value: 58652351.05120688
+  - analyte: sputum
+    time: 8
+    value: 13975627.26687342
+  - analyte: sputum
+    time: 9
+    value: 148947.19238484555
+  - analyte: sputum
+    time: 10
+    value: 492133.5149670397
+  - analyte: sputum
+    time: 11
+    value: 27958.99554973516
+  - analyte: sputum
+    time: 12
+    value: 14778.880441454066
+  - analyte: sputum
+    time: 13
+    value: 1465.9403684378271
+  - analyte: sputum
+    time: 14
+    value: 2016.3077911902406
+  - analyte: sputum
+    time: 15
+    value: 3521.497787720782
+  - analyte: sputum
+    time: 16
+    value: 6152.199644988521
+  - analyte: sputum
+    time: 17
+    value: 161339.8908700465
+  - analyte: sputum
+    time: 18
+    value: 13647.858371306778
+  - analyte: sputum
+    time: 19
+    value: 3251.998908312097
+  - analyte: sputum
+    time: 20
+    value: 1250.1532821622638
+  - analyte: sputum
+    time: 21
+    value: 6152.199644988521
+  - analyte: sputum
+    time: 22
+    value: 2561.063362581965
+  - analyte: throat_swab
+    time: 4
+    value: 68775761.6597049
+  - analyte: throat_swab
+    time: 5
+    value: 9160.337817942922
+  - analyte: throat_swab
+    time: 6
+    value: negative
+  - analyte: throat_swab
+    time: 7
+    value: 18.32574949197495
+  - analyte: throat_swab
+    time: 8
+    value: 1353.7461627157616
+  - analyte: throat_swab
+    time: 9
+    value: 71.00132017315356
+  - analyte: throat_swab
+    time: 10
+    value: 480.5881788240554
+  - analyte: throat_swab
+    time: 11
+    value: 12.303968525272445
+  - analyte: throat_swab
+    time: 12
+    value: 105.75062870326238
+  - analyte: throat_swab
+    time: 13
+    value: negative
+  - analyte: throat_swab
+    time: 14
+    value: 1250.1444864268105
+  - analyte: throat_swab
+    time: 15
+    value: negative
+  - analyte: throat_swab
+    time: 16
+    value: negative
+  - analyte: throat_swab
+    time: 21
+    value: negative
+  - analyte: throat_swab
+    time: 22
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 4231336.283859664
+  - analyte: stool
+    time: 9
+    value: 13980675.735082213
+  - analyte: stool
+    time: 10
+    value: 4961700.904561935
+  - analyte: stool
+    time: 11
+    value: 48833.244816394516
+  - analyte: stool
+    time: 12
+    value: 52896.39060004787
+  - analyte: stool
+    time: 13
+    value: 4845.346026026727
+  - analyte: stool
+    time: 14
+    value: 4845.346026026727
+  - analyte: stool
+    time: 15
+    value: 5681.693949014843
+  - analyte: stool
+    time: 16
+    value: 984.5950370910736
+  - analyte: stool
+    time: 17
+    value: 275.188317392778
+  - analyte: stool
+    time: 20
+    value: 3003.2937137549766
+  - analyte: stool
+    time: 21
+    value: 661.0587981946713
+- measurements:
+  - analyte: sputum
+    time: 3
+    value: 10745.042599762002
+  - analyte: sputum
+    time: 4
+    value: 246078257.89442512
+  - analyte: sputum
+    time: 5
+    value: 12906289.73269271
+  - analyte: sputum
+    time: 6
+    value: 24416389.227142632
+  - analyte: sputum
+    time: 7
+    value: 6300055.166771174
+  - analyte: sputum
+    time: 8
+    value: 305138.15006280725
+  - analyte: sputum
+    time: 9
+    value: 3331177.3165422445
+  - analyte: sputum
+    time: 10
+    value: 174713.28010097204
+  - analyte: sputum
+    time: 11
+    value: 1719.53459991949
+  - analyte: sputum
+    time: 12
+    value: 4472.991209582934
+  - analyte: sputum
+    time: 13
+    value: 78757.66815664191
+  - analyte: sputum
+    time: 14
+    value: 38444.63935566572
+  - analyte: sputum
+    time: 15
+    value: 78757.66815664191
+  - analyte: sputum
+    time: 16
+    value: 3252.0522960060794
+  - analyte: sputum
+    time: 17
+    value: 10745.042599762002
+  - analyte: sputum
+    time: 18
+    value: 27950.865948018676
+  - analyte: sputum
+    time: 19
+    value: 409.7290937235602
+  - analyte: sputum
+    time: 20
+    value: 1250.173805785654
+  - analyte: throat_swab
+    time: 3
+    value: 50007790.10644746
+  - analyte: throat_swab
+    time: 4
+    value: 1386817.2275983708
+  - analyte: throat_swab
+    time: 5
+    value: 92358.84242602295
+  - analyte: throat_swab
+    time: 6
+    value: 32777.882892997055
+  - analyte: throat_swab
+    time: 7
+    value: 16005.058602699997
+  - analyte: throat_swab
+    time: 8
+    value: 25.200583799342535
+  - analyte: throat_swab
+    time: 9
+    value: 443.71736449771936
+  - analyte: throat_swab
+    time: 10
+    value: 76.89271796049087
+  - analyte: throat_swab
+    time: 11
+    value: negative
+  - analyte: throat_swab
+    time: 12
+    value: negative
+  - analyte: throat_swab
+    time: 13
+    value: 14.429159320115783
+  - analyte: throat_swab
+    time: 14
+    value: 15.62492917650818
+  - analyte: throat_swab
+    time: 15
+    value: negative
+  - analyte: throat_swab
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 6
+    value: 533137.5010379844
+  - analyte: stool
+    time: 7
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 72736.85590576574
+  - analyte: stool
+    time: 9
+    value: 57282.82881446251
+  - analyte: stool
+    time: 10
+    value: 4474.764418817172
+  - analyte: stool
+    time: 11
+    value: 1719.6878508196692
+  - analyte: stool
+    time: 12
+    value: 660.8898318357745
+  - analyte: stool
+    time: 13
+    value: 6664.809319460357
+  - analyte: stool
+    time: 14
+    value: 7815.212077385447
+  - analyte: stool
+    time: 15
+    value: 1250.2881578555023
+  - analyte: stool
+    time: 19
+    value: 200.08377679863366
+- measurements:
+  - analyte: sputum
+    time: 3
+    value: 2117582.404638246
+  - analyte: sputum
+    time: 5
+    value: 751754.7228450703
+  - analyte: sputum
+    time: 6
+    value: 4588.820093394054
+  - analyte: sputum
+    time: 7
+    value: 80772.29234133867
+  - analyte: sputum
+    time: 8
+    value: 130273.46700914283
+  - analyte: sputum
+    time: 9
+    value: 74590.81968809298
+  - analyte: sputum
+    time: 10
+    value: 111097.1536541354
+  - analyte: sputum
+    time: 11
+    value: 20847.728791568774
+  - analyte: sputum
+    time: 12
+    value: 36410.640757529545
+  - analyte: sputum
+    time: 13
+    value: 11023.313195444749
+  - analyte: sputum
+    time: 14
+    value: 1628.5588221699336
+  - analyte: sputum
+    time: 15
+    value: 10179.703250863166
+  - analyte: sputum
+    time: 16
+    value: 15157.173601835617
+  - analyte: sputum
+    time: 17
+    value: 16418.31867306646
+  - analyte: sputum
+    time: 18
+    value: 2845.1650715599785
+  - analyte: sputum
+    time: 19
+    value: 6832.586784679945
+  - analyte: sputum
+    time: 20
+    value: negative
+  - analyte: sputum
+    time: 21
+    value: 161.5897029380132
+  - analyte: sputum
+    time: 22
+    value: 1910.2531934646609
+  - analyte: stool
+    time: 6
+    value: 1212230.4535989882
+  - analyte: stool
+    time: 7
+    value: 1119458.9204266046
+  - analyte: stool
+    time: 8
+    value: 5963742.971062912
+  - analyte: stool
+    time: 9
+    value: 4005307.0120203197
+  - analyte: stool
+    time: 10
+    value: 50070.77432939977
+  - analyte: stool
+    time: 11
+    value: 120280.27285630006
+  - analyte: stool
+    time: 12
+    value: 592099.8987815132
+  - analyte: stool
+    time: 13
+    value: 19254.42746485871
+  - analyte: stool
+    time: 14
+    value: 74576.3015684785
+  - analyte: stool
+    time: 15
+    value: 4587.926940063876
+  - analyte: stool
+    time: 16
+    value: 54220.10046069941
+  - analyte: stool
+    time: 17
+    value: 54220.10046069941
+  - analyte: stool
+    time: 18
+    value: 12923.48459144199
+  - analyte: stool
+    time: 19
+    value: 222.21258418470345
+  - analyte: stool
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 23
+    value: negative
+  - analyte: throat_swab
+    time: 3
+    value: 1539520.713209967
+  - analyte: throat_swab
+    time: 5
+    value: 17772.847089192706
+  - analyte: throat_swab
+    time: 6
+    value: 6832.346427033285
+  - analyte: throat_swab
+    time: 7
+    value: 3336.155215258841
+  - analyte: throat_swab
+    time: 8
+    value: 282.20778901619076
+  - analyte: throat_swab
+    time: 9
+    value: 57.36345073021987
+  - analyte: throat_swab
+    time: 10
+    value: negative
+  - analyte: throat_swab
+    time: 11
+    value: 41.70563565034082
+  - analyte: throat_swab
+    time: 12
+    value: 30.32174708559958
+  - analyte: throat_swab
+    time: 13
+    value: 161.5840185139515
+  - analyte: throat_swab
+    time: 14
+    value: negative
+  - analyte: throat_swab
+    time: 15
+    value: negative
+  - analyte: throat_swab
+    time: 16
+    value: 3.8214479536553294
+  - analyte: throat_swab
+    time: 17
+    value: negative
+  - analyte: throat_swab
+    time: 18
+    value: 12.626342081143548
+  - analyte: throat_swab
+    time: 19
+    value: 41.70563565034082
+  - analyte: throat_swab
+    time: 20
+    value: 22.052008081318615
+  - analyte: throat_swab
+    time: 21
+    value: negative
+  - analyte: throat_swab
+    time: 22
+    value: negative
+- measurements:
+  - analyte: sputum
+    time: 4
+    value: 8664904.869505715
+  - analyte: sputum
+    time: 6
+    value: 732969.0520380974
+  - analyte: sputum
+    time: 7
+    value: 2839816.357004413
+  - analyte: sputum
+    time: 8
+    value: 45078.4530610939
+  - analyte: sputum
+    time: 9
+    value: 161335.153299529
+  - analyte: sputum
+    time: 10
+    value: 25810.55948316664
+  - analyte: sputum
+    time: 11
+    value: 97.65546668707512
+  - analyte: sputum
+    time: 12
+    value: negative
+  - analyte: sputum
+    time: 13
+    value: 1154.4489176968927
+  - analyte: sputum
+    time: 14
+    value: negative
+  - analyte: sputum
+    time: 19
+    value: negative
+  - analyte: throat_swab
+    time: 4
+    value: 2839842.9974452388
+  - analyte: throat_swab
+    time: 5
+    value: 100001.40715982752
+  - analyte: throat_swab
+    time: 6
+    value: 660.8072524437216
+  - analyte: throat_swab
+    time: 7
+    value: 4129.257272806955
+  - analyte: throat_swab
+    time: 8
+    value: 27.285919587568863
+  - analyte: throat_swab
+    time: 9
+    value: 23.269474814361033
+  - analyte: throat_swab
+    time: 10
+    value: negative
+  - analyte: throat_swab
+    time: 11
+    value: negative
+  - analyte: throat_swab
+    time: 12
+    value: 21.48867097710568
+  - analyte: throat_swab
+    time: 13
+    value: 37.53004668707056
+  - analyte: throat_swab
+    time: 14
+    value: negative
+  - analyte: throat_swab
+    time: 19
+    value: negative
+  - analyte: stool
+    time: 7
+    value: 1182176.2639584094
+  - analyte: stool
+    time: 8
+    value: 16387488.870858755
+  - analyte: stool
+    time: 9
+    value: 33571477.44513852
+  - analyte: stool
+    time: 10
+    value: 387443.77945409174
+  - analyte: stool
+    time: 11
+    value: 25810.801613148353
+  - analyte: stool
+    time: 12
+    value: 148943.51854277684
+  - analyte: stool
+    time: 14
+    value: 72704.88040018399
+  - analyte: stool
+    time: 15
+    value: 17329.41721662663
+  - analyte: stool
+    time: 16
+    value: 9160.157441983756
+  - analyte: stool
+    time: 19
+    value: 3521.4040130860444
+  - analyte: stool
+    time: 20
+    value: 3521.4040130860444
+- measurements:
+  - analyte: sputum
+    time: 4
+    value: 398311.8816137271
+  - analyte: sputum
+    time: 6
+    value: 5840.626437523817
+  - analyte: sputum
+    time: 7
+    value: 19755181.735830072
+  - analyte: sputum
+    time: 8
+    value: 7594408.358633062
+  - analyte: sputum
+    time: 9
+    value: 1671101.6506033153
+  - analyte: sputum
+    time: 10
+    value: 8223770.293633364
+  - analyte: sputum
+    time: 11
+    value: 16842035.173609644
+  - analyte: sputum
+    time: 12
+    value: 141403.17236156575
+  - analyte: sputum
+    time: 13
+    value: 141403.17236156575
+  - analyte: sputum
+    time: 14
+    value: 8033.372451610779
+  - analyte: sputum
+    time: 15
+    value: 22628.825389597063
+  - analyte: sputum
+    time: 16
+    value: 1392.1235691333984
+  - analyte: sputum
+    time: 17
+    value: negative
+  - analyte: sputum
+    time: 18
+    value: 26534.81486004811
+  - analyte: sputum
+    time: 19
+    value: 359.31319652794474
+  - analyte: sputum
+    time: 20
+    value: 179606.7430027715
+  - analyte: sputum
+    time: 21
+    value: negative
+  - analyte: sputum
+    time: 22
+    value: 3088.2384029843124
+  - analyte: sputum
+    time: 23
+    value: 138.13003488903107
+  - analyte: sputum
+    time: 24
+    value: negative
+  - analyte: sputum
+    time: 25
+    value: 108.7820016403357
+  - analyte: sputum
+    time: 26
+    value: 11961.37185138524
+  - analyte: sputum
+    time: 27
+    value: 4246.380630541784
+  - analyte: stool
+    time: 6
+    value: 50183.45966318529
+  - analyte: stool
+    time: 8
+    value: 627.3476427205834
+  - analyte: stool
+    time: 9
+    value: 934.3848870579203
+  - analyte: stool
+    time: 12
+    value: 19291.83394147121
+  - analyte: stool
+    time: 20
+    value: 359.20198008519617
+  - analyte: stool
+    time: 21
+    value: 862.8767758684482
+  - analyte: stool
+    time: 26
+    value: negative
+  - analyte: throat_swab
+    time: 4
+    value: 607311951.692869
+  - analyte: throat_swab
+    time: 5
+    value: 431320.6855531491
+  - analyte: throat_swab
+    time: 6
+    value: 267427.29196398304
+  - analyte: throat_swab
+    time: 7
+    value: 494.05947413358155
+  - analyte: throat_swab
+    time: 8
+    value: 87672.74263990784
+  - analyte: throat_swab
+    time: 9
+    value: 1767.692930093415
+  - analyte: throat_swab
+    time: 10
+    value: 863.1439405581297
+  - analyte: throat_swab
+    time: 11
+    value: 18.845275186577894
+  - analyte: throat_swab
+    time: 12
+    value: negative
+  - analyte: throat_swab
+    time: 13
+    value: 38.60632756837744
+  - analyte: throat_swab
+    time: 14
+    value: 62.26629881786639
+  - analyte: throat_swab
+    time: 15
+    value: 35.65196759321473
+  - analyte: throat_swab
+    time: 16
+    value: 38.60632756837744
+  - analyte: throat_swab
+    time: 17
+    value: 38.60632756837744
+  - analyte: throat_swab
+    time: 18
+    value: negative
+  - analyte: throat_swab
+    time: 19
+    value: 53.10054775348839
+  - analyte: throat_swab
+    time: 20
+    value: negative
+  - analyte: throat_swab
+    time: 21
+    value: negative
+  - analyte: throat_swab
+    time: 26
+    value: negative
+  - analyte: throat_swab
+    time: 27
+    value: negative
+- measurements:
+  - analyte: sputum
+    time: 6
+    value: 76351973.38810533
+  - analyte: sputum
+    time: 8
+    value: 9622591.489304192
+  - analyte: sputum
+    time: 9
+    value: 246432.3767989757
+  - analyte: sputum
+    time: 10
+    value: 813984.1060862745
+  - analyte: sputum
+    time: 11
+    value: 641039.5858845599
+  - analyte: sputum
+    time: 13
+    value: 331.0036617897847
+  - analyte: sputum
+    time: 14
+    value: 3080.671833159446
+  - analyte: sputum
+    time: 16
+    value: 3080.671833159446
+  - analyte: sputum
+    time: 18
+    value: 39424.68348731622
+  - analyte: sputum
+    time: 19
+    value: 367041.60959967657
+  - analyte: sputum
+    time: 20
+    value: 282.279115398532
+  - analyte: sputum
+    time: 21
+    value: 20845.849819946638
+  - analyte: sputum
+    time: 22
+    value: 1504.2562994802292
+  - analyte: stool
+    time: 6
+    value: 8013.57692185778
+  - analyte: stool
+    time: 8
+    value: 6309.03483783254
+  - analyte: stool
+    time: 9
+    value: 11935.59146024406
+  - analyte: stool
+    time: 13
+    value: 17777.03972841694
+  - analyte: stool
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 18
+    value: 39423.94380838179
+  - analyte: stool
+    time: 21
+    value: negative
+  - analyte: stool
+    time: 22
+    value: 358.42779066442256
+  - analyte: throat_swab
+    time: 6
+    value: 12924.896721120052
+  - analyte: throat_swab
+    time: 7
+    value: 5826.316173226288
+  - analyte: throat_swab
+    time: 8
+    value: 4237.268139523922
+  - analyte: throat_swab
+    time: 9
+    value: 3080.6862830838218
+  - analyte: throat_swab
+    time: 10
+    value: 41.703468036512966
+  - analyte: throat_swab
+    time: 11
+    value: 117.50833957235712
+  - analyte: throat_swab
+    time: 12
+    value: 92.51351990840905
+  - analyte: throat_swab
+    time: 13
+    value: 45.17327798806515
+  - analyte: throat_swab
+    time: 14
+    value: 305.67208057605825
+  - analyte: throat_swab
+    time: 15
+    value: 57.360467452822306
+  - analyte: throat_swab
+    time: 16
+    value: negative
+  - analyte: throat_swab
+    time: 17
+    value: negative
+  - analyte: throat_swab
+    time: 18
+    value: 16.036792042467546
+  - analyte: throat_swab
+    time: 19
+    value: 38.511917883415215
+  - analyte: throat_swab
+    time: 20
+    value: negative
+  - analyte: throat_swab
+    time: 21
+    value: negative
+- measurements:
+  - analyte: sputum
+    time: 4
+    value: 12814549.385884618
+  - analyte: sputum
+    time: 6
+    value: 3581588.987016199
+  - analyte: sputum
+    time: 7
+    value: 529299.6162572922
+  - analyte: sputum
+    time: 8
+    value: 788346.3787934828
+  - analyte: sputum
+    time: 11
+    value: 151489140.04694122
+  - analyte: sputum
+    time: 12
+    value: 30070.618849728777
+  - analyte: sputum
+    time: 13
+    value: 788346.3787934828
+  - analyte: sputum
+    time: 14
+    value: 48499.2350855691
+  - analyte: sputum
+    time: 17
+    value: 17217.608065550165
+  - analyte: sputum
+    time: 18
+    value: 119265814.56611462
+  - analyte: sputum
+    time: 19
+    value: 99355.73348745477
+  - analyte: sputum
+    time: 20
+    value: 136614.55150623788
+  - analyte: sputum
+    time: 21
+    value: 296.04583961364955
+  - analyte: sputum
+    time: 22
+    value: 606.2930098660331
+  - analyte: sputum
+    time: 23
+    value: 113.80829468479037
+  - analyte: sputum
+    time: 24
+    value: negative
+  - analyte: sputum
+    time: 25
+    value: negative
+  - analyte: sputum
+    time: 26
+    value: 1456.8841823384566
+  - analyte: sputum
+    time: 27
+    value: negative
+  - analyte: sputum
+    time: 28
+    value: negative
+  - analyte: stool
+    time: 6
+    value: 4443.981815784081
+  - analyte: stool
+    time: 18
+    value: 407.19795023417413
+  - analyte: stool
+    time: 19
+    value: negative
+  - analyte: stool
+    time: 20
+    value: 5.512267443579327
+  - analyte: stool
+    time: 23
+    value: 105.0995761887353
+  - analyte: stool
+    time: 24
+    value: negative
+  - analyte: stool
+    time: 26
+    value: 89.62866221751295
+  - analyte: throat_swab
+    time: 4
+    value: 728028.1968528272
+  - analyte: throat_swab
+    time: 7
+    value: 15900.100389738018
+  - analyte: throat_swab
+    time: 8
+    value: 3498.7331970270075
+  - analyte: throat_swab
+    time: 9
+    value: 3230.9765092416715
+  - analyte: throat_swab
+    time: 10
+    value: 58237205.59781828
+  - analyte: throat_swab
+    time: 11
+    value: 488801.69375349645
+  - analyte: throat_swab
+    time: 12
+    value: 4812.262379932128
+  - analyte: throat_swab
+    time: 13
+    value: 12518.100067838337
+  - analyte: throat_swab
+    time: 14
+    value: 2169.273088069151
+  - analyte: throat_swab
+    time: 15
+    value: 23674.72770070666
+  - analyte: throat_swab
+    time: 16
+    value: 144.51371505992313
+  - analyte: throat_swab
+    time: 17
+    value: 711.1727895806031
+  - analyte: throat_swab
+    time: 18
+    value: 9.630177117856427
+  - analyte: throat_swab
+    time: 19
+    value: 34.445097790442105
+  - analyte: throat_swab
+    time: 20
+    value: 606.3043852416088
+  - analyte: throat_swab
+    time: 21
+    value: 34.445097790442105
+  - analyte: throat_swab
+    time: 22
+    value: negative
+  - analyte: throat_swab
+    time: 23
+    value: negative
+  - analyte: throat_swab
+    time: 24
+    value: 15.531979115181876
+  - analyte: throat_swab
+    time: 25
+    value: negative
+  - analyte: throat_swab
+    time: 26
+    value: 13.241658267844254
+  - analyte: throat_swab
+    time: 27
+    value: negative
+  - analyte: throat_swab
+    time: 28
+    value: negative
+- measurements:
+  - analyte: sputum
+    time: 2
+    value: 2483609.7518102843
+  - analyte: sputum
+    time: 3
+    value: 17777.123111813038
+  - analyte: sputum
+    time: 4
+    value: 54241.91611454683
+  - analyte: sputum
+    time: 5
+    value: 11022.216997791265
+  - analyte: sputum
+    time: 6
+    value: 1389.1231198057637
+  - analyte: sputum
+    time: 7
+    value: 420.42658641637445
+  - analyte: sputum
+    time: 8
+    value: 626.1893392130044
+  - analyte: sputum
+    time: 9
+    value: negative
+  - analyte: sputum
+    time: 14
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 50090.33351784344
+  - analyte: stool
+    time: 4
+    value: 22579.735661503637
+  - analyte: stool
+    time: 5
+    value: 4238.480682198356
+  - analyte: stool
+    time: 8
+    value: 10181.65153295411
+  - analyte: stool
+    time: 9
+    value: 534.0077315458201
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: throat_swab
+    time: 2
+    value: 11935.535476486382
+  - analyte: throat_swab
+    time: 3
+    value: 102583.50231626267
+  - analyte: throat_swab
+    time: 5
+    value: 194011.81120980292
+  - analyte: throat_swab
+    time: 6
+    value: 54225.12688159792
+  - analyte: throat_swab
+    time: 7
+    value: 80763.6754377411
+  - analyte: throat_swab
+    time: 8
+    value: 240.64791498186997
+  - analyte: throat_swab
+    time: 9
+    value: 67.28046058737921
+  - analyte: throat_swab
+    time: 10
+    value: negative
+  - analyte: throat_swab
+    time: 11
+    value: 18.804481486221412
+  - analyte: throat_swab
+    time: 12
+    value: 8.476769360148438
+  - analyte: throat_swab
+    time: 13
+    value: negative
+  - analyte: throat_swab
+    time: 15
+    value: negative
+- measurements:
+  - analyte: sputum
+    time: 8
+    value: 108302.23613721151
+  - analyte: sputum
+    time: 9
+    value: 57257.43082142817
+  - analyte: sputum
+    time: 10
+    value: negative
+  - analyte: sputum
+    time: 11
+    value: 443.7760967535199
+  - analyte: sputum
+    time: 12
+    value: negative
+  - analyte: throat_swab
+    time: 8
+    value: 4842.9876951504575
+  - analyte: throat_swab
+    time: 9
+    value: 908.8017755649098
+  - analyte: throat_swab
+    time: 10
+    value: 7.043705924226177
+  - analyte: throat_swab
+    time: 11
+    value: negative
+  - analyte: throat_swab
+    time: 12
+    value: negative

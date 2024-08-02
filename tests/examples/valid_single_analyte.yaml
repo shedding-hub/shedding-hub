@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=../../data/.schema.yaml
+title: Valid example with a single analyte.
+description: See above.
+doi: 10.../xxx
+analyte:
+  limit_of_detection: unknown
+  limit_of_quantification: 17
+  description: A single analyte.
+  specimen: stool
+participants:
+  - measurements:
+    - value: 3

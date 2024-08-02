@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../data/.schema.yaml
+title: Valid example with multiple analytes.
+description: See above.
+url: https:...
+analytes:
+  analyte1:
+    limit_of_detection: unknown
+    limit_of_quantification: 17
+    description: One analyte.
+    specimen: stool
+participants:
+  - measurements:
+    - value: 3
+      analyte: missing

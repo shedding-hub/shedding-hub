@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=http://json-schema.org/draft-07/schema
+$defs:
+  negative_positive_number:
+    description: >
+      A quantitative value, `positive` result above limit of detection but below limit
+      of quantification, or `negative` result below the limit of detection.
+    oneOf:
+      - type: number
+        exclusiveMinimum: 0 # Zero should be coded as `negative`.
+      - type: string
+        enum: [positive, negative]
+  analyte_specification:
+    description: Specification of an analyte.
+    type: object
+    additionalProperties: false
+    properties:
+      description:
+        type: string
+        description: >
+          Description of the analyte, e.g., "RdRp gene target for SARS-CoV-2 RNA as
+          described in 10.2807/1560-7917.ES.2020.25.3.2000045".
+      limit_of_detection:
+        description: Lowest value at which the analyte can be detected.
+        oneOf:
+          - type: number
+          - const: unknown
+      limit_of_quantification:
+        description: Lowest value at which the analyte can be reliably quantified.
+        oneOf:
+          - type: number
+          - const: unknown
+      specimen:
+        description: Specimen type.
+        type: string
+        enum:
+        - stool
+        - sputum
+        - throat_swab
+    required:
+      - description
+      - limit_of_detection
+      - limit_of_quantification
+      - specimen
+
+type: object
+additionalProperties: false
+properties:
+  doi:
+    type: string
+    description: >
+      Digital object identifier for the source publication, study, or data repository.
+  url:
+    type: string
+    description: Url for the source publication, study, or data repository.
+  description:
+    type: string
+    description: >
+      Description of the dataset, including how the data were extracted or obtained. If
+      a temporal offset is associated with each sample, e.g., the time since symptom
+      onset, the reference event must be described here.
+  title:
+    type: string
+    description: Title of the source publication, study, or data repository.
+  analyte:
+    description: >
+      Specification of a single analyte in this dataset. This is equivalent to
+      specifying a key `default` in the more general `analytes` specification which can
+      be used to specify multiple analytes per sample.
+    $ref: "#/$defs/analyte_specification"
+  analytes:
+    type: object
+    description: >
+      Specification of multiple analytes in this dataset with keys matching the `values`
+      property of samples.
+    additionalProperties: false
+    minProperties: 1
+    patternProperties:
+      "^.*$":
+        $ref: "#/$defs/analyte_specification"
+  participants:
+    type: array
+    description: >
+      Array of participants, including their attributes (such as demographics,
+      comorbidities, and clinical characteristics) and an array of samples collected
+      from the participant. Participants may, for example, include patients who enrolled
+      during hospitalization or participants in a prospective study.
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - measurements
+      properties:
+        measurements:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              time:
+                type: number
+                description: >
+                  Temporal offset for the sample, e.g., relative to symptom onset, drug
+                  ingestion, or hospital admission. The reference event should be
+                  defined in the dataset description.
+              value:
+                $ref: "#/$defs/negative_positive_number"
+              analyte:
+                type: string
+            required:
+              - value
+required:
+  - description
+  - participants
+  - title
+# Require that either url or doi are given.
+oneOf:
+  - required:
+    - url
+  - required:
+    - doi
