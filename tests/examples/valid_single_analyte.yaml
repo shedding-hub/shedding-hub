@@ -11,5 +11,6 @@ participants:
   - attributes:
       sex: female
       age: 86
+      arbitrary_attribute: This is some unstructured text that is not validated.
     measurements:
     - value: 3
