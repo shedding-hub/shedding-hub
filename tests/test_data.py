@@ -76,5 +76,5 @@ def test_valid_examples(path: Path) -> None:
     "path", INVALID_EXAMPLE_PATHS, ids=[path.stem for path in INVALID_EXAMPLE_PATHS]
 )
 def test_invalid_examples(path: Path) -> None:
-    with pytest.raises(ValueError):
+    with pytest.raises((ValueError, jsonschema.ValidationError)):
         load_and_validate(path)

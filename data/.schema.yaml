@@ -91,6 +91,20 @@ properties:
       required:
         - measurements
       properties:
+        attributes:
+          type: object
+          properties:
+            sex:
+              description: Sex of the participant at birth.
+              type: string
+              enum:
+                - female
+                - male
+            age:
+              description: Age of the participant in years.
+              type: number
+              minimum: 0
+              maximum: 120
         measurements:
           type: array
           minItems: 1

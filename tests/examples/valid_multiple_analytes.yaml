@@ -14,9 +14,15 @@ analytes:
     description: Another analyte.
     specimen: sputum
 participants:
-  - measurements:
+  - attributes:
+      sex: female
+      age: 38
+    measurements:
     - value: 3
       analyte: analyte1
-  - measurements:
+  - attributes:
+      sex: male
+      age: 87
+    measurements:
     - value: 1
       analyte: analyte2
