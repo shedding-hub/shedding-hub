@@ -24,4 +24,4 @@ jobs:
     - name: Lint code
       run: black --check .
     - name: Run tests
-      run: pytest -vx
+      run: pytest -v

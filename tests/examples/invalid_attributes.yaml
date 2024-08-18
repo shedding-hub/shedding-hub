@@ -9,8 +9,7 @@ analyte:
   specimen: stool
 participants:
   - attributes:
-      sex: female
-      age: 86
-      arbitrary_attribute: This is some unstructured text that is not validated.
+      sex: xxx
+      age: -1
     measurements:
     - value: 3
