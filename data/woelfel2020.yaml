@@ -8,7 +8,9 @@ description: >
   RT-qPCR assays targeting the E and RdRP genes as described in
   10.2807/1560-7917.ES.2020.25.3.2000045. Values were programmatically extracted from
   the figure, resulting in a number of significant figures far exceeding the performance
-  of the assays.
+  of the assays. The demographic data, including age and sex, are derived from the 
+  Challenger et al. BMC Medicine (2022) 20:25 https://doi.org/10.1186/s12916-021-02220-0 
+  supplement combined dataset.
 analytes:
   stool:
     description: >
