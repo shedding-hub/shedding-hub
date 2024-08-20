@@ -1,0 +1,696 @@
+# yaml-language-server: $schema=.schema.yaml
+title: Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mottle Virus, and Human
+  Mitochondrial DNA in COVID-19 Patients
+doi: 10.1101/2024.04.22.24305845
+description: >
+  The authors measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial
+  DNA (mtDNA) in longitudinal stool samples collected from 42 COVID-19 patients for
+  up to 42 days after the first sample collection date. Abundances were quantified
+  using Digital PCR assays targeting the N1 gences. The data was contributed by the
+  corresponding author.
+analytes:
+  stool:
+    description: >
+      RNA gene copy concentration in stool samples. The concentration were quantified
+      in gene copies per dry weight of stool.
+    limit_of_quantification: 1000
+    limit_of_detection: 1000
+    unit: gc/dry gram
+    date_of_reference: date of confirmation
+    specimen: stool
+participants:
+- attributes:
+    age: 44.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 15
+    value: negative
+- attributes:
+    age: 56.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 49
+    value: negative
+- attributes:
+    age: 43.0
+    sex: female
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 6
+    value: 527432.892
+- attributes:
+    age: 27.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 7
+    value: negative
+  - analyte: stool
+    time: 35
+    value: negative
+  - analyte: stool
+    time: 48
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 24
+    value: negative
+- attributes:
+    age: 30.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 4
+    value: 527949811.1
+  - analyte: stool
+    time: 2
+    value: 1754671.289
+  - analyte: stool
+    time: 28
+    value: 1018531.191
+  - analyte: stool
+    time: 41
+    value: 1493352.479
+  - analyte: stool
+    time: 16
+    value: 15110118.33
+- attributes:
+    age: 65.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 5
+    value: 11889.16435
+  - analyte: stool
+    time: 7
+    value: 4975.83537
+  - analyte: stool
+    time: 13
+    value: 1185353998.0
+- attributes:
+    age: 27.0
+    sex: female
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 1
+    value: 6863197.188
+- attributes:
+    age: 49.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 6
+    value: 18715.30945
+- attributes:
+    age: 62.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 29
+    value: 1561.022652
+  - analyte: stool
+    time: 6
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 43
+    value: negative
+- attributes:
+    age: 48.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 48
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 451122.4788
+  - analyte: stool
+    time: 12
+    value: 6441469.56
+  - analyte: stool
+    time: 24
+    value: negative
+- attributes:
+    age: 44.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 59
+    value: 4803.668018
+- attributes:
+    age: 41.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 14
+    value: 4894.026187
+  - analyte: stool
+    time: 32
+    value: negative
+  - analyte: stool
+    time: 43
+    value: negative
+- attributes:
+    age: 45.0
+    sex: female
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 3
+    value: 30585.94832
+- attributes:
+    age: 33.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 1
+    value: 1171427.341
+- attributes:
+    age: 54.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 41
+    value: negative
+  - analyte: stool
+    time: 28
+    value: negative
+  - analyte: stool
+    time: 9
+    value: 131758.3499
+- attributes:
+    age: 58.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 2
+    value: 33202.86906
+  - analyte: stool
+    time: 4
+    value: negative
+- attributes:
+    age: 66.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 23
+    value: negative
+  - analyte: stool
+    time: 28
+    value: negative
+  - analyte: stool
+    time: 13
+    value: 63203.24959
+  - analyte: stool
+    time: 3
+    value: 2153377.166
+- attributes:
+    age: 65.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 26
+    value: negative
+  - analyte: stool
+    time: 21
+    value: negative
+  - analyte: stool
+    time: 11
+    value: 52827.10809
+- attributes:
+    age: 31.0
+    sex: female
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 6
+    value: negative
+- attributes:
+    age: 71.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 2
+    value: 52341.93115
+- attributes:
+    age: 46.0
+    sex: female
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 21
+    value: negative
+  - analyte: stool
+    time: 49
+    value: negative
+- attributes:
+    age: 32.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 14
+    value: 277047.3397
+  - analyte: stool
+    time: 2
+    value: 96863.42225
+  - analyte: stool
+    time: 8
+    value: 102066.8728
+  - analyte: stool
+    time: 28
+    value: 114054.3678
+- attributes:
+    age: 68.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 2
+    value: 538054.3934
+  - analyte: stool
+    time: 37
+    value: 138917.4053
+  - analyte: stool
+    time: 23
+    value: 5637.790449
+  - analyte: stool
+    time: 6
+    value: 1369109.352
+  - analyte: stool
+    time: 24
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 288207.3371
+- attributes:
+    age: 47.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 11
+    value: negative
+- attributes:
+    age: 75.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 49
+    value: negative
+  - analyte: stool
+    time: 36
+    value: negative
+  - analyte: stool
+    time: 21
+    value: negative
+- attributes:
+    age: 55.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 7
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 43795.74232
+- attributes:
+    age: 59.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 40
+    value: negative
+  - analyte: stool
+    time: 27
+    value: negative
+  - analyte: stool
+    time: 6
+    value: negative
+  - analyte: stool
+    time: 7
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- attributes:
+    age: 31.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 55
+    value: negative
+  - analyte: stool
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 19
+    value: negative
+  - analyte: stool
+    time: 25
+    value: negative
+  - analyte: stool
+    time: 54
+    value: negative
+- attributes:
+    age: 57.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 77
+    value: negative
+  - analyte: stool
+    time: 63
+    value: negative
+  - analyte: stool
+    time: 49
+    value: negative
+  - analyte: stool
+    time: 70
+    value: negative
+  - analyte: stool
+    time: 34
+    value: negative
+  - analyte: stool
+    time: 79
+    value: negative
+- attributes:
+    age: 55.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 44
+    value: negative
+  - analyte: stool
+    time: 49
+    value: negative
+- attributes:
+    age: 64.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 47
+    value: negative
+  - analyte: stool
+    time: 10
+    value: negative
+  - analyte: stool
+    time: 17
+    value: negative
+  - analyte: stool
+    time: 13
+    value: negative
+  - analyte: stool
+    time: 33
+    value: negative
+- attributes:
+    age: 38.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 55
+    value: negative
+  - analyte: stool
+    time: 50
+    value: negative
+  - analyte: stool
+    time: 22
+    value: negative
+  - analyte: stool
+    time: 27
+    value: negative
+  - analyte: stool
+    time: 48
+    value: negative
+  - analyte: stool
+    time: 22
+    value: negative
+- attributes:
+    age: .nan
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 49
+    value: 154901.0288
+  - analyte: stool
+    time: 27
+    value: 4218.551174
+  - analyte: stool
+    time: 51
+    value: 51144.73437
+  - analyte: stool
+    time: 30
+    value: negative
+  - analyte: stool
+    time: 22
+    value: negative
+  - analyte: stool
+    time: 19
+    value: negative
+- attributes:
+    age: 31.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 21
+    value: negative
+  - analyte: stool
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 35
+    value: 5948.525555
+  - analyte: stool
+    time: 49
+    value: negative
+  - analyte: stool
+    time: 42
+    value: negative
+  - analyte: stool
+    time: 16
+    value: negative
+- attributes:
+    age: 31.0
+    sex: male
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 28
+    value: negative
+  - analyte: stool
+    time: 59
+    value: negative
+  - analyte: stool
+    time: 44
+    value: negative
+  - analyte: stool
+    time: 14
+    value: negative
+  - analyte: stool
+    time: 64
+    value: negative
+  - analyte: stool
+    time: 42
+    value: negative
+- attributes:
+    age: 26.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 34
+    value: 6719.451357
+  - analyte: stool
+    time: 41
+    value: negative
+  - analyte: stool
+    time: 69
+    value: negative
+  - analyte: stool
+    time: 29
+    value: negative
+  - analyte: stool
+    time: 55
+    value: negative
+  - analyte: stool
+    time: 27
+    value: negative
+- attributes:
+    age: 25.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 91
+    value: negative
+  - analyte: stool
+    time: 59
+    value: negative
+  - analyte: stool
+    time: 37
+    value: negative
+- attributes:
+    age: 27.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 29
+    value: negative
+  - analyte: stool
+    time: 22
+    value: negative
+  - analyte: stool
+    time: 23
+    value: negative
+  - analyte: stool
+    time: 48
+    value: negative
+  - analyte: stool
+    time: 30
+    value: negative
+- attributes:
+    age: 28.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 35
+    value: negative
+  - analyte: stool
+    time: 54
+    value: negative
+- attributes:
+    age: 21.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 48
+    value: negative
+  - analyte: stool
+    time: 68
+    value: negative
+  - analyte: stool
+    time: 59
+    value: negative
+  - analyte: stool
+    time: 32
+    value: negative
+  - analyte: stool
+    time: 29
+    value: negative
+  - analyte: stool
+    time: 39
+    value: negative
+- attributes:
+    age: 36.0
+    sex: female
+    vaccinated: true
+  measurements:
+  - analyte: stool
+    time: 39
+    value: negative
+  - analyte: stool
+    time: 35
+    value: negative
+  - analyte: stool
+    time: 40
+    value: negative
+  - analyte: stool
+    time: 34
+    value: 11515.63064
+  - analyte: stool
+    time: 32
+    value: negative
+  - analyte: stool
+    time: 11
+    value: negative
+- attributes:
+    age: 26.0
+    sex: male
+    vaccinated: false
+  measurements:
+  - analyte: stool
+    time: 26
+    value: negative
+  - analyte: stool
+    time: 23
+    value: negative
+  - analyte: stool
+    time: 46
+    value: negative
+  - analyte: stool
+    time: 30
+    value: negative
+  - analyte: stool
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 40
+    value: negative
