@@ -18,4 +18,3 @@ from shedding_hub import util
 )
 def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
     assert util.normalize_str(value, **kwargs) == expected
-
