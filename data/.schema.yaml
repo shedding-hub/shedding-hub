@@ -152,6 +152,9 @@ properties:
               value:
                 $ref: "#/$defs/negative_positive_number"
               analyte:
+                description: >
+                  Analyte for which a measurement is reported. The analyte key must
+                  appear in the dictionary of `analytes` metadata.
                 type: string
             required:
               - time
