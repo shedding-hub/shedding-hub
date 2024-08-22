@@ -1,0 +1,8 @@
+[project]
+name = "shedding-hub"
+version = "0.1.0"
+readme = "README.md"
+description = "Data and statistical models for biomarker shedding."
+
+[tool.setuptools.packages]
+find = {}
