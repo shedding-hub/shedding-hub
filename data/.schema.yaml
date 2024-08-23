@@ -33,14 +33,37 @@ $defs:
         description: Specimen type.
         type: string
         enum:
-        - stool
-        - sputum
-        - throat_swab
+          - stool
+          - sputum
+          - throat_swab
+      biomarker:
+        description: Biomarker being measured.
+        type: string
+        enum:
+          - SARS-CoV-2
+          - mtDNA
+          - PMMoV
+      unit:
+        description: Units in which measurements are reported.
+        type: string
+        enum:
+          - gc/dry gram
+          - gc/mL
+          - gc/swab
+          - gc/wet gram
+      reference_event:
+        description: Event used as reference for `time` fields of measurements.
+        type: string
+        enum:
+          - symptom onset
     required:
+      - biomarker
       - description
       - limit_of_detection
       - limit_of_quantification
+      - reference_event
       - specimen
+      - unit
 
 type: object
 additionalProperties: false
@@ -131,6 +154,6 @@ required:
 # Require that either url or doi are given.
 oneOf:
   - required:
-    - url
+      - url
   - required:
-    - doi
+      - doi

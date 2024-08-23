@@ -18,6 +18,9 @@ analytes:
     limit_of_quantification: 100
     limit_of_detection: unknown
     specimen: stool
+    biomarker: SARS-CoV-2
+    unit: gc/mL
+    reference_event: symptom onset
   sputum:
     description: >
       RNA gene copy concentration in sputum samples. Results are reported as gene copies
@@ -25,12 +28,18 @@ analytes:
     limit_of_quantification: 100
     limit_of_detection: unknown
     specimen: sputum
+    biomarker: SARS-CoV-2
+    unit: gc/mL
+    reference_event: symptom onset
   throat_swab:
     description: >
       Number of gene copies per throat swab.
     limit_of_quantification: 100
     limit_of_detection: unknown
     specimen: throat_swab
+    biomarker: SARS-CoV-2
+    unit: gc/swab
+    reference_event: symptom onset
 participants:
 - measurements:
   - analyte: sputum

@@ -7,6 +7,9 @@ analyte:
   limit_of_quantification: 17
   description: A single analyte.
   specimen: stool
+  biomarker: PMMoV
+  reference_event: symptom onset
+  unit: gc/dry gram
 participants:
   - attributes:
       sex: female
