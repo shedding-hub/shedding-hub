@@ -146,6 +146,7 @@ properties:
               analyte:
                 type: string
             required:
+              - time
               - value
 required:
   - description
