@@ -19,6 +19,7 @@ analytes:
     limit_of_detection: unknown
     specimen: stool
     biomarker: SARS-CoV-2
+    gene_target: E and RdRP (not further specified by authors)
     unit: gc/mL
     reference_event: symptom onset
   sputum:
@@ -29,6 +30,7 @@ analytes:
     limit_of_detection: unknown
     specimen: sputum
     biomarker: SARS-CoV-2
+    gene_target: E and RdRP (not further specified by authors)
     unit: gc/mL
     reference_event: symptom onset
   throat_swab:
@@ -38,6 +40,7 @@ analytes:
     limit_of_detection: unknown
     specimen: throat_swab
     biomarker: SARS-CoV-2
+    gene_target: E and RdRP (not further specified by authors)
     unit: gc/swab
     reference_event: symptom onset
 participants:
