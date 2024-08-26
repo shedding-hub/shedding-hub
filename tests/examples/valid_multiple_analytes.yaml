@@ -17,7 +17,7 @@ analytes:
     description: Another analyte.
     specimen: sputum
     biomarker: PMMoV
-    reference_event: symptom onset
+    reference_event: confirmation date
     unit: gc/dry gram
 participants:
   - attributes:
