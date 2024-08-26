@@ -12,7 +12,7 @@ analytes:
   stool_SARSCoV2_N1:
     description: >
       SARS-CoV-2 RNA genome copy concentration in stool samples. The concentration
-      were quantified in gene copies per dry weight of stool.
+      were quantified in genome copies per dry weight of stool.
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: N1
@@ -23,7 +23,7 @@ analytes:
   stool_PMMoV:
     description: >
       PMMoV genome copy concentration in stool samples. The concentration were quantified
-      in gene copies per dry weight of stool.
+      in genome copies per dry weight of stool.
     specimen: stool
     biomarker: PMMoV
     limit_of_quantification: unknown
@@ -33,7 +33,7 @@ analytes:
   stool_mtDNA:
     description: >
       mtDNA genome copy concentration in stool samples. The concentration were quantified
-      in gene copies per dry weight of stool.
+      in genome copies per dry weight of stool.
     specimen: stool
     biomarker: mtDNA
     limit_of_quantification: unknown
