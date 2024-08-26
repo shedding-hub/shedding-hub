@@ -33,14 +33,43 @@ $defs:
         description: Specimen type.
         type: string
         enum:
-        - stool
-        - sputum
-        - throat_swab
+          - stool
+          - sputum
+          - throat_swab
+      biomarker:
+        description: Biomarker being measured.
+        type: string
+        enum:
+          - SARS-CoV-2
+          - mtDNA
+          - PMMoV
+      gene_target:
+        description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
+          This field should be left empty for non-genomic biomarkers, e.g., drug
+          metabolites.
+        type: string
+      unit:
+        description: Units in which measurements are reported.
+        type: string
+        enum:
+          - gc/dry gram
+          - gc/mL
+          - gc/swab
+          - gc/wet gram
+      reference_event:
+        description: Event used as reference for `time` fields of measurements.
+        type: string
+        enum:
+          - symptom onset
+          - confirmation date
     required:
+      - biomarker
       - description
       - limit_of_detection
       - limit_of_quantification
+      - reference_event
       - specimen
+      - unit
 
 type: object
 additionalProperties: false
@@ -123,6 +152,7 @@ properties:
               analyte:
                 type: string
             required:
+              - time
               - value
 required:
   - description
@@ -131,6 +161,6 @@ required:
 # Require that either url or doi are given.
 oneOf:
   - required:
-    - url
+      - url
   - required:
-    - doi
+      - doi

@@ -8,11 +8,17 @@ analytes:
     limit_of_quantification: 17
     description: One analyte.
     specimen: stool
+    biomarker: mtDNA
+    reference_event: symptom onset
+    unit: gc/wet gram
   analyte2:
     limit_of_detection: unknown
     limit_of_quantification: 17
     description: Another analyte.
     specimen: sputum
+    biomarker: PMMoV
+    reference_event: confirmation date
+    unit: gc/dry gram
 participants:
   - attributes:
       sex: female
@@ -20,9 +26,11 @@ participants:
     measurements:
     - value: 3
       analyte: analyte1
+      time: -3.5
   - attributes:
       sex: male
       age: 87
     measurements:
     - value: 1
       analyte: analyte2
+      time: 9
