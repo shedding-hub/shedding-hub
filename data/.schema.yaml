@@ -131,9 +131,11 @@ properties:
                 - male
             age:
               description: Age of the participant in years.
-              type: number
-              minimum: 0
-              maximum: 120
+              oneOf:
+                - type: number
+                  minimum: 0
+                  maximum: 120
+                - const: unknown
         measurements:
           type: array
           minItems: 1
