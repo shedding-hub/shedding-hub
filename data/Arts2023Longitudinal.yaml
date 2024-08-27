@@ -19,7 +19,7 @@ analytes:
     biomarker: SARS-CoV-2
     gene_target: N gene
     unit: gc/dry gram
-    reference_event: initial symptom onset
+    reference_event: symptom onset
   stool_SARSCoV2_ORF1a:
     description: >
       Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR in stool
@@ -32,7 +32,7 @@ analytes:
     biomarker: SARS-CoV-2
     gene_target: ORF1a
     unit: gc/dry gram
-    reference_event: initial symptom onset
+    reference_event: symptom onset
   stool_PMMoV:
     description: >
       Concentration of PMMoV RNA was measured by ddPCR on the same day as the SARS-CoV-2.
@@ -52,7 +52,7 @@ analytes:
     specimen: stool
     biomarker: crAssphage
     unit: gc/dry gram
-    reference_event: initial symptom onset
+    reference_event: symptom onset
   participants:
   - attributes:
       age: 39
