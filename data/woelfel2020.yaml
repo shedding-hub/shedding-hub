@@ -8,7 +8,9 @@ description: >
   RT-qPCR assays targeting the E and RdRP genes as described in
   10.2807/1560-7917.ES.2020.25.3.2000045. Values were programmatically extracted from
   the figure, resulting in a number of significant figures far exceeding the performance
-  of the assays.
+  of the assays. The demographic data, including age and sex, are derived from the 
+  Challenger et al. BMC Medicine (2022) 20:25 https://doi.org/10.1186/s12916-021-02220-0 
+  supplement combined dataset.
 analytes:
   stool:
     description: >
@@ -44,7 +46,10 @@ analytes:
     unit: gc/swab
     reference_event: symptom onset
 participants:
-- measurements:
+- attributes:
+    age: 34
+    sex: male
+  measurements:
   - analyte: sputum
     time: 4
     value: 1562714.6317999878
@@ -195,7 +200,10 @@ participants:
   - analyte: stool
     time: 21
     value: 635.140918890549
-- measurements:
+- attributes:
+    age: 41
+    sex: male
+  measurements:
   - analyte: sputum
     time: 3
     value: 11183.143016477394
@@ -337,7 +345,10 @@ participants:
   - analyte: stool
     time: 19
     value: 192.24728418871337
-- measurements:
+- attributes:
+    age: 28
+    sex: male
+  measurements:
   - analyte: sputum
     time: 3
     value: 2203838.4736641357
@@ -503,7 +514,10 @@ participants:
   - analyte: stool
     time: 23
     value: negative
-- measurements:
+- attributes:
+    age: 33
+    sex: male
+  measurements:
   - analyte: sputum
     time: 4
     value: 8325456.643763932
@@ -630,7 +644,10 @@ participants:
   - analyte: stool
     time: 20
     value: 3663.8626248378096
-- measurements:
+- attributes:
+    age: 52
+    sex: male
+  measurements:
   - analyte: sputum
     time: 4
     value: 414419.7812609166
@@ -793,7 +810,10 @@ participants:
   - analyte: stool
     time: 26
     value: negative
-- measurements:
+- attributes:
+    age: 33
+    sex: male
+  measurements:
   - analyte: sputum
     time: 6
     value: 73382905.39596297
@@ -908,7 +928,10 @@ participants:
   - analyte: stool
     time: 22
     value: 373.04522462778885
-- measurements:
+- attributes:
+    age: 58
+    sex: male
+  measurements:
   - analyte: sputum
     time: 4
     value: 13337028.360774042
@@ -1059,7 +1082,10 @@ participants:
   - analyte: stool
     time: 26
     value: 93.25415774407219
-- measurements:
+- attributes:
+    age: 49
+    sex: male
+  measurements:
   - analyte: sputum
     time: 2
     value: 2584872.296288066
@@ -1156,7 +1182,10 @@ participants:
   - analyte: stool
     time: 12
     value: negative
-- measurements:
+- attributes:
+    age: 49
+    sex: male
+  measurements:
   - analyte: sputum
     time: 8
     value: 112707.96415611677
