@@ -1,8 +1,10 @@
+-e file:.
 black
 matplotlib
 jupyter
 jupytext
 jsonschema
+pandas
 pip-tools
 pyaml
 pymupdf

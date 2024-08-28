@@ -62,6 +62,7 @@ $defs:
         enum:
           - symptom onset
           - confirmation date
+          - enrollment
     required:
       - biomarker
       - description
@@ -144,15 +145,25 @@ properties:
             additionalProperties: false
             properties:
               time:
-                type: number
                 description: >
                   Temporal offset for the sample, e.g., relative to symptom onset, drug
                   ingestion, or hospital admission. The reference event should be
                   defined in the dataset description.
+                oneOf:
+                  - type: number
+                  - const: unknown
               value:
                 $ref: "#/$defs/negative_positive_number"
               analyte:
+                description: >
+                  Analyte for which a measurement is reported. The analyte key must
+                  appear in the dictionary of `analytes` metadata.
                 type: string
+              sample_id:
+                description: >
+                  Unique sample identifier if multiple measurements are reported for the
+                  same sample, e.g., replicates or different analytes.
+                type: [string, integer]
             required:
               - time
               - value

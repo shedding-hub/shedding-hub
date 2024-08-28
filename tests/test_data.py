@@ -1,4 +1,5 @@
 import jsonschema
+import numpy as np
 from pathlib import Path
 import pytest
 import yaml
@@ -48,6 +49,13 @@ def load_and_validate(path: Path):
                     f"Measurement {j} for patient {i} declares the invalid analyte "
                     f"`{measurement['analyte']}`."
                 )
+
+            value = measurement["value"]
+            if not isinstance(value, str) and np.isnan(value):
+                raise ValueError(f"Measurement {j} for patient {i} has nan `value`.")
+            time = measurement.get("time", 0)
+            if not isinstance(time, str) and np.isnan(time):
+                raise ValueError(f"Measurement {j} for patient {i} has nan `time`.")
 
     if has_analytes:
         used_analytes = {
