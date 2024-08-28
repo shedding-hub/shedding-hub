@@ -11,7 +11,9 @@ analytes:
   stool_SARSCoV2_N:
     description: >
       Concentration of RNA of the N gene quantified using (RT)-ddPCR in stool samples.
-      The concentration were quantified in gene copies per dry weight of stool.
+      The concentration were quantified in gene copies per dry weight of stool. The
+      limit of blank (LOB), determined as the upper 95% confidence limit of the negative
+      extraction control (30), ranged from 11.2 to 1,550 gc/mg-dry weight.
     limit_of_quantification: unknown
     limit_of_detection: unknown
     limit_of_blank: 1550
@@ -24,10 +26,12 @@ analytes:
     description: >
       Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR in stool
       samples. The concentration were quantified in gene copies per dry weight of
-      stool.
+      stool.The limit of blank (LOB), determined as the upper 95% confidence limit
+      of the negative extraction control (30), ranged from 11.2 to 1,550 gc/mg-dry
+      weight.
     limit_of_quantification: unknown
     limit_of_detection: unknown
-    limit_of_blank: 400
+    limit_of_blank: 1550
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: ORF1a
@@ -43,7 +47,7 @@ analytes:
     specimen: stool
     biomarker: PMMoV
     unit: gc/dry gram
-    reference_event: symptom onset
+    reference_event: initial symptom onset
   stool_crAssphage:
     description: >
       Concentration of CrAssphage DNA was measured by qPCR. LOQ if not quantifiable.
