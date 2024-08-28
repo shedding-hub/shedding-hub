@@ -6,12 +6,12 @@ description: >
   The authors present longitudinal, quantitative fecal shedding data for SARS-CoV-2
   RNA, pepper mild mottle virus (PMMoV) RNA, and crAss-like phage (crAssphage) DNA
   from 48 COVID-19 patients. Abundances were quantified using (RT)-ddPCR assays targeting
-  the N and ORF1a genes. The data were contributed by the corresponding author.
+  the N and ORF1a genes. The data were obtained from supplementary material.
 analytes:
   stool_SARSCoV2_N:
     description: >
       Concentration of RNA of the N gene quantified using (RT)-ddPCR in stool samples.
-      The concentration were quantified in gene copies per dry weight of stool. The
+      The concentration was quantified in gene copies per dry weight of stool. The
       limit of blank (LOB), determined as the upper 95% confidence limit of the negative
       extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight.
     limit_of_quantification: unknown
@@ -19,14 +19,14 @@ analytes:
     limit_of_blank: 1550
     specimen: stool
     biomarker: SARS-CoV-2
-    gene_target: N gene
+    gene_target: N
     unit: gc/dry gram
     reference_event: symptom onset
   stool_SARSCoV2_ORF1a:
     description: >
       Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR in stool
-      samples. The concentration were quantified in gene copies per dry weight of
-      stool.The limit of blank (LOB), determined as the upper 95% confidence limit
+      samples. The concentration was quantified in gene copies per dry weight of
+      stool. The limit of blank (LOB), determined as the upper 95% confidence limit
       of the negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry
       weight.
     limit_of_quantification: unknown
@@ -40,7 +40,7 @@ analytes:
   stool_PMMoV:
     description: >
       Concentration of PMMoV RNA was measured by ddPCR on the same day as the SARS-CoV-2.
-      The concentration were quantified in gene copies per dry weight of stool.
+      The concentration was quantified in gene copies per dry weight of stool.
     limit_of_quantification: unknown
     limit_of_detection: unknown
     limit_of_blank: 400
@@ -50,7 +50,9 @@ analytes:
     reference_event: symptom onset
   stool_crAssphage:
     description: >
-      Concentration of CrAssphage DNA was measured by qPCR. LOQ if not quantifiable.
+      Concentration of crAssphage DNA was measured using qPCR. The reported number
+      is either the measured concentration of crAssphage or the Limit of Quantification
+      (LOQ) if the concentration wasn't quantifiable.
     limit_of_quantification: unknown
     limit_of_detection: 25
     specimen: stool
