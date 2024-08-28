@@ -13,7 +13,7 @@ analytes:
       Concentration of RNA of the N gene quantified using (RT)-ddPCR in stool samples.
       The concentration were quantified in gene copies per dry weight of stool. The
       limit of blank (LOB), determined as the upper 95% confidence limit of the negative
-      extraction control (30), ranged from 11.2 to 1,550 gc/mg-dry weight.
+      extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight.
     limit_of_quantification: unknown
     limit_of_detection: unknown
     limit_of_blank: 1550
@@ -27,7 +27,7 @@ analytes:
       Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR in stool
       samples. The concentration were quantified in gene copies per dry weight of
       stool.The limit of blank (LOB), determined as the upper 95% confidence limit
-      of the negative extraction control (30), ranged from 11.2 to 1,550 gc/mg-dry
+      of the negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry
       weight.
     limit_of_quantification: unknown
     limit_of_detection: unknown
@@ -47,7 +47,7 @@ analytes:
     specimen: stool
     biomarker: PMMoV
     unit: gc/dry gram
-    reference_event: initial symptom onset
+    reference_event: symptom onset
   stool_crAssphage:
     description: >
       Concentration of CrAssphage DNA was measured by qPCR. LOQ if not quantifiable.
