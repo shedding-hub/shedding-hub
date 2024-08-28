@@ -54,7 +54,7 @@ participant_list = [dict(attributes=dict(age=Liu2024.loc[Liu2024.loc[Liu2024["su
 
 liu2024 = dict(title="Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mottle Virus, and Human Mitochondrial DNA in COVID-19 Patients",
                doi="10.1101/2024.04.22.24305845",
-               description=folded_str('The authors measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Abundances were quantified using Digital PCR assays targeting the N1 gences. The symptom data (e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.) is currently not included in this data.\n'),
+               description=folded_str('The authors measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Abundances were quantified using Digital PCR assays targeting the N1 genes. The symptom data (e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.) is currently not included in this data.\n'),
                analytes=dict(stool_SARSCoV2_N1=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration in stool samples. The concentration were quantified in genome copies per dry weight of stool.\n"),
                                                     specimen="stool",
                                                     biomarker="SARS-CoV-2",
