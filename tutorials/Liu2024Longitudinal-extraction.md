@@ -1,6 +1,6 @@
 # Extraction for Liu et al. (2024)
 
-[Liu et al. (2024)](https://www.medrxiv.org/content/10.1101/2024.04.22.24305845v1) measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) concentration in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Demographic information (e.g., age, sex, race, ethnicity, etc.) was also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). Currently, the raw data does not include any symptom data, such as e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.
+[Liu et al. (2024)](https://www.medrxiv.org/content/10.1101/2024.04.22.24305845v1) measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) concentrations in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Demographic information (e.g., age, sex, race, ethnicity, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). Currently, the raw data does not include any symptom data, such as e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.
 
 First, we `import` python modules needed: 
 
