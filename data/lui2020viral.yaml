@@ -1,0 +1,184 @@
+title: Viral dynamics of SARS-CoV-2 across a spectrum of disease severity in COVID-19
+doi: 10.1016/j.jinf.2020.04.014
+description: >
+  Lui et al. report on a prospective cohort study of patients with variable
+  disease severity. Viral loads for positive samples were extracted from Tbl. 1 in
+  the supplementary material, and negatives were extracted manually from Fig. 1 and
+  a figure in the supplementary material. The level of quantification was extracted
+  from methods in the supplementary material.
+
+  Data for other specimen types, including nasopharyngeal swabs, sputum, plasma, and
+  urine, are also available in the source but have not yet been included here.
+analytes:
+  2019-nCoV_N1:
+    description: Gene copies of the N1 gene quantified using RT-qPCR in stool samples.
+    limit_of_detection: unknown
+    limit_of_quantification: 694.1199999839523
+    specimen: stool
+    gene_target: N1
+    unit: gc/mL
+    reference_event: symptom onset
+    biomarker: SARS-CoV-2
+participants:
+- attributes:
+    severity: critical
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 15
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 20
+    value: 3861.000000000001
+  - analyte: 2019-nCoV_N1
+    time: 21
+    value: 13147.0
+  - analyte: 2019-nCoV_N1
+    time: 22
+    value: 2740.9999999999995
+  - analyte: 2019-nCoV_N1
+    time: 23
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 25
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 29
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 35
+    value: negative
+- attributes:
+    severity: critical
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 16
+    value: 109198.99999999999
+  - analyte: 2019-nCoV_N1
+    time: 17
+    value: 5973.999999999998
+  - analyte: 2019-nCoV_N1
+    time: 18
+    value: 977.0
+  - analyte: 2019-nCoV_N1
+    time: 19
+    value: 1622.9999999999998
+  - analyte: 2019-nCoV_N1
+    time: 20
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 23
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 30
+    value: negative
+- attributes:
+    severity: severe
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 19
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 21
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 22
+    value: 2000.0000000000002
+  - analyte: 2019-nCoV_N1
+    time: 23
+    value: negative
+- attributes:
+    severity: moderate
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 14
+    value: 5557.999999999998
+  - analyte: 2019-nCoV_N1
+    time: 18
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 19
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 21
+    value: negative
+- attributes:
+    severity: severe
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 15
+    value: 54756.00000000003
+  - analyte: 2019-nCoV_N1
+    time: 17
+    value: 5043.000000000001
+  - analyte: 2019-nCoV_N1
+    time: 18
+    value: negative
+- attributes:
+    severity: moderate
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 9
+    value: 39913.00000000003
+  - analyte: 2019-nCoV_N1
+    time: 12
+    value: 31537.999999999993
+  - analyte: 2019-nCoV_N1
+    time: 14
+    value: 1806.0
+  - analyte: 2019-nCoV_N1
+    time: 18
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 20
+    value: negative
+- attributes:
+    severity: moderate
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 12
+    value: 3260.9999999999995
+  - analyte: 2019-nCoV_N1
+    time: 13
+    value: negative
+  - analyte: 2019-nCoV_N1
+    time: 16
+    value: negative
+- attributes:
+    severity: moderate
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 6
+    value: 92645.99999999996
+  - analyte: 2019-nCoV_N1
+    time: 7
+    value: 157170.0
+  - analyte: 2019-nCoV_N1
+    time: 8
+    value: 18058.000000000007
+  - analyte: 2019-nCoV_N1
+    time: 9
+    value: 54238.00000000001
+  - analyte: 2019-nCoV_N1
+    time: 10
+    value: 12724.000000000011
+- attributes:
+    severity: severe
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 19
+    value: 2763063.9999999986
+- attributes:
+    severity: mild
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 8
+    value: 7938.0
+- attributes:
+    severity: moderate
+  measurements:
+  - analyte: 2019-nCoV_N1
+    time: 8
+    value: 1918.9999999999998
+  - analyte: 2019-nCoV_N1
+    time: 10
+    value: negative
