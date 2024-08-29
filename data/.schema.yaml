@@ -170,6 +170,8 @@ properties:
                   Unique sample identifier if multiple measurements are reported for the
                   same sample, e.g., replicates or different analytes.
                 type: [string, integer]
+              limit_of_quantification:
+                type: number
             required:
               - time
               - value
