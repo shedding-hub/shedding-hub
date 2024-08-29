@@ -171,28 +171,36 @@ participants:
     value: 69.06689655
   - analyte: stool_crAssphage
     time: 13
-    value: 254.0386893
+    value: positive
+    limit_of_quantification: 254.0386893
   - analyte: stool_crAssphage
     time: 15
-    value: 169.8419541
+    value: positive
+    limit_of_quantification: 169.8419541
   - analyte: stool_crAssphage
     time: 18
-    value: 123.8585429
+    value: positive
+    limit_of_quantification: 123.8585429
   - analyte: stool_crAssphage
     time: 20
-    value: 144.7122772
+    value: positive
+    limit_of_quantification: 144.7122772
   - analyte: stool_crAssphage
     time: 28
-    value: 9.929788755
+    value: negative
+    limit_of_quantification: 9.929788755
   - analyte: stool_crAssphage
     time: 4
-    value: 10.47523063
+    value: negative
+    limit_of_quantification: 10.47523063
   - analyte: stool_crAssphage
     time: 8
-    value: 348.6462012
+    value: positive
+    limit_of_quantification: 348.6462012
   - analyte: stool_crAssphage
     time: 9
-    value: 10.11401578
+    value: negative
+    limit_of_quantification: 10.11401578
   - analyte: stool_crAssphage
     time: 10
     value: 240.2618951
@@ -201,7 +209,8 @@ participants:
     value: 229.3576856
   - analyte: stool_crAssphage
     time: 12
-    value: 10.89145315
+    value: negative
+    limit_of_quantification: 10.89145315
 - attributes:
     age: 45
     sex: male
@@ -248,22 +257,28 @@ participants:
     value: 223.4799187
   - analyte: stool_crAssphage
     time: 5
-    value: 13.14807193
+    value: negative
+    limit_of_quantification: 13.14807193
   - analyte: stool_crAssphage
     time: 14
-    value: 238.4608452
+    value: positive
+    limit_of_quantification: 238.4608452
   - analyte: stool_crAssphage
     time: 20
-    value: 3.377299284
+    value: negative
+    limit_of_quantification: 3.377299284
   - analyte: stool_crAssphage
     time: 28
-    value: 8.420281082
+    value: negative
+    limit_of_quantification: 8.420281082
   - analyte: stool_crAssphage
     time: 8
-    value: 6.950522605
+    value: negative
+    limit_of_quantification: 6.950522605
   - analyte: stool_crAssphage
     time: 12
-    value: 11.69822746
+    value: negative
+    limit_of_quantification: 11.69822746
 - attributes:
     age: 44
     sex: male
@@ -345,11 +360,9 @@ participants:
     time: 11
     value: 513432.0457
   - analyte: stool_crAssphage
-    time: 3
-    value: negative
-  - analyte: stool_crAssphage
     time: 12
-    value: 428.4095693
+    value: positive
+    limit_of_quantification: 428.4095693
   - analyte: stool_crAssphage
     time: 15
     value: 80434.83555
@@ -373,13 +386,16 @@ participants:
     value: 576.0169965
   - analyte: stool_crAssphage
     time: 8
-    value: 343.8933958
+    value: positive
+    limit_of_quantification: 343.8933958
   - analyte: stool_crAssphage
     time: 9
-    value: 337.0155279
+    value: positive
+    limit_of_quantification: 337.0155279
   - analyte: stool_crAssphage
     time: 11
-    value: 328.2618778
+    value: positive
+    limit_of_quantification: 328.2618778
 - attributes:
     age: 52
     sex: female
@@ -438,28 +454,36 @@ participants:
     value: 9128.82842
   - analyte: stool_crAssphage
     time: 4
-    value: 7.954228689
+    value: negative
+    limit_of_quantification: 7.954228689
   - analyte: stool_crAssphage
     time: 17
-    value: 428.4095693
+    value: positive
+    limit_of_quantification: 428.4095693
   - analyte: stool_crAssphage
     time: 19
-    value: 3.75255476
+    value: negative
+    limit_of_quantification: 3.75255476
   - analyte: stool_crAssphage
     time: 5
-    value: 6.492875026
+    value: negative
+    limit_of_quantification: 6.492875026
   - analyte: stool_crAssphage
     time: 28
-    value: 8.380184506
+    value: negative
+    limit_of_quantification: 8.380184506
   - analyte: stool_crAssphage
     time: 6
-    value: 119.6776638
+    value: positive
+    limit_of_quantification: 119.6776638
   - analyte: stool_crAssphage
     time: 10
-    value: 3.522336677
+    value: negative
+    limit_of_quantification: 3.522336677
   - analyte: stool_crAssphage
     time: 12
-    value: 3.905720261
+    value: negative
+    limit_of_quantification: 3.905720261
 - attributes:
     age: 30
     sex: female
@@ -536,37 +560,48 @@ participants:
     value: 26331.76526
   - analyte: stool_crAssphage
     time: 11
-    value: 190.3645475
+    value: positive
+    limit_of_quantification: 190.3645475
   - analyte: stool_crAssphage
     time: 12
-    value: 32.15737534
+    value: negative
+    limit_of_quantification: 32.15737534
   - analyte: stool_crAssphage
     time: 13
-    value: 165.1692398
+    value: positive
+    limit_of_quantification: 165.1692398
   - analyte: stool_crAssphage
     time: 14
-    value: 18.91610314
+    value: negative
+    limit_of_quantification: 18.91610314
   - analyte: stool_crAssphage
     time: 17
-    value: 15.14411841
+    value: negative
+    limit_of_quantification: 15.14411841
   - analyte: stool_crAssphage
     time: 19
-    value: 117.7809687
+    value: negative
+    limit_of_quantification: 117.7809687
   - analyte: stool_crAssphage
     time: 5
-    value: 6.692765108
+    value: negative
+    limit_of_quantification: 6.692765108
   - analyte: stool_crAssphage
     time: 21
-    value: 191.3966001
+    value: positive
+    limit_of_quantification: 191.3966001
   - analyte: stool_crAssphage
     time: 28
-    value: 15.65714904
+    value: negative
+    limit_of_quantification: 15.65714904
   - analyte: stool_crAssphage
     time: 7
-    value: 28.8307503
+    value: negative
+    limit_of_quantification: 28.8307503
   - analyte: stool_crAssphage
     time: 9
-    value: 122.081612
+    value: positive
+    limit_of_quantification: 122.081612
 - attributes:
     age: 32
     sex: male
@@ -753,43 +788,55 @@ participants:
     value: 135000.0
   - analyte: stool_crAssphage
     time: 10
-    value: 79.26491735
+    value: negative
+    limit_of_quantification: 79.26491735
   - analyte: stool_crAssphage
     time: 11
-    value: 486.2592799
+    value: positive
+    limit_of_quantification: 486.2592799
   - analyte: stool_crAssphage
     time: 12
-    value: 70.80156628
+    value: negative
+    limit_of_quantification: 70.80156628
   - analyte: stool_crAssphage
     time: 13
-    value: 364.0443807
+    value: positive
+    limit_of_quantification: 364.0443807
   - analyte: stool_crAssphage
     time: 14
-    value: 80.02343331
+    value: negative
+    limit_of_quantification: 80.02343331
   - analyte: stool_crAssphage
     time: 17
     value: 659.5193153
   - analyte: stool_crAssphage
     time: 19
-    value: 6.538067186
+    value: negative
+    limit_of_quantification: 6.538067186
   - analyte: stool_crAssphage
     time: 21
-    value: 116.5865791
+    value: negative
+    limit_of_quantification: 116.5865791
   - analyte: stool_crAssphage
     time: 28
-    value: 80.58980125
+    value: negative
+    limit_of_quantification: 80.58980125
   - analyte: stool_crAssphage
     time: 6
-    value: 2.975006785
+    value: negative
+    limit_of_quantification: 2.975006785
   - analyte: stool_crAssphage
     time: 7
-    value: 251.4148256
+    value: positive
+    limit_of_quantification: 251.4148256
   - analyte: stool_crAssphage
     time: 8
-    value: 3.686014696
+    value: negative
+    limit_of_quantification: 3.686014696
   - analyte: stool_crAssphage
     time: 9
-    value: 2.959981498
+    value: negative
+    limit_of_quantification: 2.959981498
 - attributes:
     age: 37
     sex: female
@@ -928,19 +975,24 @@ participants:
     value: 789936.4731
   - analyte: stool_crAssphage
     time: 13
-    value: 77.4300813
+    value: negative
+    limit_of_quantification: 77.4300813
   - analyte: stool_crAssphage
     time: 16
-    value: 75.67826951
+    value: negative
+    limit_of_quantification: 75.67826951
   - analyte: stool_crAssphage
     time: 18
-    value: 112.1024799
+    value: negative
+    limit_of_quantification: 112.1024799
   - analyte: stool_crAssphage
     time: 20
-    value: 118.6162948
+    value: negative
+    limit_of_quantification: 118.6162948
   - analyte: stool_crAssphage
     time: 27
-    value: 92.40274896
+    value: negative
+    limit_of_quantification: 92.40274896
 - attributes:
     age: 56
     sex: male
@@ -981,19 +1033,24 @@ participants:
     value: 43267.98942
   - analyte: stool_crAssphage
     time: 14
-    value: 407.6425101
+    value: positive
+    limit_of_quantification: 407.6425101
   - analyte: stool_crAssphage
     time: 17
-    value: 384.6118598
+    value: positive
+    limit_of_quantification: 384.6118598
   - analyte: stool_crAssphage
     time: 19
-    value: 338.6880557
+    value: positive
+    limit_of_quantification: 338.6880557
   - analyte: stool_crAssphage
     time: 21
-    value: 8.172583982
+    value: negative
+    limit_of_quantification: 8.172583982
   - analyte: stool_crAssphage
     time: 28
-    value: 11.28043362
+    value: negative
+    limit_of_quantification: 11.28043362
 - attributes:
     age: 19
     sex: female
@@ -1087,28 +1144,35 @@ participants:
     value: 1154.074089
   - analyte: stool_crAssphage
     time: 12
-    value: 417.6460073
+    value: positive
+    limit_of_quantification: 417.6460073
   - analyte: stool_crAssphage
     time: 14
-    value: 12.98022498
+    value: negative
+    limit_of_quantification: 12.98022498
   - analyte: stool_crAssphage
     time: 17
     value: 3025.891914
   - analyte: stool_crAssphage
     time: 21
-    value: 112.1024799
+    value: negative
+    limit_of_quantification: 112.1024799
   - analyte: stool_crAssphage
     time: 5
-    value: 12.06509914
+    value: negative
+    limit_of_quantification: 12.06509914
   - analyte: stool_crAssphage
     time: 7
-    value: 128.5881388
+    value: negative
+    limit_of_quantification: 128.5881388
   - analyte: stool_crAssphage
     time: 8
-    value: 433.6070012
+    value: positive
+    limit_of_quantification: 433.6070012
   - analyte: stool_crAssphage
     time: 9
-    value: 428.1528251
+    value: positive
+    limit_of_quantification: 428.1528251
 - attributes:
     age: 61
     sex: female
@@ -1203,46 +1267,60 @@ participants:
     value: 3624805.195
   - analyte: stool_crAssphage
     time: 9
-    value: 7.040109217
+    value: negative
+    limit_of_quantification: 7.040109217
   - analyte: stool_crAssphage
     time: 10
-    value: 6.888709019
+    value: negative
+    limit_of_quantification: 6.888709019
   - analyte: stool_crAssphage
     time: 11
-    value: 7.860735445
+    value: negative
+    limit_of_quantification: 7.860735445
   - analyte: stool_crAssphage
     time: 12
-    value: 10.76722586
+    value: negative
+    limit_of_quantification: 10.76722586
   - analyte: stool_crAssphage
     time: 13
-    value: 7.079004849
+    value: negative
+    limit_of_quantification: 7.079004849
   - analyte: stool_crAssphage
     time: 16
-    value: 3.791113598
+    value: negative
+    limit_of_quantification: 3.791113598
   - analyte: stool_crAssphage
     time: 18
-    value: 3.816729231
+    value: negative
+    limit_of_quantification: 3.816729231
   - analyte: stool_crAssphage
     time: 20
-    value: 4.093303813
+    value: negative
+    limit_of_quantification: 4.093303813
   - analyte: stool_crAssphage
     time: 27
-    value: 2.988761514
+    value: negative
+    limit_of_quantification: 2.988761514
   - analyte: stool_crAssphage
     time: 4
-    value: 14.90373558
+    value: negative
+    limit_of_quantification: 14.90373558
   - analyte: stool_crAssphage
     time: 5
-    value: 3.155731431
+    value: negative
+    limit_of_quantification: 3.155731431
   - analyte: stool_crAssphage
     time: 6
-    value: 3.486888433
+    value: negative
+    limit_of_quantification: 3.486888433
   - analyte: stool_crAssphage
     time: 7
-    value: 2.755492323
+    value: negative
+    limit_of_quantification: 2.755492323
   - analyte: stool_crAssphage
     time: 8
-    value: 4.413093173
+    value: negative
+    limit_of_quantification: 4.413093173
 - attributes:
     age: 68
     sex: male
@@ -1313,34 +1391,44 @@ participants:
     value: 475602.1832
   - analyte: stool_crAssphage
     time: 10
-    value: 3.310826332
+    value: negative
+    limit_of_quantification: 3.310826332
   - analyte: stool_crAssphage
     time: 15
-    value: 7.860735445
+    value: negative
+    limit_of_quantification: 7.860735445
   - analyte: stool_crAssphage
     time: 17
-    value: 3.465496479
+    value: negative
+    limit_of_quantification: 3.465496479
   - analyte: stool_crAssphage
     time: 19
-    value: 80.34066778
+    value: positive
+    limit_of_quantification: 80.34066778
   - analyte: stool_crAssphage
     time: 21
-    value: 24.11766359
+    value: negative
+    limit_of_quantification: 24.11766359
   - analyte: stool_crAssphage
     time: 28
-    value: 10.11401578
+    value: negative
+    limit_of_quantification: 10.11401578
   - analyte: stool_crAssphage
     time: 5
-    value: 3.13819959
+    value: negative
+    limit_of_quantification: 3.13819959
   - analyte: stool_crAssphage
     time: 6
-    value: 4.955051984
+    value: negative
+    limit_of_quantification: 4.955051984
   - analyte: stool_crAssphage
     time: 7
-    value: 2.752605613
+    value: negative
+    limit_of_quantification: 2.752605613
   - analyte: stool_crAssphage
     time: 9
-    value: 4.006212242
+    value: negative
+    limit_of_quantification: 4.006212242
 - attributes:
     age: 40
     sex: female
@@ -1363,10 +1451,12 @@ participants:
     value: 7456.998124
   - analyte: stool_crAssphage
     time: 17
-    value: 2.715749645
+    value: negative
+    limit_of_quantification: 2.715749645
   - analyte: stool_crAssphage
     time: 28
-    value: 3.680390246
+    value: negative
+    limit_of_quantification: 3.680390246
 - attributes:
     age: 17
     sex: male
@@ -1461,13 +1551,16 @@ participants:
     value: 4402.255482
   - analyte: stool_crAssphage
     time: 8
-    value: 18.58663374
+    value: negative
+    limit_of_quantification: 18.58663374
   - analyte: stool_crAssphage
     time: 9
-    value: 2.114056386
+    value: negative
+    limit_of_quantification: 2.114056386
   - analyte: stool_crAssphage
     time: 10
-    value: 2.350044076
+    value: negative
+    limit_of_quantification: 2.350044076
   - analyte: stool_crAssphage
     time: 11
     value: 186.2701175
@@ -1476,31 +1569,39 @@ participants:
     value: 174.5685948
   - analyte: stool_crAssphage
     time: 16
-    value: 73.86023521
+    value: negative
+    limit_of_quantification: 73.86023521
   - analyte: stool_crAssphage
     time: 18
-    value: 73.41795835
+    value: negative
+    limit_of_quantification: 73.41795835
   - analyte: stool_crAssphage
     time: 25
-    value: 19.61589195
+    value: negative
+    limit_of_quantification: 19.61589195
   - analyte: stool_crAssphage
     time: 1
-    value: 37.38755474
+    value: negative
+    limit_of_quantification: 37.38755474
   - analyte: stool_crAssphage
     time: 2
     value: 205.0001479
   - analyte: stool_crAssphage
     time: 3
-    value: 17.47698396
+    value: negative
+    limit_of_quantification: 17.47698396
   - analyte: stool_crAssphage
     time: 4
-    value: 28.59048303
+    value: negative
+    limit_of_quantification: 28.59048303
   - analyte: stool_crAssphage
     time: 5
-    value: 11.70957926
+    value: negative
+    limit_of_quantification: 11.70957926
   - analyte: stool_crAssphage
     time: 6
-    value: 37.38755474
+    value: negative
+    limit_of_quantification: 37.38755474
 - attributes:
     age: 11
     sex: female
@@ -1565,16 +1666,20 @@ participants:
     value: 33134652.01
   - analyte: stool_crAssphage
     time: 17
-    value: 6.529028967
+    value: negative
+    limit_of_quantification: 6.529028967
   - analyte: stool_crAssphage
     time: 19
-    value: 40.88171873
+    value: negative
+    limit_of_quantification: 40.88171873
   - analyte: stool_crAssphage
     time: 21
-    value: 7.205818555
+    value: negative
+    limit_of_quantification: 7.205818555
   - analyte: stool_crAssphage
     time: 4
-    value: 6.343068701
+    value: negative
+    limit_of_quantification: 6.343068701
   - analyte: stool_crAssphage
     time: 5
     value: 1580.331801
@@ -1583,10 +1688,12 @@ participants:
     value: 760.3445499
   - analyte: stool_crAssphage
     time: 7
-    value: 28.40483055
+    value: negative
+    limit_of_quantification: 28.40483055
   - analyte: stool_crAssphage
     time: 8
-    value: 12.72780354
+    value: negative
+    limit_of_quantification: 12.72780354
   - analyte: stool_crAssphage
     time: 9
     value: 759.7343079
@@ -1654,31 +1761,40 @@ participants:
     value: 183.5566401
   - analyte: stool_crAssphage
     time: 10
-    value: 236.0578286
+    value: positive
+    limit_of_quantification: 236.0578286
   - analyte: stool_crAssphage
     time: 11
-    value: 2.659260402
+    value: negative
+    limit_of_quantification: 2.659260402
   - analyte: stool_crAssphage
     time: 12
-    value: 2.265737562
+    value: negative
+    limit_of_quantification: 2.265737562
   - analyte: stool_crAssphage
     time: 13
-    value: 18.91332566
+    value: negative
+    limit_of_quantification: 18.91332566
   - analyte: stool_crAssphage
     time: 17
-    value: 12.6607104
+    value: negative
+    limit_of_quantification: 12.6607104
   - analyte: stool_crAssphage
     time: 28
-    value: 12.19396547
+    value: negative
+    limit_of_quantification: 12.19396547
   - analyte: stool_crAssphage
     time: 6
-    value: 226.4228152
+    value: positive
+    limit_of_quantification: 226.4228152
   - analyte: stool_crAssphage
     time: 8
-    value: 3.302349519
+    value: negative
+    limit_of_quantification: 3.302349519
   - analyte: stool_crAssphage
     time: 9
-    value: 2.591074238
+    value: negative
+    limit_of_quantification: 2.591074238
 - attributes:
     age: 21
     sex: female
@@ -1761,40 +1877,52 @@ participants:
     value: 130.2188894
   - analyte: stool_crAssphage
     time: 9
-    value: 2.784989209
+    value: negative
+    limit_of_quantification: 2.784989209
   - analyte: stool_crAssphage
     time: 10
-    value: 139.0514258
+    value: positive
+    limit_of_quantification: 139.0514258
   - analyte: stool_crAssphage
     time: 11
-    value: 122.1156753
+    value: positive
+    limit_of_quantification: 122.1156753
   - analyte: stool_crAssphage
     time: 12
-    value: 7.962659024
+    value: negative
+    limit_of_quantification: 7.962659024
   - analyte: stool_crAssphage
     time: 13
-    value: 11.48553241
+    value: negative
+    limit_of_quantification: 11.48553241
   - analyte: stool_crAssphage
     time: 18
-    value: 7.490564616
+    value: negative
+    limit_of_quantification: 7.490564616
   - analyte: stool_crAssphage
     time: 27
-    value: 10.9816999
+    value: negative
+    limit_of_quantification: 10.9816999
   - analyte: stool_crAssphage
     time: 4
-    value: 163.6329889
+    value: positive
+    limit_of_quantification: 163.6329889
   - analyte: stool_crAssphage
     time: 5
-    value: 118.3728005
+    value: positive
+    limit_of_quantification: 118.3728005
   - analyte: stool_crAssphage
     time: 6
-    value: 105.9718404
+    value: positive
+    limit_of_quantification: 105.9718404
   - analyte: stool_crAssphage
     time: 7
-    value: 156.7189189
+    value: positive
+    limit_of_quantification: 156.7189189
   - analyte: stool_crAssphage
     time: 8
-    value: 2.415551865
+    value: negative
+    limit_of_quantification: 2.415551865
 - attributes:
     age: 21
     sex: male
@@ -1871,37 +1999,48 @@ participants:
     value: 2127254.211
   - analyte: stool_crAssphage
     time: 12
-    value: 6.343068701
+    value: negative
+    limit_of_quantification: 6.343068701
   - analyte: stool_crAssphage
     time: 13
-    value: 9.284781722
+    value: negative
+    limit_of_quantification: 9.284781722
   - analyte: stool_crAssphage
     time: 14
-    value: 11.14772263
+    value: negative
+    limit_of_quantification: 11.14772263
   - analyte: stool_crAssphage
     time: 17
-    value: 15.92531805
+    value: negative
+    limit_of_quantification: 15.92531805
   - analyte: stool_crAssphage
     time: 21
-    value: 7.49298174
+    value: negative
+    limit_of_quantification: 7.49298174
   - analyte: stool_crAssphage
     time: 28
-    value: 6.101427988
+    value: negative
+    limit_of_quantification: 6.101427988
   - analyte: stool_crAssphage
     time: 5
-    value: 9.244452916
+    value: negative
+    limit_of_quantification: 9.244452916
   - analyte: stool_crAssphage
     time: 6
-    value: 8.657431605
+    value: negative
+    limit_of_quantification: 8.657431605
   - analyte: stool_crAssphage
     time: 7
-    value: 6.343068701
+    value: negative
+    limit_of_quantification: 6.343068701
   - analyte: stool_crAssphage
     time: 8
-    value: 7.158099875
+    value: negative
+    limit_of_quantification: 7.158099875
   - analyte: stool_crAssphage
     time: 9
-    value: 8.657431605
+    value: negative
+    limit_of_quantification: 8.657431605
 - attributes:
     age: 29
     sex: female
@@ -2067,37 +2206,48 @@ participants:
     value: 1974889.937
   - analyte: stool_crAssphage
     time: 13
-    value: 22.13047228
+    value: negative
+    limit_of_quantification: 22.13047228
   - analyte: stool_crAssphage
     time: 15
-    value: 15.6858842
+    value: negative
+    limit_of_quantification: 15.6858842
   - analyte: stool_crAssphage
     time: 16
-    value: 26.88203839
+    value: negative
+    limit_of_quantification: 26.88203839
   - analyte: stool_crAssphage
     time: 17
-    value: 34.88508799
+    value: negative
+    limit_of_quantification: 34.88508799
   - analyte: stool_crAssphage
     time: 22
-    value: 36.85440748
+    value: negative
+    limit_of_quantification: 36.85440748
   - analyte: stool_crAssphage
     time: 5
-    value: 411.0056843
+    value: positive
+    limit_of_quantification: 411.0056843
   - analyte: stool_crAssphage
     time: 24
-    value: 227.7193656
+    value: positive
+    limit_of_quantification: 227.7193656
   - analyte: stool_crAssphage
     time: 28
-    value: 19.85376726
+    value: negative
+    limit_of_quantification: 19.85376726
   - analyte: stool_crAssphage
     time: 6
-    value: 31.95766802
+    value: negative
+    limit_of_quantification: 31.95766802
   - analyte: stool_crAssphage
     time: 8
-    value: 13.99426924
+    value: negative
+    limit_of_quantification: 13.99426924
   - analyte: stool_crAssphage
     time: 9
-    value: 14.86891107
+    value: negative
+    limit_of_quantification: 14.86891107
 - attributes:
     age: 45
     sex: male
@@ -2239,34 +2389,44 @@ participants:
     value: 193.9630709
   - analyte: stool_crAssphage
     time: 10
-    value: 28.74180206
+    value: negative
+    limit_of_quantification: 28.74180206
   - analyte: stool_crAssphage
     time: 11
-    value: 15.10913452
+    value: negative
+    limit_of_quantification: 15.10913452
   - analyte: stool_crAssphage
     time: 12
-    value: 24.17961125
+    value: negative
+    limit_of_quantification: 24.17961125
   - analyte: stool_crAssphage
     time: 13
-    value: 22.75945154
+    value: negative
+    limit_of_quantification: 22.75945154
   - analyte: stool_crAssphage
     time: 14
-    value: 12.00982488
+    value: negative
+    limit_of_quantification: 12.00982488
   - analyte: stool_crAssphage
     time: 17
-    value: 27.20206266
+    value: negative
+    limit_of_quantification: 27.20206266
   - analyte: stool_crAssphage
     time: 19
-    value: 34.10407856
+    value: negative
+    limit_of_quantification: 34.10407856
   - analyte: stool_crAssphage
     time: 21
-    value: 27.8655276
+    value: negative
+    limit_of_quantification: 27.8655276
   - analyte: stool_crAssphage
     time: 28
-    value: 3.338028362
+    value: negative
+    limit_of_quantification: 3.338028362
   - analyte: stool_crAssphage
     time: 5
-    value: 31.08807161
+    value: negative
+    limit_of_quantification: 31.08807161
 - attributes:
     age: 49
     sex: male
@@ -2300,7 +2460,8 @@ participants:
     value: 97156.51414
   - analyte: stool_crAssphage
     time: 9
-    value: 3.242795654
+    value: negative
+    limit_of_quantification: 3.242795654
 - attributes:
     age: 3
     sex: female
@@ -2379,25 +2540,31 @@ participants:
     value: 22025747.82
   - analyte: stool_crAssphage
     time: 10
-    value: 4.28463342
+    value: negative
+    limit_of_quantification: 4.28463342
   - analyte: stool_crAssphage
     time: 14
     value: 4506.256697
   - analyte: stool_crAssphage
     time: 17
-    value: 20.07257184
+    value: negative
+    limit_of_quantification: 20.07257184
   - analyte: stool_crAssphage
     time: 19
-    value: 19.35467645
+    value: negative
+    limit_of_quantification: 19.35467645
   - analyte: stool_crAssphage
     time: 21
-    value: 12.45699921
+    value: negative
+    limit_of_quantification: 12.45699921
   - analyte: stool_crAssphage
     time: 28
-    value: 2.784989209
+    value: negative
+    limit_of_quantification: 2.784989209
   - analyte: stool_crAssphage
     time: 9
-    value: 4.071921123
+    value: negative
+    limit_of_quantification: 4.071921123
 - attributes:
     age: 29
     sex: male
@@ -2593,25 +2760,27 @@ participants:
     value: 171.913486
   - analyte: stool_crAssphage
     time: 10
-    value: 95.04495383
+    value: negative
+    limit_of_quantification: 95.04495383
   - analyte: stool_crAssphage
     time: 12
     value: 694.019185
   - analyte: stool_crAssphage
-    time: 18
-    value: negative
-  - analyte: stool_crAssphage
     time: 20
-    value: 97.71412784
+    value: negative
+    limit_of_quantification: 97.71412784
   - analyte: stool_crAssphage
     time: 27
-    value: 67.7336568
+    value: negative
+    limit_of_quantification: 67.7336568
   - analyte: stool_crAssphage
     time: 3
-    value: 89.63250825
+    value: negative
+    limit_of_quantification: 89.63250825
   - analyte: stool_crAssphage
     time: 7
-    value: 145.4201934
+    value: positive
+    limit_of_quantification: 145.4201934
 - attributes:
     age: 29
     sex: female
@@ -2634,10 +2803,12 @@ participants:
     value: 869152.5561
   - analyte: stool_crAssphage
     time: 5
-    value: 14.4451591
+    value: negative
+    limit_of_quantification: 14.4451591
   - analyte: stool_crAssphage
     time: 6
-    value: 16.71410174
+    value: negative
+    limit_of_quantification: 16.71410174
 - attributes:
     age: 35
     sex: male
@@ -2696,13 +2867,15 @@ participants:
     value: 26294.31193
   - analyte: stool_crAssphage
     time: 12
-    value: 447.7365754
+    value: positive
+    limit_of_quantification: 447.7365754
   - analyte: stool_crAssphage
     time: 17
     value: 2105.765969
   - analyte: stool_crAssphage
     time: 21
-    value: 16.33423579
+    value: negative
+    limit_of_quantification: 16.33423579
   - analyte: stool_crAssphage
     time: 28
     value: 2156.794195
@@ -2717,7 +2890,8 @@ participants:
     value: 6065.280688
   - analyte: stool_crAssphage
     time: 9
-    value: 496.5805654
+    value: positive
+    limit_of_quantification: 496.5805654
 - attributes:
     age: 61
     sex: female
@@ -2835,10 +3009,12 @@ participants:
     value: 193.9498433
   - analyte: stool_crAssphage
     time: 10
-    value: 3.005973185
+    value: negative
+    limit_of_quantification: 3.005973185
   - analyte: stool_crAssphage
     time: 11
-    value: 772.9791821
+    value: positive
+    limit_of_quantification: 772.9791821
   - analyte: stool_crAssphage
     time: 12
     value: 1710.102424
@@ -2847,28 +3023,35 @@ participants:
     value: 2403.523831
   - analyte: stool_crAssphage
     time: 17
-    value: 21.51815494
+    value: negative
+    limit_of_quantification: 21.51815494
   - analyte: stool_crAssphage
     time: 19
-    value: 13.13312497
+    value: negative
+    limit_of_quantification: 13.13312497
   - analyte: stool_crAssphage
     time: 21
-    value: 11.2810176
+    value: negative
+    limit_of_quantification: 11.2810176
   - analyte: stool_crAssphage
     time: 5
     value: 2165.165191
   - analyte: stool_crAssphage
     time: 6
-    value: 487.7130553
+    value: positive
+    limit_of_quantification: 487.7130553
   - analyte: stool_crAssphage
     time: 7
-    value: 4.593127027
+    value: negative
+    limit_of_quantification: 4.593127027
   - analyte: stool_crAssphage
     time: 8
-    value: 20.35528412
+    value: negative
+    limit_of_quantification: 20.35528412
   - analyte: stool_crAssphage
     time: 9
-    value: 4.349552109
+    value: negative
+    limit_of_quantification: 4.349552109
 - attributes:
     age: 39
     sex: male
@@ -2945,37 +3128,48 @@ participants:
     value: 835.7766775
   - analyte: stool_crAssphage
     time: 10
-    value: 3.777242621
+    value: negative
+    limit_of_quantification: 3.777242621
   - analyte: stool_crAssphage
     time: 11
-    value: 21.25331136
+    value: negative
+    limit_of_quantification: 21.25331136
   - analyte: stool_crAssphage
     time: 12
-    value: 9.616605171
+    value: negative
+    limit_of_quantification: 9.616605171
   - analyte: stool_crAssphage
     time: 13
-    value: 13.96697418
+    value: negative
+    limit_of_quantification: 13.96697418
   - analyte: stool_crAssphage
     time: 17
-    value: 15.17102367
+    value: negative
+    limit_of_quantification: 15.17102367
   - analyte: stool_crAssphage
     time: 21
-    value: 11.06816822
+    value: negative
+    limit_of_quantification: 11.06816822
   - analyte: stool_crAssphage
     time: 28
-    value: 9.669443661
+    value: negative
+    limit_of_quantification: 9.669443661
   - analyte: stool_crAssphage
     time: 6
-    value: 3.932471769
+    value: negative
+    limit_of_quantification: 3.932471769
   - analyte: stool_crAssphage
     time: 7
-    value: 24.08708621
+    value: negative
+    limit_of_quantification: 24.08708621
   - analyte: stool_crAssphage
     time: 8
-    value: 22.75945154
+    value: negative
+    limit_of_quantification: 22.75945154
   - analyte: stool_crAssphage
     time: 9
-    value: 299.1262082
+    value: positive
+    limit_of_quantification: 299.1262082
 - attributes:
     age: 17
     sex: female
@@ -3039,32 +3233,37 @@ participants:
     time: 8
     value: 57205.38625
   - analyte: stool_crAssphage
-    time: 10
-    value: negative
-  - analyte: stool_crAssphage
     time: 13
-    value: 30.99664905
+    value: negative
+    limit_of_quantification: 30.99664905
   - analyte: stool_crAssphage
     time: 14
-    value: 115.4548202
+    value: positive
+    limit_of_quantification: 115.4548202
   - analyte: stool_crAssphage
     time: 19
-    value: 96.62593827
+    value: positive
+    limit_of_quantification: 96.62593827
   - analyte: stool_crAssphage
     time: 21
-    value: 75.26652034
+    value: positive
+    limit_of_quantification: 75.26652034
   - analyte: stool_crAssphage
     time: 28
-    value: 33.55416221
+    value: negative
+    limit_of_quantification: 33.55416221
   - analyte: stool_crAssphage
     time: 6
-    value: 171.6220301
+    value: positive
+    limit_of_quantification: 171.6220301
   - analyte: stool_crAssphage
     time: 7
-    value: 128.7165226
+    value: positive
+    limit_of_quantification: 128.7165226
   - analyte: stool_crAssphage
     time: 8
-    value: 29.33907424
+    value: negative
+    limit_of_quantification: 29.33907424
 - attributes:
     age: 5
     sex: male
@@ -3153,43 +3352,52 @@ participants:
     value: 32525490.2
   - analyte: stool_crAssphage
     time: 10
-    value: 67.77553964
+    value: positive
+    limit_of_quantification: 67.77553964
   - analyte: stool_crAssphage
     time: 11
-    value: 83.14324921
+    value: positive
+    limit_of_quantification: 83.14324921
   - analyte: stool_crAssphage
     time: 13
-    value: 92.88484125
+    value: negative
+    limit_of_quantification: 92.88484125
   - analyte: stool_crAssphage
     time: 14
-    value: 72.59207545
+    value: positive
+    limit_of_quantification: 72.59207545
   - analyte: stool_crAssphage
     time: 17
-    value: 85.63256805
+    value: positive
+    limit_of_quantification: 85.63256805
   - analyte: stool_crAssphage
     time: 19
-    value: 70.7952419
+    value: positive
+    limit_of_quantification: 70.7952419
   - analyte: stool_crAssphage
     time: 2
-    value: 116.2653566
+    value: positive
+    limit_of_quantification: 116.2653566
   - analyte: stool_crAssphage
     time: 28
-    value: 91.08687175
+    value: positive
+    limit_of_quantification: 91.08687175
   - analyte: stool_crAssphage
     time: 3
-    value: 41.25117957
+    value: negative
+    limit_of_quantification: 41.25117957
   - analyte: stool_crAssphage
     time: 5
-    value: 96.21235021
+    value: positive
+    limit_of_quantification: 96.21235021
   - analyte: stool_crAssphage
     time: 7
-    value: 67.4558437
-  - analyte: stool_crAssphage
-    time: 8
-    value: negative
+    value: positive
+    limit_of_quantification: 67.4558437
   - analyte: stool_crAssphage
     time: 9
-    value: 140.0738628
+    value: positive
+    limit_of_quantification: 140.0738628
 - attributes:
     age: 43
     sex: female
@@ -3230,19 +3438,20 @@ participants:
     value: 396394.633
   - analyte: stool_crAssphage
     time: 21
-    value: 265.69864
+    value: positive
+    limit_of_quantification: 265.69864
   - analyte: stool_crAssphage
     time: 4
-    value: 95.97744204
+    value: positive
+    limit_of_quantification: 95.97744204
   - analyte: stool_crAssphage
     time: 5
-    value: 227.7416914
+    value: positive
+    limit_of_quantification: 227.7416914
   - analyte: stool_crAssphage
     time: 6
-    value: 75.26652034
-  - analyte: stool_crAssphage
-    time: 7
-    value: negative
+    value: positive
+    limit_of_quantification: 75.26652034
 - attributes:
     age: 49
     sex: male
@@ -3334,40 +3543,52 @@ participants:
     value: 455.1211762
   - analyte: stool_crAssphage
     time: 5
-    value: 125.5054073
+    value: positive
+    limit_of_quantification: 125.5054073
   - analyte: stool_crAssphage
     time: 6
-    value: 74.12166293
+    value: negative
+    limit_of_quantification: 74.12166293
   - analyte: stool_crAssphage
     time: 7
-    value: 68.41999655
+    value: negative
+    limit_of_quantification: 68.41999655
   - analyte: stool_crAssphage
     time: 11
-    value: 79.10192932
+    value: negative
+    limit_of_quantification: 79.10192932
   - analyte: stool_crAssphage
     time: 13
-    value: 18.70604775
+    value: negative
+    limit_of_quantification: 18.70604775
   - analyte: stool_crAssphage
     time: 15
-    value: 104.7931542
+    value: negative
+    limit_of_quantification: 104.7931542
   - analyte: stool_crAssphage
     time: -2
-    value: 134.9419041
+    value: positive
+    limit_of_quantification: 134.9419041
   - analyte: stool_crAssphage
     time: -1
-    value: 119.6484883
+    value: positive
+    limit_of_quantification: 119.6484883
   - analyte: stool_crAssphage
     time: 0
-    value: 93.9647814
+    value: positive
+    limit_of_quantification: 93.9647814
   - analyte: stool_crAssphage
     time: 1
-    value: 97.28325758
+    value: positive
+    limit_of_quantification: 97.28325758
   - analyte: stool_crAssphage
     time: 2
-    value: 113.393127
+    value: positive
+    limit_of_quantification: 113.393127
   - analyte: stool_crAssphage
     time: 3
-    value: 71.86250685
+    value: positive
+    limit_of_quantification: 71.86250685
 - attributes:
     age: 3
     sex: male
@@ -3432,31 +3653,40 @@ participants:
     value: 14319.93097
   - analyte: stool_crAssphage
     time: 7
-    value: 24.09593336
+    value: negative
+    limit_of_quantification: 24.09593336
   - analyte: stool_crAssphage
     time: 9
-    value: 17.00549796
+    value: negative
+    limit_of_quantification: 17.00549796
   - analyte: stool_crAssphage
     time: 10
-    value: 20.7844975
+    value: negative
+    limit_of_quantification: 20.7844975
   - analyte: stool_crAssphage
     time: 16
-    value: 14.54914825
+    value: negative
+    limit_of_quantification: 14.54914825
   - analyte: stool_crAssphage
     time: 2
-    value: 122.9035183
+    value: positive
+    limit_of_quantification: 122.9035183
   - analyte: stool_crAssphage
     time: 3
-    value: 34.63501458
+    value: negative
+    limit_of_quantification: 34.63501458
   - analyte: stool_crAssphage
     time: 4
-    value: 29.64112876
+    value: negative
+    limit_of_quantification: 29.64112876
   - analyte: stool_crAssphage
     time: 5
-    value: 69.30885812
+    value: negative
+    limit_of_quantification: 69.30885812
   - analyte: stool_crAssphage
     time: 6
-    value: 21.46595644
+    value: negative
+    limit_of_quantification: 21.46595644
 - attributes:
     age: 34
     sex: male
@@ -3515,28 +3745,32 @@ participants:
     value: 6128.238583
   - analyte: stool_crAssphage
     time: 10
-    value: 7.673728851
+    value: negative
+    limit_of_quantification: 7.673728851
   - analyte: stool_crAssphage
     time: 11
-    value: 6.219759174
-  - analyte: stool_crAssphage
-    time: 17
     value: negative
+    limit_of_quantification: 6.219759174
   - analyte: stool_crAssphage
     time: 28
-    value: 8.039144511
+    value: negative
+    limit_of_quantification: 8.039144511
   - analyte: stool_crAssphage
     time: 5
-    value: 3.644360814
+    value: negative
+    limit_of_quantification: 3.644360814
   - analyte: stool_crAssphage
     time: 7
-    value: 72.22544881
+    value: positive
+    limit_of_quantification: 72.22544881
   - analyte: stool_crAssphage
     time: 8
-    value: 6.252667953
+    value: negative
+    limit_of_quantification: 6.252667953
   - analyte: stool_crAssphage
     time: 9
-    value: 7.984825967
+    value: negative
+    limit_of_quantification: 7.984825967
 - attributes:
     age: 34
     sex: female
@@ -3648,10 +3882,12 @@ participants:
     value: 304.5515395
   - analyte: stool_crAssphage
     time: 18
-    value: 30.16572078
+    value: negative
+    limit_of_quantification: 30.16572078
   - analyte: stool_crAssphage
     time: -3
-    value: 18.18643531
+    value: negative
+    limit_of_quantification: 18.18643531
 - attributes:
     age: 1
     sex: female
@@ -3686,16 +3922,16 @@ participants:
     value: 344.0666618
   - analyte: stool_crAssphage
     time: 8
-    value: 28.44196531
-  - analyte: stool_crAssphage
-    time: 22
     value: negative
+    limit_of_quantification: 28.44196531
   - analyte: stool_crAssphage
     time: -1
-    value: 91.00094349
+    value: negative
+    limit_of_quantification: 91.00094349
   - analyte: stool_crAssphage
     time: 0
-    value: 19.93276163
+    value: negative
+    limit_of_quantification: 19.93276163
 - attributes:
     age: 35
     sex: female
@@ -3724,13 +3960,16 @@ participants:
     value: 538177.8909
   - analyte: stool_crAssphage
     time: 12
-    value: 16.37703392
+    value: negative
+    limit_of_quantification: 16.37703392
   - analyte: stool_crAssphage
     time: 21
-    value: 9.443209077
+    value: negative
+    limit_of_quantification: 9.443209077
   - analyte: stool_crAssphage
     time: 9
-    value: 15.71755605
+    value: negative
+    limit_of_quantification: 15.71755605
 - attributes:
     age: 41
     sex: male
@@ -3747,7 +3986,8 @@ participants:
     value: 1086348.813
   - analyte: stool_crAssphage
     time: 21
-    value: 444.943132
+    value: positive
+    limit_of_quantification: 444.943132
 - attributes:
     age: 41
     sex: female
@@ -3824,34 +4064,42 @@ participants:
     value: 540344.9177
   - analyte: stool_crAssphage
     time: 12
-    value: 18.73532681
+    value: negative
+    limit_of_quantification: 18.73532681
   - analyte: stool_crAssphage
     time: 13
-    value: 9.802893053
+    value: negative
+    limit_of_quantification: 9.802893053
   - analyte: stool_crAssphage
     time: 14
-    value: 14.35916729
+    value: negative
+    limit_of_quantification: 14.35916729
   - analyte: stool_crAssphage
     time: 17
-    value: 24.56230626
+    value: negative
+    limit_of_quantification: 24.56230626
   - analyte: stool_crAssphage
     time: 19
-    value: 23.79473419
+    value: negative
+    limit_of_quantification: 23.79473419
   - analyte: stool_crAssphage
     time: 21
-    value: 27.19398193
+    value: negative
+    limit_of_quantification: 27.19398193
   - analyte: stool_crAssphage
     time: 28
-    value: 20.14369032
+    value: negative
+    limit_of_quantification: 20.14369032
   - analyte: stool_crAssphage
     time: 6
-    value: 39.55505109
+    value: negative
+    limit_of_quantification: 39.55505109
   - analyte: stool_crAssphage
     time: 7
-    value: 11.08153128
+    value: negative
+    limit_of_quantification: 11.08153128
   - analyte: stool_crAssphage
     time: 8
-    value: 9.802893053
-  - analyte: stool_crAssphage
-    time: 9
     value: negative
+    limit_of_quantification: 9.802893053
+
