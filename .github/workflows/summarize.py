@@ -1,3 +1,4 @@
+import argparse
 import pandas as pd
 import subprocess
 import yaml
@@ -8,7 +9,11 @@ def with_name(x: pd.Series, name: str) -> pd.Series:
     return x
 
 
-def __main__() -> None:
+def __main__(argv=None) -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("output", nargs="?")
+    args = parser.parse_args(argv)
+
     # Get all changed data files compared with the main branch.
     output = subprocess.check_output(
         ["git", "diff", "--name-only", "origin/main"], text=True
@@ -20,6 +25,7 @@ def __main__() -> None:
     ]
 
     # Iterate over files and summarize their content.
+    lines = []
     for filename in filenames:
         with open(filename) as fp:
             data = yaml.safe_load(fp)
@@ -34,20 +40,32 @@ def __main__() -> None:
 
         # Summarize changes.
         grouped = measurements.groupby("analyte")
-        lines = [
-            f"🔄 Summary for changed file `{filename}`:",
-            "",
-            "```",
-            pd.DataFrame(
-                [
-                    with_name(grouped.count().value, "n_samples"),
-                    with_name(grouped.nunique().participant, "n_unique_participants"),
-                ]
-            ).T,
-            "```",
-        ]
+        lines.extend(
+            [
+                f"🔄 Summary for changed file `{filename}`:",
+                "",
+                "```",
+                pd.DataFrame(
+                    [
+                        with_name(grouped.count().value, "n_samples"),
+                        with_name(
+                            grouped.nunique().participant, "n_unique_participants"
+                        ),
+                    ]
+                ).T,
+                "```",
+                "",
+            ]
+        )
 
-        print("\n".join(map(str, lines)))
+    # Either print to stdout or save to file.
+    if lines:
+        text = "\n".join(map(str, lines))
+        if args.output:
+            with open(args.output, "w") as fp:
+                fp.write(text)
+        else:
+            print(text)
 
 
 if __name__ == "__main__":
