@@ -30,4 +30,5 @@ jobs:
         uses: mshick/add-pr-comment@v2
         if: steps.changes-comment.outputs.stdout
         with:
-          message: ${{ steps.changes-comment.outputs.stdout }}
+          message: |
+            ${{ steps.changes-comment.outputs.stdout }}
