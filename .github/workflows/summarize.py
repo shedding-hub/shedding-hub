@@ -10,7 +10,9 @@ def with_name(x: pd.Series, name: str) -> pd.Series:
 
 def __main__() -> None:
     # Get all changed data files compared with the main branch.
-    output = subprocess.check_output(["git", "diff", "--name-only", "main"], text=True)
+    output = subprocess.check_output(
+        ["git", "diff", "--name-only", "origin/main"], text=True
+    )
     filenames = [
         name
         for name in output.splitlines()
