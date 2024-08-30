@@ -154,13 +154,12 @@ properties:
                 - hispanic
                 - not hispanic
                 - unknown
-            inpatient:
-              description: Inpatient or outpatient status of the participant.
-              type: string
-              enum:
-                - inpatient
-                - outpatient
-                - unknown
+            vaccinated:
+              description: If the participant was vaccinated against the condition.
+              oneOf:
+                - type: boolean
+                - type: string
+                  constant: unknown
         measurements:
           type: array
           minItems: 1
