@@ -24,9 +24,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Create summary for changed files
         id: changes-comment
-        run: python .github/workflows/summarize.py
+        # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#setting-an-output-parameter
+        run: echo "stdout=`python .github/workflows/summarize.py`" >> $GITHUB_OUTPUT
       - name: Add PR comment if changes are available
         uses: mshick/add-pr-comment@v2
-        if: steps.changes-comment.outputs
+        if: steps.changes-comment.outputs.stdout
         with:
           message: ${{ steps.changes-comment.outputs.stdout }}
