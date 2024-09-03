@@ -22,15 +22,19 @@ def __main__(argv=None) -> None:
     )
     args = parser.parse_args(argv)
 
-    # Get all changed data files compared with the main branch.
-    output = subprocess.check_output(
-        ["git", "diff", "--name-only", "origin/main"], text=True
-    )
-    filenames = args.filenames or [
-        name
-        for name in output.splitlines()
-        if name.startswith("data/") and name.endswith(".yaml")
-    ]
+    # Get all changed data files compared with the main branch or the explicit
+    # filenames.
+    if args.filenames:
+        filenames = args.filenames
+    else:
+        output = subprocess.check_output(
+            ["git", "diff", "--name-only", "origin/main"], text=True
+        )
+        filenames = [
+            name
+            for name in output.splitlines()
+            if name.startswith("data/") and name.endswith(".yaml")
+        ]
 
     # Iterate over files and summarize their content.
     lines = []
