@@ -198,6 +198,11 @@ properties:
                 oneOf:
                   - type: number
                   - const: unknown
+              limit_of_blank:
+                description: Highest measurement result observed for a blank sample.
+                oneOf:
+                  - type: number
+                  - const: unknown
             required:
               - time
               - value
