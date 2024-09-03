@@ -136,6 +136,7 @@ properties:
               enum:
                 - female
                 - male
+                - unknown
             age:
               description: Age of the participant in years.
               oneOf:
@@ -143,6 +144,28 @@ properties:
                   minimum: 0
                   maximum: 120
                 - const: unknown
+            race:
+              description: Race of the participant.
+              type: string
+              enum:
+                - asian
+                - black
+                - white
+                - other
+                - unknown
+            ethnicity:
+              description: Ethnicity of the participant.
+              type: string
+              enum:
+                - hispanic
+                - not hispanic
+                - unknown
+            vaccinated:
+              description: If the participant was vaccinated against the condition.
+              oneOf:
+                - type: boolean
+                - type: string
+                  constant: unknown
         measurements:
           type: array
           minItems: 1

@@ -6,8 +6,9 @@ description: >
   The authors measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial
   DNA (mtDNA) in longitudinal stool samples collected from 42 COVID-19 patients for
   up to 42 days after the first sample collection date. Abundances were quantified
-  using Digital PCR assays targeting the N1 gences. The data was contributed by the
-  corresponding author.
+  using Digital PCR assays targeting the N1 genes. The symptom data (e.g., fever,
+  cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.)
+  is currently not included in this data.
 analytes:
   stool_SARSCoV2_N1:
     description: >
@@ -44,6 +45,9 @@ participants:
 - attributes:
     age: 44.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -67,6 +71,9 @@ participants:
 - attributes:
     age: 56.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -90,6 +97,9 @@ participants:
 - attributes:
     age: 43.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -104,6 +114,9 @@ participants:
 - attributes:
     age: 27.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -163,6 +176,9 @@ participants:
 - attributes:
     age: 30.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -213,6 +229,9 @@ participants:
 - attributes:
     age: 65.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -245,6 +264,9 @@ participants:
 - attributes:
     age: 27.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -259,6 +281,9 @@ participants:
 - attributes:
     age: 49.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -273,6 +298,9 @@ participants:
 - attributes:
     age: 62.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -323,6 +351,9 @@ participants:
 - attributes:
     age: 48.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -364,6 +395,9 @@ participants:
 - attributes:
     age: 44.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -378,6 +412,9 @@ participants:
 - attributes:
     age: 41.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -410,6 +447,9 @@ participants:
 - attributes:
     age: 45.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -424,6 +464,9 @@ participants:
 - attributes:
     age: 33.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -438,6 +481,9 @@ participants:
 - attributes:
     age: 54.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -470,6 +516,9 @@ participants:
 - attributes:
     age: 58.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -493,6 +542,9 @@ participants:
 - attributes:
     age: 66.0
     sex: male
+    race: asian
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -534,6 +586,9 @@ participants:
 - attributes:
     age: 65.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -566,6 +621,9 @@ participants:
 - attributes:
     age: 31.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -589,6 +647,9 @@ participants:
 - attributes:
     age: 71.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -603,6 +664,9 @@ participants:
 - attributes:
     age: 46.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -626,6 +690,9 @@ participants:
 - attributes:
     age: 32.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -667,6 +734,9 @@ participants:
 - attributes:
     age: 68.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -726,6 +796,9 @@ participants:
 - attributes:
     age: 47.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -740,6 +813,9 @@ participants:
 - attributes:
     age: 75.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -781,6 +857,9 @@ participants:
 - attributes:
     age: 55.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -813,6 +892,9 @@ participants:
 - attributes:
     age: 59.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -872,6 +954,9 @@ participants:
 - attributes:
     age: 31.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -931,6 +1016,9 @@ participants:
 - attributes:
     age: 57.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -990,6 +1078,9 @@ participants:
 - attributes:
     age: 55.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1013,6 +1104,9 @@ participants:
 - attributes:
     age: 64.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1072,6 +1166,9 @@ participants:
 - attributes:
     age: 38.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1131,6 +1228,9 @@ participants:
 - attributes:
     age: unknown
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1190,6 +1290,9 @@ participants:
 - attributes:
     age: 31.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1249,6 +1352,9 @@ participants:
 - attributes:
     age: 31.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1308,6 +1414,9 @@ participants:
 - attributes:
     age: 26.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1367,6 +1476,9 @@ participants:
 - attributes:
     age: 25.0
     sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1399,6 +1511,9 @@ participants:
 - attributes:
     age: 27.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1449,6 +1564,9 @@ participants:
 - attributes:
     age: 28.0
     sex: female
+    race: white
+    ethnicity: hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1472,6 +1590,9 @@ participants:
 - attributes:
     age: 21.0
     sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1531,6 +1652,9 @@ participants:
 - attributes:
     age: 36.0
     sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: true
   measurements:
   - analyte: stool_SARSCoV2_N1
@@ -1590,6 +1714,9 @@ participants:
 - attributes:
     age: 26.0
     sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
     vaccinated: false
   measurements:
   - analyte: stool_SARSCoV2_N1
