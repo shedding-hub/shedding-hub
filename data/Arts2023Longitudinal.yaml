@@ -13,7 +13,9 @@ analytes:
       Concentration of RNA of the N gene quantified using (RT)-ddPCR in stool samples.
       The concentration was quantified in gene copies per dry weight of stool. The
       limit of blank (LOB), determined as the upper 95% confidence limit of the negative
-      extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight.
+      extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight. The reported
+      number is either the measured concentration of SARS-CoV-2 N or the LOB if the
+      concentration wasn't detectable. 
     limit_of_quantification: unknown
     limit_of_detection: unknown
     limit_of_blank: 1550
@@ -28,7 +30,8 @@ analytes:
       samples. The concentration was quantified in gene copies per dry weight of
       stool. The limit of blank (LOB), determined as the upper 95% confidence limit
       of the negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry
-      weight.
+      weight. The reported number is either the measured concentration of SARS-CoV-2
+      ORF1a or the LOB if the concentration wasn't detectable.
     limit_of_quantification: unknown
     limit_of_detection: unknown
     limit_of_blank: 1550
@@ -40,7 +43,9 @@ analytes:
   stool_PMMoV:
     description: >
       Concentration of PMMoV RNA was measured by ddPCR on the same day as the SARS-CoV-2.
-      The concentration was quantified in gene copies per dry weight of stool.
+      The concentration was quantified in gene copies per dry weight of stool. The
+      reported number is either the measured concentration of PMMoV or the LOB if
+      the concentration wasn't detectable.
     limit_of_quantification: unknown
     limit_of_detection: unknown
     limit_of_blank: 400
@@ -108,73 +113,95 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 39.32209494
+    value: negative
+    limit_of_blank: 39.32209494
   - analyte: stool_SARSCoV2_N
     time: 15
-    value: 59.18115768
+    value: negative
+    limit_of_blank: 59.18115768
   - analyte: stool_SARSCoV2_N
     time: 18
-    value: 19.73616738
+    value: negative
+    limit_of_blank: 19.73616738
   - analyte: stool_SARSCoV2_N
     time: 20
-    value: 663.1168831
+    value: negative
+    limit_of_blank: 663.1168831
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 28.68347339
+    value: negative
+    limit_of_blank: 28.68347339
   - analyte: stool_SARSCoV2_N
     time: 4
-    value: 36.58686717
+    value: negative
+    limit_of_blank: 36.58686717
   - analyte: stool_SARSCoV2_N
     time: 8
-    value: 44.02899916
+    value: negative
+    limit_of_blank: 44.02899916
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 30.18656386
+    value: negative
+    limit_of_blank: 30.18656386
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 29.52744008
+    value: negative
+    limit_of_blank: 29.52744008
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 11.16764559
+    value: negative
+    limit_of_blank: 11.16764559
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 62.64206897
+    value: negative
+    limit_of_blank: 62.64206897
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 39.32209494
+    value: negative
+    limit_of_blank: 39.32209494
   - analyte: stool_SARSCoV2_ORF1a
     time: 15
     value: 59.18115768
   - analyte: stool_SARSCoV2_ORF1a
     time: 18
-    value: 31.42701812
+    value: negative
+    limit_of_blank: 31.42701812
   - analyte: stool_SARSCoV2_ORF1a
     time: 20
-    value: 663.1168831
+    value: negative
+    limit_of_blank: 663.1168831
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 28.68347339
+    value: negative
+    limit_of_blank: 28.68347339
   - analyte: stool_SARSCoV2_ORF1a
     time: 4
-    value: 36.58686717
+    value: negative
+    limit_of_blank: 36.58686717
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 44.02899916
+    value: negative
+    limit_of_blank: 44.02899916
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 30.18656386
+    value: negative
+    limit_of_blank: 30.18656386
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 29.52744008
+    value: negative
+    limit_of_blank: 29.52744008
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 11.16764559
+    value: negative
+    limit_of_blank: 11.16764559
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 62.64206897
+    value: negative
+    limit_of_blank: 62.64206897
   - analyte: stool_PMMoV
     time: 13
-    value: 84.21926819
+    value: negative
+    limit_of_blank: 84.21926819
   - analyte: stool_PMMoV
     time: 15
     value: 771.9281437
@@ -189,13 +216,15 @@ participants:
     value: 27.42313895
   - analyte: stool_PMMoV
     time: 4
-    value: 97.12882206
+    value: negative
+    limit_of_blank: 97.12882206
   - analyte: stool_PMMoV
     time: 8
     value: 1786.39529
   - analyte: stool_PMMoV
     time: 9
-    value: 80.13764546
+    value: negative
+    limit_of_blank: 80.13764546
   - analyte: stool_PMMoV
     time: 10
     value: 451.8228188
@@ -204,7 +233,8 @@ participants:
     value: 101.4743654
   - analyte: stool_PMMoV
     time: 12
-    value: 69.06689655
+    value: negative
+    limit_of_blank: 69.06689655
   - analyte: stool_crAssphage
     time: 13
     value: positive
@@ -254,40 +284,52 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 5
-    value: 1548.283333
+    value: negative
+    limit_of_blank: 1548.283333
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 22.14578171
+    value: negative
+    limit_of_blank: 22.14578171
   - analyte: stool_SARSCoV2_N
     time: 20
-    value: 112.2333333
+    value: negative
+    limit_of_blank: 112.2333333
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 39.04191959
+    value: negative
+    limit_of_blank: 39.04191959
   - analyte: stool_SARSCoV2_N
     time: 8
-    value: 54.77600813
+    value: negative
+    limit_of_blank: 54.77600813
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 42.57677762
+    value: negative
+    limit_of_blank: 42.57677762
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
-    value: 1548.283333
+    value: negative
+    limit_of_blank: 1548.283333
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 22.14578171
+    value: negative
+    limit_of_blank: 22.14578171
   - analyte: stool_SARSCoV2_ORF1a
     time: 20
-    value: 112.2333333
+    value: negative
+    limit_of_blank: 112.2333333
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 39.04191959
+    value: negative
+    limit_of_blank: 39.04191959
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 54.77600813
+    value: negative
+    limit_of_blank: 54.77600813
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 42.57677762
+    value: negative
+    limit_of_blank: 42.57677762
   - analyte: stool_PMMoV
     time: 5
     value: 56930.66667
@@ -340,19 +382,23 @@ participants:
     value: 24847.18879
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 22.94138813
+    value: negative
+    limit_of_blank: 22.94138813
   - analyte: stool_SARSCoV2_N
     time: 15
-    value: 45.12512513
+    value: negative
+    limit_of_blank: 45.12512513
   - analyte: stool_SARSCoV2_N
     time: 4
     value: 16388.00522
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 44.61421449
+    value: negative
+    limit_of_blank: 44.61421449
   - analyte: stool_SARSCoV2_N
     time: 26
-    value: 23.88794326
+    value: negative
+    limit_of_blank: 23.88794326
   - analyte: stool_SARSCoV2_N
     time: 5
     value: 1053.352922
@@ -361,13 +407,15 @@ participants:
     value: 4750.0
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 47.40963626
+    value: negative
+    limit_of_blank: 47.40963626
   - analyte: stool_SARSCoV2_N
     time: 8
     value: 474.9850048
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 38.8416
+    value: negative
+    limit_of_blank: 38.8416
   - analyte: stool_SARSCoV2_N
     time: 11
     value: 25.02023327
@@ -376,10 +424,12 @@ participants:
     value: 3922.067469
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 22.94138813
+    value: negative
+    limit_of_blank: 22.94138813
   - analyte: stool_SARSCoV2_ORF1a
     time: 15
-    value: 45.12512513
+    value: negative
+    limit_of_blank: 45.12512513
   - analyte: stool_SARSCoV2_ORF1a
     time: 4
     value: 5454.132986
@@ -388,7 +438,8 @@ participants:
     value: 44.61421449
   - analyte: stool_SARSCoV2_ORF1a
     time: 26
-    value: 23.88794326
+    value: negative
+    limit_of_blank: 23.88794326
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
     value: 253.9590605
@@ -397,16 +448,19 @@ participants:
     value: 1630.0
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 47.40963626
+    value: negative
+    limit_of_blank: 47.40963626
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
     value: 153.6894156
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 38.8416
+    value: negative
+    limit_of_blank: 38.8416
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 22.79791546
+    value: negative
+    limit_of_blank: 22.79791546
   - analyte: stool_PMMoV
     time: 3
     value: 25181.45591
@@ -436,7 +490,8 @@ participants:
     value: 7481.957722
   - analyte: stool_PMMoV
     time: 8
-    value: 3533.646405
+    value: negative
+    limit_of_blank: 3533.646405
   - analyte: stool_PMMoV
     time: 9
     value: 4530.432
@@ -487,52 +542,67 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 4
-    value: 34.72774869
+    value: negative
+    limit_of_blank: 34.72774869
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 43.74908265
+    value: negative
+    limit_of_blank: 43.74908265
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 60.2989899
+    value: negative
+    limit_of_blank: 60.2989899
   - analyte: stool_SARSCoV2_N
     time: 5
-    value: 61.97404242
+    value: negative
+    limit_of_blank: 61.97404242
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 24.8214849
+    value: negative
+    limit_of_blank: 24.8214849
   - analyte: stool_SARSCoV2_N
     time: 6
-    value: 41.90480176
+    value: negative
+    limit_of_blank: 41.90480176
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 60.56805272
+    value: negative
+    limit_of_blank: 60.56805272
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 81.31216931
+    value: negative
+    limit_of_blank: 81.31216931
   - analyte: stool_SARSCoV2_ORF1a
     time: 4
-    value: 34.72774869
+    value: negative
+    limit_of_blank: 34.72774869
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 43.74908265
+    value: negative
+    limit_of_blank: 43.74908265
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 60.2989899
+    value: negative
+    limit_of_blank: 60.2989899
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
-    value: 61.97404242
+    value: negative
+    limit_of_blank: 61.97404242
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 24.8214849
+    value: negative
+    limit_of_blank: 24.8214849
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
     value: 41.90480176
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 60.56805272
+    value: negative
+    limit_of_blank: 60.56805272
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 81.31216931
+    value: negative
+    limit_of_blank: 81.31216931
   - analyte: stool_PMMoV
     time: 4
     value: 1583795.812
@@ -614,7 +684,8 @@ participants:
     value: 233334.8663
   - analyte: stool_SARSCoV2_N
     time: 5
-    value: 26.05509444
+    value: negative
+    limit_of_blank: 26.05509444
   - analyte: stool_SARSCoV2_N
     time: 21
     value: 26284.125
@@ -638,7 +709,8 @@ participants:
     value: 102942.2829
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 40.35513947
+    value: negative
+    limit_of_blank: 40.35513947
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
     value: 2599.318594
@@ -656,7 +728,8 @@ participants:
     value: 210.9737828
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 37.85238871
+    value: negative
+    limit_of_blank: 37.85238871
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
     value: 1327.327156
@@ -798,7 +871,8 @@ participants:
     value: 83.87752796
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 28.27695864
+    value: negative
+    limit_of_blank: 28.27695864
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
     value: 480.46321
@@ -869,31 +943,40 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 40.59125254
+    value: negative
+    limit_of_blank: 40.59125254
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 261.36
+    value: negative
+    limit_of_blank: 261.36
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 41.59192854
+    value: negative
+    limit_of_blank: 41.59192854
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 234.5
+    value: negative
+    limit_of_blank: 234.5
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 34.14945389
+    value: negative
+    limit_of_blank: 34.14945389
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 62.89633911
+    value: negative
+    limit_of_blank: 62.89633911
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 310.7536232
+    value: negative
+    limit_of_blank: 310.7536232
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 66.34233062
+    value: negative
+    limit_of_blank: 66.34233062
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 41.58714286
+    value: negative
+    limit_of_blank: 41.58714286
   - analyte: stool_SARSCoV2_N
     time: 6
     value: 534.0
@@ -905,34 +988,44 @@ participants:
     value: 85.75291222
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 42.76167738
+    value: negative
+    limit_of_blank: 42.76167738
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 40.59125254
+    value: negative
+    limit_of_blank: 40.59125254
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 261.36
+    value: negative
+    limit_of_blank: 261.36
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 41.59192854
+    value: negative
+    limit_of_blank: 41.59192854
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 234.5
+    value: negative
+    limit_of_blank: 234.5
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 34.14945389
+    value: negative
+    limit_of_blank: 34.14945389
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 100.260501
+    value: negative
+    limit_of_blank: 100.260501
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 310.7536232
+    value: negative
+    limit_of_blank: 310.7536232
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 66.34233062
+    value: negative
+    limit_of_blank: 66.34233062
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 41.58714286
+    value: negative
+    limit_of_blank: 41.58714286
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
     value: 381.9727919
@@ -941,10 +1034,12 @@ participants:
     value: 80.7
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 70.67680248
+    value: negative
+    limit_of_blank: 70.67680248
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 42.76167738
+    value: negative
+    limit_of_blank: 42.76167738
   - analyte: stool_PMMoV
     time: 10
     value: 307.1285037
@@ -980,7 +1075,8 @@ participants:
     value: 923.9966012
   - analyte: stool_PMMoV
     time: 8
-    value: 389.5666758
+    value: negative
+    limit_of_blank: 389.5666758
   - analyte: stool_PMMoV
     time: 9
     value: 135000.0
@@ -1048,22 +1144,28 @@ participants:
     value: 47.3
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 45.30267787
+    value: negative
+    limit_of_blank: 45.30267787
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 32.81178263
+    value: negative
+    limit_of_blank: 32.81178263
   - analyte: stool_SARSCoV2_N
     time: 16
-    value: 24.4985239
+    value: negative
+    limit_of_blank: 24.4985239
   - analyte: stool_SARSCoV2_N
     time: 18
-    value: 105.2976827
+    value: negative
+    limit_of_blank: 105.2976827
   - analyte: stool_SARSCoV2_N
     time: 20
-    value: 134.8110276
+    value: negative
+    limit_of_blank: 134.8110276
   - analyte: stool_SARSCoV2_N
     time: 27
-    value: 40.78065748
+    value: negative
+    limit_of_blank: 40.78065748
   - analyte: stool_SARSCoV2_N
     time: 5
     value: 152.398056
@@ -1075,25 +1177,32 @@ participants:
     value: 63.4
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 33.05732012
+    value: negative
+    limit_of_blank: 33.05732012
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 45.30267787
+    value: negative
+    limit_of_blank: 45.30267787
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 32.81178263
+    value: negative
+    limit_of_blank: 32.81178263
   - analyte: stool_SARSCoV2_ORF1a
     time: 16
-    value: 24.4985239
+    value: negative
+    limit_of_blank: 24.4985239
   - analyte: stool_SARSCoV2_ORF1a
     time: 18
-    value: 105.2976827
+    value: negative
+    limit_of_blank: 105.2976827
   - analyte: stool_SARSCoV2_ORF1a
     time: 20
-    value: 134.8110276
+    value: negative
+    limit_of_blank: 134.8110276
   - analyte: stool_SARSCoV2_ORF1a
     time: 27
-    value: 40.78065748
+    value: negative
+    limit_of_blank: 40.78065748
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
     value: 211.884286
@@ -1237,34 +1346,44 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 176.9327666
+    value: negative
+    limit_of_blank: 176.9327666
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 191.1054895
+    value: negative
+    limit_of_blank: 191.1054895
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 178.5436454
+    value: negative
+    limit_of_blank: 178.5436454
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 336.0397727
+    value: negative
+    limit_of_blank: 336.0397727
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 53.70925926
+    value: negative
+    limit_of_blank: 53.70925926
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 176.9327666
+    value: negative
+    limit_of_blank: 176.9327666
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 191.1054895
+    value: negative
+    limit_of_blank: 191.1054895
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 178.5436454
+    value: negative
+    limit_of_blank: 178.5436454
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 336.0397727
+    value: negative
+    limit_of_blank: 336.0397727
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 53.70925926
+    value: negative
+    limit_of_blank: 53.70925926
   - analyte: stool_PMMoV
     time: 14
     value: 238.2362322
@@ -1339,55 +1458,67 @@ participants:
     value: 33.92899043
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 38.6497561
+    value: negative
+    limit_of_blank: 38.6497561
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 39.62915068
+    value: negative
+    limit_of_blank: 39.62915068
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 63.84197531
+    value: negative
+    limit_of_blank: 63.84197531
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 33.09116484
+    value: negative
+    limit_of_blank: 33.09116484
   - analyte: stool_SARSCoV2_N
     time: 5
     value: 21.7249484
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 73.25433437
+    value: negative
+    limit_of_blank: 73.25433437
   - analyte: stool_SARSCoV2_N
     time: 8
     value: 33.61887503
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 25.4567044
+    value: negative
+    limit_of_blank: 25.4567044
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
     value: 5625.069466
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 38.6497561
+    value: negative
+    limit_of_blank: 38.6497561
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 39.62915068
+    value: negative
+    limit_of_blank: 39.62915068
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
     value: 104.2962963
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 33.09116484
+    value: negative
+    limit_of_blank: 33.09116484
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
     value: 72.41649466
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 73.25433437
+    value: negative
+    limit_of_blank: 73.25433437
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 26.0636225
+    value: negative
+    limit_of_blank: 26.0636225
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 25.4567044
+    value: negative
+    limit_of_blank: 25.4567044
   - analyte: stool_PMMoV
     time: 10
     value: 12351343.01
@@ -1459,28 +1590,35 @@ participants:
     value: 36.61899904
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 15.0328634
+    value: negative
+    limit_of_blank: 15.0328634
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 19.30661633
+    value: negative
+    limit_of_blank: 19.30661633
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 15.49857171
+    value: negative
+    limit_of_blank: 15.49857171
   - analyte: stool_SARSCoV2_N
     time: 13
     value: 53.28324125
   - analyte: stool_SARSCoV2_N
     time: 16
-    value: 20.81753083
+    value: negative
+    limit_of_blank: 20.81753083
   - analyte: stool_SARSCoV2_N
     time: 18
-    value: 17.67063063
+    value: negative
+    limit_of_blank: 17.67063063
   - analyte: stool_SARSCoV2_N
     time: 20
-    value: 21.70894309
+    value: negative
+    limit_of_blank: 21.70894309
   - analyte: stool_SARSCoV2_N
     time: 27
-    value: 15.13984127
+    value: negative
+    limit_of_blank: 15.13984127
   - analyte: stool_SARSCoV2_N
     time: 4
     value: 60.91961086
@@ -1501,28 +1639,36 @@ participants:
     value: 21.92881919
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 15.0328634
+    value: negative
+    limit_of_blank: 15.0328634
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 19.30661633
+    value: negative
+    limit_of_blank: 19.30661633
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 15.49857171
+    value: negative
+    limit_of_blank: 15.49857171
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 52.96177373
+    value: negative
+    limit_of_blank: 52.96177373
   - analyte: stool_SARSCoV2_ORF1a
     time: 16
-    value: 20.81753083
+    value: negative
+    limit_of_blank: 20.81753083
   - analyte: stool_SARSCoV2_ORF1a
     time: 18
-    value: 17.67063063
+    value: negative
+    limit_of_blank: 17.67063063
   - analyte: stool_SARSCoV2_ORF1a
     time: 20
-    value: 21.70894309
+    value: negative
+    limit_of_blank: 21.70894309
   - analyte: stool_SARSCoV2_ORF1a
     time: 27
-    value: 15.13984127
+    value: negative
+    limit_of_blank: 15.13984127
   - analyte: stool_SARSCoV2_ORF1a
     time: 4
     value: 30.50666667
@@ -1643,22 +1789,28 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 26.49102835
+    value: negative
+    limit_of_blank: 26.49102835
   - analyte: stool_SARSCoV2_N
     time: 15
-    value: 32.90633947
+    value: negative
+    limit_of_blank: 32.90633947
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 25.38930041
+    value: negative
+    limit_of_blank: 25.38930041
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 26.16425896
+    value: negative
+    limit_of_blank: 26.16425896
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 30.52348993
+    value: negative
+    limit_of_blank: 30.52348993
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 34.47294562
+    value: negative
+    limit_of_blank: 34.47294562
   - analyte: stool_SARSCoV2_N
     time: 5
     value: 184.7908257
@@ -1670,25 +1822,31 @@ participants:
     value: 54.97476497
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 28.98061901
+    value: negative
+    limit_of_blank: 28.98061901
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 26.49102835
+    value: negative
+    limit_of_blank: 26.49102835
   - analyte: stool_SARSCoV2_ORF1a
     time: 15
-    value: 32.90633947
+    value: negative
+    limit_of_blank: 32.90633947
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 25.38930041
+    value: negative
+    limit_of_blank: 25.38930041
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 26.16425896
+    value: negative
+    limit_of_blank: 26.16425896
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
     value: 38.1979674
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 34.47294562
+    value: negative
+    limit_of_blank: 34.47294562
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
     value: 196.6752294
@@ -1700,7 +1858,8 @@ participants:
     value: 100.5007422
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 28.98061901
+    value: negative
+    limit_of_blank: 28.98061901
   - analyte: stool_PMMoV
     time: 10
     value: 349368.461
@@ -1778,16 +1937,20 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 43.72788462
+    value: negative
+    limit_of_blank: 43.72788462
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 55.62776735
+    value: negative
+    limit_of_blank: 55.62776735
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 43.72788462
+    value: negative
+    limit_of_blank: 43.72788462
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 47.31557223
+    value: negative
+    limit_of_blank: 47.31557223
   - analyte: stool_PMMoV
     time: 17
     value: 13614.66346
@@ -1821,16 +1984,20 @@ participants:
     value: 176.0159593
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 20.8236073
+    value: negative
+    limit_of_blank: 20.8236073
   - analyte: stool_SARSCoV2_N
     time: 16
-    value: 27.93213671
+    value: negative
+    limit_of_blank: 27.93213671
   - analyte: stool_SARSCoV2_N
     time: 18
-    value: 30.89659607
+    value: negative
+    limit_of_blank: 30.89659607
   - analyte: stool_SARSCoV2_N
     time: 25
-    value: 19.86271711
+    value: negative
+    limit_of_blank: 19.86271711
   - analyte: stool_SARSCoV2_N
     time: 1
     value: 4949.51567
@@ -1866,13 +2033,16 @@ participants:
     value: 20.8236073
   - analyte: stool_SARSCoV2_ORF1a
     time: 16
-    value: 27.93213671
+    value: negative
+    limit_of_blank: 27.93213671
   - analyte: stool_SARSCoV2_ORF1a
     time: 18
-    value: 30.89659607
+    value: negative
+    limit_of_blank: 30.89659607
   - analyte: stool_SARSCoV2_ORF1a
     time: 25
-    value: 19.86271711
+    value: negative
+    limit_of_blank: 19.86271711
   - analyte: stool_SARSCoV2_ORF1a
     time: 1
     value: 4104.311491
@@ -2112,22 +2282,28 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 32.94024368
+    value: negative
+    limit_of_blank: 32.94024368
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 25.19122886
+    value: negative
+    limit_of_blank: 25.19122886
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 22.11959831
+    value: negative
+    limit_of_blank: 22.11959831
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 24.96908939
+    value: negative
+    limit_of_blank: 24.96908939
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 20.92086331
+    value: negative
+    limit_of_blank: 20.92086331
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 18.61601355
+    value: negative
+    limit_of_blank: 18.61601355
   - analyte: stool_SARSCoV2_N
     time: 6
     value: 14049.84802
@@ -2136,25 +2312,30 @@ participants:
     value: 9124.767225
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 31.61503802
+    value: negative
+    limit_of_blank: 31.61503802
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
     value: 40.50569194
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 25.19122886
+    value: negative
+    limit_of_blank: 25.19122886
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 22.11959831
+    value: negative
+    limit_of_blank: 22.11959831
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
     value: 55.64539921
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 20.92086331
+    value: negative
+    limit_of_blank: 20.92086331
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 18.61601355
+    value: negative
+    limit_of_blank: 18.61601355
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
     value: 4770.010132
@@ -2163,13 +2344,15 @@ participants:
     value: 7550.297586
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 31.61503802
+    value: negative
+    limit_of_blank: 31.61503802
   - analyte: stool_PMMoV
     time: 10
     value: 465.6744863
   - analyte: stool_PMMoV
     time: 11
-    value: 146.2600591
+    value: negative
+    limit_of_blank: 146.2600591
   - analyte: stool_PMMoV
     time: 12
     value: 66548121.01
@@ -2190,7 +2373,8 @@ participants:
     value: 3374.374703
   - analyte: stool_PMMoV
     time: 9
-    value: 183.5566401
+    value: negative
+    limit_of_blank: 183.5566401
   - analyte: stool_crAssphage
     time: 10
     value: positive
@@ -2306,7 +2490,8 @@ participants:
     value: 187.326056
   - analyte: stool_PMMoV
     time: 9
-    value: 1373.071895
+    value: negative
+    limit_of_blank: 1373.071895
   - analyte: stool_PMMoV
     time: 10
     value: 459.7236788
@@ -2318,7 +2503,8 @@ participants:
     value: 67.84232868
   - analyte: stool_PMMoV
     time: 13
-    value: 63.47823691
+    value: negative
+    limit_of_blank: 63.47823691
   - analyte: stool_PMMoV
     time: 18
     value: 102.9513742
@@ -2327,7 +2513,8 @@ participants:
     value: 39991261.17
   - analyte: stool_PMMoV
     time: 4
-    value: 236.9044118
+    value: negative
+    limit_of_blank: 236.9044118
   - analyte: stool_PMMoV
     time: 5
     value: 183.1621074
@@ -2407,10 +2594,12 @@ participants:
     value: 472.2758621
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 50.59983292
+    value: negative
+    limit_of_blank: 50.59983292
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 226.9470476
+    value: negative
+    limit_of_blank: 226.9470476
   - analyte: stool_SARSCoV2_N
     time: 5
     value: 56.42538741
@@ -2443,7 +2632,8 @@ participants:
     value: 62.69005848
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 226.9470476
+    value: negative
+    limit_of_blank: 226.9470476
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
     value: 56.42538741
@@ -2543,58 +2733,76 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 22.44016461
+    value: negative
+    limit_of_blank: 22.44016461
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 33.76834467
+    value: negative
+    limit_of_blank: 33.76834467
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 19.21035599
+    value: negative
+    limit_of_blank: 19.21035599
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 45.85476776
+    value: negative
+    limit_of_blank: 45.85476776
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 24.3099894
+    value: negative
+    limit_of_blank: 24.3099894
   - analyte: stool_SARSCoV2_N
     time: 6
-    value: 46.17358699
+    value: negative
+    limit_of_blank: 46.17358699
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 146.2597531
+    value: negative
+    limit_of_blank: 146.2597531
   - analyte: stool_SARSCoV2_N
     time: 8
-    value: 37.62076451
+    value: negative
+    limit_of_blank: 37.62076451
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 40.47185174
+    value: negative
+    limit_of_blank: 40.47185174
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 22.44016461
+    value: negative
+    limit_of_blank: 22.44016461
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 33.76834467
+    value: negative
+    limit_of_blank: 33.76834467
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 19.21035599
+    value: negative
+    limit_of_blank: 19.21035599
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 45.85476776
+    value: negative
+    limit_of_blank: 45.85476776
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 24.3099894
+    value: negative
+    limit_of_blank: 24.3099894
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
-    value: 46.17358699
+    value: negative
+    limit_of_blank: 46.17358699
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 146.2597531
+    value: negative
+    limit_of_blank: 146.2597531
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 37.62076451
+    value: negative
+    limit_of_blank: 37.62076451
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 40.47185174
+    value: negative
+    limit_of_blank: 40.47185174
   - analyte: stool_PMMoV
     time: 10
     value: 781.5144033
@@ -2665,19 +2873,24 @@ participants:
     value: 49.68300139
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 35.40102615
+    value: negative
+    limit_of_blank: 35.40102615
   - analyte: stool_SARSCoV2_N
     time: 22
-    value: 25.51152074
+    value: negative
+    limit_of_blank: 25.51152074
   - analyte: stool_SARSCoV2_N
     time: 5
-    value: 22.90021019
+    value: negative
+    limit_of_blank: 22.90021019
   - analyte: stool_SARSCoV2_N
     time: 24
-    value: 28.10061587
+    value: negative
+    limit_of_blank: 28.10061587
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 32.30516046
+    value: negative
+    limit_of_blank: 32.30516046
   - analyte: stool_SARSCoV2_N
     time: 6
     value: 7276.712329
@@ -2701,16 +2914,20 @@ participants:
     value: 58.83118508
   - analyte: stool_SARSCoV2_ORF1a
     time: 22
-    value: 25.51152074
+    value: negative
+    limit_of_blank: 25.51152074
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
-    value: 22.90021019
+    value: negative
+    limit_of_blank: 22.90021019
   - analyte: stool_SARSCoV2_ORF1a
     time: 24
-    value: 28.10061587
+    value: negative
+    limit_of_blank: 28.10061587
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 32.30516046
+    value: negative
+    limit_of_blank: 32.30516046
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
     value: 3660.273973
@@ -2893,64 +3110,84 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 29.63365479
+    value: negative
+    limit_of_blank: 29.63365479
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 36.0857547
+    value: negative
+    limit_of_blank: 36.0857547
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 26.87880486
+    value: negative
+    limit_of_blank: 26.87880486
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 63.31873584
+    value: negative
+    limit_of_blank: 63.31873584
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 27.78611366
+    value: negative
+    limit_of_blank: 27.78611366
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 31.9580284
+    value: negative
+    limit_of_blank: 31.9580284
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 38.52928461
+    value: negative
+    limit_of_blank: 38.52928461
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 29.0454082
+    value: negative
+    limit_of_blank: 29.0454082
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 27.4794926
+    value: negative
+    limit_of_blank: 27.4794926
   - analyte: stool_SARSCoV2_N
     time: 5
-    value: 44.53716507
+    value: negative
+    limit_of_blank: 44.53716507
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 29.63365479
+    value: negative
+    limit_of_blank: 29.63365479
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 36.0857547
+    value: negative
+    limit_of_blank: 36.0857547
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 26.87880486
+    value: negative
+    limit_of_blank: 26.87880486
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 63.31873584
+    value: negative
+    limit_of_blank: 63.31873584
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 27.78611366
+    value: negative
+    limit_of_blank: 27.78611366
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 31.9580284
+    value: negative
+    limit_of_blank: 31.9580284
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 38.52928461
+    value: negative
+    limit_of_blank: 38.52928461
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 29.0454082
+    value: negative
+    limit_of_blank: 29.0454082
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 23.37336152
+    value: negative
+    limit_of_blank: 23.37336152
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
-    value: 44.53716507
+    value: negative
+    limit_of_blank: 44.53716507
   - analyte: stool_PMMoV
     time: 10
     value: 196.5584906
@@ -3028,10 +3265,12 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 60.46063492
+    value: negative
+    limit_of_blank: 60.46063492
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 60.46063492
+    value: negative
+    limit_of_blank: 60.46063492
   - analyte: stool_PMMoV
     time: 12
     value: 63763.49206
@@ -3045,10 +3284,12 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 26.82844652
+    value: negative
+    limit_of_blank: 26.82844652
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 26.82844652
+    value: negative
+    limit_of_blank: 26.82844652
   - analyte: stool_PMMoV
     time: 9
     value: 97156.51414
@@ -3095,37 +3336,43 @@ participants:
     value: 4188.890026
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 56.29542387
+    value: negative
+    limit_of_blank: 56.29542387
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 49.0864076
+    value: negative
+    limit_of_blank: 49.0864076
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 67.4473151
+    value: negative
+    limit_of_blank: 67.4473151
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 40.91450018
+    value: negative
+    limit_of_blank: 40.91450018
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 91.75297236
+    value: negative
+    limit_of_blank: 91.75297236
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
     value: 2441.043478
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 56.29542387
-  - analyte: stool_SARSCoV2_ORF1a
-    time: 17
     value: negative
+    limit_of_blank: 56.29542387
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 49.0864076
+    value: negative
+    limit_of_blank: 49.0864076
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 67.4473151
+    value: negative
+    limit_of_blank: 67.4473151
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 40.91450018
+    value: negative
+    limit_of_blank: 40.91450018
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
     value: 109.2477092
@@ -3135,9 +3382,6 @@ participants:
   - analyte: stool_PMMoV
     time: 14
     value: 73751735.98
-  - analyte: stool_PMMoV
-    time: 17
-    value: negative
   - analyte: stool_PMMoV
     time: 19
     value: 39518.05873
@@ -3247,13 +3491,12 @@ participants:
     value: 269780.3922
   - analyte: stool_SARSCoV2_ORF1a
     time: 2
-    value: 36.60686589
+    value: negative
+    limit_of_blank: 36.60686589
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 27.78627121
-  - analyte: stool_SARSCoV2_ORF1a
-    time: 4
     value: negative
+    limit_of_blank: 27.78627121
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
     value: 615.3748006
@@ -3268,7 +3511,8 @@ participants:
     value: 81.17237308
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 102.7472527
+    value: negative
+    limit_of_blank: 102.7472527
   - analyte: stool_PMMoV
     time: 10
     value: 2616.562324
@@ -3295,9 +3539,6 @@ participants:
     value: 719374.2267
   - analyte: stool_PMMoV
     time: 28
-    value: negative
-  - analyte: stool_PMMoV
-    time: 4
     value: negative
   - analyte: stool_PMMoV
     time: 5
@@ -3384,10 +3625,12 @@ participants:
     value: 668.4745763
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 82.08481764
+    value: negative
+    limit_of_blank: 82.08481764
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 16.99216482
+    value: negative
+    limit_of_blank: 16.99216482
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
     value: 633.4234911
@@ -3405,10 +3648,12 @@ participants:
     value: 437.9661017
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 130.8710772
+    value: negative
+    limit_of_blank: 130.8710772
   - analyte: stool_PMMoV
     time: 10
-    value: 114.7594818
+    value: negative
+    limit_of_blank: 114.7594818
   - analyte: stool_PMMoV
     time: 12
     value: 114968.1943
@@ -3488,16 +3733,20 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 29.93424099
+    value: negative
+    limit_of_blank: 29.93424099
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 48.35521236
+    value: negative
+    limit_of_blank: 48.35521236
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 30.48260382
+    value: negative
+    limit_of_blank: 30.48260382
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 22.53323887
+    value: negative
+    limit_of_blank: 22.53323887
   - analyte: stool_SARSCoV2_N
     time: 4
     value: 4583.512231
@@ -3509,19 +3758,24 @@ participants:
     value: 533.981982
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 38.32215735
+    value: negative
+    limit_of_blank: 38.32215735
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 47.71695841
+    value: negative
+    limit_of_blank: 47.71695841
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 77.08108108
+    value: negative
+    limit_of_blank: 77.08108108
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 30.48260382
+    value: negative
+    limit_of_blank: 30.48260382
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 22.53323887
+    value: negative
+    limit_of_blank: 22.53323887
   - analyte: stool_SARSCoV2_ORF1a
     time: 4
     value: 2936.312523
@@ -3530,10 +3784,12 @@ participants:
     value: 2783.547303
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
-    value: 179.8558559
+    value: negative
+    limit_of_blank: 179.8558559
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 61.08779539
+    value: negative
+    limit_of_blank: 61.08779539
   - analyte: stool_PMMoV
     time: 12
     value: 147892.9332
@@ -3595,7 +3851,8 @@ participants:
     value: 1176.886326
   - analyte: stool_SARSCoV2_N
     time: 25
-    value: 54.00964539
+    value: negative
+    limit_of_blank: 54.00964539
   - analyte: stool_SARSCoV2_N
     time: 2
     value: 3845.834502
@@ -3633,25 +3890,32 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 18.99102779
+    value: negative
+    limit_of_blank: 18.99102779
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 31.92278353
+    value: negative
+    limit_of_blank: 31.92278353
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 11.72525303
+    value: negative
+    limit_of_blank: 11.72525303
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 13.13534307
+    value: negative
+    limit_of_blank: 13.13534307
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 22.50408274
+    value: negative
+    limit_of_blank: 22.50408274
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 33.81938982
+    value: negative
+    limit_of_blank: 33.81938982
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 27.20624569
+    value: negative
+    limit_of_blank: 27.20624569
   - analyte: stool_SARSCoV2_N
     time: 5
     value: 64.28221028
@@ -3660,49 +3924,64 @@ participants:
     value: 32.80067758
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 26.95663158
+    value: negative
+    limit_of_blank: 26.95663158
   - analyte: stool_SARSCoV2_N
     time: 8
-    value: 40.66758621
+    value: negative
+    limit_of_blank: 40.66758621
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 25.09090909
+    value: negative
+    limit_of_blank: 25.09090909
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 16.153288
+    value: negative
+    limit_of_blank: 16.153288
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 31.92278353
+    value: negative
+    limit_of_blank: 31.92278353
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 11.72525303
+    value: negative
+    limit_of_blank: 11.72525303
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 13.13534307
+    value: negative
+    limit_of_blank: 13.13534307
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 22.50408274
+    value: negative
+    limit_of_blank: 22.50408274
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 33.81938982
+    value: negative
+    limit_of_blank: 33.81938982
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 27.20624569
+    value: negative
+    limit_of_blank: 27.20624569
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
-    value: 23.38482569
+    value: negative
+    limit_of_blank: 23.38482569
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
-    value: 23.43402974
+    value: negative
+    limit_of_blank: 23.43402974
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 26.95663158
+    value: negative
+    limit_of_blank: 26.95663158
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 40.66758621
+    value: negative
+    limit_of_blank: 40.66758621
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 21.34169279
+    value: negative
+    limit_of_blank: 21.34169279
   - analyte: stool_PMMoV
     time: 10
     value: 126.6068519
@@ -3791,70 +4070,92 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 22.25960171
+    value: negative
+    limit_of_blank: 22.25960171
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 49.31300594
+    value: negative
+    limit_of_blank: 49.31300594
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 39.92775381
+    value: negative
+    limit_of_blank: 39.92775381
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 60.13168354
+    value: negative
+    limit_of_blank: 60.13168354
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 54.92413793
+    value: negative
+    limit_of_blank: 54.92413793
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 27.9925868
+    value: negative
+    limit_of_blank: 27.9925868
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 29.98130006
+    value: negative
+    limit_of_blank: 29.98130006
   - analyte: stool_SARSCoV2_N
     time: 6
-    value: 35.59866716
+    value: negative
+    limit_of_blank: 35.59866716
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 40.95269303
+    value: negative
+    limit_of_blank: 40.95269303
   - analyte: stool_SARSCoV2_N
     time: 8
-    value: 48.06833913
+    value: negative
+    limit_of_blank: 48.06833913
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 30.61581935
+    value: negative
+    limit_of_blank: 30.61581935
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 22.25960171
+    value: negative
+    limit_of_blank: 22.25960171
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 49.31300594
+    value: negative
+    limit_of_blank: 49.31300594
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 39.92775381
+    value: negative
+    limit_of_blank: 39.92775381
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 60.13168354
+    value: negative
+    limit_of_blank: 60.13168354
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 54.92413793
+    value: negative
+    limit_of_blank: 54.92413793
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 27.9925868
+    value: negative
+    limit_of_blank: 27.9925868
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 29.98130006
+    value: negative
+    limit_of_blank: 29.98130006
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
-    value: 35.59866716
+    value: negative
+    limit_of_blank: 35.59866716
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 40.95269303
+    value: negative
+    limit_of_blank: 40.95269303
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 48.06833913
+    value: negative
+    limit_of_blank: 48.06833913
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 26.04104174
+    value: negative
+    limit_of_blank: 26.04104174
   - analyte: stool_PMMoV
     time: 10
     value: 138795.1636
@@ -3954,7 +4255,8 @@ participants:
     value: 1083.009093
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 25.58875086
+    value: negative
+    limit_of_blank: 25.58875086
   - analyte: stool_SARSCoV2_N
     time: 6
     value: 95358.55856
@@ -3981,7 +4283,8 @@ participants:
     value: 1334.141637
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 25.58875086
+    value: negative
+    limit_of_blank: 25.58875086
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
     value: 59908.46847
@@ -4057,7 +4360,8 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 30.79089631
+    value: negative
+    limit_of_blank: 30.79089631
   - analyte: stool_SARSCoV2_N
     time: 11
     value: 12818.80328
@@ -4075,10 +4379,12 @@ participants:
     value: 22451.90647
   - analyte: stool_SARSCoV2_N
     time: 2
-    value: 53.90601324
+    value: negative
+    limit_of_blank: 53.90601324
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 29.0662391
+    value: negative
+    limit_of_blank: 29.0662391
   - analyte: stool_SARSCoV2_N
     time: 3
     value: 43890.98589
@@ -4114,10 +4420,12 @@ participants:
     value: 7775.352854
   - analyte: stool_SARSCoV2_ORF1a
     time: 2
-    value: 40.77073768
+    value: negative
+    limit_of_blank: 40.77073768
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 29.0662391
+    value: negative
+    limit_of_blank: 29.0662391
   - analyte: stool_SARSCoV2_ORF1a
     time: 3
     value: 29730.43846
@@ -4165,7 +4473,8 @@ participants:
     value: 2353.331977
   - analyte: stool_PMMoV
     time: 7
-    value: 69.93657914
+    value: negative
+    limit_of_blank: 69.93657914
   - analyte: stool_PMMoV
     time: 8
     value: 130249.2316
@@ -4227,7 +4536,8 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 33.84094755
+    value: negative
+    limit_of_blank: 33.84094755
   - analyte: stool_SARSCoV2_N
     time: 4
     value: 18007.62416
@@ -4242,7 +4552,8 @@ participants:
     value: 3638.547751
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 33.84094755
+    value: negative
+    limit_of_blank: 33.84094755
   - analyte: stool_SARSCoV2_ORF1a
     time: 4
     value: 16594.4698
@@ -4314,22 +4625,26 @@ participants:
     value: 10100.0
   - analyte: stool_SARSCoV2_N
     time: -2
-    value: 39.2221294
+    value: negative
+    limit_of_blank: 39.2221294
   - analyte: stool_SARSCoV2_N
     time: -1
-    value: 40.93494574
+    value: negative
+    limit_of_blank: 40.93494574
   - analyte: stool_SARSCoV2_N
     time: 0
     value: 71.8
   - analyte: stool_SARSCoV2_N
     time: 1
-    value: 43.20177792
+    value: negative
+    limit_of_blank: 43.20177792
   - analyte: stool_SARSCoV2_N
     time: 2
     value: 441.7472252
   - analyte: stool_SARSCoV2_N
     time: 3
-    value: 45.41407035
+    value: negative
+    limit_of_blank: 45.41407035
   - analyte: stool_SARSCoV2_ORF1a
     time: 4
     value: 10000.0
@@ -4353,22 +4668,26 @@ participants:
     value: 12100.0
   - analyte: stool_SARSCoV2_ORF1a
     time: -2
-    value: 39.2221294
+    value: negative
+    limit_of_blank: 39.2221294
   - analyte: stool_SARSCoV2_ORF1a
     time: -1
-    value: 40.93494574
+    value: negative
+    limit_of_blank: 40.93494574
   - analyte: stool_SARSCoV2_ORF1a
     time: 0
     value: 51.0
   - analyte: stool_SARSCoV2_ORF1a
     time: 1
-    value: 43.20177792
+    value: negative
+    limit_of_blank: 43.20177792
   - analyte: stool_SARSCoV2_ORF1a
     time: 2
     value: 294.2606516
   - analyte: stool_SARSCoV2_ORF1a
     time: 3
-    value: 45.41407035
+    value: negative
+    limit_of_blank: 45.41407035
   - analyte: stool_PMMoV
     time: 4
     value: 407592.9919
@@ -4505,7 +4824,8 @@ participants:
     value: 87600.0
   - analyte: stool_SARSCoV2_ORF1a
     time: 2
-    value: 389.9878062
+    value: negative
+    limit_of_blank: 389.9878062
   - analyte: stool_SARSCoV2_ORF1a
     time: 3
     value: 8162.426995
@@ -4523,10 +4843,12 @@ participants:
     value: 406.0759494
   - analyte: stool_PMMoV
     time: 9
-    value: 705.2503987
+    value: negative
+    limit_of_blank: 705.2503987
   - analyte: stool_PMMoV
     time: 10
-    value: 740.1904762
+    value: negative
+    limit_of_blank: 740.1904762
   - analyte: stool_PMMoV
     time: 16
     value: 688.0
@@ -4588,52 +4910,68 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 22.26186253
+    value: negative
+    limit_of_blank: 22.26186253
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 30.92652286
+    value: negative
+    limit_of_blank: 30.92652286
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 45.93247146
+    value: negative
+    limit_of_blank: 45.93247146
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 75.88888889
+    value: negative
+    limit_of_blank: 75.88888889
   - analyte: stool_SARSCoV2_N
     time: 5
-    value: 45.51640838
+    value: negative
+    limit_of_blank: 45.51640838
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 40.77073768
+    value: negative
+    limit_of_blank: 40.77073768
   - analyte: stool_SARSCoV2_N
     time: 8
-    value: 14.44685977
+    value: negative
+    limit_of_blank: 14.44685977
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 41.0351662
+    value: negative
+    limit_of_blank: 41.0351662
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 22.26186253
+    value: negative
+    limit_of_blank: 22.26186253
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 30.92652286
+    value: negative
+    limit_of_blank: 30.92652286
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 45.93247146
+    value: negative
+    limit_of_blank: 45.93247146
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 75.88888889
+    value: negative
+    limit_of_blank: 75.88888889
   - analyte: stool_SARSCoV2_ORF1a
     time: 5
-    value: 45.51640838
+    value: negative
+    limit_of_blank: 45.51640838
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 40.77073768
+    value: negative
+    limit_of_blank: 40.77073768
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 14.44685977
+    value: negative
+    limit_of_blank: 14.44685977
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 41.0351662
+    value: negative
+    limit_of_blank: 41.0351662
   - analyte: stool_PMMoV
     time: 10
     value: 295629.7118
@@ -4696,16 +5034,20 @@ participants:
     value: 2728.664112
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 47.96828345
+    value: negative
+    limit_of_blank: 47.96828345
   - analyte: stool_SARSCoV2_N
     time: 10
-    value: 99.71392405
+    value: negative
+    limit_of_blank: 99.71392405
   - analyte: stool_SARSCoV2_N
     time: 11
-    value: 33.93733643
+    value: negative
+    limit_of_blank: 33.93733643
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 37.19207808
+    value: negative
+    limit_of_blank: 37.19207808
   - analyte: stool_SARSCoV2_N
     time: 2
     value: 93.1
@@ -4717,22 +5059,27 @@ participants:
     value: 11500.0
   - analyte: stool_SARSCoV2_N
     time: 6
-    value: 4547.639344
+    value: negative
+    limit_of_blank: 4547.639344
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
     value: 609.3772669
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 47.96828345
+    value: negative
+    limit_of_blank: 47.96828345
   - analyte: stool_SARSCoV2_ORF1a
     time: 10
-    value: 99.71392405
+    value: negative
+    limit_of_blank: 99.71392405
   - analyte: stool_SARSCoV2_ORF1a
     time: 11
-    value: 33.93733643
+    value: negative
+    limit_of_blank: 33.93733643
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 37.19207808
+    value: negative
+    limit_of_blank: 37.19207808
   - analyte: stool_SARSCoV2_ORF1a
     time: 2
     value: 62.19500103
@@ -4744,7 +5091,8 @@ participants:
     value: 7870.0
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
-    value: 4547.639344
+    value: negative
+    limit_of_blank: 4547.639344
   - analyte: stool_PMMoV
     time: 7
     value: 24287.30524
@@ -4806,13 +5154,15 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 18
-    value: 17.1209294
+    value: negative
+    limit_of_blank: 17.1209294
   - analyte: stool_SARSCoV2_N
     time: -3
     value: 79.5
   - analyte: stool_SARSCoV2_ORF1a
     time: 18
-    value: 17.1209294
+    value: negative
+    limit_of_blank: 17.1209294
   - analyte: stool_SARSCoV2_ORF1a
     time: -3
     value: 39.6
@@ -4890,22 +5240,28 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 22.73190711
+    value: negative
+    limit_of_blank: 22.73190711
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 20.35483871
+    value: negative
+    limit_of_blank: 20.35483871
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 36.71680938
+    value: negative
+    limit_of_blank: 36.71680938
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 22.73190711
+    value: negative
+    limit_of_blank: 22.73190711
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 20.35483871
+    value: negative
+    limit_of_blank: 20.35483871
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 36.71680938
+    value: negative
+    limit_of_blank: 36.71680938
   - analyte: stool_PMMoV
     time: 12
     value: 51948351.9
@@ -4952,70 +5308,92 @@ participants:
   measurements:
   - analyte: stool_SARSCoV2_N
     time: 12
-    value: 37.80130233
+    value: negative
+    limit_of_blank: 37.80130233
   - analyte: stool_SARSCoV2_N
     time: 13
-    value: 16.93575298
+    value: negative
+    limit_of_blank: 16.93575298
   - analyte: stool_SARSCoV2_N
     time: 14
-    value: 38.96423605
+    value: negative
+    limit_of_blank: 38.96423605
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: 72.65440624
+    value: negative
+    limit_of_blank: 72.65440624
   - analyte: stool_SARSCoV2_N
     time: 19
-    value: 44.55776978
+    value: negative
+    limit_of_blank: 44.55776978
   - analyte: stool_SARSCoV2_N
     time: 21
-    value: 83.85142857
+    value: negative
+    limit_of_blank: 83.85142857
   - analyte: stool_SARSCoV2_N
     time: 28
-    value: 43.06376537
+    value: negative
+    limit_of_blank: 43.06376537
   - analyte: stool_SARSCoV2_N
     time: 6
-    value: 24.90409976
+    value: negative
+    limit_of_blank: 24.90409976
   - analyte: stool_SARSCoV2_N
     time: 7
-    value: 61.69255711
+    value: negative
+    limit_of_blank: 61.69255711
   - analyte: stool_SARSCoV2_N
     time: 8
-    value: 25.64078289
+    value: negative
+    limit_of_blank: 25.64078289
   - analyte: stool_SARSCoV2_N
     time: 9
-    value: 67.91220277
+    value: negative
+    limit_of_blank: 67.91220277
   - analyte: stool_SARSCoV2_ORF1a
     time: 12
-    value: 37.80130233
+    value: negative
+    limit_of_blank: 37.80130233
   - analyte: stool_SARSCoV2_ORF1a
     time: 13
-    value: 16.93575298
+    value: negative
+    limit_of_blank: 16.93575298
   - analyte: stool_SARSCoV2_ORF1a
     time: 14
-    value: 38.96423605
+    value: negative
+    limit_of_blank: 38.96423605
   - analyte: stool_SARSCoV2_ORF1a
     time: 17
-    value: 72.65440624
+    value: negative
+    limit_of_blank: 72.65440624
   - analyte: stool_SARSCoV2_ORF1a
     time: 19
-    value: 44.55776978
+    value: negative
+    limit_of_blank: 44.55776978
   - analyte: stool_SARSCoV2_ORF1a
     time: 21
-    value: 83.85142857
+    value: negative
+    limit_of_blank: 83.85142857
   - analyte: stool_SARSCoV2_ORF1a
     time: 28
-    value: 43.06376537
+    value: negative
+    limit_of_blank: 43.06376537
   - analyte: stool_SARSCoV2_ORF1a
     time: 6
-    value: 24.90409976
+    value: negative
+    limit_of_blank: 24.90409976
   - analyte: stool_SARSCoV2_ORF1a
     time: 7
-    value: 61.69255711
+    value: negative
+    limit_of_blank: 61.69255711
   - analyte: stool_SARSCoV2_ORF1a
     time: 8
-    value: 25.64078289
+    value: negative
+    limit_of_blank: 25.64078289
   - analyte: stool_SARSCoV2_ORF1a
     time: 9
-    value: 67.91220277
+    value: negative
+    limit_of_blank: 67.91220277
   - analyte: stool_PMMoV
     time: 12
     value: 13898418.6
