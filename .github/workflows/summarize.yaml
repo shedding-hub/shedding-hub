@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Create summary for changed files
         id: changes-comment
-        run: python .github/workflows/summarize.py summary.md
+        run: python .github/workflows/summarize.py -o summary.md
       - name: Add PR comment if changes are available
         uses: mshick/add-pr-comment@v2
         if: hashFiles('summary.md') != ''

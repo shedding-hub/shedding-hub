@@ -5,20 +5,28 @@ import yaml
 
 
 def with_name(x: pd.Series, name: str) -> pd.Series:
+    if isinstance(x, dict):
+        x = pd.Series(x)
     x.name = name
     return x
 
 
 def __main__(argv=None) -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("output", nargs="?")
+    parser.add_argument("--output", "-o", help="output filename")
+    parser.add_argument(
+        "filenames",
+        nargs="*",
+        help="input filenames (defaults to files changed compared with the `main` "
+        "branch)",
+    )
     args = parser.parse_args(argv)
 
     # Get all changed data files compared with the main branch.
     output = subprocess.check_output(
         ["git", "diff", "--name-only", "origin/main"], text=True
     )
-    filenames = [
+    filenames = args.filenames or [
         name
         for name in output.splitlines()
         if name.startswith("data/") and name.endswith(".yaml")
@@ -51,8 +59,31 @@ def __main__(argv=None) -> None:
                         with_name(
                             grouped.nunique().participant, "n_unique_participants"
                         ),
+                        with_name(
+                            {
+                                key: (subset.value == "negative").sum()
+                                for key, subset in grouped
+                            },
+                            "n_negative",
+                        ),
+                        with_name(
+                            {
+                                key: (subset.value == "positive").sum()
+                                for key, subset in grouped
+                            },
+                            "n_positive",
+                        ),
+                        with_name(
+                            {
+                                key: (
+                                    ~subset.value.isin({"positive", "negative"})
+                                ).sum()
+                                for key, subset in grouped
+                            },
+                            "n_quantified",
+                        ),
                     ]
-                ).T,
+                ).T.to_string(),
                 "```",
                 "",
             ]
