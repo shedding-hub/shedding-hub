@@ -35,9 +35,9 @@ def __main__(argv=None) -> None:
         filenames = [
             name
             for name in map(pathlib.Path, output.splitlines())
-            if name.parent.name == "data"
+            if name.parent.parent.name == "data"
             and name.suffix == ".yaml"
-            and not name.name.startswith(".")
+            and name.is_file()
         ]
 
     # Iterate over files and summarize their content.

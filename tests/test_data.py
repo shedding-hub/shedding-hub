@@ -5,17 +5,19 @@ import pytest
 import yaml
 
 
-DATA_PATHS = [
-    path for path in Path("data").glob("*.yaml") if path.name != ".schema.yaml"
-]
+DATA_PATHS = list(Path("data").glob("*/*.yaml"))
 VALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("valid_*.yaml"))
 INVALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("invalid_*.yaml"))
 
 
-def load_and_validate(path: Path):
+def load_and_validate(path: Path, skip_filename_check: bool = False):
     """
     Load and validate a dataset.
     """
+    assert (
+        skip_filename_check or path.stem == path.parent.stem
+    ), "The data filename must match the parent folder."
+
     with open("data/.schema.yaml") as fp:
         schema = yaml.safe_load(fp)
     with path.open() as fp:
@@ -77,7 +79,7 @@ def test_data_validity(path: Path) -> None:
     "path", VALID_EXAMPLE_PATHS, ids=[path.stem for path in VALID_EXAMPLE_PATHS]
 )
 def test_valid_examples(path: Path) -> None:
-    load_and_validate(path)
+    load_and_validate(path, skip_filename_check=True)
 
 
 @pytest.mark.parametrize(
@@ -85,4 +87,4 @@ def test_valid_examples(path: Path) -> None:
 )
 def test_invalid_examples(path: Path) -> None:
     with pytest.raises((ValueError, jsonschema.ValidationError)):
-        load_and_validate(path)
+        load_and_validate(path, skip_filename_check=True)

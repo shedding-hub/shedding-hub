@@ -12,7 +12,7 @@ def test_summarize(tmp_path: Path) -> None:
             ".github/workflows/summarize.py",
             "-o",
             str(tmp_file),
-            "data/woelfel2020.yaml",
+            "data/woelfel2020/woelfel2020.yaml",
         ]
     )
     result = tmp_file.read_text()
