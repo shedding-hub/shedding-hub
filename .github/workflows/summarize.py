@@ -1,5 +1,6 @@
 import argparse
 import pandas as pd
+import pathlib
 import subprocess
 import yaml
 
@@ -30,10 +31,13 @@ def __main__(argv=None) -> None:
         output = subprocess.check_output(
             ["git", "diff", "--name-only", "origin/main"], text=True
         )
+        # Select only changed data files.
         filenames = [
             name
-            for name in output.splitlines()
-            if name.startswith("data/") and name.endswith(".yaml")
+            for name in map(pathlib.Path, output.splitlines())
+            if name.parent.name == "data"
+            and name.suffix == ".yaml"
+            and not name.name.startswith(".")
         ]
 
     # Iterate over files and summarize their content.

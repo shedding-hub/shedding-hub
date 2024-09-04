@@ -29,6 +29,11 @@ $defs:
         oneOf:
           - type: number
           - const: unknown
+      limit_of_blank:
+        description: Highest measurement result observed for a blank sample.
+        oneOf:
+          - type: number
+          - const: unknown
       specimen:
         description: Specimen type.
         type: string
@@ -43,6 +48,7 @@ $defs:
           - SARS-CoV-2
           - mtDNA
           - PMMoV
+          - crAssphage
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
@@ -187,6 +193,16 @@ properties:
                   Unique sample identifier if multiple measurements are reported for the
                   same sample, e.g., replicates or different analytes.
                 type: [string, integer]
+              limit_of_quantification:
+                description: Lowest value at which the analyte can be reliably quantified.
+                oneOf:
+                  - type: number
+                  - const: unknown
+              limit_of_blank:
+                description: Highest measurement result observed for a blank sample.
+                oneOf:
+                  - type: number
+                  - const: unknown
             required:
               - time
               - value
