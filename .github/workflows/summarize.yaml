@@ -1,0 +1,32 @@
+name: Summarize Changes
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Summarize Changes
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Create summary for changed files
+        id: changes-comment
+        run: python .github/workflows/summarize.py -o summary.md
+      - name: Add PR comment if changes are available
+        uses: mshick/add-pr-comment@v2
+        if: hashFiles('summary.md') != ''
+        with:
+          message-path: summary.md
