@@ -2,7 +2,7 @@
 
 [Liu et al. (2024)](https://www.medrxiv.org/content/10.1101/2024.04.22.24305845v1) measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) concentrations in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Demographic information (e.g., age, sex, race, ethnicity, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). Currently, the raw data does not include any symptom data, such as e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.
 
-First, we `import` python modules needed: 
+First, we `import` python modules needed:
 
 ```python
 #import modules;
@@ -21,9 +21,9 @@ Liu2024 = pd.read_csv("Liu2024.csv") #Need to change the directory to load the d
 Liu2024 = Liu2024.sort_values(by=['subject','day_actual'])
 
 #some data cleaning to match the schema;
-Liu2024 = Liu2024.replace({"Gender": {"M": "male", "F": "female"}, 
-                           "Race": {"White": "white", "Black or African American": "black", "Asian": "asian"}, 
-                           "Hispanic.or.Latin.Origin": {"Yes": "hispanic", "No": "not hispanic"}, 
+Liu2024 = Liu2024.replace({"Gender": {"M": "male", "F": "female"},
+                           "Race": {"White": "white", "Black or African American": "black", "Asian": "asian"},
+                           "Hispanic.or.Latin.Origin": {"Yes": "hispanic", "No": "not hispanic"},
                            "inpatient": {"Yes": "inpatient", "No": "outpatient"}})
 Liu2024.loc[np.isnan(Liu2024["Age"]),"Age"]="unknown"
 Liu2024.loc[Liu2024["Cohort"]=="Breakthrough","Cohort"]=True
@@ -80,7 +80,7 @@ liu2024 = dict(title="Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mot
                participants=participant_list)
 
 with open("c:/Users/Yuke/stat/SheddingStudy/SheddingHubDataCleaning/Liu2024Longitudinal/Liu2024Longitudinal.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(liu2024, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close() 
+outfile.close()
 ```

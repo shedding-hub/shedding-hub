@@ -1,4 +1,4 @@
-# Shedding Hub [![Shedding Hub](https://github.com/shedding-hub/shedding-hub/actions/workflows/build.yml/badge.svg)](https://github.com/shedding-hub/shedding-hub/actions/workflows/build.yml)
+# Shedding Hub [![Shedding Hub](https://github.com/shedding-hub/shedding-hub/actions/workflows/build.yaml/badge.svg)](https://github.com/shedding-hub/shedding-hub/actions/workflows/build.yaml)
 
 The Shedding Hub collates data and statistical models for biomarker shedding (such as viral RNA or drug metabolites) in different human specimen (such as stool or sputum samples). Developing wastewater-based epidemiology into a quantitative, reliable epidemiological monitoring tool motivates the project.
 

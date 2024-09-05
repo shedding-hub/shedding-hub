@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=.schema.yaml
+# yaml-language-server: $schema=../.schema.yaml
 title: Longitudinal and quantitative fecal shedding dynamics of SARS-CoV-2, pepper
   mild mottle virus, and crAssphage
 doi: 10.1128/msphere.00132-23
@@ -15,7 +15,7 @@ analytes:
       limit of blank (LOB), determined as the upper 95% confidence limit of the negative
       extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight. The reported
       number is either the measured concentration of SARS-CoV-2 N or the LOB if the
-      concentration wasn't detectable. 
+      concentration wasn't detectable.
     limit_of_quantification: unknown
     limit_of_detection: unknown
     limit_of_blank: 1550
