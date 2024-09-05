@@ -12,7 +12,9 @@ analytes:
     description: >
       Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
       gene in sputum samples. Ct values were then converted into estimated viral copies
-      per mL, with a detection limit of 2,690 copies/mL.
+      per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated
+      by the authors using a standard curve derived from Ct values of plasmid DNA,
+      as noted in the supplementary material.
     limit_of_quantification: unknown
     limit_of_detection: 2690
     specimen: sputum
@@ -24,7 +26,9 @@ analytes:
     description: >
       Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
       gene in swab samples. Ct values were then converted into estimated viral copies
-      per mL, with a detection limit of 2,690 copies/mL.
+      per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated
+      by the authors using a standard curve derived from Ct values of plasmid DNA,
+      as noted in the supplementary material.
     limit_of_quantification: unknown
     limit_of_detection: 2690
     specimen: throat_swab
