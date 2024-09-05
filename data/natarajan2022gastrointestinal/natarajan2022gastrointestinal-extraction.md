@@ -236,6 +236,6 @@ data = {
 }
 
 with open("../data/natarajan2022.yaml", "w") as fp:
-    fp.write("# yaml-language-server: $schema=.schema.yaml\n")
+    fp.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(data, fp, sort_keys=False)
 ```
