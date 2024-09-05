@@ -27,7 +27,7 @@ analytes:
       per mL, with a detection limit of 2,690 copies/mL.
     limit_of_quantification: unknown
     limit_of_detection: 2690
-    specimen: swab
+    specimen: throat_swab
     biomarker: SARS-CoV-2
     gene_target: RdRp gene
     unit: gc/mL
