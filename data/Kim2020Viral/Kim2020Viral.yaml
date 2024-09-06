@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=.schema.yaml
 title: Viral Load Kinetics of SARS-CoV-2 Infection in First Two Patients in Korea
-doi: doi.org/10.3346/jkms.2020.35.e86
+doi: 10.3346/jkms.2020.35.e86
 description: >
   The authors present viral load kinetics for the first two confirmed COVID-19 patients
   with mild to moderate illness in Korea. Swabs, sputum, serum, plasma, urine, and
@@ -19,7 +19,7 @@ analytes:
     limit_of_detection: 2690
     specimen: sputum
     biomarker: SARS-CoV-2
-    gene_target: RdRp gene
+    gene_target: RdRp
     unit: gc/mL
     reference_event: symptom onset
   swab_SARSCoV2_RdRp:
@@ -33,7 +33,7 @@ analytes:
     limit_of_detection: 2690
     specimen: throat_swab
     biomarker: SARS-CoV-2
-    gene_target: RdRp gene
+    gene_target: RdRp
     unit: gc/mL
     reference_event: symptom onset
 participants:
