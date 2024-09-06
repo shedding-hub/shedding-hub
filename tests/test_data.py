@@ -17,6 +17,10 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
     assert (
         skip_filename_check or path.stem == path.parent.stem
     ), "The data filename must match the parent folder."
+    assert (
+        str(path) == str(path).lower()
+    ), "Data paths and filenames should be lowercase."
+    assert " " not in str(path), "Data paths should not contain spaces."
 
     with open("data/.schema.yaml") as fp:
         schema = yaml.safe_load(fp)
