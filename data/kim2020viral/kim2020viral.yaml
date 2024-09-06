@@ -1,0 +1,187 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Viral Load Kinetics of SARS-CoV-2 Infection in First Two Patients in Korea
+doi: 10.3346/jkms.2020.35.e86
+description: >
+  The authors present viral load kinetics for the first two confirmed COVID-19 patients
+  with mild to moderate illness in Korea. Swabs, sputum, serum, plasma, urine, and
+  stool samples were collected throughout the illness. Cycle threshold (Ct) values
+  were quantified using rRT-PCR targeting the RdRp and E genes. Data were obtained
+  from the supplementary material.
+analytes:
+  sputum_SARSCoV2_RdRp:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
+      gene in sputum samples. Ct values were then converted into estimated viral copies
+      per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated
+      by the authors using a standard curve derived from Ct values of plasmid DNA,
+      as noted in the supplementary material.
+    limit_of_quantification: 2690
+    limit_of_detection: unknown
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    unit: gc/mL
+    reference_event: symptom onset
+  swab_SARSCoV2_RdRp:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
+      gene in swab samples. Ct values were then converted into estimated viral copies
+      per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated
+      by the authors using a standard curve derived from Ct values of plasmid DNA,
+      as noted in the supplementary material.
+    limit_of_quantification: 2690
+    limit_of_detection: unknown
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2_RdRp
+    time: 2
+    value: 46971053
+  - analyte: swab_SARSCoV2_RdRp
+    time: 3
+    value: 5367707
+  - analyte: swab_SARSCoV2_RdRp
+    time: 5
+    value: 429195
+  - analyte: swab_SARSCoV2_RdRp
+    time: 6
+    value: 5622033
+  - analyte: swab_SARSCoV2_RdRp
+    time: 7
+    value: 4610320
+  - analyte: swab_SARSCoV2_RdRp
+    time: 8
+    value: 2227422
+  - analyte: swab_SARSCoV2_RdRp
+    time: 9
+    value: 1383607
+  - analyte: swab_SARSCoV2_RdRp
+    time: 10
+    value: 187778
+  - analyte: swab_SARSCoV2_RdRp
+    time: 11
+    value: 61341
+  - analyte: swab_SARSCoV2_RdRp
+    time: 12
+    value: 214445
+  - analyte: swab_SARSCoV2_RdRp
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 14
+    value: 204636
+  - analyte: swab_SARSCoV2_RdRp
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 16
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 3
+    value: 9171220
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 5
+    value: 341549451
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 6
+    value: 924307
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 7
+    value: 51187899
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 8
+    value: 10194839
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 9
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 10
+    value: 2169273
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 11
+    value: 1823569
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 12
+    value: 340873
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 13
+    value: 312089
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 14
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 15
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 16
+    value: negative
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2_RdRp
+    time: 14
+    value: 49047
+  - analyte: swab_SARSCoV2_RdRp
+    time: 15
+    value: 13911309
+  - analyte: swab_SARSCoV2_RdRp
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 17
+    value: 316621
+  - analyte: swab_SARSCoV2_RdRp
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp
+    time: 25
+    value: 21317
+  - analyte: swab_SARSCoV2_RdRp
+    time: 26
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 14
+    value: 391243
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 20
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 22
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 23
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 24
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 25
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp
+    time: 26
+    value: negative

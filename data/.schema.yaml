@@ -9,6 +9,14 @@ $defs:
         exclusiveMinimum: 0 # Zero should be coded as `negative`.
       - type: string
         enum: [positive, negative]
+  specimen_type_enum:
+    type: string
+    enum:
+      - stool
+      - sputum
+      - throat_swab
+      - oropharyngeal_swab
+      - nasopharyngeal_swab
   analyte_specification:
     description: Specification of an analyte.
     type: object
@@ -35,12 +43,13 @@ $defs:
           - type: number
           - const: unknown
       specimen:
-        description: Specimen type.
-        type: string
-        enum:
-          - stool
-          - sputum
-          - throat_swab
+        description: Specimen type or array of specimen types for combined samples.
+        oneOf:
+          - $ref: "#/$defs/specimen_type_enum"
+          - type: array
+            items:
+              $ref: "#/$defs/specimen_type_enum"
+            minItems: 2
       biomarker:
         description: Biomarker being measured.
         type: string
