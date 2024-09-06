@@ -41,6 +41,8 @@ $defs:
           - stool
           - sputum
           - throat_swab
+          - oropharyngeal_swab
+          - nasopharyngeal_swab
       biomarker:
         description: Biomarker being measured.
         type: string
