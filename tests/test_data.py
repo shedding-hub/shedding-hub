@@ -2,6 +2,7 @@ import jsonschema
 import numpy as np
 from pathlib import Path
 import pytest
+import re
 import yaml
 
 
@@ -14,9 +15,15 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
     """
     Load and validate a dataset.
     """
-    assert (
-        skip_filename_check or path.stem == path.parent.stem
-    ), "The data filename must match the parent folder."
+    if not skip_filename_check:
+        assert (
+            path.stem == path.parent.stem
+        ), "The data filename must match the parent folder."
+        assert (
+            str(path) == str(path).lower()
+        ), "Data paths and filenames should be lowercase."
+        assert " " not in str(path), "Data paths should not contain spaces."
+        assert re.match(r"[a-z]+\d{4}[a-z]+\.yaml", path.name)
 
     with open("data/.schema.yaml") as fp:
         schema = yaml.safe_load(fp)
