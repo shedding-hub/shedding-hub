@@ -7,7 +7,9 @@ analytes:
     limit_of_detection: unknown
     limit_of_quantification: 17
     description: One analyte.
-    specimen: stool
+    specimen:
+      - sputum
+      - throat_swab
     biomarker: mtDNA
     reference_event: symptom onset
     unit: gc/wet gram
