@@ -31,7 +31,9 @@ analytes:
       as noted in the supplementary material.
     limit_of_quantification: 2690
     limit_of_detection: unknown
-    specimen: throat_swab
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: RdRp
     unit: gc/mL
