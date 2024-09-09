@@ -31,16 +31,19 @@ $defs:
         description: Lowest value at which the analyte can be detected.
         oneOf:
           - type: number
+            exclusiveMinimum: 0
           - const: unknown
       limit_of_quantification:
         description: Lowest value at which the analyte can be reliably quantified.
         oneOf:
           - type: number
+            exclusiveMinimum: 0
           - const: unknown
       limit_of_blank:
         description: Highest measurement result observed for a blank sample.
         oneOf:
           - type: number
+            exclusiveMinimum: 0
           - const: unknown
       specimen:
         description: Specimen type or array of specimen types for combined samples.
