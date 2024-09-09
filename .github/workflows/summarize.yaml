@@ -22,6 +22,8 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Run once to check script
+        run: python .github/workflows/summarize.py data/woelfel2020virological/woelfel2020virological.yaml
       - name: Create summary for changed files
         id: changes-comment
         run: python .github/workflows/summarize.py -o summary.md

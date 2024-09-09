@@ -6,6 +6,9 @@ import yaml
 
 
 def with_name(x: pd.Series, name: str) -> pd.Series:
+    """
+    Update the name of a series and return it.
+    """
     if isinstance(x, dict):
         x = pd.Series(x)
     x.name = name
@@ -56,6 +59,10 @@ def __main__(argv=None) -> None:
 
         # Summarize changes.
         grouped = measurements.groupby("analyte")
+        numeric = {
+            key: value.value[value.value.apply(lambda x: not isinstance(x, str))]
+            for key, value in grouped
+        }
         lines.extend(
             [
                 f"🔄 Summary for changed file `{filename}`:",
@@ -89,6 +96,16 @@ def __main__(argv=None) -> None:
                                 for key, subset in grouped
                             },
                             "n_quantified",
+                        ),
+                        with_name(
+                            {key: value.min() for key, value in numeric.items()}, "min"
+                        ),
+                        with_name(
+                            {key: value.median() for key, value in numeric.items()},
+                            "median",
+                        ),
+                        with_name(
+                            {key: value.max() for key, value in numeric.items()}, "max"
                         ),
                     ]
                 ).T.to_string(),
