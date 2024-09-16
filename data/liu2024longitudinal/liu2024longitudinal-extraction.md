@@ -9,6 +9,18 @@ First, we `import` python modules needed:
 import yaml
 import pandas as pd
 import numpy as np
+
+#functions to add folded blocks and literal blocks;
+class folded_str(str): pass
+class literal_str(str): pass
+
+def folded_str_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
+def literal_str_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
+
+yaml.add_representer(folded_str, folded_str_representer)
+yaml.add_representer(literal_str, literal_str_representer)
 ```
 
 Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
@@ -79,7 +91,7 @@ liu2024 = dict(title="Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mot
                                               reference_event="confirmation date")),
                participants=participant_list)
 
-with open("c:/Users/Yuke/stat/SheddingStudy/SheddingHubDataCleaning/Liu2024Longitudinal/Liu2024Longitudinal.yaml","w") as outfile:
+with open("liu2024longitudinal.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(liu2024, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close()
