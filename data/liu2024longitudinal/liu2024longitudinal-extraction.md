@@ -91,7 +91,7 @@ liu2024 = dict(title="Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mot
                                               reference_event="confirmation date")),
                participants=participant_list)
 
-with open("c:/Users/Yuke/stat/SheddingStudy/SheddingHubDataCleaning/Liu2024Longitudinal/Liu2024Longitudinal.yaml","w") as outfile:
+with open("liu2024longitudinal.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(liu2024, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close()
