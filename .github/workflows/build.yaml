@@ -24,4 +24,4 @@ jobs:
       - name: Lint code
         run: black --check .
       - name: Run tests
-        run: pytest -v
+        run: pytest -v --cov=shedding_hub --cov-report=term-missing
