@@ -4,9 +4,12 @@ doi: 10.1038/s41467-020-19057-5
 description: >
   The paper quantified SARS-CoV-2 viral load from participants with a diverse range
   of COVID-19 disease severity, including those requiring hospitalization, outpatients
-  with mild disease, and individuals with resolved infections. Nasopharyngeal swabs,
-  oropharyngeal swabs, sputum, and urine were collected from hospitalized participants.
-  Data were obtained from the supplementary materials.
+  with mild disease, and individuals with resolved infections. Blood was collected
+  from hospitalized participants, non-hospitalized symptomatic individuals seeking
+  care at a respiratory infection clinic, and participants who had recovered from
+  known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine
+  were collected from hospitalized participants. Data were obtained from the supplementary
+  materials.
 analytes:
   Nasopharyngeal_SARSCoV2_N:
     description: >
@@ -17,7 +20,7 @@ analytes:
     limit_of_detection: 40
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
-    gene_target: N
+    gene_target: N1
     unit: gc/mL
     reference_event: symptom onset
   Oropharyngeal_PBS_SARSCoV2_N:
@@ -29,7 +32,7 @@ analytes:
     limit_of_detection: 40
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
-    gene_target: N
+    gene_target: N1
     unit: gc/mL
     reference_event: symptom onset
   Oropharyngeal_VTM_SARSCoV2_N:
@@ -40,7 +43,7 @@ analytes:
     limit_of_detection: 40
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
-    gene_target: N
+    gene_target: N1
     unit: gc/mL
     reference_event: symptom onset
   Sputum_SARSCoV2_N:
@@ -51,7 +54,7 @@ analytes:
     limit_of_detection: 40
     specimen: sputum
     biomarker: SARS-CoV-2
-    gene_target: N
+    gene_target: N1
     unit: gc/mL
     reference_event: symptom onset
   Plasma_SARSCoV2_N:
@@ -62,7 +65,7 @@ analytes:
     limit_of_detection: 40
     specimen: plasma
     biomarker: SARS-CoV-2
-    gene_target: N
+    gene_target: N1
     unit: gc/mL
     reference_event: symptom onset
   Urine_SARSCoV2_N:
@@ -73,7 +76,7 @@ analytes:
     limit_of_detection: 40
     specimen: urine
     biomarker: SARS-CoV-2
-    gene_target: N
+    gene_target: N1
     unit: gc/mL
     reference_event: symptom onset
 participants:
