@@ -50,11 +50,37 @@ fajnzylbersup[columns_to_transform] = fajnzylbersup[columns_to_transform].apply(
 ```python
 participants = []
 
+# Define mappings for race and ethnicity
+def map_race_ethnicity(value):
+    race_mapping = {
+        'W': 'white',
+        'B': 'black',
+        'O': 'other',
+        'U': 'unknown',
+        'H': 'unknown'  # 'H' stands for Hispanic, so race is unknown
+    }
+    ethnicity_mapping = {
+        'H': 'hispanic',
+        'W': 'not hispanic',
+        'B': 'not hispanic',
+        'O': 'not hispanic',
+        'U': 'unknown'
+    }
+    race = race_mapping.get(value, 'unknown')  # Default to unknown if not in mapping
+    ethnicity = ethnicity_mapping.get(value, 'unknown')  # Default to unknown if not in mapping
+    return race, ethnicity
+
+# Group by participant and extract measurements
 for patient_id, group in fajnzylbersup.groupby('PID'):
+    race_value = group['Race_Ethnicity'].iloc[0]
+    race, ethnicity = map_race_ethnicity(race_value)
+    
     participant = {
         'attributes': {
             'age': int(group['Age'].iloc[0]),
-            'sex': 'female' if group['Sex'].iloc[0] == 'F' else 'male'
+            'sex': 'female' if group['Sex'].iloc[0] == 'F' else 'male',
+            'race': race,  # Add race attribute
+            'ethnicity': ethnicity  # Add ethnicity attribute
         },
         'measurements': []
     }
@@ -62,7 +88,7 @@ for patient_id, group in fajnzylbersup.groupby('PID'):
     for _, row in group.iterrows():
         for column in group.columns:
             # Skip columns that are not analytes or should not be used
-            if column in ['PID', 'Age', 'Sex', 'Race_Ethnicity','Sx_Onset_to_SC', 'Diabetes ','O2_on_date','Pregnancy']:
+            if column in ['PID', 'Age', 'Sex', 'Race_Ethnicity', 'Sx_Onset_to_SC', 'Diabetes ', 'O2_on_date', 'Pregnancy']:
                 continue
             
             value = row[column]
@@ -75,6 +101,7 @@ for patient_id, group in fajnzylbersup.groupby('PID'):
                 participant['measurements'].append(measurementN)
     
     participants.append(participant)
+
 
 ```
 
