@@ -1,3 +1,9 @@
+# Extraction for Shrestha et al. (2020)
+
+[Shrestha et al. (2020)](https://doi.org/10.1093/cid/ciaa886) evaluated the transmission potential of COVID-19 by examining viral load over time. Over six weeks, 230 healthcare personnel underwent 528 tests at the Cleveland Clinic. Cycle threshold (Ct) values were obtained using RT-PCR targeting the N gene, and viral loads were calculated. Data were obtained from the combined dataset in the supplementary materials of Challenger et al. BMC Medicine (2022) 20:25 (https://doi.org/10.1186/s12916-021-02220-0).
+
+```python
+#import modules;
 import json
 import pandas as pd 
 import numpy as np
@@ -17,11 +23,13 @@ yaml.add_representer(folded_str, folded_str_representer)
 yaml.add_representer(literal_str, literal_str_representer)
 
 # Load dataset
-df = pd.read_excel('CombinedDataset.xlsx', sheet_name='Viral_Load') # Change the directory to load the data
+df = pd.read_excel('CombinedDataset.xlsx', sheet_name='Viral_Load')
 shrestha2020 = df[df['StudyNum'] == 12].copy()
 columns_to_drop = ['Estimated', 'SevMax', 'Sev1st', 'Died', 'Ctvalue', 'SevMax3']
 shrestha2020 = shrestha2020.drop(columns=columns_to_drop)
+```
 
+```python
 # Group by participant and extract measurements
 participants = []
 
@@ -48,6 +56,11 @@ for patient_id, group in shrestha2020.groupby('PatientID'):
         
     participants.append(participant)
 
+```
+
+The data is formatted and output as a YAML file.
+
+```python
 shrestha2020distribution = dict(title="Distribution of Transmission Potential During Nonsevere COVID-19 Illness",
         doi="10.1093/cid/ciaa886",
         description=folded_str('This study evaluated the transmission potential of COVID-19 by examining viral load over time. Over six weeks, 230 healthcare personnel underwent 528 tests at the Cleveland Clinic. Cycle threshold (Ct) values were obtained using RT-PCR targeting the N gene, and viral loads were calculated. Data were obtained from the combined dataset in the supplementary materials of Challenger et al. BMC Medicine (2022) 20:25 (https://doi.org/10.1186/s12916-021-02220-0).\n'),
@@ -66,3 +79,5 @@ with open("shrestha2020distribution.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(shrestha2020distribution, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
+
+```
