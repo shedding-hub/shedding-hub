@@ -31,6 +31,7 @@ Young2020 = pd.read_csv("Viral_Loads.csv")
 #Subset the data for Young et al. 2020;
 Young2020 = Young2020[Young2020["cov_study"]==1]
 #some data cleaning to match the schema;
+Young2020.loc[Young2020["cens"]==0,"VL"]=10**Young2020.loc[Young2020["cens"]==0,"VL"]
 Young2020.loc[Young2020["cens"]==1,"VL"]="negative"
 ```
 

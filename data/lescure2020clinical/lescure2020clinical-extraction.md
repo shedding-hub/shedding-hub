@@ -31,6 +31,7 @@ Lescure2020 = pd.read_csv("Viral_Loads.csv")
 #Subset the data for Lescure et al. 2020;
 Lescure2020 = Lescure2020[Lescure2020["cov_study"]==4]
 #some data cleaning to match the schema;
+Lescure2020.loc[Lescure2020["cens"]==0,"VL"]=10**Lescure2020.loc[Lescure2020["cens"]==0,"VL"]
 Lescure2020.loc[Lescure2020["cens"]==1,"VL"]="negative"
 ```
 
@@ -66,8 +67,4 @@ with open("lescure2020clinical.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(lescure2020clinical, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close()
-```
-
-```python
-
 ```
