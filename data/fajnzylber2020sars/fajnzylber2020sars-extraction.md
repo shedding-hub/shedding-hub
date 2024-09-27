@@ -1,6 +1,6 @@
-# Extraction for Natarajan et al. (2022)
+# Extraction for Fajnzylber et al. (2020)
 
-[Fajnzylber et al. (2020)](https://doi.org/10.1038/s41467-020-19057-5) quantified SARS-CoV-2 viral load from participants with a diverse range of COVID-19 disease severity, including those requiring hospitalization, outpatients with mild disease,  and individuals with resolved infections. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine were collected from hospitalized participants. Data were obtained from the supplementary materials.
+[Fajnzylber et al. (2020)](https://doi.org/10.1038/s41467-020-19057-5) quantified SARS-CoV-2 viral load from participants with a diverse range of COVID-19 disease severity, including those requiring hospitalization, outpatients with mild disease, and individuals with resolved infections. Blood was collected from hospitalized participants, non-hospitalized symptomatic individuals seeking care at a respiratory infection clinic, and participants who had recovered from known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine were collected from hospitalized participants. Data were obtained from the supplementary materials.
 
 ```python
 # Functions to add folded blocks and literal blocks;
@@ -83,13 +83,13 @@ The data is formatted and output as a YAML file.
 ```python
 fajnzylber2020sars = dict(title="SARS-CoV-2 viral load is associated with increased disease severity and mortality",
                doi="10.1038/s41467-020-19057-5",
-               description=folded_str('The paper quantified SARS-CoV-2 viral load from participants with a diverse range of COVID-19 disease severity, including those requiring hospitalization, outpatients with mild disease, and individuals with resolved infections. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine were collected from hospitalized participants. Data were obtained from the supplementary materials.\n'),
+               description=folded_str('The paper quantified SARS-CoV-2 viral load from participants with a diverse range of COVID-19 disease severity, including those requiring hospitalization, outpatients with mild disease, and individuals with resolved infections. Blood was collected from hospitalized participants, non-hospitalized symptomatic individuals seeking care at a respiratory infection clinic, and participants who had recovered from known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine were collected from hospitalized participants. Data were obtained from the supplementary materials.\n'),
                analytes=dict(Nasopharyngeal_SARSCoV2_N=dict(description=folded_str("Nasopharyngeal swabs were collected in 3 mL of phosphate-buffered saline. Viral concentrations were quantified using RT-qPCR targeting the N gene in the nasopharyngeal swab samples.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection=40,
                                         specimen="nasopharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
+                                        gene_target="N1", 
                                         unit="gc/mL",
                                         reference_event="symptom onset",),
                              Oropharyngeal_PBS_SARSCoV2_N=dict(description=folded_str("Oropharyngeal swabs were collected in 3 mL of phosphate buffered saline. Viral concentrations were quantified using RT-qPCR targeting the N gene in oropharyngeal swab samples.\n"),
@@ -97,7 +97,7 @@ fajnzylber2020sars = dict(title="SARS-CoV-2 viral load is associated with increa
                                         limit_of_detection=40,
                                         specimen="oropharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
+                                        gene_target="N1", 
                                         unit="gc/mL",
                                         reference_event="symptom onset",),
                              Oropharyngeal_VTM_SARSCoV2_N=dict(description=folded_str("Oropharyngeal swabs were collected in viral transport medium. Viral concentrations were quantified using RT-qPCR targeting the N gene in oropharyngeal swab samples.\n"),
@@ -105,7 +105,7 @@ fajnzylber2020sars = dict(title="SARS-CoV-2 viral load is associated with increa
                                         limit_of_detection=40,
                                         specimen="oropharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
+                                        gene_target="N1", 
                                         unit="gc/mL",
                                         reference_event="symptom onset",),                      
                              Sputum_SARSCoV2_N=dict(description=folded_str("Sputum samples were collected and viral concentrations were quantified using RT-qPCR targeting the N gene.\n"),
@@ -113,7 +113,7 @@ fajnzylber2020sars = dict(title="SARS-CoV-2 viral load is associated with increa
                                         limit_of_detection=40,
                                         specimen="sputum", 
                                         biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
+                                        gene_target="N1", 
                                         unit="gc/mL",
                                         reference_event="symptom onset",),           
                              Plasma_SARSCoV2_N=dict(description=folded_str("Plasma samples were collected and viral concentrations were quantified using RT-qPCR targeting the N gene.\n"),
@@ -121,7 +121,7 @@ fajnzylber2020sars = dict(title="SARS-CoV-2 viral load is associated with increa
                                         limit_of_detection=40,
                                         specimen="plasma", 
                                         biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
+                                        gene_target="N1", 
                                         unit="gc/mL",
                                         reference_event="symptom onset",),
                              Urine_SARSCoV2_N=dict(description=folded_str("Urine samples were collected and viral concentrations were quantified using RT-qPCR targeting the N gene.\n"),
@@ -129,15 +129,14 @@ fajnzylber2020sars = dict(title="SARS-CoV-2 viral load is associated with increa
                                         limit_of_detection=40,
                                         specimen="urine", 
                                         biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
+                                        gene_target="N1", 
                                         unit="gc/mL",
                                         reference_event="symptom onset",)                      
                                         ),
                 participants = participants
                                         )
 
-
-with open("fajnzylber2020sar.yaml","w") as outfile:
+with open("fajnzylber2020sars.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(fajnzylber2020sars, outfile, default_flow_style=False, sort_keys=False)
 outfile.close() 
