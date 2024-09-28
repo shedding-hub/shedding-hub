@@ -4,6 +4,20 @@ The Shedding Hub collates data and statistical models for biomarker shedding (su
 
 Datasets are extracted from appendices, figures, and supplementary materials of peer-reviewed studies. Each dataset is stored as a [`.yaml`](https://en.wikipedia.org/wiki/YAML) file and validated against our [data schema](data/.schema.yaml) to verify its integrity.
 
+## 📊 Getting the Data
+
+You can obtain the data by [downloading it from GitHub](https://github.com/shedding-hub/shedding-hub/tree/main/data). We also provide a [convenient Python package](http://pypi.org/project/shedding-hub/) so you can download the most recent data directly in your code or obtain a specific version of the data for reproducible analysis. Install the package by running `pip install shedding-hub` from the command line. The example below downloads the [data from Wölfel et al. (2020)](https://shedding-hub.github.io/datasets/woelfel2020virological.html) as of the commit [`259ca0d`](https://github.com/shedding-hub/shedding-hub/commit/259ca0d).
+
+```python
+>>> import shedding_hub as sh
+
+>>> sh.load_dataset('woelfel2020virological', ref='259ca0d')
+{'title': 'Virological assessment of hospitalized patients with COVID-2019',
+ 'doi': '10.1038/s41586-020-2196-x',
+ ...}
+
+```
+
 ## 🤝 Contributing
 
 Thank you for contributing your data to the Shedding Hub and supporting wastewater-based epidemiology! If you hit a bump along the road, [create a new issue](https://github.com/shedding-hub/shedding-hub/issues/new) and we'll sort it out together.
