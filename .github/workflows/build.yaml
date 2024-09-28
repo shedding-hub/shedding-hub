@@ -17,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: "3.11"
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -27,3 +27,7 @@ jobs:
         run: pytest -v --cov=shedding_hub --cov-report=term-missing
       - name: Run doctests
         run: python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE README.md
+      - name: Build package
+        run: python -m build
+      - name: Validate package
+        run: twine check dist/*.tar.gz dist/*.whl
