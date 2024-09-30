@@ -1,17 +1,16 @@
-name: Shedding Hub
+name: PyPI
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build:
-    name: Build
+  publish:
+    name: Publish
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -21,13 +20,11 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Lint code
-        run: black --check .
-      - name: Run tests
-        run: pytest -v --cov=shedding_hub --cov-report=term-missing
-      - name: Run doctests
-        run: python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE README.md
       - name: Build package
         run: python -m build
       - name: Validate package
         run: twine check dist/*.tar.gz dist/*.whl
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip-existing: true
