@@ -1,0 +1,3561 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: "Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo\u2019"
+doi: 10.1038/s41586-020-2488-1
+description: >
+  This study was conducted in the Italian municipality of Vo. Lockdown was implemented
+  after first death of pneumonia was reported. Two surveys and virus tests were conducted
+  with the first survey near the start of lockdown and the second one at the end of
+  lockdown
+analytes:
+  RdRp_gene:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp
+      gene.
+    specimen: Oropharynx and nasal mid-turbinates swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/ml
+    reference_event: Survey
+  E_gene:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp
+      gene.
+    specimen: Oropharynx and nasal mid-turbinates swab
+    biomarker: SARS-CoV-2
+    gene_target: E
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/ml
+    reference_event: Survey
+  symptom:
+    description: >
+      Symptom or not.
+    specimen: unknown
+    biomarker: unknown
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: NA
+    reference_event: survey
+participants:
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 116.8530752
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 2806.098051
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 116.8530752
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 2806.098051
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 12.22255828
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 320.4007336
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 12.22255828
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 320.4007336
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 50.23955527
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 2217.304713
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 50.23955527
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 2217.304713
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: 8998.773226
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 67638.9809065506
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: 8998.773226
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 67638.9809065506
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 680.2666122
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 62262.68097
+  - analyte: E
+    time: 2
+    value: 29.17031479
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 680.2666122
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 62262.68097
+  - analyte: E
+    time: 2
+    value: 29.17031479
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 83.7309326
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 77578.29005
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 83.7309326
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 77578.29005
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: 2466.008013
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 6309.428894
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: 2466.008013
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 6309.428894
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 41.91913407
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 709.4298224
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 41.91913407
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 709.4298224
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 16.782421264649
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 16.782421264649
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 4482.989434
+  - analyte: E
+    time: 2
+    value: 5.483383595
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 4482.989434
+  - analyte: E
+    time: 2
+    value: 5.483383595
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1639789.378
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 39.34682048
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1639789.378
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 39.34682048
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 679.6872707
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 679.6872707
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: 7.029323601
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 115.4409515
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: 7.029323601
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 115.4409515
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 27.16820414
+  - analyte: RdRp
+    time: 2
+    value: 77.35385186
+  - analyte: E
+    time: 1
+    value: 4695.804961
+  - analyte: E
+    time: 2
+    value: 268.0007688
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 27.16820414
+  - analyte: RdRp
+    time: 2
+    value: 77.35385186
+  - analyte: E
+    time: 1
+    value: 4695.804961
+  - analyte: E
+    time: 2
+    value: 268.0007688
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 43.77060324
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 43.77060324
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 10086.95597
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 175827.7058
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 10086.95597
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 175827.7058
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1325760.953
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 130.094514291868
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1325760.953
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 130.094514291868
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 4743.629607
+  - analyte: RdRp
+    time: 2
+    value: 34.48773455
+  - analyte: E
+    time: 1
+    value: 27398.91725
+  - analyte: E
+    time: 2
+    value: 5378.555877
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 4743.629607
+  - analyte: RdRp
+    time: 2
+    value: 34.48773455
+  - analyte: E
+    time: 1
+    value: 27398.91725
+  - analyte: E
+    time: 2
+    value: 5378.555877
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 3736178.46
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 3736178.46
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 60587.37072
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 60587.37072
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 820418.9452
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 32.71839407
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 820418.9452
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 32.71839407
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 355706.72
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 355706.72
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 6466.0234
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 6466.0234
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 262754.8998
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 262754.8998
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 3211.360474
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 46177.24514
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 3211.360474
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 46177.24514
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 96.88677422
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 108722.3122
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 96.88677422
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 108722.3122
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1151650.088
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 921263.2696
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1151650.088
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 921263.2696
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 461901.897275155
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 461901.897275155
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 25803.6491
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 25803.6491
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 8247.704566
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 8247.704566
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 85
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 374882.0267
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 85
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 374882.0267
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 922.369299
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 314.9190873
+  - analyte: E
+    time: 2
+    value: 112.1504484
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 922.369299
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 314.9190873
+  - analyte: E
+    time: 2
+    value: 112.1504484
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 441.0000063
+  - analyte: RdRp
+    time: 2
+    value: 14.4816052
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 441.0000063
+  - analyte: RdRp
+    time: 2
+    value: 14.4816052
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 236587.6005
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 236587.6005
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 73.94388449
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 73.94388449
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 85
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 42919.15883
+  - analyte: RdRp
+    time: 2
+    value: 1275.953914
+  - analyte: E
+    time: 1
+    value: 258587.7329
+  - analyte: E
+    time: 2
+    value: 7146.252797
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 85
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 42919.15883
+  - analyte: RdRp
+    time: 2
+    value: 1275.953914
+  - analyte: E
+    time: 1
+    value: 258587.7329
+  - analyte: E
+    time: 2
+    value: 7146.252797
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 16745.10647
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 14016.63801
+  - analyte: E
+    time: 2
+    value: 300.4782175
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 16745.10647
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 14016.63801
+  - analyte: E
+    time: 2
+    value: 300.4782175
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 524.2084817
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 7.549298504
+  - analyte: E
+    time: 2
+    value: 97.90548075
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 524.2084817
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 7.549298504
+  - analyte: E
+    time: 2
+    value: 97.90548075
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 7323.656406
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1183.852134
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 7323.656406
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1183.852134
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 94.55774079
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 590.7863551
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 94.55774079
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 590.7863551
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 85
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 86.24130599
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1787.816092
+  - analyte: E
+    time: 2
+    value: 311048.7983
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 85
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 86.24130599
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1787.816092
+  - analyte: E
+    time: 2
+    value: 311048.7983
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 5934159.128
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 5934159.128
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 25
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 51.2365005
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 2071.607679
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 25
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 51.2365005
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 2071.607679
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 856.3757161
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 87.80182692
+  - analyte: E
+    time: 2
+    value: 184.0797817
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 856.3757161
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 87.80182692
+  - analyte: E
+    time: 2
+    value: 184.0797817
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 63792.96341
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 63792.96341
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 4614058.205
+  - analyte: RdRp
+    time: 2
+    value: 655.0619228
+  - analyte: E
+    time: 1
+    value: 937843.6816
+  - analyte: E
+    time: 2
+    value: 5378.816149
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 4614058.205
+  - analyte: RdRp
+    time: 2
+    value: 655.0619228
+  - analyte: E
+    time: 1
+    value: 937843.6816
+  - analyte: E
+    time: 2
+    value: 5378.816149
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 506.862678
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 22477.51122
+  - analyte: E
+    time: 2
+    value: 43.013529
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 506.862678
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 22477.51122
+  - analyte: E
+    time: 2
+    value: 43.013529
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 325115.145
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1344028.655
+  - analyte: E
+    time: 2
+    value: 0.072823232
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 325115.145
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1344028.655
+  - analyte: E
+    time: 2
+    value: 0.072823232
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1801153.225
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1801153.225
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 64565.01974
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 64565.01974
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 322492.5431
+  - analyte: RdRp
+    time: 2
+    value: 7323.411518
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 65895.41966
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 322492.5431
+  - analyte: RdRp
+    time: 2
+    value: 7323.411518
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 65895.41966
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 24292.10365
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1759.136306
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 24292.10365
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1759.136306
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 395.2287011
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 4319.751671
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 395.2287011
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 4319.751671
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 26363.42551
+  - analyte: RdRp
+    time: 2
+    value: 109.0711619
+  - analyte: E
+    time: 1
+    value: 1375746.692
+  - analyte: E
+    time: 2
+    value: 78.95406902
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 26363.42551
+  - analyte: RdRp
+    time: 2
+    value: 109.0711619
+  - analyte: E
+    time: 1
+    value: 1375746.692
+  - analyte: E
+    time: 2
+    value: 78.95406902
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 286.7698203
+  - analyte: RdRp
+    time: 2
+    value: 61.57880083
+  - analyte: E
+    time: 1
+    value: 21194.75624
+  - analyte: E
+    time: 2
+    value: 13.9692208
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 286.7698203
+  - analyte: RdRp
+    time: 2
+    value: 61.57880083
+  - analyte: E
+    time: 1
+    value: 21194.75624
+  - analyte: E
+    time: 2
+    value: 13.9692208
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 2892175.711
+  - analyte: RdRp
+    time: 2
+    value: 430.5672892
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 2135.834081
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 2892175.711
+  - analyte: RdRp
+    time: 2
+    value: 430.5672892
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 2135.834081
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 401022.304
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 401022.304
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 39.29124497
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 39.29124497
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 85
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 11364.71424
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 20085.14748
+  - analyte: E
+    time: 2
+    value: 21869.53725
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 85
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 11364.71424
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 20085.14748
+  - analyte: E
+    time: 2
+    value: 21869.53725
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 618639.3907
+  - analyte: RdRp
+    time: 2
+    value: 23.35081212
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 57.74646184
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 15
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 618639.3907
+  - analyte: RdRp
+    time: 2
+    value: 23.35081212
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 57.74646184
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 505.3246178
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 505.3246178
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 25
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 186086.8731
+  - analyte: RdRp
+    time: 2
+    value: 10676.64695
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 48603.33735
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 25
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 186086.8731
+  - analyte: RdRp
+    time: 2
+    value: 10676.64695
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 48603.33735
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 820.3817194
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1891411.788
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 820.3817194
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1891411.788
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1369.556696
+  - analyte: RdRp
+    time: 2
+    value: 203.5616532
+  - analyte: E
+    time: 1
+    value: 446906.5822
+  - analyte: E
+    time: 2
+    value: 840.8996309
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1369.556696
+  - analyte: RdRp
+    time: 2
+    value: 203.5616532
+  - analyte: E
+    time: 1
+    value: 446906.5822
+  - analyte: E
+    time: 2
+    value: 840.8996309
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 19869.40895
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 19869.40895
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 22430.10529
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 30.67165835
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 22430.10529
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 30.67165835
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 9248.116519
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 20297.4757
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 9248.116519
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 20297.4757
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 419964.1152
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 419964.1152
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1263.017922
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 457.0315613
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 1263.017922
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 457.0315613
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 93.00414312
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 78.08662436
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 93.00414312
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 78.08662436
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 18.25379221
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 377.0593769
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 18.25379221
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 377.0593769
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 3171095.18773234
+  - analyte: RdRp
+    time: 2
+    value: 82.0532726535017
+  - analyte: E
+    time: 1
+    value: 4693506.915
+  - analyte: E
+    time: 2
+    value: 15424.82348
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 3171095.18773234
+  - analyte: RdRp
+    time: 2
+    value: 82.0532726535017
+  - analyte: E
+    time: 1
+    value: 4693506.915
+  - analyte: E
+    time: 2
+    value: 15424.82348
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 12047.87498
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 76222.261
+  - analyte: E
+    time: 2
+    value: 3317.486289
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 12047.87498
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 76222.261
+  - analyte: E
+    time: 2
+    value: 3317.486289
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 132.2583279
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1418.492703
+  - analyte: E
+    time: 2
+    value: 27.89353472
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: 132.2583279
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1418.492703
+  - analyte: E
+    time: 2
+    value: 27.89353472
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 279.1883282
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: 279.1883282
+  - analyte: symptom
+    time: 1
+    value: 'no'
+  - analyte: symptom
+    time: 2
+    value: 'yes'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: .nan
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 642.868027140453
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 642.868027140453
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1752.48706760321
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 1752.48706760321
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 22347.9956604512
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 22347.9956604512
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 65.8073058045575
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: RdRp
+    time: 1
+    value: .nan
+  - analyte: RdRp
+    time: 2
+    value: .nan
+  - analyte: E
+    time: 1
+    value: 65.8073058045575
+  - analyte: E
+    time: 2
+    value: .nan
+  - analyte: symptom
+    time: 1
+    value: 'yes'
+  - analyte: symptom
+    time: 2
+    value: 'no'
