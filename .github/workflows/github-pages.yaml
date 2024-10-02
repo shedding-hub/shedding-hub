@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: GitHub Pages
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
 
 jobs:
   deploy-pages:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch
