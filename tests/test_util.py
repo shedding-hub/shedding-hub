@@ -38,6 +38,11 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
             {"dataset": "woelfel2020", "pr": 1},
             "7bf4dabae5ba95b06a62f6102fee571b46068786",
         ),
+        # The same old version of the Woelfel dataset using a commit reference.
+        (
+            {"dataset": "woelfel2020", "ref": "534c30a"},
+            "7bf4dabae5ba95b06a62f6102fee571b46068786",
+        ),
         # Invalid because requesting local and pr.
         (
             {"dataset": "woelfel2020virological", "local": "data", "pr": 7},
