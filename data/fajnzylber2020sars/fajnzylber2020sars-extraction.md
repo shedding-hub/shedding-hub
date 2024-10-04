@@ -57,14 +57,19 @@ def map_race_ethnicity(value):
         'B': 'black',
         'O': 'other',
         'U': 'unknown',
-        'H': 'unknown'  # 'H' stands for Hispanic, so race is unknown
+        'H': 'unknown',  # 'H' stands for Hispanic, so race is unknown
+        'WH': 'white',
+        'BH': 'black'
     }
     ethnicity_mapping = {
         'H': 'hispanic',
         'W': 'not hispanic',
         'B': 'not hispanic',
         'O': 'not hispanic',
-        'U': 'unknown'
+        'U': 'unknown',
+        'WH': 'hispanic',
+        'BH': 'hispanic'
+
     }
     race = race_mapping.get(value, 'unknown')  # Default to unknown if not in mapping
     ethnicity = ethnicity_mapping.get(value, 'unknown')  # Default to unknown if not in mapping
@@ -101,7 +106,6 @@ for patient_id, group in fajnzylbersup.groupby('PID'):
                 participant['measurements'].append(measurementN)
     
     participants.append(participant)
-
 
 ```
 
