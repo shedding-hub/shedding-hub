@@ -3,6 +3,8 @@
 [Fajnzylber et al. (2020)](https://doi.org/10.1038/s41467-020-19057-5) quantified SARS-CoV-2 viral load from participants with a diverse range of COVID-19 disease severity, including those requiring hospitalization, outpatients with mild disease, and individuals with resolved infections. Blood was collected from hospitalized participants, non-hospitalized symptomatic individuals seeking care at a respiratory infection clinic, and participants who had recovered from known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine were collected from hospitalized participants. Data were obtained from the supplementary materials.
 
 ```python
+import pandas as pd 
+import yaml
 # Functions to add folded blocks and literal blocks;
 class folded_str(str): pass
 class literal_str(str): pass
@@ -106,7 +108,6 @@ for patient_id, group in fajnzylbersup.groupby('PID'):
                 participant['measurements'].append(measurementN)
     
     participants.append(participant)
-
 ```
 
 The data is formatted and output as a YAML file.
@@ -171,5 +172,4 @@ with open("fajnzylber2020sars.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(fajnzylber2020sars, outfile, default_flow_style=False, sort_keys=False)
 outfile.close() 
-
 ```
