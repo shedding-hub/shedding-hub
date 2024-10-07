@@ -5,14 +5,9 @@
 First, we `import` python modules needed:
 
 ```python
-import json
 import pandas as pd 
-import numpy as np
-import os
-import jsonschema
+#import numpy as np
 import yaml
-import matplotlib.pyplot as plt
-import io
 
 #functions to add folded blocks and literal blocks;
 class folded_str(str): pass
@@ -29,11 +24,9 @@ yaml.add_representer(literal_str, literal_str_representer)
 
 ```python
 #load the data;
-Liu2024 = pd.read_csv("Liu2024.csv")
 df = pd.read_excel('msphere.00132-23-s0002.xlsx', sheet_name='Shedding Data')
 Demographics = pd.read_excel('msphere.00132-23-s0002.xlsx', sheet_name='Demographics')
 merged_data = pd.merge(df, Demographics, on='ID')
-
 ```
 
 
@@ -142,7 +135,7 @@ Arts2023 = dict(title="Longitudinal and quantitative fecal shedding dynamics of 
                                         gene_target="N", 
                                         unit="gc/dry gram",
                                         reference_event="symptom onset",),
-                            stool_SARSCoV2_ORF1a=dict(description=folded_str("Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR in stool samples. The concentration was quantified in gene copies per dry weight of stool. The limit of blank (LOB), determined as the upper 95% confidence limit of the negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight). The reported number is either the measured concentration of SARS-CoV-2 ORF1a or the LOB if the concentration wasn't detectable.\n"),
+                            stool_SARSCoV2_ORF1a=dict(description=folded_str("Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR in stool samples. The concentration was quantified in gene copies per dry weight of stool. The limit of blank (LOB), determined as the upper 95% confidence limit of the negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight. The reported number is either the measured concentration of SARS-CoV-2 ORF1a or the LOB if the concentration wasn't detectable.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection="unknown",
                                         limit_of_blank=1550,
