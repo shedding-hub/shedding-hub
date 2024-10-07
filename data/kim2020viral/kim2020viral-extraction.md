@@ -6,7 +6,6 @@ First, we `import` python modules needed:
 
 ```python
 import pandas as pd 
-import numpy as np
 import yaml
 
 #functions to add folded blocks and literal blocks;
