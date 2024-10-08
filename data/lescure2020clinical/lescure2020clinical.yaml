@@ -1,0 +1,173 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: 'Clinical and virological data of the first cases of COVID-19 in Europe: a
+  case series'
+doi: 10.1016/S1473-3099(20)30200-0
+description: >
+  The authors followed five patients admitted to Bichat-Claude Bernard University
+  Hospital (Paris, France) and Pellegrin University Hospital (Bordeaux, France) and
+  diagnosed with COVID-19 by semi-quantitative RT-PCR on nasopharyngeal swabs. We
+  assessed patterns of clinical disease and viral load from different samples (nasopharyngeal
+  and blood, urine, and stool samples), which were obtained once daily for 3 days
+  from hospital admission, and once every 2 or 3 days until patient discharge. Stool
+  samples only have positive and negative results (currently not included in this
+  data). The data was obtained from Goyal et al. 2020 for the nasopharyngeal swab
+  results in 4 patients.
+analytes:
+  naso_swab_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in nasopharyngeal swab samples. The
+      concentration were quantified in genome copies per swab.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp or E
+    limit_of_quantification: 100
+    limit_of_detection: 1
+    unit: gc/swab
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 31
+    sex: male
+  measurements:
+  - analyte: naso_swab_SARSCoV2
+    time: 6
+    value: 63095734.448019296
+  - analyte: naso_swab_SARSCoV2
+    time: 7
+    value: 31622.776601683792
+  - analyte: naso_swab_SARSCoV2
+    time: 8
+    value: 10000.0
+  - analyte: naso_swab_SARSCoV2
+    time: 9
+    value: 31622.776601683792
+  - analyte: naso_swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 17
+    value: negative
+- attributes:
+    age: 80
+    sex: male
+  measurements:
+  - analyte: naso_swab_SARSCoV2
+    time: 8
+    value: 6309573.44480193
+  - analyte: naso_swab_SARSCoV2
+    time: 9
+    value: 100000.0
+  - analyte: naso_swab_SARSCoV2
+    time: 10
+    value: 10000.0
+  - analyte: naso_swab_SARSCoV2
+    time: 11
+    value: 15848.93192461114
+  - analyte: naso_swab_SARSCoV2
+    time: 13
+    value: 7943.282347242814
+  - analyte: naso_swab_SARSCoV2
+    time: 15
+    value: 6309.57344480193
+  - analyte: naso_swab_SARSCoV2
+    time: 20
+    value: 31622.776601683792
+  - analyte: naso_swab_SARSCoV2
+    time: 22
+    value: positive
+  - analyte: naso_swab_SARSCoV2
+    time: 24
+    value: positive
+- attributes:
+    age: 30
+    sex: female
+  measurements:
+  - analyte: naso_swab_SARSCoV2
+    time: 2
+    value: 251188.6431509582
+  - analyte: naso_swab_SARSCoV2
+    time: 3
+    value: 1258925.411794166
+  - analyte: naso_swab_SARSCoV2
+    time: 4
+    value: 1584893.1924611141
+  - analyte: naso_swab_SARSCoV2
+    time: 5
+    value: 158489.3192461114
+  - analyte: naso_swab_SARSCoV2
+    time: 6
+    value: 6309.57344480193
+  - analyte: naso_swab_SARSCoV2
+    time: 7
+    value: 1584.893192461114
+  - analyte: naso_swab_SARSCoV2
+    time: 8
+    value: 316.22776601683796
+  - analyte: naso_swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 46
+    sex: female
+  measurements:
+  - analyte: naso_swab_SARSCoV2
+    time: 2
+    value: 63095734.448019296
+  - analyte: naso_swab_SARSCoV2
+    time: 3
+    value: 31622776.60168379
+  - analyte: naso_swab_SARSCoV2
+    time: 6
+    value: 199526.2314968879
+  - analyte: naso_swab_SARSCoV2
+    time: 7
+    value: 199526.2314968879
+  - analyte: naso_swab_SARSCoV2
+    time: 8
+    value: 31622.776601683792
+  - analyte: naso_swab_SARSCoV2
+    time: 10
+    value: positive
+  - analyte: naso_swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 16
+    value: negative
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: naso_swab_SARSCoV2
+    time: 9
+    value: positive
+  - analyte: naso_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 22
+    value: negative
