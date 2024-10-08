@@ -1,0 +1,497 @@
+# yaml-language-server: $schema=.schema.yaml
+title: 'Daily Viral Kinetics and Innate and Adaptive Immune Response Assessment in
+  COVID-19: a Case Series'
+doi: https://doi.org/10.1128/msphere.00827-20
+description: >-
+  The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in
+  both the oropharyngeal swabs (OPS) and the nasopharyngeal swabs (NPS) of five COVID-19
+  patients, tracked from symptom onset up to 7 and 19 days post-onset, perspectively.
+  Cellular and humoral severe acute respiratory syndrome (SARS)-CoV-2-specific adaptive
+  responses are currently not included in this data.
+analytes:
+  NPS_SARSCoV2:
+    description: >-
+      SARS-CoV-2 RNA genome copy concentration in nasopharyngeal samples. The concentration
+      were quantified in genome copies per milliliter.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: unknown
+    limit_of_quantification: 1.4E6 copies/ml
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  OPS_SARSCoV2:
+    description: >-
+      SARS-CoV-2 RNA genome copy concentration in oropharyngeal samples. The concentration
+      were quantified in genome copies per milliliter.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    limit_of_quantification: 1.4E6 copies/ml
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: '1.75E+08'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 1
+    value: '1.75E+08'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.85E+03'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.85E+03'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '6.47E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '6.47E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: '3.89E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 3
+    value: '3.89E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '8.20E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '8.20E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '2.11E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '2.11E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '1.57E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '1.57E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '1.79E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '1.79E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '1.13E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '1.13E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '3.86E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '3.86E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '1.422E+09'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '1.422E+09'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '2.692E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '2.692E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: '1.396E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 16
+    value: '1.396E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: '2.391E+02'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 16
+    value: '2.391E+02'
+- attributes:
+    age: 35
+    sex: male
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: '2.51E+10'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 0
+    value: '2.51E+10'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: '3.25E+09'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 1
+    value: '3.25E+09'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: '6.33E+08'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 1
+    value: '6.33E+08'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.71E+09'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.71E+09'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.35E+08'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.35E+08'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: '9.40E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 3
+    value: '9.40E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.40E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.40E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '3.28E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '3.28E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '3.89E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '3.89E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '3.53E+08'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '3.53E+08'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '3.94E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '3.94E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '7.13E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '7.13E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '2.71E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '2.71E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '2.08E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '2.08E+04'
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: '1.35E+09'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 1
+    value: '1.35E+09'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '3.20E+08'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '3.20E+08'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.41E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.41E+04'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.06E+09'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.06E+09'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: '2.54E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 3
+    value: '2.54E+04'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '8.94E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '8.94E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '3.97E+03'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '3.97E+03'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '7.33E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '7.33E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '3.60E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '3.60E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '3.07E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '3.07E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '2.95E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '2.95E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '7.73E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '7.73E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '1.91E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '1.91E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: '4.20E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 8
+    value: '4.20E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: '3.41E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 8
+    value: '3.41E+04'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: '4.56E+03'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 19
+    value: '4.56E+03'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: '0.00E+00'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 19
+    value: '0.00E+00'
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: '6.85E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 0
+    value: '6.85E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: '2.85E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 1
+    value: '2.85E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: '8.53E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 1
+    value: '8.53E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '3.96E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '3.96E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.73E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 2
+    value: '1.73E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.69E+08'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.69E+08'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.83E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 3
+    value: '1.83E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '1.64E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '1.64E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: '1.41E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 4
+    value: '1.41E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '1.82E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '1.82E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: '5.97E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 5
+    value: '5.97E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '1.61E+07'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '1.61E+07'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '1.11E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '1.11E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '1.55E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '1.55E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '5.50E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '5.50E+04'
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: '2.07E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 6
+    value: '2.07E+04'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '5.49E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '5.49E+04'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: '7.40E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 7
+    value: '7.40E+04'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: '2.53E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 9
+    value: '2.53E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: '3.77E+04'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 10
+    value: '3.77E+04'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: '5.11E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 10
+    value: '5.11E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: '1.01E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 11
+    value: '1.01E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: '6.51E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 11
+    value: '6.51E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: '1.16E+05'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 12
+    value: '1.16E+05'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: '2.30E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 12
+    value: '2.30E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: '2.76E+06'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 13
+    value: '2.76E+06'
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: '3.28E+03'
+  - analyte: oropharyngeal_swab_SARSCoV2
+    time: 14
+    value: '3.28E+03'
