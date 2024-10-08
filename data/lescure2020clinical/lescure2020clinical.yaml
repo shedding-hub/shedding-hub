@@ -88,11 +88,11 @@ participants:
     time: 20
     value: 31622.776601683792
   - analyte: naso_swab_SARSCoV2
-    time: 21
-    value: negative
+    time: 22
+    value: positive
   - analyte: naso_swab_SARSCoV2
-    time: 23
-    value: negative
+    time: 24
+    value: positive
 - attributes:
     age: 30
     sex: female
@@ -145,10 +145,29 @@ participants:
     value: 31622.776601683792
   - analyte: naso_swab_SARSCoV2
     time: 10
-    value: negative
+    value: positive
   - analyte: naso_swab_SARSCoV2
     time: 14
     value: negative
   - analyte: naso_swab_SARSCoV2
     time: 16
+    value: negative
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: naso_swab_SARSCoV2
+    time: 9
+    value: positive
+  - analyte: naso_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: naso_swab_SARSCoV2
+    time: 22
     value: negative

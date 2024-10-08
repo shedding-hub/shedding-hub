@@ -8,7 +8,6 @@ First, we `import` python modules needed:
 #import modules;
 import yaml
 import pandas as pd
-import numpy as np
 
 #functions to add folded blocks and literal blocks;
 class folded_str(str): pass
@@ -30,19 +29,35 @@ Raw data ([Viral_Loads](https://github.com/shedding-hub/shedding-hub/blob/main/d
 Lescure2020 = pd.read_csv("Viral_Loads.csv")
 #Subset the data for Lescure et al. 2020;
 Lescure2020 = Lescure2020[Lescure2020["cov_study"]==4]
+#correct some doa errors;
+Lescure2020.loc[(Lescure2020["ID"]=="E3") & (Lescure2020["dao"]==13),"dao"]=14
+Lescure2020.loc[(Lescure2020["ID"]=="E3") & (Lescure2020["dao"]==15),"dao"]=16
 #some data cleaning to match the schema;
 Lescure2020.loc[Lescure2020["cens"]==0,"VL"]=10**Lescure2020.loc[Lescure2020["cens"]==0,"VL"]
 Lescure2020.loc[Lescure2020["cens"]==1,"VL"]="negative"
+#The positive but not quantifiable data are from Figure 2 in the paper;
+Lescure2020.loc[(Lescure2020["ID"]=="E3") & (Lescure2020["dao"].isin([14,16])),"VL"]="positive"
+Lescure2020.loc[(Lescure2020["ID"]=="E5") & (Lescure2020["dao"]==8),"VL"]="positive"
+
+#add data from the patient 2;
+P2 = {
+    "ID": ['E2','E2','E2','E2','E2'],
+    "dao": [0,2,5,11,13],
+    "VL": ['positive','negative','negative','negative','negative']
+}
+dat_P2 = pd.DataFrame(P2)
+
+Lescure2020 = pd.concat([Lescure2020,dat_P2])
 ```
 
 Finally, the data is formatted and output as a YAML file.
 
 ```python
 #Patient information from Table 1 and Figure 2 in Lescure et al. (2020)
-patients_info = pd.DataFrame(dict(ID=['E1','E3', 'E4', 'E5'],
-                                  age=[31, 80, 30, 46],
-                                  sex=['male','male','female','female'],
-                                  day0=[6,8,2,2]))
+patients_info = pd.DataFrame(dict(ID=['E1','E2','E3', 'E4', 'E5'],
+                                  age=[31, 48, 80, 30, 46],
+                                  sex=['male','male','male','female','female'],
+                                  day0=[6,9,8,2,2]))
 
 participant_list = [dict(attributes=dict(age=patients_info.loc[patients_info["ID"]==i,"age"].item(),
                                          sex=patients_info.loc[patients_info["ID"]==i,"sex"].item(),),
