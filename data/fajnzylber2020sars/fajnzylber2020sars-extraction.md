@@ -1,6 +1,6 @@
 # Extraction for Fajnzylber et al. (2020)
 
-[Fajnzylber et al. (2020)](https://doi.org/10.1038/s41467-020-19057-5) quantified SARS-CoV-2 viral load from participants with a diverse range of COVID-19 disease severity, including those requiring hospitalization, outpatients with mild disease, and individuals with resolved infections. Blood was collected from hospitalized participants, non-hospitalized symptomatic individuals seeking care at a respiratory infection clinic, and participants who had recovered from known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine were collected from hospitalized participants. Data were obtained from the supplementary materials.
+[Fajnzylber et al. (2020)](https://doi.org/10.1038/s41467-020-19057-5) quantified SARS-CoV-2 viral load from participants with a diverse range of COVID-19 disease severity, including those requiring hospitalization, outpatients with mild disease, and individuals with resolved infections. Blood was collected from hospitalized participants, non-hospitalized symptomatic individuals seeking care at a respiratory infection clinic, and participants who had recovered from known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine were collected from hospitalized participants. Data were obtained from the [supplementary materials](https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-020-19057-5/MediaObjects/41467_2020_19057_MOESM3_ESM.xlsx).
 
 ```python
 import pandas as pd 
