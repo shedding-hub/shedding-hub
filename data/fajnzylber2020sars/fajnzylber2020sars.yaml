@@ -1,0 +1,1912 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: SARS-CoV-2 viral load is associated with increased disease severity and mortality
+doi: 10.1038/s41467-020-19057-5
+description: >
+  The paper quantified SARS-CoV-2 viral load from participants with a diverse range
+  of COVID-19 disease severity, including those requiring hospitalization, outpatients
+  with mild disease, and individuals with resolved infections. Blood was collected
+  from hospitalized participants, non-hospitalized symptomatic individuals seeking
+  care at a respiratory infection clinic, and participants who had recovered from
+  known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine
+  were collected from hospitalized participants. Data were obtained from the supplementary
+  materials.
+analytes:
+  Nasopharyngeal_SARSCoV2_N:
+    description: >
+      Nasopharyngeal swabs were collected in 3 mL of phosphate-buffered saline. Viral
+      concentrations were quantified using RT-qPCR targeting the N gene in the nasopharyngeal
+      swab samples.
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    unit: gc/mL
+    reference_event: symptom onset
+  Oropharyngeal_PBS_SARSCoV2_N:
+    description: >
+      Oropharyngeal swabs were collected in 3 mL of phosphate buffered saline. Viral
+      concentrations were quantified using RT-qPCR targeting the N gene in oropharyngeal
+      swab samples.
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    unit: gc/mL
+    reference_event: symptom onset
+  Oropharyngeal_VTM_SARSCoV2_N:
+    description: >
+      Oropharyngeal swabs were collected in viral transport medium. Viral concentrations
+      were quantified using RT-qPCR targeting the N gene in oropharyngeal swab samples.
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    unit: gc/mL
+    reference_event: symptom onset
+  Sputum_SARSCoV2_N:
+    description: >
+      Sputum samples were collected and viral concentrations were quantified using
+      RT-qPCR targeting the N gene.
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    unit: gc/mL
+    reference_event: symptom onset
+  Plasma_SARSCoV2_N:
+    description: >
+      Plasma samples were collected and viral concentrations were quantified using
+      RT-qPCR targeting the N gene.
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    specimen: plasma
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    unit: gc/mL
+    reference_event: symptom onset
+  Urine_SARSCoV2_N:
+    description: >
+      Urine samples were collected and viral concentrations were quantified using
+      RT-qPCR targeting the N gene.
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    specimen: urine
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 36
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 10
+    value: 1405.844260714755
+  - analyte: Urine_SARSCoV2_N
+    time: 10
+    value: negative
+- attributes:
+    age: 42
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 19
+    value: 445.93377026544846
+  - analyte: Sputum_SARSCoV2_N
+    time: 19
+    value: 26128.217440593962
+  - analyte: Urine_SARSCoV2_N
+    time: 19
+    value: negative
+- attributes:
+    age: 69
+    sex: female
+    race: white
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 22
+    value: negative
+- attributes:
+    age: 93
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 10
+    value: 15452.818848885212
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 10
+    value: 8637.127687773838
+  - analyte: Sputum_SARSCoV2_N
+    time: 10
+    value: 76048.26040328297
+  - analyte: Urine_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 57
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 18
+    value: 235142.73279861396
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 18
+    value: negative
+- attributes:
+    age: 35
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 11
+    value: 5559.499999999997
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 11
+    value: 840.6000000000001
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 49
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 12
+    value: 419.59953670348744
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 12
+    value: 87.39991293412749
+  - analyte: Sputum_SARSCoV2_N
+    time: 12
+    value: 387.6002067178673
+  - analyte: Plasma_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 12
+    value: negative
+- attributes:
+    age: 60
+    sex: female
+    race: white
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 23
+    value: negative
+- attributes:
+    age: 83
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 10
+    value: 64.03797689480209
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 10
+    value: 6917.372731692741
+  - analyte: Plasma_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 18
+    value: negative
+- attributes:
+    age: 57
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Sputum_SARSCoV2_N
+    time: 17
+    value: 460833.70903218555
+  - analyte: Plasma_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 24
+    value: 846.6329563535171
+  - analyte: Plasma_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 24
+    value: negative
+- attributes:
+    age: 56
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 11
+    value: 12613.104677422041
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 11
+    value: 2293.300680922007
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 66
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Sputum_SARSCoV2_N
+    time: 22
+    value: 72.36089954648041
+  - analyte: Sputum_SARSCoV2_N
+    time: 27
+    value: 156.43666336398962
+  - analyte: Sputum_SARSCoV2_N
+    time: 34
+    value: negative
+- attributes:
+    age: 34
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: 275.8787734896712
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 21
+    value: negative
+- attributes:
+    age: 61
+    sex: male
+    race: other
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Urine_SARSCoV2_N
+    time: 10
+    value: negative
+- attributes:
+    age: 78
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 29
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 7
+    value: negative
+- attributes:
+    age: 52
+    sex: male
+    race: black
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 9
+    value: 51238.52076668316
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 9
+    value: 135712.3139846325
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 9
+    value: 566918.9272882169
+  - analyte: Sputum_SARSCoV2_N
+    time: 9
+    value: 1228188.012061243
+  - analyte: Plasma_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 24
+    value: 437.0114589153523
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 24
+    value: 1549.2264395093866
+  - analyte: Plasma_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 30
+    value: 138755.87818416112
+  - analyte: Urine_SARSCoV2_N
+    time: 30
+    value: negative
+- attributes:
+    age: 64
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 7
+    value: 1465.6997035110203
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 7
+    value: 12441.392746784244
+  - analyte: Sputum_SARSCoV2_N
+    time: 7
+    value: 1848936.517130299
+  - analyte: Plasma_SARSCoV2_N
+    time: 7
+    value: 137.10017211456247
+  - analyte: Urine_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 14
+    value: 331.29966748916473
+  - analyte: Plasma_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 63
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 30
+    value: 551.3359341983812
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 30
+    value: 27020.661061854826
+  - analyte: Plasma_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 36
+    value: 7636.350917144698
+  - analyte: Plasma_SARSCoV2_N
+    time: 36
+    value: 60.97960298265059
+  - analyte: Urine_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 43
+    value: 1028.4812947118771
+  - analyte: Urine_SARSCoV2_N
+    time: 43
+    value: negative
+- attributes:
+    age: 80
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Sputum_SARSCoV2_N
+    time: 8
+    value: 740543.5449912183
+  - analyte: Plasma_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 15
+    value: 3375.0258418969283
+  - analyte: Plasma_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 37
+    value: negative
+- attributes:
+    age: 22
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Urine_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 16
+    value: negative
+- attributes:
+    age: 43
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 10
+    value: 405.44037140373706
+  - analyte: Sputum_SARSCoV2_N
+    time: 17
+    value: 378050.6119459584
+  - analyte: Plasma_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 17
+    value: 74.87800431637106
+  - analyte: Sputum_SARSCoV2_N
+    time: 25
+    value: 22506.047121916687
+  - analyte: Plasma_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 25
+    value: negative
+- attributes:
+    age: 57
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Sputum_SARSCoV2_N
+    time: 27
+    value: 2608.054532399079
+  - analyte: Urine_SARSCoV2_N
+    time: 38
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 41
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 41
+    value: 8840.876719270109
+- attributes:
+    age: 63
+    sex: female
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 3
+    value: 705.3001886379332
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 3
+    value: 114.19997267637156
+  - analyte: Sputum_SARSCoV2_N
+    time: 3
+    value: 13220.990708058598
+  - analyte: Plasma_SARSCoV2_N
+    time: 3
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 3
+    value: negative
+- attributes:
+    age: 60
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 13
+    value: 6252.20198520189
+  - analyte: Urine_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 64
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 8
+    value: 79.59998758464992
+  - analyte: Plasma_SARSCoV2_N
+    time: 8
+    value: 1333.3003711351528
+  - analyte: Urine_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: 1111.3989956860141
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 16
+    value: 7364.597225719371
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 16
+    value: 137.79993096536754
+  - analyte: Sputum_SARSCoV2_N
+    time: 16
+    value: 476966.6348619844
+  - analyte: Plasma_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 21
+    value: 39918.3
+  - analyte: Plasma_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 29
+    value: negative
+- attributes:
+    age: 51
+    sex: male
+    race: white
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 40
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 40
+    value: 1629.4548875948533
+- attributes:
+    age: 32
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 19
+    value: 89.12509381337455
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 19
+    value: 24547.089156850285
+  - analyte: Sputum_SARSCoV2_N
+    time: 19
+    value: 9772.372209558112
+  - analyte: Plasma_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 26
+    value: negative
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 26
+    value: 501.18723362727246
+  - analyte: Sputum_SARSCoV2_N
+    time: 26
+    value: 173.78008287493762
+  - analyte: Plasma_SARSCoV2_N
+    time: 26
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 26
+    value: negative
+- attributes:
+    age: 38
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 29
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 16
+    value: negative
+- attributes:
+    age: 53
+    sex: male
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 11
+    value: 13502.121940050685
+  - analyte: Sputum_SARSCoV2_N
+    time: 11
+    value: 10508.504311615008
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 28
+    value: 161.56826278844872
+  - analyte: Urine_SARSCoV2_N
+    time: 28
+    value: negative
+- attributes:
+    age: 65
+    sex: female
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 20
+    value: 138.95616388998027
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 20
+    value: 2280.9664692067736
+  - analyte: Sputum_SARSCoV2_N
+    time: 20
+    value: 14610.92142915526
+  - analyte: Plasma_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 31
+    value: 2535.5884363467453
+  - analyte: Sputum_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 34
+    value: 119.23085649993484
+  - analyte: Sputum_SARSCoV2_N
+    time: 34
+    value: 12794.519052476928
+  - analyte: Plasma_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 39
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 40
+    value: negative
+- attributes:
+    age: 80
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 17
+    value: 809669.2581144447
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 17
+    value: 22825523.94872703
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 17
+    value: 19190328.000757366
+  - analyte: Plasma_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 22
+    value: 912.9794181688235
+- attributes:
+    age: 42
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 3
+    value: 66012736.381452076
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 3
+    value: 25865079.804507762
+  - analyte: Sputum_SARSCoV2_N
+    time: 3
+    value: 1048106926.1269816
+- attributes:
+    age: 52
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 15
+    value: 161.87722215263256
+  - analyte: Sputum_SARSCoV2_N
+    time: 15
+    value: 5316.399838314176
+  - analyte: Urine_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 23
+    value: 78.84619759689198
+  - analyte: Plasma_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 23
+    value: negative
+- attributes:
+    age: 79
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 18
+    value: 18350.629447384483
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 18
+    value: 43907.70185364014
+  - analyte: Plasma_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 27
+    value: 19165.1948406362
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 27
+    value: 1293.566572964203
+  - analyte: Plasma_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 36
+    value: negative
+- attributes:
+    age: 42
+    sex: female
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 15
+    value: 410.4681418935952
+  - analyte: Sputum_SARSCoV2_N
+    time: 15
+    value: 4038952.450970932
+  - analyte: Plasma_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 15
+    value: negative
+- attributes:
+    age: 69
+    sex: female
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: unknown
+    value: 761.8229097439889
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: unknown
+    value: 5444.512727062763
+  - analyte: Sputum_SARSCoV2_N
+    time: unknown
+    value: 3565428.4989792323
+  - analyte: Urine_SARSCoV2_N
+    time: unknown
+    value: negative
+- attributes:
+    age: 84
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 18
+    value: 6598.76810282134
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 18
+    value: 23422.388331903003
+  - analyte: Sputum_SARSCoV2_N
+    time: 18
+    value: 19369775.616607845
+  - analyte: Plasma_SARSCoV2_N
+    time: 18
+    value: 643.9326811812232
+  - analyte: Urine_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 39
+    value: 1255.5929664410064
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 39
+    value: 585.223176369826
+  - analyte: Sputum_SARSCoV2_N
+    time: 39
+    value: 155613.9141076376
+  - analyte: Plasma_SARSCoV2_N
+    time: 39
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 42
+    value: 273.16038087193675
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 42
+    value: 17947.629575413786
+  - analyte: Sputum_SARSCoV2_N
+    time: 42
+    value: 1250.5035742268885
+  - analyte: Plasma_SARSCoV2_N
+    time: 42
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 42
+    value: negative
+- attributes:
+    age: 53
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Sputum_SARSCoV2_N
+    time: 19
+    value: 364915.61286167643
+  - analyte: Plasma_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 19
+    value: negative
+- attributes:
+    age: 69
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 17
+    value: negative
+- attributes:
+    age: 30
+    sex: female
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 15
+    value: negative
+- attributes:
+    age: 85
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 13
+    value: 110990.03797804801
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 13
+    value: 26523.693457878828
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 13
+    value: 5093.895133164056
+  - analyte: Plasma_SARSCoV2_N
+    time: 13
+    value: 279.7
+  - analyte: Urine_SARSCoV2_N
+    time: 13
+    value: 78.2000444645884
+- attributes:
+    age: 63
+    sex: female
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Sputum_SARSCoV2_N
+    time: 13
+    value: 44822114.27642919
+  - analyte: Plasma_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 63
+    sex: female
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: unknown
+    value: 607.85451599114
+  - analyte: Sputum_SARSCoV2_N
+    time: unknown
+    value: 6451.846111402645
+  - analyte: Urine_SARSCoV2_N
+    time: unknown
+    value: 143.10943386178616
+- attributes:
+    age: 56
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 5
+    value: 150.50069869537222
+- attributes:
+    age: 27
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 2
+    value: 15010802.750568857
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 2
+    value: 714.023359546647
+- attributes:
+    age: 43
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 13
+    value: 40503.21872609021
+  - analyte: Sputum_SARSCoV2_N
+    time: 13
+    value: 352589.02352393605
+  - analyte: Urine_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 72
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 9
+    value: 637.2647853420201
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 9
+    value: 320986.38664564333
+  - analyte: Plasma_SARSCoV2_N
+    time: 9
+    value: 112.53825699602845
+  - analyte: Urine_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 22
+    value: 98.00213542578021
+  - analyte: Sputum_SARSCoV2_N
+    time: 22
+    value: 616.4595095791435
+- attributes:
+    age: 55
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 16
+    value: negative
+- attributes:
+    age: 39
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 19
+    value: 305.3702161972105
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 19
+    value: 4544.517888061924
+  - analyte: Sputum_SARSCoV2_N
+    time: 20
+    value: 60.30127404487834
+- attributes:
+    age: 72
+    sex: female
+    race: white
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 10
+    value: 308022.02988976927
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 10
+    value: 17782.794100389227
+  - analyte: Sputum_SARSCoV2_N
+    time: 10
+    value: 46416.916259903664
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 21
+    value: 500.93881808857265
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 21
+    value: negative
+- attributes:
+    age: 53
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 11
+    value: 249.99999500797404
+  - analyte: Sputum_SARSCoV2_N
+    time: 11
+    value: 4785661.755728646
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 41
+    sex: female
+    race: white
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 7
+    value: negative
+- attributes:
+    age: 51
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 16
+    value: 103.35631666799557
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 16
+    value: 356.59115362875934
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 16
+    value: 586.762805946876
+- attributes:
+    age: 55
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 10
+    value: 732.7992227133152
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 10
+    value: 501.00031623831075
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 10
+    value: 21854.707583792235
+  - analyte: Sputum_SARSCoV2_N
+    time: 10
+    value: 60917.63017271636
+  - analyte: Plasma_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 10
+    value: negative
+- attributes:
+    age: 50
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 15
+    value: 104.90012362240293
+  - analyte: Sputum_SARSCoV2_N
+    time: 15
+    value: 417.59952884166546
+  - analyte: Plasma_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 15
+    value: negative
+- attributes:
+    age: 58
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 23
+    value: negative
+- attributes:
+    age: 50
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Sputum_SARSCoV2_N
+    time: 26
+    value: 397.4446474158467
+  - analyte: Plasma_SARSCoV2_N
+    time: 26
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 34
+    value: 43.91190792891095
+  - analyte: Plasma_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 42
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 42
+    value: negative
+- attributes:
+    age: 71
+    sex: male
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 22
+    value: 17851.511745663458
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 22
+    value: 130.00000000000006
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 22
+    value: 2333.1000000000013
+  - analyte: Plasma_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 22
+    value: negative
+- attributes:
+    age: 70
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 12
+    value: 1048.0861704445326
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 12
+    value: 26436.199367216468
+  - analyte: Plasma_SARSCoV2_N
+    time: 12
+    value: 82.60544580664913
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 20
+    value: negative
+- attributes:
+    age: 33
+    sex: female
+    race: white
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 12
+    value: 262.705356890936
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 12
+    value: 1993.5028391758965
+  - analyte: Plasma_SARSCoV2_N
+    time: 12
+    value: negative
+- attributes:
+    age: 62
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: 310.98647376438845
+- attributes:
+    age: 76
+    sex: male
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 2
+    value: 263.1065595822088
+  - analyte: Plasma_SARSCoV2_N
+    time: 2
+    value: 414.6032847561622
+- attributes:
+    age: 69
+    sex: male
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 3
+    value: 5807.100000000001
+- attributes:
+    age: 79
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 14
+    value: 1629600.8636678727
+  - analyte: Plasma_SARSCoV2_N
+    time: 14
+    value: 492.3207540284397
+  - analyte: Plasma_SARSCoV2_N
+    time: 25
+    value: negative
+- attributes:
+    age: 56
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 16
+    value: 17465.87997481643
+  - analyte: Plasma_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 19
+    value: negative
+- attributes:
+    age: 67
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 14
+    value: 202.5840746714828
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 15
+    value: negative
+- attributes:
+    age: 34
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 29
+    value: negative
+- attributes:
+    age: 66
+    sex: male
+    race: other
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 12
+    value: 70170.9437810058
+  - analyte: Plasma_SARSCoV2_N
+    time: 12
+    value: 125.68895236976988
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 20
+    value: 850.5184507989587
+  - analyte: Plasma_SARSCoV2_N
+    time: 20
+    value: negative
+- attributes:
+    age: 44
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 39
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 39
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 39
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 43
+    value: negative
+- attributes:
+    age: 66
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 7
+    value: 81.10002722456244
+  - analyte: Urine_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 14
+    value: 129.09992798299902
+  - analyte: Plasma_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 60
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 5
+    value: 161407.01942355285
+  - analyte: Plasma_SARSCoV2_N
+    time: 5
+    value: 119.97221464733863
+  - analyte: Plasma_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 13
+    value: 110.50958748735626
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 25
+    value: negative
+- attributes:
+    age: 45
+    sex: male
+    race: white
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 9
+    value: 64.6
+- attributes:
+    age: 52
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 16
+    value: 40307.95536773277
+- attributes:
+    age: 69
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 17
+    value: 34691.87285838844
+  - analyte: Plasma_SARSCoV2_N
+    time: 17
+    value: 322.9600907217151
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 25
+    value: 61.403401613246515
+  - analyte: Plasma_SARSCoV2_N
+    time: 25
+    value: negative
+- attributes:
+    age: 51
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 11
+    value: 72.19996715471808
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 11
+    value: 63.19998860808392
+  - analyte: Sputum_SARSCoV2_N
+    time: 11
+    value: 622036.0999999994
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 23
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 62
+    sex: male
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 25
+    value: 2511.6638434043307
+  - analyte: Plasma_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 33
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 40
+    value: negative
+- attributes:
+    age: 79
+    sex: male
+    race: black
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 22
+    value: 861.6999999999999
+- attributes:
+    age: 45
+    sex: male
+    race: unknown
+    ethnicity: unknown
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 18
+    value: 1578.0981110838134
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Oropharyngeal_VTM_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 18
+    value: 1768.1984274773888
+  - analyte: Urine_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 25
+    value: 41.199979505696476
+  - analyte: Urine_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 32
+    value: negative
+  - analyte: Oropharyngeal_PBS_SARSCoV2_N
+    time: 32
+    value: negative
+  - analyte: Sputum_SARSCoV2_N
+    time: 32
+    value: 41.199979505696476
+  - analyte: Plasma_SARSCoV2_N
+    time: 32
+    value: negative
+  - analyte: Urine_SARSCoV2_N
+    time: 32
+    value: negative
+- attributes:
+    age: 37
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 32
+    value: negative
+- attributes:
+    age: 61
+    sex: female
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 36
+    value: negative
+- attributes:
+    age: 77
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 6
+    value: 249.4000000000001
+  - analyte: Urine_SARSCoV2_N
+    time: 6
+    value: negative
+- attributes:
+    age: 39
+    sex: male
+    race: black
+    ethnicity: hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: Plasma_SARSCoV2_N
+    time: 16
+    value: negative
+- attributes:
+    age: 59
+    sex: male
+    race: unknown
+    ethnicity: hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 30
+    sex: female
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Nasopharyngeal_SARSCoV2_N
+    time: 11
+    value: 1514.550771446368
+  - analyte: Plasma_SARSCoV2_N
+    time: 12
+    value: negative
+- attributes:
+    age: 68
+    sex: male
+    race: white
+    ethnicity: not hispanic
+  measurements:
+  - analyte: Plasma_SARSCoV2_N
+    time: 26
+    value: negative
