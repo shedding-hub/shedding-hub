@@ -4,27 +4,24 @@ analytes:
     description: SARS-CoV-2 RNA genome copy concentration in throat swab samples.
       Specimens were collected from all patients at least 2 days after hospitalization
       and physicians checked their symptoms and signs daily.
-    gene_target: unknown
-    limit_of_detection: unknown
-    limit_of_quantification: 1000
+    gene_target: RNA polymerase (RdRp) genes
+    limit_of_detection: 40
+    limit_of_quantification: unknown
     reference_event: PatientID
     specimen: throat_swab
     unit: value
 description: The authors measured SARS-CoV-2 in longitudinal throat swab samples collected
-  from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were
-  quantified using diagnosed by real-time reverse transcription polymerase chain reaction
-  (RT-PCR). Specimens were collected from all patients at least 2 days after hospitalization
-  and physicians checked their symptoms and signs daily. Patients who had asymptomatic
-  carrier and incubation period were analyzed.
+  from 3 presymptomatic patients and 10 patients with entirely asymptomatic infections
+  identified from 71 cases between February 4 and April 7, 2020. Abundances were quantified
+  using reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected
+  from all patients at least 2 days after hospitalization and physicians checked their
+  symptoms and signs daily. Patients who had asymptomatic carrier and incubation period
+  were analyzed.
 doi: 10.1016/j.ijid.2020.04.083
 participants:
 - attributes:
     age: 30.0
-    day: -2
-    estimated: 1
-    sevmax: 2.0
     sex: male
-  died: 0
   measurements:
   - analyte: throatswab_SARSCoV2
     time: -2
@@ -56,14 +53,9 @@ participants:
   - analyte: throatswab_SARSCoV2
     time: 14
     value: 1.0
-  sev1st: 1.0
 - attributes:
     age: 30.0
-    day: -1
-    estimated: 1
-    sevmax: 2.0
     sex: male
-  died: 0
   measurements:
   - analyte: throatswab_SARSCoV2
     time: -1
@@ -83,14 +75,9 @@ participants:
   - analyte: throatswab_SARSCoV2
     time: 11
     value: 1.0
-  sev1st: 1.0
 - attributes:
     age: 20.0
-    day: 1
-    estimated: 1
-    sevmax: 2.0
     sex: female
-  died: 0
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 1
@@ -101,5 +88,4 @@ participants:
   - analyte: throatswab_SARSCoV2
     time: 4
     value: 1.0
-  sev1st: 1.0
 title: Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients
