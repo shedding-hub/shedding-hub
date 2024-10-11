@@ -20,7 +20,7 @@ analytes:
     limit_of_quantification: unknown
     limit_of_detection: unknown
     unit: gc/swab
-    reference_event: confirmation date
+    reference_event: symptom onset
 participants:
 - measurements:
   - analyte: naso_swab_SARSCoV2
