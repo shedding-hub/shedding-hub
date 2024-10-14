@@ -1,6 +1,6 @@
 # Extraction for Arts et al. (2023)
 
-[Arts et al. (2023)](https://journals.asm.org/doi/10.1128/msphere.00132-23) present longitudinal, quantitative fecal shedding data for SARS-CoV-2 RNA, pepper mild mottle virus (PMMoV) RNA, and crAss-like phage (crAssphage) DNA from 48 COVID-19 patients. Abundances were quantified using (RT)-ddPCR assays targeting the N and ORF1a genes. The data were obtained from supplementary material.
+[Arts et al. (2023)](https://journals.asm.org/doi/10.1128/msphere.00132-23) present longitudinal, quantitative fecal shedding data for SARS-CoV-2 RNA, pepper mild mottle virus (PMMoV) RNA, and crAss-like phage (crAssphage) DNA from 48 COVID-19 patients. Abundances were quantified using (RT)-ddPCR assays targeting the N and ORF1a genes. The data were obtained from [supplementary material](https://journals.asm.org/doi/suppl/10.1128/msphere.00132-23/suppl_file/msphere.00132-23-s0002.xlsx).
 
 First, we `import` python modules needed:
 
