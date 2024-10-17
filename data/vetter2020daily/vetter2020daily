@@ -47,12 +47,17 @@ for i in pd.unique(Vetter2020["PatientID"]):
     patient_data = Vetter2020[Vetter2020["PatientID"] == i]
     age = int(patient_data['Age'].iloc[0])  # Convert to Python int
     sex = str(patient_data['Sex'].iloc[0])  # Convert to Python str
-    
+
     measurements = []
     for _, row in patient_data.iterrows():
         try:
             # Convert 'Log copies/ml' to float
             value = float(row['Log copies/ml'])  # Use float for scientific notation
+            
+            # Add the new condition here
+            if value == 0.0:
+                value = 'negative'
+                
         except ValueError:
             # Handle non-numeric values (like 'negative')
             value = 'negative'  # or assign 0
@@ -79,6 +84,7 @@ for i in pd.unique(Vetter2020["PatientID"]):
         "measurements": measurements
     }
     participant_list.append(participant_dict)
+
 
 
  
