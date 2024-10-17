@@ -5,6 +5,8 @@ import numpy as np
 
 os.getcwd()
 os.chdir("/Users/wwww/shedding-hub/data/vetter2020daily")
+os.getcwd()
+
 
 df_1 = pd.read_csv("msphere.00827-20-st002.csv")
 
@@ -39,8 +41,6 @@ Vetter2020 = Vetter2020.replace({"Sex": {"M": "male", "F": "female"},
 Vetter2020.loc[Vetter2020['Log copies/ml'] == 'neg', 'Log copies/ml'] = 'negative'
 
 
-
-
 participant_list = []
 
 for i in pd.unique(Vetter2020["PatientID"]):
@@ -50,16 +50,26 @@ for i in pd.unique(Vetter2020["PatientID"]):
     
     measurements = []
     for _, row in patient_data.iterrows():
-        measurements.append({
-            "analyte": "nasopharyngeal_swab_SARSCoV2",
-            "time": int(row['dpo']),  # Ensure it's a Python int
-            "value": str(row['Log copies/ml'])  # Convert to string if not numeric
-        })
-        measurements.append({
-            "analyte": "oropharyngeal_swab_SARSCoV2",
-            "time": int(row['dpo']),  # Ensure it's a Python int
-            "value": str(row['Log copies/ml'])  # Convert to string if not numeric
-        })
+        try:
+            # Convert 'Log copies/ml' to float
+            value = float(row['Log copies/ml'])  # Use float for scientific notation
+        except ValueError:
+            # Handle non-numeric values (like 'negative')
+            value = 'negative'  # or assign 0
+
+        # Append only for the specific sample type
+        if row['Sample'] == 'FNP':
+            measurements.append({
+                "analyte": "NPS_SARSCoV2",
+                "time": int(row['dpo']),
+                "value": value
+            })
+        elif row['Sample'] == 'OPS':
+            measurements.append({
+                "analyte": "OPS_SARSCoV2",
+                "time": int(row['dpo']),
+                "value": value
+            })
 
     participant_dict = {
         "attributes": {
@@ -69,6 +79,7 @@ for i in pd.unique(Vetter2020["PatientID"]):
         "measurements": measurements
     }
     participant_list.append(participant_dict)
+
 
  
 #functions to add folded blocks and literal blocks;
@@ -86,10 +97,12 @@ yaml.add_representer(literal_str, literal_str_representer)
 
 
 
+
+
 vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Response Assessment in COVID-19: a Case Series",
-               doi="https://doi.org/10.1128/msphere.00827-20",
-               description=folded_str('The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in both the oropharyngeal swabs (OPS) and the nasopharyngeal swabs (NPS) of five COVID-19 patients, tracked from symptom onset up to 7 and 19 days post-onset, perspectively. Cellular and humoral severe acute respiratory syndrome (SARS)-CoV-2-specific adaptive responses are currently not included in this data.'),
-               analytes=dict(NPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration in nasopharyngeal samples. The concentration were quantified in genome copies per milliliter."),
+               doi="10.1128/msphere.00827-20",
+               description=folded_str('The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in both oropharyngeal (OPS) and nasopharyngeal (NPS) swabs from five COVID-19 patients in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Cellular and humoral SARS-CoV-2-specific adaptive responses and serology data are currently not included in this dataset.\n'),
+               analytes=dict(NPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in nasopharyngeal samples. The concentration were quantified in gene copies per milliliter.\n"),
                                                     specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="unknown",  
@@ -97,7 +110,7 @@ vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Res
                                                     limit_of_detection="unknown",
                                                     unit="gc/mL",
                                                     reference_event="symptom onset"),
-                             OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration in oropharyngeal samples. The concentration were quantified in genome copies per milliliter."),
+                             OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in oropharyngeal samples. The concentration were quantified in gene copies per milliliter.\n"),
                                               specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
                                               limit_of_quantification="unkown",
@@ -107,7 +120,7 @@ vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Res
                              
                participants=participant_list)
 
-with open("/Users/wwww/shedding-hub/shedding-hub/data/Youwei/Vetter2020Daily.yaml","w") as outfile:
+with open("vetter2020daily.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
     yaml.dump(vetter2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close() 
