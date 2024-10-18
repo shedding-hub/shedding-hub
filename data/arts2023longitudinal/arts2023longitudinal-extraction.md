@@ -5,20 +5,9 @@
 First, we `import` python modules needed:
 
 ```python
-import pandas as pd 
+import pandas as pd
 import yaml
-
-#functions to add folded blocks and literal blocks;
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
+from shedding_hub import folded_str, literal_str
 ```
 
 ```python
@@ -45,7 +34,7 @@ for patient_id, group in merged_data.groupby('ID'):
         'measurements': []
     }
 
-    for _, row in group.iterrows(): 
+    for _, row in group.iterrows():
         if pd.isna(row['N_det']):
             continue
         elif row['N_det']:
@@ -98,7 +87,7 @@ for patient_id, group in merged_data.groupby('ID'):
     for _, row in group.iterrows():
         if pd.isna(row['crAss_quant']):
             continue
-        
+
         if row['crAss_quant']:
             value = row['crAss_conc']
         elif row['crAss_det']:
@@ -114,7 +103,7 @@ for patient_id, group in merged_data.groupby('ID'):
         if not row['crAss_quant']:
             measurementA['limit_of_quantification'] = row['crAss_conc']
         participant['measurements'].append(measurementA)
-    
+
     participants.append(participant)
 
 ```
@@ -129,33 +118,33 @@ Arts2023 = dict(title="Longitudinal and quantitative fecal shedding dynamics of 
                                         limit_of_quantification="unknown",
                                         limit_of_detection="unknown",
                                         limit_of_blank=1550,
-                                        specimen="stool", 
-                                        biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
+                                        specimen="stool",
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="N",
                                         unit="gc/dry gram",
                                         reference_event="symptom onset",),
                             stool_SARSCoV2_ORF1a=dict(description=folded_str("Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR in stool samples. The concentration was quantified in gene copies per dry weight of stool. The limit of blank (LOB), determined as the upper 95% confidence limit of the negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight. The reported number is either the measured concentration of SARS-CoV-2 ORF1a or the LOB if the concentration wasn't detectable.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection="unknown",
                                         limit_of_blank=1550,
-                                        specimen="stool", 
-                                        biomarker="SARS-CoV-2", 
-                                        gene_target="ORF1a", 
+                                        specimen="stool",
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="ORF1a",
                                         unit="gc/dry gram",
                                         reference_event="symptom onset",),
                             stool_PMMoV=dict(description=folded_str("Concentration of PMMoV RNA was measured by ddPCR on the same day as the SARS-CoV-2. The concentration was quantified in gene copies per dry weight of stool. The reported number is either the measured concentration of PMMoV or the LOB if the concentration wasn't detectable.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection="unknown",
                                         limit_of_blank=400,
-                                        specimen="stool", 
-                                        biomarker="PMMoV", 
+                                        specimen="stool",
+                                        biomarker="PMMoV",
                                         unit="gc/dry gram",
                                         reference_event="symptom onset",),
                             stool_crAssphage=dict(description=folded_str("Concentration of crAssphage DNA was measured using qPCR. The reported number is either the measured concentration of crAssphage or the Limit of Quantification (LOQ) if the concentration wasn't quantifiable.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection=25,
-                                        specimen="stool", 
-                                        biomarker="crAssphage", 
+                                        specimen="stool",
+                                        biomarker="crAssphage",
                                         unit="gc/dry gram",
                                         reference_event="symptom onset",)),
                 participants = participants)
@@ -163,6 +152,6 @@ Arts2023 = dict(title="Longitudinal and quantitative fecal shedding dynamics of 
 with open("Arts2023Longitudinal.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(Arts2023, outfile, default_flow_style=False, sort_keys=False)
-outfile.close() 
+outfile.close()
 
 ```
