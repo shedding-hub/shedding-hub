@@ -1,15 +1,30 @@
+#import modules;
 import os
 import yaml
 import pandas as pd
 import numpy as np
 
-os.getcwd()
-os.chdir("/Users/wwww/shedding-hub/data/vetter2020daily")
-os.getcwd()
+#We won't need this when making markdown file;
+os.chdir("./data/vetter2020daily")
 
+#functions to add folded blocks and literal blocks;
+class folded_str(str): 
+    pass
+class literal_str(str): 
+    pass
 
+def folded_str_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
+def literal_str_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
+
+yaml.add_representer(folded_str, folded_str_representer)
+yaml.add_representer(literal_str, literal_str_representer)
+
+#read the data;
 df_1 = pd.read_csv("msphere.00827-20-st002.csv")
 
+#The patient information was obtained from the Challenger et al. (2022)
 patient_info = {
     'P1': {'PatientID': 1, 'Sex': 'M', 'Age': 25},
     'P2': {'PatientID': 2, 'Sex': 'M', 'Age': 35},
@@ -29,12 +44,11 @@ def map_patient_info(df):
     return df
 
 df_1 = map_patient_info(df_1)
-df_1.to_csv('vetter2020.csv', index=False)
 
+#df_1.to_csv('vetter2020.csv', index=False)
+#Vetter2020 = pd.read_csv("vetter2020.csv")
 
-
-
-Vetter2020 = pd.read_csv("vetter2020.csv")
+Vetter2020 = df_1
 Vetter2020 = Vetter2020.sort_values(by=['PatientID','dpo'])
 Vetter2020 = Vetter2020.replace({"Sex": {"M": "male", "F": "female"}, 
                            "Virus isolation": {"yes": "virus isolated", "No": "virus unisolated", "n.d.": "not available"}})
@@ -86,25 +100,6 @@ for i in pd.unique(Vetter2020["PatientID"]):
     participant_list.append(participant_dict)
 
 
-
- 
-#functions to add folded blocks and literal blocks;
-
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
-
-
-
-
-
 vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Response Assessment in COVID-19: a Case Series",
                doi="10.1128/msphere.00827-20",
                description=folded_str('The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in both oropharyngeal (OPS) and nasopharyngeal (NPS) swabs from five COVID-19 patients in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Cellular and humoral SARS-CoV-2-specific adaptive responses and serology data are currently not included in this dataset.\n'),
@@ -119,7 +114,8 @@ vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Res
                              OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in oropharyngeal samples. The concentration were quantified in gene copies per milliliter.\n"),
                                               specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
-                                              limit_of_quantification="unkown",
+                                              gene_target="unknown",  
+                                              limit_of_quantification="unknown",
                                               limit_of_detection="unknown",
                                               unit="gc/mL",
                                              reference_event="symptom onset")),
