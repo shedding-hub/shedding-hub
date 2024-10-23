@@ -1,0 +1,61 @@
+# yaml-language-server: $schema=../.schema.yaml
+title:
+  Sequential Analysis of Viral Load in a Neonate and Her Mother Infected With
+  Severe Acute Respiratory Syndrome Coronavirus 2
+description:
+  The study reports SARS-CoV-2 viral loads in different specimen types for a neonate and
+  her mother diagnosed on 2020-03-20. The study includes nasopharyngeal, oropharyngeal,
+  stool, plasma, saliva, and urine samples. Only concentrations in stool samples are
+  reported here. Viral loads were extracted manually from Figure 1 using
+  [WebPlotDigitizer](https://automeris.io).
+doi: 10.1093/cid/ciaa447
+analytes:
+  stool_E:
+    description: Viral RNA was detected using the PowerChek 2019-nCoV real-time
+      polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification of
+      the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene, and
+      quantified with a standard curve that was constructed using in vitro transcribed
+      RNA provided from the European Virus Archive. [copied from manuscript]
+    limit_of_detection: 5700
+    limit_of_quantification: unknown
+    gene_target: E and ORF1b
+    biomarker: SARS-CoV-2
+    reference_event: symptom onset
+    specimen: stool
+    unit: gc/mL
+participants:
+  - attributes:
+      age: 0
+      sex: female
+    measurements:
+      - analyte: stool_E
+        time: 9
+        value: 41350.3319206031
+      - analyte: stool_E
+        time: 15
+        value: negative
+  - attributes:
+      age: unknown
+      sex: female
+    measurements:
+      - analyte: stool_E
+        time: 6
+        value: 6194410.7507678143
+      - analyte: stool_E
+        time: 8
+        value: 3917418.7710778309
+      - analyte: stool_E
+        time: 10
+        value: 16557699.6346952813
+      - analyte: stool_E
+        time: 13
+        value: 2415460.8344449403
+      - analyte: stool_E
+        time: 15
+        value: 41495404.2634362946
+      - analyte: stool_E
+        time: 17
+        value: 1698243.6524617444
+      - analyte: stool_E
+        time: 18
+        value: 716143.410212902
