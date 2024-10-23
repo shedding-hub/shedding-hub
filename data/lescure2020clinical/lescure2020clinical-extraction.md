@@ -29,7 +29,8 @@ Raw data ([Viral_Loads](https://github.com/shedding-hub/shedding-hub/blob/main/d
 Lescure2020 = pd.read_csv("Viral_Loads.csv")
 #Subset the data for Lescure et al. 2020;
 Lescure2020 = Lescure2020[Lescure2020["cov_study"]==4]
-#correct some doa errors;
+#correct some doa errors; #the variable "dao" is "the day after first positive" used in Goyal et al. (2020).
+#The last two records had incorrect days (13 and 15) based on Figure 2 in Lescure et al. (2020). We corrected them with days 14 and 16.
 Lescure2020.loc[(Lescure2020["ID"]=="E3") & (Lescure2020["dao"]==13),"dao"]=14
 Lescure2020.loc[(Lescure2020["ID"]=="E3") & (Lescure2020["dao"]==15),"dao"]=16
 #some data cleaning to match the schema;
@@ -39,7 +40,8 @@ Lescure2020.loc[Lescure2020["cens"]==1,"VL"]="negative"
 Lescure2020.loc[(Lescure2020["ID"]=="E3") & (Lescure2020["dao"].isin([14,16])),"VL"]="positive"
 Lescure2020.loc[(Lescure2020["ID"]=="E5") & (Lescure2020["dao"]==8),"VL"]="positive"
 
-#add data from the patient 2;
+#The `Viral_Loads.csv` is the data from Goyal et al. (2020), which only included 4 patients from Lescure et al. (2020). 
+#Data from Patient 2 were added based on Figure 2 in Lescure et al. (2020).
 P2 = {
     "ID": ['E2','E2','E2','E2','E2'],
     "dao": [0,2,5,11,13],
@@ -57,11 +59,12 @@ Finally, the data is formatted and output as a YAML file.
 patients_info = pd.DataFrame(dict(ID=['E1','E2','E3', 'E4', 'E5'],
                                   age=[31, 48, 80, 30, 46],
                                   sex=['male','male','male','female','female'],
-                                  day0=[6,9,8,2,2]))
+                                  day0=[6,9,8,2,2])) #"day0" is "the sampling day after onset".
 
 participant_list = [dict(attributes=dict(age=patients_info.loc[patients_info["ID"]==i,"age"].item(),
                                          sex=patients_info.loc[patients_info["ID"]==i,"sex"].item(),),
                          measurements=[dict(analyte="naso_swab_SARSCoV2",
+                                            #the variable "dao" is "the day after first positive" used in Goyal et al. (2020) and "day0" is "the sampling day after onset". "dao" + "day0" will be "day after symptom onset".
                                              time=int(Lescure2020.loc[j,"dao"].item()+patients_info.loc[patients_info["ID"]==i,"day0"].item()),
                                              value=Lescure2020.loc[j,"VL"]) for j in Lescure2020.loc[Lescure2020["ID"]==i].index]) for i in pd.unique(Lescure2020["ID"])]
 
