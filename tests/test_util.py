@@ -55,7 +55,7 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         ),
     ],
 )
-def test_load(kwargs: dict, expected_sha1: str):
+def test_load(kwargs: dict, expected_sha1: str) -> None:
     if isinstance(expected_sha1, str):
         data = util.load_dataset(**kwargs)
         assert "title" in data
@@ -66,3 +66,22 @@ def test_load(kwargs: dict, expected_sha1: str):
     else:
         with pytest.raises(expected_sha1):
             data = util.load_dataset(**kwargs)
+
+
+def test_str_representer() -> None:
+    x = {"a": util.folded_str("foo\nbar\n"), "b": util.literal_str("foo\nbar\n")}
+    dumped = yaml.dump(x)
+    assert (
+        dumped.strip()
+        == """
+a: >
+  foo
+
+  bar
+b: |
+  foo
+  bar
+""".strip()
+    )
+    y = yaml.safe_load(io.StringIO(dumped))
+    assert x == y
