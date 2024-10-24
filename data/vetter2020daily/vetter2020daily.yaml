@@ -33,7 +33,7 @@ analytes:
     reference_event: symptom onset
 participants:
 - attributes:
-    age: 25
+    age: 28
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
@@ -79,7 +79,7 @@ participants:
     time: 16
     value: 239.1
 - attributes:
-    age: 35
+    age: 30
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
@@ -180,7 +180,7 @@ participants:
     time: 19
     value: negative
 - attributes:
-    age: 25
+    age: 24
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
@@ -229,7 +229,7 @@ participants:
     time: 7
     value: 55000.0
 - attributes:
-    age: 65
+    age: 66
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
