@@ -11,8 +11,8 @@ description: >
 analytes:
   NPS_SARSCoV2:
     description: >
-      SARS-CoV-2 RNA gene copy concentration in nasopharyngeal samples. The concentration
-      were quantified in gene copies per milliliter.
+      SARS-CoV-2 RNA gene copy concentrations in nasopharyngeal samples. The concentrations
+      were quantified in gene copies per mL.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: unknown
@@ -22,8 +22,8 @@ analytes:
     reference_event: symptom onset
   OPS_SARSCoV2:
     description: >
-      SARS-CoV-2 RNA gene copy concentration in oropharyngeal samples. The concentration
-      were quantified in gene copies per milliliter.
+      SARS-CoV-2 RNA gene copy concentrations in oropharyngeal samples. The concentrations
+      were quantified in gene copies per mL.
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: unknown

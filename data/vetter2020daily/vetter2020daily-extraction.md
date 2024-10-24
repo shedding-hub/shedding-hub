@@ -1,6 +1,6 @@
-# Extraction for Liu et al. (2024)
+# Extraction for Vetter et al. (2020)
 
-[Liu et al. (2024)](https://journals.asm.org/doi/10.1128/msphere.00827-20) measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in both oropharyngeal (OPS) and nasopharyngeal (NPS) swabs from five COVID-19 patients in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Demographic information (e.g., age, sex, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). Currently, cellular and humoral SARS-CoV-2-specific adaptive responses and serology data are currently not included in this dataset.
+[Vetter et al. (2020)](https://journals.asm.org/doi/10.1128/msphere.00827-20) measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in both oropharyngeal (OPS) and nasopharyngeal (NPS) swabs from five COVID-19 patients in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Demographic information (e.g., age, sex, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/vetter2020daily). Currently, this dataset does not include cellular and humoral SARS-CoV-2-specific adaptive responses and serology data.
 
 First, we `import` python modules needed:
 
@@ -23,11 +23,11 @@ yaml.add_representer(folded_str, folded_str_representer)
 yaml.add_representer(literal_str, literal_str_representer)
 ```
 
-Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
+Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/vetter2020daily), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
 
 ```python
 # Read in the CSV file containing data and store it in df_1
-df_1 = pd.read_csv("msphere.00827-20-st002.csv")
+Vetter2020 = pd.read_csv("msphere.00827-20-st002.csv")
 
 # Define a dictionary containing patient information (ID, Sex, Age) from Table 1 (https://journals.asm.org/doi/10.1128/msphere.00827-20#tab1). There is an information discrepancy regading participants' ages between Table 1 and CombinedDataset.csv
 patient_info = {
@@ -49,17 +49,13 @@ def map_patient_info(df):
     
     return df
 # Apply the mapping function to df_1 and save the updated DataFrame to a CSV file
-df_1 = map_patient_info(df_1)
-df_1.to_csv('vetter2020.csv', index=False)
-Vetter2020 = pd.read_csv("vetter2020.csv")
-
+Vetter2020 = map_patient_info(Vetter2020)
 # Sort the DataFrame by 'PatientID' and 'dpo' (days post onset)
 Vetter2020 = Vetter2020.sort_values(by=['PatientID','dpo'])
-# Replace values for better readability
+# Replace values to match the schema
 Vetter2020 = Vetter2020.replace({"Sex": {"M": "male", "F": "female"}, 
-                           "Virus isolation": {"yes": "virus isolated", "No": "virus unisolated", "n.d.": "not available"}})
-# Standardize negative values in the 'Log copies/ml' column
-Vetter2020.loc[Vetter2020['Log copies/ml'] == 'neg', 'Log copies/ml'] = 'negative'
+                                 "Virus isolation": {"yes": "virus isolated", "No": "virus unisolated", "n.d.": "not available"},
+                                 "Log copies/ml": {"neg": "negative"}})
 
 # Initialize an empty list to store participant information
 participant_list = []
@@ -112,7 +108,7 @@ Finally, the data is formatted and output as a YAML file.
 vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Response Assessment in COVID-19: a Case Series",
                doi="10.1128/msphere.00827-20",
                description=folded_str('The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in both oropharyngeal (OPS) and nasopharyngeal (NPS) swabs from five COVID-19 patients in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Cellular and humoral SARS-CoV-2-specific adaptive responses and serology data are currently not included in this dataset.\n'),
-               analytes=dict(NPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in nasopharyngeal samples. The concentration were quantified in gene copies per milliliter.\n"),
+               analytes=dict(NPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentrations in nasopharyngeal samples. The concentrations were quantified in gene copies per mL.\n"),
                                                     specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="unknown",  
@@ -120,10 +116,11 @@ vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Res
                                                     limit_of_detection="unknown",
                                                     unit="gc/mL",
                                                     reference_event="symptom onset"),
-                             OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in oropharyngeal samples. The concentration were quantified in gene copies per milliliter.\n"),
+                             OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentrations in oropharyngeal samples. The concentrations were quantified in gene copies per mL.\n"),
                                               specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
-                                              limit_of_quantification="unkown",
+                                              gene_target="unknown",
+                                              limit_of_quantification="unknown",
                                               limit_of_detection="unknown",
                                               unit="gc/mL",
                                              reference_event="symptom onset")),
