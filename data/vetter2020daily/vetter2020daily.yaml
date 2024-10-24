@@ -1,0 +1,276 @@
+# yaml-language-server: $schema=.schema.yaml
+title: 'Daily Viral Kinetics and Innate and Adaptive Immune Response Assessment in
+  COVID-19: a Case Series'
+doi: 10.1128/msphere.00827-20
+description: >
+  The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in
+  both oropharyngeal (OPS) and nasopharyngeal (NPS) swabs from five COVID-19 patients
+  in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Cellular and humoral
+  SARS-CoV-2-specific adaptive responses and serology data are currently not included
+  in this dataset.
+analytes:
+  NPS_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentrations in nasopharyngeal samples. The concentrations
+      were quantified in gene copies per mL.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: unknown
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  OPS_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentrations in oropharyngeal samples. The concentrations
+      were quantified in gene copies per mL.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: unknown
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 28
+    sex: male
+  measurements:
+  - analyte: NPS_SARSCoV2
+    time: 1
+    value: 175000000.0
+  - analyte: NPS_SARSCoV2
+    time: 2
+    value: 1850.0
+  - analyte: OPS_SARSCoV2
+    time: 2
+    value: 6470000.0
+  - analyte: OPS_SARSCoV2
+    time: 3
+    value: 3890000.0
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: 820000.0
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: 21100000.0
+  - analyte: NPS_SARSCoV2
+    time: 5
+    value: 15700000.0
+  - analyte: OPS_SARSCoV2
+    time: 5
+    value: 17900000.0
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: 11300000.0
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: 3860000.0
+  - analyte: NPS_SARSCoV2
+    time: 7
+    value: 1422000000.0
+  - analyte: OPS_SARSCoV2
+    time: 7
+    value: 2692000.0
+  - analyte: NPS_SARSCoV2
+    time: 16
+    value: 139600.0
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: 239.1
+- attributes:
+    age: 30
+    sex: male
+  measurements:
+  - analyte: NPS_SARSCoV2
+    time: 0
+    value: 25100000000.0
+  - analyte: NPS_SARSCoV2
+    time: 1
+    value: 3250000000.0
+  - analyte: OPS_SARSCoV2
+    time: 1
+    value: 633000000.0
+  - analyte: NPS_SARSCoV2
+    time: 2
+    value: 1710000000.0
+  - analyte: OPS_SARSCoV2
+    time: 2
+    value: 135000000.0
+  - analyte: NPS_SARSCoV2
+    time: 3
+    value: 9400000.0
+  - analyte: OPS_SARSCoV2
+    time: 3
+    value: 1400000.0
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: 32800000.0
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: 389000.0
+  - analyte: NPS_SARSCoV2
+    time: 5
+    value: 353000000.0
+  - analyte: OPS_SARSCoV2
+    time: 5
+    value: 3940000.0
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: 713000.0
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: 271000.0
+  - analyte: NPS_SARSCoV2
+    time: 7
+    value: 20800.0
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: NPS_SARSCoV2
+    time: 1
+    value: 1350000000.0
+  - analyte: NPS_SARSCoV2
+    time: 2
+    value: 320000000.0
+  - analyte: OPS_SARSCoV2
+    time: 2
+    value: 14100.0
+  - analyte: NPS_SARSCoV2
+    time: 3
+    value: 1060000000.0
+  - analyte: OPS_SARSCoV2
+    time: 3
+    value: 25400.0
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: 89400000.0
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: 3970.0
+  - analyte: NPS_SARSCoV2
+    time: 5
+    value: 73300000.0
+  - analyte: OPS_SARSCoV2
+    time: 5
+    value: 3600000.0
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: 30700000.0
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: 2950000.0
+  - analyte: NPS_SARSCoV2
+    time: 7
+    value: 7730000.0
+  - analyte: OPS_SARSCoV2
+    time: 7
+    value: 19100000.0
+  - analyte: NPS_SARSCoV2
+    time: 8
+    value: 4200000.0
+  - analyte: OPS_SARSCoV2
+    time: 8
+    value: 34100.0
+  - analyte: NPS_SARSCoV2
+    time: 19
+    value: 4560.0
+  - analyte: OPS_SARSCoV2
+    time: 19
+    value: negative
+- attributes:
+    age: 24
+    sex: male
+  measurements:
+  - analyte: NPS_SARSCoV2
+    time: 0
+    value: 6850000.0
+  - analyte: NPS_SARSCoV2
+    time: 1
+    value: 28500000.0
+  - analyte: OPS_SARSCoV2
+    time: 1
+    value: 85300000.0
+  - analyte: NPS_SARSCoV2
+    time: 2
+    value: 39600000.0
+  - analyte: OPS_SARSCoV2
+    time: 2
+    value: 17300000.0
+  - analyte: NPS_SARSCoV2
+    time: 3
+    value: 169000000.0
+  - analyte: OPS_SARSCoV2
+    time: 3
+    value: 18300000.0
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: 1640000.0
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: 1410000.0
+  - analyte: NPS_SARSCoV2
+    time: 5
+    value: 18200000.0
+  - analyte: OPS_SARSCoV2
+    time: 5
+    value: 597000.0
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: 16100000.0
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: 111000.0
+  - analyte: NPS_SARSCoV2
+    time: 7
+    value: 1550000.0
+  - analyte: OPS_SARSCoV2
+    time: 7
+    value: 55000.0
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: 20700.0
+  - analyte: NPS_SARSCoV2
+    time: 7
+    value: 54900.0
+  - analyte: OPS_SARSCoV2
+    time: 7
+    value: 74000.0
+  - analyte: OPS_SARSCoV2
+    time: 9
+    value: 2530000.0
+  - analyte: NPS_SARSCoV2
+    time: 10
+    value: 37700.0
+  - analyte: OPS_SARSCoV2
+    time: 10
+    value: 511000.0
+  - analyte: NPS_SARSCoV2
+    time: 11
+    value: 1010000.0
+  - analyte: OPS_SARSCoV2
+    time: 11
+    value: 6510000.0
+  - analyte: NPS_SARSCoV2
+    time: 12
+    value: 116000.0
+  - analyte: OPS_SARSCoV2
+    time: 12
+    value: 2300000.0
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: 2760000.0
+  - analyte: NPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 14
+    value: 3280.0
