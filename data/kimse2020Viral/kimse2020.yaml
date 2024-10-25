@@ -1,0 +1,95 @@
+title: Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients
+doi: 10.1016/j.ijid.2020.04.083
+description: >
+  The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from
+  71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified
+  using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens
+  were collected from all patients at least 2 days after hospitalization and physicians
+  checked their symptoms and signs daily. Patients who had asymptomatic carrier and
+  incubation period were analyzed.
+analytes:
+  throatswab_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in throat swab samples. Specimens were
+      collected from all patients at least 2 days after hospitalization and physicians
+      checked their symptoms and signs daily.
+    specimen: throat_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: value
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 20.0
+    sex: female
+  death: 0
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 1.0
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 19462.36623
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 1.0
+- attributes:
+    age: 30.0
+    sex: male
+  death: 0
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: -2
+    value: 1630516385.0
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 2773733.99
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 19462.36623
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 80276.20464
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 9582.968159
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 2323.319055
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 1.0
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 563.2713518
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 1143.966374
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 1.0
+- attributes:
+    age: 30.0
+    sex: male
+  death: 0
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: -1
+    value: 6725372725.0
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 1365743.723
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 19462.36623
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 331114.3648
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 9582.968159
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 1.0
