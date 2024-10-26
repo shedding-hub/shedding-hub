@@ -9,18 +9,7 @@ First, we `import` python modules needed:
 import yaml
 import pandas as pd
 import numpy as np
-
-#functions to add folded blocks and literal blocks;
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
+from shedding_hub import folded_str
 ```
 
 Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/vetter2020daily), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
@@ -41,19 +30,19 @@ patient_info = {
 # Define a function to map patient information into the DataFrame
 def map_patient_info(df):
     df = df.copy() # Create a copy of the DataFrame to avoid modifying the original data
-    
+
      # Map 'PatientID', 'Sex', and 'Age' based on 'patient number' column using the patient_info dictionary
     df.loc[:, 'PatientID'] = df['patient number'].map(lambda x: patient_info.get(x, {}).get('PatientID'))
     df.loc[:, 'Sex'] = df['patient number'].map(lambda x: patient_info.get(x, {}).get('Sex'))
     df.loc[:, 'Age'] = df['patient number'].map(lambda x: patient_info.get(x, {}).get('Age'))
-    
+
     return df
 # Apply the mapping function to df_1 and save the updated DataFrame to a CSV file
 Vetter2020 = map_patient_info(Vetter2020)
 # Sort the DataFrame by 'PatientID' and 'dpo' (days post onset)
 Vetter2020 = Vetter2020.sort_values(by=['PatientID','dpo'])
 # Replace values to match the schema
-Vetter2020 = Vetter2020.replace({"Sex": {"M": "male", "F": "female"}, 
+Vetter2020 = Vetter2020.replace({"Sex": {"M": "male", "F": "female"},
                                  "Virus isolation": {"yes": "virus isolated", "No": "virus unisolated", "n.d.": "not available"},
                                  "Log copies/ml": {"neg": "negative"}})
 
@@ -71,14 +60,14 @@ for i in pd.unique(Vetter2020["PatientID"]):
         try:
             # Convert 'Log copies/ml' to float
             value = float(row['Log copies/ml'])  # Use float for scientific notation
-            
+
             # Add the new condition here
             if value == 0.0:
                 value = 'negative'
-                
+
         except ValueError:
             # Handle non-numeric values (like 'negative')
-            value = 'negative'  
+            value = 'negative'
 
         # Append only for the specific sample type
         if row['Sample'] == 'FNP':
@@ -111,7 +100,7 @@ vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Res
                analytes=dict(NPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentrations in nasopharyngeal samples. The concentrations were quantified in gene copies per mL.\n"),
                                                     specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
-                                                    gene_target="unknown",  
+                                                    gene_target="unknown",
                                                     limit_of_quantification="unknown",
                                                     limit_of_detection="unknown",
                                                     unit="gc/mL",
@@ -124,11 +113,11 @@ vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Res
                                               limit_of_detection="unknown",
                                               unit="gc/mL",
                                              reference_event="symptom onset")),
-                             
+
                participants=participant_list)
 
 with open("vetter2020daily.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
     yaml.dump(vetter2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close() 
+outfile.close()
 ```

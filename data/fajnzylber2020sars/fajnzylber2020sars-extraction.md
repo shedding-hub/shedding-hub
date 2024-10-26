@@ -5,7 +5,7 @@
 ```python
 import pandas as pd
 import yaml
-from shedding_hub import folded_str, literal_str
+from shedding_hub import folded_str
 
 # Load dataset
 fajnzylbersup = pd.read_excel('41467_2020_19057_MOESM3_ESM.xlsx', sheet_name='Inpatient')
