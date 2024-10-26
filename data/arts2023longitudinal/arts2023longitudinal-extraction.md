@@ -7,18 +7,7 @@ First, we `import` python modules needed:
 ```python
 import pandas as pd
 import yaml
-
-#functions to add folded blocks and literal blocks;
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
+from shedding_hub import folded_str, literal_str
 ```
 
 ```python
@@ -163,4 +152,5 @@ Arts2023 = dict(title="Longitudinal and quantitative fecal shedding dynamics of 
 with open("arts2023longitudinal.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(Arts2023, outfile, default_flow_style=False, sort_keys=False)
+outfile.close()
 ```

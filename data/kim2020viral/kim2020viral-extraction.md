@@ -5,21 +5,11 @@
 First, we `import` python modules needed:
 
 ```python
-import pandas as pd 
+import pandas as pd
 import yaml
-
-#functions to add folded blocks and literal blocks;
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
+from shedding_hub import folded_str, literal_str
 ```
+
 ```python
 KimJY = pd.read_excel('kim2020viral.xlsx')
 swab_RdRp = KimJY[KimJY['Type '] == 'swab RdRp estimated viral copy/mL']
@@ -51,7 +41,7 @@ for patient_id, group in KimJY.groupby('PatientID'):
             'value': value
         }
         participant['measurements'].append(measurementN)
-        
+
     participants.append(participant)
 ```
 
@@ -64,17 +54,17 @@ KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two
                analytes=dict(sputum_SARSCoV2_RdRp=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in sputum samples. Ct values were then converted into estimated viral copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated by the authors using a standard curve derived from Ct values of plasmid DNA, as noted in the supplementary material.\n"),
                                         limit_of_quantification=2690,
                                         limit_of_detection="unknown",
-                                        specimen="sputum", 
-                                        biomarker="SARS-CoV-2", 
-                                        gene_target="RdRp", 
+                                        specimen="sputum",
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="RdRp",
                                         unit="gc/mL",
                                         reference_event="symptom onset",),
                             swab_SARSCoV2_RdRp=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in swab samples. Ct values were then converted into estimated viral copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated by the authors using a standard curve derived from Ct values of plasmid DNA, as noted in the supplementary material.\n"),
                                         limit_of_quantification=2690,
                                         limit_of_detection="unknown",
-                                        specimen=["nasopharyngeal_swab", "oropharyngeal_swab"], 
-                                        biomarker="SARS-CoV-2", 
-                                        gene_target="RdRp", 
+                                        specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="RdRp",
                                         unit="gc/mL",
                                         reference_event="symptom onset",)),
                 participants = participants
@@ -83,5 +73,5 @@ KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two
 with open("kim2020viral.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(KimJY2020, outfile, default_flow_style=False, sort_keys=False)
-outfile.close() 
+outfile.close()
 ```
