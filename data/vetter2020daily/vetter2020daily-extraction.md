@@ -29,7 +29,7 @@ Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shed
 # Read in the CSV file containing data and store it in df_1
 Vetter2020 = pd.read_csv("msphere.00827-20-st002.csv")
 
-# Define a dictionary containing patient information (ID, Sex, Age) from Table 1 (https://journals.asm.org/doi/10.1128/msphere.00827-20#tab1). There is an information discrepancy regading participants' ages between Table 1 and CombinedDataset.csv
+# Define a dictionary containing patient information (ID, Sex, Age) from [Table 1](https://journals.asm.org/doi/10.1128/msphere.00827-20#tab1) in Vetter et al. (2020).
 patient_info = {
     'P1': {'PatientID': 1, 'Sex': 'M', 'Age': 28},
     'P2': {'PatientID': 2, 'Sex': 'M', 'Age': 30},
