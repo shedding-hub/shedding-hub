@@ -39,9 +39,9 @@ intercept = model.intercept_
 print(f"Slope: {slope}")
 print(f"Intercept: {intercept}")
 ```
-![Linear Regression Plot](data/young2020epidemiologic/Goyal_linreg.png)
+![Linear Regression Plot](Goyal_linreg.png)
 
-Cycle threshold values were plotted against the corresponding viral load (VL) values per swab in ![Linear Regression Plot](data/young2020epidemiologic/Goyal_linreg.png). A linear regression was performed to obtain the slope and intercept of the standard curve and serves as the basis for converting `Ct` values from other samples in [Challenger et al. (2022)](https://doi.org/10.1186/s12916-021-02220-0) into viral load concentration.
+Cycle threshold values were plotted against the corresponding viral load (VL) values per swab in the figure above. A linear regression was performed to obtain the slope and intercept of the standard curve and serves as the basis for converting `Ct` values from other samples in [Challenger et al. (2022)](https://doi.org/10.1186/s12916-021-02220-0) into viral load concentration.
 
 The derived standard curve equation is adjusted into an exponential format. Thus, for each `Ctvalue` in the `young2020` dataset, the viral load is calculated as \( \text{concentration} = 10^{(14.1147 - 0.3231 \times \text{Ctvalue})} \), except for a `Ctvalue` of 38, which defaults to a concentration of 1 to account for undetectable viral loads.
 
