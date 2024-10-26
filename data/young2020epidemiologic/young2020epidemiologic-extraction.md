@@ -15,7 +15,7 @@ from shedding_hub import folded_str, literal_str
 Raw data ([CombinedDataset](https://github.com/shedding-hub/shedding-hub/blob/main/data/young2020epidemiologic/CombinedDataset.xlsx)), which is stored on [Shedding Hub](https://github.com/shedding-hub), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
 
 ```python
-df = pd.read_excel(os.path.join(current_directory, 'Challenger2022/CombinedDataset.xlsx'), sheet_name='Viral_Load')
+df = pd.read_excel('CombinedDataset.xlsx', sheet_name='Viral_Load')
 young2020 = df[df['StudyNum'] == 6].copy()
 columns_to_drop = ['Estimated', 'SevMax', 'Sev1st', 'Died', 'SevMax3']
 young2020 = young2020.drop(columns=columns_to_drop)
