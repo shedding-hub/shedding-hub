@@ -86,3 +86,27 @@ def load_dataset(
         )
     response.raise_for_status()
     return yaml.safe_load(response.text)
+
+
+class folded_str(str):
+    """
+    Folded string in yaml representation.
+    """
+
+
+class literal_str(str):
+    """
+    Literal string in yaml representation.
+    """
+
+
+def _folded_str_representer(dumper, data):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style=">")
+
+
+def _literal_str_representer(dumper, data):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
+
+
+yaml.add_representer(folded_str, _folded_str_representer)
+yaml.add_representer(literal_str, _literal_str_representer)
