@@ -20,7 +20,7 @@ analytes:
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: N1 and N2
-    limit_of_quantification: 0.22387211385683378
+    limit_of_quantification: unknown
     limit_of_detection: unknown
     unit: gc/mL
     reference_event: confirmation date
@@ -35,7 +35,7 @@ analytes:
     specimen: saliva
     biomarker: SARS-CoV-2
     gene_target: N
-    limit_of_quantification: 12.022644346174081
+    limit_of_quantification: unknown
     limit_of_detection: unknown
     unit: gc/mL
     reference_event: confirmation date
