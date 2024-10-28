@@ -8,18 +8,7 @@ First, we `import` python modules needed:
 #import modules;
 import yaml
 import pandas as pd
-
-#functions to add folded blocks and literal blocks;
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
+from shedding_hub import folded_str
 ```
 
 Raw data ([Viral_Loads](https://github.com/shedding-hub/shedding-hub/blob/main/data/lescure2020clinical/Viral_Loads.csv)), which is stored on [Shedding Hub](https://github.com/shedding-hub), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
@@ -40,7 +29,7 @@ Lescure2020.loc[Lescure2020["cens"]==1,"VL"]="negative"
 Lescure2020.loc[(Lescure2020["ID"]=="E3") & (Lescure2020["dao"].isin([14,16])),"VL"]="positive"
 Lescure2020.loc[(Lescure2020["ID"]=="E5") & (Lescure2020["dao"]==8),"VL"]="positive"
 
-#The `Viral_Loads.csv` is the data from Goyal et al. (2020), which only included 4 patients from Lescure et al. (2020). 
+#The `Viral_Loads.csv` is the data from Goyal et al. (2020), which only included 4 patients from Lescure et al. (2020).
 #Data from Patient 2 were added based on Figure 2 in Lescure et al. (2020).
 P2 = {
     "ID": ['E2','E2','E2','E2','E2'],
