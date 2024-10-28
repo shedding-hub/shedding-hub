@@ -7,7 +7,7 @@ First, we `import` python modules needed:
 ```python
 import pandas as pd
 import yaml
-from shedding_hub import folded_str, literal_str
+from shedding_hub import folded_str
 ```
 
 ```python
