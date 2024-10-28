@@ -9,7 +9,7 @@ First, we `import` python modules needed:
 import yaml
 import pandas as pd
 import numpy as np
-from shedding_hub import folded_str, literal_str
+from shedding_hub import folded_str
 ```
 
 Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).

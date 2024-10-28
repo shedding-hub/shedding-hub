@@ -5,7 +5,7 @@
 ```python
 import pandas as pd
 import yaml
-from shedding_hub import folded_str, literal_str
+from shedding_hub import folded_str
 
 # Load dataset
 df = pd.read_excel('CombinedDataset.xlsx', sheet_name='Viral_Load')
