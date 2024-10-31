@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../data/.schema.yaml
-title: Valid example with a single analyte.
+title: Invalid example due to invalid doi.
 description: See above.
-doi: 10.1093/jrsssc/qlad011
+doi: not-a-doi
 analyte:
   limit_of_detection: unknown
   limit_of_quantification: 17
