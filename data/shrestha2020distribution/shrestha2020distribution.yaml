@@ -12,10 +12,12 @@ analytes:
     description: >
       Cycle threshold (Ct) values were quantified using RT-PCR targeting the N gene
       in nasopharyngeal swab samples. Ct values were then converted into copies per
-      mL, with a detection limit of 20 copies/mL. Viral load calculations were based
-      on the minimum detectable viral load (MDVL) and Ct values.
+      mL. Viral load calculations were based on the minimum detectable viral load
+      (MDVL) and Ct values. Using commercially available plasmids that contained the
+      nucleocapsid (N) gene, the limit of detection was found to be 20 copies/uL for
+      upper respiratory specimens. We cannot determine the LOD for raw samples.
     limit_of_quantification: unknown
-    limit_of_detection: 20
+    limit_of_detection: unknown
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: N

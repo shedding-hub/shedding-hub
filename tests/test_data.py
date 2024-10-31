@@ -23,7 +23,9 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
             str(path) == str(path).lower()
         ), "Data paths and filenames should be lowercase."
         assert " " not in str(path), "Data paths should not contain spaces."
-        assert re.match(r"[a-z]+\d{4}[a-z]+\.yaml", path.name)
+        assert re.match(
+            r"[a-z]+\d{4}[a-z]+\.yaml", path.name
+        ), "File name must match the pattern `[author][year][first word of title]`."
 
     with open("data/.schema.yaml") as fp:
         schema = yaml.safe_load(fp)

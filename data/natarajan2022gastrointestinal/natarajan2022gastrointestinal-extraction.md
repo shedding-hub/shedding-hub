@@ -123,119 +123,175 @@ data = {
             "description": "Concentration of genomic RNA of the E gene quantified "
             "using RT-qPCR for a sample collected using the OMNIGene GUT collection "
             "tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "E",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "E-gRNA-RT-qPCR-ZY": {
             "description": "Concentration of genomic RNA of the E gene quantified "
             "using RT-qPCR for a sample collected using the Zymo DNA/RNA shield fecal "
             "collection tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "E",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "RdRP-gRNA-RT-qPCR-OG": {
             "description": "Concentration of genomic RNA of the RdRp gene quantified "
             "using RT-qPCR for a sample collected using the OMNIGene GUT collection "
             "tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "RdRP",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "RdRP-gRNA-RT-qPCR-ZY": {
             "description": "Concentration of genomic RNA of the RdRp gene quantified "
             "using RT-qPCR for a sample collected using the Zymo DNA/RNA shield fecal "
             "collection tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "RdRP",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N1-gRNA-RT-qPCR-OG": {
             "description": "Concentration of genomic RNA of the N1 gene quantified "
             "using RT-qPCR for a sample collected using the OMNIGene GUT collection "
             "tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N1",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N1-gRNA-RT-qPCR-ZY": {
             "description": "Concentration of genomic RNA of the N1 gene quantified "
             "using RT-qPCR for a sample collected using the Zymo DNA/RNA shield fecal "
             "collection tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N1",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N2-gRNA-RT-qPCR-OG": {
             "description": "Concentration of genomic RNA of the N2 gene quantified "
             "using RT-qPCR for a sample collected using the OMNIGene GUT collection "
             "tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N2",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N2-gRNA-RT-qPCR-ZY": {
             "description": "Concentration of genomic RNA of the N2 gene quantified "
             "using RT-qPCR for a sample collected using the Zymo DNA/RNA shield fecal "
             "collection tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N2",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N1-gRNA-ddPCR-OG": {
             "description": "Concentration of genomic RNA of the N1 gene quantified "
             "using ddPCR for a sample collected using the OMNIGene GUT collection "
             "tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N1",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N1-gRNA-ddPCR-ZY": {
             "description": "Concentration of genomic RNA of the N1 gene quantified "
             "using ddPCR for a sample collected using the Zymo DNA/RNA shield fecal "
             "collection tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N1",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "E-gRNA-ddPCR-OG": {
             "description": "Concentration of genomic RNA of the E gene quantified "
             "using ddPCR for a sample collected using the OMNIGene GUT collection "
             "tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "E",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "E-gRNA-ddPCR-ZY": {
             "description": "Concentration of genomic RNA of the E gene quantified "
             "using ddPCR for a sample collected using the Zymo DNA/RNA shield fecal "
             "collection tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "E",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N1-sgRNA-RT-qPCR-OG": {
             "description": "Concentration of sub-genomic RNA of the N1 gene quantified "
             "using RT-qPCR for a sample collected using the OMNIGene GUT collection "
             "tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N1",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
         "N1-sgRNA-RT-qPCR-ZY": {
             "description": "Concentration of sub-genomic RNA of the N1 gene quantified "
             "using RT-qPCR for a sample collected using the Zymo DNA/RNA shield fecal "
             "collection tube.",
+            "biomarker": "SARS-CoV-2",
+            "gene_target": "N1",
+            "unit": "gc/mL",
             "specimen": "stool",
             "limit_of_detection": 1000,
             "limit_of_quantification": "unknown",
+            "reference_event": "enrollment",
         },
     },
     "participants": participants,
 }
 
-with open("../data/natarajan2022.yaml", "w") as fp:
+with open("natarajan2022gastrointestinal.yaml", "w") as fp:
     fp.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(data, fp, sort_keys=False)
 ```
