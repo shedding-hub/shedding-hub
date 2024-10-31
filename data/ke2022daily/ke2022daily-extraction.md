@@ -17,6 +17,7 @@ Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shed
 ```python
 #load the data;
 Ke2022 = pd.read_excel('41564_2022_1105_MOESM4_ESM.xlsx',sheet_name='data_samples')
+Ke2022SymptomTime = pd.read_excel('symptom_date_gap.xlsx',sheet_name='Sheet1')
 
 #sort by ID and date;
 Ke2022 = Ke2022.sort_values(by=['Ind','Time'])
@@ -53,7 +54,9 @@ Ke2022ConfirmTime = Ke2022ConfirmTime.rename(columns={'Time': 'Confirm_Time'})
 Ke2022ConfirmTime = pd.concat([Ke2022ConfirmTime,pd.DataFrame(dict(Ind=[449614,'451146 *'], Confirm_Time=[-2, -4]))])
 #change the 'Time' as the day after confirmation;
 Ke2022=Ke2022.merge(Ke2022ConfirmTime, how='left', on='Ind')
-Ke2022['Time']=Ke2022['Time']-Ke2022['Confirm_Time']
+Ke2022=Ke2022.merge(Ke2022SymptomTime, how='left', on='Ind')
+Ke2022['ConfirmDayAfterSymptom'] = Ke2022['Confirm_Time']-Ke2022['first_symptom']
+Ke2022['Time']=Ke2022['Time']-Ke2022['first_symptom']
 ```
 
 Finally, the data is formatted and output as a YAML file.
@@ -63,9 +66,11 @@ participant_list = [dict(attributes=dict(age=int(Ke2022.loc[Ke2022.loc[Ke2022["I
                                          lineage=Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"Lineage"]),
                          measurements=[dict(analyte="nasal_SARSCoV2",
                                              time=int(Ke2022.loc[j,"Time"].item()),
+                                             confirmation_gap=int(Ke2022.loc[j,"ConfirmDayAfterSymptom"].item()),
                                              value=Ke2022.loc[j,"nasal_conc"]) for j in Ke2022.loc[(Ke2022["Ind"]==i) & (pd.notna(Ke2022['nasal_conc']))].index] +
                                        [dict(analyte="saliva_SARSCoV2",
                                              time=int(Ke2022.loc[j,"Time"].item()),
+                                             confirmation_gap=int(Ke2022.loc[j,"ConfirmDayAfterSymptom"].item()),
                                              value=Ke2022.loc[j,"saliva_conc"]) for j in Ke2022.loc[(Ke2022["Ind"]==i) & (pd.notna(Ke2022['saliva_conc']))].index]) for i in pd.unique(Ke2022["Ind"])]
 
 ke2022 = dict(title="Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals Substantial Heterogeneity in Infectiousness",
@@ -78,7 +83,7 @@ ke2022 = dict(title="Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals
                                                     limit_of_quantification="unknown", #0.22387211385683378,calculated by 10**(11.35-0.25*48) with CN=48; the minimum quantifiable value observed was 7.89768849399884;
                                                     limit_of_detection="unknown",
                                                     unit="gc/mL",
-                                                    reference_event="confirmation date"),
+                                                    reference_event="symptom onset"),
                              saliva_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration in saliva samples. The study was not able to measure the calibration curve using saliva samples taken from participants. Instead, the authors used data from calibration experiments in which saliva samples obtained from healthy donors were spiked with SARS-CoV-2 genomic RNA. The calibration curve for saliva samples was in the Supplemental Table S11 in Ke et al. (2022).\n"),
                                               specimen="saliva",
                                               biomarker="SARS-CoV-2",
@@ -86,15 +91,11 @@ ke2022 = dict(title="Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals
                                               limit_of_quantification="unknown", #12.022644346174081 calculated by 10**(14.24-0.28*47) with CT=47; the minimum quantifiable value observed was 1161.9836038697981;
                                               limit_of_detection="unknown",
                                               unit="gc/mL",
-                                              reference_event="confirmation date")),
+                                              reference_event="symptom onset")),
                participants=participant_list)
 
 with open("ke2022daily.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(ke2022, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close()
-```
-
-```python
-Ke2022[0:20]
 ```
