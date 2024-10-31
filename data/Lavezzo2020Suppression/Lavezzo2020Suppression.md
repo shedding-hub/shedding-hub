@@ -243,7 +243,7 @@ haisuproj = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian muni
 ```
 
 ```python
-with open("Lavezzo2020Suppression.yaml","w") as outfile:
+with open("lavezzo2020suppression.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(haisuproj, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close()

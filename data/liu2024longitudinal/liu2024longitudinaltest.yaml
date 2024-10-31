@@ -1,0 +1,1775 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mottle Virus, and Human
+  Mitochondrial DNA in COVID-19 Patients
+doi: 10.1101/2024.04.22.24305845
+description: >
+  The authors measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial
+  DNA (mtDNA) in longitudinal stool samples collected from 42 COVID-19 patients for
+  up to 42 days after the first sample collection date. Abundances were quantified
+  using Digital PCR assays targeting the N1 genes. The symptom data (e.g., fever,
+  cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.)
+  is currently not included in this data.
+analytes:
+  stool_SARSCoV2_N1:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in stool samples. The concentration
+      were quantified in genome copies per dry weight of stool.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    limit_of_quantification: 1000
+    limit_of_detection: unknown
+    unit: gc/dry gram
+    reference_event: confirmation date
+  stool_PMMoV:
+    description: >
+      PMMoV genome copy concentration in stool samples. The concentration were quantified
+      in genome copies per dry weight of stool.
+    specimen: stool
+    biomarker: PMMoV
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/dry gram
+    reference_event: confirmation date
+  stool_mtDNA:
+    description: >
+      mtDNA genome copy concentration in stool samples. The concentration were quantified
+      in genome copies per dry weight of stool.
+    specimen: stool
+    biomarker: mtDNA
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/dry gram
+    reference_event: confirmation date
+participants:
+- attributes:
+    age: 44.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 12
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 15
+    value: negative
+  - analyte: stool_PMMoV
+    time: 12
+    value: 116170462.0
+  - analyte: stool_PMMoV
+    time: 15
+    value: 813184698.1
+  - analyte: stool_mtDNA
+    time: 12
+    value: 219266805.3
+  - analyte: stool_mtDNA
+    time: 15
+    value: 141669808.0
+- attributes:
+    age: 56.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 12
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 49
+    value: negative
+  - analyte: stool_PMMoV
+    time: 12
+    value: 938018442.8
+  - analyte: stool_PMMoV
+    time: 49
+    value: 361364947.6
+  - analyte: stool_mtDNA
+    time: 12
+    value: 243043062.2
+  - analyte: stool_mtDNA
+    time: 49
+    value: 450997281.6
+- attributes:
+    age: 43.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 6
+    value: 527432.892
+  - analyte: stool_PMMoV
+    time: 6
+    value: 3129105.701
+  - analyte: stool_mtDNA
+    time: 6
+    value: 176043082.4
+- attributes:
+    age: 27.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 35
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 48
+    value: negative
+  - analyte: stool_PMMoV
+    time: 4
+    value: 14508470.9
+  - analyte: stool_PMMoV
+    time: 7
+    value: 36013454.2
+  - analyte: stool_PMMoV
+    time: 11
+    value: 124402637.9
+  - analyte: stool_PMMoV
+    time: 24
+    value: 1041906240.0
+  - analyte: stool_PMMoV
+    time: 35
+    value: 10847289.71
+  - analyte: stool_PMMoV
+    time: 48
+    value: 41625960.02
+  - analyte: stool_mtDNA
+    time: 4
+    value: 440760928.4
+  - analyte: stool_mtDNA
+    time: 7
+    value: 448465145.4
+  - analyte: stool_mtDNA
+    time: 11
+    value: 282112541.6
+  - analyte: stool_mtDNA
+    time: 24
+    value: 180253040.7
+  - analyte: stool_mtDNA
+    time: 35
+    value: 603359276.8
+  - analyte: stool_mtDNA
+    time: 48
+    value: 315497003.8
+- attributes:
+    age: 30.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 2
+    value: 1754671.289
+  - analyte: stool_SARSCoV2_N1
+    time: 4
+    value: 527949811.1
+  - analyte: stool_SARSCoV2_N1
+    time: 16
+    value: 15110118.33
+  - analyte: stool_SARSCoV2_N1
+    time: 28
+    value: 1018531.191
+  - analyte: stool_SARSCoV2_N1
+    time: 41
+    value: 1493352.479
+  - analyte: stool_PMMoV
+    time: 2
+    value: 37992.08083
+  - analyte: stool_PMMoV
+    time: 4
+    value: 33665.66775
+  - analyte: stool_PMMoV
+    time: 16
+    value: 457487571.8
+  - analyte: stool_PMMoV
+    time: 28
+    value: 303268495.1
+  - analyte: stool_PMMoV
+    time: 41
+    value: 1206167885.0
+  - analyte: stool_mtDNA
+    time: 2
+    value: 2576425926.0
+  - analyte: stool_mtDNA
+    time: 4
+    value: 2104104235.0
+  - analyte: stool_mtDNA
+    time: 16
+    value: 53170217.63
+  - analyte: stool_mtDNA
+    time: 28
+    value: 672819268.2
+  - analyte: stool_mtDNA
+    time: 41
+    value: 1217135069.0
+- attributes:
+    age: 65.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 5
+    value: 11889.16435
+  - analyte: stool_SARSCoV2_N1
+    time: 7
+    value: 4975.83537
+  - analyte: stool_SARSCoV2_N1
+    time: 13
+    value: 1185353998.0
+  - analyte: stool_PMMoV
+    time: 5
+    value: 190226.6296
+  - analyte: stool_PMMoV
+    time: 7
+    value: 14933.37802
+  - analyte: stool_PMMoV
+    time: 13
+    value: 322827.175
+  - analyte: stool_mtDNA
+    time: 5
+    value: 47028250.11
+  - analyte: stool_mtDNA
+    time: 7
+    value: 41754127.37
+  - analyte: stool_mtDNA
+    time: 13
+    value: 4790044966.0
+- attributes:
+    age: 27.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 1
+    value: 6863197.188
+  - analyte: stool_PMMoV
+    time: 1
+    value: 518293.6401
+  - analyte: stool_mtDNA
+    time: 1
+    value: 730103164.0
+- attributes:
+    age: 49.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 6
+    value: 18715.30945
+  - analyte: stool_PMMoV
+    time: 6
+    value: 533386.3192
+  - analyte: stool_mtDNA
+    time: 6
+    value: 38754058632.0
+- attributes:
+    age: 62.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 3
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 6
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 29
+    value: 1561.022652
+  - analyte: stool_SARSCoV2_N1
+    time: 43
+    value: negative
+  - analyte: stool_PMMoV
+    time: 3
+    value: 22657980.46
+  - analyte: stool_PMMoV
+    time: 6
+    value: 1742170.504
+  - analyte: stool_PMMoV
+    time: 16
+    value: 6702491.103
+  - analyte: stool_PMMoV
+    time: 29
+    value: 185869.6131
+  - analyte: stool_PMMoV
+    time: 43
+    value: 221189.4096
+  - analyte: stool_mtDNA
+    time: 3
+    value: 572753401.0
+  - analyte: stool_mtDNA
+    time: 6
+    value: 140497804.2
+  - analyte: stool_mtDNA
+    time: 16
+    value: 153698220.6
+  - analyte: stool_mtDNA
+    time: 29
+    value: 141019999.7
+  - analyte: stool_mtDNA
+    time: 43
+    value: 195469710.8
+- attributes:
+    age: 48.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 3
+    value: 451122.4788
+  - analyte: stool_SARSCoV2_N1
+    time: 12
+    value: 6441469.56
+  - analyte: stool_SARSCoV2_N1
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 48
+    value: negative
+  - analyte: stool_PMMoV
+    time: 3
+    value: 1641221.757
+  - analyte: stool_PMMoV
+    time: 12
+    value: 15445.79735
+  - analyte: stool_PMMoV
+    time: 24
+    value: 45431945.88
+  - analyte: stool_PMMoV
+    time: 48
+    value: 37033734.02
+  - analyte: stool_mtDNA
+    time: 3
+    value: 465691022.1
+  - analyte: stool_mtDNA
+    time: 12
+    value: 81366934.91
+  - analyte: stool_mtDNA
+    time: 24
+    value: 61446439.01
+  - analyte: stool_mtDNA
+    time: 48
+    value: 232018613.6
+- attributes:
+    age: 44.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 59
+    value: 4803.668018
+  - analyte: stool_PMMoV
+    time: 59
+    value: 356949.485
+  - analyte: stool_mtDNA
+    time: 59
+    value: 92932500.5
+- attributes:
+    age: 41.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 14
+    value: 4894.026187
+  - analyte: stool_SARSCoV2_N1
+    time: 32
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 43
+    value: negative
+  - analyte: stool_PMMoV
+    time: 14
+    value: 1143570.786
+  - analyte: stool_PMMoV
+    time: 32
+    value: 73247.59494
+  - analyte: stool_PMMoV
+    time: 43
+    value: 639425.1984
+  - analyte: stool_mtDNA
+    time: 14
+    value: 143141202.9
+  - analyte: stool_mtDNA
+    time: 32
+    value: 209063696.2
+  - analyte: stool_mtDNA
+    time: 43
+    value: 280928628.7
+- attributes:
+    age: 45.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 3
+    value: 30585.94832
+  - analyte: stool_PMMoV
+    time: 3
+    value: 1104623.288
+  - analyte: stool_mtDNA
+    time: 3
+    value: 3023303353.0
+- attributes:
+    age: 33.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 1
+    value: 1171427.341
+  - analyte: stool_PMMoV
+    time: 1
+    value: 339252.9231
+  - analyte: stool_mtDNA
+    time: 1
+    value: 412422804.4
+- attributes:
+    age: 54.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 9
+    value: 131758.3499
+  - analyte: stool_SARSCoV2_N1
+    time: 28
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 41
+    value: negative
+  - analyte: stool_PMMoV
+    time: 9
+    value: 9759.877769
+  - analyte: stool_PMMoV
+    time: 28
+    value: 2289559062.0
+  - analyte: stool_PMMoV
+    time: 41
+    value: 5907226.916
+  - analyte: stool_mtDNA
+    time: 9
+    value: 297857010.4
+  - analyte: stool_mtDNA
+    time: 28
+    value: 432291783.2
+  - analyte: stool_mtDNA
+    time: 41
+    value: 1619175147.0
+- attributes:
+    age: 58.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 2
+    value: 33202.86906
+  - analyte: stool_SARSCoV2_N1
+    time: 4
+    value: negative
+  - analyte: stool_PMMoV
+    time: 2
+    value: 15706400.67
+  - analyte: stool_PMMoV
+    time: 4
+    value: 1700530.723
+  - analyte: stool_mtDNA
+    time: 2
+    value: 392866245.7
+  - analyte: stool_mtDNA
+    time: 4
+    value: 3953876810.0
+- attributes:
+    age: 66.0
+    sex: male
+    race: asian
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 3
+    value: 2153377.166
+  - analyte: stool_SARSCoV2_N1
+    time: 13
+    value: 63203.24959
+  - analyte: stool_SARSCoV2_N1
+    time: 23
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 28
+    value: negative
+  - analyte: stool_PMMoV
+    time: 3
+    value: 405471.8846
+  - analyte: stool_PMMoV
+    time: 13
+    value: 125602094.2
+  - analyte: stool_PMMoV
+    time: 23
+    value: 7234476.101
+  - analyte: stool_PMMoV
+    time: 28
+    value: 5140855.966
+  - analyte: stool_mtDNA
+    time: 3
+    value: 493220111.4
+  - analyte: stool_mtDNA
+    time: 13
+    value: 119310498.0
+  - analyte: stool_mtDNA
+    time: 23
+    value: 13598368.8
+  - analyte: stool_mtDNA
+    time: 28
+    value: 67054389.27
+- attributes:
+    age: 65.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 11
+    value: 52827.10809
+  - analyte: stool_SARSCoV2_N1
+    time: 21
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 26
+    value: negative
+  - analyte: stool_PMMoV
+    time: 11
+    value: 4592374.264
+  - analyte: stool_PMMoV
+    time: 21
+    value: 37317245.9
+  - analyte: stool_PMMoV
+    time: 26
+    value: 23005670.72
+  - analyte: stool_mtDNA
+    time: 11
+    value: 107680034.5
+  - analyte: stool_mtDNA
+    time: 21
+    value: 204014613.6
+  - analyte: stool_mtDNA
+    time: 26
+    value: 217335404.7
+- attributes:
+    age: 31.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 6
+    value: negative
+  - analyte: stool_PMMoV
+    time: 1
+    value: 794.4730742
+  - analyte: stool_PMMoV
+    time: 6
+    value: 2900.745086
+  - analyte: stool_mtDNA
+    time: 1
+    value: 8220728.021
+  - analyte: stool_mtDNA
+    time: 6
+    value: 783738348.1
+- attributes:
+    age: 71.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 2
+    value: 52341.93115
+  - analyte: stool_PMMoV
+    time: 2
+    value: 261509.8774
+  - analyte: stool_mtDNA
+    time: 2
+    value: 942154760.7
+- attributes:
+    age: 46.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 21
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 49
+    value: negative
+  - analyte: stool_PMMoV
+    time: 21
+    value: 1390960188.0
+  - analyte: stool_PMMoV
+    time: 49
+    value: 3508811007.0
+  - analyte: stool_mtDNA
+    time: 21
+    value: 282809214.1
+  - analyte: stool_mtDNA
+    time: 49
+    value: 1400794412.0
+- attributes:
+    age: 32.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 2
+    value: 96863.42225
+  - analyte: stool_SARSCoV2_N1
+    time: 8
+    value: 102066.8728
+  - analyte: stool_SARSCoV2_N1
+    time: 14
+    value: 277047.3397
+  - analyte: stool_SARSCoV2_N1
+    time: 28
+    value: 114054.3678
+  - analyte: stool_PMMoV
+    time: 2
+    value: 53857.67046
+  - analyte: stool_PMMoV
+    time: 8
+    value: 1168058.369
+  - analyte: stool_PMMoV
+    time: 14
+    value: 411107.8365
+  - analyte: stool_PMMoV
+    time: 28
+    value: 2379001.954
+  - analyte: stool_mtDNA
+    time: 2
+    value: 134523599.3
+  - analyte: stool_mtDNA
+    time: 8
+    value: 296410900.7
+  - analyte: stool_mtDNA
+    time: 14
+    value: 128952643.0
+  - analyte: stool_mtDNA
+    time: 28
+    value: 67356636.07
+- attributes:
+    age: 68.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 2
+    value: 538054.3934
+  - analyte: stool_SARSCoV2_N1
+    time: 6
+    value: 1369109.352
+  - analyte: stool_SARSCoV2_N1
+    time: 8
+    value: 288207.3371
+  - analyte: stool_SARSCoV2_N1
+    time: 23
+    value: 5637.790449
+  - analyte: stool_SARSCoV2_N1
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 37
+    value: 138917.4053
+  - analyte: stool_PMMoV
+    time: 2
+    value: 5598170.404
+  - analyte: stool_PMMoV
+    time: 6
+    value: 17440.88346
+  - analyte: stool_PMMoV
+    time: 8
+    value: 23368.16247
+  - analyte: stool_PMMoV
+    time: 23
+    value: 354554.3772
+  - analyte: stool_PMMoV
+    time: 24
+    value: 100134.1207
+  - analyte: stool_PMMoV
+    time: 37
+    value: 17233876.8
+  - analyte: stool_mtDNA
+    time: 2
+    value: 53354555.77
+  - analyte: stool_mtDNA
+    time: 6
+    value: 293878886.3
+  - analyte: stool_mtDNA
+    time: 8
+    value: 729028969.8
+  - analyte: stool_mtDNA
+    time: 23
+    value: 67027064.23
+  - analyte: stool_mtDNA
+    time: 24
+    value: 76216370.73
+  - analyte: stool_mtDNA
+    time: 37
+    value: 93137805.8
+- attributes:
+    age: 47.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 11
+    value: negative
+  - analyte: stool_PMMoV
+    time: 11
+    value: 45250.83768
+  - analyte: stool_mtDNA
+    time: 11
+    value: 188229720.3
+- attributes:
+    age: 75.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 21
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 36
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 49
+    value: negative
+  - analyte: stool_PMMoV
+    time: 16
+    value: 107741.3355
+  - analyte: stool_PMMoV
+    time: 21
+    value: 12323978.16
+  - analyte: stool_PMMoV
+    time: 36
+    value: 508434.2285
+  - analyte: stool_PMMoV
+    time: 49
+    value: 1344588.359
+  - analyte: stool_mtDNA
+    time: 16
+    value: 199272048.0
+  - analyte: stool_mtDNA
+    time: 21
+    value: 32409877.9
+  - analyte: stool_mtDNA
+    time: 36
+    value: 164279912.0
+  - analyte: stool_mtDNA
+    time: 49
+    value: 66076107.2
+- attributes:
+    age: 55.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: inpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 4
+    value: 43795.74232
+  - analyte: stool_SARSCoV2_N1
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 11
+    value: negative
+  - analyte: stool_PMMoV
+    time: 4
+    value: 256647.5884
+  - analyte: stool_PMMoV
+    time: 7
+    value: 65721.4977
+  - analyte: stool_PMMoV
+    time: 11
+    value: negative
+  - analyte: stool_mtDNA
+    time: 4
+    value: 89225315.45
+  - analyte: stool_mtDNA
+    time: 7
+    value: 222731958.5
+  - analyte: stool_mtDNA
+    time: 11
+    value: 97438817.33
+- attributes:
+    age: 59.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 6
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 8
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 12
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 27
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 40
+    value: negative
+  - analyte: stool_PMMoV
+    time: 6
+    value: 879104184.8
+  - analyte: stool_PMMoV
+    time: 7
+    value: 950000437.1
+  - analyte: stool_PMMoV
+    time: 8
+    value: 1945514841.0
+  - analyte: stool_PMMoV
+    time: 12
+    value: 287409502.5
+  - analyte: stool_PMMoV
+    time: 27
+    value: 628487934.5
+  - analyte: stool_PMMoV
+    time: 40
+    value: 24603435.56
+  - analyte: stool_mtDNA
+    time: 6
+    value: 290141609.1
+  - analyte: stool_mtDNA
+    time: 7
+    value: 293449921.5
+  - analyte: stool_mtDNA
+    time: 8
+    value: 264351441.6
+  - analyte: stool_mtDNA
+    time: 12
+    value: 172812198.3
+  - analyte: stool_mtDNA
+    time: 27
+    value: 562131719.3
+  - analyte: stool_mtDNA
+    time: 40
+    value: 390579539.6
+- attributes:
+    age: 31.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 19
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 20
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 20
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 54
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 55
+    value: negative
+  - analyte: stool_PMMoV
+    time: 19
+    value: 886956.9208
+  - analyte: stool_PMMoV
+    time: 20
+    value: 26138482.76
+  - analyte: stool_PMMoV
+    time: 20
+    value: 11343938.7
+  - analyte: stool_PMMoV
+    time: 25
+    value: 1562272534.0
+  - analyte: stool_PMMoV
+    time: 54
+    value: 52134053.75
+  - analyte: stool_PMMoV
+    time: 55
+    value: 159338303.4
+  - analyte: stool_mtDNA
+    time: 19
+    value: 296833462.4
+  - analyte: stool_mtDNA
+    time: 20
+    value: 185511724.1
+  - analyte: stool_mtDNA
+    time: 20
+    value: 177753015.4
+  - analyte: stool_mtDNA
+    time: 25
+    value: 248558968.8
+  - analyte: stool_mtDNA
+    time: 54
+    value: 109216303.8
+  - analyte: stool_mtDNA
+    time: 55
+    value: 231720371.5
+- attributes:
+    age: 57.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 34
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 49
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 63
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 70
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 77
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 79
+    value: negative
+  - analyte: stool_PMMoV
+    time: 34
+    value: 16015272.58
+  - analyte: stool_PMMoV
+    time: 49
+    value: 21925403.21
+  - analyte: stool_PMMoV
+    time: 63
+    value: 1417732280.0
+  - analyte: stool_PMMoV
+    time: 70
+    value: 16626315.79
+  - analyte: stool_PMMoV
+    time: 77
+    value: 101410950.4
+  - analyte: stool_PMMoV
+    time: 79
+    value: 198574001.5
+  - analyte: stool_mtDNA
+    time: 34
+    value: 727570248.5
+  - analyte: stool_mtDNA
+    time: 49
+    value: 410883987.8
+  - analyte: stool_mtDNA
+    time: 63
+    value: 1082951375.0
+  - analyte: stool_mtDNA
+    time: 70
+    value: 635526315.8
+  - analyte: stool_mtDNA
+    time: 77
+    value: 416300857.9
+  - analyte: stool_mtDNA
+    time: 79
+    value: 590017762.1
+- attributes:
+    age: 55.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 44
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 49
+    value: negative
+  - analyte: stool_PMMoV
+    time: 44
+    value: 216248104.0
+  - analyte: stool_PMMoV
+    time: 49
+    value: 457755208.0
+  - analyte: stool_mtDNA
+    time: 44
+    value: 3616642187.0
+  - analyte: stool_mtDNA
+    time: 49
+    value: 1914694036.0
+- attributes:
+    age: 64.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 10
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 13
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 17
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 33
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 47
+    value: negative
+  - analyte: stool_PMMoV
+    time: 10
+    value: 28086825.16
+  - analyte: stool_PMMoV
+    time: 11
+    value: 15233419.28
+  - analyte: stool_PMMoV
+    time: 13
+    value: 3064503.207
+  - analyte: stool_PMMoV
+    time: 17
+    value: 2194646.964
+  - analyte: stool_PMMoV
+    time: 33
+    value: 1115083.539
+  - analyte: stool_PMMoV
+    time: 47
+    value: 36771076.37
+  - analyte: stool_mtDNA
+    time: 10
+    value: 429774041.6
+  - analyte: stool_mtDNA
+    time: 11
+    value: 244732343.5
+  - analyte: stool_mtDNA
+    time: 13
+    value: 320746041.1
+  - analyte: stool_mtDNA
+    time: 17
+    value: 340077500.4
+  - analyte: stool_mtDNA
+    time: 33
+    value: 286693804.8
+  - analyte: stool_mtDNA
+    time: 47
+    value: 689816463.0
+- attributes:
+    age: 38.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 22
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 22
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 27
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 48
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 50
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 55
+    value: negative
+  - analyte: stool_PMMoV
+    time: 22
+    value: 890763147.5
+  - analyte: stool_PMMoV
+    time: 22
+    value: 2221989499.0
+  - analyte: stool_PMMoV
+    time: 27
+    value: 27859295.08
+  - analyte: stool_PMMoV
+    time: 48
+    value: 12135251.71
+  - analyte: stool_PMMoV
+    time: 50
+    value: 257958.042
+  - analyte: stool_PMMoV
+    time: 55
+    value: 243879431.8
+  - analyte: stool_mtDNA
+    time: 22
+    value: 187165610.4
+  - analyte: stool_mtDNA
+    time: 22
+    value: 239447662.7
+  - analyte: stool_mtDNA
+    time: 27
+    value: 168921355.9
+  - analyte: stool_mtDNA
+    time: 48
+    value: 248334585.0
+  - analyte: stool_mtDNA
+    time: 50
+    value: 341572028.0
+  - analyte: stool_mtDNA
+    time: 55
+    value: 425112858.4
+- attributes:
+    age: unknown
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 19
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 22
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 27
+    value: 4218.551174
+  - analyte: stool_SARSCoV2_N1
+    time: 30
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 49
+    value: 154901.0288
+  - analyte: stool_SARSCoV2_N1
+    time: 51
+    value: 51144.73437
+  - analyte: stool_PMMoV
+    time: 19
+    value: 5491911.912
+  - analyte: stool_PMMoV
+    time: 22
+    value: 235247316.3
+  - analyte: stool_PMMoV
+    time: 27
+    value: 92942134.94
+  - analyte: stool_PMMoV
+    time: 30
+    value: 44879028.06
+  - analyte: stool_PMMoV
+    time: 49
+    value: 10330342.85
+  - analyte: stool_PMMoV
+    time: 51
+    value: 37645624.18
+  - analyte: stool_mtDNA
+    time: 19
+    value: 176827184.3
+  - analyte: stool_mtDNA
+    time: 22
+    value: 112572335.4
+  - analyte: stool_mtDNA
+    time: 27
+    value: 341529952.1
+  - analyte: stool_mtDNA
+    time: 30
+    value: 193277583.5
+  - analyte: stool_mtDNA
+    time: 49
+    value: 185322803.5
+  - analyte: stool_mtDNA
+    time: 51
+    value: 324006141.5
+- attributes:
+    age: 31.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 20
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 21
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 35
+    value: 5948.525555
+  - analyte: stool_SARSCoV2_N1
+    time: 42
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 49
+    value: negative
+  - analyte: stool_PMMoV
+    time: 16
+    value: 2329570509.0
+  - analyte: stool_PMMoV
+    time: 20
+    value: 3315483688.0
+  - analyte: stool_PMMoV
+    time: 21
+    value: 3279618533.0
+  - analyte: stool_PMMoV
+    time: 35
+    value: 72395759.17
+  - analyte: stool_PMMoV
+    time: 42
+    value: 3337755634.0
+  - analyte: stool_PMMoV
+    time: 49
+    value: 2879860259.0
+  - analyte: stool_mtDNA
+    time: 16
+    value: 356172590.3
+  - analyte: stool_mtDNA
+    time: 20
+    value: 699617946.1
+  - analyte: stool_mtDNA
+    time: 21
+    value: 296473724.3
+  - analyte: stool_mtDNA
+    time: 35
+    value: 1186306785.0
+  - analyte: stool_mtDNA
+    time: 42
+    value: 539004203.6
+  - analyte: stool_mtDNA
+    time: 49
+    value: 258320158.0
+- attributes:
+    age: 31.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 14
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 28
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 42
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 44
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 59
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 64
+    value: negative
+  - analyte: stool_PMMoV
+    time: 14
+    value: 201843038.6
+  - analyte: stool_PMMoV
+    time: 28
+    value: 1801373762.0
+  - analyte: stool_PMMoV
+    time: 42
+    value: 589435617.6
+  - analyte: stool_PMMoV
+    time: 44
+    value: 523554701.2
+  - analyte: stool_PMMoV
+    time: 59
+    value: 14267058.82
+  - analyte: stool_PMMoV
+    time: 64
+    value: 84360878.79
+  - analyte: stool_mtDNA
+    time: 14
+    value: 203851238.6
+  - analyte: stool_mtDNA
+    time: 28
+    value: 187058910.9
+  - analyte: stool_mtDNA
+    time: 42
+    value: 499773103.5
+  - analyte: stool_mtDNA
+    time: 44
+    value: 198908930.8
+  - analyte: stool_mtDNA
+    time: 59
+    value: 195720716.1
+  - analyte: stool_mtDNA
+    time: 64
+    value: 185082926.9
+- attributes:
+    age: 26.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 27
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 29
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 34
+    value: 6719.451357
+  - analyte: stool_SARSCoV2_N1
+    time: 41
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 55
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 69
+    value: negative
+  - analyte: stool_PMMoV
+    time: 27
+    value: 16912235.29
+  - analyte: stool_PMMoV
+    time: 29
+    value: 126963271.9
+  - analyte: stool_PMMoV
+    time: 34
+    value: 3390585381.0
+  - analyte: stool_PMMoV
+    time: 41
+    value: 15127018.54
+  - analyte: stool_PMMoV
+    time: 55
+    value: 2779121900.0
+  - analyte: stool_PMMoV
+    time: 69
+    value: 987820.518
+  - analyte: stool_mtDNA
+    time: 27
+    value: 308604705.9
+  - analyte: stool_mtDNA
+    time: 29
+    value: 448450700.1
+  - analyte: stool_mtDNA
+    time: 34
+    value: 268529185.7
+  - analyte: stool_mtDNA
+    time: 41
+    value: 1190452133.0
+  - analyte: stool_mtDNA
+    time: 55
+    value: 870413472.3
+  - analyte: stool_mtDNA
+    time: 69
+    value: 496509786.7
+- attributes:
+    age: 25.0
+    sex: female
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 37
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 59
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 91
+    value: negative
+  - analyte: stool_PMMoV
+    time: 37
+    value: 4049591.623
+  - analyte: stool_PMMoV
+    time: 59
+    value: 137866934.5
+  - analyte: stool_PMMoV
+    time: 91
+    value: 287654079.7
+  - analyte: stool_mtDNA
+    time: 37
+    value: 60816188.48
+  - analyte: stool_mtDNA
+    time: 59
+    value: 83796929.85
+  - analyte: stool_mtDNA
+    time: 91
+    value: 108851845.6
+- attributes:
+    age: 27.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 22
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 23
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 29
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 30
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 48
+    value: negative
+  - analyte: stool_PMMoV
+    time: 22
+    value: 643037.2914
+  - analyte: stool_PMMoV
+    time: 23
+    value: 27638810.79
+  - analyte: stool_PMMoV
+    time: 29
+    value: 29522480.91
+  - analyte: stool_PMMoV
+    time: 30
+    value: 31580165.29
+  - analyte: stool_PMMoV
+    time: 48
+    value: 6126886.333
+  - analyte: stool_mtDNA
+    time: 22
+    value: 203057445.4
+  - analyte: stool_mtDNA
+    time: 23
+    value: 134053958.1
+  - analyte: stool_mtDNA
+    time: 29
+    value: 343223187.6
+  - analyte: stool_mtDNA
+    time: 30
+    value: 145033155.1
+  - analyte: stool_mtDNA
+    time: 48
+    value: 159930007.1
+- attributes:
+    age: 28.0
+    sex: female
+    race: white
+    ethnicity: hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 35
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 54
+    value: negative
+  - analyte: stool_PMMoV
+    time: 35
+    value: 47357368.23
+  - analyte: stool_PMMoV
+    time: 54
+    value: 578898912.2
+  - analyte: stool_mtDNA
+    time: 35
+    value: 162983451.1
+  - analyte: stool_mtDNA
+    time: 54
+    value: 295282571.4
+- attributes:
+    age: 21.0
+    sex: male
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 29
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 32
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 39
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 48
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 59
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 68
+    value: negative
+  - analyte: stool_PMMoV
+    time: 29
+    value: 5891302.875
+  - analyte: stool_PMMoV
+    time: 32
+    value: 9376129.13
+  - analyte: stool_PMMoV
+    time: 39
+    value: 62791269.11
+  - analyte: stool_PMMoV
+    time: 48
+    value: 396336056.1
+  - analyte: stool_PMMoV
+    time: 59
+    value: 24492889.37
+  - analyte: stool_PMMoV
+    time: 68
+    value: 300971083.6
+  - analyte: stool_mtDNA
+    time: 29
+    value: 215832608.4
+  - analyte: stool_mtDNA
+    time: 32
+    value: 175727735.2
+  - analyte: stool_mtDNA
+    time: 39
+    value: 532129399.2
+  - analyte: stool_mtDNA
+    time: 48
+    value: 332619905.4
+  - analyte: stool_mtDNA
+    time: 59
+    value: 92560686.52
+  - analyte: stool_mtDNA
+    time: 68
+    value: 130758473.4
+- attributes:
+    age: 36.0
+    sex: female
+    race: black
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: true
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 32
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 34
+    value: 11515.63064
+  - analyte: stool_SARSCoV2_N1
+    time: 35
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 39
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 40
+    value: negative
+  - analyte: stool_PMMoV
+    time: 11
+    value: 2293683.248
+  - analyte: stool_PMMoV
+    time: 32
+    value: 52957080.31
+  - analyte: stool_PMMoV
+    time: 34
+    value: 13793166.48
+  - analyte: stool_PMMoV
+    time: 35
+    value: 3195743.52
+  - analyte: stool_PMMoV
+    time: 39
+    value: 79993452.29
+  - analyte: stool_PMMoV
+    time: 40
+    value: 17314336.25
+  - analyte: stool_mtDNA
+    time: 11
+    value: 164004294.4
+  - analyte: stool_mtDNA
+    time: 32
+    value: 587215627.3
+  - analyte: stool_mtDNA
+    time: 34
+    value: 161346780.4
+  - analyte: stool_mtDNA
+    time: 35
+    value: 194568567.7
+  - analyte: stool_mtDNA
+    time: 39
+    value: 592484064.9
+  - analyte: stool_mtDNA
+    time: 40
+    value: 143514663.3
+- attributes:
+    age: 26.0
+    sex: male
+    race: white
+    ethnicity: not hispanic
+    inpatient: outpatient
+    vaccinated: false
+  measurements:
+  - analyte: stool_SARSCoV2_N1
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 23
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 26
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 30
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 40
+    value: negative
+  - analyte: stool_SARSCoV2_N1
+    time: 46
+    value: negative
+  - analyte: stool_PMMoV
+    time: 16
+    value: 34626942.24
+  - analyte: stool_PMMoV
+    time: 23
+    value: 47844093.42
+  - analyte: stool_PMMoV
+    time: 26
+    value: 12497584.56
+  - analyte: stool_PMMoV
+    time: 30
+    value: 1537565.248
+  - analyte: stool_PMMoV
+    time: 40
+    value: 47491509.89
+  - analyte: stool_PMMoV
+    time: 46
+    value: 11510668.18
+  - analyte: stool_mtDNA
+    time: 16
+    value: 131887532.1
+  - analyte: stool_mtDNA
+    time: 23
+    value: 848234160.6
+  - analyte: stool_mtDNA
+    time: 26
+    value: 431218310.3
+  - analyte: stool_mtDNA
+    time: 30
+    value: 526496066.6
+  - analyte: stool_mtDNA
+    time: 40
+    value: 121317875.7
+  - analyte: stool_mtDNA
+    time: 46
+    value: 1636810007.0
