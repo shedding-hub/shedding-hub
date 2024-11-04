@@ -63,14 +63,13 @@ Finally, the data is formatted and output as a YAML file.
 
 ```python
 participant_list = [dict(attributes=dict(age=int(Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"Age"]),
-                                         lineage=Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"Lineage"]),
+                                         lineage=Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"Lineage"],
+                                         confirmation_gap=int(Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"ConfirmDayAfterSymptom"])), #number of days for confirmation day after symptom onset day;
                          measurements=[dict(analyte="nasal_SARSCoV2",
                                              time=int(Ke2022.loc[j,"Time"].item()),
-                                             confirmation_gap=int(Ke2022.loc[j,"ConfirmDayAfterSymptom"].item()),
                                              value=Ke2022.loc[j,"nasal_conc"]) for j in Ke2022.loc[(Ke2022["Ind"]==i) & (pd.notna(Ke2022['nasal_conc']))].index] +
                                        [dict(analyte="saliva_SARSCoV2",
                                              time=int(Ke2022.loc[j,"Time"].item()),
-                                             confirmation_gap=int(Ke2022.loc[j,"ConfirmDayAfterSymptom"].item()),
                                              value=Ke2022.loc[j,"saliva_conc"]) for j in Ke2022.loc[(Ke2022["Ind"]==i) & (pd.notna(Ke2022['saliva_conc']))].index]) for i in pd.unique(Ke2022["Ind"])]
 
 ke2022 = dict(title="Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals Substantial Heterogeneity in Infectiousness",
@@ -80,7 +79,7 @@ ke2022 = dict(title="Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals
                                                     specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="N1 and N2",
-                                                    limit_of_quantification="unknown", #0.22387211385683378,calculated by 10**(11.35-0.25*48) with CN=48; the minimum quantifiable value observed was 7.89768849399884;
+                                                    limit_of_quantification="unknown", #0.22387211385683378, calculated by 10**(11.35-0.25*48) with CN=48; the minimum quantifiable value observed was 7.89768849399884;
                                                     limit_of_detection="unknown",
                                                     unit="gc/mL",
                                                     reference_event="symptom onset"),
@@ -88,7 +87,7 @@ ke2022 = dict(title="Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals
                                               specimen="saliva",
                                               biomarker="SARS-CoV-2",
                                               gene_target="N",
-                                              limit_of_quantification="unknown", #12.022644346174081 calculated by 10**(14.24-0.28*47) with CT=47; the minimum quantifiable value observed was 1161.9836038697981;
+                                              limit_of_quantification="unknown", #12.022644346174081, calculated by 10**(14.24-0.28*47) with CT=47; the minimum quantifiable value observed was 1161.9836038697981;
                                               limit_of_detection="unknown",
                                               unit="gc/mL",
                                               reference_event="symptom onset")),
