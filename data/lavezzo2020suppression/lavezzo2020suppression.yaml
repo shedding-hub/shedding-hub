@@ -1,16 +1,16 @@
 # yaml-language-server: $schema=../.schema.yaml
-title: "Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo\u2019"
+title: Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo'
 doi: 10.1038/s41586-020-2488-1
 description: >
-  This study was conducted in the Italian municipality of Vo. Lockdown was implemented
-  after first death of pneumonia was reported. Two surveys and virus tests were conducted
-  with the first survey near the start of lockdown and the second one at the end of
-  lockdown
+  This study was conducted in the Italian municipality of Vo. A lockdown was implemented
+  after the first death of pneumonia was reported. Two rounds of surveys and virus
+  tests were conducted with the first survey near the start of the lockdown and the
+  second one at the end of the lockdown
 analytes:
   RdRp_first_pos:
     description: >
       SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp
-      gene, and the reference event is first positive day.
+      gene, and the reference event is the first positive test day (confirmation date).
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: RdRp
@@ -21,7 +21,7 @@ analytes:
   E_first_pos:
     description: >
       SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene,
-      and the reference event is first positive day.
+      and the reference event is the first positive test day (confirmation date).
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: E
@@ -32,7 +32,7 @@ analytes:
   RdRp_symptom:
     description: >
       SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp
-      gene, and the reference event is symptom onset day.
+      gene, and the reference event is symptom onset.
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: RdRp
@@ -43,7 +43,7 @@ analytes:
   E_symptom:
     description: >
       SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene,
-      and the reference event is symptom onset day.
+      and the reference event is symptom onset.
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: E

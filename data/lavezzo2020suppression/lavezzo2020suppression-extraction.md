@@ -7,7 +7,7 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.16.4
   kernelspec:
-    display_name: python_clean
+    display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
@@ -15,22 +15,10 @@ jupyter:
 ```python
 import yaml
 import pandas as pd
+from shedding_hub import folded_str
 import numpy as np
 import textwrap
 import datetime
-
-
-#functions to add folded blocks and literal blocks;
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer);
 ```
 
 ```python
@@ -203,10 +191,10 @@ for type in ['first_pos','symptom']:
 ```
 
 ```python
-haisuproj = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo’",
+Lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo'",
                doi="10.1038/s41586-020-2488-1",
-               description=folded_str('This study was conducted in the Italian municipality of Vo. Lockdown was implemented after first death of pneumonia was reported. Two surveys and virus tests were conducted with the first survey near the start of lockdown and the second one at the end of lockdown\n'),
-               analytes=dict(RdRp_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is first positive day.\n"),
+               description=folded_str('This study was conducted in the Italian municipality of Vo. A lockdown was implemented after the first death of pneumonia was reported. Two rounds of surveys and virus tests were conducted with the first survey near the start of the lockdown and the second one at the end of the lockdown\n'),
+               analytes=dict(RdRp_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is the first positive test day (confirmation date).\n"),
                                                     specimen="oropharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="RdRp",
@@ -214,7 +202,7 @@ haisuproj = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian muni
                                                     limit_of_detection="unknown",
                                                     unit="gc/mL",
                                                     reference_event="confirmation date"),
-                             E_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is first positive day.\n"),
+                             E_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is the first positive test day (confirmation date).\n"),
                                               specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
                                               gene_target="E",
@@ -222,7 +210,7 @@ haisuproj = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian muni
                                               limit_of_detection="unknown",
                                               unit="gc/mL",
                                               reference_event="confirmation date"),
-                            RdRp_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is symptom onset day.\n"),
+                            RdRp_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is symptom onset.\n"),
                                                 specimen="oropharyngeal_swab",
                                                 biomarker="SARS-CoV-2",
                                                 gene_target="RdRp",
@@ -230,7 +218,7 @@ haisuproj = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian muni
                                                 limit_of_detection="unknown",
                                                 unit="gc/mL",
                                                 reference_event="symptom onset"),
-                             E_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is symptom onset day.\n"),
+                             E_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is symptom onset.\n"),
                                               specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
                                               gene_target="E",
@@ -245,6 +233,6 @@ haisuproj = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian muni
 ```python
 with open("lavezzo2020suppression.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
-    yaml.dump(haisuproj, outfile, default_style=None, default_flow_style=False, sort_keys=False)
+    yaml.dump(Lavezzo2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close()
 ```
