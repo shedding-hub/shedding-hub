@@ -45,7 +45,8 @@ def cal_conc_Ct(Ct_value):
 Ke2022['saliva_conc']=Ke2022['Saliva_Ct'].map(cal_conc_Ct)
 ```
 
-We adjusted the time as the day after the confirmation (first antigen test positive).
+We adjusted the time as the day after the symptom onset (first day observing any symptoms). Below is an illustration of the adjustment of time and calculation of confirm day after symptom onset:
+![Illustration of adjustment reference event](illustration_adjustment.png)
 
 ```python
 #identify the first antigen positive day as the confirmation day for each subject;
