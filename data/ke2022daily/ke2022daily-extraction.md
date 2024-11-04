@@ -17,9 +17,11 @@ Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shed
 ```python
 #load the data;
 Ke2022 = pd.read_excel('41564_2022_1105_MOESM4_ESM.xlsx',sheet_name='data_samples')
-Ke2022SymptomTime = pd.read_excel('symptom_date_gap.xlsx',sheet_name='Sheet1')
+#This CSV below was extracted from Extended Data Fig. 2 Individual-level symptom data in Ke et al (2022). The column "first_symptom" includes the first day of observing any symptoms.
+Ke2022SymptomTime = pd.read_csv('symptom_date_gap.csv')
 
 #sort by ID and date;
+Ke2022['Ind'] = Ke2022['Ind'].astype('str')
 Ke2022 = Ke2022.sort_values(by=['Ind','Time'])
 
 #calculate the concentrations based on nasal CN values using the formula, log10(V)=11.35-0.25CN, in the subsection 
@@ -51,12 +53,12 @@ Ke2022['cum_cnt'] = Ke2022.groupby(['Ind','Antigen']).cumcount()
 Ke2022ConfirmTime = Ke2022.loc[(Ke2022['Antigen']=='Pos') & (Ke2022['cum_cnt']==0),['Ind','Time']]
 Ke2022ConfirmTime = Ke2022ConfirmTime.rename(columns={'Time': 'Confirm_Time'})
 #two subjects do not have any antigen positive. we used the first saliva positive day as confirmation day for those two subjects: 449614,'451146 *'.
-Ke2022ConfirmTime = pd.concat([Ke2022ConfirmTime,pd.DataFrame(dict(Ind=[449614,'451146 *'], Confirm_Time=[-2, -4]))])
-#change the 'Time' as the day after confirmation;
+Ke2022ConfirmTime = pd.concat([Ke2022ConfirmTime,pd.DataFrame(dict(Ind=['449614','451146 *'], Confirm_Time=[-2, -4]))])
+#change the 'Time' as the day after symptom onset;
 Ke2022=Ke2022.merge(Ke2022ConfirmTime, how='left', on='Ind')
 Ke2022=Ke2022.merge(Ke2022SymptomTime, how='left', on='Ind')
-Ke2022['ConfirmDayAfterSymptom'] = Ke2022['Confirm_Time']-Ke2022['first_symptom']
-Ke2022['Time']=Ke2022['Time']-Ke2022['first_symptom']
+Ke2022['ConfirmDayAfterSymptom'] = Ke2022['Confirm_Time'].astype('int64')-Ke2022['first_symptom'].astype('int64')
+Ke2022['Time']=Ke2022['Time']-Ke2022['first_symptom'].astype('int64')
 ```
 
 Finally, the data is formatted and output as a YAML file.
@@ -64,7 +66,7 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 participant_list = [dict(attributes=dict(age=int(Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"Age"]),
                                          lineage=Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"Lineage"],
-                                         confirmation_gap=int(Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"ConfirmDayAfterSymptom"])), #number of days for confirmation day after symptom onset day;
+                                         confirmation_gap=int(Ke2022.loc[Ke2022.loc[Ke2022["Ind"]==i].index[0],"ConfirmDayAfterSymptom"])), #Confirmation occurs how many days after symptom onset. A negative value indicates that the confirmation occurs before symptom onset.
                          measurements=[dict(analyte="nasal_SARSCoV2",
                                              time=int(Ke2022.loc[j,"Time"].item()),
                                              value=Ke2022.loc[j,"nasal_conc"]) for j in Ke2022.loc[(Ke2022["Ind"]==i) & (pd.notna(Ke2022['nasal_conc']))].index] +

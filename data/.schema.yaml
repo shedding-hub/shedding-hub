@@ -184,11 +184,6 @@ properties:
             lineage:
               description: Lineage information of the disease for the participant.
               type: string
-            confirmation_gap:
-              description: Confirmation occurs how many days after symptom onset. A negative value indicate that the confirmation occurs before sympotom onset.
-              oneOf:
-                - type: number
-                - const: unknown
         measurements:
           type: array
           minItems: 1
