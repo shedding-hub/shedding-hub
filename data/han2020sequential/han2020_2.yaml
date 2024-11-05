@@ -1,0 +1,220 @@
+# yaml-language-server: $schema=.schema.yaml
+title: Sequential Analysis of Viral Load in a Neonate and Her Mother Infected With
+  Severe Acute Respiratory Syndrome Coronavirus 2
+doi: 10.1093/cid/ciaa447
+description: >
+  The study reports SARS-CoV-2 viral loads in different specimen types for a neonate
+  and her mother diagnosed on 2020-03-20. The study includes nasopharyngeal, oropharyngeal,
+  stool, plasma, saliva, and urine samples. Only concentrations in stool samples are
+  reported here. Viral loads were extracted manually from Figure 1 using [WebPlotDigitizer](https://automeris.io).
+analytes:
+  stool_E:
+    description: >
+      From manuscript: "Viral RNA was detected using the PowerChek 2019-nCoV real-time
+      polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification
+      of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene,
+      and quantified with a standard curve that was constructed using in vitro transcribed
+      RNA provided from the European Virus Archive." However, data reported in Figure
+      1 explicitly refer to the E gene target.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: E
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
+  NPS_E:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration
+      was quantified in gene copies per milliliter.
+    specimen: nasopharynx
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
+  OPS_E:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in oropharynx samples. The concentration
+      was quantified in gene copies per milliliter.
+    specimen: oropharynx
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
+  plasma_E:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in plasma samples. The concentration
+      was quantified in gene copies per milliliter.
+    specimen: plasma
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
+  saliva_E:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in saliva samples. The concentration
+      was quantified in gene copies per milliliter.
+    specimen: saliva
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
+  urine_E:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in urine samples. The concentration was
+      quantified in gene copies per milliliter.
+    specimen: urine
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
+  sputum_E:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in sputum samples. The concentration
+      was quantified in gene copies per milliliter.
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 0.074
+    sex: female
+  measurements:
+  - analyte: nasopharynx_E
+    time: 4
+    value: 11681124694.666067
+  - analyte: nasopharynx_E
+    time: 6
+    value: 32759511.94747962
+  - analyte: nasopharynx_E
+    time: 9
+    value: 80905018.2151711
+  - analyte: nasopharynx_E
+    time: 11
+    value: 1734857.484251887
+  - analyte: nasopharynx_E
+    time: 15
+    value: negative
+  - analyte: nasopharynx_E
+    time: 17
+    value: negative
+  - analyte: nasopharynx_E
+    time: 18
+    value: negative
+  - analyte: OPS_E
+    time: 3
+    value: 127143592.65931857
+  - analyte: OPS_E
+    time: 7
+    value: 115172.73841453933
+  - analyte: OPS_E
+    time: 9
+    value: 8440736.989269793
+  - analyte: OPS_E
+    time: 14
+    value: 743302.5864356309
+  - analyte: OPS_E
+    time: 17
+    value: negative
+  - analyte: OPS_E
+    time: 18
+    value: negative
+  - analyte: plasma_E
+    time: 5
+    value: 69261.32539235131
+  - analyte: plasma_E
+    time: 10
+    value: 25047.997196476856
+  - analyte: plasma_E
+    time: 12
+    value: negative
+  - analyte: saliva_E
+    time: 5
+    value: 284438.07448225166
+  - analyte: saliva_E
+    time: 8
+    value: 161654.93117096298
+  - analyte: saliva_E
+    time: 12
+    value: negative
+  - analyte: urine_E
+    time: 5
+    value: 6828.979798663403
+  - analyte: urine_E
+    time: 8
+    value: 55249.873500189744
+  - analyte: urine_E
+    time: 10
+    value: 97214.27932910941
+  - analyte: urine_E
+    time: 11
+    value: 8090.501821517101
+  - analyte: urine_E
+    time: 15
+    value: 21142.355644342828
+  - analyte: urine_E
+    time: 16
+    value: 15938.740063219358
+  - analyte: urine_E
+    time: 18
+    value: negative
+- attributes:
+    age: unknown
+    sex: female
+  measurements:
+  - analyte: urine_E
+    time: 8
+    value: negative
+  - analyte: urine_E
+    time: 12
+    value: negative
+  - analyte: sputum_E
+    time: 10
+    value: 173377.88907936602
+  - analyte: sputum_E
+    time: 12
+    value: 9035.971303185745
+  - analyte: sputum_E
+    time: 16
+    value: negative
+  - analyte: sputum_E
+    time: 17
+    value: negative
+  - analyte: sputum_E
+    time: 18
+    value: negative
+  - analyte: sputum_E
+    time: 21
+    value: negative
+  - analyte: plasma_E
+    time: 7
+    value: negative
+  - analyte: NPS+OPS_E
+    time: 10
+    value: 115582.76565029647
+  - analyte: NPS+OPS_E
+    time: 13
+    value: 9574.852116096288
+  - analyte: NPS+OPS_E
+    time: 15
+    value: negative
+  - analyte: NPS+OPS_E
+    time: 17
+    value: negative
+  - analyte: NPS+OPS_E
+    time: 18
+    value: negative
+  - analyte: NPS+OPS_E
+    time: 20
+    value: negative
+  - analyte: NPS+OPS_E
+    time: 21
+    value: negative
