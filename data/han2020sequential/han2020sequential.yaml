@@ -43,6 +43,18 @@ analytes:
     limit_of_detection: 5700
     unit: gc/mL
     reference_event: symptom onset
+  NPSOPS_E:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in oropharynx and nasopharynx samples.
+      The concentration was quantified in gene copies per milliliter.
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    unit: gc/mL
+    reference_event: symptom onset
   plasma_E:
     description: >
       SARS-CoV-2 RNA gene copy concentration in plasma samples. The concentration
@@ -197,24 +209,24 @@ participants:
   - analyte: plasma_E
     time: 7
     value: negative
-  - analyte: NPS+OPS_E
+  - analyte: NPSOPS_E
     time: 10
     value: 115582.76565029647
-  - analyte: NPS+OPS_E
+  - analyte: NPSOPS_E
     time: 13
     value: 9574.852116096288
-  - analyte: NPS+OPS_E
+  - analyte: NPSOPS_E
     time: 15
     value: negative
-  - analyte: NPS+OPS_E
+  - analyte: NPSOPS_E
     time: 17
     value: negative
-  - analyte: NPS+OPS_E
+  - analyte: NPSOPS_E
     time: 18
     value: negative
-  - analyte: NPS+OPS_E
+  - analyte: NPSOPS_E
     time: 20
     value: negative
-  - analyte: NPS+OPS_E
+  - analyte: NPSOPS_E
     time: 21
     value: negative
