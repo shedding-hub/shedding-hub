@@ -19,6 +19,7 @@ $defs:
       - throat_swab
       - oropharyngeal_swab
       - nasopharyngeal_swab
+      - saliva
   analyte_specification:
     description: Specification of an analyte.
     type: object
