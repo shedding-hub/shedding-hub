@@ -27,7 +27,7 @@ analytes:
     description: >
       SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration
       was quantified in gene copies per milliliter.
-    specimen: nasopharynx
+    specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     limit_of_quantification: unknown
     limit_of_detection: 5700
@@ -37,7 +37,7 @@ analytes:
     description: >
       SARS-CoV-2 RNA gene copy concentration in oropharynx samples. The concentration
       was quantified in gene copies per milliliter.
-    specimen: oropharynx
+    specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     limit_of_quantification: unknown
     limit_of_detection: 5700
