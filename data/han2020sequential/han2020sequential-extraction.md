@@ -191,6 +191,6 @@ han2020 = dict(
 
 
 with open("han2020sequential.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(han2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close() 
