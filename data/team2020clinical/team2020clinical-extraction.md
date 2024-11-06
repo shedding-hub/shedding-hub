@@ -8,7 +8,6 @@ First, we `import` python modules needed:
 #import modules;
 import yaml
 import pandas as pd
-import numpy as np
 from shedding_hub import folded_str
 ```
 
@@ -85,5 +84,4 @@ team2020clinical = dict(title="Clinical and virologic characteristics of the fir
 with open("team2020clinical.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(team2020clinical, outfile, default_flow_style=False, sort_keys=False)
-outfile.close() 
 ```
