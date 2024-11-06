@@ -56,7 +56,7 @@ for patient_id, group in team2020.groupby('PatientID'):
         else:
             value = row['value']
         measurementN = {
-            'analyte': 'swab_SARSCoV2_N',
+            'analyte': 'naso_swab_SARSCoV2_N',
             'time': row['Day'],
             'value': value
         }
