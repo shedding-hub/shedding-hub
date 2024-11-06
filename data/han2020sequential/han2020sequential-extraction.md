@@ -111,6 +111,12 @@ for i in pd.unique(Han2020["Patient"]):
                 "time": int(row['Day']),
                 "value": value
             })
+        elif row['Type'] == 'stool':
+            measurements.append({
+                "analyte": "stool_E",
+                "time": int(row['Day']),
+                "value": value
+            })
 
     participant_dict = {
         "attributes": {
@@ -182,6 +188,15 @@ han2020 = dict(
             biomarker="SARS-CoV-2",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
+            unit="gc/mL",
+            reference_event="symptom onset"
+        ),
+        stool_E=dict(description=folded_str("From manuscript: \"Viral RNA was detected using the PowerChek 2019-nCoV real-time polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene, and quantified with a standard curve that was constructed using in vitro transcribed RNA provided from the European Virus Archive.\" However, data reported in Figure 1 explicitly refer to the E gene target.\n"),
+            specimen="sputum",
+            biomarker="SARS-CoV-2",
+            limit_of_quantification="unknown",
+            limit_of_detection=5700,
+            gene_target= "E",
             unit="gc/mL",
             reference_event="symptom onset"
         )
