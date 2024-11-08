@@ -23,7 +23,7 @@ team2020 = team2020.drop(columns=columns_to_drop)
 # Information from the original paper.
 patient_info = {
     'PatientID': ['7-6', '7-7', '7-8', '7-9', '7-10', '7-11', '7-12'],
-    'Age': [35, 65, 65, 35, 55, 55, 55],
+    'Age': ['30-39', '60-69', '60-69', '30-39', '60-69', '60-69', '60-69'],
     'Sex': ['male', 'female', 'male', 'male', 'male', 'male', 'female']
 }
 patient_df = pd.DataFrame(patient_info)
@@ -38,7 +38,7 @@ for patient_id, group in team2020.groupby('PatientID'):
     if pd.notna(group['Age'].iloc[0]) and pd.notna(group['Sex'].iloc[0]):
         participant = {
             'attributes': {
-                'age': int(group['Age'].iloc[0]),
+                'age_group': group['Age'].iloc[0],
                 'sex': group['Sex'].iloc[0]
             },
             'measurements': []
