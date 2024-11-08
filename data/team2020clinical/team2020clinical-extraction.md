@@ -23,7 +23,7 @@ team2020 = team2020.drop(columns=columns_to_drop)
 # Information from the original paper.
 patient_info = {
     'PatientID': ['7-6', '7-7', '7-8', '7-9', '7-10', '7-11', '7-12'],
-    'Age': ['30-39', '60-69', '60-69', '30-39', '60-69', '60-69', '60-69'],
+    'Age': ['30-39', '60-69', '60-69', '30-39', '50-59', '50-59', '50-59'],
     'Sex': ['male', 'female', 'male', 'male', 'male', 'male', 'female']
 }
 patient_df = pd.DataFrame(patient_info)
