@@ -7,7 +7,7 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.16.4
   kernelspec:
-    display_name: Python 3 (ipykernel)
+    display_name: python_clean
     language: python
     name: python3
 ---
@@ -15,24 +15,27 @@ jupyter:
 ```python
 import yaml
 import pandas as pd
-from shedding_hub import folded_str
 import numpy as np
 import textwrap
 import datetime
+
+
+#functions to add folded blocks and literal blocks;
+from shedding_hub import folded_str
 ```
 
 ```python
 #Read Excel file into the environment
-df_demo = pd.read_excel('anonymised_data_public_final.xlsx', sheet_name='anonymised_dataset')
+df_demographics = pd.read_excel('anonymised_data_public_final.xlsx', sheet_name='anonymised_dataset')
 df_pcr = pd.read_excel('anonymised_data_public_final.xlsx', sheet_name='RT_PCR_DATA')
-# list(df_demo.columns)
+# list(df_demographics.columns)
 
 ```
 
 ```python
-# Filter the useful columns in df_demo
-df_demo2 = df_demo.loc[:,'id':'gender'].join(df_demo['first_symptoms_date'])
-df_demo2.describe();
+# Filter the useful columns in df_demographics
+df_demographics2 = df_demographics.loc[:,'id':'gender'].join(df_demographics['first_symptoms_date'])
+df_demographics2.describe()
 ```
 
 ```python
@@ -45,8 +48,8 @@ df_pcr2.columns = ['id','RdRp_1','E_1','RdRp_2','E_2','symptom_1','symptom_2']
 
 ```python
 #Join pcr data with the demographic data
-df = df_pcr2.merge(df_demo2,how = 'left',on = 'id')
-list(df.columns);
+df = df_pcr2.merge(df_demographics2,how = 'left',on = 'id')
+list(df.columns)
 ```
 
 The first survey occurred between 21 and 29 February 2020 and the
@@ -64,13 +67,10 @@ print(df['age_group'].value_counts())
 #Recode the gender.
 print(df['gender'].value_counts())
 df['gender'] = df['gender'].replace({'M':'male','F':'female'})
-print(df['gender'].value_counts());
+print(df['gender'].value_counts())
 ```
 
 ```python
-# participants = {}
-# for i in range(0,df['id'].shape[0]):df
-#     participants[i] = 1
 print(df['id'].duplicated().value_counts()) #No Duplicate entries
 
 #Reshape the dataframe.
@@ -85,7 +85,7 @@ df = df.reset_index()
 
 ```python
 #Retrieve the test date and result information.
-df_test = df_demo.loc[:,datetime.datetime(2020, 2, 21, 0, 0):datetime.datetime(2020, 3, 10, 0, 0)].join(df_demo['id'])
+df_test = df_demographics.loc[:,datetime.datetime(2020, 2, 21, 0, 0):datetime.datetime(2020, 3, 10, 0, 0)].join(df_demographics['id'])
 df_test = pd.melt(df_test,id_vars=['id'],var_name = 'test_date',value_name = 'results')
 df_test = df_test[~df_test['results'].isnull()]
 df_test['results'].value_counts()
@@ -97,20 +97,17 @@ df_test['results'].value_counts()
 df_test = df_test[df_test['id'].isin(df['id'])]
 #Convert to date
 df_test['test_date'] = pd.to_datetime(df_test['test_date'])
-# df_test['test'] = df_test['test_date'].dt.date
-```
-
-```python
 df_test['test_date'].value_counts()
 ```
 
 ```python
+#Separate round 1 and round 2 by date before 2020/03/06 or after.
 df_test_1= df_test[df_test['test_date'] < datetime.datetime(2020, 3, 6)]
 df_test_2 = df_test[df_test['test_date'] >= datetime.datetime(2020, 3, 6)]
 ```
 
 ```python
-#Generate the first positive /neg day for both first and second round
+#Generate the first positive /neg day for both round 1 and round 2
     
 for type in ['Pos','Neg']:
     temp_m = pd.DataFrame()
@@ -138,8 +135,7 @@ df.loc[~df['RdRp'].isnull() | ~df['E'].isnull(),'pcr_results'] = 'Pos'
 #Assign the Test date
 df.loc[df['pcr_results'] == 'Pos','test_date'] = df['first_Pos']
 df.loc[df['pcr_results'] == 'Neg','test_date'] = df['first_Neg']
-
-  
+ 
 ```
 
 ```python
@@ -165,9 +161,9 @@ df.loc[df['reference_type'] == 'symptom','time'] = (df['test_date'] - df['first_
 ```
 
 ```python
-#Exclude missing time.
+#Exclude missing time (Which means no test was conducted.).
 df = df.loc[~df['time'].isnull(),]
-#Change the coding of negative pcr values.
+#Change the coding of negative pcr values to meet schema.
 for i in ['RdRp','E']:
     df.loc[df[i].isnull(),i] = 'negative'
 ```
@@ -191,10 +187,10 @@ for type in ['first_pos','symptom']:
 ```
 
 ```python
-Lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo'",
+lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo",
                doi="10.1038/s41586-020-2488-1",
-               description=folded_str('This study was conducted in the Italian municipality of Vo. A lockdown was implemented after the first death of pneumonia was reported. Two rounds of surveys and virus tests were conducted with the first survey near the start of the lockdown and the second one at the end of the lockdown\n'),
-               analytes=dict(RdRp_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is the first positive test day (confirmation date).\n"),
+               description=folded_str('This study was conducted in the Italian municipality of Vo. Lockdown was implemented after first death of pneumonia was reported. Two surveys and virus tests were conducted with the first survey near the start of lockdown and the second one at the end of lockdown\n'),
+               analytes=dict(RdRp_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is first positive day.\n"),
                                                     specimen="oropharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="RdRp",
@@ -202,7 +198,7 @@ Lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian mu
                                                     limit_of_detection="unknown",
                                                     unit="gc/mL",
                                                     reference_event="confirmation date"),
-                             E_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is the first positive test day (confirmation date).\n"),
+                             E_first_pos=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is first positive day.\n"),
                                               specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
                                               gene_target="E",
@@ -210,7 +206,7 @@ Lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian mu
                                               limit_of_detection="unknown",
                                               unit="gc/mL",
                                               reference_event="confirmation date"),
-                            RdRp_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is symptom onset.\n"),
+                            RdRp_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp gene, and the reference event is symptom onset day.\n"),
                                                 specimen="oropharyngeal_swab",
                                                 biomarker="SARS-CoV-2",
                                                 gene_target="RdRp",
@@ -218,7 +214,7 @@ Lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian mu
                                                 limit_of_detection="unknown",
                                                 unit="gc/mL",
                                                 reference_event="symptom onset"),
-                             E_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is symptom onset.\n"),
+                             E_symptom=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene, and the reference event is symptom onset day.\n"),
                                               specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
                                               gene_target="E",
@@ -233,6 +229,6 @@ Lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian mu
 ```python
 with open("lavezzo2020suppression.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
-    yaml.dump(Lavezzo2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
+    yaml.dump(lavezzo2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close()
 ```
