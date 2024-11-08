@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import yaml
@@ -19,20 +19,20 @@ yaml.add_representer(folded_str, folded_str_representer)
 yaml.add_representer(literal_str, literal_str_representer)
 
 
-# In[2]:
+# In[ ]:
 
 
-data = pd.read_csv("CombinedDataset-2.csv") 
-data=data[113:132]
+data = pd.read_csv("CombinedDataset.csv") 
+data = data['StudyNum'] == 4]
 
 
-# In[4]:
+# In[ ]:
 
 
 data = data.sort_values(by=['Day','StudyNum'])
 
 
-# In[47]:
+# In[ ]:
 
 
 data = data.replace({"Sex": {"M": "male", "F": "female"},
@@ -41,7 +41,7 @@ data = data.replace({"Sex": {"M": "male", "F": "female"},
 print(data)
 
 
-# In[63]:
+# In[ ]:
 
 
 df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
@@ -77,7 +77,7 @@ for patient_id, patient_data in df.groupby("PatientID"):
 print(participants)
 
 
-# In[67]:
+# In[ ]:
 
 
 output_data = {
