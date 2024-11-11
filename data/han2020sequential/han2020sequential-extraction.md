@@ -17,7 +17,8 @@ Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shed
 
 ```python
 # Read in the CSV file containing data and store it in Han2020
-Han2020 = pd.read_csv("combinedata.csv")
+Han2020 = pd.read_csv("combinedataset.csv")
+
 
 # Define a dictionary containing patient information (ID, Sex, Age) from information provided in Clinical Analysis in Han et al. (2020).
 patient_info = {
@@ -49,17 +50,16 @@ participant_list = []
 for i in pd.unique(Han2020["Patient"]):
     patient_data = Han2020[Han2020["Patient"] == i]
     try:
-        age = float(patient_data['Age'].iloc[0]) 
+        age = float(patient_data['Age'].iloc[0])  # Convert to float first and then to int to handle numeric strings
     except ValueError:
         age = 'unknown'  # If the conversion fails, keep 'unknown' 
-    
     sex = str(patient_data['Sex'].iloc[0]) 
     
     measurements = []
     for _, row in patient_data.iterrows():
         try:
             
-            value = 10 ** float(row['LogValue'])  # Convert logvalue to original one
+            value = 10 ** float(row['LogValue'])  # Use float for scientific notation
             
             if value == 1.0:
                 value = 'negative'
@@ -112,6 +112,13 @@ for i in pd.unique(Han2020["Patient"]):
                 "value": value
             })
 
+        elif row['Type'] == 'stool':
+            measurements.append({
+                "analyte": "stool_E",
+                "time": int(row['Day']),
+                "value": value
+            })    
+
     participant_dict = {
         "attributes": {
             "age": age,
@@ -128,7 +135,7 @@ Finally, the data is formatted and output as a YAML file.
 han2020 = dict(
     title="Sequential Analysis of Viral Load in a Neonate and Her Mother Infected With Severe Acute Respiratory Syndrome Coronavirus 2",
     doi="10.1093/cid/ciaa447",
-    description=folded_str('The study reports SARS-CoV-2 viral loads in different specimen types for a neonate and her mother diagnosed on 2020-03-20. The study includes nasopharyngeal, oropharyngeal, stool, plasma, saliva, and urine samples. No concentrations in stool samples are reported here. Viral loads were extracted manually from Figure 1 using [WebPlotDigitizer](https://automeris.io).\n'),
+    description=folded_str('The study reports SARS-CoV-2 viral loads in different specimen types for a neonate and her mother diagnosed on 2020-03-20. The study includes nasopharyngeal, oropharyngeal, stool, plasma, saliva, and urine samples. Viral loads were extracted manually from Figure 1 using [WebPlotDigitizer](https://automeris.io).\n'),
     analytes=dict(nasopharynx_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="nasopharyngeal_swab",
             biomarker="SARS-CoV-2",
@@ -184,10 +191,19 @@ han2020 = dict(
             limit_of_detection=5700,
             unit="gc/mL",
             reference_event="symptom onset"
+        ),
+        stool_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in stool samples. The concentration was quantified in gene copies per milliliter.\n"),
+            specimen="stool",
+            biomarker="SARS-CoV-2",
+            limit_of_quantification="unknown",
+            limit_of_detection=5700,
+            unit="gc/mL",
+            reference_event="symptom onset"
         )
     ),
     participants=participant_list
 )
+
 
 
 with open("han2020sequential.yaml","w") as outfile:
