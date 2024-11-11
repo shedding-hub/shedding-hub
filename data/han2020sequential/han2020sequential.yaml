@@ -89,8 +89,12 @@ analytes:
     reference_event: symptom onset
   stool_E:
     description: >
-      SARS-CoV-2 RNA gene copy concentration in stool samples. The concentration was
-      quantified in gene copies per milliliter.
+      From manuscript: "Viral RNA was detected using the PowerChek 2019-nCoV real-time
+      polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification
+      of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene,
+      and quantified with a standard curve that was constructed using in vitro transcribed
+      RNA provided from the European Virus Archive." However, data reported in Figure
+      1 explicitly refer to the E gene target.
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: E
