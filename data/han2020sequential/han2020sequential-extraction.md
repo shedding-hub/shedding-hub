@@ -209,7 +209,7 @@ han2020 = dict(
         )
     ),
     participants=participant_list
-))
+)
 
 
 
