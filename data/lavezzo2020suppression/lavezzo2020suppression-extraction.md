@@ -24,18 +24,19 @@ import datetime
 from shedding_hub import folded_str
 ```
 
+Data are stored in 2 worksheets in excel file. 'df_demographics' extracts the demographic info of patients; and 'df_pcr' extracts the pcr results of patients.
+
 ```python
 #Read Excel file into the environment
 df_demographics = pd.read_excel('anonymised_data_public_final.xlsx', sheet_name='anonymised_dataset')
 df_pcr = pd.read_excel('anonymised_data_public_final.xlsx', sheet_name='RT_PCR_DATA')
-# list(df_demographics.columns)
 
 ```
 
 ```python
 # Filter the useful columns in df_demographics
 df_demographics2 = df_demographics.loc[:,'id':'gender'].join(df_demographics['first_symptoms_date'])
-df_demographics2.describe()
+
 ```
 
 ```python
@@ -49,7 +50,7 @@ df_pcr2.columns = ['id','RdRp_1','E_1','RdRp_2','E_2','symptom_1','symptom_2']
 ```python
 #Join pcr data with the demographic data
 df = df_pcr2.merge(df_demographics2,how = 'left',on = 'id')
-list(df.columns)
+
 ```
 
 The first survey occurred between 21 and 29 February 2020 and the
@@ -58,16 +59,9 @@ that prevalence was taken on the weighted average of the first sample
 collection date, that is, on 26 February 2020 and on 7 March 2020.
 
 ```python
-print(df['age_group'].value_counts())
-#Use the middle value of each age group
-df['age_group'] = df['age_group'].str[0:2]
-df['age_group'] = pd.to_numeric(df['age_group'])+4
-print(df['age_group'].value_counts())
-
 #Recode the gender.
-print(df['gender'].value_counts())
 df['gender'] = df['gender'].replace({'M':'male','F':'female'})
-print(df['gender'].value_counts())
+
 ```
 
 ```python
@@ -83,12 +77,13 @@ df = pd.wide_to_long(df,
 df = df.reset_index()
 ```
 
+Test date were stored as many columns with column names as test date, and the values are test results (Pos, Neg, or NA). We need to extract and reshape them into single field.
+
 ```python
 #Retrieve the test date and result information.
 df_test = df_demographics.loc[:,datetime.datetime(2020, 2, 21, 0, 0):datetime.datetime(2020, 3, 10, 0, 0)].join(df_demographics['id'])
 df_test = pd.melt(df_test,id_vars=['id'],var_name = 'test_date',value_name = 'results')
 df_test = df_test[~df_test['results'].isnull()]
-df_test['results'].value_counts()
 
 ```
 
@@ -100,6 +95,11 @@ df_test['test_date'] = pd.to_datetime(df_test['test_date'])
 df_test['test_date'].value_counts()
 ```
 
+Some patients had more than 2 test dates, and we apply some algorithm to assign test dates to pcr values. 
+1. The test dates were first grouped into round 1 and 2 by whether it is before 2020/03/06.
+2. In each round, the first positive date and first negative date were calculated.
+3. For PCR side, if any of the E and RdRp gene shows numbers, then the PCR result is regarded as 'Positive'. In each round, the date will be matched by the PCR result. (For example, if in round 1, the PCR result is 'Positive', the test date will be first positive date in round 1).
+
 ```python
 #Separate round 1 and round 2 by date before 2020/03/06 or after.
 df_test_1= df_test[df_test['test_date'] < datetime.datetime(2020, 3, 6)]
@@ -107,8 +107,7 @@ df_test_2 = df_test[df_test['test_date'] >= datetime.datetime(2020, 3, 6)]
 ```
 
 ```python
-#Generate the first positive /neg day for both round 1 and round 2
-    
+#Generate the first positive /neg day for both round 1 and round 2   
 for type in ['Pos','Neg']:
     temp_m = pd.DataFrame()
     for round in range(1,3):
@@ -137,6 +136,11 @@ df.loc[df['pcr_results'] == 'Pos','test_date'] = df['first_Pos']
 df.loc[df['pcr_results'] == 'Neg','test_date'] = df['first_Neg']
  
 ```
+
+The reference date is determined with both first positive date and first symptom date.
+If first symptom date is available, then the reference date is first symptom date.
+If not available, we use the first positive date as reference date.
+This reference date serve as the start point of the 'time' field of each test.
 
 ```python
 #Retrieve the first positive date
@@ -173,7 +177,7 @@ for i in ['RdRp','E']:
 participant_list = []
 for type in ['first_pos','symptom']:
       df_output = df[df['reference_type'] == type]    
-      temp = [dict(attributes=dict(age=df_output.loc[df_output.loc[df_output["id"]==i].index[0],'age_group'].astype('object'),
+      temp = [dict(attributes=dict(age_group=df_output.loc[df_output.loc[df_output["id"]==i].index[0],'age_group'],
                                    sex=df_output.loc[df_output.loc[df_output["id"]==i].index[0],'gender']),
                                    measurements=[dict(analyte='RdRp_'+type,
                                                 time=df_output.loc[(df_output['Round'] == j) & (df_output['id'] == i),"time"].item(),
@@ -230,5 +234,5 @@ lavezzo2020 = dict(title="Suppression of a SARS-CoV-2 outbreak in the Italian mu
 with open("lavezzo2020suppression.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(lavezzo2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
+
 ```
