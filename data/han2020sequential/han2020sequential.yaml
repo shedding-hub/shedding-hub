@@ -14,6 +14,7 @@ analytes:
       was quantified in gene copies per milliliter.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
@@ -24,6 +25,7 @@ analytes:
       was quantified in gene copies per milliliter.
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
@@ -36,6 +38,7 @@ analytes:
     - nasopharyngeal_swab
     - oropharyngeal_swab
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
@@ -46,6 +49,7 @@ analytes:
       was quantified in gene copies per milliliter.
     specimen: plasma
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
@@ -56,6 +60,7 @@ analytes:
       was quantified in gene copies per milliliter.
     specimen: saliva
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
@@ -66,6 +71,7 @@ analytes:
       quantified in gene copies per milliliter.
     specimen: urine
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
@@ -76,6 +82,7 @@ analytes:
       was quantified in gene copies per milliliter.
     specimen: sputum
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
@@ -86,6 +93,7 @@ analytes:
       quantified in gene copies per milliliter.
     specimen: stool
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700
     unit: gc/mL
