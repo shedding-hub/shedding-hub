@@ -111,6 +111,12 @@ for i in pd.unique(Han2020["Patient"]):
                 "time": int(row['Day']),
                 "value": value
             })
+        elif row['Type'] == 'stool':
+            measurements.append({
+                "analyte": "stool_E",
+                "time": int(row['Day']),
+                "value": value
+            })
 
         elif row['Type'] == 'stool':
             measurements.append({
@@ -192,11 +198,20 @@ han2020 = dict(
             unit="gc/mL",
             reference_event="symptom onset"
         ),
+<<<<<<< HEAD
         stool_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in stool samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="stool",
             biomarker="SARS-CoV-2",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
+=======
+        stool_E=dict(description=folded_str("From manuscript: \"Viral RNA was detected using the PowerChek 2019-nCoV real-time polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene, and quantified with a standard curve that was constructed using in vitro transcribed RNA provided from the European Virus Archive.\" However, data reported in Figure 1 explicitly refer to the E gene target.\n"),
+            specimen="sputum",
+            biomarker="SARS-CoV-2",
+            limit_of_quantification="unknown",
+            limit_of_detection=5700,
+            gene_target= "E",
+>>>>>>> b7cf71eb5b0ba2704560bc84f07d3813018ff40f
             unit="gc/mL",
             reference_event="symptom onset"
         )
@@ -207,6 +222,6 @@ han2020 = dict(
 
 
 with open("han2020sequential.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(han2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close() 

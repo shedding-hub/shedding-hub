@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=.schema.yaml
+# yaml-language-server: $schema=../.schema.yaml
 title: Sequential Analysis of Viral Load in a Neonate and Her Mother Infected With
   Severe Acute Respiratory Syndrome Coronavirus 2
 doi: 10.1093/cid/ciaa447
@@ -82,12 +82,26 @@ analytes:
     reference_event: symptom onset
   stool_E:
     description: >
+<<<<<<< HEAD
       SARS-CoV-2 RNA gene copy concentration in stool samples. The concentration was
       quantified in gene copies per milliliter.
     specimen: stool
     biomarker: SARS-CoV-2
     limit_of_quantification: unknown
     limit_of_detection: 5700
+=======
+      From manuscript: "Viral RNA was detected using the PowerChek 2019-nCoV real-time
+      polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification
+      of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene,
+      and quantified with a standard curve that was constructed using in vitro transcribed
+      RNA provided from the European Virus Archive." However, data reported in Figure
+      1 explicitly refer to the E gene target.
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700
+    gene_target: E
+>>>>>>> b7cf71eb5b0ba2704560bc84f07d3813018ff40f
     unit: gc/mL
     reference_event: symptom onset
 participants:
@@ -194,6 +208,27 @@ participants:
   - analyte: nasopharynx_E
     time: 18
     value: negative
+  - analyte: stool_E
+    time: 6
+    value: 6025360.388226712
+  - analyte: stool_E
+    time: 7
+    value: 3564632.447527771
+  - analyte: stool_E
+    time: 10
+    value: 15020350.290700559
+  - analyte: stool_E
+    time: 12
+    value: 2216582.703432371
+  - analyte: stool_E
+    time: 15
+    value: 37344798.71722773
+  - analyte: stool_E
+    time: 17
+    value: 1464126.040732536
+  - analyte: stool_E
+    time: 18
+    value: 614079.9900238973
 - attributes:
     age: unknown
     sex: female
@@ -249,6 +284,12 @@ participants:
   - analyte: stool_E
     time: 9
     value: 45191.34061484367
+  - analyte: stool_E
+    time: 15
+    value: negative
+  - analyte: stool_E
+    time: 9
+    value: 40701.42453219447
   - analyte: stool_E
     time: 15
     value: negative
