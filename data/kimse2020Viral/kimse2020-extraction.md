@@ -22,8 +22,8 @@ yaml.add_representer(literal_str, literal_str_representer)
 ```
 ```python
 #load the data
-data = pd.read_csv("CombinedDataset-2.csv") 
-data=data[113:132]
+data = pd.read_csv("CombinedDataset.csv") 
+data = data['StudyNum'] == 4]
 data = data.sort_values(by=['Day','StudyNum'])
 data = data.replace({"Sex": {"M": "male", "F": "female"},
                            "SevMax3": {"Moderate": "moderate", "Mild": "mild", "Severe": "severe"},
@@ -86,7 +86,7 @@ output_data = {
     },
     "participants": participants
 }
-with open("/Users/reina/Desktop/kimse2020.yaml","w") as outfile:
+with open("kimse2020.yaml","w") as outfile:
     yaml.dump(output_data, outfile, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
 ```
