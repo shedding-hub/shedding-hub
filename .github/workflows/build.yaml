@@ -44,5 +44,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run extraction notebooks
         run: make extraction
+      - name: Check if any files changed
+        run: git diff --exit-code
       - name: Run just the data tests
         run: pytest tests/test_data.py -k test_data_validity
