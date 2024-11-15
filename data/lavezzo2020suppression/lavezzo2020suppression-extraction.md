@@ -12,6 +12,12 @@ jupyter:
     name: python3
 ---
 
+Article title: Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo
+This study was conducted in the Italian municipality of Vo. Lockdown was implemented
+  after first death of pneumonia was reported. Two surveys and virus tests were conducted
+  with the first survey near the start of lockdown and the second one at the end of
+  lockdown.
+
 ```python
 import yaml
 import pandas as pd
@@ -54,9 +60,7 @@ df = df_pcr2.merge(df_demographics2,how = 'left',on = 'id')
 ```
 
 The first survey occurred between 21 and 29 February 2020 and the
-second survey occurred on 7 March 2020. In the model, we assumed
-that prevalence was taken on the weighted average of the first sample
-collection date, that is, on 26 February 2020 and on 7 March 2020.
+second survey occurred on 7 March 2020.
 
 ```python
 #Recode the gender.
