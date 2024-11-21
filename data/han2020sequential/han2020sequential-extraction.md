@@ -22,7 +22,7 @@ Han2020 = pd.read_csv("combinedataset.csv")
 
 # Define a dictionary containing patient information (ID, Sex, Age) from information provided in Clinical Analysis in Han et al. (2020).
 patient_info = {
-    1: {'Sex': 'female', 'Age': 0.074},
+    1: {'Sex': 'female', 'Age': 0.074}, #0.074 represent 27 days as participant is a 27-day-old neonate
     2: {'Sex': 'female', 'Age': 'unknown'},
 }
 
@@ -145,6 +145,7 @@ han2020 = dict(
     analytes=dict(nasopharynx_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="nasopharyngeal_swab",
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
             unit="gc/mL",
@@ -153,6 +154,7 @@ han2020 = dict(
         oropharynx_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in oropharynx samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="oropharyngeal_swab",
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
             unit="gc/mL",
@@ -161,6 +163,7 @@ han2020 = dict(
         NPSOPS_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in oropharynx and nasopharynx samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
             unit="gc/mL",
@@ -169,6 +172,7 @@ han2020 = dict(
         plasma_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in plasma samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="plasma",
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
             unit="gc/mL",
@@ -177,6 +181,7 @@ han2020 = dict(
         saliva_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in saliva samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="saliva",
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
             unit="gc/mL",
@@ -185,6 +190,7 @@ han2020 = dict(
         urine_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in urine samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="urine",
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
             unit="gc/mL",
@@ -193,17 +199,18 @@ han2020 = dict(
         sputum_E=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in sputum samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="sputum",
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
             unit="gc/mL",
             reference_event="symptom onset"
         ),
         stool_E=dict(description=folded_str("From manuscript: \"Viral RNA was detected using the PowerChek 2019-nCoV real-time polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene, and quantified with a standard curve that was constructed using in vitro transcribed RNA provided from the European Virus Archive.\" However, data reported in Figure 1 explicitly refer to the E gene target.\n"),
-            specimen="sputum",
+            specimen="stool",
             biomarker="SARS-CoV-2",
+            gene_target= "E",
             limit_of_quantification="unknown",
             limit_of_detection=5700,
-            gene_target= "E",
             unit="gc/mL",
             reference_event="symptom onset"
         )
