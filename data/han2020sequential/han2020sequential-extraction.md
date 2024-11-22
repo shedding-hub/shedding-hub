@@ -1,6 +1,6 @@
 # Extraction for Han et al. (2020)
 
-[Han et al. (2020)](https://doi.org/10.1093/cid/ciaa447) reports SARS-CoV-2 viral loads in different specimen types for a neonate and her mother diagnosed on 2020-03-20. The study includes nasopharyngeal, oropharyngeal, stool, plasma, saliva, and urine samples. . The viral load in the respiratory specimens gradually decreased with time and was undetectable after 17 days from the onset of symptoms. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/han2020sequential).
+[Han et al. (2020)](https://doi.org/10.1093/cid/ciaa447) reports SARS-CoV-2 viral loads in different specimen types for a neonate and her mother diagnosed on 2020-03-20. The study includes nasopharyngeal, oropharyngeal, stool, plasma, saliva, and urine samples. The viral load in the respiratory specimens gradually decreased with time and was undetectable after 17 days from the onset of symptoms. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/han2020sequential).
 
 First, we `import` python modules needed:
 
