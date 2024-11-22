@@ -22,7 +22,7 @@ yaml.add_representer(literal_str, literal_str_representer)
 ```
 ```python
 #load the data
-data = pd.read_csv("CombinedDataset.csv") 
+data = pd.read_excel("CombinedDataset.xlsx") 
 data = data['StudyNum'] == 4
 data = data.replace({"Sex": {"M": "male", "F": "female"},
                            "SevMax3": {"Moderate": "moderate", "Mild": "mild", "Severe": "severe"},
@@ -45,7 +45,7 @@ for patient_id, patient_data in df.groupby("PatientID"):
             # "sevmax": float(patient_data["SevMax"].iloc[0]),
         },
         # "sev1st": float(patient_data["Sev1st"].iloc[0]),
-        "death": int(patient_data["Died"].iloc[0]),
+        #"death": int(patient_data["Died"].iloc[0]),
         "measurements": []
     }
     # print(participant)
