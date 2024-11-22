@@ -23,8 +23,7 @@ yaml.add_representer(literal_str, literal_str_representer)
 ```python
 #load the data
 data = pd.read_csv("CombinedDataset.csv") 
-data = data['StudyNum'] == 4]
-data = data.sort_values(by=['Day','StudyNum'])
+data = data['StudyNum'] == 4
 data = data.replace({"Sex": {"M": "male", "F": "female"},
                            "SevMax3": {"Moderate": "moderate", "Mild": "mild", "Severe": "severe"},
                            "PatientID":{"4-1":"1", "4-2":"2","4-3":"3"}})
@@ -54,7 +53,7 @@ for patient_id, patient_data in df.groupby("PatientID"):
         measurement = {
             "analyte": "throatswab_SARSCoV2",
             "time": int(row["Day"]),
-            "value": float(row["value"])
+            "value": float(row["value"]) if float(row["value"]) !=1.0 else 'negative'
         }
         participant["measurements"].append(measurement)
 

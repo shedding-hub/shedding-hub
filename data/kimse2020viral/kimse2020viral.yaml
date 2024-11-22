@@ -27,14 +27,20 @@ participants:
   death: 0
   measurements:
   - analyte: throatswab_SARSCoV2
+    time: -2
+    value: 9582.968159
+  - analyte: throatswab_SARSCoV2
+    time: 0
+    value: 1143.966374
+  - analyte: throatswab_SARSCoV2
     time: 1
-    value: 1.0
+    value: negative
   - analyte: throatswab_SARSCoV2
     time: 3
     value: 19462.36623
   - analyte: throatswab_SARSCoV2
     time: 4
-    value: 1.0
+    value: negative
 - attributes:
     age: 30.0
     sex: male
@@ -60,7 +66,7 @@ participants:
     value: 2323.319055
   - analyte: throatswab_SARSCoV2
     time: 11
-    value: 1.0
+    value: negative
   - analyte: throatswab_SARSCoV2
     time: 12
     value: 563.2713518
@@ -69,7 +75,7 @@ participants:
     value: 1143.966374
   - analyte: throatswab_SARSCoV2
     time: 14
-    value: 1.0
+    value: negative
 - attributes:
     age: 30.0
     sex: male
@@ -92,4 +98,4 @@ participants:
     value: 9582.968159
   - analyte: throatswab_SARSCoV2
     time: 11
-    value: 1.0
+    value: negative
