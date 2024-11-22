@@ -60,8 +60,8 @@ phillip2020 = dict(title="Epidemiological Correlates of Polymerase Chain Reactio
                                                     specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="N1 and N2 probe",
-                                                    limit_of_quantification="3162",
-                                                    limit_of_detection="3162",
+                                                    limit_of_quantification=3162,
+                                                    limit_of_detection=3162,
                                                     unit="gc/mL",
                                                     reference_event="enrollment")),
                participants=participant_list)
