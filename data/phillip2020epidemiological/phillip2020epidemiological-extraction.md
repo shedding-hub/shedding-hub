@@ -37,7 +37,7 @@ df['Sex'] = df['Sex'].replace({'M':'male','F':'female'})
 df['value'] = df['value'].astype('object')
 df['Age'] = df['Age'].astype('object')
 df['Day'] = df['Day'].astype('object')
-df.loc[df['value']==1,'value'] = 'missing'
+df.loc[df['value']==1,'value'] = 'negative'
 #Rename column
 df.rename(columns={'PatientID': 'id'}, inplace=True)
 ```
