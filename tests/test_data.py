@@ -3,6 +3,7 @@ import numpy as np
 from pathlib import Path
 import pytest
 import re
+import requests
 import yaml
 
 
@@ -32,6 +33,20 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
     with path.open() as fp:
         data = yaml.safe_load(fp)
     jsonschema.validate(data, schema)
+
+    # If there is a doi, validate it.
+    doi_or_url = False
+    doi = data.get("doi")
+    if doi:
+        response = requests.get(f"https://doi.org/{doi}", allow_redirects=False)
+        assert response.status_code == 302, f"doi `{doi}` could not be resolved."
+        doi_or_url = True
+    url = data.get("url")
+    if url:
+        response = requests.get(url)
+        response.raise_for_status()
+        doi_or_url = True
+    assert doi_or_url, "At least one of `doi` or `url` must be given."
 
     # Ensure there is exactly one of `analyte` and `analytes`.
     has_analyte = "analyte" in data
@@ -95,5 +110,5 @@ def test_valid_examples(path: Path) -> None:
     "path", INVALID_EXAMPLE_PATHS, ids=[path.stem for path in INVALID_EXAMPLE_PATHS]
 )
 def test_invalid_examples(path: Path) -> None:
-    with pytest.raises((ValueError, jsonschema.ValidationError)):
+    with pytest.raises((AssertionError, ValueError, jsonschema.ValidationError)):
         load_and_validate(path, skip_filename_check=True)

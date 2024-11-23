@@ -1,0 +1,2196 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo
+doi: 10.1038/s41586-020-2488-1
+description: >
+  This study was conducted in the Italian municipality of Vo. Lockdown was implemented
+  after first death of pneumonia was reported. Two surveys and virus tests were conducted
+  with the first survey near the start of lockdown and the second one at the end of
+  lockdown
+analytes:
+  RdRp_first_pos:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp
+      gene, and the reference event is first positive day.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  E_first_pos:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene,
+      and the reference event is first positive day.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: E
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  RdRp_symptom:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration calculated from evaluation of RdRp
+      gene, and the reference event is symptom onset day.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  E_symptom:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration calculated from evaluation of E gene,
+      and the reference event is symptom onset day.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: E
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 116.8530752
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 2806.098051
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 116.8530752
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 2806.098051
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 11-20
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 12.22255828
+  - analyte: E_first_pos
+    time: 0.0
+    value: 320.4007336
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 50.23955527
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 2217.304713
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 50.23955527
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 2217.304713
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -10.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 8998.773226
+  - analyte: E_first_pos
+    time: -10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 67638.9809065506
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -10.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 8998.773226
+  - analyte: E_first_pos
+    time: -10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 67638.9809065506
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 680.2666122
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 62262.68097
+  - analyte: E_first_pos
+    time: 8.0
+    value: 29.17031479
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 680.2666122
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 62262.68097
+  - analyte: E_first_pos
+    time: 8.0
+    value: 29.17031479
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 83.7309326
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: 77578.29005
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 83.7309326
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: 77578.29005
+- attributes:
+    age_group: 41-50
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -10.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 2466.008013
+  - analyte: E_first_pos
+    time: -10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 6309.428894
+- attributes:
+    age_group: 41-50
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -10.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 2466.008013
+  - analyte: E_first_pos
+    time: -10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 6309.428894
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 41.91913407
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 709.4298224
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 41.91913407
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 709.4298224
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 14.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 16.782421264649
+  - analyte: E_first_pos
+    time: 14.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 14.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 16.782421264649
+  - analyte: E_first_pos
+    time: 14.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 11.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 4482.989434
+  - analyte: E_first_pos
+    time: 11.0
+    value: 5.483383595
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 11.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 4482.989434
+  - analyte: E_first_pos
+    time: 11.0
+    value: 5.483383595
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 1639789.378
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 9.0
+    value: 39.34682048
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 1639789.378
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 9.0
+    value: 39.34682048
+- attributes:
+    age_group: 11-20
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -9.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: -9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 679.6872707
+- attributes:
+    age_group: 11-20
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -9.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: -9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 679.6872707
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -8.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 7.029323601
+  - analyte: E_first_pos
+    time: -8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 115.4409515
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -8.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 7.029323601
+  - analyte: E_first_pos
+    time: -8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 115.4409515
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 27.16820414
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: 77.35385186
+  - analyte: E_first_pos
+    time: 0.0
+    value: 4695.804961
+  - analyte: E_first_pos
+    time: 10.0
+    value: 268.0007688
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 27.16820414
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: 77.35385186
+  - analyte: E_first_pos
+    time: 0.0
+    value: 4695.804961
+  - analyte: E_first_pos
+    time: 10.0
+    value: 268.0007688
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 43.77060324
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 43.77060324
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 10086.95597
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 175827.7058
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 10086.95597
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 175827.7058
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 1325760.953
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: 130.094514291868
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 1325760.953
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: 130.094514291868
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 4743.629607
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: 34.48773455
+  - analyte: E_first_pos
+    time: 0.0
+    value: 27398.91725
+  - analyte: E_first_pos
+    time: 10.0
+    value: 5378.555877
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 4743.629607
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: 34.48773455
+  - analyte: E_first_pos
+    time: 0.0
+    value: 27398.91725
+  - analyte: E_first_pos
+    time: 10.0
+    value: 5378.555877
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 3736178.46
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 60587.37072
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 60587.37072
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 820418.9452
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 355706.72
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 355706.72
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 6466.0234
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 6466.0234
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 262754.8998
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 10.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 262754.8998
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 10.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 3211.360474
+  - analyte: E_first_pos
+    time: 0.0
+    value: 46177.24514
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 96.88677422
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 108722.3122
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 96.88677422
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 108722.3122
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 41-50
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 1151650.088
+  - analyte: E_first_pos
+    time: 0.0
+    value: 921263.2696
+- attributes:
+    age_group: 41-50
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 14.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 461901.897275155
+  - analyte: E_first_pos
+    time: 14.0
+    value: negative
+- attributes:
+    age_group: 41-50
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 14.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 461901.897275155
+  - analyte: E_first_pos
+    time: 14.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 25803.6491
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 25803.6491
+  - analyte: RdRp_first_pos
+    time: 8.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 11.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 8247.704566
+  - analyte: E_first_pos
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 11.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 8247.704566
+  - analyte: E_first_pos
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 81-90
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 374882.0267
+- attributes:
+    age_group: 31-40
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 922.369299
+  - analyte: RdRp_first_pos
+    time: 13.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 314.9190873
+  - analyte: E_first_pos
+    time: 13.0
+    value: 112.1504484
+- attributes:
+    age_group: 31-40
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 922.369299
+  - analyte: RdRp_first_pos
+    time: 13.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 314.9190873
+  - analyte: E_first_pos
+    time: 13.0
+    value: 112.1504484
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 441.0000063
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -9.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: -9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 236587.6005
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -9.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: -9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 236587.6005
+- attributes:
+    age_group: 21-30
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 73.94388449
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -12.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: -12.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 5934159.128
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: -12.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: -12.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 5934159.128
+- attributes:
+    age_group: 11-20
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 63792.96341
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 11-20
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 63792.96341
+  - analyte: RdRp_first_pos
+    time: 9.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 9.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 4614058.205
+  - analyte: RdRp_first_pos
+    time: 12.0
+    value: 655.0619228
+  - analyte: E_first_pos
+    time: 0.0
+    value: 937843.6816
+  - analyte: E_first_pos
+    time: 12.0
+    value: 5378.816149
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 4614058.205
+  - analyte: RdRp_first_pos
+    time: 12.0
+    value: 655.0619228
+  - analyte: E_first_pos
+    time: 0.0
+    value: 937843.6816
+  - analyte: E_first_pos
+    time: 12.0
+    value: 5378.816149
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 325115.145
+  - analyte: E_first_pos
+    time: 0.0
+    value: 1344028.655
+- attributes:
+    age_group: 41-50
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 322492.5431
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: 7323.411518
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 10.0
+    value: 65895.41966
+- attributes:
+    age_group: 41-50
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 322492.5431
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: 7323.411518
+  - analyte: E_first_pos
+    time: 0.0
+    value: negative
+  - analyte: E_first_pos
+    time: 10.0
+    value: 65895.41966
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 24292.10365
+  - analyte: E_first_pos
+    time: 0.0
+    value: 1759.136306
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 395.2287011
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 4319.751671
+  - analyte: E_first_pos
+    time: 10.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: 395.2287011
+  - analyte: RdRp_first_pos
+    time: 10.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 4319.751671
+  - analyte: E_first_pos
+    time: 10.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 11.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 419964.1152
+  - analyte: E_first_pos
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_first_pos
+    time: 0.0
+    value: negative
+  - analyte: RdRp_first_pos
+    time: 11.0
+    value: negative
+  - analyte: E_first_pos
+    time: 0.0
+    value: 419964.1152
+  - analyte: E_first_pos
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 81-90
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 42919.15883
+  - analyte: RdRp_symptom
+    time: 11.0
+    value: 1275.953914
+  - analyte: E_symptom
+    time: 0.0
+    value: 258587.7329
+  - analyte: E_symptom
+    time: 11.0
+    value: 7146.252797
+- attributes:
+    age_group: 81-90
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 42919.15883
+  - analyte: RdRp_symptom
+    time: 11.0
+    value: 1275.953914
+  - analyte: E_symptom
+    time: 0.0
+    value: 258587.7329
+  - analyte: E_symptom
+    time: 11.0
+    value: 7146.252797
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 6.0
+    value: 16745.10647
+  - analyte: RdRp_symptom
+    time: 20.0
+    value: negative
+  - analyte: E_symptom
+    time: 6.0
+    value: 14016.63801
+  - analyte: E_symptom
+    time: 20.0
+    value: 300.4782175
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 6.0
+    value: 16745.10647
+  - analyte: RdRp_symptom
+    time: 20.0
+    value: negative
+  - analyte: E_symptom
+    time: 6.0
+    value: 14016.63801
+  - analyte: E_symptom
+    time: 20.0
+    value: 300.4782175
+- attributes:
+    age_group: 21-30
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 4.0
+    value: 524.2084817
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: 4.0
+    value: 7.549298504
+  - analyte: E_symptom
+    time: 12.0
+    value: 97.90548075
+- attributes:
+    age_group: 21-30
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 4.0
+    value: 524.2084817
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: 4.0
+    value: 7.549298504
+  - analyte: E_symptom
+    time: 12.0
+    value: 97.90548075
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 5.0
+    value: 7323.656406
+  - analyte: E_symptom
+    time: 5.0
+    value: 1183.852134
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 94.55774079
+  - analyte: RdRp_symptom
+    time: 10.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 590.7863551
+  - analyte: E_symptom
+    time: 10.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 94.55774079
+  - analyte: RdRp_symptom
+    time: 10.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 590.7863551
+  - analyte: E_symptom
+    time: 10.0
+    value: negative
+- attributes:
+    age_group: 81-90
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 86.24130599
+  - analyte: E_symptom
+    time: 0.0
+    value: 1787.816092
+- attributes:
+    age_group: 21-30
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 51.2365005
+  - analyte: E_symptom
+    time: 0.0
+    value: 2071.607679
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: -2.0
+    value: 856.3757161
+  - analyte: RdRp_symptom
+    time: 13.0
+    value: negative
+  - analyte: E_symptom
+    time: -2.0
+    value: 87.80182692
+  - analyte: E_symptom
+    time: 13.0
+    value: 184.0797817
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: -2.0
+    value: 856.3757161
+  - analyte: RdRp_symptom
+    time: 13.0
+    value: negative
+  - analyte: E_symptom
+    time: -2.0
+    value: 87.80182692
+  - analyte: E_symptom
+    time: 13.0
+    value: 184.0797817
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 7.0
+    value: 506.862678
+  - analyte: E_symptom
+    time: 7.0
+    value: 22477.51122
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 11.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 1801153.225
+  - analyte: E_symptom
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 11.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 1801153.225
+  - analyte: E_symptom
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 9.0
+    value: 64565.01974
+  - analyte: RdRp_symptom
+    time: 19.0
+    value: negative
+  - analyte: E_symptom
+    time: 9.0
+    value: negative
+  - analyte: E_symptom
+    time: 19.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 9.0
+    value: 64565.01974
+  - analyte: RdRp_symptom
+    time: 19.0
+    value: negative
+  - analyte: E_symptom
+    time: 9.0
+    value: negative
+  - analyte: E_symptom
+    time: 19.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 1.0
+    value: 26363.42551
+  - analyte: RdRp_symptom
+    time: 10.0
+    value: 109.0711619
+  - analyte: E_symptom
+    time: 1.0
+    value: 1375746.692
+  - analyte: E_symptom
+    time: 10.0
+    value: 78.95406902
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 1.0
+    value: 26363.42551
+  - analyte: RdRp_symptom
+    time: 10.0
+    value: 109.0711619
+  - analyte: E_symptom
+    time: 1.0
+    value: 1375746.692
+  - analyte: E_symptom
+    time: 10.0
+    value: 78.95406902
+- attributes:
+    age_group: 31-40
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 10.0
+    value: 286.7698203
+  - analyte: E_symptom
+    time: 10.0
+    value: 21194.75624
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 2892175.711
+  - analyte: RdRp_symptom
+    time: 13.0
+    value: 430.5672892
+  - analyte: E_symptom
+    time: 0.0
+    value: negative
+  - analyte: E_symptom
+    time: 13.0
+    value: 2135.834081
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 2892175.711
+  - analyte: RdRp_symptom
+    time: 13.0
+    value: 430.5672892
+  - analyte: E_symptom
+    time: 0.0
+    value: negative
+  - analyte: E_symptom
+    time: 13.0
+    value: 2135.834081
+- attributes:
+    age_group: 31-40
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 3.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 15.0
+    value: negative
+  - analyte: E_symptom
+    time: 3.0
+    value: 401022.304
+  - analyte: E_symptom
+    time: 15.0
+    value: negative
+- attributes:
+    age_group: 31-40
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 3.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 15.0
+    value: negative
+  - analyte: E_symptom
+    time: 3.0
+    value: 401022.304
+  - analyte: E_symptom
+    time: 15.0
+    value: negative
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 2.0
+    value: 39.29124497
+  - analyte: RdRp_symptom
+    time: 11.0
+    value: negative
+  - analyte: E_symptom
+    time: 2.0
+    value: negative
+  - analyte: E_symptom
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 31-40
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 2.0
+    value: 39.29124497
+  - analyte: RdRp_symptom
+    time: 11.0
+    value: negative
+  - analyte: E_symptom
+    time: 2.0
+    value: negative
+  - analyte: E_symptom
+    time: 11.0
+    value: negative
+- attributes:
+    age_group: 81-90
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 11364.71424
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 20085.14748
+  - analyte: E_symptom
+    time: 12.0
+    value: 21869.53725
+- attributes:
+    age_group: 81-90
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 11364.71424
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 20085.14748
+  - analyte: E_symptom
+    time: 12.0
+    value: 21869.53725
+- attributes:
+    age_group: 11-20
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: -1.0
+    value: 618639.3907
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 23.35081212
+  - analyte: E_symptom
+    time: -1.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 57.74646184
+- attributes:
+    age_group: 11-20
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: -1.0
+    value: 618639.3907
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 23.35081212
+  - analyte: E_symptom
+    time: -1.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 57.74646184
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: -8.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 4.0
+    value: negative
+  - analyte: E_symptom
+    time: -8.0
+    value: negative
+  - analyte: E_symptom
+    time: 4.0
+    value: 505.3246178
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: -8.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 4.0
+    value: negative
+  - analyte: E_symptom
+    time: -8.0
+    value: negative
+  - analyte: E_symptom
+    time: 4.0
+    value: 505.3246178
+- attributes:
+    age_group: 21-30
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: -1.0
+    value: 186086.8731
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 10676.64695
+  - analyte: E_symptom
+    time: -1.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 48603.33735
+- attributes:
+    age_group: 21-30
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: -1.0
+    value: 186086.8731
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 10676.64695
+  - analyte: E_symptom
+    time: -1.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 48603.33735
+- attributes:
+    age_group: 41-50
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 3.0
+    value: 820.3817194
+  - analyte: E_symptom
+    time: 3.0
+    value: 1891411.788
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 1369.556696
+  - analyte: RdRp_symptom
+    time: 15.0
+    value: 203.5616532
+  - analyte: E_symptom
+    time: 0.0
+    value: 446906.5822
+  - analyte: E_symptom
+    time: 15.0
+    value: 840.8996309
+- attributes:
+    age_group: 51-60
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 1369.556696
+  - analyte: RdRp_symptom
+    time: 15.0
+    value: 203.5616532
+  - analyte: E_symptom
+    time: 0.0
+    value: 446906.5822
+  - analyte: E_symptom
+    time: 15.0
+    value: 840.8996309
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 19869.40895
+  - analyte: RdRp_symptom
+    time: 8.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: negative
+  - analyte: E_symptom
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 19869.40895
+  - analyte: RdRp_symptom
+    time: 8.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: negative
+  - analyte: E_symptom
+    time: 8.0
+    value: negative
+- attributes:
+    age_group: 51-60
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 6.0
+    value: 22430.10529
+  - analyte: E_symptom
+    time: 6.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 9248.116519
+  - analyte: RdRp_symptom
+    time: 24.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 20297.4757
+  - analyte: E_symptom
+    time: 24.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 9248.116519
+  - analyte: RdRp_symptom
+    time: 24.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 20297.4757
+  - analyte: E_symptom
+    time: 24.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: -1.0
+    value: 1263.017922
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: -1.0
+    value: 457.0315613
+  - analyte: E_symptom
+    time: 12.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: -1.0
+    value: 1263.017922
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: -1.0
+    value: 457.0315613
+  - analyte: E_symptom
+    time: 12.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 1.0
+    value: 93.00414312
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: 1.0
+    value: 78.08662436
+  - analyte: E_symptom
+    time: 12.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 1.0
+    value: 93.00414312
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: E_symptom
+    time: 1.0
+    value: 78.08662436
+  - analyte: E_symptom
+    time: 12.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 8.0
+    value: 18.25379221
+  - analyte: E_symptom
+    time: 8.0
+    value: 377.0593769
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 2.0
+    value: 3171095.18773234
+  - analyte: E_symptom
+    time: 2.0
+    value: 4693506.915
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 12047.87498
+  - analyte: RdRp_symptom
+    time: 10.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 76222.261
+  - analyte: E_symptom
+    time: 10.0
+    value: 3317.486289
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: 12047.87498
+  - analyte: RdRp_symptom
+    time: 10.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 76222.261
+  - analyte: E_symptom
+    time: 10.0
+    value: 3317.486289
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 132.2583279
+  - analyte: RdRp_symptom
+    time: 26.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 1418.492703
+  - analyte: E_symptom
+    time: 26.0
+    value: 27.89353472
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: 132.2583279
+  - analyte: RdRp_symptom
+    time: 26.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 1418.492703
+  - analyte: E_symptom
+    time: 26.0
+    value: 27.89353472
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 4.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 15.0
+    value: negative
+  - analyte: E_symptom
+    time: 4.0
+    value: negative
+  - analyte: E_symptom
+    time: 15.0
+    value: 279.1883282
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 4.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 15.0
+    value: negative
+  - analyte: E_symptom
+    time: 4.0
+    value: negative
+  - analyte: E_symptom
+    time: 15.0
+    value: 279.1883282
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 7.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 18.0
+    value: negative
+  - analyte: E_symptom
+    time: 7.0
+    value: negative
+  - analyte: E_symptom
+    time: 18.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 7.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 18.0
+    value: negative
+  - analyte: E_symptom
+    time: 7.0
+    value: negative
+  - analyte: E_symptom
+    time: 18.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 9.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 23.0
+    value: negative
+  - analyte: E_symptom
+    time: 9.0
+    value: 642.868027140453
+  - analyte: E_symptom
+    time: 23.0
+    value: negative
+- attributes:
+    age_group: 61-70
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 9.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 23.0
+    value: negative
+  - analyte: E_symptom
+    time: 9.0
+    value: 642.868027140453
+  - analyte: E_symptom
+    time: 23.0
+    value: negative
+- attributes:
+    age_group: 41-50
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 3.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 17.0
+    value: negative
+  - analyte: E_symptom
+    time: 3.0
+    value: 1752.48706760321
+  - analyte: E_symptom
+    time: 17.0
+    value: negative
+- attributes:
+    age_group: 41-50
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 3.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 17.0
+    value: negative
+  - analyte: E_symptom
+    time: 3.0
+    value: 1752.48706760321
+  - analyte: E_symptom
+    time: 17.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 14.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 22347.9956604512
+  - analyte: E_symptom
+    time: 14.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: female
+  measurements:
+  - analyte: RdRp_symptom
+    time: 0.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 14.0
+    value: negative
+  - analyte: E_symptom
+    time: 0.0
+    value: 22347.9956604512
+  - analyte: E_symptom
+    time: 14.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 26.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 65.8073058045575
+  - analyte: E_symptom
+    time: 26.0
+    value: negative
+- attributes:
+    age_group: 71-80
+    sex: male
+  measurements:
+  - analyte: RdRp_symptom
+    time: 12.0
+    value: negative
+  - analyte: RdRp_symptom
+    time: 26.0
+    value: negative
+  - analyte: E_symptom
+    time: 12.0
+    value: 65.8073058045575
+  - analyte: E_symptom
+    time: 26.0
+    value: negative

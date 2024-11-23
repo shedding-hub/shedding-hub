@@ -1,0 +1,244 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Sequential Analysis of Viral Load in a Neonate and Her Mother Infected With
+  Severe Acute Respiratory Syndrome Coronavirus 2
+doi: 10.1093/cid/ciaa447
+description: The study reports SARS-CoV-2 viral loads in different specimen types
+  for a neonate and her mother diagnosed on 2020-03-20. The study includes nasopharyngeal,
+  oropharyngeal, stool, plasma, saliva, and urine samples. Viral loads were extracted
+  manually from Figure 1 using [WebPlotDigitizer](https://automeris.io).
+analytes:
+  nasopharynx_E:
+    description: SARS-CoV-2 RNA gene copy concentration in nasopharynx samples.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    unit: gc/mL
+    reference_event: symptom onset
+  oropharynx_E:
+    description: SARS-CoV-2 RNA gene copy concentration in oropharynx samples.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    unit: gc/mL
+    reference_event: symptom onset
+  NPSOPS_E:
+    description: SARS-CoV-2 RNA gene copy concentration in oropharynx and nasopharynx
+      samples.
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    unit: gc/mL
+    reference_event: symptom onset
+  plasma_E:
+    description: SARS-CoV-2 RNA gene copy concentration in plasma samples.
+    specimen: plasma
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    unit: gc/mL
+    reference_event: symptom onset
+  saliva_E:
+    description: SARS-CoV-2 RNA gene copy concentration in saliva samples.
+    specimen: saliva
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    unit: gc/mL
+    reference_event: symptom onset
+  urine_E:
+    description: SARS-CoV-2 RNA gene copy concentration in urine samples.
+    specimen: urine
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    unit: gc/mL
+    reference_event: symptom onset
+  sputum_E:
+    description: SARS-CoV-2 RNA gene copy concentration in sputum samples.
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    unit: gc/mL
+    reference_event: symptom onset
+  stool_E:
+    description: 'From manuscript: "Viral RNA was detected using the PowerChek 2019-nCoV
+      real-time polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification
+      of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene,
+      and quantified with a standard curve that was constructed using in vitro transcribed
+      RNA provided from the European Virus Archive." However, data reported in Figure
+      1 explicitly refer to the E gene target.'
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 5700.0
+    gene_target: E
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: unknown
+    sex: female
+  measurements:
+  - analyte: NPSOPS_E
+    value: 125476.76235228709
+    time: 10
+  - analyte: NPSOPS_E
+    value: 9846.274668467533
+    time: 13
+  - analyte: NPSOPS_E
+    value: negative
+    time: 16
+  - analyte: NPSOPS_E
+    value: negative
+    time: 17
+  - analyte: NPSOPS_E
+    value: negative
+    time: 18
+  - analyte: NPSOPS_E
+    value: negative
+    time: 20
+  - analyte: NPSOPS_E
+    value: negative
+    time: 21
+  - analyte: sputum_E
+    value: 179750.86279152086
+    time: 10
+  - analyte: sputum_E
+    value: 9698.501371874832
+    time: 13
+  - analyte: sputum_E
+    value: negative
+    time: 16
+  - analyte: sputum_E
+    value: negative
+    time: 17
+  - analyte: sputum_E
+    value: negative
+    time: 18
+  - analyte: sputum_E
+    value: negative
+    time: 21
+  - analyte: stool_E
+    value: 45845.151153583894
+    time: 9
+  - analyte: stool_E
+    value: negative
+    time: 15
+  - analyte: plasma_E
+    value: negative
+    time: 8
+  - analyte: urine_E
+    value: negative
+    time: 8
+  - analyte: urine_E
+    value: negative
+    time: 13
+- attributes:
+    age: 0.074
+    sex: female
+  measurements:
+  - analyte: urine_E
+    value: 6669.220732869349
+    time: 6
+  - analyte: urine_E
+    value: 57718.90986325754
+    time: 8
+  - analyte: urine_E
+    value: 98326.64401668301
+    time: 10
+  - analyte: urine_E
+    value: 8509.551402448904
+    time: 12
+  - analyte: urine_E
+    value: 21664.868174125317
+    time: 15
+  - analyte: urine_E
+    value: 16374.782862699687
+    time: 17
+  - analyte: urine_E
+    value: negative
+    time: 19
+  - analyte: saliva_E
+    value: 322318.7854759381
+    time: 6
+  - analyte: saliva_E
+    value: 173471.27074011686
+    time: 9
+  - analyte: saliva_E
+    value: negative
+    time: 12
+  - analyte: plasma_E
+    value: 70929.15277042163
+    time: 5
+  - analyte: plasma_E
+    value: 26486.181616051723
+    time: 10
+  - analyte: plasma_E
+    value: negative
+    time: 13
+  - analyte: stool_E
+    value: 6166224.948336247
+    time: 6
+  - analyte: stool_E
+    value: 3927605.672173467
+    time: 8
+  - analyte: stool_E
+    value: 16195318.106077239
+    time: 10
+  - analyte: stool_E
+    value: 2485518.7701261574
+    time: 13
+  - analyte: stool_E
+    value: 40281524.262081355
+    time: 15
+  - analyte: stool_E
+    value: 1660991.8450929027
+    time: 17
+  - analyte: stool_E
+    value: 718078.0919958244
+    time: 18
+  - analyte: oropharynx_E
+    value: 126033114.85864629
+    time: 4
+  - analyte: oropharynx_E
+    value: 119122.41717120321
+    time: 7
+  - analyte: oropharynx_E
+    value: 8772747.162111795
+    time: 10
+  - analyte: oropharynx_E
+    value: 776145.5936524285
+    time: 15
+  - analyte: oropharynx_E
+    value: negative
+    time: 17
+  - analyte: oropharynx_E
+    value: negative
+    time: 18
+  - analyte: nasopharynx_E
+    value: 10928615969.473494
+    time: 4
+  - analyte: nasopharynx_E
+    value: 32316924.960830856
+    time: 7
+  - analyte: nasopharynx_E
+    value: 78628843.5027952
+    time: 9
+  - analyte: nasopharynx_E
+    value: 1663167.2199685066
+    time: 12
+  - analyte: nasopharynx_E
+    value: negative
+    time: 15
+  - analyte: nasopharynx_E
+    value: negative
+    time: 17
+  - analyte: nasopharynx_E
+    value: negative
+    time: 18

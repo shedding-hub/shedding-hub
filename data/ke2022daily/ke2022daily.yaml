@@ -1,0 +1,5439 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals Substantial Heterogeneity
+  in Infectiousness
+doi: 10.1038/s41564-022-01105-z
+description: >
+  The authors studied the dynamics of infectious virus and viral RNA shedding for
+  SARS-CoV-2 during acute infection through daily longitudinal sampling of 60 individuals
+  for up to 14 days. Nasal swab and saliva samples were collected daily and tested
+  for University of Illinois at Urbana-Champaign faculty, staff, and students (during
+  the fall of 2020 and spring of 2021) who reported a negative RT-qPCR test result
+  in the past 7 days and were either within 24 h of a positive RT-qPCR result or within
+  5 days of exposure to someone with a confirmed positive RT-qPCR result.
+analytes:
+  nasal_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in mid-turbinate nasal swab (nasopharyngeal
+      swab) samples. Note that the unit of these measurements is per mL: this is because
+      nasal swab samples were each collected in 3 mL of VTM. The calibration curve
+      for nasal samples was in the Supplemental Table S10 in Ke et al. (2022).
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N1 and N2
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  saliva_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in saliva samples. The study was not
+      able to measure the calibration curve using saliva samples taken from participants.
+      Instead, the authors used data from calibration experiments in which saliva
+      samples obtained from healthy donors were spiked with SARS-CoV-2 genomic RNA.
+      The calibration curve for saliva samples was in the Supplemental Table S11 in
+      Ke et al. (2022).
+    specimen: saliva
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 22
+    lineage: B.1.576
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 44157.044735331205
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1437143.0533563897
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 53394927.35741756
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 5308844.442309879
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 1090184.4923851267
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 72861.81745132274
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 10653.68863667563
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 1388.3533099290457
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 3349.6543915782727
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 176.80722177343216
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 1151330.4741558158
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 1220112.8470319293
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 256330.33198658953
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 1808006.5521100045
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 405135.22022926353
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 632120.6820052665
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 90782.05301781862
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 191778.5364482653
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 77767.83344557033
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 2921.4603738773344
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 234207.0694793826
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 51475.431993126105
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 34
+    lineage: B.1.2
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 3758374.0428844355
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 13883.533099290456
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 938642.0366721336
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 223872.11385683378
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 4390.358656409448
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 2600.159563165272
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 2030.0185198596803
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 270.7073203921352
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 165.0061001320225
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 11.748975549395302
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 2627846.540838493
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 232059846.15989244
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 28920113.962154813
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 22782427.6625008
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 4207266.283844437
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 14696028.989796488
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 883893.6217394039
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 1579064.972728426
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 68359.67668381012
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 1228004.617988788
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 57809.60474057163
+- attributes:
+    age: 21
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 1181680.312544783
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1258925.411794166
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 37583740.428844355
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 407380.2778041122
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 38681.20546330517
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 492606.3433495771
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 10115.794542598982
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 235.77621959612569
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 20.773037255725587
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 22.77718241857322
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 49.26063433495761
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 97.16279515771038
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 50164.90567732211
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 16935577.086915173
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 23834168.2067315
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 10242359.141215678
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 4975079.213514392
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 11355336.278419351
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 25585858.86905648
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 17947336.268325247
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1370250.5971242422
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 168577.65178289797
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 776962.3959921381
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 64505.98332848311
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 92555.02447634359
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 4528.975799036213
+- attributes:
+    age: 23
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 3292304.5333340657
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 15222991.328804173
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 37800.71373018109
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 13489.628825916532
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 2786.1211686297665
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 2645.452694724046
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 7989.13941667404
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 123.02687708123811
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 272.27013080779153
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 85.11380382023759
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 82.22426499470696
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 17.080477200597077
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: 510975.40905467485
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 48128242.18676017
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 12189895.989248648
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 55462571.295791045
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 3919223.224549763
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1370250.5971242422
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 6649668.571246756
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 895364.7655495901
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 148183.55175164307
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 167494.28760264313
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 2056837.5866278883
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 10442392.185431736
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 31944.787242086815
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 59319.84396649717
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 52820.19497699964
+- attributes:
+    age: 73
+    lineage: B.1.1
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 609536.8972401681
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 2371373.7056616554
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 43903586.56409447
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 63459990.09812872
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 20535250.26457146
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 22258710.44793001
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 575439.9373371566
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 117489.75549395279
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 5888.436553555884
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 1023.2929922807537
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 5463.86549881854
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 4786.30092322638
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 92299638.48404525
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 3650900.5248449785
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 19266374.595240794
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 1903706.531742073
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 152615976.5625463
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 13601913.22855669
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 986279.4856312099
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 23377604.122746896
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 231206.47901755894
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 193018.97276345702
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 12223.624492787301
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 2185.7475486869293
+- attributes:
+    age: 23
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 1698.243652461746
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 10653.68863667563
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 1168153.7298613244
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 9772372.209558092
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 5158221.65072305
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 72861.81745132274
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 5591.1352757055965
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 9225.71427154763
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 1698.243652461746
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 1023.2929922807537
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 8.269895085679327
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 24.68880104906209
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 42150.23497210431
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 183992448.97966683
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 91117123.30429193
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 16826740.610704638
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 5551367.774352109
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 14047531.026968762
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 4047622.486878724
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 6564475.019516977
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 6075751.4610574115
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 3008846.2766457237
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 248198.98435070956
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 218172.49589882954
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 45248.06378555482
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 1365.211695066444
+- attributes:
+    age: 49
+    lineage: B.1.2
+    confirmation_gap: 3
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 495.45019080479057
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 8222.426499470712
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 3487385.84135218
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 33689921.57414906
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 4650503.761666059
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 5099175.975748696
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 270707.32039213524
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 16788.040181225588
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 83656.5595755809
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 1166272.4050819618
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 6194410.750767799
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 4786300.923226381
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 36008082.9173482
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 21917953.438441288
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 44545106.3359898
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 16504409.85652279
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1335365.0333271818
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 223872.11385683378
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 3422945.6231604107
+- attributes:
+    age: 22
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 14125375.446227526
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 33113112.148259077
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 314412.6420258793
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 1273503.0810166604
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 12022.644346174131
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 737.0551753379339
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 331.13112148259074
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 17603539.536161624
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 29295438.297694266
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 27822746.57675122
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 8441118.555927671
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 19142559.25021082
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1558834.4677043906
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 524324.3172456372
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 1579064.972728426
+- attributes:
+    age: 42
+    lineage: B.1.582
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 2951209.226666384
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 2917427.014001166
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 56234.13251903491
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 32923.045333340655
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 4897.788193684456
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 630.9573444801918
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 627.3356959840372
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 157.57960227439236
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 4813.932540001439
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 599.1009386113537
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 1011.5794542598962
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 73.28245331389044
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 40.27170343254595
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 66.83439175686135
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 1212271.7925364983
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 2528133.4798341133
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 50164.90567732211
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.1.207
+    confirmation_gap: 3
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 20.53525026457146
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 676082.9753919819
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 676082.9753919819
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 25556419.01064137
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 51286138.39913638
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 39582206.48357227
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 9549925.860214349
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 767361.4893618185
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 8609.937521845999
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 1295.6866975170162
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 623.7348354824192
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 886.1352236594994
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 27.542287033381633
+  - analyte: nasal_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 7884.969177453787
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 573852.1326746177
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 573852.1326746177
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1651961.798229015
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 661302.2494817659
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 1251987.5206248814
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 162181.00973589264
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 58183.52110480684
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 78270.84095906104
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 103944.13751488006
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 1140775012.9221158
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 49842.52094042594
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 14
+    value: 6014.5065197754775
+- attributes:
+    age: 30
+    lineage: B.1.2
+    confirmation_gap: 2
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 160324539.06900418
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 4786300.923226381
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 98.85530946569371
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 125169.9273031723
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 129568.66975170189
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 6531305.526474716
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 6025.595860743569
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 758.5775750291821
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 533.9492735741755
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 2238.7211385683377
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 283.4653633489659
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 220.03917096373954
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 132.58671177605606
+  - analyte: saliva_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 26595000.32721515
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 95940063.15159316
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 32270076.875155322
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 10375284.158180105
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 12918140.390030546
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 2070141.3487910372
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 2610958.6865859283
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 608135.0012787164
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 669884.6094165244
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 146285.0686999855
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 13378.271336046984
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 7277798.045368227
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 2143.8776659735026
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 35
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 267608559.31993333
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 14537843.856076606
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 9332543.007969905
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 168849.58594867532
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 27227.0130807791
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 43903.58656409447
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 875.9917176331152
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 7.989139416674041
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 82.69895085679326
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 118.16803125447831
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 100.5773063001737
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 64.19482215080346
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 23.98832919019485
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 162.18100973589264
+  - analyte: saliva_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 6356235.79937843
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 121786738.48912579
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 5845208.403588542
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 1706082.3890031208
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 2495743.794831564
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 2447935.666196066
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 906984.7815057911
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 367790.0704223862
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 347056.3540079876
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 109446.02678150774
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 7834.296427662088
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 52480.746024977125
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 51808.37850719901
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 23
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 57876198.83491197
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1380384.2646028837
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 3002617.4208612675
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 25852.348395621888
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 52480.74602497723
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 290068.119869315
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 42169.65034285822
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 4004.0546833054636
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 63826.34861905483
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 365.1741272548377
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 120.92051829432073
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 142.88939585111007
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 23.71373705661655
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 206.5380155810527
+  - analyte: saliva_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 4975079.213514392
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 39920870.24388075
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 26595000.32721515
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 12835121.968394963
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 4786300.923226381
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 16292960.32639718
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 138547916.7566724
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 3627438.0147645758
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 5171303.179169624
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 2610958.6865859283
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 440554.86350655346
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 35416.040042646106
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 81357.95056053948
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 22698.648518838214
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 58559.85598492877
+- attributes:
+    age: 53
+    lineage: B.1.2
+    confirmation_gap: 2
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 122.32071190499326
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 32546.178349804533
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 235776.21959612521
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 3651741.272548377
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 5591135.275705596
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 1437143.0533563897
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 424130.9839104877
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 2968.2467434632367
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 68.39116472814278
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 6564475.019516977
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 912851.2193311221
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 4634469.197362875
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 74336.13896551754
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 1728223.872949768
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 4848417.387084452
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 5238416.190277907
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 1344002.2630821608
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 218172.49589882954
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 51475.431993126105
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 26497.200988789504
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 3637.474856426313
+- attributes:
+    age: 47
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: -1
+    value: 10592537.251772875
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 252638.77101318954
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1916461.0627353853
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 56885293.08438402
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 12373711.899353506
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 2006781.090018186
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 91201.08393559097
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 338.844156139202
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 19275.249131909328
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 183.0206106311053
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 1348.9628825916504
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 128.82495516931323
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 634.5999009812872
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: 79799.46872679752
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 1706082.3890031208
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 1025179.7048255566
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 520954.7473285543
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 661302.2494817659
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 11577105.74115271
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 19952.62314968875
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 193018.97276345702
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 136269.9196994862
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 28
+    lineage: B.1.2
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 375837.40428844356
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1717908.387157586
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 19611.011754760457
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 41686.938347033465
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 110280.82338495507
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 33689.92157414906
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 2676.085593199328
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 762.9568911615336
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 23.71373705661655
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 80.3526122185616
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 209893.988362352
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 346098725.48535347
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 122574463.20498061
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 3535086.1336199706
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 1243941.6235583057
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1717117.4432444528
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 1739402.139780303
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 979941.1610955923
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 954992.586021433
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 762079.0100254115
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 5072242.398926509
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 108043.83723712253
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 9145.343031204598
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 6415.049325106628
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 37
+    lineage: B.1.311
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 2125690.3452171055
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 10232929.922807537
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 23577621.959612522
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 3736801.253821156
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 32923045.333340656
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 5248074.602497723
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 329230.45333340653
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 13567.505302998597
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 3108.1359027394733
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 1522.2991328804173
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 373.6801253821156
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 138.0384264602881
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 33.496543915782794
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 58559.85598492877
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 72710980.31596598
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 512861383.99136585
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 168112497.44769597
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 205305223.92794704
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 19516413.002858225
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 1891472.3628330096
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 3894036.3387971707
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 2713938.4876415837
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 229720.63071583453
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 172981.63592150997
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 10884.28737943593
+- attributes:
+    age: 23
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 860993.7521845999
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 416869.38347033464
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 139636.83610559363
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 3630780.54770101
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 703882.2279364556
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 40271.703432545866
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 24266.100950824144
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 11816.80312544783
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 5099.175975748696
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 105.31736871297139
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 4192.759966846051
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 4545691.935849246
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 5039645.636126419
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 2070141.3487910372
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 325386.85178010724
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 504428.945952414
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1151330.4741558158
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 9264.031007363976
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 21281.39045982709
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 28
+    lineage: B.1.2
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 8912509.381337442
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 4623810.213992603
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 40040546.83305456
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 982878.8730000316
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 166916.78072110546
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 338844.15613920207
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 13803.842646028837
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 8609.937521845999
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 2030.0185198596803
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 841.395141645193
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 204.17379446695315
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 30.373860919461045
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 1452111.6175877391
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 2251127.015912876
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 538021.9571891105
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 3627438.0147645758
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 276949.12668096775
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 105293.12128434377
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 405135.22022926353
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 141644.59272385115
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 156027.08686930584
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 28
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 19054607.179632444
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 11547819.84689458
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 5308844.442309879
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 780728.4401379069
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 19164.610627353853
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 13567.505302998597
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 5991.0093861135365
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 2398.83291901949
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 180.9255910253822
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 66.06934480075964
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 280.22056216667454
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 144.5439770745928
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 39156151.4839612
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 16611161.476000125
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 8332973.486343146
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 2627846.540838493
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 5696393.73341183
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 15776112.696993468
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 967386.4499689507
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 942757.508527414
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 154028.11480716133
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 27899.729974082697
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 256330.33198658953
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 4301.30263382134
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 1848.417195369656
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 4738.053933388246
+- attributes:
+    age: 27
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 4192759.9668460507
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 860993.7521845999
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 122320.711904993
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 125169.9273031723
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 226464.43075930572
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 84625.2568807268
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 54013.211476463475
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 27861.211686297665
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 47043.54057259755
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 7897.688493998856
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 613.0557921498201
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 498.3104559705293
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 22.908676527677702
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 69502431.75887962
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 101671680.04663739
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 20682355.559317604
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 11577105.74115271
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 3028307.694265775
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 3512367.904656803
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 3229981.240595625
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 669884.6094165244
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 349301.1375635548
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 866961.8757582179
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 1706082.3890031208
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 360744.7338641901
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 41879.35651179165
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 71055.87633694727
+- attributes:
+    age: 37
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 331131.1214825908
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 14206922.128601816
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 67608297.53919819
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 7807284.401379069
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 5787619.883491197
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 977237.2209558091
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 1035142.1666793431
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 117489.75549395279
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 5011.872336272715
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 375.83740428844357
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 87.59917176331152
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 231.73946499684797
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 104.71285480508985
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 434910.6072324525
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 769839161.9294324
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 312176351.08481574
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 71779429.127136
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 18535316.234148104
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 11137815.001346635
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 2017437.085611921
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 19266374.595240794
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 261336.45761890206
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 31944.787242086815
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 47951.25740813498
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 40290.25350832952
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 5937.45047302193
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 248313.3105295568
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 22258.710447930007
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 99426.00739529557
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 26607.250597988084
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 352.7767866188735
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 4731.512589614803
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 39.35500754557764
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 122.32071190499326
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 25.556419010641317
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 122574463.20498061
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 9120108.393559078
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 7372249.081043367
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 10111137.119549057
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 6154602.37371315
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1991590.2890576117
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 2070141.3487910372
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 399944.74976109614
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 207204.88977590032
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 85113.80382023759
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 98084.41360309022
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 273400.937850561
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 11313.57864119557
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 8629.785477669702
+- attributes:
+    age: 32
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 242.66100950824142
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 217.52040340195245
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 28.67477375581313
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 10.471285480508985
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 41879.35651179165
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 51144.62515963049
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 12787.922629358462
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.577
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 703882.2279364556
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 1005773.0630017371
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 4340102.6364474315
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 436515.8322401656
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 99426.00739529557
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 25.11886431509582
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 1708.047720059708
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 16.311729092278398
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 196.11011754760494
+  - analyte: nasal_SARSCoV2
+    time: 14
+    value: 92.78974901273298
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 491586.55915686104
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 301161.8803078821
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 2056837.5866278883
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 64505.98332848311
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 166417.8856616583
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 18113.400926195987
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1503.834347961355
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 44
+    lineage: B.1.2
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 10115.794542598982
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 2125690.3452171055
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 18945235.143565916
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 10057730.63001737
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 6683439.175686135
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 412097.5190973296
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 1202264.4346174132
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 140442.96835779474
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 305492.1113215509
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 9015711.37605957
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 40.97321098135405
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 59910.09386113537
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 160324.53906900418
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 263026.7991895382
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 33327289.957613792
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 34641764.10352489
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 503037081.08462405
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 151635190.07872874
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 9853715.06858618
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 11577105.74115271
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 76067650.07662268
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1706082.3890031208
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 6606934.480075951
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 1072506.6656157041
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 472933.4149186511
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 61263.24544438652
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 2432204.009073811
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 4317178.444709222
+- attributes:
+    age: 49
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 960505.8183867305
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 13883533.099290457
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 10000000.0
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 258523.48395621887
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 32546.178349804533
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 457.0881896148752
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 449.26232467029325
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 20.892961308540407
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 640324.324468947
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 1379113.469023599
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 834065.1974086609
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 3467368.5045253094
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 3087450.475587442
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 552077.4392807562
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 1695118.2515313951
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 13905.928754654402
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 895364.7655495901
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 24054.703049880944
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 57
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 291742.7014001166
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 47588279.098881714
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 70388222.79364571
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 35481338.92335753
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 17278259.805078626
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 1983809.6568365032
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 191646.10627353852
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 348738.584135218
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 546386.549881854
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 15667.51070108147
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 11028.082338495507
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 2722.7013080779097
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 1513.5612484362073
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 17.885455291077694
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 1568917.1126078502
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 80612056.38638903
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 16188253.626421068
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 2989509.927814581
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 2030486.002716804
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1499684.835502368
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 234207.0694793826
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 669884.6094165244
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 291608.3798521222
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 3218.103443093442
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 66619.29002234538
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 16873.29890625803
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 36
+    lineage: B.1.361
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 41209751.90973304
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 57213695.46523268
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 8128305.161640978
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 18197.008586099826
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 4897.788193684456
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 5401.3211476463475
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 3507.5187395256794
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 2834.653633489665
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 822.2426499470695
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 101.74193661806056
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 95.49925860214368
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 15.84893192461111
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 21498096.103893533
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 89371696.08501959
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 82186408.03889047
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 76559660.69112554
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 20549440.41345303
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 87659704.03212793
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 5921067.335646602
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 7277798.045368227
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 8605973.411928207
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 9358365.435835293
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 7965260.797837773
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 961169.5415159294
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 103944.13751488006
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 321218.09339879727
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 374973.0022454834
+- attributes:
+    age: 22
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 325461.78349804535
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 17378008.287493728
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 17988709.151287872
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 36099401.358641595
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 18945235.143565916
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 204173.79446695274
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 2691.534803926914
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 1479.1083881682073
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 188.3649089489802
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 30.549211132155094
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 263.02679918953817
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 47.863009232263806
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 118.85022274370165
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 110.2808233849553
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 124968339.7211214
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 58398272.4618929
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 25421431.36204937
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 27114400.08688312
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 82717995.18641345
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 4975079.213514392
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 7372249.081043367
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 2265687.4550129087
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1158777.3561551261
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 232701.93788481617
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 384768.9338937872
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 166417.8856616583
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 179804.26951774277
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 2056837.5866278883
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 228244.33121735012
+- attributes:
+    age: 28
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 776247.1166286912
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 1161448.6138403413
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 32923.045333340655
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 244.06190680419763
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 4365.158322401657
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 47.58827909888171
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 144.5439770745928
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 16.50061001320225
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 15.31087461682032
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 25.703957827688647
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 22490546.05835778
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 11577105.74115271
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 26326.916742184854
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 10577913.22499501
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 1166272.4050819618
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 182137.76371047748
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 652829.844158614
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 201929.60697981142
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 40
+    lineage: B.1.1.207
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 47315125.896148026
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 47315125.896148026
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 16788040.18122559
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 6456542.290346549
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 5956621.435290097
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 7807284.401379069
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 891250.938133744
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 319889.51096913975
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 66834.39175686135
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 11614.486138403414
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 492.6063433495761
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 321.7362532695601
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 278.61211686297725
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 4234479.161692068
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 298400811.593022
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 157615890.49638423
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 232059846.15989244
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 238122262.3276836
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 3445085.462865786
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 2511886.431509577
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 1173815.9324832193
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1903706.531742073
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 87902.25168308824
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 23291.636302139686
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 42
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 6025.595860743569
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1862087.1366628655
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 5655877.570891533
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 21752040.3401952
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 215030.46793402542
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 179887.09151287875
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 11415.633046188435
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 33689.92157414906
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 221.3094709605632
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 63.45999009812872
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 2645.452694724046
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 977.2372209558112
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 11502705.477901137
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 4533149061.464115
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 6338697112.569263
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 1049059207.7764436
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 638557485.0788385
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 3391563869.0582194
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 831763771.1026709
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 774818532.775618
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 217570495.09257954
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 2905360314.303151
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 149692485.67600378
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 336046.9824606985
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 930679.1831626532
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 4458615.279480701
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 432115.65447029745
+- attributes:
+    age: 28
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 348738.584135218
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 293426.95039559645
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 38018.93963205613
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 13645.831365889238
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 50118.72336272715
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 9885.53094656937
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 65313.05526474716
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 153108.74616820287
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 39582.20648357218
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 749.8942093324558
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 705342.4142580966
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 4345102.241715714
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 44381.29803081385
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 65765.78373554199
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 47336.92033483018
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 72912.16599950644
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 2295091.4760242226
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 32568.66822016688
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 208545.10476931705
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 41077.12125533859
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 67920.36326171829
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+- attributes:
+    age: 29
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 269.1534803926914
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 389762.4530977196
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 309029.5432513592
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 21
+    lineage: B.1.2
+    confirmation_gap: 2
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 42904.21892388848
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 602559.5860743568
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 467735.1412871981
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 62015.46436537847
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 489778.81936844566
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 89639.61859499493
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 8560.517117200932
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 7.89768849399884
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 30060763.02628229
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 1528973.6466907104
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 942757.508527414
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 1684224.575082704
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 776962.3959921381
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1038484.4550082718
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 12223.624492787301
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 39012.16029526748
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 32173.625326955942
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 22908.6765276777
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 2738.4196342643613
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 42169.65034285822
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 754.2233958475699
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 1531.087461682032
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 846.2525688072697
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 24.83133105295568
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 100.0
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 185.13988942052723
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 1961.1011754760495
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 459.7269885308718
+  - analyte: saliva_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 4234479.161692068
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 1599558.0286146647
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 1406047.524129913
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 861390.3457724283
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 855854.6212208228
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1031810.6352675929
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 44957.277130190465
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 25656.652970348696
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 6415.049325106628
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 23
+    lineage: B.1.243
+    confirmation_gap: -2
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 495450.19080478954
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 203001.85198596804
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 187.28370830175444
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 3845.9178204535356
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 47.04354057259755
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 22.13094709605632
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 13.33521432163324
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 32.35936569296281
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 23.307731152826364
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 25258060.548319556
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 954992.586021433
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 394820.7780378819
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 600343.7587325638
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 548529.5139412035
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 68801.83161430384
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 18706.82140365794
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1382.9293697959404
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 28
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 11481536.214968817
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 54954087.38576248
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 8810488.730080128
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 17080477.200597078
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 5011872.336272715
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 512861.3839913648
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 5432503.314924325
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 1102808.2338495508
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 172782.59805078627
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 348738.584135218
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 2030.0185198596803
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 2615.1704481379943
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 2834.653633489665
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 77.62471166286896
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 4988.844874600127
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 11956387.999881225
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 43132040.06994157
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 828705.077906983
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 723769.0370745296
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 7762471.166286912
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 5515691.912608017
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 2070141.3487910372
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 17947336.268325247
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 7712585.649892122
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 62690249.7476164
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 2560943.5171567644
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 9179097.860573363
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 28813.764348397
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 657052.3909635547
+- attributes:
+    age: 28
+    lineage: B.1.1.7
+    confirmation_gap: 2
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 49545.01908047895
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 77624.71166286911
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 41447.65840379389
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 75857.75750291836
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 1678804.018122559
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 5655877.570891533
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 78523.5634610071
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 45185.59443749217
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 436.51583224016474
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 149.62356560944298
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 71.20327999992011
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 2208004.733018897
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 1706082.3890031208
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 34419138.826842874
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 17155366.477283467
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 3746277.983440598
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 15776112.696993468
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 220394118.18101066
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1086425.6236170644
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 559242.2830409005
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 9086.570489581445
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 25
+    lineage: B.1.1.7
+    confirmation_gap: -1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 14206.922128601816
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 69582.49547006043
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 162181.009735893
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 10964.78196143185
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 16718603.57204467
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 1276438.8088113435
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 157036.28043335516
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 604226.8220498785
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 42422.86549229497
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.1.1
+    confirmation_gap: 2
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 94406.08762859226
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 12232071.1904993
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 6382634.861905483
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 8462525.68807268
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 9120.108393559096
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 16032.453906900417
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 16405.89773199539
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 6237.348354824191
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 84139.51416451948
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 656.9011164762649
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 14
+    value: 21.25690345217101
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 1433507.6007281228
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 490230130.13616854
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 1402167833.7057552
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 2425492857.109413
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 568591024.6988546
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 221819641.98002195
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 5823.713479437514
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 27466289.924159557
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 4021610.443342134
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 21637147.217791054
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 1452111.6175877391
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 315064.88329723955
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 111583.50522886658
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 101297.79687601005
+  - analyte: saliva_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 50
+    lineage: B.1.2
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 5991009.386113537
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 17782794.100389227
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 4004054.6833054638
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 43151.9076827765
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 9942.600739529558
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 2125.690345217101
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 3736.801253821156
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 177.82794100389228
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 204.17379446695315
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -1
+    value: 948855.326727801
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 487079666.49253666
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 70404432.14699753
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 29675633.58073526
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 5515691.912608017
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 2544485.615146634
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 752315.4831868692
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 4153364.0548907327
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 8774047.879567536
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 559242.2830409005
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 115239.13771994831
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 19696.996148999133
+- attributes:
+    age: 52
+    lineage: B.1.1.519
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 5623413.251903491
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 18836490.894897982
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 1077705.2536943213
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 2497468.389154143
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 19724.227361148533
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 4168.6938347033465
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 11816.80312544783
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 424.1309839104877
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 375.83740428844357
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 375.83740428844357
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 129.56866975170163
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 11.614486138403414
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 138.0384264602881
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 36.09940135864159
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 303.73860919461043
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 407755.661750211
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 7516228.940182045
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 4047622.486878724
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 640324.324468947
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 234207.0694793826
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 311028.3668685136
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 161138.75357200042
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 109446.02678150774
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 24210.2904673617
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 11240.87193469727
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 11240.87193469727
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 20
+    lineage: B.1.2
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 3801893.9632056127
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1273503.0810166604
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1273503.0810166604
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 2175.2040340195244
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 2175.2040340195244
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 30725.573652674455
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 9440.608762859227
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 794.3282347242822
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 53.39492735741756
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 30.90295432513592
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 36.09940135864159
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 10509934.271862155
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 1326783.31072416
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 1326783.31072416
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 1326783.31072416
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 1326783.31072416
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 370168.9610332352
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 488427.37842292566
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 66619.29002234538
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 53505.693817313564
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 7537.025766884261
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 6292.163512879859
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 65343.13996496
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.1.7
+    confirmation_gap: 2
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 6309.57344480193
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 2125690.3452171055
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 220039.17096373954
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 521795.1042390015
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 58884.36553555884
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 107770.52536943213
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 676.0829753919819
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 2934.2695039559644
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 4216.965034285822
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 2137.9620895022326
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 687.8599123088081
+  - analyte: saliva_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 254683.0252585034
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 27822746.57675122
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 371535229.0971728
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 265705167.0355062
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 119453808.29338849
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 165958690.74375564
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 1193438379.2107918
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 187585817.379928
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 290803748.2735312
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 11502705.477901137
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 1452111.6175877391
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 15617.085932653674
+- attributes:
+    age: 49
+    lineage: B.1.2
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 97162795.15771058
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 36728230.04980843
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 2412681.5325916302
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 960505.8183867305
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 384591.78204535355
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 3694026.4435828337
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 175792.36139586894
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 2251645.416744618
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 1905460.7179632443
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 1366469680.7404656
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 210668692.57394102
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 579695594.6535227
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 37428291.224080525
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 11651987.230249975
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 3229981.240595625
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 3467368.5045253094
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 78054869.14662367
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 548529.5139412035
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 268163.70667607296
+- attributes:
+    age: 23
+    lineage: B.1.2
+    confirmation_gap: 6
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 32.73406948788373
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 50.118723362727145
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 76.73614893618186
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 2786.1211686297665
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 325.46178349804535
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 234.42288153199178
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 4499.870338721487
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 4499.870338721487
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 4401492.842868153
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 42422.86549229497
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 278740.4520323769
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 787045.7896950969
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 4786300.923226381
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 999079.3899844598
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 49842.52094042594
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 9605058.183867306
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 707945.7843841374
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 62733.56959840373
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 90157.1137605957
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 7943.282347242805
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 378.0071373018101
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 55.91135275705608
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 465586093.52295816
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 7762471.166286912
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 4943106.869868354
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 802416.7763085829
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 1361444.682465951
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 108043.83723712253
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 31045595.88128349
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 1523.3510631495635
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 21
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 933.2543007969886
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1071.5193052376048
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 33304.27623087463
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 137246.09610075597
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 1830206.106311053
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 2175204.03401952
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 12589254.117941663
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 1141563.3046188436
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 93325.43007969906
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 2722.7013080779097
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 530.8844442309879
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 138.0384264602881
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 39.582206483572264
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 2731492.4220891767
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 12835121.968394963
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 9061498.022319961
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 70859812.69167684
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 49704991.05762346
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 36475394.692560725
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 5375266.487867439
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 40438962.05078186
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 1673400.9068393107
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 374973.0022454834
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 1161.9836038697981
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 1475.0271017597563
+- attributes:
+    age: 19
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 57543993.73371567
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 94951099.92021963
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 18092559.102538183
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 728618.1745132274
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 69984.19960022731
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 668.3439175686135
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 1840.7720014689507
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 35.481338923357455
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 54.63865498818529
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 4021610.443342134
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 8120822.162499822
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 705342.4142580966
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 98084.41360309022
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 138931.26817367537
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 488427.37842292566
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 18113.400926195987
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 9028.175649662579
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 3930.0674134185183
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 19696.996148999133
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 22
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 31622776.60168379
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1788545.5291077695
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 103514.2166679343
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 1280855.0945362784
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 124451.46117713844
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 46238.102139926035
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 2802.205621666745
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 444.119661365588
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 78.0728440137907
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 1348.9628825916504
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 310.81359027394734
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 441.5704473533121
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 1049059207.7764436
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 30450890.66974223
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 32270076.875155322
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 14138391.390945628
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 21086281.499332886
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 151077.5731924994
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 3047894.989627983
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 527715.6817648103
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 415719.1206752184
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 71515.47046592791
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 3036.6867884657736
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 20
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 2867477.3755813134
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 57543993.73371567
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 15399265.26059492
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 248313.3105295568
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 771791.5155850111
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 161250.102733774
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 402717.0343254587
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 15577.58034831602
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 4168.6938347033465
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 5821.03217770871
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 57.87619883491197
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 20.773037255725587
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 137.24609610075598
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 69694.73963563197
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 17603539.536161624
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 11282361.21648989
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 2627846.540838493
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 2560943.5171567644
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 193018.97276345702
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 204550.24311093477
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 94972.96573624243
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 34292.56732975598
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 48573.567328785495
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 16873.29890625803
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 4677.351412871981
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 4830.5880203977185
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 21
+    lineage: B.1.1.7
+    confirmation_gap: 1
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 3912.911271268524
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 1128495.93752776
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 10901844.923851268
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 3845917.8204535353
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 891250.938133744
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 356861.74928348063
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 10115.794542598982
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 205.3525026457146
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 481.3932540001439
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 588.8436553555883
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 3890.4514499428046
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 196.11011754760494
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 105293.12128434377
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 6779536.449241933
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 59538789.412768535
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 53015150.66784589
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 12427964.384409131
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 73181279.76744553
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 19266374.595240794
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 636209.2805735172
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 264728.0740017566
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 299226.4636608183
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 29757.743773728074
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 108742.67195462447
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 53851.77219975273
+- attributes:
+    age: 21
+    lineage: P.1
+    confirmation_gap: 5
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 9885.53094656937
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 17080477.200597078
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 808164.9291125368
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 216271.852372702
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 43651.58322401656
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 26760.85593199328
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 4050.419451364931
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 436.51583224016474
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 62.733569598403726
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 12705.741052085394
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 317102.74389478855
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 7046930.689671467
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 2355049.2838960043
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 3770509.158333926
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 313040.1190096235
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 1086425.6236170644
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 186895.99716514887
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 14361.506529074757
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 21
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 148.76473740795
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 32923.045333340655
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 104111.81076233396
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 22387211.385683376
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 16032453.906900417
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 382384.25365811225
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 126619.32675109443
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 6531.305526474716
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 489.7788193684456
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 258.52348395621885
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 73.7055175337934
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 28.346536334896594
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 144012437.11755714
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 6379696226.625793
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 16458869432.193035
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 5717418729.175524
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 2318462095.4131293
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 401420918.2043213
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 94710907.94701584
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 12508349.283740627
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 50350060.87879037
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 58775996.36805995
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 8798.324994418628
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 123708.63074892691
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 11727353.05779377
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 235721.93636510018
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 194267.4323031487
+- attributes:
+    age: 23
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 53088444.423098795
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 9278974.901273297
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 12808550.945362784
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 720277.7512383406
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 44157.044735331205
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 112849.59375277598
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 8128.305161640978
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 1000.0
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 4926.063433495771
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 1575.7960227439235
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 565.5877570891533
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 865.9643233600654
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 1258.9254117941662
+  - analyte: saliva_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 19769696.40111858
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 300330887.86765516
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 161733505.57998514
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 337287308.65886927
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 13867558.288718868
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 5445026.528424198
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 16292960.32639718
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 3770509.158333926
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 6649668.571246756
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 3580964.371026355
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 399944.74976109614
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 287872.3810835245
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 114498.55346901882
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: 37051.005630192354
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 40290.25350832952
+- attributes:
+    age: 34
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 15135612.484362071
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 2660725.059798809
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 285101.826750391
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 6760829.753919818
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 148764.73740795002
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 10592537.251772875
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 49831.04559705293
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 172782.59805078627
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 11284.959375277598
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 6201.5464365378475
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 2187761.623949552
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 21752.0403401952
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 69984.19960022731
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 3388.4415613920205
+  - analyte: saliva_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -2
+    value: 18655203.891005937
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 7184557.087925951
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 15473907.628208768
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 280543.3637951716
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 156027.08686930584
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 1494.169957406696
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 125314.1174941413
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 329609.71217745694
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 62
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 10292005.271944264
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 384591.78204535355
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 1356750.5302998598
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 64194.82215080346
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 50118.72336272715
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 8317.63771102671
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 11614.486138403414
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 151.3561248436207
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 29.00681198693156
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 31.081359027394733
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 12.161860006463654
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 136772882.55958468
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 7277798.045368227
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 288934898.1559075
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 39920870.24388075
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 2004472.0273651553
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 387257.6449216165
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 691830.9709189363
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 344825.9965526229
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 802416.7763085829
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: negative
+- attributes:
+    age: 30
+    lineage: B.1.1.7
+    confirmation_gap: 0
+  measurements:
+  - analyte: nasal_SARSCoV2
+    time: 0
+    value: 565587.7570891533
+  - analyte: nasal_SARSCoV2
+    time: 1
+    value: 789768.8493998856
+  - analyte: nasal_SARSCoV2
+    time: 2
+    value: 1479108.3881682071
+  - analyte: nasal_SARSCoV2
+    time: 3
+    value: 16595869.074375598
+  - analyte: nasal_SARSCoV2
+    time: 4
+    value: 41447658.40379389
+  - analyte: nasal_SARSCoV2
+    time: 5
+    value: 75857757.5029182
+  - analyte: nasal_SARSCoV2
+    time: 6
+    value: 26915348.039269138
+  - analyte: nasal_SARSCoV2
+    time: 7
+    value: 201836.63636815597
+  - analyte: nasal_SARSCoV2
+    time: 8
+    value: 56885.29308438413
+  - analyte: nasal_SARSCoV2
+    time: 9
+    value: 1154.781984689458
+  - analyte: nasal_SARSCoV2
+    time: 10
+    value: 1949.8445997580416
+  - analyte: nasal_SARSCoV2
+    time: 11
+    value: 346.736850452531
+  - analyte: nasal_SARSCoV2
+    time: 12
+    value: 263.02679918953817
+  - analyte: nasal_SARSCoV2
+    time: 13
+    value: 50.69907082747044
+  - analyte: saliva_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 0
+    value: 15275660.582380733
+  - analyte: saliva_SARSCoV2
+    time: 1
+    value: 260615354.99988976
+  - analyte: saliva_SARSCoV2
+    time: 2
+    value: 922146665.1242648
+  - analyte: saliva_SARSCoV2
+    time: 3
+    value: 703396171.2162458
+  - analyte: saliva_SARSCoV2
+    time: 4
+    value: 28920113.962154813
+  - analyte: saliva_SARSCoV2
+    time: 5
+    value: 5696393.73341183
+  - analyte: saliva_SARSCoV2
+    time: 6
+    value: 24143487.29714149
+  - analyte: saliva_SARSCoV2
+    time: 7
+    value: 4516479.049291118
+  - analyte: saliva_SARSCoV2
+    time: 8
+    value: 1695118.2515313951
+  - analyte: saliva_SARSCoV2
+    time: 9
+    value: 491586.55915686104
+  - analyte: saliva_SARSCoV2
+    time: 10
+    value: 245019.1336880778
+  - analyte: saliva_SARSCoV2
+    time: 11
+    value: 2062.528697846569
+  - analyte: saliva_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: saliva_SARSCoV2
+    time: 13
+    value: 83483.37537236499

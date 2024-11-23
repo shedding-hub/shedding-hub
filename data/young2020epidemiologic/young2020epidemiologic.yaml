@@ -1,0 +1,693 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Epidemiologic Features and Clinical Course of Patients Infected With SARS-CoV-2
+  in Singapore
+doi: 10.1001/jama.2020.3204
+description: >
+  Clinical, laboratory, and radiologic data were collected, including PCR cycle threshold
+  values from nasopharyngeal swabs and viral shedding in blood, urine, and stool.
+  The clinical course was summarized, including the requirement for supplemental oxygen,
+  intensive care, and the use of empirical treatment with lopinavir-ritonavir. The
+  numbers of positive stool, blood, and urine samples were small. Data for the nasopharyngeal
+  swab results were obtained from the combined dataset in the supplementary materials
+  of Challenger et al. (2022). The standard curve was calculated based on the concentration
+  provided by Goyal et al. (2020).
+analytes:
+  swab_SARSCoV2_N:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in nasopharyngeal swab samples. The
+      unit of concentration were converted to gc/swab from Ct values based on standard
+      curve calculated from the concentration provided by Goyal et al. (2020).
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N, E, and ORF1lab
+    unit: gc/swab
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1975513.491579446
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 800.0737100802227
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 1953.6645673965652
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 1250.230242271096
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 108540.04567499713
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 3542.6642927440876
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 26405.840763127326
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 8650.67507620161
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 1250.230242271096
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 1264212.266734452
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 69459.23566664293
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 551.543791145712
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 1813.5937063319584
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 1562.859726722998
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 5535.92247964065
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 35558.218968040164
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 6424.066086128953
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 19609.2055970054
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 4428.534170131512
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 2442.1931006590594
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 5535.92247964065
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 1346.7903626290954
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 1250.230242271096
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 2104.55364317535
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 3288.6677540195756
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 100758.10710099332
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 5597833.798788532
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 108540.04567499713
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 5597833.798788532
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 2469505.5128237433
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 1089431.6796591338
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 135681.30124094724
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 5535.92247964065
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 6424.066086128953
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 9318.800192914992
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 10038.52719822675
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 640.0295121083692
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 100758.10710099332
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1160.5931420818404
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 3816.2779671933263
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 4111.023884683191
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 10813.841505707438
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 28445.266043394113
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 11649.036337842177
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 55564.83128371256
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 800.0737100802227
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 282.35143545411535
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 22755.165578082477
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 1467033.3947530545
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 8650.67507620161
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 5139.016356936332
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 1160.5931420818404
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 861.8664992230291
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 2442.1931006590594
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 10038.52719822675
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 3816.2779671933263
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 13517.923986333242
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 1562.859726722998
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 18203.294695716108
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 12548.736499304794
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 28445.266043394113
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 100758.10710099332
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1173572.7046903402
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 647187.3203208094
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 6030176.168281363
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 74823.84126421812
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 24512.635084654597
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 3052.881871556251
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 11649.036337842177
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 8030.452174617025
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 15686.642534255488
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 13517.923986333242
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 4770.567003780315
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: 1250.230242271096
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 124.56040166082366
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 928.4317846270418
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 475.2914479666686
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 19609.2055970054
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 512.0000460065149
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 3288.6677540195756
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 1346.7903626290954
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 600786.2713688732
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 24786773.600766882
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 33008.82004260735
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 30642.204031212932
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 4770.567003780315
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: 1346.7903626290954
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 409.5811867285978
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: 1562.859726722998
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 3816.2779671933263
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: 861.8664992230291
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 800.0737100802227
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: 1953.6645673965652
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 6424.066086128953
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 5963.483198341251
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 12548.736499304794
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 14561.965574016673
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1580338.0616672335
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 44946926.52627947
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 14561.965574016673
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 3288.6677540195756
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 6920.221572927531
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 12548.736499304794
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: 304.15852959477326
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: 6424.066086128953
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 28445.266043394113
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: 28445.266043394113
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: 59856.31825548893
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 28763385.372328904
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 3087023.958004488
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 135681.30124094724
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 18203.294695716108
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 3816.2779671933263
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 12548.736499304794
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 107.33960678208784
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 8650.67507620161
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: 1077.3827059250866
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 41262.92400152285
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 9318.800192914992
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 640.0295121083692
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 5139.016356936332
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1346.7903626290954
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 4770.567003780315
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 28445.266043394113
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 74823.84126421812
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 1346.7903626290954
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 1953.6645673965652
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 10813.841505707438
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 1953.6645673965652
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 2630.81312580638
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 6424.066086128953
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 2442.1931006590594
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 21123.7004384771
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: 4770.567003780315
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 21123.7004384771
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: 8030.452174617025
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: 800.0737100802227
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 742.7112460440248
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+- measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 16898.182648953894
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 5139.016356936332
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 1160.5931420818404
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 13517.923986333242
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 2834.0010055090897
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 2442.1931006590594
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 3816.2779671933263
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: 125953.4303401044
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: 8030.452174617025
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 9318.800192914992
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: 1953.6645673965652
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: 928.4317846270418
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: 225.870753156825
