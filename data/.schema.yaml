@@ -19,6 +19,7 @@ $defs:
       - throat_swab
       - oropharyngeal_swab
       - nasopharyngeal_swab
+      - saliva
   analyte_specification:
     description: Specification of an analyte.
     type: object
@@ -180,6 +181,9 @@ properties:
                 - type: boolean
                 - type: string
                   constant: unknown
+            lineage:
+              description: Lineage information of the disease for the participant.
+              type: string
         measurements:
           type: array
           minItems: 1
