@@ -16,8 +16,6 @@ data = data[data['StudyNum'] == 4]
 data = data.replace({"Sex": {"M": "male", "F": "female"},
                     "PatientID":{"4-1":"1", "4-2":"2","4-3":"3"}})
 
-#some data cleaning to match the schema;
-df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
 
 participants = []
 
