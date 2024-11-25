@@ -19,7 +19,7 @@ data = data.replace({"Sex": {"M": "male", "F": "female"},
 
 participants = []
 
-for patient_id, patient_data in df.groupby("PatientID"):
+for patient_id, patient_data in data.groupby("PatientID"):
     participant = {
         "attributes": {
             "age": float(patient_data["Age"].iloc[0]),
