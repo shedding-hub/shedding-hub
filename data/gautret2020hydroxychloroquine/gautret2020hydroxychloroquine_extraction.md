@@ -14,7 +14,7 @@ from shedding_hub import folded_str
 Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/gautret2020hydroxychloroquine), will be loaded and cleaned to match the [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). 
 
 ```python
-df = pd.read_excel(os.path.join(current_directory, 'Challenger2022/CombinedDataset.xlsx'), sheet_name='Viral_Load')
+df = pd.read_excel('CombinedDataset.xlsx', sheet_name='Viral_Load')
 gautret2020 = df[df['StudyNum'] == 5].copy()
 columns_to_drop = ['Estimated', 'SevMax', 'Sev1st', 'Died', 'SevMax3']
 gautret2020 = gautret2020.drop(columns=columns_to_drop)
