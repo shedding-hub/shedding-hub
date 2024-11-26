@@ -18,7 +18,7 @@ analytes:
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: N, NP, M, ORF7, ORF8, ORF3, S, NSP7, NSP13
-    unit: copies/mL
+    unit: gc/mL
     reference_event: symptom onset
 participants:
 - attributes:
