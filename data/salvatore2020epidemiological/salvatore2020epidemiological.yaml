@@ -26,11 +26,11 @@ analytes:
       of both viral targets (N1 and N2 probes).
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
-    gene_target: N1 and N2 probe
+    gene_target: N1 probe
     limit_of_quantification: unknown
     limit_of_detection: 3162
     unit: gc/mL
-    reference_event: enrollment
+    reference_event: symptom onset
 participants:
 - attributes:
     age: 51.0
