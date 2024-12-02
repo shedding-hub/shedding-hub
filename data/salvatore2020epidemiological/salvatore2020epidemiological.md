@@ -52,6 +52,12 @@ participant_list = [dict(attributes=dict(age=df.loc[df.loc[df["id"]==i].index[0]
 
 ```
 
+The authors stated: "a limit of detection in the range of 1000–3162 viral RNA copies per mL". We used the maximum "3162" to be conservative.
+
+Results were considered positive if signals were detected (Ct < 40) for the RP, N1, and N2 genes. Results were classified as “not detected” if RP was detected but no signal was observed (Ct ≥ 40) from either N1 or N2. Results were classified as inconclusive if RP was detected (Ct < 40) and either N1 or N2 was detected (but not both). Results were classified as invalid if no RP was detected in the sample. Any specimens for which results were inconclusive were retested; specimens which produced inconclusive results after retesting were excluded from the analysis (n = 17 specimens from 6 participants). Ct values for amplification of both viral targets (N1 and N2 probes).
+
+The author of the original paper stated: "For this analysis, we focused on values of the N1 probe." Thus we think the viral load in data is from N1 probe.
+
 ```python
 phillip2020 = dict(title="Epidemiological Correlates of Polymerase Chain Reaction Cycle Threshold Values in the Detection of Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2)",
                doi="10.1093/cid/ciaa1469",
@@ -59,7 +65,7 @@ phillip2020 = dict(title="Epidemiological Correlates of Polymerase Chain Reactio
                analytes=dict(N1_and_N2_probes=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration calculated from evaluation of both N1 and N2 probe.\nThe authors stated: 'a limit of detection in the range of 1000-3162 viral RNA copies per mL'. We used the maximum '3162' to be conservative.\nResults were considered positive if signals were detected (Ct < 40) for the RP, N1, and N2 genes. Results were classified as 'not detected' if RP was detected but no signal was observed (Ct >= 40) from either N1 or N2. Results were classified as inconclusive if RP was detected (Ct < 40) and either N1 or N2 was detected (but not both). Results were classified as invalid if no RP was detected in the sample. Any specimens for which results were inconclusive were retested; specimens which produced inconclusive results after retesting were excluded from the analysis (n = 17 specimens from 6 participants). Ct values for amplification of both viral targets (N1 and N2 probes).\n"),
                                                     specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
-                                                    gene_target="N1 and N2 probe",
+                                                    gene_target="N1 probe",
                                                     limit_of_quantification='unknown',
                                                     limit_of_detection=3162, #1000~3162 in the article.
                                                     unit="gc/mL",
