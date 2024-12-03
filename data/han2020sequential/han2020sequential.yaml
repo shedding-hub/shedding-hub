@@ -11,6 +11,7 @@ analytes:
     description: SARS-CoV-2 RNA gene copy concentration in nasopharynx samples.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
     unit: gc/mL
@@ -19,6 +20,7 @@ analytes:
     description: SARS-CoV-2 RNA gene copy concentration in oropharynx samples.
     specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
     unit: gc/mL
@@ -30,6 +32,7 @@ analytes:
     - nasopharyngeal_swab
     - oropharyngeal_swab
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
     unit: gc/mL
@@ -38,6 +41,7 @@ analytes:
     description: SARS-CoV-2 RNA gene copy concentration in plasma samples.
     specimen: plasma
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
     unit: gc/mL
@@ -46,6 +50,7 @@ analytes:
     description: SARS-CoV-2 RNA gene copy concentration in saliva samples.
     specimen: saliva
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
     unit: gc/mL
@@ -54,6 +59,7 @@ analytes:
     description: SARS-CoV-2 RNA gene copy concentration in urine samples.
     specimen: urine
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
     unit: gc/mL
@@ -62,6 +68,7 @@ analytes:
     description: SARS-CoV-2 RNA gene copy concentration in sputum samples.
     specimen: sputum
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
     unit: gc/mL
@@ -73,11 +80,11 @@ analytes:
       and quantified with a standard curve that was constructed using in vitro transcribed
       RNA provided from the European Virus Archive." However, data reported in Figure
       1 explicitly refer to the E gene target.'
-    specimen: sputum
+    specimen: stool
     biomarker: SARS-CoV-2
+    gene_target: E
     limit_of_quantification: unknown
     limit_of_detection: 5700.0
-    gene_target: E
     unit: gc/mL
     reference_event: symptom onset
 participants:

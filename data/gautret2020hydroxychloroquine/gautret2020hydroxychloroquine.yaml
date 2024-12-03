@@ -1,0 +1,517 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Hydroxychloroquine and azithromycin as a treatment of COVID-19:results of an
+  open-label non-randomized clinical trial
+doi: 10.1016/j.ijantimicag.2020.105949
+description: >
+  This study evaluated the effect of hydroxychloroquine on respiratory viral loads.
+  Six patients were asymptomatic, 22 exhibited upper respiratory tract infection symptoms,
+  and eight showed lower respiratory tract infection symptoms. Only 19 patients with
+  a known onset of symptoms were included in the analysis below. Data for the nasopharyngeal
+  swab results were obtained from the combined dataset in the supplementary materials
+  of Challenger et al. (2022). Attributes of drug treatments were sourced from the
+  supplementary materials of the original paper.
+analytes:
+  nasopharyngeal_swab_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in nasopharyngeal swab samples. Viral
+      load concentrations were obtained from the combined dataset in the supplementary
+      materials of Challenger et al. (2022)
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 20
+    sex: male
+    Hydroxychloroquine_treatment: false
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 5633267.88175178
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 5633267.88175178
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 5633267.88175178
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 672471.088804301
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 39526.7617474435
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 163035.592767995
+- attributes:
+    age: 44
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 80276.2046418103
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 163035.592767995
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 1365743.72283473
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 19462.3662293253
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 1365743.72283473
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 39526.7617474435
+- attributes:
+    age: 25
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 11440789.6140617
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 2773733.99022852
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 331114.364808519
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 2773733.99022852
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: negative
+- attributes:
+    age: 49
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: 4718.50532713275
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 672471.088804301
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 194642816.877014
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 1630516384.98925
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 4718.50532713275
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 5633267.88175178
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 23235477.1228308
+- attributes:
+    age: 24
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 331114.364808519
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 19462.3662293253
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 4718.50532713275
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: negative
+- attributes:
+    age: 81
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 23235477.1228308
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 47189697.1570939
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 80276.2046418103
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 19462.3662293253
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 331114.364808519
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+- attributes:
+    age: 85
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: 802841053.115832
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 47189697.1570939
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 11440789.6140617
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 47189697.1570939
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 1365743.72283473
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 5633267.88175178
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 5633267.88175178
+- attributes:
+    age: 40
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 23235477.1228308
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 331114.364808519
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 47189697.1570939
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 3311469526.12901
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 95839113.0083639
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 802841053.115832
+- attributes:
+    age: 53
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 672471.088804301
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 331114.364808519
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 19462.3662293253
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 39526.7617474435
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: negative
+- attributes:
+    age: 63
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 4718.50532713275
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 80276.2046418103
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 42
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: 194642816.877014
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 1630516384.98925
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 802841053.115832
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 802841053.115832
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 194642816.877014
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 95839113.0083639
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 39526.7617474435
+- attributes:
+    age: 87
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 2773733.99022852
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 80276.2046418103
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: negative
+- attributes:
+    age: 33
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: false
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 3311469526.12901
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 11440789.6140617
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 1365743.72283473
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 1365743.72283473
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 19462.3662293253
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 19462.3662293253
+- attributes:
+    age: 53
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: true
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 331114.364808519
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 39526.7617474435
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 4718.50532713275
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 4718.50532713275
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 48
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: true
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 11440789.6140617
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 163035.592767995
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 163035.592767995
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+- attributes:
+    age: 50
+    sex: female
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: true
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 80276.2046418103
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 672471.088804301
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: negative
+- attributes:
+    age: 20
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: true
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 672471.088804301
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 39526.7617474435
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 163035.592767995
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+- attributes:
+    age: 54
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: true
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 5633267.88175178
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 163035.592767995
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 60
+    sex: male
+    Hydroxychloroquine_treatment: true
+    Azithromycin_treatment: true
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 163035.592767995
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 39526.7617474435
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 39526.7617474435
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
