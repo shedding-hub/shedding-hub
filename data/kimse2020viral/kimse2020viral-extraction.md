@@ -22,14 +22,24 @@ yaml.add_representer(literal_str, literal_str_representer)
 ```
 ```python
 #load the data
-data = pd.read_excel("CombinedDataset.xlsx") 
-data = data['StudyNum'] == 4
-data = data.replace({"Sex": {"M": "male", "F": "female"},
+combineddataset_df = pd.read_excel("CombinedDataset.xlsx") 
+combineddataset_df = combineddataset_df[combineddataset_df['StudyNum'] == 4]
+asymptomatic_df = pd.read_excel("asymptomatic.xlsx") 
+combineddataset_df = combineddataset_df.replace({"Sex": {"M": "male", "F": "female"},
                            "SevMax3": {"Moderate": "moderate", "Mild": "mild", "Severe": "severe"},
                            "PatientID":{"4-1":"1", "4-2":"2","4-3":"3"}})
+# Step 2: Rename patients in asymptomatic data
+asymptomatic_df['Patient'] = asymptomatic_df['Patient'].str.strip()
+patient_mapping = {patient: f"4-{i+1}" for i, patient in enumerate(asymptomatic_df['Patient'].unique())}
+asymptomatic_df['Patient'] = asymptomatic_df['Patient'].map(patient_mapping)
 
-#some data cleaning to match the schema;
-df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
+# Step 3: Filter combined dataset for `PatientID` starting with `4-`
+filtered_combined_df = combineddataset_df[combineddataset_df['PatientID'].str.startswith('4-')]
+
+# Step 4: Merge datasets on Patient and PatientID
+merged_df = pd.merge(asymptomatic_df, filtered_combined_df, left_on='Patient', right_on='PatientID', how='outer')
+
+df = pd.DataFrame(combineddataset_df) if not isinstance(combineddataset_df, pd.DataFrame) else combineddataset_df
 
 participants = []
 
@@ -59,6 +69,10 @@ for patient_id, patient_data in df.groupby("PatientID"):
 
 
     participants.append(participant)
+#print(participants)
+
+
+
 
 ```
 Finally, the data is formatted and output as a YAML file.
