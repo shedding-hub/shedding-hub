@@ -31,3 +31,22 @@ jobs:
         run: python -m build
       - name: Validate package
         run: twine check dist/*.tar.gz dist/*.whl
+  extraction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Create backup of current data
+        run: make backup_data
+      - name: Run extraction notebooks
+        run: make extraction
+      - name: Check nothing changed
+        run: make assert_data_unchanged
+      - name: Run just the data tests
+        run: pytest tests/test_data.py -k test_data_validity

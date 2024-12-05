@@ -1,827 +1,98 @@
 title: Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients
 doi: 10.1016/j.ijid.2020.04.083
-description: The authors measured SARS-CoV-2 in longitudinal throat swab samples collected
-  from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were
-  quantified using real-time reverse transcription polymerase chain reaction (RT-PCR).
-  Specimens were collected from all patients at least 2 days after hospitalization
-  and physicians checked their symptoms and signs daily. Patients who had asymptomatic
-  carrier and incubation period were analyzed.
+description: >
+  The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from
+  71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified
+  using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens
+  were collected from all patients at least 2 days after hospitalization and physicians
+  checked their symptoms and signs daily. Patients who had asymptomatic carrier and
+  incubation period were analyzed.
 analytes:
   throatswab_SARSCoV2:
-    description: SARS-CoV-2 RNA genome copy concentration in throat swab samples.
-      Specimens were collected from all patients at least 2 days after hospitalization
-      and physicians checked their symptoms and signs daily.
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in throat swab samples. Specimens were
+      collected from all patients at least 2 days after hospitalization and physicians
+      checked their symptoms and signs daily.
     specimen: throat_swab
     biomarker: SARS-CoV-2
     gene_target: RdRp
     limit_of_quantification: unknown
-    limit_of_detection: 40
-    unit: value
+    limit_of_detection: unknown
+    unit: gc/mL
     reference_event: symptom onset
 participants:
-- Patient: 4-1
-  Age (years): 20
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: LPV/r
-  Day: -2.0
-  value: 9582.96815875333
-  Age: 20.0
-  Sex_y: F
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 33.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-1
-- Patient: 4-1
-  Age (years): 20
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: LPV/r
-  Day: 0.0
-  value: 1143.96637386429
-  Age: 20.0
-  Sex_y: F
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 36.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-1
-- Patient: 4-1
-  Age (years): 20
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: LPV/r
-  Day: 1.0
-  value: 1.0
-  Age: 20.0
-  Sex_y: F
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 40.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-1
-- Patient: 4-1
-  Age (years): 20
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: LPV/r
-  Day: 3.0
-  value: 19462.3662293253
-  Age: 20.0
-  Sex_y: F
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 32.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-1
-- Patient: 4-1
-  Age (years): 20
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: LPV/r
-  Day: 4.0
-  value: 1.0
-  Age: 20.0
-  Sex_y: F
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 40.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-1
-- Patient: 4-10
-  Age (years): 8
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-11
-  Age (years): 21
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Dormitory
-  Incubation perioda(days): 14b
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-12
-  Age (years): 55
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Occupational
-  Incubation perioda(days): 10
-  Symptom-free period after admission (days): 7
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-13
-  Age (years): 25
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Foreign visit
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: -2.0
-  value: 1630516384.98925
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 16.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 1.0
-  value: 2773733.99022852
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 25.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 3.0
-  value: 19462.3662293253
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 32.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 5.0
-  value: 80276.2046418103
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 30.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 8.0
-  value: 9582.96815875333
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 33.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 10.0
-  value: 2323.31905452941
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 35.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 11.0
-  value: 1.0
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 40.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 12.0
-  value: 563.271351810653
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 37.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 13.0
-  value: 1143.96637386429
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 36.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-2
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 14.0
-  value: 1.0
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 40.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-2
-- Patient: 4-3
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: HTN
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: -1.0
-  value: 6725372724.51475
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 14.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-3
-- Patient: 4-3
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: HTN
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 2.0
-  value: 1365743.72283473
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 26.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-3
-- Patient: 4-3
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: HTN
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 4.0
-  value: 19462.3662293253
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 32.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-3
-- Patient: 4-3
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: HTN
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 6.0
-  value: 331114.364808519
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 28.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-3
-- Patient: 4-3
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: HTN
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 8.0
-  value: 9582.96815875333
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 33.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-3
-- Patient: 4-3
-  Age (years): 30
-  Sex_x: M
-  Underlying disease: HTN
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 4
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 11.0
-  value: 1.0
-  Age: 30.0
-  Sex_y: M
-  Estimated: 1.0
-  SevMax: 2.0
-  Sev1st: 1.0
-  Died: 0.0
-  LOD: 277.3461
-  Ctvalue: 40.0
-  SevMax3: Mild
-  StudyNum: 4.0
-  PatientID: 4-3
-- Patient: 4-4
-  Age (years): 58
-  Sex_x: M
-  Underlying disease: DM
-  Contact with confirmed COVID-19 case: Family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-5
-  Age (years): 79
-  Sex_x: F
-  Underlying disease: Asthma, osteoporosis
-  Contact with confirmed COVID-19 case: Medical care
-  Incubation perioda(days): 10
-  Symptom-free period after admission (days): 7
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-6
-  Age (years): 8
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Foreign visit, family
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-7
-  Age (years): 37
-  Sex_x: M
-  Underlying disease: Liver donor
-  Contact with confirmed COVID-19 case: Foreign visit
-  Incubation perioda(days): 14b
-  Symptom-free period after admission (days): 0
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-8
-  Age (years): 48
-  Sex_x: M
-  Underlying disease: DM
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 0
-  Symptom-free period after admission (days): 2
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
-- Patient: 4-9
-  Age (years): 24
-  Sex_x: F
-  Underlying disease: 0
-  Contact with confirmed COVID-19 case: Religious event
-  Incubation perioda(days): 20b
-  Symptom-free period after admission (days): 1
-  ? 'Maximal O^2
-
-    supply (min/l)'
-  : 0
-  Pneumonia extent (max 24): 0
-  Treatment: 0
-  Day: 0.0
-  value: 0.0
-  Age: 0.0
-  Sex_y: 0
-  Estimated: 0.0
-  SevMax: 0.0
-  Sev1st: 0.0
-  Died: 0.0
-  LOD: 0.0
-  Ctvalue: 0.0
-  SevMax3: 0
-  StudyNum: 0.0
-  PatientID: 0
+- attributes:
+    age: 20.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: -2
+    value: 9582.968159
+  - analyte: throatswab_SARSCoV2
+    time: 0
+    value: 1143.966374
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 19462.36623
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: negative
+- attributes:
+    age: 30.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: -2
+    value: 1630516385.0
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 2773733.99
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 19462.36623
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 80276.20464
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 9582.968159
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 2323.319055
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 563.2713518
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 1143.966374
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 30.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: -1
+    value: 6725372725.0
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 1365743.723
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 19462.36623
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 331114.3648
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 9582.968159
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: negative

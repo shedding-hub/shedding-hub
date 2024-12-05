@@ -1,64 +1,32 @@
-# Extraction for kimse et al. (2020)
+# Extraction for Kim et al. (2020)
 
-[kimse et al. (2020)](https://www.ijidonline.com/article/S1201-9712(20)30299-X/fulltext) The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected from all patients at least 2 days after hospitalization and physicians checked their symptoms and signs daily. Patients who had asymptomatic carrier and incubation period were analyzed. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). 
+[Kim et al. (2020)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7196533/) The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected from all patients at least 2 days after hospitalization and physicians checked their symptoms and signs daily. Patients who had asymptomatic carrier and incubation period were analyzed. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/kimse2020viral).
 
 First, we `import` python modules needed:
 
 ```python
 import yaml
 import pandas as pd
-import numpy as np
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
-
+from shedding_hub import folded_str
 ```
 ```python
 #load the data
-combineddataset_df = pd.read_excel("CombinedDataset.xlsx") 
-combineddataset_df = combineddataset_df[combineddataset_df['StudyNum'] == 4]
-asymptomatic_df = pd.read_excel("asymptomatic.xlsx") 
-combineddataset_df = combineddataset_df.replace({"Sex": {"M": "male", "F": "female"},
-                           "SevMax3": {"Moderate": "moderate", "Mild": "mild", "Severe": "severe"},
-                           "PatientID":{"4-1":"1", "4-2":"2","4-3":"3"}})
-# Step 2: Rename patients in asymptomatic data
-asymptomatic_df['Patient'] = asymptomatic_df['Patient'].str.strip()
-patient_mapping = {patient: f"4-{i+1}" for i, patient in enumerate(asymptomatic_df['Patient'].unique())}
-asymptomatic_df['Patient'] = asymptomatic_df['Patient'].map(patient_mapping)
+data = pd.read_excel("CombinedDataset.xlsx")
+data = data[data['StudyNum'] == 4]
+data = data.replace({"Sex": {"M": "male", "F": "female"},
+                    "PatientID":{"4-1":"1", "4-2":"2","4-3":"3"}})
 
-# Step 3: Filter combined dataset for `PatientID` starting with `4-`
-filtered_combined_df = combineddataset_df[combineddataset_df['PatientID'].str.startswith('4-')]
-
-# Step 4: Merge datasets on Patient and PatientID
-merged_df = pd.merge(asymptomatic_df, filtered_combined_df, left_on='Patient', right_on='PatientID', how='outer')
-
-df = pd.DataFrame(combineddataset_df) if not isinstance(combineddataset_df, pd.DataFrame) else combineddataset_df
 
 participants = []
 
-for patient_id, patient_data in df.groupby("PatientID"):
-#patient_id in df["PatientID"].unique():
-#     patient_data = df[df["PatientID"] == patient_id]
+for patient_id, patient_data in data.groupby("PatientID"):
     participant = {
         "attributes": {
-            # "day": int(patient_data["Day"].iloc[0]),
             "age": float(patient_data["Age"].iloc[0]),
             "sex": str(patient_data["Sex"].iloc[0]),
-            # "estimated": int(patient_data["Estimated"].iloc[0]),
-            # "sevmax": float(patient_data["SevMax"].iloc[0]),
         },
-        # "sev1st": float(patient_data["Sev1st"].iloc[0]),
-        #"death": int(patient_data["Died"].iloc[0]),
         "measurements": []
     }
-    # print(participant)
     for _, row in patient_data.iterrows():
         measurement = {
             "analyte": "throatswab_SARSCoV2",
@@ -67,12 +35,7 @@ for patient_id, patient_data in df.groupby("PatientID"):
         }
         participant["measurements"].append(measurement)
 
-
     participants.append(participant)
-#print(participants)
-
-
-
 
 ```
 Finally, the data is formatted and output as a YAML file.
@@ -92,14 +55,14 @@ output_data = {
             "biomarker": "SARS-CoV-2",
             "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
-            "limit_of_detection": 40,
-            "unit": "value",
+            "limit_of_detection": "unknown",
+            "unit": "gc/mL",
             "reference_event": "symptom onset"
         }
     },
     "participants": participants
 }
-with open("kimse2020.yaml","w") as outfile:
+with open("kimse2020viral.yaml","w") as outfile:
     yaml.dump(output_data, outfile, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
 ```
