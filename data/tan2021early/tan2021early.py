@@ -49,7 +49,7 @@ tan2021Tcell = dict(
                 "The swab_SARSCoV2_N metric refers to the detection of SARS-CoV-2 RNA in patient swabs,using RT-PCR cycle counts as a proxy for viral quantity. Data for the swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022)\n"
             ),
             limit_of_quantification="unknown",
-            limit_of_detection="36.5",
+            limit_of_detection=36.5,
             specimen="unknown",
             biomarker="SARS-CoV-2",
             gene_target="unknown",
