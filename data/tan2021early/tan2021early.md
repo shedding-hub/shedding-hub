@@ -21,13 +21,16 @@ tan2021 = tan2021.drop(columns=columns_to_drop)
 participants = []
 
 for patient_id, group in tan2021.groupby("PatientID"):
-    participant = {
-        "attributes": {
-            "age": int(group["Age"].iloc[0]),
-            "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
-        },
-        "measurements": [],
-    }
+    # Check if 'Age' or 'Sex' is not null
+    if pd.notnull(group["Age"].iloc[0]) and pd.notnull(group["Sex"].iloc[0]):
+        participant = {
+            "attributes": {
+                "age": int(group["Age"].iloc[0]),
+                "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
+            },
+            "measurements": [],
+        }
+
 
     for _, row in group.iterrows():
         if row["value"] == 1:

@@ -20,6 +20,7 @@ $defs:
       - oropharyngeal_swab
       - nasopharyngeal_swab
       - saliva
+      - unknown
   analyte_specification:
     description: Specification of an analyte.
     type: object
