@@ -17,8 +17,8 @@ analytes:
     biomarker: SARS-CoV-2
     gene_target: RdRp
     limit_of_quantification: unknown
-    limit_of_detection: unknown
-    unit: gc/mL
+    limit_of_detection: 40
+    unit: value
     reference_event: symptom onset
 participants:
 - attributes:
@@ -26,73 +26,172 @@ participants:
     sex: female
   measurements:
   - analyte: throatswab_SARSCoV2
-    time: -2
-    value: 9582.968159
+    value: 9582.96815875333
   - analyte: throatswab_SARSCoV2
-    time: 0
-    value: 1143.966374
+    value: 1143.96637386429
   - analyte: throatswab_SARSCoV2
-    time: 1
     value: negative
   - analyte: throatswab_SARSCoV2
-    time: 3
-    value: 19462.36623
+    value: 19462.3662293253
   - analyte: throatswab_SARSCoV2
-    time: 4
     value: negative
 - attributes:
     age: 30.0
     sex: male
   measurements:
   - analyte: throatswab_SARSCoV2
-    time: -2
-    value: 1630516385.0
+    value: 1630516384.98925
   - analyte: throatswab_SARSCoV2
-    time: 1
-    value: 2773733.99
+    value: 2773733.99022852
   - analyte: throatswab_SARSCoV2
-    time: 3
-    value: 19462.36623
+    value: 19462.3662293253
   - analyte: throatswab_SARSCoV2
-    time: 5
-    value: 80276.20464
+    value: 80276.2046418103
   - analyte: throatswab_SARSCoV2
-    time: 8
-    value: 9582.968159
+    value: 9582.96815875333
   - analyte: throatswab_SARSCoV2
-    time: 10
-    value: 2323.319055
+    value: 2323.31905452941
   - analyte: throatswab_SARSCoV2
-    time: 11
     value: negative
   - analyte: throatswab_SARSCoV2
-    time: 12
-    value: 563.2713518
+    value: 563.271351810653
   - analyte: throatswab_SARSCoV2
-    time: 13
-    value: 1143.966374
+    value: 1143.96637386429
   - analyte: throatswab_SARSCoV2
-    time: 14
     value: negative
 - attributes:
     age: 30.0
     sex: male
   measurements:
   - analyte: throatswab_SARSCoV2
-    time: -1
-    value: 6725372725.0
+    value: 6725372724.51475
   - analyte: throatswab_SARSCoV2
-    time: 2
-    value: 1365743.723
+    value: 1365743.72283473
   - analyte: throatswab_SARSCoV2
-    time: 4
-    value: 19462.36623
+    value: 19462.3662293253
   - analyte: throatswab_SARSCoV2
-    time: 6
-    value: 331114.3648
+    value: 331114.364808519
   - analyte: throatswab_SARSCoV2
-    time: 8
-    value: 9582.968159
+    value: 9582.96815875333
   - analyte: throatswab_SARSCoV2
-    time: 11
     value: negative
+- attributes:
+    age: 58.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 4.023755
+  - analyte: throatswab_SARSCoV2
+    value: 1.868053
+  - analyte: throatswab_SARSCoV2
+    value: 3.089891
+  - analyte: throatswab_SARSCoV2
+    value: 4.028829
+  - analyte: throatswab_SARSCoV2
+    value: 3.694544
+  - analyte: throatswab_SARSCoV2
+    value: 1.892477
+  - analyte: throatswab_SARSCoV2
+    value: 1.876479
+  - analyte: throatswab_SARSCoV2
+    value: 2.797753
+  - analyte: throatswab_SARSCoV2
+    value: 1.862165
+  - analyte: throatswab_SARSCoV2
+    value: 1.881553
+- attributes:
+    age: 79.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 3.727394
+  - analyte: throatswab_SARSCoV2
+    value: 1.872295
+- attributes:
+    age: 8.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 1.847852
+  - analyte: throatswab_SARSCoV2
+    value: 1.813356
+- attributes:
+    age: 37.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 3.456193
+  - analyte: throatswab_SARSCoV2
+    value: 1.865516
+  - analyte: throatswab_SARSCoV2
+    value: 1.884071
+  - analyte: throatswab_SARSCoV2
+    value: 1.884924
+  - analyte: throatswab_SARSCoV2
+    value: 3.406551
+- attributes:
+    age: 48.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 5.862042
+  - analyte: throatswab_SARSCoV2
+    value: 3.105057
+  - analyte: throatswab_SARSCoV2
+    value: 1.852094
+- attributes:
+    age: 24.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 2.767402
+  - analyte: throatswab_SARSCoV2
+    value: 1.831853
+- attributes:
+    age: 8.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 1.849537
+- attributes:
+    age: 21.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 6.745372
+  - analyte: throatswab_SARSCoV2
+    value: 3.652417
+  - analyte: throatswab_SARSCoV2
+    value: 2.150992
+  - analyte: throatswab_SARSCoV2
+    value: 1.799004
+- attributes:
+    age: 55.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 4.328619
+  - analyte: throatswab_SARSCoV2
+    value: 4.966896
+  - analyte: throatswab_SARSCoV2
+    value: 3.430103
+  - analyte: throatswab_SARSCoV2
+    value: 1.875665
+  - analyte: throatswab_SARSCoV2
+    value: 1.877331
+- attributes:
+    age: 25.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    value: 5.543716
+  - analyte: throatswab_SARSCoV2
+    value: 4.307565
+  - analyte: throatswab_SARSCoV2
+    value: 3.690341
+  - analyte: throatswab_SARSCoV2
+    value: 3.090782
+  - analyte: throatswab_SARSCoV2
+    value: 4.028829
+  - analyte: throatswab_SARSCoV2
+    value: 1.855444
