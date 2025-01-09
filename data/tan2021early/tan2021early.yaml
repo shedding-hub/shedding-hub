@@ -10,9 +10,10 @@ analytes:
   swab_SARSCoV2_N:
     description: >
       The swab_SARSCoV2_N metric refers to the detection of SARS-CoV-2 RNA in patient
-      swabs,using RT-PCR cycle counts as a proxy for viral quantity. Data for the
-      swab results were obtained from the combined dataset in the supplementary materials
-      of Challenger et al. (2022)
+      swabs,using RT-PCR cycle counts as a proxy for viral quantity. We used 2^(-Ctvalue)
+      represents the relative quantities of SARS-CoV-2 RNA, and the 10^(-11) is the
+      positive cutoffs. Data for the swab results were obtained from the combined
+      dataset in the supplementary materials of Challenger et al. (2022)
     limit_of_quantification: unknown
     limit_of_detection: 36.5
     specimen: unknown
@@ -27,31 +28,31 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 1
-    value: 1737.61541276428
+    value: 35.41
   - analyte: swab_SARSCoV2_N
     time: 2
-    value: 3924963.75208117
+    value: 24.51
   - analyte: swab_SARSCoV2_N
     time: 3
-    value: 13561350.5504428
+    value: 22.76
   - analyte: swab_SARSCoV2_N
     time: 4
-    value: 39247.7062166449
+    value: 31.01
   - analyte: swab_SARSCoV2_N
     time: 5
-    value: 22426774.4366878
+    value: 22.05
   - analyte: swab_SARSCoV2_N
     time: 6
-    value: 1689187.6273943
+    value: 25.7
   - analyte: swab_SARSCoV2_N
     time: 7
-    value: 40090.8392633599
+    value: 30.98
   - analyte: swab_SARSCoV2_N
     time: 9
-    value: 10286.54676114
+    value: 32.9
   - analyte: swab_SARSCoV2_N
     time: 11
-    value: 23732.8780296648
+    value: 31.72
   - analyte: swab_SARSCoV2_N
     time: 13
     value: negative
@@ -64,13 +65,13 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 0
-    value: 58776.1004983052
+    value: 30.44
   - analyte: swab_SARSCoV2_N
     time: 2
-    value: 119370.321854274
+    value: 29.44
   - analyte: swab_SARSCoV2_N
     time: 9
-    value: 102141.759283944
+    value: 29.66
   - analyte: swab_SARSCoV2_N
     time: 15
     value: negative
@@ -86,16 +87,16 @@ participants:
     value: negative
   - analyte: swab_SARSCoV2_N
     time: 2
-    value: 3815292.39153925
+    value: 24.55
   - analyte: swab_SARSCoV2_N
     time: 4
-    value: 938258706.136522
+    value: 16.78
   - analyte: swab_SARSCoV2_N
     time: 15
-    value: 100704.626240414
+    value: 29.68
   - analyte: swab_SARSCoV2_N
     time: 19
-    value: 11278.9853372624
+    value: 32.77
   - analyte: swab_SARSCoV2_N
     time: 21
     value: negative
@@ -108,7 +109,7 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 10
-    value: 11041.781890141
+    value: 32.8
   - analyte: swab_SARSCoV2_N
     time: 12
     value: negative
@@ -121,13 +122,13 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 8
-    value: 24242.7160734479
+    value: 31.69
   - analyte: swab_SARSCoV2_N
     time: 9
-    value: 1677262.10834994
+    value: 25.71
   - analyte: swab_SARSCoV2_N
     time: 10
-    value: 95832.0393557245
+    value: 29.75
   - analyte: swab_SARSCoV2_N
     time: 23
     value: negative
@@ -143,16 +144,16 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 4
-    value: 19189947.3876257
+    value: 22.27
   - analyte: swab_SARSCoV2_N
     time: 5
-    value: 911974.560180118
+    value: 26.57
   - analyte: swab_SARSCoV2_N
     time: 8
-    value: 52477.0573683174
+    value: 30.6
   - analyte: swab_SARSCoV2_N
     time: 11
-    value: 37348.708467437
+    value: 31.08
   - analyte: swab_SARSCoV2_N
     time: 13
     value: negative
@@ -165,29 +166,29 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 4
-    value: 139504.878704718
+    value: 29.22
 - attributes:
     age: 65
     sex: female
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 4
-    value: 2307086.90276294
+    value: 25.26
   - analyte: swab_SARSCoV2_N
     time: 7
-    value: 200223.085407672
+    value: 28.71
   - analyte: swab_SARSCoV2_N
     time: 9
-    value: 1021442.72352829
+    value: 26.41
   - analyte: swab_SARSCoV2_N
     time: 13
-    value: 51738.7059467253
+    value: 30.62
   - analyte: swab_SARSCoV2_N
     time: 17
-    value: 6354313.75700442
+    value: 23.83
   - analyte: swab_SARSCoV2_N
     time: 19
-    value: 35290.6730153733
+    value: 31.16
   - analyte: swab_SARSCoV2_N
     time: 21
     value: negative
@@ -200,31 +201,31 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 1
-    value: 120227931.773612
+    value: 19.68
   - analyte: swab_SARSCoV2_N
     time: 3
-    value: 1455666.26275713
+    value: 25.91
   - analyte: swab_SARSCoV2_N
     time: 5
-    value: 96513.4157516424
+    value: 29.74
   - analyte: swab_SARSCoV2_N
     time: 7
-    value: 524783.484999856
+    value: 27.35
   - analyte: swab_SARSCoV2_N
     time: 9
-    value: 513746.991209662
+    value: 27.38
   - analyte: swab_SARSCoV2_N
     time: 11
-    value: 24242.7160734479
+    value: 31.69
   - analyte: swab_SARSCoV2_N
     time: 13
-    value: 11685.7021286121
+    value: 32.72
   - analyte: swab_SARSCoV2_N
     time: 14
-    value: 46522.3048635154
+    value: 30.77
   - analyte: swab_SARSCoV2_N
     time: 19
-    value: 2441.448377772
+    value: 34.93
   - analyte: swab_SARSCoV2_N
     time: 23
     value: negative
@@ -237,31 +238,31 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 2
-    value: 33113065.8309824
+    value: 21.5
   - analyte: swab_SARSCoV2_N
     time: 4
-    value: 269616.396284375
+    value: 28.29
   - analyte: swab_SARSCoV2_N
     time: 6
-    value: 32416679.3099431
+    value: 21.53
   - analyte: swab_SARSCoV2_N
     time: 8
-    value: 233995.32488302
+    value: 28.49
   - analyte: swab_SARSCoV2_N
     time: 10
-    value: 141495.721413786
+    value: 29.2
   - analyte: swab_SARSCoV2_N
     time: 13
-    value: 49585.4006306251
+    value: 30.68
   - analyte: swab_SARSCoV2_N
     time: 14
-    value: 97199.6368090744
+    value: 29.73
   - analyte: swab_SARSCoV2_N
     time: 19
-    value: 7116.52361856101
+    value: 33.42
   - analyte: swab_SARSCoV2_N
     time: 23
-    value: 9315.20080537505
+    value: 33.04
   - analyte: swab_SARSCoV2_N
     time: 27
     value: negative
@@ -274,10 +275,10 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 1
-    value: 820027.438648278
+    value: 26.72
   - analyte: swab_SARSCoV2_N
     time: 3
-    value: 1762542.62002721
+    value: 25.64
   - analyte: swab_SARSCoV2_N
     time: 17
     value: negative
@@ -290,25 +291,25 @@ participants:
   measurements:
   - analyte: swab_SARSCoV2_N
     time: 11
-    value: 1308903.04301875
+    value: 26.06
   - analyte: swab_SARSCoV2_N
     time: 13
-    value: 26209566.9922681
+    value: 21.83
   - analyte: swab_SARSCoV2_N
     time: 15
-    value: 92496.6386133232
+    value: 29.8
   - analyte: swab_SARSCoV2_N
     time: 17
-    value: 172543.289878747
+    value: 28.92
   - analyte: swab_SARSCoV2_N
     time: 19
-    value: 57540.0058293554
+    value: 30.47
   - analyte: swab_SARSCoV2_N
     time: 23
-    value: 108098.329215351
+    value: 29.58
   - analyte: swab_SARSCoV2_N
     time: 26
-    value: 1476439.7481933
+    value: 25.89
   - analyte: swab_SARSCoV2_N
     time: 27
     value: negative
