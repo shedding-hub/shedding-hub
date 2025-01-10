@@ -1,0 +1,1063 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Epidemiological Correlates of Polymerase Chain Reaction Cycle Threshold Values
+  in the Detection of Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2)
+doi: 10.1093/cid/ciaa1469
+description: >
+  This study was conducted in Utah and Wisconsin between 23 March and 13 May 2020,
+  with testing data collected during a prospective household transmission investigation
+  of outpatient and mild coronavirus disease 2019 cases.
+analytes:
+  N1_probe:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration calculated from evaluation of N1 probe.
+      The authors stated: 'a limit of detection in the range of 1000-3162 viral RNA
+      copies per mL'. We used the maximum '3162' to be conservative.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    limit_of_quantification: unknown
+    limit_of_detection: 3162
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 51.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 17501422.8003722
+  - analyte: N1_probe
+    time: 18
+    value: 52044006.3909293
+  - analyte: N1_probe
+    time: 24
+    value: 1115239.83324973
+- attributes:
+    age: 58.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 4429.53362278546
+  - analyte: N1_probe
+    time: 25
+    value: 5893.31055745352
+- attributes:
+    age: 24.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 3972.79320250547
+  - analyte: N1_probe
+    time: 25
+    value: negative
+- attributes:
+    age: 52.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 61246.021645481
+  - analyte: N1_probe
+    time: 25
+    value: 6574.57263065268
+- attributes:
+    age: 29.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: -2
+    value: 16856425.6795011
+  - analyte: N1_probe
+    time: 12
+    value: 660.054714932018
+- attributes:
+    age: 28.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 693813.895380259
+  - analyte: N1_probe
+    time: 25
+    value: 6204.81442898809
+- attributes:
+    age: 30.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 9
+    value: 406.897840649165
+  - analyte: N1_probe
+    time: 23
+    value: negative
+- attributes:
+    age: 14.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 2383008.77979473
+  - analyte: N1_probe
+    time: 20
+    value: negative
+- attributes:
+    age: 10.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 0
+    value: 6185958.35769077
+  - analyte: N1_probe
+    time: 14
+    value: 11950.2775663359
+- attributes:
+    age: 23.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 39557.5787314445
+  - analyte: N1_probe
+    time: 21
+    value: negative
+- attributes:
+    age: 21.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: 6035.71422785764
+  - analyte: N1_probe
+    time: 19
+    value: 8079.91785929641
+- attributes:
+    age: 21.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 4615.6738851419
+  - analyte: N1_probe
+    time: 25
+    value: negative
+- attributes:
+    age: 15.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 4
+    value: 3774158.05655392
+- attributes:
+    age: 53.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 0
+    value: 129714.658966444
+- attributes:
+    age: 27.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 24
+    value: negative
+  - analyte: N1_probe
+    time: 38
+    value: 874.140498318229
+  - analyte: N1_probe
+    time: 45
+    value: 5847.55985630422
+- attributes:
+    age: 63.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 8
+    value: 32651.6952101699
+  - analyte: N1_probe
+    time: 22
+    value: 5195.41544513031
+- attributes:
+    age: 71.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 50920.4709108645
+  - analyte: N1_probe
+    time: 20
+    value: 215594.446501667
+- attributes:
+    age: 20.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 8
+    value: 2414448.85904359
+  - analyte: N1_probe
+    time: 22
+    value: negative
+- attributes:
+    age: 51.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 15
+    value: 540.13470685314
+  - analyte: N1_probe
+    time: 22
+    value: negative
+  - analyte: N1_probe
+    time: 29
+    value: negative
+- attributes:
+    age: 22.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: 6002.87656248143
+  - analyte: N1_probe
+    time: 19
+    value: negative
+- attributes:
+    age: 53.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 12
+    value: 69409387.4202656
+  - analyte: N1_probe
+    time: 26
+    value: negative
+- attributes:
+    age: 31.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 49207.4334827826
+  - analyte: N1_probe
+    time: 24
+    value: negative
+- attributes:
+    age: 27.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 6689.69117870176
+  - analyte: N1_probe
+    time: 24
+    value: negative
+- attributes:
+    age: 3.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 0
+    value: 986174124.69638
+  - analyte: N1_probe
+    time: 14
+    value: 1476.1215958941
+- attributes:
+    age: 51.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 122758.151693799
+  - analyte: N1_probe
+    time: 14
+    value: 1102.353230617
+  - analyte: N1_probe
+    time: 25
+    value: 2460.55001637814
+- attributes:
+    age: 20.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 8
+    value: 189579.257982072
+  - analyte: N1_probe
+    time: 11
+    value: 379524.829587934
+  - analyte: N1_probe
+    time: 22
+    value: 1500.58524535354
+- attributes:
+    age: 60.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 16237.4518709098
+  - analyte: N1_probe
+    time: 20
+    value: negative
+- attributes:
+    age: 22.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 55956170.0010906
+  - analyte: N1_probe
+    time: 20
+    value: negative
+- attributes:
+    age: 27.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 9
+    value: 34595.0286400175
+  - analyte: N1_probe
+    time: 13
+    value: negative
+  - analyte: N1_probe
+    time: 23
+    value: negative
+- attributes:
+    age: 32.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 9789.52641431752
+  - analyte: N1_probe
+    time: 15
+    value: negative
+  - analyte: N1_probe
+    time: 25
+    value: negative
+- attributes:
+    age: 45.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 12
+    value: 4669.61767810715
+  - analyte: N1_probe
+    time: 26
+    value: 1399.23647148894
+- attributes:
+    age: 58.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 168639.577986865
+  - analyte: N1_probe
+    time: 20
+    value: 18447.3443022509
+- attributes:
+    age: 59.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 8
+    value: 17878661.1782577
+  - analyte: N1_probe
+    time: 22
+    value: 8042.7936131383
+- attributes:
+    age: 37.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 30856.8525602583
+  - analyte: N1_probe
+    time: 20
+    value: negative
+  - analyte: N1_probe
+    time: 25
+    value: negative
+- attributes:
+    age: 37.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 110671.163369149
+  - analyte: N1_probe
+    time: 20
+    value: negative
+  - analyte: N1_probe
+    time: 27
+    value: negative
+- attributes:
+    age: 31.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: negative
+  - analyte: N1_probe
+    time: 19
+    value: 401.969425256453
+  - analyte: N1_probe
+    time: 26
+    value: negative
+- attributes:
+    age: 54.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 158862.271499176
+  - analyte: N1_probe
+    time: 13
+    value: 67565.4219082514
+  - analyte: N1_probe
+    time: 21
+    value: 3106.00756581989
+- attributes:
+    age: 32.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 9
+    value: 134687.624815174
+  - analyte: N1_probe
+    time: 23
+    value: 7073.29405059643
+- attributes:
+    age: 56.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 4898736936.9249
+  - analyte: N1_probe
+    time: 21
+    value: negative
+- attributes:
+    age: 53.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 8788220.1802863
+  - analyte: N1_probe
+    time: 21
+    value: 1562.86836008576
+- attributes:
+    age: 19.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 1660237.11812201
+  - analyte: N1_probe
+    time: 24
+    value: negative
+- attributes:
+    age: 17.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 5137596.3130503
+  - analyte: N1_probe
+    time: 20
+    value: negative
+- attributes:
+    age: 18.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 833972.13405413
+  - analyte: N1_probe
+    time: 21
+    value: 95222.9145113055
+- attributes:
+    age: 49.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 15
+    value: 430414.537726716
+  - analyte: N1_probe
+    time: 29
+    value: negative
+- attributes:
+    age: 75.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: -1
+    value: negative
+  - analyte: N1_probe
+    time: 13
+    value: 2086.26702288957
+  - analyte: N1_probe
+    time: 18
+    value: negative
+- attributes:
+    age: 45.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 4
+    value: negative
+  - analyte: N1_probe
+    time: 18
+    value: negative
+- attributes:
+    age: 35.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 3
+    value: 2127024805.85283
+  - analyte: N1_probe
+    time: 17
+    value: 74410.2276356722
+- attributes:
+    age: 33.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: -1
+    value: 36115.2659334123
+  - analyte: N1_probe
+    time: 0
+    value: 6036587.41640348
+  - analyte: N1_probe
+    time: 1
+    value: 478880523.438081
+  - analyte: N1_probe
+    time: 2
+    value: 340585059.517136
+  - analyte: N1_probe
+    time: 3
+    value: 345812787.087303
+  - analyte: N1_probe
+    time: 13
+    value: 625366.796865505
+- attributes:
+    age: 11.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: -1
+    value: negative
+  - analyte: N1_probe
+    time: 0
+    value: negative
+  - analyte: N1_probe
+    time: 1
+    value: 13382.8234544631
+  - analyte: N1_probe
+    time: 2
+    value: 4612745.31566122
+  - analyte: N1_probe
+    time: 3
+    value: negative
+  - analyte: N1_probe
+    time: 13
+    value: negative
+- attributes:
+    age: 7.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: -2
+    value: 10642417.1785287
+  - analyte: N1_probe
+    time: -1
+    value: 3768546.88810595
+  - analyte: N1_probe
+    time: 0
+    value: 1592493.31600871
+  - analyte: N1_probe
+    time: 1
+    value: 21093621.3636088
+  - analyte: N1_probe
+    time: 2
+    value: 2093676.87948693
+  - analyte: N1_probe
+    time: 12
+    value: 14640.7576007089
+- attributes:
+    age: 22.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: 15222573.9992404
+  - analyte: N1_probe
+    time: 6
+    value: 10163424.5017381
+  - analyte: N1_probe
+    time: 9
+    value: 5516.73468511915
+  - analyte: N1_probe
+    time: 19
+    value: 1693.2565759546
+- attributes:
+    age: 46.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 4
+    value: 51859967.8920962
+- attributes:
+    age: 45.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 0
+    value: negative
+  - analyte: N1_probe
+    time: 1
+    value: negative
+  - analyte: N1_probe
+    time: 2
+    value: 286413.005009274
+  - analyte: N1_probe
+    time: 3
+    value: 323394809.196327
+  - analyte: N1_probe
+    time: 4
+    value: 1069433980.58153
+- attributes:
+    age: 18.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 1
+    value: 360140535.271021
+  - analyte: N1_probe
+    time: 2
+    value: 1190189225.33757
+  - analyte: N1_probe
+    time: 3
+    value: 46449985.0403618
+  - analyte: N1_probe
+    time: 4
+    value: 6747307.01974052
+  - analyte: N1_probe
+    time: 5
+    value: 1700354.44386904
+- attributes:
+    age: 16.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 2
+    value: 552367142.454031
+  - analyte: N1_probe
+    time: 3
+    value: 163951165.326366
+  - analyte: N1_probe
+    time: 4
+    value: 15580468.3850449
+  - analyte: N1_probe
+    time: 5
+    value: 96855.9185505093
+  - analyte: N1_probe
+    time: 6
+    value: 5995243.77476857
+- attributes:
+    age: 73.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: 88823329.4616817
+  - analyte: N1_probe
+    time: 10
+    value: negative
+- attributes:
+    age: 13.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 2
+    value: 1108625632.44567
+  - analyte: N1_probe
+    time: 3
+    value: 1108154458.97583
+- attributes:
+    age: 11.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 0
+    value: 8028.56051845246
+  - analyte: N1_probe
+    time: 1
+    value: 3907.74892022323
+  - analyte: N1_probe
+    time: 2
+    value: 843.477269075902
+  - analyte: N1_probe
+    time: 3
+    value: 298893.182123429
+  - analyte: N1_probe
+    time: 4
+    value: 52726.7538557579
+- attributes:
+    age: 47.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 12
+    value: 319.475904833084
+  - analyte: N1_probe
+    time: 26
+    value: negative
+- attributes:
+    age: 52.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 489478.569624098
+  - analyte: N1_probe
+    time: 21
+    value: negative
+- attributes:
+    age: 15.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 7282828.06785506
+  - analyte: N1_probe
+    time: 20
+    value: negative
+- attributes:
+    age: 48.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 11
+    value: 12650.762965454
+  - analyte: N1_probe
+    time: 25
+    value: negative
+- attributes:
+    age: 47.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 6469.22219526793
+  - analyte: N1_probe
+    time: 21
+    value: 3985.76196841226
+- attributes:
+    age: 10.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 8
+    value: 92.3653910907365
+  - analyte: N1_probe
+    time: 22
+    value: negative
+- attributes:
+    age: 58.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 16
+    value: 15237.6355456823
+  - analyte: N1_probe
+    time: 30
+    value: 478.335143166719
+- attributes:
+    age: 15.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 72788.5889013372
+  - analyte: N1_probe
+    time: 21
+    value: negative
+- attributes:
+    age: 60.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 78510270.837819
+  - analyte: N1_probe
+    time: 20
+    value: 1800.14575368733
+- attributes:
+    age: 54.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 15
+    value: 7935.25172320835
+  - analyte: N1_probe
+    time: 29
+    value: negative
+- attributes:
+    age: 22.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 2397.22611171106
+  - analyte: N1_probe
+    time: 24
+    value: negative
+- attributes:
+    age: 21.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: 982127.073376434
+  - analyte: N1_probe
+    time: 19
+    value: negative
+- attributes:
+    age: 18.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: 402227.011993447
+  - analyte: N1_probe
+    time: 19
+    value: negative
+- attributes:
+    age: 20.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 22
+    value: negative
+  - analyte: N1_probe
+    time: 36
+    value: 2283.98575233115
+- attributes:
+    age: 56.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 22123.7006627846
+  - analyte: N1_probe
+    time: 24
+    value: negative
+- attributes:
+    age: 20.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 3
+    value: 174968941.112303
+  - analyte: N1_probe
+    time: 17
+    value: 1314.56823746298
+- attributes:
+    age: 50.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 16
+    value: 15646.7951644607
+  - analyte: N1_probe
+    time: 30
+    value: negative
+- attributes:
+    age: 46.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 16
+    value: 3561.8864292897
+  - analyte: N1_probe
+    time: 24
+    value: negative
+  - analyte: N1_probe
+    time: 30
+    value: negative
+- attributes:
+    age: 29.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 8
+    value: 128143.533101311
+- attributes:
+    age: 57.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 2
+    value: 84310.0538334713
+  - analyte: N1_probe
+    time: 16
+    value: 56601.9461377369
+- attributes:
+    age: 46.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 16
+    value: 1256.4700926464
+  - analyte: N1_probe
+    time: 30
+    value: 114.264220367339
+  - analyte: N1_probe
+    time: 39
+    value: negative
+- attributes:
+    age: 40.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 9
+    value: 8946.50836568516
+  - analyte: N1_probe
+    time: 23
+    value: negative
+- attributes:
+    age: 90.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 10053135.894448
+  - analyte: N1_probe
+    time: 35
+    value: negative
+- attributes:
+    age: 56.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 699.042017698859
+  - analyte: N1_probe
+    time: 21
+    value: 73874.4291638724
+  - analyte: N1_probe
+    time: 29
+    value: 1680.70683857405
+- attributes:
+    age: 71.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 9
+    value: 874.264371979793
+  - analyte: N1_probe
+    time: 23
+    value: negative
+- attributes:
+    age: 55.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 6
+    value: 231767.902254574
+  - analyte: N1_probe
+    time: 20
+    value: negative
+- attributes:
+    age: 47.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 5
+    value: 2334711.59258447
+  - analyte: N1_probe
+    time: 19
+    value: 4731.89644848634
+- attributes:
+    age: 43.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 13
+    value: 7908.31153326099
+  - analyte: N1_probe
+    time: 27
+    value: 2013.65522600227
+- attributes:
+    age: 31.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 8
+    value: 69793.8171468785
+  - analyte: N1_probe
+    time: 22
+    value: negative
+- attributes:
+    age: 58.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 17
+    value: 61385.0352280967
+  - analyte: N1_probe
+    time: 31
+    value: negative
+- attributes:
+    age: 22.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 4
+    value: 1133565337.24281
+  - analyte: N1_probe
+    time: 18
+    value: negative
+- attributes:
+    age: 67.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 10
+    value: 22756.4261730201
+  - analyte: N1_probe
+    time: 24
+    value: 516813.600931107
+- attributes:
+    age: 46.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 7
+    value: 8443.35096971247
+  - analyte: N1_probe
+    time: 21
+    value: negative
+- attributes:
+    age: 56.0
+    sex: female
+  measurements:
+  - analyte: N1_probe
+    time: 22
+    value: 19419.6672531557
+  - analyte: N1_probe
+    time: 36
+    value: negative
+- attributes:
+    age: 20.0
+    sex: male
+  measurements:
+  - analyte: N1_probe
+    time: 15
+    value: 2957.81844712285
+  - analyte: N1_probe
+    time: 29
+    value: negative

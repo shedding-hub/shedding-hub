@@ -6,7 +6,11 @@ from shedding_hub import folded_str
 # Load dataset
 df = pd.read_excel("CombinedDataset.xlsx", sheet_name="Viral_Load")
 tan2021 = df[df["StudyNum"] == 16].copy()
+<<<<<<< HEAD
 columns_to_drop = ["Estimated", "SevMax", "Sev1st", "Died", "value", "SevMax3"]
+=======
+columns_to_drop = ["Estimated", "SevMax", "Sev1st", "Died", "Ctvalue", "SevMax3"]
+>>>>>>> 294625d6bd134bfe7f170ca09a955ac3e753361f
 tan2021 = tan2021.drop(columns=columns_to_drop)
 
 # Group by participant and extract measurements
@@ -24,10 +28,17 @@ for patient_id, group in tan2021.groupby("PatientID"):
         }
 
     for _, row in group.iterrows():
+<<<<<<< HEAD
         if row["Ctvalue"] == 38:
             value = "negative"
         else:
             value = row["Ctvalue"]
+=======
+        if row["value"] == 1:
+            value = "negative"
+        else:
+            value = row["value"]
+>>>>>>> 294625d6bd134bfe7f170ca09a955ac3e753361f
         measurementN = {
             "analyte": "swab_SARSCoV2_N",
             "time": row["Day"],
@@ -46,7 +57,11 @@ tan2021Tcell = dict(
     analytes=dict(
         swab_SARSCoV2_N=dict(
             description=folded_str(
+<<<<<<< HEAD
                 "The swab_SARSCoV2_N metric refers to the detection of SARS-CoV-2 RNA in patient swabs,using RT-PCR cycle counts as a proxy for viral quantity. We used 2^(-Ctvalue) represents the relative quantities of SARS-CoV-2 RNA, and the 10^(-11) is the positive cutoffs. Data for the swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022)\n"
+=======
+                "The swab_SARSCoV2_N metric refers to the detection of SARS-CoV-2 RNA in patient swabs,using RT-PCR cycle counts as a proxy for viral quantity. Data for the swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022)\n"
+>>>>>>> 294625d6bd134bfe7f170ca09a955ac3e753361f
             ),
             limit_of_quantification="unknown",
             limit_of_detection=36.5,
