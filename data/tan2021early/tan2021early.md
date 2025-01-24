@@ -1,8 +1,8 @@
 # Extracting Data From Vector Graphics
 
-https://www.cell.com/cell-reports/fulltext/S2211-1247(21)00041-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2211124721000413%3Fshowall%3Dtrue This article examines how SARS-CoV-2-specific immune responses influence disease severity and viral clearance in COVID-19 patients by analyzing virological and immunological changes from symptom onset to recovery or death, with a focus on the roles of T cell responses and antibody production in controlling the infection. Data for the swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022). 
+[Tan et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7826084/) examines how SARS-CoV-2-specific immune responses influence disease severity and viral clearance in COVID-19 patients by analyzing virological and immunological changes from symptom onset to recovery or death, with a focus on the roles of T cell responses and antibody production in controlling the infection. Data for the oral swab results were obtained from the combined dataset in the supplementary materials of [Challenger et al. (2022)](https://doi.org/10.1186/s12916-021-02220-0).
 
-First, we import python modules needed:
+First, we import `python` modules needed:
 ```python
 import pandas as pd
 import yaml
@@ -59,14 +59,12 @@ tan2021Tcell = dict(
     analytes=dict(
         swab_SARSCoV2_N=dict(
             description=folded_str(
-                "The swab_SARSCoV2_N metric refers to the detection of SARS-CoV-2 RNA in patient swabs,using RT-PCR cycle counts as a proxy for viral quantity. We used 2^(-Ctvalue) represents the relative quantities of SARS-CoV-2 RNA, and the 10^(-11) is the positive cutoffs. Data for the swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022)\n"
-
+                "The swab_SARSCoV2_N analyte refers to the detection of SARS-CoV-2 RNA in patient oral swabs, using RT-PCR cycle threshold (CT) values to calculate the relative quantities of SARS-CoV-2 RNA. 10^(-11) was the detection limit, which was transformed as CT value equals 36.5. Data was obtained from the combined dataset in the supplementary materials of Challenger et al. (2022)\n"
             ),
             limit_of_quantification="unknown",
             limit_of_detection=36.5,
-            specimen="unknown",
+            specimen="throat_swab", #based on the communication with the corresponding author Dr. Antonio Bertoletti at Duke-Nus Medical School (antonio@duke-nus.edu.sg).
             biomarker="SARS-CoV-2",
-            gene_target="unknown",
             unit="cycle threshold",
             reference_event="symptom onset",
         )
