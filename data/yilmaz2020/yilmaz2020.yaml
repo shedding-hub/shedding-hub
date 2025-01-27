@@ -1,0 +1,23 @@
+title: Upper Respiratory Tract Levels of Severe Acute Respiratory Syndrome Coronavirus
+  2 RNA and Duration of Viral RNA Shedding Do Not Differ Between Patients With Mild
+  and Severe/Critical Coronavirus Disease 2019
+doi: 10.1093/infdis/jiaa632
+description: >
+  The authors reports longitudinal viral RNA loads from the nasopharynx/throat in
+  patients with mild and severe/critical coronavirus disease 2019 (COVID-19). He also
+  investigated whether the duration of symptoms correlated with the duration of viral
+  RNA shedding. A total of 56 patients were included.
+analytes:
+  throatswab_SARSCoV2:
+    description: >
+      The author collected serial upper respiratory tract samples (1 nasopharyngeal
+      swab and 1 throat swab put in a single collection tube with 1 mL of trans- port
+      medium) for real-time PCR of SARS-CoV-2 RNA for all patients.
+    specimen: nasopharyngeal swab and throat swab
+    biomarker: SARS-CoV-2
+    gene_target: RNA
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: value
+    reference_event: symptom onset
+participants: []
