@@ -64,6 +64,7 @@ $defs:
           - mtDNA
           - PMMoV
           - crAssphage
+          - influenza
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
