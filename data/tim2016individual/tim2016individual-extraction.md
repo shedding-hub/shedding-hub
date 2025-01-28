@@ -9,6 +9,7 @@ import os
 import yaml
 import pandas as pd
 import numpy as np
+from shedding_hub import folded_str
 ```
 
 Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/tim2016individual), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
@@ -202,21 +203,6 @@ for household_id, participants in household_participants.items():
 # Remove householdID from attributes in the final list
 for participant in participant_list:
     participant["attributes"].pop("householdid", None)  
-```
-
-```python
-
-#Functions customize how specific strings are formatted in YAML files.
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
 ```
 
 Finally, the data is formatted and output as a YAML file.
