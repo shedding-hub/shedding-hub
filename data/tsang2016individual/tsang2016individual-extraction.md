@@ -35,7 +35,7 @@ Tsang2016 = Tsang2016.replace({"Sex": {1: "male", 0: "female"}})
 # Replace numerical values in 'Influenza_virus_subtype' with subtype names displayed in README.txt
 Tsang2016 = Tsang2016.replace({"Influenza_virus_subtype": {3: "Pandemic A (H1N1)", 2: "Seasonal A (H3N2)", 1: "Seasonal A (H1N1)", 0: "Unsubtyple influenza"}})
 # Convert the 'Vaccination' column to boolean values (1 -> True, 0 -> False)
-Tsang2016["Vaccination"] = Tsang2016["Vaccination"].replace({1: True, 0: False})
+Tsang2016["Vaccination"] = Tsang2016["Vaccination"].replace({1: True, 0: False, -1: "unknown"})
 # Add a new column 'Type' to label the sample type for all rows
 Tsang2016["Type"] = "NPS+OPS"
 
