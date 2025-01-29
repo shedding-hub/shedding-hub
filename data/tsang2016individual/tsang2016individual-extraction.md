@@ -1,18 +1,16 @@
-# Extraction for Tim et al. (2016)
+# Extraction for Tsang et al. (2016)
 
-[Tim et al. (2016)](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1p3kn) measured Influenza A virus within households during December 2008, focusing on viral loads in index cases and their household contacts to identify secondary infections. The study includes oropharynx and nasopharynx samples. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/tim2016individual).
+[Tsang et al. (2016)](https://doi.org/10.1371/journal.pone.0154418) evaluated the Influenza A virus transmissions within households in Hong Kong from February 2008 through December 2012 in large community-based studies.  In these studies, the authors recruited outpatients with acute respiratory illness within 2 days after illness onset, who lived in a household with at least 2 other persons none of whom reported recent illness in the preceding 14 days before the time of the first visit. Participants with a positive result on the rapid test and their household contacts were followed up, involving 3 home visits over approximately 7 days. During each home visit, nose and throat swab specimens were collected from all subjects and their household contacts regardless of the presence of respiratory symptoms. For the pathogen shedding, it reported viral loads for longitudinal oropharynx and nasopharynx samples from index cases and household contacts. Raw data that Tsang et al. (2016) used are available via [Dryad](http://dx.doi.org/10.5061/dryad.1p3kn).
 
 First, we `import` python modules needed:
 
 ```python
-import os
 import yaml
 import pandas as pd
-import numpy as np
 from shedding_hub import folded_str
 ```
 
-Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/tim2016individual), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
+Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/Tsang2016individual), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
 
 ```python
 # Read in the CSV file containing data and stored as RawData
@@ -31,40 +29,35 @@ column_names = [
 ]
 
 ExtractedData.columns = column_names
-ExtractedData.to_csv("ExtractedData.csv", index=False) 
 
-Tim2016 = pd.read_csv("ExtractedData.csv")
-Tim2016 = Tim2016.replace({"Sex": {1: "male", 0: "female"}})
+Tsang2016 = ExtractedData
+Tsang2016 = Tsang2016.replace({"Sex": {1: "male", 0: "female"}})
 # Replace numerical values in 'Influenza_virus_subtype' with subtype names displayed in README.txt
-Tim2016 = Tim2016.replace({"Influenza_virus_subtype": {3: "Pandemic A(H1N1)", 2: "Seasonal A(H3N2)", 1: "Seasonal A(H1N1)", 0: "nsubtyple influenz"}})
+Tsang2016 = Tsang2016.replace({"Influenza_virus_subtype": {3: "Pandemic A (H1N1)", 2: "Seasonal A (H3N2)", 1: "Seasonal A (H1N1)", 0: "Unsubtyple influenza"}})
 # Convert the 'Vaccination' column to boolean values (1 -> True, 0 -> False)
-Tim2016["Vaccination"] = Tim2016["Vaccination"].replace({1: True, 0: False}).astype(bool)
-#print(Tim2016["Vaccination"].dtype) 
+Tsang2016["Vaccination"] = Tsang2016["Vaccination"].replace({1: True, 0: False})
 # Add a new column 'Type' to label the sample type for all rows
-Tim2016["Type"] = "NPS+OPS"
+Tsang2016["Type"] = "NPS+OPS"
 
 #Separate index cases and non-index cases into two DataFrames for further processing
-
 #1. Filter for index cases (MemberID == 0 and PCR_confirmed_infection == 1)
-index_Tim2016 = Tim2016[(Tim2016['MemberID'] == 0) & (Tim2016['PCR_confirmed_infection'] == 1)] #keep both house id and member id
+index_Tsang2016 = Tsang2016[(Tsang2016['MemberID'] == 0) & (Tsang2016['PCR_confirmed_infection'] == 1)] #keep both house id and member id
 
 #2. Filter for non-index cases (MemberID != 0 and PCR_confirmed_infection == 1)
-unindex_Tim2016= Tim2016[(Tim2016['MemberID'] != 0) & (Tim2016['PCR_confirmed_infection'] == 1)]
+contact_Tsang2016= Tsang2016[(Tsang2016['MemberID'] != 0) & (Tsang2016['PCR_confirmed_infection'] == 1)]
 
-#1. Create index participant list
+#1. Create an index participant list
 participant_list_index = []
 
 # Loop through each unique HouseholdID in the filtered dataset
-for household_id in pd.unique(index_Tim2016["HouseholdID"]):
-    patient_data = index_Tim2016[index_Tim2016["HouseholdID"] == household_id]
+for household_id in pd.unique(index_Tsang2016["HouseholdID"]):
+    patient_data = index_Tsang2016[index_Tsang2016["HouseholdID"] == household_id]
     
     # Extract age and sex
     age = int(patient_data['Age'].iloc[0])
     sex = str(patient_data['Sex'].iloc[0])
-    vaccination = patient_data['Vaccination'].iloc[0] 
+    vaccinated = patient_data['Vaccination'].iloc[0]
     virus_subtype = str(patient_data['Influenza_virus_subtype'].iloc[0])
-
-
     
     # Initialize the measurements list
     measurements = []
@@ -98,8 +91,8 @@ for household_id in pd.unique(index_Tim2016["HouseholdID"]):
             "householdid": household_id,
             "age": age,
             "sex": sex,
-            "vaccination": vaccination,
-            "virus_subtype": virus_subtype
+            "vaccinated": vaccinated,
+            "subtype": virus_subtype
         },
         "measurements": measurements
     }
@@ -112,11 +105,11 @@ for household_id in pd.unique(index_Tim2016["HouseholdID"]):
 
 
 #2. Create index participant list
-participant_list_unindex = []
+participant_list_contact = []
 # Process non-index cases similarly, adjusting days based on symptom onset
-for household_id in pd.unique(unindex_Tim2016["HouseholdID"]):  
-    patient_data = unindex_Tim2016[unindex_Tim2016["HouseholdID"] == household_id]
-    index_case_data = index_Tim2016[index_Tim2016["HouseholdID"] == household_id]
+for household_id in pd.unique(contact_Tsang2016["HouseholdID"]):  
+    patient_data = contact_Tsang2016[contact_Tsang2016["HouseholdID"] == household_id]
+    index_case_data = index_Tsang2016[index_Tsang2016["HouseholdID"] == household_id]
 
     if index_case_data.empty:
         continue  # Skip households without an index case
@@ -127,8 +120,8 @@ for household_id in pd.unique(unindex_Tim2016["HouseholdID"]):
         # Extract participant attributes
         age = int(participant_row['Age'])
         sex = str(participant_row['Sex'])
-        vaccinated = str(participant_row['Vaccination'])
-        virus_subtype = str(participant_row['Influenza_virus_subtype'])
+        vaccinated = participant_row['Vaccination']
+        subtype = str(participant_row['Influenza_virus_subtype'])
 
         # Adjust symptom onset for non-index cases
         participant_symptom_onset = participant_row['DateofSymptomOnset']
@@ -152,27 +145,25 @@ for household_id in pd.unique(unindex_Tim2016["HouseholdID"]):
             if participant_row['Type'] == 'NPS+OPS' and value != 'missing':
                 measurements.append({
                     "analyte": "NPSOPS",
-                    "time": adjusted_day,
+                    "time": int(adjusted_day),
                     "value": value
                 })
 
     
-        participant_dict_unindex = {
+        participant_dict_contact = {
             "attributes": {
                 "householdid": household_id,
                 "age": age,
                 "sex": sex,
-                "vaccination": vaccination,
-                "virus_subtype": virus_subtype
+                "vaccinated": vaccinated,
+                "subtype": virus_subtype
             },
             "measurements": measurements
         }
 
         # Append to the participant list
-        participant_list_unindex.append(participant_dict_unindex)
+        participant_list_contact.append(participant_dict_contact)
 
-        # for participant in participant_list_unindex[:10]:
-        #     print(participant)
 
 
 # Merge index and non-index participant lists
@@ -188,8 +179,8 @@ for participant in participant_list_index:
         household_participants[household_id] = []
     household_participants[household_id].append(participant)
 
-# Add unindex participants to the dictionary
-for participant in participant_list_unindex:
+# Add contact participants to the dictionary
+for participant in participant_list_contact:
     household_id = participant["attributes"]["householdid"]  # Ensure consistent key name
     if household_id not in household_participants:
         household_participants[household_id] = []
@@ -208,42 +199,26 @@ for participant in participant_list:
 Finally, the data is formatted and output as a YAML file.
 
 ```python
-tim2016 = dict(
+Tsang2016 = dict(
     title= "Individual Correlates of Infectivity of Influenza A Virus Infections in Households",
     doi= "10.1371/journal.pone.0154418",
-    description=folded_str('The community-based study reports the transmission of Influenza A virus within households during December 2008, focusing on viral loads in index cases and their household contacts to identify secondary infections. The study includes oropharynx and nasopharynx samples.\n'),   
+    description=folded_str('The community-based study reports the transmission of Influenza A virus within households from February 2008 through December 2012, focusing on viral loads in nasal and throat swabs from index cases and their household contacts.\n'),   
     analytes=dict(
         NPSOPS=dict(description=folded_str("Influenza A virus RNA gene copy concentration in oropharynx and nasopharynx samples. Paired nasal and throat swabs were pooled in viral transport medium immediately after collection and subsequently processed for quantitative reverse transcription PCR to detect and quantify influenza A virus. The concentration was quantified in gene copies per milliliter. M gene was used as the gene target for the PCR assay, as described in a referenced study (Chan et al., 2008).\n"), 
             specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker="influenza",
-            gene_target="M gene", 
+            gene_target="M", 
             limit_of_quantification="unknown",
-            limit_of_detection=900, 
-            unit="gc/mL",
+            limit_of_detection=900, #The lower limit of detection (LLOD) of the PCR assay was approximately 900 virus gene copies per milliliter.
+            unit="gc/mL", #Based on Figure 2 in the paper; From Chan et al. (2007), 10.1016/j.jcv.2007.12.003, we can know 1 nasal and 1 oral swabs were transformed to 5 mL of samples for quantification.
             reference_event="symptom onset"
         )
     ),
     participants=participant_list
 )
 
-# Helper function to convert numpy types to native Python types
-def clean_data(data):
-    if isinstance(data, dict):
-        return {key: clean_data(value) for key, value in data.items()}
-    elif isinstance(data, list):
-        return [clean_data(item) for item in data]
-    elif isinstance(data, np.bool_):  # Handle numpy booleans
-        return bool(data)
-    elif isinstance(data, np.generic):  # Check for numpy types
-        return data.item()  # Convert numpy to Python native type
-    return data
-
-# Clean the `tim2016` data
-tim2016_cleaned = clean_data(tim2016)
-
-
-with open("tim2016individual.yaml","w") as outfile:
+with open("tsang2016individual.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
-    yaml.dump(tim2016_cleaned, outfile, default_style=None, default_flow_style=False, sort_keys=False)
+    yaml.dump(Tsang2016, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 outfile.close() 
-```    
+```
