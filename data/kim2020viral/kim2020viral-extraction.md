@@ -31,12 +31,12 @@ for patient_id, group in KimJY.groupby('PatientID'):
     }
 
     for _, row in group.iterrows():
-        if row['Value'] == 1:
+        if row['Ctvalue'] == 'ud':
             value = "negative"
         else:
-            value = row['Value']
+            value = row['Value'] if pd.notna(row['Value']) else row['Ctvalue']
         measurementN = {
-            'analyte': 'swab_SARSCoV2_RdRp' if row['Type '] == 'swab RdRp estimated viral copy/mL' else 'sputum_SARSCoV2_RdRp',
+            'analyte': row['Type '],
             'time': row['Day'],
             'value': value
         }
@@ -51,7 +51,7 @@ Finally, the data is formatted and output as a YAML file.
 KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two Patients in Korea",
                doi="10.3346/jkms.2020.35.e86",
                description=folded_str('The authors present viral load kinetics for the first two confirmed COVID-19 patients with mild to moderate illness in Korea. Swabs, sputum, serum, plasma, urine, and stool samples were collected throughout the illness. Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp and E genes. Data were obtained from the supplementary material.\n'),
-               analytes=dict(sputum_SARSCoV2_RdRp=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in sputum samples. Ct values were then converted into estimated viral copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated by the authors using a standard curve derived from Ct values of plasmid DNA, as noted in the supplementary material.\n"),
+               analytes=dict(sputum_SARSCoV2_RdRp_VL=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in sputum samples. Ct values were then converted into estimated viral copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated by the authors using a standard curve derived from Ct values of plasmid DNA, as noted in the supplementary material.\n"),
                                         limit_of_quantification=2690,
                                         limit_of_detection="unknown",
                                         specimen="sputum",
@@ -59,14 +59,47 @@ KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two
                                         gene_target="RdRp",
                                         unit="gc/mL",
                                         reference_event="symptom onset",),
-                            swab_SARSCoV2_RdRp=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in swab samples. Ct values were then converted into estimated viral copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated by the authors using a standard curve derived from Ct values of plasmid DNA, as noted in the supplementary material.\n"),
+                            swab_SARSCoV2_RdRp_VL=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in swab samples. Ct values were then converted into estimated viral copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number was calculated by the authors using a standard curve derived from Ct values of plasmid DNA, as noted in the supplementary material.\n"),
                                         limit_of_quantification=2690,
                                         limit_of_detection="unknown",
                                         specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
                                         biomarker="SARS-CoV-2",
                                         gene_target="RdRp",
                                         unit="gc/mL",
-                                        reference_event="symptom onset",)),
+                                        reference_event="symptom onset",),
+                            swab_SARSCoV2_E_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the E gene in swab samples.\n"),
+                                        limit_of_quantification=35,
+                                        limit_of_detection="unknown",
+                                        specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="E",
+                                        unit="",
+                                        reference_event="symptom onset",),
+                            sputum_SARSCoV2_E_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the E gene in sputum samples.\n"),
+                                        limit_of_quantification=35,
+                                        limit_of_detection="unknown",
+                                        specimen="sputum",
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="E",
+                                        unit="",
+                                        reference_event="symptom onset",),
+                            stool_SARSCoV2_E_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the E gene in stool samples.\n"),
+                                        limit_of_quantification=35,
+                                        limit_of_detection="unknown",
+                                        specimen="stool",
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="E",
+                                        unit="",
+                                        reference_event="symptom onset",),
+                                        ),
+                            stool_SARSCoV2_RdRp_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in stool samples.\n"),
+                                        limit_of_quantification=35,
+                                        limit_of_detection="unknown",
+                                        specimen="stool",
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="RdRp",
+                                        unit="",
+                                        reference_event="symptom onset",),
                 participants = participants
                                         )
 
