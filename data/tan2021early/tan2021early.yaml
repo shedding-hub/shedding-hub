@@ -1,0 +1,317 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Early induction of functional SARS-CoV-2-specific T cells associates with rapid
+  viral clearance and mild disease in COVID-19 patients
+doi: 10.1016/j.celrep.2021.108728
+description: >
+  Measured SARS-CoV-2 viral load in the upper respiratory tract, along with SARS-CoV-2-specific
+  antibodies and T cell responses, at multiple time points from acute infection through
+  convalescence or until death.
+analytes:
+  swab_SARSCoV2_N:
+    description: >
+      The swab_SARSCoV2_N analyte refers to the detection of SARS-CoV-2 RNA in patient
+      oral swabs, using RT-PCR cycle threshold (CT) values to calculate the relative
+      quantities of SARS-CoV-2 RNA. 10^(-11) was the detection limit, which was transformed
+      as CT value equals 36.5. Data was obtained from the combined dataset in the
+      supplementary materials of Challenger et al. (2022)
+    limit_of_quantification: unknown
+    limit_of_detection: 36.5
+    specimen: throat_swab
+    biomarker: SARS-CoV-2
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 44
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 35.41
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 24.51
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 22.76
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 31.01
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 22.05
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 25.7
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 30.98
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 32.9
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 31.72
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 27
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 30.44
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 29.44
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 29.66
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+- attributes:
+    age: 58
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 24.55
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 16.78
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 29.68
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 32.77
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+- attributes:
+    age: 32
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 32.8
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 64
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 31.69
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 25.71
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 29.75
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: negative
+- attributes:
+    age: 44
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 22.27
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 26.57
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 30.6
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 31.08
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 29.22
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 25.26
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 28.71
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 26.41
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 30.62
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 23.83
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 31.16
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+- attributes:
+    age: 32
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 19.68
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 25.91
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 29.74
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 27.35
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 27.38
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 31.69
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 32.72
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 30.77
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 34.93
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+- attributes:
+    age: 32
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 21.5
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 28.29
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 21.53
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 28.49
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 29.2
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 30.68
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 29.73
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 33.42
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: 33.04
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 26.72
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 25.64
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: negative
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 26.06
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 21.83
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 29.8
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 28.92
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 30.47
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: 29.58
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: 25.89
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
