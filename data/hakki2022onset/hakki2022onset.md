@@ -124,7 +124,7 @@ for patient_id, group in hakki2022.groupby("participant"):
             value = row["copy"]
 
         measurementN = {
-            "analyte": "nose_and_throat_swab",
+            "analyte": "nasopharyngeal_and_oropharyngeal_swab",
             "time": row["day"],
             "value": value,
         }
@@ -145,13 +145,13 @@ hakki2022 = dict(
         "Through a prospective, longitudinal, community cohort study that captures the critical growth phase and peak of viral replication, the goal is to characterize the window of SARS-CoV-2 infectiousness and its temporal relationship with symptom onset.\n"
     ),
     analytes=dict(
-        nose_and_throat_swab=dict(
+        nasopharyngeal_and_oropharyngeal_swab=dict(
             description=folded_str(
                 "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swabs specimens collected from participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the onset of symptoms.\n"
             ),
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
-            specimen="nose_and_throat_swab",
+            specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker="SARS-CoV-2",
             unit="gc/mL",
             reference_event="symptom onset",
@@ -164,4 +164,5 @@ with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
+
 ```
