@@ -87,7 +87,7 @@ gautret2020hydroxychloroquine = dict(title="Hydroxychloroquine and azithromycin 
                                         limit_of_detection="unknown",
                                         specimen="nasopharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
-                                        unit="",
+                                        unit="cycle threshold",
                                         reference_event="symptom onset",)
                             ),
                 participants = participants

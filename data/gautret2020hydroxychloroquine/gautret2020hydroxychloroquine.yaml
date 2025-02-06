@@ -30,7 +30,7 @@ analytes:
     limit_of_detection: unknown
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
-    unit: ''
+    unit: cycle threshold
     reference_event: symptom onset
 participants:
 - attributes:
