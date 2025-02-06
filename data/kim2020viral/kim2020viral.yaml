@@ -49,7 +49,7 @@ analytes:
     - oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: E
-    unit: ''
+    unit: cycle threshold
     reference_event: symptom onset
   sputum_SARSCoV2_E_Ct:
     description: >
@@ -60,7 +60,7 @@ analytes:
     specimen: sputum
     biomarker: SARS-CoV-2
     gene_target: E
-    unit: ''
+    unit: cycle threshold
     reference_event: symptom onset
   stool_SARSCoV2_E_Ct:
     description: >
@@ -71,7 +71,7 @@ analytes:
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: E
-    unit: ''
+    unit: cycle threshold
     reference_event: symptom onset
 stool_SARSCoV2_RdRp_Ct:
   description: >
@@ -82,7 +82,7 @@ stool_SARSCoV2_RdRp_Ct:
   specimen: stool
   biomarker: SARS-CoV-2
   gene_target: RdRp
-  unit: ''
+  unit: cycle threshold
   reference_event: symptom onset
 participants:
 - attributes:
