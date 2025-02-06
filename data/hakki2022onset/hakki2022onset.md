@@ -145,7 +145,7 @@ hakki2022 = dict(
         "Through a prospective, longitudinal, community cohort study that captures the critical growth phase and peak of viral replication, the goal is to characterize the window of SARS-CoV-2 infectiousness and its temporal relationship with symptom onset.\n"
     ),
     analytes=dict(
-        swab_upper_res=dict(
+        nose_and_throat_swab=dict(
             description=folded_str(
                 "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swabs specimens collected from participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the onset of symptoms.\n"
             ),
