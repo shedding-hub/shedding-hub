@@ -20,7 +20,7 @@ ${EXTRACTION_HTML} : %.html : %.md
 
 # For Python extraction scripts, simply run them in one step and log to output file.
 ${EXTRACTION_LOGS} : %.log : %.py
-	python $< > $@
+	cd $(dir $@) && python $(notdir $<) > $(notdir $@)
 
 backup_data : ${DATA_BACKUPS}
 
