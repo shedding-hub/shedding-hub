@@ -91,7 +91,6 @@ KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two
                                         gene_target="E",
                                         unit="cycle threshold",
                                         reference_event="symptom onset",),
-                                        ),
                             stool_SARSCoV2_RdRp_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in stool samples.\n"),
                                         limit_of_quantification=35,
                                         limit_of_detection="unknown",
@@ -99,9 +98,8 @@ KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two
                                         biomarker="SARS-CoV-2",
                                         gene_target="RdRp",
                                         unit="cycle threshold",
-                                        reference_event="symptom onset",),
-                participants = participants
-                                        )
+                                        reference_event="symptom onset",)),
+                participants = participants)
 
 with open("kim2020viral.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
