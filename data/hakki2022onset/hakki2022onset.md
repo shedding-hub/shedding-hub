@@ -124,7 +124,7 @@ for patient_id, group in hakki2022.groupby("participant"):
             value = row["copy"]
 
         measurementN = {
-            "analyte": "swab_SARSCoV2_N",
+            "analyte": "nose_and_throat_swab",
             "time": row["day"],
             "value": value,
         }
