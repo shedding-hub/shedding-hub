@@ -3,9 +3,8 @@ title: Individual Correlates of Infectivity of Influenza A Virus Infections in H
 doi: 10.1371/journal.pone.0154418
 description: >
   The community-based study reports the transmission of Influenza A virus within households
-  during December a2008, focusing on viral loads in index cases and their household
-  contacts to identify secondary infections. The study includes oropharynx and nasopharynx
-  samples.
+  from February 2008 through December 2012, focusing on viral loads in nasal and throat
+  swabs from index cases and their household contacts.
 analytes:
   NPSOPS:
     description: >
@@ -19,7 +18,7 @@ analytes:
     - nasopharyngeal_swab
     - oropharyngeal_swab
     biomarker: influenza
-    gene_target: M gene
+    gene_target: M
     limit_of_quantification: unknown
     limit_of_detection: 900
     unit: gc/mL
@@ -28,8 +27,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -43,8 +42,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -55,8 +54,8 @@ participants:
 - attributes:
     age: 36
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -70,8 +69,8 @@ participants:
 - attributes:
     age: 55
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -82,8 +81,8 @@ participants:
 - attributes:
     age: 26
     sex: female
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -97,8 +96,8 @@ participants:
 - attributes:
     age: 29
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -112,8 +111,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -127,8 +126,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -139,8 +138,8 @@ participants:
 - attributes:
     age: 41
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -151,8 +150,8 @@ participants:
 - attributes:
     age: 16
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -166,8 +165,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -181,8 +180,8 @@ participants:
 - attributes:
     age: 51
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -193,8 +192,8 @@ participants:
 - attributes:
     age: 39
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -205,8 +204,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -217,8 +216,8 @@ participants:
 - attributes:
     age: 30
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -229,8 +228,8 @@ participants:
 - attributes:
     age: 27
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -244,8 +243,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -253,8 +252,8 @@ participants:
 - attributes:
     age: 45
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -265,8 +264,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -277,8 +276,8 @@ participants:
 - attributes:
     age: 29
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -289,8 +288,8 @@ participants:
 - attributes:
     age: 55
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -304,8 +303,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -316,8 +315,8 @@ participants:
 - attributes:
     age: 39
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -328,8 +327,8 @@ participants:
 - attributes:
     age: 64
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -340,8 +339,8 @@ participants:
 - attributes:
     age: 27
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -352,8 +351,8 @@ participants:
 - attributes:
     age: 33
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -364,8 +363,8 @@ participants:
 - attributes:
     age: 17
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -376,8 +375,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -388,8 +387,8 @@ participants:
 - attributes:
     age: 37
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -397,8 +396,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -412,8 +411,8 @@ participants:
 - attributes:
     age: 43
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -424,8 +423,8 @@ participants:
 - attributes:
     age: 4
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -436,8 +435,8 @@ participants:
 - attributes:
     age: 36
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -445,8 +444,8 @@ participants:
 - attributes:
     age: 14
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -457,8 +456,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -469,8 +468,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -484,8 +483,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -499,8 +498,8 @@ participants:
 - attributes:
     age: 72
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -511,8 +510,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -526,8 +525,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -541,8 +540,8 @@ participants:
 - attributes:
     age: 36
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -553,8 +552,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -568,8 +567,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -580,8 +579,8 @@ participants:
 - attributes:
     age: 49
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -592,8 +591,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -607,8 +606,8 @@ participants:
 - attributes:
     age: 41
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -619,8 +618,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -634,8 +633,8 @@ participants:
 - attributes:
     age: 30
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -646,8 +645,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -661,8 +660,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -676,8 +675,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -691,8 +690,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -703,8 +702,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -1
@@ -718,8 +717,8 @@ participants:
 - attributes:
     age: 8
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -733,8 +732,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -748,8 +747,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -763,8 +762,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -778,8 +777,8 @@ participants:
 - attributes:
     age: 63
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -790,8 +789,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -805,8 +804,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -817,8 +816,8 @@ participants:
 - attributes:
     age: 30
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -832,8 +831,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -844,8 +843,8 @@ participants:
 - attributes:
     age: 52
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -856,8 +855,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -871,8 +870,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -883,8 +882,8 @@ participants:
 - attributes:
     age: 1
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: unknown
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -898,8 +897,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -913,8 +912,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -928,8 +927,8 @@ participants:
 - attributes:
     age: 17
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -943,8 +942,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -958,8 +957,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -973,8 +972,8 @@ participants:
 - attributes:
     age: 53
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -988,8 +987,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1000,8 +999,8 @@ participants:
 - attributes:
     age: 43
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1012,8 +1011,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1027,8 +1026,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1042,8 +1041,8 @@ participants:
 - attributes:
     age: 41
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1057,8 +1056,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1072,8 +1071,8 @@ participants:
 - attributes:
     age: 43
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1084,8 +1083,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1099,8 +1098,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1111,8 +1110,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1123,8 +1122,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1138,8 +1137,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1153,8 +1152,8 @@ participants:
 - attributes:
     age: 46
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1165,8 +1164,8 @@ participants:
 - attributes:
     age: 31
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -1177,8 +1176,8 @@ participants:
 - attributes:
     age: 14
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1192,8 +1191,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1207,8 +1206,8 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1222,8 +1221,8 @@ participants:
 - attributes:
     age: 32
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1237,8 +1236,8 @@ participants:
 - attributes:
     age: 34
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1252,8 +1251,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1267,8 +1266,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1282,8 +1281,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1297,8 +1296,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1312,8 +1311,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1327,8 +1326,8 @@ participants:
 - attributes:
     age: 58
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1342,8 +1341,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1354,8 +1353,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1369,8 +1368,8 @@ participants:
 - attributes:
     age: 71
     sex: female
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1381,8 +1380,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1396,8 +1395,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1411,8 +1410,8 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1423,8 +1422,8 @@ participants:
 - attributes:
     age: 37
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1438,8 +1437,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1453,8 +1452,8 @@ participants:
 - attributes:
     age: 22
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1465,8 +1464,8 @@ participants:
 - attributes:
     age: 25
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1477,8 +1476,8 @@ participants:
 - attributes:
     age: 52
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1492,8 +1491,8 @@ participants:
 - attributes:
     age: 48
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1507,8 +1506,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1522,8 +1521,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1537,8 +1536,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1552,8 +1551,8 @@ participants:
 - attributes:
     age: 42
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1561,8 +1560,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1573,8 +1572,8 @@ participants:
 - attributes:
     age: 35
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1585,8 +1584,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1600,8 +1599,8 @@ participants:
 - attributes:
     age: 40
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1612,8 +1611,8 @@ participants:
 - attributes:
     age: 8
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1627,8 +1626,8 @@ participants:
 - attributes:
     age: 31
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1639,8 +1638,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1654,8 +1653,8 @@ participants:
 - attributes:
     age: 1
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1666,8 +1665,8 @@ participants:
 - attributes:
     age: 14
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1678,8 +1677,8 @@ participants:
 - attributes:
     age: 23
     sex: female
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1690,8 +1689,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1705,8 +1704,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1720,8 +1719,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1735,8 +1734,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -1
@@ -1750,8 +1749,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1765,8 +1764,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1777,8 +1776,8 @@ participants:
 - attributes:
     age: 72
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1789,8 +1788,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1801,8 +1800,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1813,8 +1812,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1825,8 +1824,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1840,8 +1839,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1855,8 +1854,8 @@ participants:
 - attributes:
     age: 21
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1870,8 +1869,8 @@ participants:
 - attributes:
     age: 45
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1882,8 +1881,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1897,8 +1896,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1912,8 +1911,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1924,8 +1923,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1939,8 +1938,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -1954,8 +1953,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1966,8 +1965,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -1981,8 +1980,8 @@ participants:
 - attributes:
     age: 20
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -1996,8 +1995,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2008,8 +2007,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2023,8 +2022,8 @@ participants:
 - attributes:
     age: 42
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2035,8 +2034,8 @@ participants:
 - attributes:
     age: 9
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2050,8 +2049,8 @@ participants:
 - attributes:
     age: 24
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2062,8 +2061,8 @@ participants:
 - attributes:
     age: 29
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2077,8 +2076,8 @@ participants:
 - attributes:
     age: 34
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2089,8 +2088,8 @@ participants:
 - attributes:
     age: 20
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2104,8 +2103,8 @@ participants:
 - attributes:
     age: 50
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2116,8 +2115,8 @@ participants:
 - attributes:
     age: 4
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2131,8 +2130,8 @@ participants:
 - attributes:
     age: 64
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2143,8 +2142,8 @@ participants:
 - attributes:
     age: 19
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2158,8 +2157,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2173,8 +2172,8 @@ participants:
 - attributes:
     age: 46
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2185,8 +2184,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2200,8 +2199,8 @@ participants:
 - attributes:
     age: 30
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2215,8 +2214,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2230,8 +2229,8 @@ participants:
 - attributes:
     age: 0
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2245,8 +2244,8 @@ participants:
 - attributes:
     age: 43
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2257,8 +2256,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2272,8 +2271,8 @@ participants:
 - attributes:
     age: 46
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2284,8 +2283,8 @@ participants:
 - attributes:
     age: 31
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2296,8 +2295,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2311,8 +2310,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2326,8 +2325,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2338,8 +2337,8 @@ participants:
 - attributes:
     age: 42
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2350,8 +2349,8 @@ participants:
 - attributes:
     age: 43
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2362,8 +2361,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2377,8 +2376,8 @@ participants:
 - attributes:
     age: 46
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2389,8 +2388,8 @@ participants:
 - attributes:
     age: 4
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2404,8 +2403,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2419,8 +2418,8 @@ participants:
 - attributes:
     age: 15
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2431,8 +2430,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2446,8 +2445,8 @@ participants:
 - attributes:
     age: 43
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2455,8 +2454,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2470,8 +2469,8 @@ participants:
 - attributes:
     age: 38
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2482,8 +2481,8 @@ participants:
 - attributes:
     age: 28
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2494,8 +2493,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2509,8 +2508,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2521,8 +2520,8 @@ participants:
 - attributes:
     age: 34
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2533,8 +2532,8 @@ participants:
 - attributes:
     age: 28
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2545,8 +2544,8 @@ participants:
 - attributes:
     age: 40
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2557,8 +2556,8 @@ participants:
 - attributes:
     age: 41
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 6
@@ -2566,8 +2565,8 @@ participants:
 - attributes:
     age: 36
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2578,8 +2577,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2593,8 +2592,8 @@ participants:
 - attributes:
     age: 49
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2608,8 +2607,8 @@ participants:
 - attributes:
     age: 18
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2620,8 +2619,8 @@ participants:
 - attributes:
     age: 38
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2632,8 +2631,8 @@ participants:
 - attributes:
     age: 34
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2644,8 +2643,8 @@ participants:
 - attributes:
     age: 33
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2659,8 +2658,8 @@ participants:
 - attributes:
     age: 2
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2671,8 +2670,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2686,8 +2685,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2698,8 +2697,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2713,8 +2712,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2728,8 +2727,8 @@ participants:
 - attributes:
     age: 79
     sex: male
-    vaccination: true
-    virus_subtype: nsubtyple influenz
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2743,8 +2742,8 @@ participants:
 - attributes:
     age: 8
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2755,8 +2754,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2770,8 +2769,8 @@ participants:
 - attributes:
     age: 68
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2785,8 +2784,8 @@ participants:
 - attributes:
     age: 33
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2797,8 +2796,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2812,8 +2811,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2827,8 +2826,8 @@ participants:
 - attributes:
     age: 2
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2842,8 +2841,8 @@ participants:
 - attributes:
     age: 32
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2854,8 +2853,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2869,8 +2868,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2884,8 +2883,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -2899,8 +2898,8 @@ participants:
 - attributes:
     age: 25
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2911,8 +2910,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2926,8 +2925,8 @@ participants:
 - attributes:
     age: 22
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2941,8 +2940,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2956,8 +2955,8 @@ participants:
 - attributes:
     age: 36
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -2968,8 +2967,8 @@ participants:
 - attributes:
     age: 29
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -2983,8 +2982,8 @@ participants:
 - attributes:
     age: 14
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -2995,8 +2994,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3010,8 +3009,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3019,8 +3018,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3034,8 +3033,8 @@ participants:
 - attributes:
     age: 45
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3049,8 +3048,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3064,8 +3063,8 @@ participants:
 - attributes:
     age: 39
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3076,8 +3075,8 @@ participants:
 - attributes:
     age: 9
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3091,8 +3090,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3106,8 +3105,8 @@ participants:
 - attributes:
     age: 30
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 4
@@ -3115,8 +3114,8 @@ participants:
 - attributes:
     age: 37
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3127,8 +3126,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3139,8 +3138,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3154,8 +3153,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3169,8 +3168,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3181,8 +3180,8 @@ participants:
 - attributes:
     age: 44
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3190,8 +3189,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3202,8 +3201,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3217,8 +3216,8 @@ participants:
 - attributes:
     age: 9
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3232,8 +3231,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3247,8 +3246,8 @@ participants:
 - attributes:
     age: 55
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3259,8 +3258,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3274,8 +3273,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 7
@@ -3283,8 +3282,8 @@ participants:
 - attributes:
     age: 3
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -3298,8 +3297,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3313,8 +3312,8 @@ participants:
 - attributes:
     age: 42
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3325,8 +3324,8 @@ participants:
 - attributes:
     age: 27
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3337,8 +3336,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3352,8 +3351,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3364,8 +3363,8 @@ participants:
 - attributes:
     age: 20
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3376,8 +3375,8 @@ participants:
 - attributes:
     age: 49
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -3388,8 +3387,8 @@ participants:
 - attributes:
     age: 27
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3400,8 +3399,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3415,8 +3414,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3430,8 +3429,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3442,8 +3441,8 @@ participants:
 - attributes:
     age: 61
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3454,8 +3453,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3469,8 +3468,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3484,8 +3483,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3499,8 +3498,8 @@ participants:
 - attributes:
     age: 51
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3508,8 +3507,8 @@ participants:
 - attributes:
     age: 31
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3523,8 +3522,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3538,8 +3537,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3553,8 +3552,8 @@ participants:
 - attributes:
     age: 16
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3565,8 +3564,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3580,8 +3579,8 @@ participants:
 - attributes:
     age: 26
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -3592,8 +3591,8 @@ participants:
 - attributes:
     age: 28
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -3604,8 +3603,8 @@ participants:
 - attributes:
     age: 37
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3619,8 +3618,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3634,8 +3633,8 @@ participants:
 - attributes:
     age: 38
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -3646,8 +3645,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3658,8 +3657,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3673,8 +3672,8 @@ participants:
 - attributes:
     age: 16
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3688,8 +3687,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3700,8 +3699,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3712,8 +3711,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3724,8 +3723,8 @@ participants:
 - attributes:
     age: 24
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3736,8 +3735,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3748,8 +3747,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3763,8 +3762,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3778,8 +3777,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3793,8 +3792,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3805,8 +3804,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -3820,8 +3819,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3835,8 +3834,8 @@ participants:
 - attributes:
     age: 48
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3847,8 +3846,8 @@ participants:
 - attributes:
     age: 1
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3859,8 +3858,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3874,8 +3873,8 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3886,8 +3885,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3898,8 +3897,8 @@ participants:
 - attributes:
     age: 35
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -1
@@ -3910,8 +3909,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3925,8 +3924,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -1
@@ -3940,8 +3939,8 @@ participants:
 - attributes:
     age: 40
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -3955,8 +3954,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3970,8 +3969,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -3985,8 +3984,8 @@ participants:
 - attributes:
     age: 38
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 4
@@ -3994,8 +3993,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -3
@@ -4009,8 +4008,8 @@ participants:
 - attributes:
     age: 49
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4021,8 +4020,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4033,8 +4032,8 @@ participants:
 - attributes:
     age: 35
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -4042,8 +4041,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4057,8 +4056,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4072,8 +4071,8 @@ participants:
 - attributes:
     age: 2
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4084,8 +4083,8 @@ participants:
 - attributes:
     age: 16
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4099,8 +4098,8 @@ participants:
 - attributes:
     age: 9
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4114,8 +4113,8 @@ participants:
 - attributes:
     age: 23
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4126,8 +4125,8 @@ participants:
 - attributes:
     age: 21
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4138,8 +4137,8 @@ participants:
 - attributes:
     age: 15
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4150,8 +4149,8 @@ participants:
 - attributes:
     age: 57
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -2
@@ -4165,8 +4164,8 @@ participants:
 - attributes:
     age: 17
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4180,8 +4179,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4195,8 +4194,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4207,8 +4206,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4222,8 +4221,8 @@ participants:
 - attributes:
     age: 41
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4234,8 +4233,8 @@ participants:
 - attributes:
     age: 23
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -4246,8 +4245,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4261,8 +4260,8 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4273,8 +4272,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4285,8 +4284,8 @@ participants:
 - attributes:
     age: 30
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4294,8 +4293,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4309,8 +4308,8 @@ participants:
 - attributes:
     age: 58
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4321,8 +4320,8 @@ participants:
 - attributes:
     age: 15
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4333,8 +4332,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4345,8 +4344,8 @@ participants:
 - attributes:
     age: 17
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4360,8 +4359,8 @@ participants:
 - attributes:
     age: 9
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4372,8 +4371,8 @@ participants:
 - attributes:
     age: 16
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4384,8 +4383,8 @@ participants:
 - attributes:
     age: 19
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4396,8 +4395,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4411,8 +4410,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4426,8 +4425,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4441,8 +4440,8 @@ participants:
 - attributes:
     age: 2
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4456,8 +4455,8 @@ participants:
 - attributes:
     age: 32
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -4468,8 +4467,8 @@ participants:
 - attributes:
     age: 23
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4480,8 +4479,8 @@ participants:
 - attributes:
     age: 16
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4492,8 +4491,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4507,8 +4506,8 @@ participants:
 - attributes:
     age: 25
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4516,8 +4515,8 @@ participants:
 - attributes:
     age: 20
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4528,8 +4527,8 @@ participants:
 - attributes:
     age: 72
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4543,8 +4542,8 @@ participants:
 - attributes:
     age: 30
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4555,8 +4554,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4567,8 +4566,8 @@ participants:
 - attributes:
     age: 2
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4579,8 +4578,8 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4591,8 +4590,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4606,8 +4605,8 @@ participants:
 - attributes:
     age: 17
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4621,8 +4620,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4636,8 +4635,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4648,8 +4647,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4660,8 +4659,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4672,8 +4671,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -4684,8 +4683,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4696,8 +4695,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4711,8 +4710,8 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4723,8 +4722,8 @@ participants:
 - attributes:
     age: 18
     sex: male
-    vaccination: true
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4735,8 +4734,8 @@ participants:
 - attributes:
     age: 2
     sex: female
-    vaccination: true
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4747,8 +4746,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4759,8 +4758,8 @@ participants:
 - attributes:
     age: 76
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4771,8 +4770,8 @@ participants:
 - attributes:
     age: 40
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4783,8 +4782,8 @@ participants:
 - attributes:
     age: 9
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4795,8 +4794,8 @@ participants:
 - attributes:
     age: 48
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4807,8 +4806,8 @@ participants:
 - attributes:
     age: 18
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 4
@@ -4816,8 +4815,8 @@ participants:
 - attributes:
     age: 35
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4828,8 +4827,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4843,8 +4842,8 @@ participants:
 - attributes:
     age: 33
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4855,8 +4854,8 @@ participants:
 - attributes:
     age: 72
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4870,8 +4869,8 @@ participants:
 - attributes:
     age: 33
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -4882,8 +4881,8 @@ participants:
 - attributes:
     age: 28
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4894,8 +4893,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4906,8 +4905,8 @@ participants:
 - attributes:
     age: 48
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4918,8 +4917,8 @@ participants:
 - attributes:
     age: 43
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -4930,8 +4929,8 @@ participants:
 - attributes:
     age: 14
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4945,8 +4944,8 @@ participants:
 - attributes:
     age: 50
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -4957,8 +4956,8 @@ participants:
 - attributes:
     age: 18
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4972,8 +4971,8 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -4987,8 +4986,8 @@ participants:
 - attributes:
     age: 22
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5002,8 +5001,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5014,8 +5013,8 @@ participants:
 - attributes:
     age: 33
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5026,8 +5025,8 @@ participants:
 - attributes:
     age: 43
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5038,8 +5037,8 @@ participants:
 - attributes:
     age: 33
     sex: male
-    vaccination: true
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5050,8 +5049,8 @@ participants:
 - attributes:
     age: 27
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5062,8 +5061,8 @@ participants:
 - attributes:
     age: 30
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5074,8 +5073,8 @@ participants:
 - attributes:
     age: 52
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5086,8 +5085,8 @@ participants:
 - attributes:
     age: 17
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5098,8 +5097,8 @@ participants:
 - attributes:
     age: 14
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5113,8 +5112,8 @@ participants:
 - attributes:
     age: 36
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5125,8 +5124,8 @@ participants:
 - attributes:
     age: 68
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -5140,8 +5139,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5152,8 +5151,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5167,8 +5166,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5182,8 +5181,8 @@ participants:
 - attributes:
     age: 69
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -5194,8 +5193,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5206,8 +5205,8 @@ participants:
 - attributes:
     age: 18
     sex: male
-    vaccination: true
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5218,8 +5217,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -5233,8 +5232,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -5248,8 +5247,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -5260,8 +5259,8 @@ participants:
 - attributes:
     age: 41
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5272,8 +5271,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -5284,8 +5283,8 @@ participants:
 - attributes:
     age: 81
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5296,8 +5295,8 @@ participants:
 - attributes:
     age: 26
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5308,8 +5307,8 @@ participants:
 - attributes:
     age: 50
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5323,8 +5322,8 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -5332,8 +5331,8 @@ participants:
 - attributes:
     age: 29
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5344,8 +5343,8 @@ participants:
 - attributes:
     age: 34
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5356,8 +5355,8 @@ participants:
 - attributes:
     age: 13
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5368,8 +5367,8 @@ participants:
 - attributes:
     age: 13
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5380,8 +5379,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5392,8 +5391,8 @@ participants:
 - attributes:
     age: 37
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5404,8 +5403,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5416,8 +5415,8 @@ participants:
 - attributes:
     age: 15
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5431,8 +5430,8 @@ participants:
 - attributes:
     age: 42
     sex: male
-    vaccination: true
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5443,8 +5442,8 @@ participants:
 - attributes:
     age: 19
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5455,8 +5454,8 @@ participants:
 - attributes:
     age: 29
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5464,8 +5463,8 @@ participants:
 - attributes:
     age: 30
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5476,8 +5475,8 @@ participants:
 - attributes:
     age: 11
     sex: female
-    vaccination: true
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5491,8 +5490,8 @@ participants:
 - attributes:
     age: 49
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -5503,8 +5502,8 @@ participants:
 - attributes:
     age: 43
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5515,8 +5514,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5530,8 +5529,8 @@ participants:
 - attributes:
     age: 53
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5542,8 +5541,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5554,8 +5553,8 @@ participants:
 - attributes:
     age: 48
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -5563,8 +5562,8 @@ participants:
 - attributes:
     age: 2
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -5575,8 +5574,8 @@ participants:
 - attributes:
     age: 36
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5584,8 +5583,8 @@ participants:
 - attributes:
     age: 63
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5596,8 +5595,8 @@ participants:
 - attributes:
     age: 70
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -2
@@ -5608,23 +5607,23 @@ participants:
 - attributes:
     age: 58
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
     value: 1340000.000000007
   - analyte: NPSOPS
     time: 3
-    value: 335999.9999999969
+    value: 335999.999999997
   - analyte: NPSOPS
     time: 7
     value: 899.9999999999897
 - attributes:
     age: 91
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -5632,8 +5631,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5647,8 +5646,8 @@ participants:
 - attributes:
     age: 28
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5659,8 +5658,8 @@ participants:
 - attributes:
     age: 61
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5671,8 +5670,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5683,8 +5682,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5695,8 +5694,8 @@ participants:
 - attributes:
     age: 16
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5707,8 +5706,8 @@ participants:
 - attributes:
     age: 10
     sex: female
-    vaccination: true
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5722,8 +5721,8 @@ participants:
 - attributes:
     age: 10
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -5737,8 +5736,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5749,8 +5748,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5761,8 +5760,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5776,8 +5775,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5788,8 +5787,8 @@ participants:
 - attributes:
     age: 9
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5800,8 +5799,8 @@ participants:
 - attributes:
     age: 61
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5812,8 +5811,8 @@ participants:
 - attributes:
     age: 27
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5827,8 +5826,8 @@ participants:
 - attributes:
     age: 55
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5839,8 +5838,8 @@ participants:
 - attributes:
     age: 28
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5851,8 +5850,8 @@ participants:
 - attributes:
     age: 17
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5866,8 +5865,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -5878,8 +5877,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5890,8 +5889,8 @@ participants:
 - attributes:
     age: 9
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5905,8 +5904,8 @@ participants:
 - attributes:
     age: 11
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5920,8 +5919,8 @@ participants:
 - attributes:
     age: 35
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5932,8 +5931,8 @@ participants:
 - attributes:
     age: 4
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -5947,8 +5946,8 @@ participants:
 - attributes:
     age: 6
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -5959,8 +5958,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5974,8 +5973,8 @@ participants:
 - attributes:
     age: 18
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5986,8 +5985,8 @@ participants:
 - attributes:
     age: 47
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -5998,8 +5997,8 @@ participants:
 - attributes:
     age: 17
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6010,8 +6009,8 @@ participants:
 - attributes:
     age: 7
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6022,8 +6021,8 @@ participants:
 - attributes:
     age: 21
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6034,8 +6033,8 @@ participants:
 - attributes:
     age: 49
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6049,8 +6048,8 @@ participants:
 - attributes:
     age: 47
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6064,8 +6063,8 @@ participants:
 - attributes:
     age: 53
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6079,8 +6078,8 @@ participants:
 - attributes:
     age: 15
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 3
@@ -6094,8 +6093,8 @@ participants:
 - attributes:
     age: 8
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -6106,8 +6105,8 @@ participants:
 - attributes:
     age: 6
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 5
@@ -6115,8 +6114,8 @@ participants:
 - attributes:
     age: 12
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6130,8 +6129,8 @@ participants:
 - attributes:
     age: 21
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6142,8 +6141,8 @@ participants:
 - attributes:
     age: 23
     sex: male
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6154,8 +6153,8 @@ participants:
 - attributes:
     age: 19
     sex: female
-    vaccination: true
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6166,8 +6165,8 @@ participants:
 - attributes:
     age: 15
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 5
@@ -6175,8 +6174,8 @@ participants:
 - attributes:
     age: 19
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6187,8 +6186,8 @@ participants:
 - attributes:
     age: 48
     sex: female
-    vaccination: false
-    virus_subtype: Pandemic A(H1N1)
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6199,8 +6198,8 @@ participants:
 - attributes:
     age: 14
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H3N2)
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6214,8 +6213,8 @@ participants:
 - attributes:
     age: 5
     sex: female
-    vaccination: true
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6229,8 +6228,8 @@ participants:
 - attributes:
     age: 36
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6241,8 +6240,8 @@ participants:
 - attributes:
     age: 3
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6256,8 +6255,8 @@ participants:
 - attributes:
     age: 7
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
   measurements:
   - analyte: NPSOPS
     time: 0
@@ -6271,8 +6270,8 @@ participants:
 - attributes:
     age: 54
     sex: male
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6283,8 +6282,8 @@ participants:
 - attributes:
     age: 48
     sex: female
-    vaccination: false
-    virus_subtype: Seasonal A(H1N1)
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: -2
@@ -6298,8 +6297,8 @@ participants:
 - attributes:
     age: 8
     sex: female
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6313,8 +6312,8 @@ participants:
 - attributes:
     age: 8
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
@@ -6328,8 +6327,8 @@ participants:
 - attributes:
     age: 17
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 2
@@ -6343,8 +6342,8 @@ participants:
 - attributes:
     age: 5
     sex: male
-    vaccination: false
-    virus_subtype: nsubtyple influenz
+    vaccinated: false
+    subtype: Unsubtyple influenza
   measurements:
   - analyte: NPSOPS
     time: 1
