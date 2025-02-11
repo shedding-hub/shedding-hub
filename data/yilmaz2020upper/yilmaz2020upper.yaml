@@ -20,6 +20,7 @@ analytes:
     limit_of_detection: unknown
     unit: gc/swab
     reference_event: symptom onset
+    enum: throat_swab
 participants:
 - attributes:
     age: 36.0
