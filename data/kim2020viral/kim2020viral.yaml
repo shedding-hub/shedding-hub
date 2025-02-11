@@ -8,7 +8,7 @@ description: >
   were quantified using rRT-PCR targeting the RdRp and E genes. Data were obtained
   from the supplementary material.
 analytes:
-  sputum_SARSCoV2_RdRp:
+  sputum_SARSCoV2_RdRp_VL:
     description: >
       Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
       gene in sputum samples. Ct values were then converted into estimated viral copies
@@ -22,7 +22,7 @@ analytes:
     gene_target: RdRp
     unit: gc/mL
     reference_event: symptom onset
-  swab_SARSCoV2_RdRp:
+  swab_SARSCoV2_RdRp_VL:
     description: >
       Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
       gene in swab samples. Ct values were then converted into estimated viral copies
@@ -38,150 +38,592 @@ analytes:
     gene_target: RdRp
     unit: gc/mL
     reference_event: symptom onset
+  swab_SARSCoV2_E_Ct:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the E gene
+      in swab samples.
+    limit_of_quantification: 35
+    limit_of_detection: unknown
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: E
+    unit: cycle threshold
+    reference_event: symptom onset
+  sputum_SARSCoV2_E_Ct:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the E gene
+      in sputum samples.
+    limit_of_quantification: 35
+    limit_of_detection: unknown
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    gene_target: E
+    unit: cycle threshold
+    reference_event: symptom onset
+  stool_SARSCoV2_E_Ct:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the E gene
+      in stool samples.
+    limit_of_quantification: 35
+    limit_of_detection: unknown
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: E
+    unit: cycle threshold
+    reference_event: symptom onset
+  stool_SARSCoV2_RdRp_Ct:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
+      gene in stool samples.
+    limit_of_quantification: 35
+    limit_of_detection: unknown
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    unit: cycle threshold
+    reference_event: symptom onset
+  sputum_SARSCoV2_RdRp_Ct:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
+      gene in sputum samples.
+    limit_of_quantification: 35
+    limit_of_detection: unknown
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    unit: cycle threshold
+    reference_event: symptom onset
+  swab_SARSCoV2_RdRp_Ct:
+    description: >
+      Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp
+      gene in swab samples.
+    limit_of_quantification: 35
+    limit_of_detection: unknown
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    unit: cycle threshold
+    reference_event: symptom onset
 participants:
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 2
-    value: 46971053
-  - analyte: swab_SARSCoV2_RdRp
+    value: 46971053.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 2
+    value: 25.05
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 3
-    value: 5367707
-  - analyte: swab_SARSCoV2_RdRp
+    value: 5367707.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 3
+    value: 28.33
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 5
-    value: 429195
-  - analyte: swab_SARSCoV2_RdRp
+    value: 429195.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 5
+    value: 32.15
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 6
-    value: 5622033
-  - analyte: swab_SARSCoV2_RdRp
+    value: 5622033.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 6
+    value: 28.26
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 7
-    value: 4610320
-  - analyte: swab_SARSCoV2_RdRp
+    value: 4610320.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 7
+    value: 28.56
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 8
-    value: 2227422
-  - analyte: swab_SARSCoV2_RdRp
+    value: 2227422.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 8
+    value: 29.66
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 9
-    value: 1383607
-  - analyte: swab_SARSCoV2_RdRp
+    value: 1383607.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 9
+    value: 30.38
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 10
-    value: 187778
-  - analyte: swab_SARSCoV2_RdRp
+    value: 187778.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 10
+    value: 33.4
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 11
-    value: 61341
-  - analyte: swab_SARSCoV2_RdRp
+    value: 61341.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 11
+    value: 35.09
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 12
-    value: 214445
-  - analyte: swab_SARSCoV2_RdRp
+    value: 214445.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 12
+    value: 32.2
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 13
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 14
-    value: 204636
-  - analyte: swab_SARSCoV2_RdRp
+    value: 204636.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 14
+    value: 33.27
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 15
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 16
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 16
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 3
-    value: 9171220
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 9171220.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 3
+    value: 27.52
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 5
-    value: 341549451
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 341549451.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 5
+    value: 22.05
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 6
-    value: 924307
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 924307.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 6
+    value: 30.99
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 7
-    value: 51187899
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 51187899.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 7
+    value: 24.92
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 8
-    value: 10194839
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 10194839.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 8
+    value: 27.36
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 9
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 9
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 10
-    value: 2169273
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 2169273.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 10
+    value: 29.7
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 11
-    value: 1823569
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 1823569.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 11
+    value: 29.96
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 12
-    value: 340873
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 340873.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 12
+    value: 32.5
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 13
-    value: 312089
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 312089.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 13
+    value: 32.63
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 14
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 14
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 15
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 15
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 16
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 2
+    value: 22.5
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 3
+    value: 26.5
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 5
+    value: 29.29
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 6
+    value: 25.32
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 7
+    value: 25.73
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 8
+    value: 26.3
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 11
+    value: 34.23
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 12
+    value: 33.79
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 14
+    value: 31.68
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 16
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 3
+    value: 24.64
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 5
+    value: 19.83
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 6
+    value: 28.05
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 7
+    value: 22.25
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 8
+    value: 25.3
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 9
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 10
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 11
+    value: 27.22
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 12
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 13
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 14
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 15
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 5
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 6
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 8
+    value: 36.27
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 9
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 10
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 11
+    value: 34.29
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 12
+    value: 33.45
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 14
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 15
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 5
+    value: 37.66
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 6
+    value: 37.75
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 7
+    value: 35.54
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 8
+    value: 33.29
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 9
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 10
+    value: 28.2
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 12
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 14
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 15
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
     time: 16
     value: negative
 - attributes:
     age: 55
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 14
-    value: 49047
-  - analyte: swab_SARSCoV2_RdRp
+    value: 49047.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 14
+    value: 35.43
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 15
-    value: 13911309
-  - analyte: swab_SARSCoV2_RdRp
+    value: 13911309.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 15
+    value: 26.89
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 16
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 17
-    value: 316621
-  - analyte: swab_SARSCoV2_RdRp
+    value: 316621.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 17
+    value: 32.61
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 18
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 20
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 21
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 25
-    value: 21317
-  - analyte: swab_SARSCoV2_RdRp
+    value: 21317.0
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 25
+    value: 36.69
+  - analyte: swab_SARSCoV2_RdRp_VL
     time: 26
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: swab_SARSCoV2_RdRp_Ct
+    time: 26
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 14
-    value: 391243
-  - analyte: sputum_SARSCoV2_RdRp
+    value: 391243.0
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 14
+    value: 32.29
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 20
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 20
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 22
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 22
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 23
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 23
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 24
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 24
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 25
     value: negative
-  - analyte: sputum_SARSCoV2_RdRp
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 25
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 26
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 26
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 14
+    value: 32.06
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 15
+    value: 24.2
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 16
+    value: 36.83
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 17
+    value: 25.15
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 25
+    value: 33.18
+  - analyte: swab_SARSCoV2_E_Ct
+    time: 26
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 14
+    value: 30.04
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 20
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 22
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 23
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 24
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 25
+    value: negative
+  - analyte: sputum_SARSCoV2_E_Ct
+    time: 26
+    value: 39.51
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 17
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 19
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 21
+    value: negative
+  - analyte: stool_SARSCoV2_RdRp_Ct
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 17
+    value: 30.45
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 19
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 21
+    value: negative
+  - analyte: stool_SARSCoV2_E_Ct
+    time: 24
     value: negative
