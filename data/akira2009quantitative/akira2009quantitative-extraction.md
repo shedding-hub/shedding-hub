@@ -85,7 +85,7 @@ akira2009 = dict(title="Quantitative analysis of fecal sapovirus shedding: ident
                                                     gene_target="VP1",  
                                                     limit_of_quantification="unknown",
                                                     limit_of_detection=129000,
-                                                    unit="gc/dry gram",
+                                                    unit="gc/wet gram",
                                                     reference_event="symptom onset")),
                              
                participants=participant_list)
