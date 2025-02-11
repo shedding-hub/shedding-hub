@@ -18,7 +18,7 @@ analytes:
     gene_target: RNA
     limit_of_quantification: unknown
     limit_of_detection: unknown
-    unit: value
+    unit: string
     reference_event: symptom onset
 participants:
 - attributes:

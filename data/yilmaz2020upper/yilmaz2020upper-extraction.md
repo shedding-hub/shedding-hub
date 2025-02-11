@@ -75,34 +75,31 @@ else:
         participants.append(participant)
 
 
-
-
 ```
 Finally, the data is formatted and output as a YAML file.
 ```python
 output_data = {
-    "title": "Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients",
-    "doi": "10.1016/j.ijid.2020.04.083",
+    "title": "Upper Respiratory Tract Levels of Severe Acute Respiratory Syndrome Coronavirus 2 RNA and Duration of Viral RNA Shedding Do Not Differ Between Patients With Mild and Severe/Critical Coronavirus Disease 2019",
+    "doi": "10.1093/infdis/jiaa632",
     "description": folded_str(
-        "The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected from all patients at least 2 days after hospitalization and physicians checked their symptoms and signs daily. Patients who had asymptomatic carrier and incubation period were analyzed.\n"
+        "The authors reports longitudinal viral RNA loads from the nasopharynx/throat in patients with mild and severe/critical coronavirus disease 2019 (COVID-19). He also investigated whether the duration of symptoms correlated with the duration of viral RNA shedding. A total of 56 patients were included.\n"
     ),
     "analytes": {
         "throatswab_SARSCoV2": {
             "description": folded_str(
-                "SARS-CoV-2 RNA genome copy concentration in throat swab samples. Specimens were collected from all patients at least 2 days after hospitalization and physicians checked their symptoms and signs daily.\n"
+                "The author collected serial upper respiratory tract samples (1 nasopharyngeal swab and 1 throat swab put in a single collection tube with 1 mL of trans- port medium) for real-time PCR of SARS-CoV-2 RNA for all patients.\n"
             ),
-            "specimen": "throat_swab",
+            "specimen": "nasopharyngeal swab and throat swab",
             "biomarker": "SARS-CoV-2",
-            "gene_target": "RdRp",
+            "gene_target": "RNA",
             "limit_of_quantification": "unknown",
-            "limit_of_detection": 40,
+            "limit_of_detection": "unknown",
             "unit": "value",
             "reference_event": "symptom onset"
         }
     },
     "participants": participants
 }
-with open("kimse2020.yaml","w") as outfile:
+with open("yilmaz2020.yaml","w") as outfile:
     yaml.dump(output_data, outfile, default_flow_style=False, allow_unicode=True, sort_keys=False)
-
 ```
