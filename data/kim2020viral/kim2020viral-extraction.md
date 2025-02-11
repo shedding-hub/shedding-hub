@@ -18,9 +18,9 @@ sputum_RdRp = KimJY[KimJY['Type '] == 'sputum RdRp']
 
 
 ```python
+# Group by participant and extract measurements
 participants = []
 
-# Group by participant and extract measurements
 for patient_id, group in KimJY.groupby('PatientID'):
     participant = {
         'attributes': {
@@ -31,37 +31,30 @@ for patient_id, group in KimJY.groupby('PatientID'):
     }
 
     for _, row in group.iterrows():
-        # If Ctvalue is 'ud', mark as negative
-        if row['Ctvalue'] == 'ud':
-            measurement = {
-                'analyte': row['Type ']+ '_Ct',
-                'time': row['Day'],
-                'value': "negative"
-            }
-            participant['measurements'].append(measurement)
-        # If a valid numeric value exists, record two measurements: one for the numeric value (_VL) and one for the Ct value (_Ct)
-        elif pd.notna(row['Value']):
+        # If a valid numeric value exists, record two measurements:
+        # one for the numeric value (_VL) and one for the Ct value (_Ct)
+        if pd.notna(row['Value']):
             measurement_vl = {
                 'analyte': row['Type '] + '_VL',
                 'time': row['Day'],
-                'value': row['Value']
+                'value': "negative" if row['Ctvalue'] == 'ud' else row['Value']
             }
             participant['measurements'].append(measurement_vl)
             
             measurement_ct = {
                 'analyte': row['Type '] + '_Ct',
                 'time': row['Day'],
-                'value': row['Ctvalue']
+                'value': "negative" if row['Ctvalue'] == 'ud' else row['Ctvalue']
             }
             participant['measurements'].append(measurement_ct)
         # Otherwise, record a single measurement using Ctvalue
         else:
-            measurement = {
-                'analyte': row['Type ']+ '_Ct',
+            measurement_ct = {
+                'analyte': row['Type '] + '_Ct',
                 'time': row['Day'],
-                'value': row['Ctvalue']
+                'value': "negative" if row['Ctvalue'] == 'ud' else row['Ctvalue']
             }
-            participant['measurements'].append(measurement)
+            participant['measurements'].append(measurement_ct)
             
     participants.append(participant)
 ```

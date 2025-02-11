@@ -173,6 +173,9 @@ participants:
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 12
     value: 32.2
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 13
+    value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 13
     value: negative
@@ -182,8 +185,14 @@ participants:
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 14
     value: 33.27
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 15
+    value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 16
     value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 16
@@ -218,6 +227,9 @@ participants:
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 8
     value: 27.36
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 9
+    value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 9
     value: negative
@@ -245,11 +257,20 @@ participants:
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 13
     value: 32.63
-  - analyte: sputum_SARSCoV2_RdRp_Ct
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 14
     value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 14
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
     time: 15
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_Ct
+    time: 15
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 16
     value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 16
@@ -417,6 +438,9 @@ participants:
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 15
     value: 26.89
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 16
+    value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 16
     value: negative
@@ -426,20 +450,38 @@ participants:
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 17
     value: 32.61
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 18
+    value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 20
     value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 20
     value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 21
+    value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 22
     value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 22
     value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 23
+    value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 24
     value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 24
@@ -450,6 +492,9 @@ participants:
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 25
     value: 36.69
+  - analyte: swab_SARSCoV2_RdRp_VL
+    time: 26
+    value: negative
   - analyte: swab_SARSCoV2_RdRp_Ct
     time: 26
     value: negative
@@ -459,20 +504,38 @@ participants:
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 14
     value: 32.29
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 20
+    value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 20
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 22
     value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 22
     value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 23
+    value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 23
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 24
     value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 24
     value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 25
+    value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 25
+    value: negative
+  - analyte: sputum_SARSCoV2_RdRp_VL
+    time: 26
     value: negative
   - analyte: sputum_SARSCoV2_RdRp_Ct
     time: 26
