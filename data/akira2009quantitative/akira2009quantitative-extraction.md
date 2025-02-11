@@ -79,7 +79,7 @@ Finally, the data is formatted and output as a YAML file.
 akira2009 = dict(title="Quantitative analysis of fecal sapovirus shedding: identification of nucleotide substitutions in the capsid protein during prolonged excretion",
                doi="10.1007/s00705-009-0358-0",
                description=folded_str("This study quantifies Sapovirus (SaV) RNA shedding in stool from two outbreak cases using real-time RT-PCR, revealing that SaV excretion generally declines within two weeks but can persist at high concentrations for up to four weeks in some individuals. The study also identifies nucleotide substitutions in the VP1 gene during prolonged excretion, suggesting potential viral evolution.\n"),
-               analyte=dict(stool_SaV=dict(description=folded_str("Sapovirus RNA gene copy concentration in stool samples. The concentration were quantified in cDNA copies per gram.\n"),
+               analytes=dict(stool_SaV=dict(description=folded_str("Sapovirus RNA gene copy concentration in stool samples. The concentration were quantified in cDNA copies per gram.\n"),
                                                     specimen="stool",
                                                     biomarker="sapovirus",
                                                     gene_target="VP1",  
