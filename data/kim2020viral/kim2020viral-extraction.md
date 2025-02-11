@@ -31,17 +31,38 @@ for patient_id, group in KimJY.groupby('PatientID'):
     }
 
     for _, row in group.iterrows():
+        # If Ctvalue is 'ud', mark as negative
         if row['Ctvalue'] == 'ud':
-            value = "negative"
+            measurement = {
+                'analyte': row['Type ']+ '_Ct',
+                'time': row['Day'],
+                'value': "negative"
+            }
+            participant['measurements'].append(measurement)
+        # If a valid numeric value exists, record two measurements: one for the numeric value (_VL) and one for the Ct value (_Ct)
+        elif pd.notna(row['Value']):
+            measurement_vl = {
+                'analyte': row['Type '] + '_VL',
+                'time': row['Day'],
+                'value': row['Value']
+            }
+            participant['measurements'].append(measurement_vl)
+            
+            measurement_ct = {
+                'analyte': row['Type '] + '_Ct',
+                'time': row['Day'],
+                'value': row['Ctvalue']
+            }
+            participant['measurements'].append(measurement_ct)
+        # Otherwise, record a single measurement using Ctvalue
         else:
-            value = row['Value'] if pd.notna(row['Value']) else row['Ctvalue']
-        measurementN = {
-            'analyte': row['Type '],
-            'time': row['Day'],
-            'value': value
-        }
-        participant['measurements'].append(measurementN)
-
+            measurement = {
+                'analyte': row['Type ']+ '_Ct',
+                'time': row['Day'],
+                'value': row['Ctvalue']
+            }
+            participant['measurements'].append(measurement)
+            
     participants.append(participant)
 ```
 
@@ -98,7 +119,24 @@ KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two
                                         biomarker="SARS-CoV-2",
                                         gene_target="RdRp",
                                         unit="cycle threshold",
-                                        reference_event="symptom onset",)),
+                                        reference_event="symptom onset",),
+                            sputum_SARSCoV2_RdRp_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in sputum samples.\n"),
+                                        limit_of_quantification=35,
+                                        limit_of_detection="unknown",
+                                        specimen="sputum",
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="RdRp",
+                                        unit="cycle threshold",
+                                        reference_event="symptom onset",),
+                            swab_SARSCoV2_RdRp_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp gene in swab samples.\n"),
+                                        limit_of_quantification=35,
+                                        limit_of_detection="unknown",
+                                        specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
+                                        biomarker="SARS-CoV-2",
+                                        gene_target="RdRp",
+                                        unit="cycle threshold",
+                                        reference_event="symptom onset",)
+                                        ),
                 participants = participants)
 
 with open("kim2020viral.yaml","w") as outfile:
