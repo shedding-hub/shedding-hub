@@ -6,17 +6,7 @@ First, we `import` python modules needed:
 ```python
 import yaml
 import pandas as pd
-import numpy as np
-class folded_str(str): pass
-class literal_str(str): pass
-
-def folded_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
-def literal_str_representer(dumper, data):
-    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
-
-yaml.add_representer(folded_str, folded_str_representer)
-yaml.add_representer(literal_str, literal_str_representer)
+from shedding_hub import folded_str
 ```
 ```python
 # Step 1: Read in data from Excel files
@@ -46,7 +36,41 @@ data = data.replace({
     
 })
 
-# Step 3: Create the list of participants
+df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
+
+participants = []
+
+for patient_id, patient_data in df.groupby("PatientID"):
+#patient_id in df["PatientID"].unique():
+#     patient_data = df[df["PatientID"] == patient_id]
+    participant = {
+        "attributes": {
+            # "day": int(patient_data["Day"].iloc[0]),
+            "age": float(patient_data["Age"].iloc[0]),
+            "sex": str(patient_data["Sex"].iloc[0]),
+            # "estimated": int(patient_data["Estimated"].iloc[0]),
+            # "sevmax": float(patient_data["SevMax"].iloc[0]),
+        },
+        # "sev1st": float(patient_data["Sev1st"].iloc[0]),
+        #"death": int(patient_data["Died"].iloc[0]),
+        "measurements": []
+    }
+    # print(participant)
+    for _, row in patient_data.iterrows():
+        measurement = {
+            "analyte": "throatswab_SARSCoV2",
+            "time": int(row["Day"]),
+            "value": float(row["value"])
+        }
+        participant["measurements"].append(measurement)
+
+
+    participants.append(participant)
+
+    # Check column names
+print(df.columns)
+
+# Strip spaces from column names to avoid issues with whitespace
 df.columns = df.columns.str.strip()
 
 # Verify the column exists after cleaning
@@ -74,6 +98,8 @@ else:
 
         participants.append(participant)
 
+    print(participants)
+
 
 ```
 Finally, the data is formatted and output as a YAML file.
@@ -94,7 +120,7 @@ output_data = {
             "gene_target": "RNA",
             "limit_of_quantification": "unknown",
             "limit_of_detection": "unknown",
-            "unit": "value",
+            "unit": "gc/swab",
             "reference_event": "symptom onset"
         }
     },

@@ -13,14 +13,12 @@ analytes:
       The author collected serial upper respiratory tract samples (1 nasopharyngeal
       swab and 1 throat swab put in a single collection tube with 1 mL of trans- port
       medium) for real-time PCR of SARS-CoV-2 RNA for all patients.
-    specimen: nasopharyngeal swab and throat swab
+    specimen: throat swab
     biomarker: SARS-CoV-2
-    gene_target: RNA
+    gene_target: gc/swab
     limit_of_quantification: unknown
     limit_of_detection: unknown
-    unit: gc/swab
     reference_event: symptom onset
-    enum: throat_swab
 participants:
 - attributes:
     age: 36.0
