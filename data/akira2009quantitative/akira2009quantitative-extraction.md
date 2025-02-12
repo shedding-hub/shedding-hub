@@ -1,6 +1,6 @@
 # Extraction for Akira et al. (2009)
 
-[Akira et al. (2009)](https://doi.org/10.1002/jmv.21217) quantifies Sapovirus (SaV) RNA shedding in stool from two outbreak cases using real-time RT-PCR, revealing that SaV excretion generally declines within two weeks but can persist at high concentrations for up to four weeks in some individuals. The study also identifies nucleotide substitutions in the VP1 gene during prolonged excretion, suggesting potential viral evolution.
+[Iwakiri et al. (2009)](https://doi.org/10.1007/s00705-009-0358-0) quantified Sapovirus (SaV) RNA shedding in stool samples from cases of two outbreaks using real-time RT-PCR, revealing that SaV excretion generally declined within two weeks but can persist at high concentrations for up to four weeks in some individuals. The study also identified nucleotide substitutions in the VP1 gene during prolonged excretion, suggesting potential viral evolution.
                
 
 First, we `import` python modules needed:
