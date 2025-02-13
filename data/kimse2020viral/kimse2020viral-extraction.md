@@ -11,75 +11,63 @@ import numpy as np
 from shedding_hub import folded_str
 ```
 ```python
-combineddataset_df
-```
-
-```python
-asymptomatic_df
-```
-
-```python
-merged_df
-```
-
-```python
-df
-```
-
-```python
-merged_df
-```
-
-```python
 combineddataset_df = pd.read_excel("CombinedDataset.xlsx") 
 combineddataset_df = combineddataset_df[combineddataset_df['StudyNum'] == 4]
 asymptomatic_df = pd.read_excel("asymptomatic.xlsx") 
 combineddataset_df = combineddataset_df.replace({"Sex": {"M": "male", "F": "female"},
                            "PatientID":{"4-1":"1", "4-2":"2","4-3":"3"}})
-# Step 2: Rename patients in asymptomatic data
-asymptomatic_df['patient'] = asymptomatic_df['patient'].str.strip()
-patient_mapping = {patient: f"4-{i+1}" for i, patient in enumerate(asymptomatic_df['patient'].unique())}
-asymptomatic_df['patient'] = asymptomatic_df['patient'].map(patient_mapping)
+```
 
-# Step 4: Merge datasets on Patient and PatientID
-merged_df = pd.merge(asymptomatic_df, combineddataset_df, left_on='patient', right_on='PatientID', how='outer')
+```python
+participants_symptomatic = []
 
-# Step 5: Fill missing values with 0
-#merged_df.fillna(0, inplace=True)
-#df = pd.DataFrame(combineddataset_df) if not isinstance(combineddataset_df, pd.DataFrame) else combineddataset_df
-
-participants = []
-
-for patient_id, patient_data in merged_df("PatientID"):
-#patient_id in df["PatientID"].unique():
-#     patient_data = df[df["PatientID"] == patient_id]
+for patient_id, patient_data in combineddataset_df.groupby("PatientID"):
     participant = {
         "attributes": {
-            # "day": int(patient_data["Day"].iloc[0]),
             "age": float(patient_data["Age"].iloc[0]),
             "sex": str(patient_data["Sex"].iloc[0]),
-            #"death": int(patient_data["Died"].iloc[0]),
-            # "estimated": int(patient_data["Estimated"].iloc[0]),
-            # "sevmax": float(patient_data["SevMax"].iloc[0]),
         },
-        # "sev1st": float(patient_data["Sev1st"].iloc[0]),
-        #"death": int(patient_data["Died"].iloc[0]),
         "measurements": []
     }
-    # print(participant)
+    for _, row in patient_data.iterrows():
+        measurement = {
+            "analyte": "throatswab_SARSCoV2",
+            "time": max(int(row["Day"]), 1), 
+            "value": float(row["value"]) if float(row["value"]) != 1.0 else 'negative'
+        }
+        participant["measurements"].append(measurement)
+    
+    participants_symptomatic.append(participant)
+
+```
+
+```python
+participants_asymptomatic = []
+for patient_id, patient_data in asymptomatic_df.groupby("PatientID"):
+    participant = {
+        "attributes": {
+            "age": float(patient_data["Age"].iloc[0]),
+            "sex": str(patient_data["Sex"].iloc[0]),
+        },
+        "measurements": []
+    }
     for _, row in patient_data.iterrows():
         measurement = {
             "analyte": "throatswab_SARSCoV2",
             "time": int(row["Day"]),
-            "value": float(row["value"]) if float(row["value"]) !=1.0 else 'negative'
+            "value": float(row["value"]) if float(row["value"]) != 1.0 else 'negative'
         }
         participant["measurements"].append(measurement)
-
-#不要merge，分别做成两个study，先loop前三个人用第一个analyte，再loop后十个人
-    #先做，再把participants merge
-    participants.append(participant)
-
+    
+    participants_asymptomatic.append(participant)
 ```
+
+```python
+participants = []
+participants.extend(participants_symptomatic)
+participants.extend(participants_asymptomatic)
+```
+
 Finally, the data is formatted and output as a YAML file.
 ```python
 output_data = {
@@ -89,28 +77,28 @@ output_data = {
         "The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020..."
     ),
     "analytes": {
-        "throatswab_SARSCoV2_sy": {
+        "throatswab_SARSCoV2_symptomatic": {
             "description": folded_str("SARS-CoV-2 RNA genome copy concentration in throat swab samples..."),
             "specimen": "throat_swab",
             "biomarker": "SARS-CoV-2",
             "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
             "limit_of_detection": 40,
-            "unit": "value",
+            "unit": "gc/swab",
             "reference_event": "symptom onset"
         },
-         "throatswab_SARSCoV2_asy": {
+         "throatswab_SARSCoV2_asymptomatic": {
             "description": folded_str("SARS-CoV-2 RNA genome copy concentration in throat swab samples..."),
             "specimen": "throat_swab",
             "biomarker": "SARS-CoV-2",
             "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
             "limit_of_detection": 40,
-            "unit": "value",
+            "unit": "gc/swab",
             "reference_event": "confirmation date"
         }
     },  
-    "participants": participants #放merge之后的participants
+    "participants": participants 
 }
 with open("kimse2020viral.yaml","w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
@@ -118,5 +106,8 @@ with open("kimse2020viral.yaml","w") as outfile:
 ```
 
 ```python
-
+#make sure branch
+#git pull
+#result
+#push
 ```
