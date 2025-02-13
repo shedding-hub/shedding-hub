@@ -3,11 +3,11 @@ title: Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic 
 doi: 10.1016/j.ijid.2020.04.083
 description: >-
   The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from
-  71 COVID-19 patients between February 4 and April 7, 2020...
+  71 COVID-19 patients between February 4 and April 7, 2020
 analytes:
   throatswab_SARSCoV2_symptomatic:
-    description: >-
-      SARS-CoV-2 RNA genome copy concentration in throat swab samples...
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in throat swab samples.
     specimen: throat_swab
     biomarker: SARS-CoV-2
     gene_target: RdRp
@@ -16,8 +16,8 @@ analytes:
     unit: gc/swab
     reference_event: symptom onset
   throatswab_SARSCoV2_asymptomatic:
-    description: >-
-      SARS-CoV-2 RNA genome copy concentration in throat swab samples...
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in throat swab samples.
     specimen: throat_swab
     biomarker: SARS-CoV-2
     gene_target: RdRp
