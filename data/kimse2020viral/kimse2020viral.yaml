@@ -103,14 +103,14 @@ participants:
     value: negative
 - attributes:
     age: 8.0
-    sex: F
+    sex: female
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 4
     value: 39.9288061336254
 - attributes:
     age: 21.0
-    sex: M
+    sex: male
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 1
@@ -126,7 +126,7 @@ participants:
     value: 40.0930367236972
 - attributes:
     age: 55.0
-    sex: F
+    sex: female
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 8
@@ -145,7 +145,7 @@ participants:
     value: 39.8384761617
 - attributes:
     age: 25.0
-    sex: F
+    sex: female
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 1
@@ -167,7 +167,7 @@ participants:
     value: 39.909607080359
 - attributes:
     age: 58.0
-    sex: M
+    sex: male
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 2
@@ -201,7 +201,7 @@ participants:
     value: 39.8247535596933
 - attributes:
     age: 79.0
-    sex: F
+    sex: female
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 8
@@ -211,7 +211,7 @@ participants:
     value: 39.8548425677632
 - attributes:
     age: 8.0
-    sex: F
+    sex: female
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 2
@@ -221,7 +221,7 @@ participants:
     value: 40.0463924664173
 - attributes:
     age: 37.0
-    sex: M
+    sex: male
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 1
@@ -240,7 +240,7 @@ participants:
     value: 34.8685651697699
 - attributes:
     age: 48.0
-    sex: M
+    sex: male
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 2
@@ -253,7 +253,7 @@ participants:
     value: 39.9204970351625
 - attributes:
     age: 24.0
-    sex: F
+    sex: female
   measurements:
   - analyte: throatswab_SARSCoV2
     time: 2
