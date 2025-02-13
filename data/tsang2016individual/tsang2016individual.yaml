@@ -1,0 +1,6356 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Individual Correlates of Infectivity of Influenza A Virus Infections in Households
+doi: 10.1371/journal.pone.0154418
+description: >
+  The community-based study reports the transmission of Influenza A virus within households
+  from February 2008 through December 2012, focusing on viral loads in nasal and throat
+  swabs from index cases and their household contacts.
+analytes:
+  NPSOPS:
+    description: >
+      Influenza A virus RNA gene copy concentration in oropharynx and nasopharynx
+      samples. Paired nasal and throat swabs were pooled in viral transport medium
+      immediately after collection and subsequently processed for quantitative reverse
+      transcription PCR to detect and quantify influenza A virus. The concentration
+      was quantified in gene copies per milliliter. M gene was used as the gene target
+      for the PCR assay, as described in a referenced study (Chan et al., 2008).
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: influenza
+    gene_target: M
+    limit_of_quantification: unknown
+    limit_of_detection: 900
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3500000.000000036
+  - analyte: NPSOPS
+    time: 4
+    value: 166999.99999999863
+  - analyte: NPSOPS
+    time: 7
+    value: 3829.9999999999773
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5570000.000000017
+  - analyte: NPSOPS
+    time: 9
+    value: 7130.0000000000755
+- attributes:
+    age: 36
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 123999.99999999863
+  - analyte: NPSOPS
+    time: 6
+    value: 2029.999999999986
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 55
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2630000.0000000116
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 26
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 25100000.00000012
+  - analyte: NPSOPS
+    time: 4
+    value: 1000.0
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 29
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1860000.0000000142
+  - analyte: NPSOPS
+    time: 5
+    value: 7430.000000000079
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1420000.0000000123
+  - analyte: NPSOPS
+    time: 5
+    value: 1020.0000000000061
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 136000.00000000067
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 41
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 4400000.000000022
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 16
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 29499999.999999788
+  - analyte: NPSOPS
+    time: 4
+    value: 1619999.999999996
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 40500000.00000014
+  - analyte: NPSOPS
+    time: 3
+    value: 18300000.00000001
+  - analyte: NPSOPS
+    time: 6
+    value: 364999.9999999962
+- attributes:
+    age: 51
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 34699.999999999665
+  - analyte: NPSOPS
+    time: 3
+    value: 20199999.99999982
+- attributes:
+    age: 39
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 388000.0000000028
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 88200.00000000012
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 30
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 16000.000000000206
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 27
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 18200000.0000002
+  - analyte: NPSOPS
+    time: 5
+    value: 23699.99999999979
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3009999.999999974
+- attributes:
+    age: 45
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 6769999.99999993
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 118000000.00000112
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 29
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1089999999.9999914
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 55
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2330000.000000004
+  - analyte: NPSOPS
+    time: 4
+    value: 708000.0000000013
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 3140000.0000000345
+  - analyte: NPSOPS
+    time: 2
+    value: 899.9999999999897
+- attributes:
+    age: 39
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5109999.999999969
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 64
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 609000.0000000059
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 27
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1160000.000000004
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 33
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 68799999.99999985
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 17
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 204000000.0000002
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 144000000.00000018
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 37
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 819000.0000000028
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 92100000.00000013
+  - analyte: NPSOPS
+    time: 5
+    value: 1119999.9999999963
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 4620000.000000045
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1460000.000000009
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 36
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 16599999.999999791
+- attributes:
+    age: 14
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 12500000.000000097
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 13400000.00000007
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 35199999.9999999
+  - analyte: NPSOPS
+    time: 5
+    value: 283000000.0000003
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 274999999.99999785
+  - analyte: NPSOPS
+    time: 4
+    value: 1050000.000000005
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 72
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 1200000.0000000156
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 6230000.000000007
+  - analyte: NPSOPS
+    time: 6
+    value: 1319999.999999999
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 787999.9999999896
+  - analyte: NPSOPS
+    time: 5
+    value: 99899.99999999949
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 36
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 426999.9999999958
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 291000.0000000015
+  - analyte: NPSOPS
+    time: 3
+    value: 5899999.999999946
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 58699.99999999934
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 49
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 4599999.999999955
+  - analyte: NPSOPS
+    time: 6
+    value: 18499.999999999847
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 287999999.9999992
+  - analyte: NPSOPS
+    time: 5
+    value: 54100.00000000009
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 41
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1969999.9999999858
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 3559999.999999961
+  - analyte: NPSOPS
+    time: 4
+    value: 3839999.9999999893
+  - analyte: NPSOPS
+    time: 9
+    value: 1539.999999999989
+- attributes:
+    age: 30
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 274000000.00000167
+  - analyte: NPSOPS
+    time: 6
+    value: 438000.00000000023
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 602999.9999999986
+  - analyte: NPSOPS
+    time: 5
+    value: 5370000.000000059
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 17899999.99999986
+  - analyte: NPSOPS
+    time: 4
+    value: 29900000.000000026
+  - analyte: NPSOPS
+    time: 10
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 34299999.999999955
+  - analyte: NPSOPS
+    time: 5
+    value: 32099999.99999982
+  - analyte: NPSOPS
+    time: 9
+    value: 7940.000000000068
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 188999.9999999983
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -1
+    value: 8580.000000000093
+  - analyte: NPSOPS
+    time: 1
+    value: 476999.99999999563
+  - analyte: NPSOPS
+    time: 6
+    value: 38299999.99999978
+- attributes:
+    age: 8
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1460000000.000009
+  - analyte: NPSOPS
+    time: 3
+    value: 34600000.00000026
+  - analyte: NPSOPS
+    time: 5
+    value: 197999.9999999995
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 111000000.00000049
+  - analyte: NPSOPS
+    time: 4
+    value: 25100000.00000012
+  - analyte: NPSOPS
+    time: 8
+    value: 1699.999999999985
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 3629.999999999981
+  - analyte: NPSOPS
+    time: 3
+    value: 893000.0000000081
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 70200000.00000083
+  - analyte: NPSOPS
+    time: 4
+    value: 301999.9999999996
+  - analyte: NPSOPS
+    time: 7
+    value: 776000.0000000026
+- attributes:
+    age: 63
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 10500.000000000047
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 28500000.0
+  - analyte: NPSOPS
+    time: 4
+    value: 1920000.0000000023
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 20400000.000000063
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 30
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 11800000.000000136
+  - analyte: NPSOPS
+    time: 5
+    value: 95000.00000000055
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2290000.000000011
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 52
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 204999.99999999785
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 11899999.999999983
+  - analyte: NPSOPS
+    time: 5
+    value: 516999.99999999674
+  - analyte: NPSOPS
+    time: 6
+    value: 39999.99999999977
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 63399.99999999958
+  - analyte: NPSOPS
+    time: 4
+    value: 76599.99999999924
+- attributes:
+    age: 1
+    sex: male
+    vaccinated: unknown
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 632000000.000006
+  - analyte: NPSOPS
+    time: 3
+    value: 808000.0000000079
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 34299999.999999955
+  - analyte: NPSOPS
+    time: 3
+    value: 32099999.99999982
+  - analyte: NPSOPS
+    time: 7
+    value: 7940.000000000068
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 132000000.00000018
+  - analyte: NPSOPS
+    time: 2
+    value: 2379999.9999999874
+  - analyte: NPSOPS
+    time: 7
+    value: 280000.0000000007
+- attributes:
+    age: 17
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1139999.9999999932
+  - analyte: NPSOPS
+    time: 3
+    value: 1320.0000000000005
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 17300000.000000197
+  - analyte: NPSOPS
+    time: 4
+    value: 31899.999999999924
+  - analyte: NPSOPS
+    time: 7
+    value: 19600.000000000175
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 223999999.99999836
+  - analyte: NPSOPS
+    time: 3
+    value: 1259999.9999999912
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 53
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 261999999.9999964
+  - analyte: NPSOPS
+    time: 4
+    value: 3699.999999999958
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 662000000.0000002
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 66899.99999999948
+  - analyte: NPSOPS
+    time: 5
+    value: 14899.999999999847
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 361000000.0000013
+  - analyte: NPSOPS
+    time: 5
+    value: 829999.9999999929
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 14500000.00000016
+  - analyte: NPSOPS
+    time: 4
+    value: 347999.9999999991
+  - analyte: NPSOPS
+    time: 8
+    value: 1070.0000000000014
+- attributes:
+    age: 41
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2680000.000000009
+  - analyte: NPSOPS
+    time: 3
+    value: 55899.99999999952
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 17200.000000000025
+  - analyte: NPSOPS
+    time: 4
+    value: 2049999.9999999786
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 41599.9999999997
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 123999.99999999863
+  - analyte: NPSOPS
+    time: 4
+    value: 135000.00000000125
+  - analyte: NPSOPS
+    time: 6
+    value: 530000.0000000012
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 110000000.00000143
+  - analyte: NPSOPS
+    time: 2
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 55500000.00000047
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 7829999.999999937
+  - analyte: NPSOPS
+    time: 4
+    value: 983.9999999999967
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 36700.00000000004
+  - analyte: NPSOPS
+    time: 3
+    value: 395999.99999999825
+  - analyte: NPSOPS
+    time: 7
+    value: 90199.9999999997
+- attributes:
+    age: 46
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3260000000.000003
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 31
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 249000000.00000203
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 741000000.0000035
+  - analyte: NPSOPS
+    time: 5
+    value: 346000.00000000256
+  - analyte: NPSOPS
+    time: 8
+    value: 204999.99999999785
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2049999999.9999828
+  - analyte: NPSOPS
+    time: 4
+    value: 456000.0000000049
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 521000000.00000715
+  - analyte: NPSOPS
+    time: 3
+    value: 9019.999999999962
+  - analyte: NPSOPS
+    time: 7
+    value: 123999.99999999863
+- attributes:
+    age: 32
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 4660000.0
+  - analyte: NPSOPS
+    time: 5
+    value: 4229.999999999978
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 34
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 15799999.99999992
+  - analyte: NPSOPS
+    time: 4
+    value: 6760.000000000063
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 104000000.00000009
+  - analyte: NPSOPS
+    time: 3
+    value: 5920000.000000003
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 98599.99999999975
+  - analyte: NPSOPS
+    time: 3
+    value: 4069.9999999999986
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 730000000.0000075
+  - analyte: NPSOPS
+    time: 3
+    value: 30199999.999999963
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1640000.000000007
+  - analyte: NPSOPS
+    time: 4
+    value: 1160.0000000000039
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 37800.000000000444
+  - analyte: NPSOPS
+    time: 3
+    value: 10399.999999999987
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 58
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 160000000.00000206
+  - analyte: NPSOPS
+    time: 4
+    value: 284000000.0000019
+  - analyte: NPSOPS
+    time: 7
+    value: 444000.0000000003
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 992000.0000000036
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 41800000.000000454
+  - analyte: NPSOPS
+    time: 3
+    value: 640000.0000000044
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 71
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 59399999.999999516
+  - analyte: NPSOPS
+    time: 9
+    value: 588000.0000000019
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2049999.9999999786
+  - analyte: NPSOPS
+    time: 4
+    value: 516999.99999999674
+  - analyte: NPSOPS
+    time: 6
+    value: 364000.0000000033
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 32399999.99999986
+  - analyte: NPSOPS
+    time: 5
+    value: 4529999.999999977
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 713000000.0000068
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 37
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 520999.99999999435
+  - analyte: NPSOPS
+    time: 2
+    value: 20499.999999999785
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 49900000.00000003
+  - analyte: NPSOPS
+    time: 3
+    value: 25100.00000000012
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 22
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 716999.9999999993
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 25
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 155999.99999999953
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 52
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 261999999.9999964
+  - analyte: NPSOPS
+    time: 3
+    value: 10299.999999999953
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 48
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 8289999.999999928
+  - analyte: NPSOPS
+    time: 4
+    value: 2800000.000000007
+  - analyte: NPSOPS
+    time: 8
+    value: 62099.99999999997
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 8559999.999999935
+  - analyte: NPSOPS
+    time: 3
+    value: 137000.0000000011
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 33200000.00000027
+  - analyte: NPSOPS
+    time: 4
+    value: 2379999.9999999874
+  - analyte: NPSOPS
+    time: 7
+    value: 19999.99999999996
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 2550000000.000033
+  - analyte: NPSOPS
+    time: 3
+    value: 5899999.999999946
+  - analyte: NPSOPS
+    time: 6
+    value: 1610000.000000001
+- attributes:
+    age: 42
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 35199999.9999999
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 50200000.00000004
+  - analyte: NPSOPS
+    time: 5
+    value: 691000.000000003
+- attributes:
+    age: 35
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 10700000.000000002
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 74600.0000000002
+  - analyte: NPSOPS
+    time: 4
+    value: 125000.00000000097
+  - analyte: NPSOPS
+    time: 10
+    value: 21800.00000000028
+- attributes:
+    age: 40
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 12500.000000000096
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2309999999.9999747
+  - analyte: NPSOPS
+    time: 5
+    value: 140000.0000000006
+  - analyte: NPSOPS
+    time: 10
+    value: 899.9999999999897
+- attributes:
+    age: 31
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 6309999.999999936
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 83400000.0000002
+  - analyte: NPSOPS
+    time: 4
+    value: 70399999.99999967
+  - analyte: NPSOPS
+    time: 7
+    value: 3009.999999999977
+- attributes:
+    age: 1
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1100000000.0000143
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 256999.99999999715
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 23
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 94000000.00000031
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 30099999.99999974
+  - analyte: NPSOPS
+    time: 4
+    value: 26200000.000000283
+  - analyte: NPSOPS
+    time: 8
+    value: 208999.99999999796
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 722000.0000000013
+  - analyte: NPSOPS
+    time: 4
+    value: 389000.000000002
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 36800000.000000186
+  - analyte: NPSOPS
+    time: 4
+    value: 1770000.0000000135
+  - analyte: NPSOPS
+    time: 7
+    value: 78799.99999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -1
+    value: 773999.9999999953
+  - analyte: NPSOPS
+    time: 2
+    value: 74100000.00000034
+  - analyte: NPSOPS
+    time: 5
+    value: 539000.0000000017
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 116000.00000000038
+  - analyte: NPSOPS
+    time: 4
+    value: 197999.9999999995
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 33399999.999999665
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 72
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 3699999.9999999544
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 548000.0000000012
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5370000.000000059
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 33500000.000000373
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 362999999.9999977
+  - analyte: NPSOPS
+    time: 4
+    value: 4669999.999999978
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 19799999.99999995
+  - analyte: NPSOPS
+    time: 2
+    value: 88500.00000000084
+  - analyte: NPSOPS
+    time: 5
+    value: 40500.00000000014
+- attributes:
+    age: 21
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 66000000.000000216
+  - analyte: NPSOPS
+    time: 3
+    value: 328000.00000000076
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 45
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 521999999.9999978
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5540000.000000007
+  - analyte: NPSOPS
+    time: 4
+    value: 256999.99999999715
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 67600000.00000063
+  - analyte: NPSOPS
+    time: 4
+    value: 2139999.9999999963
+  - analyte: NPSOPS
+    time: 8
+    value: 1220000.0000000054
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1080000000.0000014
+  - analyte: NPSOPS
+    time: 6
+    value: 305999.99999999977
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5589999.9999999525
+  - analyte: NPSOPS
+    time: 4
+    value: 167999.9999999988
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 134000000.0000007
+  - analyte: NPSOPS
+    time: 4
+    value: 40300000.00000005
+  - analyte: NPSOPS
+    time: 7
+    value: 99200.00000000036
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 5769999.999999981
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 153999999.9999989
+  - analyte: NPSOPS
+    time: 4
+    value: 4969999.999999973
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 20
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 4400000.000000022
+  - analyte: NPSOPS
+    time: 4
+    value: 134000.0000000007
+  - analyte: NPSOPS
+    time: 11
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2290000.000000011
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 650999.999999997
+  - analyte: NPSOPS
+    time: 4
+    value: 78600.0000000004
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 42
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 271000.00000000256
+  - analyte: NPSOPS
+    time: 3
+    value: 8340000.00000002
+- attributes:
+    age: 9
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 667000000.0000023
+  - analyte: NPSOPS
+    time: 4
+    value: 1100000.000000012
+  - analyte: NPSOPS
+    time: 8
+    value: 1699999.9999999832
+- attributes:
+    age: 24
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 153000.0000000005
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 29
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 8080000.000000079
+  - analyte: NPSOPS
+    time: 4
+    value: 4879.999999999994
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 34
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 37800000.00000044
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 20
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 153999999.9999989
+  - analyte: NPSOPS
+    time: 4
+    value: 3670.0000000000073
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 50
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1000000.0
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 60500000.00000021
+  - analyte: NPSOPS
+    time: 4
+    value: 18300000.00000001
+  - analyte: NPSOPS
+    time: 6
+    value: 475000.00000000367
+- attributes:
+    age: 64
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 45099999.99999994
+  - analyte: NPSOPS
+    time: 3
+    value: 271000.00000000256
+- attributes:
+    age: 19
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1040000000.0000008
+  - analyte: NPSOPS
+    time: 3
+    value: 70399.99999999968
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 22200000.000000056
+  - analyte: NPSOPS
+    time: 6
+    value: 575999.9999999973
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 46
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 54100.00000000009
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1549999999.999995
+  - analyte: NPSOPS
+    time: 4
+    value: 7220000.000000012
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 30
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 558999999.9999964
+  - analyte: NPSOPS
+    time: 3
+    value: 197999.9999999995
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 123000000.00000054
+  - analyte: NPSOPS
+    time: 3
+    value: 4929999.999999997
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 0
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 57699.99999999981
+  - analyte: NPSOPS
+    time: 6
+    value: 102999999.99999933
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 125000000.00000097
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 375999999.99999905
+  - analyte: NPSOPS
+    time: 5
+    value: 4889999.999999995
+  - analyte: NPSOPS
+    time: 7
+    value: 1610000.000000001
+- attributes:
+    age: 46
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 7410000.000000034
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 31
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1809999.9999999816
+  - analyte: NPSOPS
+    time: 4
+    value: 12300.000000000055
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 12800000.00000004
+  - analyte: NPSOPS
+    time: 3
+    value: 241999.9999999994
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 44700000.00000038
+  - analyte: NPSOPS
+    time: 3
+    value: 5540.000000000002
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 623000000.0000008
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 42
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1600000.0000000205
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 5060.000000000012
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 22900000.000000115
+  - analyte: NPSOPS
+    time: 3
+    value: 1480000.0000000095
+  - analyte: NPSOPS
+    time: 7
+    value: 1999999.9999999963
+- attributes:
+    age: 46
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 271000.00000000256
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 579000.0000000051
+  - analyte: NPSOPS
+    time: 4
+    value: 1830.000000000003
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 311999.9999999978
+  - analyte: NPSOPS
+    time: 3
+    value: 789999.9999999974
+  - analyte: NPSOPS
+    time: 5
+    value: 18499999.999999847
+- attributes:
+    age: 15
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1400000.0000000063
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 156999.9999999985
+  - analyte: NPSOPS
+    time: 6
+    value: 94800.00000000073
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 62300.00000000008
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 16899999.999999877
+  - analyte: NPSOPS
+    time: 5
+    value: 161999.9999999996
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 38
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1630000.000000008
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 28
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 894999.9999999965
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 31699999.999999914
+  - analyte: NPSOPS
+    time: 4
+    value: 13199999.99999999
+  - analyte: NPSOPS
+    time: 6
+    value: 184999.99999999846
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3810000.0000000047
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 34
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2790000.0000000163
+  - analyte: NPSOPS
+    time: 8
+    value: 94800.00000000073
+- attributes:
+    age: 28
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 11000000.000000121
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 40
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 118000.00000000135
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 41
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 6
+    value: 2960.00000000001
+- attributes:
+    age: 36
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 415999.99999999703
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 294999.9999999979
+  - analyte: NPSOPS
+    time: 4
+    value: 1350000.0000000123
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 49
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 21800000.00000028
+  - analyte: NPSOPS
+    time: 3
+    value: 330000.00000000175
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 18
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 3119999999.999978
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 38
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 108000.00000000015
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 34
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 2330000.000000004
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 33
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 72000000.00000022
+  - analyte: NPSOPS
+    time: 4
+    value: 718999.9999999953
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 2
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 35900000.00000005
+  - analyte: NPSOPS
+    time: 6
+    value: 241999.9999999994
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1499999.9999999942
+  - analyte: NPSOPS
+    time: 4
+    value: 33500000.000000373
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 6199999.999999943
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 12000000.000000155
+  - analyte: NPSOPS
+    time: 3
+    value: 53900.000000000175
+  - analyte: NPSOPS
+    time: 7
+    value: 2969.9999999999845
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1730000.0000000198
+  - analyte: NPSOPS
+    time: 4
+    value: 1110000.0000000072
+  - analyte: NPSOPS
+    time: 8
+    value: 1429.9999999999943
+- attributes:
+    age: 79
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1589999999.9999979
+  - analyte: NPSOPS
+    time: 2
+    value: 6949999.99999994
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 55899999.99999952
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 776999999.9999909
+  - analyte: NPSOPS
+    time: 3
+    value: 17899999.99999986
+  - analyte: NPSOPS
+    time: 6
+    value: 1910000.0000000102
+- attributes:
+    age: 68
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 102999999.99999933
+  - analyte: NPSOPS
+    time: 4
+    value: 17600.000000000022
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 33
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1089999.9999999916
+  - analyte: NPSOPS
+    time: 2
+    value: 2700.000000000017
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 72100000.00000013
+  - analyte: NPSOPS
+    time: 5
+    value: 4980000.000000032
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 14600000.000000091
+  - analyte: NPSOPS
+    time: 6
+    value: 654999.9999999949
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 2
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 31699999.999999914
+  - analyte: NPSOPS
+    time: 4
+    value: 26500000.00000011
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 32
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 610999.9999999935
+  - analyte: NPSOPS
+    time: 4
+    value: 4190000.000000041
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 26000000.00000012
+  - analyte: NPSOPS
+    time: 4
+    value: 16899999.999999877
+  - analyte: NPSOPS
+    time: 7
+    value: 263000.00000000116
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 37899999.99999983
+  - analyte: NPSOPS
+    time: 4
+    value: 19100000.000000104
+  - analyte: NPSOPS
+    time: 6
+    value: 1809999.9999999816
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 9750.000000000075
+  - analyte: NPSOPS
+    time: 6
+    value: 15399999.99999989
+  - analyte: NPSOPS
+    time: 9
+    value: 1830000.0000000012
+- attributes:
+    age: 25
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 510000.0000000046
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1539999.999999989
+  - analyte: NPSOPS
+    time: 3
+    value: 51699.99999999967
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 22
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 758999999.9999981
+  - analyte: NPSOPS
+    time: 6
+    value: 10500000.000000048
+  - analyte: NPSOPS
+    time: 10
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5780000.000000018
+  - analyte: NPSOPS
+    time: 5
+    value: 4470000.000000038
+  - analyte: NPSOPS
+    time: 7
+    value: 470000.00000000244
+- attributes:
+    age: 36
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 33599.999999999694
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 29
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 2130000.0000000102
+  - analyte: NPSOPS
+    time: 4
+    value: 19699999.99999986
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 31699999.999999914
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5609999.999999986
+  - analyte: NPSOPS
+    time: 5
+    value: 180999.99999999817
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 733000.0000000035
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 26200000.000000283
+  - analyte: NPSOPS
+    time: 4
+    value: 1330000.0000000135
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 45
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 16999999.999999832
+  - analyte: NPSOPS
+    time: 4
+    value: 309999999.99999774
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1270000.0000000088
+  - analyte: NPSOPS
+    time: 5
+    value: 28099999.999999996
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 39
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 441000.0000000014
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 237999999.9999992
+  - analyte: NPSOPS
+    time: 4
+    value: 967999.999999992
+  - analyte: NPSOPS
+    time: 6
+    value: 4260.000000000013
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 10200000.00000005
+  - analyte: NPSOPS
+    time: 2
+    value: 344999.9999999967
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 30
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 4
+    value: 1999999.9999999963
+- attributes:
+    age: 37
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 290000000.0000021
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 62200000.0000002
+  - analyte: NPSOPS
+    time: 4
+    value: 218000.0000000028
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 10099999.99999995
+  - analyte: NPSOPS
+    time: 2
+    value: 45800000.000000045
+  - analyte: NPSOPS
+    time: 5
+    value: 1579999.9999999919
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 18300000.00000001
+  - analyte: NPSOPS
+    time: 5
+    value: 22999999.99999987
+  - analyte: NPSOPS
+    time: 9
+    value: 1029999.9999999953
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 113000000.00000006
+  - analyte: NPSOPS
+    time: 5
+    value: 17200.000000000025
+- attributes:
+    age: 44
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1779999.999999984
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 7650000.000000039
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 96299999.99999891
+  - analyte: NPSOPS
+    time: 4
+    value: 14200000.000000125
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 13099999.999999871
+  - analyte: NPSOPS
+    time: 3
+    value: 9080000.00000011
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 95199999.99999912
+  - analyte: NPSOPS
+    time: 5
+    value: 869000.0000000068
+  - analyte: NPSOPS
+    time: 11
+    value: 899.9999999999897
+- attributes:
+    age: 55
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 486999.99999999517
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 16400.00000000007
+  - analyte: NPSOPS
+    time: 3
+    value: 10099.999999999949
+  - analyte: NPSOPS
+    time: 11
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 7
+    value: 16599.999999999793
+- attributes:
+    age: 3
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 279000.00000000163
+  - analyte: NPSOPS
+    time: 6
+    value: 842000.0000000019
+  - analyte: NPSOPS
+    time: 10
+    value: 2819999.999999993
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2070000000.000011
+  - analyte: NPSOPS
+    time: 5
+    value: 53800.00000000007
+  - analyte: NPSOPS
+    time: 7
+    value: 278000.0000000022
+- attributes:
+    age: 42
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1720000.0000000028
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 27
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 71499999.99999993
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 52600.00000000013
+  - analyte: NPSOPS
+    time: 3
+    value: 266000.0000000017
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 368000000.00000185
+  - analyte: NPSOPS
+    time: 6
+    value: 1960.0000000000175
+- attributes:
+    age: 20
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1160000.000000004
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 49
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 86399999.99999927
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 27
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1510000.000000001
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 30099999.99999974
+  - analyte: NPSOPS
+    time: 4
+    value: 5829999.999999946
+  - analyte: NPSOPS
+    time: 10
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 34399999.999999985
+  - analyte: NPSOPS
+    time: 3
+    value: 5440000.000000006
+  - analyte: NPSOPS
+    time: 7
+    value: 155999.99999999953
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2680000.000000009
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 61
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 197999.9999999995
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1659999.9999999793
+  - analyte: NPSOPS
+    time: 1
+    value: 360000.00000000256
+  - analyte: NPSOPS
+    time: 6
+    value: 120000.00000000156
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 14999999.999999942
+  - analyte: NPSOPS
+    time: 4
+    value: 5130000.000000047
+  - analyte: NPSOPS
+    time: 6
+    value: 74300.00000000086
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 56700000.00000045
+  - analyte: NPSOPS
+    time: 4
+    value: 11699999.999999966
+  - analyte: NPSOPS
+    time: 7
+    value: 7599.999999999977
+- attributes:
+    age: 51
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 17099999.999999832
+- attributes:
+    age: 31
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1600000.0000000205
+  - analyte: NPSOPS
+    time: 4
+    value: 1300000.0000000084
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 15499999.99999995
+  - analyte: NPSOPS
+    time: 3
+    value: 2400000.0000000214
+  - analyte: NPSOPS
+    time: 5
+    value: 786999.9999999923
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 184999999.99999845
+  - analyte: NPSOPS
+    time: 3
+    value: 12000000.000000155
+  - analyte: NPSOPS
+    time: 6
+    value: 1800000.0000000163
+- attributes:
+    age: 16
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 96299999.99999891
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 19699999.99999986
+  - analyte: NPSOPS
+    time: 4
+    value: 974000.0000000104
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 26
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 106000.00000000004
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 28
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 1220.0000000000055
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 37
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1610000.000000001
+  - analyte: NPSOPS
+    time: 4
+    value: 130000.00000000084
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 38800000.00000028
+  - analyte: NPSOPS
+    time: 3
+    value: 9790000.000000058
+  - analyte: NPSOPS
+    time: 7
+    value: 202999.99999999857
+- attributes:
+    age: 38
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 60500000.00000021
+  - analyte: NPSOPS
+    time: 4
+    value: 71000.00000000076
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 945999.9999999943
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 76500.0000000004
+  - analyte: NPSOPS
+    time: 4
+    value: 71000.00000000076
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 16
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 4679999.999999959
+  - analyte: NPSOPS
+    time: 4
+    value: 78099.99999999993
+  - analyte: NPSOPS
+    time: 8
+    value: 4769.999999999956
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 214999.99999999718
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 160000.00000000204
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 50100000.00000054
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 24
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1189999.9999999984
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 6160.0000000000655
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 42600.000000000124
+  - analyte: NPSOPS
+    time: 4
+    value: 1510000.000000001
+  - analyte: NPSOPS
+    time: 6
+    value: 2900.000000000027
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 544000.0000000006
+  - analyte: NPSOPS
+    time: 3
+    value: 76500.0000000004
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 294000.0000000021
+  - analyte: NPSOPS
+    time: 4
+    value: 84200.00000000017
+  - analyte: NPSOPS
+    time: 6
+    value: 102000.00000000051
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 4660.0
+  - analyte: NPSOPS
+    time: 4
+    value: 6369.999999999992
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 5010.000000000048
+  - analyte: NPSOPS
+    time: 6
+    value: 29400.000000000207
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 303999.9999999976
+  - analyte: NPSOPS
+    time: 4
+    value: 9629999.99999989
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 48
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 10600000.000000004
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 1
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 480999.9999999982
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 504000.0000000058
+  - analyte: NPSOPS
+    time: 4
+    value: 1340.000000000007
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 135000.00000000125
+  - analyte: NPSOPS
+    time: 9
+    value: 11600.000000000038
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 111999999.99999963
+  - analyte: NPSOPS
+    time: 6
+    value: 673000.0000000043
+- attributes:
+    age: 35
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -1
+    value: 7149.999999999993
+  - analyte: NPSOPS
+    time: 2
+    value: 268000.00000000093
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 32600000.000000093
+  - analyte: NPSOPS
+    time: 3
+    value: 120999.99999999993
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -1
+    value: 4229.999999999978
+  - analyte: NPSOPS
+    time: 1
+    value: 5719999.99999995
+  - analyte: NPSOPS
+    time: 6
+    value: 1259.9999999999911
+- attributes:
+    age: 40
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 622000.000000002
+  - analyte: NPSOPS
+    time: 4
+    value: 3540.000000000017
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 42799.99999999976
+  - analyte: NPSOPS
+    time: 5
+    value: 27499.999999999844
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 519000000.00000185
+  - analyte: NPSOPS
+    time: 4
+    value: 102000000.0000005
+  - analyte: NPSOPS
+    time: 6
+    value: 318999.99999999924
+- attributes:
+    age: 38
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 4
+    value: 3980.000000000018
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -3
+    value: 10200.000000000051
+  - analyte: NPSOPS
+    time: 0
+    value: 18300000.00000001
+  - analyte: NPSOPS
+    time: 2
+    value: 210999.9999999989
+- attributes:
+    age: 49
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 3559999.999999961
+  - analyte: NPSOPS
+    time: 2
+    value: 458000.00000000047
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 438999.9999999986
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 35
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 27400.00000000011
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 328999.9999999964
+  - analyte: NPSOPS
+    time: 6
+    value: 6050000.0000000205
+  - analyte: NPSOPS
+    time: 9
+    value: 1340.000000000007
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3099999.9999999837
+  - analyte: NPSOPS
+    time: 3
+    value: 5310.00000000001
+  - analyte: NPSOPS
+    time: 6
+    value: 4410.000000000015
+- attributes:
+    age: 2
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 207000.00000000108
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 16
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 305000.00000000314
+  - analyte: NPSOPS
+    time: 4
+    value: 1840.0000000000148
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 2760000.0000000144
+  - analyte: NPSOPS
+    time: 4
+    value: 433000.00000000454
+  - analyte: NPSOPS
+    time: 6
+    value: 41800.00000000045
+- attributes:
+    age: 23
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 5190000.000000029
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 21
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 61099.999999999345
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2650.000000000014
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 57
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -2
+    value: 21900.0000000001
+  - analyte: NPSOPS
+    time: 1
+    value: 3980.000000000018
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 17
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 138999.99999999825
+  - analyte: NPSOPS
+    time: 4
+    value: 1209.9999999999993
+  - analyte: NPSOPS
+    time: 8
+    value: 4069.9999999999986
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 7479999.99999998
+  - analyte: NPSOPS
+    time: 4
+    value: 266000.0000000017
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 14500.00000000016
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 148999.99999999846
+  - analyte: NPSOPS
+    time: 5
+    value: 19000.000000000033
+  - analyte: NPSOPS
+    time: 7
+    value: 56099.999999999854
+- attributes:
+    age: 41
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 21599.999999999945
+  - analyte: NPSOPS
+    time: 8
+    value: 5390.000000000017
+- attributes:
+    age: 23
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 421000.0000000017
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 753999.9999999935
+  - analyte: NPSOPS
+    time: 4
+    value: 4800.000000000029
+  - analyte: NPSOPS
+    time: 11
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 48099.99999999982
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1290000.000000002
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 30
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 165999.99999999793
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 74799.9999999998
+  - analyte: NPSOPS
+    time: 4
+    value: 18700.00000000006
+  - analyte: NPSOPS
+    time: 7
+    value: 60500.000000000204
+- attributes:
+    age: 58
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 21599.999999999945
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2410000.00000001
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 102999.99999999953
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 17
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 74300.00000000086
+  - analyte: NPSOPS
+    time: 4
+    value: 1559.9999999999936
+  - analyte: NPSOPS
+    time: 6
+    value: 10399.999999999987
+- attributes:
+    age: 9
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1020000.0000000051
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 16
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 215999.99999999945
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 19
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 29699.999999999814
+  - analyte: NPSOPS
+    time: 4
+    value: 2980.0000000000337
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1160000.000000004
+  - analyte: NPSOPS
+    time: 3
+    value: 5460000.00000004
+  - analyte: NPSOPS
+    time: 7
+    value: 344999.9999999967
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 153000.0000000005
+  - analyte: NPSOPS
+    time: 3
+    value: 35199.999999999905
+  - analyte: NPSOPS
+    time: 5
+    value: 4199.9999999999945
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 7899.9999999999745
+  - analyte: NPSOPS
+    time: 6
+    value: 6359.999999999941
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 2
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1020000.0000000051
+  - analyte: NPSOPS
+    time: 4
+    value: 4829.999999999975
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 32
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 2159.9999999999945
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 23
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 94599.99999999943
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 16
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 15399999.99999989
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2079999.9999999935
+  - analyte: NPSOPS
+    time: 5
+    value: 102000.00000000051
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 25
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 15199.999999999909
+- attributes:
+    age: 20
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 156999.9999999985
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 72
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 218000.0000000028
+  - analyte: NPSOPS
+    time: 4
+    value: 918.9999999999974
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 30
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 75899.99999999996
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 110000.00000000121
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 2
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 4539.999999999962
+  - analyte: NPSOPS
+    time: 4
+    value: 244000.00000000012
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 173000.00000000198
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 3159999.9999999716
+  - analyte: NPSOPS
+    time: 4
+    value: 20499.999999999785
+  - analyte: NPSOPS
+    time: 7
+    value: 6500.000000000068
+- attributes:
+    age: 17
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 129000000.00000021
+  - analyte: NPSOPS
+    time: 5
+    value: 12900.000000000022
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 23799.999999999873
+  - analyte: NPSOPS
+    time: 4
+    value: 9880.000000000045
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 643999.9999999966
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2190000.00000001
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 4829.999999999975
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 2850.0
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 3469999.999999967
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 191000.00000000102
+  - analyte: NPSOPS
+    time: 6
+    value: 2960.00000000001
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 166999.99999999863
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 18
+    sex: male
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 34600.000000000255
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 2
+    sex: female
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 41400.00000000014
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 13600.000000000067
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 76
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 17499.99999999982
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 40
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2059.9999999999845
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 13300000.000000136
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 48
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 3249.9999999999673
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 18
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 4
+    value: 1519.999999999991
+- attributes:
+    age: 35
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 210000.00000000055
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 10099.999999999949
+  - analyte: NPSOPS
+    time: 3
+    value: 10099.999999999949
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 33
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 6309.999999999935
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 72
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 28299.99999999997
+  - analyte: NPSOPS
+    time: 4
+    value: 217000.00000000026
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 33
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 229999.9999999987
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 28
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2040.0000000000064
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2449999.9999999856
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 48
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1950.0000000000093
+  - analyte: NPSOPS
+    time: 5
+    value: 81399.99999999974
+- attributes:
+    age: 43
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 1720.0000000000045
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1600000.0000000205
+  - analyte: NPSOPS
+    time: 4
+    value: 5689.9999999999845
+  - analyte: NPSOPS
+    time: 8
+    value: 2540.0000000000105
+- attributes:
+    age: 50
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2269999.999999985
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 18
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 293000.00000000035
+  - analyte: NPSOPS
+    time: 4
+    value: 3769.9999999999745
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 440000.00000000227
+  - analyte: NPSOPS
+    time: 4
+    value: 36499.99999999962
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 22
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 13199.99999999999
+  - analyte: NPSOPS
+    time: 5
+    value: 1119.9999999999964
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2209999.999999997
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 33
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 10399.999999999987
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 397000.0000000042
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 33
+    sex: male
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 341000.000000002
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 27
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 89099.99999999911
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 30
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1920000.0000000023
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 52
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 19699999.99999986
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 17
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 12700000.00000009
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 14500.00000000016
+  - analyte: NPSOPS
+    time: 5
+    value: 149999.99999999942
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 36
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 34799999.99999992
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 68
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 45099999.99999994
+  - analyte: NPSOPS
+    time: 3
+    value: 4279.99999999998
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 6270000.000000057
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 16599999.999999791
+  - analyte: NPSOPS
+    time: 5
+    value: 544000.0000000006
+  - analyte: NPSOPS
+    time: 9
+    value: 46600.0
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 3769999.9999999744
+  - analyte: NPSOPS
+    time: 5
+    value: 120000.00000000156
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 69
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 8120.000000000086
+  - analyte: NPSOPS
+    time: 3
+    value: 1619999.999999996
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 210999.9999999989
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 18
+    sex: male
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 9189999.999999974
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 431999.9999999981
+  - analyte: NPSOPS
+    time: 2
+    value: 27800.000000000226
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 2900000.0000000265
+  - analyte: NPSOPS
+    time: 3
+    value: 983.0000000000095
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 19000.000000000033
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 41
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 75399.99999999935
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 17300.000000000196
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 81
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 5560.000000000035
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 26
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 75899999.99999996
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 50
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 96799999.9999992
+  - analyte: NPSOPS
+    time: 3
+    value: 47100.00000000044
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 337000.00000000134
+- attributes:
+    age: 29
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 43600.000000000386
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 34
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 165999.99999999793
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 127000.00000000089
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 13
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 174999.9999999982
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 10299999.999999953
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 37
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 7050.000000000025
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 5889999.99999998
+  - analyte: NPSOPS
+    time: 3
+    value: 180000.00000000163
+- attributes:
+    age: 15
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 4710000.000000044
+  - analyte: NPSOPS
+    time: 4
+    value: 111000.00000000071
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 42
+    sex: male
+    vaccinated: true
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 12000000.000000155
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 19
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 567000.0000000044
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 29
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 64399.999999999665
+- attributes:
+    age: 30
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 15499999.99999995
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: female
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 11300000.000000006
+  - analyte: NPSOPS
+    time: 5
+    value: 1510.0000000000025
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 49
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 2089.9999999999795
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 43
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2089999.9999999797
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 94400.00000000016
+  - analyte: NPSOPS
+    time: 4
+    value: 675000.0000000075
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 53
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 19799999.99999995
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 199000.0000000015
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 48
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 199000.0000000015
+- attributes:
+    age: 2
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 8479.999999999929
+  - analyte: NPSOPS
+    time: 2
+    value: 899.9999999999897
+- attributes:
+    age: 36
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 322999.9999999981
+- attributes:
+    age: 63
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 85299.99999999943
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 70
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -2
+    value: 1440.0000000000018
+  - analyte: NPSOPS
+    time: 3
+    value: 12000.000000000155
+- attributes:
+    age: 58
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1340000.000000007
+  - analyte: NPSOPS
+    time: 3
+    value: 335999.999999997
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 91
+    sex: female
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 560999.9999999986
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 825000.0000000091
+  - analyte: NPSOPS
+    time: 4
+    value: 217000.00000000026
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 28
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 148999.99999999846
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 61
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 237999.99999999872
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 23500.000000000215
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 16199999.99999996
+  - analyte: NPSOPS
+    time: 7
+    value: 3339.9999999999663
+- attributes:
+    age: 16
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 9130000.000000022
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: female
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 16500000.00000015
+  - analyte: NPSOPS
+    time: 3
+    value: 2379.9999999999895
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 10
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 454999.99999999744
+  - analyte: NPSOPS
+    time: 3
+    value: 55600.00000000034
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 357999.9999999965
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 951999.9999999913
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 105000.00000000048
+  - analyte: NPSOPS
+    time: 3
+    value: 24000.000000000215
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1879999.9999999988
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 3579.999999999965
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 61
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 14999.999999999942
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 27
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3670000.0000000037
+  - analyte: NPSOPS
+    time: 3
+    value: 4350.000000000027
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 55
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 24000000.000000216
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 28
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 41199.99999999957
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 17
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3270000.0000000293
+  - analyte: NPSOPS
+    time: 3
+    value: 1900.0000000000055
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 15199.999999999909
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 91300.00000000022
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 9
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 593999.9999999951
+  - analyte: NPSOPS
+    time: 4
+    value: 9139.999999999967
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 11
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 386999.9999999984
+  - analyte: NPSOPS
+    time: 5
+    value: 9480.000000000082
+  - analyte: NPSOPS
+    time: 10
+    value: 899.9999999999897
+- attributes:
+    age: 35
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1669999.9999999865
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 4
+    sex: male
+    vaccinated: true
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 140999.99999999994
+  - analyte: NPSOPS
+    time: 3
+    value: 513000.00000000466
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 584999.9999999994
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 4869999.999999952
+  - analyte: NPSOPS
+    time: 4
+    value: 122000.00000000054
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 18
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 989999.9999999994
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 47
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 251000.0000000012
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 17
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 989999.9999999994
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 1429.9999999999943
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 21
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 86399.99999999927
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 49
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 858000.0000000084
+  - analyte: NPSOPS
+    time: 4
+    value: 67699.9999999993
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 47
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 3070000.0000000224
+  - analyte: NPSOPS
+    time: 4
+    value: 30999.99999999984
+  - analyte: NPSOPS
+    time: 7
+    value: 899.9999999999897
+- attributes:
+    age: 53
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 2049999.9999999786
+  - analyte: NPSOPS
+    time: 3
+    value: 1280.0000000000052
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 3
+    value: 5030000.00000003
+  - analyte: NPSOPS
+    time: 4
+    value: 909.0000000000055
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 77699999.99999925
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 6
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 5
+    value: 2180000.000000028
+- attributes:
+    age: 12
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 11300000.000000006
+  - analyte: NPSOPS
+    time: 5
+    value: 424999.9999999983
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 21
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 36499.99999999962
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 23
+    sex: male
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 97900.00000000058
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 19
+    sex: female
+    vaccinated: true
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2579999.9999999995
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 15
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 5
+    value: 16999.999999999833
+- attributes:
+    age: 19
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 4210000.000000017
+  - analyte: NPSOPS
+    time: 3
+    value: 899.9999999999897
+- attributes:
+    age: 48
+    sex: female
+    vaccinated: false
+    subtype: Pandemic A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 483999.9999999969
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 14
+    sex: male
+    vaccinated: false
+    subtype: Seasonal A (H3N2)
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 49699999.999999724
+  - analyte: NPSOPS
+    time: 4
+    value: 3549.999999999968
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: female
+    vaccinated: true
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 1209999.9999999993
+  - analyte: NPSOPS
+    time: 4
+    value: 74100.00000000035
+  - analyte: NPSOPS
+    time: 7
+    value: 530000.0000000012
+- attributes:
+    age: 36
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 544000.0000000006
+  - analyte: NPSOPS
+    time: 5
+    value: 127000.00000000089
+- attributes:
+    age: 3
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 123000.00000000054
+  - analyte: NPSOPS
+    time: 4
+    value: 1220000.0000000054
+  - analyte: NPSOPS
+    time: 6
+    value: 899.9999999999897
+- attributes:
+    age: 7
+    sex: female
+    vaccinated: false
+    subtype: Seasonal A (H1N1)
+  measurements:
+  - analyte: NPSOPS
+    time: 0
+    value: 1429999999.9999957
+  - analyte: NPSOPS
+    time: 3
+    value: 64900000.00000012
+  - analyte: NPSOPS
+    time: 6
+    value: 1420.000000000011
+- attributes:
+    age: 54
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 2070.000000000011
+  - analyte: NPSOPS
+    time: 5
+    value: 899.9999999999897
+- attributes:
+    age: 48
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: -2
+    value: 25699.999999999716
+  - analyte: NPSOPS
+    time: 1
+    value: 2109999.999999989
+  - analyte: NPSOPS
+    time: 4
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: female
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 8630.000000000011
+  - analyte: NPSOPS
+    time: 5
+    value: 1720000.0000000028
+  - analyte: NPSOPS
+    time: 9
+    value: 899.9999999999897
+- attributes:
+    age: 8
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 15899999.999999946
+  - analyte: NPSOPS
+    time: 5
+    value: 4419999.999999977
+  - analyte: NPSOPS
+    time: 8
+    value: 899.9999999999897
+- attributes:
+    age: 17
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 2
+    value: 129000000.00000021
+  - analyte: NPSOPS
+    time: 6
+    value: 24199.99999999994
+  - analyte: NPSOPS
+    time: 11
+    value: 899.9999999999897
+- attributes:
+    age: 5
+    sex: male
+    vaccinated: false
+    subtype: Unsubtyple influenza
+  measurements:
+  - analyte: NPSOPS
+    time: 1
+    value: 10299.999999999953
+  - analyte: NPSOPS
+    time: 3
+    value: 2660000.0000000168
+  - analyte: NPSOPS
+    time: 6
+    value: 1999.999999999994
