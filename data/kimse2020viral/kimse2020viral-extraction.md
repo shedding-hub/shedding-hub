@@ -54,7 +54,7 @@ for patient_id, patient_data in asymptomatic_df.groupby("PatientID"):
     for _, row in patient_data.iterrows():
         measurement = {
             "analyte": "throatswab_SARSCoV2",
-            "time": int(row["Day"]),
+            "time": max(int(row["Day"]), 1), 
             "value": float(row["value"]) if float(row["value"]) != 1.0 else 'negative'
         }
         participant["measurements"].append(measurement)
