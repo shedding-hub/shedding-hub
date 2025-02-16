@@ -54,12 +54,24 @@ for patient_id, group in team2020.groupby('PatientID'):
             value = "negative"
         else:
             value = row['value']
-        measurementN = {
-            'analyte': 'naso_swab_SARSCoV2_N',
+        measurement_VL = {
+            'analyte': 'naso_swab_SARSCoV2_N_VL',
             'time': row['Day'],
             'value': value
         }
-        participant['measurements'].append(measurementN)
+        participant['measurements'].append(measurement_VL)
+    
+    for _, row in group.iterrows():
+        if row['value'] == 1:
+            value = "negative"
+        else:
+            value = row['Ctvalue']
+        measurement_Ct = {
+            'analyte': 'naso_swab_SARSCoV2_N_Ct',
+            'time': row['Day'],
+            'value': value
+        }
+        participant['measurements'].append(measurement_Ct)
         
     participants.append(participant)
 ```
@@ -70,14 +82,23 @@ Finally, the data is formatted and output as a YAML file.
 team2020clinical = dict(title="Clinical and virologic characteristics of the first 12 patients with coronavirus disease 2019 (COVID-19) in the United States",
                doi="10.1038/s41591-020-0877-5",
                description=folded_str('Respiratory, stool, serum, and urine specimens were submitted for SARS-CoV-2 real-time reverse-transcription polymerase chain reaction (rRT-PCR) testing, viral culture, and whole-genome sequencing. Only nasopharyngeal samples were included in this dataset. Data for the nasopharyngeal swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022), while attributes of hospitalized patients were obtained from the original paper.\n'),
-               analytes=dict(naso_swab_SARSCoV2_N=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration in nasopharyngeal swab samples. Viral load concentrations were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022)\n"),
+               analytes=dict(naso_swab_SARSCoV2_N_VL=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentrations in nasopharyngeal swab samples were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022). The viral load values were estimated using an average standard curve.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection="unknown",
                                         specimen="nasopharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
                                         gene_target="N", 
                                         unit="gc/mL",
-                                        reference_event="symptom onset",)),
+                                        reference_event="symptom onset",),
+                            naso_swab_SARSCoV2_N_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the N gene in nasopharyngeal swab samples.\n"),
+                                        limit_of_quantification="unknown",
+                                        limit_of_detection="unknown",
+                                        specimen="nasopharyngeal_swab", 
+                                        biomarker="SARS-CoV-2", 
+                                        gene_target="N", 
+                                        unit="cycle threshold",
+                                        reference_event="symptom onset",)
+                                        ),
                 participants = participants
                                         )
 
