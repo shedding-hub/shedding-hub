@@ -62,10 +62,7 @@ for patient_id, group in team2020.groupby('PatientID'):
         participant['measurements'].append(measurement_VL)
     
     for _, row in group.iterrows():
-        if row['value'] == 1:
-            value = "negative"
-        else:
-            value = row['Ctvalue']
+        value = row['Ctvalue']
         measurement_Ct = {
             'analyte': 'naso_swab_SARSCoV2_N_Ct',
             'time': row['Day'],
