@@ -10,7 +10,7 @@ from shedding_hub import folded_str
 # Load dataset
 df = pd.read_excel('CombinedDataset.xlsx', sheet_name='Viral_Load')
 shrestha2020 = df[df['StudyNum'] == 12].copy()
-columns_to_drop = ['Estimated', 'SevMax', 'Sev1st', 'Died', 'Ctvalue', 'SevMax3']
+columns_to_drop = ['Estimated', 'SevMax', 'Sev1st', 'Died', 'SevMax3']
 shrestha2020 = shrestha2020.drop(columns=columns_to_drop)
 ```
 
