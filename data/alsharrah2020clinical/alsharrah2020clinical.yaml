@@ -15,9 +15,7 @@ analytes:
     - nasopharyngeal_swab
     - oropharyngeal_swab
     biomarker: SARS-CoV-2
-    gene_target:
-    - E gene
-    - RdRP gene
+    gene_target: E, RdRP
     limit_of_quantification: unknown
     limit_of_detection: unknown
     unit: gc/mL

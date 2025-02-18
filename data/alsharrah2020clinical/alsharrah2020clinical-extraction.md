@@ -64,7 +64,7 @@ alsharrah2020 = dict(title="Clinical characteristics of pediatric SARS-CoV-2 inf
             analytes=dict(NPS_OPS=dict(description=folded_str("This analyte represents SARS-CoV-2 RNA detection in paired nasopharyngeal and oropharyngeal swabs.\n"),
                           specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
                           biomarker="SARS-CoV-2",
-                          gene_target=["E gene", "RdRP gene"],
+                          gene_target="E, RdRP",
                           limit_of_quantification="unknown",
                           limit_of_detection="unknown",
                           unit="gc/mL",
