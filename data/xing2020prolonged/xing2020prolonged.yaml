@@ -15,9 +15,7 @@ analytes:
       test, and a value of 40 indicated the virus was molecularly undetectable.
     specimen: stool
     biomarker: SARS-CoV-2
-    gene_target:
-    - ORF1ab
-    - N
+    gene_target: ORF1ab, N
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
@@ -31,9 +29,7 @@ analytes:
       test, and a value of 40 indicated the virus was molecularly undetectable.
     specimen: throat_swab
     biomarker: SARS-CoV-2
-    gene_target:
-    - ORF1ab
-    - N
+    gene_target: ORF1ab, N
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
