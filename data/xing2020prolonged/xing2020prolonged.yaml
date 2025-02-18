@@ -1,10 +1,12 @@
 # yaml-language-server: $schema=.schema.yaml
 title: Prolonged viral shedding in feces of pediatric patients with coronavirus disease
   2019
-doi: 10.1016/j.jmii.2020.03.021
+doi: doi.org/10.1016/j.jmii.2020.03.021
 description: >
   This study characterized the dynamic profiles of SARS-CoV-2 shedding in respiratory
-  and fecal specimens in children with COVID-19.
+  and fecal specimens in three children with COVID-19. However, complete specimen
+  test value data were available for only one child. A total of 19 throat swab specimens
+  and 17 fecal specimens were collected.
 analytes:
   stool_SARSCoV2:
     description: >
@@ -40,7 +42,7 @@ participants:
     sex: male
   measurements:
   - analyte: throat_swab_SARSCoV2
-    time: 0.5
+    time: 1
     value: 18.17
   - analyte: throat_swab_SARSCoV2
     time: 2
@@ -65,37 +67,37 @@ participants:
     value: 38.19
   - analyte: throat_swab_SARSCoV2
     time: 15
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 17
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 19
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 21
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 23
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 25
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 27
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 29
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 31
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 33
-    value: 40
+    value: negative
   - analyte: throat_swab_SARSCoV2
     time: 35
-    value: 40
+    value: negative
   - analyte: stool_SARSCoV2
     time: 3.5
     value: 12.65
@@ -128,22 +130,22 @@ participants:
     value: 38.76
   - analyte: stool_SARSCoV2
     time: 23
-    value: 40
+    value: negative
   - analyte: stool_SARSCoV2
     time: 25
-    value: 40
+    value: negative
   - analyte: stool_SARSCoV2
     time: 27
-    value: 40
+    value: negative
   - analyte: stool_SARSCoV2
     time: 29
-    value: 40
+    value: negative
   - analyte: stool_SARSCoV2
     time: 31
-    value: 40
+    value: negative
   - analyte: stool_SARSCoV2
     time: 33
-    value: 40
+    value: negative
   - analyte: stool_SARSCoV2
     time: 35
-    value: 40
+    value: negative
