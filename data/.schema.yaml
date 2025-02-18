@@ -62,6 +62,7 @@ $defs:
         type: string
         enum:
           - SARS-CoV-2
+          - SARS
           - mtDNA
           - PMMoV
           - crAssphage
