@@ -36,6 +36,9 @@ data = data.replace({
     
 })
 
+
+```
+```python
 df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
 
 participants = []
@@ -99,9 +102,8 @@ else:
         participants.append(participant)
 
     print(participants)
-
-
 ```
+
 Finally, the data is formatted and output as a YAML file.
 ```python
 output_data = {
@@ -115,9 +117,9 @@ output_data = {
             "description": folded_str(
                 "The author collected serial upper respiratory tract samples (1 nasopharyngeal swab and 1 throat swab put in a single collection tube with 1 mL of trans- port medium) for real-time PCR of SARS-CoV-2 RNA for all patients.\n"
             ),
-            "specimen": "nasopharyngeal swab and throat swab",
+            "specimen": "throat_swab",
             "biomarker": "SARS-CoV-2",
-            "gene_target": "RNA",
+            "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
             "limit_of_detection": "unknown",
             "unit": "gc/swab",
