@@ -67,7 +67,7 @@ Finally, the data is formatted and output as a YAML file.
 
 ```python
 Xing2020 = dict(title="Prolonged viral shedding in feces of pediatric patients with coronavirus disease 2019",
-               doi="doi.org/10.1016/j.jmii.2020.03.021",
+               doi="10.1016/j.jmii.2020.03.021",
                description=folded_str('This study characterized the dynamic profiles of SARS-CoV-2 shedding in respiratory and fecal specimens in three children with COVID-19. However, complete specimen test value data were available for only one child. A total of 19 throat swab specimens and 17 fecal specimens were collected.\n'),
                analytes=dict(stool_SARSCoV2=dict(description=folded_str("Presence of SARS-CoV-2 RNA was detected by RT-PCR in stool samples. The PCR assay simultaneously amplified two target genes of SARS-CoV-2 included open reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle threshold (Ct) value no more than 40 with evident amplification curve was considered as a positive test, and a value of 40 indicated the virus was molecularly undetectable.\n"),
                                                     specimen="stool",
