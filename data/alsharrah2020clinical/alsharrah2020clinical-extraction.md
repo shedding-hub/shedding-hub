@@ -15,7 +15,7 @@ Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shed
 Alsharrah2020 = pd.read_csv("data.csv")
 Alsharrah2020  = Alsharrah2020 .replace({"Sex": {"M": "male", "F": "female"}})
 #Adds a new column "type" with the value "NPS_OPS" for all rows, indicating nasopharyngeal and oropharyngeal swabs.
-Alsharrah2020 ["type"] = "NPS_OPS"
+Alsharrah2020 ["type"] = "NPS"
 #Extracts numerical IDs from the PatientID column
 Alsharrah2020["ID"] = Alsharrah2020["PatientID"].str.split("-").str[1].astype(int)
 
@@ -44,12 +44,12 @@ for i in pd.unique(Alsharrah2020["ID"]):
             value = 'negative'
 
         # Append measurements separately for each sample type
-        if row['type'] == 'NPS_OPS':
+        if row['type'] == 'NPS':
             measurements.append({
-                "analyte": ["nasopharyngeal_SARSCoV2","oropharyngeal_SARSCoV2"], 
+                "analyte": "nasopharyngeal_SARSCoV2", 
                 "time": int(row['Day']), 
                 "value": value})
-            #measurements.append({"analyte": "oropharyngeal_SARSCoV2", "time": int(row['Day']), "value": value})
+
 
     participant_dict = {"attributes": {"age": age, "sex": sex}, "measurements": measurements}
     participant_list.append(participant_dict)
@@ -61,8 +61,8 @@ Finally, the data is formatted and output as a YAML file.
 alsharrah2020 = dict(title="Clinical characteristics of pediatric SARS-CoV-2 infection and coronavirus disease 2019 (COVID-19) in Kuwait",
             doi="10.1002/jmv.26684",
             description=folded_str("This study measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in paired oropharyngeal and nasopharyngeal samples from 33 COVID-19 patients in Jaber Alahmad Hospital (JAH).\n"),
-            analytes=dict(NPS_OPS=dict(description=folded_str("This analyte represents SARS-CoV-2 RNA detection in paired nasopharyngeal and oropharyngeal swabs.\n"),
-                          specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
+            analytes=dict(NPS=dict(description=folded_str("This analyte indicates the detection of SARS-CoV-2 RNA in both nasopharyngeal and oropharyngeal swabs, but only the nasopharyngeal swab values are presented.\n"),
+                          specimen="nasopharyngeal_swab",
                           biomarker="SARS-CoV-2",
                           gene_target="E, RdRP",
                           limit_of_quantification="unknown",
