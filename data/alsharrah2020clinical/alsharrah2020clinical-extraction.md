@@ -46,7 +46,7 @@ for i in pd.unique(Alsharrah2020["ID"]):
         # Append measurements separately for each sample type
         if row['type'] == 'NPS':
             measurements.append({
-                "analyte": "nasopharyngeal_swab", 
+                "analyte": "NPS_SARSCoV2", 
                 "time": int(row['Day']), 
                 "value": value})
 
@@ -61,7 +61,7 @@ Finally, the data is formatted and output as a YAML file.
 alsharrah2020 = dict(title="Clinical characteristics of pediatric SARS-CoV-2 infection and coronavirus disease 2019 (COVID-19) in Kuwait",
             doi="10.1002/jmv.26684",
             description=folded_str("This study measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in paired oropharyngeal and nasopharyngeal samples from 33 COVID-19 patients in Jaber Alahmad Hospital (JAH).\n"),
-            analytes=dict(NPS=dict(description=folded_str("This analyte indicates the detection of SARS-CoV-2 RNA in both nasopharyngeal and oropharyngeal swabs, but only the nasopharyngeal swab values are presented.\n"),
+            analytes=dict(NPS_SARSCoV2=dict(description=folded_str("This analyte indicates the detection of SARS-CoV-2 RNA in both nasopharyngeal and oropharyngeal swabs, but only the nasopharyngeal swab values are presented.\n"),
                           specimen="nasopharyngeal_swab",
                           biomarker="SARS-CoV-2",
                           gene_target="E, RdRP",
