@@ -46,7 +46,7 @@ for i in pd.unique(Alsharrah2020["ID"]):
         # Append measurements separately for each sample type
         if row['type'] == 'NPS':
             measurements.append({
-                "analyte": "nasopharyngeal_SARSCoV2", 
+                "analyte": "nasopharyngeal_swab", 
                 "time": int(row['Day']), 
                 "value": value})
 
