@@ -8,7 +8,6 @@ First, we `import` python modules needed:
 #import modules;
 import yaml
 import pandas as pd
-import numpy as np
 from shedding_hub import folded_str
 
 ```
