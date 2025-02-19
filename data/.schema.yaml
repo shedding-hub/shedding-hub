@@ -65,6 +65,8 @@ $defs:
           - mtDNA
           - PMMoV
           - crAssphage
+          - influenza
+          - sapovirus
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
@@ -114,12 +116,6 @@ properties:
   title:
     type: string
     description: Title of the source publication, study, or data repository.
-  analyte:
-    description: >
-      Specification of a single analyte in this dataset. This is equivalent to
-      specifying a key `default` in the more general `analytes` specification which can
-      be used to specify multiple analytes per sample.
-    $ref: "#/$defs/analyte_specification"
   analytes:
     type: object
     description: >
@@ -224,6 +220,7 @@ properties:
                   - type: number
                   - const: unknown
             required:
+              - analyte
               - time
               - value
 required:
