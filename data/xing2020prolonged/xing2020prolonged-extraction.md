@@ -1,6 +1,6 @@
 # Extraction for Xing et al. (2020)
 
-[Xing et al. (2020)](https://doi.org/10.1016/j.jmii.2020.03.021) compares the dynamic changes of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) RNA in respiratory and fecal specimens in children with coronavirus disease 2019 (COVID-19). Only one case with complete demographic information (e.g., age, sex, etc.) and specimen test value is exposed in the paper. The raw data is directly collected and entered in .md file.
+[Xing et al. (2020)](https://doi.org/10.1016/j.jmii.2020.03.021) compared the dynamic changes of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) RNA in respiratory and fecal specimens in children with coronavirus disease 2019 (COVID-19). Only one case with complete demographic information (e.g., age, sex, etc.) and specimen test results was included in the paper.
 
 First, we `import` python modules needed:
 
