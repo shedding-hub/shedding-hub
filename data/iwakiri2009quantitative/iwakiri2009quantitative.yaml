@@ -1,0 +1,214 @@
+# yaml-language-server: $schema=.schema.yaml
+title: 'Quantitative analysis of fecal sapovirus shedding: identification of nucleotide
+  substitutions in the capsid protein during prolonged excretion'
+doi: 10.1007/s00705-009-0358-0
+description: >
+  This study quantifies Sapovirus (SaV) RNA shedding in stool from two outbreak cases
+  using real-time RT-PCR, revealing that SaV excretion generally declines within two
+  weeks but can persist at high concentrations for up to four weeks in some individuals.
+  The study also identifies nucleotide substitutions in the VP1 gene during prolonged
+  excretion, suggesting potential viral evolution.
+analytes:
+  stool_SaV:
+    description: >
+      Sapovirus RNA gene copy concentration in stool samples. The concentration were
+      quantified in cDNA copies per gram.
+    specimen: stool
+    biomarker: sapovirus
+    gene_target: VP1
+    limit_of_quantification: unknown
+    limit_of_detection: 129000
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 14
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 3
+    value: 2230000000.0
+  - analyte: stool_SaV
+    time: 11
+    value: 223000.0
+- attributes:
+    age: 12
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 15
+    value: 22400000.0
+  - analyte: stool_SaV
+    time: 25
+    value: 794000.0
+  - analyte: stool_SaV
+    time: 30
+    value: negative
+- attributes:
+    age: 15
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 6
+    value: 287000000.0
+  - analyte: stool_SaV
+    time: 14
+    value: 2660000.0
+  - analyte: stool_SaV
+    time: 28
+    value: 238000.0
+  - analyte: stool_SaV
+    time: 31
+    value: negative
+- attributes:
+    age: 15
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 7
+    value: 395000.0
+  - analyte: stool_SaV
+    time: 22
+    value: negative
+- attributes:
+    age: 18
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 4
+    value: 2880000.0
+  - analyte: stool_SaV
+    time: 21
+    value: negative
+- attributes:
+    age: 16
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 2
+    value: 56200000.0
+  - analyte: stool_SaV
+    time: 14
+    value: negative
+- attributes:
+    age: 19
+    sex: female
+  measurements:
+  - analyte: stool_SaV
+    time: 1
+    value: 94900000.0
+  - analyte: stool_SaV
+    time: 16
+    value: negative
+- attributes:
+    age: 16
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 5
+    value: 577000000.0
+  - analyte: stool_SaV
+    time: 26
+    value: negative
+- attributes:
+    age: 20
+    sex: female
+  measurements:
+  - analyte: stool_SaV
+    time: 5
+    value: 118000000.0
+  - analyte: stool_SaV
+    time: 28
+    value: negative
+- attributes:
+    age: 13
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 3
+    value: 102000000.0
+  - analyte: stool_SaV
+    time: 25
+    value: negative
+- attributes:
+    age: 16
+    sex: female
+  measurements:
+  - analyte: stool_SaV
+    time: 3
+    value: 191000.0
+  - analyte: stool_SaV
+    time: 31
+    value: negative
+- attributes:
+    age: 10
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 3
+    value: 8250000000.0
+  - analyte: stool_SaV
+    time: 12
+    value: 4430000.0
+  - analyte: stool_SaV
+    time: 26
+    value: negative
+  - analyte: stool_SaV
+    time: 33
+    value: negative
+- attributes:
+    age: 10
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 2
+    value: 1320000000.0
+  - analyte: stool_SaV
+    time: 19
+    value: negative
+  - analyte: stool_SaV
+    time: 26
+    value: negative
+- attributes:
+    age: 34
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 4
+    value: 132000.0
+  - analyte: stool_SaV
+    time: 9
+    value: negative
+- attributes:
+    age: 26
+    sex: female
+  measurements:
+  - analyte: stool_SaV
+    time: 5
+    value: 38400000.0
+  - analyte: stool_SaV
+    time: 10
+    value: negative
+- attributes:
+    age: 11
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 10
+    value: 53100000.0
+  - analyte: stool_SaV
+    time: 21
+    value: negative
+  - analyte: stool_SaV
+    time: 28
+    value: negative
+- attributes:
+    age: 12
+    sex: male
+  measurements:
+  - analyte: stool_SaV
+    time: 14
+    value: 938000.0
+  - analyte: stool_SaV
+    time: 28
+    value: negative
