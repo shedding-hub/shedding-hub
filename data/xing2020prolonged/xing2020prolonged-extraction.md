@@ -1,6 +1,6 @@
 # Extraction for Xing et al. (2020)
 
-[Xing et al. (2020)](https://doi.org/10.1016/j.jmii.2020.03.021) compares the dynamic changes of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) RNA in respiratory and fecal specimens in children with coronavirus disease 2019 (COVID-19). Only one case with complete demographic information (e.g., age, sex, etc.) and specimen test value is exposed in the paper. The raw data is directly collected and entered in .md file.
+[Xing et al. (2020)](https://doi.org/10.1016/j.jmii.2020.03.021) compared the dynamic changes of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) RNA in respiratory and fecal specimens in children with coronavirus disease 2019 (COVID-19). Only one case with complete demographic information (e.g., age, sex, etc.) and specimen test results was included in the paper.
 
 First, we `import` python modules needed:
 
@@ -8,12 +8,13 @@ First, we `import` python modules needed:
 #import modules;
 import yaml
 import pandas as pd
-import numpy as np
 from shedding_hub import folded_str
 
 ```
 
-The raw data is directly collected and entered in .md file.
+The raw data was extracted from Figure 4 (see below) in Xing et al. (2020) and entered in the markdown (.md) file.
+
+![image](patient_data.png)
 
 ```python
 # Define a dictionary containing patient demographic information (Case Number, Sex, Age) from [Table 1] in Xing et al. (2020).
@@ -22,7 +23,7 @@ patient_demo_info = {
 }
 
 # List case1's Ct_Values for fecal specimen and throat swab along with time (days from admission)
-time = [1, 2, 3.5, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35]
+time = [1, 3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
 ct_fecal = [12.65, 12.31, 15.81, 13.97, 18, 24.37, 28.29, 34.67, 37.05, 38.76, 40, 40, 40, 40, 40, 40, 40]
 ct_throat = [18.17, 23.97, 20.53, 25.91, 28.36, 34.83, 32.17, 38.19, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
 
