@@ -13,7 +13,9 @@ from shedding_hub import folded_str
 
 ```
 
-The raw data is directly collected and entered in .md file.
+The raw data was extracted from Figure 4 (see below) in Xing et al. (2020) and entered in the markdown (.md) file.
+
+![image](patient_data.png)
 
 ```python
 # Define a dictionary containing patient demographic information (Case Number, Sex, Age) from [Table 1] in Xing et al. (2020).
