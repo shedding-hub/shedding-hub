@@ -68,7 +68,7 @@ alsharrah2020 = dict(title="Clinical characteristics of pediatric SARS-CoV-2 inf
                           biomarker="SARS-CoV-2",
                           gene_target="E, RdRP",
                           limit_of_quantification="unknown",
-                          limit_of_detection=277.3461,
+                          limit_of_detection=41,
                           unit="cycle threshold",
                           reference_event="symptom onset",
         )
