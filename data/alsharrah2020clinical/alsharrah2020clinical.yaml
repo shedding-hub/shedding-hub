@@ -5,7 +5,8 @@ doi: 10.1002/jmv.26684
 description: >
   This study measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in
   paired oropharyngeal and nasopharyngeal samples from 33 COVID-19 patients in Jaber
-  Alahmad Hospital (JAH).
+  Alahmad Hospital (JAH). Cycle threshold (Ct) value for E and RdRP genes were measured
+  using Tib MolBiol's LightMix.
 analytes:
   NPS_SARSCoV2:
     description: >
@@ -15,8 +16,8 @@ analytes:
     biomarker: SARS-CoV-2
     gene_target: E, RdRP
     limit_of_quantification: unknown
-    limit_of_detection: unknown
-    unit: gc/mL
+    limit_of_detection: 277.3461
+    unit: cycle threshold
     reference_event: symptom onset
 participants:
 - attributes:
@@ -25,338 +26,338 @@ participants:
   measurements:
   - analyte: NPS_SARSCoV2
     time: 7
-    value: 163035.5928
+    value: 29.0
   - analyte: NPS_SARSCoV2
     time: 12
-    value: 6724.379994
+    value: 33.5
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 18
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 20
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 23
-    value: 6724.379994
+    value: 33.5
   - analyte: NPS_SARSCoV2
     time: 26
-    value: negative
+    value: 41.0
 - attributes:
     age: 1
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 8
-    value: negative
+    value: 41.0
 - attributes:
     age: 12
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 7
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 10
-    value: negative
+    value: 41.0
 - attributes:
     age: 7
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 3
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 5
-    value: negative
+    value: 41.0
 - attributes:
     age: 6
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 7
-    value: 67250417.98
+    value: 20.5
   - analyte: NPS_SARSCoV2
     time: 14
-    value: 2323.319055
+    value: 35.0
   - analyte: NPS_SARSCoV2
     time: 17
-    value: 56329.90693
+    value: 30.5
   - analyte: NPS_SARSCoV2
     time: 21
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 23
-    value: 6724.379994
+    value: 33.5
   - analyte: NPS_SARSCoV2
     time: 26
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 27
-    value: negative
+    value: 41.0
 - attributes:
     age: 8
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 19
-    value: 19462.36623
+    value: 32.0
 - attributes:
     age: 8
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 2
-    value: 23235477.12
+    value: 22.0
   - analyte: NPS_SARSCoV2
     time: 15
-    value: 9582.968159
+    value: 33.0
   - analyte: NPS_SARSCoV2
     time: 18
-    value: 802.722546
+    value: 36.5
   - analyte: NPS_SARSCoV2
     time: 24
-    value: negative
+    value: 41.0
 - attributes:
     age: 10
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 5
-    value: 331114.3648
+    value: 28.0
   - analyte: NPS_SARSCoV2
     time: 17
-    value: negative
+    value: 41.0
 - attributes:
     age: 10
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 14
-    value: negative
+    value: 41.0
 - attributes:
     age: 11
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0
 - attributes:
     age: 0
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 13
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 16
-    value: negative
+    value: 41.0
 - attributes:
     age: 1
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 12
-    value: 9582.968159
+    value: 33.0
   - analyte: NPS_SARSCoV2
     time: 16
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 28
-    value: negative
+    value: 41.0
 - attributes:
     age: 10
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 12
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 18
-    value: negative
+    value: 41.0
 - attributes:
     age: 10
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 2
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 14
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 19
-    value: negative
+    value: 41.0
 - attributes:
     age: 0
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 14
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 20
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 26
-    value: negative
+    value: 41.0
 - attributes:
     age: 0
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 17
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 20
-    value: negative
+    value: 41.0
 - attributes:
     age: 6
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 14
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 17
-    value: negative
+    value: 41.0
 - attributes:
     age: 7
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 11
-    value: 114402.2666
+    value: 29.5
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 18
-    value: 4718.505327
+    value: 34.0
 - attributes:
     age: 4
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 0
-    value: 5633267.882
+    value: 24.0
   - analyte: NPS_SARSCoV2
     time: 12
-    value: 2323.319055
+    value: 35.0
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 18
-    value: negative
+    value: 41.0
 - attributes:
     age: 10
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 2
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 8
-    value: 27735.97507
+    value: 31.5
   - analyte: NPS_SARSCoV2
     time: 20
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 22
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 25
-    value: negative
+    value: 41.0
 - attributes:
     age: 9
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 19
-    value: negative
+    value: 41.0
 - attributes:
     age: 4
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 1
-    value: 1630516385.0
+    value: 16.0
   - analyte: NPS_SARSCoV2
     time: 13
-    value: negative
+    value: 41.0
 - attributes:
     age: 0
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 12
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 19
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 23
-    value: negative
+    value: 41.0
 - attributes:
     age: 1
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 0
-    value: 1365743.723
+    value: 26.0
   - analyte: NPS_SARSCoV2
     time: 16
-    value: 1143.966374
+    value: 36.0
   - analyte: NPS_SARSCoV2
     time: 19
-    value: negative
+    value: 41.0
 - attributes:
     age: 17
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 10
-    value: 56329.90693
+    value: 30.5
   - analyte: NPS_SARSCoV2
     time: 12
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0
 - attributes:
     age: 15
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 12
-    value: negative
+    value: 41.0
 - attributes:
     age: 13
     sex: female
   measurements:
   - analyte: NPS_SARSCoV2
     time: 14
-    value: negative
+    value: 41.0
 - attributes:
     age: 17
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 13
-    value: negative
+    value: 41.0
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0
 - attributes:
     age: 15
     sex: male
   measurements:
   - analyte: NPS_SARSCoV2
     time: 15
-    value: negative
+    value: 41.0

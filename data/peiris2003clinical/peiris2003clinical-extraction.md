@@ -1,6 +1,6 @@
-# Extraction for Alsharrah et al. (2020)
+# Extraction for Peiris et al. (2003)
 
-[Alsharrah et al. (2020)](https://onlinelibrary.wiley.com/doi/10.1002/jmv.26684) measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in paired oropharyngeal and nasopharyngeal swabs from thirty three COVID-19 patients in in Jaber Alahmad Hospital (JAH) after symptom onset. Demographic information (e.g., age, sex, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/alsharrah2020clinical). 
+[Peiris et al. (2003)](https://onlinelibrary.wiley.com/doi/10.1002/jmv.26684) measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in paired oropharyngeal and nasopharyngeal swabs from thirty three COVID-19 patients in in Jaber Alahmad Hospital (JAH) after symptom onset. Demographic information (e.g., age, sex, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/alsharrah2020clinical). 
 First, we `import` python modules needed:
 
 ```python
