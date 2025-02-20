@@ -11,7 +11,7 @@ from shedding_hub import folded_str
 Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/alsharrah2020clinical), is from study 15 in challenger paper , will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). Original CT value is reported instead of the estimated viral load values using an average standard curve. 
 
 ```python
-Rawdata = pd.read_csv("CombinedDataset.csv")
+Rawdata = pd.read_excel("CombinedDataset.xlsx", sheet_name="Viral_Load")
 selected_columns = ["Day", "Age", "Sex", "Ctvalue", "StudyNum", "PatientID"]
 # Filter where StudyNum == 15
 Alsharrah2020 = Rawdata[Rawdata["StudyNum"] == 15][selected_columns]
@@ -36,9 +36,8 @@ for i in pd.unique(Alsharrah2020["ID"]):
                 value = 'negative'
             else:
                 value = float(row['Ctvalue']) # Report ct value directly
-
-            # Special condition for 1.0
-            if value == 1.0:
+    
+            if value == 41.0:
                 value = 'negative'
 
         except ValueError:
