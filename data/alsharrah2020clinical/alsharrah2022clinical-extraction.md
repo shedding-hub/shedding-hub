@@ -8,7 +8,7 @@ import yaml
 import pandas as pd
 from shedding_hub import folded_str
 ```
-Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/alsharrah2020clinical), is from study 15 in challenger paper , will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). Original CT value is reported instead of the estimated viral load values using an average standard curve. 
+Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/alsharrah2020clinical), is from study 15 in challenger paper , will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). We used CT values reported in this data. 
 
 ```python
 Rawdata = pd.read_excel("CombinedDataset.xlsx", sheet_name="Viral_Load")
