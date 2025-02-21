@@ -6,12 +6,11 @@ description: >
   This study measured SARS detected by real-time reverse transcriptase PCR in nasopharyngeal
   samples from 14 patients who admitted to the United Christian Hospital from the
   Amoy Gardens housing estate who fulfilled the modified WHO definition of SARS, on
-  days 5, 10 and 15 after symptom onset.
+  days 5, 10, and 15 after symptom onset.
 analytes:
   NPS_SARS:
     description: >
-      This analyte indicates the detection of SARS RNA in nasopharyngeal, stool and
-      faecal swabs, but only the nasopharyngeal swab values are presented.
+      This analyte indicates the detection of SARS RNA in nasopharyngeal aspirates.
     specimen: nasopharyngeal_swab
     biomarker: SARS
     gene_target: unkonw
