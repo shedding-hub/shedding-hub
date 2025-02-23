@@ -1,7 +1,6 @@
 # Extraction for hakki et al. (2022)
 
-[hakki et al. (2022)] (https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) analyzed the infectious window of SARS-CoV-2 using longitudinal upper respiratory tract (URT) sampling. A cohort of 57 patients underwent daily URT sampling for up to 20 days. SARS-CoV-2 viral RNA levels were quantified from URT swabs, with data extracted from the **trajectories.csv** dataset. Demographic variables such as age and sex were not included in the dataset.
-
+[hakki et al. (2022)](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) analyzed the infectious window of SARS-CoV-2 using longitudinal upper respiratory tract (URT) sampling. A cohort of 57 patients underwent daily URT sampling for up to 20 days. SARS-CoV-2 viral RNA levels were quantified from URT swabs, with data extracted from the **trajectories.csv** dataset, which is stored at [GitHub](https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/tree/main). Demographic variables such as age and sex were not included in the dataset.
 First, we import `python` modules needed:
 ```python
 import os
@@ -14,11 +13,11 @@ from shedding_hub import folded_str
 
 We clean data and add the demographic information in datasets:
 ```python
-hakki2022 = pd.read_csv("trajectories.csv")
+hakki2022 = pd.read_csv("trajectories.csv") # The data was obtained from https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/blob/main/Data/trajectories.csv
 
 
 
-# Define a dictionary containing patient information (ID, Sex, Age) from [Table 1](https://journals.asm.org/doi/10.1128/msphere.00827-20#tab1) in Vetter et al. (2020).
+# Define a dictionary containing patient information (ID, Sex, Age) from [Figure 3](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) in hakki et al. (2022).
 patient_info = {
     '1': {'PatientID': 1, 'Sex': 'F', 'Age': 35},
     '2': {'PatientID': 2, 'Sex': 'M', 'Age': 37},
@@ -83,7 +82,7 @@ patient_info = {
 def map_patient_info(df):
     df = df.copy() # Create a copy of the DataFrame to avoid modifying the original data
     df['participant'] = df['participant'].astype(str)
-     # Map 'PatientID', 'Sex', and 'Age' based on 'participant' column using the patient_info dictionary
+    # Map 'PatientID', 'Sex', and 'Age' based on 'participant' column using the patient_info dictionary
     df.loc[:, 'PatientID'] = df['participant'].map(lambda x: patient_info.get(x, {}).get('PatientID'))
     df.loc[:, 'Sex'] = df['participant'].map(lambda x: patient_info.get(x, {}).get('Sex'))
     df.loc[:, 'Age'] = df['participant'].map(lambda x: patient_info.get(x, {}).get('Age'))
@@ -96,13 +95,25 @@ def map_patient_info(df):
 hakki2022 = map_patient_info(hakki2022)
 hakki2022['participant'] = hakki2022['participant'].astype(int)
 hakki2022 = hakki2022.sort_values(by=['PatientID','day'])
-columns_to_drop = ["pfu", "LFD", "copy_exist", "pfu_exist", "LFD_exist", "vaccinated", "WGS"]
+columns_to_drop = ["LFD", "copy_exist", "pfu_exist", "LFD_exist"]
 hakki2022 = hakki2022.drop(columns=columns_to_drop)
 
-# Group by participant and extract measurements
-participants = []
+patient_ids = [1, 5, 6, 7, 8, 12, 16, 20, 21, 22, 23, 25, 30, 32, 45, 47, 50, 52, 56, 57]
 
-for patient_id, group in hakki2022.groupby("participant"):
+# Ensure 'PatientID' exists
+if 'PatientID' in hakki2022.columns:
+    # Patients without symptoms
+    nosymptomdataset = hakki2022[hakki2022['PatientID'].isin(patient_ids)]
+
+    # Patients with symptoms (all others not in patient_ids)
+    symptomdataset = hakki2022[~hakki2022['PatientID'].isin(patient_ids)]
+#nosymptomdataset = hakki2022[hakki2022['PatientID']==1,5,6,7,8,12,16,20,21,22,23,25,30,32,45,47,50,52,56,57]
+#symptomdataset = hakki2022[hakki2022['PatientID']==2,3,4,9,10,11,13,14,15,17,18,19,24,26,27,28,29,31,33,34,35,36,37,38,39,40,41,42,43,44,46,48,49,51,53,54,55]
+
+# Group by participant and extract measurements
+participants_nasooroph = []
+
+for patient_id, group in nosymptomdataset.groupby("participant"):
     # Initialize participant with a default structure
     participant = {"attributes": {}, "measurements": []}
 
@@ -111,26 +122,105 @@ for patient_id, group in hakki2022.groupby("participant"):
         participant["attributes"] = {
             "age": int(group["Age"].iloc[0]),
             "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
+            "vaccinated": "False" if group["vaccinated"].iloc[0] == "FALSE" else "True",
+            "variant_wave": "Pre-Alpha" if group["WGS"].iloc[0] == "Pre-Alpha" else \
+                            "Alpha" if group["WGS"].iloc[0] == "Alpha" else \
+                            "Delta" if group["WGS"].iloc[0] == "Delta" else "Unknown"
+
         }
 
-    # Process measurements
+    measurements = []
     for _, row in group.iterrows():
-        # Skip rows where 'copy' is NaN
         if pd.isna(row["copy"]):
             continue
-        if row["copy"] == 1:
-            value = "negative"
-        else:
-            value = row["copy"]
 
-        measurementN = {
+        value_naor = "negative" if row["copy"] == 1 else row["copy"]
+
+        measurement_entry1 = {
             "analyte": "nasopharyngeal_and_oropharyngeal_swab",
             "time": row["day"],
-            "value": value,
+            "value": value_naor,
         }
-        participant["measurements"].append(measurementN)
 
-    participants.append(participant)
+        if pd.isna(row["pfu"]):
+            continue
+
+        value_pfu = "negative" if row["pfu"] == 1 else row["pfu"]
+
+
+        measurement_entry2 = {
+            "analyte": "cultivable_SARSCoV2",
+            "time": row["day"],
+            "value": value_pfu,
+        }
+
+        measurements.append(measurement_entry1)
+        measurements.append(measurement_entry2)
+
+
+    participant["measurements"].extend(measurements)
+
+
+    participants_nasooroph.append(participant)
+
+
+participants_cultivable = []
+
+for patient_id, group in symptomdataset.groupby("participant"):
+    # Initialize participant with a default structure
+    participant = {"attributes": {}, "measurements": []}
+
+    # Check if 'Age' or 'Sex' is not null and add attributes
+    if pd.notnull(group["Age"].iloc[0]) and pd.notnull(group["Sex"].iloc[0]):
+        participant["attributes"] = {
+            "age": int(group["Age"].iloc[0]),
+            "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
+            "vaccinated": "False" if group["vaccinated"].iloc[0] == "FALSE" else "True",
+            "variant_wave": "Pre-Alpha" if group["WGS"].iloc[0] == "Pre-Alpha" else \
+                            "Alpha" if group["WGS"].iloc[0] == "Alpha" else \
+                            "Delta" if group["WGS"].iloc[0] == "Delta" else "Unknown"
+
+        }
+
+    measurements = []
+    for _, row in group.iterrows():
+        if pd.isna(row["copy"]):
+            continue
+
+        value_naor = "negative" if row["copy"] == 1 else row["copy"]
+
+        measurement_entry1 = {
+            "analyte": "nasopharyngeal_and_oropharyngeal_swab",
+            "time": row["day"],
+            "value": value_naor,
+        }
+
+        if pd.isna(row["pfu"]):
+            continue
+
+        value_pfu = "negative" if row["pfu"] == 1 else row["pfu"]
+
+
+        measurement_entry2 = {
+            "analyte": "cultivable_SARSCoV2",
+            "time": row["day"],
+            "value": value_pfu,
+        }
+
+        measurements.append(measurement_entry1)
+        measurements.append(measurement_entry2)
+
+
+    participant["measurements"].extend(measurements)
+
+
+    participants_cultivable.append(participant)
+
+
+participants = []
+participants.extend(participants_nasooroph)
+participants.extend(participants_cultivable)
+
 
 
 ```
@@ -145,6 +235,8 @@ hakki2022 = dict(
         "Through a prospective, longitudinal, community cohort study that captures the critical growth phase and peak of viral replication, the goal is to characterize the window of SARS-CoV-2 infectiousness and its temporal relationship with symptom onset.\n"
     ),
     analytes=dict(
+
+
         nasopharyngeal_and_oropharyngeal_swab=dict(
             description=folded_str(
                 "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swabs specimens collected from participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the onset of symptoms.\n"
@@ -154,15 +246,29 @@ hakki2022 = dict(
             specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker="SARS-CoV-2",
             unit="gc/mL",
+            reference_event="confirmation date"
+
+            ),
+
+        cultivable_SARSCoV2=dict(
+            description=folded_str(
+               "The analyte for infectious virus is the cultivable SARS-CoV-2 virus, which was measured using plaque assays in in vitro cell culture.The unit for the measurement is PFU/mL.\n"
+            ),
+            limit_of_quantification = "unknown",
+            limit_of_detection = "unknown",  
+            specimen = ["nasopharyngeal_swab", "oropharyngeal_swab"],   
+            biomarker = "SARS-CoV-2",
+            unit = "pfu/mL",
             reference_event="symptom onset",
-        )
-    ),
-    participants=participants,
+                 )
+        ),
+   participants = participants,
 )
 
 with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
+
 
 ```
