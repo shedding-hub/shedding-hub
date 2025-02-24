@@ -27,6 +27,52 @@ data = data.replace({
 ```
 
 ```python
+# Ensure 'data' is a DataFrame
+df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
+
+# Strip spaces from column names to avoid issues with whitespace
+df.columns = df.columns.str.strip()
+
+# Verify the 'PatientID' column exists
+if 'PatientID' not in df.columns:
+    print("Column 'PatientID' not found!")
+else:
+    participants = []
+
+    for patient_id, patient_data in df.groupby("PatientID"):
+        participant = {
+            "attributes": {
+                "age": float(patient_data["Age"].iloc[0]),
+                "sex": str(patient_data["Sex"].iloc[0]),
+            },
+            "measurements": []
+        }
+
+        # Iterate through each patient's data
+        for _, row in patient_data.iterrows():
+            # Add viral load (VL) measurement
+            if pd.notna(row['value']):
+                measurement_vl = {
+                    "analyte": str(row['Ctvalue']) + '_VL',
+                    "time": int(row["Day"]),
+                    "value": "negative" if row['Ctvalue'] == 'ud' else row['value']
+                }
+                participant['measurements'].append(measurement_vl)
+
+            # Add Ct value measurement
+            if pd.notna(row['Ctvalue']):
+                measurement_ct = {
+                    "analyte": str(row['Ctvalue']) + '_Ct',
+                    "time": int(row["Day"]),
+                    "value": "negative" if row['Ctvalue'] == 'ud' else row['Ctvalue']
+                }
+                participant['measurements'].append(measurement_ct)
+
+        participants.append(participant)
+
+```
+
+```python
 df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
 # Ensure 'data' is a DataFrame. If 'data' is not already a DataFrame, convert it to one.
 # This step prevents errors in downstream operations that require DataFrame methods.
@@ -58,7 +104,6 @@ for patient_id, patient_data in df.groupby("PatientID"):
 
     participants.append(participant)
 
-print(df.columns)
 
 # Strip spaces from column names to avoid issues with whitespace
 df.columns = df.columns.str.strip()
