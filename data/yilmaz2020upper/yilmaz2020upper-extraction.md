@@ -1,6 +1,6 @@
 # Extraction for ylimaz2020 et al. (2020)
 
-Ylimaz et al. (2020)](https://doi.org/10.1093/infdis/jiaa632) reported longitudinal viral RNA loads from the nasopharynx/throat in patients with mild and severe/critical coronavirus disease 2019 (COVID-19). The authors also investigated whether the duration of symptoms correlated with the duration of viral RNA shedding. A total of 56 patients were included. The raw data was obtained from [Challenger et al. (2020)](https://doi.org/10.1186/s12916-021-02220-0) and validated with Figure 1 in [Ylimaz et al. (2020)](https://doi.org/10.1093/infdis/jiaa632). The data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/yilmaz2020upper). 
+[Ylimaz et al. (2020)](https://doi.org/10.1093/infdis/jiaa632) reported longitudinal viral RNA loads from the nasopharynx/throat in patients with mild and severe/critical coronavirus disease 2019 (COVID-19). The authors also investigated whether the duration of symptoms correlated with the duration of viral RNA shedding. A total of 56 patients were included. The raw data was obtained from [Challenger et al. (2020)](https://doi.org/10.1186/s12916-021-02220-0) and validated with Figure 1 in [Ylimaz et al. (2020)](https://doi.org/10.1093/infdis/jiaa632). The data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/yilmaz2020upper). 
 
 First, we `import` python modules needed:
 ```python
@@ -97,9 +97,6 @@ output_data = {
     "participants": participants
 }
 with open("yilmaz2020upper.yaml","w") as outfile:
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, allow_unicode=True, sort_keys=False)
-```
-
-```python
-
 ```
