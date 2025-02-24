@@ -31,8 +31,6 @@ participant_list = []
 
 for i in pd.unique(Peiris2003["ID"]):
     patient_data = Peiris2003[Peiris2003["ID"] == i]
-    # age = int(patient_data['Age'].iloc[0])  # Convert to Python int
-    # sex = str(patient_data['Sex'].iloc[0])  # Convert to Python str
 
     measurements = []
     for _, row in patient_data.iterrows():
