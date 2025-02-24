@@ -89,6 +89,7 @@ $defs:
           - symptom onset
           - confirmation date
           - enrollment
+          - hospital admission
     required:
       - biomarker
       - description
