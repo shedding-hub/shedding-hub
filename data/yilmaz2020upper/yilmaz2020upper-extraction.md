@@ -53,7 +53,7 @@ else:
             # Add viral load (VL) measurement
             if pd.notna(row['value']):
                 measurement_vl = {
-                    "analyte": "throatswab_SARSCoV2_VL",
+                    "analyte": "throatswab_SARSCoV2",     
                     "time": int(row["Day"]),
                     "value": "negative" if row['Ctvalue'] == 'ud' else row['value']
                 }
@@ -62,7 +62,7 @@ else:
             # Add Ct value measurement
             if pd.notna(row['Ctvalue']):
                 measurement_ct = {
-                    "analyte": "throatswab_SARSCoV2_Ct",
+                    "analyte": "throatswab_SARSCoV2", 
                     "time": int(row["Day"]),
                     "value": "negative" if row['Ctvalue'] == 'ud' else row['Ctvalue']
                 }
