@@ -26,7 +26,6 @@ Peiris2003['ID'] = Peiris2003['PatientID'].map(patient_id_mapping)
 
 Peiris2003["type"] = "NPS"
 
-#print(Peiris2003.head(10))
 
 participant_list = []
 
