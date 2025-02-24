@@ -99,5 +99,4 @@ ke2022 = dict(title="Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals
 with open("ke2022daily.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(ke2022, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
