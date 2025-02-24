@@ -1,21 +1,16 @@
 # Extraction for hakki et al. (2022)
 
-[hakki et al. (2022)](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) analyzed the infectious window of SARS-CoV-2 using longitudinal upper respiratory tract (URT) sampling. A cohort of 57 patients underwent daily URT sampling for up to 20 days. SARS-CoV-2 viral RNA levels were quantified from URT swabs, with data extracted from the **trajectories.csv** dataset, which is stored at [GitHub](https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/tree/main). Demographic variables such as age and sex were not included in the dataset.
+[Hakki et al. (2022)](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) analyzed the infectious window of SARS-CoV-2 using longitudinal upper respiratory tract (URT) sampling. A cohort of 57 patients underwent daily URT sampling for up to 20 days. SARS-CoV-2 viral RNA levels were quantified from URT swabs, with data extracted from the **trajectories.csv** dataset, which is stored at [GitHub](https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/tree/main). Demographic variables such as age and sex were not included in the **trajectories.csv** dataset.
 First, we import `python` modules needed:
 ```python
-import os
+#import os
 import pandas as pd
 import yaml
 from shedding_hub import folded_str
 ```
-
-
-
 We clean data and add the demographic information in datasets:
 ```python
 hakki2022 = pd.read_csv("trajectories.csv") # The data was obtained from https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/blob/main/Data/trajectories.csv
-
-
 
 # Define a dictionary containing patient information (ID, Sex, Age) from [Figure 3](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) in hakki et al. (2022).
 patient_info = {
@@ -88,8 +83,6 @@ def map_patient_info(df):
     df.loc[:, 'Age'] = df['participant'].map(lambda x: patient_info.get(x, {}).get('Age'))
 
     return df
-
-
 
 # Apply the mapping function to df_1 and save the updated DataFrame to a CSV file
 hakki2022 = map_patient_info(hakki2022)
@@ -220,14 +213,10 @@ for patient_id, group in symptomdataset.groupby("participant"):
 participants = []
 participants.extend(participants_nasooroph)
 participants.extend(participants_cultivable)
-
-
-
 ```
 
 Finally, the data is formatted and output as a YAML file.
 ```python
-
 hakki2022 = dict(
     title="Onset and window of SARS-CoV-2 infectiousness and temporal correlation with symptom onset: a prospective, longitudinal, community cohort study",
     doi="10.1016/S2213-2600(22)00226-0",
@@ -239,26 +228,26 @@ hakki2022 = dict(
 
         nasopharyngeal_and_oropharyngeal_swab=dict(
             description=folded_str(
-                "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swabs specimens collected from participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the onset of symptoms.\n"
+                "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swab specimens collected from participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the onset of symptoms.\n"
             ),
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
             specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker="SARS-CoV-2",
-            unit="gc/mL",
-            reference_event="confirmation date"
+            unit="gc/mL", # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
+            reference_event="enrollment"
 
             ),
 
         cultivable_SARSCoV2=dict(
             description=folded_str(
-               "The analyte for infectious virus is the cultivable SARS-CoV-2 virus, which was measured using plaque assays in in vitro cell culture.The unit for the measurement is PFU/mL.\n"
+               "The analyte for infectious virus is the cultivable SARS-CoV-2 virus, which was measured using plaque assays in in vitro cell culture. The unit for the measurement is PFU/mL.\n"
             ),
             limit_of_quantification = "unknown",
             limit_of_detection = "unknown",  
             specimen = ["nasopharyngeal_swab", "oropharyngeal_swab"],   
             biomarker = "SARS-CoV-2",
-            unit = "pfu/mL",
+            unit = "pfu/mL", # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
             reference_event="symptom onset",
                  )
         ),
@@ -269,6 +258,4 @@ with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
-
-
 ```

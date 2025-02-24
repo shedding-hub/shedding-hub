@@ -10,7 +10,7 @@ analytes:
   nasopharyngeal_and_oropharyngeal_swab:
     description: >
       This analyte represents the detection and quantification of SARS-CoV-2 viral
-      RNA from throat and nose swabs specimens collected from participants. The analysis
+      RNA from throat and nose swab specimens collected from participants. The analysis
       focuses on measuring the viral load expressed in log10 copies/mL, with the primary
       reference event being the onset of symptoms.
     limit_of_quantification: unknown
@@ -20,11 +20,11 @@ analytes:
     - oropharyngeal_swab
     biomarker: SARS-CoV-2
     unit: gc/mL
-    reference_event: confirmation date
+    reference_event: enrollment
   cultivable_SARSCoV2:
     description: >
       The analyte for infectious virus is the cultivable SARS-CoV-2 virus, which was
-      measured using plaque assays in in vitro cell culture.The unit for the measurement
+      measured using plaque assays in in vitro cell culture. The unit for the measurement
       is PFU/mL.
     limit_of_quantification: unknown
     limit_of_detection: unknown
