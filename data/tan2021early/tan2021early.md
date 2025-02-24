@@ -75,5 +75,4 @@ tan2021Tcell = dict(
 with open("tan2021early.yaml", "w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(tan2021Tcell, outfile, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```

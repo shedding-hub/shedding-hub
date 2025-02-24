@@ -91,7 +91,6 @@ iwakiri2009 = dict(title="Quantitative analysis of fecal sapovirus shedding: ide
                participants=participant_list)
 
 with open("iwakiri2009quantitative.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(iwakiri2009, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close() 
 ```
