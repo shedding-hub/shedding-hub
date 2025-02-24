@@ -24,18 +24,20 @@ for patient_id, patient_data in combineddataset_df.groupby("PatientID"):
     participant = {
         "attributes": {
             "age": float(patient_data["Age"].iloc[0]),
-            "sex": str(patient_data["Sex"].iloc[0]),
+            "sex": patient_data["Sex"].iloc[0].replace("F", "female").replace("M", "male"),
         },
         "measurements": []
     }
+
     for _, row in patient_data.iterrows():
         measurement = {
             "analyte": "throatswab_SARSCoV2",
-            "time": round(float(row["Day"])), 
-            "Ctvalue": float(row["value"]) if float(row["value"]) != 1.0 else 'negative'
+            "time": round(float(row["Day"])),
+            # 直接在此处理负数为0
+            "value": float(row["value"]) if float(row["value"]) > 0 else 0
         }
         participant["measurements"].append(measurement)
-    
+
     participants_symptomatic.append(participant)
 
 ```
@@ -46,7 +48,7 @@ for patient_id, patient_data in asymptomatic_df.groupby("PatientID"):
     participant = {
         "attributes": {
             "age": float(patient_data["Age"].iloc[0]),
-            "sex": str(patient_data["Sex"].iloc[0]),
+            "sex": patient_data["Sex"].iloc[0].replace("F", "female").replace("M", "male"),
         },
         "measurements": []
     }
@@ -54,7 +56,7 @@ for patient_id, patient_data in asymptomatic_df.groupby("PatientID"):
         measurement = {
             "analyte": "throatswab_SARSCoV2",
             "time": round(float(row["Day"])), 
-            "value": float(row["value"]) if float(row["value"]) != 1.0 else 'negative'
+            "value": value if value > 0 else 0
         }
         participant["measurements"].append(measurement)
     
