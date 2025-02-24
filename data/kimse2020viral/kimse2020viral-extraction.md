@@ -31,9 +31,8 @@ for patient_id, patient_data in combineddataset_df.groupby("PatientID"):
 
     for _, row in patient_data.iterrows():
         measurement = {
-            "analyte": "throatswab_SARSCoV2",
+            "analyte": "throatswab_SARSCoV2_symptomatic",
             "time": round(float(row["Day"])),
-            # 直接在此处理负数为0
             "value": float(row["value"]) if float(row["value"]) > 0 else 0
         }
         participant["measurements"].append(measurement)
@@ -54,9 +53,9 @@ for patient_id, patient_data in asymptomatic_df.groupby("PatientID"):
     }
     for _, row in patient_data.iterrows():
         measurement = {
-            "analyte": "throatswab_SARSCoV2",
+            "analyte": "throatswab_SARSCoV2_asymptomatic",
             "time": round(float(row["Day"])), 
-            "value": value if value > 0 else 0
+             "value": float(row["value"]) if float(row["value"]) > 0 else 0
         }
         participant["measurements"].append(measurement)
     
