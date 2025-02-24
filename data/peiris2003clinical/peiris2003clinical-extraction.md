@@ -34,19 +34,7 @@ for i in pd.unique(Peiris2003["ID"]):
 
     measurements = []
     for _, row in patient_data.iterrows():
-        try:
-            # Handle missing values safely
-            if pd.isna(row['value']):
-                value = 'negative'
-            else:
-                value = 10 ** float(row['value']) 
-
-            # Special condition for 1.0
-            if value == 1.0:
-                value = 'negative'
-
-        except ValueError:
-            value = 'negative'
+        value = 10 ** float(row['value'])
 
         # Append measurements separately for each sample type
         if row['type'] == 'NPS':
