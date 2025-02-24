@@ -56,7 +56,7 @@ for _, row in patient_data.iterrows():
         measurement_vl = {
             "analyte": "throatswab_SARSCoV2_VL",
             "time": int(row["Day"]),
-            "value": "negative" if row['value'] == 1.0 else str(row['value'])
+            "value": "negative" if row['value'] == 1.0 else row['value']  # 1.0 -> negative, 其他保留
         }
         participant['measurements'].append(measurement_vl)
 
@@ -65,9 +65,10 @@ for _, row in patient_data.iterrows():
         measurement_ct = {
             "analyte": "throatswab_SARSCoV2_Ct",
             "time": int(row["Day"]),
-            "value": "negative" if row['Ctvalue'] == 40.0 else str(row['Ctvalue'])
+            "value": "negative" if row['Ctvalue'] == 40.0 else row['Ctvalue']  # 40.0 -> negative, 其他保留
         }
         participant['measurements'].append(measurement_ct)
+
 
 # Append participant data after processing each patient
 participants.append(participant)
