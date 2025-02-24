@@ -71,5 +71,4 @@ peiris2003 = dict(title="Clinical progression and viral load in a community outb
 with open("peiris2003clinical.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(peiris2003, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
