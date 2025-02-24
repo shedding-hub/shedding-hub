@@ -54,7 +54,7 @@ for _, row in patient_data.iterrows():
     # Add viral load (VL) measurement
     if pd.notna(row['value']):
         measurement_vl = {
-            "analyte": "throatswab_SARSCoV2_VL",
+            "analyte": "throatswab_SARSCoV2",
             "time": int(row["Day"]),
             "value": "negative" if row['value'] == 1.0 else row['value']  # 1.0 -> negative, 其他保留
         }
@@ -63,7 +63,7 @@ for _, row in patient_data.iterrows():
     # Add Ct value measurement
     if pd.notna(row['Ctvalue']):
         measurement_ct = {
-            "analyte": "throatswab_SARSCoV2_Ct",
+            "analyte": "throatswab_SARSCoV2",
             "time": int(row["Day"]),
             "value": "negative" if row['Ctvalue'] == 40.0 else row['Ctvalue']  # 40.0 -> negative, 其他保留
         }
