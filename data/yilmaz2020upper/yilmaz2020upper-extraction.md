@@ -48,27 +48,30 @@ else:
             "measurements": []
         }
 
-        # Iterate through each patient's data
-        for _, row in patient_data.iterrows():
-            # Add viral load (VL) measurement
-            if pd.notna(row['value']):
-                measurement_vl = {
-                    "analyte": "throatswab_SARSCoV2",     
-                    "time": int(row["Day"]),
-                    "value": "negative" if row['Ctvalue'] == 'ud' else row['value']
-                }
-                participant['measurements'].append(measurement_vl)
+        
+    # Iterate through each patient's data
+for _, row in patient_data.iterrows():
+    # Add viral load (VL) measurement
+    if pd.notna(row['value']):
+        measurement_vl = {
+            "analyte": "throatswab_SARSCoV2_VL",
+            "time": int(row["Day"]),
+            "value": "negative" if row['value'] == 1.0 else str(row['value'])
+        }
+        participant['measurements'].append(measurement_vl)
 
-            # Add Ct value measurement
-            if pd.notna(row['Ctvalue']):
-                measurement_ct = {
-                    "analyte": "throatswab_SARSCoV2", 
-                    "time": int(row["Day"]),
-                    "value": "negative" if row['Ctvalue'] == 'ud' else row['Ctvalue']
-                }
-                participant['measurements'].append(measurement_ct)
+    # Add Ct value measurement
+    if pd.notna(row['Ctvalue']):
+        measurement_ct = {
+            "analyte": "throatswab_SARSCoV2_Ct",
+            "time": int(row["Day"]),
+            "value": "negative" if row['Ctvalue'] == 40.0 else str(row['Ctvalue'])
+        }
+        participant['measurements'].append(measurement_ct)
 
-        participants.append(participant)
+# Append participant data after processing each patient
+participants.append(participant)
+
 
 ```
 
