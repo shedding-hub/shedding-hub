@@ -1,0 +1,267 @@
+# yaml-language-server:$schema=../.schema.yaml
+title: Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients
+doi: 10.1016/j.ijid.2020.04.083
+description: >
+  The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from
+  71 COVID-19 patients between February 4 and April 7, 2020.
+analytes:
+  throatswab_SARSCoV2_symptomatic:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in throat swab samples. Ct = 35 is
+      the cut-off for a positive result and Ct = 40 is a negative sample; Ct = 40
+      was the limit of detection.
+    specimen: throat_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+  throatswab_SARSCoV2_asymptomatic:
+    description: >
+      SARS-CoV-2 RNA genome copy concentration in throat swab samples.Ct = 35 is the
+      cut-off for a positive result and Ct = 40 is a negative sample; Ct = 40 was
+      the limit of detection.
+    specimen: throat_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- attributes:
+    age: 20.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: -2
+    value: 33.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 0
+    value: 36.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 1
+    value: negative
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 3
+    value: 32.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 4
+    value: negative
+- attributes:
+    age: 30.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: -2
+    value: 16.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 1
+    value: 25.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 3
+    value: 32.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 5
+    value: 30.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 8
+    value: 33.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 10
+    value: 35.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 11
+    value: negative
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 12
+    value: 37.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 13
+    value: 36.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 14
+    value: negative
+- attributes:
+    age: 30.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: -1
+    value: 14.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 2
+    value: 26.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 4
+    value: 32.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 6
+    value: 28.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 8
+    value: 33.0
+  - analyte: throatswab_SARSCoV2_symptomatic
+    time: 11
+    value: negative
+- attributes:
+    age: 8.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 4
+    value: negative
+- attributes:
+    age: 21.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 1
+    value: 24
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 3
+    value: 34
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 5
+    value: 39
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 7
+    value: negative
+- attributes:
+    age: 55.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 8
+    value: 32
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 10
+    value: 30
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 12
+    value: 35
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 14
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 16
+    value: negative
+- attributes:
+    age: 25.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 2
+    value: 28
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 4
+    value: 32
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 6
+    value: 34
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 8
+    value: 36
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 9
+    value: 33
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 11
+    value: negative
+- attributes:
+    age: 58.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 3
+    value: 33
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 5
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 7
+    value: 36
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 9
+    value: 33
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 11
+    value: 34
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 13
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 15
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 17
+    value: 37
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 19
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 21
+    value: negative
+- attributes:
+    age: 79.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 8
+    value: 34
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 10
+    value: negative
+- attributes:
+    age: 8.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 2
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 3
+    value: negative
+- attributes:
+    age: 37.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 1
+    value: 35
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 2
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 3
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 4
+    value: negative
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 5
+    value: 35
+- attributes:
+    age: 48.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 2
+    value: 27
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 4
+    value: 36
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 7
+    value: negative
+- attributes:
+    age: 24.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 2
+    value: 37
+  - analyte: throatswab_SARSCoV2_asymptomatic
+    time: 4
+    value: negative
