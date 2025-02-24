@@ -53,7 +53,7 @@ else:
             # Add viral load (VL) measurement
             if pd.notna(row['value']):
                 measurement_vl = {
-                    "analyte": str(row['Ctvalue']) + '_VL',
+                    "analyte": "throatswab_SARSCoV2_VL",
                     "time": int(row["Day"]),
                     "value": "negative" if row['Ctvalue'] == 'ud' else row['value']
                 }
@@ -62,7 +62,7 @@ else:
             # Add Ct value measurement
             if pd.notna(row['Ctvalue']):
                 measurement_ct = {
-                    "analyte": str(row['Ctvalue']) + '_Ct',
+                    "analyte": "throatswab_SARSCoV2_Ct",
                     "time": int(row["Day"]),
                     "value": "negative" if row['Ctvalue'] == 'ud' else row['Ctvalue']
                 }
@@ -70,68 +70,6 @@ else:
 
         participants.append(participant)
 
-```
-
-```python
-df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
-# Ensure 'data' is a DataFrame. If 'data' is not already a DataFrame, convert it to one.
-# This step prevents errors in downstream operations that require DataFrame methods.
-
-participants = []
-
-for patient_id, patient_data in df.groupby("PatientID"):
-    participant = {
-        "attributes": {
-            # "day": int(patient_data["Day"].iloc[0]),
-            "age": float(patient_data["Age"].iloc[0]),
-            "sex": str(patient_data["Sex"].iloc[0]),
-            # "estimated": int(patient_data["Estimated"].iloc[0]),
-            # "sevmax": float(patient_data["SevMax"].iloc[0]),
-        },
-        # "sev1st": float(patient_data["Sev1st"].iloc[0]),
-        #"death": int(patient_data["Died"].iloc[0]),
-        "measurements": []
-    }
-    # print(participant)
-    for _, row in patient_data.iterrows():
-        measurement = {
-            "analyte": "throatswab_SARSCoV2",
-            "time": int(row["Day"]),
-            "value": float(row["value"])
-        }
-        participant["measurements"].append(measurement)
-
-
-    participants.append(participant)
-
-
-# Strip spaces from column names to avoid issues with whitespace
-df.columns = df.columns.str.strip()
-
-# Verify the column exists after cleaning
-if 'PatientID' not in df.columns:
-    print("Column 'PatientID' not found!")
-else:
-    participants = []
-
-    for patient_id, patient_data in df.groupby("PatientID"):
-        participant = {
-            "attributes": {
-                "age": float(patient_data["Age"].iloc[0]),
-                "sex": str(patient_data["Sex"].iloc[0]),
-            },
-            "measurements": []
-        }
-
-for _, row in patient_data.iterrows():
-            measurement = {
-                "analyte": "throatswab_SARSCoV2",
-                "time": int(row["Day"]),
-                "value": float(row["value"])
-            }
-            participant["measurements"].append(measurement)
-
-participants.append(participant)
 ```
 
 Finally, the data is formatted and output as a YAML file.
