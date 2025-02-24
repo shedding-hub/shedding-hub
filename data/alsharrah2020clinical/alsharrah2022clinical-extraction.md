@@ -77,7 +77,6 @@ alsharrah2020 = dict(title="Clinical characteristics of pediatric SARS-CoV-2 inf
 
 
 with open("alsharrah2020clinical.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(alsharrah2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close() 
 ```
