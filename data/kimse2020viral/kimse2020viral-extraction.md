@@ -1,6 +1,6 @@
 # Extraction for kimse et al. (2020)
 
-[kim et al. (2020)](https://www.ijidonline.com/article/S1201-9712(20)30299-X/fulltext) The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected from all patients at least two days after hospitalization and physicians checked their symptoms and signs daily. Patients who had asymptomatic carrier and incubation period were analyzed. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). 
+[Kim et al. (2020)](https://www.ijidonline.com/article/S1201-9712(20)30299-X/fulltext) The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected from all patients at least two days after hospitalization and physicians checked their symptoms and signs daily. This study included both symptomatic and asymptomatic cases. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). 
 
 First, we `import` python modules needed:
 
@@ -33,7 +33,7 @@ for patient_id, patient_data in combineddataset_df.groupby("PatientID"):
         measurement = {
             "analyte": "throatswab_SARSCoV2_symptomatic",
             "time": round(float(row["Day"])),
-            "value": float(row["value"]) if float(row["value"]) > 0 else 0
+            "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
         }
         participant["measurements"].append(measurement)
 
@@ -55,7 +55,7 @@ for patient_id, patient_data in asymptomatic_df.groupby("PatientID"):
         measurement = {
             "analyte": "throatswab_SARSCoV2_asymptomatic",
             "time": round(float(row["Day"])), 
-             "value": float(row["value"]) if float(row["value"]) > 0 else 0
+             "value": round(float(row["value"])) if round(float(row["value"])) < 40 else "negative"
         }
         participant["measurements"].append(measurement)
     
@@ -103,11 +103,4 @@ output_data = {
 with open("kimse2020viral.yaml","w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False)
-```
-
-```python
-#make sure branch
-#git pull
-#result
-#push
 ```
