@@ -1,0 +1,151 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Prolonged viral shedding in feces of pediatric patients with coronavirus disease
+  2019
+doi: 10.1016/j.jmii.2020.03.021
+description: >
+  This study characterized the dynamic profiles of SARS-CoV-2 shedding in respiratory
+  and fecal specimens in three children with COVID-19. However, complete specimen
+  test value data were available for only one child. A total of 19 throat swab specimens
+  and 17 fecal specimens were collected.
+analytes:
+  stool_SARSCoV2:
+    description: >
+      Presence of SARS-CoV-2 RNA was detected by RT-PCR in stool samples. The PCR
+      assay simultaneously amplified two target genes of SARS-CoV-2 included open
+      reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle threshold (Ct)
+      value no more than 40 with evident amplification curve was considered as a positive
+      test, and a value of 40 indicated the virus was molecularly undetectable.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: ORF1ab, N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: hospital admission
+  throat_swab_SARSCoV2:
+    description: >
+      Presence of SARS-CoV-2 RNA was detected by RT-PCR in throat_swab samples. The
+      PCR assay simultaneously amplified two target genes of SARS-CoV-2 included open
+      reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle threshold (Ct)
+      value no more than 40 with evident amplification curve was considered as a positive
+      test, and a value of 40 indicated the virus was molecularly undetectable.
+    specimen: throat_swab
+    biomarker: SARS-CoV-2
+    gene_target: ORF1ab, N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: hospital admission
+participants:
+- attributes:
+    age: 1.5
+    sex: male
+  measurements:
+  - analyte: throat_swab_SARSCoV2
+    time: 1
+    value: 18.17
+  - analyte: throat_swab_SARSCoV2
+    time: 3
+    value: 23.97
+  - analyte: throat_swab_SARSCoV2
+    time: 4
+    value: 20.53
+  - analyte: throat_swab_SARSCoV2
+    time: 6
+    value: 25.91
+  - analyte: throat_swab_SARSCoV2
+    time: 8
+    value: 28.36
+  - analyte: throat_swab_SARSCoV2
+    time: 10
+    value: 34.83
+  - analyte: throat_swab_SARSCoV2
+    time: 12
+    value: 32.17
+  - analyte: throat_swab_SARSCoV2
+    time: 14
+    value: 38.19
+  - analyte: throat_swab_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: throat_swab_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 12.65
+  - analyte: stool_SARSCoV2
+    time: 6
+    value: 12.31
+  - analyte: stool_SARSCoV2
+    time: 8
+    value: 15.81
+  - analyte: stool_SARSCoV2
+    time: 10
+    value: 13.97
+  - analyte: stool_SARSCoV2
+    time: 12
+    value: 18
+  - analyte: stool_SARSCoV2
+    time: 14
+    value: 24.37
+  - analyte: stool_SARSCoV2
+    time: 16
+    value: 28.29
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 34.67
+  - analyte: stool_SARSCoV2
+    time: 20
+    value: 37.05
+  - analyte: stool_SARSCoV2
+    time: 22
+    value: 38.76
+  - analyte: stool_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 36
+    value: negative

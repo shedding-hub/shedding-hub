@@ -117,7 +117,6 @@ vetter2020 = dict(title="Daily Viral Kinetics and Innate and Adaptive Immune Res
                participants=participant_list)
 
 with open("vetter2020daily.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(vetter2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
