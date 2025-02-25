@@ -62,5 +62,4 @@ shrestha2020distribution = dict(title="Distribution of Transmission Potential Du
 with open("shrestha2020distribution.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(shrestha2020distribution, outfile, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```

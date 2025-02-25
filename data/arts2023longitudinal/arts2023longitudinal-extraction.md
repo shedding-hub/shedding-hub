@@ -152,5 +152,4 @@ Arts2023 = dict(title="Longitudinal and quantitative fecal shedding dynamics of 
 with open("arts2023longitudinal.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(Arts2023, outfile, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```

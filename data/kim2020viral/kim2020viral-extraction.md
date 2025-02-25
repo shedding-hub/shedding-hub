@@ -135,5 +135,4 @@ KimJY2020 = dict(title="Viral Load Kinetics of SARS-CoV-2 Infection in First Two
 with open("kim2020viral.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(KimJY2020, outfile, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```

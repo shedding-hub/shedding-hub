@@ -220,5 +220,4 @@ Tsang2016 = dict(
 with open("tsang2016individual.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(Tsang2016, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close() 
 ```

@@ -1,0 +1,161 @@
+# yaml-language-server: $schema=.schema.yaml
+title: 'Clinical progression and viral load in a community outbreak of coronavirus-associated
+  SARS pneumonia: a prospective study'
+doi: 10.1016/S0140-6736(03)13412-5
+description: >
+  This study measured SARS detected by real-time reverse transcriptase PCR in nasopharyngeal
+  samples from 14 patients who admitted to the United Christian Hospital from the
+  Amoy Gardens housing estate who fulfilled the modified WHO definition of SARS, on
+  days 5, 10, and 15 after symptom onset.
+analytes:
+  NPS_SARS:
+    description: >
+      This analyte indicates the detection of SARS RNA in nasopharyngeal aspirates.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS
+    gene_target: unkonw
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 61321.19632707483
+  - analyte: NPS_SARS
+    time: 10
+    value: 46573791.327248454
+  - analyte: NPS_SARS
+    time: 15
+    value: 1630757.4866383928
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 59173.04168684237
+  - analyte: NPS_SARS
+    time: 10
+    value: 11185942.073493924
+  - analyte: NPS_SARS
+    time: 15
+    value: 3448344.280482483
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 3210976.802169803
+  - analyte: NPS_SARS
+    time: 10
+    value: 468116.53529937816
+  - analyte: NPS_SARS
+    time: 15
+    value: 15262.59285028388
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 11474.519623162518
+  - analyte: NPS_SARS
+    time: 10
+    value: 174241034.94015947
+  - analyte: NPS_SARS
+    time: 15
+    value: 10310.372024072614
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 11072.553516019672
+  - analyte: NPS_SARS
+    time: 10
+    value: 20509114.1832711
+  - analyte: NPS_SARS
+    time: 15
+    value: 5052.889757161364
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 1465308.955883714
+  - analyte: NPS_SARS
+    time: 10
+    value: 223644139.42031693
+  - analyte: NPS_SARS
+    time: 15
+    value: 294460.1635715947
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 1063037.715195525
+  - analyte: NPS_SARS
+    time: 10
+    value: 1689958.7573886006
+  - analyte: NPS_SARS
+    time: 15
+    value: 11072.553516019672
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 120742.01158309949
+  - analyte: NPS_SARS
+    time: 10
+    value: 10051072.115005204
+  - analyte: NPS_SARS
+    time: 15
+    value: 149547.36354089194
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 979.8293449078709
+  - analyte: NPS_SARS
+    time: 10
+    value: 11185942.073493924
+  - analyte: NPS_SARS
+    time: 15
+    value: 979.8293449078709
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 5289947.074802679
+  - analyte: NPS_SARS
+    time: 10
+    value: 287054660.31140065
+  - analyte: NPS_SARS
+    time: 15
+    value: 2093131.241948619
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 8409666.259230807
+  - analyte: NPS_SARS
+    time: 10
+    value: 88491723.7696257
+  - analyte: NPS_SARS
+    time: 15
+    value: 5680999.865563324
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 42928.26764169628
+  - analyte: NPS_SARS
+    time: 10
+    value: 9031340.408996072
+  - analyte: NPS_SARS
+    time: 15
+    value: 6485.551361160065
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 744185.8636065954
+  - analyte: NPS_SARS
+    time: 10
+    value: 3448344.280482483
+  - analyte: NPS_SARS
+    time: 15
+    value: 41424.43913370681
+- measurements:
+  - analyte: NPS_SARS
+    time: 5
+    value: 13854565.812503882
+  - analyte: NPS_SARS
+    time: 10
+    value: 40382638.3843779
+  - analyte: NPS_SARS
+    time: 15
+    value: 1226014.4108281932
