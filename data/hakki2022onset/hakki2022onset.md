@@ -237,7 +237,7 @@ for patient_id, group in nosymptomdataset.groupby("participant"):
         participant["attributes"] = {
             "age": int(group["Age"].iloc[0]),
             "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
-            "vaccinated": "False" if group["vaccinated"].iloc[0] == "FALSE" else "True",
+            "vaccinated": False if group["vaccinated"].iloc[0] == "FALSE" else True,
             "variant_wave": (
                 "Pre-Alpha"
                 if group["WGS"].iloc[0] == "Pre-Alpha"
@@ -257,7 +257,7 @@ for patient_id, group in nosymptomdataset.groupby("participant"):
         value_naor = "negative" if row["copy"] == 1 else row["copy"]
 
         measurement_entry1 = {
-            "analyte": "nasopharyngeal_and_oropharyngeal_swab",
+            "analyte": "asymptomatic_PCR",
             "time": row["day"],
             "value": value_naor,
         }
@@ -268,7 +268,7 @@ for patient_id, group in nosymptomdataset.groupby("participant"):
         value_pfu = "negative" if row["pfu"] == 1 else row["pfu"]
 
         measurement_entry2 = {
-            "analyte": "cultivable_SARSCoV2",
+            "analyte": "asymptomatic_cultivable",
             "time": row["day"],
             "value": value_pfu,
         }
@@ -292,7 +292,7 @@ for patient_id, group in symptomdataset.groupby("participant"):
         participant["attributes"] = {
             "age": int(group["Age"].iloc[0]),
             "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
-            "vaccinated": "False" if group["vaccinated"].iloc[0] == "FALSE" else "True",
+            "vaccinated": False if group["vaccinated"].iloc[0] == "FALSE" else True,
             "variant_wave": (
                 "Pre-Alpha"
                 if group["WGS"].iloc[0] == "Pre-Alpha"
@@ -312,7 +312,7 @@ for patient_id, group in symptomdataset.groupby("participant"):
         value_naor = "negative" if row["copy"] == 1 else row["copy"]
 
         measurement_entry1 = {
-            "analyte": "nasopharyngeal_and_oropharyngeal_swab",
+            "analyte": "symptomatic_PCR",
             "time": row["day"],
             "value": value_naor,
         }
@@ -323,7 +323,7 @@ for patient_id, group in symptomdataset.groupby("participant"):
         value_pfu = "negative" if row["pfu"] == 1 else row["pfu"]
 
         measurement_entry2 = {
-            "analyte": "cultivable_SARSCoV2",
+            "analyte": "symptomatic_cultivable",
             "time": row["day"],
             "value": value_pfu,
         }
@@ -352,9 +352,9 @@ hakki2022 = dict(
         "Through a prospective, longitudinal, community cohort study that captures the critical growth phase and peak of viral replication, the goal is to characterize the window of SARS-CoV-2 infectiousness and its temporal relationship with symptom onset.\n"
     ),
     analytes=dict(
-        nasopharyngeal_and_oropharyngeal_swab=dict(
+        asymptomatic_PCR=dict(
             description=folded_str(
-                "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swabs specimens collected from participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the onset of symptoms.\n"
+                "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swabs specimens collected from asymptomatic participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the enrollment.\n"
             ),
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
@@ -363,15 +363,39 @@ hakki2022 = dict(
             unit="gc/mL",  # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
             reference_event="enrollment",
         ),
-        cultivable_SARSCoV2=dict(
+        asymptomatic_cultivable=dict(
             description=folded_str(
-                "The analyte for infectious virus is the cultivable SARS-CoV-2 virus, which was measured using plaque assays in in vitro cell culture.The unit for the measurement is PFU/mL.\n"
+                "The infectious virus analyte consisted of culturable SARS-CoV-2 derived from throat and nasal swabs of asymptomatic participants, measured using a plaque assay in vitro. The unit of measurement was PFU/mL, with enrollment as the primary reference event.\n"
             ),
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
             specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker="SARS-CoV-2",
             unit="pfu/mL",  # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
+            reference_event="enrollment",
+        ),
+        symptomatic_PCR=dict(
+            description=folded_str(
+                "This analyte represents the detection and quantification of SARS-CoV-2 viral RNA from throat and nose swabs specimens collected from symptomatic participants. The analysis focuses on measuring the viral load expressed in log10 copies/mL, with the primary reference event being the symptom onset.\n"
+            ),
+            limit_of_quantification="unknown",
+            limit_of_detection="unknown",
+            specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
+            biomarker="SARS-CoV-2",
+            unit="gc/mL",
+            # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
+            reference_event="symptom onset",
+        ),
+        symptomatic_cultivable=dict(
+            description=folded_str(
+                "The infectious virus analyte consisted of culturable SARS-CoV-2 derived from throat and nasal swabs of symptomatic participants, measured using a plaque assay in vitro. The unit of measurement was PFU/mL, with symptom onset as the primary reference event.\n"
+            ),
+            limit_of_quantification="unknown",
+            limit_of_detection="unknown",
+            specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
+            biomarker="SARS-CoV-2",
+            unit="pfu/mL",
+            # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
             reference_event="symptom onset",
         ),
     ),
@@ -382,6 +406,7 @@ with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
+
 
 
 ```
