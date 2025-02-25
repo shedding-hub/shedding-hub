@@ -33,30 +33,36 @@ participants = []
 
 # Group by participant and extract measurements
 
-for patient_id, group in merged_df.groupby('PatientID'):
-    participant = {
-        'attributes': {
-            'age': int(group['Age'].iloc[0]),
-            'sex': 'female' if group['Sex'].iloc[0] == 'F' else 'male',
-            'Hydroxychloroquine_treatment': True if group['Hydroxychloroquine'].iloc[0] == 'yes' else False,
-            'Azithromycin_treatment':True if group['Azithromycin'].iloc[0] == 'yes' else False
-        },
-        'measurements': []
-    }
-
+for patient_id, group in team2020.groupby('PatientID'):
+    # Check if both 'Age' and 'Sex' are not NaN
+    if pd.notna(group['Age'].iloc[0]) and pd.notna(group['Sex'].iloc[0]):
+        participant = {
+            'attributes': {
+                'age_group': group['Age'].iloc[0],
+                'sex': group['Sex'].iloc[0]
+            },
+            'measurements': []
+        }
+    else:
+        # If age or sex is NaN, exclude 'attributes' from the participant dictionary
+        participant = {
+            'measurements': []
+        }
+    
     for _, row in group.iterrows():
         if row['value'] == 1:
             value = "negative"
         else:
-            value = row['value']
-        measurementN = {
-            'analyte': 'nasopharyngeal_swab_SARSCoV2',
+            value = row['Ctvalue']
+        measurement_Ct = {
+            'analyte': 'naso_swab_SARSCoV2_N_Ct',
             'time': row['Day'],
             'value': value
         }
-        participant['measurements'].append(measurementN)
+        participant['measurements'].append(measurement_Ct)
         
     participants.append(participant)
+
 ```
 
 Finally, the data is formatted and output as a YAML file.
