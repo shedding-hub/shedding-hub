@@ -41,18 +41,6 @@ for patient_id, group in merged_df.groupby('PatientID'):
         },
         'measurements': []
     }
-
-    for _, row in group.iterrows():
-        if row['value'] == 1:
-            value = "negative"
-        else:
-            value = row['value']
-        measurementN = {
-            'analyte': 'nasopharyngeal_swab_SARSCoV2_VL',
-            'time': row['Day'],
-            'value': value
-        }
-        participant['measurements'].append(measurementN)
     
     for _, row in group.iterrows():
         if row['value'] == 1:
@@ -75,14 +63,7 @@ Finally, the data is formatted and output as a YAML file.
 gautret2020hydroxychloroquine = dict(title="Hydroxychloroquine and azithromycin as a treatment of COVID-19:results of an open-label non-randomized clinical trial",
                doi="10.1016/j.ijantimicag.2020.105949",
                description=folded_str('This study evaluated the effect of hydroxychloroquine on respiratory viral loads. Six patients were asymptomatic, 22 exhibited upper respiratory tract infection symptoms, and eight showed lower respiratory tract infection symptoms. Only 19 patients with a known onset of symptoms were included in the analysis below. Data for the nasopharyngeal swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022). Attributes of drug treatments were sourced from the supplementary materials of the original paper.\n'),
-               analytes=dict(nasopharyngeal_swab_SARSCoV2_VL=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration in nasopharyngeal swab samples. Viral load concentrations were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022) Viral load values were estimated using an average standard curve.\n"),
-                                        limit_of_quantification="unknown",
-                                        limit_of_detection="unknown",
-                                        specimen="nasopharyngeal_swab", 
-                                        biomarker="SARS-CoV-2", 
-                                        unit="gc/mL",
-                                        reference_event="symptom onset",),
-                            nasopharyngeal_swab_SARSCoV2_Ct=dict(description=folded_str("Cycle threshold (Ct) values targeting the E gene in nasopharyngeal swab samples.\n"),
+               analytes=dict(nasopharyngeal_swab_SARSCoV2_Ct=dict(description=folded_str("Cycle threshold (Ct) values targeting the E gene in nasopharyngeal swab samples.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection="unknown",
                                         specimen="nasopharyngeal_swab", 
