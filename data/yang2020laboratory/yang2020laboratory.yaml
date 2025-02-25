@@ -10,7 +10,10 @@ analytes:
   upper_resp_tract:
     description: >
       SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract samples.
-    specimen: Nasopharyngeal swabs,oropharyngeal swabs and sputum
+    specimen:
+    - Nasopharyngeal swabs
+    - oropharyngeal swabs
+    - sputum
     biomarker: SARS-CoV-2
     gene_target: ORF1ab and N gene
     limit_of_quantification: unknown

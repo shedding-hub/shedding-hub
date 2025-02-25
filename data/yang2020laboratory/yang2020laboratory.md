@@ -58,7 +58,7 @@ yangproj = dict(title="Laboratory Diagnosis and Monitoring the Viral Shedding of
                doi="10.1016/j.xinn.2020.100061",
                description=folded_str('This study involved 3552 clinical sames from 410 COVID-19 patients confirmed by Guangdong CDC. Oropharyngeal swabs, nasopharyngeal swabs and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.\n'),
                analytes=dict(upper_resp_tract=dict(description=folded_str("SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract samples.\n"),
-                                                    specimen="Nasopharyngeal swabs,oropharyngeal swabs and sputum",
+                                                    specimen=["Nasopharyngeal swabs","oropharyngeal swabs", "sputum"],
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="ORF1ab and N gene",
                                                     limit_of_quantification="unknown",
