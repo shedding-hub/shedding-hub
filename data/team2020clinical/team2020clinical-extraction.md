@@ -33,42 +33,28 @@ participants = []
 
 # Group by participant and extract measurements
 
-for patient_id, group in team2020.groupby('PatientID'):
-    # Check if both 'Age' and 'Sex' are not NaN
-    if pd.notna(group['Age'].iloc[0]) and pd.notna(group['Sex'].iloc[0]):
-        participant = {
-            'attributes': {
-                'age_group': group['Age'].iloc[0],
-                'sex': group['Sex'].iloc[0]
-            },
-            'measurements': []
-        }
-    else:
-        # If age or sex is NaN, exclude 'attributes' from the participant dictionary
-        participant = {
-            'measurements': []
-        }
+for patient_id, group in merged_df.groupby('PatientID'):
+    participant = {
+        'attributes': {
+            'age': int(group['Age'].iloc[0]),
+            'sex': 'female' if group['Sex'].iloc[0] == 'F' else 'male',
+            'Hydroxychloroquine_treatment': True if group['Hydroxychloroquine'].iloc[0] == 'yes' else False,
+            'Azithromycin_treatment':True if group['Azithromycin'].iloc[0] == 'yes' else False
+        },
+        'measurements': []
+    }
 
     for _, row in group.iterrows():
         if row['value'] == 1:
             value = "negative"
         else:
             value = row['value']
-        measurement_VL = {
-            'analyte': 'naso_swab_SARSCoV2_N_VL',
+        measurementN = {
+            'analyte': 'nasopharyngeal_swab_SARSCoV2',
             'time': row['Day'],
             'value': value
         }
-        participant['measurements'].append(measurement_VL)
-    
-    for _, row in group.iterrows():
-        value = row['Ctvalue']
-        measurement_Ct = {
-            'analyte': 'naso_swab_SARSCoV2_N_Ct',
-            'time': row['Day'],
-            'value': value
-        }
-        participant['measurements'].append(measurement_Ct)
+        participant['measurements'].append(measurementN)
         
     participants.append(participant)
 ```
@@ -79,15 +65,7 @@ Finally, the data is formatted and output as a YAML file.
 team2020clinical = dict(title="Clinical and virologic characteristics of the first 12 patients with coronavirus disease 2019 (COVID-19) in the United States",
                doi="10.1038/s41591-020-0877-5",
                description=folded_str('Respiratory, stool, serum, and urine specimens were submitted for SARS-CoV-2 real-time reverse-transcription polymerase chain reaction (rRT-PCR) testing, viral culture, and whole-genome sequencing. Only nasopharyngeal samples were included in this dataset. Data for the nasopharyngeal swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022), while attributes of hospitalized patients were obtained from the original paper.\n'),
-               analytes=dict(naso_swab_SARSCoV2_N_VL=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentrations in nasopharyngeal swab samples were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022). The viral load values were estimated using an average standard curve.\n"),
-                                        limit_of_quantification="unknown",
-                                        limit_of_detection="unknown",
-                                        specimen="nasopharyngeal_swab", 
-                                        biomarker="SARS-CoV-2", 
-                                        gene_target="N", 
-                                        unit="gc/mL",
-                                        reference_event="symptom onset",),
-                            naso_swab_SARSCoV2_N_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the N gene in nasopharyngeal swab samples.\n"),
+               analytes=dict(naso_swab_SARSCoV2_N_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the N gene in nasopharyngeal swab samples.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection="unknown",
                                         specimen="nasopharyngeal_swab", 
