@@ -27,6 +27,56 @@ data = data.replace({
 ```
 
 ```python
+
+# Ensure 'data' is a DataFrame
+df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
+
+# Strip spaces from column names to avoid issues with whitespace
+df.columns = df.columns.str.strip()
+
+# Verify the 'PatientID' column exists
+if 'PatientID' not in df.columns:
+    print("Column 'PatientID' not found!")
+else:
+    participants = []
+
+    # Group by 'PatientID' and process each patient
+    for patient_id, patient_data in df.groupby("PatientID"):
+        # Create participant dictionary
+        participant = {
+            "attributes": {
+                "age": float(patient_data["Age"].iloc[0]),
+                "sex": str(patient_data["Sex"].iloc[0]),
+            },
+            "measurements": []
+        }
+
+        # Iterate through each patient's data
+        for _, row in patient_data.iterrows():
+            # Add viral load (VL) measurement
+            if pd.notna(row['value']):
+                measurement_vl = {
+                    "analyte": "throatswab_SARSCoV2",
+                    "time": int(row["Day"]),
+                    "value": "negative" if row['value'] == 1.0 else row['value']
+                }
+                participant['measurements'].append(measurement_vl)
+
+            # Add Ct value measurement
+            if pd.notna(row['Ctvalue']):
+                measurement_ct = {
+                    "analyte": "throatswab_SARSCoV2",
+                    "time": int(row["Day"]),
+                    "value": "negative" if row['Ctvalue'] == 40.0 else row['Ctvalue']
+                }
+                participant['measurements'].append(measurement_ct)
+
+        # Append participant to the list
+        participants.append(participant)
+
+```
+
+```python
 # Ensure 'data' is a DataFrame
 df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
 
@@ -103,4 +153,8 @@ output_data = {
 with open("yilmaz2020upper.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, allow_unicode=True, sort_keys=False)
+```
+
+```python
+
 ```
