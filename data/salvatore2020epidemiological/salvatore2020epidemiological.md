@@ -36,7 +36,7 @@ df['Sex'] = df['Sex'].replace({'M':'male','F':'female'})
 df['Ctvalue'] = df['Ctvalue'].astype('object')
 df['Age'] = df['Age'].astype('object')
 df['Day'] = df['Day'].astype('object')
-df.loc[df['Ctvalue']==1,'Ctvalue'] = 'negative'
+df.loc[df['Ctvalue']>=40,'Ctvalue'] = 'negative' #Ct value >= 40 should be negative.
 #Rename column
 df.rename(columns={'PatientID': 'id'}, inplace=True)
 ```

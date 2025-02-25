@@ -61,7 +61,7 @@ participants:
     value: 34.2428
   - analyte: N1_probe
     time: 25
-    value: 40.0
+    value: negative
 - attributes:
     age: 52.0
     sex: female
@@ -101,7 +101,7 @@ participants:
     value: 37.459
   - analyte: N1_probe
     time: 23
-    value: 40.0
+    value: negative
 - attributes:
     age: 14.0
     sex: female
@@ -111,7 +111,7 @@ participants:
     value: 25.2143
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
 - attributes:
     age: 10.0
     sex: female
@@ -131,7 +131,7 @@ participants:
     value: 30.9989
   - analyte: N1_probe
     time: 21
-    value: 40.0
+    value: negative
 - attributes:
     age: 21.0
     sex: female
@@ -151,7 +151,7 @@ participants:
     value: 34.0311
   - analyte: N1_probe
     time: 25
-    value: 40.0
+    value: negative
 - attributes:
     age: 15.0
     sex: female
@@ -172,7 +172,7 @@ participants:
   measurements:
   - analyte: N1_probe
     time: 24
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 38
     value: 36.3797
@@ -208,7 +208,7 @@ participants:
     value: 25.1958
   - analyte: N1_probe
     time: 22
-    value: 40.0
+    value: negative
 - attributes:
     age: 51.0
     sex: female
@@ -218,10 +218,10 @@ participants:
     value: 37.0592
   - analyte: N1_probe
     time: 22
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 29
-    value: 40.0
+    value: negative
 - attributes:
     age: 22.0
     sex: male
@@ -231,7 +231,7 @@ participants:
     value: 33.6602
   - analyte: N1_probe
     time: 19
-    value: 40.0
+    value: negative
 - attributes:
     age: 53.0
     sex: female
@@ -241,7 +241,7 @@ participants:
     value: 20.4554
   - analyte: N1_probe
     time: 26
-    value: 40.0
+    value: negative
 - attributes:
     age: 31.0
     sex: male
@@ -251,7 +251,7 @@ participants:
     value: 30.6908
   - analyte: N1_probe
     time: 24
-    value: 40.0
+    value: negative
 - attributes:
     age: 27.0
     sex: female
@@ -261,7 +261,7 @@ participants:
     value: 33.5073
   - analyte: N1_probe
     time: 24
-    value: 40.0
+    value: negative
 - attributes:
     age: 3.0
     sex: male
@@ -307,7 +307,7 @@ participants:
     value: 32.2557
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
 - attributes:
     age: 22.0
     sex: female
@@ -317,7 +317,7 @@ participants:
     value: 20.7595
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
 - attributes:
     age: 27.0
     sex: female
@@ -327,10 +327,10 @@ participants:
     value: 31.1881
   - analyte: N1_probe
     time: 13
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 23
-    value: 40.0
+    value: negative
 - attributes:
     age: 32.0
     sex: male
@@ -340,10 +340,10 @@ participants:
     value: 32.9699
   - analyte: N1_probe
     time: 15
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 25
-    value: 40.0
+    value: negative
 - attributes:
     age: 45.0
     sex: male
@@ -383,10 +383,10 @@ participants:
     value: 31.3495
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 25
-    value: 40.0
+    value: negative
 - attributes:
     age: 37.0
     sex: male
@@ -396,23 +396,23 @@ participants:
     value: 29.5468
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 27
-    value: 40.0
+    value: negative
 - attributes:
     age: 31.0
     sex: female
   measurements:
   - analyte: N1_probe
     time: 5
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 19
     value: 37.4762
   - analyte: N1_probe
     time: 26
-    value: 40.0
+    value: negative
 - attributes:
     age: 54.0
     sex: female
@@ -445,7 +445,7 @@ participants:
     value: 14.4473
   - analyte: N1_probe
     time: 21
-    value: 40.0
+    value: negative
 - attributes:
     age: 53.0
     sex: male
@@ -465,7 +465,7 @@ participants:
     value: 25.7244
   - analyte: N1_probe
     time: 24
-    value: 40.0
+    value: negative
 - attributes:
     age: 17.0
     sex: male
@@ -475,7 +475,7 @@ participants:
     value: 24.13
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
 - attributes:
     age: 18.0
     sex: female
@@ -495,30 +495,30 @@ participants:
     value: 27.6298
   - analyte: N1_probe
     time: 29
-    value: 40.0
+    value: negative
 - attributes:
     age: 75.0
     sex: male
   measurements:
   - analyte: N1_probe
     time: -1
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 13
     value: 35.1519
   - analyte: N1_probe
     time: 18
-    value: 40.0
+    value: negative
 - attributes:
     age: 45.0
     sex: male
   measurements:
   - analyte: N1_probe
     time: 4
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 18
-    value: 40.0
+    value: negative
 - attributes:
     age: 35.0
     sex: male
@@ -557,10 +557,10 @@ participants:
   measurements:
   - analyte: N1_probe
     time: -1
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 0
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 1
     value: 32.5286
@@ -569,10 +569,10 @@ participants:
     value: 24.2821
   - analyte: N1_probe
     time: 3
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 13
-    value: 40.0
+    value: negative
 - attributes:
     age: 7.0
     sex: female
@@ -624,10 +624,10 @@ participants:
   measurements:
   - analyte: N1_probe
     time: 0
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 1
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 2
     value: 28.2047
@@ -684,7 +684,7 @@ participants:
     value: 20.1073
   - analyte: N1_probe
     time: 10
-    value: 40.0
+    value: negative
 - attributes:
     age: 13.0
     sex: female
@@ -723,7 +723,7 @@ participants:
     value: 37.8004
   - analyte: N1_probe
     time: 26
-    value: 40.0
+    value: negative
 - attributes:
     age: 52.0
     sex: female
@@ -733,7 +733,7 @@ participants:
     value: 27.4483
   - analyte: N1_probe
     time: 21
-    value: 40.0
+    value: negative
 - attributes:
     age: 15.0
     sex: male
@@ -743,7 +743,7 @@ participants:
     value: 23.6375
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
 - attributes:
     age: 48.0
     sex: male
@@ -753,7 +753,7 @@ participants:
     value: 32.608
   - analyte: N1_probe
     time: 25
-    value: 40.0
+    value: negative
 - attributes:
     age: 47.0
     sex: female
@@ -773,7 +773,7 @@ participants:
     value: 39.5519
   - analyte: N1_probe
     time: 22
-    value: 40.0
+    value: negative
 - attributes:
     age: 58.0
     sex: female
@@ -793,7 +793,7 @@ participants:
     value: 30.1382
   - analyte: N1_probe
     time: 21
-    value: 40.0
+    value: negative
 - attributes:
     age: 60.0
     sex: male
@@ -813,7 +813,7 @@ participants:
     value: 33.2663
   - analyte: N1_probe
     time: 29
-    value: 40.0
+    value: negative
 - attributes:
     age: 22.0
     sex: female
@@ -823,7 +823,7 @@ participants:
     value: 34.9558
   - analyte: N1_probe
     time: 24
-    value: 40.0
+    value: negative
 - attributes:
     age: 21.0
     sex: male
@@ -833,7 +833,7 @@ participants:
     value: 26.4654
   - analyte: N1_probe
     time: 19
-    value: 40.0
+    value: negative
 - attributes:
     age: 18.0
     sex: male
@@ -843,14 +843,14 @@ participants:
     value: 27.7254
   - analyte: N1_probe
     time: 19
-    value: 40.0
+    value: negative
 - attributes:
     age: 20.0
     sex: male
   measurements:
   - analyte: N1_probe
     time: 22
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 36
     value: 35.0241
@@ -863,7 +863,7 @@ participants:
     value: 31.8191
   - analyte: N1_probe
     time: 24
-    value: 40.0
+    value: negative
 - attributes:
     age: 20.0
     sex: female
@@ -883,7 +883,7 @@ participants:
     value: 32.308
   - analyte: N1_probe
     time: 30
-    value: 40.0
+    value: negative
 - attributes:
     age: 46.0
     sex: male
@@ -893,10 +893,10 @@ participants:
     value: 34.3969
   - analyte: N1_probe
     time: 24
-    value: 40.0
+    value: negative
   - analyte: N1_probe
     time: 30
-    value: 40.0
+    value: negative
 - attributes:
     age: 29.0
     sex: female
@@ -926,7 +926,7 @@ participants:
     value: 39.2516
   - analyte: N1_probe
     time: 39
-    value: 40.0
+    value: negative
 - attributes:
     age: 40.0
     sex: female
@@ -936,7 +936,7 @@ participants:
     value: 33.097
   - analyte: N1_probe
     time: 23
-    value: 40.0
+    value: negative
 - attributes:
     age: 90.0
     sex: female
@@ -946,7 +946,7 @@ participants:
     value: 23.1825
   - analyte: N1_probe
     time: 35
-    value: 40.0
+    value: negative
 - attributes:
     age: 56.0
     sex: male
@@ -969,7 +969,7 @@ participants:
     value: 36.3795
   - analyte: N1_probe
     time: 23
-    value: 40.0
+    value: negative
 - attributes:
     age: 55.0
     sex: female
@@ -979,7 +979,7 @@ participants:
     value: 28.5035
   - analyte: N1_probe
     time: 20
-    value: 40.0
+    value: negative
 - attributes:
     age: 47.0
     sex: male
@@ -1009,7 +1009,7 @@ participants:
     value: 30.1975
   - analyte: N1_probe
     time: 22
-    value: 40.0
+    value: negative
 - attributes:
     age: 58.0
     sex: male
@@ -1019,7 +1019,7 @@ participants:
     value: 30.3787
   - analyte: N1_probe
     time: 31
-    value: 40.0
+    value: negative
 - attributes:
     age: 22.0
     sex: male
@@ -1029,7 +1029,7 @@ participants:
     value: 16.5131
   - analyte: N1_probe
     time: 18
-    value: 40.0
+    value: negative
 - attributes:
     age: 67.0
     sex: male
@@ -1049,7 +1049,7 @@ participants:
     value: 33.1787
   - analyte: N1_probe
     time: 21
-    value: 40.0
+    value: negative
 - attributes:
     age: 56.0
     sex: female
@@ -1059,7 +1059,7 @@ participants:
     value: 32.0031
   - analyte: N1_probe
     time: 36
-    value: 40.0
+    value: negative
 - attributes:
     age: 20.0
     sex: male
@@ -1069,4 +1069,4 @@ participants:
     value: 34.6592
   - analyte: N1_probe
     time: 29
-    value: 40.0
+    value: negative
