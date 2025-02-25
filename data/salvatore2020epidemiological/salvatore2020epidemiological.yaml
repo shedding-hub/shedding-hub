@@ -7,10 +7,10 @@ description: >
   with testing data collected during a prospective household transmission investigation
   of outpatient and mild coronavirus disease 2019 cases.
 analytes:
-  N1_and_N2_probes:
+  N1_probe:
     description: >
       SARS-CoV-2 RNA genome copy concentration calculated from evaluation of both
-      N1 and N2 probe.
+      N1 probe.
        Results were considered positive if signals were detected (Ct < 40) for the
       RP, N1, and N2 genes. Results were classified as 'not detected' if RP was detected
       but no signal was observed (Ct >= 40) from either N1 or N2. Results were classified
@@ -19,10 +19,11 @@ analytes:
       the sample. Any specimens for which results were inconclusive were retested;
       specimens which produced inconclusive results after retesting were excluded
       from the analysis (n = 17 specimens from 6 participants). Ct values for amplification
-      of both viral targets (N1 and N2 probes).
+      of both viral targets (N1 and N2 probes). But for further analysis, the author
+      focused on N1 probe
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
-    gene_target: N1 probe
+    gene_target: N1
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
@@ -32,1040 +33,1040 @@ participants:
     age: 51.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 22.4
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 18
     value: 20.8618
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 26.286
 - attributes:
     age: 58.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 34.0892
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 33.6862
 - attributes:
     age: 24.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 34.2428
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 40.0
 - attributes:
     age: 52.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 30.3819
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 33.5318
 - attributes:
     age: 29.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: -2
     value: 22.453
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 12
     value: 36.7762
 - attributes:
     age: 28.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 26.9559
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 33.6135
 - attributes:
     age: 30.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 9
     value: 37.459
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 23
     value: 40.0
 - attributes:
     age: 14.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 25.2143
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
 - attributes:
     age: 10.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 23.8679
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 14
     value: 32.6884
 - attributes:
     age: 23.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 30.9989
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 40.0
 - attributes:
     age: 21.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 33.6525
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 19
     value: 33.2408
 - attributes:
     age: 21.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 34.0311
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 40.0
 - attributes:
     age: 15.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 24.5653
 - attributes:
     age: 53.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 29.3227
 - attributes:
     age: 27.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 38
     value: 36.3797
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 45
     value: 33.6972
 - attributes:
     age: 63.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 8
     value: 31.2697
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 33.8641
 - attributes:
     age: 71.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 30.6425
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 28.6056
 - attributes:
     age: 20.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 8
     value: 25.1958
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 40.0
 - attributes:
     age: 51.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 15
     value: 37.0592
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 29
     value: 40.0
 - attributes:
     age: 22.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 33.6602
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 19
     value: 40.0
 - attributes:
     age: 53.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 12
     value: 20.4554
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 26
     value: 40.0
 - attributes:
     age: 31.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 30.6908
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 40.0
 - attributes:
     age: 27.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 33.5073
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 40.0
 - attributes:
     age: 3.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 16.7097
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 14
     value: 35.6402
 - attributes:
     age: 51.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 29.4005
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 14
     value: 36.0523
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 34.919
 - attributes:
     age: 20.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 8
     value: 28.7871
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 27.8074
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 35.617
 - attributes:
     age: 60.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 32.2557
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
 - attributes:
     age: 22.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 20.7595
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
 - attributes:
     age: 27.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 9
     value: 31.1881
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 13
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 23
     value: 40.0
 - attributes:
     age: 32.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 32.9699
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 15
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 40.0
 - attributes:
     age: 45.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 12
     value: 34.0147
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 26
     value: 35.7157
 - attributes:
     age: 58.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 28.9523
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 32.0756
 - attributes:
     age: 59.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 8
     value: 22.3699
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 33.2473
 - attributes:
     age: 37.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 31.3495
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 40.0
 - attributes:
     age: 37.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 29.5468
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 27
     value: 40.0
 - attributes:
     age: 31.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 19
     value: 37.4762
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 26
     value: 40.0
 - attributes:
     age: 54.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 29.0366
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 13
     value: 30.2433
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 34.5902
 - attributes:
     age: 32.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 9
     value: 29.2696
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 23
     value: 33.4286
 - attributes:
     age: 56.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 14.4473
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 40.0
 - attributes:
     age: 53.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 23.3723
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 35.5596
 - attributes:
     age: 19.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 25.7244
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 40.0
 - attributes:
     age: 17.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 24.13
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
 - attributes:
     age: 18.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 26.6962
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 29.759
 - attributes:
     age: 49.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 15
     value: 27.6298
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 29
     value: 40.0
 - attributes:
     age: 75.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: -1
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 13
     value: 35.1519
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 18
     value: 40.0
 - attributes:
     age: 45.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 18
     value: 40.0
 - attributes:
     age: 35.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 15.6248
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 17
     value: 30.1071
 - attributes:
     age: 33.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: -1
     value: 31.1274
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 23.9024
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 1
     value: 17.7293
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 18.2103
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 18.1888
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 13
     value: 27.1025
 - attributes:
     age: 11.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: -1
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 1
     value: 32.5286
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 24.2821
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 13
     value: 40.0
 - attributes:
     age: 7.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: -2
     value: 23.1021
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: -1
     value: 24.5674
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 25.7832
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 1
     value: 22.1365
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 25.397
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 12
     value: 32.4018
 - attributes:
     age: 22.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 22.5969
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 23.1671
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 9
     value: 33.7794
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 19
     value: 35.4465
 - attributes:
     age: 46.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 20.8668
 - attributes:
     age: 45.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 1
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 28.2047
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 18.2834
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 16.5953
 - attributes:
     age: 18.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 1
     value: 18.1315
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 16.4443
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 21.0223
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 23.7453
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 25.6907
 - attributes:
     age: 16.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 17.5278
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 19.2422
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 22.5641
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 29.735
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 23.9121
 - attributes:
     age: 73.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 20.1073
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 40.0
 - attributes:
     age: 13.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 16.5445
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 16.5451
 - attributes:
     age: 11.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 0
     value: 33.2498
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 1
     value: 34.2661
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 36.4301
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 28.1445
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 30.5933
 - attributes:
     age: 47.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 12
     value: 37.8004
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 26
     value: 40.0
 - attributes:
     age: 52.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 27.4483
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 40.0
 - attributes:
     age: 15.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 23.6375
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
 - attributes:
     age: 48.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 11
     value: 32.608
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 25
     value: 40.0
 - attributes:
     age: 47.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 33.5546
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 34.2382
 - attributes:
     age: 10.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 8
     value: 39.5519
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 40.0
 - attributes:
     age: 58.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 16
     value: 32.3454
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 30
     value: 37.2307
 - attributes:
     age: 15.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 30.1382
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 40.0
 - attributes:
     age: 60.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 20.2815
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 35.3601
 - attributes:
     age: 54.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 15
     value: 33.2663
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 29
     value: 40.0
 - attributes:
     age: 22.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 34.9558
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 40.0
 - attributes:
     age: 21.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 26.4654
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 19
     value: 40.0
 - attributes:
     age: 18.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 27.7254
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 19
     value: 40.0
 - attributes:
     age: 20.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 36
     value: 35.0241
 - attributes:
     age: 56.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 31.8191
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 40.0
 - attributes:
     age: 20.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 3
     value: 19.1504
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 17
     value: 35.8038
 - attributes:
     age: 50.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 16
     value: 32.308
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 30
     value: 40.0
 - attributes:
     age: 46.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 16
     value: 34.3969
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 40.0
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 30
     value: 40.0
 - attributes:
     age: 29.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 8
     value: 29.3399
 - attributes:
     age: 57.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 2
     value: 29.9308
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 16
     value: 30.4932
 - attributes:
     age: 46.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 16
     value: 35.8676
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 30
     value: 39.2516
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 39
     value: 40.0
 - attributes:
     age: 40.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 9
     value: 33.097
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 23
     value: 40.0
 - attributes:
     age: 90.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 23.1825
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 35
     value: 40.0
 - attributes:
     age: 56.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 36.6952
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 30.1173
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 29
     value: 35.457
 - attributes:
     age: 71.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 9
     value: 36.3795
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 23
     value: 40.0
 - attributes:
     age: 55.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 6
     value: 28.5035
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 20
     value: 40.0
 - attributes:
     age: 47.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 5
     value: 25.2432
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 19
     value: 33.996
 - attributes:
     age: 43.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 13
     value: 33.2711
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 27
     value: 35.2019
 - attributes:
     age: 31.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 8
     value: 30.1975
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 40.0
 - attributes:
     age: 58.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 17
     value: 30.3787
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 31
     value: 40.0
 - attributes:
     age: 22.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 4
     value: 16.5131
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 18
     value: 40.0
 - attributes:
     age: 67.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 10
     value: 31.7793
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 24
     value: 27.3716
 - attributes:
     age: 46.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 7
     value: 33.1787
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 21
     value: 40.0
 - attributes:
     age: 56.0
     sex: female
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 22
     value: 32.0031
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 36
     value: 40.0
 - attributes:
     age: 20.0
     sex: male
   measurements:
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 15
     value: 34.6592
-  - analyte: N1_and_N2_probes
+  - analyte: N1_probe
     time: 29
     value: 40.0
