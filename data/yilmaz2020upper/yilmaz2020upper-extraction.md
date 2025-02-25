@@ -40,88 +40,38 @@ if 'PatientID' not in df.columns:
 else:
     participants = []
 
-    # Group by 'PatientID' and process each patient
-    for patient_id, patient_data in df.groupby("PatientID"):
-        # Create participant dictionary
-        participant = {
-            "attributes": {
-                "age": float(patient_data["Age"].iloc[0]),
-                "sex": str(patient_data["Sex"].iloc[0]),
-            },
-            "measurements": []
-        }
+   # Iterate through each patient group
+for patient_id, patient_data in df.groupby("PatientID"):
+    participant = {
+        "attributes": {
+            "age": float(patient_data["Age"].iloc[0]),
+            "sex": str(patient_data["Sex"].iloc[0])
+        },
+        "measurements": []
+    }
 
-        # Iterate through each patient's data
-        for _, row in patient_data.iterrows():
-            # Add viral load (VL) measurement
-            if pd.notna(row['value']):
-                measurement_vl = {
-                    "analyte": "throatswab_SARSCoV2",
-                    "time": int(row["Day"]),
-                    "value": "negative" if row['value'] == 1.0 else row['value']
-                }
-                participant['measurements'].append(measurement_vl)
+    # Iterate through each row of the patient's data
+    for _, row in patient_data.iterrows():
+        # Add viral load (VL) measurement
+        if pd.notna(row['value']):
+            measurement_vl = {
+                "analyte": "throatswab_SARSCoV2",
+                "time": int(row["Day"]),
+                "value": "negative" if row['value'] == 1.0 else row['value']
+            }
+            participant['measurements'].append(measurement_vl)
 
-            # Add Ct value measurement
-            if pd.notna(row['Ctvalue']):
-                measurement_ct = {
-                    "analyte": "throatswab_SARSCoV2",
-                    "time": int(row["Day"]),
-                    "value": "negative" if row['Ctvalue'] == 40.0 else row['Ctvalue']
-                }
-                participant['measurements'].append(measurement_ct)
+        # Add Ct value measurement
+        if pd.notna(row['Ctvalue']):
+            measurement_ct = {
+                "analyte": "throatswab_SARSCoV2",
+                "time": int(row["Day"]),
+                "value": "negative" if row['Ctvalue'] == 40.0 else row['Ctvalue']
+            }
+            participant['measurements'].append(measurement_ct)
 
-        # Append participant to the list
-        participants.append(participant)
-
-```
-
-```python
-# Ensure 'data' is a DataFrame
-df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
-
-# Strip spaces from column names to avoid issues with whitespace
-df.columns = df.columns.str.strip()
-
-# Verify the 'PatientID' column exists
-if 'PatientID' not in df.columns:
-    print("Column 'PatientID' not found!")
-else:
-    participants = []
-
-    for patient_id, patient_data in df.groupby("PatientID"):
-        participant = {
-            "attributes": {
-                "age": float(patient_data["Age"].iloc[0]),
-                "sex": str(patient_data["Sex"].iloc[0]),
-            },
-            "measurements": []
-        }
-
-        
-    # Iterate through each patient's data
-for _, row in patient_data.iterrows():
-    # Add viral load (VL) measurement
-    if pd.notna(row['value']):
-        measurement_vl = {
-            "analyte": "throatswab_SARSCoV2",
-            "time": int(row["Day"]),
-            "value": "negative" if row['value'] == 1.0 else row['value']  # 1.0 -> negative, 其他保留
-        }
-        participant['measurements'].append(measurement_vl)
-
-    # Add Ct value measurement
-    if pd.notna(row['Ctvalue']):
-        measurement_ct = {
-            "analyte": "throatswab_SARSCoV2",
-            "time": int(row["Day"]),
-            "value": "negative" if row['Ctvalue'] == 40.0 else row['Ctvalue']  # 40.0 -> negative, 其他保留
-        }
-        participant['measurements'].append(measurement_ct)
-
-
-# Append participant data after processing each patient
-participants.append(participant)
+    # Append participant after processing all rows
+    participants.append(participant) 
 
 
 ```
