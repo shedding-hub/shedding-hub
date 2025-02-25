@@ -52,15 +52,6 @@ for patient_id, patient_data in df.groupby("PatientID"):
 
     # Iterate through each row of the patient's data
     for _, row in patient_data.iterrows():
-        # Add viral load (VL) measurement
-        if pd.notna(row['value']):
-            measurement_vl = {
-                "analyte": "throatswab_SARSCoV2",
-                "time": int(row["Day"]),
-                "value": "negative" if row['value'] == 1.0 else row['value']
-            }
-            participant['measurements'].append(measurement_vl)
-
         # Add Ct value measurement
         if pd.notna(row['Ctvalue']):
             measurement_ct = {
