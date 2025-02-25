@@ -39,7 +39,7 @@ for patient_number, group in seah2020.groupby('Patient Number'):
         else:
             value = float(row['ct value']) # convert ct value to number (single value form)
         measurementN = {
-            'analyte': 'nasopharyngeal_swab_SARSCoV2',
+            'analyte': 'nasopharyngeal_swab_SARSCoV2', 
             'time': int(row['Days.Since.Initial.COVID-19.Symptoms']),
             'value': value
         }
@@ -58,7 +58,7 @@ Seah2020 = dict(title="Assessing Viral Shedding and Infectivity of Tears in Coro
                doi="10.1016/j.ophtha.2020.03.026",
                description=folded_str('This study investigated the potential transmission of SARS-CoV-2 through tears by detecting the virus using viral isolation and quantitative reverse-transcription polymerase chain reaction (RT-PCR) analysis. A total of 17 COVID-19 patients were enrolled in this prospective study in Singapore after obtaining informed consent. Researchers collected 135 nasopharyngeal swab samples and 32 tear samples throughout the study. No evidence of SARS-CoV-2 shedding in tears was observed during the course of the disease. In conclusion, the findings suggest that the risk of SARS-CoV-2 transmission through tears is minimal. \n'),
                analytes=dict(asopharyngeal_swab_SARSCoV2=dict(description=folded_str("The presence of SARS-CoV-2 is assessed with viral isolation and quantitative reverse-transcription polymerase chain reaction (RT-PCR) analysis for patients' nasopharyngeal swabs. \n"),
-                                                    specimen="asopharyngeal_swab",
+                                                    specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     limit_of_quantification='unknown', 
                                                     limit_of_detection='unknown',

@@ -15,7 +15,7 @@ analytes:
     description: "The presence of SARS-CoV-2 is assessed with viral isolation and\
       \ quantitative reverse-transcription polymerase chain reaction (RT-PCR) analysis\
       \ for patients' nasopharyngeal swabs. \n"
-    specimen: asopharyngeal_swab
+    specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     limit_of_quantification: unknown
     limit_of_detection: unknown
