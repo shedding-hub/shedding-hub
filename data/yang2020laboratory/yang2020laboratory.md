@@ -66,7 +66,7 @@ yangproj = dict(title="Laboratory Diagnosis and Monitoring the Viral Shedding of
                                                     unit="cycle threshold",
                                                     reference_event="symptom onset"),
                              lower_resp_tract=dict(description=folded_str("SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract samples.\n"),
-                                                    specimen="Bronchoalveolar lavage fluid (BALF)",
+                                                    specimen="bronchoalveolar_lavage_fluid",
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="ORF1ab and N gene",
                                                     limit_of_quantification="unknown",

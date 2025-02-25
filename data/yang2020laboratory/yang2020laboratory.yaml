@@ -23,7 +23,7 @@ analytes:
   lower_resp_tract:
     description: >
       SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract samples.
-    specimen: Bronchoalveolar lavage fluid (BALF)
+    specimen: bronchoalveolar_lavage_fluid
     biomarker: SARS-CoV-2
     gene_target: ORF1ab and N gene
     limit_of_quantification: unknown
