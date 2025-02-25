@@ -1,9 +1,8 @@
 # Extraction for hakki et al. (2022)
 
-[hakki et al. (2022)](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) analyzed the infectious window of SARS-CoV-2 using longitudinal upper respiratory tract (URT) sampling. A cohort of 57 patients underwent daily URT sampling for up to 20 days. SARS-CoV-2 viral RNA levels were quantified from URT swabs, with data extracted from the **trajectories.csv** dataset, which is stored at [GitHub](https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/tree/main). Demographic variables such as age and sex were not included in the dataset.
+[Hakki et al. (2022)](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) analyzed the infectious window of SARS-CoV-2 using longitudinal upper respiratory tract (URT) sampling. A cohort of 57 patients underwent daily URT sampling for up to 20 days. SARS-CoV-2 viral RNA levels were quantified from URT swabs, with data extracted from the **trajectories.csv** dataset, which is stored at [GitHub](https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/tree/main). Demographic variables such as age and sex were not included in the dataset.
 First, we import `python` modules needed:
 ```python
-import os
 import pandas as pd
 import yaml
 from shedding_hub import folded_str
@@ -107,8 +106,15 @@ if 'PatientID' in hakki2022.columns:
 
     # Patients with symptoms (all others not in patient_ids)
     symptomdataset = hakki2022[~hakki2022['PatientID'].isin(patient_ids)]
-#nosymptomdataset = hakki2022[hakki2022['PatientID']==1,5,6,7,8,12,16,20,21,22,23,25,30,32,45,47,50,52,56,57]
-#symptomdataset = hakki2022[hakki2022['PatientID']==2,3,4,9,10,11,13,14,15,17,18,19,24,26,27,28,29,31,33,34,35,36,37,38,39,40,41,42,43,44,46,48,49,51,53,54,55]
+
+patient_ids_symptom = [2, 3, 4, 9, 10, 11, 13, 14, 15, 17, 18, 19, 24, 26, 27, 28, 29,31, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 48, 49,50, 51, 53, 54, 55]
+day_values = [-1, -1, 1, -4, -1,-1,-1,-3,-1,0,-2,-1,-1,0,-3,1,-1,-4,-2,-3,0,-1,-2,-1,-2,0,-2,-1,-3,-3,-4,-3,-2,2,-4,-2,-1,-2]
+# Modify the 'day' column for the symptom group cycling through day_values
+if 'PatientID' in symptomdataset.columns and 'day' in symptomdataset.columns:
+
+    for i, patient in enumerate(patient_ids_symptom):
+        if i < len(day_values):
+            symptomdataset.loc[symptomdataset['PatientID'] == patient, 'day'] += day_values[i]
 
 # Group by participant and extract measurements
 participants_nasooroph = []
@@ -222,7 +228,6 @@ participants.extend(participants_nasooroph)
 participants.extend(participants_cultivable)
 
 
-
 ```
 
 Finally, the data is formatted and output as a YAML file.
@@ -245,8 +250,8 @@ hakki2022 = dict(
             limit_of_detection="unknown",
             specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker="SARS-CoV-2",
-            unit="gc/mL",
-            reference_event="confirmation date"
+            unit="gc/mL", # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
+            reference_event="enrollment"
 
             ),
 
@@ -255,10 +260,10 @@ hakki2022 = dict(
                "The analyte for infectious virus is the cultivable SARS-CoV-2 virus, which was measured using plaque assays in in vitro cell culture.The unit for the measurement is PFU/mL.\n"
             ),
             limit_of_quantification = "unknown",
-            limit_of_detection = "unknown",  
-            specimen = ["nasopharyngeal_swab", "oropharyngeal_swab"],   
+            limit_of_detection = "unknown",
+            specimen = ["nasopharyngeal_swab", "oropharyngeal_swab"],
             biomarker = "SARS-CoV-2",
-            unit = "pfu/mL",
+            unit = "pfu/mL", # Nose and throat swabs were placed in 3 mL viral transport medium (VTM) of two brands (Copan Diagnostics, Murrieta, CA, USA; or MANTACC, Guangdong, China).
             reference_event="symptom onset",
                  )
         ),
@@ -269,6 +274,7 @@ with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
+
 
 
 ```
