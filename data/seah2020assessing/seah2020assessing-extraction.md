@@ -63,11 +63,10 @@ Seah2020 = dict(title="Assessing Viral Shedding and Infectivity of Tears in Coro
                                                     limit_of_quantification='unknown', 
                                                     limit_of_detection='unknown',
                                                     unit="cycle threshold",
-                                                    reference_event="symptom onset"), 
-               participants=participant_list))
+                                                    reference_event="symptom onset")) ,
+               participants=participant_list)
 
 with open("seah2020assessing.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(Seah2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
