@@ -161,5 +161,4 @@ fajnzylber2020sars = dict(title="SARS-CoV-2 viral load is associated with increa
 with open("fajnzylber2020sars.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(fajnzylber2020sars, outfile, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```

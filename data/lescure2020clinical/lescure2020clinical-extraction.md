@@ -73,5 +73,4 @@ lescure2020clinical = dict(title="Clinical and virological data of the first cas
 with open("lescure2020clinical.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(lescure2020clinical, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
