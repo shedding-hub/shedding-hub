@@ -13,7 +13,7 @@ analytes:
       Cycle threshold (Ct) values were quantified using RT-PCR targeting the N gene
       in nasopharyngeal swab samples.
     limit_of_quantification: unknown
-    limit_of_detection: unknown
+    limit_of_detection: 40
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: N
