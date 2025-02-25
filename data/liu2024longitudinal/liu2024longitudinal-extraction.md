@@ -1,6 +1,6 @@
 # Extraction for Liu et al. (2024)
 
-[Liu et al. (2024)](https://www.medrxiv.org/content/10.1101/2024.04.22.24305845v1) measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) concentrations in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Demographic information (e.g., age, sex, race, ethnicity, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). Currently, the raw data does not include any symptom data, such as e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.
+[Liu et al. (2024)](https://doi.org/10.3389/fmed.2024.1417967) measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) concentrations in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Demographic information (e.g., age, sex, race, ethnicity, etc.) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). Currently, the raw data does not include any symptom data, such as e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.
 
 First, we `import` python modules needed:
 
@@ -54,7 +54,7 @@ participant_list = [dict(attributes=dict(age=Liu2024.loc[Liu2024.loc[Liu2024["su
                                              value=Liu2024.loc[j,"gc_dryg_mtDNA"]) for j in Liu2024.loc[Liu2024["subject"]==i].index]) for i in pd.unique(Liu2024["subject"])]
 
 liu2024 = dict(title="Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mottle Virus, and Human Mitochondrial DNA in COVID-19 Patients",
-               doi="10.1101/2024.04.22.24305845",
+               doi="10.3389/fmed.2024.1417967",
                description=folded_str('The authors measured SARS-CoV-2, pepper mild mottle virus (PMMoV), and human mitochondrial DNA (mtDNA) in longitudinal stool samples collected from 42 COVID-19 patients for up to 42 days after the first sample collection date. Abundances were quantified using Digital PCR assays targeting the N1 genes. The symptom data (e.g., fever, cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.) is currently not included in this data.\n'),
                analytes=dict(stool_SARSCoV2_N1=dict(description=folded_str("SARS-CoV-2 RNA genome copy concentration in stool samples. The concentration were quantified in genome copies per dry weight of stool.\n"),
                                                     specimen="stool",
@@ -83,5 +83,4 @@ liu2024 = dict(title="Longitudinal Fecal Shedding of SARS-CoV-2, Pepper Mild Mot
 with open("liu2024longitudinal.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(liu2024, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```

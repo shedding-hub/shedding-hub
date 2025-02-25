@@ -90,5 +90,4 @@ young2020epidemiologic = dict(title="Epidemiologic Features and Clinical Course 
 with open("young2020epidemiologic.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(young2020epidemiologic, outfile, default_flow_style=False, sort_keys=False)
-outfile.close() 
 ```
