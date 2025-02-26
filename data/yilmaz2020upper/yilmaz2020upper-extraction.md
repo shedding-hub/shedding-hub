@@ -23,11 +23,9 @@ data = data.replace({
     "Severe": "severe",
     **{f"14-{i}": str(i) for i in range(1, 55)}  
 })
-
 ```
 
 ```python
-
 # Ensure 'data' is a DataFrame
 df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data
 
@@ -63,8 +61,6 @@ for patient_id, patient_data in df.groupby("PatientID"):
 
     # Append participant after processing all rows
     participants.append(participant) 
-
-
 ```
 
 Finally, the data is formatted and output as a YAML file.
@@ -84,8 +80,8 @@ output_data = {
             "biomarker": "SARS-CoV-2",
             "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
-            "limit_of_detection": "unknown",
-            "unit": "gc/swab",
+            "limit_of_detection": "40",
+            "unit": "cycle threshold",
             "reference_event": "symptom onset"
         }
     },
@@ -94,8 +90,4 @@ output_data = {
 with open("yilmaz2020upper.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, allow_unicode=True, sort_keys=False)
-```
-
-```python
-
 ```
