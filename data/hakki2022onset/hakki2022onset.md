@@ -411,5 +411,4 @@ hakki2022 = dict(
 with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
