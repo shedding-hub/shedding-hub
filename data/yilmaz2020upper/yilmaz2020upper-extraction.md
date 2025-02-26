@@ -80,7 +80,7 @@ output_data = {
             "biomarker": "SARS-CoV-2",
             "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
-            "limit_of_detection": "40",
+            "limit_of_detection": 40,
             "unit": "cycle threshold",
             "reference_event": "symptom onset"
         }
