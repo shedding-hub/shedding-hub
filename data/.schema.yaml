@@ -21,6 +21,7 @@ $defs:
       - nasopharyngeal_swab
       - saliva
       - unknown
+      - bronchoalveolar_lavage_fluid
   analyte_specification:
     description: Specification of an analyte.
     type: object
