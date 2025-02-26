@@ -90,8 +90,7 @@ Xing2020 = dict(title="Prolonged viral shedding in feces of pediatric patients w
                participants=participant_list)
 
 with open("xing2020prolonged.yaml","w") as outfile:
-    outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
+    outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(Xing2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
 

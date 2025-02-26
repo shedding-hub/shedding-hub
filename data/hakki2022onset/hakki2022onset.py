@@ -1,14 +1,7 @@
-# Extraction for hakki et al. (2022)
-
-[Hakki et al. (2022)](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00226-0/fulltext) analyzed the infectious window of SARS-CoV-2 using longitudinal upper respiratory tract (URT) sampling. A cohort of 57 patients underwent daily URT sampling for up to 20 days. SARS-CoV-2 viral RNA levels were quantified from URT swabs, with data extracted from the **trajectories.csv** dataset, which is stored at [GitHub](https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/tree/main). Demographic variables such as age and sex were not included in the dataset.
-First, we import `python` modules needed:
-```python
 import pandas as pd
 import yaml
 from shedding_hub import folded_str
-```
-We clean data and add the demographic information in datasets:
-```python
+
 hakki2022 = pd.read_csv(
     "trajectories.csv"
 )  # The data was obtained from https://github.com/HPRURespMed/SARS-CoV-2-viral-shedding-dynamics/blob/main/Data/trajectories.csv
@@ -347,10 +340,6 @@ participants = []
 participants.extend(participants_nasooroph)
 participants.extend(participants_cultivable)
 
-```
-
-Finally, the data is formatted and output as a YAML file.
-```python
 hakki2022 = dict(
     title="Onset and window of SARS-CoV-2 infectiousness and temporal correlation with symptom onset: a prospective, longitudinal, community cohort study",
     doi="10.1016/S2213-2600(22)00226-0",
@@ -412,4 +401,3 @@ with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
-```
