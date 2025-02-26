@@ -67,7 +67,7 @@ participants:
 - attributes:
     age: 35
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -199,7 +199,7 @@ participants:
 - attributes:
     age: 23
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -319,7 +319,7 @@ participants:
 - attributes:
     age: 27
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -445,7 +445,7 @@ participants:
 - attributes:
     age: 25
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -577,7 +577,7 @@ participants:
 - attributes:
     age: 28
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -667,7 +667,7 @@ participants:
 - attributes:
     age: 50
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -751,7 +751,7 @@ participants:
 - attributes:
     age: 32
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -877,7 +877,7 @@ participants:
 - attributes:
     age: 63
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -1003,7 +1003,7 @@ participants:
 - attributes:
     age: 49
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -1087,7 +1087,7 @@ participants:
 - attributes:
     age: 16
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -1177,7 +1177,7 @@ participants:
 - attributes:
     age: 40
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -1267,7 +1267,7 @@ participants:
 - attributes:
     age: 48
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: asymptomatic_PCR
@@ -1621,7 +1621,7 @@ participants:
 - attributes:
     age: 37
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -1753,7 +1753,7 @@ participants:
 - attributes:
     age: 29
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -1885,7 +1885,7 @@ participants:
 - attributes:
     age: 27
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2017,7 +2017,7 @@ participants:
 - attributes:
     age: 47
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2149,7 +2149,7 @@ participants:
 - attributes:
     age: 60
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2239,7 +2239,7 @@ participants:
 - attributes:
     age: 32
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2329,7 +2329,7 @@ participants:
 - attributes:
     age: 46
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2413,7 +2413,7 @@ participants:
 - attributes:
     age: 51
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2503,7 +2503,7 @@ participants:
 - attributes:
     age: 45
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2587,7 +2587,7 @@ participants:
 - attributes:
     age: 23
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2707,7 +2707,7 @@ participants:
 - attributes:
     age: 52
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2785,7 +2785,7 @@ participants:
 - attributes:
     age: 26
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2875,7 +2875,7 @@ participants:
 - attributes:
     age: 49
     sex: female
-    vaccinated: true
+    vaccinated: false
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
@@ -2959,7 +2959,7 @@ participants:
 - attributes:
     age: 12
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
@@ -3043,7 +3043,7 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
@@ -3133,7 +3133,7 @@ participants:
 - attributes:
     age: 15
     sex: male
-    vaccinated: true
+    vaccinated: false
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR

@@ -237,7 +237,12 @@ for patient_id, group in nosymptomdataset.groupby("participant"):
         participant["attributes"] = {
             "age": int(group["Age"].iloc[0]),
             "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
-            "vaccinated": False if group["vaccinated"].iloc[0] == "FALSE" else True,
+            # "vaccinated": False if group["vaccinated"].iloc[0] == "FALSE" else True,
+            "vaccinated": (
+                False
+                if str(group["vaccinated"].iloc[0]).strip().lower() == "false"
+                else True
+            ),
             "variant_wave": (
                 "Pre-Alpha"
                 if group["WGS"].iloc[0] == "Pre-Alpha"
@@ -292,7 +297,12 @@ for patient_id, group in symptomdataset.groupby("participant"):
         participant["attributes"] = {
             "age": int(group["Age"].iloc[0]),
             "sex": "female" if group["Sex"].iloc[0] == "F" else "male",
-            "vaccinated": False if group["vaccinated"].iloc[0] == "FALSE" else True,
+            # "vaccinated": False if group["vaccinated"].iloc[0] == "FALSE" else True,
+            "vaccinated": (
+                False
+                if str(group["vaccinated"].iloc[0]).strip().lower() == "false"
+                else True
+            ),
             "variant_wave": (
                 "Pre-Alpha"
                 if group["WGS"].iloc[0] == "Pre-Alpha"
@@ -406,7 +416,6 @@ with open("hakki2022onset.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(hakki2022, outfile, default_flow_style=False, sort_keys=False)
 outfile.close()
-
 
 
 ```
