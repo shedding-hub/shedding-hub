@@ -73,7 +73,7 @@ team2020clinical = dict(title="Clinical and virologic characteristics of the fir
                description=folded_str('Respiratory, stool, serum, and urine specimens were submitted for SARS-CoV-2 real-time reverse-transcription polymerase chain reaction (rRT-PCR) testing, viral culture, and whole-genome sequencing. Only nasopharyngeal samples were included in this dataset. Data for the nasopharyngeal swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022), while attributes of hospitalized patients were obtained from the original paper.\n'),
                analytes=dict(naso_swab_SARSCoV2_N_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using rRT-PCR targeting the N gene in nasopharyngeal swab samples.\n"),
                                         limit_of_quantification="unknown",
-                                        limit_of_detection="unknown",
+                                        limit_of_detection=41,
                                         specimen="nasopharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
                                         gene_target="N", 

@@ -65,7 +65,7 @@ gautret2020hydroxychloroquine = dict(title="Hydroxychloroquine and azithromycin 
                description=folded_str('This study evaluated the effect of hydroxychloroquine on respiratory viral loads. Six patients were asymptomatic, 22 exhibited upper respiratory tract infection symptoms, and eight showed lower respiratory tract infection symptoms. Only 19 patients with a known onset of symptoms were included in the analysis below. Data for the nasopharyngeal swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022). Attributes of drug treatments were sourced from the supplementary materials of the original paper.\n'),
                analytes=dict(nasopharyngeal_swab_SARSCoV2_Ct=dict(description=folded_str("Cycle threshold (Ct) values targeting the E gene in nasopharyngeal swab samples.\n"),
                                         limit_of_quantification="unknown",
-                                        limit_of_detection="unknown",
+                                        limit_of_detection=35,
                                         specimen="nasopharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
                                         unit="cycle threshold",
