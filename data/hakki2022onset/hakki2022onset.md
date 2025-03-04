@@ -338,7 +338,7 @@ for patient_id, group in symptomdataset.groupby("participant"):
 
         measurement_entry2 = {
             "analyte": "symptomatic_cultivable",
-            "time": row["days_since_peak"],#day_since_peak-- the distance between symptom onset day and 0
+            "time": row["days_since_peak"],#day_since_peak - the distance between symptom onset day and 0
             "value": value_pfu,
         }
 
