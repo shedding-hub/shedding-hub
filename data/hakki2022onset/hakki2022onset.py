@@ -166,54 +166,60 @@ patient_ids_symptom = [
     54,
     55,
 ]
+
+
 day_values = [
-    -1,
-    -1,
-    1,
-    -4,
-    -1,
-    -1,
-    -1,
-    -3,
-    -1,
-    0,
     -2,
     -1,
-    -1,
+    -5,
     0,
+    -2,
+    -2,
     -3,
     1,
-    -1,
+    -2,
+    -6,
+    -7,
+    -5,
     -4,
+    -5,
+    1,
+    -6,
+    -2,
+    -4,
+    -3,
+    -1,
+    -2,
+    -2,
+    -2,
+    -2,
+    1,
+    -5,
     -2,
     -3,
+    -3,
+    -2,
     0,
-    -1,
+    -4,
     -2,
-    -1,
-    -2,
+    -6,
     0,
     -2,
-    -1,
-    -3,
-    -3,
     -4,
     -3,
-    -2,
-    2,
-    -4,
-    -2,
-    -1,
-    -2,
 ]
+
 # Modify the 'day' column for the symptom group cycling through day_values
-if "PatientID" in symptomdataset.columns and "day" in symptomdataset.columns:
+if (
+    "PatientID" in symptomdataset.columns
+    and "days_since_peak" in symptomdataset.columns
+):
 
     for i, patient in enumerate(patient_ids_symptom):
         if i < len(day_values):
             symptomdataset.loc[
-                symptomdataset["PatientID"] == patient, "day"
-            ] += day_values[i]
+                symptomdataset["PatientID"] == patient, "days_since_peak"
+            ] -= day_values[i]
 
 # Group by participant and extract measurements
 participants_nasooroph = []
@@ -313,7 +319,9 @@ for patient_id, group in symptomdataset.groupby("participant"):
 
         measurement_entry1 = {
             "analyte": "symptomatic_PCR",
-            "time": row["day"],
+            "time": row[
+                "days_since_peak"
+            ],  # day_since_peak-the distance between symptom onset day and 0
             "value": value_naor,
         }
 
@@ -324,7 +332,9 @@ for patient_id, group in symptomdataset.groupby("participant"):
 
         measurement_entry2 = {
             "analyte": "symptomatic_cultivable",
-            "time": row["day"],
+            "time": row[
+                "days_since_peak"
+            ],  # day_since_peak - the distance between symptom onset day and 0
             "value": value_pfu,
         }
 
