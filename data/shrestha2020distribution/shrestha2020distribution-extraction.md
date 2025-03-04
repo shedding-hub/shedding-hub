@@ -50,7 +50,7 @@ shrestha2020distribution = dict(title="Distribution of Transmission Potential Du
                description=folded_str('This study evaluated the transmission potential of COVID-19 by examining viral load over time. Over six weeks, 230 healthcare personnel underwent 528 tests at the Cleveland Clinic. Cycle threshold (Ct) values were obtained using RT-PCR targeting the N gene, and viral loads were calculated. Data were obtained from the combined dataset in the supplementary materials of Challenger et al. BMC Medicine (2022) 20:25 (https://doi.org/10.1186/s12916-021-02220-0).\n'),
                analytes=dict(swab_SARSCoV2_N_Ct=dict(description=folded_str("Cycle threshold (Ct) values were quantified using RT-PCR targeting the N gene in nasopharyngeal swab samples.\n"),
                                         limit_of_quantification="unknown",
-                                        limit_of_detection="unknown",
+                                        limit_of_detection=40,
                                         specimen="nasopharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
                                         gene_target="N", 

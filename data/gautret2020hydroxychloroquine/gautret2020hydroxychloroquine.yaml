@@ -15,7 +15,7 @@ analytes:
     description: >
       Cycle threshold (Ct) values targeting the E gene in nasopharyngeal swab samples.
     limit_of_quantification: unknown
-    limit_of_detection: unknown
+    limit_of_detection: 35
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     unit: cycle threshold

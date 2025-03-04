@@ -2021,6 +2021,36 @@ participants:
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
+    time: -9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
     time: -4
     value: negative
   - analyte: symptomatic_cultivable
@@ -2028,123 +2058,93 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -3
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -3
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
     value: 1428.67428525201
   - analyte: symptomatic_cultivable
-    time: 2
+    time: -3
     value: negative
   - analyte: symptomatic_PCR
-    time: 3
+    time: -2
     value: 1927696.82555217
   - analyte: symptomatic_cultivable
-    time: 3
+    time: -2
     value: 500.0
   - analyte: symptomatic_PCR
-    time: 4
+    time: -1
     value: 1511173641.00214
   - analyte: symptomatic_cultivable
-    time: 4
+    time: -1
     value: 500000.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 0
     value: 2323489037.57239
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 0
     value: 1000000.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 1
     value: 841604695.192563
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 1
     value: 12000.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 2
     value: 74392741.4350218
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 2
     value: 350.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 3
     value: 166219233.371364
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 3
     value: 400.0
   - analyte: symptomatic_PCR
-    time: 9
+    time: 4
     value: 99335003.257064
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 4
     value: 150.0
   - analyte: symptomatic_PCR
-    time: 10
+    time: 5
     value: 11003527.701942
   - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 3510511.52603161
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 508374.320217964
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 242436.174646223
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 579.301107133332
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 6836.88536870392
+  - analyte: symptomatic_cultivable
     time: 10
     value: negative
   - analyte: symptomatic_PCR
     time: 11
-    value: 3510511.52603161
-  - analyte: symptomatic_cultivable
-    time: 11
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 12
-    value: 508374.320217964
-  - analyte: symptomatic_cultivable
-    time: 12
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 13
-    value: 242436.174646223
-  - analyte: symptomatic_cultivable
-    time: 13
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 14
-    value: 579.301107133332
-  - analyte: symptomatic_cultivable
-    time: 14
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 15
-    value: 6836.88536870392
-  - analyte: symptomatic_cultivable
-    time: 15
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 16
     value: 228298955.402806
   - analyte: symptomatic_cultivable
-    time: 16
+    time: 11
     value: 30.0
 - attributes:
     age: 60
@@ -2153,6 +2153,18 @@ participants:
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
     time: -1
     value: negative
   - analyte: symptomatic_cultivable
@@ -2160,81 +2172,69 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
     value: 7284.88714477438
   - analyte: symptomatic_cultivable
-    time: 2
+    time: 0
     value: negative
   - analyte: symptomatic_PCR
-    time: 3
+    time: 1
     value: 2762089.42324792
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 1
     value: 1500.0
   - analyte: symptomatic_PCR
-    time: 4
+    time: 2
     value: 243258740.740683
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 2
     value: 100000.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 3
     value: 82112395.2238446
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 3
     value: 15000.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 4
     value: 37801489.3507085
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 4
     value: 3000.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 5
     value: 57307269.7354457
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 5
     value: 1500.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 6
     value: 24241372.3201381
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 6
     value: 100.0
   - analyte: symptomatic_PCR
-    time: 9
+    time: 7
     value: 1236195.11482773
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 7
     value: 20.0
   - analyte: symptomatic_PCR
-    time: 10
+    time: 8
     value: 159917.729747424
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 8
     value: negative
   - analyte: symptomatic_PCR
-    time: 11
+    time: 9
     value: 94230.6528623208
   - analyte: symptomatic_cultivable
-    time: 11
+    time: 9
     value: negative
   - analyte: symptomatic_PCR
-    time: 12
+    time: 10
     value: 12189.9463099397
   - analyte: symptomatic_cultivable
-    time: 12
+    time: 10
     value: negative
 - attributes:
     age: 32
@@ -2333,6 +2333,18 @@ participants:
     variant_wave: Pre-Alpha
   measurements:
   - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
     time: -1
     value: negative
   - analyte: symptomatic_cultivable
@@ -2340,75 +2352,63 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
     value: 3523.4011953486
   - analyte: symptomatic_cultivable
-    time: 2
+    time: 0
     value: 20.0
   - analyte: symptomatic_PCR
-    time: 3
+    time: 1
     value: 218100.438932486
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 1
     value: 375.0
   - analyte: symptomatic_PCR
-    time: 4
+    time: 2
     value: 4216977.34055086
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 2
     value: 500.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 3
     value: 100038008.141098
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 3
     value: 20000.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 4
     value: 47371390.0178661
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 4
     value: 5000.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 5
     value: 932347.909369098
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 5
     value: 120.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 6
     value: 193459.56432056
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 6
     value: 40.0
   - analyte: symptomatic_PCR
-    time: 9
+    time: 7
     value: 2529.3795143572
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 7
     value: negative
   - analyte: symptomatic_PCR
-    time: 10
+    time: 8
     value: 3017.04741459171
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 8
     value: negative
   - analyte: symptomatic_PCR
-    time: 11
+    time: 9
     value: 1976.14406725569
   - analyte: symptomatic_cultivable
-    time: 11
+    time: 9
     value: negative
 - attributes:
     age: 51
@@ -2591,118 +2591,118 @@ participants:
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
-    time: 0
+    time: 1
     value: 346.198669051401
   - analyte: symptomatic_cultivable
-    time: 0
+    time: 1
     value: negative
   - analyte: symptomatic_PCR
-    time: 1
+    time: 2
     value: 22673.6605521775
   - analyte: symptomatic_cultivable
-    time: 1
+    time: 2
     value: negative
   - analyte: symptomatic_PCR
-    time: 3
+    time: 4
     value: 18026969.7143366
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 4
     value: 260.0
   - analyte: symptomatic_PCR
-    time: 4
+    time: 5
     value: 12231305.7998858
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 5
     value: negative
   - analyte: symptomatic_PCR
-    time: 5
+    time: 6
     value: 135475959.081858
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 6
     value: 10.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 7
     value: 57113.4883448699
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 7
     value: negative
   - analyte: symptomatic_PCR
-    time: 7
+    time: 8
     value: 2299359.46370895
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 8
     value: negative
   - analyte: symptomatic_PCR
-    time: 8
+    time: 9
     value: 265713.031827005
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 9
     value: negative
   - analyte: symptomatic_PCR
-    time: 9
+    time: 10
     value: 64843.6938000812
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 10
     value: negative
   - analyte: symptomatic_PCR
-    time: 10
+    time: 11
     value: 39025.7723892795
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 11
     value: negative
   - analyte: symptomatic_PCR
-    time: 11
+    time: 12
     value: 30922.9960083007
   - analyte: symptomatic_cultivable
-    time: 11
+    time: 12
     value: negative
   - analyte: symptomatic_PCR
-    time: 12
+    time: 13
     value: 3330.12314020472
   - analyte: symptomatic_cultivable
-    time: 12
+    time: 13
     value: negative
   - analyte: symptomatic_PCR
-    time: 13
+    time: 14
     value: 263845.765948796
   - analyte: symptomatic_cultivable
-    time: 13
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 14
-    value: negative
-  - analyte: symptomatic_cultivable
     time: 14
     value: negative
   - analyte: symptomatic_PCR
     time: 15
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 16
     value: 30275.6438511864
   - analyte: symptomatic_cultivable
-    time: 15
+    time: 16
     value: negative
   - analyte: symptomatic_PCR
-    time: 16
+    time: 17
     value: 13360.3312152119
   - analyte: symptomatic_cultivable
-    time: 16
+    time: 17
     value: negative
   - analyte: symptomatic_PCR
-    time: 17
+    time: 18
     value: 1054.96008847342
   - analyte: symptomatic_cultivable
-    time: 17
+    time: 18
     value: negative
   - analyte: symptomatic_PCR
-    time: 18
+    time: 19
     value: 3944.26155059067
   - analyte: symptomatic_cultivable
-    time: 18
+    time: 19
     value: negative
   - analyte: symptomatic_PCR
-    time: 19
+    time: 20
     value: negative
   - analyte: symptomatic_cultivable
-    time: 19
+    time: 20
     value: negative
 - attributes:
     age: 52
@@ -2711,6 +2711,12 @@ participants:
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
     time: -2
     value: negative
   - analyte: symptomatic_cultivable
@@ -2718,69 +2724,63 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
     value: 239.918460342993
   - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 1704.12468122983
+  - analyte: symptomatic_cultivable
     time: 0
     value: negative
   - analyte: symptomatic_PCR
     time: 1
-    value: 1704.12468122983
+    value: 29851.6222059075
   - analyte: symptomatic_cultivable
     time: 1
     value: negative
   - analyte: symptomatic_PCR
     time: 2
-    value: 29851.6222059075
+    value: 351.116181682103
   - analyte: symptomatic_cultivable
     time: 2
     value: negative
   - analyte: symptomatic_PCR
     time: 3
-    value: 351.116181682103
+    value: 1680.25778166373
   - analyte: symptomatic_cultivable
     time: 3
     value: negative
   - analyte: symptomatic_PCR
     time: 4
-    value: 1680.25778166373
+    value: 133126.879316312
   - analyte: symptomatic_cultivable
     time: 4
     value: negative
   - analyte: symptomatic_PCR
     time: 5
-    value: 133126.879316312
+    value: 41877.3086325371
   - analyte: symptomatic_cultivable
     time: 5
     value: negative
   - analyte: symptomatic_PCR
     time: 6
-    value: 41877.3086325371
+    value: 3180476.90058
   - analyte: symptomatic_cultivable
     time: 6
     value: negative
   - analyte: symptomatic_PCR
     time: 7
-    value: 3180476.90058
+    value: 5915781.07107748
   - analyte: symptomatic_cultivable
     time: 7
     value: negative
   - analyte: symptomatic_PCR
     time: 8
-    value: 5915781.07107748
-  - analyte: symptomatic_cultivable
-    time: 8
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 9
     value: 1506063.6901895
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 8
     value: negative
 - attributes:
     age: 26
@@ -2789,6 +2789,24 @@ participants:
     variant_wave: Alpha
   measurements:
   - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
     time: -1
     value: negative
   - analyte: symptomatic_cultivable
@@ -2796,81 +2814,63 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 3
     value: 57113.4883448699
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 0
     value: negative
   - analyte: symptomatic_PCR
-    time: 4
+    time: 1
     value: 326010.7309547
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 1
     value: 140.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 2
     value: 247619.93164215
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 2
     value: 50.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 3
     value: 2039579.02259514
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 3
     value: 3000.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 4
     value: 2097932.15140882
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 4
     value: 3000.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 5
     value: 10039602.293234
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 5
     value: 150.0
   - analyte: symptomatic_PCR
-    time: 9
+    time: 6
     value: 3714259.19893894
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 6
     value: negative
   - analyte: symptomatic_PCR
-    time: 10
+    time: 7
     value: 18093.1599765483
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 7
     value: negative
   - analyte: symptomatic_PCR
-    time: 11
+    time: 8
     value: 398.639110183033
   - analyte: symptomatic_cultivable
-    time: 11
+    time: 8
     value: negative
   - analyte: symptomatic_PCR
-    time: 12
+    time: 9
     value: 1054.96008847342
   - analyte: symptomatic_cultivable
-    time: 12
+    time: 9
     value: negative
 - attributes:
     age: 49
@@ -3227,6 +3227,48 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
     time: -3
     value: negative
   - analyte: symptomatic_cultivable
@@ -3234,75 +3276,33 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 3
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 3
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 4
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 4
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 5
     value: 12627.4431079015
   - analyte: symptomatic_cultivable
-    time: 5
+    time: -2
     value: negative
   - analyte: symptomatic_PCR
-    time: 6
+    time: -1
     value: 541686.652674026
   - analyte: symptomatic_cultivable
-    time: 6
+    time: -1
     value: negative
   - analyte: symptomatic_PCR
-    time: 7
+    time: 0
     value: 366190046.689485
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 0
     value: 27500.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 1
     value: 374019902.193251
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 1
     value: 1600.0
   - analyte: symptomatic_PCR
-    time: 10
+    time: 3
     value: 1364473.73607252
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 3
     value: negative
 - attributes:
     age: 42
@@ -3311,6 +3311,48 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
     time: 0
     value: negative
   - analyte: symptomatic_cultivable
@@ -3318,81 +3360,39 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 3
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 3
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 4
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 4
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 5
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 5
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 6
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 6
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 7
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 7
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 8
     value: 59163.2896841042
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 1
     value: negative
   - analyte: symptomatic_PCR
-    time: 9
+    time: 2
     value: 418695526.732535
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 2
     value: 105000.0
   - analyte: symptomatic_PCR
-    time: 10
+    time: 3
     value: 126251044.204882
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 3
     value: 1750.0
   - analyte: symptomatic_PCR
-    time: 11
+    time: 4
     value: 32598053.986645
   - analyte: symptomatic_cultivable
-    time: 11
+    time: 4
     value: 10.0
   - analyte: symptomatic_PCR
-    time: 12
+    time: 5
     value: 1218881.74276366
   - analyte: symptomatic_cultivable
-    time: 12
+    time: 5
     value: negative
   - analyte: symptomatic_PCR
-    time: 13
+    time: 6
     value: 1354885.06354275
   - analyte: symptomatic_cultivable
-    time: 13
+    time: 6
     value: negative
 - attributes:
     age: 49
@@ -3635,6 +3635,12 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
     time: -2
     value: negative
   - analyte: symptomatic_cultivable
@@ -3642,57 +3648,51 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
     value: 244980309.948085
   - analyte: symptomatic_cultivable
-    time: 0
+    time: -1
     value: 140000.0
   - analyte: symptomatic_PCR
-    time: 1
+    time: 0
     value: 51919626.6063623
   - analyte: symptomatic_cultivable
-    time: 1
+    time: 0
     value: 25000.0
   - analyte: symptomatic_PCR
-    time: 2
+    time: 1
     value: 11003527.701942
   - analyte: symptomatic_cultivable
-    time: 2
+    time: 1
     value: 5000.0
   - analyte: symptomatic_PCR
-    time: 3
+    time: 2
     value: 113577968.291864
   - analyte: symptomatic_cultivable
+    time: 2
+    value: 10000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 38883004.2873665
+  - analyte: symptomatic_cultivable
     time: 3
     value: 10000.0
   - analyte: symptomatic_PCR
     time: 4
-    value: 38883004.2873665
-  - analyte: symptomatic_cultivable
-    time: 4
-    value: 10000.0
-  - analyte: symptomatic_PCR
-    time: 5
     value: 1096530.43111852
   - analyte: symptomatic_cultivable
+    time: 4
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 143865.192980775
+  - analyte: symptomatic_cultivable
     time: 5
     value: 100.0
   - analyte: symptomatic_PCR
     time: 6
-    value: 143865.192980775
-  - analyte: symptomatic_cultivable
-    time: 6
-    value: 100.0
-  - analyte: symptomatic_PCR
-    time: 7
     value: 674050.796748798
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 6
     value: negative
 - attributes:
     age: 43
@@ -3701,6 +3701,12 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
     time: 0
     value: negative
   - analyte: symptomatic_cultivable
@@ -3708,81 +3714,75 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
     value: 765282.33061439
   - analyte: symptomatic_cultivable
-    time: 2
+    time: 1
     value: negative
   - analyte: symptomatic_PCR
-    time: 3
+    time: 2
     value: 3092013.23022543
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 2
     value: 2000.0
   - analyte: symptomatic_PCR
-    time: 4
+    time: 3
     value: 9095746.57364427
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 3
     value: 5250.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 4
     value: 23401493.4406504
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 4
     value: 5000.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 5
     value: 86267616.5969323
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 5
     value: 20000.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 6
     value: 2685263.03026784
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 6
     value: 40.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 7
     value: 497731.845189789
   - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 12019.2215809924
+  - analyte: symptomatic_cultivable
     time: 8
     value: negative
   - analyte: symptomatic_PCR
     time: 9
-    value: 12019.2215809924
+    value: 5731.78853934202
   - analyte: symptomatic_cultivable
     time: 9
     value: negative
   - analyte: symptomatic_PCR
     time: 10
-    value: 5731.78853934202
+    value: 344932.169406698
   - analyte: symptomatic_cultivable
     time: 10
     value: negative
   - analyte: symptomatic_PCR
     time: 11
-    value: 344932.169406698
+    value: negative
   - analyte: symptomatic_cultivable
     time: 11
     value: negative
   - analyte: symptomatic_PCR
     time: 12
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 12
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 13
     value: 167.442100354127
   - analyte: symptomatic_cultivable
-    time: 13
+    time: 12
     value: negative
 - attributes:
     age: 55
@@ -3791,6 +3791,18 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
     time: -1
     value: negative
   - analyte: symptomatic_cultivable
@@ -3798,75 +3810,63 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
     value: 278.215231111943
   - analyte: symptomatic_cultivable
-    time: 2
+    time: 0
     value: negative
   - analyte: symptomatic_PCR
-    time: 3
+    time: 1
     value: 657.708445020517
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 1
     value: negative
   - analyte: symptomatic_PCR
-    time: 4
+    time: 2
     value: 511972.141915373
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 2
     value: 100.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 3
     value: 64606475.91769
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 3
     value: 2000.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 4
     value: 16681409.6716223
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 4
     value: 1000.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 5
     value: 2762089.42324792
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 5
     value: 10.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 6
     value: 92910.9175444272
   - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 35607.0566265298
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 6836.88536870392
+  - analyte: symptomatic_cultivable
     time: 8
     value: negative
   - analyte: symptomatic_PCR
-    time: 9
-    value: 35607.0566265298
-  - analyte: symptomatic_cultivable
-    time: 9
-    value: negative
-  - analyte: symptomatic_PCR
     time: 10
-    value: 6836.88536870392
-  - analyte: symptomatic_cultivable
-    time: 10
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 12
     value: 1054.96008847342
   - analyte: symptomatic_cultivable
-    time: 12
+    time: 10
     value: negative
 - attributes:
     age: 36
@@ -3875,6 +3875,24 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
     time: -3
     value: negative
   - analyte: symptomatic_cultivable
@@ -3882,81 +3900,63 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
     value: 164493.036602497
   - analyte: symptomatic_cultivable
-    time: 1
+    time: -2
     value: negative
   - analyte: symptomatic_PCR
-    time: 2
+    time: -1
     value: 38208.7940495198
   - analyte: symptomatic_cultivable
-    time: 2
+    time: -1
     value: negative
   - analyte: symptomatic_PCR
-    time: 3
+    time: 0
     value: 3767017.68173304
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 0
     value: 200.0
   - analyte: symptomatic_PCR
-    time: 4
+    time: 1
     value: 3365069.59096813
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 1
     value: 450.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 2
     value: 91274529.691662
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 2
     value: 50.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 3
     value: 762482695.935044
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 3
     value: 20000.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 4
     value: 35227486.3774393
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 4
     value: 10.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 5
     value: 5284555.76028762
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 5
     value: negative
   - analyte: symptomatic_PCR
-    time: 9
+    time: 6
     value: 69092.7177960637
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 6
     value: negative
   - analyte: symptomatic_PCR
-    time: 10
+    time: 7
     value: 10147.7773217439
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 7
     value: negative
 - attributes:
     age: 48
@@ -3965,6 +3965,42 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
     time: -3
     value: negative
   - analyte: symptomatic_cultivable
@@ -3972,81 +4008,45 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 0
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 3
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: 3
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 4
     value: 263845.765948796
   - analyte: symptomatic_cultivable
-    time: 4
+    time: -2
     value: negative
   - analyte: symptomatic_PCR
-    time: 5
+    time: -1
     value: 602128.269773268
   - analyte: symptomatic_cultivable
-    time: 5
+    time: -1
     value: negative
   - analyte: symptomatic_PCR
-    time: 6
+    time: 0
     value: 1193365.27193937
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 0
     value: 175.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 1
     value: 7843702.53525315
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 1
     value: 200.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 2
     value: 436791998.726412
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 2
     value: 45000.0
   - analyte: symptomatic_PCR
-    time: 9
+    time: 3
     value: 418695526.732535
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 3
     value: 45000.0
   - analyte: symptomatic_PCR
-    time: 10
+    time: 4
     value: 65987888.0440332
   - analyte: symptomatic_cultivable
-    time: 10
+    time: 4
     value: 10.0
 - attributes:
     age: 49
@@ -4055,6 +4055,24 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
     time: -4
     value: negative
   - analyte: symptomatic_cultivable
@@ -4062,81 +4080,63 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -3
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -3
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
     value: 247619.93164215
   - analyte: symptomatic_cultivable
-    time: 0
+    time: -3
     value: 615000.0
   - analyte: symptomatic_PCR
-    time: 1
+    time: -2
     value: 1249167797.78733
   - analyte: symptomatic_cultivable
-    time: 1
+    time: -2
     value: 130000.0
   - analyte: symptomatic_PCR
-    time: 2
+    time: -1
     value: 975945095.859456
   - analyte: symptomatic_cultivable
-    time: 2
+    time: -1
     value: 105000.0
   - analyte: symptomatic_PCR
-    time: 3
+    time: 0
     value: 1789862968.28184
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 0
     value: 60000.0
   - analyte: symptomatic_PCR
-    time: 4
+    time: 1
     value: 52287067.5877354
   - analyte: symptomatic_cultivable
-    time: 4
+    time: 1
     value: 3500.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 2
     value: 9160118.18541797
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 2
     value: 100.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 3
     value: 11891097.0078994
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 3
     value: 4400.0
   - analyte: symptomatic_PCR
-    time: 7
+    time: 4
     value: 22117792.0144142
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 4
     value: 3600.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 5
     value: 585380.31704999
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 5
     value: 27000.0
   - analyte: symptomatic_PCR
-    time: 9
+    time: 6
     value: 2547.28021495482
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 6
     value: 35000.0
 - attributes:
     age: 60
@@ -4307,6 +4307,24 @@ participants:
     variant_wave: Delta
   measurements:
   - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
     time: -4
     value: negative
   - analyte: symptomatic_cultivable
@@ -4314,75 +4332,57 @@ participants:
     value: negative
   - analyte: symptomatic_PCR
     time: -3
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -3
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -2
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -2
-    value: negative
-  - analyte: symptomatic_PCR
-    time: -1
-    value: negative
-  - analyte: symptomatic_cultivable
-    time: -1
-    value: negative
-  - analyte: symptomatic_PCR
-    time: 0
     value: 27717176.4881593
   - analyte: symptomatic_cultivable
-    time: 0
+    time: -3
     value: negative
   - analyte: symptomatic_PCR
-    time: 1
+    time: -2
     value: 63935.5337666824
   - analyte: symptomatic_cultivable
-    time: 1
+    time: -2
     value: 150.0
   - analyte: symptomatic_PCR
-    time: 2
+    time: -1
     value: 2821148.26787799
   - analyte: symptomatic_cultivable
-    time: 2
+    time: -1
     value: 4500.0
   - analyte: symptomatic_PCR
-    time: 3
+    time: 0
     value: 439883224.36031
   - analyte: symptomatic_cultivable
-    time: 3
+    time: 0
     value: 120000.0
   - analyte: symptomatic_PCR
-    time: 5
+    time: 2
     value: 3027284.0094903
   - analyte: symptomatic_cultivable
-    time: 5
+    time: 2
     value: 5500.0
   - analyte: symptomatic_PCR
-    time: 6
+    time: 3
     value: 319185.915213389
   - analyte: symptomatic_cultivable
-    time: 6
+    time: 3
     value: negative
   - analyte: symptomatic_PCR
-    time: 7
+    time: 4
     value: 18939207.746668
   - analyte: symptomatic_cultivable
-    time: 7
+    time: 4
     value: 10.0
   - analyte: symptomatic_PCR
-    time: 8
+    time: 5
     value: 8628.35968995412
   - analyte: symptomatic_cultivable
-    time: 8
+    time: 5
     value: negative
   - analyte: symptomatic_PCR
-    time: 9
+    time: 6
     value: 555.30042421829
   - analyte: symptomatic_cultivable
-    time: 9
+    time: 6
     value: negative
 - attributes:
     age: 41
