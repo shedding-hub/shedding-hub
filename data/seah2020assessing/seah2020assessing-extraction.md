@@ -47,8 +47,6 @@ for patient_number, group in seah2020.groupby('Patient Number'):
     
     participant_list.append(participant)
 
-# Print the resulting participant list
-#print(participant_list)
 ```
 
 Finally, the data is formatted and output as a YAML file.
@@ -56,14 +54,14 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 Seah2020 = dict(title="Assessing Viral Shedding and Infectivity of Tears in Coronavirus Disease 2019 (COVID-19) Patients",
                doi="10.1016/j.ophtha.2020.03.026",
-               description=folded_str('This study investigated the potential transmission of SARS-CoV-2 through tears by detecting the virus using viral isolation and quantitative reverse-transcription polymerase chain reaction (RT-PCR) analysis. A total of 17 COVID-19 patients were enrolled in this prospective study in Singapore after obtaining informed consent. Researchers collected 135 nasopharyngeal swab samples and 32 tear samples throughout the study (all tear samples showed negative results for SARS-CoV-2 on viral isolation and RT-PCR). No evidence of SARS-CoV-2 shedding in tears was observed during the course of the disease. In conclusion, the findings suggest that the risk of SARS-CoV-2 transmission through tears is minimal. \n'),
+               description=folded_str('This study investigated the potential transmission of SARS-CoV-2 through tears by detecting the virus using viral isolation and quantitative reverse-transcription polymerase chain reaction (RT-PCR) analysis. A total of 17 COVID-19 patients were enrolled in this prospective study in Singapore after obtaining informed consent. Researchers collected 135 nasopharyngeal swab samples and 32 tear samples throughout the study (all tear samples showed negative results for SARS-CoV-2 on viral isolation and RT-PCR). No evidence of SARS-CoV-2 shedding in tears was observed during the course of the disease. In conclusion, the findings suggest that the risk of SARS-CoV-2 transmission through tears is minimal.\n'),
                analytes=dict(nasopharyngeal_swab_SARSCoV2=dict(description=folded_str("The presence of SARS-CoV-2 is assessed with viral isolation and quantitative reverse-transcription polymerase chain reaction (RT-PCR) analysis for patients' nasopharyngeal swabs. \n"),
                                                     specimen="nasopharyngeal_swab",
                                                     biomarker="SARS-CoV-2",
                                                     limit_of_quantification='unknown', 
                                                     limit_of_detection='unknown',
                                                     unit="cycle threshold",
-                                                    reference_event="symptom onset")) ,
+                                                    reference_event="symptom onset")),
                participants=participant_list)
 
 with open("seah2020assessing.yaml","w") as outfile:
