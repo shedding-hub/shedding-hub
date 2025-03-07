@@ -15,7 +15,7 @@ from shedding_hub import folded_str
 
 We extracted the raw data using [automeris.io](https://automeris.io/) from Figure 4 (see below) in [Peiris et al. (2003)](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(03)13412-5/fulltext). The extracted data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/peiris2003clinical), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
 
-[!image](patient_data.png)
+![image](patient_data.png)
 
 ```python
 Peiris2003 = pd.read_csv("data.csv")
