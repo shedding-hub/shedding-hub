@@ -1,6 +1,6 @@
 # Extraction for Yang et al. (2020)
 
-This study involved 3552 clinical sames from 410 COVID-19 patients confirmed by Guangdong CDC. Oropharyngeal swabs, nasopharyngeal swabs and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.
+This study involved 3552 clinical samples from 410 COVID-19 patients confirmed by Guangdong CDC (Center for Disease Control and Prevention). Oropharyngeal swabs, nasopharyngeal swabs, and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.
 The manuscript did not provide detailed sample type for each test.
 Days shown in the dataset are days after illness onset (d.a.o.)
 
@@ -56,7 +56,7 @@ participant_list = [dict(attributes=dict(age=dat_pat.loc[dat_pat.loc[dat_pat["Ca
 ```python
 yangproj = dict(title="Laboratory Diagnosis and Monitoring the Viral Shedding of SARS-CoV-2 Infection",
                doi="10.1016/j.xinn.2020.100061",
-               description=folded_str('This study involved 3552 clinical sames from 410 COVID-19 patients confirmed by Guangdong CDC. Oropharyngeal swabs, nasopharyngeal swabs and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.\n'),
+               description=folded_str('This study involved 3552 clinical samples from 410 COVID-19 patients confirmed by Guangdong CDC. Oropharyngeal swabs, nasopharyngeal swabs and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.\n'),
                analytes=dict(upper_resp_tract=dict(description=folded_str("SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract samples.\n"),
                                                     specimen=["nasopharyngeal_swab","oropharyngeal_swab", "sputum"],
                                                     biomarker="SARS-CoV-2",
