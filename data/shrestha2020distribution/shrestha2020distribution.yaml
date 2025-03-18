@@ -8,2523 +8,2519 @@ description: >
   and viral loads were calculated. Data were obtained from the combined dataset in
   the supplementary materials of Challenger et al. BMC Medicine (2022) 20:25 (https://doi.org/10.1186/s12916-021-02220-0).
 analytes:
-  swab_SARSCoV2_N:
+  swab_SARSCoV2_N_Ct:
     description: >
       Cycle threshold (Ct) values were quantified using RT-PCR targeting the N gene
-      in nasopharyngeal swab samples. Ct values were then converted into copies per
-      mL. Viral load calculations were based on the minimum detectable viral load
-      (MDVL) and Ct values. Using commercially available plasmids that contained the
-      nucleocapsid (N) gene, the limit of detection was found to be 20 copies/uL for
-      upper respiratory specimens. We cannot determine the LOD for raw samples.
+      in nasopharyngeal swab samples.
     limit_of_quantification: unknown
-    limit_of_detection: unknown
+    limit_of_detection: 40
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: N
-    unit: gc/mL
+    unit: cycle threshold
     reference_event: symptom onset
 participants:
 - attributes:
     age: 51
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 174082779.306754
+    value: 19.1575666666667
 - attributes:
     age: 31
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 423598886.782832
+    value: 17.9024333333333
 - attributes:
     age: 60
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 284015929.371014
+    value: 18.4666666666667
 - attributes:
     age: 27
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 94707.0851562821
-  - analyte: swab_SARSCoV2_N
+    value: 29.7666666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
 - attributes:
     age: 61
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
-    value: 1896.63969509494
-  - analyte: swab_SARSCoV2_N
+    value: 35.2864
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 20403.6882953156
+    value: 31.9333333333333
 - attributes:
     age: 25
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 243580.918753485
-  - analyte: swab_SARSCoV2_N
+    value: 28.4333333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 1753.77637700862
+    value: 35.3969333333333
 - attributes:
     age: 32
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 3390605659.89432
+    value: 14.9666666666667
 - attributes:
     age: 59
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 6677.69492378388
-  - analyte: swab_SARSCoV2_N
+    value: 33.5098333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 40591.9651788016
-  - analyte: swab_SARSCoV2_N
+    value: 30.9624666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 532651375.214875
-  - analyte: swab_SARSCoV2_N
+    value: 17.5791
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 41298937.5473105
+    value: 21.1882
 - attributes:
     age: 40
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 8
-    value: 48141.8660523696
+    value: 30.7217
 - attributes:
     age: 31
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 5242529022.55293
-  - analyte: swab_SARSCoV2_N
+    value: 14.3515666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
     value: negative
 - attributes:
     age: 57
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 8
-    value: 9759.51722626102
+    value: 32.9742333333333
 - attributes:
     age: 21
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1772022138.22916
+    value: 15.8825333333333
 - attributes:
     age: 63
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 452321698.805383
-  - analyte: swab_SARSCoV2_N
+    value: 17.8098333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
 - attributes:
     age: 22
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
-    value: 1230543.39737131
-  - analyte: swab_SARSCoV2_N
+    value: 26.1471333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 26956.5195869776
-  - analyte: swab_SARSCoV2_N
+    value: 31.5402333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 10649.6769094674
+    value: 32.8510333333333
 - attributes:
     age: 29
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 120173995.957152
-  - analyte: swab_SARSCoV2_N
+    value: 19.6806333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 5803688.99981859
-  - analyte: swab_SARSCoV2_N
+    value: 23.9579333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 359137.248098867
+    value: 27.8853333333333
 - attributes:
     age: 26
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 359604.037448269
-  - analyte: swab_SARSCoV2_N
+    value: 27.8835
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
-    value: 61347.3545904976
-  - analyte: swab_SARSCoV2_N
+    value: 30.3795666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 28398010.176468
+    value: 21.71681
 - attributes:
     age: 57
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 962702175.108885
+    value: 16.7437
 - attributes:
     age: 36
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 3190.76589884892
-  - analyte: swab_SARSCoV2_N
+    value: 34.5522
+  - analyte: swab_SARSCoV2_N_Ct
     time: 29
-    value: 6784.51731832076
-  - analyte: swab_SARSCoV2_N
+    value: 33.4874333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
 - attributes:
     age: 31
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 60271915.2768434
+    value: 20.6546333333333
 - attributes:
     age: 55
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 2481.50004909927
-  - analyte: swab_SARSCoV2_N
+    value: 34.9070333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 36
-    value: 18784.9853532989
+    value: 32.05
 - attributes:
     age: 50
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
-    value: 7190.17958591911
-  - analyte: swab_SARSCoV2_N
+    value: 33.4054666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
-    value: 10087.1144797957
-  - analyte: swab_SARSCoV2_N
+    value: 32.9276333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 603487.094532942
+    value: 27.1527666666667
 - attributes:
     age: 32
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 2067152049.11189
-  - analyte: swab_SARSCoV2_N
+    value: 15.6651
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 12722.6706057746
+    value: 32.6
 - attributes:
     age: 38
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1818573264.61369
-  - analyte: swab_SARSCoV2_N
+    value: 15.8459333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 22017.370149667
-  - analyte: swab_SARSCoV2_N
+    value: 31.8259
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 25629.8247081174
-  - analyte: swab_SARSCoV2_N
+    value: 31.6114666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 2288048368.81564
-  - analyte: swab_SARSCoV2_N
+    value: 15.5218
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
     value: negative
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 16422.1777984284
-  - analyte: swab_SARSCoV2_N
+    value: 32.2397333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 1777470865.28743
+    value: 15.8782
 - attributes:
     age: 22
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 237469.177969606
+    value: 28.4692
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 19834.5051368624
+    value: 31.9732666666667
 - attributes:
     age: 29
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 2640.89098732647
-  - analyte: swab_SARSCoV2_N
+    value: 34.8191666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 6041.56130084348
+    value: 33.6511333333333
 - attributes:
     age: 26
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 11475155.4478755
-  - analyte: swab_SARSCoV2_N
+    value: 22.9957666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
     value: negative
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1812.73092451143
+    value: 35.3502666666667
 - attributes:
     age: 60
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 29239372.3576449
+    value: 21.6756
 - attributes:
     age: 56
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 4500.81756800625
+    value: 34.0666666666667
 - attributes:
     age: 50
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 365685696.893791
-  - analyte: swab_SARSCoV2_N
+    value: 18.1099333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 49746.0921170906
+    value: 30.6754333333333
 - attributes:
     age: 27
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 171483527.519437
-  - analyte: swab_SARSCoV2_N
+    value: 19.1788
+  - analyte: swab_SARSCoV2_N_Ct
     time: 31
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 43540.3268358082
-  - analyte: swab_SARSCoV2_N
+    value: 30.8635
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
-    value: 28926.0935932744
-  - analyte: swab_SARSCoV2_N
+    value: 31.4407
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
     value: negative
 - attributes:
     age: 38
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 10313091.0311038
+    value: 23.1464666666667
 - attributes:
     age: 49
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 30450.7306477976
+    value: 31.3682
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 4644993.91977935
-  - analyte: swab_SARSCoV2_N
+    value: 24.2722666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 614.487339026528
-  - analyte: swab_SARSCoV2_N
+    value: 36.8771666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 33299.6108632484
+    value: 31.2419666666667
 - attributes:
     age: 26
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
-    value: 8616.79390740731
-  - analyte: swab_SARSCoV2_N
+    value: 33.15
+  - analyte: swab_SARSCoV2_N_Ct
     time: 29
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 2451.55949306912
+    value: 34.9241666666667
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 2480.44539462052
-  - analyte: swab_SARSCoV2_N
+    value: 34.9076333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 4424528.28180964
+    value: 24.3409
 - attributes:
     age: 41
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 30848200.3596938
-  - analyte: swab_SARSCoV2_N
+    value: 21.6
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 42341843.6479297
+    value: 21.153
 - attributes:
     age: 49
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1002349.22662008
-  - analyte: swab_SARSCoV2_N
+    value: 26.4366333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 2840.74901166847
+    value: 34.7162
 - attributes:
     age: 25
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 8
-    value: 258608.944688272
-  - analyte: swab_SARSCoV2_N
+    value: 28.3488333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 20891.2872279053
-  - analyte: swab_SARSCoV2_N
+    value: 31.9
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
 - attributes:
     age: 56
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 10087382.5714313
+    value: 23.1777
 - attributes:
     age: 35
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 62137841.0040396
+    value: 20.6116
 - attributes:
     age: 43
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 1791.79011341419
-  - analyte: swab_SARSCoV2_N
+    value: 35.3666666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 28503.6170914084
-  - analyte: swab_SARSCoV2_N
+    value: 31.4614666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
     value: negative
 - attributes:
     age: 62
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 710528.602830365
-  - analyte: swab_SARSCoV2_N
+    value: 26.9223
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
-    value: 2312.91735836846
-  - analyte: swab_SARSCoV2_N
+    value: 35.0063333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 307419.579266022
+    value: 28.1048
 - attributes:
     age: 34
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 11305.6538423878
-  - analyte: swab_SARSCoV2_N
+    value: 32.7666666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 14348475.7543917
+    value: 22.6803666666667
 - attributes:
     age: 40
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 2832.64288144441
-  - analyte: swab_SARSCoV2_N
+    value: 34.7202333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
-    value: 16891.0450980877
+    value: 32.2
 - attributes:
     age: 64
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 119836.382529659
-  - analyte: swab_SARSCoV2_N
+    value: 29.4345
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 1828391899.94653
+    value: 15.8383333333333
 - attributes:
     age: 39
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 11596.6272911011
-  - analyte: swab_SARSCoV2_N
+    value: 32.7308
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
     value: negative
 - attributes:
     age: 56
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 49761514.5719205
+    value: 20.9251
 - attributes:
     age: 23
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 3532086399.89145
+    value: 14.9089666666667
 - attributes:
     age: 52
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 149783097.124634
-  - analyte: swab_SARSCoV2_N
+    value: 19.3697666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 388567.026761172
+    value: 27.7741666666667
 - attributes:
     age: 59
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 1038.85850907616
-  - analyte: swab_SARSCoV2_N
+    value: 36.1360333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 648684783.73624
+    value: 17.3009333333333
 - attributes:
     age: 69
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 1984.05759737752
-  - analyte: swab_SARSCoV2_N
+    value: 35.2228
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 6457.77380351777
+    value: 33.5571
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 76842.593311777
-  - analyte: swab_SARSCoV2_N
+    value: 30.0617
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 115365772.7687
-  - analyte: swab_SARSCoV2_N
+    value: 19.7382666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
 - attributes:
     age: 28
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 1325768808.12072
+    value: 16.2920333333333
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 3892574180.82298
+    value: 14.7718
 - attributes:
     age: 58
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 521954567.185407
+    value: 17.6077333333333
 - attributes:
     age: 46
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 20919490.7220319
-  - analyte: swab_SARSCoV2_N
+    value: 22.1482
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 258718.90198963
+    value: 28.3482333333333
 - attributes:
     age: 58
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 5013776.74382997
+    value: 24.1644333333333
 - attributes:
     age: 30
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 9561.49221438529
-  - analyte: swab_SARSCoV2_N
+    value: 33.0031666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 3670607.12674222
+    value: 24.6045666666667
 - attributes:
     age: 23
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 523646066.17906
+    value: 17.6031666666667
 - attributes:
     age: 36
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 3176124312.4265
+    value: 15.0589
 - attributes:
     age: 32
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 62250.7553729607
+    value: 30.3589333333333
 - attributes:
     age: 48
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 14336620.5226106
-  - analyte: swab_SARSCoV2_N
+    value: 22.6815333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 2949.09965416226
+    value: 34.6633666666667
 - attributes:
     age: 62
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 223675549.754189
+    value: 18.8037666666667
 - attributes:
     age: 36
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 2828306.27720519
+    value: 24.9725
 - attributes:
     age: 33
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 562822580.999694
+    value: 17.5013333333333
 - attributes:
     age: 58
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 24525536.2632455
+    value: 21.9237333333333
 - attributes:
     age: 52
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 1498.31888902983
+    value: 35.6191333333333
 - attributes:
     age: 49
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 68536.1068580697
-  - analyte: swab_SARSCoV2_N
+    value: 30.2231666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 247208.754006471
+    value: 28.4124666666667
 - attributes:
     age: 47
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 7421.00905065875
-  - analyte: swab_SARSCoV2_N
+    value: 33.3608666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
-    value: 41438.5237907427
-  - analyte: swab_SARSCoV2_N
+    value: 30.9333333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
     value: negative
 - attributes:
     age: 48
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 55650.2580488612
-  - analyte: swab_SARSCoV2_N
+    value: 30.5171333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 4443.6785261109
+    value: 34.0847
 - attributes:
     age: 21
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 486953.514255121
+    value: 27.4556
 - attributes:
     age: 34
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 32647165.4841321
-  - analyte: swab_SARSCoV2_N
+    value: 21.52
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 530202.46854852
-  - analyte: swab_SARSCoV2_N
+    value: 27.3355
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 2221.63520675981
+    value: 35.0631666666667
 - attributes:
     age: 32
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 11439.9451971101
+    value: 32.75
 - attributes:
     age: 32
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 2962869711.31639
-  - analyte: swab_SARSCoV2_N
+    value: 15.157
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 1453.53209795375
-  - analyte: swab_SARSCoV2_N
+    value: 35.6619666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 44218.0359796621
+    value: 30.8417
 - attributes:
     age: 55
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 5863497542.51667
+    value: 14.1935666666667
 - attributes:
     age: 57
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 56329.9069310953
-  - analyte: swab_SARSCoV2_N
+    value: 30.5
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
     value: negative
 - attributes:
     age: 36
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 2451979326.97636
+    value: 15.4241333333333
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 151719.382822711
+    value: 29.1015333333333
 - attributes:
     age: 46
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 11800.2376691599
+    value: 32.7062333333333
 - attributes:
     age: 30
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 53628605.1969118
-  - analyte: swab_SARSCoV2_N
+    value: 20.8194666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 4981437.72178889
+    value: 24.1735666666667
 - attributes:
     age: 53
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 253200898.595205
+    value: 18.6287666666667
 - attributes:
     age: 30
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 255996.034841863
+    value: 28.3631666666667
 - attributes:
     age: 36
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 2355480.07378219
+    value: 25.2307
 - attributes:
     age: 32
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 5184.87416171258
+    value: 33.8669666666667
 - attributes:
     age: 21
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 2251597550.94108
-  - analyte: swab_SARSCoV2_N
+    value: 15.5444666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 1102.87402831701
+    value: 36.0516333333333
 - attributes:
     age: 55
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 56723.7203208059
+    value: 30.4901666666667
 - attributes:
     age: 21
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 1218311.73267765
+    value: 26.1612333333333
 - attributes:
     age: 50
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 26283.2512147343
+    value: 31.5759333333333
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 519360093.576767
+    value: 17.6147666666667
 - attributes:
     age: 27
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 45463451.3384125
+    value: 21.0526
 - attributes:
     age: 46
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 70101280.3057038
+    value: 20.4414
 - attributes:
     age: 44
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 6247492735.09512
+    value: 14.1040333333333
 - attributes:
     age: 30
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 84633.2313487559
+    value: 29.9254
 - attributes:
     age: 47
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 6414.75736124762
+    value: 33.5665333333333
 - attributes:
     age: 27
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 471819431.752533
+    value: 17.7502666666667
 - attributes:
     age: 45
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 3060733561.14909
+    value: 15.1111333333333
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 33334330.0484998
+    value: 21.4906
 - attributes:
     age: 34
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 349746938.107448
+    value: 18.1728333333333
 - attributes:
     age: 30
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 180010.67941622
+    value: 28.8602
 - attributes:
     age: 42
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 7900.28464085352
+    value: 33.2725333333333
 - attributes:
     age: 39
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 4597.50571604412
+    value: 34.0366666666667
 - attributes:
     age: 58
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 76638026.4185669
+    value: 20.3155666666667
 - attributes:
     age: 28
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 281318999.785803
+    value: 18.4801333333333
 - attributes:
     age: 33
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 47569.996683416
-  - analyte: swab_SARSCoV2_N
+    value: 30.7385666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 2009670.47314028
+    value: 25.4548
 - attributes:
     age: 37
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 782343.352697858
+    value: 26.7864
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 395708160.742206
+    value: 17.9985666666667
 - attributes:
     age: 32
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 838913059.879503
-  - analyte: swab_SARSCoV2_N
+    value: 16.9379666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
-    value: 378863264.710227
-  - analyte: swab_SARSCoV2_N
+    value: 18.0599666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
-    value: 1244.30392055614
-  - analyte: swab_SARSCoV2_N
+    value: 35.8813333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 80656.2702708139
+    value: 29.9933333333333
 - attributes:
     age: 44
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 3198555826.45276
-  - analyte: swab_SARSCoV2_N
+    value: 15.0489666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
-    value: 1411.58339845764
+    value: 35.7033
 - attributes:
     age: 23
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 574708.006685374
+    value: 27.2217333333333
 - attributes:
     age: 33
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 4681114.76150066
+    value: 24.2613333333333
 - attributes:
     age: 23
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 5784668.4961671
+    value: 23.9625666666667
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 311932827.906742
+    value: 18.3343333333333
 - attributes:
     age: 65
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 6966.85909791772
+    value: 33.45
 - attributes:
     age: 36
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 14149.2240176056
+    value: 32.45
 - attributes:
     age: 30
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 3569233469.36369
+    value: 14.8942
 - attributes:
     age: 38
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1782978453.67115
+    value: 15.8738333333333
 - attributes:
     age: 35
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 3342189435.22737
+    value: 14.9869666666667
 - attributes:
     age: 25
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 516668687.417295
+    value: 17.6221
 - attributes:
     age: 65
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 571313053.474233
-  - analyte: swab_SARSCoV2_N
+    value: 17.4802
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 90314.3184534676
-  - analyte: swab_SARSCoV2_N
+    value: 29.8337
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
 - attributes:
     age: 59
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 336689.352001803
+    value: 27.9764333333333
 - attributes:
     age: 58
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 4255545713.36225
+    value: 14.6459666666667
 - attributes:
     age: 41
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 1415597855.6077
+    value: 16.1995
 - attributes:
     age: 61
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 58901335.5229513
+    value: 20.6871
 - attributes:
     age: 43
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 52789.0517246884
+    value: 30.5916333333333
 - attributes:
     age: 67
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 4561195202.84711
+    value: 14.5480666666667
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 181329649.276368
+    value: 19.1
 - attributes:
     age: 31
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 60838230.5382198
+    value: 20.6414333333333
 - attributes:
     age: 26
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 70669770.2861844
+    value: 20.43
 - attributes:
     age: 26
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 276327827.495202
+    value: 18.5054
 - attributes:
     age: 40
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 33
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
-    value: 14149.2240176056
-  - analyte: swab_SARSCoV2_N
+    value: 32.45
+  - analyte: swab_SARSCoV2_N_Ct
     time: 35
-    value: 16079.088332343
-  - analyte: swab_SARSCoV2_N
+    value: 32.2695333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 3560.03628480539
-  - analyte: swab_SARSCoV2_N
+    value: 34.3976333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 253385.587616109
+    value: 28.3776333333333
 - attributes:
     age: 30
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 12236185.5739935
+    value: 22.9051333333333
 - attributes:
     age: 51
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 685.084612337486
+    value: 36.7236666666667
 - attributes:
     age: 55
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 4933.42177237748
+    value: 33.9371333333333
 - attributes:
     age: 47
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 332463084.262729
+    value: 18.2443666666667
 - attributes:
     age: 40
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 56781521.1965461
+    value: 20.7388333333333
 - attributes:
     age: 47
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 419497255.566901
+    value: 17.9161666666667
 - attributes:
     age: 44
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 63843.8549046299
+    value: 30.3232666666667
 - attributes:
     age: 28
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 869287178.899078
+    value: 16.8877666666667
 - attributes:
     age: 40
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 1079533376.8091
+    value: 16.5820333333333
 - attributes:
     age: 53
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 6479198917.27292
+    value: 14.0526333333333
 - attributes:
     age: 39
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 6481.91540888208
-  - analyte: swab_SARSCoV2_N
+    value: 33.5518333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 5904.1765576708
-  - analyte: swab_SARSCoV2_N
+    value: 33.6836
+  - analyte: swab_SARSCoV2_N_Ct
     time: 8
-    value: 296586.835478874
-  - analyte: swab_SARSCoV2_N
+    value: 28.1554333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 2359718601.29295
+    value: 15.4782666666667
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 6510335756.01308
+    value: 14.0458666666667
 - attributes:
     age: 28
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 67139.1356315504
-  - analyte: swab_SARSCoV2_N
+    value: 30.2522333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
-    value: 115261.945544571
-  - analyte: swab_SARSCoV2_N
+    value: 29.4894333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 36
-    value: 2162116.23171487
-  - analyte: swab_SARSCoV2_N
+    value: 25.3516
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
-    value: 61910.6142736581
+    value: 30.3666666666667
 - attributes:
     age: 46
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 35
-    value: 9117.1434533971
-  - analyte: swab_SARSCoV2_N
+    value: 33.0703333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
-    value: 434.909119696239
-  - analyte: swab_SARSCoV2_N
+    value: 37.3650333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
-    value: 4897.66682613022
-  - analyte: swab_SARSCoV2_N
+    value: 33.9474
+  - analyte: swab_SARSCoV2_N_Ct
     time: 33
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 288994.921789713
+    value: 28.1920333333333
 - attributes:
     age: 45
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 196940.295675179
-  - analyte: swab_SARSCoV2_N
+    value: 28.7333333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 27073.9123425037
-  - analyte: swab_SARSCoV2_N
+    value: 31.5341
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 36517.5073145396
+    value: 31.1117666666667
 - attributes:
     age: 30
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 9437.20879439352
-  - analyte: swab_SARSCoV2_N
+    value: 33.0216333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
-    value: 288694.775501153
-  - analyte: swab_SARSCoV2_N
+    value: 28.1935
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 1359.75359145143
-  - analyte: swab_SARSCoV2_N
+    value: 35.7561
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 271309851.202813
+    value: 18.5312666666667
 - attributes:
     age: 30
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 12061.4229941682
-  - analyte: swab_SARSCoV2_N
+    value: 32.6753333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 2035.89040362277
-  - analyte: swab_SARSCoV2_N
+    value: 35.1864
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
     value: negative
 - attributes:
     age: 69
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 75693683.3989277
-  - analyte: swab_SARSCoV2_N
+    value: 20.3330666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 7717191.91235566
+    value: 23.5557333333333
 - attributes:
     age: 59
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 161625288.600483
-  - analyte: swab_SARSCoV2_N
+    value: 19.2623666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 559666.324455969
-  - analyte: swab_SARSCoV2_N
+    value: 27.2591666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 35691.3156517642
-  - analyte: swab_SARSCoV2_N
+    value: 31.1440666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
-    value: 23420.5181804293
-  - analyte: swab_SARSCoV2_N
+    value: 31.7387
+  - analyte: swab_SARSCoV2_N_Ct
     time: 31
-    value: 16180.7970926297
+    value: 32.2606333333333
 - attributes:
     age: 72
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 272059.747193846
-  - analyte: swab_SARSCoV2_N
+    value: 28.2772666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 25014.4913901758
-  - analyte: swab_SARSCoV2_N
+    value: 31.6457666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
-    value: 4563.64640069012
-  - analyte: swab_SARSCoV2_N
+    value: 34.0471
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 2660123487.10856
+    value: 15.3091333333333
 - attributes:
     age: 41
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 21649.2217333854
-  - analyte: swab_SARSCoV2_N
+    value: 31.8497
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 23013753.0068866
+    value: 22.0135333333333
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 4202.38869848839
-  - analyte: swab_SARSCoV2_N
+    value: 34.1635
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 24064814.9684422
-  - analyte: swab_SARSCoV2_N
+    value: 21.9505
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 1181.72377632035
-  - analyte: swab_SARSCoV2_N
+    value: 35.9541666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
-    value: 1725.42949304972
+    value: 35.4199333333333
 - attributes:
     age: 59
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 667063493.725987
-  - analyte: swab_SARSCoV2_N
+    value: 17.2615
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 6223.59942309175
-  - analyte: swab_SARSCoV2_N
+    value: 33.6092333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
 - attributes:
     age: 32
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
-    value: 2131.78966532192
-  - analyte: swab_SARSCoV2_N
+    value: 35.1214333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 1324.66556569556
-  - analyte: swab_SARSCoV2_N
+    value: 35.793
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 396063439.470331
-  - analyte: swab_SARSCoV2_N
+    value: 17.9973
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 170638.690698075
+    value: 28.9356666666667
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 38084.4312043546
-  - analyte: swab_SARSCoV2_N
+    value: 31.0524666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
     value: negative
 - attributes:
     age: 29
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
-    value: 112638.23563306
-  - analyte: swab_SARSCoV2_N
+    value: 29.5219333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
-    value: 91119.8634786333
-  - analyte: swab_SARSCoV2_N
+    value: 29.8211666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1510585548.84729
-  - analyte: swab_SARSCoV2_N
+    value: 16.1078333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 12279.8624878517
+    value: 32.65
 - attributes:
     age: 60
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 425522.742226103
+    value: 27.6459333333333
 - attributes:
     age: 29
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 84617493.4595789
+    value: 20.1757666666667
 - attributes:
     age: 34
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 2287825.46242105
-  - analyte: swab_SARSCoV2_N
+    value: 25.2718333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 866192740.811493
+    value: 16.8928
 - attributes:
     age: 39
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
-    value: 21095.5516293936
-  - analyte: swab_SARSCoV2_N
+    value: 31.8862666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 83900.8814563344
-  - analyte: swab_SARSCoV2_N
+    value: 29.9376666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 8
-    value: 4615578.54597304
-  - analyte: swab_SARSCoV2_N
+    value: 24.2812333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 4296.4185098259
+    value: 34.1322666666667
 - attributes:
     age: 23
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 5034555912.36648
+    value: 14.4087
 - attributes:
     age: 44
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 55933709.1898379
+    value: 20.7600666666667
 - attributes:
     age: 26
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 46452.0415311607
-  - analyte: swab_SARSCoV2_N
+    value: 30.7721333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
-    value: 25838.8915253236
-  - analyte: swab_SARSCoV2_N
+    value: 31.6
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 10506.5334237761
-  - analyte: swab_SARSCoV2_N
+    value: 32.8701333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 46812299.3441267
+    value: 21.0113333333333
 - attributes:
     age: 21
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 33
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 2033.19966826984
-  - analyte: swab_SARSCoV2_N
+    value: 35.1882666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
-    value: 7748.03130018865
-  - analyte: swab_SARSCoV2_N
+    value: 33.3
+  - analyte: swab_SARSCoV2_N_Ct
     time: 35
-    value: 4336.27561406014
-  - analyte: swab_SARSCoV2_N
+    value: 34.1192333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 202936.593405077
+    value: 28.691
 - attributes:
     age: 31
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 11852.466152201
-  - analyte: swab_SARSCoV2_N
+    value: 32.7
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 8112.99715492609
-  - analyte: swab_SARSCoV2_N
+    value: 33.2350333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 376116.341757207
-  - analyte: swab_SARSCoV2_N
+    value: 27.8201333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
     value: negative
 - attributes:
     age: 54
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 33
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 21246.5468488633
-  - analyte: swab_SARSCoV2_N
+    value: 31.8762
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
-    value: 13228.5364269866
-  - analyte: swab_SARSCoV2_N
+    value: 32.5449666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 4675.46618133118
+    value: 34.0129333333333
 - attributes:
     age: 61
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 14165.9416502846
-  - analyte: swab_SARSCoV2_N
+    value: 32.4483333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 12135.7115027828
-  - analyte: swab_SARSCoV2_N
+    value: 32.6666666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
     value: negative
 - attributes:
     age: 42
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 9059220.15138598
+    value: 23.3294333333333
 - attributes:
     age: 33
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 0
-    value: 21023994.4512459
-  - analyte: swab_SARSCoV2_N
+    value: 22.1411666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 118502.387479465
-  - analyte: swab_SARSCoV2_N
+    value: 29.4503
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 18784.9853532989
-  - analyte: swab_SARSCoV2_N
+    value: 32.05
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 2405.56284907836
+    value: 34.9509
 - attributes:
     age: 29
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 37245.6515150495
-  - analyte: swab_SARSCoV2_N
+    value: 31.0839
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 593606.543764345
-  - analyte: swab_SARSCoV2_N
+    value: 27.1760666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 66808.5633921566
+    value: 30.2592
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 1250468205.61927
+    value: 16.3745666666667
 - attributes:
     age: 41
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 2049452.05663592
+    value: 25.4271333333333
 - attributes:
     age: 22
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
-    value: 40648.5643934248
-  - analyte: swab_SARSCoV2_N
+    value: 30.9605
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 5149987.10455439
-  - analyte: swab_SARSCoV2_N
+    value: 24.1266
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 22546.1943409688
-  - analyte: swab_SARSCoV2_N
+    value: 31.7924
+  - analyte: swab_SARSCoV2_N_Ct
     time: 30
-    value: 88655.4096402406
+    value: 29.8598666666667
 - attributes:
     age: 53
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 170180404.94155
+    value: 19.1895666666667
 - attributes:
     age: 29
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 2259.57454655154
-  - analyte: swab_SARSCoV2_N
+    value: 35.0392666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 35597.0351131743
-  - analyte: swab_SARSCoV2_N
+    value: 31.1478
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
     value: negative
 - attributes:
     age: 67
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 15557304.3756694
+    value: 22.5662
 - attributes:
     age: 44
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 14634.8807994006
-  - analyte: swab_SARSCoV2_N
+    value: 32.4023666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 87278.0768629837
+    value: 29.8819666666667
 - attributes:
     age: 31
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 283880.971240566
-  - analyte: swab_SARSCoV2_N
+    value: 28.2172333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 5999.75849872998
-  - analyte: swab_SARSCoV2_N
+    value: 33.6609333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 7651.65554218705
-  - analyte: swab_SARSCoV2_N
+    value: 33.3176666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
 - attributes:
     age: 29
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 6580.78630342975
-  - analyte: swab_SARSCoV2_N
+    value: 33.5304666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 126651619.045232
-  - analyte: swab_SARSCoV2_N
+    value: 19.6065333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 2756.3558717868
+    value: 34.7587666666667
 - attributes:
     age: 58
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 1185.46939751247
-  - analyte: swab_SARSCoV2_N
+    value: 35.9497
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 14725.367462651
-  - analyte: swab_SARSCoV2_N
+    value: 32.3936666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 2926360872.80976
+    value: 15.1745
 - attributes:
     age: 56
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 13254.4920416806
-  - analyte: swab_SARSCoV2_N
+    value: 32.5422
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 1206600.52511895
-  - analyte: swab_SARSCoV2_N
+    value: 26.1748666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
-    value: 6095.59205613433
-  - analyte: swab_SARSCoV2_N
+    value: 33.6385666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 4052.77470529445
+    value: 34.2146666666667
 - attributes:
     age: 50
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 4749950715.16007
-  - analyte: swab_SARSCoV2_N
+    value: 14.4908333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 2065584.31820744
-  - analyte: swab_SARSCoV2_N
+    value: 25.4160666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 952.317222946667
+    value: 36.2588
 - attributes:
     age: 25
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 7572.37801155459
-  - analyte: swab_SARSCoV2_N
+    value: 33.3323666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 1427.27149830416
-  - analyte: swab_SARSCoV2_N
+    value: 35.6877
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 7083867761.34945
-  - analyte: swab_SARSCoV2_N
+    value: 13.9267
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 416.739804065869
+    value: 37.4252666666667
 - attributes:
     age: 60
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 11137.3737478363
-  - analyte: swab_SARSCoV2_N
+    value: 32.7878333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 863211242.290681
+    value: 16.8976666666667
 - attributes:
     age: 56
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 31289167.0125501
+    value: 21.5799666666667
 - attributes:
     age: 27
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 11664.4713249384
-  - analyte: swab_SARSCoV2_N
+    value: 32.7225666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 31
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 129769.812023365
+    value: 29.3221
 - attributes:
     age: 56
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 2302.01851085555
+    value: 35.013
 - attributes:
     age: 31
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 5782909912.77569
-  - analyte: swab_SARSCoV2_N
+    value: 14.2131
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 14343.69001729
-  - analyte: swab_SARSCoV2_N
+    value: 32.4307333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 15850.9839620497
+    value: 32.2897
 - attributes:
     age: 51
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 13
-    value: 5008.55467267017
+    value: 33.9158
 - attributes:
     age: 58
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 86394459.9029613
-  - analyte: swab_SARSCoV2_N
+    value: 20.1464333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 25
-    value: 13871.2994074529
-  - analyte: swab_SARSCoV2_N
+    value: 32.478
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 4192.97092057174
+    value: 34.1666666666667
 - attributes:
     age: 62
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 6576.43611619456
-  - analyte: swab_SARSCoV2_N
+    value: 33.5314
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
-    value: 4149.62624466969
-  - analyte: swab_SARSCoV2_N
+    value: 34.1813333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 11159.4898526008
+    value: 32.7850333333333
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 289288.548063824
-  - analyte: swab_SARSCoV2_N
+    value: 28.1906
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 11728.2797344854
-  - analyte: swab_SARSCoV2_N
+    value: 32.7148666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
 - attributes:
     age: 32
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 29
-    value: 16498.3695681781
-  - analyte: swab_SARSCoV2_N
+    value: 32.2332
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 16853.5893805476
-  - analyte: swab_SARSCoV2_N
+    value: 32.2031333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 5069.96292014641
-  - analyte: swab_SARSCoV2_N
+    value: 33.8986
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1243430012.31402
+    value: 16.3825333333333
 - attributes:
     age: 39
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 16288.918503851
-  - analyte: swab_SARSCoV2_N
+    value: 32.2512333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 141041.988093824
+    value: 29.2045333333333
 - attributes:
     age: 28
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 8
-    value: 5312432.99235435
-  - analyte: swab_SARSCoV2_N
+    value: 24.0827666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 1831973.95027416
-  - analyte: swab_SARSCoV2_N
+    value: 25.5854666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 1607461151.6503
-  - analyte: swab_SARSCoV2_N
+    value: 16.0201
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 30098.9613975212
+    value: 31.3846
 - attributes:
     age: 49
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 3300373.1944774
-  - analyte: swab_SARSCoV2_N
+    value: 24.7546333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
 - attributes:
     age: 27
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 4193.96127089489
-  - analyte: swab_SARSCoV2_N
+    value: 34.1663333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 661963136.090633
-  - analyte: swab_SARSCoV2_N
+    value: 17.2723333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
     value: negative
 - attributes:
     age: 33
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 19159154.5483469
-  - analyte: swab_SARSCoV2_N
+    value: 22.2722666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 1904994.97433953
-  - analyte: swab_SARSCoV2_N
+    value: 25.5303
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 15368.463219223
+    value: 32.3333333333333
 - attributes:
     age: 33
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 594562356.186417
-  - analyte: swab_SARSCoV2_N
+    value: 17.4239
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
 - attributes:
     age: 27
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 13090589.0269211
-  - analyte: swab_SARSCoV2_N
+    value: 22.8098666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 99538.9276386385
-  - analyte: swab_SARSCoV2_N
+    value: 29.6964333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
     value: negative
 - attributes:
     age: 28
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 495199.149387266
-  - analyte: swab_SARSCoV2_N
+    value: 27.4319
+  - analyte: swab_SARSCoV2_N_Ct
     time: 23
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 6389979.28675921
-  - analyte: swab_SARSCoV2_N
+    value: 23.8221
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 10
     value: negative
 - attributes:
     age: 28
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 12
-    value: 2852.44644150257
-  - analyte: swab_SARSCoV2_N
+    value: 34.7104
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 11439.9451971101
-  - analyte: swab_SARSCoV2_N
+    value: 32.75
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
-    value: 8471.71365306897
+    value: 33.1739666666667
 - attributes:
     age: 23
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 2606879.34407872
-  - analyte: swab_SARSCoV2_N
+    value: 25.0875666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 29
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 39592.1596797047
-  - analyte: swab_SARSCoV2_N
+    value: 30.9976666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 41720469.0785683
-  - analyte: swab_SARSCoV2_N
+    value: 21.1738666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
-    value: 2347871.32346055
-  - analyte: swab_SARSCoV2_N
+    value: 25.2352666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
     value: negative
 - attributes:
     age: 42
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 384097548.54534
-  - analyte: swab_SARSCoV2_N
+    value: 18.0406
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 2244953.84603897
+    value: 25.2985333333333
 - attributes:
     age: 51
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 58209903.8765544
+    value: 20.7037666666667
 - attributes:
     age: 33
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 6448820161.72429
+    value: 14.0592666666667
 - attributes:
     age: 57
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 33
-    value: 22053.7983926588
-  - analyte: swab_SARSCoV2_N
+    value: 31.8235666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 26
-    value: 36871.9445112621
-  - analyte: swab_SARSCoV2_N
+    value: 31.0981333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 7842865.37098394
-  - analyte: swab_SARSCoV2_N
+    value: 23.5329333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 131345.366650032
+    value: 29.3050666666667
 - attributes:
     age: 32
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 2647651074.67364
-  - analyte: swab_SARSCoV2_N
+    value: 15.3157666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
     value: negative
 - attributes:
     age: 69
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 2060.21917414955
-  - analyte: swab_SARSCoV2_N
+    value: 35.1696333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 2654342.20192651
+    value: 25.0621
 - attributes:
     age: 57
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 8
-    value: 30470963.4435645
-  - analyte: swab_SARSCoV2_N
+    value: 21.6173666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 20
-    value: 12294.9521410089
-  - analyte: swab_SARSCoV2_N
+    value: 32.6482666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 14
-    value: 167302.742259538
-  - analyte: swab_SARSCoV2_N
+    value: 28.9635333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 1523483211.73765
+    value: 16.0958333333333
 - attributes:
     age: 23
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 29
-    value: 3168697.71675899
-  - analyte: swab_SARSCoV2_N
+    value: 24.8121
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 2218862.75059651
-  - analyte: swab_SARSCoV2_N
+    value: 25.3150333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 27
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 4134.75699612781
+    value: 34.1864
 - attributes:
     age: 35
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 738572762.27511
+    value: 17.1177666666667
 - attributes:
     age: 53
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 63860631.5947541
-  - analyte: swab_SARSCoV2_N
+    value: 20.573
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
-    value: 847.690876438384
+    value: 36.4230666666667
 - attributes:
     age: 32
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 3
-    value: 2981541018.99774
+    value: 15.1481333333333
 - attributes:
     age: 66
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 7
-    value: 19010.3627185438
-  - analyte: swab_SARSCoV2_N
+    value: 32.0331666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 11439.9451971101
+    value: 32.75
 - attributes:
     age: 30
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 41005433.7519322
-  - analyte: swab_SARSCoV2_N
+    value: 21.1982666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 18
-    value: 73531.5301768248
+    value: 30.1238666666667
 - attributes:
     age: 24
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 6
-    value: 2099228303.37238
-  - analyte: swab_SARSCoV2_N
+    value: 15.6433666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 1407.68839139969
-  - analyte: swab_SARSCoV2_N
+    value: 35.7072
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 3050549.45770253
+    value: 24.8657333333333
 - attributes:
     age: 50
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 4
-    value: 6804273.99009313
+    value: 23.7334333333333
 - attributes:
     age: 36
     sex: male
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 28
-    value: 3862.51507524059
-  - analyte: swab_SARSCoV2_N
+    value: 34.2825333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 21
-    value: 2280.32079146564
-  - analyte: swab_SARSCoV2_N
+    value: 35.0263666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 10451.840066709
+    value: 32.8775
 - attributes:
     age: 48
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 16
-    value: 184042.82320229
-  - analyte: swab_SARSCoV2_N
+    value: 28.8289333333333
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 38153862.619862
+    value: 21.3
 - attributes:
     age: 62
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 19
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 5
-    value: 113067665.287433
+    value: 19.7666666666667
 - attributes:
     age: 57
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 1
-    value: 576817322.233488
-  - analyte: swab_SARSCoV2_N
+    value: 17.4666666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 9
-    value: 20446.6192845137
-  - analyte: swab_SARSCoV2_N
+    value: 31.9303666666667
+  - analyte: swab_SARSCoV2_N_Ct
     time: 15
-    value: 9249.43629064325
+    value: 33.05
 - attributes:
     age: 33
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 2
-    value: 434470262.074693
+    value: 17.8666666666667
 - attributes:
     age: 27
     sex: female
   measurements:
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 22
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 17
-    value: 22821.0089261018
-  - analyte: swab_SARSCoV2_N
+    value: 31.7753
+  - analyte: swab_SARSCoV2_N_Ct
     time: 24
     value: negative
-  - analyte: swab_SARSCoV2_N
+  - analyte: swab_SARSCoV2_N_Ct
     time: 11
-    value: 76572.6701773751
+    value: 30.0666666666667

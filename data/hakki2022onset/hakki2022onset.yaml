@@ -1,0 +1,4650 @@
+# yaml-language-server:$schema=../.schema.yaml
+title: 'Onset and window of SARS-CoV-2 infectiousness and temporal correlation with
+  symptom onset: a prospective, longitudinal, community cohort study'
+doi: 10.1016/S2213-2600(22)00226-0
+description: >
+  Through a prospective, longitudinal, community cohort study that captures the critical
+  growth phase and peak of viral replication, the goal is to characterize the window
+  of SARS-CoV-2 infectiousness and its temporal relationship with symptom onset.
+analytes:
+  asymptomatic_PCR:
+    description: >
+      This analyte represents the detection and quantification of SARS-CoV-2 viral
+      RNA from throat and nose swabs specimens collected from asymptomatic participants.
+      The analysis focuses on measuring the viral load expressed in log10 copies/mL,
+      with the primary reference event being the enrollment.
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    unit: gc/mL
+    reference_event: enrollment
+  asymptomatic_cultivable:
+    description: >
+      The infectious virus analyte consisted of culturable SARS-CoV-2 derived from
+      throat and nasal swabs of asymptomatic participants, measured using a plaque
+      assay in vitro. The unit of measurement was PFU/mL, with enrollment as the primary
+      reference event.
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    unit: pfu/mL
+    reference_event: enrollment
+  symptomatic_PCR:
+    description: >
+      This analyte represents the detection and quantification of SARS-CoV-2 viral
+      RNA from throat and nose swabs specimens collected from symptomatic participants.
+      The analysis focuses on measuring the viral load expressed in log10 copies/mL,
+      with the primary reference event being the symptom onset.
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    unit: gc/mL
+    reference_event: symptom onset
+  symptomatic_cultivable:
+    description: >
+      The infectious virus analyte consisted of culturable SARS-CoV-2 derived from
+      throat and nasal swabs of symptomatic participants, measured using a plaque
+      assay in vitro. The unit of measurement was PFU/mL, with symptom onset as the
+      primary reference event.
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    unit: pfu/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 35
+    sex: female
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: 990.082763138518
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: 20.0
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 585380.31704999
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: 2000.0
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 131707750.42642
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: 40000.0
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 91920489.7063312
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: 6000.0
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 12317868.113607
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: 2500.0
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 28614.8572312831
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: 20.0
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 2068549.83184871
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 7653.53208177785
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: 37408.9186027146
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: 587.529678661681
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 14
+    value: 2373.82919596948
+  - analyte: asymptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 15
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 16
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 17
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 18
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 19
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 20
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 20
+    value: negative
+- attributes:
+    age: 23
+    sex: female
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 182178325.951217
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: 150000.0
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 35227486.3774393
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: 15000.0
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 2963909.85152659
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: 500.0
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 743996.314101803
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: 100.0
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 1364473.73607252
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: 50.0
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 5137567.99293011
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: 3000.0
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: 77893.0322276055
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: 283124.455854746
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 15
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 16
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 17
+    value: 192.805391410783
+  - analyte: asymptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 18
+    value: 276.260107555221
+  - analyte: asymptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 19
+    value: negative
+- attributes:
+    age: 27
+    sex: female
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: 191397290.6598
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: 15500.0
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 20611733.3012491
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: 5000.0
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 5751236.02864495
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: 200.0
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 497731.845189789
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: 20.0
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 21888.0974096721
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 16625.0023994236
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 1704.12468122983
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 1479.94936138737
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 35.4866533168057
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 15
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 16
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 17
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 18
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 19
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 20
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 20
+    value: negative
+- attributes:
+    age: 25
+    sex: female
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 152731482.903545
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: 25000.0
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 51919626.6063623
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: 10000.0
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 7571945.63925963
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: 150.0
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 97612.5880939386
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 20687.4141313313
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 24675.9764460979
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 9258.81692037979
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 8875.22033073383
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 2601.74602086901
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: 28015.8244095856
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: 3573.44867221681
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 14
+    value: 172817.053695793
+  - analyte: asymptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 15
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 16
+    value: 282.16708603038
+  - analyte: asymptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 17
+    value: 643.939760365184
+  - analyte: asymptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 18
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 19
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 20
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 20
+    value: negative
+- attributes:
+    age: 28
+    sex: female
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: 1164.43214834036
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: 320.357881426071
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: 20.0
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 56.1231713859061
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+- attributes:
+    age: 50
+    sex: male
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: 48220.6736839196
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: 20.0
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: 151145.357237188
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 2459.02585276674
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 5192.92442517459
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 1610.64401131759
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 80.4157666440824
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+- attributes:
+    age: 32
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: 11684.9118252241
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 108107298.995838
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 96572040.5764673
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 123608063.3701
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 67875826.5296315
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 5999810.64928818
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 1571157.38632521
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 553268.966986224
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 53224.4804952171
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 16980.477289345
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: 1565.84460376655
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: 6326.56999598602
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 14
+    value: 3401.32765063112
+  - analyte: asymptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 15
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 16
+    value: 496.048792244849
+  - analyte: asymptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 17
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 18
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 19
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 20
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 20
+    value: negative
+- attributes:
+    age: 63
+    sex: male
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: 48561.9367633948
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: 157678.022502549
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: 2299359.46370895
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: 80.0
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 1369103283.76156
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: 7000.0
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 192751830.60758
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: 150.0
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 7361335.05351634
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 6259128.93298403
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: 170.0
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 15436284.2475511
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 10326839.1197384
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: 550.0
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 212034.064002867
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 850672.844431692
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 972644.991026782
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: 30.0
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: 965809.847146687
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: 1582276.64217619
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 14
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 15
+    value: 3180476.90058
+  - analyte: asymptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 16
+    value: 225928.056974512
+  - analyte: asymptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 17
+    value: 227526.975002253
+  - analyte: asymptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 18
+    value: 708160.510264791
+  - analyte: asymptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 19
+    value: negative
+- attributes:
+    age: 49
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: 18875.1658540687
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: 285128.159169077
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 6716471.14329554
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 25648324.8857922
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 3135933.13943708
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 1104290.69913375
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: 50.0
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 81259.6530444683
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 7928.21711268279
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 193459.56432056
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 784.515551083114
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+- attributes:
+    age: 16
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 39.1690646978811
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 12189.9463099397
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 700.806220632571
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 162189.250484522
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 26568842.476708
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: 300.0
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 356004619.601002
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: 150.0
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: 6764004.35779586
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: 51380.4381510259
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+- attributes:
+    age: 40
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 3377.42523598868
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: 32.1504374265869
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+- attributes:
+    age: 48
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 65764.7536185866
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+- attributes:
+    age: 43
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: 11280.0704440895
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: 30.0
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 7625533.1420683
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 43996.470878419
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: 20.0
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 23901862.8905278
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: 1525.0
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 28510175.4119799
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: 975.0
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 15327807.6453175
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: 210.0
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 212034.064002867
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: 2811.60870968767
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 13
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 13
+    value: negative
+- attributes:
+    age: 54
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 599925502.09128
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: 160000.0
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 847560825.375748
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: 260000.0
+- attributes:
+    age: 49
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: 690.991169030203
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: 1294.35996122001
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: 1054.96008847342
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 328317.945215472
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 1176651.74774436
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 4959569.20671412
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: 50.0
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 14901470.9149529
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: 150.0
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 13500535.086762
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: 120.0
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 4821620.80805623
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 323719.730360353
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: negative
+- attributes:
+    age: 45
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: 30062.8854617487
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: 37010140.554274
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: 15500.0
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 17525556.8897348
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: 7500.0
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 268501435.436418
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: 35000.0
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 3070284.48489416
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: 89691.8787751341
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: 553268.966986224
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 9
+    value: 203249.405602155
+  - analyte: asymptomatic_cultivable
+    time: 9
+    value: 10.0
+  - analyte: asymptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 12
+    value: negative
+- attributes:
+    age: 45
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: asymptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 2
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 3
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 4
+    value: 28110879.8083985
+  - analyte: asymptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 5
+    value: 20833.82126573
+  - analyte: asymptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 6
+    value: 188.769140007473
+  - analyte: asymptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 7
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: asymptomatic_PCR
+    time: 8
+    value: negative
+  - analyte: asymptomatic_cultivable
+    time: 8
+    value: negative
+- attributes:
+    age: 37
+    sex: male
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 3916.54373427769
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 6303425.48571376
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 1000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 64606475.91769
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 4500.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 23073746.8269216
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 650.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 15545528.550783
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 50.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 27136936.0100402
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 80.4157666440824
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 1062.42615854278
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 13
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 14
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 15
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 16
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 17
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 18
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 19
+    value: negative
+- attributes:
+    age: 29
+    sex: male
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 209064.448125643
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 3000.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 170974828.633316
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 1500000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 138372698.612151
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 110000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 12145351.792252
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 1000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 7258236.81995991
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 1000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 4430373.55591535
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 1000.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 181562.299930459
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 19970.6674896534
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 397180.767512928
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 212034.064002867
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 3754.27971797974
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 12189.9463099397
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: 1018.40940622201
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 13
+    value: 5229.6753298267
+  - analyte: symptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 14
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 15
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 16
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 17
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 18
+    value: 1728.33059359571
+  - analyte: symptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 19
+    value: negative
+- attributes:
+    age: 27
+    sex: male
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 6788.8399918008
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 675.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 90965.8898738962
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 500.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 28510175.4119799
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 30000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 695688076.589263
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 400000.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 105100338.48009
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 30000.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 5397549.8418546
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: 150.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: 20.0
+  - analyte: symptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 1828.64171174712
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 3498.64092378016
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 13
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 14
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 15
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 16
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 17
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 18
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 19
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 19
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 20
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 20
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 21
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 21
+    value: negative
+- attributes:
+    age: 47
+    sex: male
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: 1428.67428525201
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 1927696.82555217
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: 500.0
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 1511173641.00214
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: 500000.0
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 2323489037.57239
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 1000000.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 841604695.192563
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 12000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 74392741.4350218
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 350.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 166219233.371364
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 400.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 99335003.257064
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 150.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 11003527.701942
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 3510511.52603161
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 508374.320217964
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 242436.174646223
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 579.301107133332
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 6836.88536870392
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 228298955.402806
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: 30.0
+- attributes:
+    age: 60
+    sex: female
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 7284.88714477438
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 2762089.42324792
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 1500.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 243258740.740683
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 100000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 82112395.2238446
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 15000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 37801489.3507085
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 3000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 57307269.7354457
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 1500.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 24241372.3201381
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 1236195.11482773
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: 20.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 159917.729747424
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 94230.6528623208
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 12189.9463099397
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+- attributes:
+    age: 32
+    sex: female
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 515595.425797736
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 4070873.8049575
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 1123776372.8755
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 165051148.010093
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 80.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 57712839.6674302
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 40.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 31468645.2760234
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 7056351.91732809
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 5670687.83038897
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 875010.91690621
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 104744.947447946
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 203249.405602155
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 82997.1424912086
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: 11684.9118252241
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+- attributes:
+    age: 46
+    sex: male
+    vaccinated: false
+    variant_wave: Pre-Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 3523.4011953486
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 20.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 218100.438932486
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 375.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 4216977.34055086
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 500.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 100038008.141098
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 20000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 47371390.0178661
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 5000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 932347.909369098
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 120.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 193459.56432056
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 40.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 2529.3795143572
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 3017.04741459171
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 1976.14406725569
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+- attributes:
+    age: 51
+    sex: male
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 1433521.66014889
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 4638.82932009797
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 39025.7723892795
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 526619.858927186
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 117256.436588312
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 11767.607247918
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+- attributes:
+    age: 45
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 16276.9691376268
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 104744.947447946
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 50.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 34979929.5194435
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 239851811.659857
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 80000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 35727868.4548275
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 200.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 13789202.7878874
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 220.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 5284555.76028762
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 80.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 1160172.30266795
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 40.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 602128.269773268
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: 220.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 149028.510329919
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 508374.320217964
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 102552.182307755
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 117256.436588312
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+- attributes:
+    age: 23
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 346.198669051401
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 22673.6605521775
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 18026969.7143366
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 260.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 12231305.7998858
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 135475959.081858
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 57113.4883448699
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 2299359.46370895
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 265713.031827005
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 64843.6938000812
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 39025.7723892795
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: 30922.9960083007
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 13
+    value: 3330.12314020472
+  - analyte: symptomatic_cultivable
+    time: 13
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 14
+    value: 263845.765948796
+  - analyte: symptomatic_cultivable
+    time: 14
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 15
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 15
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 16
+    value: 30275.6438511864
+  - analyte: symptomatic_cultivable
+    time: 16
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 17
+    value: 13360.3312152119
+  - analyte: symptomatic_cultivable
+    time: 17
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 18
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 18
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 19
+    value: 3944.26155059067
+  - analyte: symptomatic_cultivable
+    time: 19
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 20
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 20
+    value: negative
+- attributes:
+    age: 52
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 239.918460342993
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 1704.12468122983
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 29851.6222059075
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 351.116181682103
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 1680.25778166373
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 133126.879316312
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 41877.3086325371
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 3180476.90058
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 5915781.07107748
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 1506063.6901895
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+- attributes:
+    age: 26
+    sex: male
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 57113.4883448699
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 326010.7309547
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 140.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 247619.93164215
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 50.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 2039579.02259514
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 3000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 2097932.15140882
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 3000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 10039602.293234
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 150.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 3714259.19893894
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 18093.1599765483
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 398.639110183033
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+- attributes:
+    age: 49
+    sex: female
+    vaccinated: false
+    variant_wave: Alpha
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 16276.9691376268
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 1582276.64217619
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 150.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 287146.042914977
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 50.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 80962380.6084087
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 800.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 198266533.532013
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 1150.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 220389194.011424
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 250.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 610681.085357528
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 37673.6656870437
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 18742.5229313544
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+- attributes:
+    age: 12
+    sex: male
+    vaccinated: false
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 2714.19628841609
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 37272065.4419302
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 30000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 318018236.408269
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 105000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 202505857.683017
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 30000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 543524551.143432
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 5500.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 2973966155.02362
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 338857072.669276
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 10773176.2382026
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 952283.321255889
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 718219.440483482
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 20687.4141313313
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: 1340.8145003989
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 13
+    value: 341.350028012879
+  - analyte: symptomatic_cultivable
+    time: 13
+    value: negative
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: 59581.9948760272
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 678821.129327084
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: 200.0
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 284085073.956554
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: 165000.0
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 86878142.129857
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 6000.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 7056351.91732809
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 400.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 4307144.51887169
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 700.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 14643.0874789512
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 86584.368455587
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 112398.454237423
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 25742.498747311
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 18480.0269312993
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 4085.82097627085
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: false
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: 1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 48220.6736839196
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 15655545.9881188
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 1350.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 12317868.113607
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 15000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 33295063.7899612
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 500.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 62368087.1876788
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 400.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 15436284.2475511
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: 110.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 1860908.86369689
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: 40.0
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 6669271.96265462
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 1616108.79459874
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 3902215.83041395
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: 303811.801621263
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 13
+    value: 5321955.15010611
+  - analyte: symptomatic_cultivable
+    time: 13
+    value: 70.0
+  - analyte: symptomatic_PCR
+    time: 14
+    value: 15936.2217184667
+  - analyte: symptomatic_cultivable
+    time: 14
+    value: negative
+- attributes:
+    age: 41
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 12627.4431079015
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 541686.652674026
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 366190046.689485
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 27500.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 374019902.193251
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 1600.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 1364473.73607252
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: negative
+- attributes:
+    age: 42
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 59163.2896841042
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 418695526.732535
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 105000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 126251044.204882
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 1750.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 32598053.986645
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 1218881.74276366
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 1354885.06354275
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+- attributes:
+    age: 49
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 70074.1320614122
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 2039579.02259514
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 1150.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 15113136.0020576
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 1500.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 217302561.432915
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 5000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 74919227.1535568
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 3500.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 26196735.9624583
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 2500.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 8357678.19481986
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 1000.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 450938.452863787
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: 150.0
+- attributes:
+    age: 55
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 265713.031827005
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 244151.92246174
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 51919626.6063623
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 25000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 909490423.791288
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 220000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 659939.995933673
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 383419.841210265
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 7413432.04174753
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 70.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 979528.50798156
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 50.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 240732.484038925
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 8097.73781636109
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 1815.79115545963
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 962.54401410184
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: 2018.39787136947
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+- attributes:
+    age: 44
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 13454.8837675715
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 776152.636780387
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 200.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 61494598.9450439
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 220000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 195489737.036282
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 30000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 900045.310858074
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 784.515551083114
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 667.050738549752
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+- attributes:
+    age: 41
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 244980309.948085
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: 140000.0
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 51919626.6063623
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 25000.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 11003527.701942
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 5000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 113577968.291864
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 10000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 38883004.2873665
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 10000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 1096530.43111852
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 143865.192980775
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 674050.796748798
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+- attributes:
+    age: 43
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 765282.33061439
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 3092013.23022543
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 2000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 9095746.57364427
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 5250.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 23401493.4406504
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 5000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 86267616.5969323
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 20000.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 2685263.03026784
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 40.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 497731.845189789
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 12019.2215809924
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 5731.78853934202
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 344932.169406698
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: 167.442100354127
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+- attributes:
+    age: 55
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 278.215231111943
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 657.708445020517
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 511972.141915373
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 64606475.91769
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 2000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 16681409.6716223
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 1000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 2762089.42324792
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 92910.9175444272
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 35607.0566265298
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 6836.88536870392
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 1054.96008847342
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+- attributes:
+    age: 36
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 164493.036602497
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 38208.7940495198
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 3767017.68173304
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 200.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 3365069.59096813
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 450.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 91274529.691662
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 50.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 762482695.935044
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 20000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 35227486.3774393
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 5284555.76028762
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 69092.7177960637
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 10147.7773217439
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+- attributes:
+    age: 48
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 263845.765948796
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 602128.269773268
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 1193365.27193937
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 175.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 7843702.53525315
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 200.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 436791998.726412
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 45000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 418695526.732535
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 45000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 65987888.0440332
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 10.0
+- attributes:
+    age: 49
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: 247619.93164215
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: 615000.0
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 1249167797.78733
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: 130000.0
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 975945095.859456
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: 105000.0
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 1789862968.28184
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 60000.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 52287067.5877354
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 3500.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 9160118.18541797
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 100.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 11891097.0078994
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 4400.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 22117792.0144142
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 3600.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 585380.31704999
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 27000.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 2547.28021495482
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 35000.0
+- attributes:
+    age: 60
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -3
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 36884.9927931763
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: 1000.0
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 66.9437971515976
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: 320.0
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 92257.9974190917
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 120000.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 316942.875178112
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 250000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 73869955.5305712
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 23000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 246714062.892552
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 85000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 488965573.507954
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 50000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 401348799.009568
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 29000.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 61929803.0723161
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 3100.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 1000472.73284144
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: 125000.0
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 3662239.61830616
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: 3900.0
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 15492.9621983165
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: 230.0
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 10889.2554027622
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: 380.0
+- attributes:
+    age: 46
+    sex: female
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 1004.14620395565
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 72589.0905048158
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 6575866.3299184
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 8500.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 751803842.371557
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 140000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 106593216.091039
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 5000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 29533404.7302173
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 3500.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 6908631.92817133
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 825.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 688463.313933398
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 60.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 221198.40480899
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+- attributes:
+    age: 39
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -7
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -6
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -5
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -4
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -4
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -3
+    value: 27717176.4881593
+  - analyte: symptomatic_cultivable
+    time: -3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -2
+    value: 63935.5337666824
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: 150.0
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 2821148.26787799
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: 4500.0
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 439883224.36031
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 120000.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 3027284.0094903
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 5500.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 319185.915213389
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 18939207.746668
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 8628.35968995412
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 555.30042421829
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+- attributes:
+    age: 41
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 2638.70202348611
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 16276.9691376268
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 46053774.0873702
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 13250.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 346102496.020936
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 18000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 39158183.6403
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 1450.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 9691765.14056838
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 180.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 1968914.73339973
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 332981.474532055
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 8875.22033073383
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 3510511.52603161
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+- attributes:
+    age: 41
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 101.487171706097
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 1490.42312788523
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 38751.5235402405
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 986460.740352653
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 150.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 86878142.129857
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 45000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 201082772.501275
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 10000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 5874208.64212651
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 60.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 23821.0400516514
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: 40.0
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 319185.915213389
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 68607.1771604158
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 11
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 11
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 12
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: 12
+    value: negative
+- attributes:
+    age: 15
+    sex: male
+    vaccinated: true
+    variant_wave: Delta
+  measurements:
+  - analyte: symptomatic_PCR
+    time: -2
+    value: negative
+  - analyte: symptomatic_cultivable
+    time: -2
+    value: negative
+  - analyte: symptomatic_PCR
+    time: -1
+    value: 1716.18496143948
+  - analyte: symptomatic_cultivable
+    time: -1
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 0
+    value: 2537961.49199138
+  - analyte: symptomatic_cultivable
+    time: 0
+    value: 50.0
+  - analyte: symptomatic_PCR
+    time: 1
+    value: 63253982.7266148
+  - analyte: symptomatic_cultivable
+    time: 1
+    value: 1100.0
+  - analyte: symptomatic_PCR
+    time: 2
+    value: 141331376.06828
+  - analyte: symptomatic_cultivable
+    time: 2
+    value: 3000.0
+  - analyte: symptomatic_PCR
+    time: 3
+    value: 379332596.196983
+  - analyte: symptomatic_cultivable
+    time: 3
+    value: 30000.0
+  - analyte: symptomatic_PCR
+    time: 4
+    value: 225101543.676034
+  - analyte: symptomatic_cultivable
+    time: 4
+    value: 15000.0
+  - analyte: symptomatic_PCR
+    time: 5
+    value: 6811873.97015043
+  - analyte: symptomatic_cultivable
+    time: 5
+    value: 10.0
+  - analyte: symptomatic_PCR
+    time: 6
+    value: 1914150.17155054
+  - analyte: symptomatic_cultivable
+    time: 6
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 7
+    value: 1262627.37100473
+  - analyte: symptomatic_cultivable
+    time: 7
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 8
+    value: 112398.454237423
+  - analyte: symptomatic_cultivable
+    time: 8
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 9
+    value: 446.255429819441
+  - analyte: symptomatic_cultivable
+    time: 9
+    value: negative
+  - analyte: symptomatic_PCR
+    time: 10
+    value: 1704.12468122983
+  - analyte: symptomatic_cultivable
+    time: 10
+    value: negative
