@@ -20,7 +20,7 @@ def test_summarize(tmp_path: Path) -> None:
              n_samples  n_unique_participants  n_negative  n_positive  n_quantified        min        median           max
 sputum           147.0                    9.0        24.0         0.0         123.0  93.830687  29089.805626  4.473311e+08
 stool             82.0                    9.0        13.0         0.0          69.0   5.736962  12422.291543  3.225616e+07
-throat_swab      153.0                    9.0        57.0         0.0          96.0   3.977220    461.750274  5.835205e+08
+oropharyngeal_swab      153.0                    9.0        57.0         0.0          96.0   3.977220    461.750274  5.835205e+08
 """  # noqa: E501
     for line in expected.splitlines():
         assert line.strip() in result
