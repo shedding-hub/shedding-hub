@@ -1,0 +1,4664 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Centers for Disease Control and Prevention (CDC) Nursing Home Public Health
+  Response Network (NHPHRN)
+doi: https://github.com/abtassociates/CDC_NHPHRN/blob/main/
+description: >
+  The INHERENT study, part of the CDC funded Nursing Home Public Health Response Network
+  (NHPHRN), examined SARSCoV2 shedding in nursing home residents and staff. It characterized
+  the viral shedding kinetics including proliferation, peak, and clearance using qRTPCR,
+  antigen testing, genetic sequencing, and culture. The original dataset is published
+  and updated on their GitHub repository (https://github.com/abtassociates/CDC_NHPHRN/blob/main/).
+analytes:
+  NP_SARSCoV2:
+    description: >
+      Viral concentrations were quantified using RTqPCR targeting the N and S genes
+      in nasopharyngeal swab samples with the TaqPath COVID19, Flu A, Flu B Combo
+      Kit. One nasal swab was processed using the TaqPath Combo Kit on the QuantStudio
+      7 Pro, which provided results for all three analytes. For specimens with a SARSCoV2
+      cycle threshold (Ct) value below 30, a second analysis was performed using the
+      CDC Influenza SARSCoV2 (Flu SC2) Multiplex Assay on the ABT 7500 Fast Dx.
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: S and N
+    unit: gc/mL
+    reference_event: initial positive test date
+participants:
+- attributes:
+    age: 67
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 7807061.61001878
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 164774.089881758
+- attributes:
+    age: 58
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 75188.8884626848
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 3867908.58292081
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 70657.7759517614
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+- attributes:
+    age: 65
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 784468.411720336
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 10867761.5383853
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 6574459.61856201
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 263942.089318776
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 204747.382588103
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 228897.68401181
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 638227.294220449
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 19012.9051074227
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+- attributes:
+    age: 83
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 33229682.4512283
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 27059469.257155
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 335519986.538299
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 9127489.93265143
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 1047081.36720539
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 65065.6499118111
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 155707.489949811
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 1484256.27721938
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 5475946.24678377
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 16752.6089575942
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 26379.1825125632
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 13957.0315434541
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 74349.7809229715
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 43
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 85
+    value: negative
+- attributes:
+    age: 72
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 43806358.7452865
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 910458.412323955
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 1062564.53213584
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+- attributes:
+    age: 65
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 1255978.83466142
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 88389.6427126121
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 55166.3170071351
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 24530.9832487447
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 12862.1988309598
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 41
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 48
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 55
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 61
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 69
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 78
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 83
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 90
+    value: negative
+- attributes:
+    age: 68
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 9167815.26724941
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 846281651.694418
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 74409643.9879515
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 24258809.9971773
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 841229.585204308
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 10946.6503420033
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 4574781.64921839
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 699591.566377757
+- attributes:
+    age: 79
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 61678766.8066675
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 512987203.053909
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 323510310.046231
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 37562654.2679361
+- attributes:
+    age: 61
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 2740443.22014846
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 1901131.53142497
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 38957.5526713765
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 11670.484441133
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 51709.7371834848
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: 30798.9557545051
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 35
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 42
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 49
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 72
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 79
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 91
+    value: negative
+- attributes:
+    age: 68
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 95320.9599596664
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 103349460.269775
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 46143.3368591457
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 174842872.950576
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 1077423.24751025
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 7418528.46340515
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 556832.06350553
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 11724362.8370488
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 64360.811685813
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 149483.019271639
+- attributes:
+    age: 75
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 240553380.436702
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 316798303.589356
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 1162852486.48214
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 18698563.1930894
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 347100054.618981
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 279846004.394571
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 1946538720.24536
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 156434451.847096
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 337496024.076745
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 31746609.5436346
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 147024.8730597
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+- attributes:
+    age: 67
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 3616182.52150109
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 111370.159558113
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 203827.086015154
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 44
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 64
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 72
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 79
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 92
+    value: negative
+- attributes:
+    age: 32
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 119507938.087073
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 517490426.014158
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 15321436.5998009
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 371146.90453221
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 52217.9464829266
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 31355.6457144178
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+- attributes:
+    age: 27
+    vaccinated: true
+    sex: female
+    ethnicity: hispanic
+    race: other
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 4823894.45477528
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 12768034.0510859
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 19102530.6087954
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 2250136.07388543
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 46514.3555011265
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 71
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 11869998.6889502
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 113050.980722494
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 132405.908571088
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 20712.3606371245
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 1222173.55005645
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 13681.7327190476
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 22819.4506536498
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 29158.6622270861
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 35
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 43
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 56
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 70
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 78
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 85
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 92
+    value: negative
+- attributes:
+    age: 65
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 51634.7176627941
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 148047.583686785
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 27041.5164081075
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1860149.79295806
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 40
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 48
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 54
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 61
+    value: negative
+- attributes:
+    age: 83
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 2817721.17196238
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 13583077.0466417
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 74482721.0966149
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 4780461.73783618
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 24654.2149785052
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 58348.5769835345
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 470814.693974857
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 17365595.8513074
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 813601.163269729
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 720724.44077561
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 28478977.1632521
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 40
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 48
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 56
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 61
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 68
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 76
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 83
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 91
+    value: negative
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 226177.562333776
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 106273.225109491
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 192507.255870673
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 133909.912507015
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 34733.9299246493
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 78
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 15105981.8343352
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 418728.174631291
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 13529864.601854
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 6480949.68336254
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 6957832.872428
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 1097137.06672489
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 62375.4775584313
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 65755.7863776492
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+- attributes:
+    age: 56
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 26627131.2758819
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 83238.495407148
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 212434.052473244
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 45721.9784313009
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: negative
+- attributes:
+    age: 53
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 10796546.5063346
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 336880.384739664
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 1421234.45711155
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 39
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 46
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 53
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 60
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 67
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 74
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 81
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 88
+    value: negative
+- attributes:
+    age: 24
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 960383807.567725
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 10645368.8293975
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 209531.886428975
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 11318.4509062473
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 33507.4350006008
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 38
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 45
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 52
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 66
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 73
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 87
+    value: negative
+- attributes:
+    age: 65
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 32186056.0010296
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 3992792.13008277
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 45754.8986959396
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 24753.0587434445
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 36831.5982362623
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 42
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 48
+    value: negative
+- attributes:
+    age: 72
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: -2
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+- attributes:
+    age: 81
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 92117366.2889787
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 6259375.82579669
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 4479229083.9087
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 16680270.7644176
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 408293489.626157
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 2079722.65635546
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 264665.614120148
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 2470846.89991888
+- attributes:
+    age: 74
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 3708146.14989414
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 71610.4704566974
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 190484.767850822
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 50556.7428894687
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 10675489.5451468
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 86629.3825176372
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 17472.522824324
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: negative
+- attributes:
+    age: 75
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 1217686.85643048
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 42
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 49
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 72
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 79
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 91
+    value: negative
+- attributes:
+    age: 70
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 16760941.8231877
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 97835722.6177269
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 16469969.5468798
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 12952146.3016429
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 183829752.315049
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 17647530.8289732
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 27655.2889126545
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: 18724.5289843751
+- attributes:
+    age: 72
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 332528507.781325
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 445390532.871626
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 287810.297538731
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 24210.6889954667
+- attributes:
+    age: 53
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 7514335.79642985
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 2744598.36165569
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 9987528.90357451
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 39038132.3924835
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 389208.973820245
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 52018.5396078402
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 367633.361074494
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 437188.00734212
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 1970859.17360711
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 10184.3231658788
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 38
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 47
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 51
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 59
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 69
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 75
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 82
+    value: negative
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 538927176.250789
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 187355857.142166
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 2746925.63118998
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 315857.335064685
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 45
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 49
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 67
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 73
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+- attributes:
+    age: 80
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 48085.58018736
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 38
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 47
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 51
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 59
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 69
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 75
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 82
+    value: negative
+- attributes:
+    age: 62
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 45
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 49
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 67
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 73
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 93
+    value: negative
+- attributes:
+    age: 81
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+- attributes:
+    age: 82
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 14919.4062496691
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 121013.397792843
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 41199.9245866909
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 55368.0080281908
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 39644.5368924941
+- attributes:
+    age: 85
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 285519915.070553
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 7062388.29646834
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 73
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 35
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 43
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 51
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 78
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 84
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 88
+    value: negative
+- attributes:
+    age: 79
+    vaccinated: true
+    sex: male
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 5131237.18017267
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+- attributes:
+    age: 76
+    vaccinated: true
+    sex: male
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 3671936.18253757
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 30384447.4201745
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 101028.970045595
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 545216.105410999
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 1214331.71819772
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 104104.47718467
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+- attributes:
+    age: 86
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 3830746369.14036
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 27494112.2763067
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 642523.049139006
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 53892.1892727832
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 109283.019630862
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 10858.6254536781
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+- attributes:
+    age: 56
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 146358121.002346
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 83469407.4734594
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 37437010.0651391
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 894450.222096074
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 387654.450163021
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 48851.8046373952
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 55
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 11097645.0824046
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 3592605.08423744
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 662030.719025682
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 30967.3477126821
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 83
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 8397868.59898238
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1685783.33793898
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 1893067.80792573
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 27679778.7624964
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 359461.676390579
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 18558.4896027503
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+- attributes:
+    age: 54
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 1988745.41668904
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 323139837.850131
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 53725922.2138306
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 236901.78321695
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 16764834.7761421
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 15421502.7518792
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 850589.676481575
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 48931.820862413
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: 27651416.8762146
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 40
+    value: negative
+- attributes:
+    age: 59
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 67881.7940220276
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 28511.6298088639
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 8113079.81141177
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 88459.180520701
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 1275523.52021172
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 8995128.05397108
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 109429.592073292
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 680043.376565973
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 96062.1087244002
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 83
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 21083200.5017311
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 4583035824.53842
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 149039668.645259
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 866045.724609111
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 1251670.74087572
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 5240357.64509349
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 6996727.75894412
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 1158203.62866374
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 111680.246398762
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 34
+    value: 120047.074576171
+  - analyte: swab_SARSCoV2_N
+    time: 40
+    value: 630268.683280098
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 61
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 76
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 83
+    value: negative
+- attributes:
+    age: 89
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 76995337.1438144
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 661054845.779042
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 1132494639.97346
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 3373840.8513041
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 2202186.00459061
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 39029.631675844
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 329368.740634592
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+- attributes:
+    age: 84
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 9836308.93429474
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 25409871.7207739
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: -3
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 160742320.494712
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 97905653.1597116
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 1367246.79742316
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 9875236.74598704
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 5949049.4367176
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 61670.6005932029
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 1972795.13610841
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 7457438.78791848
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 492567.069731904
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 46
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 54
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 58
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 68
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 73
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+- attributes:
+    age: 84
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: -8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 1498661.79025414
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 622118.256904889
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 12012804.0558721
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 1000936.41598488
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 2176901.15634924
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 9569385.50362589
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 526151.6812344
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 67
+    vaccinated: true
+    sex: female
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 4148706.55756505
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 416005.359171596
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 4086007.82766402
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 225732.84599662
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 602998.630530734
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 142449.104758675
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+- attributes:
+    age: 84
+    vaccinated: true
+    sex: female
+    ethnicity: hispanic
+    race: other
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 6518545.99189223
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 6322288.44314674
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 34695756.8079405
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 1823153.38482132
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 175028.019947927
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 71081.4706885302
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: male
+    ethnicity: hispanic
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 838585.180011101
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 78020.6824421813
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 286905.087729044
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 13909.2496970327
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 10313.2401596628
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 121301.114711061
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 56
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+- attributes:
+    age: 69
+    vaccinated: true
+    sex: male
+    race: black
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 48
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 54
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 68
+    value: negative
+- attributes:
+    age: 79
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 2373989.79301728
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 13413.8479161032
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 781473.565000664
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 2626882.55777916
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 156688.200835796
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+- attributes:
+    age: 57
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 1751766.73509914
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 3602915.78882274
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 130451.668338213
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 15836.7112917293
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 95048.8861324714
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 16927235.1480137
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 123549412.713811
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 1087461610.44959
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 44273984.2644514
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 440168401.012803
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 41609639.6150588
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 46435757.7543597
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: 16049.2962643814
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: 20887.771380065
+  - analyte: swab_SARSCoV2_N
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 41
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 47
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 54
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 61
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 68
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 75
+    value: negative
+- attributes:
+    age: 43
+    vaccinated: true
+    sex: female
+    race: other
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 5028660.18213687
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 19022.4765595574
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 23181.4361108838
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 11844.9923629196
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 86612.5236997501
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 35
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 55
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 65
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 75
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 83
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+- attributes:
+    age: 82
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 113519.919028352
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 195920.472805913
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 39
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 44
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 58
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 65
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 72
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 78
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+- attributes:
+    age: 50
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 830773018.759254
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 160485307.053229
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 3192226.80078401
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 5754919.8096449
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 389254.298849869
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 86023.5666818988
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 19041.0545572699
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 44
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 51
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 65
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 73
+    value: negative
+- attributes:
+    age: 53
+    vaccinated: true
+    sex: female
+    ethnicity: hispanic
+    race: other
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 532649194.323363
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 16848065.8797893
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 4509917.60473537
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 240623.862673351
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 656640.683798837
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 3331526.69794871
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 244901.176754967
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 130585.873716099
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 15087.9276650326
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 52
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 58
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 66
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 75
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 83
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 84
+    value: negative
+- attributes:
+    age: 39
+    vaccinated: true
+    sex: male
+    race: other
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 290684802.397509
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 239214609.939946
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 179569329.903326
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 52767516.888972
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 4795061.4268539
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 429729.919983739
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 56714.2504284548
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 89
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 112121.150030385
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 411624.236882738
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 190934.42312118
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 46
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 53
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 59
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 67
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 88
+    value: negative
+- attributes:
+    age: 20
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 1459116629.54483
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 21285229.6220124
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 207570862.4947
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 75102131.6185331
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 171171644.169588
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+- attributes: {}
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 29396332.8189849
+- attributes: {}
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 5521063.12214852
+- attributes:
+    age: 49
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 68736034.5420637
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 11756792.6460201
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 259742571.814779
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 232432453.199494
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 3017873.5867275
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 2929299.97988132
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 101978.257670798
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 61710.2046921341
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 21000.8344662816
+- attributes:
+    age: 40
+    vaccinated: true
+    sex: female
+    ethnicity: hispanic
+    race: other
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 13452377.1107797
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 46888598.502067
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 85053018.3122492
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 65672183.4826699
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 4520977.71112123
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 2499706.14516895
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 26335262.4731764
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 136191616.186368
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 2289139.40524735
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 252681.139612407
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 209938.395883355
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 77523.3333441683
+- attributes:
+    age: 50
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 10237932.1894366
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 435582.381737626
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 1877588.00719935
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 139804.399331934
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 28160.8921283996
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 104300.005618193
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 1735110.43565078
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 27666480.4082036
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 25990615.6611359
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 14478963.8160372
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: 568893.168680988
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 34
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 41
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 48
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 55
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 62
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 69
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 76
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 83
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 90
+    value: negative
+- attributes:
+    age: 54
+    vaccinated: true
+    sex: female
+    ethnicity: hispanic
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 6129075.91416548
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 761323.599602793
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 211232.994336158
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 44
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 47
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 66
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 69
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 76
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 83
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 90
+    value: negative
+- attributes:
+    age: 56
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 85806.8449445552
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 2762853.11027931
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 14913535.3011016
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 11401740.9628845
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 4335334.77792915
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 34984.802539405
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 24496.6073516316
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 51
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 58
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 65
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 72
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 79
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+- attributes:
+    age: 73
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 12675217592.8728
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 4633510359.96112
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 85757701.9354255
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 988468.469075484
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 242549.111003027
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 40289.6158422127
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 20821.2832878265
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 16537.7165074869
+  - analyte: swab_SARSCoV2_N
+    time: 15
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 38
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 46
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 55
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 63
+    value: negative
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: -2
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: 12816341.1924837
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 42010766.7619585
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 19321532.6665044
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 4097455.46159019
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 338980.880918682
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 12154.1861533621
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 168785.111760363
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 34104.7927616861
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 44449.1858234082
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 38
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 43
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 64
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 77
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 85
+    value: negative
+- attributes:
+    age: 77
+    vaccinated: false
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 219457928.784733
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 19837545.667244
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 8985295.54345373
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 877293.817388922
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 2038933.29002447
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 685098.369687103
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 76416.7872860366
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 25738.981081583
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 39947.2563859472
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 12860.8763340258
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 46
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 57
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 67
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 74
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 88
+    value: negative
+- attributes:
+    age: 63
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: -18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -2
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 0
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: 884531051.135306
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: 341942.65085858
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: 57275.8545120888
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: 197214.07637555
+  - analyte: swab_SARSCoV2_N
+    time: 29
+    value: 156897.856908524
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: 31212.798518736
+  - analyte: swab_SARSCoV2_N
+    time: 31
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: 19196.6329797306
+  - analyte: swab_SARSCoV2_N
+    time: 33
+    value: 12025.553135438
+  - analyte: swab_SARSCoV2_N
+    time: 34
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 35
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 40
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 43
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 47
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 54
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 60
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 72
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 81
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 89
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 95
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 103
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 108
+    value: negative
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 323360.858333456
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 10339.2781471711
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 51891759.2557537
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 5236022.89395035
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 1652030.11806377
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 10911916.2980195
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 12127478.0853371
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 4757677.37022139
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 22498148.2564167
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 11181350.5245878
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: 55411293.4635988
+  - analyte: swab_SARSCoV2_N
+    time: 21
+    value: 378044.583297919
+  - analyte: swab_SARSCoV2_N
+    time: 25
+    value: 6392759.81419862
+  - analyte: swab_SARSCoV2_N
+    time: 28
+    value: 388477.741016135
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: 42449.854803644
+  - analyte: swab_SARSCoV2_N
+    time: 41
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 49
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 56
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 61
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 68
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 77
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 81
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 88
+    value: negative
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 2258351880.34575
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 24484665.9779938
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 1645469.92057686
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 140825.158810223
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 71285.0073704327
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 19
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 30
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 46
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 54
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 61
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 66
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 73
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 82
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 86
+    value: negative
+- attributes:
+    age: 84
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 954359339.533382
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 38436193.0227629
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 43084810.0380047
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 15721231.8911814
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 11555.3012468249
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 488673.762606483
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 157590.310294228
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 1395129.61162192
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 22031.5317812715
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 38279.2413039334
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 35
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 40
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 47
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 62
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 71
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 75
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 82
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 91
+    value: negative
+- attributes:
+    age: 86
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: -11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: -5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 80
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 229210.693575428
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 500433.700162663
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 30112.8439474921
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+- attributes:
+    age: 90
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 674674533.227881
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 171478750.04033
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 25567154.4949231
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 33529595.9551665
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 63863191.3957026
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 136860.113049272
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 141321.192492396
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 66948.1424117188
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 11066.6726933013
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 25282.1283782117
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 21606.0655636063
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: positive
+- attributes:
+    age: 81
+    vaccinated: true
+    sex: male
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 1100856.35449794
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 360756.938620957
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 77601233.7923434
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: 1528554.37864731
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 111421524.654607
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 262120.545524764
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: 145574.34198192
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: 74954.7260302534
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: 7357188.96069697
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: 256006.188600538
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: 271648.73574352
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: 7221885.53900437
+  - analyte: swab_SARSCoV2_N
+    time: 13
+    value: 65733.050153548
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: 8785210.19421559
+  - analyte: swab_SARSCoV2_N
+    time: 17
+    value: 9652246.42500612
+  - analyte: swab_SARSCoV2_N
+    time: 20
+    value: 1765308.80835267
+  - analyte: swab_SARSCoV2_N
+    time: 24
+    value: 1589524.71975071
+  - analyte: swab_SARSCoV2_N
+    time: 27
+    value: 4530937.93971628
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: 312452.585980004
+  - analyte: swab_SARSCoV2_N
+    time: 39
+    value: 154812.248375033
+  - analyte: swab_SARSCoV2_N
+    time: 46
+    value: 432849.559484674
+  - analyte: swab_SARSCoV2_N
+    time: 53
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 60
+    value: 8349195.99365413
+  - analyte: swab_SARSCoV2_N
+    time: 67
+    value: 231717.587490341
+  - analyte: swab_SARSCoV2_N
+    time: 74
+    value: 3150296.92140029
+- attributes:
+    age: 55
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 1
+    value: 2599070835.20592
+  - analyte: swab_SARSCoV2_N
+    time: 3
+    value: 11557483.1947212
+  - analyte: swab_SARSCoV2_N
+    time: 5
+    value: 411177.946191831
+  - analyte: swab_SARSCoV2_N
+    time: 7
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 18
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 22
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 26
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 32
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 41
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 50
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 59
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 66
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 73
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 80
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 87
+    value: negative
+- attributes:
+    age: 33
+    vaccinated: true
+    sex: female
+    race: white
+  measurements:
+  - analyte: swab_SARSCoV2_N
+    time: 2
+    value: 4371582.73400852
+  - analyte: swab_SARSCoV2_N
+    time: 4
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 6
+    value: 194488.719195898
+  - analyte: swab_SARSCoV2_N
+    time: 8
+    value: positive
+  - analyte: swab_SARSCoV2_N
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 12
+    value: negative
+  - analyte: swab_SARSCoV2_N
+    time: 14
+    value: negative
