@@ -14,7 +14,7 @@ from shedding_hub import folded_str
 
 ```python
 #load the data;
-test = pd.read_excel(os.path.join(current_directory, 'NHPHRN INHERENT Public Use Files and Data Dictionary.xlsx'), sheet_name='Case list test results')
+test = pd.read_excel('NHPHRN INHERENT Public Use Files and Data Dictionary.xlsx', sheet_name='Case list test results')
 
 columns_to_keep = [
     'nh', 'outbreak_id', 'study_id', 'type', 'event', 
@@ -23,7 +23,7 @@ columns_to_keep = [
 ]
 test = test[columns_to_keep]
 
-descriptive = pd.read_excel(os.path.join(current_directory, 'NHPHRN INHERENT Public Use Files and Data Dictionary.xlsx'), sheet_name='Case descriptive information')
+descriptive = pd.read_excel('NHPHRN INHERENT Public Use Files and Data Dictionary.xlsx', sheet_name='Case descriptive information')
 
 columns_to_keep = [
     'study_id', 'enr_date', 'casedate', 
