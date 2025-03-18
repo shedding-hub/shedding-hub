@@ -27,7 +27,7 @@ for patient_id, patient_data in df_a.groupby("PatientID"):
         for _, row in patient_data.iterrows():
             if pd.notna(row['Ctvalue']):
                 measurement_ct = {
-                    "analyte": "stool_SARSCoV2",
+                    "analyte": "stool_SARSCoV2_ORF1ab",
                     "time": row["Day"],
                     "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
                 }
@@ -46,7 +46,7 @@ for patient_id, patient_data in df_b.groupby("PatientID"):
     }
     for _, row in patient_data.iterrows():
         measurement = {
-            "analyte": "stool_SARSCoV2",
+            "analyte": "stool_SARSCoV2_N",
             "time": round(float(row["Day"])),
             "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
         }
