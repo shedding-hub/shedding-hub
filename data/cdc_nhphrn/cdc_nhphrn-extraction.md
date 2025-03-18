@@ -128,7 +128,7 @@ CDC = dict(title="Centers for Disease Control and Prevention (CDC) Nursing Home 
                 participants = participants
                                         )
 
-with open("CDC_INHERENT.yaml","w") as outfile:
+with open("cdc_nhphrn.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=../.schema.yaml\n")
     yaml.dump(CDC, outfile, default_flow_style=False, sort_keys=False)
 
