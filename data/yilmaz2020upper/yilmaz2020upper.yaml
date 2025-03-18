@@ -1,0 +1,1289 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Upper Respiratory Tract Levels of Severe Acute Respiratory Syndrome Coronavirus
+  2 RNA and Duration of Viral RNA Shedding Do Not Differ Between Patients With Mild
+  and Severe/Critical Coronavirus Disease 2019
+doi: 10.1093/infdis/jiaa632
+description: >
+  The authors reported longitudinal viral RNA loads from the nasopharynx/throat in
+  patients with mild and severe/critical coronavirus disease 2019 (COVID-19). They
+  also investigated whether the duration of symptoms correlated with the duration
+  of viral RNA shedding. A total of 56 patients were included.
+analytes:
+  throatswab_SARSCoV2:
+    description: >
+      The author collected serial upper respiratory tract samples (one nasopharyngeal
+      swab and one throat swab were put in a single collection tube with 1 mL of trans-
+      port medium) for real-time PCR of SARS-CoV-2 RNA for all patients.
+    specimen:
+    - nasopharyngeal_swab
+    - throat_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 36.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 19.8
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 28.4
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 32.6
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 30.9
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 38.5
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 39.2
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: 31.9
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: 35.3
+  - analyte: throatswab_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 38
+    value: negative
+- attributes:
+    age: 40.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 26.3
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 33.7
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 32.4
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 34.6
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 38.2
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 33.2
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: 35.2
+  - analyte: throatswab_SARSCoV2
+    time: 26
+    value: 36.6
+  - analyte: throatswab_SARSCoV2
+    time: 32
+    value: negative
+- attributes:
+    age: 42.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 19.5
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 18.0
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 25.2
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 30.9
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 34.7
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 35.5
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: 38.3
+  - analyte: throatswab_SARSCoV2
+    time: 28
+    value: negative
+- attributes:
+    age: 29.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 25.9
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 20.0
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 30.4
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: negative
+- attributes:
+    age: 35.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 20.1
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 30.0
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 31.2
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: 26.4
+  - analyte: throatswab_SARSCoV2
+    time: 31
+    value: 37.7
+  - analyte: throatswab_SARSCoV2
+    time: 34
+    value: negative
+- attributes:
+    age: 61.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 22.3
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 27.7
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: negative
+- attributes:
+    age: 59.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 14.2
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 32.0
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 34.3
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: 34.1
+  - analyte: throatswab_SARSCoV2
+    time: 28
+    value: negative
+- attributes:
+    age: 32.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 21.1
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 26.8
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 36.5
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 30
+    value: negative
+- attributes:
+    age: 50.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 36.4
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 34.4
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: negative
+- attributes:
+    age: 25.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 29.1
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 36.6
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: negative
+- attributes:
+    age: 23.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 37.2
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: negative
+- attributes:
+    age: 29.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 17.6
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 21.4
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 24.4
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 36.8
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 31.9
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: 33.2
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: 33.6
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: 35.5
+  - analyte: throatswab_SARSCoV2
+    time: 29
+    value: 38.7
+  - analyte: throatswab_SARSCoV2
+    time: 35
+    value: 34.0
+  - analyte: throatswab_SARSCoV2
+    time: 38
+    value: 34.19
+  - analyte: throatswab_SARSCoV2
+    time: 43
+    value: negative
+- attributes:
+    age: 19.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 0
+    value: 30.1
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 38.3
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 40.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 28.8
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 38.1
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: negative
+- attributes:
+    age: 35.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 20.8
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 35.6
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 35.0
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: 35.0
+  - analyte: throatswab_SARSCoV2
+    time: 28
+    value: 32.0
+  - analyte: throatswab_SARSCoV2
+    time: 35
+    value: 35.1
+  - analyte: throatswab_SARSCoV2
+    time: 43
+    value: 31.6
+  - analyte: throatswab_SARSCoV2
+    time: 49
+    value: negative
+- attributes:
+    age: 19.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 24.9
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 32.5
+  - analyte: throatswab_SARSCoV2
+    time: 26
+    value: 33.7
+  - analyte: throatswab_SARSCoV2
+    time: 33
+    value: negative
+- attributes:
+    age: 26.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 21.0
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 31.6
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 37.5
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 37.3
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: negative
+- attributes:
+    age: 55.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 12.8
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 16.4
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 28.9
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: 34.6
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 33.6
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: negative
+- attributes:
+    age: 52.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 29.4
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 24.8
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: negative
+- attributes:
+    age: 58.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 0
+    value: 36.4
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 24.8
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 23.9
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: 35.5
+  - analyte: throatswab_SARSCoV2
+    time: 26
+    value: 34.72
+  - analyte: throatswab_SARSCoV2
+    time: 31
+    value: negative
+- attributes:
+    age: 52.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 28.0
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 31.7
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: negative
+- attributes:
+    age: 55.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 28.0
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 22.3
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 27.3
+  - analyte: throatswab_SARSCoV2
+    time: 23
+    value: 34.2
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: 34.1
+  - analyte: throatswab_SARSCoV2
+    time: 29
+    value: 34.09
+  - analyte: throatswab_SARSCoV2
+    time: 33
+    value: 32.37
+  - analyte: throatswab_SARSCoV2
+    time: 36
+    value: 31.7
+  - analyte: throatswab_SARSCoV2
+    time: 43
+    value: 32.84
+  - analyte: throatswab_SARSCoV2
+    time: 48
+    value: negative
+- attributes:
+    age: 22.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 25.5
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 29.1
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 18.7
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 31.7
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 29.5
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 35.8
+- attributes:
+    age: 66.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 14.6
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 31.1
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: 35.1
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 39.8
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: negative
+- attributes:
+    age: 55.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 27.4
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 27.3
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 34.4
+  - analyte: throatswab_SARSCoV2
+    time: 23
+    value: 36.6
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: 34.1
+  - analyte: throatswab_SARSCoV2
+    time: 29
+    value: 34.37
+  - analyte: throatswab_SARSCoV2
+    time: 33
+    value: 32.85
+  - analyte: throatswab_SARSCoV2
+    time: 36
+    value: 34.66
+  - analyte: throatswab_SARSCoV2
+    time: 43
+    value: negative
+- attributes:
+    age: 68.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 0
+    value: 11.9
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 33.9
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 35.3
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: negative
+- attributes:
+    age: 60.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 18.8
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 18.4
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 35.3
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: 29.0
+  - analyte: throatswab_SARSCoV2
+    time: 20
+    value: 36.2
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: 35.9
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: 37.69
+  - analyte: throatswab_SARSCoV2
+    time: 32
+    value: negative
+- attributes:
+    age: 55.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 12.7
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 32.0
+- attributes:
+    age: 53.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 28.9
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 16.6
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 22.5
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: 36.7
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: 33.6
+  - analyte: throatswab_SARSCoV2
+    time: 32
+    value: 36.25
+  - analyte: throatswab_SARSCoV2
+    time: 41
+    value: 38.57
+  - analyte: throatswab_SARSCoV2
+    time: 46
+    value: negative
+- attributes:
+    age: 43.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 0
+    value: 15.9
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 21.3
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 26.0
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 34.3
+- attributes:
+    age: 30.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 19.67
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 30.04
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 35.6
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 37.11
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: negative
+- attributes:
+    age: 46.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 22.0
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 24.3
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 27.7
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 24.4
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 24.1
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 35.5
+  - analyte: throatswab_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 23
+    value: negative
+- attributes:
+    age: 72.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 28.7
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 33.8
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 32.5
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 34.5
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 38.5
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: 33.2
+  - analyte: throatswab_SARSCoV2
+    time: 28
+    value: negative
+- attributes:
+    age: 36.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 23.1
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 50.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 31.4
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 33.0
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 31.3
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 31.2
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 33.1
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 32.8
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: negative
+- attributes:
+    age: 51.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 32.75
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 32.9
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 26.6
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: 32.9
+  - analyte: throatswab_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: negative
+- attributes:
+    age: 69.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 20.1
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 25.0
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 27.4
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 31.5
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 33.3
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: negative
+- attributes:
+    age: 57.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 2
+    value: 16.9
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 34.3
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: 37.3
+  - analyte: throatswab_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 34
+    value: 37.7
+  - analyte: throatswab_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 42
+    value: negative
+- attributes:
+    age: 51.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 29.4
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 34.2
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 33.4
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 33.5
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 34.7
+  - analyte: throatswab_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: negative
+- attributes:
+    age: 72.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 23.7
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 24.5
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 28.5
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: 26.2
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 26
+    value: 27.9
+  - analyte: throatswab_SARSCoV2
+    time: 30
+    value: 31.53
+  - analyte: throatswab_SARSCoV2
+    time: 34
+    value: 31.0
+  - analyte: throatswab_SARSCoV2
+    time: 43
+    value: 30.7
+  - analyte: throatswab_SARSCoV2
+    time: 50
+    value: 36.1
+- attributes:
+    age: 72.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 16.7
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 23.8
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 30.0
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 33.5
+  - analyte: throatswab_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: 32.7
+  - analyte: throatswab_SARSCoV2
+    time: 26
+    value: 33.56
+- attributes:
+    age: 52.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 29.3
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 26.8
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 36.9
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: 27.0
+  - analyte: throatswab_SARSCoV2
+    time: 30
+    value: 37.0
+  - analyte: throatswab_SARSCoV2
+    time: 31
+    value: 36.3
+  - analyte: throatswab_SARSCoV2
+    time: 33
+    value: 33.06
+  - analyte: throatswab_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 41
+    value: 35.44
+  - analyte: throatswab_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 47
+    value: 37.4
+- attributes:
+    age: 52.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 26.2
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 25.8
+  - analyte: throatswab_SARSCoV2
+    time: 5
+    value: 25.6
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 31.7
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 38.6
+  - analyte: throatswab_SARSCoV2
+    time: 19
+    value: negative
+- attributes:
+    age: 46.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 29.2
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 33.2
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 36.1
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: negative
+- attributes:
+    age: 57.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 22.2
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 30.9
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 33.7
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 39.0
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: 38.3
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: 36.3
+  - analyte: throatswab_SARSCoV2
+    time: 29
+    value: 34.2
+  - analyte: throatswab_SARSCoV2
+    time: 35
+    value: negative
+- attributes:
+    age: 81.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 29.5
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 30.6
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 35.9
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 30.2
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 20
+    value: 34.29
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: 33.2
+  - analyte: throatswab_SARSCoV2
+    time: 54
+    value: negative
+- attributes:
+    age: 50.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 38.1
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 29.0
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 29.3
+  - analyte: throatswab_SARSCoV2
+    time: 23
+    value: 36.65
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: 37.84
+  - analyte: throatswab_SARSCoV2
+    time: 26
+    value: negative
+- attributes:
+    age: 79.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 23.5
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 30.6
+- attributes:
+    age: 47.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 25.0
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 30.8
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 41.4
+  - analyte: throatswab_SARSCoV2
+    time: 15
+    value: 28.5
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 24
+    value: negative
+- attributes:
+    age: 67.0
+    sex: female
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 21.1
+  - analyte: throatswab_SARSCoV2
+    time: 7
+    value: 29.1
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 25.2
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 31.3
+  - analyte: throatswab_SARSCoV2
+    time: 11
+    value: 28.9
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 32.4
+  - analyte: throatswab_SARSCoV2
+    time: 17
+    value: 34.2
+  - analyte: throatswab_SARSCoV2
+    time: 20
+    value: negative
+- attributes:
+    age: 31.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 1
+    value: 24.8
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 35.8
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 46.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 4
+    value: 23.0
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 21.8
+  - analyte: throatswab_SARSCoV2
+    time: 9
+    value: 24.5
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 23.2
+  - analyte: throatswab_SARSCoV2
+    time: 14
+    value: 29.6
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: 28.9
+  - analyte: throatswab_SARSCoV2
+    time: 20
+    value: negative
+- attributes:
+    age: 48.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 3
+    value: 20.1
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 24.8
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 26.9
+  - analyte: throatswab_SARSCoV2
+    time: 12
+    value: 34.1
+  - analyte: throatswab_SARSCoV2
+    time: 18
+    value: 28.0
+  - analyte: throatswab_SARSCoV2
+    time: 21
+    value: 30.1
+  - analyte: throatswab_SARSCoV2
+    time: 25
+    value: 37.2
+  - analyte: throatswab_SARSCoV2
+    time: 28
+    value: 37.9
+  - analyte: throatswab_SARSCoV2
+    time: 33
+    value: negative
+- attributes:
+    age: 71.0
+    sex: male
+  measurements:
+  - analyte: throatswab_SARSCoV2
+    time: 6
+    value: 26.2
+  - analyte: throatswab_SARSCoV2
+    time: 8
+    value: 17.4
+  - analyte: throatswab_SARSCoV2
+    time: 10
+    value: 17.7
+  - analyte: throatswab_SARSCoV2
+    time: 13
+    value: 24.5
+  - analyte: throatswab_SARSCoV2
+    time: 16
+    value: 32.1
+  - analyte: throatswab_SARSCoV2
+    time: 22
+    value: 34.3
+  - analyte: throatswab_SARSCoV2
+    time: 27
+    value: 31.7
+  - analyte: throatswab_SARSCoV2
+    time: 31
+    value: 27.5
+  - analyte: throatswab_SARSCoV2
+    time: 35
+    value: 33.8
+  - analyte: throatswab_SARSCoV2
+    time: 38
+    value: 25.84
+  - analyte: throatswab_SARSCoV2
+    time: 43
+    value: 33.03
+  - analyte: throatswab_SARSCoV2
+    time: 49
+    value: negative
