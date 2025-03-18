@@ -74,6 +74,7 @@ output_data = {
             "specimen": "stool",
             "biomarker": "SARS-CoV-2",
             "gene_target": "ORF1ab",
+            "limit_of_quantification": "unknown", 
             "limit_of_detection": 40,
             "unit": "cycle threshold",
             "reference_event": "symptom onset"
@@ -83,6 +84,7 @@ output_data = {
             "specimen": "stool",
             "biomarker": "SARS-CoV-2",
             "gene_target": "N",
+            "limit_of_quantification": "unknown",  
             "limit_of_detection": 40,
             "unit": "cycle threshold",
             "reference_event": "hospital admission"
