@@ -31,11 +31,11 @@ analytes:
     gene_target: E and RdRP (not further specified by authors)
     unit: gc/mL
     reference_event: symptom onset
-  throat_swab:
+  oropharyngeal_swab:
     description: Number of gene copies per throat swab.
     limit_of_quantification: 100
     limit_of_detection: unknown
-    specimen: throat_swab
+    specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: E and RdRP (not further specified by authors)
     unit: gc/swab

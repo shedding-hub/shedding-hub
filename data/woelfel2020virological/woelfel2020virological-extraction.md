@@ -294,16 +294,16 @@ with open("woelfel2020virological.yaml", "w") as fp:
                 "unit": "gc/mL",
                 "reference_event": "symptom onset"
             },
-            "throat_swab": {
+            "oropharyngeal_swab": {
                 "description": "Number of gene copies per throat swab.",
                 "limit_of_quantification": 100,
                 "limit_of_detection": "unknown",
-                "specimen": "throat_swab",
+                "specimen": "oropharyngeal_swab",
                 "biomarker": "SARS-CoV-2",
                 "gene_target": "E and RdRP (not further specified by authors)",
                 "unit": "gc/swab",
                 "reference_event": "symptom onset"
-                },
+            },
         },
         "participants": patients,
     }, fp, sort_keys=False)
