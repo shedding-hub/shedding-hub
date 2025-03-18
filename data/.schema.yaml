@@ -90,6 +90,7 @@ $defs:
           - confirmation date
           - enrollment
           - hospital admission
+          - initial positive test date
     required:
       - biomarker
       - description
