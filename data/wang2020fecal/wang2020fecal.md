@@ -18,41 +18,42 @@ df_b["Ctvalue"] = pd.to_numeric(df_b["Ctvalue"], errors="coerce")
 
 
 ```python
-participants_ORF1ab = []    
+participants_ORF1ab = []
 for patient_id, patient_data in df_a.groupby("PatientID"):
-        participant = {
-            "attributes": {},  
-            "measurements": []
-        }
-        for _, row in patient_data.iterrows():
-            if pd.notna(row['Ctvalue']):
-                measurement_ct = {
-                    "analyte": "stool_SARSCoV2_ORF1ab",
-                    "time": row["Day"],
-                    "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
-                }
-                participant['measurements'].append(measurement_ct)
+    participant = {
+        "attributes": {},  
+        "measurements": []
+    }   
+    for _, row in patient_data.iterrows():
+        if pd.notna(row["Ctvalue"]):  
+            measurement_ct = {
+                "analyte": "stool_SARSCoV2_ORF1ab",
+                "time": int(row["Day"]),  
+                "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
+            }
+            participant["measurements"].append(measurement_ct)
 
-participants_ORF1ab.append(participant)
+    if participant["measurements"]:
+        participants_ORF1ab.append(participant)
 ```
-
 
 ```python
 participants_N = []
 for patient_id, patient_data in df_b.groupby("PatientID"):
     participant = {
-        "attributes": {},  
+        "attributes": {}, 
         "measurements": []
     }
     for _, row in patient_data.iterrows():
-        measurement = {
-            "analyte": "stool_SARSCoV2_N",
-            "time": round(float(row["Day"])),
-            "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
-        }
-        participant["measurements"].append(measurement)
-
-    participants_N.append(participant)
+        if pd.notna(row["Ctvalue"]):  
+            measurement_ct = {
+                "analyte": "stool_SARSCoV2_N",
+                "time": int(row["Day"]),  
+                "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
+            }
+            participant["measurements"].append(measurement_ct)  
+    if participant["measurements"]:
+        participants_N.append(participant)
 ```
 
 
