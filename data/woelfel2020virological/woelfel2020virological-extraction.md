@@ -162,10 +162,22 @@ markers_by_patient_and_kind = {
 }
 ```
 
-We are finally ready to extract the data for each patient. We obtain the x and y axes by picking the longest horizontal and vertical lines of the `axes` kind, respectively. This allows us to transform from the graphics coordinates to the data coordinates. The y axis has limits from 0 (representing a negative sample) to 10 on the log10 scale. But the x axes of each subplot are not shared, and we manually extract the limits from the figure in the publication.
+We are finally ready to extract the data for each patient. We obtain the x and y axes by picking the longest horizontal and vertical lines of the `axes` kind, respectively. This allows us to transform from the graphics coordinates to the data coordinates. The y axis has limits from 0 (representing a negative sample) to 10 on the log10 scale. But the x axes of each subplot are not shared, and we manually extract the limits from the figure in the publication. The attributes are manually defined.
 
 ```python
 fig, ax = plt.subplots()
+
+attributes = [
+    {"age": 34, "sex": "male"},
+    {"age": 41, "sex": "male"},
+    {"age": 28, "sex": "male"},
+    {"age": 33, "sex": "male"},
+    {"age": 52, "sex": "male"},
+    {"age": 33, "sex": "male"},
+    {"age": 58, "sex": "male"},
+    {"age": 49, "sex": "male"},
+    {"age": 49, "sex": "male"},
+]
 
 xlims = [
     (3.5, 22.5),
@@ -210,7 +222,7 @@ for patient, lines_by_kind in lines_by_patient_and_kind.items():
             "time": round(day),
             "value": "negative" if log10 < 0.05 else float(10 ** log10)
         } for day, log10 in zip(days, log10s))
-    patients.append({"measurements": measurements})
+    patients.append({"attributes": attributes[patient], "measurements": measurements})
 ```
 
 Having extracted the data, we can now plot it on regular axes to verify that the extraction worked as expected.
@@ -244,5 +256,55 @@ Finally, we write the data as a YAML file which can be copied into the `data` fo
 # Dump the data to YAML in the correct format.
 with open("woelfel2020virological.yaml", "w") as fp:
     fp.write("# yaml-language-server: $schema=../.schema.yaml\n")
-    yaml.dump(patients, fp)
+    yaml.dump({
+        "title": "Virological assessment of hospitalized patients with COVID-2019",
+        "doi": "10.1038/s41586-020-2196-x",
+        "description": "The authors conducted a virological analysis of nine linked "
+        "cases of COVID-19 in Munich in early 2020. They quantified SARS-CoV-2 RNA "
+        "gene copies in throat swabs and RNA concentrations in stool and sputum "
+        "samples. Abundances were quantified using RT-qPCR assays targeting the E and "
+        "RdRP genes as described in 10.2807/1560-7917.ES.2020.25.3.2000045. Values "
+        "were programmatically extracted from the figure, resulting in a number of "
+        "significant figures far exceeding the performance of the assays. The "
+        "demographic data, including age and sex, are derived from the Challenger et "
+        "al. BMC Medicine (2022) 20:25 https://doi.org/10.1186/s12916-021-02220-0 "
+        "supplement combined dataset.",
+        "analytes": {
+            "stool": {
+                "description": "RNA gene copy concentration in stool samples. The "
+                "authors report that \"stool samples were taken and shipped in native "
+                "conditions,\" suggesting that results reported as gene copies per "
+                "gram refer to wet weight.",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "gene_target": "E and RdRP (not further specified by authors)",
+                "unit": "gc/mL",
+                "reference_event": "symptom onset"
+            },
+            "sputum": {
+                "description": "RNA gene copy concentration in sputum samples. Results "
+                "are reported as gene copies per mL.",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+                "specimen": "sputum",
+                "biomarker": "SARS-CoV-2",
+                "gene_target": "E and RdRP (not further specified by authors)",
+                "unit": "gc/mL",
+                "reference_event": "symptom onset"
+            },
+            "throat_swab": {
+                "description": "Number of gene copies per throat swab.",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+                "specimen": "throat_swab",
+                "biomarker": "SARS-CoV-2",
+                "gene_target": "E and RdRP (not further specified by authors)",
+                "unit": "gc/swab",
+                "reference_event": "symptom onset"
+                },
+        },
+        "participants": patients,
+    }, fp, sort_keys=False)
 ```
