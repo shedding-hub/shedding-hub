@@ -10,15 +10,13 @@ import io
 import matplotlib as mpl
 from matplotlib import pyplot as plt
 import numpy as np
-import requests
 import pymupdf
 import yaml
 
 
 # Load the document from Nature and get the page with the figure.
-response = requests.get("https://www.nature.com/articles/s41586-020-2196-x.pdf")
-response.raise_for_status()
-document = pymupdf.Document(stream=response.content)
+with open("woelfel2020virological.pdf", "rb") as fp:
+    document = pymupdf.Document(stream=fp.read())
 page = document[2]
 ```
 
@@ -244,7 +242,7 @@ Finally, we write the data as a YAML file which can be copied into the `data` fo
 
 ```python
 # Dump the data to YAML in the correct format.
-stream = io.StringIO()
-yaml.dump(patients, stream)
-print(stream.getvalue())
+with open("woelfel2020virological.yaml", "w") as fp:
+    fp.write("# yaml-language-server: $schema=../.schema.yaml\n")
+    yaml.dump(patients, fp)
 ```
