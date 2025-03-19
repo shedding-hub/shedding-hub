@@ -26,7 +26,6 @@ The standard curve for converting `Ct` values to viral load per swab was establi
 
 ```python
 from sklearn.linear_model import LinearRegression
-Xu2020 = pd.read_csv("Viral_Loads.csv")
 Young2020 = Young2020[Young2020["cov_study"]==1]
 Young2020 = Young2020[Young2020['Ct'] != 40]
 X = Young2020['Ct'].values.reshape(-1, 1)
