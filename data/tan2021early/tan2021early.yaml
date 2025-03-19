@@ -10,13 +10,13 @@ analytes:
   swab_SARSCoV2_N:
     description: >
       The swab_SARSCoV2_N analyte refers to the detection of SARS-CoV-2 RNA in patient
-      oral swabs, using RT-PCR cycle threshold (CT) values to calculate the relative
-      quantities of SARS-CoV-2 RNA. 10^(-11) was the detection limit, which was transformed
-      as CT value equals 36.5. Data was obtained from the combined dataset in the
-      supplementary materials of Challenger et al. (2022)
+      oropharyngeal swabs, using RT-PCR cycle threshold (CT) values to calculate the
+      relative quantities of SARS-CoV-2 RNA. 10^(-11) was the detection limit, which
+      was transformed as CT value equals 36.5. Data was obtained from the combined
+      dataset in the supplementary materials of Challenger et al. (2022)
     limit_of_quantification: unknown
     limit_of_detection: 36.5
-    specimen: throat_swab
+    specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     unit: cycle threshold
     reference_event: symptom onset

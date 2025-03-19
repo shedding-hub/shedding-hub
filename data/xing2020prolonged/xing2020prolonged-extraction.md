@@ -1,6 +1,6 @@
 # Extraction for Xing et al. (2020)
 
-[Xing et al. (2020)](https://doi.org/10.1016/j.jmii.2020.03.021) compared the dynamic changes of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) RNA in respiratory and fecal specimens in children with coronavirus disease 2019 (COVID-19). Only one case with complete demographic information (e.g., age, sex, etc.) and specimen test results was included in the paper.
+[Xing et al. (2020)](https://doi.org/10.1016/j.jmii.2020.03.021) compared the dynamic changes of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) RNA in respiratory and fecal specimens in children with coronavirus disease 2019 (COVID-19). Only one case with complete demographic information (e.g., age, sex, etc.) and specimen test results was included in the paper. Throat samples were recorded as oropharyngeal samples in the standardized dataset.
 
 First, we `import` python modules needed:
 
@@ -38,9 +38,9 @@ for case_key, case_info in patient_demo_info.items():
     measurements = []
     # Iterate over each time point
     for index, t in enumerate(time):  # Use enumerate to get both index and value
-        # Append throat swab data for all time points
+        # Append oropharyngeal swab data for all time points
             measurements.append({
-                "analyte": "throat_swab_SARSCoV2",
+                "analyte": "oropharyngeal_swab_SARSCoV2",
                 "time": t,
                 "value": ct_throat[index] if ct_throat[index] < 40 else 'negative'
             })
@@ -69,7 +69,7 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 Xing2020 = dict(title="Prolonged viral shedding in feces of pediatric patients with coronavirus disease 2019",
                doi="10.1016/j.jmii.2020.03.021",
-               description=folded_str('This study characterized the dynamic profiles of SARS-CoV-2 shedding in respiratory and fecal specimens in three children with COVID-19. However, complete specimen test value data were available for only one child. A total of 19 throat swab specimens and 17 fecal specimens were collected.\n'),
+               description=folded_str('This study characterized the dynamic profiles of SARS-CoV-2 shedding in respiratory and fecal specimens in three children with COVID-19. However, complete specimen test value data were available for only one child. A total of 19 oropharyngeal swab specimens and 17 fecal specimens were collected.\n'),
                analytes=dict(stool_SARSCoV2=dict(description=folded_str("Presence of SARS-CoV-2 RNA was detected by RT-PCR in stool samples. The PCR assay simultaneously amplified two target genes of SARS-CoV-2 included open reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle threshold (Ct) value no more than 40 with evident amplification curve was considered as a positive test, and a value of 40 indicated the virus was molecularly undetectable.\n"),
                                                     specimen="stool",
                                                     biomarker="SARS-CoV-2",
@@ -78,8 +78,8 @@ Xing2020 = dict(title="Prolonged viral shedding in feces of pediatric patients w
                                                     limit_of_detection=40,
                                                     unit="cycle threshold",
                                                     reference_event="hospital admission"), 
-                             throat_swab_SARSCoV2=dict(description=folded_str("Presence of SARS-CoV-2 RNA was detected by RT-PCR in throat_swab samples. The PCR assay simultaneously amplified two target genes of SARS-CoV-2 included open reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle threshold (Ct) value no more than 40 with evident amplification curve was considered as a positive test, and a value of 40 indicated the virus was molecularly undetectable.\n"),
-                                              specimen="throat_swab",
+                             oropharyngeal_swab_SARSCoV2=dict(description=folded_str("Presence of SARS-CoV-2 RNA was detected by RT-PCR in oropharyngeal_swab samples. The PCR assay simultaneously amplified two target genes of SARS-CoV-2 included open reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle threshold (Ct) value no more than 40 with evident amplification curve was considered as a positive test, and a value of 40 indicated the virus was molecularly undetectable.\n"),
+                                              specimen="oropharyngeal_swab",
                                               biomarker="SARS-CoV-2",
                                               gene_target="ORF1ab, N",
                                               limit_of_quantification="unknown",
