@@ -14,7 +14,7 @@ analytes:
       and oropharyngeal swabs, but only the nasopharyngeal swab values are presented.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
-    gene_target: E, RdRP
+    gene_target: E and RdRP
     limit_of_quantification: unknown
     limit_of_detection: 41
     unit: cycle threshold

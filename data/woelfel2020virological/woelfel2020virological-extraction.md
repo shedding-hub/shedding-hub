@@ -1,6 +1,6 @@
 # Extracting Data From Vector Graphics
 
-When raw data are not available, they can often be extracted from figures in publications. Vector graphics, as are often present in modern PDFs, are particularly suitable for data extraction because each visual element can be accessed programmatically. For rasterized figures, other methods, such as [WebPlotDigitizer](https://automeris.io), may be suitable. Here, we extract viral loads for throat swabs and stool and sputum samples from [one of the early virological analyses conducted to study SARS-CoV-2](https://doi.org/10.1038/s41586-020-2196-x). Unfortunately, there is no "standard" format for these vector graphics, and each extraction is likely to take some time to get right.
+When raw data are not available, they can often be extracted from figures in publications. Vector graphics, as are often present in modern PDFs, are particularly suitable for data extraction because each visual element can be accessed programmatically. For rasterized figures, other methods, such as [WebPlotDigitizer](https://automeris.io), may be suitable. Here, we extract viral loads for throat swabs and stool and sputum samples from [one of the early virological analyses conducted to study SARS-CoV-2](https://doi.org/10.1038/s41586-020-2196-x). Unfortunately, there is no "standard" format for these vector graphics, and each extraction is likely to take some time to get right. Throat samples were recorded as oropharyngeal samples in the standardized dataset.
 
 The data for nine patients are shown in figure 2 on the third page as a vector graphic. We first download the PDF document, load it using the [`pymupdf`](https://pymupdf.readthedocs.io/en/latest/index.html) library, and extract the third page.
 
@@ -148,7 +148,7 @@ We now have all the data grouped by patient and color of the lines which allows 
 kind_by_color = {
     (0, 0, 0): "axes",
     (0.9289997816085815, 0.4899977147579193, 0.1919890195131302): "sputum",
-    (1.0, 0.7529869675636292, 0.0): "throat_swab",
+    (1.0, 0.7529869675636292, 0.0): "oropharyngeal_swab",
     (0.49799343943595886, 0.49799343943595886, 0.49799343943595886): "stool",
 }
 
@@ -294,16 +294,16 @@ with open("woelfel2020virological.yaml", "w") as fp:
                 "unit": "gc/mL",
                 "reference_event": "symptom onset"
             },
-            "throat_swab": {
+            "oropharyngeal_swab": {
                 "description": "Number of gene copies per throat swab.",
                 "limit_of_quantification": 100,
                 "limit_of_detection": "unknown",
-                "specimen": "throat_swab",
+                "specimen": "oropharyngeal_swab",
                 "biomarker": "SARS-CoV-2",
                 "gene_target": "E and RdRP (not further specified by authors)",
                 "unit": "gc/swab",
                 "reference_event": "symptom onset"
-                },
+            },
         },
         "participants": patients,
     }, fp, sort_keys=False)

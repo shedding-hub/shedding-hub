@@ -1,6 +1,6 @@
 # Extraction for kimse et al. (2020)
 
-[Kim et al. (2020)](https://www.ijidonline.com/article/S1201-9712(20)30299-X/fulltext) The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected from all patients at least two days after hospitalization and physicians checked their symptoms and signs daily. This study included both symptomatic and asymptomatic cases. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). 
+[Kim et al. (2020)](https://www.ijidonline.com/article/S1201-9712(20)30299-X/fulltext) The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020. Abundances were quantified using real-time reverse transcription polymerase chain reaction (RT-PCR). Specimens were collected from all patients at least two days after hospitalization and physicians checked their symptoms and signs daily. This study included both symptomatic and asymptomatic cases. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub). Throat samples were recorded as oropharyngeal samples in the standardized dataset.
 
 First, we `import` python modules needed:
 
@@ -31,7 +31,7 @@ for patient_id, patient_data in combineddataset_df.groupby("PatientID"):
 
     for _, row in patient_data.iterrows():
         measurement = {
-            "analyte": "throatswab_SARSCoV2_symptomatic",
+            "analyte": "oropharyngealswab_SARSCoV2_symptomatic",
             "time": round(float(row["Day"])),
             "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
         }
@@ -53,7 +53,7 @@ for patient_id, patient_data in asymptomatic_df.groupby("PatientID"):
     }
     for _, row in patient_data.iterrows():
         measurement = {
-            "analyte": "throatswab_SARSCoV2_asymptomatic",
+            "analyte": "oropharyngealswab_SARSCoV2_asymptomatic",
             "time": round(float(row["Day"])), 
              "value": round(float(row["value"])) if round(float(row["value"])) < 40 else "negative"
         }
@@ -74,12 +74,12 @@ output_data = {
     "title": "Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients",
     "doi": "10.1016/j.ijid.2020.04.083",
     "description": folded_str(
-        "The authors measured SARS-CoV-2 in longitudinal throat swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020.\n"
+        "The authors measured SARS-CoV-2 in longitudinal oropharyngeal swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020.\n"
     ),
     "analytes": {
-        "throatswab_SARSCoV2_symptomatic": {
-            "description": folded_str("SARS-CoV-2 RNA genome copy concentration in throat swab samples. Ct = 35 is the cut-off for a positive result and Ct = 40 is a negative sample; Ct = 40 was the limit of detection.\n"),
-            "specimen": "throat_swab",
+        "oropharyngealswab_SARSCoV2_symptomatic": {
+            "description": folded_str("SARS-CoV-2 RNA genome copy concentration in oropharyngeal swab samples. Ct = 35 is the cut-off for a positive result and Ct = 40 is a negative sample; Ct = 40 was the limit of detection.\n"),
+            "specimen": "oropharyngeal_swab",
             "biomarker": "SARS-CoV-2",
             "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
@@ -87,9 +87,9 @@ output_data = {
             "unit": "cycle threshold",
             "reference_event": "symptom onset"
         },
-         "throatswab_SARSCoV2_asymptomatic": {
-            "description": folded_str("SARS-CoV-2 RNA genome copy concentration in throat swab samples.Ct = 35 is the cut-off for a positive result and Ct = 40 is a negative sample; Ct = 40 was the limit of detection.\n"),
-            "specimen": "throat_swab",
+         "oropharyngealswab_SARSCoV2_asymptomatic": {
+            "description": folded_str("SARS-CoV-2 RNA genome copy concentration in oropharyngeal swab samples.Ct = 35 is the cut-off for a positive result and Ct = 40 is a negative sample; Ct = 40 was the limit of detection.\n"),
+            "specimen": "oropharyngeal_swab",
             "biomarker": "SARS-CoV-2",
             "gene_target": "RdRp",
             "limit_of_quantification": "unknown",
