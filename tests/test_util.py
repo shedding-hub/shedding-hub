@@ -31,7 +31,7 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # need updates.
         (
             {"dataset": "woelfel2020virological"},
-            "0320f30d4165d0a40c08339187572fd350d6851f",
+            "d93f77da4babf4247f7775121adc749337f53f31",
         ),
         # An old version of the Woelfel dataset from a PR before folder restructuring.
         (
