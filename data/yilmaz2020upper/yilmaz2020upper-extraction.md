@@ -10,8 +10,8 @@ from shedding_hub import folded_str
 ```
 ```python
 # Step 1: Read in data from Excel files
-data = pd.read_excel("CombinedDataset.xlsx") 
-data = data[data['StudyNum'] == 14] 
+data = pd.read_excel("CombinedDataset.xlsx")
+data = data[data['StudyNum'] == 14]
 
 
 # Step 2: Replace values in the Series
@@ -21,7 +21,7 @@ data = data.replace({
     "Moderate": "moderate",
     "Mild": "mild",
     "Severe": "severe",
-    **{f"14-{i}": str(i) for i in range(1, 55)}  
+    **{f"14-{i}": str(i) for i in range(1, 55)}
 })
 ```
 
@@ -60,7 +60,7 @@ for patient_id, patient_data in df.groupby("PatientID"):
             participant['measurements'].append(measurement_ct)
 
     # Append participant after processing all rows
-    participants.append(participant) 
+    participants.append(participant)
 ```
 
 Finally, the data is formatted and output as a YAML file.
@@ -74,7 +74,7 @@ output_data = {
     "analytes": {
         "oropharyngealswab_SARSCoV2": {
             "description": folded_str(
-                "The author collected serial upper respiratory tract samples (one nasopharyngeal swab and one oropharyngeal swab were put in a single collection tube with 1 mL of trans- port medium) for real-time PCR of SARS-CoV-2 RNA for all patients.\n"
+                "The author collected serial upper respiratory tract samples (one nasopharyngeal swab and one oropharyngeal swab were put in a single collection tube with 1 mL of transport medium) for real-time PCR of SARS-CoV-2 RNA for all patients.\n"
             ),
             "specimen": ["nasopharyngeal_swab", "oropharyngeal_swab"],
             "biomarker": "SARS-CoV-2",
