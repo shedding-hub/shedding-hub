@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below along with the primary data sources."
+type: dataset
+authors:
+- family-names: "Wang"
+  given-names: "Yuke"
+  orcid: "https://orcid.org/0000-0002-9615-7859"
+- family-names: "Hoffmann"
+  given-names: "Till"
+  orcid: "https://orcid.org/0000-0003-4403-0722"
+- family-names: "Xiao"
+  given-names: "Wenfei"
+- family-names: "Hu"
+  given-names: "Youwei"
+- family-names: "Chen"
+  given-names: "Zirui"
+- family-names: "Zhang"
+  given-names: "Haisu"
+- family-names: "Shen"
+  given-names: "Lejun"
+- family-names: "Zhai"
+  given-names: "Siyu"
+title: "Shedding Hub"
+version: 1.0.0
+doi: 10.5281/zenodo.15052773
+date-released: 2025-03-19
+url: "https://github.com/shedding-hub/shedding-hub"
