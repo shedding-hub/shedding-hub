@@ -25,7 +25,7 @@ ${EXTRACTION_LOGS} : %.log : %.py
 backup_data : ${DATA_BACKUPS}
 
 ${DATA_BACKUPS} : ${TMPDIR}%.yaml :
-	cp data/$*/$*.yaml $@
+	mv data/$*/$*.yaml $@
 
 assert_data_unchanged : ${DATA_CHECKS}
 
