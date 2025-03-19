@@ -103,7 +103,7 @@ for patient_id, group in merged_df.groupby('study_id'):
             continue
 
         measurement = {
-            'analyte': 'swab_SARSCoV2_N',
+            'analyte': 'NP_SARSCoV2',
             'time': row['day'],
             'value': value
         }
