@@ -9,7 +9,7 @@ analytes:
     description: One analyte.
     specimen:
       - sputum
-      - throat_swab
+      - oropharyngeal_swab
     biomarker: mtDNA
     reference_event: symptom onset
     unit: gc/wet gram
