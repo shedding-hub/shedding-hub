@@ -51,7 +51,7 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # Load from local directory.
         (
             {"dataset": "woelfel2020virological", "local": "data"},
-            "7a76032013b04139ebe5bcaa3dd092e7f64b5081",
+            "0320f30d4165d0a40c08339187572fd350d6851f",
         ),
     ],
 )
