@@ -31,7 +31,7 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # need updates.
         (
             {"dataset": "woelfel2020virological"},
-            "7a76032013b04139ebe5bcaa3dd092e7f64b5081",
+            "d93f77da4babf4247f7775121adc749337f53f31",
         ),
         # An old version of the Woelfel dataset from a PR before folder restructuring.
         (
@@ -51,7 +51,7 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # Load from local directory.
         (
             {"dataset": "woelfel2020virological", "local": "data"},
-            "7a76032013b04139ebe5bcaa3dd092e7f64b5081",
+            "d93f77da4babf4247f7775121adc749337f53f31",
         ),
     ],
 )

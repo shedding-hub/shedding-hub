@@ -1,0 +1,446 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Assessing Viral Shedding and Infectivity of Tears in Coronavirus Disease 2019
+  (COVID-19) Patients
+doi: 10.1016/j.ophtha.2020.03.026
+description: >
+  This study investigated the potential transmission of SARS-CoV-2 through tears by
+  detecting the virus using viral isolation and quantitative reverse-transcription
+  polymerase chain reaction (RT-PCR) analysis. A total of 17 COVID-19 patients were
+  enrolled in this prospective study in Singapore after obtaining informed consent.
+  Researchers collected 135 nasopharyngeal swab samples and 32 tear samples throughout
+  the study (all tear samples showed negative results for SARS-CoV-2 on viral isolation
+  and RT-PCR). No evidence of SARS-CoV-2 shedding in tears was observed during the
+  course of the disease. In conclusion, the findings suggest that the risk of SARS-CoV-2
+  transmission through tears is minimal.
+analytes:
+  nasopharyngeal_swab_SARSCoV2:
+    description: >
+      The presence of SARS-CoV-2 is assessed with viral isolation and quantitative
+      reverse-transcription polymerase chain reaction (RT-PCR) analysis for patients'
+      nasopharyngeal swabs.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 24.4
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 20.11
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 19.09
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 21.65
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 24.0
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 23.46
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 23.17
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: 24.3
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 37.92
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 32.75
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 27.06
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 22.28
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 22.41
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 24.3
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 28.5
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 30.31
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 26.67
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 25.8
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 27.99
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 38.05
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 21.2
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 22.04
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 24.51
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 28.4
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 28.24
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 30.54
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: 34.86
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: 36.83
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 37.17
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 29.48
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 26.19
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 28.69
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: 34.07
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: 35.48
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: 33.5
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 31.18
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 36.28
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 37.7
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 35.02
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 34.69
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 35.09
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 26.33
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 29.15
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: 37.05
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: 37.1
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 35.14
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 31.22
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 33.71
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 34.17
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: 34.63
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: 34.25
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 29.04
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 20
+    value: 35.33
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 34.1
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 29.19
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 33.72
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 36.2
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: 36.71
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: 33.13
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 35.14
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: 37.55
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 32.79
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 33.43
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 38.16
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 32.28
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 39.39
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: 35.91
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: 37.72
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: 38.42
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: 38.21
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 38.21
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 20
+    value: 36.0
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 29.54
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: 33.04
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 37.55
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 29.3
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 34.0
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 33.31
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 28.66
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: 35.27
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: 34.53
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: 30.77
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: 37.45
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: 35.92
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 32.29
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 20
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 25.4
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 26.38
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 33.06
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 32.26
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 30.2
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: 36.21
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: 29.48
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: 22.89
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: 22.15
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: 38.81
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 36.34
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 20
+    value: negative
+- measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 19.35
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 20.01
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 21.97
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: 29.06
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: 32.19
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: 32.27
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 21.31
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 14
+    value: 19.22
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: 34.1
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 16
+    value: 32.05
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: 30.43
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 19
+    value: 36.52
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 20
+    value: negative

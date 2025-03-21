@@ -16,7 +16,6 @@ $defs:
       - sputum
       - urine
       - plasma
-      - throat_swab
       - oropharyngeal_swab
       - nasopharyngeal_swab
       - saliva
@@ -83,6 +82,7 @@ $defs:
           - gc/swab
           - gc/wet gram
           - cycle threshold
+          - pfu/mL
       reference_event:
         description: Event used as reference for `time` fields of measurements.
         type: string
