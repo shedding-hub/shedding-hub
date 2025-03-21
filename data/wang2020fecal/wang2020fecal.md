@@ -1,3 +1,17 @@
+## Data Extraction
+The data used in this study was extracted from **Figure 1 of the original paper** using **WebPlotDigitizer**, a tool for extracting numerical data from images of graphs. The extracted data was saved into two `.xlsx` files:
+
+- **`A data.xlsx`** → Corresponds to **ORF1ab gene measurements**
+- **`B data.xlsx`** → Corresponds to **N gene measurements**
+
+These two files contain the cycle threshold (Ct) values for SARS-CoV-2 RNA in fecal samples, with respect to the **days since symptom onset**
+## Source Figure
+The figure below represents the data used in this study:
+![Source Figure](data.jpg)
+
+The following Python script was used to process the extracted data:
+
+
 ```python
 import yaml
 import pandas as pd
@@ -8,70 +22,55 @@ from shedding_hub import folded_str
 ```python
 df_a = pd.read_excel("A data.xlsx")
 df_b = pd.read_excel("B data.xlsx")
-df_a.columns = ["PatientID", "Day", "Ctvalue"]
-df_b.columns = ["PatientID", "Day", "Ctvalue"]
-df_a["Day"] = df_a["Day"].astype(int)
-df_a["Ctvalue"] = pd.to_numeric(df_a["Ctvalue"], errors="coerce")
-df_b["Day"] = df_b["Day"].astype(int)
-df_b["Ctvalue"] = pd.to_numeric(df_b["Ctvalue"], errors="coerce")
+df_a.columns = ["patients", "days", "ctvalue"]
+df_b.columns = ["patients", "days", "ctvalue"]
+df_a["days"] = df_a["days"].astype(int)
+df_b["days"] = df_b["days"].astype(int)
+df_a["ctvalue"] = pd.to_numeric(df_a["ctvalue"], errors="coerce")
+df_b["ctvalue"] = pd.to_numeric(df_b["ctvalue"], errors="coerce")
 ```
 
 
 ```python
-participants_ORF1ab = []
-for patient_id, patient_data in df_a.groupby("PatientID"):
-    participant = {
-        "attributes": {},  
-        "measurements": []
-    }   
-    for _, row in patient_data.iterrows():
-        if pd.notna(row["Ctvalue"]):  
-            measurement_ct = {
-                "analyte": "stool_SARSCoV2_ORF1ab",
-                "time": int(row["Day"]),  
-                "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
-            }
-            participant["measurements"].append(measurement_ct)
-
-    if participant["measurements"]:
-        participants_ORF1ab.append(participant)
+df_merged = pd.merge(df_a, df_b, on=["patients", "days"], how="outer", suffixes=("_ORF1ab", "_N"))
 ```
-
-```python
-participants_N = []
-for patient_id, patient_data in df_b.groupby("PatientID"):
-    participant = {
-        "attributes": {}, 
-        "measurements": []
-    }
-    for _, row in patient_data.iterrows():
-        if pd.notna(row["Ctvalue"]):  
-            measurement_ct = {
-                "analyte": "stool_SARSCoV2_N",
-                "time": int(row["Day"]),  
-                "value": float(row["Ctvalue"]) if float(row["Ctvalue"]) < 40 else "negative"
-            }
-            participant["measurements"].append(measurement_ct)  
-    if participant["measurements"]:
-        participants_N.append(participant)
-```
-
 
 ```python
 participants = []
-participants.extend(participants_ORF1ab)
-participants.extend(participants_N)
-```
+for patient_id, patient_data in df_merged.groupby("patients"):
+    participant = {
+        "measurements": []
+    }
 
+    for _, row in patient_data.iterrows():
+        if pd.notna(row["ctvalue_ORF1ab"]):
+            measurement_orf1ab = {
+                "analyte": "stool_SARSCoV2_ORF1ab",
+                "time": int(row["days"]),
+                "value": float(row["ctvalue_ORF1ab"]) if float(row["ctvalue_ORF1ab"]) < 40 else "negative"
+            }
+            participant["measurements"].append(measurement_orf1ab)
+
+        if pd.notna(row["ctvalue_N"]):
+            measurement_n = {
+                "analyte": "stool_SARSCoV2_N",
+                "time": int(row["days"]),
+                "value": float(row["ctvalue_N"]) if float(row["ctvalue_N"]) < 40 else "negative"
+            }
+            participant["measurements"].append(measurement_n)
+
+    if participant["measurements"]:
+        participants.append(participant)
+```
 
 ```python
 output_data = {
     "title": "Fecal viral shedding in COVID-19 patients: Clinical significance, viral load dynamics and survival analysis",
     "doi": "10.1016/j.virusres.2020.198147",
-    "description": "This study investigates the fecal shedding of SARS-CoV-2 in COVID-19 patients, analyzing viral load dynamics, clinical significance, and survival analysis.",
+    "description": folded_str("This study investigates the fecal shedding of SARS-CoV-2 in COVID-19 patients, analyzing viral load dynamics, clinical significance, and survival analysis.\n"),
     "analytes": {
         "stool_SARSCoV2_ORF1ab": {
-            "description": "qPCR analysis of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene. Ct = 35 is the cut-off for a positive result, and Ct = 40 is a negative sample.",
+            "description": folded_str("qPCR analysis of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene. Ct less than 35 is defined as positive, and Ct > 40 is considered as negative.\n"),
             "specimen": "stool",
             "biomarker": "SARS-CoV-2",
             "gene_target": "ORF1ab",
@@ -81,14 +80,14 @@ output_data = {
             "reference_event": "symptom onset"
         },
         "stool_SARSCoV2_N": {
-            "description": "qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene. Ct = 35 is the cut-off for a positive result, and Ct = 40 is a negative sample.",
+            "description": folded_str("qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene. Ct = 35 is the cut-off for a positive result, and Ct = 40 is a negative sample.\n"),
             "specimen": "stool",
             "biomarker": "SARS-CoV-2",
             "gene_target": "N",
             "limit_of_quantification": "unknown",  
             "limit_of_detection": 40,
             "unit": "cycle threshold",
-            "reference_event": "hospital admission"
+            "reference_event": "symptom onset"
         }
     },  
     "participants": participants
@@ -96,4 +95,8 @@ output_data = {
 with open("wang2020fecal.yaml","w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False)
+```
+
+```python
+
 ```
