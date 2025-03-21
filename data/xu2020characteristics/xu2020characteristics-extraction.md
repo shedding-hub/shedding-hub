@@ -14,7 +14,7 @@ from shedding_hub import folded_str
 
 We extracted the raw data using [automeris.io](https://automeris.io/) from Figure 1 (b) (see below) in [Xu et al. (2020)](https://www.nature.com/articles/s41591-020-0817-4/figures/1). The extracted data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/xu2020characteristics), was loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml).
 
-[!image](patient_data_rectal.png)
+![image](patient_data_rectal.png)
 [!image](patient_data_nasopharyngeal.png)
 
 ```python
