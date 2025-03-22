@@ -49,7 +49,7 @@ slope, intercept = ct_transformation_vl(ct_values, copies_per_ml)
 
 ![Linear Regression Plot](ct_value_vs_viral_load.png)
 
-Cycle threshold (`Ct`) values were plotted against the corresponding viral load (VL) values per swab in the figure above. A linear regression was performed to obtain the slope and intercept of the standard curve and serves as the basis for converting `Ct` values into viral load concentration based on four pairs of points provided by the author.
+Cycle threshold (`Ct`) values were plotted against the corresponding viral load (VL) values per swab in the figure above. A linear regression was performed to obtain the slope and intercept of the standard curve and serves as the basis for converting `Ct` values into viral load concentration based on four pairs of data points provided in the Methods Part, Statistical Analysis section of the article.
 
 The derived standard curve equation is adjusted into an exponential format. Thus, for each `Ctvalue` in the `xu2020` dataset, the viral load is calculated as $\text{concentration} = 10^{(13.8596 + (-0.2841) \times \text{Ctvalue})}$, except for a `Ctvalue` of 40, which defaults to a concentration of 1 to account for undetectable viral loads.
 
@@ -119,7 +119,7 @@ Xu2020 = dict(title="Characteristics of pediatric SARS-CoV-2 infection and poten
                                                     biomarker="SARS-CoV-2",
                                                     gene_target="ORF1ab, N", 
                                                     limit_of_quantification='unknown', 
-                                                    limit_of_detection=312, 
+                                                    limit_of_detection=312, # plug ct=40 in function of concentration provided above and we get 312 after rounding the result
                                                     unit="gc/mL", 
                                                     reference_event="hospital admission"), 
                              nasopharyngeal_swab_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA copy number concentration in nasopharyngeal swab samples. The unit of concentration were converted to copies per ml from Ct values based on standard curve calculated from the concentration provided by the author.\n"),
@@ -127,7 +127,7 @@ Xu2020 = dict(title="Characteristics of pediatric SARS-CoV-2 infection and poten
                                               biomarker="SARS-CoV-2",
                                               gene_target="ORF1ab, N",
                                               limit_of_quantification="unknown",
-                                              limit_of_detection=312,
+                                              limit_of_detection=312, # plug ct=40 in function of concentration provided above and we get 312 after rounding the result
                                               unit="gc/mL",
                                              reference_event="hospital admission")), 
 
