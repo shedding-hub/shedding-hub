@@ -1,0 +1,391 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Characteristics of pediatric SARS-CoV-2 infection and potential evidence for
+  persistent fecal viral shedding
+doi: 10.1038/s41591-020-0817-4
+description: >
+  This study reported the epidemiological and clinical features of ten children infected
+  with SARS-CoV-2 confirmed by real-time reverse transcription PCR assay of SARS-CoV-2
+  RNA and tested for evidence of viral excretion through the gastrointestinal and
+  respiratory tracts. A total of 107 samples in both of nasopharyngeal and rectal
+  swabs were collected and ct values were recorded by days after admission. The standard
+  curve of transforming ct value into viral load was calculated based on the concentration
+  provided by the author.
+analytes:
+  rectal_swab_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA copy number concentration in rectal swab samples. The unit of
+      concentration were converted to copies per ml from Ct values based on standard
+      curve calculated from the concentration provided by the author.
+    specimen: rectal_swab
+    biomarker: SARS-CoV-2
+    gene_target: ORF1ab, N
+    limit_of_quantification: unknown
+    limit_of_detection: 312
+    unit: gc/mL
+    reference_event: hospital admission
+  nasopharyngeal_swab_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA copy number concentration in nasopharyngeal swab samples. The
+      unit of concentration were converted to copies per ml from Ct values based on
+      standard curve calculated from the concentration provided by the author.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: ORF1ab, N
+    limit_of_quantification: unknown
+    limit_of_detection: 312
+    unit: gc/mL
+    reference_event: hospital admission
+participants:
+- attributes:
+    age: 6.166666666666667
+    sex: male
+  measurements:
+  - analyte: rectal_swab_SARSCoV2
+    time: 5
+    value: 219533.20288401298
+  - analyte: rectal_swab_SARSCoV2
+    time: 8
+    value: 319273.004749484
+  - analyte: rectal_swab_SARSCoV2
+    time: 10
+    value: 206248.064940627
+  - analyte: rectal_swab_SARSCoV2
+    time: 12
+    value: 30424003.44540878
+  - analyte: rectal_swab_SARSCoV2
+    time: 16
+    value: 319273.004749484
+  - analyte: rectal_swab_SARSCoV2
+    time: 18
+    value: 866817.150104175
+  - analyte: rectal_swab_SARSCoV2
+    time: 19
+    value: 206248.064940627
+  - analyte: rectal_swab_SARSCoV2
+    time: 21
+    value: 29783.080956655715
+  - analyte: rectal_swab_SARSCoV2
+    time: 23
+    value: 10306.091530927912
+  - analyte: rectal_swab_SARSCoV2
+    time: 25
+    value: 67050.79396952053
+  - analyte: rectal_swab_SARSCoV2
+    time: 27
+    value: 2033.4120345106255
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: 15056744.148196593
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: 217510.17230745906
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 402045.1385957681
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 2187.1695380312817
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 21
+    value: negative
+- attributes:
+    age: 12.583333333333334
+    sex: female
+  measurements:
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: 15057107.82484693
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: negative
+- attributes:
+    age: 7.083333333333333
+    sex: female
+  measurements:
+  - analyte: rectal_swab_SARSCoV2
+    time: 0
+    value: 2353383.9708881197
+  - analyte: rectal_swab_SARSCoV2
+    time: 3
+    value: 7239002.871145801
+  - analyte: rectal_swab_SARSCoV2
+    time: 5
+    value: 18464336.81537856
+  - analyte: rectal_swab_SARSCoV2
+    time: 7
+    value: 28582882.934923455
+  - analyte: rectal_swab_SARSCoV2
+    time: 10
+    value: 67050.79396952053
+  - analyte: rectal_swab_SARSCoV2
+    time: 12
+    value: 26287.48028760513
+  - analyte: rectal_swab_SARSCoV2
+    time: 15
+    value: 319273.004749484
+  - analyte: rectal_swab_SARSCoV2
+    time: 17
+    value: 409829.78994919907
+  - analyte: rectal_swab_SARSCoV2
+    time: 19
+    value: 1341837.1520809797
+  - analyte: rectal_swab_SARSCoV2
+    time: 23
+    value: 24696.683099676407
+  - analyte: rectal_swab_SARSCoV2
+    time: 21
+    value: 33743.51218016746
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: 29387.0154255091
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 13.75
+    sex: male
+  measurements:
+  - analyte: rectal_swab_SARSCoV2
+    time: 0
+    value: 4040.5364638139126
+  - analyte: rectal_swab_SARSCoV2
+    time: 2
+    value: 219533.20288401298
+  - analyte: rectal_swab_SARSCoV2
+    time: 4
+    value: 141816.87023797436
+  - analyte: rectal_swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: 6136.918300404648
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: negative
+- attributes:
+    age: 1.1666666666666667
+    sex: male
+  measurements:
+  - analyte: rectal_swab_SARSCoV2
+    time: 0
+    value: 675283.5515359927
+  - analyte: rectal_swab_SARSCoV2
+    time: 2
+    value: 25228147.914187144
+  - analyte: rectal_swab_SARSCoV2
+    time: 3
+    value: 117597.17900080032
+  - analyte: rectal_swab_SARSCoV2
+    time: 5
+    value: 675283.5515359927
+  - analyte: rectal_swab_SARSCoV2
+    time: 9
+    value: 1112676.2528209982
+  - analyte: rectal_swab_SARSCoV2
+    time: 11
+    value: 409829.78994919907
+  - analyte: rectal_swab_SARSCoV2
+    time: 13
+    value: 233674.081656912
+  - analyte: rectal_swab_SARSCoV2
+    time: 15
+    value: 299952.0735464842
+  - analyte: rectal_swab_SARSCoV2
+    time: 17
+    value: 43314.33069262214
+  - analyte: rectal_swab_SARSCoV2
+    time: 19
+    value: 91612.67826407263
+  - analyte: rectal_swab_SARSCoV2
+    time: 21
+    value: 40693.14696907609
+- attributes:
+    age: 3.4166666666666665
+    sex: male
+  measurements:
+  - analyte: rectal_swab_SARSCoV2
+    time: 1
+    value: 2303.8067771989486
+  - analyte: rectal_swab_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: rectal_swab_SARSCoV2
+    time: 5
+    value: 110480.73955448977
+  - analyte: rectal_swab_SARSCoV2
+    time: 7
+    value: 2164.3910057898015
+  - analyte: rectal_swab_SARSCoV2
+    time: 9
+    value: 29783.080956655715
+  - analyte: rectal_swab_SARSCoV2
+    time: 11
+    value: 1341837.1520809797
+  - analyte: rectal_swab_SARSCoV2
+    time: 13
+    value: 409829.78994919907
+  - analyte: rectal_swab_SARSCoV2
+    time: 15
+    value: 110480.73955448977
+  - analyte: rectal_swab_SARSCoV2
+    time: 17
+    value: 219533.20288401298
+  - analyte: rectal_swab_SARSCoV2
+    time: 19
+    value: 55599.761913714276
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: 21595.30045054438
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    age: 13.666666666666666
+    sex: male
+  measurements:
+  - analyte: rectal_swab_SARSCoV2
+    time: 0
+    value: 27980.746122151206
+  - analyte: rectal_swab_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: rectal_swab_SARSCoV2
+    time: 5
+    value: 43314.33069262214
+  - analyte: rectal_swab_SARSCoV2
+    time: 7
+    value: 7086.503554460224
+  - analyte: rectal_swab_SARSCoV2
+    time: 9
+    value: 141816.87023797436
+  - analyte: rectal_swab_SARSCoV2
+    time: 11
+    value: 141816.87023797436
+  - analyte: rectal_swab_SARSCoV2
+    time: 13
+    value: 13229.252910472482
+  - analyte: rectal_swab_SARSCoV2
+    time: 15
+    value: 19239.65610590894
+  - analyte: rectal_swab_SARSCoV2
+    time: 17
+    value: 2164.3910057898015
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: 15466.479881311096
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 3
+    value: 15823.179896759424
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 5
+    value: 23213.704839119957
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: 4366.458846112048
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 9
+    value: 17435.360209858314
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 13
+    value: 2009.6781488331521
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 17
+    value: negative
+- attributes:
+    age: 0.16666666666666666
+    sex: female
+  measurements:
+  - analyte: rectal_swab_SARSCoV2
+    time: 0
+    value: negative
+  - analyte: rectal_swab_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: rectal_swab_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: rectal_swab_SARSCoV2
+    time: 3
+    value: 3796.0218137205993
+  - analyte: rectal_swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: rectal_swab_SARSCoV2
+    time: 7
+    value: 1260635.3501267952
+  - analyte: rectal_swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 0
+    value: 88639.96192661821
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2
+    time: 10
+    value: negative
