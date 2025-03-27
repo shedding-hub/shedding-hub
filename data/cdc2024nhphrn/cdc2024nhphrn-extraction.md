@@ -50,13 +50,15 @@ for patient_id, group in merged_df.groupby('study_id'):
         participant['attributes']['age'] = int(group['age'].iloc[0])
 
     vaccine_val = group['vaccine'].iloc[0]
+    # A numeric string representing the number of COVID-19 vaccinations received (allowed values: 0-10) or the string "COVID-19 vaccination status unknown" to indicate an unknown status.
     if pd.isna(vaccine_val) or vaccine_val == 'COVID-19 vaccination status unknown':
         pass
     else:
         vaccine_numeric = pd.to_numeric(vaccine_val, errors='coerce')
         if pd.notna(vaccine_numeric):
             participant['attributes']['vaccinated'] = vaccine_numeric > 0
-
+            # If a numeric value is provided and it is greater than 0, the participant is considered vaccinated.
+        
     if pd.notna(group['bio_sex'].iloc[0]):
         sex = ('female' if group['bio_sex'].iloc[0] == 'Female at birth'
             else 'male' if group['bio_sex'].iloc[0] == 'Male at birth'
