@@ -37,7 +37,7 @@ participants:
     time: 9
     value: 32.2078308604687
   - analyte: stool_SARSCoV2_ORF1ab
-    time: 13
+    time: 14
     value: 34.6875
   - analyte: stool_SARSCoV2_N
     time: 14
@@ -78,7 +78,7 @@ participants:
     value: negative
   - analyte: stool_SARSCoV2_N
     time: 25
-    value: 39.949734341586
+    value: negative
 - measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 18
@@ -131,7 +131,7 @@ participants:
     value: negative
   - analyte: stool_SARSCoV2_N
     time: 20
-    value: 39.9374986221036
+    value: negative
 - measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 14
@@ -365,14 +365,14 @@ participants:
     value: negative
   - analyte: stool_SARSCoV2_N
     time: 29
-    value: 39.9563482440089
+    value: negative
 - measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 16
     value: 36.25
   - analyte: stool_SARSCoV2_N
     time: 17
-    value: negative
+    value: 36.4583333333333
   - analyte: stool_SARSCoV2_ORF1ab
     time: 24
     value: negative

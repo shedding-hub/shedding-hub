@@ -36,6 +36,14 @@ df_merged = pd.merge(df_a, df_b, on=["patients", "days"], how="outer", suffixes=
 ```
 
 ```python
+from decimal import Decimal, ROUND_HALF_UP
+
+def round_half_up(n):
+    return int(Decimal(str(n)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+
+```
+
+```python
 participants = []
 for patient_id, patient_data in df_merged.groupby("patients"):
     participant = {
@@ -46,7 +54,7 @@ for patient_id, patient_data in df_merged.groupby("patients"):
         if pd.notna(row["ctvalue_ORF1ab"]):
             measurement_orf1ab = {
                 "analyte": "stool_SARSCoV2_ORF1ab",
-                "time": int(row["days"]),
+                "time": round_half_up(row["days"]),
                 "value": float(row["ctvalue_ORF1ab"]) if float(row["ctvalue_ORF1ab"]) < 40 else "negative"
             }
             participant["measurements"].append(measurement_orf1ab)
@@ -54,7 +62,7 @@ for patient_id, patient_data in df_merged.groupby("patients"):
         if pd.notna(row["ctvalue_N"]):
             measurement_n = {
                 "analyte": "stool_SARSCoV2_N",
-                "time": int(row["days"]),
+                "time": round_half_up(row["days"]),
                 "value": float(row["ctvalue_N"]) if float(row["ctvalue_N"]) < 40 else "negative"
             }
             participant["measurements"].append(measurement_n)
