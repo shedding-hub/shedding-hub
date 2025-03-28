@@ -1,16 +1,15 @@
-## Data Extraction
-The data used in this study was extracted from **Figure 1 of the original paper** using **WebPlotDigitizer**, a tool for extracting numerical data from images of graphs. The extracted data was saved into two `.xlsx` files:
+# Data Extraction for Wang et al. (2020)
+In [Wang et al. (2020)](https://doi.org/10.1016/j.virusres.2020.198147), 69 COVID-19 patients were included. SARS-CoV-2 RNA was tested in stool and respiratory specimens until two sequential negative results were obtained. Clinical, laboratory and imaging data were recorded. The data used in this study was extracted from **Figure 1** of the [Wang et al. (2020)](https://doi.org/10.1016/j.virusres.2020.198147) using [https://automeris.io/](https://automeris.io/), a tool for extracting numerical data from images of graphs. The extracted data was saved into two `.xlsx` files:
 
 - **`A data.xlsx`** → Corresponds to **ORF1ab gene measurements**
 - **`B data.xlsx`** → Corresponds to **N gene measurements**
 
-These two files contain the cycle threshold (Ct) values for SARS-CoV-2 RNA in fecal samples, with respect to the **days since symptom onset**
+These two files contain the cycle threshold (Ct) values for SARS-CoV-2 RNA in fecal samples, with respect to the **days since symptom onset**.
 ## Source Figure
 The figure below represents the data used in this study:
 ![Source Figure](data.jpg)
 
 The following Python script was used to process the extracted data:
-
 
 ```python
 import yaml
@@ -97,8 +96,4 @@ output_data = {
 with open("wang2020fecal.yaml","w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False)
-```
-
-```python
-
 ```
