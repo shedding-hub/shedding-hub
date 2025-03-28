@@ -16,31 +16,29 @@ The following Python script was used to process the extracted data:
 import yaml
 import pandas as pd
 from shedding_hub import folded_str
+from decimal import Decimal, ROUND_HALF_UP
 ```
 
 
 ```python
 df_a = pd.read_excel("A data.xlsx")
 df_b = pd.read_excel("B data.xlsx")
-df_a.columns = ["patients", "days", "ctvalue"]
-df_b.columns = ["patients", "days", "ctvalue"]
-df_a["days"] = df_a["days"].astype(int)
-df_b["days"] = df_b["days"].astype(int)
-df_a["ctvalue"] = pd.to_numeric(df_a["ctvalue"], errors="coerce")
-df_b["ctvalue"] = pd.to_numeric(df_b["ctvalue"], errors="coerce")
+df_a.columns = ["patients", "days", "ctvalue_ORF1ab"]
+df_b.columns = ["patients", "days", "ctvalue_N"]
+df_a["days"] = pd.to_numeric(df_a["days"], errors="coerce")
+df_b["days"] = pd.to_numeric(df_b["days"], errors="coerce")
+df_a["ctvalue_ORF1ab"] = pd.to_numeric(df_a["ctvalue_ORF1ab"], errors="coerce")
+df_b["ctvalue_N"] = pd.to_numeric(df_b["ctvalue_N"], errors="coerce")
 ```
 
-
-```python
-df_merged = pd.merge(df_a, df_b, on=["patients", "days"], how="outer", suffixes=("_ORF1ab", "_N"))
-```
 
 ```python
 from decimal import Decimal, ROUND_HALF_UP
 
 def round_half_up(n):
     return int(Decimal(str(n)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
-
+df_merged = pd.merge(df_a, df_b, on=["patients", "days"], how="outer")
+df_merged["rounded_day"] = df_merged["days"].apply(round_half_up)
 ```
 
 ```python
@@ -49,24 +47,20 @@ for patient_id, patient_data in df_merged.groupby("patients"):
     participant = {
         "measurements": []
     }
-
     for _, row in patient_data.iterrows():
+        day = int(row["rounded_day"])  
         if pd.notna(row["ctvalue_ORF1ab"]):
-            measurement_orf1ab = {
+            participant["measurements"].append({
                 "analyte": "stool_SARSCoV2_ORF1ab",
-                "time": round_half_up(row["days"]),
+                "time": day,
                 "value": float(row["ctvalue_ORF1ab"]) if float(row["ctvalue_ORF1ab"]) < 40 else "negative"
-            }
-            participant["measurements"].append(measurement_orf1ab)
-
+            })
         if pd.notna(row["ctvalue_N"]):
-            measurement_n = {
+            participant["measurements"].append({
                 "analyte": "stool_SARSCoV2_N",
-                "time": round_half_up(row["days"]),
+                "time": day,
                 "value": float(row["ctvalue_N"]) if float(row["ctvalue_N"]) < 40 else "negative"
-            }
-            participant["measurements"].append(measurement_n)
-
+            })
     if participant["measurements"]:
         participants.append(participant)
 ```
