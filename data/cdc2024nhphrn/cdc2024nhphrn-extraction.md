@@ -52,38 +52,44 @@ for patient_id, group in merged_df.groupby('study_id'):
     vaccine_val = group['vaccine'].iloc[0]
     # A numeric string representing the number of COVID-19 vaccinations received (allowed values: 0-10) or the string "COVID-19 vaccination status unknown" to indicate an unknown status.
     if pd.isna(vaccine_val) or vaccine_val == 'COVID-19 vaccination status unknown':
-        pass
+        participant['attributes']['vaccinated'] = 'unknown'
     else:
         vaccine_numeric = pd.to_numeric(vaccine_val, errors='coerce')
         if pd.notna(vaccine_numeric):
             participant['attributes']['vaccinated'] = vaccine_numeric > 0
             # If a numeric value is provided and it is greater than 0, the participant is considered vaccinated.
-        
-    if pd.notna(group['bio_sex'].iloc[0]):
-        sex = ('female' if group['bio_sex'].iloc[0] == 'Female at birth'
-            else 'male' if group['bio_sex'].iloc[0] == 'Male at birth'
-            else 'unknown')
-        if sex != 'unknown':
-            participant['attributes']['sex'] = sex
+        else:
+            participant['attributes']['vaccinated'] = 'unknown'
 
-    if pd.notna(group['ethnicity'].iloc[0]):
+    # Process bio_sex: if missing, set as 'unknown'
+    if pd.isna(group['bio_sex'].iloc[0]):
+        participant['attributes']['sex'] = 'unknown'
+    else:
+        sex = ('female' if group['bio_sex'].iloc[0] == 'Female at birth'
+               else 'male' if group['bio_sex'].iloc[0] == 'Male at birth'
+               else 'unknown')
+        participant['attributes']['sex'] = sex
+
+    if pd.isna(group['ethnicity'].iloc[0]):
+        participant['attributes']['ethnicity'] = 'unknown'
+    else:
         ethnicity = group['ethnicity'].iloc[0]
         ethnicity_val = ('not hispanic' if ethnicity == 'Non-White'
-                        else 'hispanic' if ethnicity == 'Hispanic'
-                        else 'unknown')
-        if ethnicity_val != 'unknown':
-            participant['attributes']['ethnicity'] = ethnicity_val
+                         else 'hispanic' if ethnicity == 'Hispanic'
+                         else 'unknown')
+        participant['attributes']['ethnicity'] = ethnicity_val
 
-    if pd.notna(group['race'].iloc[0]):
+    if pd.isna(group['race'].iloc[0]):
+        participant['attributes']['race'] = 'unknown'
+    else:
         race = group['race'].iloc[0]
         race_val = ('white' if race == 'White'
                     else 'black' if race == 'Black or African American'
                     else 'other' if race in ['Other', 'American Indian or Alaska Native', 'Native Hawaiian or Other Pacific Islander']
                     else 'unknown')
-        if race_val != 'unknown':
-            participant['attributes']['race'] = race_val
+        participant['attributes']['race'] = race_val
 
-
+    # Process measurements
     for _, row in group.iterrows():
         if row['pcr'] in ['Not tested', 'Not collected'] or pd.isna(row['pcr']):
             continue
