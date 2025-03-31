@@ -1,9 +1,20 @@
 # Extraction for Yang et al. (2020)
 
-This study involved 3552 clinical samples from 410 COVID-19 patients confirmed by Guangdong CDC (Center for Disease Control and Prevention). Oropharyngeal swabs, nasopharyngeal swabs, and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.
+[Yang et al. (2020)](https://doi.org/10.1016/j.xinn.2020.100061) involved 3552 clinical samples from 410 COVID-19 patients confirmed by Guangdong CDC (Center for Disease Control and Prevention). Oropharyngeal swabs, nasopharyngeal swabs, and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.
 The manuscript did not provide detailed sample type for each test.
-Days shown in the dataset are days after illness onset (d.a.o.)
+Days shown in the dataset are days after illness onset (d.a.o.). The raw data was extracted from Figure 2 and Figure S1 (see below) in [Yang et al. (2020)](https://doi.org/10.1016/j.xinn.2020.100061).
 
+**Figure 2 Serial Detection of Viral RNA in Different Sites of the Respiratory Tract from 21 COVID-19 Cases**
+
+![image](yang2020_fig2.jpg)
+
+*Numbers of cases from severe and mild groups are marked in red and black, respectively. The detection results of samples from the upper respiratory tract are in green, and from the lower respiratory tract (BALF) in black. Lower cycle threshold (Ct) values indicate higher viral loads. The black and red arrows indicate hospital admission and the start of antiviral treatment, respectively.*
+
+**Figure S1. Serial detection of viral RNA in 7 COVID-19 cases from whomSARS-CoV-2 RNA was not detected in the upper respiratory specimens for at least the first 3 times.**
+
+![image](yang2020_figS1.png)
+
+*Numbers of cases from severe and mild groups were markedin red and black, respectively. The detection results of samples from upper respiratorytract were in green, and lower respiratory tract in black. Lower cycle threshold (Ct) values indicate higher viral loads. The black and red arrows indicate hospital admission and the start of antiviral treatment, respectively.*
 
 ```python
 #import modules;
