@@ -89,6 +89,19 @@ for patient_id, group in merged_df.groupby('study_id'):
                     else 'unknown')
         participant['attributes']['race'] = race_val
 
+    for col in ['lineage', 'variant']:
+        unique_vals = group[col].dropna().unique()
+        # Filter out "Unassigned"
+        filtered_vals = [v for v in unique_vals if v != 'Unassigned']
+        if len(filtered_vals) == 0:
+            participant['attributes'][col] = 'unknown'
+        elif len(filtered_vals) == 1:
+            participant['attributes'][col] = filtered_vals[0]
+        else:
+            error_message = f"Error: Multiple distinct values for {col}: {filtered_vals}"
+            print(error_message)
+
+
     # Process measurements
     for _, row in group.iterrows():
         if row['pcr'] in ['Not tested', 'Not collected'] or pd.isna(row['pcr']):
