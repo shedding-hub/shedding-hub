@@ -111,7 +111,7 @@ for patient_id, group in merged_df.groupby('study_id'):
         elif row['pcr'] == 'Positive':
             # Process VL_status for positive PCR results
             if row['VL_status'] == 'Not eligible for VL testing':
-                continue  # Skip this row
+                value = "unknown"
             elif row['VL_status'] in ['Undetectable, will not be done', 'VL run, not detected']:
                 value = "negative"
             elif row['VL_status'] == 'Less than 10,000 copies/mL':
