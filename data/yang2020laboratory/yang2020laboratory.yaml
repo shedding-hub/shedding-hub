@@ -1,0 +1,1228 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Laboratory Diagnosis and Monitoring the Viral Shedding of SARS-CoV-2 Infection
+doi: 10.1016/j.xinn.2020.100061
+description: >
+  This study involved 3552 clinical samples from 410 COVID-19 patients confirmed by
+  Guangdong CDC. Oropharyngeal swabs, nasopharyngeal swabs and sputum samples were
+  tested for upper respiratory tract infection, while bronchoalveolar lavage fluid
+  (BALF) was tested for lower respiratory tract infection.
+analytes:
+  upper_resp_tract:
+    description: >
+      SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract samples.
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    - sputum
+    biomarker: SARS-CoV-2
+    gene_target: ORF1ab and N gene
+    limit_of_quantification: unknown
+    limit_of_detection: 38
+    unit: cycle threshold
+    reference_event: symptom onset
+  lower_resp_tract:
+    description: >
+      SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract samples.
+    specimen: bronchoalveolar_lavage_fluid
+    biomarker: SARS-CoV-2
+    gene_target: ORF1ab and N gene
+    limit_of_quantification: unknown
+    limit_of_detection: 38
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 8
+    value: 19
+  - analyte: lower_resp_tract
+    time: 19
+    value: 30
+  - analyte: lower_resp_tract
+    time: 23
+    value: 20
+  - analyte: lower_resp_tract
+    time: 25
+    value: negative
+  - analyte: lower_resp_tract
+    time: 31
+    value: 32
+  - analyte: lower_resp_tract
+    time: 34
+    value: negative
+  - analyte: lower_resp_tract
+    time: 37
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: 32
+  - analyte: upper_resp_tract
+    time: 8
+    value: 33
+  - analyte: upper_resp_tract
+    time: 9
+    value: 35
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
+  - analyte: upper_resp_tract
+    time: 12
+    value: 25
+  - analyte: upper_resp_tract
+    time: 13
+    value: 28
+  - analyte: upper_resp_tract
+    time: 14
+    value: 26
+  - analyte: upper_resp_tract
+    time: 15
+    value: 36
+  - analyte: upper_resp_tract
+    time: 16
+    value: negative
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: negative
+  - analyte: upper_resp_tract
+    time: 20
+    value: negative
+  - analyte: upper_resp_tract
+    time: 21
+    value: negative
+  - analyte: upper_resp_tract
+    time: 22
+    value: negative
+  - analyte: upper_resp_tract
+    time: 24
+    value: negative
+  - analyte: upper_resp_tract
+    time: 25
+    value: negative
+  - analyte: upper_resp_tract
+    time: 28
+    value: 34
+  - analyte: upper_resp_tract
+    time: 31
+    value: negative
+  - analyte: upper_resp_tract
+    time: 34
+    value: negative
+  - analyte: upper_resp_tract
+    time: 37
+    value: negative
+- attributes:
+    age: 65.0
+    sex: female
+  measurements:
+  - analyte: lower_resp_tract
+    time: 9
+    value: 26
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 9
+    value: negative
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+  - analyte: upper_resp_tract
+    time: 14
+    value: negative
+  - analyte: upper_resp_tract
+    time: 15
+    value: negative
+  - analyte: upper_resp_tract
+    time: 16
+    value: negative
+  - analyte: upper_resp_tract
+    time: 17
+    value: negative
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: negative
+  - analyte: upper_resp_tract
+    time: 20
+    value: negative
+  - analyte: upper_resp_tract
+    time: 21
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 21
+    value: 27
+  - analyte: lower_resp_tract
+    time: 25
+    value: 30
+  - analyte: lower_resp_tract
+    time: 28
+    value: negative
+  - analyte: upper_resp_tract
+    time: 16
+    value: 30
+  - analyte: upper_resp_tract
+    time: 17
+    value: 29
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: 35
+  - analyte: upper_resp_tract
+    time: 21
+    value: 36
+  - analyte: upper_resp_tract
+    time: 22
+    value: negative
+  - analyte: upper_resp_tract
+    time: 25
+    value: negative
+  - analyte: upper_resp_tract
+    time: 28
+    value: negative
+  - analyte: upper_resp_tract
+    time: 29
+    value: negative
+- attributes:
+    age: 63.0
+    sex: male
+  measurements:
+  - analyte: lower_resp_tract
+    time: 6
+    value: 24
+  - analyte: lower_resp_tract
+    time: 12
+    value: 27
+  - analyte: lower_resp_tract
+    time: 15
+    value: 27
+  - analyte: lower_resp_tract
+    time: 17
+    value: 24
+  - analyte: lower_resp_tract
+    time: 19
+    value: 31
+  - analyte: lower_resp_tract
+    time: 21
+    value: 34
+  - analyte: lower_resp_tract
+    time: 23
+    value: negative
+  - analyte: lower_resp_tract
+    time: 27
+    value: 30
+  - analyte: lower_resp_tract
+    time: 30
+    value: 28
+  - analyte: lower_resp_tract
+    time: 32
+    value: negative
+  - analyte: upper_resp_tract
+    time: 5
+    value: negative
+  - analyte: upper_resp_tract
+    time: 6
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: 30
+  - analyte: upper_resp_tract
+    time: 9
+    value: 26
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: 29
+  - analyte: upper_resp_tract
+    time: 14
+    value: 31
+  - analyte: upper_resp_tract
+    time: 16
+    value: negative
+  - analyte: upper_resp_tract
+    time: 17
+    value: 27
+  - analyte: upper_resp_tract
+    time: 19
+    value: 37
+  - analyte: upper_resp_tract
+    time: 21
+    value: negative
+  - analyte: upper_resp_tract
+    time: 23
+    value: negative
+  - analyte: upper_resp_tract
+    time: 25
+    value: 26
+  - analyte: upper_resp_tract
+    time: 27
+    value: negative
+  - analyte: upper_resp_tract
+    time: 30
+    value: negative
+  - analyte: upper_resp_tract
+    time: 34
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 11
+    value: 27
+  - analyte: upper_resp_tract
+    time: 4
+    value: 28
+  - analyte: upper_resp_tract
+    time: 5
+    value: 29
+  - analyte: upper_resp_tract
+    time: 6
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: 35
+  - analyte: upper_resp_tract
+    time: 9
+    value: 29
+  - analyte: upper_resp_tract
+    time: 10
+    value: 28
+  - analyte: upper_resp_tract
+    time: 12
+    value: 29
+  - analyte: upper_resp_tract
+    time: 13
+    value: 30
+  - analyte: upper_resp_tract
+    time: 14
+    value: 33
+  - analyte: upper_resp_tract
+    time: 15
+    value: 34
+  - analyte: upper_resp_tract
+    time: 17
+    value: 37
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: 34
+  - analyte: upper_resp_tract
+    time: 20
+    value: negative
+  - analyte: upper_resp_tract
+    time: 23
+    value: negative
+- attributes:
+    age: 47.0
+    sex: male
+  measurements:
+  - analyte: lower_resp_tract
+    time: 15
+    value: 35
+  - analyte: upper_resp_tract
+    time: 14
+    value: negative
+  - analyte: upper_resp_tract
+    time: 17
+    value: negative
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: negative
+  - analyte: upper_resp_tract
+    time: 20
+    value: negative
+  - analyte: upper_resp_tract
+    time: 21
+    value: negative
+  - analyte: upper_resp_tract
+    time: 26
+    value: negative
+  - analyte: upper_resp_tract
+    time: 27
+    value: negative
+- attributes:
+    age: 34.0
+    sex: male
+  measurements:
+  - analyte: lower_resp_tract
+    time: 11
+    value: 34
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 9
+    value: negative
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 10
+    value: 29
+  - analyte: lower_resp_tract
+    time: 14
+    value: 34
+  - analyte: lower_resp_tract
+    time: 16
+    value: 33
+  - analyte: lower_resp_tract
+    time: 21
+    value: negative
+  - analyte: upper_resp_tract
+    time: 5
+    value: 24
+  - analyte: upper_resp_tract
+    time: 7
+    value: 25
+  - analyte: upper_resp_tract
+    time: 8
+    value: 24
+  - analyte: upper_resp_tract
+    time: 11
+    value: 30
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: negative
+  - analyte: upper_resp_tract
+    time: 20
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 12
+    value: 23
+  - analyte: lower_resp_tract
+    time: 15
+    value: 28
+  - analyte: lower_resp_tract
+    time: 17
+    value: 24
+  - analyte: lower_resp_tract
+    time: 18
+    value: 31
+  - analyte: lower_resp_tract
+    time: 21
+    value: 28
+  - analyte: lower_resp_tract
+    time: 23
+    value: 28
+  - analyte: lower_resp_tract
+    time: 26
+    value: negative
+  - analyte: lower_resp_tract
+    time: 27
+    value: negative
+  - analyte: lower_resp_tract
+    time: 34
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: 31
+  - analyte: upper_resp_tract
+    time: 9
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: 36
+  - analyte: upper_resp_tract
+    time: 12
+    value: 35
+  - analyte: upper_resp_tract
+    time: 14
+    value: 26
+  - analyte: upper_resp_tract
+    time: 17
+    value: 34
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 23
+    value: 34
+  - analyte: upper_resp_tract
+    time: 24
+    value: negative
+  - analyte: upper_resp_tract
+    time: 27
+    value: negative
+  - analyte: upper_resp_tract
+    time: 28
+    value: negative
+  - analyte: upper_resp_tract
+    time: 33
+    value: negative
+  - analyte: upper_resp_tract
+    time: 35
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 8
+    value: 27
+  - analyte: lower_resp_tract
+    time: 13
+    value: negative
+  - analyte: lower_resp_tract
+    time: 16
+    value: 32
+  - analyte: lower_resp_tract
+    time: 17
+    value: 34
+  - analyte: lower_resp_tract
+    time: 19
+    value: 37
+  - analyte: lower_resp_tract
+    time: 20
+    value: negative
+  - analyte: upper_resp_tract
+    time: 3
+    value: 23
+  - analyte: upper_resp_tract
+    time: 5
+    value: 30
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: 31
+  - analyte: upper_resp_tract
+    time: 10
+    value: 33
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+  - analyte: upper_resp_tract
+    time: 24
+    value: negative
+  - analyte: upper_resp_tract
+    time: 26
+    value: negative
+  - analyte: upper_resp_tract
+    time: 27
+    value: negative
+  - analyte: upper_resp_tract
+    time: 28
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 11
+    value: 24
+  - analyte: lower_resp_tract
+    time: 16
+    value: 31
+  - analyte: lower_resp_tract
+    time: 18
+    value: 31
+  - analyte: lower_resp_tract
+    time: 19
+    value: 36
+  - analyte: lower_resp_tract
+    time: 22
+    value: negative
+  - analyte: upper_resp_tract
+    time: 6
+    value: 30
+  - analyte: upper_resp_tract
+    time: 10
+    value: 36
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+  - analyte: upper_resp_tract
+    time: 18
+    value: 31
+  - analyte: upper_resp_tract
+    time: 23
+    value: negative
+  - analyte: upper_resp_tract
+    time: 24
+    value: negative
+  - analyte: upper_resp_tract
+    time: 25
+    value: negative
+  - analyte: upper_resp_tract
+    time: 26
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 14
+    value: 29
+  - analyte: lower_resp_tract
+    time: 15
+    value: 26
+  - analyte: lower_resp_tract
+    time: 18
+    value: 24
+  - analyte: lower_resp_tract
+    time: 20
+    value: 31
+  - analyte: lower_resp_tract
+    time: 22
+    value: 26
+  - analyte: lower_resp_tract
+    time: 24
+    value: 31
+  - analyte: lower_resp_tract
+    time: 32
+    value: 37
+  - analyte: lower_resp_tract
+    time: 44
+    value: 30
+  - analyte: lower_resp_tract
+    time: 46
+    value: 33
+  - analyte: lower_resp_tract
+    time: 48
+    value: negative
+  - analyte: upper_resp_tract
+    time: 3
+    value: 23
+  - analyte: upper_resp_tract
+    time: 7
+    value: 19
+  - analyte: upper_resp_tract
+    time: 8
+    value: 34
+  - analyte: upper_resp_tract
+    time: 9
+    value: 22
+  - analyte: upper_resp_tract
+    time: 10
+    value: 23
+  - analyte: upper_resp_tract
+    time: 11
+    value: 23
+  - analyte: upper_resp_tract
+    time: 12
+    value: 28
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+  - analyte: upper_resp_tract
+    time: 15
+    value: 32
+  - analyte: upper_resp_tract
+    time: 17
+    value: 33
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: negative
+  - analyte: upper_resp_tract
+    time: 28
+    value: negative
+  - analyte: upper_resp_tract
+    time: 29
+    value: negative
+  - analyte: upper_resp_tract
+    time: 31
+    value: 37
+  - analyte: upper_resp_tract
+    time: 33
+    value: negative
+  - analyte: upper_resp_tract
+    time: 35
+    value: negative
+  - analyte: upper_resp_tract
+    time: 37
+    value: 34
+  - analyte: upper_resp_tract
+    time: 42
+    value: negative
+  - analyte: upper_resp_tract
+    time: 43
+    value: negative
+  - analyte: upper_resp_tract
+    time: 44
+    value: negative
+  - analyte: upper_resp_tract
+    time: 46
+    value: negative
+  - analyte: upper_resp_tract
+    time: 47
+    value: negative
+  - analyte: upper_resp_tract
+    time: 48
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 20
+    value: 36
+  - analyte: lower_resp_tract
+    time: 22
+    value: 33
+  - analyte: lower_resp_tract
+    time: 24
+    value: 37
+  - analyte: lower_resp_tract
+    time: 31
+    value: 36
+  - analyte: lower_resp_tract
+    time: 33
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: 26
+  - analyte: upper_resp_tract
+    time: 8
+    value: 32
+  - analyte: upper_resp_tract
+    time: 9
+    value: 33
+  - analyte: upper_resp_tract
+    time: 11
+    value: 38
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 14
+    value: negative
+  - analyte: upper_resp_tract
+    time: 16
+    value: negative
+  - analyte: upper_resp_tract
+    time: 32
+    value: negative
+  - analyte: upper_resp_tract
+    time: 33
+    value: negative
+  - analyte: upper_resp_tract
+    time: 35
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 13
+    value: 23
+  - analyte: lower_resp_tract
+    time: 15
+    value: 29
+  - analyte: lower_resp_tract
+    time: 17
+    value: 34
+  - analyte: lower_resp_tract
+    time: 19
+    value: 33
+  - analyte: lower_resp_tract
+    time: 22
+    value: negative
+  - analyte: upper_resp_tract
+    time: 4
+    value: 19
+  - analyte: upper_resp_tract
+    time: 9
+    value: 33
+  - analyte: upper_resp_tract
+    time: 10
+    value: 25
+  - analyte: upper_resp_tract
+    time: 11
+    value: 31
+  - analyte: upper_resp_tract
+    time: 12
+    value: 31
+  - analyte: upper_resp_tract
+    time: 24
+    value: negative
+  - analyte: upper_resp_tract
+    time: 25
+    value: negative
+  - analyte: upper_resp_tract
+    time: 26
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 19
+    value: 30
+  - analyte: lower_resp_tract
+    time: 21
+    value: 32
+  - analyte: lower_resp_tract
+    time: 23
+    value: 32
+  - analyte: lower_resp_tract
+    time: 27
+    value: negative
+  - analyte: lower_resp_tract
+    time: 29
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+  - analyte: upper_resp_tract
+    time: 14
+    value: 33
+  - analyte: upper_resp_tract
+    time: 15
+    value: 29
+  - analyte: upper_resp_tract
+    time: 16
+    value: 31
+  - analyte: upper_resp_tract
+    time: 18
+    value: 36
+  - analyte: upper_resp_tract
+    time: 20
+    value: negative
+  - analyte: upper_resp_tract
+    time: 26
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 16
+    value: 27
+  - analyte: lower_resp_tract
+    time: 18
+    value: 29
+  - analyte: lower_resp_tract
+    time: 24
+    value: negative
+  - analyte: upper_resp_tract
+    time: 14
+    value: 27
+  - analyte: upper_resp_tract
+    time: 15
+    value: 23
+  - analyte: upper_resp_tract
+    time: 17
+    value: 29
+  - analyte: upper_resp_tract
+    time: 18
+    value: negative
+  - analyte: upper_resp_tract
+    time: 26
+    value: negative
+  - analyte: upper_resp_tract
+    time: 28
+    value: negative
+  - analyte: upper_resp_tract
+    time: 29
+    value: negative
+  - analyte: upper_resp_tract
+    time: 30
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 4
+    value: 21
+  - analyte: lower_resp_tract
+    time: 6
+    value: 28
+  - analyte: lower_resp_tract
+    time: 9
+    value: 29
+  - analyte: lower_resp_tract
+    time: 10
+    value: 35
+  - analyte: upper_resp_tract
+    time: 3
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: 31
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+  - analyte: upper_resp_tract
+    time: 19
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 16
+    value: 28
+  - analyte: upper_resp_tract
+    time: 8
+    value: 20
+  - analyte: upper_resp_tract
+    time: 10
+    value: 29
+  - analyte: upper_resp_tract
+    time: 11
+    value: 23
+  - analyte: upper_resp_tract
+    time: 12
+    value: 25
+  - analyte: upper_resp_tract
+    time: 13
+    value: 20
+  - analyte: upper_resp_tract
+    time: 14
+    value: 22
+  - analyte: upper_resp_tract
+    time: 16
+    value: 25
+  - analyte: upper_resp_tract
+    time: 18
+    value: 34
+  - analyte: upper_resp_tract
+    time: 21
+    value: 31
+  - analyte: upper_resp_tract
+    time: 22
+    value: 35
+  - analyte: upper_resp_tract
+    time: 23
+    value: 35
+  - analyte: upper_resp_tract
+    time: 26
+    value: negative
+  - analyte: upper_resp_tract
+    time: 27
+    value: negative
+  - analyte: upper_resp_tract
+    time: 28
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 17
+    value: negative
+  - analyte: lower_resp_tract
+    time: 23
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: 30
+  - analyte: upper_resp_tract
+    time: 14
+    value: 23
+  - analyte: upper_resp_tract
+    time: 15
+    value: 31
+  - analyte: upper_resp_tract
+    time: 16
+    value: 35
+  - analyte: upper_resp_tract
+    time: 17
+    value: negative
+  - analyte: upper_resp_tract
+    time: 18
+    value: 36
+  - analyte: upper_resp_tract
+    time: 19
+    value: 30
+  - analyte: upper_resp_tract
+    time: 21
+    value: negative
+  - analyte: upper_resp_tract
+    time: 23
+    value: negative
+  - analyte: upper_resp_tract
+    time: 24
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+  measurements:
+  - analyte: lower_resp_tract
+    time: 11
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 9
+    value: 32
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+- attributes:
+    age: 36.0
+    sex: male
+  measurements:
+  - analyte: lower_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 6
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 10
+    value: 31
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: 36
+  - analyte: upper_resp_tract
+    time: 14
+    value: negative
+  - analyte: upper_resp_tract
+    time: 16
+    value: negative
+- attributes:
+    age: 76.0
+    sex: female
+  measurements:
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+  - analyte: upper_resp_tract
+    time: 14
+    value: negative
+  - analyte: upper_resp_tract
+    time: 16
+    value: negative
+  - analyte: upper_resp_tract
+    time: 17
+    value: 31
+  - analyte: upper_resp_tract
+    time: 21
+    value: negative
+- attributes:
+    age: 56.0
+    sex: male
+  measurements:
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 9
+    value: negative
+  - analyte: upper_resp_tract
+    time: 10
+    value: 32
+  - analyte: upper_resp_tract
+    time: 14
+    value: negative
+  - analyte: upper_resp_tract
+    time: 15
+    value: negative
+  - analyte: upper_resp_tract
+    time: 21
+    value: negative
+- attributes:
+    age: 10.0
+    sex: male
+  measurements:
+  - analyte: upper_resp_tract
+    time: 6
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 9
+    value: 35
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
+- attributes:
+    age: 61.0
+    sex: male
+  measurements:
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 9
+    value: negative
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: 32
+- attributes:
+    age: 26.0
+    sex: female
+  measurements:
+  - analyte: upper_resp_tract
+    time: 2
+    value: negative
+  - analyte: upper_resp_tract
+    time: 3
+    value: negative
+  - analyte: upper_resp_tract
+    time: 4
+    value: negative
+  - analyte: upper_resp_tract
+    time: 5
+    value: 33
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
+  - analyte: upper_resp_tract
+    time: 12
+    value: negative
+- attributes:
+    age: 48.0
+    sex: male
+  measurements:
+  - analyte: upper_resp_tract
+    time: 5
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: negative
+  - analyte: upper_resp_tract
+    time: 9
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: 29
+  - analyte: upper_resp_tract
+    time: 13
+    value: negative
+- attributes:
+    age: 73.0
+    sex: female
+  measurements:
+  - analyte: upper_resp_tract
+    time: 4
+    value: negative
+  - analyte: upper_resp_tract
+    time: 5
+    value: negative
+  - analyte: upper_resp_tract
+    time: 7
+    value: negative
+  - analyte: upper_resp_tract
+    time: 8
+    value: 33
+  - analyte: upper_resp_tract
+    time: 10
+    value: negative
+  - analyte: upper_resp_tract
+    time: 11
+    value: negative
