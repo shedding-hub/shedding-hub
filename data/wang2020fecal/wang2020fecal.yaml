@@ -1,0 +1,378 @@
+# yaml-language-server:$schema=../.schema.yaml
+title: 'Fecal viral shedding in COVID-19 patients: Clinical significance, viral load
+  dynamics and survival analysis'
+doi: 10.1016/j.virusres.2020.198147
+description: >
+  This study investigates the fecal shedding of SARS-CoV-2 in COVID-19 patients, analyzing
+  viral load dynamics, clinical significance, and survival analysis.
+analytes:
+  stool_SARSCoV2_ORF1ab:
+    description: >
+      qPCR analysis of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene. Ct less
+      than 35 is defined as positive, and Ct > 40 is considered as negative.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: ORF1ab
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+  stool_SARSCoV2_N:
+    description: >
+      qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene. Ct = 35 is
+      the cut-off for a positive result, and Ct = 40 is a negative sample.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: stool_SARSCoV2_N
+    time: 10
+    value: 32.2078308604687
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 10
+    value: 31.3541666666666
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 14
+    value: 34.6875
+  - analyte: stool_SARSCoV2_N
+    time: 14
+    value: 35.3418285235565
+  - analyte: stool_SARSCoV2_N
+    time: 18
+    value: 38.0584889437597
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 18
+    value: 39.375
+  - analyte: stool_SARSCoV2_N
+    time: 20
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 20
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 15
+    value: 39.5833333333333
+  - analyte: stool_SARSCoV2_N
+    time: 16
+    value: 33.9121338912133
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 19
+    value: 26.875
+  - analyte: stool_SARSCoV2_N
+    time: 20
+    value: 28.1589958158995
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 22
+    value: 27.6041666666666
+  - analyte: stool_SARSCoV2_N
+    time: 23
+    value: 29.205020920502
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 26
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 19
+    value: 32.9166666666666
+  - analyte: stool_SARSCoV2_N
+    time: 19
+    value: 34.9354042196697
+  - analyte: stool_SARSCoV2_N
+    time: 23
+    value: 32.2352785555237
+  - analyte: stool_SARSCoV2_N
+    time: 30
+    value: 37.4576159086399
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 30
+    value: 38.9583333333333
+  - analyte: stool_SARSCoV2_N
+    time: 32
+    value: 37.0459004828148
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 32
+    value: 37.6041666666666
+  - analyte: stool_SARSCoV2_N
+    time: 34
+    value: 37.7783901761502
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 34
+    value: 35.5208333333333
+  - analyte: stool_SARSCoV2_N
+    time: 36
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 36
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_N
+    time: 8
+    value: 25.6412178398994
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 8
+    value: 24.6875
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 16
+    value: 34.0625
+  - analyte: stool_SARSCoV2_N
+    time: 16
+    value: 33.2627482969201
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 20
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 20
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_N
+    time: 15
+    value: 38.5723891620185
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 15
+    value: 36.9791666666666
+  - analyte: stool_SARSCoV2_N
+    time: 18
+    value: 35.4539341696245
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 18
+    value: 33.75
+  - analyte: stool_SARSCoV2_N
+    time: 22
+    value: 36.7122291055799
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 22
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 28
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 28
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_N
+    time: 18
+    value: 27.4329240062611
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 18
+    value: 26.5625
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 20
+    value: 31.875
+  - analyte: stool_SARSCoV2_N
+    time: 20
+    value: 29.2084261116867
+  - analyte: stool_SARSCoV2_N
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 24
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_N
+    time: 13
+    value: 27.1095041777816
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 13
+    value: 27.0833333333333
+  - analyte: stool_SARSCoV2_N
+    time: 17
+    value: 29.5143190987455
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 17
+    value: 28.9583333333333
+  - analyte: stool_SARSCoV2_N
+    time: 19
+    value: 31.0808218876077
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 19
+    value: 31.7708333333333
+  - analyte: stool_SARSCoV2_N
+    time: 25
+    value: 34.2181265019069
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 25
+    value: 33.6458333333333
+  - analyte: stool_SARSCoV2_N
+    time: 32
+    value: 33.399656077074
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 32
+    value: 32.8125
+  - analyte: stool_SARSCoV2_N
+    time: 34
+    value: 31.7369210079587
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 34
+    value: 35.4166666666666
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 37
+    value: 35.625
+  - analyte: stool_SARSCoV2_N
+    time: 37
+    value: 36.1183006680041
+  - analyte: stool_SARSCoV2_N
+    time: 38
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 38
+    value: 35.0
+  - analyte: stool_SARSCoV2_N
+    time: 40
+    value: 34.2492118432945
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 40
+    value: 35.3125
+  - analyte: stool_SARSCoV2_N
+    time: 41
+    value: 34.7727022200665
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 41
+    value: 32.7083333333333
+  - analyte: stool_SARSCoV2_N
+    time: 44
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 44
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 15
+    value: 28.125
+  - analyte: stool_SARSCoV2_N
+    time: 15
+    value: 27.6353094204016
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 17
+    value: 31.6666666666666
+  - analyte: stool_SARSCoV2_N
+    time: 17
+    value: 30.9730152781145
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 19
+    value: 32.2916666666666
+  - analyte: stool_SARSCoV2_N
+    time: 19
+    value: 33.3732004673824
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 23
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 23
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 29
+    value: 32.8125
+  - analyte: stool_SARSCoV2_N
+    time: 29
+    value: 33.8075313807531
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 31
+    value: 31.7708333333333
+  - analyte: stool_SARSCoV2_N
+    time: 31
+    value: 32.2384937238493
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 35
+    value: 32.0833333333333
+  - analyte: stool_SARSCoV2_N
+    time: 35
+    value: 34.6443514644351
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 36
+    value: 31.3541666666666
+  - analyte: stool_SARSCoV2_N
+    time: 36
+    value: 33.4937238493723
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 38
+    value: 35.2083333333333
+  - analyte: stool_SARSCoV2_N
+    time: 38
+    value: 34.3305439330544
+  - analyte: stool_SARSCoV2_N
+    time: 39
+    value: 34.0167364016736
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 39
+    value: 31.4583333333333
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 41
+    value: 30.1041666666666
+  - analyte: stool_SARSCoV2_N
+    time: 41
+    value: 31.4016736401673
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 42
+    value: 32.5
+  - analyte: stool_SARSCoV2_N
+    time: 42
+    value: 29.8326359832636
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 44
+    value: 35.3125
+  - analyte: stool_SARSCoV2_N
+    time: 44
+    value: 35.8995815899581
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 46
+    value: 38.125
+  - analyte: stool_SARSCoV2_N
+    time: 46
+    value: 36.2133891213389
+  - analyte: stool_SARSCoV2_N
+    time: 49
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 49
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 50
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 21
+    value: 32.2916666666666
+  - analyte: stool_SARSCoV2_N
+    time: 21
+    value: 31.8143036663065
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 24
+    value: 33.75
+  - analyte: stool_SARSCoV2_N
+    time: 24
+    value: 34.2164730263012
+  - analyte: stool_SARSCoV2_N
+    time: 27
+    value: 32.4515531647523
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 27
+    value: 31.0416666666666
+  - analyte: stool_SARSCoV2_N
+    time: 29
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 29
+    value: negative
+- measurements:
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 17
+    value: 36.25
+  - analyte: stool_SARSCoV2_N
+    time: 17
+    value: 36.4583333333333
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 24
+    value: negative
