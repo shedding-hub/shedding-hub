@@ -74,7 +74,7 @@ for patient_id, group in merged_df.groupby('study_id'):
         participant['attributes']['ethnicity'] = 'unknown'
     else:
         ethnicity = group['ethnicity'].iloc[0]
-        ethnicity_val = ('not hispanic' if ethnicity == 'Non-White'
+        ethnicity_val = ('not hispanic' if ethnicity == 'Non-Hispanic'
                          else 'hispanic' if ethnicity == 'Hispanic'
                          else 'unknown')
         participant['attributes']['ethnicity'] = ethnicity_val
