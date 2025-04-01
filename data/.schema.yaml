@@ -20,6 +20,7 @@ $defs:
       - oropharyngeal_swab
       - nasopharyngeal_swab
       - saliva
+      - emesis
       - unknown
   analyte_specification:
     description: Specification of an analyte.
@@ -67,6 +68,7 @@ $defs:
           - crAssphage
           - influenza
           - sapovirus
+          - Norovirus
           - SARS
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
@@ -83,6 +85,7 @@ $defs:
           - gc/wet gram
           - cycle threshold
           - pfu/mL
+          - NA
       reference_event:
         description: Event used as reference for `time` fields of measurements.
         type: string

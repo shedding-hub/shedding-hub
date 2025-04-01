@@ -1,0 +1,284 @@
+# yaml-language-server:$schema=../.schema.yaml
+title: Noroviruses are highly infectious but there is strong variation in host susceptibility
+  and virus pathogenicity
+doi: 10.1016/j.epidem.2020.100401
+description: >
+  By analyzing the variation in infectivity and pathogenicity of norovirus, the study
+  compares these differences and describes how virus infectivity and host susceptibility
+  vary. The results indicate that secretor-positive individuals experience significantly
+  higher infection and illness rates compared to secretor-negative individuals, who
+  exhibit protective effects.
+analytes:
+  stool_PCR:
+    description: >
+      This analyte represents the PCR value in the stool
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: stool
+    biomarker: Norovirus
+    unit: NA
+    reference_event: dosed
+    amount_unit: gram
+  stool_RNA:
+    description: >
+      The analyte represents the RNA value in the stool
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: stool
+    biomarker: Norovirus
+    unit: NA
+    reference_event: dosed
+    amount_unit: gram
+  emesis_PCR:
+    description: >
+      This analyte represents the PCR in emesis
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: emesis
+    biomarker: Norovirus
+    unit: NA
+    reference_event: dosed
+    amount_unit: gram
+  emesis_RNA:
+    description: >
+      The analyte represents the RNA in emesis
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: emesis
+    biomarker: Norovirus
+    unit: NA
+    reference_event: dosed
+    amount_unit: gram
+participants:
+- attributes: {}
+  measurements:
+  - analyte: stool_PCR
+    time: -16.25
+    value: negative
+    amount: 95
+  - analyte: stool_RNA
+    time: -16.25
+    value: negative
+    amount: 95
+  - analyte: stool_PCR
+    time: 28.2
+    value: negative
+    amount: 92
+  - analyte: stool_RNA
+    time: 28.2
+    value: negative
+    amount: 92
+  - analyte: stool_PCR
+    time: 28.333333333333332
+    value: negative
+    amount: 113
+  - analyte: stool_RNA
+    time: 28.333333333333332
+    value: negative
+    amount: 113
+  - analyte: stool_PCR
+    time: 31.5
+    value: positive
+    amount: 76
+  - analyte: stool_RNA
+    time: 31.5
+    value: positive
+    amount: 76
+  - analyte: stool_PCR
+    time: 48.333333333333336
+    value: positive
+    amount: 74
+  - analyte: stool_RNA
+    time: 48.333333333333336
+    value: positive
+    amount: 74
+  - analyte: stool_PCR
+    time: 51.583333333333336
+    value: positive
+    amount: 90
+  - analyte: stool_RNA
+    time: 51.583333333333336
+    value: positive
+    amount: 90
+  - analyte: stool_PCR
+    time: 80.05
+    value: negative
+    amount: 182
+  - analyte: stool_RNA
+    time: 80.05
+    value: positive
+    amount: 182
+  - analyte: stool_PCR
+    time: 173.0
+    value: negative
+    amount: 233
+  - analyte: stool_RNA
+    time: 173.0
+    value: negative
+    amount: 233
+  - analyte: stool_PCR
+    time: 366.6666666666667
+    value: negative
+    amount: 125
+  - analyte: stool_RNA
+    time: 366.6666666666667
+    value: negative
+    amount: 125
+  - analyte: stool_PCR
+    time: 418.75
+    value: negative
+    amount: 143
+  - analyte: stool_RNA
+    time: 418.75
+    value: negative
+    amount: 143
+- attributes: {}
+  measurements:
+  - analyte: stool_PCR
+    time: -26.333333333333332
+    value: negative
+    amount: 49
+  - analyte: stool_RNA
+    time: -26.333333333333332
+    value: negative
+    amount: 49
+  - analyte: stool_PCR
+    time: 7.416666666666667
+    value: negative
+    amount: 15
+  - analyte: stool_RNA
+    time: 7.416666666666667
+    value: negative
+    amount: 15
+  - analyte: stool_PCR
+    time: 26.166666666666668
+    value: negative
+    amount: 90
+  - analyte: stool_RNA
+    time: 26.166666666666668
+    value: negative
+    amount: 90
+  - analyte: stool_PCR
+    time: 55.083333333333336
+    value: positive
+    amount: 120
+  - analyte: stool_RNA
+    time: 55.083333333333336
+    value: positive
+    amount: 120
+  - analyte: stool_PCR
+    time: 151.91666666666666
+    value: negative
+    amount: 35
+  - analyte: stool_RNA
+    time: 151.91666666666666
+    value: negative
+    amount: 35
+  - analyte: stool_PCR
+    time: 191.91666666666666
+    value: negative
+    amount: 32
+  - analyte: stool_RNA
+    time: 191.91666666666666
+    value: negative
+    amount: 32
+  - analyte: stool_PCR
+    time: 313.5
+    value: negative
+    amount: 42
+  - analyte: stool_RNA
+    time: 313.5
+    value: negative
+    amount: 42
+  - analyte: stool_PCR
+    time: 1053.1666666666667
+    value: negative
+    amount: 18
+  - analyte: stool_RNA
+    time: 1053.1666666666667
+    value: negative
+    amount: 18
+- attributes: {}
+  measurements:
+  - analyte: emesis_PCR
+    time: 27.333333333333332
+    value: negative
+    amount: .nan
+  - analyte: emesis_RNA
+    time: 27.333333333333332
+    value: negative
+    amount: .nan
+  - analyte: emesis_PCR
+    time: 28.4
+    value: negative
+    amount: .nan
+  - analyte: emesis_RNA
+    time: 28.4
+    value: negative
+    amount: .nan
+  - analyte: emesis_PCR
+    time: 29.083333333333332
+    value: negative
+    amount: .nan
+  - analyte: emesis_RNA
+    time: 29.083333333333332
+    value: negative
+    amount: .nan
+  - analyte: emesis_PCR
+    time: 31.166666666666668
+    value: negative
+    amount: .nan
+  - analyte: emesis_RNA
+    time: 31.166666666666668
+    value: negative
+    amount: .nan
+  - analyte: emesis_PCR
+    time: 32.666666666666664
+    value: negative
+    amount: .nan
+  - analyte: emesis_RNA
+    time: 32.666666666666664
+    value: negative
+    amount: .nan
+  - analyte: emesis_PCR
+    time: 37.083333333333336
+    value: negative
+    amount: .nan
+  - analyte: emesis_RNA
+    time: 37.083333333333336
+    value: negative
+    amount: .nan
+- attributes: {}
+  measurements:
+  - analyte: emesis_PCR
+    time: 26.25
+    value: negative
+    amount: 749
+  - analyte: emesis_RNA
+    time: 26.25
+    value: negative
+    amount: 749
+  - analyte: emesis_PCR
+    time: 27.25
+    value: negative
+    amount: 248
+  - analyte: emesis_RNA
+    time: 27.25
+    value: negative
+    amount: 248
+  - analyte: emesis_PCR
+    time: 28.25
+    value: negative
+    amount: 112
+  - analyte: emesis_RNA
+    time: 28.25
+    value: negative
+    amount: 112
+  - analyte: emesis_PCR
+    time: 39.166666666666664
+    value: negative
+    amount: 330
+  - analyte: emesis_RNA
+    time: 39.166666666666664
+    value: negative
+    amount: 330
