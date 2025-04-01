@@ -91,7 +91,12 @@ for patient_id, group in merged_df.groupby('study_id'):
 
     for col in ['lineage', 'variant']:
         unique_vals = group[col].dropna().unique()
-        # Filter out "Unassigned"
+        # Some individuals have multiple non nan lineage entries. Below are all:
+        # Study ID 131265-32: [nan 'XBB.1.16' 'Unassigned']
+        # Study ID 131516-426: [nan 'XBB.1.16' 'Unassigned']
+        # Study ID 131516-458: [nan 'XBB.1.16' 'Unassigned']
+        # Study ID 131516-512: [nan 'EG.5.1' 'Unassigned']
+        # We only used the valid value in those cases, so we filter out "Unassigned"
         filtered_vals = [v for v in unique_vals if v != 'Unassigned']
         if len(filtered_vals) == 0:
             participant['attributes'][col] = 'unknown'
@@ -100,7 +105,7 @@ for patient_id, group in merged_df.groupby('study_id'):
         else:
             error_message = f"Error: Multiple distinct values for {col}: {filtered_vals}"
             print(error_message)
-
+        
 
     # Process measurements
     for _, row in group.iterrows():
