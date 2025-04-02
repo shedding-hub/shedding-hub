@@ -208,10 +208,10 @@ teunis2020 = dict(
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
             specimen="stool",
-            biomarker="Norovirus",
+            biomarker="norovirus",
             unit="NA",
             reference_event="dosed",
-            amount_unit="gram"
+            sample_amount_unit="gram"
 
         ),
         stool_RNA=dict(
@@ -221,10 +221,10 @@ teunis2020 = dict(
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
             specimen="stool",
-            biomarker="Norovirus",
+            biomarker="norovirus",
             unit="NA",
             reference_event="dosed",
-            amount_unit="gram",
+            sample_amount_unit="gram",
         ),
         emesis_PCR=dict(
             description=folded_str(
@@ -233,10 +233,10 @@ teunis2020 = dict(
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
             specimen="emesis",
-            biomarker="Norovirus",
+            biomarker="norovirus",
             unit="NA",
             reference_event="dosed",
-            amount_unit="gram",
+            sample_amount_unit="gram",
         ),
         emesis_RNA=dict(
             description=folded_str(
@@ -245,10 +245,10 @@ teunis2020 = dict(
             limit_of_quantification="unknown",
             limit_of_detection="unknown",
             specimen="emesis",
-            biomarker="Norovirus",
+            biomarker="norovirus",
             unit="NA",
             reference_event="dosed",
-            amount_unit="gram",
+            sample_amount_unit="gram",
         ),
     ),
     participants=participants,
