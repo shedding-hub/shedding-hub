@@ -1,22 +1,19 @@
 # yaml-language-server: $schema=../.schema.yaml
 title: Virological assessment of hospitalized patients with COVID-2019
 doi: 10.1038/s41586-020-2196-x
-description: >
-  The authors conducted a virological analysis of nine linked cases of COVID-19 in
-  Munich in early 2020. They quantified SARS-CoV-2 RNA gene copies in throat swabs and
-  RNA concentrations in stool and sputum samples. Abundances were quantified using
-  RT-qPCR assays targeting the E and RdRP genes as described in
-  10.2807/1560-7917.ES.2020.25.3.2000045. Values were programmatically extracted from
-  the figure, resulting in a number of significant figures far exceeding the performance
-  of the assays. The demographic data, including age and sex, are derived from the
-  Challenger et al. BMC Medicine (2022) 20:25 https://doi.org/10.1186/s12916-021-02220-0
-  supplement combined dataset.
+description: The authors conducted a virological analysis of nine linked cases of
+  COVID-19 in Munich in early 2020. They quantified SARS-CoV-2 RNA gene copies in
+  throat swabs and RNA concentrations in stool and sputum samples. Abundances were
+  quantified using RT-qPCR assays targeting the E and RdRP genes as described in 10.2807/1560-7917.ES.2020.25.3.2000045.
+  Values were programmatically extracted from the figure, resulting in a number of
+  significant figures far exceeding the performance of the assays. The demographic
+  data, including age and sex, are derived from the Challenger et al. BMC Medicine
+  (2022) 20:25 https://doi.org/10.1186/s12916-021-02220-0 supplement combined dataset.
 analytes:
   stool:
-    description: >
-      RNA gene copy concentration in stool samples. The authors report that "stool
-      samples were taken and shipped in native conditions," suggesting that results
-      reported as gene copies per gram refer to wet weight.
+    description: RNA gene copy concentration in stool samples. The authors report
+      that "stool samples were taken and shipped in native conditions," suggesting
+      that results reported as gene copies per gram refer to wet weight.
     limit_of_quantification: 100
     limit_of_detection: unknown
     specimen: stool
@@ -25,9 +22,8 @@ analytes:
     unit: gc/mL
     reference_event: symptom onset
   sputum:
-    description: >
-      RNA gene copy concentration in sputum samples. Results are reported as gene copies
-      per mL.
+    description: RNA gene copy concentration in sputum samples. Results are reported
+      as gene copies per mL.
     limit_of_quantification: 100
     limit_of_detection: unknown
     specimen: sputum
@@ -35,12 +31,11 @@ analytes:
     gene_target: E and RdRP (not further specified by authors)
     unit: gc/mL
     reference_event: symptom onset
-  throat_swab:
-    description: >
-      Number of gene copies per throat swab.
+  oropharyngeal_swab:
+    description: Number of gene copies per throat swab.
     limit_of_quantification: 100
     limit_of_detection: unknown
-    specimen: throat_swab
+    specimen: oropharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: E and RdRP (not further specified by authors)
     unit: gc/swab
@@ -107,61 +102,61 @@ participants:
   - analyte: sputum
     time: 22
     value: 2460.9297476859733
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 4
     value: 71586624.89816013
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 5
     value: 9536.778001420955
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 6
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 17.613288717623746
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 1301.1524070927223
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 73.89551617274573
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: 461.7502736841163
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: 12.80686137120952
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: 101.64192237647795
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: 1301.1524070927223
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 16
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 17
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 18
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 19
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 20
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 21
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 22
     value: negative
   - analyte: stool
@@ -258,58 +253,58 @@ participants:
   - analyte: sputum
     time: 20
     value: 1201.6546172816657
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 3
     value: 48057747.149824694
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 4
     value: 1332529.190723878
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 5
     value: 88770.23608916711
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 6
     value: 34121.27481679463
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 15382.207382497167
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 24.219028452872582
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 461.7502736841163
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: 80.0276255036308
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: 13.867277885677378
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: 16.261231185381174
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 16
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 17
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 18
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 19
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 20
     value: negative
   - analyte: stool
@@ -406,61 +401,61 @@ participants:
   - analyte: sputum
     time: 22
     value: 1987.9475051914758
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 3
     value: 1602230.4356814811
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 5
     value: 18495.535413233774
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 6
     value: 6566.736739406078
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 3471.9256070275005
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 271.226055714882
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 59.70201220820101
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: 43.40444282759396
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: 31.555815080468644
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: 168.1567942255867
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 16
     value: 3.9772199780789097
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 17
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 18
     value: 12.131391272590763
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 19
     value: 40.07933341066387
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 20
     value: 21.194082920636
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 21
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 22
     value: negative
   - analyte: stool
@@ -563,52 +558,52 @@ participants:
   - analyte: sputum
     time: 19
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 4
     value: 2728591.9587569167
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 5
     value: 104077.23252028598
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 6
     value: 687.7434488855441
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 3968.7217628337103
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 28.39842997445236
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 22.357786718257984
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: 22.357786718257984
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: 39.05858508211667
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 16
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 17
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 18
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 19
     value: negative
   - analyte: stool
@@ -717,76 +712,76 @@ participants:
   - analyte: sputum
     time: 27
     value: 4081.3107917677044
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 4
     value: 583520465.5105487
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 5
     value: 414419.7812609166
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 6
     value: 256949.60475351932
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 474.8494125087927
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 84238.15710397481
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 1698.977284380004
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: 898.0540560519331
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: 18.111936939086927
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: 37.0937481243148
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: 59.82757365169997
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: 37.0937481243148
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 16
     value: 37.0937481243148
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 17
     value: 37.0937481243148
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 18
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 19
     value: 55.24847447218598
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 20
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 21
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 22
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 23
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 24
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 25
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 26
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 27
     value: negative
   - analyte: stool
@@ -856,52 +851,52 @@ participants:
   - analyte: sputum
     time: 22
     value: 1445.3269586958197
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 6
     value: 13451.62243175235
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 5599.776862489599
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 4408.645719992577
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 2959.958541281922
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: 43.40361181227624
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: 122.29885416335843
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: 88.91515034335782
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: 43.40361181227624
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: 318.03657127918655
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: 55.129397220885465
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 16
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 17
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 18
     value: 16.685248380294652
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 19
     value: 37.01449428451262
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 20
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 21
     value: negative
   - analyte: stool
@@ -992,73 +987,73 @@ participants:
   - analyte: sputum
     time: 28
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 4
     value: 757711.5992517561
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 15277.21289729626
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 3641.350525066505
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 3362.6793887576005
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: 55955759.18726219
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: 469793.8620102167
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: 5008.422522418584
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: 13028.369895021267
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: 2084.9370105479534
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: 22754.0982379742
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 16
     value: 138.89406926990839
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 17
     value: 683.3125481521544
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 18
     value: 9.252914287454043
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 19
     value: 33.10564534674472
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 20
     value: 631.0189051927977
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 21
     value: 33.10564534674472
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 22
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 23
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 24
     value: 16.16025046730857
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 25
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 26
     value: 12.722796069597907
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 27
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 28
     value: negative
   - analyte: stool
@@ -1125,43 +1120,43 @@ participants:
   - analyte: sputum
     time: 14
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 2
     value: 12422.175010403982
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 3
     value: 106766.07023314988
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 5
     value: 201920.22964718397
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 6
     value: 56435.48196526866
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 7
     value: 77623.77957581503
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 231.29210758037064
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 70.0236414062469
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: 18.073408843919893
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: 8.147213122246047
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 13
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 14
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 15
     value: negative
   - analyte: stool
@@ -1204,19 +1199,19 @@ participants:
   - analyte: sputum
     time: 10
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 8
     value: 5040.781602099776
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 9
     value: 873.4041253126768
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 10
     value: 6.7693549650961105
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 11
     value: negative
-  - analyte: throat_swab
+  - analyte: oropharyngeal_swab
     time: 12
     value: negative
   - analyte: stool
