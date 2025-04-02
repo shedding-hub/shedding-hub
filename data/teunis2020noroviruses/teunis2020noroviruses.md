@@ -192,6 +192,7 @@ participants.extend(participants_stool)
 participants.extend(participants_emesis)
 ```
 Finally, the data is formatted and output as a YAML file.
+
 ```python
 teunis2020 = dict(
     title="Noroviruses are highly infectious but there is strong variation in host susceptibility and virus pathogenicity",
@@ -253,7 +254,7 @@ teunis2020 = dict(
     participants=participants,
 )
 
-with open("teunis2020norovirus.yaml", "w") as outfile:
+with open("teunis2020noroviruses.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
     yaml.dump(teunis2020, outfile, default_flow_style=False, sort_keys=False)
 ```
