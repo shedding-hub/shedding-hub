@@ -23,6 +23,7 @@ $defs:
       - rectal_swab
       - unknown
       - bronchoalveolar_lavage_fluid
+      - emesis
   analyte_specification:
     description: Specification of an analyte.
     type: object
@@ -71,6 +72,7 @@ $defs:
           - sapovirus
           - Norovirus
           - SARS
+          - Norovirus
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
