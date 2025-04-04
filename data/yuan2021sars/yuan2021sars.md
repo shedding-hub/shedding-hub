@@ -35,9 +35,11 @@ participants = []
 
 for patient_id, group in df_filtered.groupby("patient_id"):
     participant = {
-        "id": patient_id,
-        "age": float(group["age"].iloc[0]) if pd.notna(group["age"].iloc[0]) else "unknown",
-        "sex": group["sex"].iloc[0] if pd.notna(group["sex"].iloc[0]) else "unknown",
+        "attributes": {
+            "id": patient_id,
+            "age": float(group["age"].iloc[0]) if pd.notna(group["age"].iloc[0]) else "unknown",
+            "sex": group["sex"].iloc[0] if pd.notna(group["sex"].iloc[0]) else "unknown"
+        },
         "measurements": []
     }
 

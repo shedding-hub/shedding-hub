@@ -30,9 +30,10 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
 participants:
-- id: zs116
-  age: 42.0
-  sex: M
+- attributes:
+    id: zs116
+    age: 42.0
+    sex: M
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 7
@@ -190,9 +191,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: 10
     value: negative
-- id: zs1161
-  age: 43.0
-  sex: F
+- attributes:
+    id: zs1161
+    age: 43.0
+    sex: F
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: -1
@@ -284,9 +286,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: 5
     value: negative
-- id: zs1311
-  age: 65.0
-  sex: M
+- attributes:
+    id: zs1311
+    age: 65.0
+    sex: M
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 1
@@ -510,9 +513,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: 10
     value: negative
-- id: zs172
-  age: 10.0
-  sex: M
+- attributes:
+    id: zs172
+    age: 10.0
+    sex: M
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -664,9 +668,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: unknown
     value: negative
-- id: zs251
-  age: 7.0
-  sex: F
+- attributes:
+    id: zs251
+    age: 7.0
+    sex: F
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -752,9 +757,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: unknown
     value: negative
-- id: zs374
-  age: 65.0
-  sex: F
+- attributes:
+    id: zs374
+    age: 65.0
+    sex: F
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: -1
@@ -888,9 +894,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: 0
     value: negative
-- id: zs573
-  age: 68.0
-  sex: F
+- attributes:
+    id: zs573
+    age: 68.0
+    sex: F
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: -5
@@ -1054,9 +1061,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: 13
     value: negative
-- id: zs647
-  age: 34.0
-  sex: M
+- attributes:
+    id: zs647
+    age: 34.0
+    sex: M
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 0
@@ -1130,9 +1138,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: 2
     value: negative
-- id: zs782
-  age: 40.0
-  sex: F
+- attributes:
+    id: zs782
+    age: 40.0
+    sex: F
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -1248,9 +1257,10 @@ participants:
   - analyte: stool_SARSCoV2_N
     time: unknown
     value: negative
-- id: zs792
-  age: 36.0
-  sex: M
+- attributes:
+    id: zs792
+    age: 36.0
+    sex: M
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
