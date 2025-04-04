@@ -33,7 +33,7 @@ participants:
 - attributes:
     id: zs116
     age: 42.0
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 7
@@ -194,7 +194,7 @@ participants:
 - attributes:
     id: zs1161
     age: 43.0
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: -1
@@ -289,7 +289,7 @@ participants:
 - attributes:
     id: zs1311
     age: 65.0
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 1
@@ -516,7 +516,7 @@ participants:
 - attributes:
     id: zs172
     age: 10.0
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -671,7 +671,7 @@ participants:
 - attributes:
     id: zs251
     age: 7.0
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -760,7 +760,7 @@ participants:
 - attributes:
     id: zs374
     age: 65.0
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: -1
@@ -897,7 +897,7 @@ participants:
 - attributes:
     id: zs573
     age: 68.0
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: -5
@@ -1064,7 +1064,7 @@ participants:
 - attributes:
     id: zs647
     age: 34.0
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 0
@@ -1141,7 +1141,7 @@ participants:
 - attributes:
     id: zs782
     age: 40.0
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -1260,7 +1260,7 @@ participants:
 - attributes:
     id: zs792
     age: 36.0
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown

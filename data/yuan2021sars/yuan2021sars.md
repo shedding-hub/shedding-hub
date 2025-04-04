@@ -21,6 +21,7 @@ df_case["date_collection"] = pd.to_datetime(df_case["date_collection"], errors="
 df_case["date_onset"] = pd.to_datetime(df_case["date_onset"], errors="coerce")
 
 df_case["time"] = (df_case["date_collection"] - df_case["date_onset"]).dt.days
+df_case["sex"] = df_case["sex"].replace({"M": "male", "F": "female"})
 
 positive_patients = df_case[
     (df_case["ctvalue_ORF1ab"] < 40) | (df_case["ctvalue_N"] < 40)
