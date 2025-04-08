@@ -129,11 +129,38 @@ for patient_id, group in merged_df.groupby('study_id'):
             continue
 
         measurement = {
-            'analyte': 'NP_SARSCoV2',
+            'analyte': 'NP_SARSCoV2_VL',
             'time': row['day'],
             'value': value
         }
+
+        if row['pcr'] in ['Not tested', 'Not collected'] or pd.isna(row['pcr']):
+            continue
+        elif row['pcr'] == 'Negative':
+            value_CT = "negative"
+        elif row['pcr'] == 'Positive':
+            # Process VL_status for positive PCR results
+            if row['VL_status'] == 'Not eligible for VL testing':
+                continue  # Skip this row
+            elif row['VL_status'] in ['Undetectable, will not be done', 'VL run, not detected']:
+                value_CT = "negative"
+            elif row['VL_status'] == 'Less than 10,000 copies/mL':
+                value_CT = "positive"
+            elif row['VL_status'] in ['Within detectable range', 'More than 1 billion copies/mL', "Less than 10,000 copies/mL"]:
+                value_CT = row["Ct"]
+            else:
+                continue    
+        else:
+            continue
+
+        measurement_CT = {
+            'analyte': 'NP_SARSCoV2_CT',
+            'time': row['day'],
+            'value': value_CT
+        }
+
         participant['measurements'].append(measurement)
+        participant['measurements'].append(measurement_CT)
 
     if participant['measurements']:
         participants.append(participant)
@@ -143,13 +170,21 @@ for patient_id, group in merged_df.groupby('study_id'):
 CDC = dict(title="Centers for Disease Control and Prevention (CDC) Nursing Home Public Health Response Network (NHPHRN)",
                url="https://github.com/abtassociates/CDC_NHPHRN/blob/main/",
                description=folded_str('The INHERENT study, part of the CDC funded Nursing Home Public Health Response Network (NHPHRN), examined SARSCoV2 shedding in nursing home residents and staff. It characterized the viral shedding kinetics including proliferation, peak, and clearance using qRTPCR, antigen testing, genetic sequencing, and culture. The original dataset is published and updated on their GitHub repository (https://github.com/abtassociates/CDC_NHPHRN/blob/main/).\n'),
-               analytes=dict(NP_SARSCoV2=dict(description=folded_str('Viral concentrations were quantified using RTqPCR targeting the N and S genes in nasopharyngeal swab samples with the TaqPath COVID19, Flu A, Flu B Combo Kit. One nasal swab was processed using the TaqPath Combo Kit on the QuantStudio 7 Pro, which provided results for all three analytes. For specimens with a SARSCoV2 cycle threshold (Ct) value below 30, a second analysis was performed using the CDC Influenza SARSCoV2 (Flu SC2) Multiplex Assay on the ABT 7500 Fast Dx. The reference event, "confirmation date", is defined as the date of the initial positive test.\n'),
-                                        limit_of_quantification="unknown",
+               analytes=dict(NP_SARSCoV2_VL=dict(description=folded_str('Viral concentrations were quantified using RTqPCR targeting the N and S genes in nasopharyngeal swab samples with the TaqPath COVID19, Flu A, Flu B Combo Kit. One nasal swab was processed using the TaqPath Combo Kit on the QuantStudio 7 Pro, which provided results for all three analytes. For specimens with a SARSCoV2 cycle threshold (Ct) value below 30, a second analysis was performed using the CDC Influenza SARSCoV2 (Flu SC2) Multiplex Assay on the ABT 7500 Fast Dx. The reference event, "confirmation date", is defined as the date of the initial positive test.\n'),
+                                        limit_of_quantification=10000,
                                         limit_of_detection="unknown",
                                         specimen="nasopharyngeal_swab", 
                                         biomarker="SARS-CoV-2", 
                                         gene_target="S and N", 
                                         unit="gc/mL",
+                                        reference_event="confirmation date",),
+                            NP_SARSCoV2_CT=dict(description=folded_str('Cycle threshold (Ct) values were measured using RTqPCR targeting the N and S genes in nasopharyngeal swab samples with the TaqPath COVID19, Flu A, Flu B Combo Kit. One nasal swab was processed using the TaqPath Combo Kit on the QuantStudio 7 Pro, which provided results for all three analytes. For specimens with a SARSCoV2 cycle threshold value below 30, a second analysis was performed using the CDC Influenza SARSCoV2 (Flu SC2) Multiplex Assay on the ABT 7500 Fast Dx. The reference event, "confirmation date", is defined as the date of the initial positive test.\n'),
+                                        limit_of_quantification="unknown",
+                                        limit_of_detection=37,
+                                        specimen="nasopharyngeal_swab", 
+                                        biomarker="SARS-CoV-2", 
+                                        gene_target="S and N", 
+                                        unit="cycle threshold",
                                         reference_event="confirmation date",)),
                 participants = participants
                                         )
