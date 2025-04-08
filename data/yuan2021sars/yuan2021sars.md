@@ -9,25 +9,43 @@ from shedding_hub import folded_str
 df = pd.read_csv("pone.0247367.s001.csv")
 df_case = df[df['case'].notna()].copy()
 df_case = df_case[[
-    "id", "age", "gender1", "ORF1ab", "N", "date_collection", "date_onset"
+    "id", "age", "gender1", "ORF1ab", "N",
+    "date_collection", "date_onset", "date_detection", "type" 
 ]].copy()
+
 df_case.columns = [
-    "patient_id", "age", "sex", "ctvalue_ORF1ab", "ctvalue_N", "date_collection", "date_onset"
+    "patient_id", "age", "sex", "ctvalue_ORF1ab", "ctvalue_N",
+    "date_collection", "date_onset", "date_detection", "symptom_status"  
 ]
 
 df_case["ctvalue_ORF1ab"] = pd.to_numeric(df_case["ctvalue_ORF1ab"], errors="coerce")
 df_case["ctvalue_N"] = pd.to_numeric(df_case["ctvalue_N"], errors="coerce")
 df_case["date_collection"] = pd.to_datetime(df_case["date_collection"], errors="coerce")
 df_case["date_onset"] = pd.to_datetime(df_case["date_onset"], errors="coerce")
+df_case["date_detection"] = pd.to_datetime(df_case["date_detection"], errors="coerce")
 
-df_case["time"] = (df_case["date_collection"] - df_case["date_onset"]).dt.days
 df_case["sex"] = df_case["sex"].replace({"M": "male", "F": "female"})
+df_case["symptom_status"] = df_case["symptom_status"].str.lower().str.strip()
+df_case["symptom_status"] = df_case["symptom_status"].map({
+    "symptomatic": "symptomatic",
+    "asymptomatic": "asymptomatic"
+}).fillna("unknown")  
+
+def compute_time(row):
+    if row["symptom_status"] == "symptomatic" and pd.notna(row["date_onset"]):
+        return (row["date_collection"] - row["date_onset"]).days
+    elif row["symptom_status"] == "asymptomatic" and pd.notna(row["date_detection"]):
+        return (row["date_collection"] - row["date_detection"]).days
+    else:
+        return None  
+
+df_case["time"] = df_case.apply(compute_time, axis=1)
 
 positive_patients = df_case[
     (df_case["ctvalue_ORF1ab"] < 40) | (df_case["ctvalue_N"] < 40)
 ]["patient_id"].unique()
-
 df_filtered = df_case[df_case["patient_id"].isin(positive_patients)].copy()
+
 ```
 
 
@@ -39,13 +57,14 @@ for patient_id, group in df_filtered.groupby("patient_id"):
         "attributes": {
             "id": patient_id,
             "age": float(group["age"].iloc[0]) if pd.notna(group["age"].iloc[0]) else "unknown",
-            "sex": group["sex"].iloc[0] if pd.notna(group["sex"].iloc[0]) else "unknown"
+            "sex": group["sex"].iloc[0] if pd.notna(group["sex"].iloc[0]) else "unknown",
+            "symptom_status": group["symptom_status"].iloc[0] if pd.notna(group["symptom_status"].iloc[0]) else "unknown"
         },
         "measurements": []
     }
 
     for _, row in group.iterrows():
-        time = int(row["time"]) if pd.notna(row["time"]) else "unknown"
+        time = int(row["time"]) if pd.notna(row["time"]) and row["time"] >= 0 else "unknown"
 
         if pd.notna(row["ctvalue_ORF1ab"]):
             participant["measurements"].append({

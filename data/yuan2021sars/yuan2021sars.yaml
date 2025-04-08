@@ -34,6 +34,7 @@ participants:
     id: zs116
     age: 42.0
     sex: male
+    symptom_status: symptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 7
@@ -195,12 +196,13 @@ participants:
     id: zs1161
     age: 43.0
     sex: female
+    symptom_status: symptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
-    time: -1
+    time: unknown
     value: 24.96
   - analyte: stool_SARSCoV2_N
-    time: -1
+    time: unknown
     value: 26.09
   - analyte: stool_SARSCoV2_ORF1ab
     time: 2
@@ -290,6 +292,7 @@ participants:
     id: zs1311
     age: 65.0
     sex: male
+    symptom_status: symptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 1
@@ -517,24 +520,25 @@ participants:
     id: zs172
     age: 10.0
     sex: male
+    symptom_status: asymptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 37.47
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 32.62
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 33.71
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -543,10 +547,10 @@ participants:
     time: unknown
     value: 25.75
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 25.59
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 28.34
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -555,10 +559,10 @@ participants:
     time: unknown
     value: 27.59
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 31.37
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 30.62
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -567,70 +571,76 @@ participants:
     time: unknown
     value: 27.02
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 33.61
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 35.17
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 31.73
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 32.23
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 33.07
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 33.26
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 33.98
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 33.39
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 29.13
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 28.94
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 27.47
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 30.05
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 31.2
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 32.47
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 31.72
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 29.86
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -645,39 +655,34 @@ participants:
     time: unknown
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
 - attributes:
     id: zs251
     age: 7.0
     sex: female
+    symptom_status: asymptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 25.13
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 26.16
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -692,22 +697,22 @@ participants:
     time: unknown
     value: 25.2
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 27.51
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 29.41
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 31.55
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 30.97
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -728,28 +733,28 @@ participants:
     time: unknown
     value: 28.92
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 34.68
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 34.12
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -761,12 +766,13 @@ participants:
     id: zs374
     age: 65.0
     sex: female
+    symptom_status: symptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
-    time: -1
+    time: unknown
     value: 19.66
   - analyte: stool_SARSCoV2_N
-    time: -1
+    time: unknown
     value: 22.4
   - analyte: stool_SARSCoV2_ORF1ab
     time: 2
@@ -898,12 +904,13 @@ participants:
     id: zs573
     age: 68.0
     sex: female
+    symptom_status: symptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
-    time: -5
+    time: unknown
     value: 26.05
   - analyte: stool_SARSCoV2_N
-    time: -5
+    time: unknown
     value: 29.42
   - analyte: stool_SARSCoV2_ORF1ab
     time: 0
@@ -1065,6 +1072,7 @@ participants:
     id: zs647
     age: 34.0
     sex: male
+    symptom_status: symptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: 0
@@ -1142,6 +1150,7 @@ participants:
     id: zs782
     age: 40.0
     sex: female
+    symptom_status: asymptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -1150,10 +1159,22 @@ participants:
     time: unknown
     value: 36.79
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -1174,10 +1195,10 @@ participants:
     time: unknown
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -1186,10 +1207,22 @@ participants:
     time: unknown
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_N
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
     time: unknown
@@ -1198,151 +1231,128 @@ participants:
     time: unknown
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_N
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_N
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_N
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
-    value: negative
-  - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
 - attributes:
     id: zs792
     age: 36.0
     sex: male
+    symptom_status: asymptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 33.61
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 33.49
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 34.97
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 34.01
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 33.66
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 32.84
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 36.35
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 35.59
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 34.13
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 35.75
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 35.88
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 35.58
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: 35.16
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: 32.25
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab
-    time: unknown
+    time: 0
     value: negative
   - analyte: stool_SARSCoV2_N
-    time: unknown
+    time: 0
     value: negative
