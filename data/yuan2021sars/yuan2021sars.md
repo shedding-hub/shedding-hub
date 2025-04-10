@@ -128,7 +128,7 @@ output_data = {
         "limit_of_quantification": "unknown",
         "limit_of_detection": 40,
         "unit": "cycle threshold",
-        "reference_event": "detection date"
+        "reference_event": "confirmation date"
     },
     "stool_SARSCoV2_N_symptomatic": {
         "description": folded_str(
@@ -154,7 +154,7 @@ output_data = {
         "limit_of_quantification": "unknown",
         "limit_of_detection": 40,
         "unit": "cycle threshold",
-        "reference_event": "detection date"
+        "reference_event": "confirmation date"
     }
 },
 

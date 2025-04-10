@@ -30,7 +30,7 @@ analytes:
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
-    reference_event: detection date
+    reference_event: confirmation date
   stool_SARSCoV2_N_symptomatic:
     description: >-
       RT-qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene in symptomatic
@@ -54,7 +54,7 @@ analytes:
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
-    reference_event: detection date
+    reference_event: confirmation date
 participants:
 - attributes:
     id: zs116
