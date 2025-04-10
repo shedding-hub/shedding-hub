@@ -65,17 +65,25 @@ for patient_id, group in df_filtered.groupby("patient_id"):
 
     for _, row in group.iterrows():
         time = int(row["time"]) if pd.notna(row["time"]) and row["time"] >= 0 else "unknown"
+        if row["symptom_status"] not in ["symptomatic", "asymptomatic"]:
+            continue
+
+        status_suffix = (
+            "_symptomatic" if row["symptom_status"] == "symptomatic"
+            else "_asymptomatic" if row["symptom_status"] == "asymptomatic"
+            else "_unknown"
+        )
 
         if pd.notna(row["ctvalue_ORF1ab"]):
             participant["measurements"].append({
-                "analyte": "stool_SARSCoV2_ORF1ab",
+                "analyte": f"stool_SARSCoV2_ORF1ab{status_suffix}",
                 "time": time,
                 "value": float(row["ctvalue_ORF1ab"]) if row["ctvalue_ORF1ab"] < 40 else "negative"
             })
 
         if pd.notna(row["ctvalue_N"]):
             participant["measurements"].append({
-                "analyte": "stool_SARSCoV2_N",
+                "analyte": f"stool_SARSCoV2_N{status_suffix}",
                 "time": time,
                 "value": float(row["ctvalue_N"]) if row["ctvalue_N"] < 40 else "negative"
             })
@@ -96,33 +104,60 @@ output_data = {
         "It reports detection of viral RNA in stool over extended time following symptom onset."
     ),
     "analytes": {
-        "stool_SARSCoV2_ORF1ab": {
-            "description": folded_str(
-                "qPCR analysis of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene. "
-                "Ct less than 40 is considered positive in this analysis."
-            ),
-            "specimen": "stool",
-            "biomarker": "SARS-CoV-2",
-            "gene_target": "ORF1ab",
-            "limit_of_quantification": "unknown",
-            "limit_of_detection": 40,
-            "unit": "cycle threshold",
-            "reference_event": "symptom onset"
-        },
-        "stool_SARSCoV2_N": {
-            "description": folded_str(
-                "qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene. "
-                "Ct less than 40 is considered positive in this analysis."
-            ),
-            "specimen": "stool",
-            "biomarker": "SARS-CoV-2",
-            "gene_target": "N",
-            "limit_of_quantification": "unknown",
-            "limit_of_detection": 40,
-            "unit": "cycle threshold",
-            "reference_event": "symptom onset"
-        }
+    "stool_SARSCoV2_ORF1ab_symptomatic": {
+        "description": folded_str(
+            "RT-qPCR analysis of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene in symptomatic patients. "
+            "Positive if Ct < 40. Stool RNA shedding can persist longer than respiratory samples."
+        ),
+        "specimen": "stool",
+        "biomarker": "SARS-CoV-2",
+        "gene_target": "ORF1ab",
+        "limit_of_quantification": "unknown",
+        "limit_of_detection": 40,
+        "unit": "cycle threshold",
+        "reference_event": "symptom onset"
     },
+    "stool_SARSCoV2_ORF1ab_asymptomatic": {
+        "description": folded_str(
+            "RT-qPCR detection of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene in asymptomatic individuals. "
+            "Positive if Ct < 40. Fecal shedding may occur even without symptoms and extend beyond respiratory clearance."
+        ),
+        "specimen": "stool",
+        "biomarker": "SARS-CoV-2",
+        "gene_target": "ORF1ab",
+        "limit_of_quantification": "unknown",
+        "limit_of_detection": 40,
+        "unit": "cycle threshold",
+        "reference_event": "detection date"
+    },
+    "stool_SARSCoV2_N_symptomatic": {
+        "description": folded_str(
+            "RT-qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene in symptomatic patients. "
+            "Ct < 40 is considered positive. Stool testing complements respiratory diagnostics."
+        ),
+        "specimen": "stool",
+        "biomarker": "SARS-CoV-2",
+        "gene_target": "N",
+        "limit_of_quantification": "unknown",
+        "limit_of_detection": 40,
+        "unit": "cycle threshold",
+        "reference_event": "symptom onset"
+    },
+    "stool_SARSCoV2_N_asymptomatic": {
+        "description": folded_str(
+            "RT-qPCR detection of SARS-CoV-2 RNA in stool samples targeting N gene in asymptomatic individuals. "
+            "Ct < 40 is considered positive. Prolonged fecal shedding may be observed even after respiratory clearance."
+        ),
+        "specimen": "stool",
+        "biomarker": "SARS-CoV-2",
+        "gene_target": "N",
+        "limit_of_quantification": "unknown",
+        "limit_of_detection": 40,
+        "unit": "cycle threshold",
+        "reference_event": "detection date"
+    }
+},
+
     "participants": participants 
 }
 with open("yuan2021sars.yaml","w") as outfile:
