@@ -37,7 +37,7 @@ def compute_time(row):
     elif row["symptom_status"] == "asymptomatic" and pd.notna(row["date_detection"]):
         return (row["date_collection"] - row["date_detection"]).days
     else:
-        return None  
+        return None
 
 df_case["time"] = df_case.apply(compute_time, axis=1)
 
@@ -65,13 +65,13 @@ for patient_id, group in df_filtered.groupby("patient_id"):
 
     for _, row in group.iterrows():
         time = int(row["time"]) if pd.notna(row["time"]) and row["time"] >= 0 else "unknown"
+
         if row["symptom_status"] not in ["symptomatic", "asymptomatic"]:
             continue
 
         status_suffix = (
             "_symptomatic" if row["symptom_status"] == "symptomatic"
-            else "_asymptomatic" if row["symptom_status"] == "asymptomatic"
-            else "_unknown"
+            else "_asymptomatic"
         )
 
         if pd.notna(row["ctvalue_ORF1ab"]):
@@ -90,7 +90,6 @@ for patient_id, group in df_filtered.groupby("patient_id"):
 
     if participant["measurements"]:
         participants.append(participant)
-
 ```
 
 
