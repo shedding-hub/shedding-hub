@@ -118,7 +118,7 @@ for patient_id, group in merged_df.groupby('study_id'):
             if row['VL_status'] == 'Not eligible for VL testing':
                 continue  # Skip this row
             elif row['VL_status'] in ['Undetectable, will not be done', 'VL run, not detected']:
-                value = "negative"
+                value = "positive"
             elif row['VL_status'] == 'Less than 10,000 copies/mL':
                 value = row["VL"] # values are reported instead of "positive"
             elif row['VL_status'] in ['Within detectable range', 'More than 1 billion copies/mL']:
@@ -143,9 +143,7 @@ for patient_id, group in merged_df.groupby('study_id'):
             if row['VL_status'] == 'Not eligible for VL testing':
                 continue  # Skip this row
             elif row['VL_status'] in ['Undetectable, will not be done', 'VL run, not detected']:
-                value_CT = "negative"
-            elif row['VL_status'] == 'Less than 10,000 copies/mL':
-                value_CT = row["Ct"] # values are reported instead of "positive"
+                value_CT = "positive"
             elif row['VL_status'] in ['Within detectable range', 'More than 1 billion copies/mL', "Less than 10,000 copies/mL"]:
                 value_CT = row["Ct"]
             else:
