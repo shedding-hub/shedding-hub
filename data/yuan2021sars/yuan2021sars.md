@@ -29,6 +29,7 @@ df_case["symptom_status"] = df_case["symptom_status"].map({
     "symptomatic": "symptomatic",
     "asymptomatic": "asymptomatic"
 }).fillna("unknown")  
+df_case["specimen"] = df_case["specimen"].replace({"serum": "plasma"})
 
 def compute_time(row):
     if row["symptom_status"] == "symptomatic" and pd.notna(row["date_onset"]):
@@ -108,8 +109,7 @@ for specimen in df_filtered["specimen"].dropna().unique():
               "**Target Gene:** ORF1ab\n"
               "**Symptom Status:** symptomatic\n\n"
               "RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive."
-               )
-
+               ),
                 "specimen": specimen.lower(),
                 "biomarker": "SARS-CoV-2",
                 "gene_target": gene,
@@ -132,76 +132,6 @@ output_data = {
 with open("yuan2021sars.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False,allow_unicode=True,width=1000)
-
-```
-
-```python
-output_data = {
-    "title": "SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis",
-    "doi": "10.1016/j.virusres.2020.198147",
-    "description": folded_str(
-        "This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types—including stool, respiratory secretions, urine, and serum—in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types."
-    ),
-    "analytes": {
-    "stool_SARSCoV2_ORF1ab_symptomatic": {
-        "description": folded_str(
-            "RT-qPCR analysis of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene in symptomatic patients. "
-            "Positive if Ct < 40. Stool RNA shedding can persist longer than respiratory samples."
-        ),
-        "specimen": "stool",
-        "biomarker": "SARS-CoV-2",
-        "gene_target": "ORF1ab",
-        "limit_of_quantification": "unknown",
-        "limit_of_detection": 40,
-        "unit": "cycle threshold",
-        "reference_event": "symptom onset"
-    },
-    "stool_SARSCoV2_ORF1ab_asymptomatic": {
-        "description": folded_str(
-            "RT-qPCR detection of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene in asymptomatic individuals. "
-            "Positive if Ct < 40. Fecal shedding may occur even without symptoms and extend beyond respiratory clearance."
-        ),
-        "specimen": "stool",
-        "biomarker": "SARS-CoV-2",
-        "gene_target": "ORF1ab",
-        "limit_of_quantification": "unknown",
-        "limit_of_detection": 40,
-        "unit": "cycle threshold",
-        "reference_event": "confirmation date"
-    },
-    "stool_SARSCoV2_N_symptomatic": {
-        "description": folded_str(
-            "RT-qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene in symptomatic patients. "
-            "Ct < 40 is considered positive. Stool testing complements respiratory diagnostics."
-        ),
-        "specimen": "stool",
-        "biomarker": "SARS-CoV-2",
-        "gene_target": "N",
-        "limit_of_quantification": "unknown",
-        "limit_of_detection": 40,
-        "unit": "cycle threshold",
-        "reference_event": "symptom onset"
-    },
-    "stool_SARSCoV2_N_asymptomatic": {
-        "description": folded_str(
-            "RT-qPCR detection of SARS-CoV-2 RNA in stool samples targeting N gene in asymptomatic individuals. "
-            "Ct < 40 is considered positive. Prolonged fecal shedding may be observed even after respiratory clearance."
-        ),
-        "specimen": "stool",
-        "biomarker": "SARS-CoV-2",
-        "gene_target": "N",
-        "limit_of_quantification": "unknown",
-        "limit_of_detection": 40,
-        "unit": "cycle threshold",
-        "reference_event": "confirmation date"
-    }
-},
-
-    "participants": participants 
-}
-with open("yuan2021sars.yaml","w") as outfile:
-    outfile.write("# yaml-language-server:$schema=../.schema.yaml\n")
-    yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False, allow_unicode=True)
 ```
 
 ```python
