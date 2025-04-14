@@ -62,7 +62,7 @@ Zuo2020 = dict(title="Alterations in Gut Microbiota of Patients With COVID-19 Du
             doi="10.1053/j.gastro.2020.05.048.",
             description=folded_str("The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in fecal samples from 15 hospitalized COVID-19 patients in Hong Kong.\n"),
             analytes=dict(stool_SARS=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentrations in fecal samples, which were were collected 2 to 3 times per week starting from hospital admission, and SARS-CoV-2 detection in feces was tracked longitudinally. The concentrations were quantified in gene copies per mL.\n"),
-                          specimen="stool_swab",
+                          specimen="stool",
                           biomarker="SARS-CoV-2",
                           gene_target="RdRp",
                           limit_of_quantification="unknown",

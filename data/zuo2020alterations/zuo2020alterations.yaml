@@ -11,7 +11,7 @@ analytes:
       2 to 3 times per week starting from hospital admission, and SARS-CoV-2 detection
       in feces was tracked longitudinally. The concentrations were quantified in gene
       copies per mL.
-    specimen: stool_swab
+    specimen: stool
     biomarker: SARS-CoV-2
     gene_target: RdRp
     limit_of_quantification: unknown
