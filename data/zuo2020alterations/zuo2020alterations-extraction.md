@@ -66,7 +66,7 @@ Zuo2020 = dict(title="Alterations in Gut Microbiota of Patients With COVID-19 Du
                           biomarker="SARS-CoV-2",
                           gene_target="RdRp",
                           limit_of_quantification="unknown",
-                          limit_of_detection="347",
+                          limit_of_detection=347,
                           unit="gc/mL",
                           reference_event="symptom onset",
         )
