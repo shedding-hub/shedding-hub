@@ -80,5 +80,4 @@ Zuo2020 = dict(title="Alterations in Gut Microbiota of Patients With COVID-19 Du
 with open("zuo2020alterations.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=.schema.yaml\n")
     yaml.dump(Zuo2020, outfile, default_style=None, default_flow_style=False, sort_keys=False)
-outfile.close()
 ```
