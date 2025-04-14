@@ -14,6 +14,8 @@ The raw data (data.csv) was extracted from Figure 3C (see below) in Zuo et al. (
 ```python
 zuo2020 = pd.read_csv("data.csv")
 zuo2020["type"] = "stool"
+zuo2020 = zuo2020.replace({"Sex": {'M': "male", 'F': "female"}})
+
 # Initialize an empty list to store participant information
 participant_list = []
 # Loop through each unique patient in the patient_demo_info dictionary

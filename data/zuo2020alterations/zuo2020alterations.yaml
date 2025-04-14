@@ -21,7 +21,7 @@ analytes:
 participants:
 - attributes:
     age: 65
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -37,7 +37,7 @@ participants:
     value: negative
 - attributes:
     age: 55
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -47,7 +47,7 @@ participants:
     value: negative
 - attributes:
     age: 42
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -63,7 +63,7 @@ participants:
     value: negative
 - attributes:
     age: 70
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -76,7 +76,7 @@ participants:
     value: negative
 - attributes:
     age: 58
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -95,7 +95,7 @@ participants:
     value: negative
 - attributes:
     age: 71
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -105,7 +105,7 @@ participants:
     value: negative
 - attributes:
     age: 48
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -121,7 +121,7 @@ participants:
     value: negative
 - attributes:
     age: 38
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -143,14 +143,14 @@ participants:
     value: negative
 - attributes:
     age: 33
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARS
     time: 0
     value: 8138.476822555994
 - attributes:
     age: 70
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -166,7 +166,7 @@ participants:
     value: negative
 - attributes:
     age: 62
-    sex: M
+    sex: male
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -176,7 +176,7 @@ participants:
     value: 7471.670684143498
 - attributes:
     age: 71
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -198,7 +198,7 @@ participants:
     value: 66818.06197698516
 - attributes:
     age: 47
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -208,7 +208,7 @@ participants:
     value: negative
 - attributes:
     age: 22
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
@@ -218,7 +218,7 @@ participants:
     value: 1915841.8110260358
 - attributes:
     age: 46
-    sex: F
+    sex: female
   measurements:
   - analyte: stool_SARS
     time: 0
