@@ -7,7 +7,7 @@ import yaml
 import pandas as pd
 from shedding_hub import folded_str
 ```
-The raw data (data.csv) was extracted from Figure 3C (see below) in Zuo et al. (2020) and entered in the markdown (.md) file.
+The raw data (data.csv) was extracted from [Figure 3C](https://www.gastrojournal.org/cms/10.1053/j.gastro.2020.05.048/asset/63b0fcb5-b3dd-4535-ad0a-d352016f6c5f/main.assets/gr3_lrg.jpg) (see below) in [Zuo et al. (2020)](https://www.gastrojournal.org/article/S0016-5085(20)34701-6/fulltext?referrer=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F) and entered in the markdown (.md) file.
 
 ![image](patient_data.png)
 
