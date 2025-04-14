@@ -1,0 +1,237 @@
+# yaml-language-server: $schema=.schema.yaml
+title: Alterations in Gut Microbiota of Patients With COVID-19 During Time of Hospitalization
+doi: 10.1053/j.gastro.2020.05.048.
+description: >
+  The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in
+  fecal samples from 15 hospitalized COVID-19 patients in Hong Kong.
+analytes:
+  stool_SARS:
+    description: >
+      SARS-CoV-2 RNA gene copy concentrations in fecal samples, which were were collected
+      2 to 3 times per week starting from hospital admission, and SARS-CoV-2 detection
+      in feces was tracked longitudinally. The concentrations were quantified in gene
+      copies per mL.
+    specimen: stool_swab
+    biomarker: SARS-CoV-2
+    gene_target: RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: '347'
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 65
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 3699.1872199932054
+  - analyte: stool_SARS
+    time: 5
+    value: negative
+  - analyte: stool_SARS
+    time: 9
+    value: negative
+  - analyte: stool_SARS
+    time: 15
+    value: negative
+- attributes:
+    age: 55
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: negative
+  - analyte: stool_SARS
+    time: 2
+    value: negative
+- attributes:
+    age: 42
+    sex: M
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 111264.75500790839
+  - analyte: stool_SARS
+    time: 3
+    value: 1654.0287191402724
+  - analyte: stool_SARS
+    time: 4
+    value: negative
+  - analyte: stool_SARS
+    time: 14
+    value: negative
+- attributes:
+    age: 70
+    sex: M
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: negative
+  - analyte: stool_SARS
+    time: 4
+    value: 2027.3591570556575
+  - analyte: stool_SARS
+    time: 22
+    value: negative
+- attributes:
+    age: 58
+    sex: M
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 45712.449229762766
+  - analyte: stool_SARS
+    time: 3
+    value: 31256.634546803503
+  - analyte: stool_SARS
+    time: 5
+    value: 1778.411155855395
+  - analyte: stool_SARS
+    time: 9
+    value: negative
+  - analyte: stool_SARS
+    time: 11
+    value: negative
+- attributes:
+    age: 71
+    sex: M
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 4828.159914250888
+  - analyte: stool_SARS
+    time: 1
+    value: negative
+- attributes:
+    age: 48
+    sex: M
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 85608.19435040126
+  - analyte: stool_SARS
+    time: 2
+    value: 16395.472081380118
+  - analyte: stool_SARS
+    time: 7
+    value: negative
+  - analyte: stool_SARS
+    time: 9
+    value: negative
+- attributes:
+    age: 38
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: negative
+  - analyte: stool_SARS
+    time: 1
+    value: negative
+  - analyte: stool_SARS
+    time: 3
+    value: negative
+  - analyte: stool_SARS
+    time: 4
+    value: negative
+  - analyte: stool_SARS
+    time: 6
+    value: negative
+  - analyte: stool_SARS
+    time: 9
+    value: negative
+- attributes:
+    age: 33
+    sex: M
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 8138.476822555994
+- attributes:
+    age: 70
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 1928.6166066457124
+  - analyte: stool_SARS
+    time: 2
+    value: negative
+  - analyte: stool_SARS
+    time: 5
+    value: negative
+  - analyte: stool_SARS
+    time: 10
+    value: negative
+- attributes:
+    age: 62
+    sex: M
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 2855592.3050696496
+  - analyte: stool_SARS
+    time: 5
+    value: 7471.670684143498
+- attributes:
+    age: 71
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 28418.964335140772
+  - analyte: stool_SARS
+    time: 1
+    value: 602795.2202489044
+  - analyte: stool_SARS
+    time: 3
+    value: 154544.64881565815
+  - analyte: stool_SARS
+    time: 5
+    value: 208804.20286025995
+  - analyte: stool_SARS
+    time: 7
+    value: 432203.5164262188
+  - analyte: stool_SARS
+    time: 11
+    value: 66818.06197698516
+- attributes:
+    age: 47
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: negative
+  - analyte: stool_SARS
+    time: 2
+    value: negative
+- attributes:
+    age: 22
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 3746.8621210740166
+  - analyte: stool_SARS
+    time: 2
+    value: 1915841.8110260358
+- attributes:
+    age: 46
+    sex: F
+  measurements:
+  - analyte: stool_SARS
+    time: 0
+    value: 2578.524350163852
+  - analyte: stool_SARS
+    time: 4
+    value: negative
+  - analyte: stool_SARS
+    time: 6
+    value: 65471.68406441646
+  - analyte: stool_SARS
+    time: 7
+    value: 1259895.2773293122
+  - analyte: stool_SARS
+    time: 9
+    value: 68567.82931308553
