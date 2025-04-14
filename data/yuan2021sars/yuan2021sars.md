@@ -29,6 +29,7 @@ df_case["symptom_status"] = df_case["symptom_status"].map({
     "symptomatic": "symptomatic",
     "asymptomatic": "asymptomatic"
 }).fillna("unknown")  
+df_case["specimen"] = df_case["specimen"].str.lower().str.strip()
 df_case["specimen"] = df_case["specimen"].replace({"serum": "plasma"})
 
 def compute_time(row):
@@ -109,7 +110,7 @@ for specimen in df_filtered["specimen"].dropna().unique():
               "**Target Gene:** ORF1ab\n"
               "**Symptom Status:** symptomatic\n\n"
               "RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive."
-               ),
+              ),
                 "specimen": specimen.lower(),
                 "biomarker": "SARS-CoV-2",
                 "gene_target": gene,

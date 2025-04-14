@@ -148,7 +148,7 @@ analytes:
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: confirmation date
-  serum_SARSCoV2_ORF1ab_symptomatic:
+  plasma_SARSCoV2_ORF1ab_symptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -159,14 +159,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: serum
+    specimen: plasma
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: symptom onset
-  serum_SARSCoV2_ORF1ab_asymptomatic:
+  plasma_SARSCoV2_ORF1ab_asymptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -177,14 +177,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: serum
+    specimen: plasma
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: confirmation date
-  serum_SARSCoV2_N_symptomatic:
+  plasma_SARSCoV2_N_symptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -195,14 +195,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: serum
+    specimen: plasma
     biomarker: SARS-CoV-2
     gene_target: N
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: symptom onset
-  serum_SARSCoV2_N_asymptomatic:
+  plasma_SARSCoV2_N_asymptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -213,7 +213,7 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: serum
+    specimen: plasma
     biomarker: SARS-CoV-2
     gene_target: N
     limit_of_quantification: unknown
@@ -389,10 +389,10 @@ participants:
   - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 40
     value: negative
-  - analyte: serum_SARSCoV2_ORF1ab_symptomatic
+  - analyte: plasma_SARSCoV2_ORF1ab_symptomatic
     time: 37
     value: negative
-  - analyte: serum_SARSCoV2_N_symptomatic
+  - analyte: plasma_SARSCoV2_N_symptomatic
     time: 37
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
@@ -1085,10 +1085,10 @@ participants:
   - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 15
     value: 37.53
-  - analyte: serum_SARSCoV2_ORF1ab_symptomatic
+  - analyte: plasma_SARSCoV2_ORF1ab_symptomatic
     time: 15
     value: negative
-  - analyte: serum_SARSCoV2_N_symptomatic
+  - analyte: plasma_SARSCoV2_N_symptomatic
     time: 15
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
@@ -1289,10 +1289,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 26
     value: 32.92
-  - analyte: serum_SARSCoV2_ORF1ab_symptomatic
+  - analyte: plasma_SARSCoV2_ORF1ab_symptomatic
     time: 26
     value: negative
-  - analyte: serum_SARSCoV2_N_symptomatic
+  - analyte: plasma_SARSCoV2_N_symptomatic
     time: 26
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1607,10 +1607,10 @@ participants:
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: serum_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: plasma_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: serum_SARSCoV2_N_asymptomatic
+  - analyte: plasma_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
