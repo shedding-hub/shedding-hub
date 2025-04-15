@@ -22,6 +22,7 @@ $defs:
       - rectal_swab
       - unknown
       - bronchoalveolar_lavage_fluid
+      - emesis
   analyte_specification:
     description: Specification of an analyte.
     type: object
@@ -69,6 +70,7 @@ $defs:
           - influenza
           - sapovirus
           - SARS
+          - norovirus
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
@@ -84,6 +86,7 @@ $defs:
           - gc/wet gram
           - cycle threshold
           - pfu/mL
+          - NA
       reference_event:
         description: Event used as reference for `time` fields of measurements.
         type: string
@@ -92,6 +95,13 @@ $defs:
           - confirmation date
           - enrollment
           - hospital admission
+          - dosed
+      sample_amount_unit:
+        description: Sample amount measurement (e.g., weight or volume) unit.
+        type: string
+        enum:
+          - gram
+          - mL
     required:
       - biomarker
       - description
@@ -225,6 +235,12 @@ properties:
                 description: Highest measurement result observed for a blank sample.
                 oneOf:
                   - type: number
+                  - const: unknown
+              sample_amount:
+                description: The amount (weight or volume) of sample collected.
+                oneOf:
+                  - type: number
+                    exclusiveMinimum: 0
                   - const: unknown
             required:
               - analyte
