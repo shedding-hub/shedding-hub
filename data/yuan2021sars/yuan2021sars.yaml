@@ -4,7 +4,7 @@ doi: 10.1016/j.virusres.2020.198147
 description: >-
   This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types—including stool, respiratory secretions, urine, and serum—in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.
 analytes:
-  nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic:
+  respiratory_secretions_SARSCoV2_ORF1ab_symptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -15,14 +15,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: nasopharyngeal_swab
+    specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: symptom onset
-  nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic:
+  respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -33,14 +33,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: nasopharyngeal_swab
+    specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: confirmation date
-  nasopharyngeal_swab_SARSCoV2_N_symptomatic:
+  respiratory_secretions_SARSCoV2_N_symptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -51,14 +51,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: nasopharyngeal_swab
+    specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: N
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: symptom onset
-  nasopharyngeal_swab_SARSCoV2_N_asymptomatic:
+  respiratory_secretions_SARSCoV2_N_asymptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -69,7 +69,7 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: nasopharyngeal_swab
+    specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: N
     limit_of_quantification: unknown
@@ -148,7 +148,7 @@ analytes:
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: confirmation date
-  plasma_SARSCoV2_ORF1ab_symptomatic:
+  serum_SARSCoV2_ORF1ab_symptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -159,14 +159,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: plasma
+    specimen: serum
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: symptom onset
-  plasma_SARSCoV2_ORF1ab_asymptomatic:
+  serum_SARSCoV2_ORF1ab_asymptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -177,14 +177,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: plasma
+    specimen: serum
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: confirmation date
-  plasma_SARSCoV2_N_symptomatic:
+  serum_SARSCoV2_N_symptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -195,14 +195,14 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: plasma
+    specimen: serum
     biomarker: SARS-CoV-2
     gene_target: N
     limit_of_quantification: unknown
     limit_of_detection: 40
     unit: cycle threshold
     reference_event: symptom onset
-  plasma_SARSCoV2_N_asymptomatic:
+  serum_SARSCoV2_N_asymptomatic:
     description: '## Analyte Description
 
       **Specimen:** respiratory secretions
@@ -213,7 +213,7 @@ analytes:
 
 
       RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
-    specimen: plasma
+    specimen: serum
     biomarker: SARS-CoV-2
     gene_target: N
     limit_of_quantification: unknown
@@ -299,22 +299,22 @@ participants:
     sex: male
     symptom_status: symptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 7
     value: 36.55
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 7
     value: 36.55
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 14
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 14
     value: 38.83
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 20
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 20
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -323,22 +323,22 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 20
     value: 34.32
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 33
     value: 34.39
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 33
     value: 31.9
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 35
     value: 34.43
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 35
     value: 31.46
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 39
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 39
     value: 33.73
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -347,10 +347,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 45
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 45
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 45
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -359,10 +359,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 44
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 43
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 43
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -377,34 +377,34 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 42
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 41
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 41
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 40
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 40
     value: negative
-  - analyte: plasma_SARSCoV2_ORF1ab_symptomatic
+  - analyte: serum_SARSCoV2_ORF1ab_symptomatic
     time: 37
     value: negative
-  - analyte: plasma_SARSCoV2_N_symptomatic
+  - analyte: serum_SARSCoV2_N_symptomatic
     time: 37
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 36
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 36
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 26
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 26
     value: negative
   - analyte: urine_SARSCoV2_ORF1ab_symptomatic
@@ -419,10 +419,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 24
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 24
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 24
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -431,10 +431,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 23
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 22
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 22
     value: negative
   - analyte: urine_SARSCoV2_ORF1ab_symptomatic
@@ -443,16 +443,16 @@ participants:
   - analyte: urine_SARSCoV2_N_symptomatic
     time: 20
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 18
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 18
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 10
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 10
     value: negative
 - attributes:
@@ -461,22 +461,22 @@ participants:
     sex: female
     symptom_status: symptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: unknown
     value: 24.96
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: unknown
     value: 26.09
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 2
     value: 31.15
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 2
     value: 31.13
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 4
     value: 35.48
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 4
     value: 37.9
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -485,10 +485,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 4
     value: 38.4
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 10
     value: 37.86
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 10
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -497,16 +497,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 21
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 21
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 21
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 14
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 14
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -515,22 +515,22 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 14
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 12
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 12
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 11
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 11
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 8
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 8
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -545,10 +545,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 7
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 5
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 5
     value: negative
 - attributes:
@@ -557,16 +557,16 @@ participants:
     sex: male
     symptom_status: symptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 1
     value: 18.68
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 1
     value: 20.12
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 8
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 8
     value: 36.39
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -575,16 +575,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 10
     value: 36.72
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 10
     value: 27.62
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 10
     value: 39.86
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 12
     value: 35.23
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 12
     value: 34.74
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -593,16 +593,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 12
     value: 31.35
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 15
     value: 35.91
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 15
     value: 37.16
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 17
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 17
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -611,16 +611,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 17
     value: 28.57
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 18
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 18
     value: 37.51
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 21
     value: 38.96
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 21
     value: 39.94
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -635,10 +635,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 22
     value: 26.68
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 25
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 25
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -647,10 +647,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 25
     value: 26.62
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 26
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 26
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -671,22 +671,22 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 28
     value: 32.48
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 29
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 29
     value: 34.09
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 33
     value: 38.29
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 33
     value: 37.85
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 38
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 38
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -695,16 +695,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 38
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 35
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 35
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 34
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 34
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -713,10 +713,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 33
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 31
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 31
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -725,22 +725,22 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 30
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 27
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 27
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 23
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 23
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 20
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 20
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -761,10 +761,10 @@ participants:
   - analyte: urine_SARSCoV2_N_symptomatic
     time: 17
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 16
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 16
     value: negative
   - analyte: urine_SARSCoV2_ORF1ab_symptomatic
@@ -773,10 +773,10 @@ participants:
   - analyte: urine_SARSCoV2_N_symptomatic
     time: 10
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 10
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 10
     value: negative
 - attributes:
@@ -785,16 +785,16 @@ participants:
     sex: male
     symptom_status: asymptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: 37.47
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -833,10 +833,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: unknown
     value: 27.02
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -851,10 +851,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: 32.23
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -899,22 +899,22 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
   - analyte: urine_SARSCoV2_ORF1ab_asymptomatic
@@ -923,16 +923,16 @@ participants:
   - analyte: urine_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
 - attributes:
@@ -941,16 +941,16 @@ participants:
     sex: female
     symptom_status: asymptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: 25.13
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: 26.16
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -965,10 +965,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: 29.41
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1001,28 +1001,28 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: 34.12
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
 - attributes:
@@ -1031,28 +1031,28 @@ participants:
     sex: female
     symptom_status: symptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: unknown
     value: 19.66
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: unknown
     value: 22.4
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 2
     value: 24.57
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 2
     value: 24.71
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 4
     value: 31.59
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 4
     value: 33.32
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 8
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 8
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1061,46 +1061,46 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 8
     value: 36.59
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 10
     value: 34.15
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 10
     value: 34.56
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 12
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 12
     value: 37.26
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 14
     value: 34.23
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 14
     value: 32.29
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 15
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 15
     value: 37.53
-  - analyte: plasma_SARSCoV2_ORF1ab_symptomatic
+  - analyte: serum_SARSCoV2_ORF1ab_symptomatic
     time: 15
     value: negative
-  - analyte: plasma_SARSCoV2_N_symptomatic
+  - analyte: serum_SARSCoV2_N_symptomatic
     time: 15
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 16
     value: 34.08
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 16
     value: 36.03
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 1
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 1
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1109,10 +1109,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 21
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 19
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 19
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1121,10 +1121,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 19
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 16
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 16
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1133,16 +1133,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 14
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 11
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 11
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 7
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 7
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1157,10 +1157,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 3
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 0
     value: negative
 - attributes:
@@ -1169,22 +1169,22 @@ participants:
     sex: female
     symptom_status: symptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: unknown
     value: 26.05
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: unknown
     value: 29.42
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 0
     value: 30.84
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 0
     value: 36.14
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 2
     value: 32.89
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 2
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1193,10 +1193,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 2
     value: 26.1
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 4
     value: 36.78
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 4
     value: 38.31
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1211,16 +1211,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 5
     value: 29.63
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 7
     value: 34.28
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 7
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 8
     value: 27.75
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 8
     value: 23.65
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1229,16 +1229,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 9
     value: 21.7
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 10
     value: 37.97
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 10
     value: 37.05
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 12
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 12
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1265,10 +1265,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 19
     value: 26.85
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 22
     value: 29.73
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 22
     value: 31.9
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1289,10 +1289,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 26
     value: 32.92
-  - analyte: plasma_SARSCoV2_ORF1ab_symptomatic
+  - analyte: serum_SARSCoV2_ORF1ab_symptomatic
     time: 26
     value: negative
-  - analyte: plasma_SARSCoV2_N_symptomatic
+  - analyte: serum_SARSCoV2_N_symptomatic
     time: 26
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1301,34 +1301,34 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 27
     value: 36.35
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 27
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 27
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 23
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 23
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 21
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 21
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 19
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 19
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 13
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 13
     value: negative
 - attributes:
@@ -1337,10 +1337,10 @@ participants:
     sex: male
     symptom_status: symptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 0
     value: 29.45
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 0
     value: 32.31
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1349,22 +1349,22 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 27
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 26
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 26
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 20
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 20
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 10
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 10
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1373,16 +1373,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_symptomatic
     time: 10
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 8
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 8
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 7
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 7
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_symptomatic
@@ -1397,16 +1397,16 @@ participants:
   - analyte: urine_SARSCoV2_N_symptomatic
     time: 7
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 5
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 5
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_symptomatic
     time: 2
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_symptomatic
     time: 2
     value: negative
 - attributes:
@@ -1415,10 +1415,10 @@ participants:
     sex: female
     symptom_status: asymptomatic
   measurements:
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: unknown
     value: 36.81
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: unknown
     value: 36.79
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1427,16 +1427,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1445,10 +1445,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1457,10 +1457,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1475,10 +1475,10 @@ participants:
   - analyte: urine_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1493,16 +1493,16 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: unknown
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1511,22 +1511,22 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
 - attributes:
@@ -1547,10 +1547,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: 34.01
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1571,10 +1571,10 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: 35.75
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
@@ -1589,33 +1589,33 @@ participants:
   - analyte: faeces_SARSCoV2_N_asymptomatic
     time: 0
     value: 32.25
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: plasma_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: serum_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: plasma_SARSCoV2_N_asymptomatic
+  - analyte: serum_SARSCoV2_N_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
     time: 0
     value: negative

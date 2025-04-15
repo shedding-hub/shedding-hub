@@ -30,10 +30,6 @@ df_case["symptom_status"] = df_case["symptom_status"].map({
     "asymptomatic": "asymptomatic"
 }).fillna("unknown")  
 df_case["specimen"] = df_case["specimen"].str.lower().str.strip()
-df_case["specimen"] = df_case["specimen"].replace({
-    "serum": "plasma",
-    "respiratory secretions": "nasopharyngeal_swab"
-})
 
 def compute_time(row):
     if row["symptom_status"] == "symptomatic" and pd.notna(row["date_onset"]):
