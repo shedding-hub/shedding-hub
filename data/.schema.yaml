@@ -22,6 +22,7 @@ $defs:
       - rectal_swab
       - unknown
       - bronchoalveolar_lavage_fluid
+      - serum
   analyte_specification:
     description: Specification of an analyte.
     type: object
