@@ -1,20 +1,12 @@
 # yaml-language-server:$schema=../schema.yaml
 title: SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis
 doi: 10.1016/j.virusres.2020.198147
-description: >-
+description: >
   This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types—including stool, respiratory secretions, urine, and serum—in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.
 analytes:
   respiratory_secretions_SARSCoV2_ORF1ab_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in respiratory secretions from symptomatic individuals.
     specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -23,16 +15,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in respiratory secretions from asymptomatic individuals.
     specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -41,16 +25,8 @@ analytes:
     unit: cycle threshold
     reference_event: confirmation date
   respiratory_secretions_SARSCoV2_N_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in respiratory secretions from symptomatic individuals.
     specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: N
@@ -59,16 +35,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   respiratory_secretions_SARSCoV2_N_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in respiratory secretions from asymptomatic individuals.
     specimen: respiratory secretions
     biomarker: SARS-CoV-2
     gene_target: N
@@ -77,16 +45,8 @@ analytes:
     unit: cycle threshold
     reference_event: confirmation date
   faeces_SARSCoV2_ORF1ab_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in faeces from symptomatic individuals.
     specimen: faeces
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -95,16 +55,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   faeces_SARSCoV2_ORF1ab_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in faeces from asymptomatic individuals.
     specimen: faeces
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -113,16 +65,8 @@ analytes:
     unit: cycle threshold
     reference_event: confirmation date
   faeces_SARSCoV2_N_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in faeces from symptomatic individuals.
     specimen: faeces
     biomarker: SARS-CoV-2
     gene_target: N
@@ -131,16 +75,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   faeces_SARSCoV2_N_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in faeces from asymptomatic individuals.
     specimen: faeces
     biomarker: SARS-CoV-2
     gene_target: N
@@ -149,16 +85,8 @@ analytes:
     unit: cycle threshold
     reference_event: confirmation date
   serum_SARSCoV2_ORF1ab_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in serum from symptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -167,16 +95,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   serum_SARSCoV2_ORF1ab_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in serum from asymptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -185,16 +105,8 @@ analytes:
     unit: cycle threshold
     reference_event: confirmation date
   serum_SARSCoV2_N_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in serum from symptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: N
@@ -203,16 +115,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   serum_SARSCoV2_N_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in serum from asymptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: N
@@ -221,16 +125,8 @@ analytes:
     unit: cycle threshold
     reference_event: confirmation date
   urine_SARSCoV2_ORF1ab_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in urine from symptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -239,16 +135,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   urine_SARSCoV2_ORF1ab_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in urine from asymptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -257,16 +145,8 @@ analytes:
     unit: cycle threshold
     reference_event: confirmation date
   urine_SARSCoV2_N_symptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in urine from symptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: N
@@ -275,16 +155,8 @@ analytes:
     unit: cycle threshold
     reference_event: symptom onset
   urine_SARSCoV2_N_asymptomatic:
-    description: '## Analyte Description
-
-      **Specimen:** respiratory secretions
-
-      **Target Gene:** ORF1ab
-
-      **Symptom Status:** symptomatic
-
-
-      RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive.'
+    description: >
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in urine from asymptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: N
@@ -792,148 +664,148 @@ participants:
     time: 0
     value: 37.47
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 2
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 2
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 2
     value: 32.62
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 2
     value: 33.71
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 3
     value: 25.64
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 3
     value: 25.75
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 5
     value: 25.59
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 5
     value: 28.34
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 8
     value: 26.29
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 8
     value: 27.59
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 9
     value: 31.37
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 9
     value: 30.62
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 10
     value: 26.95
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 10
     value: 27.02
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 16
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 16
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 16
     value: 33.61
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 16
     value: 35.17
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 17
     value: 31.73
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 17
     value: 32.23
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 18
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 18
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 18
     value: 33.07
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 18
     value: 33.26
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 19
     value: 33.98
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 19
     value: 33.39
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 20
     value: 29.13
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 20
     value: 28.94
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 22
     value: 27.47
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 22
     value: 30.05
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 24
     value: 31.2
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 24
     value: 32.47
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 25
     value: 31.72
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 25
     value: 29.86
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 27
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 27
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 23
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 23
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 12
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 12
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 8
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 8
     value: negative
   - analyte: urine_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 8
     value: negative
   - analyte: urine_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 8
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 6
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 6
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 3
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 3
     value: negative
 - attributes:
     id: zs251
@@ -948,82 +820,82 @@ participants:
     time: 0
     value: 26.16
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 3
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 3
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 3
     value: 25.41
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 3
     value: 25.2
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 6
     value: 27.51
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 6
     value: 29.41
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 9
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 9
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 9
     value: 31.55
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 9
     value: 30.97
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 12
     value: 32.65
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 12
     value: 31.69
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 15
     value: 30.67
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 15
     value: 29.81
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 17
     value: 29.59
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 17
     value: 28.92
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 21
     value: 34.68
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 21
     value: 34.12
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 13
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 13
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 11
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 11
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 5
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 5
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 1
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 1
     value: negative
 - attributes:
     id: zs374
@@ -1416,112 +1288,112 @@ participants:
     symptom_status: asymptomatic
   measurements:
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 12
     value: 36.81
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 12
     value: 36.79
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 24
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 24
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 22
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 22
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 20
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 20
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 17
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 17
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 16
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 16
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 14
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 14
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 14
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 14
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 12
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 12
     value: negative
   - analyte: urine_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 12
     value: negative
   - analyte: urine_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 12
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 10
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 10
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 9
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 9
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: unknown
+    time: 7
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: unknown
+    time: 7
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 7
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 7
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 6
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 6
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 6
     value: negative
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 6
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 3
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 3
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 1
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 1
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0
@@ -1536,82 +1408,82 @@ participants:
     symptom_status: asymptomatic
   measurements:
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 1
     value: 33.61
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 1
     value: 33.49
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 3
     value: 34.97
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 3
     value: 34.01
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 7
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 7
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 7
     value: 33.66
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 7
     value: 32.84
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 8
     value: 36.35
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 8
     value: 35.59
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 11
     value: 34.13
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 11
     value: 35.75
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 11
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 11
     value: negative
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 14
     value: 35.88
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 14
     value: 35.58
   - analyte: faeces_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 16
     value: 35.16
   - analyte: faeces_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 16
     value: 32.25
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 10
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 10
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 5
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 5
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 3
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 3
     value: negative
   - analyte: serum_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: 3
     value: negative
   - analyte: serum_SARSCoV2_N_asymptomatic
-    time: 0
+    time: 3
     value: negative
   - analyte: respiratory_secretions_SARSCoV2_ORF1ab_asymptomatic
     time: 0

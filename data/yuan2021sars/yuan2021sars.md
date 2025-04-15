@@ -31,11 +31,16 @@ df_case["symptom_status"] = df_case["symptom_status"].map({
 }).fillna("unknown")  
 df_case["specimen"] = df_case["specimen"].str.lower().str.strip()
 
+asymptomatic_min_dates = df_case[df_case["symptom_status"] == "asymptomatic"] \
+    .groupby("patient_id")["date_collection"].min()
+
+df_case["first_collection_date"] = df_case["patient_id"].map(asymptomatic_min_dates)
+
 def compute_time(row):
     if row["symptom_status"] == "symptomatic" and pd.notna(row["date_onset"]):
         return (row["date_collection"] - row["date_onset"]).days
-    elif row["symptom_status"] == "asymptomatic" and pd.notna(row["date_detection"]):
-        return (row["date_collection"] - row["date_detection"]).days
+    elif row["symptom_status"] == "asymptomatic" and pd.notna(row["first_collection_date"]):
+        return (row["date_collection"] - row["first_collection_date"]).days
     else:
         return None
 
@@ -102,14 +107,15 @@ for specimen in df_filtered["specimen"].dropna().unique():
         for status in ["symptomatic", "asymptomatic"]:
             analyte_key = f"{specimen.lower().replace(' ', '_')}_SARSCoV2_{gene}_{status}"
             reference_event = "symptom onset" if status == "symptomatic" else "confirmation date"
+            
+            description_text = (
+                f"This entry describes RT-qPCR detection of SARS-CoV-2 RNA "
+                f"(Ct < 40 considered positive) targeting the {gene} gene in "
+                f"{specimen.lower()} from {status} individuals.\n"
+            )
+
             analytes[analyte_key] = {
-                "description": (
-              "## Analyte Description\n"
-              "**Specimen:** respiratory secretions\n"
-              "**Target Gene:** ORF1ab\n"
-              "**Symptom Status:** symptomatic\n\n"
-              "RT-qPCR detection of SARS-CoV-2 RNA. Ct < 40 is considered positive."
-              ),
+                "description": folded_str(description_text),  
                 "specimen": specimen.lower(),
                 "biomarker": "SARS-CoV-2",
                 "gene_target": gene,
@@ -119,11 +125,12 @@ for specimen in df_filtered["specimen"].dropna().unique():
                 "reference_event": reference_event
             }
 
+
 output_data = {
     "title": "SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis",
     "doi": "10.1016/j.virusres.2020.198147",
     "description": folded_str(
-        "This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types—including stool, respiratory secretions, urine, and serum—in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types."
+        "This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types—including stool, respiratory secretions, urine, and serum—in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.\n"
     ),
     "analytes": analytes,
     "participants": participants
