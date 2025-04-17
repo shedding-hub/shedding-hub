@@ -1,0 +1,308 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: SARS-CoV-2 Virus Culture and Subgenomic RNA for Respiratory Specimens from
+  Patients with Mild Coronavirus Disease
+doi: 10.3201/eid2611.203219
+description: >
+  This study investigated 68 respiratory specimens from 35 coronavirus disease patients
+  in Hong Kong, 32 of whom had mild disease. The specimens comprised 46 combined nasopharyngeal
+  aspirates and throat swabs, 2 nasopharyngeal aspirates alone, 4 combined nasopharyngeal
+  and throat swabs, 3 nasopharyngeal swabs alone, 11 sputum samples, and 2 saliva
+  samples. The patient origin of each sample is unknown. Data on RNA loads were obtained
+  from the 'Culture_probability_data_wild_type.csv' dataset in the GitHub repository
+  of Jones et al. (2021).
+analytes:
+  SARSCoV2_N:
+    description: >
+      The specimens comprised 46 combined nasopharyngeal aspirates and throat swabs,
+      2 nasopharyngeal aspirates alone, 4 combined nasopharyngeal and throat swabs,
+      3 nasopharyngeal swabs alone, 11 sputum samples, and 2 saliva samples. The limit
+      of detection for viral N gene RNA was 10 copies/mL. RNA was extracted using
+      the QIAamp Viral RNA Extraction Kit and then tested by RT quantitative PCR targeting
+      the SARSCoV2 nucleoprotein (N) gene. Serial dilutions of a copy number control
+      plasmid DNA were included in each RT qPCR run to construct a standard curve
+      correlating cycle threshold values with gene copy numbers in the samples.
+    limit_of_quantification: unknown
+    limit_of_detection: 10
+    specimen:
+    - nasopharyngeal_swab
+    - nasopharyngeal_aspirates
+    - throat_swabs
+    - sputum
+    - saliva
+    biomarker: SARS-CoV-2
+    gene_target: N
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 104863727.93009907
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 426333.84113872034
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 1
+    value: 3284317117.233596
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 4
+    value: 928362474.9687752
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 6
+    value: 13035661.270061117
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 5
+    value: 209417050.25330624
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 7
+    value: 21080539.43488879
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 7
+    value: 9155010.101397397
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 3
+    value: 2390587.6573160435
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 9012155.163766883
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 42894217.924626045
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 5
+    value: 23735009.402597066
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 4
+    value: 28910738.80216055
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 2
+    value: 170642508.75808555
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 1
+    value: 196966570.56518152
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 2
+    value: 101444972.69709706
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 4
+    value: 1789.257357336642
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 4
+    value: 696.7099275282492
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 4
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 6
+    value: 166.79198668425644
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 6
+    value: 801.6448019093898
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 8
+    value: 3992685.3423029864
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 9
+    value: 2781.971860998536
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 9
+    value: 9871.105242233121
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 9
+    value: 572451.1549215239
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 13
+    value: 200.57164548176314
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 14
+    value: 18102356.65344126
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 16
+    value: 464514.5842273481
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 17
+    value: 5071.805385533858
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 19
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 20
+    value: 79217.11062924664
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 31
+    value: 319060.3459161053
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 34
+    value: 845.3034933308686
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 41
+    value: 96362.36920604596
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 53
+    value: 8828451.819953924
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 55
+    value: 42099250.471129976
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 56
+    value: 25974801.16181032
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 59
+    value: 153401.74183831256
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 61
+    value: 5506291.2042885935
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 63
+    value: 3657238.3428771477
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 65
+    value: 144655.79952850577
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 67
+    value: 4650749.725222745
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 26
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 26
+    value: 11.216161054362193
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 38
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 37
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 4
+    value: 12762.007723384519
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 4
+    value: 18399.13931365393
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 1
+    value: 248678.72342630435
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 7452.02225641795
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 13039.61586008866
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 9
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 9
+    value: 10.977373531425608
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 7
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 7
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 12
+    value: 10.003819774082169
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 1
+    value: 2755249.6465359116
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 1
+    value: 65284127.389221035
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 7
+    value: 99907057.78105043
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 8
+    value: 121682996.2548844
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 1727206.392816775
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 0
+    value: 1226343.056488924
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 14
+    value: negative
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 6
+    value: 12.336956415973843
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 7
+    value: 11.028895404660357
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 13
+    value: 12.184271973776779
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 14
+    value: 11.028895404660357
+- measurements:
+  - analyte: SARSCoV2_N
+    time: 13
+    value: 10.10817837637113
