@@ -23,6 +23,8 @@ $defs:
       - unknown
       - bronchoalveolar_lavage_fluid
       - serum
+      - nasopharyngeal_aspirate
+      - throat_swab
   analyte_specification:
     description: Specification of an analyte.
     type: object
