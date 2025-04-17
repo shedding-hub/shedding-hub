@@ -25,8 +25,8 @@ analytes:
     limit_of_detection: 10
     specimen:
     - nasopharyngeal_swab
-    - nasopharyngeal_aspirates
-    - throat_swabs
+    - nasopharyngeal_aspirate
+    - throat_swab
     - sputum
     - saliva
     biomarker: SARS-CoV-2

@@ -48,7 +48,7 @@ perera2020sars = dict(title="SARS-CoV-2 Virus Culture and Subgenomic RNA for Res
                analytes=dict(SARSCoV2_N=dict(description=folded_str("The specimens comprised 46 combined nasopharyngeal aspirates and throat swabs, 2 nasopharyngeal aspirates alone, 4 combined nasopharyngeal and throat swabs, 3 nasopharyngeal swabs alone, 11 sputum samples, and 2 saliva samples. The limit of detection for viral N gene RNA was 10 copies/mL. RNA was extracted using the QIAamp Viral RNA Extraction Kit and then tested by RT quantitative PCR targeting the SARSCoV2 nucleoprotein (N) gene. Serial dilutions of a copy number control plasmid DNA were included in each RT qPCR run to construct a standard curve correlating cycle threshold values with gene copy numbers in the samples.\n"),
                                         limit_of_quantification="unknown",
                                         limit_of_detection= 10,
-                                        specimen=["nasopharyngeal_swab", "nasopharyngeal_aspirates", "throat_swabs", "sputum", "saliva"], 
+                                        specimen=["nasopharyngeal_swab", "nasopharyngeal_aspirate", "throat_swab", "sputum", "saliva"], 
                                         biomarker="SARS-CoV-2", 
                                         gene_target="N", 
                                         unit="gc/mL",
