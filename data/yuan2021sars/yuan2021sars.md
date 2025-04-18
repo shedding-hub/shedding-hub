@@ -30,6 +30,7 @@ df_case["symptom_status"] = df_case["symptom_status"].map({
     "asymptomatic": "asymptomatic"
 }).fillna("unknown")  
 df_case["specimen"] = df_case["specimen"].str.lower().str.strip()
+df_case["specimen"] = df_case["specimen"].replace("faeces", "stool")
 
 asymptomatic_min_dates = df_case[df_case["symptom_status"] == "asymptomatic"] \
     .groupby("patient_id")["date_collection"].min()
