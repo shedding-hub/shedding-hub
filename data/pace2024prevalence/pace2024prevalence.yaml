@@ -23,7 +23,7 @@ analytes:
     specimen: stool
     biomarker: SARS-CoV-2
     limit_of_quantification: unknown
-    limit_of_detection: '40'
+    limit_of_detection: 40
     unit: cycle threshold
     reference_event: enrollment
 participants:
