@@ -22,6 +22,7 @@ $defs:
       - rectal_swab
       - unknown
       - bronchoalveolar_lavage_fluid
+      - serum
   analyte_specification:
     description: Specification of an analyte.
     type: object
@@ -184,7 +185,10 @@ properties:
                 - type: string
                   constant: unknown
             lineage:
-              description: Lineage information of the disease for the participant.
+              description: Lineage information of the pathogen for the participant.
+              type: string
+            variant: 
+              description: Variant information of the pathogen for the participant.
               type: string
         measurements:
           type: array

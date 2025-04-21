@@ -1,0 +1,251 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Alterations in Gut Microbiota of Patients With COVID-19 During Time of Hospitalization
+doi: 10.1053/j.gastro.2020.05.048
+description: >
+  The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in
+  fecal samples from 15 hospitalized COVID-19 patients in Hong Kong.
+analytes:
+  stool_SARSCoV2_SymptomOnset:
+    description: >
+      SARS-CoV-2 RNA gene copy concentrations in fecal samples, which were were collected
+      2 to 3 times per week starting from hospital admission, and SARS-CoV-2 detection
+      in feces was tracked longitudinally. The day is calculated relative to the date
+      of symptom onset. The concentrations were quantified in gene copies per mL.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    limit_of_quantification: unknown
+    limit_of_detection: 347
+    unit: gc/mL
+    reference_event: symptom onset
+  stool_SARSCoV2_ConfirmationDate:
+    description: >
+      SARS-CoV-2 RNA gene copy concentrations in fecal samples, which were were collected
+      2 to 3 times per week starting from hospital admission, and SARS-CoV-2 detection
+      in feces was tracked longitudinally. The day is calculated relative to the date
+      of SARS-CoV-2 confirmation. The concentrations were quantified in gene copies
+      per mL.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: N1
+    limit_of_quantification: unknown
+    limit_of_detection: 347
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 19
+    value: 3699.1872199932054
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 24
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 28
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 34
+    value: negative
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 17
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 19
+    value: negative
+- attributes:
+    age: 42
+    sex: male
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 18
+    value: 111264.75500790839
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 21
+    value: 1654.0287191402724
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 22
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 32
+    value: negative
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 20
+    value: 2027.3591570556575
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 38
+    value: negative
+- attributes:
+    age: 58
+    sex: male
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 8
+    value: 45712.449229762766
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 11
+    value: 31256.634546803503
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 13
+    value: 1778.411155855395
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 17
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 19
+    value: negative
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 16
+    value: 4828.159914250888
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 17
+    value: negative
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 5
+    value: 85608.19435040126
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 7
+    value: 16395.472081380118
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 12
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 14
+    value: negative
+- attributes:
+    age: 38
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 12
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 13
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 15
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 16
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 21
+    value: negative
+- attributes:
+    age: 33
+    sex: male
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 7
+    value: 8138.476822555994
+- attributes:
+    age: 70
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 2
+    value: 1928.6166066457124
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 12
+    value: negative
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 22
+    value: 2855592.3050696496
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 27
+    value: 7471.670684143498
+- attributes:
+    age: 71
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 1
+    value: 28418.964335140772
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 2
+    value: 602795.2202489044
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 4
+    value: 154544.64881565815
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 6
+    value: 208804.20286025995
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 8
+    value: 432203.5164262188
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 12
+    value: 66818.06197698516
+- attributes:
+    age: 47
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2_ConfirmationDate
+    time: 3
+    value: negative
+- attributes:
+    age: 22
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 5
+    value: 3746.8621210740166
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 7
+    value: 1915841.8110260358
+- attributes:
+    age: 46
+    sex: female
+  measurements:
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 3
+    value: 2578.524350163852
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 9
+    value: 65471.68406441646
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 10
+    value: 1259895.2773293122
+  - analyte: stool_SARSCoV2_SymptomOnset
+    time: 12
+    value: 68567.82931308553
