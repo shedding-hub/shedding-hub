@@ -53,7 +53,7 @@ pace2024 = dict(title="Prevalence and duration of SARS-CoV-2 fecal shedding in b
                                                     specimen="stool",
                                                     biomarker="SARS-CoV-2",
                                                     limit_of_quantification="unknown", 
-                                                    limit_of_detection="40",
+                                                    limit_of_detection=40,
                                                     unit="cycle threshold",
                                                     reference_event="enrollment")),
                participants=participant_list)
