@@ -24,19 +24,21 @@ df_case["date_collection"] = pd.to_datetime(df_case["date_collection"], errors="
 df_case["date_onset"] = pd.to_datetime(df_case["date_onset"], errors="coerce")
 df_case["date_detection"] = pd.to_datetime(df_case["date_detection"], errors="coerce")
 df_case["sex"] = df_case["sex"].replace({"M": "male", "F": "female"})
-df_case["symptom_status"] = df_case["symptom_status"].str.lower().str.strip()
-df_case["symptom_status"] = df_case["symptom_status"].map({
-    "symptomatic": "symptomatic",
-    "asymptomatic": "asymptomatic"
-}).fillna("unknown")  
+df_case["symptom_status"] = df_case["symptom_status"].str.lower().str.strip() 
 df_case["specimen"] = df_case["specimen"].str.lower().str.strip()
 df_case["specimen"] = df_case["specimen"].replace({
     "faeces": "stool",
     "respiratory secretions": "nasopharyngeal_swab"
 })
 
-asymptomatic_min_dates = df_case[df_case["symptom_status"] == "asymptomatic"] \
-    .groupby("patient_id")["date_collection"].min()
+asymptomatic_positive = df_case[
+    (df_case["symptom_status"] == "asymptomatic") &
+    ((df_case["ctvalue_ORF1ab"] < 40) | (df_case["ctvalue_N"] < 40))
+]
+
+asymptomatic_min_dates = asymptomatic_positive.groupby("patient_id")["date_collection"].min()
+
+df_case["confirmation_date"] = df_case["patient_id"].map(asymptomatic_min_dates)
 
 df_case["first_collection_date"] = df_case["patient_id"].map(asymptomatic_min_dates)
 
@@ -64,7 +66,6 @@ participants = []
 for patient_id, group in df_filtered.groupby("patient_id"):
     participant = {
         "attributes": {
-            "id": patient_id,
             "age": float(group["age"].iloc[0]) if pd.notna(group["age"].iloc[0]) else "unknown",
             "sex": group["sex"].iloc[0] if pd.notna(group["sex"].iloc[0]) else "unknown",
             "symptom_status": group["symptom_status"].iloc[0] if pd.notna(group["symptom_status"].iloc[0]) else "unknown"
@@ -73,7 +74,7 @@ for patient_id, group in df_filtered.groupby("patient_id"):
     }
 
     for _, row in group.iterrows():
-        time = int(row["time"]) if pd.notna(row["time"]) and row["time"] >= 0 else "unknown"
+        time = int(row["time"]) if pd.notna(row["time"]) else "unknown"
 
         if row["symptom_status"] not in ["symptomatic", "asymptomatic"]:
             continue
@@ -142,7 +143,7 @@ output_data = {
 
 with open("yuan2021sars.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../schema.yaml\n")
-    yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False,allow_unicode=True,width=1000)
+    yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False)
 ```
 
 ```python

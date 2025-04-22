@@ -1,12 +1,17 @@
 # yaml-language-server:$schema=../schema.yaml
-title: SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis
+title: SARS-CoV-2 viral shedding characteristics and potential evidence for the priority
+  for faecal specimen testing in diagnosis
 doi: 10.1016/j.virusres.2020.198147
-description: >
-  This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types—including stool, respiratory secretions, urine, and serum—in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.
+description: "This study investigates the shedding of SARS-CoV-2 RNA across multiple\
+  \ specimen types\u2014including stool, respiratory secretions, urine, and serum\u2014\
+  in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load\
+  \ dynamics and time to clearance across specimen types.\n"
 analytes:
   nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in nasopharyngeal_swab from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in nasopharyngeal_swab from symptomatic
+      individuals.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -16,7 +21,9 @@ analytes:
     reference_event: symptom onset
   nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in nasopharyngeal_swab from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in nasopharyngeal_swab from asymptomatic
+      individuals.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -26,7 +33,8 @@ analytes:
     reference_event: confirmation date
   nasopharyngeal_swab_SARSCoV2_N_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in nasopharyngeal_swab from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in nasopharyngeal_swab from symptomatic individuals.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: N
@@ -36,7 +44,8 @@ analytes:
     reference_event: symptom onset
   nasopharyngeal_swab_SARSCoV2_N_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in nasopharyngeal_swab from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in nasopharyngeal_swab from asymptomatic individuals.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: N
@@ -46,7 +55,8 @@ analytes:
     reference_event: confirmation date
   stool_SARSCoV2_ORF1ab_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in stool from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in stool from symptomatic individuals.
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -56,7 +66,8 @@ analytes:
     reference_event: symptom onset
   stool_SARSCoV2_ORF1ab_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in stool from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in stool from asymptomatic individuals.
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -66,7 +77,8 @@ analytes:
     reference_event: confirmation date
   stool_SARSCoV2_N_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in stool from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in stool from symptomatic individuals.
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: N
@@ -76,7 +88,8 @@ analytes:
     reference_event: symptom onset
   stool_SARSCoV2_N_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in stool from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in stool from asymptomatic individuals.
     specimen: stool
     biomarker: SARS-CoV-2
     gene_target: N
@@ -86,7 +99,8 @@ analytes:
     reference_event: confirmation date
   serum_SARSCoV2_ORF1ab_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in serum from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in serum from symptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -96,7 +110,8 @@ analytes:
     reference_event: symptom onset
   serum_SARSCoV2_ORF1ab_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in serum from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in serum from asymptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -106,7 +121,8 @@ analytes:
     reference_event: confirmation date
   serum_SARSCoV2_N_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in serum from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in serum from symptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: N
@@ -116,7 +132,8 @@ analytes:
     reference_event: symptom onset
   serum_SARSCoV2_N_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in serum from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in serum from asymptomatic individuals.
     specimen: serum
     biomarker: SARS-CoV-2
     gene_target: N
@@ -126,7 +143,8 @@ analytes:
     reference_event: confirmation date
   urine_SARSCoV2_ORF1ab_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in urine from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in urine from symptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -136,7 +154,8 @@ analytes:
     reference_event: symptom onset
   urine_SARSCoV2_ORF1ab_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the ORF1ab gene in urine from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the ORF1ab gene in urine from asymptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: ORF1ab
@@ -146,7 +165,8 @@ analytes:
     reference_event: confirmation date
   urine_SARSCoV2_N_symptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in urine from symptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in urine from symptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: N
@@ -156,7 +176,8 @@ analytes:
     reference_event: symptom onset
   urine_SARSCoV2_N_asymptomatic:
     description: >
-      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered positive) targeting the N gene in urine from asymptomatic individuals.
+      This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+      positive) targeting the N gene in urine from asymptomatic individuals.
     specimen: urine
     biomarker: SARS-CoV-2
     gene_target: N
@@ -166,7 +187,6 @@ analytes:
     reference_event: confirmation date
 participants:
 - attributes:
-    id: zs116
     age: 42.0
     sex: male
     symptom_status: symptomatic
@@ -328,16 +348,15 @@ participants:
     time: 10
     value: negative
 - attributes:
-    id: zs1161
     age: 43.0
     sex: female
     symptom_status: symptomatic
   measurements:
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
-    time: unknown
+    time: -1
     value: 24.96
   - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
-    time: unknown
+    time: -1
     value: 26.09
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
     time: 2
@@ -424,7 +443,6 @@ participants:
     time: 5
     value: negative
 - attributes:
-    id: zs1311
     age: 65.0
     sex: male
     symptom_status: symptomatic
@@ -652,7 +670,6 @@ participants:
     time: 10
     value: negative
 - attributes:
-    id: zs172
     age: 10.0
     sex: male
     symptom_status: asymptomatic
@@ -808,7 +825,6 @@ participants:
     time: 3
     value: negative
 - attributes:
-    id: zs251
     age: 7.0
     sex: female
     symptom_status: asymptomatic
@@ -898,16 +914,15 @@ participants:
     time: 1
     value: negative
 - attributes:
-    id: zs374
     age: 65.0
     sex: female
     symptom_status: symptomatic
   measurements:
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
-    time: unknown
+    time: -1
     value: 19.66
   - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
-    time: unknown
+    time: -1
     value: 22.4
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
     time: 2
@@ -1036,16 +1051,15 @@ participants:
     time: 0
     value: negative
 - attributes:
-    id: zs573
     age: 68.0
     sex: female
     symptom_status: symptomatic
   measurements:
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
-    time: unknown
+    time: -5
     value: 26.05
   - analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
-    time: unknown
+    time: -5
     value: 29.42
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
     time: 0
@@ -1204,7 +1218,6 @@ participants:
     time: 13
     value: negative
 - attributes:
-    id: zs647
     age: 34.0
     sex: male
     symptom_status: symptomatic
@@ -1282,212 +1295,210 @@ participants:
     time: 2
     value: negative
 - attributes:
-    id: zs782
     age: 40.0
     sex: female
     symptom_status: asymptomatic
   measurements:
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 12
+    time: 0
     value: 36.81
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 12
+    time: 0
     value: 36.79
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 24
-    value: negative
-  - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 24
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 22
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 22
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 20
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 20
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 17
-    value: negative
-  - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 17
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 16
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 16
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 14
-    value: negative
-  - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 14
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 14
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 14
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
     time: 12
     value: negative
   - analyte: stool_SARSCoV2_N_asymptomatic
     time: 12
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: 10
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: 8
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
+    time: 5
+    value: negative
+  - analyte: stool_SARSCoV2_N_asymptomatic
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
+    time: 2
+    value: negative
+  - analyte: stool_SARSCoV2_N_asymptomatic
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: 2
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
+    time: 0
+    value: negative
+  - analyte: stool_SARSCoV2_N_asymptomatic
+    time: 0
     value: negative
   - analyte: urine_SARSCoV2_ORF1ab_asymptomatic
-    time: 12
+    time: 0
     value: negative
   - analyte: urine_SARSCoV2_N_asymptomatic
-    time: 12
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 10
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 10
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 9
-    value: negative
-  - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 9
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 7
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 7
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 7
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 6
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 6
-    value: negative
-  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 6
-    value: negative
-  - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 6
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 3
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 3
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 1
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 1
-    value: negative
-  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
     time: 0
     value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: -2
+    value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 0
+    time: -2
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
+    time: -3
+    value: negative
+  - analyte: stool_SARSCoV2_N_asymptomatic
+    time: -3
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
+    time: -5
+    value: negative
+  - analyte: stool_SARSCoV2_N_asymptomatic
+    time: -5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: -5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: -5
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: -6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: -6
+    value: negative
+  - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
+    time: -6
+    value: negative
+  - analyte: stool_SARSCoV2_N_asymptomatic
+    time: -6
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: -9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: -9
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: -11
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: -11
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+    time: -12
+    value: negative
+  - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+    time: -12
     value: negative
 - attributes:
-    id: zs792
     age: 36.0
     sex: male
     symptom_status: asymptomatic
   measurements:
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 1
+    time: 0
     value: 33.61
   - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 1
+    time: 0
     value: 33.49
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 3
+    time: 2
     value: 34.97
   - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 3
+    time: 2
     value: 34.01
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 7
+    time: 6
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 7
+    time: 6
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 7
+    time: 6
     value: 33.66
   - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 7
+    time: 6
     value: 32.84
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 8
+    time: 7
     value: 36.35
   - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 8
+    time: 7
     value: 35.59
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 11
+    time: 10
     value: 34.13
   - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 11
+    time: 10
     value: 35.75
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 11
+    time: 10
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 11
+    time: 10
     value: negative
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 14
+    time: 13
     value: 35.88
   - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 14
+    time: 13
     value: 35.58
   - analyte: stool_SARSCoV2_ORF1ab_asymptomatic
-    time: 16
+    time: 15
     value: 35.16
   - analyte: stool_SARSCoV2_N_asymptomatic
-    time: 16
+    time: 15
     value: 32.25
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 10
+    time: 9
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 10
+    time: 9
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 5
+    time: 4
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 5
+    time: 4
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 3
+    time: 2
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 3
+    time: 2
     value: negative
   - analyte: serum_SARSCoV2_ORF1ab_asymptomatic
-    time: 3
+    time: 2
     value: negative
   - analyte: serum_SARSCoV2_N_asymptomatic
-    time: 3
+    time: 2
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
-    time: 0
+    time: -1
     value: negative
   - analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
-    time: 0
+    time: -1
     value: negative
