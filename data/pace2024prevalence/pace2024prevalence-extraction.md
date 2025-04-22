@@ -24,9 +24,12 @@ participant_list = []
 
 # Group by participant and extract measurements
 for patient_number, group in pace2024.groupby('Patient Number'):
-    participant = {
-        'measurements': []
-    }
+    
+    # Extract age and sex
+    sex = str(group['sex'].iloc[0])
+    infant = group['infant'].iloc[0]
+
+    measurements = []
 
     for index, row in group.iterrows():
         if row['Ct Value'] == 0:
@@ -38,8 +41,14 @@ for patient_number, group in pace2024.groupby('Patient Number'):
             'time': int(row["Day"]),
             'value': value
         }
-        participant['measurements'].append(measurementN)
-    
+        measurements.append(measurementN)
+    participant = {
+        "attributes": {
+            "sex": sex,
+            "infant":infant
+        },
+        "measurements": measurements
+    }
     participant_list.append(participant)
 ```
 
