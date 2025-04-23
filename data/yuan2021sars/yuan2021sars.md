@@ -1,10 +1,13 @@
+# Extraction for Yuan et al. (2021)
+[Yuan et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7899334/) The authors investigated SARS-CoV-2 RNA shedding patterns across multiple specimen types in COVID-19 patients. The study collected 938 samples from 60 laboratory-confirmed patients in Shenzhen, China, between January and February 2020. Specimens included stool, respiratory secretions, urine, and serum. Viral loads were quantified using real-time reverse transcription polymerase chain reaction (RT-qPCR), and both symptomatic and asymptomatic cases were included. The authors reported that viral RNA was detectable for a prolonged period in stool, raising implications for fecal-oral transmission. Metadata such as age, sex, symptom status, and time from onset or initial confirmation were also recorded. Raw data is publicly available via [Shedding Hub](https://github.com/shedding-hub). For standardization, "faeces" was labeled as "stool" and "respiratory secretions" as "nasopharyngeal_swab" in the final dataset.
+
+First, we `import` python modules needed:
+
 ```python
 import yaml
 import pandas as pd
 from shedding_hub import folded_str
 ```
-
-
 ```python
 df = pd.read_csv("pone.0247367.s001.csv")
 df_case = df[df['case'].notna()].copy()
@@ -130,7 +133,6 @@ for specimen in df_filtered["specimen"].dropna().unique():
                 "reference_event": reference_event
             }
 
-
 output_data = {
     "title": "SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis",
     "doi": "10.1016/j.virusres.2020.198147",
@@ -146,6 +148,3 @@ with open("yuan2021sars.yaml", "w") as outfile:
     yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False)
 ```
 
-```python
-
-```
