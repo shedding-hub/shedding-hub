@@ -1,0 +1,1392 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Prevalence and duration of SARS-CoV-2 fecal shedding in breastfeeding dyads
+  following maternal COVID-19 diagnosis
+doi: 10.3389/fimmu.2024.1329092
+description: >
+  This study examined whether and to what extent SARS-CoV-2 is detectable in the feces
+  of lactating women and their breastfed infants following maternal COVID-19 diagnosis.
+  A total of 57 maternal-infant dyads provided maternal and/or infant fecal samples,
+  including 33 dyads in the COVID-19 group and 24 dyads in the healthy group. Fecal
+  samples were collected from each mother and child in both the groups and telephone
+  surveys administered during the first week following enrollment (1, 2-6 and 7 day)
+  and again around 2, 3, 4, and 8 wk following enrollment for COVID-19 group, and
+  two separate days during the first week after enrollment (1, 7 day) and again around
+  3 and 8 wk for healthy group. Since the author didn't provide the specific time
+  information in the paper, we adopted mean value of time period as our data (4d for
+  2-6d, 11d for 2wk, 18d for 3wk, 25d for 4wk, 53d for 8wk).
+analytes:
+  stool_SARSCoV2:
+    description: >
+      RNA isolated from fecal samples (including negative and positive controls) was
+      used as the input for Quick SARS-CoV-2 multiplex reverse-transcription quantitative
+      polymerase chain reaction (RT-qPCR) assay (cat. R3013, Zymo Research).
+    specimen: stool
+    biomarker: SARS-CoV-2
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: enrollment
+participants:
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 31.9
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 32.7
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 34.9
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 36.1
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: 38.0
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 35.7
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 30.6
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 33.4
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 37.2
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 32.4
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 37.1
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 35.6
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 35.2
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 39.7
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 34.5
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 35.6
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 38.9
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 36.2
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 39.3
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 35.9
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 33.7
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 32.4
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 34.1
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 34.4
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 34.9
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 32.5
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 20.8
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 20.6
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 22.5
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 35.1
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 35.5
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 24.1
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 23.9
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 23.2
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 28.8
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: 38.6
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 24.4
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 25.3
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 25.0
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 29.3
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 27.8
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 22.3
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 19.9
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 22.9
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 26.5
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 30.7
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: 27.2
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 35.1
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: 34.6
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 27.4
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: 31.1
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 30.6
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: 33.4
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: 34.9
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: 25.4
+- attributes:
+    sex: unknown
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: 32.4
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
