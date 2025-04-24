@@ -29,7 +29,7 @@ analytes:
 participants:
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 18
@@ -42,7 +42,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 11
@@ -58,7 +58,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 7
@@ -77,7 +77,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -96,7 +96,7 @@ participants:
     value: 38.0
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -121,7 +121,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -146,7 +146,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -168,7 +168,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -190,7 +190,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -209,76 +209,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
-  measurements:
-  - analyte: stool_SARSCoV2
-    time: 1
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 53
-    value: negative
-- attributes:
-    sex: female
-    infant: F
-  measurements:
-  - analyte: stool_SARSCoV2
-    time: 1
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 53
-    value: negative
-- attributes:
-    sex: female
-    infant: F
-  measurements:
-  - analyte: stool_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 53
-    value: negative
-- attributes:
-    sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -303,7 +234,51 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -328,29 +303,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
-  measurements:
-  - analyte: stool_SARSCoV2
-    time: 1
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 53
-    value: negative
-- attributes:
-    sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -375,14 +328,29 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
   - analyte: stool_SARSCoV2
     time: 7
     value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -407,7 +375,39 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+- attributes:
+    sex: female
+    infant: false
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: female
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -432,7 +432,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -457,7 +457,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -479,7 +479,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -501,7 +501,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -526,7 +526,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -548,7 +548,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 11
@@ -558,7 +558,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -583,7 +583,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -602,7 +602,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -627,7 +627,7 @@ participants:
     value: negative
 - attributes:
     sex: female
-    infant: F
+    infant: false
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -643,7 +643,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 18
@@ -656,7 +656,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 11
@@ -672,7 +672,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -697,7 +697,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -713,7 +713,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -729,7 +729,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -754,7 +754,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -776,7 +776,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -801,7 +801,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -823,7 +823,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -848,7 +848,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -870,7 +870,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -892,7 +892,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -908,7 +908,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -930,7 +930,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -955,7 +955,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -980,7 +980,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1005,7 +1005,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1030,7 +1030,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1046,7 +1046,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -1056,7 +1056,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -1078,7 +1078,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1103,7 +1103,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1125,32 +1125,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
-  measurements:
-  - analyte: stool_SARSCoV2
-    time: 1
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 53
-    value: negative
-- attributes:
-    sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1175,7 +1150,32 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 4
@@ -1197,7 +1197,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1219,51 +1219,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
-  measurements:
-  - analyte: stool_SARSCoV2
-    time: 1
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 53
-    value: negative
-- attributes:
-    sex: unknown
-    infant: T
-  measurements:
-  - analyte: stool_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: stool_SARSCoV2
-    time: 53
-    value: negative
-- attributes:
-    sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1288,7 +1244,26 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1313,7 +1288,32 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
+  measurements:
+  - analyte: stool_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: stool_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    sex: unknown
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1338,7 +1338,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1363,7 +1363,7 @@ participants:
     value: negative
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1
@@ -1379,7 +1379,7 @@ participants:
     value: 25.4
 - attributes:
     sex: unknown
-    infant: T
+    infant: true
   measurements:
   - analyte: stool_SARSCoV2
     time: 1

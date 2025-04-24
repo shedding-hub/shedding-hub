@@ -17,7 +17,11 @@ The raw data was extracted from Figure 3 (A, B) and Figure 4 (A, B) (see below) 
 
 ```python
 #load the data
-pace2024 = pd.read_csv("data for pace2024prevalence.csv") 
+pace2024 = pd.read_csv("data for pace2024prevalence.csv")
+
+# change infant data value
+pace2024.loc[pace2024["infant"]=="T","infant"]=True
+pace2024.loc[pace2024["infant"]=="F","infant"]=False
 
 # Initialize an empty list to store participant information
 participant_list = []
@@ -25,9 +29,9 @@ participant_list = []
 # Group by participant and extract measurements
 for patient_number, group in pace2024.groupby('Patient Number'):
     
-    # Extract age and sex
+    # Extract sex and whether infant
     sex = str(group['sex'].iloc[0])
-    infant = group['infant'].iloc[0]
+    infant = (group['infant'].iloc[0])
 
     measurements = []
 
