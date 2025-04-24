@@ -1,5 +1,5 @@
 # Extraction for Yuan et al. (2021)
-[Yuan et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7899334/) The author studied how SARS-CoV-2 is shed through different specimen types in confirmed COVID-19 patients from Zhoushan, China. They collected both respiratory and fecal samples throughout the course of infection and used RT-qPCR to measure viral load. One of the main goals was to figure out which sample type was more reliable for detecting the virus over time. They found that respiratory samples showed a drop in positive rate as time went on, while fecal samples had a higher and more stable detection rate—even in the later stages or in patients without symptoms. Based on this, the authors suggested that stool samples might actually be more useful for diagnosing or monitoring COVID-19 in certain cases. The raw data used in this analysis is available on [Shedding Hub](https://github.com/shedding-hub). In the standardized version of the dataset, “faeces” was labeled as “stool” and “respiratory secretions” were mapped to “nasopharyngeal_swab.”
+[Yuan et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7899334/) studied how SARS-CoV-2 is shed through different specimen types in confirmed COVID-19 patients from Zhoushan, China. They collected both respiratory tract and fecal samples throughout the course of infection and used RT-qPCR to measure viral load. One of the main goals was to figure out which sample type was more reliable for detecting the virus over time. They found that respiratory tract samples showed a drop in positive rate as time went on, while fecal samples had a higher and more stable detection rate-even in the later stages or in patients without symptoms. Based on this, the authors suggested that stool samples might actually be more useful for diagnosing or monitoring COVID-19 in certain cases. The raw data used in this analysis is available on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/yuan2021sars). In the standardized version of the dataset, "faeces" was labeled as "stool" and “respiratory secretions” were considered as "nasopharyngeal_swab" samples.
 First, we `import` python modules needed:
 
 ```python
@@ -131,7 +131,7 @@ for specimen in df_filtered["specimen"].dropna().unique():
                 "unit": "cycle threshold",
                 "reference_event": reference_event
             }
-```            
+```
 
 Finally, the data is formatted and output as a YAML file.
 
@@ -140,7 +140,7 @@ output_data = {
     "title": "SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis",
     "doi": "10.1016/j.virusres.2020.198147",
     "description": folded_str(
-        "This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types—including stool, respiratory secretions, urine, and serum—in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.\n"
+        "This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types-including stool, respiratory secretions, urine, and serum-in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.\n"
     ),
     "analytes": analytes,
     "participants": participants
@@ -150,4 +150,3 @@ with open("yuan2021sars.yaml", "w") as outfile:
     outfile.write("# yaml-language-server:$schema=../schema.yaml\n")
     yaml.dump(output_data, outfile, default_flow_style=False, sort_keys=False)
 ```
-
