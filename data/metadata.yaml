@@ -1,0 +1,1530 @@
+- ID: alsharrah2020clinical
+  biomarker: SARS-CoV-2
+  description: This analyte indicates the detection of SARS-CoV-2 RNA in both nasopharyngeal
+    and oropharyngeal swabs, but only the nasopharyngeal swab values are presented.
+  limit_of_detection: 41
+  limit_of_quantification: unknown
+  n_negative: 53
+  n_positive: 22
+  n_quantified: 0
+  n_samples: 75
+  n_unique_participants: 29
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: arts2023longitudinal
+  biomarker: SARS-CoV-2
+  description: Concentration of RNA of the N gene quantified using (RT)-ddPCR in stool
+    samples. The concentration was quantified in gene copies per dry weight of stool.
+    The limit of blank (LOB), determined as the upper 95% confidence limit of the
+    negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight. The reported
+    number is either the measured concentration of SARS-CoV-2 N or the LOB if the
+    concentration wasn't detectable.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 184
+  n_positive: 184
+  n_quantified: 193
+  n_samples: 377
+  n_unique_participants: 48
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/dry gram
+- ID: arts2023longitudinal
+  biomarker: SARS-CoV-2
+  description: Concentration of RNA of the ORF1a gene quantified using (RT)-ddPCR
+    in stool samples. The concentration was quantified in gene copies per dry weight
+    of stool. The limit of blank (LOB), determined as the upper 95% confidence limit
+    of the negative extraction control, ranged from 11.2 to 1,550 gc/mg-dry weight.
+    The reported number is either the measured concentration of SARS-CoV-2 ORF1a or
+    the LOB if the concentration wasn't detectable.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 186
+  n_positive: 186
+  n_quantified: 191
+  n_samples: 377
+  n_unique_participants: 48
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/dry gram
+- ID: arts2023longitudinal
+  biomarker: PMMoV
+  description: Concentration of PMMoV RNA was measured by ddPCR on the same day as
+    the SARS-CoV-2. The concentration was quantified in gene copies per dry weight
+    of stool. The reported number is either the measured concentration of PMMoV or
+    the LOB if the concentration wasn't detectable.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 25
+  n_positive: 25
+  n_quantified: 352
+  n_samples: 377
+  n_unique_participants: 48
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/dry gram
+- ID: arts2023longitudinal
+  biomarker: crAssphage
+  description: Concentration of crAssphage DNA was measured using qPCR. The reported
+    number is either the measured concentration of crAssphage or the Limit of Quantification
+    (LOQ) if the concentration wasn't quantifiable.
+  limit_of_detection: 25
+  limit_of_quantification: unknown
+  n_negative: 200
+  n_positive: 271
+  n_quantified: 100
+  n_samples: 371
+  n_unique_participants: 48
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/dry gram
+- ID: cdc2024nhphrn
+  biomarker: SARS-CoV-2
+  description: Viral concentrations were quantified using RTqPCR targeting the N and
+    S genes in nasopharyngeal swab samples with the TaqPath COVID19, Flu A, Flu B
+    Combo Kit. One nasal swab was processed using the TaqPath Combo Kit on the QuantStudio
+    7 Pro, which provided results for all three analytes. For specimens with a SARSCoV2
+    cycle threshold (Ct) value below 30, a second analysis was performed using the
+    CDC Influenza SARSCoV2 (Flu SC2) Multiplex Assay on the ABT 7500 Fast Dx. The
+    reference event, "confirmation date", is defined as the date of the initial positive
+    test.
+  limit_of_detection: unknown
+  limit_of_quantification: 10000
+  n_negative: 695
+  n_positive: 216
+  n_quantified: 500
+  n_samples: 1379
+  n_unique_participants: 84
+  reference_event: confirmation date
+  specimen: nasopharyngeal_swab
+  unit: gc/mL
+- ID: cdc2024nhphrn
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were measured using RTqPCR targeting the
+    N and S genes in nasopharyngeal swab samples with the TaqPath COVID19, Flu A,
+    Flu B Combo Kit. One nasal swab was processed using the TaqPath Combo Kit on the
+    QuantStudio 7 Pro, which provided results for all three analytes. For specimens
+    with a SARSCoV2 cycle threshold value below 30, a second analysis was performed
+    using the CDC Influenza SARSCoV2 (Flu SC2) Multiplex Assay on the ABT 7500 Fast
+    Dx. The reference event, "confirmation date", is defined as the date of the initial
+    positive test.
+  limit_of_detection: 37
+  limit_of_quantification: unknown
+  n_negative: 663
+  n_positive: 716
+  n_quantified: 0
+  n_samples: 1379
+  n_unique_participants: 84
+  reference_event: confirmation date
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: fajnzylber2020sars
+  biomarker: SARS-CoV-2
+  description: Nasopharyngeal swabs were collected in 3 mL of phosphate-buffered saline.
+    Viral concentrations were quantified using RT-qPCR targeting the N gene in the
+    nasopharyngeal swab samples.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 52
+  n_positive: 52
+  n_quantified: 43
+  n_samples: 95
+  n_unique_participants: 66
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: gc/mL
+- ID: fajnzylber2020sars
+  biomarker: SARS-CoV-2
+  description: Oropharyngeal swabs were collected in 3 mL of phosphate buffered saline.
+    Viral concentrations were quantified using RT-qPCR targeting the N gene in oropharyngeal
+    swab samples.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 23
+  n_positive: 23
+  n_quantified: 41
+  n_samples: 64
+  n_unique_participants: 47
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: fajnzylber2020sars
+  biomarker: SARS-CoV-2
+  description: Oropharyngeal swabs were collected in viral transport medium. Viral
+    concentrations were quantified using RT-qPCR targeting the N gene in oropharyngeal
+    swab samples.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 5
+  n_positive: 5
+  n_quantified: 13
+  n_samples: 18
+  n_unique_participants: 18
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: fajnzylber2020sars
+  biomarker: SARS-CoV-2
+  description: Sputum samples were collected and viral concentrations were quantified
+    using RT-qPCR targeting the N gene.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 13
+  n_positive: 13
+  n_quantified: 54
+  n_samples: 67
+  n_unique_participants: 45
+  reference_event: symptom onset
+  specimen: sputum
+  unit: gc/mL
+- ID: fajnzylber2020sars
+  biomarker: SARS-CoV-2
+  description: Plasma samples were collected and viral concentrations were quantified
+    using RT-qPCR targeting the N gene.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 90
+  n_positive: 90
+  n_quantified: 23
+  n_samples: 113
+  n_unique_participants: 71
+  reference_event: symptom onset
+  specimen: plasma
+  unit: gc/mL
+- ID: fajnzylber2020sars
+  biomarker: SARS-CoV-2
+  description: Urine samples were collected and viral concentrations were quantified
+    using RT-qPCR targeting the N gene.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 70
+  n_positive: 70
+  n_quantified: 7
+  n_samples: 77
+  n_unique_participants: 53
+  reference_event: symptom onset
+  specimen: urine
+  unit: gc/mL
+- ID: gautret2020hydroxychloroquine
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values targeting the E gene in nasopharyngeal
+    swab samples.
+  limit_of_detection: 35
+  limit_of_quantification: unknown
+  n_negative: 44
+  n_positive: 82
+  n_quantified: 0
+  n_samples: 126
+  n_unique_participants: 19
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: hakki2022onset
+  biomarker: SARS-CoV-2
+  description: This analyte represents the detection and quantification of SARS-CoV-2
+    viral RNA from throat and nose swabs specimens collected from asymptomatic participants.
+    The analysis focuses on measuring the viral load expressed in log10 copies/mL,
+    with the primary reference event being the enrollment.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 96
+  n_positive: 96
+  n_quantified: 146
+  n_samples: 242
+  n_unique_participants: 17
+  reference_event: enrollment
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: gc/mL
+- ID: hakki2022onset
+  biomarker: SARS-CoV-2
+  description: The infectious virus analyte consisted of culturable SARS-CoV-2 derived
+    from throat and nasal swabs of asymptomatic participants, measured using a plaque
+    assay in vitro. The unit of measurement was PFU/mL, with enrollment as the primary
+    reference event.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 190
+  n_positive: 190
+  n_quantified: 52
+  n_samples: 242
+  n_unique_participants: 17
+  reference_event: enrollment
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: pfu/mL
+- ID: hakki2022onset
+  biomarker: SARS-CoV-2
+  description: This analyte represents the detection and quantification of SARS-CoV-2
+    viral RNA from throat and nose swabs specimens collected from symptomatic participants.
+    The analysis focuses on measuring the viral load expressed in log10 copies/mL,
+    with the primary reference event being the symptom onset.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 125
+  n_positive: 125
+  n_quantified: 347
+  n_samples: 472
+  n_unique_participants: 33
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: gc/mL
+- ID: hakki2022onset
+  biomarker: SARS-CoV-2
+  description: The infectious virus analyte consisted of culturable SARS-CoV-2 derived
+    from throat and nasal swabs of symptomatic participants, measured using a plaque
+    assay in vitro. The unit of measurement was PFU/mL, with symptom onset as the
+    primary reference event.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 294
+  n_positive: 294
+  n_quantified: 178
+  n_samples: 472
+  n_unique_participants: 33
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: pfu/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentration in nasopharynx samples.
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 3
+  n_positive: 3
+  n_quantified: 4
+  n_samples: 7
+  n_unique_participants: 1
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: gc/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentration in oropharynx samples.
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 2
+  n_positive: 2
+  n_quantified: 4
+  n_samples: 6
+  n_unique_participants: 1
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentration in oropharynx and nasopharynx
+    samples.
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 5
+  n_positive: 5
+  n_quantified: 2
+  n_samples: 7
+  n_unique_participants: 1
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: gc/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentration in plasma samples.
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 2
+  n_positive: 2
+  n_quantified: 2
+  n_samples: 4
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: plasma
+  unit: gc/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentration in saliva samples.
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 1
+  n_positive: 1
+  n_quantified: 2
+  n_samples: 3
+  n_unique_participants: 1
+  reference_event: symptom onset
+  specimen: saliva
+  unit: gc/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentration in urine samples.
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 3
+  n_positive: 3
+  n_quantified: 6
+  n_samples: 9
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: urine
+  unit: gc/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentration in sputum samples.
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 4
+  n_positive: 4
+  n_quantified: 2
+  n_samples: 6
+  n_unique_participants: 1
+  reference_event: symptom onset
+  specimen: sputum
+  unit: gc/mL
+- ID: han2020sequential
+  biomarker: SARS-CoV-2
+  description: 'From manuscript: "Viral RNA was detected using the PowerChek 2019-nCoV
+    real-time polymerase chain reaction kit (Kogene Biotech, Seoul, Korea) for amplification
+    of the E gene and the RNA-dependent RNA polymerase region of the ORF1b gene, and
+    quantified with a standard curve that was constructed using in vitro transcribed
+    RNA provided from the European Virus Archive." However, data reported in Figure
+    1 explicitly refer to the E gene target.'
+  limit_of_detection: 5700.0
+  limit_of_quantification: unknown
+  n_negative: 1
+  n_positive: 1
+  n_quantified: 8
+  n_samples: 9
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/mL
+- ID: iwakiri2009quantitative
+  biomarker: sapovirus
+  description: Sapovirus RNA gene copy concentration in stool samples. The concentration
+    were quantified in cDNA copies per gram.
+  limit_of_detection: 129000
+  limit_of_quantification: unknown
+  n_negative: 19
+  n_positive: 19
+  n_quantified: 22
+  n_samples: 41
+  n_unique_participants: 17
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/wet gram
+- ID: ke2022daily
+  biomarker: SARS-CoV-2
+  description: 'SARS-CoV-2 RNA genome copy concentration in mid-turbinate nasal swab
+    (nasopharyngeal swab) samples. Note that the unit of these measurements is per
+    mL: this is because nasal swab samples were each collected in 3 mL of VTM. The
+    calibration curve for nasal samples was in the Supplemental Table S10 in Ke et
+    al. (2022).'
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 138
+  n_positive: 138
+  n_quantified: 657
+  n_samples: 795
+  n_unique_participants: 60
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: gc/mL
+- ID: ke2022daily
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration in saliva samples. The study
+    was not able to measure the calibration curve using saliva samples taken from
+    participants. Instead, the authors used data from calibration experiments in which
+    saliva samples obtained from healthy donors were spiked with SARS-CoV-2 genomic
+    RNA. The calibration curve for saliva samples was in the Supplemental Table S11
+    in Ke et al. (2022).
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 237
+  n_positive: 237
+  n_quantified: 667
+  n_samples: 904
+  n_unique_participants: 60
+  reference_event: symptom onset
+  specimen: saliva
+  unit: gc/mL
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the RdRp gene in sputum samples. Ct values were then converted into estimated
+    viral copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number
+    was calculated by the authors using a standard curve derived from Ct values of
+    plasmid DNA, as noted in the supplementary material.
+  limit_of_detection: unknown
+  limit_of_quantification: 2690
+  n_negative: 10
+  n_positive: 0
+  n_quantified: 10
+  n_samples: 20
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: sputum
+  unit: gc/mL
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the RdRp gene in swab samples. Ct values were then converted into estimated viral
+    copies per mL, with a detection limit of 2,690 copies/mL. The RNA copy number
+    was calculated by the authors using a standard curve derived from Ct values of
+    plasmid DNA, as noted in the supplementary material.
+  limit_of_detection: unknown
+  limit_of_quantification: 2690
+  n_negative: 11
+  n_positive: 0
+  n_quantified: 15
+  n_samples: 26
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: gc/mL
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the E gene in swab samples.
+  limit_of_detection: unknown
+  limit_of_quantification: 35
+  n_negative: 12
+  n_positive: 26
+  n_quantified: 0
+  n_samples: 26
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: cycle threshold
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the E gene in sputum samples.
+  limit_of_detection: unknown
+  limit_of_quantification: 35
+  n_negative: 12
+  n_positive: 20
+  n_quantified: 0
+  n_samples: 20
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: sputum
+  unit: cycle threshold
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the E gene in stool samples.
+  limit_of_detection: unknown
+  limit_of_quantification: 35
+  n_negative: 10
+  n_positive: 16
+  n_quantified: 0
+  n_samples: 16
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: stool
+  unit: cycle threshold
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the RdRp gene in stool samples.
+  limit_of_detection: unknown
+  limit_of_quantification: 35
+  n_negative: 13
+  n_positive: 16
+  n_quantified: 0
+  n_samples: 16
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: stool
+  unit: cycle threshold
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the RdRp gene in sputum samples.
+  limit_of_detection: unknown
+  limit_of_quantification: 35
+  n_negative: 10
+  n_positive: 20
+  n_quantified: 0
+  n_samples: 20
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen: sputum
+  unit: cycle threshold
+- ID: kim2020viral
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the RdRp gene in swab samples.
+  limit_of_detection: unknown
+  limit_of_quantification: 35
+  n_negative: 11
+  n_positive: 26
+  n_quantified: 0
+  n_samples: 26
+  n_unique_participants: 2
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: cycle threshold
+- ID: kimse2020viral
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration in oropharyngeal swab samples.
+    Ct = 35 is the cut-off for a positive result and Ct = 40 is a negative sample;
+    Ct = 40 was the limit of detection.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 5
+  n_positive: 16
+  n_quantified: 0
+  n_samples: 21
+  n_unique_participants: 3
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: cycle threshold
+- ID: kimse2020viral
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration in oropharyngeal swab samples.Ct
+    = 35 is the cut-off for a positive result and Ct = 40 is a negative sample; Ct
+    = 40 was the limit of detection.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 18
+  n_positive: 22
+  n_quantified: 0
+  n_samples: 40
+  n_unique_participants: 10
+  reference_event: confirmation date
+  specimen: oropharyngeal_swab
+  unit: cycle threshold
+- ID: lavezzo2020suppression
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration calculated from evaluation
+    of RdRp gene, and the reference event is first positive day.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 75
+  n_positive: 75
+  n_quantified: 67
+  n_samples: 142
+  n_unique_participants: 76
+  reference_event: confirmation date
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: lavezzo2020suppression
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration calculated from evaluation
+    of E gene, and the reference event is first positive day.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 72
+  n_positive: 72
+  n_quantified: 70
+  n_samples: 142
+  n_unique_participants: 76
+  reference_event: confirmation date
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: lavezzo2020suppression
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration calculated from evaluation
+    of RdRp gene, and the reference event is symptom onset day.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 62
+  n_positive: 62
+  n_quantified: 59
+  n_samples: 121
+  n_unique_participants: 65
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: lavezzo2020suppression
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration calculated from evaluation
+    of E gene, and the reference event is symptom onset day.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 47
+  n_positive: 47
+  n_quantified: 74
+  n_samples: 121
+  n_unique_participants: 65
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: lescure2020clinical
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration in nasopharyngeal swab samples.
+    The concentration were quantified in genome copies per swab.
+  limit_of_detection: 1
+  limit_of_quantification: 100
+  n_negative: 15
+  n_positive: 4
+  n_quantified: 23
+  n_samples: 42
+  n_unique_participants: 5
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: gc/swab
+- ID: liu2024longitudinal
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration in stool samples. The concentration
+    were quantified in genome copies per dry weight of stool.
+  limit_of_detection: unknown
+  limit_of_quantification: 1000
+  n_negative: 115
+  n_positive: 0
+  n_quantified: 40
+  n_samples: 155
+  n_unique_participants: 42
+  reference_event: confirmation date
+  specimen: stool
+  unit: gc/dry gram
+- ID: liu2024longitudinal
+  biomarker: PMMoV
+  description: PMMoV genome copy concentration in stool samples. The concentration
+    were quantified in genome copies per dry weight of stool.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 1
+  n_positive: 1
+  n_quantified: 154
+  n_samples: 155
+  n_unique_participants: 42
+  reference_event: confirmation date
+  specimen: stool
+  unit: gc/dry gram
+- ID: liu2024longitudinal
+  biomarker: mtDNA
+  description: mtDNA genome copy concentration in stool samples. The concentration
+    were quantified in genome copies per dry weight of stool.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 0
+  n_positive: 0
+  n_quantified: 155
+  n_samples: 155
+  n_unique_participants: 42
+  reference_event: confirmation date
+  specimen: stool
+  unit: gc/dry gram
+- ID: lui2020viral
+  biomarker: SARS-CoV-2
+  description: Gene copies of the N1 gene quantified using RT-qPCR in stool samples.
+  limit_of_detection: unknown
+  limit_of_quantification: 694.1199999839523
+  n_negative: 20
+  n_positive: 0
+  n_quantified: 23
+  n_samples: 43
+  n_unique_participants: 11
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the E gene quantified using RT-qPCR
+    for a sample collected using the OMNIGene GUT collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 541
+  n_positive: 493
+  n_quantified: 163
+  n_samples: 656
+  n_unique_participants: 108
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the E gene quantified using RT-qPCR
+    for a sample collected using the Zymo DNA/RNA shield fecal collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 506
+  n_positive: 488
+  n_quantified: 214
+  n_samples: 702
+  n_unique_participants: 104
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the RdRp gene quantified using RT-qPCR
+    for a sample collected using the OMNIGene GUT collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 563
+  n_positive: 553
+  n_quantified: 103
+  n_samples: 656
+  n_unique_participants: 108
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the RdRp gene quantified using RT-qPCR
+    for a sample collected using the Zymo DNA/RNA shield fecal collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 537
+  n_positive: 534
+  n_quantified: 168
+  n_samples: 702
+  n_unique_participants: 104
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the N1 gene quantified using RT-qPCR
+    for a sample collected using the OMNIGene GUT collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 423
+  n_positive: 376
+  n_quantified: 280
+  n_samples: 656
+  n_unique_participants: 108
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the N1 gene quantified using RT-qPCR
+    for a sample collected using the Zymo DNA/RNA shield fecal collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 435
+  n_positive: 404
+  n_quantified: 298
+  n_samples: 702
+  n_unique_participants: 104
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the N2 gene quantified using RT-qPCR
+    for a sample collected using the OMNIGene GUT collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 501
+  n_positive: 429
+  n_quantified: 227
+  n_samples: 656
+  n_unique_participants: 108
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the N2 gene quantified using RT-qPCR
+    for a sample collected using the Zymo DNA/RNA shield fecal collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 500
+  n_positive: 459
+  n_quantified: 243
+  n_samples: 702
+  n_unique_participants: 104
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the N1 gene quantified using ddPCR
+    for a sample collected using the OMNIGene GUT collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 269
+  n_positive: 185
+  n_quantified: 154
+  n_samples: 339
+  n_unique_participants: 108
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the N1 gene quantified using ddPCR
+    for a sample collected using the Zymo DNA/RNA shield fecal collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 265
+  n_positive: 154
+  n_quantified: 197
+  n_samples: 351
+  n_unique_participants: 104
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the E gene quantified using ddPCR for
+    a sample collected using the OMNIGene GUT collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 134
+  n_positive: 103
+  n_quantified: 58
+  n_samples: 161
+  n_unique_participants: 92
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of genomic RNA of the E gene quantified using ddPCR for
+    a sample collected using the Zymo DNA/RNA shield fecal collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 64
+  n_positive: 41
+  n_quantified: 79
+  n_samples: 120
+  n_unique_participants: 75
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of sub-genomic RNA of the N1 gene quantified using RT-qPCR
+    for a sample collected using the OMNIGene GUT collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 569
+  n_positive: 569
+  n_quantified: 49
+  n_samples: 618
+  n_unique_participants: 108
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: natarajan2022gastrointestinal
+  biomarker: SARS-CoV-2
+  description: Concentration of sub-genomic RNA of the N1 gene quantified using RT-qPCR
+    for a sample collected using the Zymo DNA/RNA shield fecal collection tube.
+  limit_of_detection: 1000
+  limit_of_quantification: unknown
+  n_negative: 405
+  n_positive: 405
+  n_quantified: 137
+  n_samples: 542
+  n_unique_participants: 101
+  reference_event: enrollment
+  specimen: stool
+  unit: gc/mL
+- ID: peiris2003clinical
+  biomarker: SARS
+  description: This analyte indicates the detection of SARS RNA in nasopharyngeal
+    aspirates.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 0
+  n_positive: 0
+  n_quantified: 42
+  n_samples: 42
+  n_unique_participants: 14
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: gc/mL
+- ID: salvatore2020epidemiological
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration calculated from evaluation
+    of both N1 probe. Results were considered positive if signals were detected (Ct
+    < 40) for theRP, N1, and N2 genes. Results were classified as 'not detected' if
+    RP was detected but no signal was observed (Ct >= 40) from either N1 or N2. Results
+    were classified as inconclusive if RP was detected (Ct < 40) and either N1 or
+    N2 was detected (but not both). Results were classified as invalid if no RP was
+    detected in the sample. Any specimens for which results were inconclusive were
+    retested; specimens which produced inconclusive results after retesting were excluded
+    from the analysis (n = 17 specimens from 6 participants). Ct values for amplification
+    of both viral targets (N1 and N2 probes). But for further analysis, the author
+    focused on N1 probe
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 66
+  n_positive: 157
+  n_quantified: 0
+  n_samples: 223
+  n_unique_participants: 93
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: seah2020assessing
+  biomarker: SARS-CoV-2
+  description: The presence of SARS-CoV-2 is assessed with viral isolation and quantitative
+    reverse-transcription polymerase chain reaction (RT-PCR) analysis for patients'
+    nasopharyngeal swabs.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 26
+  n_positive: 134
+  n_quantified: 0
+  n_samples: 134
+  n_unique_participants: 17
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: shrestha2020distribution
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using RT-PCR targeting
+    the N gene in nasopharyngeal swab samples.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 119
+  n_positive: 409
+  n_quantified: 0
+  n_samples: 528
+  n_unique_participants: 230
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: tan2021early
+  biomarker: SARS-CoV-2
+  description: The swab_SARSCoV2_N analyte refers to the detection of SARS-CoV-2 RNA
+    in patient oropharyngeal swabs, using RT-PCR cycle threshold (CT) values to calculate
+    the relative quantities of SARS-CoV-2 RNA. 10^(-11) was the detection limit, which
+    was transformed as CT value equals 36.5. Data was obtained from the combined dataset
+    in the supplementary materials of Challenger et al. (2022)
+  limit_of_detection: 36.5
+  limit_of_quantification: unknown
+  n_negative: 24
+  n_positive: 58
+  n_quantified: 0
+  n_samples: 82
+  n_unique_participants: 12
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: cycle threshold
+- ID: team2020clinical
+  biomarker: SARS-CoV-2
+  description: Cycle threshold (Ct) values were quantified using rRT-PCR targeting
+    the N gene in nasopharyngeal swab samples.
+  limit_of_detection: 41
+  limit_of_quantification: unknown
+  n_negative: 73
+  n_positive: 48
+  n_quantified: 0
+  n_samples: 121
+  n_unique_participants: 12
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: tsang2016individual
+  biomarker: influenza
+  description: Influenza A virus RNA gene copy concentration in oropharynx and nasopharynx
+    samples. Paired nasal and throat swabs were pooled in viral transport medium immediately
+    after collection and subsequently processed for quantitative reverse transcription
+    PCR to detect and quantify influenza A virus. The concentration was quantified
+    in gene copies per milliliter. M gene was used as the gene target for the PCR
+    assay, as described in a referenced study (Chan et al., 2008).
+  limit_of_detection: 900
+  limit_of_quantification: unknown
+  n_negative: 345
+  n_positive: 0
+  n_quantified: 1154
+  n_samples: 1154
+  n_unique_participants: 478
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: gc/mL
+- ID: vetter2020daily
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentrations in nasopharyngeal samples.
+    The concentrations were quantified in gene copies per mL.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 2
+  n_positive: 2
+  n_quantified: 37
+  n_samples: 39
+  n_unique_participants: 5
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: gc/mL
+- ID: vetter2020daily
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentrations in oropharyngeal samples. The
+    concentrations were quantified in gene copies per mL.
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 1
+  n_positive: 1
+  n_quantified: 34
+  n_samples: 35
+  n_unique_participants: 5
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: gc/mL
+- ID: wang2020fecal
+  biomarker: SARS-CoV-2
+  description: qPCR analysis of SARS-CoV-2 RNA in stool samples targeting ORF1ab gene.
+    Ct less than 35 is defined as positive, and Ct > 40 is considered as negative.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 13
+  n_positive: 43
+  n_quantified: 0
+  n_samples: 56
+  n_unique_participants: 11
+  reference_event: symptom onset
+  specimen: stool
+  unit: cycle threshold
+- ID: wang2020fecal
+  biomarker: SARS-CoV-2
+  description: qPCR analysis of SARS-CoV-2 RNA in stool samples targeting N gene.
+    Ct = 35 is the cut-off for a positive result, and Ct = 40 is a negative sample.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 12
+  n_positive: 44
+  n_quantified: 0
+  n_samples: 56
+  n_unique_participants: 11
+  reference_event: symptom onset
+  specimen: stool
+  unit: cycle threshold
+- ID: woelfel2020virological
+  biomarker: SARS-CoV-2
+  description: RNA gene copy concentration in stool samples. The authors report that
+    "stool samples were taken and shipped in native conditions," suggesting that results
+    reported as gene copies per gram refer to wet weight.
+  limit_of_detection: unknown
+  limit_of_quantification: 100
+  n_negative: 13
+  n_positive: 2
+  n_quantified: 67
+  n_samples: 82
+  n_unique_participants: 9
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/mL
+- ID: woelfel2020virological
+  biomarker: SARS-CoV-2
+  description: RNA gene copy concentration in sputum samples. Results are reported
+    as gene copies per mL.
+  limit_of_detection: unknown
+  limit_of_quantification: 100
+  n_negative: 24
+  n_positive: 1
+  n_quantified: 122
+  n_samples: 147
+  n_unique_participants: 9
+  reference_event: symptom onset
+  specimen: sputum
+  unit: gc/mL
+- ID: woelfel2020virological
+  biomarker: SARS-CoV-2
+  description: Number of gene copies per throat swab.
+  limit_of_detection: unknown
+  limit_of_quantification: 100
+  n_negative: 57
+  n_positive: 40
+  n_quantified: 56
+  n_samples: 153
+  n_unique_participants: 9
+  reference_event: symptom onset
+  specimen: oropharyngeal_swab
+  unit: gc/swab
+- ID: xing2020prolonged
+  biomarker: SARS-CoV-2
+  description: Presence of SARS-CoV-2 RNA was detected by RT-PCR in stool samples.
+    The PCR assay simultaneously amplified two target genes of SARS-CoV-2 included
+    open reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle threshold
+    (Ct) value no more than 40 with evident amplification curve was considered as
+    a positive test, and a value of 40 indicated the virus was molecularly undetectable.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 7
+  n_positive: 10
+  n_quantified: 0
+  n_samples: 17
+  n_unique_participants: 1
+  reference_event: hospital admission
+  specimen: stool
+  unit: cycle threshold
+- ID: xing2020prolonged
+  biomarker: SARS-CoV-2
+  description: Presence of SARS-CoV-2 RNA was detected by RT-PCR in oropharyngeal_swab
+    samples. The PCR assay simultaneously amplified two target genes of SARS-CoV-2
+    included open reading frame 1ab (ORF1ab) and nucleocapsid protein (N). A cycle
+    threshold (Ct) value no more than 40 with evident amplification curve was considered
+    as a positive test, and a value of 40 indicated the virus was molecularly undetectable.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 11
+  n_positive: 8
+  n_quantified: 0
+  n_samples: 19
+  n_unique_participants: 1
+  reference_event: hospital admission
+  specimen: oropharyngeal_swab
+  unit: cycle threshold
+- ID: xu2020characteristics
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA copy number concentration in rectal swab samples. The
+    unit of concentration were converted to copies per ml from Ct values based on
+    standard curve calculated from the concentration provided by the author.
+  limit_of_detection: 312
+  limit_of_quantification: unknown
+  n_negative: 8
+  n_positive: 8
+  n_quantified: 55
+  n_samples: 63
+  n_unique_participants: 7
+  reference_event: hospital admission
+  specimen: rectal_swab
+  unit: gc/mL
+- ID: xu2020characteristics
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA copy number concentration in nasopharyngeal swab samples.
+    The unit of concentration were converted to copies per ml from Ct values based
+    on standard curve calculated from the concentration provided by the author.
+  limit_of_detection: 312
+  limit_of_quantification: unknown
+  n_negative: 29
+  n_positive: 29
+  n_quantified: 15
+  n_samples: 44
+  n_unique_participants: 7
+  reference_event: hospital admission
+  specimen: nasopharyngeal_swab
+  unit: gc/mL
+- ID: yang2020laboratory
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract
+    samples.
+  limit_of_detection: 38
+  limit_of_quantification: unknown
+  n_negative: 174
+  n_positive: 101
+  n_quantified: 0
+  n_samples: 276
+  n_unique_participants: 28
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  - sputum
+  unit: cycle threshold
+- ID: yang2020laboratory
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA ct value from evaluation of upper respiratory tract
+    samples.
+  limit_of_detection: 38
+  limit_of_quantification: unknown
+  n_negative: 23
+  n_positive: 62
+  n_quantified: 0
+  n_samples: 85
+  n_unique_participants: 21
+  reference_event: symptom onset
+  specimen: bronchoalveolar_lavage_fluid
+  unit: cycle threshold
+- ID: yilmaz2020upper
+  biomarker: SARS-CoV-2
+  description: The author collected serial upper respiratory tract samples (one nasopharyngeal
+    swab and one oropharyngeal swab were put in a single collection tube with 1 mL
+    of transport medium) for real-time PCR of SARS-CoV-2 RNA for all patients.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 81
+  n_positive: 268
+  n_quantified: 0
+  n_samples: 349
+  n_unique_participants: 54
+  reference_event: symptom onset
+  specimen:
+  - nasopharyngeal_swab
+  - oropharyngeal_swab
+  unit: cycle threshold
+- ID: young2020epidemiologic
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA genome copy concentration in nasopharyngeal swab samples.
+    The unit of concentration were converted to gc/swab from Ct values based on standard
+    curve calculated from the concentration provided by Goyal et al. (2020).
+  limit_of_detection: unknown
+  limit_of_quantification: unknown
+  n_negative: 65
+  n_positive: 65
+  n_quantified: 151
+  n_samples: 216
+  n_unique_participants: 18
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: gc/swab
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in nasopharyngeal_swab from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 56
+  n_positive: 28
+  n_quantified: 0
+  n_samples: 84
+  n_unique_participants: 6
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in nasopharyngeal_swab from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 31
+  n_positive: 2
+  n_quantified: 0
+  n_samples: 33
+  n_unique_participants: 4
+  reference_event: confirmation date
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in nasopharyngeal_swab from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 52
+  n_positive: 32
+  n_quantified: 0
+  n_samples: 84
+  n_unique_participants: 6
+  reference_event: symptom onset
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in nasopharyngeal_swab from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 30
+  n_positive: 3
+  n_quantified: 0
+  n_samples: 33
+  n_unique_participants: 4
+  reference_event: confirmation date
+  specimen: nasopharyngeal_swab
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in stool from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 24
+  n_positive: 22
+  n_quantified: 0
+  n_samples: 46
+  n_unique_participants: 6
+  reference_event: symptom onset
+  specimen: stool
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in stool from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 8
+  n_positive: 28
+  n_quantified: 0
+  n_samples: 36
+  n_unique_participants: 4
+  reference_event: confirmation date
+  specimen: stool
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in stool from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 22
+  n_positive: 24
+  n_quantified: 0
+  n_samples: 46
+  n_unique_participants: 6
+  reference_event: symptom onset
+  specimen: stool
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in stool from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 8
+  n_positive: 28
+  n_quantified: 0
+  n_samples: 36
+  n_unique_participants: 4
+  reference_event: confirmation date
+  specimen: stool
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in serum from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 3
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 3
+  n_unique_participants: 3
+  reference_event: symptom onset
+  specimen: serum
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in serum from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 1
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 1
+  n_unique_participants: 1
+  reference_event: confirmation date
+  specimen: serum
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in serum from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 3
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 3
+  n_unique_participants: 3
+  reference_event: symptom onset
+  specimen: serum
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in serum from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 1
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 1
+  n_unique_participants: 1
+  reference_event: confirmation date
+  specimen: serum
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in urine from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 6
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 6
+  n_unique_participants: 3
+  reference_event: symptom onset
+  specimen: urine
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the ORF1ab gene in urine from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 2
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 2
+  n_unique_participants: 2
+  reference_event: confirmation date
+  specimen: urine
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in urine from symptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 6
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 6
+  n_unique_participants: 3
+  reference_event: symptom onset
+  specimen: urine
+  unit: cycle threshold
+- ID: yuan2021sars
+  biomarker: SARS-CoV-2
+  description: This entry describes RT-qPCR detection of SARS-CoV-2 RNA (Ct < 40 considered
+    positive) targeting the N gene in urine from asymptomatic individuals.
+  limit_of_detection: 40
+  limit_of_quantification: unknown
+  n_negative: 2
+  n_positive: 0
+  n_quantified: 0
+  n_samples: 2
+  n_unique_participants: 2
+  reference_event: confirmation date
+  specimen: urine
+  unit: cycle threshold
+- ID: zuo2020alterations
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentrations in fecal samples, which were
+    were collected 2 to 3 times per week starting from hospital admission, and SARS-CoV-2
+    detection in feces was tracked longitudinally. The day is calculated relative
+    to the date of symptom onset. The concentrations were quantified in gene copies
+    per mL.
+  limit_of_detection: 347
+  limit_of_quantification: unknown
+  n_negative: 21
+  n_positive: 21
+  n_quantified: 19
+  n_samples: 40
+  n_unique_participants: 12
+  reference_event: symptom onset
+  specimen: stool
+  unit: gc/mL
+- ID: zuo2020alterations
+  biomarker: SARS-CoV-2
+  description: SARS-CoV-2 RNA gene copy concentrations in fecal samples, which were
+    were collected 2 to 3 times per week starting from hospital admission, and SARS-CoV-2
+    detection in feces was tracked longitudinally. The day is calculated relative
+    to the date of SARS-CoV-2 confirmation. The concentrations were quantified in
+    gene copies per mL.
+  limit_of_detection: 347
+  limit_of_quantification: unknown
+  n_negative: 5
+  n_positive: 5
+  n_quantified: 7
+  n_samples: 12
+  n_unique_participants: 3
+  reference_event: confirmation date
+  specimen: stool
+  unit: gc/mL
