@@ -1,4 +1,3 @@
-import argparse
 import pandas as pd
 import requests
 import yaml
@@ -35,9 +34,7 @@ def create_meta(schema: dict) -> pd.DataFrame:
 def safe_compare(a, b, operator):
     def compare(x, y):
         # Allow int and float to compare with each other
-        if not (isinstance(x, (int, float)) and isinstance(y, (int, float))) and type(
-            x
-        ) != type(y):
+        if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
             return False
 
         if operator == "==":
@@ -129,7 +126,7 @@ def append_meta(metadata: pd.DataFrame, dataset: str) -> pd.DataFrame:
                             safe_compare(
                                 value,
                                 data["analytes"][analyte]["limit_of_quantification"],
-                                "<",
+                                "<=",
                             )
                         )
                     )
@@ -139,7 +136,7 @@ def append_meta(metadata: pd.DataFrame, dataset: str) -> pd.DataFrame:
                             safe_compare(
                                 value,
                                 data["analytes"][analyte]["limit_of_detection"],
-                                "<",
+                                "<=",
                             )
                             | (
                                 (
@@ -163,7 +160,23 @@ def append_meta(metadata: pd.DataFrame, dataset: str) -> pd.DataFrame:
                             data["analytes"][analyte]["limit_of_quantification"]
                             == "unknown"
                         )
+                        & (data["analytes"][analyte]["limit_of_detection"] == "unknown")
                         & (safe_compare(value, 0, ">"))
+                    )
+                    | (
+                        (data["analytes"][analyte]["unit"] != "cycle threshold")
+                        & (
+                            data["analytes"][analyte]["limit_of_quantification"]
+                            == "unknown"
+                        )
+                        & (data["analytes"][analyte]["limit_of_detection"] != "unknown")
+                        & (
+                            safe_compare(
+                                value,
+                                data["analytes"][analyte]["limit_of_detection"],
+                                ">=",
+                            )
+                        )
                     )
                     | (
                         (data["analytes"][analyte]["unit"] != "cycle threshold")
@@ -175,7 +188,7 @@ def append_meta(metadata: pd.DataFrame, dataset: str) -> pd.DataFrame:
                             safe_compare(
                                 value,
                                 data["analytes"][analyte]["limit_of_quantification"],
-                                ">",
+                                ">=",
                             )
                         )
                     )

@@ -23,7 +23,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 184
-  n_positive: 184
+  n_positive: 0
   n_quantified: 193
   n_samples: 377
   n_unique_participants: 48
@@ -41,7 +41,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 186
-  n_positive: 186
+  n_positive: 0
   n_quantified: 191
   n_samples: 377
   n_unique_participants: 48
@@ -57,7 +57,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 25
-  n_positive: 25
+  n_positive: 0
   n_quantified: 352
   n_samples: 377
   n_unique_participants: 48
@@ -72,7 +72,7 @@
   limit_of_detection: 25
   limit_of_quantification: unknown
   n_negative: 200
-  n_positive: 271
+  n_positive: 71
   n_quantified: 100
   n_samples: 371
   n_unique_participants: 48
@@ -91,7 +91,7 @@
     test.
   limit_of_detection: unknown
   limit_of_quantification: 10000
-  n_negative: 695
+  n_negative: 663
   n_positive: 216
   n_quantified: 500
   n_samples: 1379
@@ -127,7 +127,7 @@
   limit_of_detection: 40
   limit_of_quantification: unknown
   n_negative: 52
-  n_positive: 52
+  n_positive: 0
   n_quantified: 43
   n_samples: 95
   n_unique_participants: 66
@@ -142,7 +142,7 @@
   limit_of_detection: 40
   limit_of_quantification: unknown
   n_negative: 23
-  n_positive: 23
+  n_positive: 0
   n_quantified: 41
   n_samples: 64
   n_unique_participants: 47
@@ -157,7 +157,7 @@
   limit_of_detection: 40
   limit_of_quantification: unknown
   n_negative: 5
-  n_positive: 5
+  n_positive: 0
   n_quantified: 13
   n_samples: 18
   n_unique_participants: 18
@@ -171,7 +171,7 @@
   limit_of_detection: 40
   limit_of_quantification: unknown
   n_negative: 13
-  n_positive: 13
+  n_positive: 0
   n_quantified: 54
   n_samples: 67
   n_unique_participants: 45
@@ -185,7 +185,7 @@
   limit_of_detection: 40
   limit_of_quantification: unknown
   n_negative: 90
-  n_positive: 90
+  n_positive: 0
   n_quantified: 23
   n_samples: 113
   n_unique_participants: 71
@@ -199,7 +199,7 @@
   limit_of_detection: 40
   limit_of_quantification: unknown
   n_negative: 70
-  n_positive: 70
+  n_positive: 0
   n_quantified: 7
   n_samples: 77
   n_unique_participants: 53
@@ -229,7 +229,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 96
-  n_positive: 96
+  n_positive: 0
   n_quantified: 146
   n_samples: 242
   n_unique_participants: 17
@@ -247,7 +247,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 190
-  n_positive: 190
+  n_positive: 0
   n_quantified: 52
   n_samples: 242
   n_unique_participants: 17
@@ -265,7 +265,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 125
-  n_positive: 125
+  n_positive: 0
   n_quantified: 347
   n_samples: 472
   n_unique_participants: 33
@@ -283,7 +283,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 294
-  n_positive: 294
+  n_positive: 0
   n_quantified: 178
   n_samples: 472
   n_unique_participants: 33
@@ -298,7 +298,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 3
-  n_positive: 3
+  n_positive: 0
   n_quantified: 4
   n_samples: 7
   n_unique_participants: 1
@@ -311,7 +311,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 2
-  n_positive: 2
+  n_positive: 0
   n_quantified: 4
   n_samples: 6
   n_unique_participants: 1
@@ -325,7 +325,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 5
-  n_positive: 5
+  n_positive: 0
   n_quantified: 2
   n_samples: 7
   n_unique_participants: 1
@@ -340,7 +340,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 2
-  n_positive: 2
+  n_positive: 0
   n_quantified: 2
   n_samples: 4
   n_unique_participants: 2
@@ -353,7 +353,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 1
-  n_positive: 1
+  n_positive: 0
   n_quantified: 2
   n_samples: 3
   n_unique_participants: 1
@@ -366,7 +366,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 3
-  n_positive: 3
+  n_positive: 0
   n_quantified: 6
   n_samples: 9
   n_unique_participants: 2
@@ -379,7 +379,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 4
-  n_positive: 4
+  n_positive: 0
   n_quantified: 2
   n_samples: 6
   n_unique_participants: 1
@@ -397,7 +397,7 @@
   limit_of_detection: 5700.0
   limit_of_quantification: unknown
   n_negative: 1
-  n_positive: 1
+  n_positive: 0
   n_quantified: 8
   n_samples: 9
   n_unique_participants: 2
@@ -411,7 +411,7 @@
   limit_of_detection: 129000
   limit_of_quantification: unknown
   n_negative: 19
-  n_positive: 19
+  n_positive: 0
   n_quantified: 22
   n_samples: 41
   n_unique_participants: 17
@@ -428,7 +428,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 138
-  n_positive: 138
+  n_positive: 0
   n_quantified: 657
   n_samples: 795
   n_unique_participants: 60
@@ -446,7 +446,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 237
-  n_positive: 237
+  n_positive: 0
   n_quantified: 667
   n_samples: 904
   n_unique_participants: 60
@@ -496,7 +496,7 @@
   limit_of_detection: unknown
   limit_of_quantification: 35
   n_negative: 12
-  n_positive: 26
+  n_positive: 14
   n_quantified: 0
   n_samples: 26
   n_unique_participants: 2
@@ -512,7 +512,7 @@
   limit_of_detection: unknown
   limit_of_quantification: 35
   n_negative: 12
-  n_positive: 20
+  n_positive: 8
   n_quantified: 0
   n_samples: 20
   n_unique_participants: 2
@@ -526,7 +526,7 @@
   limit_of_detection: unknown
   limit_of_quantification: 35
   n_negative: 10
-  n_positive: 16
+  n_positive: 6
   n_quantified: 0
   n_samples: 16
   n_unique_participants: 2
@@ -540,7 +540,7 @@
   limit_of_detection: unknown
   limit_of_quantification: 35
   n_negative: 13
-  n_positive: 16
+  n_positive: 3
   n_quantified: 0
   n_samples: 16
   n_unique_participants: 2
@@ -554,7 +554,7 @@
   limit_of_detection: unknown
   limit_of_quantification: 35
   n_negative: 10
-  n_positive: 20
+  n_positive: 10
   n_quantified: 0
   n_samples: 20
   n_unique_participants: 2
@@ -568,7 +568,7 @@
   limit_of_detection: unknown
   limit_of_quantification: 35
   n_negative: 11
-  n_positive: 26
+  n_positive: 15
   n_quantified: 0
   n_samples: 26
   n_unique_participants: 2
@@ -614,7 +614,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 75
-  n_positive: 75
+  n_positive: 0
   n_quantified: 67
   n_samples: 142
   n_unique_participants: 76
@@ -628,7 +628,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 72
-  n_positive: 72
+  n_positive: 0
   n_quantified: 70
   n_samples: 142
   n_unique_participants: 76
@@ -642,7 +642,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 62
-  n_positive: 62
+  n_positive: 0
   n_quantified: 59
   n_samples: 121
   n_unique_participants: 65
@@ -656,7 +656,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 47
-  n_positive: 47
+  n_positive: 0
   n_quantified: 74
   n_samples: 121
   n_unique_participants: 65
@@ -698,7 +698,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 1
-  n_positive: 1
+  n_positive: 0
   n_quantified: 154
   n_samples: 155
   n_unique_participants: 42
@@ -739,8 +739,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 541
-  n_positive: 493
-  n_quantified: 163
+  n_positive: 0
+  n_quantified: 115
   n_samples: 656
   n_unique_participants: 108
   reference_event: enrollment
@@ -753,8 +753,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 506
-  n_positive: 488
-  n_quantified: 214
+  n_positive: 0
+  n_quantified: 196
   n_samples: 702
   n_unique_participants: 104
   reference_event: enrollment
@@ -767,8 +767,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 563
-  n_positive: 553
-  n_quantified: 103
+  n_positive: 0
+  n_quantified: 93
   n_samples: 656
   n_unique_participants: 108
   reference_event: enrollment
@@ -781,8 +781,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 537
-  n_positive: 534
-  n_quantified: 168
+  n_positive: 0
+  n_quantified: 165
   n_samples: 702
   n_unique_participants: 104
   reference_event: enrollment
@@ -795,8 +795,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 423
-  n_positive: 376
-  n_quantified: 280
+  n_positive: 0
+  n_quantified: 233
   n_samples: 656
   n_unique_participants: 108
   reference_event: enrollment
@@ -809,8 +809,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 435
-  n_positive: 404
-  n_quantified: 298
+  n_positive: 0
+  n_quantified: 267
   n_samples: 702
   n_unique_participants: 104
   reference_event: enrollment
@@ -823,8 +823,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 501
-  n_positive: 429
-  n_quantified: 227
+  n_positive: 0
+  n_quantified: 155
   n_samples: 656
   n_unique_participants: 108
   reference_event: enrollment
@@ -837,8 +837,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 500
-  n_positive: 459
-  n_quantified: 243
+  n_positive: 0
+  n_quantified: 202
   n_samples: 702
   n_unique_participants: 104
   reference_event: enrollment
@@ -851,8 +851,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 269
-  n_positive: 185
-  n_quantified: 154
+  n_positive: 0
+  n_quantified: 70
   n_samples: 339
   n_unique_participants: 108
   reference_event: enrollment
@@ -865,8 +865,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 265
-  n_positive: 154
-  n_quantified: 197
+  n_positive: 0
+  n_quantified: 86
   n_samples: 351
   n_unique_participants: 104
   reference_event: enrollment
@@ -879,8 +879,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 134
-  n_positive: 103
-  n_quantified: 58
+  n_positive: 0
+  n_quantified: 27
   n_samples: 161
   n_unique_participants: 92
   reference_event: enrollment
@@ -893,8 +893,8 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 64
-  n_positive: 41
-  n_quantified: 79
+  n_positive: 0
+  n_quantified: 56
   n_samples: 120
   n_unique_participants: 75
   reference_event: enrollment
@@ -907,7 +907,7 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 569
-  n_positive: 569
+  n_positive: 0
   n_quantified: 49
   n_samples: 618
   n_unique_participants: 108
@@ -921,7 +921,7 @@
   limit_of_detection: 1000
   limit_of_quantification: unknown
   n_negative: 405
-  n_positive: 405
+  n_positive: 0
   n_quantified: 137
   n_samples: 542
   n_unique_participants: 101
@@ -973,7 +973,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 26
-  n_positive: 134
+  n_positive: 108
   n_quantified: 0
   n_samples: 134
   n_unique_participants: 17
@@ -1037,7 +1037,7 @@
   limit_of_quantification: unknown
   n_negative: 345
   n_positive: 0
-  n_quantified: 1154
+  n_quantified: 809
   n_samples: 1154
   n_unique_participants: 478
   reference_event: symptom onset
@@ -1052,7 +1052,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 2
-  n_positive: 2
+  n_positive: 0
   n_quantified: 37
   n_samples: 39
   n_unique_participants: 5
@@ -1066,7 +1066,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 1
-  n_positive: 1
+  n_positive: 0
   n_quantified: 34
   n_samples: 35
   n_unique_participants: 5
@@ -1185,7 +1185,7 @@
   limit_of_detection: 312
   limit_of_quantification: unknown
   n_negative: 8
-  n_positive: 8
+  n_positive: 0
   n_quantified: 55
   n_samples: 63
   n_unique_participants: 7
@@ -1200,7 +1200,7 @@
   limit_of_detection: 312
   limit_of_quantification: unknown
   n_negative: 29
-  n_positive: 29
+  n_positive: 0
   n_quantified: 15
   n_samples: 44
   n_unique_participants: 7
@@ -1214,7 +1214,7 @@
   limit_of_detection: 38
   limit_of_quantification: unknown
   n_negative: 174
-  n_positive: 101
+  n_positive: 102
   n_quantified: 0
   n_samples: 276
   n_unique_participants: 28
@@ -1263,7 +1263,7 @@
   limit_of_detection: unknown
   limit_of_quantification: unknown
   n_negative: 65
-  n_positive: 65
+  n_positive: 0
   n_quantified: 151
   n_samples: 216
   n_unique_participants: 18
@@ -1504,7 +1504,7 @@
   limit_of_detection: 347
   limit_of_quantification: unknown
   n_negative: 21
-  n_positive: 21
+  n_positive: 0
   n_quantified: 19
   n_samples: 40
   n_unique_participants: 12
@@ -1521,7 +1521,7 @@
   limit_of_detection: 347
   limit_of_quantification: unknown
   n_negative: 5
-  n_positive: 5
+  n_positive: 0
   n_quantified: 7
   n_samples: 12
   n_unique_participants: 3
