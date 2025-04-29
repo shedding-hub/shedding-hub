@@ -1,0 +1,2387 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Estimating infectiousness throughout SARS-CoV-2 infection course
+doi: 10.1126/science.abi5273
+description: >
+  This study analyzed viral load data from 25,381 German cases, including 9519 hospitalized
+  patients, 6110 PAMS cases from walk-in test centers, 1533 B.1.1.7 variant infections,
+  and the viral load time series of 4434 (mainly hospitalized) patients. Viral load
+  results were then combined with estimated cell culture isolation probabilities,
+  producing a clinical proxy estimate of infectiousness. Data were obtained from the
+  'viral-load-with-negatives.tsv' dataset in the GitHub repository of Jones et al.
+  (2021). Samples lacking a known onset date or a detected positive test result were
+  filtered out.
+analytes:
+  swab_SARSCoV2:
+    description: >
+      Viral load is semiquantitative, estimating RNA copies per entire swab sample,
+      whereas only a fraction of the volume can reach the test tube. The quantification
+      is based on a standard curve and derive a formula in which RT-PCR cycle threshold
+      values are converted to viral loads. Viral load is estimated from the cycle
+      threshold (Ct) value using the empirical formulae 14.159 - (Ct x 0.297) for
+      the Roche Light Cycler 480 system and 15.043 - (Ct x 0.296) for the Roche cobas
+      6800/8800 systems. An estimated 3 percent of our samples were from the lower
+      respiratory tract. These were not removed from the dataset because of their
+      low frequency and the fact that the first samples for patients are almost universally
+      swab samples. Samples from the lower respiratory tract are generally taken from
+      patients only after intubation, by which point viral loads have typically fallen.
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    unit: gc/swab
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 2093843539.9517279
+- attributes:
+    age: 80
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 2181209670.0734615
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 11922222.44934232
+- attributes:
+    age: 63
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 33
+    value: 8014.448019882495
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 13
+    value: 325398.07200618985
+- attributes:
+    age: 88
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 53553.30473654289
+- attributes:
+    age: 68
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 26547.474731396298
+- attributes:
+    age: 27
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 292302372.25487554
+- attributes:
+    age: 62
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 23
+    value: 5809.379230318396
+- attributes:
+    age: 26
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 1776817.0403117267
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 7433636.12924396
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 169369.18717632184
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 2449052604.1252728
+- attributes:
+    age: 81
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 321342.13972463674
+- attributes:
+    age: 58
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 857125.0584710937
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 302230.2283649391
+- attributes:
+    age: 69
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 2447424.760707672
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 194739076.88327226
+- attributes:
+    age: 39
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 375856.06999363186
+- attributes:
+    age: 76
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 239737.7918722402
+- attributes:
+    age: 76
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 389138907.8669166
+- attributes:
+    age: 25
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 70330.03965714441
+- attributes:
+    age: 72
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -2
+    value: 221064440.29367733
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 55824935.23508385
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 56553.2011944203
+- attributes:
+    age: 71
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 119761.42026066656
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 17412549.791231595
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 31087.22197267133
+- attributes:
+    age: 43
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 325967404.6173934
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 47728121.41324649
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 269355572.08128685
+- attributes:
+    age: 76
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 1221532.860111045
+- attributes:
+    age: 57
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 334750.2185314353
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 93691877.52083336
+- attributes:
+    age: 82
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 14203167065.848534
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 535651.7530690079
+- attributes:
+    age: 88
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 1164643.7534610033
+- attributes:
+    age: 56
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 36890.43446348544
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -4
+    value: 6178.58741957869
+- attributes:
+    age: 44
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 262114173.48856568
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 1752770.2016586026
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 88119527.56437793
+- attributes:
+    age: 79
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 1742026994.6465359
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 1410360305.262807
+- attributes:
+    age: 33
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 18
+    value: 430723.79184103414
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 59760864.93318981
+- attributes:
+    age: 38
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 7036.900432655797
+- attributes:
+    age: 53
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 8291534029.959104
+- attributes:
+    age: 56
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 12168.676469437913
+- attributes:
+    age: 91
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 1298778.0382723564
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 14243.891337214896
+- attributes:
+    age: 75
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 360801.5382039387
+- attributes:
+    age: 59
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 2729299.427472983
+- attributes:
+    age: 52
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 22844.653425860855
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 126358.13958182369
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 83389.71293465738
+- attributes:
+    age: 62
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 96
+    value: 78430.08700733056
+- attributes:
+    age: 25
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 17
+    value: 14184.29214248564
+- attributes:
+    age: 51
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 35405.77658685058
+- attributes:
+    age: 44
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 162585.27701469135
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 299757034.4127674
+- attributes:
+    age: 44
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 4278940.540140368
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 743355909.4764342
+- attributes:
+    age: 69
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 72815519.0439837
+- attributes:
+    age: 40
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 20645907.997428324
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 19
+    value: 11023.758109628356
+- attributes:
+    age: 40
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 3127724.393971695
+- attributes:
+    age: 47
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 31498044.817158867
+- attributes:
+    age: 69
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 8342668.520675287
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 1498549.503420558
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 21
+    value: 13578426.043704677
+- attributes:
+    age: 71
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 6179066.863104977
+- attributes:
+    age: 79
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 988963.697330262
+- attributes:
+    age: 76
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 10684.424491893022
+- attributes:
+    age: 72
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 13
+    value: 2052.0694013295506
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 2365456.8283288833
+- attributes:
+    age: 66
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 28
+    value: 2551239918.112398
+- attributes:
+    age: 51
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 795237.1877187558
+- attributes:
+    age: 67
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 88060.95602015461
+- attributes:
+    age: 65
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 46414.11971639996
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 1315214588.3084762
+- attributes:
+    age: 58
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 43091476.07860466
+- attributes:
+    age: 46
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 38905267.076311104
+- attributes:
+    age: 85
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 52113.569052627296
+- attributes:
+    age: 86
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 487346.8406665902
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 334432.1896197949
+- attributes:
+    age: 81
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 18477651.492068637
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 2196121071.6852145
+- attributes:
+    age: 49
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 16
+    value: 25658.35991628693
+- attributes:
+    age: 33
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -1
+    value: 139954.28272458148
+- attributes:
+    age: 94
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 61371.05217466099
+- attributes:
+    age: 79
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 72273.03969953429
+- attributes:
+    age: 50
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 140047369.81823024
+- attributes:
+    age: 52
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 182550.03245600374
+- attributes:
+    age: 32
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 8180.755993477064
+- attributes:
+    age: 60
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 262114173.48856568
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 42508290.66948377
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 224832.02232511714
+- attributes:
+    age: 40
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 83389.71293465738
+- attributes:
+    age: 24
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 1467355.3714913805
+- attributes:
+    age: 58
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 18513654.435716406
+- attributes:
+    age: 80
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 17060265.174650762
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 14290759.028822843
+- attributes:
+    age: 69
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 68439.27554090934
+- attributes:
+    age: 90
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -2
+    value: 6528085.899106668
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 122961.10697283538
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 15828445.528620623
+- attributes:
+    age: 27
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 940313.0884441505
+- attributes:
+    age: 26
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 75853764.25681603
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 528753877.62464595
+- attributes:
+    age: 49
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 145890880.2959474
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 532014.7411951942
+- attributes:
+    age: 79
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 323538.93076607183
+- attributes:
+    age: 56
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 180079.4622864257
+- attributes:
+    age: 57
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 162585.27701469135
+- attributes:
+    age: 68
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -1
+    value: 1315112.5387378838
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 13
+    value: 413471.5894722549
+- attributes:
+    age: 57
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 5394331.7259541545
+- attributes:
+    age: 51
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 6847873152.006187
+- attributes:
+    age: 41
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 186443510.90189588
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 19
+    value: 42770.44237588032
+- attributes:
+    age: 68
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 83445177.49906455
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 37093374.854474835
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 81629526.94369848
+- attributes:
+    age: 47
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 24
+    value: 3500.317462302988
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 16
+    value: 23644.085268978728
+- attributes:
+    age: 21
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 11365224008.837719
+- attributes:
+    age: 47
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 8124.94004599718
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 59721.14292118807
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 13765626.434959972
+- attributes:
+    age: 38
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 884123.660481683
+- attributes:
+    age: 47
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 3202495.797420442
+- attributes:
+    age: 82
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 16
+    value: 116438.56569358235
+- attributes:
+    age: 39
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 1205001.0490521945
+- attributes:
+    age: 69
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 24647022.91727646
+- attributes:
+    age: 63
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 658661.4125569104
+- attributes:
+    age: 60
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 290124.7046180344
+- attributes:
+    age: 43
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 1801193.7855599434
+- attributes:
+    age: 73
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 845525.0188952774
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 3584311.7042862033
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 19
+    value: 221774.50496171243
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 722890.5968370441
+- attributes:
+    age: 68
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 341889865.3618129
+- attributes:
+    age: 56
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 8069.504921511589
+- attributes:
+    age: 74
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 9177599.32343836
+- attributes:
+    age: 32
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 2843180.1081452803
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 550450.1435278651
+- attributes:
+    age: 50
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 547076284.3441879
+- attributes:
+    age: 40
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 5577.546622216203
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 265533.592234105
+- attributes:
+    age: 78
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 18
+    value: 433668.3485930996
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 496975.5458615708
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 44077.69749348464
+- attributes:
+    age: 57
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 1059394613.666889
+- attributes:
+    age: 62
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 14785963.14994124
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 294300638.7545945
+- attributes:
+    age: 52
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 787047692.7305225
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 28245011.896979805
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 6439737.000616809
+- attributes:
+    age: 64
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 37
+    value: 172866.56301158573
+- attributes:
+    age: 53
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 108842113.04007293
+- attributes:
+    age: 62
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 16
+    value: 2024320.1356418424
+- attributes:
+    age: 83
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 1391272967.6619272
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 4862485.246253462
+- attributes:
+    age: 80
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 615124716.3815758
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 427936808.5604601
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 21627.10456395705
+- attributes:
+    age: 67
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 15784.388636874482
+- attributes:
+    age: 58
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 13
+    value: 5249309.641603967
+- attributes:
+    age: 44
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 1156735.9605044199
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 282324.94532031077
+- attributes:
+    age: 69
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 18
+    value: 15463.50512797618
+- attributes:
+    age: 26
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 606712.4827671577
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 25491222.30475768
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 17531587.188958187
+- attributes:
+    age: 31
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 9774.590437675877
+- attributes:
+    age: 22
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 4221030.810456586
+- attributes:
+    age: 57
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 5897821909.945508
+- attributes:
+    age: 60
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 110315.78173678405
+- attributes:
+    age: 36
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 698679.9046392305
+- attributes:
+    age: 40
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -1
+    value: 8804.144084507618
+- attributes:
+    age: 42
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 768603.4994949015
+- attributes:
+    age: 51
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -2
+    value: 2010508.5335767563
+- attributes:
+    age: 74
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 2415907956.9968915
+- attributes:
+    age: 66
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 4707175.133340491
+- attributes:
+    age: 52
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -2
+    value: 2843180.1081452803
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 143094.2121016429
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 21
+    value: 7841.270612767016
+- attributes:
+    age: 41
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 56784.53143536905
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 14001633.390965221
+- attributes:
+    age: 53
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 249740.90939260836
+- attributes:
+    age: 18
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 8567.45205462901
+- attributes:
+    age: 61
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 9831199383.88936
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 561816.6207524244
+- attributes:
+    age: 53
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 140047369.81823024
+- attributes:
+    age: 77
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 19
+    value: 310171.61818954936
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 334972869.1966384
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 3733867.9804732674
+- attributes:
+    age: 60
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 38
+    value: 129053141.52899387
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 101606.04665033227
+- attributes:
+    age: 39
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 92423883.4557514
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 31
+    value: 4862485.246253462
+- attributes:
+    age: 39
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 6988347.734680349
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 158319540.4919569
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 159401860.254111
+- attributes:
+    age: 68
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 13
+    value: 467417.78979327827
+- attributes:
+    age: 29
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 8286022.790879497
+- attributes:
+    age: 20
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 13
+    value: 878091.4307172811
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 21
+    value: 3094.4858303568435
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 670694.9933476712
+- attributes:
+    age: 70
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 17734017.23488563
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 49381998.745402746
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 157488.1592446157
+- attributes:
+    age: 72
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 13
+    value: 1942.7004944006765
+- attributes:
+    age: 46
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 781.5564975709051
+- attributes:
+    age: 44
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 1419058.0993833316
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 10661642.496982248
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 167497.13194193668
+- attributes:
+    age: 29
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 6098137.517489273
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 99616602.0859078
+- attributes:
+    age: 53
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 39980098.48472446
+- attributes:
+    age: 69
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 7687738.675318114
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 21951478.149195194
+- attributes:
+    age: 55
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 10906983.491493497
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 48180.51801233484
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 936503.559935277
+- attributes:
+    age: 67
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 29
+    value: 190166.97688617103
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 470613.19758910505
+- attributes:
+    age: 50
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 7788.029313505724
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 16045601.252669431
+- attributes:
+    age: 58
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 8809999.938898271
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 23339607.678367205
+- attributes:
+    age: 76
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 107369080.83047608
+- attributes:
+    age: 34
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 2
+    value: 1838387.3963061932
+- attributes:
+    age: 22
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 29025333.64925958
+- attributes:
+    age: 22
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 98874.45330079514
+- attributes:
+    age: 58
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 511045115.83471155
+- attributes:
+    age: 37
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 48184256.70467428
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 94269.68211331994
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 1073214.9796268165
+- attributes:
+    age: 82
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 968955.3297388715
+- attributes:
+    age: 56
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 14290759.028822843
+- attributes:
+    age: 56
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 1789756538.926369
+- attributes:
+    age: 57
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 346580366.387968
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 71830058.52769612
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 192775.94103104688
+- attributes:
+    age: 55
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 2729299.427472983
+- attributes:
+    age: 54
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 860240.5613612231
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 13431.878361621766
+- attributes:
+    age: 90
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 22867408.899859704
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 170527.04563025176
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 452063744.681854
+- attributes:
+    age: 64
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 5539.67574216116
+- attributes:
+    age: 51
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 410682.59655435337
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 2717463289.702045
+- attributes:
+    age: 21
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 171692.81951157367
+- attributes:
+    age: 77
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 114158700.6732881
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 93055720.76311131
+- attributes:
+    age: 61
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 185612.18725572748
+- attributes:
+    age: 69
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 119655.40076407792
+- attributes:
+    age: 78
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 2150259.727325121
+- attributes:
+    age: 57
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 30860787.39222697
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 381012.5647031951
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 9495621.969945362
+- attributes:
+    age: 27
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 4583673367.043512
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 97525.61794872713
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 314840.8579570944
+- attributes:
+    age: 63
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 4311058143.012216
+- attributes:
+    age: 57
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 27
+    value: 5171.113448305121
+- attributes:
+    age: 40
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 31071760.97114498
+- attributes:
+    age: 63
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 22
+    value: 6052.706080808143
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 12555582.547796257
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 210628.954669754
+- attributes:
+    age: 84
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 70330.03965714441
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 5
+    value: 31263.3827708232
+- attributes:
+    age: 58
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 72767.11982947079
+- attributes:
+    age: 76
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -3
+    value: 18990651.694477268
+- attributes:
+    age: 51
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 635117.5989537922
+- attributes:
+    age: 66
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 105845.58359394803
+- attributes:
+    age: 44
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 8930867.264725836
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 4457480.372143583
+- attributes:
+    age: 63
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 968955.3297388715
+- attributes:
+    age: 48
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 1325597.05388232
+- attributes:
+    age: 47
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 16155293.781390226
+- attributes:
+    age: 52
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 1281200.8171944467
+- attributes:
+    age: 22
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 31051.108109718116
+- attributes:
+    age: 56
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 133436.34581429267
+- attributes:
+    age: 67
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 100916.15362104957
+- attributes:
+    age: 57
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 2909797.2513534725
+- attributes:
+    age: 81
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 145890880.2959474
+- attributes:
+    age: 45
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 24971.069235931194
+- attributes:
+    age: 67
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 9
+    value: 109563.11537140985
+- attributes:
+    age: 71
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 14
+    value: 93600.69326385875
+- attributes:
+    age: 82
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 75338726.17659505
+- attributes:
+    age: 75
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 89939144.86283126
+- attributes:
+    age: 59
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 7
+    value: 4903583.157624174
+- attributes:
+    age: 69
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 703924175.7841053
+- attributes:
+    age: 63
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 24
+    value: 121421944.93065926
+- attributes:
+    age: 40
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 121412.5236107843
+- attributes:
+    age: 26
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 6
+    value: 6989431.143780605
+- attributes:
+    age: 35
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 7275.09939023543
+- attributes:
+    age: 73
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 4
+    value: 370601.51110868383
+- attributes:
+    age: 59
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 2415907956.9968915
+- attributes:
+    age: 25
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 1
+    value: 2555078324.913344
+- attributes:
+    age: 81
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 11
+    value: 2811877.2505029845
+- attributes:
+    age: 50
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 16601614.257305404
+- attributes:
+    age: 62
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 15
+    value: 33751641.84582182
+- attributes:
+    age: 56
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 39
+    value: 197408.54906657618
+- attributes:
+    age: 54
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 3
+    value: 55409.03660979264
+- attributes:
+    age: 63
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 0
+    value: 228724776.7142529
+- attributes:
+    age: 53
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 8
+    value: 101615.12510883938
+- attributes:
+    age: 78
+    sex: female
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 40
+    value: 3647.095033425679
+- attributes:
+    age: 40
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: 4269.061264228939
+- attributes:
+    age: 56
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: swab_SARSCoV2
+    time: 16
+    value: 47851.79029266273
+- attributes:
+    age: 65
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 7798556.420379277
+- attributes:
+    age: 70
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 18
+    value: 32390.7914297967
+- attributes:
+    age: 30
+    sex: male
+  measurements:
+  - analyte: swab_SARSCoV2
+    time: 12
+    value: 134348.55661035527
