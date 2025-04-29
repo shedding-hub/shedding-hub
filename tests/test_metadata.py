@@ -299,4 +299,13 @@ def test_append_meta(schema: dict, dataset: str, expected: pd.DataFrame) -> None
     temp = create_meta(schema)
     temp = append_meta(temp, dataset)
     for i in range(len(temp)):
-        assert all(temp.loc[i] == expected.loc[i])
+        assert all(
+            temp.loc[i] == expected.loc[i]
+        ), "The metadata created for the study (woelfel2020virological) is not matching the expected metadata."
+        assert all(
+            temp["n_samples"] > temp["n_unique_participants"]
+        ), "The number of samples should be smaller than the number of participants."
+        assert all(
+            temp["n_samples"]
+            == temp["n_negative"] + temp["n_positive"] + temp["n_quantified"]
+        ), "The numbers of negative, non-quantified positive, and quantified samples should be added up to the total number of samples."
