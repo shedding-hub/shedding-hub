@@ -48,5 +48,7 @@ jobs:
         run: make extraction
       - name: Check nothing changed
         run: make assert_data_unchanged
+      - name: Create metadata structure using schema
+        run: make create_metadata
       - name: Run just the data tests
         run: pytest tests/test_data.py -k test_data_validity
