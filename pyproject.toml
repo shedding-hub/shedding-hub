@@ -6,6 +6,8 @@ description = "Data and statistical models for biomarker shedding."
 dependencies = [
     "pyaml",
     "requests",
+    "pandas",
+    "matplotlib"
 ]
 
 [tool.setuptools.packages]
