@@ -193,7 +193,7 @@ def plot_shedding_duration(df_shedding_duration: pd.DataFrame, df_ID: str):
     )
 
     plt.yticks([])
-    plt.xlabel(f"Days after {df_shedding_duration["reference_event"][0]}")
+    plt.xlabel(f"Days after {df_shedding_duration['reference_event'][0]}")
     plt.title(f'Individual Shedding Duration for the Study "{df_ID}"')
     plt.grid(True, axis="x")
     plt.tight_layout()
