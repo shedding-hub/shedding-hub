@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Duration of Norovirus Shedding in Symptomatic and Asymptomatic Food Handlers
+doi: 10.1128/jcm.01932-07
+description: >
+  This study investigates the duration of norovirus RNA shedding in two food handlers—one
+  symptomatic and one asymptomatic—using repeated real-time reverse transcription-PCR
+  tests on fecal specimens. Norovirus RNA was detected and quantified over time, and
+  the duration of viral shedding was compared between symptomatic and asymptomatic
+  individuals.
+analytes:
+  stool_Norovirus_log10copies:
+    description: >
+      Quantitative measurement of norovirus RNA in stool samples using real-time RT-PCR.
+      Results are expressed as log10 copies per gram of feces.
+    specimen: stool
+    biomarker: sapovirus
+    gene_target: GII
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/wet gram
+    reference_event: confirmation date
+  norovirus_presence_qualitative:
+    description: >
+      Qualitative detection of norovirus RNA in stool samples using real-time RT-PCR.
+      Results are recorded as 'positive' or 'negative'.
+    specimen: stool
+    biomarker: sapovirus
+    gene_target: GII
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/wet gram
+    reference_event: confirmation date
+participants:
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-05-13'
+    value: 4.05
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-05-18'
+    value: 7.05
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-05-23'
+    value: 6.18
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-06-06'
+    value: 5.61
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-06-20'
+    value: 6.83
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-07-05'
+    value: 6.67
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-07-19'
+    value: 4.05
+- attributes:
+    group: asymptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-05-24'
+    value: 9.03
+- attributes:
+    group: asymptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-06-05'
+    value: 6.97
+- attributes:
+    group: asymptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-06-20'
+    value: 4.32
+- attributes:
+    group: asymptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: '2023-07-05'
+    value: 4.05
