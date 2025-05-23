@@ -1,0 +1,61 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Duration of Norovirus Shedding in Symptomatic and Asymptomatic Food Handlers
+doi: 10.1128/jcm.01932-07
+description: >
+  This study investigates the duration of norovirus RNA shedding in two food handlers—one
+  symptomatic and one asymptomatic—using repeated real-time reverse transcription-PCR
+  tests on fecal specimens. Norovirus RNA was detected and quantified over time, and
+  the duration of viral shedding was compared between symptomatic and asymptomatic
+  individuals.
+analytes:
+  stool_Norovirus_log10copies:
+    description: >
+      Quantitative measurement of norovirus RNA in stool samples using real-time RT-PCR.
+      Results are expressed as log10 copies per gram of feces.
+    specimen: stool
+    biomarker: sapovirus
+    gene_target: GII
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/wet gram
+    reference_event: confirmation date
+participants:
+- attributes:
+    group: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: 0
+    value: 4.05
+  - analyte: stool_Norovirus_log10copies
+    time: 5
+    value: 7.05
+  - analyte: stool_Norovirus_log10copies
+    time: 10
+    value: 6.18
+  - analyte: stool_Norovirus_log10copies
+    time: 24
+    value: 5.61
+  - analyte: stool_Norovirus_log10copies
+    time: 38
+    value: 6.83
+  - analyte: stool_Norovirus_log10copies
+    time: 53
+    value: 6.67
+  - analyte: stool_Norovirus_log10copies
+    time: 67
+    value: 4.05
+- attributes:
+    group: asymptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: 0
+    value: 9.03
+  - analyte: stool_Norovirus_log10copies
+    time: 12
+    value: 6.97
+  - analyte: stool_Norovirus_log10copies
+    time: 27
+    value: 4.32
+  - analyte: stool_Norovirus_log10copies
+    time: 42
+    value: 4.05
