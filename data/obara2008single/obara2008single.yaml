@@ -35,65 +35,38 @@ participants:
     group: symptomatic
   measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-05-13'
+    time: 0
     value: 4.05
-- attributes:
-    group: symptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-05-18'
+    time: 5
     value: 7.05
-- attributes:
-    group: symptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-05-23'
+    time: 10
     value: 6.18
-- attributes:
-    group: symptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-06-06'
+    time: 24
     value: 5.61
-- attributes:
-    group: symptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-06-20'
+    time: 38
     value: 6.83
-- attributes:
-    group: symptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-07-05'
+    time: 53
     value: 6.67
-- attributes:
-    group: symptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-07-19'
+    time: 67
     value: 4.05
 - attributes:
     group: asymptomatic
   measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-05-24'
+    time: 0
     value: 9.03
-- attributes:
-    group: asymptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-06-05'
+    time: 12
     value: 6.97
-- attributes:
-    group: asymptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-06-20'
+    time: 27
     value: 4.32
-- attributes:
-    group: asymptomatic
-  measurements:
   - analyte: stool_Norovirus_log10copies
-    time: '2023-07-05'
+    time: 42
     value: 4.05

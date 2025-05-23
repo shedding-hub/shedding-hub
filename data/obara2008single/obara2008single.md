@@ -7,6 +7,7 @@ First, we `import` python modules needed:
 import yaml
 import pandas as pd
 from shedding_hub import folded_str
+from datetime import datetime
 ```
 ```python
 df_log = pd.read_excel("log10_copy_number_data.xlsx")
@@ -14,42 +15,53 @@ df_pcr = pd.read_excel("employee_pcr_data.xlsx")
 
 df_log.columns = ["PatientID", "Group", "Date", "Log10CopyNumber"]
 df_pcr.columns = ["Employee", "PatientID", "Date", "PCR_Result_Raw", "PCR_Value", "PCR_Qualitative"]
+df_log["PersonID"] = df_log["PatientID"].str.extract(r"(a|b)")
+df_pcr["PersonID"] = df_pcr["PatientID"].str.extract(r"(a|b)")
 
-merged_df = pd.merge(df_log, df_pcr[["PatientID", "Date", "PCR_Qualitative"]],
-                     on=["PatientID", "Date"], how="left")
+merged_df = pd.merge(
+    df_log[["PatientID", "PersonID", "Date", "Log10CopyNumber"]],
+    df_pcr[["PatientID", "Date", "PCR_Qualitative"]],
+    on=["PatientID", "Date"],
+    how="left"
+)
+merged_df["Date"] = pd.to_datetime(merged_df["Date"], errors="coerce")
 ```
 
 ```python
 participants = []
-for patient_id, patient_data in merged_df.groupby("PatientID"):
-    group_type = "symptomatic" if "a" in patient_id.lower() else "asymptomatic"
+
+for person_id, person_data in merged_df.groupby("PersonID"):
+    group_type = "symptomatic" if person_id == "a" else "asymptomatic"
     participant = {
-        "attributes": {
-            "group": group_type
-        },
+        "attributes": {"group": group_type},
         "measurements": []
     }
 
-    for _, row in patient_data.iterrows():
-        time_str = row["Date"]
+    person_data = person_data.sort_values("Date")
+    reference_date = person_data["Date"].min()
+
+    for _, row in person_data.iterrows():
+        if pd.isna(row["Date"]):
+            continue 
+
+        day_offset = (row["Date"] - reference_date).days
 
         if pd.notna(row["Log10CopyNumber"]):
             participant["measurements"].append({
                 "analyte": "stool_Norovirus_log10copies",
-                "time": time_str,
+                "time": day_offset,
                 "value": float(row["Log10CopyNumber"])
             })
 
         if pd.notna(row["PCR_Qualitative"]) and row["PCR_Qualitative"] in ["positive", "negative"]:
             participant["measurements"].append({
                 "analyte": "norovirus_presence_qualitative",
-                "time": time_str,
+                "time": day_offset,
                 "value": row["PCR_Qualitative"]
             })
 
     if participant["measurements"]:
         participants.append(participant)
-
 ```
 
 Finally, the data is formatted and output as a YAML file.
