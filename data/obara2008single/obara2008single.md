@@ -87,22 +87,8 @@ output_data = {
             "limit_of_quantification": "unknown",
             "limit_of_detection": "unknown",
             "unit": "gc/wet gram",
-            "reference_event": "confirmation date"
+            "reference_event": "confirmation date"}
         },
-        "norovirus_presence_qualitative": {
-            "description": folded_str(
-                "Qualitative detection of norovirus RNA in stool samples using real-time RT-PCR. "
-                "Results are recorded as 'positive' or 'negative'.\n"
-            ),
-            "specimen": "stool",
-            "biomarker": "sapovirus",
-            "gene_target": "GII",
-            "limit_of_quantification": "unknown",
-            "limit_of_detection": "unknown",
-            "unit": "gc/wet gram",
-            "reference_event": "confirmation date"
-        }
-    },
     "participants": participants
 }
 
