@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "team2020clinical",
+  "name": "Clinical and virologic characteristics of the first 12 patients with coronavirus disease 2019 (COVID-19) in the United States",
+  "description": "Respiratory, stool, serum, and urine specimens were submitted for SARS-CoV-2 real-time reverse-transcription polymerase chain reaction (rRT-PCR) testing, viral culture, and whole-genome sequencing. Only nasopharyngeal samples were included in this dataset. Data for the nasopharyngeal swab results were obtained from the combined dataset in the supplementary materials of Challenger et al. (2022), while attributes of hospitalized patients were obtained from the original paper.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/team2020clinical",
+  "identifier": "10.1038/s41591-020-0877-5",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-4-23",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/team2020clinical/team2020clinical.yaml"
+  }
+}

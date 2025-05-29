@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "woelfel2020virological",
+  "name": "Virological assessment of hospitalized patients with COVID-2019",
+  "description": "The authors conducted a virological analysis of nine linked cases of COVID-19 in Munich in early 2020. They quantified SARS-CoV-2 RNA gene copies in throat swabs and RNA concentrations in stool and sputum samples. Abundances were quantified using RT-qPCR assays targeting the E and RdRP genes as described in 10.2807/1560-7917.ES.2020.25.3.2000045. Values were programmatically extracted from the figure, resulting in a number of significant figures far exceeding the performance of the assays. The demographic data, including age and sex, are derived from the Challenger et al. BMC Medicine (2022) 20:25 https://doi.org/10.1186/s12916-021-02220-0 supplement combined dataset.",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/woelfel2020virological",
+  "identifier": "10.1038/s41586-020-2196-x",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-4-1",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/woelfel2020virological/woelfel2020virological.yaml"
+  }
+}

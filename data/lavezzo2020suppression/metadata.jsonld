@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "lavezzo2020suppression",
+  "name": "Suppression of a SARS-CoV-2 outbreak in the Italian municipality of Vo",
+  "description": "This study was conducted in the Italian municipality of Vo. Lockdown was implemented after first death of pneumonia was reported. Two surveys and virus tests were conducted with the first survey near the start of lockdown and the second one at the end of lockdown\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/lavezzo2020suppression",
+  "identifier": "10.1038/s41586-020-2488-1",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-6-30",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/lavezzo2020suppression/lavezzo2020suppression.yaml"
+  }
+}

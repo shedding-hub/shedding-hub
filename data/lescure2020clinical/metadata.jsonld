@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "lescure2020clinical",
+  "name": "Clinical and virological data of the first cases of COVID-19 in Europe: a case series",
+  "description": "The authors followed five patients admitted to Bichat-Claude Bernard University Hospital (Paris, France) and Pellegrin University Hospital (Bordeaux, France) and diagnosed with COVID-19 by semi-quantitative RT-PCR on nasopharyngeal swabs. We assessed patterns of clinical disease and viral load from different samples (nasopharyngeal and blood, urine, and stool samples), which were obtained once daily for 3 days from hospital admission, and once every 2 or 3 days until patient discharge. Stool samples only have positive and negative results (currently not included in this data). The data was obtained from Goyal et al. 2020 for the nasopharyngeal swab results in 4 patients.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/lescure2020clinical",
+  "identifier": "10.1016/S1473-3099(20)30200-0",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-6",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/lescure2020clinical/lescure2020clinical.yaml"
+  }
+}

@@ -88,6 +88,25 @@ def load_dataset(
     return yaml.safe_load(response.text)
 
 
+def get_publication_date(doi):
+    headers = {"Accept": "application/vnd.citationstyles.csl+json"}
+    url = f"https://doi.org/{doi}"
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        data = response.json()
+        if "issued" in data:
+            issued = data["issued"]["date-parts"][0]  # e.g., [2023, 11, 17]
+            return "-".join(map(str, issued))
+        elif "published" in data:
+            return data["published"]
+        elif "created" in data:
+            return data["created"]["date-time"][:10]  # fallback
+    else:
+        print(f"DOI metadata request failed: {response.status_code}")
+        return None
+
+
 class folded_str(str):
     """
     Folded string in yaml representation.

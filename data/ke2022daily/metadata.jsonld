@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "ke2022daily",
+  "name": "Daily Longitudinal Sampling of SARS-CoV-2 Infection Reveals Substantial Heterogeneity in Infectiousness",
+  "description": "The authors studied the dynamics of infectious virus and viral RNA shedding for SARS-CoV-2 during acute infection through daily longitudinal sampling of 60 individuals for up to 14 days. Nasal swab and saliva samples were collected daily and tested for University of Illinois at Urbana-Champaign faculty, staff, and students (during the fall of 2020 and spring of 2021) who reported a negative RT-qPCR test result in the past 7 days and were either within 24 h of a positive RT-qPCR result or within 5 days of exposure to someone with a confirmed positive RT-qPCR result.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/ke2022daily",
+  "identifier": "10.1038/s41564-022-01105-z",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2022-4-28",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/ke2022daily/ke2022daily.yaml"
+  }
+}

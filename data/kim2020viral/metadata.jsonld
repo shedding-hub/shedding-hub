@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "kim2020viral",
+  "name": "Viral Load Kinetics of SARS-CoV-2 Infection in First Two Patients in Korea",
+  "description": "The authors present viral load kinetics for the first two confirmed COVID-19 patients with mild to moderate illness in Korea. Swabs, sputum, serum, plasma, urine, and stool samples were collected throughout the illness. Cycle threshold (Ct) values were quantified using rRT-PCR targeting the RdRp and E genes. Data were obtained from the supplementary material.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/kim2020viral",
+  "identifier": "10.3346/jkms.2020.35.e86",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/kim2020viral/kim2020viral.yaml"
+  }
+}
