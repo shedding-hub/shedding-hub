@@ -214,9 +214,9 @@ def append_summary(summary: pd.DataFrame, dataset: str) -> pd.DataFrame:
 def generate_jsonld(
     dataset: str,
     *,
-    repo: str = "shedding-hub/shedding-hub", 
+    repo: str = "shedding-hub/shedding-hub",
     ref: str = "main",
-    version: str = "0.1.0"
+    version: str = "0.1.0",
 ) -> dict:
     """
     Generate JSON-LD metadata dictionary for a dataset. This function uses the shedding-hub module to load dataset and create a structured JSON-LD representation.
@@ -232,10 +232,10 @@ def generate_jsonld(
     - dict: JSON-LD metadata.
     """
     data = sh.load_dataset(dataset)
-    doi = data.get('doi')
+    doi = data.get("doi")
 
     # Validate required fields
-    for field in ['title', 'description']:
+    for field in ["title", "description"]:
         if field not in data or not data[field]:
             raise ValueError(f"Missing required metadata field: {field}")
 
@@ -250,55 +250,47 @@ def generate_jsonld(
         "@context": "https://schema.org",
         "@type": "Dataset",
         "@id": dataset,
-        "name": data['title'],
-        "description": data['description'],
+        "name": data["title"],
+        "description": data["description"],
         "url": f"https://github.com/{repo}/tree/{ref}/data/{dataset}",
         "identifier": doi,
         "keywords": [
-            "pathogen", "shedding", "biomarker",
-            "infectious disease", "wastewater surveillance"
+            "pathogen",
+            "shedding",
+            "biomarker",
+            "infectious disease",
+            "wastewater surveillance",
         ],
         "creator": [
             {
                 "@type": "Person",
                 "name": "Yuke Wang",
-                "affiliation": {
-                    "@type": "Organization",
-                    "name": "Example University"
-                },
-                "@id": "https://orcid.org/0000-0002-9615-7859"
+                "affiliation": {"@type": "Organization", "name": "Example University"},
+                "@id": "https://orcid.org/0000-0002-9615-7859",
             },
             {
                 "@type": "Person",
                 "name": "Till Hoffmann",
-                "affiliation": {
-                    "@type": "Organization",
-                    "name": "Harvard University"
-                },
-                "@id": "https://orcid.org/0000-0003-4403-0722"
-            }
+                "affiliation": {"@type": "Organization", "name": "Harvard University"},
+                "@id": "https://orcid.org/0000-0003-4403-0722",
+            },
         ],
-        "publisher": {
-            "@type": "Organization",
-            "name": "Shedding Hub Organization"
-        },
+        "publisher": {"@type": "Organization", "name": "Shedding Hub Organization"},
         "datePublished": pub_date,
         "license": "https://opensource.org/licenses/MIT",
         "version": version,
         "distribution": {
             "@type": "DataDownload",
             "encodingFormat": "application/yaml",
-            "contentUrl": f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}/{dataset}.yaml"
-        }
+            "contentUrl": f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}/{dataset}.yaml",
+        },
     }
 
     return json_ld
 
 
 def save_jsonld(
-    json_ld: dict, 
-    directory: str,
-    filename: str = "metadata.jsonld"
+    json_ld: dict, directory: str, filename: str = "metadata.jsonld"
 ) -> None:
     """
     Save JSON-LD dictionary to a JSON file in the specified directory.
@@ -324,7 +316,6 @@ def save_jsonld(
     return file_path
 
 
-
 def __main__() -> None:
     """
     Main function to generate metadata (JSON-LD) for all datasets in the repository.
@@ -347,23 +338,16 @@ def __main__() -> None:
         summary = append_summary(summary, filename)
         # create JSON-LD metadata
         metadata = generate_jsonld(
-            dataset=filename,
-            repo=repo,
-            ref=ref,
-            version=version
+            dataset=filename, repo=repo, ref=ref, version=version
         )
         # save JSON-LD metadata
         print(f"Save JSON-LD metadata for {filename}...")
         save_jsonld(
-            json_ld=metadata,
-            directory=f"data/{filename}",
-            filename="metadata.jsonld"
+            json_ld=metadata, directory=f"data/{filename}", filename="metadata.jsonld"
         )
 
     # remove "\n" from description
-    summary["description"] = [
-        item.replace("\n", "") for item in summary["description"]
-    ]
+    summary["description"] = [item.replace("\n", "") for item in summary["description"]]
 
     # save summary to YAML file
     with open("data/summary.yaml", "w") as f:
