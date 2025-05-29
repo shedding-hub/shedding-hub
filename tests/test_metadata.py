@@ -5,15 +5,15 @@ import requests
 import shedding_hub as sh
 
 
-def create_meta(schema: dict) -> pd.DataFrame:
+def create_summary(schema: dict) -> pd.DataFrame:
     """
-    Create data structure of metadata using schema file.
+    Create data structure of data summary using schema file.
 
     Args:
         schema: Schema file loaded from GitHub repository.
 
     Returns:
-        Empty Metadata dataframe with column names.
+        Empty data summary dataframe with column names.
     """
     # Initialize column names as a list with ID column
     column_names = ["ID"]
@@ -60,8 +60,8 @@ def create_meta(schema: dict) -> pd.DataFrame:
         )
     ],
 )
-def test_create_meta(schema: dict, expected: dict) -> None:
-    temp = create_meta(schema)
+def test_create_summary(schema: dict, expected: dict) -> None:
+    temp = create_summary(schema)
     assert len(temp) == expected["length"]
     assert list(temp.columns) == expected["names"]
 
@@ -108,16 +108,16 @@ def test_safe_compare(
     assert safe_compare(a, b, operator) == expected
 
 
-def append_meta(metadata: pd.DataFrame, dataset: str) -> pd.DataFrame:
+def append_summary(summary: pd.DataFrame, dataset: str) -> pd.DataFrame:
     """
-    Extract data from yaml file and append it to the metadata.
+    Extract data from yaml file and append it to the data summary. This function loads the dataset using the shedding-hub module, processes the measurements, and calculates summary statistics for each analyte. The results are appended to the data summary dataframe.
 
     Args:
-        metadata: Metadata dataframe with column names.
+        summary: data summary dataframe with column names.
         dataset: Dataset identifier, e.g., :code:`woelfel2020virological`.
 
     Returns:
-        Metadata dataframe with extracted data appended.
+        data summary dataframe with extracted data appended.
     """
     data = sh.load_dataset(dataset)
 
@@ -252,13 +252,13 @@ def append_meta(metadata: pd.DataFrame, dataset: str) -> pd.DataFrame:
             [dataset]
             + [
                 data["analytes"][analyte][key]
-                for key in metadata.columns
+                for key in summary.columns
                 if key in list(data["analytes"][analyte].keys())
             ]
             + [n_samples, n_unique_participants, n_negative, n_positive, n_quantified]
         )
-        metadata.loc[len(metadata)] = new_line
-    return metadata
+        summary.loc[len(summary)] = new_line
+    return summary
 
 
 @pytest.mark.parametrize(
@@ -295,13 +295,13 @@ def append_meta(metadata: pd.DataFrame, dataset: str) -> pd.DataFrame:
         )
     ],
 )
-def test_append_meta(schema: dict, dataset: str, expected: pd.DataFrame) -> None:
-    temp = create_meta(schema)
-    temp = append_meta(temp, dataset)
+def test_append_summary(schema: dict, dataset: str, expected: pd.DataFrame) -> None:
+    temp = create_summary(schema)
+    temp = append_summary(temp, dataset)
     for i in range(len(temp)):
         assert all(
             temp.loc[i] == expected.loc[i]
-        ), "The metadata created for the study (woelfel2020virological) is not matching the expected metadata."
+        ), "The data summary created for the study (woelfel2020virological) is not matching the expected data summary."
         assert all(
             temp["n_samples"] > temp["n_unique_participants"]
         ), "The number of samples should be smaller than the number of participants."

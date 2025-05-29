@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "arts2023longitudinal",
+  "name": "Longitudinal and quantitative fecal shedding dynamics of SARS-CoV-2, pepper mild mottle virus, and crAssphage",
+  "description": "The authors present longitudinal, quantitative fecal shedding data for SARS-CoV-2 RNA, pepper mild mottle virus (PMMoV) RNA, and crAss-like phage (crAssphage) DNA from 48 COVID-19 patients. Abundances were quantified using (RT)-ddPCR assays targeting the N and ORF1a genes. The data were obtained from supplementary material.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/arts2023longitudinal",
+  "identifier": "10.1128/msphere.00132-23",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2023-8-24",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/arts2023longitudinal/arts2023longitudinal.yaml"
+  }
+}

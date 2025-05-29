@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "zuo2020alterations",
+  "name": "Alterations in Gut Microbiota of Patients With COVID-19 During Time of Hospitalization",
+  "description": "The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in fecal samples from 15 hospitalized COVID-19 patients in Hong Kong.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/zuo2020alterations",
+  "identifier": "10.1053/j.gastro.2020.05.048",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-9",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/zuo2020alterations/zuo2020alterations.yaml"
+  }
+}

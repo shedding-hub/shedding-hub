@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "yang2020laboratory",
+  "name": "Laboratory Diagnosis and Monitoring the Viral Shedding of SARS-CoV-2 Infection",
+  "description": "This study involved 3552 clinical samples from 410 COVID-19 patients confirmed by Guangdong CDC. Oropharyngeal swabs, nasopharyngeal swabs and sputum samples were tested for upper respiratory tract infection, while bronchoalveolar lavage fluid (BALF) was tested for lower respiratory tract infection.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/yang2020laboratory",
+  "identifier": "10.1016/j.xinn.2020.100061",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-11",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/yang2020laboratory/yang2020laboratory.yaml"
+  }
+}

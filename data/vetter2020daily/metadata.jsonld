@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "vetter2020daily",
+  "name": "Daily Viral Kinetics and Innate and Adaptive Immune Response Assessment in COVID-19: a Case Series",
+  "description": "The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in both oropharyngeal (OPS) and nasopharyngeal (NPS) swabs from five COVID-19 patients in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Cellular and humoral SARS-CoV-2-specific adaptive responses and serology data are currently not included in this dataset.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/vetter2020daily",
+  "identifier": "10.1128/msphere.00827-20",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-12-23",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/vetter2020daily/vetter2020daily.yaml"
+  }
+}

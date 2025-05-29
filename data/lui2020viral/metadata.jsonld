@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "lui2020viral",
+  "name": "Viral dynamics of SARS-CoV-2 across a spectrum of disease severity in COVID-19",
+  "description": "Lui et al. report on a prospective cohort study of patients with variable disease severity. Viral loads for positive samples were extracted from Tbl. 1 in the supplementary material, and negatives were extracted manually from Fig. 1 and a figure in the supplementary material. The level of quantification was extracted from methods in the supplementary material.\nData for other specimen types, including nasopharyngeal swabs, sputum, plasma, and urine, are also available in the source but have not yet been included here.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/lui2020viral",
+  "identifier": "10.1016/j.jinf.2020.04.014",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-8",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/lui2020viral/lui2020viral.yaml"
+  }
+}

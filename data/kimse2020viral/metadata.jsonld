@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "kimse2020viral",
+  "name": "Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients",
+  "description": "The authors measured SARS-CoV-2 in longitudinal oropharyngeal swab samples collected from 71 COVID-19 patients between February 4 and April 7, 2020.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/kimse2020viral",
+  "identifier": "10.1016/j.ijid.2020.04.083",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-6",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/kimse2020viral/kimse2020viral.yaml"
+  }
+}

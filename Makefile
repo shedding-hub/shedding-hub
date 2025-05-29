@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction create_metadata
+.PHONY : backup_data assert_data_unchanged extraction metadata create_metadata
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -9,6 +9,9 @@ DATA_FILES_MARKDOWN = ${EXTRACTION_MARKDOWN:%-extraction.md=%.yaml}
 DATA_FILES = ${DATA_FILES_PY} ${DATA_FILES_MARKDOWN}
 DATA_BACKUPS = $(addprefix ${TMPDIR},$(notdir ${DATA_FILES}))
 DATA_CHECKS = ${DATA_BACKUPS:.yaml=.null}
+YAML_FILES := $(wildcard data/*/*.yaml)
+DATASET_NAMES := $(basename $(notdir $(YAML_FILES)))
+METADATA_FILES := $(patsubst %,data/%/metadata.jsonld,$(DATASET_NAMES))
 
 extraction : ${DATA_FILES}
 
@@ -34,7 +37,9 @@ assert_data_unchanged : ${DATA_CHECKS}
 ${DATA_CHECKS} : ${TMPDIR}%.null : ${TMPDIR}%.yaml
 	python .github/workflows/compare.py data/$*/$*.yaml $<
 
-create_metadata : data/metadata.yaml
+# Master target to trigger all metadata generation
+create_metadata: data/summary.yaml $(METADATA_FILES)
 
-data/metadata.yaml : 
+# Single script that generates both metadata.jsonld and summary.yaml
+data/summary.yaml $(METADATA_FILES): .github/workflows/metadata.py $(YAML_FILES)
 	python .github/workflows/metadata.py

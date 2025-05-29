@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "yuan2021sars",
+  "name": "SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis",
+  "description": "This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types-including stool, respiratory secretions, urine, and serum-in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/yuan2021sars",
+  "identifier": "10.1016/j.virusres.2020.198147",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-11",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/yuan2021sars/yuan2021sars.yaml"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "alsharrah2020clinical",
+  "name": "Clinical characteristics of pediatric SARS-CoV-2 infection and coronavirus disease 2019 (COVID-19) in Kuwait",
+  "description": "This study measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in paired oropharyngeal and nasopharyngeal samples from 33 COVID-19 patients in Jaber Alahmad Hospital (JAH). Cycle threshold (Ct) value for E and RdRP genes were measured using Tib MolBiol's LightMix.\n",
+  "url": "https://github.com/shedding-hub/shedding-hub/tree/main/data/alsharrah2020clinical",
+  "identifier": "10.1002/jmv.26684",
+  "keywords": [
+    "pathogen",
+    "shedding",
+    "biomarker",
+    "infectious disease",
+    "wastewater surveillance"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Yuke Wang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Example University"
+      },
+      "@id": "https://orcid.org/0000-0002-9615-7859"
+    },
+    {
+      "@type": "Person",
+      "name": "Till Hoffmann",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      "@id": "https://orcid.org/0000-0003-4403-0722"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shedding Hub Organization"
+  },
+  "datePublished": "2020-12",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "0.1.0",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "contentUrl": "https://raw.githubusercontent.com/shedding-hub/shedding-hub/main/data/alsharrah2020clinical/alsharrah2020clinical.yaml"
+  }
+}
