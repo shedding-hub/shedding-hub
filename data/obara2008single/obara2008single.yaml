@@ -1,27 +1,49 @@
 # yaml-language-server: $schema=../.schema.yaml
-title: Duration of Norovirus Shedding in Symptomatic and Asymptomatic Food Handlers
+title: Single Base Substitutions in the Capsid Region of the Norovirus Genome during
+  Viral Shedding in Cases of Infection in Areas Where Norovirus Infection Is Endemic
 doi: 10.1128/jcm.01932-07
-description: >
-  This study investigates the duration of norovirus RNA shedding in two food handlers—one
-  symptomatic and one asymptomatic—using repeated real-time reverse transcription-PCR
-  tests on fecal specimens. Norovirus RNA was detected and quantified over time, and
-  the duration of viral shedding was compared between symptomatic and asymptomatic
-  individuals.
+description: "This study investigates the duration of norovirus RNA shedding in two\
+  \ food handlers\u2014one symptomatic and one asymptomatic\u2014using repeated real-time\
+  \ reverse transcription-PCR tests on fecal specimens. Norovirus RNA was detected\
+  \ and quantified over time, and the duration of viral shedding was compared between\
+  \ symptomatic and asymptomatic individuals.\n"
 analytes:
   stool_Norovirus_log10copies:
     description: >
       Quantitative measurement of norovirus RNA in stool samples using real-time RT-PCR.
       Results are expressed as log10 copies per gram of feces.
     specimen: stool
-    biomarker: sapovirus
-    gene_target: GII
+    biomarker: norovirus
+    genotype: GII.4
+    limit_of_quantification: unknown
+    limit_of_detection: 4
+    unit: gc/wet gram
+    reference_event: confirmation date
+  norovirus_presence_qualitative:
+    description: >
+      Qualitative detection of norovirus RNA in stool samples using real-time RT-PCR.
+      Results are recorded as 'positive' or 'negative'.
+    specimen: stool
+    biomarker: norovirus
+    genotype: GII.4
     limit_of_quantification: unknown
     limit_of_detection: unknown
     unit: gc/wet gram
     reference_event: confirmation date
+  norovirus_ct_value:
+    description: >
+      Cycle threshold (Ct) values from real-time RT-PCR detection of norovirus RNA
+      in stool samples. Lower Ct values indicate higher viral load.
+    specimen: stool
+    biomarker: norovirus
+    genotype: GII.4
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
 participants:
 - attributes:
-    group: symptomatic
+    symptomatic: symptomatic
   measurements:
   - analyte: stool_Norovirus_log10copies
     time: 0
@@ -45,7 +67,7 @@ participants:
     time: 67
     value: 4.05
 - attributes:
-    group: asymptomatic
+    symptomatic: asymptomatic
   measurements:
   - analyte: stool_Norovirus_log10copies
     time: 0
