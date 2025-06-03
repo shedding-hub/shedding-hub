@@ -1,0 +1,534 @@
+# yaml-language-server:$schema=../.schema.yaml
+title: 'Faecal shedding of rotavirus vaccine in Chinese children after vaccination with Lanzhou lamb rotavirus vaccine'
+doi: 10.1038/s41598-018-19469-w
+description: >
+  Prospective study characterizing faecal shedding of Lanzhou lamb rotavirus (LLR) vaccine 
+  in Chinese children post-vaccination. Faecal samples (n=1,184) were collected from 114 
+  children for 15 days post-vaccination in September–November 2011/2012. Viral shedding 
+  was detected using enzyme immunoassay (EIA) and quantified using real-time RT-PCR. 
+  The reference event for measurements is the day of vaccination (post-vaccination day).
+analytes:
+  llr_vaccine_pcr:
+    description: >
+      Detection and quantification of LLR vaccine strain viral RNA from stool specimens 
+      using real-time RT-PCR targeting the NSP3 gene. Viral loads are expressed as 
+      copies per gram of stool. EIA "+" but PCR "-" or missing will be treated as negative. 
+      And "<1.0 x 10^3" was treated as positive. 
+    limit_of_quantification: 1000
+    limit_of_detection: unknown
+    specimen: stool
+    biomarker: Lanzhou lamb rotavirus vaccine
+    gene_target: NSP3
+    unit: gc/wet gram
+    reference_event: vaccination
+participants:
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: 21100
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 13000
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: 17000
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: 178000000
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 11000000
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: 370000
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: 49000
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: 47000
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 23000
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: 190000
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 1800000
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: 170000
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: 390000
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 3100000
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 430000
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: 2100
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: 46000
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 190000000
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: 2400000
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: 16000
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: 1500000
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: 27000
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: 11000
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: 37000
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 3
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 5
+    value: 1300000
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: 500000
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 13
+    value: negative
+- attributes:
+    variant: LLR
+  measurements:
+  - analyte: llr_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 6
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 7
+    value: positive
+  - analyte: llr_vaccine_pcr
+    time: 8
+    value: 26000
+  - analyte: llr_vaccine_pcr
+    time: 9
+    value: 2700000
+  - analyte: llr_vaccine_pcr
+    time: 10
+    value: 13000
+  - analyte: llr_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: llr_vaccine_pcr
+    time: 12
+    value: negative
