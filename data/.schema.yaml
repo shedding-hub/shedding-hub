@@ -69,6 +69,7 @@ $defs:
           - crAssphage
           - influenza
           - sapovirus
+          - norovirus
           - SARS
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.

@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Single Base Substitutions in the Capsid Region of the Norovirus Genome during
+  Viral Shedding in Cases of Infection in Areas Where Norovirus Infection Is Endemic
+doi: 10.1128/jcm.01932-07
+description: "This study investigates the duration of norovirus RNA shedding in two\
+  \ food handlers\u2014one symptomatic and one asymptomatic\u2014using repeated real-time\
+  \ reverse transcription-PCR tests on fecal specimens. Norovirus RNA was detected\
+  \ and quantified over time, and the duration of viral shedding was compared between\
+  \ symptomatic and asymptomatic individuals.\n"
+analytes:
+  stool_Norovirus_log10copies:
+    description: >
+      Quantitative measurement of norovirus RNA in stool samples using real-time RT-PCR.
+      Results are expressed as log10 copies per gram of feces.
+    specimen: stool
+    biomarker: norovirus
+    genotype: GII.4
+    limit_of_quantification: unknown
+    limit_of_detection: 4
+    unit: gc/wet gram
+    reference_event: confirmation date
+  norovirus_presence_qualitative:
+    description: >
+      Qualitative detection of norovirus RNA in stool samples using real-time RT-PCR.
+      Results are recorded as 'positive' or 'negative'.
+    specimen: stool
+    biomarker: norovirus
+    genotype: GII.4
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: gc/wet gram
+    reference_event: confirmation date
+  norovirus_ct_value:
+    description: >
+      Cycle threshold (Ct) values from real-time RT-PCR detection of norovirus RNA
+      in stool samples. Lower Ct values indicate higher viral load.
+    specimen: stool
+    biomarker: norovirus
+    genotype: GII.4
+    limit_of_quantification: unknown
+    limit_of_detection: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- attributes:
+    symptomatic: symptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: 0
+    value: 4.05
+  - analyte: stool_Norovirus_log10copies
+    time: 5
+    value: 7.05
+  - analyte: stool_Norovirus_log10copies
+    time: 10
+    value: 6.18
+  - analyte: stool_Norovirus_log10copies
+    time: 24
+    value: 5.61
+  - analyte: stool_Norovirus_log10copies
+    time: 38
+    value: 6.83
+  - analyte: stool_Norovirus_log10copies
+    time: 53
+    value: 6.67
+  - analyte: stool_Norovirus_log10copies
+    time: 67
+    value: 4.05
+- attributes:
+    symptomatic: asymptomatic
+  measurements:
+  - analyte: stool_Norovirus_log10copies
+    time: 0
+    value: 9.03
+  - analyte: stool_Norovirus_log10copies
+    time: 12
+    value: 6.97
+  - analyte: stool_Norovirus_log10copies
+    time: 27
+    value: 4.32
+  - analyte: stool_Norovirus_log10copies
+    time: 42
+    value: 4.05
