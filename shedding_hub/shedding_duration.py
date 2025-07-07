@@ -77,13 +77,21 @@ def calc_shedding_duration(
                 # "sex" : participant_sex,
                 "analyte": name,
                 "n_sample": group[group["value"].notna()]["time"].size,
-                "first_sample": group[group["value"].notna()]["time"].min(),
-                "last_sample": group[group["value"].notna()]["time"].max(),
+                "first_sample": group[
+                    (group["value"].notna()) & (group["time"] != "unknown")
+                ]["time"].min(),
+                "last_sample": group[
+                    (group["value"].notna()) & (group["time"] != "unknown")
+                ]["time"].max(),
                 "first_detect": group[
-                    (group["value"] != "negative") & (group["value"].notna())
+                    (group["value"] != "negative")
+                    & (group["value"].notna())
+                    & (group["time"] != "unknown")
                 ]["time"].min(),
                 "last_detect": group[
-                    (group["value"] != "negative") & (group["value"].notna())
+                    (group["value"] != "negative")
+                    & (group["value"].notna())
+                    & (group["time"] != "unknown")
                 ]["time"].max(),
             }
             df_shedding_duration.loc[len(df_shedding_duration)] = row_new
@@ -92,6 +100,10 @@ def calc_shedding_duration(
     df_shedding_duration = df_shedding_duration.merge(
         df_analyte, how="left", on="analyte"
     ).drop(columns=["analyte"])
+    # concatenate list of specimen types to string;
+    df_shedding_duration["specimen"] = df_shedding_duration["specimen"].apply(
+        lambda x: ", ".join(map(str, x)) if isinstance(x, list) else str(x)
+    )
     # calculate individual level shedding duration
     df_shedding_duration["first_sample"] = pd.to_numeric(
         df_shedding_duration["first_sample"], errors="coerce"
