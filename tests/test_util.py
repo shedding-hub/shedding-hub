@@ -31,17 +31,17 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # need updates.
         (
             {"dataset_ID": "woelfel2020virological"},
-            "d93f77da4babf4247f7775121adc749337f53f31",
+            "0fae1c755023b347002be6cf1551a2b79b31b19a",
         ),
         # An old version of the Woelfel dataset from a PR before folder restructuring.
         (
             {"dataset_ID": "woelfel2020", "pr": 1},
-            "7bf4dabae5ba95b06a62f6102fee571b46068786",
+            "89b17f0f1c00c8c50a83ff15c6d28138afc262ca",
         ),
         # The same old version of the Woelfel dataset using a commit reference.
         (
             {"dataset_ID": "woelfel2020", "ref": "534c30a"},
-            "7bf4dabae5ba95b06a62f6102fee571b46068786",
+            "89b17f0f1c00c8c50a83ff15c6d28138afc262ca",
         ),
         # Invalid because requesting local and pr.
         (
@@ -51,7 +51,7 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # Load from local directory.
         (
             {"dataset_ID": "woelfel2020virological", "local": "data"},
-            "d93f77da4babf4247f7775121adc749337f53f31",
+            "0fae1c755023b347002be6cf1551a2b79b31b19a",
         ),
     ],
 )
