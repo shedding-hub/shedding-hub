@@ -28,7 +28,7 @@ def normalize_str(
 
 
 def load_dataset(
-    dataset: str,
+    dataset_ID: str,
     *,
     repo: str = "shedding-hub/shedding-hub",
     ref: Optional[str] = None,
@@ -39,7 +39,7 @@ def load_dataset(
     Load a dataset from GitHub or a local directory.
 
     Args:
-        dataset: Dataset identifier, e.g., :code:`woelfel2020virological`.
+        dataset_ID: Dataset identifier, e.g., :code:`woelfel2020virological`.
         repo: GitHub repository to load data from.
         ref: Git reference to load. Defaults to the most recent data on the :code:`main`
             branch of https://github.com/shedding-hub/shedding-hub and is automatically
@@ -60,9 +60,11 @@ def load_dataset(
 
     # If we have a local file, just read it.
     if local:
-        path = (pathlib.Path(local) / dataset / dataset).with_suffix(".yaml")
+        path = (pathlib.Path(local) / dataset_ID / dataset_ID).with_suffix(".yaml")
         with path.open() as fp:
-            return yaml.safe_load(fp)
+            data = yaml.safe_load(fp)
+        data["study_ID"] = dataset_ID
+        return data
 
     # If a PR is specified, resolve it so we can get the relevant file.
     if pr:
@@ -77,15 +79,17 @@ def load_dataset(
     # Download the contents and parse the file.
     ref = ref or "main"
     response = requests.get(
-        f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}/{dataset}.yaml"
+        f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset_ID}/{dataset_ID}.yaml"
     )
     # Backwards compatibility before change of folder structure.
     if response.status_code == 404:
         response = requests.get(
-            f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}.yaml"
+            f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset_ID}.yaml"
         )
     response.raise_for_status()
-    return yaml.safe_load(response.text)
+    data = yaml.safe_load(response.text)
+    data["study_ID"] = dataset_ID
+    return data
 
 
 class folded_str(str):

@@ -1,128 +1,131 @@
 import shedding_hub as sh
 import pandas as pd
-from typing import Optional
+from typing import List, Dict, Any
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from matplotlib.lines import Line2D
-import glob
-from pathlib import Path
+import traceback
+import logging
+
+# Constants
+DEFAULT_BIOMARKER = "SARS-CoV-2"
+DEFAULT_FIGURE_SIZE = (8, 6)
+DEFAULT_MULTI_FIGURE_SIZE = (10, 8)
+DEFAULT_MARKERSIZE = 10
+NEGATIVE_VALUE = "negative"
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def calc_shedding_duration(
-    df_ID: str,
+    dataset: Dict[str, Any],
     *,
     plotting: bool = False,
-    ref: Optional[str] = None,
-    pr: Optional[int] = None,
-    local: Optional[str] = None,
 ) -> pd.DataFrame:
     """
-    Calcualte summary statistics for the shedding duration using a loaded dataset by the `load_dataset` function.
+    Calculate summary statistics for the shedding duration using a loaded dataset by the `load_dataset` function.
 
     Args:
-        df_ID: Dataset identifier, e.g., :code:`woelfel2020virological`.
+        dataset: Loaded dataset using the `load_dataset` function.
         plotting: Create a plot for individual level of shedding duration by specimen type.
-        ref: Git reference to load. Defaults to the most recent data on the :code:`main`
-            branch of https://github.com/shedding-hub/shedding-hub and is automatically
-            fetched if a :code:`pr` number is specified.
-        pr: Pull request to fetch data from.
-        local: Local directory to load data from.
 
     Returns:
         Summary table of shedding duration (min, max, mean) by biomarker and specimen.
+        
+    Raises:
+        ValueError: If dataset is missing required keys or is empty.
+        KeyError: If required analyte information is missing.
     """
-    # load the dataset;
-    df = sh.load_dataset(dataset=df_ID, ref=ref, pr=pr, local=local)
-    # initialize a pandas dataframe
-    df_shedding_duration = pd.DataFrame(
-        columns=[
-            "study_ID",
-            "participant_ID",  # "age","sex",
-            "analyte",
-            "n_sample",
-            "first_sample",
-            "last_sample",
-            "first_detect",
-            "last_detect",
-        ]
-    )
-    df_analyte = pd.DataFrame(
-        columns=["analyte", "specimen", "biomarker", "reference_event"]
-    )
+    if not dataset or not isinstance(dataset, dict):
+        raise ValueError("Dataset must be a non-empty dictionary")
+    
+    required_keys = ["analytes", "participants", "study_ID"]
+    missing_keys = [key for key in required_keys if key not in dataset]
+    if missing_keys:
+        raise ValueError(f"Dataset missing required keys: {missing_keys}")
 
     # extract analyte data from the standardized shedding data loaded
-    for key in df["analytes"]:
-        row_new = {
+    df_analyte = pd.DataFrame([
+        {
             "analyte": key,
-            "specimen": df["analytes"][key]["specimen"],
-            "biomarker": df["analytes"][key]["biomarker"],
-            "reference_event": df["analytes"][key]["reference_event"],
-        }
-        df_analyte.loc[len(df_analyte)] = row_new
+            "specimen": analyte["specimen"],
+            "biomarker": analyte["biomarker"],
+            "reference_event": analyte["reference_event"],
+        } for key, analyte in dataset["analytes"].items()
+    ])
 
     # extract participant and measurement data from the standardized shedding data loaded
-    participant_counter = 0
-    for item in df["participants"]:
-        participant_counter += 1
+    shedding_duration_data = []
+    for participant_counter, item in enumerate(dataset["participants"], 1):
         participant_ID = participant_counter
         # participant_age = item["attributes"]["age"]
         # participant_sex = item["attributes"]["sex"]
         for name, group in pd.DataFrame.from_dict(item["measurements"]).groupby(
             "analyte"
         ):
+            # filter the group by value notna and time not unknown
+            group = group[group["value"].notna() & (group["time"] != "unknown")].copy()
+            
+            # Skip if no valid data after filtering
+            if group.empty:
+                continue
+                
+            # format time to numeric
+            group["time"] = pd.to_numeric(group["time"], errors="coerce")
+            
+            # Skip if no valid numeric times
+            if group["time"].isna().all():
+                continue
+            
+            # Calculate detection times, handling cases where no positive values exist
+            positive_values = group[group["value"] != NEGATIVE_VALUE]
+            first_detect = positive_values["time"].min() if not positive_values.empty else pd.NA
+            last_detect = positive_values["time"].max() if not positive_values.empty else pd.NA
+            
             row_new = {
-                "study_ID": df_ID,
+                "study_ID": dataset["study_ID"],
                 "participant_ID": participant_ID,
                 # "age" : participant_age,
                 # "sex" : participant_sex,
                 "analyte": name,
-                "n_sample": group[group["value"].notna()]["time"].size,
-                "first_sample": group[
-                    (group["value"].notna()) & (group["time"] != "unknown")
-                ]["time"].min(),
-                "last_sample": group[
-                    (group["value"].notna()) & (group["time"] != "unknown")
-                ]["time"].max(),
-                "first_detect": group[
-                    (group["value"] != "negative")
-                    & (group["value"].notna())
-                    & (group["time"] != "unknown")
-                ]["time"].min(),
-                "last_detect": group[
-                    (group["value"] != "negative")
-                    & (group["value"].notna())
-                    & (group["time"] != "unknown")
-                ]["time"].max(),
+                "n_sample": group["value"].count(),
+                "first_sample": group["time"].min(),
+                "last_sample": group["time"].max(),
+                "first_detect": first_detect,
+                "last_detect": last_detect,
             }
-            df_shedding_duration.loc[len(df_shedding_duration)] = row_new
+            shedding_duration_data.append(row_new)
+    
+    # create dataframe from list
+    df_shedding_duration = pd.DataFrame(shedding_duration_data)
+    
+    # Return empty DataFrame if no data
+    if df_shedding_duration.empty:
+        logger.warning(f"No valid shedding duration data found for study {dataset['study_ID']}")
+        return pd.DataFrame()
 
     # merge analyte information and drop analyte column
     df_shedding_duration = df_shedding_duration.merge(
         df_analyte, how="left", on="analyte"
     ).drop(columns=["analyte"])
+    
     # concatenate list of specimen types to string;
     df_shedding_duration["specimen"] = df_shedding_duration["specimen"].apply(
         lambda x: ", ".join(map(str, x)) if isinstance(x, list) else str(x)
     )
+    
     # calculate individual level shedding duration
-    df_shedding_duration["first_sample"] = pd.to_numeric(
-        df_shedding_duration["first_sample"], errors="coerce"
-    )
-    df_shedding_duration["last_sample"] = pd.to_numeric(
-        df_shedding_duration["last_sample"], errors="coerce"
-    )
-    df_shedding_duration["first_detect"] = pd.to_numeric(
-        df_shedding_duration["first_detect"], errors="coerce"
-    )
-    df_shedding_duration["last_detect"] = pd.to_numeric(
-        df_shedding_duration["last_detect"], errors="coerce"
-    )
-    df_shedding_duration["shedding_duration"] = (
-        df_shedding_duration["last_detect"] - df_shedding_duration["first_detect"] + 1
+    # Only calculate for rows where both first_detect and last_detect are not NA
+    mask = df_shedding_duration["first_detect"].notna() & df_shedding_duration["last_detect"].notna()
+    df_shedding_duration.loc[mask, "shedding_duration"] = (
+        df_shedding_duration.loc[mask, "last_detect"] - 
+        df_shedding_duration.loc[mask, "first_detect"] + 1
     )
 
-    if plotting == True:
-        plt_shedding = plot_shedding_duration(df_shedding_duration, df_ID=df_ID)
+    if plotting:
+        plt_shedding = plot_shedding_duration(df_shedding_duration, dataset_ID=dataset["study_ID"])
         plt_shedding.show()
 
     df_return = (
@@ -142,19 +145,30 @@ def calc_shedding_duration(
     return df_return
 
 
-def plot_shedding_duration(df_shedding_duration: pd.DataFrame, df_ID: str):
+def plot_shedding_duration(df_shedding_duration: pd.DataFrame, dataset_ID: str) -> plt.Figure:
     """
-    Plot shedding duration for each individuals by specimen type.
+    Plot shedding duration for each individual by specimen type.
 
     Args:
         df_shedding_duration: Shedding duration dataset extracted from the loaded dataset.
-        df_ID: Dataset identifier, e.g., :code:`woelfel2020virological`.
+        dataset_ID: Dataset identifier, e.g., :code:`woelfel2020virological`.
 
     Returns:
         The plot of shedding duration.
+        
+    Raises:
+        ValueError: If DataFrame is empty or missing required columns.
     """
+    if df_shedding_duration.empty:
+        raise ValueError("DataFrame is empty, cannot create plot")
+    
+    required_columns = ["specimen", "first_sample", "last_sample", "first_detect", "last_detect", "reference_event"]
+    missing_columns = [col for col in required_columns if col not in df_shedding_duration.columns]
+    if missing_columns:
+        raise ValueError(f"DataFrame missing required columns: {missing_columns}")
+
     # Plot range bars
-    plt.figure(figsize=(8, 6))
+    plt.figure(figsize=DEFAULT_FIGURE_SIZE)
 
     # Sort dataset by specimen group
     df_shedding_duration_sorted = df_shedding_duration.sort_values("specimen")
@@ -167,21 +181,25 @@ def plot_shedding_duration(df_shedding_duration: pd.DataFrame, df_ID: str):
     for name, group in df_shedding_duration_sorted.groupby("specimen"):
         color = color_map[specimen_counter % len(color_map)]
         specimen_colors[name] = color
-        for __, row in group.iterrows():
-            (line_sampl,) = plt.plot(
-                [row["first_sample"], row["last_sample"]],
-                [participant_counter, participant_counter],
-                linestyle="--",
-                marker="o",
-                color=color,
-            )
-            (line_shed,) = plt.plot(
-                [row["first_detect"], row["last_detect"]],
-                [participant_counter, participant_counter],
-                linestyle="-",
-                marker="o",
-                color=color,
-            )
+        for _, row in group.iterrows():
+            # Only plot if we have valid data
+            if pd.notna(row["first_sample"]) and pd.notna(row["last_sample"]):
+                plt.plot(
+                    [row["first_sample"], row["last_sample"]],
+                    [participant_counter, participant_counter],
+                    linestyle="--",
+                    marker="o",
+                    color=color,
+                )
+            
+            if pd.notna(row["first_detect"]) and pd.notna(row["last_detect"]):
+                plt.plot(
+                    [row["first_detect"], row["last_detect"]],
+                    [participant_counter, participant_counter],
+                    linestyle="-",
+                    marker="o",
+                    color=color,
+                )
             participant_counter += 1
         specimen_counter += 1
 
@@ -205,27 +223,36 @@ def plot_shedding_duration(df_shedding_duration: pd.DataFrame, df_ID: str):
     )
 
     plt.yticks([])
-    plt.xlabel(f"Days after {df_shedding_duration['reference_event'][0]}")
-    plt.title(f'Individual Shedding Duration for the Study "{df_ID}"')
+    plt.xlabel(f"Days after {df_shedding_duration['reference_event'].iloc[0]}")
+    plt.title(f'Individual Shedding Duration for the Study "{dataset_ID}"')
     plt.grid(True, axis="x")
     plt.tight_layout()
     return plt
 
 
 def calc_shedding_durations(
-    df_IDs: list[str], *, plotting: bool = False, biomarker: str = "SARS-CoV-2"
+    dataset_IDs: List[str], 
+    *, 
+    plotting: bool = False, 
+    biomarker: str = DEFAULT_BIOMARKER
 ) -> pd.DataFrame:
     """
-    Calcualte summary statistics for the shedding duration using a loaded dataset by the `load_dataset` function.
+    Calculate summary statistics for the shedding duration using multiple loaded datasets.
 
     Args:
-        df_IDs : A list of dataset identifiers.
+        dataset_IDs: A list of dataset identifiers.
         plotting: Create a plot for study level of shedding duration by specimen type.
         biomarker: Filter the data for plotting with a specific biomarker (e.g., "SARS-CoV-2").
 
     Returns:
         Summary table of shedding duration (min, max, mean, n_sample, n_participant) by study, biomarker, and specimen.
+        
+    Raises:
+        ValueError: If dataset_IDs is empty or contains invalid entries.
     """
+    if not dataset_IDs:
+        raise ValueError("dataset_IDs cannot be empty")
+    
     # Initialize an empty DataFrame with columns
     df_shedding_durations = pd.DataFrame(
         columns=[
@@ -242,39 +269,42 @@ def calc_shedding_durations(
     )
 
     # Loop to append data
-    for (
-        filename
-    ) in df_IDs:  # [Path(file).stem for file in Path("data").glob("*/*.yaml")]:
-        print(f"Load the data: {filename}")
+    for filename in dataset_IDs:
+        logger.info(f"Loading the data: {filename}")
         try:
-            if len(df_shedding_durations) == 0:
-                df_shedding_durations = calc_shedding_duration(
-                    df_ID=filename, plotting=False
-                )
-
-            elif len(calc_shedding_duration(df_ID=filename, plotting=False)) == 0:
-                pass
+            dataset = sh.load_dataset(dataset_ID=filename)
+            df_shedding_duration = calc_shedding_duration(
+                dataset=dataset, plotting=False
+            )
+            
+            if df_shedding_duration.empty:
+                logger.warning(f"No valid data found for {filename}")
+                continue
+                
+            if df_shedding_durations.empty:
+                df_shedding_durations = df_shedding_duration
             else:
                 df_shedding_durations = pd.concat(
-                    [
-                        df_shedding_durations,
-                        calc_shedding_duration(df_ID=filename, plotting=False),
-                    ],
+                    [df_shedding_durations, df_shedding_duration],
                     ignore_index=True,
                 )
-        except:
-            print(f"Cannot load the data {filename}!!!")
-    if plotting == True:
+        except Exception as e:
+            logger.error(f"Cannot load the data {filename}: {e}")
+            traceback.print_exc()
+    
+    if plotting and not df_shedding_durations.empty:
         plt_sheddings = plot_shedding_durations(
             df_shedding_durations, biomarker=biomarker
         )
         plt_sheddings.show()
+    
     return df_shedding_durations
 
 
 def plot_shedding_durations(
-    df_shedding_durations: pd.DataFrame, biomarker: str = "SARS-CoV-2"
-):
+    df_shedding_durations: pd.DataFrame, 
+    biomarker: str = DEFAULT_BIOMARKER
+) -> plt.Figure:
     """
     Plot shedding duration by study and specimen type.
 
@@ -284,17 +314,31 @@ def plot_shedding_durations(
 
     Returns:
         The plot of shedding duration by study and sample type.
+        
+    Raises:
+        ValueError: If DataFrame is empty or missing required columns.
     """
-    # Plot range bars
-    plt.figure(figsize=(10, 8))
+    if df_shedding_durations.empty:
+        raise ValueError("DataFrame is empty, cannot create plot")
+    
+    required_columns = ["biomarker", "shedding_duration_mean", "specimen", "study_ID", "n_participant"]
+    missing_columns = [col for col in required_columns if col not in df_shedding_durations.columns]
+    if missing_columns:
+        raise ValueError(f"DataFrame missing required columns: {missing_columns}")
 
-    # filter the dataset by biomaker
+    # Plot range bars
+    plt.figure(figsize=DEFAULT_MULTI_FIGURE_SIZE)
+
+    # Filter the dataset by biomarker
     df_shedding_durations_filtered = df_shedding_durations.loc[
         (
             (df_shedding_durations["biomarker"] == biomarker)
-            & (~df_shedding_durations["shedding_duration_mean"].isnull())
+            & (df_shedding_durations["shedding_duration_mean"].notna())
         )
     ]
+    
+    if df_shedding_durations_filtered.empty:
+        raise ValueError(f"No data found for biomarker: {biomarker}")
 
     # Sort dataset by specimen group
     df_shedding_durations_sorted = df_shedding_durations_filtered.sort_values(
@@ -310,7 +354,7 @@ def plot_shedding_durations(
 
     for name, group in df_shedding_durations_sorted.groupby("specimen"):
         color = color_map[specimen_counter % len(color_map)]
-        for __, row in group.iterrows():
+        for _, row in group.iterrows():
             x_vals = [
                 row["shedding_duration_min"],
                 row["shedding_duration_mean"],
@@ -325,14 +369,14 @@ def plot_shedding_durations(
                 study_counter,
                 marker="|",
                 color=color,
-                markersize=10,
+                markersize=DEFAULT_MARKERSIZE,
             )
             plt.plot(
                 row["shedding_duration_max"],
                 study_counter,
                 marker="|",
                 color=color,
-                markersize=10,
+                markersize=DEFAULT_MARKERSIZE,
             )
             plt.plot(
                 row["shedding_duration_mean"], study_counter, marker="o", color=color
@@ -348,7 +392,7 @@ def plot_shedding_durations(
     plt.yticks(
         ticks=range(len(df_shedding_durations_sorted["study_ID"])),
         labels=[
-            a + " (N=" + str(b) + ")"
+            f"{a} (N={b})"
             for a, b in zip(
                 df_shedding_durations_sorted["study_ID"].values,
                 df_shedding_durations_sorted["n_participant"],
