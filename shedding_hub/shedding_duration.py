@@ -41,7 +41,7 @@ def calc_shedding_duration(
     if not dataset or not isinstance(dataset, dict):
         raise ValueError("Dataset must be a non-empty dictionary")
 
-    required_keys = ["analytes", "participants", "study_ID"]
+    required_keys = ["analytes", "participants", "dataset_id"]
     missing_keys = [key for key in required_keys if key not in dataset]
     if missing_keys:
         raise ValueError(f"Dataset missing required keys: {missing_keys}")
@@ -92,7 +92,7 @@ def calc_shedding_duration(
             )
 
             row_new = {
-                "study_ID": dataset["study_ID"],
+                "dataset_id": dataset["dataset_id"],
                 "participant_ID": participant_ID,
                 # "age" : participant_age,
                 # "sex" : participant_sex,
@@ -111,7 +111,7 @@ def calc_shedding_duration(
     # Return empty DataFrame if no data
     if df_shedding_duration.empty:
         logger.warning(
-            f"No valid shedding duration data found for study {dataset['study_ID']}"
+            f"No valid shedding duration data found for study {dataset['dataset_id']}"
         )
         return pd.DataFrame()
 
@@ -139,13 +139,12 @@ def calc_shedding_duration(
 
     if plotting:
         plt_shedding = plot_shedding_duration(
-            df_shedding_duration, dataset_ID=dataset["study_ID"]
+            df_shedding_duration, dataset_id=dataset["dataset_id"]
         )
-        plt_shedding.show()
 
     df_return = (
         df_shedding_duration.groupby(
-            ["study_ID", "biomarker", "specimen", "reference_event"]
+            ["dataset_id", "biomarker", "specimen", "reference_event"]
         )
         .agg(
             shedding_duration_min=("shedding_duration", "min"),
@@ -161,14 +160,14 @@ def calc_shedding_duration(
 
 
 def plot_shedding_duration(
-    df_shedding_duration: pd.DataFrame, dataset_ID: str
+    df_shedding_duration: pd.DataFrame, dataset_id: str
 ) -> plt.Figure:
     """
     Plot shedding duration for each individual by specimen type.
 
     Args:
         df_shedding_duration: Shedding duration dataset extracted from the loaded dataset.
-        dataset_ID: Dataset identifier, e.g., :code:`woelfel2020virological`.
+        dataset_id: Dataset identifier, e.g., :code:`woelfel2020virological`.
 
     Returns:
         The plot of shedding duration.
@@ -187,14 +186,13 @@ def plot_shedding_duration(
         "last_detect",
         "reference_event",
     ]
-    missing_columns = [
-        col for col in required_columns if col not in df_shedding_duration.columns
-    ]
+    missing_columns = set(required_columns) - set(df_shedding_duration.columns)
+
     if missing_columns:
         raise ValueError(f"DataFrame missing required columns: {missing_columns}")
 
     # Plot range bars
-    plt.figure(figsize=DEFAULT_FIGURE_SIZE)
+    fig = plt.figure(figsize=DEFAULT_FIGURE_SIZE)
 
     # Sort dataset by specimen group
     df_shedding_duration_sorted = df_shedding_duration.sort_values("specimen")
@@ -250,14 +248,14 @@ def plot_shedding_duration(
 
     plt.yticks([])
     plt.xlabel(f"Days after {df_shedding_duration['reference_event'].iloc[0]}")
-    plt.title(f'Individual Shedding Duration for the Study "{dataset_ID}"')
+    plt.title(f'Individual Shedding Duration for the Study "{dataset_id}"')
     plt.grid(True, axis="x")
     plt.tight_layout()
-    return plt
+    return fig
 
 
 def calc_shedding_durations(
-    dataset_IDs: List[str],
+    dataset_ids: List[str],
     *,
     plotting: bool = False,
     biomarker: str = DEFAULT_BIOMARKER,
@@ -266,7 +264,7 @@ def calc_shedding_durations(
     Calculate summary statistics for the shedding duration using multiple loaded datasets.
 
     Args:
-        dataset_IDs: A list of dataset identifiers.
+        dataset_ids: A list of dataset identifiers.
         plotting: Create a plot for study level of shedding duration by specimen type.
         biomarker: Filter the data for plotting with a specific biomarker (e.g., "SARS-CoV-2").
 
@@ -274,55 +272,36 @@ def calc_shedding_durations(
         Summary table of shedding duration (min, max, mean, n_sample, n_participant) by study, biomarker, and specimen.
 
     Raises:
-        ValueError: If dataset_IDs is empty or contains invalid entries.
+        ValueError: If dataset_ids is empty or contains invalid entries.
     """
-    if not dataset_IDs:
-        raise ValueError("dataset_IDs cannot be empty")
+    if not dataset_ids:
+        raise ValueError("dataset_ids cannot be empty")
 
-    # Initialize an empty DataFrame with columns
-    df_shedding_durations = pd.DataFrame(
-        columns=[
-            "study_ID",
-            "biomarker",
-            "specimen",
-            "reference_event",
-            "shedding_duration_min",
-            "shedding_duration_max",
-            "shedding_duration_mean",
-            "n_sample",
-            "n_participant",
-        ]
-    )
-
-    # Loop to append data
-    for filename in dataset_IDs:
-        logger.info(f"Loading the data: {filename}")
+    loaded_datasets = []
+    for dataset_id in dataset_ids:
+        logger.info(f"Loading the data: {dataset_id}")
         try:
-            dataset = sh.load_dataset(dataset_ID=filename)
-            df_shedding_duration = calc_shedding_duration(
-                dataset=dataset, plotting=False
-            )
-
-            if df_shedding_duration.empty:
-                logger.warning(f"No valid data found for {filename}")
-                continue
-
-            if df_shedding_durations.empty:
-                df_shedding_durations = df_shedding_duration
-            else:
-                df_shedding_durations = pd.concat(
-                    [df_shedding_durations, df_shedding_duration],
-                    ignore_index=True,
+            loaded_datasets.append(
+                calc_shedding_duration(
+                    dataset=sh.load_dataset(dataset=dataset_id), plotting=False
                 )
+            )
         except Exception as e:
-            logger.error(f"Cannot load the data {filename}: {e}")
+            logger.error(f"Cannot load the data {dataset_id}: {e}")
             traceback.print_exc()
+
+    if not loaded_datasets:
+        logger.warning(
+            "No datasets were successfully loaded. Returning empty DataFrame."
+        )
+        return pd.DataFrame()
+
+    df_shedding_durations = pd.concat(loaded_datasets, ignore_index=True)
 
     if plotting and not df_shedding_durations.empty:
         plt_sheddings = plot_shedding_durations(
             df_shedding_durations, biomarker=biomarker
         )
-        plt_sheddings.show()
 
     return df_shedding_durations
 
@@ -350,17 +329,15 @@ def plot_shedding_durations(
         "biomarker",
         "shedding_duration_mean",
         "specimen",
-        "study_ID",
+        "dataset_id",
         "n_participant",
     ]
-    missing_columns = [
-        col for col in required_columns if col not in df_shedding_durations.columns
-    ]
+    missing_columns = set(required_columns) - set(df_shedding_durations.columns)
     if missing_columns:
         raise ValueError(f"DataFrame missing required columns: {missing_columns}")
 
     # Plot range bars
-    plt.figure(figsize=DEFAULT_MULTI_FIGURE_SIZE)
+    fig = plt.figure(figsize=DEFAULT_MULTI_FIGURE_SIZE)
 
     # Filter the dataset by biomarker
     df_shedding_durations_filtered = df_shedding_durations.loc[
@@ -423,11 +400,11 @@ def plot_shedding_durations(
     plt.legend(handles, labels, title="Specimen", loc="upper right")
 
     plt.yticks(
-        ticks=range(len(df_shedding_durations_sorted["study_ID"])),
+        ticks=range(len(df_shedding_durations_sorted["dataset_id"])),
         labels=[
             f"{a} (N={b})"
             for a, b in zip(
-                df_shedding_durations_sorted["study_ID"].values,
+                df_shedding_durations_sorted["dataset_id"].values,
                 df_shedding_durations_sorted["n_participant"],
             )
         ],
@@ -436,4 +413,4 @@ def plot_shedding_durations(
     plt.title(f"Shedding Duration Plot for {biomarker}")
     plt.grid(True, axis="x")
     plt.tight_layout()
-    return plt
+    return fig

@@ -30,27 +30,27 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # of the hash. However, this dataset is relatively stable and is unlikely to
         # need updates.
         (
-            {"dataset_ID": "woelfel2020virological"},
+            {"dataset": "woelfel2020virological"},
             "0fae1c755023b347002be6cf1551a2b79b31b19a",
         ),
         # An old version of the Woelfel dataset from a PR before folder restructuring.
         (
-            {"dataset_ID": "woelfel2020", "pr": 1},
+            {"dataset": "woelfel2020", "pr": 1},
             "89b17f0f1c00c8c50a83ff15c6d28138afc262ca",
         ),
         # The same old version of the Woelfel dataset using a commit reference.
         (
-            {"dataset_ID": "woelfel2020", "ref": "534c30a"},
+            {"dataset": "woelfel2020", "ref": "534c30a"},
             "89b17f0f1c00c8c50a83ff15c6d28138afc262ca",
         ),
         # Invalid because requesting local and pr.
         (
-            {"dataset_ID": "woelfel2020virological", "local": "data", "pr": 7},
+            {"dataset": "woelfel2020virological", "local": "data", "pr": 7},
             ValueError,
         ),
         # Load from local directory.
         (
-            {"dataset_ID": "woelfel2020virological", "local": "data"},
+            {"dataset": "woelfel2020virological", "local": "data"},
             "0fae1c755023b347002be6cf1551a2b79b31b19a",
         ),
     ],
