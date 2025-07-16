@@ -63,7 +63,7 @@ def load_dataset(
         path = (pathlib.Path(local) / dataset / dataset).with_suffix(".yaml")
         with path.open() as fp:
             data = yaml.safe_load(fp)
-        data["study_ID"] = dataset
+        data["dataset_id"] = dataset
         return data
 
     # If a PR is specified, resolve it so we can get the relevant file.
