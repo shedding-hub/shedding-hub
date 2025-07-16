@@ -33,28 +33,31 @@ def calc_shedding_duration(
 
     Returns:
         Summary table of shedding duration (min, max, mean) by biomarker and specimen.
-        
+
     Raises:
         ValueError: If dataset is missing required keys or is empty.
         KeyError: If required analyte information is missing.
     """
     if not dataset or not isinstance(dataset, dict):
         raise ValueError("Dataset must be a non-empty dictionary")
-    
+
     required_keys = ["analytes", "participants", "study_ID"]
     missing_keys = [key for key in required_keys if key not in dataset]
     if missing_keys:
         raise ValueError(f"Dataset missing required keys: {missing_keys}")
 
     # extract analyte data from the standardized shedding data loaded
-    df_analyte = pd.DataFrame([
-        {
-            "analyte": key,
-            "specimen": analyte["specimen"],
-            "biomarker": analyte["biomarker"],
-            "reference_event": analyte["reference_event"],
-        } for key, analyte in dataset["analytes"].items()
-    ])
+    df_analyte = pd.DataFrame(
+        [
+            {
+                "analyte": key,
+                "specimen": analyte["specimen"],
+                "biomarker": analyte["biomarker"],
+                "reference_event": analyte["reference_event"],
+            }
+            for key, analyte in dataset["analytes"].items()
+        ]
+    )
 
     # extract participant and measurement data from the standardized shedding data loaded
     shedding_duration_data = []
@@ -67,23 +70,27 @@ def calc_shedding_duration(
         ):
             # filter the group by value notna and time not unknown
             group = group[group["value"].notna() & (group["time"] != "unknown")].copy()
-            
+
             # Skip if no valid data after filtering
             if group.empty:
                 continue
-                
+
             # format time to numeric
             group["time"] = pd.to_numeric(group["time"], errors="coerce")
-            
+
             # Skip if no valid numeric times
             if group["time"].isna().all():
                 continue
-            
+
             # Calculate detection times, handling cases where no positive values exist
             positive_values = group[group["value"] != NEGATIVE_VALUE]
-            first_detect = positive_values["time"].min() if not positive_values.empty else pd.NA
-            last_detect = positive_values["time"].max() if not positive_values.empty else pd.NA
-            
+            first_detect = (
+                positive_values["time"].min() if not positive_values.empty else pd.NA
+            )
+            last_detect = (
+                positive_values["time"].max() if not positive_values.empty else pd.NA
+            )
+
             row_new = {
                 "study_ID": dataset["study_ID"],
                 "participant_ID": participant_ID,
@@ -97,35 +104,43 @@ def calc_shedding_duration(
                 "last_detect": last_detect,
             }
             shedding_duration_data.append(row_new)
-    
+
     # create dataframe from list
     df_shedding_duration = pd.DataFrame(shedding_duration_data)
-    
+
     # Return empty DataFrame if no data
     if df_shedding_duration.empty:
-        logger.warning(f"No valid shedding duration data found for study {dataset['study_ID']}")
+        logger.warning(
+            f"No valid shedding duration data found for study {dataset['study_ID']}"
+        )
         return pd.DataFrame()
 
     # merge analyte information and drop analyte column
     df_shedding_duration = df_shedding_duration.merge(
         df_analyte, how="left", on="analyte"
     ).drop(columns=["analyte"])
-    
+
     # concatenate list of specimen types to string;
     df_shedding_duration["specimen"] = df_shedding_duration["specimen"].apply(
         lambda x: ", ".join(map(str, x)) if isinstance(x, list) else str(x)
     )
-    
+
     # calculate individual level shedding duration
     # Only calculate for rows where both first_detect and last_detect are not NA
-    mask = df_shedding_duration["first_detect"].notna() & df_shedding_duration["last_detect"].notna()
+    mask = (
+        df_shedding_duration["first_detect"].notna()
+        & df_shedding_duration["last_detect"].notna()
+    )
     df_shedding_duration.loc[mask, "shedding_duration"] = (
-        df_shedding_duration.loc[mask, "last_detect"] - 
-        df_shedding_duration.loc[mask, "first_detect"] + 1
+        df_shedding_duration.loc[mask, "last_detect"]
+        - df_shedding_duration.loc[mask, "first_detect"]
+        + 1
     )
 
     if plotting:
-        plt_shedding = plot_shedding_duration(df_shedding_duration, dataset_ID=dataset["study_ID"])
+        plt_shedding = plot_shedding_duration(
+            df_shedding_duration, dataset_ID=dataset["study_ID"]
+        )
         plt_shedding.show()
 
     df_return = (
@@ -145,7 +160,9 @@ def calc_shedding_duration(
     return df_return
 
 
-def plot_shedding_duration(df_shedding_duration: pd.DataFrame, dataset_ID: str) -> plt.Figure:
+def plot_shedding_duration(
+    df_shedding_duration: pd.DataFrame, dataset_ID: str
+) -> plt.Figure:
     """
     Plot shedding duration for each individual by specimen type.
 
@@ -155,15 +172,24 @@ def plot_shedding_duration(df_shedding_duration: pd.DataFrame, dataset_ID: str) 
 
     Returns:
         The plot of shedding duration.
-        
+
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
     """
     if df_shedding_duration.empty:
         raise ValueError("DataFrame is empty, cannot create plot")
-    
-    required_columns = ["specimen", "first_sample", "last_sample", "first_detect", "last_detect", "reference_event"]
-    missing_columns = [col for col in required_columns if col not in df_shedding_duration.columns]
+
+    required_columns = [
+        "specimen",
+        "first_sample",
+        "last_sample",
+        "first_detect",
+        "last_detect",
+        "reference_event",
+    ]
+    missing_columns = [
+        col for col in required_columns if col not in df_shedding_duration.columns
+    ]
     if missing_columns:
         raise ValueError(f"DataFrame missing required columns: {missing_columns}")
 
@@ -191,7 +217,7 @@ def plot_shedding_duration(df_shedding_duration: pd.DataFrame, dataset_ID: str) 
                     marker="o",
                     color=color,
                 )
-            
+
             if pd.notna(row["first_detect"]) and pd.notna(row["last_detect"]):
                 plt.plot(
                     [row["first_detect"], row["last_detect"]],
@@ -231,10 +257,10 @@ def plot_shedding_duration(df_shedding_duration: pd.DataFrame, dataset_ID: str) 
 
 
 def calc_shedding_durations(
-    dataset_IDs: List[str], 
-    *, 
-    plotting: bool = False, 
-    biomarker: str = DEFAULT_BIOMARKER
+    dataset_IDs: List[str],
+    *,
+    plotting: bool = False,
+    biomarker: str = DEFAULT_BIOMARKER,
 ) -> pd.DataFrame:
     """
     Calculate summary statistics for the shedding duration using multiple loaded datasets.
@@ -246,13 +272,13 @@ def calc_shedding_durations(
 
     Returns:
         Summary table of shedding duration (min, max, mean, n_sample, n_participant) by study, biomarker, and specimen.
-        
+
     Raises:
         ValueError: If dataset_IDs is empty or contains invalid entries.
     """
     if not dataset_IDs:
         raise ValueError("dataset_IDs cannot be empty")
-    
+
     # Initialize an empty DataFrame with columns
     df_shedding_durations = pd.DataFrame(
         columns=[
@@ -276,11 +302,11 @@ def calc_shedding_durations(
             df_shedding_duration = calc_shedding_duration(
                 dataset=dataset, plotting=False
             )
-            
+
             if df_shedding_duration.empty:
                 logger.warning(f"No valid data found for {filename}")
                 continue
-                
+
             if df_shedding_durations.empty:
                 df_shedding_durations = df_shedding_duration
             else:
@@ -291,19 +317,18 @@ def calc_shedding_durations(
         except Exception as e:
             logger.error(f"Cannot load the data {filename}: {e}")
             traceback.print_exc()
-    
+
     if plotting and not df_shedding_durations.empty:
         plt_sheddings = plot_shedding_durations(
             df_shedding_durations, biomarker=biomarker
         )
         plt_sheddings.show()
-    
+
     return df_shedding_durations
 
 
 def plot_shedding_durations(
-    df_shedding_durations: pd.DataFrame, 
-    biomarker: str = DEFAULT_BIOMARKER
+    df_shedding_durations: pd.DataFrame, biomarker: str = DEFAULT_BIOMARKER
 ) -> plt.Figure:
     """
     Plot shedding duration by study and specimen type.
@@ -314,15 +339,23 @@ def plot_shedding_durations(
 
     Returns:
         The plot of shedding duration by study and sample type.
-        
+
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
     """
     if df_shedding_durations.empty:
         raise ValueError("DataFrame is empty, cannot create plot")
-    
-    required_columns = ["biomarker", "shedding_duration_mean", "specimen", "study_ID", "n_participant"]
-    missing_columns = [col for col in required_columns if col not in df_shedding_durations.columns]
+
+    required_columns = [
+        "biomarker",
+        "shedding_duration_mean",
+        "specimen",
+        "study_ID",
+        "n_participant",
+    ]
+    missing_columns = [
+        col for col in required_columns if col not in df_shedding_durations.columns
+    ]
     if missing_columns:
         raise ValueError(f"DataFrame missing required columns: {missing_columns}")
 
@@ -336,7 +369,7 @@ def plot_shedding_durations(
             & (df_shedding_durations["shedding_duration_mean"].notna())
         )
     ]
-    
+
     if df_shedding_durations_filtered.empty:
         raise ValueError(f"No data found for biomarker: {biomarker}")
 
