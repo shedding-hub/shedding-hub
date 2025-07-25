@@ -99,7 +99,7 @@ kissler2021 = dict(
             biomarker="SARS-CoV-2",           
             gene_target="ORF1ab",             # Public documentation of Roche cobas shows that Target 1 = ORF1ab and Target 2 = E gene
             limit_of_quantification="unknown",
-            limit_of_detection="unknown",     # Not specified numerically; Ct=40 treated as cutoff
+            limit_of_detection=40,     
             unit="gc/mL",                     
             reference_event="confirmation date"  # Day 1 = first PCR-positive test (Ct < 40)
         )
