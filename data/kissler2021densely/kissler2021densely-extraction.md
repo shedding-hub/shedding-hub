@@ -86,7 +86,7 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 
 # YAML dictionary structure describing the dataset
-peiris2003 = dict(
+kissler2021 = dict(
     title="Densely sampled viral trajectories suggest longer duration of acute infection with B.1.1.7 variant relative to non-B.1.1.7 SARS-CoV-2",
     doi="10.1056/nejmc2102507",
     description=folded_str("This study analyzed densely sampled longitudinal RT-qPCR data from 65 individuals infected with SARS-CoV-2, including 7 infected with the B.1.1.7 (Alpha) variant, using each person's lowest Ct value as the reference event time point. Inclusion criteria required each individual to have at least 5 positive PCR tests (Ct < 40), including at least one with Ct < 35. Ct value were collected using the Roche cobas SARS-CoV-2 assay and converted to estimated RNA viral concentrations via a standard curve and log-linear transformation.\n"),
@@ -95,12 +95,12 @@ peiris2003 = dict(
     analytes=dict(
         NPS_SARSCoV2=dict(
             description=folded_str("SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration was quantified in gene copies per milliliter\n"),
-            specimen="nasopharyngeal_swab",   # Sample type
-            biomarker="SARS-CoV-2",           # Virus detected
-            gene_target="ORF1ab",             # Target gene for detection
-            limit_of_quantification="unknown",# Not specified in paper
+            specimen="nasopharyngeal_swab",   
+            biomarker="SARS-CoV-2",           
+            gene_target="ORF1ab",             # Public documentation of Roche cobas shows that Target 1 = ORF1ab and Target 2 = E gene
+            limit_of_quantification="unknown",
             limit_of_detection="unknown",     # Not specified numerically; Ct=40 treated as cutoff
-            unit="gc/mL",                     # Gene copies per mL
+            unit="gc/mL",                     
             reference_event="confirmation date"  # Day 1 = first PCR-positive test (Ct < 40)
         )
     ),
@@ -112,7 +112,7 @@ peiris2003 = dict(
 # Output YAML to file
 with open("kissler2021densely.yaml","w") as outfile:
     outfile.write("# yaml-language-server: $schema=.schema.yaml\n")  # Optional schema annotation
-    yaml.dump(peiris2003, outfile, default_style=None, default_flow_style=False, sort_keys=False)
+    yaml.dump(kissler2021, outfile, default_style=None, default_flow_style=False, sort_keys=False)
 
 outfile.close()
 ```
