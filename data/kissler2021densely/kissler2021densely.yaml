@@ -14,7 +14,7 @@ analytes:
   NPS_SARSCoV2:
     description: >
       SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration
-      was quantified in gene copies per milliliter
+      was quantified in gene copies per milliliter.
     specimen: nasopharyngeal_swab
     biomarker: SARS-CoV-2
     gene_target: ORF1ab

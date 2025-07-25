@@ -94,7 +94,7 @@ kissler2021 = dict(
     # Define the biomarker being measured
     analytes=dict(
         NPS_SARSCoV2=dict(
-            description=folded_str("SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration was quantified in gene copies per milliliter\n"),
+            description=folded_str("SARS-CoV-2 RNA gene copy concentration in nasopharynx samples. The concentration was quantified in gene copies per milliliter.\n"),
             specimen="nasopharyngeal_swab",   
             biomarker="SARS-CoV-2",           
             gene_target="ORF1ab",             # Public documentation of Roche cobas shows that Target 1 = ORF1ab and Target 2 = E gene
