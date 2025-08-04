@@ -100,9 +100,8 @@ def test_calc_shedding_durations_valid(mock_load_dataset, minimal_dataset):
 @patch("shedding_hub.shedding_duration.sh.load_dataset")
 def test_calc_shedding_durations_all_fail(mock_load_dataset):
     mock_load_dataset.side_effect = Exception("fail")
-    df = sh.calc_shedding_durations(["bad_dataset"])
-    assert isinstance(df, pd.DataFrame)
-    assert df.empty
+    with pytest.raises(Exception):
+        df = sh.calc_shedding_durations(["bad_dataset"])
 
 
 def test_plot_shedding_duration(minimal_dataset):
