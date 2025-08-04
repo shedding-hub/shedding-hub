@@ -61,22 +61,19 @@ def calc_shedding_duration(
 
     # extract participant and measurement data from the standardized shedding data loaded
     shedding_duration_data = []
-    for participant_counter, item in enumerate(dataset["participants"], 1):
-        participant_ID = participant_counter
-        # participant_age = item["attributes"]["age"]
-        # participant_sex = item["attributes"]["sex"]
+    for participant_id, item in enumerate(dataset["participants"], 1):
         for name, group in pd.DataFrame.from_dict(item["measurements"]).groupby(
             "analyte"
         ):
-            # filter the group by value notna and time not unknown
-            group = group[group["value"].notna() & (group["time"] != "unknown")].copy()
+            # filter the group by time not unknown
+            group = group[group["time"] != "unknown"].copy()
 
             # Skip if no valid data after filtering
             if group.empty:
                 continue
 
             # format time to numeric
-            group["time"] = pd.to_numeric(group["time"], errors="coerce")
+            group["time"] = pd.to_numeric(group["time"], errors="raise")
 
             # Skip if no valid numeric times
             if group["time"].isna().all():
@@ -93,9 +90,7 @@ def calc_shedding_duration(
 
             row_new = {
                 "dataset_id": dataset["dataset_id"],
-                "participant_ID": participant_ID,
-                # "age" : participant_age,
-                # "sex" : participant_sex,
+                "participant_id": participant_id,
                 "analyte": name,
                 "n_sample": group["value"].count(),
                 "first_sample": group["time"].min(),
@@ -126,16 +121,7 @@ def calc_shedding_duration(
     )
 
     # calculate individual level shedding duration
-    # Only calculate for rows where both first_detect and last_detect are not NA
-    mask = (
-        df_shedding_duration["first_detect"].notna()
-        & df_shedding_duration["last_detect"].notna()
-    )
-    df_shedding_duration.loc[mask, "shedding_duration"] = (
-        df_shedding_duration.loc[mask, "last_detect"]
-        - df_shedding_duration.loc[mask, "first_detect"]
-        + 1
-    )
+    df_shedding_duration["shedding_duration"] = df_shedding_duration["last_detect"] - df_shedding_duration["first_detect"] + 1
 
     if plotting:
         plt_shedding = plot_shedding_duration(
@@ -151,7 +137,7 @@ def calc_shedding_duration(
             shedding_duration_max=("shedding_duration", "max"),
             shedding_duration_mean=("shedding_duration", "mean"),
             n_sample=("n_sample", "sum"),
-            n_participant=("participant_ID", "nunique"),
+            n_participant=("participant_id", "nunique"),
         )
         .reset_index()
     )
@@ -248,7 +234,7 @@ def plot_shedding_duration(
 
     plt.yticks([])
     plt.xlabel(f"Days after {df_shedding_duration['reference_event'].iloc[0]}")
-    plt.title(f'Individual Shedding Duration for the Study "{dataset_id}"')
+    plt.title(f'Individual Shedding Duration for the Dataset "{dataset_id}"')
     plt.grid(True, axis="x")
     plt.tight_layout()
     return fig
@@ -280,15 +266,11 @@ def calc_shedding_durations(
     loaded_datasets = []
     for dataset_id in dataset_ids:
         logger.info(f"Loading the data: {dataset_id}")
-        try:
-            loaded_datasets.append(
-                calc_shedding_duration(
-                    dataset=sh.load_dataset(dataset=dataset_id), plotting=False
-                )
+        loaded_datasets.append(
+            calc_shedding_duration(
+                dataset=sh.load_dataset(dataset=dataset_id), plotting=False
             )
-        except Exception as e:
-            logger.error(f"Cannot load the data {dataset_id}: {e}")
-            traceback.print_exc()
+        )
 
     if not loaded_datasets:
         logger.warning(
