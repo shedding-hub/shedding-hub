@@ -121,7 +121,9 @@ def calc_shedding_duration(
     )
 
     # calculate individual level shedding duration
-    df_shedding_duration["shedding_duration"] = df_shedding_duration["last_detect"] - df_shedding_duration["first_detect"] + 1
+    df_shedding_duration["shedding_duration"] = (
+        df_shedding_duration["last_detect"] - df_shedding_duration["first_detect"] + 1
+    )
 
     if plotting:
         plt_shedding = plot_shedding_duration(
