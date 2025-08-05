@@ -6,11 +6,12 @@ import glob
 from pathlib import Path
 from matplotlib import cm
 
+
 def calc_shedding_peak(
     dataset: Dict[str, Any],
     *,
     plotting: bool = False,
-    output: str, 
+    output: str,
 ) -> pd.DataFrame:
     """
     Calcualte summary statistics for the shedding peak using a loaded dataset by the `load_dataset` function.
@@ -18,13 +19,13 @@ def calc_shedding_peak(
     Args:
         dataset: Loaded dataset using the `load_dataset` function.
         plotting: Create a plot for individual level of shedding peak by specimen type.
-        output: Type of dataframe returned. 
+        output: Type of dataframe returned.
             summary: Summary table of shedding peak (min, max, mean) by biomarker and specimen.
             individual: Individual entries (Not summarized)
 
 
     Returns:
-        Dataframe based on selected output. 
+        Dataframe based on selected output.
 
     Raises:
         ValueError: If dataset is missing required keys or is empty.
@@ -37,58 +38,76 @@ def calc_shedding_peak(
     missing_keys = [key for key in required_keys if key not in dataset]
     if missing_keys:
         raise ValueError(f"Dataset missing required keys: {missing_keys}")
-    
 
     # initialize a pandas dataframe
-    df_shedding_peak = pd.DataFrame(columns=["dataset_id","participant_ID",#"age","sex",
-                                                 "analyte","n_sample","first_sample","last_sample","shedding_peak"])
-    df_analyte = pd.DataFrame(columns=["analyte","specimen","biomarker","reference_event"])
+    df_shedding_peak = pd.DataFrame(
+        columns=[
+            "dataset_id",
+            "participant_ID",  # "age","sex",
+            "analyte",
+            "n_sample",
+            "first_sample",
+            "last_sample",
+            "shedding_peak",
+        ]
+    )
+    df_analyte = pd.DataFrame(
+        columns=["analyte", "specimen", "biomarker", "reference_event"]
+    )
 
     # extract analyte data from the standardized shedding data loaded
     for key in dataset["analytes"]:
-        row_new = {"analyte":key,
-                   "specimen":dataset["analytes"][key]["specimen"],
-                   "biomarker":dataset["analytes"][key]["biomarker"],
-                   "reference_event":dataset["analytes"][key]["reference_event"]}
+        row_new = {
+            "analyte": key,
+            "specimen": dataset["analytes"][key]["specimen"],
+            "biomarker": dataset["analytes"][key]["biomarker"],
+            "reference_event": dataset["analytes"][key]["reference_event"],
+        }
         df_analyte.loc[len(df_analyte)] = row_new
-    
+
     # extract participant and measurement data from the standardized shedding data loaded
     participant_counter = 0
     for item in dataset["participants"]:
         participant_counter += 1
         participant_ID = participant_counter
-        #participant_age = item["attributes"]["age"]
-        #participant_sex = item["attributes"]["sex"]
-        for name, group in pd.DataFrame.from_dict(item["measurements"]).groupby("analyte"):
+        # participant_age = item["attributes"]["age"]
+        # participant_sex = item["attributes"]["sex"]
+        for name, group in pd.DataFrame.from_dict(item["measurements"]).groupby(
+            "analyte"
+        ):
             # Filter numeric values for shedding peak calculation
-            numeric_values = group[group["value"].apply(lambda x: isinstance(x, (int, float)))]
-            
+            numeric_values = group[
+                group["value"].apply(lambda x: isinstance(x, (int, float)))
+            ]
+
             # Check if there are any numeric values
             if len(numeric_values) > 0:
                 shedding_peak = group.loc[numeric_values["value"].idxmax(), "time"]
             else:
                 # If all values are non-numeric (e.g., "negative"), set to null
                 shedding_peak = None
-            
+
             row_new = {
                 "dataset_id": dataset["dataset_id"],
-                "participant_ID" : participant_ID,
-                #"age" : participant_age,
-                #"sex" : participant_sex,
-                "analyte" : name,
-                "n_sample" : group[group["value"].notna()]["time"].size,
+                "participant_ID": participant_ID,
+                # "age" : participant_age,
+                # "sex" : participant_sex,
+                "analyte": name,
+                "n_sample": group[group["value"].notna()]["time"].size,
                 "first_sample": group[
                     (group["value"].notna()) & (group["time"] != "unknown")
                 ]["time"].min(),
                 "last_sample": group[
                     (group["value"].notna()) & (group["time"] != "unknown")
                 ]["time"].max(),
-                "shedding_peak": shedding_peak
+                "shedding_peak": shedding_peak,
             }
             df_shedding_peak.loc[len(df_shedding_peak)] = row_new
 
     # merge analyte information and drop analyte column
-    df_shedding_peak = df_shedding_peak.merge(df_analyte, how="left", on="analyte").drop(columns=["analyte"])
+    df_shedding_peak = df_shedding_peak.merge(
+        df_analyte, how="left", on="analyte"
+    ).drop(columns=["analyte"])
     # concatenate list of specimen types to string;
     df_shedding_peak["specimen"] = df_shedding_peak["specimen"].apply(
         lambda x: ", ".join(map(str, x)) if isinstance(x, list) else str(x)
@@ -100,34 +119,37 @@ def calc_shedding_peak(
     df_shedding_peak["last_sample"] = pd.to_numeric(
         df_shedding_peak["last_sample"], errors="coerce"
     )
-    df_shedding_peak["shedding_peak"] = pd.to_numeric(df_shedding_peak["shedding_peak"], errors='coerce')
-    
-    #if plotting == True:
+    df_shedding_peak["shedding_peak"] = pd.to_numeric(
+        df_shedding_peak["shedding_peak"], errors="coerce"
+    )
+
+    # if plotting == True:
     #    plt_shedding = plot_shedding_peak(df_shedding_peak, df_ID = df_ID)
     #    plt_shedding.show()
 
-    df_return = df_shedding_peak.groupby(
-        ["dataset_id", "biomarker", "specimen", "reference_event"]
-    ).agg(
-        shedding_peak_min   = ("shedding_peak", "min"),
-        shedding_peak_q25   = ("shedding_peak", lambda x: x.quantile(0.25)),
-        shedding_peak_median= ("shedding_peak", "median"),
-        shedding_peak_q75   = ("shedding_peak", lambda x: x.quantile(0.75)),
-        shedding_peak_max   = ("shedding_peak", "max"),
-        shedding_peak_mean  = ("shedding_peak", "mean"),
-        n_sample            = ("n_sample", "sum"),
-        n_participant       = ("participant_ID", "nunique"),
-    ).reset_index()
-    
+    df_return = (
+        df_shedding_peak.groupby(
+            ["dataset_id", "biomarker", "specimen", "reference_event"]
+        )
+        .agg(
+            shedding_peak_min=("shedding_peak", "min"),
+            shedding_peak_q25=("shedding_peak", lambda x: x.quantile(0.25)),
+            shedding_peak_median=("shedding_peak", "median"),
+            shedding_peak_q75=("shedding_peak", lambda x: x.quantile(0.75)),
+            shedding_peak_max=("shedding_peak", "max"),
+            shedding_peak_mean=("shedding_peak", "mean"),
+            n_sample=("n_sample", "sum"),
+            n_participant=("participant_ID", "nunique"),
+        )
+        .reset_index()
+    )
+
     if output == "summary":
         return df_return
     elif output == "individual":
         return df_shedding_peak
     else:
         raise ValueError("`output` must be either 'summary' or 'individual'")
-    
-
-
 
 
 def plot_shedding_peak_individual(
@@ -202,24 +224,21 @@ def plot_shedding_peak_individual(
     # ------------------------------------------------------------------
     # Plotting logic (unchanged except for moving df name to `df`) -----
     # ------------------------------------------------------------------
-    df = (
-        df_shedding_peak
-        .dropna(subset=["first_sample", "last_sample", "shedding_peak"])
-        .copy()
-    )
+    df = df_shedding_peak.dropna(
+        subset=["first_sample", "last_sample", "shedding_peak"]
+    ).copy()
 
     # limit rows per specimen for legibility
-    df = (
-        df.groupby("specimen", group_keys=False)
-          .apply(
-              lambda g: g.sample(
-                  n=max_nparticipant, random_state=random_seed
-              ) if len(g) > max_nparticipant else g
-          )
+    df = df.groupby("specimen", group_keys=False).apply(
+        lambda g: (
+            g.sample(n=max_nparticipant, random_state=random_seed)
+            if len(g) > max_nparticipant
+            else g
+        )
     )
 
     # error-bar extents
-    df["err_plus"]  = df["last_sample"] - df["first_sample"]
+    df["err_plus"] = df["last_sample"] - df["first_sample"]
     df["err_minus"] = 0
 
     specimens = df["specimen"].unique()
@@ -273,11 +292,8 @@ def plot_shedding_peak_individual(
     return fig, axes
 
 
-
-
-
 def plot_shedding_peak_summary(
-    dataset_ids: Union[str, Iterable[str]],                      # ← NEW sole “loader” input
+    dataset_ids: Union[str, Iterable[str]],  # ← NEW sole “loader” input
     *,
     selected_biomarker: str = "SARS-CoV-2",
     selected_reference_event: str = "symptom onset",
@@ -302,14 +318,14 @@ def plot_shedding_peak_summary(
 
     # ── 0. normalise input -------------------------------------------
     if isinstance(dataset_ids, str):
-        dataset_ids = [dataset_ids]           # wrap single ID
+        dataset_ids = [dataset_ids]  # wrap single ID
 
     # ---------------- 1. load & summarise ---------------------------------
     summary_frames = []
 
     for ds_id in dataset_ids:
         try:
-            df_raw  = sh.load_dataset(ds_id)
+            df_raw = sh.load_dataset(ds_id)
             df_peak = calc_shedding_peak(df_raw, output="summary")
             summary_frames.append(df_peak)
             print(f"✓ {ds_id} processed")
@@ -343,9 +359,9 @@ def plot_shedding_peak_summary(
             {
                 "label": f"{r['dataset_id']} (n={r['n_participant']})",
                 "whislo": r["shedding_peak_min"],
-                "q1":     r["shedding_peak_q25"],
-                "med":    r["shedding_peak_median"],
-                "q3":     r["shedding_peak_q75"],
+                "q1": r["shedding_peak_q25"],
+                "med": r["shedding_peak_median"],
+                "q3": r["shedding_peak_q75"],
                 "whishi": r["shedding_peak_max"],
             }
         )
@@ -385,16 +401,23 @@ def plot_shedding_peak_summary(
 
     handles = [
         plt.Line2D(
-            [0], [0], marker="s", linestyle="",
-            markerfacecolor=spec_colors[s], markeredgecolor="black",
-            label=s, markersize=12
+            [0],
+            [0],
+            marker="s",
+            linestyle="",
+            markerfacecolor=spec_colors[s],
+            markeredgecolor="black",
+            label=s,
+            markersize=12,
         )
         for s in unique_specimens
     ]
     ax.legend(
-        handles, [h.get_label() for h in handles],
+        handles,
+        [h.get_label() for h in handles],
         title="Specimen",
-        bbox_to_anchor=(1.02, 1), loc="upper left"
+        bbox_to_anchor=(1.02, 1),
+        loc="upper left",
     )
 
     plt.tight_layout()
