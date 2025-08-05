@@ -1,51 +1,59 @@
 import shedding_hub as sh
 import pandas as pd
-from typing import Optional
+from typing import Optional, Dict, Any
 import matplotlib.pyplot as plt
 import glob
 from pathlib import Path
 
 def calc_shedding_peak(
-    df_ID: str,
+    dataset: Dict[str, Any],
     *,
     plotting: bool = False,
-    ref: Optional[str] = None,
-    pr: Optional[int] = None,
-    local: Optional[str] = None,
+    output: str, 
 ) -> pd.DataFrame:
     """
     Calcualte summary statistics for the shedding peak using a loaded dataset by the `load_dataset` function.
 
     Args:
-        df_ID: Dataset identifier, e.g., :code:`woelfel2020virological`.
+        dataset: Loaded dataset using the `load_dataset` function.
         plotting: Create a plot for individual level of shedding peak by specimen type.
-        ref: Git reference to load. Defaults to the most recent data on the :code:`main`
-            branch of https://github.com/shedding-hub/shedding-hub and is automatically
-            fetched if a :code:`pr` number is specified.
-        pr: Pull request to fetch data from.
-        local: Local directory to load data from.
+        output: Type of dataframe returned. 
+            summary: Summary table of shedding peak (min, max, mean) by biomarker and specimen.
+            individual: Individual entries (Not summarized)
+
 
     Returns:
-        Summary table of shedding peak (min, max, mean) by biomarker and specimen.
+        Dataframe based on selected output. 
+
+    Raises:
+        ValueError: If dataset is missing required keys or is empty.
+        KeyError: If required analyte information is missing.
     """
-    # load the dataset;
-    df = sh.load_dataset(dataset = df_ID, ref = ref, pr = pr, local = local)
+    if not dataset or not isinstance(dataset, dict):
+        raise ValueError("Dataset must be a non-empty dictionary")
+
+    required_keys = ["analytes", "participants", "dataset_id"]
+    missing_keys = [key for key in required_keys if key not in dataset]
+    if missing_keys:
+        raise ValueError(f"Dataset missing required keys: {missing_keys}")
+    
+
     # initialize a pandas dataframe
     df_shedding_peak = pd.DataFrame(columns=["study_ID","participant_ID",#"age","sex",
                                                  "analyte","n_sample","first_sample","last_sample","shedding_peak"])
     df_analyte = pd.DataFrame(columns=["analyte","specimen","biomarker","reference_event"])
 
     # extract analyte data from the standardized shedding data loaded
-    for key in df["analytes"]:
+    for key in dataset["analytes"]:
         row_new = {"analyte":key,
-                   "specimen":df["analytes"][key]["specimen"],
-                   "biomarker":df["analytes"][key]["biomarker"],
-                   "reference_event":df["analytes"][key]["reference_event"]}
+                   "specimen":dataset["analytes"][key]["specimen"],
+                   "biomarker":dataset["analytes"][key]["biomarker"],
+                   "reference_event":dataset["analytes"][key]["reference_event"]}
         df_analyte.loc[len(df_analyte)] = row_new
     
     # extract participant and measurement data from the standardized shedding data loaded
     participant_counter = 0
-    for item in df["participants"]:
+    for item in dataset["participants"]:
         participant_counter += 1
         participant_ID = participant_counter
         #participant_age = item["attributes"]["age"]
@@ -100,11 +108,24 @@ def calc_shedding_peak(
     df_return = df_shedding_peak.groupby(
         ["study_ID", "biomarker", "specimen", "reference_event"]
     ).agg(
-        shedding_peak_min=("shedding_peak", "min"),
-        shedding_peak_max=("shedding_peak", "max"),
-        shedding_peak_mean=("shedding_peak", "mean"),
-        n_sample=("n_sample", "sum"),
-        n_participant = ("participant_ID", "nunique")
+        shedding_peak_min   = ("shedding_peak", "min"),
+        shedding_peak_q25   = ("shedding_peak", lambda x: x.quantile(0.25)),
+        shedding_peak_median= ("shedding_peak", "median"),
+        shedding_peak_q75   = ("shedding_peak", lambda x: x.quantile(0.75)),
+        shedding_peak_max   = ("shedding_peak", "max"),
+        shedding_peak_mean  = ("shedding_peak", "mean"),
+        n_sample            = ("n_sample", "sum"),
+        n_participant       = ("participant_ID", "nunique"),
     ).reset_index()
     
-    return(df_return)
+    if output == "summary":
+        return df_return
+    elif output == "individual":
+        return df_shedding_peak
+    else:
+        raise ValueError("`output` must be either 'summary' or 'individual'")
+    
+
+
+def plot_individual_shedding(
+        dataset = 
