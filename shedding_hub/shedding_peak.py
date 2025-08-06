@@ -6,6 +6,7 @@ import matplotlib.colors as mcolors
 from matplotlib.lines import Line2D
 from matplotlib import cm
 import logging
+from collections.abc import Iterable
 
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
@@ -286,11 +287,13 @@ def plot_shedding_peak(
         fontsize=14,
     )
     plt.tight_layout()
+    plt.close(fig)          # <<–– suppress duplicate display
+    
     return fig
 
 
 def plot_shedding_peaks(
-    dataset_ids: List[str],
+    dataset_ids: Union[str, List[str], tuple],
     *,
     selected_biomarker: str = DEFAULT_BIOMARKER,
     selected_reference_event: str = "symptom onset",
@@ -310,6 +313,12 @@ def plot_shedding_peaks(
     Returns:
         matplotlib.figure.Figure: Box plot showing shedding peaks across studies.
     """
+    # ---- normalise input ----------------------------------------------
+    if isinstance(dataset_ids, str):
+        dataset_ids = [dataset_ids]
+    elif not isinstance(dataset_ids, Iterable):
+        raise TypeError("dataset_ids must be a string or an iterable of strings")
+
     if not dataset_ids:
         raise ValueError("dataset_ids cannot be empty")
 
@@ -416,4 +425,5 @@ def plot_shedding_peaks(
     )
 
     plt.tight_layout()
+    plt.close(fig)          # <<–– suppress duplicate display
     return fig
