@@ -66,9 +66,13 @@ def calc_shedding_peak(
     # extract participant and measurement data from the standardized shedding data loaded
     shedding_peak_data = []
     for participant_id, item in enumerate(dataset["participants"], 1):
-        for name, group in pd.DataFrame.from_dict(item["measurements"]).groupby("analyte"):
+        for name, group in pd.DataFrame.from_dict(item["measurements"]).groupby(
+            "analyte"
+        ):
             # Filter numeric values for shedding peak calculation
-            numeric_values = group[group["value"].apply(lambda x: isinstance(x, (int, float)))]
+            numeric_values = group[
+                group["value"].apply(lambda x: isinstance(x, (int, float)))
+            ]
 
             # Skip if no valid data after filtering
             if numeric_values.empty:
@@ -82,7 +86,11 @@ def calc_shedding_peak(
                 continue
 
             # Calculate peak time
-            shedding_peak = group.loc[numeric_values["value"].idxmax(), "time"] if not numeric_values.empty else pd.NA
+            shedding_peak = (
+                group.loc[numeric_values["value"].idxmax(), "time"]
+                if not numeric_values.empty
+                else pd.NA
+            )
 
             row_new = {
                 "dataset_id": dataset["dataset_id"],
@@ -100,7 +108,9 @@ def calc_shedding_peak(
 
     # Return empty DataFrame if no data
     if df_shedding_peak.empty:
-        logger.warning(f"No valid shedding peak data found for study {dataset['dataset_id']}")
+        logger.warning(
+            f"No valid shedding peak data found for study {dataset['dataset_id']}"
+        )
         return pd.DataFrame()
 
     # merge analyte information and drop analyte column
@@ -114,9 +124,8 @@ def calc_shedding_peak(
     )
 
     if plotting:
-        plt_shedding = plot_shedding_peak(
-            df_shedding_peak
-        )
+        plt.ioff()  # Prevent double display in Jupyter
+        plt_shedding = plot_shedding_peak(df_shedding_peak)
         plt.close(plt_shedding)  # Close the figure to prevent automatic display
 
     df_return = (
@@ -155,6 +164,7 @@ def plot_shedding_peak(
     peak_color: str = "tab:red",
     window_color: str = "gray",
 ) -> plt.Figure:
+    plt.ioff()  # Prevent double display in Jupyter
     """
     Create a faceted error-bar plot showing each participant's shedding window and peak,
     grouped by specimen type.
@@ -188,7 +198,7 @@ def plot_shedding_peak(
     # Verify required columns are present
     required_cols = {
         "specimen",
-        "participant_id", 
+        "participant_id",
         "first_sample",
         "last_sample",
         "shedding_peak",
@@ -209,13 +219,17 @@ def plot_shedding_peak(
         raise ValueError("No valid data remains after dropping NA values.")
 
     # limit rows per specimen for legibility
-    df = df.groupby("specimen").apply(
-        lambda g: (
-            g.sample(n=max_nparticipant, random_state=random_seed)
-            if len(g) > max_nparticipant
-            else g
+    df = (
+        df.groupby("specimen")
+        .apply(
+            lambda g: (
+                g.sample(n=max_nparticipant, random_state=random_seed)
+                if len(g) > max_nparticipant
+                else g
+            )
         )
-    ).reset_index(level=0, drop=True)
+        .reset_index(level=0, drop=True)
+    )
 
     # error-bar extents
     df["err_plus"] = df["last_sample"] - df["first_sample"]
@@ -226,9 +240,7 @@ def plot_shedding_peak(
 
     # Create figure and axes
     fig, axes = plt.subplots(
-        1, n,
-        figsize=(figsize_width_per_specimen * n, figsize_height),
-        sharey=False
+        1, n, figsize=(figsize_width_per_specimen * n, figsize_height), sharey=False
     )
     if n == 1:
         axes = [axes]
@@ -338,14 +350,16 @@ def plot_shedding_peaks(
     bxp_stats = []
     specimen_order = []
     for _, r in df_filtered.iterrows():
-        bxp_stats.append({
-            "label": f"{r['dataset_id']} (n={r['n_participant']})",
-            "whislo": r["shedding_peak_min"],
-            "q1": r["shedding_peak_q25"],
-            "med": r["shedding_peak_median"],
-            "q3": r["shedding_peak_q75"],
-            "whishi": r["shedding_peak_max"],
-        })
+        bxp_stats.append(
+            {
+                "label": f"{r['dataset_id']} (n={r['n_participant']})",
+                "whislo": r["shedding_peak_min"],
+                "q1": r["shedding_peak_q25"],
+                "med": r["shedding_peak_median"],
+                "q3": r["shedding_peak_q75"],
+                "whishi": r["shedding_peak_max"],
+            }
+        )
         specimen_order.append(r["specimen"])
 
     # Create figure and plot
