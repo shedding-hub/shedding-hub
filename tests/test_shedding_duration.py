@@ -111,7 +111,7 @@ def test_plot_shedding_duration(minimal_dataset):
 
 def test_plot_shedding_duration_empty():
     with pytest.raises(ValueError):
-        sh.plot_shedding_duration(pd.DataFrame(), dataset_id="test_dataset")
+        sh.plot_shedding_duration(pd.DataFrame())
 
 
 @patch("shedding_hub.shedding_duration.sh.load_dataset")

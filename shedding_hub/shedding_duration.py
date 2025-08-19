@@ -7,6 +7,14 @@ from matplotlib.lines import Line2D
 import traceback
 import logging
 
+try:
+    from IPython.display import display
+except ImportError:
+    # Fallback for non-IPython environments (like unit tests)
+    def display(fig):
+        pass  # Do nothing when not in IPython
+
+
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
 DEFAULT_FIGURE_SIZE = (8, 6)
@@ -167,7 +175,6 @@ def plot_shedding_duration(
 
     Args:
         df_shedding_duration: Shedding duration dataset extracted from the loaded dataset.
-        dataset_id: Dataset identifier, e.g., :code:`woelfel2020virological`.
         max_nparticipant: Maximum number of participants to show per specimen type.
             If exceeded, participants are randomly sampled.
         random_seed: Random seed for participant sampling when max_nparticipant is exceeded.
