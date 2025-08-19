@@ -1,12 +1,10 @@
 import shedding_hub as sh
 import pandas as pd
-from typing import List, Dict, Any, Optional, Tuple, Union, Literal
+from typing import List, Dict, Any, Literal
 import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 from matplotlib.lines import Line2D
 from matplotlib import cm
 import logging
-from collections.abc import Iterable
 
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
@@ -125,9 +123,8 @@ def calc_shedding_peak(
     )
 
     if plotting:
-        plt.ioff()  # Prevent double display in Jupyter
         plt_shedding = plot_shedding_peak(df_shedding_peak)
-        plt.close(plt_shedding)  # Close the figure to prevent automatic display
+        display(plt_shedding)
 
     df_return = (
         df_shedding_peak.groupby(
@@ -192,23 +189,19 @@ def plot_shedding_peak(
         - Error bars show the full shedding window from first to last sample
         - Diamond markers show the peak shedding time point
     """
-    # Debug logging
-    logger.info(f"Input DataFrame columns: {df_shedding_peak.columns.tolist()}")
-    logger.info(f"Input DataFrame shape: {df_shedding_peak.shape}")
-
     # Verify required columns are present
-    required_cols = {
+    required_columns = {
         "specimen",
         "participant_id",
         "first_sample",
         "last_sample",
         "shedding_peak",
     }
-    missing = required_cols - set(df_shedding_peak.columns)
-    if missing:
+    missing_columns = required_columns - set(df_shedding_peak.columns)
+    if missing_columns:
         raise ValueError(
             "Input DataFrame is missing required column(s): "
-            f"{', '.join(sorted(missing))}"
+            f"{', '.join(sorted(missing_columns))}"
         )
 
     # Drop any rows with NA values in time columns
@@ -220,17 +213,12 @@ def plot_shedding_peak(
         raise ValueError("No valid data remains after dropping NA values.")
 
     # limit rows per specimen for legibility
-    df = (
-        df.groupby("specimen")
-        .apply(
-            lambda g: (
-                g.sample(n=max_nparticipant, random_state=random_seed)
-                if len(g) > max_nparticipant
-                else g
-            )
-        )
-        .reset_index(level=0, drop=True)
-    )
+    dfs = []
+    for specimen, group in df.groupby("specimen"):
+        if len(group) > max_nparticipant:
+            group = group.sample(n=max_nparticipant, random_state=random_seed)
+        dfs.append(group)
+    df = pd.concat(dfs, ignore_index=True)
 
     # error-bar extents
     df["err_plus"] = df["last_sample"] - df["first_sample"]
@@ -275,82 +263,114 @@ def plot_shedding_peak(
 
         ax.set_yticks(y)
         ax.set_yticklabels("P" + g["participant_id"].astype(str))
-        ax.set_xlabel("Days from reference event")
+        ax.set_xlabel(f"Days after {df_shedding_peak['reference_event'].iloc[0]}")
         ax.set_title(spec)
         ax.grid(axis="x", alpha=0.3)
 
     axes[0].set_ylabel("Participant")
     axes[-1].legend(loc="upper right")
     fig.suptitle(
-        "Shedding window (error bar) + peak, grouped by specimen",
+        f'Individual Shedding Peak for Dataset "{df_shedding_peak['dataset_id'].iloc[0]}"',
         y=1.02,
         fontsize=14,
     )
     plt.tight_layout()
-    plt.close(fig)          # <<–– suppress duplicate display
-    
+    plt.close(fig)  # <<–– suppress duplicate display
+
     return fig
 
 
-def plot_shedding_peaks(
-    dataset_ids: Union[str, List[str], tuple],
+def calc_shedding_peaks(
+    dataset_ids: List[str],
     *,
-    selected_biomarker: str = DEFAULT_BIOMARKER,
-    selected_reference_event: str = "symptom onset",
-    selected_min_nparticipant: int = 5,
-    x_axis_upper_limit: int | None = 50,
-) -> plt.Figure:
+    plotting: bool = False,
+    biomarker: str = DEFAULT_BIOMARKER,
+    reference_event: str = "symptom onset",
+    min_nparticipant: int = 5,
+) -> pd.DataFrame:
     """
-    Load multiple datasets and create a summary plot of shedding peaks.
+    Calculate summary statistics for the shedding peak using multiple loaded datasets.
 
     Args:
-        dataset_ids: List of dataset IDs to load and analyze.
-        selected_biomarker: Biomarker to filter by (default: SARS-CoV-2).
-        selected_reference_event: Reference event to use for time alignment.
-        selected_min_nparticipant: Minimum number of participants required to include a study.
+        dataset_ids: A list of dataset identifiers.
+        plotting: Create a plot for study level of shedding duration by specimen type.
+        biomarker: Filter the data for plotting with a specific biomarker (e.g., "SARS-CoV-2").
+        reference_event: Filter the data for plotting with a specific reference event (e.g., "symptom onset").
+        min_nparticipant: Filter the data for plotting with a minimum number of participants (e.g., 5).
+
+    Returns:
+        Summary table of shedding peak (min, q1, median, q3, max, mean, n_sample, n_participant) by study, biomarker, and specimen.
+
+    Raises:
+        ValueError: If dataset_ids is empty or contains invalid entries.
+    """
+    if not dataset_ids:
+        raise ValueError("dataset_ids cannot be empty")
+
+    loaded_datasets = []
+    for dataset_id in dataset_ids:
+        logger.info(f"Loading the data: {dataset_id}")
+        loaded_datasets.append(
+            calc_shedding_peak(
+                dataset=sh.load_dataset(dataset=dataset_id),
+                plotting=False,
+                output="summary",
+            )
+        )
+
+    if not loaded_datasets:
+        logger.warning(
+            "No datasets were successfully loaded. Returning empty DataFrame."
+        )
+        return pd.DataFrame()
+
+    df_shedding_peaks = pd.concat(loaded_datasets, ignore_index=True)
+
+    if plotting and not df_shedding_peaks.empty:
+        plt_sheddings = plot_shedding_peaks(
+            df_shedding_peaks,
+            biomarker=biomarker,
+            reference_event=reference_event,
+            min_nparticipant=min_nparticipant,
+        )
+        display(plt_sheddings)
+
+    return df_shedding_peaks
+
+
+def plot_shedding_peaks(
+    df_shedding_peaks: pd.DataFrame,
+    *,
+    biomarker: str = DEFAULT_BIOMARKER,
+    reference_event: str = "symptom onset",
+    min_nparticipant: int = 5,
+    x_axis_upper_limit: int | None = 50,
+) -> plt.Figure:
+    plt.ioff()  # Prevent double display in Jupyter
+    """
+    Plot shedding peaks by study, biomarker, specimen type, and reference event.
+
+    Args:
+        df_shedding_peaks: Summary table of shedding peak (min, max, mean, n_sample, n_participant) by study, biomarker, and specimen.
+        biomarker: Filter the data for plotting with a specific biomarker (e.g., "SARS-CoV-2").
+        reference_event: Filter the data for plotting with a specific reference event (e.g., "symptom onset").
+        min_nparticipant: Filter the data for plotting with a minimum number of participants (e.g., 5).
         x_axis_upper_limit: Upper limit for x-axis in days (None for auto-scaling).
 
     Returns:
         matplotlib.figure.Figure: Box plot showing shedding peaks across studies.
     """
-    # ---- normalise input ----------------------------------------------
-    if isinstance(dataset_ids, str):
-        dataset_ids = [dataset_ids]
-    elif not isinstance(dataset_ids, Iterable):
-        raise TypeError("dataset_ids must be a string or an iterable of strings")
-
-    if not dataset_ids:
-        raise ValueError("dataset_ids cannot be empty")
-
-    # Load and process datasets
-    summary_frames = []
-    for dataset_id in dataset_ids:
-        logger.info(f"Loading the data: {dataset_id}")
-        try:
-            df_raw = sh.load_dataset(dataset=dataset_id)
-            df_peak = calc_shedding_peak(df_raw, output="summary", plotting=False)
-            summary_frames.append(df_peak)
-            logger.info(f"✓ {dataset_id} processed")
-        except Exception as e:
-            logger.warning(f"✗ {dataset_id} failed → {e}")
-
-    if not summary_frames:
-        logger.warning("No datasets were successfully loaded. Nothing to plot.")
-        raise ValueError("All dataset IDs failed; nothing to plot.")
-
-    df_summary = pd.concat(summary_frames, ignore_index=True)
-
     # Filter summary based on criteria
-    df_filtered = df_summary.query(
-        "biomarker == @selected_biomarker and "
-        "reference_event == @selected_reference_event and "
-        "n_participant >= @selected_min_nparticipant"
+    df_filtered = df_shedding_peaks.query(
+        "biomarker == @biomarker and "
+        "reference_event == @reference_event and "
+        "n_participant >= @min_nparticipant"
     ).copy()
 
     if df_filtered.empty:
         raise ValueError(
             "No rows match the chosen biomarker/reference_event "
-            "with ≥ selected_min_nparticipant."
+            "with ≥ min_nparticipant."
         )
 
     df_filtered = df_filtered.sort_values(["specimen", "dataset_id"])
@@ -382,7 +402,7 @@ def plot_shedding_peaks(
         line.set_linewidth(1.5)
 
     # Create color map for unique specimens
-    unique_specimens = pd.unique(specimen_order)
+    unique_specimens = pd.Series(specimen_order).unique()
     cmap = cm.get_cmap("tab10", len(unique_specimens))
     spec_colors = {spec: cmap(i) for i, spec in enumerate(unique_specimens)}
 
@@ -394,12 +414,9 @@ def plot_shedding_peaks(
     if x_axis_upper_limit is not None:
         ax.set_xlim(-5, x_axis_upper_limit)
 
-    ax.set_xlabel("Shedding peak (time units)")
-    ax.set_ylabel("Study")
-    ax.set_title(
-        f"{selected_biomarker} shedding peak by study "
-        f"(ref = {selected_reference_event})"
-    )
+    ax.set_xlabel(f"Days after {reference_event}")
+    ax.set_ylabel("")
+    ax.set_title(f"Shedding Peak Plot for {biomarker}")
     ax.axvline(0, color="gray", linestyle="--", linewidth=1)
 
     # Add legend for unique specimens
@@ -420,10 +437,10 @@ def plot_shedding_peaks(
         handles,
         [h.get_label() for h in handles],
         title="Specimen",
-        bbox_to_anchor=(1.02, 1),
-        loc="upper left",
+        loc="upper right",
+        bbox_to_anchor=(1, 1),
     )
 
     plt.tight_layout()
-    plt.close(fig)          # <<–– suppress duplicate display
+    plt.close(fig)  # <<–– suppress duplicate display
     return fig
