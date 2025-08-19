@@ -1,6 +1,6 @@
 import shedding_hub as sh
 import pandas as pd
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Literal
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from matplotlib.lines import Line2D
@@ -23,6 +23,7 @@ def calc_shedding_duration(
     dataset: Dict[str, Any],
     *,
     plotting: bool = False,
+    output: Literal["summary", "individual"] = "summary",
 ) -> pd.DataFrame:
     """
     Calculate summary statistics for the shedding duration using a loaded dataset by the `load_dataset` function.
@@ -30,9 +31,12 @@ def calc_shedding_duration(
     Args:
         dataset: Loaded dataset using the `load_dataset` function.
         plotting: Create a plot for individual level of shedding duration by specimen type.
+        output: Type of dataframe returned.
+            summary: Summary table of shedding duration (min, max, mean) by biomarker, specimen, and reference event.
+            individual: Individual shedding duration by biomarker, specimen, and reference event.
 
     Returns:
-        Summary table of shedding duration (min, max, mean) by biomarker and specimen.
+        DataFrame of shedding duration either summary or individual.
 
     Raises:
         ValueError: If dataset is missing required keys or is empty.
@@ -126,9 +130,8 @@ def calc_shedding_duration(
     )
 
     if plotting:
-        plt_shedding = plot_shedding_duration(
-            df_shedding_duration, dataset_id=dataset["dataset_id"]
-        )
+        plt_shedding = plot_shedding_duration(df_shedding_duration)
+        display(plt_shedding)
 
     df_return = (
         df_shedding_duration.groupby(
@@ -144,21 +147,33 @@ def calc_shedding_duration(
         .reset_index()
     )
 
-    return df_return
+    if output == "summary":
+        return df_return
+    elif output == "individual":
+        return df_shedding_duration
+    else:
+        raise ValueError("`output` must be either 'summary' or 'individual'")
 
 
 def plot_shedding_duration(
-    df_shedding_duration: pd.DataFrame, dataset_id: str
+    df_shedding_duration: pd.DataFrame,
+    *,  # Force keyword arguments for better clarity
+    max_nparticipant: int = 30,
+    random_seed: int = 12345,
 ) -> plt.Figure:
+    plt.ioff()  # Prevent double display in Jupyter
     """
     Plot shedding duration for each individual by specimen type.
 
     Args:
         df_shedding_duration: Shedding duration dataset extracted from the loaded dataset.
         dataset_id: Dataset identifier, e.g., :code:`woelfel2020virological`.
+        max_nparticipant: Maximum number of participants to show per specimen type.
+            If exceeded, participants are randomly sampled.
+        random_seed: Random seed for participant sampling when max_nparticipant is exceeded.
 
     Returns:
-        The plot of shedding duration.
+        matplotlib.pyplot.Figure: The generated figure of shedding duration.
 
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
@@ -178,6 +193,14 @@ def plot_shedding_duration(
 
     if missing_columns:
         raise ValueError(f"DataFrame missing required columns: {missing_columns}")
+
+    # limit rows per specimen for legibility
+    dfs = []
+    for specimen, group in df_shedding_duration.groupby("specimen"):
+        if len(group) > max_nparticipant:
+            group = group.sample(n=max_nparticipant, random_state=random_seed)
+        dfs.append(group)
+    df_shedding_duration = pd.concat(dfs, ignore_index=True)
 
     # Plot range bars
     fig = plt.figure(figsize=DEFAULT_FIGURE_SIZE)
@@ -231,14 +254,20 @@ def plot_shedding_duration(
 
     # Add both legends
     plt.legend(
-        handles=specimen_legend + linestyle_legend, title="Legend", loc="upper right"
+        handles=specimen_legend + linestyle_legend,
+        title="Legend",
+        loc="upper right",
+        bbox_to_anchor=(1, 1),
     )
 
     plt.yticks([])
     plt.xlabel(f"Days after {df_shedding_duration['reference_event'].iloc[0]}")
-    plt.title(f'Individual Shedding Duration for the Dataset "{dataset_id}"')
+    plt.title(
+        f'Individual Shedding Duration for the Dataset "{df_shedding_duration["dataset_id"].iloc[0]}"'
+    )
     plt.grid(True, axis="x")
     plt.tight_layout()
+    plt.close(fig)  # <<–– suppress duplicate display
     return fig
 
 
@@ -286,6 +315,7 @@ def calc_shedding_durations(
         plt_sheddings = plot_shedding_durations(
             df_shedding_durations, biomarker=biomarker
         )
+        display(plt_sheddings)
 
     return df_shedding_durations
 
@@ -293,6 +323,7 @@ def calc_shedding_durations(
 def plot_shedding_durations(
     df_shedding_durations: pd.DataFrame, biomarker: str = DEFAULT_BIOMARKER
 ) -> plt.Figure:
+    plt.ioff()  # Prevent double display in Jupyter
     """
     Plot shedding duration by study and specimen type.
 
@@ -397,4 +428,5 @@ def plot_shedding_durations(
     plt.title(f"Shedding Duration Plot for {biomarker}")
     plt.grid(True, axis="x")
     plt.tight_layout()
+    plt.close(fig)  # <<–– suppress duplicate display
     return fig
