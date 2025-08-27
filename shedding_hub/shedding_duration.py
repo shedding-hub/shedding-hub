@@ -7,14 +7,6 @@ from matplotlib.lines import Line2D
 import traceback
 import logging
 
-try:
-    from IPython.display import display
-except ImportError:
-    # Fallback for non-IPython environments (like unit tests)
-    def display(fig):
-        pass  # Do nothing when not in IPython
-
-
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
 DEFAULT_FIGURE_SIZE = (8, 6)
@@ -30,18 +22,16 @@ logger = logging.getLogger(__name__)
 def calc_shedding_duration(
     dataset: Dict[str, Any],
     *,
-    plotting: bool = False,
-    output: Literal["summary", "individual"] = "summary",
+    output: Literal["summary", "individual"] = "individual",
 ) -> pd.DataFrame:
     """
     Calculate summary statistics for the shedding duration using a loaded dataset by the `load_dataset` function.
 
     Args:
         dataset: Loaded dataset using the `load_dataset` function.
-        plotting: Create a plot for individual level of shedding duration by specimen type.
         output: Type of dataframe returned.
             summary: Summary table of shedding duration (min, max, mean) by biomarker, specimen, and reference event.
-            individual: Individual shedding duration by biomarker, specimen, and reference event.
+            individual: Individual shedding duration by biomarker, specimen, and reference event. This is used for plot_shedding_duration function.
 
     Returns:
         DataFrame of shedding duration either summary or individual.
@@ -137,11 +127,10 @@ def calc_shedding_duration(
         df_shedding_duration["last_detect"] - df_shedding_duration["first_detect"] + 1
     )
 
-    if plotting:
-        plt_shedding = plot_shedding_duration(df_shedding_duration)
-        display(plt_shedding)
+    if output == "individual":
+        return df_shedding_duration
 
-    df_return = (
+    df_shedding_duration_summary = (
         df_shedding_duration.groupby(
             ["dataset_id", "biomarker", "specimen", "reference_event"]
         )
@@ -156,11 +145,9 @@ def calc_shedding_duration(
     )
 
     if output == "summary":
-        return df_return
-    elif output == "individual":
-        return df_shedding_duration
-    else:
-        raise ValueError("`output` must be either 'summary' or 'individual'")
+        return df_shedding_duration_summary
+
+    raise ValueError("`output` must be either 'summary' or 'individual'")
 
 
 def plot_shedding_duration(
@@ -169,7 +156,6 @@ def plot_shedding_duration(
     max_nparticipant: int = 30,
     random_seed: int = 12345,
 ) -> plt.Figure:
-    plt.ioff()  # Prevent double display in Jupyter
     """
     Plot shedding duration for each individual by specimen type.
 
@@ -180,7 +166,7 @@ def plot_shedding_duration(
         random_seed: Random seed for participant sampling when max_nparticipant is exceeded.
 
     Returns:
-        matplotlib.pyplot.Figure: The generated figure of shedding duration.
+        The generated figure of shedding duration.
 
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
@@ -274,14 +260,12 @@ def plot_shedding_duration(
     )
     plt.grid(True, axis="x")
     plt.tight_layout()
-    plt.close(fig)  # <<–– suppress duplicate display
     return fig
 
 
 def calc_shedding_durations(
     dataset_ids: List[str],
     *,
-    plotting: bool = False,
     biomarker: str = DEFAULT_BIOMARKER,
 ) -> pd.DataFrame:
     """
@@ -289,7 +273,6 @@ def calc_shedding_durations(
 
     Args:
         dataset_ids: A list of dataset identifiers.
-        plotting: Create a plot for study level of shedding duration by specimen type.
         biomarker: Filter the data for plotting with a specific biomarker (e.g., "SARS-CoV-2").
 
     Returns:
@@ -306,23 +289,11 @@ def calc_shedding_durations(
         logger.info(f"Loading the data: {dataset_id}")
         loaded_datasets.append(
             calc_shedding_duration(
-                dataset=sh.load_dataset(dataset=dataset_id), plotting=False
+                dataset=sh.load_dataset(dataset=dataset_id), output="summary"
             )
         )
 
-    if not loaded_datasets:
-        logger.warning(
-            "No datasets were successfully loaded. Returning empty DataFrame."
-        )
-        return pd.DataFrame()
-
     df_shedding_durations = pd.concat(loaded_datasets, ignore_index=True)
-
-    if plotting and not df_shedding_durations.empty:
-        plt_sheddings = plot_shedding_durations(
-            df_shedding_durations, biomarker=biomarker
-        )
-        display(plt_sheddings)
 
     return df_shedding_durations
 
@@ -330,7 +301,6 @@ def calc_shedding_durations(
 def plot_shedding_durations(
     df_shedding_durations: pd.DataFrame, biomarker: str = DEFAULT_BIOMARKER
 ) -> plt.Figure:
-    plt.ioff()  # Prevent double display in Jupyter
     """
     Plot shedding duration by study and specimen type.
 
@@ -435,5 +405,4 @@ def plot_shedding_durations(
     plt.title(f"Shedding Duration Plot for {biomarker}")
     plt.grid(True, axis="x")
     plt.tight_layout()
-    plt.close(fig)  # <<–– suppress duplicate display
     return fig

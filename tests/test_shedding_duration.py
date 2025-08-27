@@ -78,7 +78,8 @@ def minimal_dataset_2():
 def test_calc_shedding_duration_valid(minimal_dataset):
     df = sh.calc_shedding_duration(minimal_dataset)
     assert not df.empty
-    assert "shedding_duration_min" in df.columns
+    assert "first_detect" in df.columns
+    assert "last_sample" in df.columns
     assert df["dataset_id"].iloc[0] == "test_dataset"
 
 
@@ -89,23 +90,43 @@ def test_calc_shedding_duration_invalid():
         sh.calc_shedding_duration({"foo": "bar"})
 
 
-@patch("shedding_hub.shedding_duration.sh.load_dataset")
-def test_calc_shedding_durations_valid(mock_load_dataset, minimal_dataset):
-    mock_load_dataset.return_value = minimal_dataset
-    df = sh.calc_shedding_durations(["test_dataset"])
+def test_calc_shedding_durations_valid():
+    df = sh.calc_shedding_durations(["woelfel2020virological"])
     assert not df.empty
-    assert "shedding_duration_mean" in df.columns
+
+    # Check first row values
+    expected_first_row = pd.Series(
+        {
+            "dataset_id": "woelfel2020virological",
+            "biomarker": "SARS-CoV-2",
+            "specimen": "oropharyngeal_swab",
+            "reference_event": "symptom onset",
+            "shedding_duration_min": 3,
+            "shedding_duration_max": 23,
+            "shedding_duration_mean": 13.111111,
+            "n_sample": 153,
+            "n_participant": 9,
+        }
+    )
+
+    # Get first row as Series and check each value
+    first_row = df.iloc[0].copy()
+    first_row.name = None  # Reset the index name
+    pd.testing.assert_series_equal(
+        first_row[expected_first_row.index], expected_first_row, check_names=True
+    )
 
 
-@patch("shedding_hub.shedding_duration.sh.load_dataset")
-def test_calc_shedding_durations_all_fail(mock_load_dataset):
-    mock_load_dataset.side_effect = Exception("fail")
+def test_calc_shedding_durations_all_fail():
     with pytest.raises(Exception):
-        df = sh.calc_shedding_durations(["bad_dataset"])
+        sh.calc_shedding_durations(["invalid_dataset_id"])
 
 
 def test_plot_shedding_duration(minimal_dataset):
-    fig = sh.calc_shedding_duration(minimal_dataset, plotting=True)
+    # First get the individual level data
+    df_individual = sh.calc_shedding_duration(minimal_dataset, output="individual")
+    # Then plot it
+    fig = sh.plot_shedding_duration(df_individual)
     assert fig is not None
 
 
@@ -119,8 +140,9 @@ def test_plot_shedding_durations_with_ids(
     mock_load_dataset, minimal_dataset, minimal_dataset_2
 ):
     mock_load_dataset.side_effect = [minimal_dataset, minimal_dataset_2]
-    df1 = sh.calc_shedding_duration(minimal_dataset)
-    df2 = sh.calc_shedding_duration(minimal_dataset_2)
+    # Get summary data for both datasets
+    df1 = sh.calc_shedding_duration(minimal_dataset, output="summary")
+    df2 = sh.calc_shedding_duration(minimal_dataset_2, output="summary")
     df = pd.concat([df1, df2], ignore_index=True)
     fig = sh.plot_shedding_durations(df, biomarker="SARS-CoV-2")
     import matplotlib.figure
