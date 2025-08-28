@@ -135,11 +135,7 @@ def test_plot_shedding_duration_empty():
         sh.plot_shedding_duration(pd.DataFrame())
 
 
-@patch("shedding_hub.shedding_duration.sh.load_dataset")
-def test_plot_shedding_durations_with_ids(
-    mock_load_dataset, minimal_dataset, minimal_dataset_2
-):
-    mock_load_dataset.side_effect = [minimal_dataset, minimal_dataset_2]
+def test_plot_shedding_durations_with_ids(minimal_dataset, minimal_dataset_2):
     # Get summary data for both datasets
     df1 = sh.calc_shedding_duration(minimal_dataset, output="summary")
     df2 = sh.calc_shedding_duration(minimal_dataset_2, output="summary")
