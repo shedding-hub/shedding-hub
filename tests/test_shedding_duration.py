@@ -4,7 +4,6 @@ matplotlib.use("Agg")
 
 import pytest
 import pandas as pd
-from unittest.mock import patch, MagicMock
 import shedding_hub as sh
 
 
