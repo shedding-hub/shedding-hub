@@ -5,21 +5,13 @@ from .shedding_duration import (
     plot_shedding_duration,
     plot_shedding_durations,
 )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 383ad57648f41e6f9e19092c85bbc94b3e31d568
+
 from .shedding_peak import (
     calc_shedding_peak,
     calc_shedding_peaks,
     plot_shedding_peak,
     plot_shedding_peaks,
 )
-<<<<<<< HEAD
->>>>>>> 383ad57 (Harmonize shedding_duration and shedding_peak)
-=======
->>>>>>> 383ad57648f41e6f9e19092c85bbc94b3e31d568
 
 __all__ = [
     "folded_str",
@@ -30,17 +22,8 @@ __all__ = [
     "calc_shedding_durations",
     "plot_shedding_duration",
     "plot_shedding_durations",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 383ad57648f41e6f9e19092c85bbc94b3e31d568
     "calc_shedding_peak",
     "calc_shedding_peaks",
     "plot_shedding_peak",
     "plot_shedding_peaks",
-<<<<<<< HEAD
->>>>>>> 383ad57 (Harmonize shedding_duration and shedding_peak)
-=======
->>>>>>> 383ad57648f41e6f9e19092c85bbc94b3e31d568
 ]
