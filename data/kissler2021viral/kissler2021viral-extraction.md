@@ -29,7 +29,7 @@ def assign_reference_day(group):
         group["DayFromReference"] = pd.NA
     else:
         ref_time = pos_times.min()
-        group["DayFromReference"] = group["TestDateIndex"] - ref_time + 1
+        group["DayFromReference"] = group["TestDateIndex"] - ref_time 
     return group
 
 Kissler2021 = Kissler2021.groupby("PersonIDClean", group_keys=False).apply(assign_reference_day)
@@ -93,13 +93,13 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 
 # YAML dictionary structure describing the dataset
-kissler2021 = dict(title="Densely sampled viral trajectories suggest longer duration of acute infection with B.1.1.7 variant relative to non-B.1.1.7 SARS-CoV-2",
-            doi="10.1056/nejmc2102507",
+kissler2021 = dict(title="Viral dynamics of acute SARS-CoV-2 infection and applications to diagnostic and public health strategies",
+            doi="10.1371/journal.pbio.3001333",
             description=folded_str("This study analyzed densely sampled longitudinal RT-qPCR data from 65 individuals infected with SARS-CoV-2, including 7 infected with the B.1.1.7 (Alpha) variant, using each person's lowest Ct value as the reference event time point. Inclusion criteria required each individual to have at least 5 positive PCR tests (Ct < 40), including at least one with Ct < 35. Ct value were collected using the Roche cobas SARS-CoV-2 assay and converted to estimated RNA viral concentrations via a standard curve and log-linear transformation.\n"),
             analytes=dict(AN_OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. The concentration was quantified in gene copies per milliliter.\n"),
-                          specimen=["nasopharyngeal_swab", "oropharyngeal_swab"],
-                          biomarker="AN_OPS_SARSCoV2",
-                          gene_target=["N1, N2, RdRp"],
+                          specimen=["anterior_nares_swab", "oropharyngeal_swab"],
+                          biomarker="SARS-CoV-2",
+                          gene_target="N1, N2, RdRp",
                           limit_of_quantification="unknown",
                           limit_of_detection=40,
                           unit="gc/mL",
