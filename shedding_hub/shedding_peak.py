@@ -363,7 +363,9 @@ def plot_shedding_peaks(
     # Create figure and plot
     fig, ax = plt.subplots(figsize=DEFAULT_MULTI_FIGURE_SIZE)
 
-    bp = ax.bxp(bxp_stats, vert=False, patch_artist=True, showfliers=False)
+    bp = ax.bxp(
+        bxp_stats, orientation="horizontal", patch_artist=True, showfliers=False
+    )
 
     # Style the plot
     for line in bp["medians"]:
@@ -372,7 +374,7 @@ def plot_shedding_peaks(
 
     # Create color map for unique specimens
     unique_specimens = pd.Series(specimen_order).unique()
-    cmap = cm.get_cmap("tab10", len(unique_specimens))
+    cmap = plt.colormaps["tab10"].resampled(len(unique_specimens))
     spec_colors = {spec: cmap(i) for i, spec in enumerate(unique_specimens)}
 
     for patch, spec in zip(bp["boxes"], specimen_order):
