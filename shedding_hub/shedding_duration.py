@@ -4,6 +4,7 @@ from typing import List, Dict, Any, Literal
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from matplotlib.lines import Line2D
+import traceback
 import logging
 
 # Constants

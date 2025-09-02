@@ -4,6 +4,7 @@ from typing import List, Dict, Any, Literal
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib import cm
+import matplotlib.figure as Figure
 import logging
 
 # Constants
@@ -152,7 +153,7 @@ def plot_shedding_peak(
     peak_marker: str = "D",
     peak_color: str = "tab:red",
     window_color: str = "gray",
-) -> plt.Figure:
+) -> Figure:
     """
     Create a faceted error-bar plot showing each participant's shedding window and peak,
     grouped by specimen type.
@@ -314,7 +315,7 @@ def plot_shedding_peaks(
     reference_event: str = "symptom onset",
     min_nparticipant: int = 5,
     x_axis_upper_limit: int | None = 50,
-) -> plt.Figure:
+) -> Figure:
     """
     Plot shedding peaks by study, biomarker, specimen type, and reference event.
 
