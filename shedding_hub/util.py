@@ -62,7 +62,9 @@ def load_dataset(
     if local:
         path = (pathlib.Path(local) / dataset / dataset).with_suffix(".yaml")
         with path.open() as fp:
-            return yaml.safe_load(fp)
+            data = yaml.safe_load(fp)
+        data["dataset_id"] = dataset
+        return data
 
     # If a PR is specified, resolve it so we can get the relevant file.
     if pr:
@@ -85,7 +87,9 @@ def load_dataset(
             f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}.yaml"
         )
     response.raise_for_status()
-    return yaml.safe_load(response.text)
+    data = yaml.safe_load(response.text)
+    data["dataset_id"] = dataset
+    return data
 
 
 class folded_str(str):
