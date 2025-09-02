@@ -21,7 +21,6 @@ logger = logging.getLogger(__name__)
 def calc_shedding_peak(
     dataset: Dict[str, Any],
     *,
-    plotting: bool = False,
     output: Literal["summary", "individual"] = "summary",
 ) -> pd.DataFrame:
     """
@@ -29,10 +28,9 @@ def calc_shedding_peak(
 
     Args:
         dataset: Loaded dataset using the `load_dataset` function.
-        plotting: Create a plot for individual level of shedding peak by specimen type.
         output: Type of dataframe returned.
             summary: Summary table of shedding peak (min, max, mean) by biomarker and specimen.
-            individual: Individual entries (Not summarized)
+            individual: Individual entries (Not summarized). This is used for plot_shedding_peak function.
 
     Returns:
         Summary table of shedding peak (min, max, mean) by biomarker and specimen.
@@ -85,11 +83,7 @@ def calc_shedding_peak(
                 continue
 
             # Calculate peak time
-            shedding_peak = (
-                group.loc[numeric_values["value"].idxmax(), "time"]
-                if not numeric_values.empty
-                else pd.NA
-            )
+            shedding_peak = group.loc[numeric_values["value"].idxmax(), "time"]
 
             row_new = {
                 "dataset_id": dataset["dataset_id"],
@@ -122,11 +116,10 @@ def calc_shedding_peak(
         lambda x: ", ".join(map(str, x)) if isinstance(x, list) else str(x)
     )
 
-    if plotting:
-        plt_shedding = plot_shedding_peak(df_shedding_peak)
-        display(plt_shedding)
+    if output == "individual":
+        return df_shedding_peak
 
-    df_return = (
+    df_shedding_peak_summary = (
         df_shedding_peak.groupby(
             ["dataset_id", "biomarker", "specimen", "reference_event"]
         )
@@ -144,11 +137,9 @@ def calc_shedding_peak(
     )
 
     if output == "summary":
-        return df_return
-    elif output == "individual":
-        return df_shedding_peak
-    else:
-        raise ValueError("`output` must be either 'summary' or 'individual'")
+        return df_shedding_peak_summary
+
+    raise ValueError("`output` must be either 'summary' or 'individual'")
 
 
 def plot_shedding_peak(
@@ -162,7 +153,6 @@ def plot_shedding_peak(
     peak_color: str = "tab:red",
     window_color: str = "gray",
 ) -> plt.Figure:
-    plt.ioff()  # Prevent double display in Jupyter
     """
     Create a faceted error-bar plot showing each participant's shedding window and peak,
     grouped by specimen type.
@@ -189,7 +179,10 @@ def plot_shedding_peak(
         - Error bars show the full shedding window from first to last sample
         - Diamond markers show the peak shedding time point
     """
-    # Verify required columns are present
+    if df_shedding_peak.empty:
+        raise ValueError("DataFrame is empty, cannot create plot")
+
+    # Verify required columns are present for plotting
     required_columns = {
         "specimen",
         "participant_id",
@@ -197,17 +190,15 @@ def plot_shedding_peak(
         "last_sample",
         "shedding_peak",
     }
-    missing_columns = required_columns - set(df_shedding_peak.columns)
+    missing_columns = set(required_columns) - set(df_shedding_peak.columns)
+
     if missing_columns:
         raise ValueError(
-            "Input DataFrame is missing required column(s): "
-            f"{', '.join(sorted(missing_columns))}"
+            f"DataFrame missing required columns for plotting shedding peak: {', '.join(sorted(missing_columns))}"
         )
 
-    # Drop any rows with NA values in time columns
-    df = df_shedding_peak.dropna(
-        subset=["first_sample", "last_sample", "shedding_peak"]
-    ).copy()
+    # Drop any rows with NA values in shedding peak
+    df = df_shedding_peak.dropna(subset=["shedding_peak"]).copy()
 
     if df.empty:
         raise ValueError("No valid data remains after dropping NA values.")
@@ -261,8 +252,7 @@ def plot_shedding_peak(
             label="Peak",
         )
 
-        ax.set_yticks(y)
-        ax.set_yticklabels("P" + g["participant_id"].astype(str))
+        ax.set_yticks([])
         ax.set_xlabel(f"Days after {df_shedding_peak['reference_event'].iloc[0]}")
         ax.set_title(spec)
         ax.grid(axis="x", alpha=0.3)
@@ -275,15 +265,12 @@ def plot_shedding_peak(
         fontsize=14,
     )
     plt.tight_layout()
-    plt.close(fig)  # <<–– suppress duplicate display
-
     return fig
 
 
 def calc_shedding_peaks(
     dataset_ids: List[str],
     *,
-    plotting: bool = False,
     biomarker: str = DEFAULT_BIOMARKER,
     reference_event: str = "symptom onset",
     min_nparticipant: int = 5,
@@ -293,7 +280,6 @@ def calc_shedding_peaks(
 
     Args:
         dataset_ids: A list of dataset identifiers.
-        plotting: Create a plot for study level of shedding duration by specimen type.
         biomarker: Filter the data for plotting with a specific biomarker (e.g., "SARS-CoV-2").
         reference_event: Filter the data for plotting with a specific reference event (e.g., "symptom onset").
         min_nparticipant: Filter the data for plotting with a minimum number of participants (e.g., 5).
@@ -312,28 +298,11 @@ def calc_shedding_peaks(
         logger.info(f"Loading the data: {dataset_id}")
         loaded_datasets.append(
             calc_shedding_peak(
-                dataset=sh.load_dataset(dataset=dataset_id),
-                plotting=False,
-                output="summary",
+                dataset=sh.load_dataset(dataset=dataset_id), output="summary"
             )
         )
 
-    if not loaded_datasets:
-        logger.warning(
-            "No datasets were successfully loaded. Returning empty DataFrame."
-        )
-        return pd.DataFrame()
-
     df_shedding_peaks = pd.concat(loaded_datasets, ignore_index=True)
-
-    if plotting and not df_shedding_peaks.empty:
-        plt_sheddings = plot_shedding_peaks(
-            df_shedding_peaks,
-            biomarker=biomarker,
-            reference_event=reference_event,
-            min_nparticipant=min_nparticipant,
-        )
-        display(plt_sheddings)
 
     return df_shedding_peaks
 
@@ -346,7 +315,6 @@ def plot_shedding_peaks(
     min_nparticipant: int = 5,
     x_axis_upper_limit: int | None = 50,
 ) -> plt.Figure:
-    plt.ioff()  # Prevent double display in Jupyter
     """
     Plot shedding peaks by study, biomarker, specimen type, and reference event.
 
@@ -370,7 +338,7 @@ def plot_shedding_peaks(
     if df_filtered.empty:
         raise ValueError(
             "No rows match the chosen biomarker/reference_event "
-            "with ≥ min_nparticipant."
+            "with the minimum number of participants required."
         )
 
     df_filtered = df_filtered.sort_values(["specimen", "dataset_id"])
@@ -442,5 +410,4 @@ def plot_shedding_peaks(
     )
 
     plt.tight_layout()
-    plt.close(fig)  # <<–– suppress duplicate display
     return fig
