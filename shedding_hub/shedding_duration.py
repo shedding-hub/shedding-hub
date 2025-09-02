@@ -4,7 +4,7 @@ from typing import List, Dict, Any, Literal
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from matplotlib.lines import Line2D
-import traceback
+from matplotlib.figure import Figure
 import logging
 
 # Constants
@@ -155,7 +155,7 @@ def plot_shedding_duration(
     *,  # Force keyword arguments for better clarity
     max_nparticipant: int = 30,
     random_seed: int = 12345,
-) -> plt.Figure:
+) -> Figure:
     """
     Plot shedding duration for each individual by specimen type.
 
@@ -300,7 +300,7 @@ def calc_shedding_durations(
 
 def plot_shedding_durations(
     df_shedding_durations: pd.DataFrame, biomarker: str = DEFAULT_BIOMARKER
-) -> plt.Figure:
+) -> Figure:
     """
     Plot shedding duration by study and specimen type.
 
@@ -356,6 +356,7 @@ def plot_shedding_durations(
 
     for name, group in df_shedding_durations_sorted.groupby("specimen"):
         color = color_map[specimen_counter % len(color_map)]
+        line = None
         for _, row in group.iterrows():
             x_vals = [
                 row["shedding_duration_min"],
@@ -384,6 +385,7 @@ def plot_shedding_durations(
                 row["shedding_duration_mean"], study_counter, marker="o", color=color
             )
             study_counter += 1
+        assert line, f"Group for specimen '{name}' is empty."
         legend_handles.append((line, name))
         specimen_counter += 1
 
