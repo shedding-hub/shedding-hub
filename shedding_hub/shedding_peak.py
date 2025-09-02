@@ -261,7 +261,7 @@ def plot_shedding_peak(
     axes[0].set_ylabel("Participant")
     axes[-1].legend(loc="upper right")
     fig.suptitle(
-        f'Individual Shedding Peak for Dataset "{df_shedding_peak['dataset_id'].iloc[0]}"',
+        f"Individual Shedding Peak for Dataset '{df_shedding_peak['dataset_id'].iloc[0]}'",
         y=1.02,
         fontsize=14,
     )
