@@ -65,7 +65,7 @@ def __main__(argv=None) -> None:
         }
         lines.extend(
             [
-                f"🔄 Summary for changed file `{filename}`:",
+                f"Summary for changed file `{filename}`:",
                 "",
                 "```",
                 pd.DataFrame(
