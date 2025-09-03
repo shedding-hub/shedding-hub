@@ -19,7 +19,7 @@ analytes:
     gene_target: N1, N2, RdRp
     limit_of_quantification: unknown
     limit_of_detection: 40
-    unit: gc/mL
+    unit: cycle threshold
     reference_event: confirmation date
 participants:
 - attributes:

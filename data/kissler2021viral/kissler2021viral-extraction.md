@@ -1,7 +1,6 @@
 # Extraction for Kissler et al. (2021)
 
-[Kissler et al. (2021)]( https://doi.org/10.1371/journal.pbio.3001333) analyzed densely sampled longitudinal RT-qPCR data from 65 individuals infected with SARS-CoV-2, including 7 infected with the B.1.1.7 (Alpha) variant, using each person's lowest Ct value as the reference event time point. Inclusion criteria required each individual to have at least 5 positive PCR tests (Ct < 40), including at least one with Ct < 35. Ct value were collected using the Roche cobas SARS-CoV-2 assay and converted to estimated RNA viral concentrations via a standard curve and log-linear transformation. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/kissler2021viral). However, the dataset we analyzed comes from the study at [CtTrajectories_B117] (https://www.medrxiv.org/content/10.1101/2021.02.16.21251535v1). The study analyzed densely sampled longitudinal RT-qPCR data from 65 individuals infected with SARS-CoV-2, including 7 infected with the B.1.1.7 (Alpha) variant, using each person's lowest Ct value as the reference event time point. Inclusion criteria required each individual to have at least 5 positive PCR tests (Ct < 40), including at least one with Ct < 35. Ct value were collected using the Roche cobas SARS-CoV-2 assay and converted to estimated RNA viral concentrations via a standard curve and log-linear transformation.
-
+[Kissler et al. (2021)]( https://doi.org/10.1371/journal.pbio.3001333) analyzed densely sampled prospective longitudinal quantitative reverse transcription PCR testing to measure the SARS-CoV-2 viral RNA trajectories for 68 individuals during the resumption of the 2019–2020 National Basketball Association season. We combined information published in [this preprint](https://www.medrxiv.org/content/10.1101/2021.02.16.21251535v1), which reported 65 individuals infected with SARS-CoV-2, including 7 infected with the B.1.1.7 (Alpha) variant. We determined the inclusion criteria required each individual to have at least 5 positive PCR tests (Ct < 40), including at least one with Ct < 35. Ct value were collected using the Roche cobas SARS-CoV-2 assay and converted to estimated RNA viral concentrations via a standard curve and log-linear transformation. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/kissler2021viral).
  
 First, we `import` python modules needed:
 
@@ -103,7 +102,7 @@ kissler2021 = dict(title="Viral dynamics of acute SARS-CoV-2 infection and appli
                           gene_target="N1, N2, RdRp",
                           limit_of_quantification="unknown",
                           limit_of_detection=40,
-                          unit="gc/mL",
+                          unit="cycle threshold",
                           reference_event="confirmation date",
         )
     ),
