@@ -231,7 +231,7 @@ def plot_shedding_peak(
             df[df["specimen"] == spec]
             .sort_values(["shedding_peak", "participant_id"], ascending=[True, True])
             .reset_index(drop=True)  # reset index after sorting
-        ) #Sort by shedding peak day.
+        )  # Sort by shedding peak day.
         y = list(range(len(g)))[::-1]
 
         # horizontal error bars (shedding window)
