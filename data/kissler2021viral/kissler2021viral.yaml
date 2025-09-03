@@ -3,13 +3,10 @@ title: Viral dynamics of acute SARS-CoV-2 infection and applications to diagnost
   and public health strategies
 doi: 10.1371/journal.pbio.3001333
 description: >
-  This study analyzed densely sampled longitudinal RT-qPCR data from 65 individuals
-  infected with SARS-CoV-2, including 7 infected with the B.1.1.7 (Alpha) variant,
-  using each person's lowest Ct value as the reference event time point. Inclusion
-  criteria required each individual to have at least 5 positive PCR tests (Ct < 40),
-  including at least one with Ct < 35. Ct value were collected using the Roche cobas
-  SARS-CoV-2 assay and converted to estimated RNA viral concentrations via a standard
-  curve and log-linear transformation.
+  This study followed 68 people with frequent RT-qPCR to map SARS-CoV-2 viral RNA
+  trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates
+  acute infection, and a second PCR within 48 hours helps tell whether someone is
+  early (proliferation) or late (clearance) in infection.
 analytes:
   AN_OPS_SARSCoV2:
     description: >
