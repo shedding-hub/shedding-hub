@@ -50,51 +50,6 @@ def extract_lineage(patient_data):
 
 
 participant_list = []
-```
-
-```python
-patient_data = Kissler2021[Kissler2021["PersonIDClean"] == i]
-    
-person_id = int(patient_data["PersonID"].iloc[0])
-```
-
-```python
-Kissler2021 = pd.read_csv("ct_dat_refined.csv")
-Kissler2021["type"] = "AN+OPS"    
-
-# Round test date index to nearest integer for consistent daily time units
-Kissler2021["RoundedDay"] = Kissler2021["TestDateIndex"].round().astype(int)
-
-# Function to assign reference day per individual (first day with Ct < 40)
-
-def assign_reference_day(group):
-    # first positive (Ct < 40) time using raw TestDateIndex
-    pos_times = group.loc[group["CtT1"] < 40, "TestDateIndex"]
-    if pos_times.empty:
-        group["DayFromReference"] = pd.NA
-    else:
-        ref_time = pos_times.min()
-        group["DayFromReference"] = group["TestDateIndex"] - ref_time 
-    return group
-
-Kissler2021 = Kissler2021.groupby("PersonIDClean", group_keys=False).apply(assign_reference_day)
-Kissler2021["DayFromReferenceRounded"] = (
-    Kissler2021["DayFromReference"].round().astype("Int64")  
-)
-
-
-def extract_lineage(patient_data):
-    if "B117Status" in patient_data.columns:
-        status = patient_data["B117Status"].astype(str)
-        if not status.empty:
-            if status.iloc[0] == "Yes":
-                return "B.1.1.7"
-            elif status.iloc[0] == "No":
-                return "non-B.1.1.7"
-    return "unknown"
-
-
-participant_list = []
 # Iterate over unique participant IDs
 for i in pd.unique(Kissler2021["PersonIDClean"]):
     patient_data = Kissler2021[Kissler2021["PersonIDClean"] == i]
