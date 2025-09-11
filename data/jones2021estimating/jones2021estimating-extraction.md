@@ -15,7 +15,7 @@ Raw data ['viral-load-with-negatives.tsv'](https://github.com/VirologyCharite/SA
 
 Each individual has only one positive test at record. 
 ```python
-df = pd.read_csv("/Users/fionaxiao/Desktop/💩/SheddingHub/jones2021estimating/data/viral-load-with-negatives.tsv", sep="\t")
+df = pd.read_csv("viral-load-with-negatives.tsv", sep="\t")
 df_filtered = df.groupby('personHash').filter(lambda g: not (g['Ct'] == -1.0).all())
 df_filtered['viral_load_extracted'] = 10 ** df_filtered['log10Load']
 
