@@ -6,6 +6,7 @@ from matplotlib.lines import Line2D
 from matplotlib import cm
 import matplotlib.figure as Figure
 import logging
+import numpy as np
 
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
@@ -48,52 +49,76 @@ def calc_shedding_peak(
     if missing_keys:
         raise ValueError(f"Dataset missing required keys: {missing_keys}")
 
-    # extract analyte data from the standardized shedding data loaded
+    # extract analyte data from the standardized shedding data loaded (include unit)
     df_analyte = pd.DataFrame(
         [
             {
                 "analyte": key,
-                "specimen": analyte["specimen"],
-                "biomarker": analyte["biomarker"],
-                "reference_event": analyte["reference_event"],
+                "specimen": analyte.get("specimen"),
+                "biomarker": analyte.get("biomarker"),
+                "reference_event": analyte.get("reference_event"),
+                "unit": analyte.get("unit"),
             }
-            for key, analyte in dataset["analytes"].items()
+            for key, analyte in dataset.get("analytes", {}).items()
         ]
     )
 
+    # map analyte -> unit for per-analyte decision when computing peak
+    analyte_unit_map = {row["analyte"]: row.get("unit") for _, row in df_analyte.iterrows()}
+
     # extract participant and measurement data from the standardized shedding data loaded
     shedding_peak_data = []
-    for participant_id, item in enumerate(dataset["participants"], 1):
-        for name, group in pd.DataFrame.from_dict(item["measurements"]).groupby(
-            "analyte"
-        ):
-            # Filter numeric values for shedding peak calculation
-            numeric_values = group[
-                group["value"].apply(lambda x: isinstance(x, (int, float)))
-            ]
+    for participant_id, item in enumerate(dataset.get("participants", []), 1):
+        meas = pd.DataFrame.from_dict(item.get("measurements", {}))
+        if meas.empty:
+            continue
 
-            # Skip if no valid data after filtering
-            if numeric_values.empty:
+        for name, group in meas.groupby("analyte"):
+            # coerce values to numeric where possible (handle numeric strings); drop non-numeric rows
+            g = group.copy()
+            g["value_num"] = pd.to_numeric(g["value"], errors="coerce")
+            g = g.dropna(subset=["value_num"])
+            if g.empty:
                 continue
 
-            # format time to numeric
-            group["time"] = pd.to_numeric(group["time"], errors="coerce")
-
-            # Skip if no valid numeric times
-            if group["time"].isna().all():
+            # coerce time to numeric for selection and for first/last calculations
+            g["time_num"] = pd.to_numeric(g["time"], errors="coerce")
+            # if all times are NA, skip
+            if g["time_num"].isna().all():
                 continue
 
-            # Calculate peak time
-            shedding_peak = group.loc[numeric_values["value"].idxmax(), "time"]
+            # decide whether to pick min (cycle threshold) or max (other units)
+            unit = analyte_unit_map.get(name)
+            pick_min = isinstance(unit, str) and unit.strip().lower() == "cycle threshold"
+
+            # select index of interest using rows with numeric values only
+            if pick_min:
+                sel_idx = g["value_num"].idxmin()
+            else:
+                sel_idx = g["value_num"].idxmax()
+
+            # get shedding_peak time from the selected row (use numeric-coerced time)
+            shedding_peak_time = g.loc[sel_idx, "time_num"]
+            if pd.isna(shedding_peak_time):
+                # skip if selected peak time is NA
+                continue
+
+            # compute first/last sample using numeric times (exclude non-numeric / 'unknown')
+            times_num = pd.to_numeric(group["time"], errors="coerce")
+            valid_times = times_num.loc[times_num.notna()]
+
+            # keep NA (np.nan) if there is no numeric time entry for this group
+            first_sample = valid_times.min() if not valid_times.empty else np.nan
+            last_sample = valid_times.max() if not valid_times.empty else np.nan
 
             row_new = {
-                "dataset_id": dataset["dataset_id"],
+                "dataset_id": dataset.get("dataset_id"),
                 "participant_id": participant_id,
                 "analyte": name,
                 "n_sample": group["value"].count(),
-                "first_sample": group[group["time"] != "unknown"]["time"].min(),
-                "last_sample": group[group["time"] != "unknown"]["time"].max(),
-                "shedding_peak": shedding_peak,
+                "first_sample": first_sample,
+                "last_sample": last_sample,
+                "shedding_peak": shedding_peak_time,
             }
             shedding_peak_data.append(row_new)
 
@@ -270,6 +295,9 @@ def plot_shedding_peak(
         fontsize=14,
     )
     plt.tight_layout()
+    # Close the figure in the pyplot state to avoid Jupyter/matplotlib auto-display
+    # while still returning the Figure object for the caller to display once.
+    plt.close(fig)
     return fig
 
 
@@ -417,4 +445,6 @@ def plot_shedding_peaks(
     )
 
     plt.tight_layout()
+    # Close the figure in the pyplot state to avoid duplicate display in notebooks.
+    plt.close(fig)
     return fig
