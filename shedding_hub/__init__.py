@@ -6,6 +6,13 @@ from .shedding_duration import (
     plot_shedding_durations,
 )
 
+from .shedding_peak import (
+    calc_shedding_peak,
+    calc_shedding_peaks,
+    plot_shedding_peak,
+    plot_shedding_peaks,
+)
+
 __all__ = [
     "folded_str",
     "literal_str",
@@ -15,4 +22,8 @@ __all__ = [
     "calc_shedding_durations",
     "plot_shedding_duration",
     "plot_shedding_durations",
+    "calc_shedding_peak",
+    "calc_shedding_peaks",
+    "plot_shedding_peak",
+    "plot_shedding_peaks",
 ]
