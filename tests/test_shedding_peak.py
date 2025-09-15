@@ -17,6 +17,7 @@ def minimal_dataset():
                 "specimen": "stool",
                 "biomarker": "SARS-CoV-2",
                 "reference_event": "symptom onset",
+                "unit": "gc/mL",
             }
         },
         "participants": [
@@ -24,12 +25,12 @@ def minimal_dataset():
                 "measurements": [
                     {"analyte": "A", "value": 1.0, "time": 0},
                     {"analyte": "A", "value": 2.0, "time": 1},
-                    {"analyte": "A", "value": 0.5, "time": 2},
+                    {"analyte": "A", "value": "negative", "time": 2},
                 ]
             },
             {
                 "measurements": [
-                    {"analyte": "A", "value": 0.5, "time": 0},
+                    {"analyte": "A", "value": "negative", "time": 0},
                     {"analyte": "A", "value": 3.0, "time": 1},
                     {"analyte": "A", "value": 1.0, "time": 2},
                 ]
@@ -47,18 +48,20 @@ def minimal_dataset_2():
                 "specimen": "nasal",
                 "biomarker": "SARS-CoV-2",
                 "reference_event": "symptom onset",
+                "unit": "gc/mL",
             },
             "C": {
                 "specimen": "serum",
                 "biomarker": "SARS-CoV-2",
                 "reference_event": "symptom onset",
+                "unit": "gc/mL",
             },
         },
         "participants": [
             {
                 "measurements": [
                     {"analyte": "B", "value": 1.0, "time": 0},
-                    {"analyte": "B", "value": 2.0, "time": 5},
+                    {"analyte": "B", "value": "negative", "time": 5},
                     {"analyte": "C", "value": 2.0, "time": 1},
                     {"analyte": "C", "value": 3.0, "time": 3},
                 ]
@@ -67,7 +70,7 @@ def minimal_dataset_2():
                 "measurements": [
                     {"analyte": "B", "value": 2.0, "time": 1},
                     {"analyte": "B", "value": 3.0, "time": 3},
-                    {"analyte": "C", "value": 1.0, "time": 0},
+                    {"analyte": "C", "value": "negative", "time": 0},
                     {"analyte": "C", "value": 4.0, "time": 2},
                 ]
             },
@@ -76,7 +79,7 @@ def minimal_dataset_2():
 
 
 def test_calc_shedding_peak_valid(minimal_dataset):
-    df = sh.calc_shedding_peak(minimal_dataset)
+    df = sh.calc_shedding_peak(minimal_dataset, output="summary")
     assert not df.empty
     assert "shedding_peak_min" in df.columns
     assert "shedding_peak_max" in df.columns

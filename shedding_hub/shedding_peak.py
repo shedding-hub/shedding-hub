@@ -4,7 +4,7 @@ from typing import List, Dict, Any, Literal
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib import cm
-import matplotlib.figure as Figure
+from matplotlib.figure import Figure
 import logging
 import numpy as np
 
@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 def calc_shedding_peak(
     dataset: Dict[str, Any],
     *,
-    output: Literal["summary", "individual"] = "summary",
+    output: Literal["summary", "individual"] = "individual",
 ) -> pd.DataFrame:
     """
     Calculate summary statistics for the shedding peak using a loaded dataset by the `load_dataset` function.
@@ -31,11 +31,11 @@ def calc_shedding_peak(
     Args:
         dataset: Loaded dataset using the `load_dataset` function.
         output: Type of dataframe returned.
-            summary: Summary table of shedding peak (min, max, mean) by biomarker and specimen.
             individual: Individual entries (Not summarized). This is used for plot_shedding_peak function.
+            summary: Summary table of shedding peak (min, max, mean) by biomarker and specimen.
 
     Returns:
-        Summary table of shedding peak (min, max, mean) by biomarker and specimen.
+        DataFrame of shedding peak either individual or summary.
 
     Raises:
         ValueError: If dataset is missing required keys or is empty.
@@ -54,12 +54,12 @@ def calc_shedding_peak(
         [
             {
                 "analyte": key,
-                "specimen": analyte.get("specimen"),
-                "biomarker": analyte.get("biomarker"),
-                "reference_event": analyte.get("reference_event"),
-                "unit": analyte.get("unit"),
+                "specimen": analyte["specimen"],
+                "biomarker": analyte["biomarker"],
+                "reference_event": analyte["reference_event"],
+                "unit": analyte["unit"],
             }
-            for key, analyte in dataset.get("analytes", {}).items()
+            for key, analyte in dataset["analytes"].items()
         ]
     )
 
@@ -70,8 +70,8 @@ def calc_shedding_peak(
 
     # extract participant and measurement data from the standardized shedding data loaded
     shedding_peak_data = []
-    for participant_id, item in enumerate(dataset.get("participants", []), 1):
-        meas = pd.DataFrame.from_dict(item.get("measurements", {}))
+    for participant_id, item in enumerate(dataset["participants"], 1):
+        meas = pd.DataFrame.from_dict(item["measurements"])
         if meas.empty:
             continue
 
@@ -116,7 +116,7 @@ def calc_shedding_peak(
             last_sample = valid_times.max() if not valid_times.empty else np.nan
 
             row_new = {
-                "dataset_id": dataset.get("dataset_id"),
+                "dataset_id": dataset["dataset_id"],
                 "participant_id": participant_id,
                 "analyte": name,
                 "n_sample": group["value"].count(),
@@ -241,10 +241,6 @@ def plot_shedding_peak(
         dfs.append(group)
     df = pd.concat(dfs, ignore_index=True)
 
-    # error-bar extents
-    df["err_plus"] = df["last_sample"] - df["first_sample"]
-    df["err_minus"] = 0
-
     specimens = df["specimen"].unique()
     n = len(specimens)
 
@@ -263,17 +259,16 @@ def plot_shedding_peak(
         )  # Sort by shedding peak day.
         y = list(range(len(g)))[::-1]
 
-        # horizontal error bars (shedding window)
-        ax.errorbar(
-            x=g["first_sample"],
-            y=y,
-            xerr=[g["err_minus"], g["err_plus"]],
-            fmt="none",
-            ecolor=window_color,
-            elinewidth=2,
-            capsize=0,
-            zorder=1,
-        )
+        # horizontal dashed lines (shedding window)
+        for i, (_, row) in enumerate(g.iterrows()):
+            ax.plot(
+                [row["first_sample"], row["last_sample"]],
+                [y[i], y[i]],
+                linestyle="--",
+                color=window_color,
+                linewidth=2,
+                zorder=1,
+            )
 
         # peak markers
         ax.scatter(
@@ -399,9 +394,7 @@ def plot_shedding_peaks(
     # Create figure and plot
     fig, ax = plt.subplots(figsize=DEFAULT_MULTI_FIGURE_SIZE)
 
-    bp = ax.bxp(
-        bxp_stats, orientation="horizontal", patch_artist=True, showfliers=False
-    )
+    bp = ax.bxp(bxp_stats, vert=False, patch_artist=True, showfliers=False)
 
     # Style the plot
     for line in bp["medians"]:
