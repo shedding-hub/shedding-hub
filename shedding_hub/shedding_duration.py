@@ -299,7 +299,7 @@ def calc_shedding_durations(
 
 
 def plot_shedding_durations(
-    df_shedding_durations: pd.DataFrame, biomarker: str = DEFAULT_BIOMARKER
+    df_shedding_durations: pd.DataFrame, *, biomarker: str = DEFAULT_BIOMARKER
 ) -> Figure:
     """
     Plot shedding duration by study and specimen type.
