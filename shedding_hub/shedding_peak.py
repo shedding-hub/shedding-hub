@@ -64,7 +64,9 @@ def calc_shedding_peak(
     )
 
     # map analyte -> unit for per-analyte decision when computing peak
-    analyte_unit_map = {row["analyte"]: row.get("unit") for _, row in df_analyte.iterrows()}
+    analyte_unit_map = {
+        row["analyte"]: row.get("unit") for _, row in df_analyte.iterrows()
+    }
 
     # extract participant and measurement data from the standardized shedding data loaded
     shedding_peak_data = []
@@ -89,7 +91,9 @@ def calc_shedding_peak(
 
             # decide whether to pick min (cycle threshold) or max (other units)
             unit = analyte_unit_map.get(name)
-            pick_min = isinstance(unit, str) and unit.strip().lower() == "cycle threshold"
+            pick_min = (
+                isinstance(unit, str) and unit.strip().lower() == "cycle threshold"
+            )
 
             # select index of interest using rows with numeric values only
             if pick_min:
