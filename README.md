@@ -18,6 +18,161 @@ You can obtain the data by [downloading it from GitHub](https://github.com/shedd
 
 ```
 
+## 🚀 API Access
+
+The Shedding Hub now provides a REST API for programmatic access to datasets, built with FastAPI. The API offers comprehensive endpoints for browsing, searching, and retrieving biomarker shedding data.
+
+### Starting the API Server
+
+```bash
+cd api
+pip install -r requirements.txt
+python run.py
+```
+
+The API will be available at `http://localhost:8004` with interactive documentation at `http://localhost:8004/docs`.
+
+**Alternative methods:**
+```bash
+# Direct uvicorn command
+uvicorn main:app --host 0.0.0.0 --port 8004
+
+# Development mode with auto-reload
+uvicorn main:app --host 0.0.0.0 --port 8004 --reload
+```
+
+### Key API Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /` | API information and available endpoints |
+| `GET /datasets` | List all datasets with filtering options |
+| `GET /datasets/{dataset_id}` | Get full dataset with measurements |
+| `GET /datasets/{dataset_id}/metadata` | Get dataset metadata only |
+| `GET /search` | Search datasets by keywords |
+| `GET /stats` | Overall project statistics |
+| `GET /health` | Health check endpoint |
+| `GET /filters` | Available filter options |
+| `POST /refresh-cache` | Refresh dataset cache |
+| `GET /datasets/{dataset_id}/export` | Export dataset in CSV/JSON/Excel |
+
+### Monitoring and Metrics
+
+The API includes comprehensive monitoring capabilities:
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /metrics` | Prometheus metrics for monitoring tools |
+| `GET /admin/metrics` | JSON metrics summary for dashboards |
+| `GET /admin/metrics/detailed` | Detailed performance metrics |
+
+**Available Metrics:**
+- Request count and duration by endpoint
+- Cache hit/miss ratios
+- System resource usage (CPU, memory)
+- Error rates and rate limiting violations
+- Dataset loading statistics
+
+### Data Source Configuration
+
+The API supports two data source modes:
+
+**🌐 GitHub Integration (Default)**  
+The API automatically fetches data directly from the live GitHub repository, ensuring you always have access to the latest datasets without manual synchronization.
+
+**📁 Local Files**  
+Traditional mode using local data files for air-gapped or offline deployments.
+
+Toggle between modes using the `SHEDDING_HUB_GITHUB_ENABLED` setting:
+
+```bash
+# Use GitHub as data source (recommended)
+SHEDDING_HUB_GITHUB_ENABLED=true
+
+# Use local files instead
+SHEDDING_HUB_GITHUB_ENABLED=false
+SHEDDING_HUB_DATA_DIRECTORY=/path/to/local/data
+```
+
+**GitHub Integration Benefits:**
+- ✅ Real-time access to the latest datasets
+- ✅ No manual data synchronization required
+- ✅ Automatic caching with configurable TTL
+- ✅ Fallback to cached data if GitHub is temporarily unavailable
+- ✅ Support for GitHub tokens to increase rate limits
+
+### Configuration
+
+The API supports extensive configuration via environment variables (prefix: `SHEDDING_HUB_`):
+
+```bash
+# Server Configuration
+SHEDDING_HUB_HOST=0.0.0.0
+SHEDDING_HUB_PORT=8000
+SHEDDING_HUB_DEBUG=false
+
+# Rate Limiting
+SHEDDING_HUB_RATE_LIMIT_ENABLED=true
+SHEDDING_HUB_RATE_LIMIT_DEFAULT=100/minute
+SHEDDING_HUB_RATE_LIMIT_SEARCH=30/minute
+
+# Cache Settings
+SHEDDING_HUB_CACHE_TTL_SECONDS=3600
+
+# GitHub Integration Settings
+SHEDDING_HUB_GITHUB_ENABLED=true
+SHEDDING_HUB_GITHUB_REPO_OWNER=shedding-hub
+SHEDDING_HUB_GITHUB_REPO_NAME=shedding-hub
+SHEDDING_HUB_GITHUB_BRANCH=main
+SHEDDING_HUB_GITHUB_DATA_PATH=data
+SHEDDING_HUB_GITHUB_TOKEN=your_github_token_here  # Optional, for higher rate limits
+SHEDDING_HUB_GITHUB_CACHE_TTL=600  # GitHub cache TTL in seconds (10 minutes)
+
+# Local Files (when GitHub disabled)
+SHEDDING_HUB_DATA_DIRECTORY=/path/to/data
+```
+
+### Example Usage
+
+```python
+import requests
+
+# Get all datasets
+response = requests.get('http://localhost:8004/datasets?limit=10')
+datasets = response.json()
+
+# Search for COVID-related datasets
+response = requests.get('http://localhost:8004/search?q=COVID&limit=5')
+results = response.json()
+
+# Get specific dataset
+response = requests.get('http://localhost:8004/datasets/woelfel2020virological')
+dataset = response.json()
+
+# Export dataset as CSV
+response = requests.get(
+    'http://localhost:8004/datasets/woelfel2020virological/export?format=csv'
+)
+
+# Check data source information
+response = requests.get('http://localhost:8004/admin/data-source')
+source_info = response.json()
+print(f"Data source: {source_info['source_type']}")
+```
+
+### Features
+
+- **🌐 GitHub Integration**: Real-time data access from live repository with intelligent caching
+- **🚀 High Performance**: Async processing with configurable caching strategies
+- **🛡️ Rate Limiting**: Protection against abuse with configurable limits per endpoint
+- **✅ Input Validation**: Comprehensive sanitization and Pydantic v2 validation
+- **🔧 Error Handling**: Structured error responses with detailed logging
+- **📊 Export Options**: CSV, JSON, and Excel format support
+- **📈 Monitoring**: Prometheus-compatible metrics with system resource tracking
+- **🌍 CORS Support**: Configurable cross-origin resource sharing
+- **🗜️ Compression**: Automatic response compression for large datasets
+- **🔄 Dual Data Sources**: Seamlessly switch between GitHub and local file modes
+
 ## 🤝 Contributing
 
 Thank you for contributing your data to the Shedding Hub and supporting wastewater-based epidemiology! If you hit a bump along the road, [create a new issue](https://github.com/shedding-hub/shedding-hub/issues/new) and we'll sort it out together.

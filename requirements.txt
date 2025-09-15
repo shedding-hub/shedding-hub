@@ -73,6 +73,8 @@ et-xmlfile==2.0.0
     # via openpyxl
 executing==2.2.0
     # via stack-data
+fastapi==0.115.8
+    # via -r requirements.in
 fastjsonschema==2.21.1
     # via nbformat
 fonttools==4.58.5
@@ -341,6 +343,8 @@ python-dateutil==2.9.0.post0
     #   jupyter-client
     #   matplotlib
     #   pandas
+python-multipart==0.0.20
+    # via -r requirements.in
 python-json-logger==3.3.0
     # via jupyter-events
 pytz==2025.2
@@ -454,6 +458,8 @@ urllib3==2.5.0
     # via
     #   requests
     #   twine
+uvicorn==0.34.0
+    # via -r requirements.in
 wcwidth==0.2.13
     # via prompt-toolkit
 webcolors==24.11.1

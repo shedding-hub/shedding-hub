@@ -1,5 +1,6 @@
 -e file:.
 black
+fastapi
 matplotlib
 jupyter
 jupytext
@@ -12,4 +13,6 @@ pyaml
 pymupdf
 pytest
 pytest-cov
+python-multipart
+uvicorn
 twine
