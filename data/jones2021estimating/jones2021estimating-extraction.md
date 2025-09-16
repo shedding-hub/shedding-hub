@@ -24,8 +24,6 @@ df_individual_positive = (
     .groupby("personHash", as_index=False)
     .agg(valid_Ct_count=("valid", "sum"))
 )
-
-df_individual_positive["valid_Ct_count"].unique()
 ```
 
 We split into two datasets based on if people have onset information. 
@@ -65,7 +63,7 @@ df_without_onset['reference_date_confirmation'] = (
 reference_date is the number of days between the test date and the patient’s reported symptom-onset date. Large positive and negative values mean the swab was taken well before or after they were infected. Those samples are irrelevant, so we drop any record with reference_date < -7 and >30.
 
 
-```python 
+```python
 # Without onset
 df_filtered_without_onset = df_without_onset.loc[
     (df_without_onset['reference_date_confirmation'] >= -7) &
@@ -122,7 +120,7 @@ for patient_id, group in df_filtered_without_onset.groupby('personHash'):
         'attributes': {
             'age': int(group['Age'].iloc[0]),
             'sex': sex, 
-            'lineage': 'B.1.1.7' if group['B117'].iloc[0] == 1 else 'unknown' 
+            'lineage': 'B.1.1.7' if group['B117'].iloc[0] == 1 else 'non-B.1.1.7' 
         },
         'measurements': []
     }
