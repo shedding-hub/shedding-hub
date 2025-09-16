@@ -191,6 +191,12 @@ properties:
             variant: 
               description: Variant information of the pathogen for the participant.
               type: string
+            infant:
+              description: If the participant was an infant.
+              oneOf:
+                - type: boolean
+                - type: string
+                  constant: unknown
         measurements:
           type: array
           minItems: 1
