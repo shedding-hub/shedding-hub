@@ -64,11 +64,6 @@ df_without_onset['reference_date_confirmation'] = (
 
 reference_date is the number of days between the test date and the patient’s reported symptom-onset date. Large positive and negative values mean the swab was taken well before or after they were infected. Those samples are irrelevant, so we drop any record with reference_date < -7 and >30.
 
-```python
-example = df_with_onset.loc[df_with_onset['personHash'] == "8bb13ce1d8b40383949ff842074f4040"]
-example = example.reset_index(drop=True)
-print (example)
-```
 
 ```python 
 # Without onset
@@ -98,7 +93,7 @@ for patient_id, group in df_filtered_with_onset.groupby('personHash'):
         'attributes': {
             'age': int(group['Age'].iloc[0]),
             'sex': sex, 
-            'lineage': 'B.1.1.7' if group['Gender'].iloc[0] == 1 else 'unknown' 
+            'lineage': 'B.1.1.7' if group['B117'].iloc[0] == 1 else 'unknown' 
         },
         'measurements': []
     }
@@ -127,7 +122,7 @@ for patient_id, group in df_filtered_without_onset.groupby('personHash'):
         'attributes': {
             'age': int(group['Age'].iloc[0]),
             'sex': sex, 
-            'lineage': 'B.1.1.7' if group['Gender'].iloc[0] == 1 else 'unknown' 
+            'lineage': 'B.1.1.7' if group['B117'].iloc[0] == 1 else 'unknown' 
         },
         'measurements': []
     }
