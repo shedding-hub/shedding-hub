@@ -100,7 +100,7 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 stephanie2020 = dict(title="Clinical and virologic characteristics of the first 12 patients with coronavirus disease 2019 (COVID-19) in the United States",
                doi="10.1038/s41591-020-0877-5",
-               description=folded_str('This study describes the first 12 COVID-19 patients identified in the United States, tracking their clinical progression and virological characteristics. SARS-CoV-2 was detected by real-time reverse transcriptase PCR in stool, serum, sputum, oropharyngeal and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results were reported in cycle threshold (Ct) values.\n'),
+               description=folded_str('This study describes the first 12 COVID-19 patients identified in the United States, tracking their clinical progression and virological characteristics. SARS-CoV-2 was detected by real-time reverse transcriptase PCR in stool, urine, serum, sputum, oropharyngeal and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results were reported in cycle threshold (Ct) values.\n'),
                analytes=dict(Stool_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in stool samples. The concentration were quantified in gene copies per milliliter.\n"),
                                                     specimen="stool",
                                                     biomarker="SARS-CoV-2",
