@@ -1,6 +1,6 @@
 # Extraction for Stephanie et al. (2020)
 
-[Stephanie et al. (2020)](https://www.nature.com/articles/s41591-020-0877-5#citeas) measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in stool, serum, sputum, oropharyngeal and nasopharyngeal swabs from twelve COVID-19 patients in United States, up to 2 to 3 weeks after symptom onset. Demographic information (age and sex) is also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/stephanie2020clinical). 
+[The COVID-19 Investigation Team (2020)](https://www.nature.com/articles/s41591-020-0877-5) measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in stool, urine, serum, sputum, oropharyngeal and nasopharyngeal swabs from twelve COVID-19 patients in United States, up to 2 to 3 weeks after symptom onset. Demographic information (age and sex) and hospitalization status are also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/covid2020clinical). 
 
 First, we `import` python modules needed:
 
