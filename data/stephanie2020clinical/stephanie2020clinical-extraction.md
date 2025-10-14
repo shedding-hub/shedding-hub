@@ -109,7 +109,7 @@ stephanie2020 = dict(title="Clinical and virologic characteristics of the first 
                                                     limit_of_detection=40,
                                                     unit="gc/mL",
                                                     reference_event="symptom onset"),
-                             Serum_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in serum samples. The concentration were quantified in gene copies per milliliter.\n"),
+                             Serum_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in serum samples. The results were reported in cycle threshold numbers.\n"),
                                               specimen="serum",
                                               biomarker="SARS-CoV-2",
                                               gene_target="N", 
