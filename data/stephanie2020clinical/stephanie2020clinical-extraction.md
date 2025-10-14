@@ -11,7 +11,7 @@ import numpy as np
 from shedding_hub import folded_str
 ```
 
-Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/stephanie2020clinical), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). Patient demographic information (age and sex) was obtained from the [Supplementary Information](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-020-0877-5/MediaObjects/41591_2020_877_MOESM1_ESM.pdf). For patients 1–5, who were non-hospitalized, demographic data were not available and are therefore marked as unknown in our list. When age was reported as a range, we used the median value as the representative age.
+Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/covid2020clinical), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). Patient demographic information (age and sex) was obtained from the [Supplementary Information](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-020-0877-5/MediaObjects/41591_2020_877_MOESM1_ESM.pdf). For patients 1–5, who were non-hospitalized, demographic data were not available and are therefore marked as unknown in our list. When age was reported as a range, we used the median value as the representative age.
 
 ```python
 Stephanie2020 = pd.read_csv("data.csv")       
