@@ -83,13 +83,13 @@ participants:
   measurements:
   - analyte: Serum_SARSCoV2
     time: 1
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 8
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 22
-    value: inclusive
+    value: inconclusive
   - analyte: Sputum_SARSCoV2
     time: 1
     value: 32.1875
@@ -146,13 +146,13 @@ participants:
     value: 32.578125
   - analyte: NPS_SARSCoV2
     time: 12
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 14
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 16
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 18
     value: 38.046875
@@ -161,7 +161,7 @@ participants:
     value: negative
   - analyte: NPS_SARSCoV2
     time: 22
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 24
     value: negative
@@ -190,22 +190,22 @@ participants:
     value: negative
   - analyte: Serum_SARSCoV2
     time: 5
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 9
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 11
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 18
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 4
     value: 34.140625
@@ -214,16 +214,16 @@ participants:
     value: negative
   - analyte: OPS_SARSCoV2
     time: 9
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 11
     value: negative
   - analyte: OPS_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 18
     value: negative
@@ -235,10 +235,10 @@ participants:
     value: negative
   - analyte: NPS_SARSCoV2
     time: 11
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 15
     value: 36.09375
@@ -320,7 +320,7 @@ participants:
   measurements:
   - analyte: Stool_SARSCoV2
     time: 9
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 11
     value: 39.609375
@@ -338,7 +338,7 @@ participants:
     value: negative
   - analyte: Serum_SARSCoV2
     time: 7
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 2
     value: 33.75
@@ -347,7 +347,7 @@ participants:
     value: negative
   - analyte: OPS_SARSCoV2
     time: 9
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 11
     value: negative
@@ -442,16 +442,16 @@ participants:
     value: negative
   - analyte: Serum_SARSCoV2
     time: 10
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 17
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 20
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 23
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 26
     value: negative
@@ -466,7 +466,7 @@ participants:
     value: 21.25
   - analyte: OPS_SARSCoV2
     time: 10
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 13
     value: negative
@@ -493,7 +493,7 @@ participants:
     value: negative
   - analyte: NPS_SARSCoV2
     time: 17
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 20
     value: 36.875
@@ -543,25 +543,25 @@ participants:
     value: 37.30769231
   - analyte: Stool_SARSCoV2
     time: 14
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 4
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 7
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 12
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 14
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 4
     value: 22.421875
@@ -612,10 +612,10 @@ participants:
     value: negative
   - analyte: NPS_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 16
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 20
     value: negative
@@ -659,7 +659,7 @@ participants:
     value: negative
   - analyte: Stool_SARSCoV2
     time: 21
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 24
     value: negative
@@ -668,28 +668,28 @@ participants:
     value: negative
   - analyte: Serum_SARSCoV2
     time: 8
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 10
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 12
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 18
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 21
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 23
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 24
-    value: inclusive
+    value: inconclusive
   - analyte: Sputum_SARSCoV2
     time: 8
     value: 24.375
@@ -722,25 +722,25 @@ participants:
     value: 36.15384615
   - analyte: OPS_SARSCoV2
     time: 10
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 12
     value: 27.30769231
   - analyte: OPS_SARSCoV2
     time: 14
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 18
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 21
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 24
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 8
     value: 38.046875
@@ -793,31 +793,31 @@ participants:
   measurements:
   - analyte: Stool_SARSCoV2
     time: 6
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 8
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 12
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 18
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 1
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 6
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 8
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 10
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 26
-    value: inclusive
+    value: inconclusive
   - analyte: Sputum_SARSCoV2
     time: 4
     value: 32.1875
@@ -829,10 +829,10 @@ participants:
     value: 34.53125
   - analyte: Sputum_SARSCoV2
     time: 10
-    value: inclusive
+    value: inconclusive
   - analyte: Sputum_SARSCoV2
     time: 12
-    value: inclusive
+    value: inconclusive
   - analyte: Sputum_SARSCoV2
     time: 18
     value: negative
@@ -862,7 +862,7 @@ participants:
     value: 37.265625
   - analyte: NPS_SARSCoV2
     time: 4
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 6
     value: negative
@@ -909,25 +909,25 @@ participants:
     value: 32.30769231
   - analyte: Stool_SARSCoV2
     time: 16
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 19
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 24
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 28
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 32
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 3
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 6
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 9
     value: 36.484375
@@ -939,22 +939,22 @@ participants:
     value: 36.09375
   - analyte: Serum_SARSCoV2
     time: 16
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 19
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 22
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 25
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 28
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 31
-    value: inclusive
+    value: inconclusive
   - analyte: Sputum_SARSCoV2
     time: 3
     value: 30.234375
@@ -1002,7 +1002,7 @@ participants:
     value: 36.09375
   - analyte: NPS_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 16
     value: 38.046875
@@ -1011,7 +1011,7 @@ participants:
     value: 35.3125
   - analyte: NPS_SARSCoV2
     time: 22
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 24
     value: negative
@@ -1058,19 +1058,19 @@ participants:
     value: negative
   - analyte: Serum_SARSCoV2
     time: 9
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 16
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 17
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 25
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 9
     value: 30.76923077
@@ -1079,28 +1079,28 @@ participants:
     value: 36.92307692
   - analyte: OPS_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 16
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 17
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 22
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 23
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 25
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 27
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 29
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 9
     value: 25.546875
@@ -1124,7 +1124,7 @@ participants:
     value: negative
   - analyte: NPS_SARSCoV2
     time: 25
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 27
     value: negative
@@ -1153,13 +1153,13 @@ participants:
     value: 30.0
   - analyte: Serum_SARSCoV2
     time: 9
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 11
-    value: inclusive
+    value: inconclusive
   - analyte: Serum_SARSCoV2
     time: 16
-    value: inclusive
+    value: inconclusive
   - analyte: Sputum_SARSCoV2
     time: 11
     value: 18.515625
@@ -1183,10 +1183,10 @@ participants:
     value: 36.484375
   - analyte: OPS_SARSCoV2
     time: 18
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 20
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 24
     value: 36.484375
@@ -1275,10 +1275,10 @@ participants:
     value: 36.42857143
   - analyte: Stool_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: Stool_SARSCoV2
     time: 22
     value: negative
@@ -1293,7 +1293,7 @@ participants:
     value: 30.0
   - analyte: OPS_SARSCoV2
     time: 6
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 8
     value: 30.0
@@ -1302,10 +1302,10 @@ participants:
     value: 31.53846154
   - analyte: OPS_SARSCoV2
     time: 11
-    value: inclusive
+    value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 13
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 2
     value: negative
@@ -1326,7 +1326,7 @@ participants:
     value: 28.671875
   - analyte: NPS_SARSCoV2
     time: 15
-    value: inclusive
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 17
     value: negative

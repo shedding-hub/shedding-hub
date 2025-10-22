@@ -49,7 +49,7 @@ for i in pd.unique(Covid2020["ID"]):
         try:
             value = float(row['Value'])  
             if 40 < value < 50:
-                value = 'inclusive'
+                value = 'inconclusive'
             elif value >= 50:
                 value = 'negative'   
         except ValueError:
