@@ -1,0 +1,7461 @@
+# yaml-language-server: $schema=.schema.yaml
+title: Viral dynamics of acute SARS-CoV-2 infection and applications to diagnostic
+  and public health strategies
+doi: 10.1371/journal.pbio.3001333
+description: >
+  This study followed 68 people with frequent RT-qPCR to map SARS-CoV-2 viral RNA
+  trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates
+  acute infection, and a second PCR within 48 hours helps tell whether someone is
+  early (proliferation) or late (clearance) in infection.
+analytes:
+  AN_OPS_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal
+      swabs. The concentration was quantified in gene copies per milliliter.
+    specimen:
+    - anterior_nares_swab
+    - oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N1, N2, RdRp
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- attributes:
+    person_id: 710
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 30.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 33.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 36.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: 38.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    person_id: 735
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 34.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 39.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: 38.8280983514062
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 69
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 70
+    value: negative
+- attributes:
+    person_id: 737
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: 39.2
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 35.8
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 28.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 24.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 27.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 35.17
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: 28.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 37.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: 39.4303829366448
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+- attributes:
+    person_id: 744
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 33.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+- attributes:
+    person_id: 746
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 32.13
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 33.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 33.93
+- attributes:
+    person_id: 754
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 17.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 25.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: 36.7
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 37.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: 35.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: 38.99
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: 37.82
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: 35.82
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 69
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 70
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 71
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 72
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 73
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 74
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 75
+    value: negative
+- attributes:
+    person_id: 755
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 31.8
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 24.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 19.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 28.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: 32.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: 38.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: 34.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 69
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 70
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 71
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 72
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 73
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 74
+    value: negative
+- attributes:
+    person_id: 771
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 27.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 33.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 35.7
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+- attributes:
+    person_id: 781
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 26.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 37.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 37.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+- attributes:
+    person_id: 807
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: 36.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 34.55
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+- attributes:
+    person_id: 816
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 19.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 69
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 70
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 71
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 72
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 73
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 74
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 75
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 76
+    value: negative
+- attributes:
+    person_id: 818
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 23.7
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: 30.06
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+- attributes:
+    person_id: 837
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 27.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 18.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+- attributes:
+    person_id: 842
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 33.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 25.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+- attributes:
+    person_id: 845
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 31.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 23.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+- attributes:
+    person_id: 883
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 24.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: 33.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: 32.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: 35.84
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+- attributes:
+    person_id: 942
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 31.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 23.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 38.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 33.92
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 33.19
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+- attributes:
+    person_id: 962
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.35
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    person_id: 971
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: 39.7516013821054
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 38.0
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 35.03
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+- attributes:
+    person_id: 972
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: 39.1
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 38.9753234722423
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 36.2985030934038
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+- attributes:
+    person_id: 979
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 39.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+- attributes:
+    person_id: 981
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 37.57
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+- attributes:
+    person_id: 1015
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 34.46
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 36.9141717805366
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 37.25
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: 35.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+- attributes:
+    person_id: 1023
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 37.55
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+- attributes:
+    person_id: 1222
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 29.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: 35.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: 38.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: 38.37
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 69
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 70
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 71
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 72
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 73
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 74
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 75
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 76
+    value: negative
+- attributes:
+    person_id: 1273
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 38.0
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 32.6
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 30.79
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 17.7
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 30.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 31.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+- attributes:
+    person_id: 1370
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 29.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 34.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: 38.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+- attributes:
+    person_id: 1740
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 33.8
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: 38.2258137661675
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 28.05
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 30.89132592815
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 34.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 36.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 38.2927342756385
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 39.0422439817132
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    person_id: 1819
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 31.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 30.54
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: 38.07
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+- attributes:
+    person_id: 1835
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.2
+- attributes:
+    person_id: 1912
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 36.86
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 31.8415971626377
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    person_id: 1953
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 19.31
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 19.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: 37.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: 39.6311444650577
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+- attributes:
+    person_id: 1980
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 27.72
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 26.49
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 69
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 70
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 71
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 72
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 73
+    value: negative
+- attributes:
+    person_id: 2193
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 37.9715158301778
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 37.46
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+- attributes:
+    person_id: 2340
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 34.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 39.7649854839996
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+- attributes:
+    person_id: 2349
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: 39.3366942233855
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: 28.98
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: 32.1494315062041
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 33.55
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 32.8052524990195
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 27.9468235114277
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 32.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 34.5
+- attributes:
+    person_id: 2463
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 35.25
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 20.06
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 24.94
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 36.9810922900076
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+- attributes:
+    person_id: 2499
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 35.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+- attributes:
+    person_id: 2695
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.85
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: 39.1493167968668
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+- attributes:
+    person_id: 2786
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 30.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+- attributes:
+    person_id: 2976
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: 38.7
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.47
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+- attributes:
+    person_id: 2987
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: 35.5
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 37.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 28.04
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+- attributes:
+    person_id: 3047
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -30
+    value: 35.5
+  - analyte: AN_OPS_SARSCoV2
+    time: -26
+    value: 37.4
+  - analyte: AN_OPS_SARSCoV2
+    time: -25
+    value: 36.09
+  - analyte: AN_OPS_SARSCoV2
+    time: -21
+    value: 39.6
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: 36.9275558824308
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: 35.94
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 30.87
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+- attributes:
+    person_id: 3100
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 34.3310401149575
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 33.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 37.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 38.5202640078397
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 37.38
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: 39.9523629105183
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: 39.8319059934706
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+- attributes:
+    person_id: 3102
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 24.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 31.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 37.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+- attributes:
+    person_id: 3110
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: 35.6
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 34.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 24.83
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+- attributes:
+    person_id: 3179
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: 38.5202640078397
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: 36.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 33.63
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 38.83
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: 35.87
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: 39.6712967707403
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+- attributes:
+    person_id: 3357
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: 37.04
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 39.92
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 37.06
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 35.28
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 39.68
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+- attributes:
+    person_id: 3407
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 24.45
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 25.7518308007801
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 38.02
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: 39.58
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: 39.5776080574809
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+- attributes:
+    person_id: 3433
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 36.7535625578063
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+- attributes:
+    person_id: 3466
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 32.06
+- attributes:
+    person_id: 3474
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: 39.2831578158087
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 33.59
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 34.0767421789678
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    person_id: 3475
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: 38.45
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: 37.1283174108437
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 37.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 35.64
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 37.17
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 39.9925152162009
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+- attributes:
+    person_id: 3478
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -25
+    value: 39.51068754801
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 34.86
+- attributes:
+    person_id: 3479
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 22.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 23.15
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: 39.0154757779248
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: 38.6273368229933
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+- attributes:
+    person_id: 3485
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: 31.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 27.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 35.0939339229264
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 33.33
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 36.91
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: 37.9313635244953
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    person_id: 3490
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 24.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: 38.57
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+- attributes:
+    person_id: 3491
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: 36.1
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 34.89
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 23.36
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 27.05
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 32.35
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 36.7
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+- attributes:
+    person_id: 3492
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 23.16
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+- attributes:
+    person_id: 3494
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 37.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 39.3
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+- attributes:
+    person_id: 3497
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: 38.5
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: 39.1493167968668
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 37.59
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 39.91
+- attributes:
+    person_id: 3498
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: 38.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 23.06
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 37.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: 36.74
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: 38.3195024794268
+- attributes:
+    person_id: 3637
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 36.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 18.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 29.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+- attributes:
+    person_id: 6682
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: 36.9677081881134
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 33.71
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 37.4361517544101
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 37.5164563657753
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+- attributes:
+    person_id: 7262
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: 32.8454048047021
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 23.0750104219416
+- attributes:
+    person_id: 7283
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 39.8185218915764
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+- attributes:
+    person_id: 7544
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.3730388870036
+- attributes:
+    person_id: 7586
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 37.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 37.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: 38.6407209248875
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
