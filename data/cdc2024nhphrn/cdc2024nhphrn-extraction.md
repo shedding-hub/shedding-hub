@@ -1,6 +1,6 @@
 # Extraction for CDC INHERENT Study
 
-[CDC INHERENT](https://github.com/abtassociates/CDC_NHPHRN/blob/main/) , part of the CDC funded Nursing Home Public Health Response Network (NHPHRN), examined SARSCoV2 shedding in nursing home residents and staff. It characterized the viral shedding kinetics including proliferation, peak, and clearance using qRTPCR, antigen testing, genetic sequencing, and culture. The original dataset is published and updated on their [GitHub repository](https://github.com/abtassociates/CDC_NHPHRN/blob/main/).
+[CDC INHERENT](https://github.com/abtassociates/CDC_NHPHRN/blob/main/) , part of the CDC funded Nursing Home Public Health Response Network (NHPHRN), examined SARSCoV2 shedding in nursing home residents and staff. It characterized the viral shedding kinetics including proliferation, peak, and clearance using qRTPCR, antigen testing, genetic sequencing, and culture. The original dataset is published and updated on their [GitHub repository](https://github.com/YWAN446/cdc2024nhphrn/tree/main).
 
 
 First, we `import` python modules needed:
