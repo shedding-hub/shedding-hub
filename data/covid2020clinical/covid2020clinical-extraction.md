@@ -48,9 +48,12 @@ for i in pd.unique(Covid2020["ID"]):
     for _, row in patient_data.iterrows():
         try:
             value = float(row['Value'])  
-            if 40 < value < 50:
+
+            # For Inconclusive and Negative categories, the values were extracted from the website based on the plot’s axis coordinates, so they are not true Ct values. If the extracted coordinates fall within the predefined ranges, we classify them into the corresponding category.
+            
+            if 40 < round(value) < 50:
                 value = 'inconclusive'
-            elif value >= 50:
+            elif round(value) >= 50:  
                 value = 'negative'   
         except ValueError:
             value = 'negative'  
