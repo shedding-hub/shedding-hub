@@ -18,6 +18,18 @@ Kissler2021 = pd.read_csv("ct_dat_clean.csv")
 Kissler2021["type"] = "AN+OPS"          
 
 
+def assign_reference_day(group):
+    # first positive (Ct < 40) time using raw Date.Index
+    pos_times = group.loc[group["CT.Mean"] < 40, "Date.Index"]
+    if pos_times.empty:
+        group["DayFromReference"] = pd.NA
+    else:
+        ref_time = pos_times.min()
+        group["DayFromReference"] = group["Date.Index"] - ref_time 
+    return group
+
+Kissler2021 = Kissler2021.groupby("Person.ID", group_keys=False).apply(assign_reference_day)
+
 participant_list = []
 
 for i in pd.unique(Kissler2021["Person.ID"]):
@@ -37,7 +49,7 @@ for i in pd.unique(Kissler2021["Person.ID"]):
         if row["type"] == "AN+OPS":
             measurements.append({
                 "analyte": "AN_OPS_SARSCoV2",
-                "time": int(row['Date.Index']),
+                "time": int(row['DayFromReference']),
                 "value": value
             })
     
@@ -59,7 +71,7 @@ Finally, the data is formatted and output as a YAML file.
 kissler2021 = dict(title="Viral dynamics of acute SARS-CoV-2 infection and applications to diagnostic and public health strategies",
             doi="10.1371/journal.pbio.3001333",
             description=folded_str("This study followed 68 people with frequent RT-qPCR to map SARS-CoV-2 viral RNA trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates acute infection, and a second PCR within 48 hours helps tell whether someone is early (proliferation) or late (clearance) in infection.\n"),
-            analytes=dict(AN_OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. The concentration was quantified in gene copies per milliliter.\n"),
+            analytes=dict(AN_OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. Results were reported in cycle threshold (Ct) values.\n"),
                           specimen=["anterior_nares_swab", "oropharyngeal_swab"],
                           biomarker="SARS-CoV-2",
                           gene_target="N1, N2, RdRp",

@@ -3,15 +3,16 @@ title: Viral dynamics of acute SARS-CoV-2 infection and applications to diagnost
   and public health strategies
 doi: 10.1371/journal.pbio.3001333
 description: >
-  This study followed 68 people with frequent RT-qPCR to map SARS-CoV-2 viral RNA
-  trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates
-  acute infection, and a second PCR within 48 hours helps tell whether someone is
-  early (proliferation) or late (clearance) in infection.
+  This study followed 68 people (90% male) during the NBA 2019 to 2020 season with
+  frequent RT-qPCR to map SARS-CoV-2 viral RNA trajectories and 46 had acute infections.
+  A single low Ct (<30) strongly indicates acute infection, and a second PCR within
+  48 hours helps tell whether someone is early (proliferation) or late (clearance)
+  in infection.
 analytes:
   AN_OPS_SARSCoV2:
     description: >
       SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal
-      swabs. The concentration was quantified in gene copies per milliliter.
+      swabs. Results were reported in cycle threshold (Ct) values.
     specimen:
     - anterior_nares_swab
     - oropharyngeal_swab
@@ -362,56 +363,41 @@ participants:
     person_id: 737
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -8
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -6
-    value: 39.2
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -4
-    value: 35.8
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -2
-    value: 28.9
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 39.2
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 35.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 28.9
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
     value: 24.6
   - analyte: AN_OPS_SARSCoV2
-    time: 1
+    time: 7
     value: 27.9
   - analyte: AN_OPS_SARSCoV2
-    time: 5
+    time: 11
     value: 35.17
   - analyte: AN_OPS_SARSCoV2
-    time: 7
+    time: 13
     value: 28.2
   - analyte: AN_OPS_SARSCoV2
-    time: 9
+    time: 15
     value: 37.1
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
-    value: 39.4303829366448
-  - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 16
-    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 17
     value: negative
@@ -419,10 +405,10 @@ participants:
     time: 18
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 20
-    value: negative
+    time: 19
+    value: 39.4303829366448
   - analyte: AN_OPS_SARSCoV2
-    time: 21
+    time: 20
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 22
@@ -432,9 +418,6 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 24
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 25
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 26
@@ -546,6 +529,24 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
     value: negative
 - attributes:
     person_id: 744
@@ -911,32 +912,26 @@ participants:
     person_id: 755
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -2
+    time: 0
     value: 31.8
   - analyte: AN_OPS_SARSCoV2
-    time: -1
+    time: 1
     value: 24.1
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 2
     value: 19.9
   - analyte: AN_OPS_SARSCoV2
-    time: 6
+    time: 8
     value: 28.3
   - analyte: AN_OPS_SARSCoV2
-    time: 8
+    time: 10
     value: 32.3
   - analyte: AN_OPS_SARSCoV2
-    time: 10
+    time: 12
     value: 38.2
   - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: 34.5
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 13
-    value: negative
+    value: 34.5
   - analyte: AN_OPS_SARSCoV2
     time: 14
     value: negative
@@ -1120,6 +1115,12 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 74
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 75
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 76
+    value: negative
 - attributes:
     person_id: 771
   measurements:
@@ -1274,49 +1275,25 @@ participants:
     person_id: 807
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -8
-    value: 36.6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 36.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
     value: 34.55
   - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 15
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 17
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 18
@@ -1446,6 +1423,30 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
     value: negative
 - attributes:
     person_id: 816
@@ -1811,29 +1812,26 @@ participants:
     person_id: 837
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -8
+    time: -10
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -7
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -5
+    time: -6
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -3
+    time: -4
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: 27.8
+    time: -2
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 18.6
+    value: 27.8
   - analyte: AN_OPS_SARSCoV2
-    time: 18
-    value: negative
+    time: 1
+    value: 18.6
   - analyte: AN_OPS_SARSCoV2
     time: 19
     value: negative
@@ -1975,38 +1973,38 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 65
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
 - attributes:
     person_id: 842
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -11
+    time: -10
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -9
+    time: -8
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -7
+    time: -6
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -5
+    time: -4
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -3
+    time: -2
     value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: 33.8
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 33.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
     value: 25.3
   - analyte: AN_OPS_SARSCoV2
-    time: 14
+    time: 15
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 20
+    time: 17
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 21
@@ -2015,7 +2013,7 @@ participants:
     time: 22
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 24
+    time: 23
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 25
@@ -2140,30 +2138,30 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 65
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
 - attributes:
     person_id: 845
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -9
+    time: -8
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -7
+    time: -6
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -5
+    time: -4
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -3
+    time: -2
     value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: 31.4
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 23.4
+    value: 31.4
   - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
+    time: 1
+    value: 23.4
   - analyte: AN_OPS_SARSCoV2
     time: 13
     value: negative
@@ -2172,6 +2170,9 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
     value: negative
 - attributes:
     person_id: 883
@@ -2330,9 +2331,6 @@ participants:
     person_id: 942
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -8
     value: negative
   - analyte: AN_OPS_SARSCoV2
@@ -2343,27 +2341,24 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
     value: 31.0
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 2
     value: 23.2
   - analyte: AN_OPS_SARSCoV2
-    time: 3
+    time: 5
     value: 38.5
   - analyte: AN_OPS_SARSCoV2
-    time: 5
+    time: 7
     value: 33.92
   - analyte: AN_OPS_SARSCoV2
-    time: 6
+    time: 8
     value: 33.19
   - analyte: AN_OPS_SARSCoV2
-    time: 8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 12
@@ -2379,270 +2374,6 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 17
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 19
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 20
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 21
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 22
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 23
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 24
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 26
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 27
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 28
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 29
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 30
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 31
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 32
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 33
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 34
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 35
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 36
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 37
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 38
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 39
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 40
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 41
-    value: negative
-- attributes:
-    person_id: 962
-  measurements:
-  - analyte: AN_OPS_SARSCoV2
-    time: -6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -3
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 38.35
-  - analyte: AN_OPS_SARSCoV2
-    time: 1
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 9
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-- attributes:
-    person_id: 971
-  measurements:
-  - analyte: AN_OPS_SARSCoV2
-    time: -9
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -8
-    value: 39.7516013821054
-  - analyte: AN_OPS_SARSCoV2
-    time: -7
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -3
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -2
-    value: 38.0
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 35.03
-  - analyte: AN_OPS_SARSCoV2
-    time: 1
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 3
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 9
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 15
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 17
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 18
-    value: negative
-- attributes:
-    person_id: 972
-  measurements:
-  - analyte: AN_OPS_SARSCoV2
-    time: -6
-    value: 39.1
-  - analyte: AN_OPS_SARSCoV2
-    time: -4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -3
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -2
-    value: 38.9753234722423
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 36.2985030934038
-  - analyte: AN_OPS_SARSCoV2
-    time: 2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 9
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 15
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 17
@@ -2725,11 +2456,281 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 43
     value: negative
+- attributes:
+    person_id: 962
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.35
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    person_id: 971
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 39.7516013821054
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 38.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: 35.03
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+- attributes:
+    person_id: 972
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 39.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 38.9753234722423
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 36.2985030934038
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 35
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 44
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
     value: negative
 - attributes:
     person_id: 979
@@ -3434,41 +3435,32 @@ participants:
     person_id: 1273
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -6
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -4
-    value: 38.0
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -2
-    value: 32.6
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: 30.79
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 17.7
+    value: 38.0
+  - analyte: AN_OPS_SARSCoV2
+    time: 2
+    value: 32.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 3
+    value: 30.79
   - analyte: AN_OPS_SARSCoV2
     time: 4
+    value: 17.7
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
     value: 30.5
   - analyte: AN_OPS_SARSCoV2
-    time: 5
+    time: 9
     value: 31.5
-  - analyte: AN_OPS_SARSCoV2
-    time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 14
     value: negative
@@ -3479,10 +3471,10 @@ participants:
     time: 16
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 17
+    time: 18
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 18
+    time: 19
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 20
@@ -3492,9 +3484,6 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 22
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 23
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 24
@@ -3624,6 +3613,18 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 66
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 67
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 68
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 69
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 70
     value: negative
 - attributes:
     person_id: 1370
@@ -3776,18 +3777,6 @@ participants:
     person_id: 1740
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -56
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -55
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -54
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -53
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -52
     value: negative
   - analyte: AN_OPS_SARSCoV2
@@ -3933,40 +3922,40 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -4
-    value: 33.8
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -3
-    value: 38.2258137661675
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 28.05
+    value: 33.8
   - analyte: AN_OPS_SARSCoV2
     time: 1
-    value: 30.89132592815
-  - analyte: AN_OPS_SARSCoV2
-    time: 2
-    value: 34.5
-  - analyte: AN_OPS_SARSCoV2
-    time: 3
-    value: 36.5
+    value: 38.2258137661675
   - analyte: AN_OPS_SARSCoV2
     time: 4
-    value: 38.2927342756385
+    value: 28.05
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 30.89132592815
   - analyte: AN_OPS_SARSCoV2
     time: 6
-    value: 39.0422439817132
+    value: 34.5
   - analyte: AN_OPS_SARSCoV2
     time: 7
-    value: negative
+    value: 36.5
   - analyte: AN_OPS_SARSCoV2
     time: 8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 9
-    value: negative
+    value: 38.2927342756385
   - analyte: AN_OPS_SARSCoV2
     time: 10
-    value: negative
+    value: 39.0422439817132
   - analyte: AN_OPS_SARSCoV2
     time: 11
     value: negative
@@ -3979,38 +3968,44 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 14
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
 - attributes:
     person_id: 1819
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -7
+    time: -12
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -4
-    value: 31.6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 31.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
     value: 30.54
   - analyte: AN_OPS_SARSCoV2
-    time: 10
+    time: 14
     value: 38.07
   - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 18
@@ -4019,13 +4014,10 @@ participants:
     time: 19
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 20
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 21
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 24
@@ -4037,13 +4029,13 @@ participants:
     time: 26
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 27
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 28
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 31
@@ -4055,10 +4047,13 @@ participants:
     time: 33
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 34
+    time: 35
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 35
+    time: 36
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 38
@@ -4067,13 +4062,13 @@ participants:
     time: 39
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 40
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 41
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 45
@@ -4082,13 +4077,13 @@ participants:
     time: 46
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 47
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 48
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 52
@@ -4097,7 +4092,13 @@ participants:
     time: 53
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 54
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
     value: negative
 - attributes:
     person_id: 1835
@@ -4130,49 +4131,49 @@ participants:
     person_id: 1912
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -35
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -23
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -22
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -21
+    time: -31
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -19
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -17
+    time: -18
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -16
+    time: -17
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -15
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -14
+    time: -13
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -12
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -6
+    time: -11
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -5
+    time: -10
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -4
-    value: 36.86
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 36.86
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
     value: 31.8415971626377
   - analyte: AN_OPS_SARSCoV2
-    time: 14
+    time: 18
     value: negative
 - attributes:
     person_id: 1953
@@ -4202,14 +4203,11 @@ participants:
     person_id: 1980
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -1
+    time: 0
     value: 27.72
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 1
     value: 26.49
-  - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 15
     value: negative
@@ -4387,50 +4385,53 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 73
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 74
+    value: negative
 - attributes:
     person_id: 2193
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -1
+    time: 0
     value: 37.9715158301778
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 1
     value: 37.46
   - analyte: AN_OPS_SARSCoV2
-    time: 9
+    time: 10
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 11
+    time: 12
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 15
+    time: 14
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 16
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 18
+    time: 17
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 21
+    time: 19
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 28
+    time: 22
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 35
+    time: 29
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 39
+    time: 36
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 46
+    time: 40
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 50
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
     value: negative
 - attributes:
     person_id: 2340
@@ -4472,34 +4473,13 @@ participants:
     person_id: 2349
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -50
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -48
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -47
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -46
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -45
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -44
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -43
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -42
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -41
+    time: -40
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -40
+    time: -39
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -38
@@ -4523,13 +4503,13 @@ participants:
     time: -32
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -31
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -30
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -28
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -27
@@ -4550,7 +4530,7 @@ participants:
     time: -22
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -20
+    time: -21
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -19
@@ -4571,9 +4551,6 @@ participants:
     time: -14
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -12
     value: negative
   - analyte: AN_OPS_SARSCoV2
@@ -4587,63 +4564,75 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -8
-    value: 39.3366942233855
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -7
-    value: 28.98
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -4
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -3
-    value: 32.1494315062041
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -2
-    value: 33.55
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -1
-    value: 32.8052524990195
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 27.9468235114277
+    value: 39.3366942233855
   - analyte: AN_OPS_SARSCoV2
     time: 1
+    value: 28.98
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 32.1494315062041
+  - analyte: AN_OPS_SARSCoV2
+    time: 6
+    value: 33.55
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
+    value: 32.8052524990195
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: 27.9468235114277
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
     value: 32.8
   - analyte: AN_OPS_SARSCoV2
-    time: 2
+    time: 10
     value: 34.5
 - attributes:
     person_id: 2463
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -6
+    time: -2
     value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -4
-    value: 35.25
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 35.25
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
     value: 20.06
   - analyte: AN_OPS_SARSCoV2
-    time: 3
+    time: 7
     value: 24.94
   - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: 36.9810922900076
-  - analyte: AN_OPS_SARSCoV2
-    time: 9
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
+    value: 36.9810922900076
   - analyte: AN_OPS_SARSCoV2
     time: 13
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 15
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 16
@@ -4731,6 +4720,18 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
     value: negative
 - attributes:
     person_id: 2499
@@ -5120,26 +5121,17 @@ participants:
     person_id: 2976
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -3
-    value: 38.7
-  - analyte: AN_OPS_SARSCoV2
-    time: -2
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 38.47
+    value: 38.7
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 1
     value: negative
@@ -5148,7 +5140,7 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 3
-    value: negative
+    value: 38.47
   - analyte: AN_OPS_SARSCoV2
     time: 4
     value: negative
@@ -5272,148 +5264,19 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 44
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
 - attributes:
     person_id: 2987
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -3
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -2
-    value: 35.5
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: 37.9
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 28.04
-  - analyte: AN_OPS_SARSCoV2
-    time: 8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 15
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 17
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 18
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 19
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 20
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 21
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 22
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 23
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 24
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 25
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 26
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 27
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 28
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 29
-    value: negative
-- attributes:
-    person_id: 3047
-  measurements:
-  - analyte: AN_OPS_SARSCoV2
-    time: -38
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -36
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -30
-    value: 35.5
-  - analyte: AN_OPS_SARSCoV2
-    time: -26
-    value: 37.4
-  - analyte: AN_OPS_SARSCoV2
-    time: -25
-    value: 36.09
-  - analyte: AN_OPS_SARSCoV2
-    time: -21
-    value: 39.6
-  - analyte: AN_OPS_SARSCoV2
-    time: -19
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -10
-    value: 36.9275558824308
-  - analyte: AN_OPS_SARSCoV2
-    time: -9
-    value: 35.94
-  - analyte: AN_OPS_SARSCoV2
-    time: -8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -7
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -3
     value: negative
   - analyte: AN_OPS_SARSCoV2
@@ -5424,42 +5287,15 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 30.87
+    value: 35.5
   - analyte: AN_OPS_SARSCoV2
     time: 1
-    value: negative
+    value: 37.9
   - analyte: AN_OPS_SARSCoV2
     time: 2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 3
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 7
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 9
-    value: negative
+    value: 28.04
   - analyte: AN_OPS_SARSCoV2
     time: 10
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 13
@@ -5518,6 +5354,81 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 31
     value: negative
+- attributes:
+    person_id: 3047
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 35.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
+    value: 37.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
+    value: 36.09
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 39.6
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 20
+    value: 36.9275558824308
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
+    value: 35.94
+  - analyte: AN_OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 30
+    value: 30.87
+  - analyte: AN_OPS_SARSCoV2
+    time: 31
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 32
     value: negative
@@ -5533,47 +5444,134 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 36
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 38
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 51
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 52
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 53
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 54
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 55
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 56
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 57
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 63
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 64
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 65
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 66
+    value: negative
 - attributes:
     person_id: 3100
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -1
+    time: 0
     value: 34.3310401149575
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 1
     value: 33.6
   - analyte: AN_OPS_SARSCoV2
-    time: 1
+    time: 2
     value: 37.0
   - analyte: AN_OPS_SARSCoV2
-    time: 3
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 4
-    value: 38.5202640078397
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 5
-    value: 37.38
+    value: 38.5202640078397
   - analyte: AN_OPS_SARSCoV2
     time: 6
-    value: negative
+    value: 37.38
   - analyte: AN_OPS_SARSCoV2
     time: 7
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 8
-    value: 39.9523629105183
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 9
-    value: negative
+    value: 39.9523629105183
   - analyte: AN_OPS_SARSCoV2
-    time: 11
-    value: 39.8319059934706
+    time: 10
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 12
-    value: negative
+    value: 39.8319059934706
   - analyte: AN_OPS_SARSCoV2
-    time: 15
+    time: 13
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 16
@@ -5658,6 +5656,9 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
     value: negative
 - attributes:
     person_id: 3102
@@ -5810,29 +5811,14 @@ participants:
     person_id: 3110
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -5
+    time: 0
     value: 35.6
   - analyte: AN_OPS_SARSCoV2
-    time: -4
+    time: 1
     value: 34.4
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 5
     value: 24.83
-  - analyte: AN_OPS_SARSCoV2
-    time: 27
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 28
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 29
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 30
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 31
-    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 32
     value: negative
@@ -5911,48 +5897,48 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 57
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 58
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 59
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 60
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 61
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 62
+    value: negative
 - attributes:
     person_id: 3179
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -5
+    time: 0
     value: 38.5202640078397
   - analyte: AN_OPS_SARSCoV2
-    time: -4
+    time: 1
     value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -3
-    value: 36.1
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 33.63
   - analyte: AN_OPS_SARSCoV2
     time: 2
-    value: negative
+    value: 36.1
   - analyte: AN_OPS_SARSCoV2
-    time: 3
-    value: 38.83
-  - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: negative
+    time: 5
+    value: 33.63
   - analyte: AN_OPS_SARSCoV2
     time: 7
-    value: 35.87
-  - analyte: AN_OPS_SARSCoV2
-    time: 10
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 8
+    value: 38.83
   - analyte: AN_OPS_SARSCoV2
     time: 11
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: 39.6712967707403
+    value: 35.87
   - analyte: AN_OPS_SARSCoV2
     time: 15
     value: negative
@@ -5967,7 +5953,7 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 19
-    value: negative
+    value: 39.6712967707403
   - analyte: AN_OPS_SARSCoV2
     time: 20
     value: negative
@@ -6028,30 +6014,39 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 39
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 40
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
 - attributes:
     person_id: 3357
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -3
+    time: 0
     value: 37.04
   - analyte: AN_OPS_SARSCoV2
-    time: -1
+    time: 2
     value: 39.92
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 3
     value: 37.06
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 3
     value: 35.28
   - analyte: AN_OPS_SARSCoV2
-    time: 1
+    time: 4
     value: 39.68
-  - analyte: AN_OPS_SARSCoV2
-    time: 2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 3
-    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 5
     value: negative
@@ -6069,9 +6064,6 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 14
@@ -6174,6 +6166,15 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
     value: negative
 - attributes:
     person_id: 3407
@@ -6380,98 +6381,68 @@ participants:
     person_id: 3474
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -20
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -19
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -18
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -17
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -16
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -15
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -13
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -12
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -11
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -10
-    value: 39.2831578158087
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 33.59
-  - analyte: AN_OPS_SARSCoV2
-    time: 1
-    value: 34.0767421789678
-  - analyte: AN_OPS_SARSCoV2
-    time: 13
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 14
+    time: -9
     value: negative
-- attributes:
-    person_id: 3475
-  measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -10
-    value: 38.45
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -6
-    value: 37.1283174108437
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -5
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -3
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -2
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -1
-    value: 37.1
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 35.64
+    value: 39.2831578158087
   - analyte: AN_OPS_SARSCoV2
-    time: 1
-    value: 37.17
+    time: 10
+    value: 33.59
   - analyte: AN_OPS_SARSCoV2
-    time: 2
+    time: 11
+    value: 34.0767421789678
+  - analyte: AN_OPS_SARSCoV2
+    time: 23
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 3
+    time: 24
     value: negative
+- attributes:
+    person_id: 3475
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.45
   - analyte: AN_OPS_SARSCoV2
     time: 4
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 5
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: 39.9925152162009
-  - analyte: AN_OPS_SARSCoV2
-    time: 7
-    value: negative
+    value: 37.1283174108437
   - analyte: AN_OPS_SARSCoV2
     time: 8
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 9
-    value: negative
+    value: 37.1
   - analyte: AN_OPS_SARSCoV2
     time: 10
-    value: negative
+    value: 35.64
   - analyte: AN_OPS_SARSCoV2
     time: 11
-    value: negative
+    value: 37.17
   - analyte: AN_OPS_SARSCoV2
     time: 12
     value: negative
@@ -6486,7 +6457,7 @@ participants:
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 16
-    value: negative
+    value: 39.9925152162009
   - analyte: AN_OPS_SARSCoV2
     time: 17
     value: negative
@@ -6559,26 +6530,56 @@ participants:
   - analyte: AN_OPS_SARSCoV2
     time: 40
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 42
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 43
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 44
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 45
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 46
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 47
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 48
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 49
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 50
+    value: negative
 - attributes:
     person_id: 3478
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -25
+    time: 0
     value: 39.51068754801
   - analyte: AN_OPS_SARSCoV2
-    time: -8
+    time: 17
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -7
+    time: 18
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -2
+    time: 23
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -1
+    time: 24
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 0
+    time: 25
     value: 34.86
 - attributes:
     person_id: 3479
@@ -6623,31 +6624,31 @@ participants:
     person_id: 3485
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -11
+    time: -4
     value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -7
-    value: 31.1
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 31.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 7
     value: 27.3
   - analyte: AN_OPS_SARSCoV2
-    time: 3
+    time: 10
     value: 35.0939339229264
   - analyte: AN_OPS_SARSCoV2
-    time: 6
+    time: 13
     value: 33.33
   - analyte: AN_OPS_SARSCoV2
-    time: 9
+    time: 16
     value: 36.91
   - analyte: AN_OPS_SARSCoV2
-    time: 11
+    time: 18
     value: 37.9313635244953
   - analyte: AN_OPS_SARSCoV2
-    time: 13
+    time: 20
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 14
+    time: 21
     value: negative
 - attributes:
     person_id: 3490
@@ -6728,46 +6729,40 @@ participants:
     person_id: 3491
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -9
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -5
-    value: 36.1
-  - analyte: AN_OPS_SARSCoV2
     time: -4
-    value: 34.89
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 36.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 34.89
+  - analyte: AN_OPS_SARSCoV2
+    time: 5
     value: 23.36
   - analyte: AN_OPS_SARSCoV2
-    time: 3
+    time: 8
     value: 27.05
   - analyte: AN_OPS_SARSCoV2
-    time: 6
+    time: 11
     value: 32.35
   - analyte: AN_OPS_SARSCoV2
-    time: 9
+    time: 14
     value: 36.7
   - analyte: AN_OPS_SARSCoV2
-    time: 11
+    time: 16
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 13
+    time: 18
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 14
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 15
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 17
+    time: 19
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 20
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 23
+    time: 22
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 25
@@ -6779,13 +6774,19 @@ participants:
     time: 30
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 32
+    time: 33
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 34
+    time: 35
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 36
+    time: 37
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 39
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 41
     value: negative
 - attributes:
     person_id: 3492
@@ -6860,112 +6861,100 @@ participants:
     person_id: 3497
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -22
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -16
-    value: 38.5
-  - analyte: AN_OPS_SARSCoV2
     time: -6
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -5
+    time: 0
+    value: 38.5
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 11
     value: 39.1493167968668
-  - analyte: AN_OPS_SARSCoV2
-    time: -2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 37.59
-  - analyte: AN_OPS_SARSCoV2
-    time: 1
-    value: 39.91
-- attributes:
-    person_id: 3498
-  measurements:
-  - analyte: AN_OPS_SARSCoV2
-    time: -1
-    value: 38.1
-  - analyte: AN_OPS_SARSCoV2
-    time: 0
-    value: 23.06
-  - analyte: AN_OPS_SARSCoV2
-    time: 9
-    value: 37.8
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
-    value: 36.74
   - analyte: AN_OPS_SARSCoV2
     time: 14
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: 37.59
+  - analyte: AN_OPS_SARSCoV2
+    time: 17
+    value: 39.91
+- attributes:
+    person_id: 3498
+  measurements:
+  - analyte: AN_OPS_SARSCoV2
+    time: 0
+    value: 38.1
+  - analyte: AN_OPS_SARSCoV2
+    time: 1
+    value: 23.06
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: 37.8
+  - analyte: AN_OPS_SARSCoV2
+    time: 13
+    value: 36.74
+  - analyte: AN_OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
     value: 38.3195024794268
 - attributes:
     person_id: 3637
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -8
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -4
-    value: 36.4
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 36.4
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
     value: 18.0
   - analyte: AN_OPS_SARSCoV2
-    time: 2
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: 6
-    value: 29.2
-  - analyte: AN_OPS_SARSCoV2
-    time: 12
     value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: 29.2
   - analyte: AN_OPS_SARSCoV2
     time: 16
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 19
+    time: 20
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 21
+    time: 23
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 25
     value: negative
 - attributes:
     person_id: 6682
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -55
+    time: -47
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -52
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -50
+    time: -44
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -42
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -38
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -36
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -35
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -34
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -29
+    time: -30
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -28
@@ -6974,10 +6963,7 @@ participants:
     time: -27
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -24
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -22
+    time: -26
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -21
@@ -6986,58 +6972,61 @@ participants:
     time: -20
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -15
+    time: -19
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -16
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -14
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -10
+    time: -13
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -8
-    value: 36.9677081881134
+    time: -12
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -7
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -6
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
-    value: 33.71
-  - analyte: AN_OPS_SARSCoV2
-    time: 1
-    value: 37.4361517544101
-  - analyte: AN_OPS_SARSCoV2
-    time: 2
-    value: 37.5164563657753
-  - analyte: AN_OPS_SARSCoV2
-    time: 6
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: 7
-    value: negative
+    value: 36.9677081881134
   - analyte: AN_OPS_SARSCoV2
     time: 8
+    value: 33.71
+  - analyte: AN_OPS_SARSCoV2
+    time: 9
+    value: 37.4361517544101
+  - analyte: AN_OPS_SARSCoV2
+    time: 10
+    value: 37.5164563657753
+  - analyte: AN_OPS_SARSCoV2
+    time: 14
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: 13
+    time: 15
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: 21
     value: negative
 - attributes:
     person_id: 7262
   measurements:
   - analyte: AN_OPS_SARSCoV2
-    time: -52
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -51
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -49
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
     time: -48
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -47
-    value: negative
-  - analyte: AN_OPS_SARSCoV2
-    time: -46
     value: negative
   - analyte: AN_OPS_SARSCoV2
     time: -45
@@ -7151,6 +7140,9 @@ participants:
     time: -9
     value: negative
   - analyte: AN_OPS_SARSCoV2
+    time: -8
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
     time: -7
     value: negative
   - analyte: AN_OPS_SARSCoV2
@@ -7160,10 +7152,19 @@ participants:
     time: -5
     value: negative
   - analyte: AN_OPS_SARSCoV2
-    time: -4
-    value: 32.8454048047021
+    time: -3
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -2
+    value: negative
+  - analyte: AN_OPS_SARSCoV2
+    time: -1
+    value: negative
   - analyte: AN_OPS_SARSCoV2
     time: 0
+    value: 32.8454048047021
+  - analyte: AN_OPS_SARSCoV2
+    time: 4
     value: 23.0750104219416
 - attributes:
     person_id: 7283
