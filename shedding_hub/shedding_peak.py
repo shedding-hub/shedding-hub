@@ -499,9 +499,10 @@ def plot_shedding_peak_values(
 
     # Create figure with subplots for each unit
     fig, axes = plt.subplots(
-        1, n_units,
+        1,
+        n_units,
         figsize=(DEFAULT_MULTI_FIGURE_SIZE[0] * n_units, DEFAULT_MULTI_FIGURE_SIZE[1]),
-        squeeze=False
+        squeeze=False,
     )
     axes = axes.flatten()
 
@@ -680,7 +681,9 @@ def plot_shedding_peak_value(
 
     # Create color map for biomarkers
     cmap = plt.colormaps["tab10"].resampled(len(unique_biomarkers))
-    biomarker_colors = {biomarker: cmap(i) for i, biomarker in enumerate(unique_biomarkers)}
+    biomarker_colors = {
+        biomarker: cmap(i) for i, biomarker in enumerate(unique_biomarkers)
+    }
 
     # Determine faceting strategy
     # Priority: Unit > Specimen
@@ -702,9 +705,10 @@ def plot_shedding_peak_value(
     # Create figure
     n_facets = len(facet_groups)
     fig, axes = plt.subplots(
-        1, n_facets,
+        1,
+        n_facets,
         figsize=(figsize_width_per_facet * n_facets, figsize_height),
-        squeeze=False
+        squeeze=False,
     )
     axes = axes.flatten()
 
@@ -714,7 +718,9 @@ def plot_shedding_peak_value(
         ax.set_title(facet_labels[idx])
 
         if df_facet.empty:
-            ax.text(0.5, 0.5, "No data", ha="center", va="center", transform=ax.transAxes)
+            ax.text(
+                0.5, 0.5, "No data", ha="center", va="center", transform=ax.transAxes
+            )
             continue
 
         # Get unit for Y-axis label
