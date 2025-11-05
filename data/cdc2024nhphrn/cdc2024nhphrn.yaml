@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=../.schema.yaml
 title: Centers for Disease Control and Prevention (CDC) Nursing Home Public Health
   Response Network (NHPHRN)
-url: https://github.com/abtassociates/CDC_NHPHRN/blob/main/
+url: https://github.com/YWAN446/cdc2024nhphrn/tree/main
 description: >
   The INHERENT study, part of the CDC funded Nursing Home Public Health Response Network
   (NHPHRN), examined SARSCoV2 shedding in nursing home residents and staff. It characterized
   the viral shedding kinetics including proliferation, peak, and clearance using qRTPCR,
   antigen testing, genetic sequencing, and culture. The original dataset is published
-  and updated on their GitHub repository (https://github.com/abtassociates/CDC_NHPHRN/blob/main/).
+  and updated on their GitHub repository (https://github.com/YWAN446/cdc2024nhphrn/tree/main/).
 analytes:
   NP_SARSCoV2_VL:
     description: >
