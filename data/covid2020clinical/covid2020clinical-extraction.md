@@ -1,4 +1,4 @@
-# Extraction for Stephanie et al. (2020)
+# Extraction for COVID-19 Investigation Team (2020)
 
 [The COVID-19 Investigation Team (2020)](https://www.nature.com/articles/s41591-020-0877-5) measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in stool, urine, serum, sputum, oropharyngeal and nasopharyngeal swabs from twelve COVID-19 patients in United States, up to 2 to 3 weeks after symptom onset. Demographic information (age and sex) and hospitalization status are also included in the data. The raw data is stored at [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/covid2020clinical). 
 
@@ -11,7 +11,7 @@ import numpy as np
 from shedding_hub import folded_str
 ```
 
-Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/covid2020clinical), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). Patient demographic information (age and sex) was obtained from the [Supplementary Information](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-020-0877-5/MediaObjects/41591_2020_877_MOESM1_ESM.pdf). For patients 1–5, who were non-hospitalized, demographic data were not available and are therefore marked as unknown in our list. When age was reported as a range, we used the median value as the representative age. Additional patient information (urine specimen testing result and hospitalization status) was obtained from the [Additional Information](https://github.com/shedding-hub/shedding-hub/tree/main/data/covid2020clinical/additional_info.png).
+Raw data, which is stored on [Shedding Hub](https://github.com/shedding-hub/shedding-hub/tree/main/data/covid2020clinical), will be loaded and cleaned to match the most updated [schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml). Patient demographic information (age and sex) was obtained from the [Supplementary Information](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-020-0877-5/MediaObjects/41591_2020_877_MOESM1_ESM.pdf). The paper reported age as range, for example 50-59, and we coded the range as the middle point (55 in the example). For patients 1–5, who were non-hospitalized, demographic data were not available and are therefore marked as unknown in our list. When age was reported as a range, we used the median value as the representative age. Additional patient information (urine specimen testing result and hospitalization status) was obtained from the [Additional Information](https://github.com/shedding-hub/shedding-hub/tree/main/data/covid2020clinical/additional_info.png).
 
 ```python
 Covid2020 = pd.read_csv("data.csv")       
@@ -114,7 +114,7 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 covid2020 = dict(title="Clinical and virologic characteristics of the first 12 patients with coronavirus disease 2019 (COVID-19) in the United States",
                doi="10.1038/s41591-020-0877-5",
-               description=folded_str('This study describes the first 12 COVID-19 patients identified in the United States, tracking their clinical progression and virological characteristics. SARS-CoV-2 was detected by real-time reverse transcriptase PCR in stool, serum, sputum, oropharyngeal and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results were reported in cycle threshold (Ct) values.\n'),
+               description=folded_str('This study describes the first 12 COVID-19 patients identified in the United States, tracking their clinical progression and virological characteristics. SARS-CoV-2 was detected by real-time reverse transcriptase PCR in stool, urine, serum, sputum, oropharyngeal and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results were reported in cycle threshold (Ct) values.\n'),
                analytes=dict(Stool_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in stool samples. The results were reported in cycle threshold numbers.\n"),
                                                     specimen="stool",
                                                     biomarker="SARS-CoV-2",

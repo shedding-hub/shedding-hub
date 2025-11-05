@@ -3,7 +3,7 @@ $defs:
   negative_positive_number:
     description: >
       A quantitative value, `positive` result above limit of detection but below limit
-      of quantification, `inconclusive` result not calculated for specimens, or `negative` result below the limit of detection.
+      of quantification, `inconclusive` result not conclusive for test output, or `negative` result below the limit of detection.
     oneOf:
       - type: number
         exclusiveMinimum: 0 # Zero should be coded as `negative`.

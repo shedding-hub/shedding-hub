@@ -5,9 +5,9 @@ doi: 10.1038/s41591-020-0877-5
 description: >
   This study describes the first 12 COVID-19 patients identified in the United States,
   tracking their clinical progression and virological characteristics. SARS-CoV-2
-  was detected by real-time reverse transcriptase PCR in stool, serum, sputum, oropharyngeal
-  and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results were reported
-  in cycle threshold (Ct) values.
+  was detected by real-time reverse transcriptase PCR in stool, urine, serum, sputum,
+  oropharyngeal and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results
+  were reported in cycle threshold (Ct) values.
 analytes:
   Stool_SARSCoV2:
     description: >
@@ -206,6 +206,9 @@ participants:
   - analyte: Serum_SARSCoV2
     time: 18
     value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
+    value: negative
   - analyte: OPS_SARSCoV2
     time: 4
     value: 34.140625
@@ -226,6 +229,9 @@ participants:
     value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 18
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 22
     value: negative
   - analyte: NPS_SARSCoV2
     time: 4
@@ -339,6 +345,24 @@ participants:
   - analyte: Serum_SARSCoV2
     time: 7
     value: negative
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
+    value: negative
   - analyte: OPS_SARSCoV2
     time: 2
     value: 33.75
@@ -432,6 +456,9 @@ participants:
     time: 20
     value: negative
   - analyte: Stool_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Stool_SARSCoV2
     time: 23
     value: negative
   - analyte: Stool_SARSCoV2
@@ -448,6 +475,9 @@ participants:
     value: negative
   - analyte: Serum_SARSCoV2
     time: 20
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
     value: negative
   - analyte: Serum_SARSCoV2
     time: 23
@@ -471,13 +501,28 @@ participants:
     time: 13
     value: negative
   - analyte: OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
     time: 17
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 22
     value: negative
   - analyte: OPS_SARSCoV2
     time: 23
     value: negative
   - analyte: OPS_SARSCoV2
     time: 26
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 28
     value: negative
   - analyte: OPS_SARSCoV2
     time: 29
@@ -488,6 +533,9 @@ participants:
   - analyte: NPS_SARSCoV2
     time: 10
     value: 36.875
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 15
     value: negative
@@ -505,6 +553,15 @@ participants:
     value: negative
   - analyte: NPS_SARSCoV2
     time: 26
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 29
     value: negative
   - analyte: Urine_SARSCoV2
     time: 10
@@ -807,6 +864,9 @@ participants:
     time: 1
     value: negative
   - analyte: Serum_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: Serum_SARSCoV2
     time: 6
     value: negative
   - analyte: Serum_SARSCoV2
@@ -853,6 +913,9 @@ participants:
     value: negative
   - analyte: OPS_SARSCoV2
     time: 10
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 12
     value: negative
   - analyte: NPS_SARSCoV2
     time: 1
@@ -971,6 +1034,12 @@ participants:
     time: 11
     value: negative
   - analyte: OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: OPS_SARSCoV2
     time: 19
     value: negative
   - analyte: OPS_SARSCoV2
@@ -984,6 +1053,9 @@ participants:
     value: negative
   - analyte: OPS_SARSCoV2
     time: 28
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 30
     value: negative
   - analyte: OPS_SARSCoV2
     time: 31
@@ -1022,6 +1094,9 @@ participants:
     time: 28
     value: negative
   - analyte: NPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: NPS_SARSCoV2
     time: 32
     value: negative
   - analyte: Urine_SARSCoV2
@@ -1058,6 +1133,9 @@ participants:
     value: negative
   - analyte: Serum_SARSCoV2
     time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 12
     value: negative
   - analyte: Serum_SARSCoV2
     time: 13
@@ -1158,6 +1236,9 @@ participants:
     time: 11
     value: negative
   - analyte: Serum_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Serum_SARSCoV2
     time: 16
     value: negative
   - analyte: Sputum_SARSCoV2
@@ -1192,6 +1273,9 @@ participants:
     value: 36.484375
   - analyte: OPS_SARSCoV2
     time: 27
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 30
     value: negative
   - analyte: OPS_SARSCoV2
     time: 32
@@ -1286,7 +1370,19 @@ participants:
     time: 6
     value: negative
   - analyte: Serum_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
     time: 11
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 15
     value: negative
   - analyte: OPS_SARSCoV2
     time: 2
@@ -1305,6 +1401,18 @@ participants:
     value: inconclusive
   - analyte: OPS_SARSCoV2
     time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 24
     value: negative
   - analyte: NPS_SARSCoV2
     time: 2
@@ -1329,6 +1437,12 @@ participants:
     value: inconclusive
   - analyte: NPS_SARSCoV2
     time: 17
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 24
     value: negative
   - analyte: Urine_SARSCoV2
     time: 6
