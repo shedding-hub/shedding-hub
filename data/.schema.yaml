@@ -3,12 +3,12 @@ $defs:
   negative_positive_number:
     description: >
       A quantitative value, `positive` result above limit of detection but below limit
-      of quantification, or `negative` result below the limit of detection.
+      of quantification, `inconclusive` result not conclusive for test output, or `negative` result below the limit of detection.
     oneOf:
       - type: number
         exclusiveMinimum: 0 # Zero should be coded as `negative`.
       - type: string
-        enum: [positive, negative]
+        enum: [positive, negative, inconclusive]
   specimen_type_enum:
     type: string
     enum:
@@ -191,6 +191,12 @@ properties:
                 - type: boolean
                 - type: string
                   constant: unknown
+            hospitalized:
+              description: If the participant was hospitalized.
+              oneOf:
+                - type: boolean
+                - type: string
+                  constant: unknown              
             lineage:
               description: Lineage information of the pathogen for the participant.
               type: string

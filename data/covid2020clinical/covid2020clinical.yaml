@@ -1,0 +1,1464 @@
+# yaml-language-server: $schema=.schema.yaml
+title: Clinical and virologic characteristics of the first 12 patients with coronavirus
+  disease 2019 (COVID-19) in the United States
+doi: 10.1038/s41591-020-0877-5
+description: >
+  This study describes the first 12 COVID-19 patients identified in the United States,
+  tracking their clinical progression and virological characteristics. SARS-CoV-2
+  was detected by real-time reverse transcriptase PCR in stool, urine, serum, sputum,
+  oropharyngeal and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results
+  were reported in cycle threshold (Ct) values.
+analytes:
+  Stool_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in stool samples. The results were reported
+      in cycle threshold numbers.
+    specimen: stool
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+  Serum_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in serum samples. The results were reported
+      in cycle threshold numbers.
+    specimen: serum
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+  Sputum_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in sputum samples. The results were reported
+      in cycle threshold numbers.
+    specimen: sputum
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+  OPS_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in oropharyngeal samples. The results
+      were reported in cycle threshold numbers.
+    specimen: oropharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+  NPS_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in nasopharyngeal samples. The results
+      were reported in cycle threshold numbers.
+    specimen: nasopharyngeal_swab
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+  Urine_SARSCoV2:
+    description: >
+      SARS-CoV-2 RNA gene copy concentration in urine samples. The results were reported
+      in cycle threshold numbers.
+    specimen: urine
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_quantification: unknown
+    limit_of_detection: 40
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: unknown
+    sex: unknown
+    hospitalized: false
+  measurements:
+  - analyte: Serum_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 1
+    value: 32.1875
+  - analyte: Sputum_SARSCoV2
+    time: 8
+    value: 27.5
+  - analyte: OPS_SARSCoV2
+    time: 1
+    value: 27.5
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: 31.40625
+  - analyte: OPS_SARSCoV2
+    time: 8
+    value: 34.53125
+  - analyte: OPS_SARSCoV2
+    time: 10
+    value: 34.140625
+  - analyte: OPS_SARSCoV2
+    time: 12
+    value: 35.703125
+  - analyte: OPS_SARSCoV2
+    time: 14
+    value: 37.65625
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: 35.703125
+  - analyte: OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: 25.546875
+  - analyte: NPS_SARSCoV2
+    time: 8
+    value: 30.625
+  - analyte: NPS_SARSCoV2
+    time: 10
+    value: 32.578125
+  - analyte: NPS_SARSCoV2
+    time: 12
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 14
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 16
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 18
+    value: 38.046875
+  - analyte: NPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 22
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 27
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+    hospitalized: false
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 11
+    value: 35.3125
+  - analyte: Stool_SARSCoV2
+    time: 13
+    value: 31.40625
+  - analyte: Stool_SARSCoV2
+    time: 15
+    value: 32.96875
+  - analyte: Stool_SARSCoV2
+    time: 18
+    value: 35.3125
+  - analyte: Stool_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: 34.140625
+  - analyte: OPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 9
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 15
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: 35.3125
+  - analyte: NPS_SARSCoV2
+    time: 5
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 11
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 15
+    value: 36.09375
+  - analyte: NPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 22
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+    hospitalized: false
+  measurements:
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: 35.703125
+  - analyte: OPS_SARSCoV2
+    time: 10
+    value: 27.890625
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: 29.453125
+  - analyte: OPS_SARSCoV2
+    time: 26
+    value: 37.265625
+  - analyte: OPS_SARSCoV2
+    time: 29
+    value: 31.015625
+  - analyte: OPS_SARSCoV2
+    time: 33
+    value: 32.578125
+  - analyte: OPS_SARSCoV2
+    time: 36
+    value: 35.703125
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: 38.046875
+  - analyte: NPS_SARSCoV2
+    time: 10
+    value: 25.15625
+  - analyte: NPS_SARSCoV2
+    time: 16
+    value: 31.015625
+  - analyte: NPS_SARSCoV2
+    time: 26
+    value: 36.09375
+  - analyte: NPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 33
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 36
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+    hospitalized: false
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 9
+    value: inconclusive
+  - analyte: Stool_SARSCoV2
+    time: 11
+    value: 39.609375
+  - analyte: Stool_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 15
+    value: 35.703125
+  - analyte: Stool_SARSCoV2
+    time: 18
+    value: 38.4375
+  - analyte: Stool_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 2
+    value: 33.75
+  - analyte: OPS_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 9
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 18
+    value: 36.09375
+  - analyte: OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 2
+    value: 34.53125
+  - analyte: NPS_SARSCoV2
+    time: 7
+    value: 36.875
+  - analyte: NPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 11
+    value: 37.65625
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: 36.484375
+  - analyte: NPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 24
+    value: 25.9375
+  - analyte: NPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 22
+    value: negative
+- attributes:
+    age: unknown
+    sex: unknown
+    hospitalized: false
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 3
+    value: 21.25
+  - analyte: OPS_SARSCoV2
+    time: 10
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 3
+    value: 16.953125
+  - analyte: NPS_SARSCoV2
+    time: 10
+    value: 36.875
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 17
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 20
+    value: 36.875
+  - analyte: NPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 28
+    value: negative
+- attributes:
+    age: 35
+    sex: male
+    hospitalized: true
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 7
+    value: 37.30769231
+  - analyte: Stool_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 7
+    value: inconclusive
+  - analyte: Serum_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: 22.421875
+  - analyte: OPS_SARSCoV2
+    time: 7
+    value: 32.96875
+  - analyte: OPS_SARSCoV2
+    time: 11
+    value: 36.09375
+  - analyte: OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: 19.6875
+  - analyte: NPS_SARSCoV2
+    time: 7
+    value: 24.375
+  - analyte: NPS_SARSCoV2
+    time: 11
+    value: 33.75
+  - analyte: NPS_SARSCoV2
+    time: 12
+    value: 39.21875
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 15
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 16
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 20
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 7
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 14
+    value: negative
+- attributes:
+    age: 65
+    sex: female
+    hospitalized: true
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 10
+    value: 32.46031746
+  - analyte: Stool_SARSCoV2
+    time: 12
+    value: 34.44444444
+  - analyte: Stool_SARSCoV2
+    time: 14
+    value: 36.42857143
+  - analyte: Stool_SARSCoV2
+    time: 15
+    value: 39.20634921
+  - analyte: Stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 21
+    value: inconclusive
+  - analyte: Stool_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 8
+    value: 24.375
+  - analyte: Sputum_SARSCoV2
+    time: 10
+    value: 23.984375
+  - analyte: Sputum_SARSCoV2
+    time: 12
+    value: 30.625
+  - analyte: Sputum_SARSCoV2
+    time: 14
+    value: 27.890625
+  - analyte: Sputum_SARSCoV2
+    time: 15
+    value: 29.84375
+  - analyte: Sputum_SARSCoV2
+    time: 18
+    value: 32.578125
+  - analyte: Sputum_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 29
+    value: 36.484375
+  - analyte: OPS_SARSCoV2
+    time: 8
+    value: 36.15384615
+  - analyte: OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 12
+    value: 27.30769231
+  - analyte: OPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 8
+    value: 38.046875
+  - analyte: NPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 24
+    value: negative
+- attributes:
+    age: 65
+    sex: male
+    hospitalized: true
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 1
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 26
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 4
+    value: 32.1875
+  - analyte: Sputum_SARSCoV2
+    time: 6
+    value: 30.625
+  - analyte: Sputum_SARSCoV2
+    time: 8
+    value: 34.53125
+  - analyte: Sputum_SARSCoV2
+    time: 10
+    value: inconclusive
+  - analyte: Sputum_SARSCoV2
+    time: 12
+    value: inconclusive
+  - analyte: Sputum_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 1
+    value: 34.140625
+  - analyte: OPS_SARSCoV2
+    time: 3
+    value: 40.0
+  - analyte: OPS_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 1
+    value: 38.046875
+  - analyte: NPS_SARSCoV2
+    time: 3
+    value: 37.265625
+  - analyte: NPS_SARSCoV2
+    time: 4
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 4
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 10
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 12
+    value: negative
+- attributes:
+    age: 35
+    sex: male
+    hospitalized: true
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 6
+    value: 31.53846154
+  - analyte: Stool_SARSCoV2
+    time: 11
+    value: 31.15384615
+  - analyte: Stool_SARSCoV2
+    time: 13
+    value: 32.30769231
+  - analyte: Stool_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: Stool_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 3
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 6
+    value: inconclusive
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: 36.484375
+  - analyte: Serum_SARSCoV2
+    time: 11
+    value: 36.09375
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: 36.09375
+  - analyte: Serum_SARSCoV2
+    time: 16
+    value: inconclusive
+  - analyte: Serum_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 3
+    value: 30.234375
+  - analyte: OPS_SARSCoV2
+    time: 3
+    value: 32.96875
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: 39.21875
+  - analyte: OPS_SARSCoV2
+    time: 9
+    value: 36.875
+  - analyte: OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 31
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 3
+    value: 19.6875
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: 34.53125
+  - analyte: NPS_SARSCoV2
+    time: 9
+    value: 32.578125
+  - analyte: NPS_SARSCoV2
+    time: 11
+    value: 36.09375
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 16
+    value: 38.046875
+  - analyte: NPS_SARSCoV2
+    time: 19
+    value: 35.3125
+  - analyte: NPS_SARSCoV2
+    time: 22
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 19
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 28
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 32
+    value: negative
+- attributes:
+    age: 55
+    sex: male
+    hospitalized: true
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 9
+    value: 30.76923077
+  - analyte: OPS_SARSCoV2
+    time: 12
+    value: 36.92307692
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 25
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 9
+    value: 25.546875
+  - analyte: NPS_SARSCoV2
+    time: 12
+    value: 34.140625
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: 33.75
+  - analyte: NPS_SARSCoV2
+    time: 16
+    value: 35.703125
+  - analyte: NPS_SARSCoV2
+    time: 17
+    value: 37.265625
+  - analyte: NPS_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 23
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 25
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 29
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 16
+    value: negative
+- attributes:
+    age: 55
+    sex: male
+    hospitalized: true
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 14
+    value: 24.23076923
+  - analyte: Stool_SARSCoV2
+    time: 16
+    value: 24.61538462
+  - analyte: Stool_SARSCoV2
+    time: 17
+    value: 25.76923077
+  - analyte: Stool_SARSCoV2
+    time: 25
+    value: 30.0
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 12
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: Sputum_SARSCoV2
+    time: 11
+    value: 18.515625
+  - analyte: OPS_SARSCoV2
+    time: 5
+    value: 31.40625
+  - analyte: OPS_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 12
+    value: 32.578125
+  - analyte: OPS_SARSCoV2
+    time: 14
+    value: 34.53125
+  - analyte: OPS_SARSCoV2
+    time: 16
+    value: 36.484375
+  - analyte: OPS_SARSCoV2
+    time: 18
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 20
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 24
+    value: 36.484375
+  - analyte: OPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 32
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 5
+    value: 26.71875
+  - analyte: NPS_SARSCoV2
+    time: 9
+    value: 34.921875
+  - analyte: NPS_SARSCoV2
+    time: 11
+    value: 28.671875
+  - analyte: NPS_SARSCoV2
+    time: 12
+    value: 29.0625
+  - analyte: NPS_SARSCoV2
+    time: 14
+    value: 34.53125
+  - analyte: NPS_SARSCoV2
+    time: 16
+    value: 35.3125
+  - analyte: NPS_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 20
+    value: 33.359375
+  - analyte: NPS_SARSCoV2
+    time: 24
+    value: 34.921875
+  - analyte: NPS_SARSCoV2
+    time: 27
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 30
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 32
+    value: 37.65625
+  - analyte: NPS_SARSCoV2
+    time: 34
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 37
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 14
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 16
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 18
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 25
+    value: negative
+- attributes:
+    age: 55
+    sex: female
+    hospitalized: true
+  measurements:
+  - analyte: Stool_SARSCoV2
+    time: 6
+    value: 37.22222222
+  - analyte: Stool_SARSCoV2
+    time: 11
+    value: 36.42857143
+  - analyte: Stool_SARSCoV2
+    time: 13
+    value: inconclusive
+  - analyte: Stool_SARSCoV2
+    time: 15
+    value: inconclusive
+  - analyte: Stool_SARSCoV2
+    time: 22
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 9
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Serum_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 2
+    value: 30.0
+  - analyte: OPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 8
+    value: 30.0
+  - analyte: OPS_SARSCoV2
+    time: 9
+    value: 31.53846154
+  - analyte: OPS_SARSCoV2
+    time: 11
+    value: inconclusive
+  - analyte: OPS_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: OPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 2
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 9
+    value: 22.8125
+  - analyte: NPS_SARSCoV2
+    time: 11
+    value: 36.484375
+  - analyte: NPS_SARSCoV2
+    time: 13
+    value: 28.671875
+  - analyte: NPS_SARSCoV2
+    time: 15
+    value: inconclusive
+  - analyte: NPS_SARSCoV2
+    time: 17
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 21
+    value: negative
+  - analyte: NPS_SARSCoV2
+    time: 24
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 6
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 8
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 11
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 13
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 15
+    value: negative
+  - analyte: Urine_SARSCoV2
+    time: 22
+    value: negative
