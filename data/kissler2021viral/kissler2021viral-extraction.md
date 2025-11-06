@@ -70,7 +70,7 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 kissler2021 = dict(title="Viral dynamics of acute SARS-CoV-2 infection and applications to diagnostic and public health strategies",
             doi="10.1371/journal.pbio.3001333",
-            description=folded_str("This study followed 68 people with frequent RT-qPCR to map SARS-CoV-2 viral RNA trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates acute infection, and a second PCR within 48 hours helps tell whether someone is early (proliferation) or late (clearance) in infection.\n"),
+            description=folded_str("This study followed 68 people (90% male) during the NBA 2019 to 2020 season with frequent RT-qPCR to map SARS-CoV-2 viral RNA trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates acute infection, and a second PCR within 48 hours helps tell whether someone is early (proliferation) or late (clearance) in infection.\n"),
             analytes=dict(AN_OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. Results were reported in cycle threshold (Ct) values.\n"),
                           specimen=["anterior_nares_swab", "oropharyngeal_swab"],
                           biomarker="SARS-CoV-2",
