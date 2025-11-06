@@ -70,9 +70,9 @@ for person_id, person_data in merged_df.groupby("PersonID"):
                val = np.log10(val)
 
            participant["measurements"].append({
-               "analyte": "stool_Norovirus_log10copies",
+               "analyte": "stool_Norovirus_copies",
                "time": day_offset,
-               "value": round(val, 2)
+               "value": 10**(val)
            })
 
         # Append qualitative PCR result (binary: positive/negative), not subject to log10 transformation
@@ -94,28 +94,28 @@ output_data = {
     "title": "Single Base Substitutions in the Capsid Region of the Norovirus Genome during Viral Shedding in Cases of Infection in Areas Where Norovirus Infection Is Endemic",
     "doi": "10.1128/jcm.01932-07",
     "description": folded_str(
-        "This study investigates the duration of norovirus RNA shedding in two food handlers—"
-        "one symptomatic and one asymptomatic—using repeated real-time reverse transcription-PCR "
+        "This study investigates the duration of norovirus RNA shedding in two food handlers-"
+        "one symptomatic and one asymptomatic-using repeated real-time reverse transcription-PCR "
         "tests on fecal specimens. Norovirus RNA was detected and quantified over time, and the duration "
         "of viral shedding was compared between symptomatic and asymptomatic individuals.\n"
     ),
    "analytes": {
-        "stool_Norovirus_log10copies": {
+        "stool_Norovirus_copies": {
             "description": folded_str(
                 "Quantitative measurement of norovirus RNA in stool samples using real-time RT-PCR. "
-                "Results are expressed as log10 copies per gram of feces.\n"
+                "Results are expressed as copies per gram of feces.\n"
             ),
             "specimen": "stool",
             "biomarker": "norovirus",
             "genotype": "GII.4",
             "limit_of_quantification": "unknown",
-            "limit_of_detection": 4,
+            "limit_of_detection": 10000,
             "unit": "gc/wet gram",
             "reference_event": "confirmation date"
         },
         "norovirus_presence_qualitative": {
             "description": folded_str(
-                "Qualitative detection of norovirus RNA in stool samples using real-time RT-PCR. "
+                "Detection of norovirus RNA in stool samples using real-time RT-PCR. "
                 "Results are recorded as 'positive' or 'negative'.\n"
             ),
             "specimen": "stool",
@@ -123,7 +123,7 @@ output_data = {
             "genotype": "GII.4",
             "limit_of_quantification": "unknown",
             "limit_of_detection": "unknown",
-            "unit": "gc/wet gram",
+            "unit": null,
             "reference_event": "confirmation date"
         },
         "norovirus_ct_value": {
