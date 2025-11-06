@@ -42,7 +42,7 @@ participants = []
 # Group merged sample-level data by participant ID ('a' or 'b')
 for person_id, person_data in merged_df.groupby("PersonID"):
     # Determine group type based on symptomatic (a) or asymptomatic (b)
-    group_type = "symptomatic" if person_id == "a" else "asymptomatic"
+    group_type = True if person_id == "a" else False
     # Initialize participant record with group attribute and empty measurement list
     participant = {
         "attributes": {"symptomatic": group_type},
@@ -123,7 +123,7 @@ output_data = {
             "genotype": "GII.4",
             "limit_of_quantification": "unknown",
             "limit_of_detection": "unknown",
-            "unit": null,
+            "unit": None,
             "reference_event": "confirmation date"
         },
         "norovirus_ct_value": {

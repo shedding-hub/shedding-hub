@@ -44,7 +44,7 @@ analytes:
     reference_event: confirmation date
 participants:
 - attributes:
-    symptomatic: symptomatic
+    symptomatic: true
   measurements:
   - analyte: stool_Norovirus_copies
     time: 0
@@ -68,7 +68,7 @@ participants:
     time: 67
     value: 11220.18454301963
 - attributes:
-    symptomatic: asymptomatic
+    symptomatic: false
   measurements:
   - analyte: stool_Norovirus_copies
     time: 0
