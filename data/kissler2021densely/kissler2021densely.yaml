@@ -14,7 +14,7 @@ analytes:
   AN_OPS_SARSCoV2:
     description: >
       SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal
-      swabs. The concentration was quantified in gene copies per milliliter.
+      swabs. Results were reported in cycle threshold (Ct) values.
     specimen:
     - anterior_nares_swab
     - oropharyngeal_swab

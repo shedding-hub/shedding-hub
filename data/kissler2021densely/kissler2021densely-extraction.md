@@ -98,7 +98,7 @@ Finally, the data is formatted and output as a YAML file.
 kissler2021 = dict(title="Densely sampled viral trajectories suggest longer duration of acute infection with B.1.1.7 variant relative to non-B.1.1.7 SARS-CoV-2",
             doi="10.1101/2021.02.16.21251535",
             description=folded_str("This study analyzed densely sampled longitudinal RT-qPCR data from 65 individuals infected with SARS-CoV-2, including 7 infected with the B.1.1.7 (Alpha) variant, using each person's lowest Ct value as the reference event time point. Inclusion criteria required each individual to have at least 5 positive PCR tests (Ct < 40), including at least one with Ct < 35. Ct value were collected using the Roche cobas target 1 assay and converted to estimated RNA viral concentrations via a standard curve and log-linear transformation.\n"),
-            analytes=dict(AN_OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. The concentration was quantified in gene copies per milliliter.\n"),
+            analytes=dict(AN_OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. Results were reported in cycle threshold (Ct) values.\n"),
                           specimen=["anterior_nares_swab", "oropharyngeal_swab"],
                           biomarker="SARS-CoV-2",
                           gene_target="ORF1",
