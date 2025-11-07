@@ -70,22 +70,28 @@ $defs:
           - crAssphage
           - influenza
           - sapovirus
+          - norovirus
           - SARS
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
           metabolites.
         type: string
+      genotype:
+        description: Genotype of the pathogen for the participant.
+        type: string
       unit:
         description: Units in which measurements are reported.
-        type: string
-        enum:
-          - gc/dry gram
-          - gc/mL
-          - gc/swab
-          - gc/wet gram
-          - cycle threshold
-          - pfu/mL
+        oneOf:
+          - type: string
+            enum:
+              - gc/dry gram
+              - gc/mL
+              - gc/swab
+              - gc/wet gram
+              - cycle threshold
+              - pfu/mL
+          - type: "null"
       reference_event:
         description: Event used as reference for `time` fields of measurements.
         type: string
@@ -199,6 +205,12 @@ properties:
               type: string
             infant:
               description: If the participant was an infant.
+              oneOf:
+                - type: boolean
+                - type: string
+                  constant: unknown
+            symptomatic:
+              description: If the participant was symptomatic.
               oneOf:
                 - type: boolean
                 - type: string
