@@ -54,11 +54,15 @@ for i in pd.unique(Kissler2021["Person.ID"]):
             })
     
         viral_load_log = row.get("log10_GEperML", pd.NA)
-        if not pd.isna(viral_load_log):
-            measurements.append({
+        if pd.isna(viral_load_log) or viral_load_log==2.65760968215156:
+            viral_load_value = "negative"
+        else:
+            viral_load_value = float(10 ** viral_load_log)
+        
+        measurements.append({
                 "analyte": "AN_OPS_SARSCoV2_viral",
                 "time": int(row["DayFromReference"]),
-                "value": float(10 ** viral_load_log)
+                "value": viral_load_value
             })
 
     participant_dict = {
@@ -93,7 +97,7 @@ kissler2021 = dict(title="Viral dynamics of acute SARS-CoV-2 infection and appli
                           specimen=["anterior_nares_swab", "oropharyngeal_swab"],
                           biomarker="SARS-CoV-2",
                           gene_target="N1, N2, RdRp",
-                          limit_of_quantification="unknown",
+                          limit_of_quantification=10 ** 2.65760968215156,
                           limit_of_detection=10 ** 2.65760968215156,  
                           unit="gc/mL",
                           reference_event="confirmation date")          
