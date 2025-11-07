@@ -65,10 +65,6 @@ for person_id, person_data in merged_df.groupby("PersonID"):
         if pd.notna(row["Log10CopyNumber"]):
            val = float(row["Log10CopyNumber"])
 
-   
-           if val > 100000:  
-               val = np.log10(val)
-
            participant["measurements"].append({
                "analyte": "stool_Norovirus_copies",
                "time": day_offset,
@@ -111,32 +107,6 @@ output_data = {
             "limit_of_quantification": "unknown",
             "limit_of_detection": 10000,
             "unit": "gc/wet gram",
-            "reference_event": "confirmation date"
-        },
-        "norovirus_presence_qualitative": {
-            "description": folded_str(
-                "Detection of norovirus RNA in stool samples using real-time RT-PCR. "
-                "Results are recorded as 'positive' or 'negative'.\n"
-            ),
-            "specimen": "stool",
-            "biomarker": "norovirus",
-            "genotype": "GII.4",
-            "limit_of_quantification": "unknown",
-            "limit_of_detection": "unknown",
-            "unit": None,
-            "reference_event": "confirmation date"
-        },
-        "norovirus_ct_value": {
-            "description": folded_str(
-                "Cycle threshold (Ct) values from real-time RT-PCR detection of norovirus RNA in stool samples. "
-                "Lower Ct values indicate higher viral load.\n"
-            ),
-            "specimen": "stool",
-            "biomarker": "norovirus",
-            "genotype": "GII.4",
-            "limit_of_quantification": "unknown",
-            "limit_of_detection": "unknown",
-            "unit": "cycle threshold",
             "reference_event": "confirmation date"
         }
     },

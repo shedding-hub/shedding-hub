@@ -20,28 +20,6 @@ analytes:
     limit_of_detection: 10000
     unit: gc/wet gram
     reference_event: confirmation date
-  norovirus_presence_qualitative:
-    description: >
-      Detection of norovirus RNA in stool samples using real-time RT-PCR. Results
-      are recorded as 'positive' or 'negative'.
-    specimen: stool
-    biomarker: norovirus
-    genotype: GII.4
-    limit_of_quantification: unknown
-    limit_of_detection: unknown
-    unit: null
-    reference_event: confirmation date
-  norovirus_ct_value:
-    description: >
-      Cycle threshold (Ct) values from real-time RT-PCR detection of norovirus RNA
-      in stool samples. Lower Ct values indicate higher viral load.
-    specimen: stool
-    biomarker: norovirus
-    genotype: GII.4
-    limit_of_quantification: unknown
-    limit_of_detection: unknown
-    unit: cycle threshold
-    reference_event: confirmation date
 participants:
 - attributes:
     symptomatic: true
