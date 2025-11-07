@@ -42,17 +42,24 @@ for i in pd.unique(Kissler2021["Person.ID"]):
         
         ct_raw = row.get("CT.Mean", pd.NA)
         if pd.isna(ct_raw) or ct_raw >= 40:
-            value = "negative"
+            ct_value = "negative"
         else:
-            value = float(ct_raw)
+            ct_value = float(ct_raw)
 
-        if row["type"] == "AN+OPS":
-            measurements.append({
-                "analyte": "AN_OPS_SARSCoV2",
+
+        measurements.append({
+                "analyte": "AN_OPS_SARSCoV2_ct",
                 "time": int(row['DayFromReference']),
-                "value": value
+                "value": ct_value
             })
     
+        viral_load = row.get("log10_GEperML", pd.NA)
+        if not pd.isna(viral_load):
+            measurements.append({
+                "analyte": "AN_OPS_SARSCoV2_viral",
+                "time": int(row["DayFromReference"]),
+                "value": float(viral_load)
+            })
 
     participant_dict = {
         "attributes": {
@@ -62,6 +69,8 @@ for i in pd.unique(Kissler2021["Person.ID"]):
     
     participant_list.append(participant_dict)
 
+
+
 ```
 
 Finally, the data is formatted and output as a YAML file.
@@ -70,19 +79,28 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 kissler2021 = dict(title="Viral dynamics of acute SARS-CoV-2 infection and applications to diagnostic and public health strategies",
             doi="10.1371/journal.pbio.3001333",
-            description=folded_str("This study followed 68 people with frequent RT-qPCR to map SARS-CoV-2 viral RNA trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates acute infection, and a second PCR within 48 hours helps tell whether someone is early (proliferation) or late (clearance) in infection.\n"),
-            analytes=dict(AN_OPS_SARSCoV2=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. Results were reported in cycle threshold (Ct) values.\n"),
+            description=folded_str("This study followed 68 people (90% male) during the NBA 2019 to 2020 season with frequent RT-qPCR to map SARS-CoV-2 viral RNA trajectories and 46 had acute infections. A single low Ct (<30) strongly indicates acute infection, and a second PCR within 48 hours helps tell whether someone is early (proliferation) or late (clearance) in infection.\n"),
+            analytes=dict(
+                AN_OPS_SARSCoV2_ct=dict(description=folded_str("SARS-CoV-2 RNA gene copy concentration in combined anterior nares and oropharyngeal swabs. Results were reported in cycle threshold (Ct) values.\n"),
                           specimen=["anterior_nares_swab", "oropharyngeal_swab"],
                           biomarker="SARS-CoV-2",
                           gene_target="N1, N2, RdRp",
                           limit_of_quantification="unknown",
                           limit_of_detection=40,
                           unit="cycle threshold",
-                          reference_event="confirmation date",
-        )
-    ),
+                          reference_event="confirmation date"),
+                AN_OPS_SARSCoV2_viral=dict(description=folded_str("Estimated SARS-CoV-2 RNA genome copy concentration measured from combined anterior nares and oropharyngeal swab specimens. Viral load was derived by the study authors by transforming the corresponding Ct values using a Bayesian model implemented in Stan, and results are reported in genome copies per milliliter.\n"),
+                          specimen=["anterior_nares_swab", "oropharyngeal_swab"],
+                          biomarker="SARS-CoV-2",
+                          gene_target="N1, N2, RdRp",
+                          limit_of_quantification="unknown",
+                          limit_of_detection="unknown",
+                          unit="gc/mL",
+                          reference_event="confirmation date")          
+),
     participants=participant_list,
 )
+
 
 
 with open("kissler2021viral.yaml","w") as outfile:
