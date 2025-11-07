@@ -11,6 +11,7 @@ from .shedding_peak import (
     calc_shedding_peaks,
     plot_shedding_peak,
     plot_shedding_peaks,
+    plot_shedding_peak_values
 )
 
 __all__ = [
@@ -26,4 +27,5 @@ __all__ = [
     "calc_shedding_peaks",
     "plot_shedding_peak",
     "plot_shedding_peaks",
+    "plot_shedding_peak_values",
 ]

@@ -568,12 +568,20 @@ def plot_shedding_peak_values(
 
         # Set labels based on transformation
         if is_cycle_threshold:
-            ax.set_xlabel(f"Peak value ({unit})")
+            ax.set_xlabel(f"Peak value ({unit})", fontsize=14)
+            # Reverse X-axis for cycle threshold (lower Ct = higher viral load)
+            # Set upper limit to 40 (common max Ct value)
+            ax.invert_xaxis()
+            current_xlim = ax.get_xlim()
+            ax.set_xlim(40, min(current_xlim))
         else:
-            ax.set_xlabel(f"log10(Peak value) ({unit})")
+            ax.set_xlabel(f"log10(Peak value) ({unit})", fontsize=14)
 
-        ax.set_ylabel("")
-        ax.set_title(f"Unit: {unit}")
+        ax.set_ylabel("", fontsize=14)
+        ax.set_title(f"Unit: {unit}", fontsize=16)
+
+        # Increase tick label font size
+        ax.tick_params(axis="both", which="major", labelsize=12)
 
         # Add legend for unique specimens (only on first subplot)
         if unit_idx == 0:
@@ -596,12 +604,14 @@ def plot_shedding_peak_values(
                 title="Specimen",
                 loc="upper right",
                 bbox_to_anchor=(1, 1),
+                fontsize=12,
+                title_fontsize=13,
             )
 
     # Overall title
     fig.suptitle(
         f"Shedding Peak Values for {biomarker}",
-        fontsize=14,
+        fontsize=18,
         y=1.00 if n_units == 1 else 1.02,
     )
 
@@ -614,6 +624,7 @@ def plot_shedding_peak_values(
 def plot_shedding_peak_value(
     df_shedding_peak: pd.DataFrame,
     *,
+    biomarker: str | None = DEFAULT_BIOMARKER,
     facet_by_specimen: bool = True,
     figsize_width_per_facet: int = 6,
     figsize_height: int = 6,
@@ -628,6 +639,7 @@ def plot_shedding_peak_value(
     Args:
         df_shedding_peak: Individual level output from calc_shedding_peak containing
             columns: shedding_peak, shedding_peak_value, biomarker, specimen, reference_event, unit.
+        biomarker: Biomarker to filter data. Defaults to "SARS-CoV-2". Set to None to show all biomarkers.
         facet_by_specimen: If True, create separate subplots for each specimen type (within each unit).
             If False, plot all data on a single plot with biomarker color-coding.
             Note: If multiple units exist, they are always plotted separately regardless of this setting.
@@ -675,6 +687,15 @@ def plot_shedding_peak_value(
     if df.empty:
         raise ValueError("No valid data remains after dropping NA values.")
 
+    # Filter by biomarker if specified
+    if biomarker is not None:
+        df = df[df["biomarker"] == biomarker].copy()
+        if df.empty:
+            raise ValueError(
+                f"No data found for biomarker '{biomarker}'. "
+                f"Available biomarkers: {', '.join(df_shedding_peak['biomarker'].unique())}"
+            )
+
     # Get unique values for faceting
     unique_units = df["unit"].unique()
     unique_biomarkers = df["biomarker"].unique()
@@ -715,7 +736,7 @@ def plot_shedding_peak_value(
     # Plot for each facet
     for idx, (facet_key, df_facet) in enumerate(facet_groups):
         ax = axes[idx]
-        ax.set_title(facet_labels[idx])
+        ax.set_title(facet_labels[idx], fontsize=16)
 
         if df_facet.empty:
             ax.text(
@@ -779,25 +800,34 @@ def plot_shedding_peak_value(
 
         # Set labels with unit information
         reference_event = df_facet["reference_event"].iloc[0]
-        ax.set_xlabel(f"Days after {reference_event}")
+        ax.set_xlabel(f"Days after {reference_event}", fontsize=14)
 
         # Set Y-axis label based on transformation
         if is_cycle_threshold:
-            ax.set_ylabel(f"Peak value ({unit})")
+            ax.set_ylabel(f"Peak value ({unit})", fontsize=14)
+            # Reverse Y-axis for cycle threshold (lower Ct = higher viral load)
+            # Set upper limit to 40 (common max Ct value)
+            ax.invert_yaxis()
+            current_ylim = ax.get_ylim()
+            ax.set_ylim(40, min(current_ylim))
         else:
-            ax.set_ylabel(f"log10(Peak value) ({unit})")
+            ax.set_ylabel(f"log10(Peak value) ({unit})", fontsize=14)
+
+        # Increase tick label font size
+        ax.tick_params(axis="both", which="major", labelsize=12)
+
         ax.grid(True, alpha=0.3)
 
         # Add legend
         if idx == n_facets - 1:  # Only on last subplot
-            ax.legend(loc="best", framealpha=0.9)
+            ax.legend(loc="best", framealpha=0.9, fontsize=12, title_fontsize=13)
 
     # Overall title
     dataset_id = df["dataset_id"].iloc[0] if "dataset_id" in df.columns else "Unknown"
     fig.suptitle(
         f"Shedding Peak Time vs Peak Value for Dataset '{dataset_id}'",
         y=1.02 if n_facets > 1 else 1.00,
-        fontsize=14,
+        fontsize=18,
     )
 
     plt.tight_layout()
