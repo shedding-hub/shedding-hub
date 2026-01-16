@@ -1060,3 +1060,356 @@ def plot_shedding_heatmap(
     plt.tight_layout()
     plt.close(fig)
     return fig
+
+
+def plot_mean_trajectory(
+    dataset: Dict[str, Any],
+    *,
+    biomarker: str | None = None,
+    specimen: str | None = None,
+    value: str | None = None,
+    central_tendency: str = "mean",
+    uncertainty: str = "95ci",
+    time_bin_size: float = 1.0,
+    time_range: tuple[float, float] | None = None,
+    min_observations: int = 3,
+    figsize: tuple[int, int] = (10, 6),
+    line_color: str = "steelblue",
+    fill_alpha: float = 0.3,
+    show_individual: bool = False,
+    individual_alpha: float = 0.1,
+    show_n: bool = True,
+) -> Figure:
+    """
+    Plot mean/median trajectory with confidence bands across participants.
+
+    Creates a line plot showing the central tendency (mean or median) of measurements
+    over time, with a shaded band showing the uncertainty range. Useful for visualizing
+    the "typical" shedding pattern across all participants.
+
+    Args:
+        dataset: Raw dataset dictionary from load_dataset() containing 'analytes',
+            'participants', and 'dataset_id' keys.
+        biomarker: Optional filter for a specific biomarker. If None, uses first biomarker found.
+        specimen: Optional filter for a specific specimen type. If None, uses first specimen found.
+        value: Optional filter for value type. Options are "concentration" or "ct".
+            If None, plots all data (may raise error if mixed). Defaults to None.
+        central_tendency: Measure of central tendency. Options:
+            - "mean": Arithmetic mean (default)
+            - "median": Median value
+        uncertainty: Type of uncertainty band. Options:
+            - "95ci": 95% confidence interval (default)
+            - "iqr": Interquartile range (25th-75th percentile)
+            - "sd": Standard deviation (mean ± 1 SD)
+            - "range": Full range (min-max)
+        time_bin_size: Size of time bins in days for aggregating measurements. Defaults to 1.0.
+        time_range: Optional tuple (min_time, max_time) to limit the time axis.
+            If None, uses the full range of data.
+        min_observations: Minimum number of observations required per time bin to include
+            in the plot. Bins with fewer observations are excluded. Defaults to 3.
+        figsize: Figure size as (width, height). Defaults to (10, 6).
+        line_color: Color for the central tendency line and fill. Defaults to "steelblue".
+        fill_alpha: Transparency of the uncertainty band (0-1). Defaults to 0.3.
+        show_individual: If True, shows individual participant trajectories in background.
+            Defaults to False.
+        individual_alpha: Transparency of individual trajectories (0-1). Defaults to 0.1.
+        show_n: If True, shows the number of observations at each time point. Defaults to True.
+
+    Returns:
+        matplotlib.figure.Figure: The generated figure containing the mean trajectory plot.
+
+    Raises:
+        ValueError: If dataset is missing required keys, is empty, or has no valid data.
+    """
+    # Validate input
+    if not dataset or not isinstance(dataset, dict):
+        raise ValueError("Dataset must be a non-empty dictionary")
+
+    required_keys = ["analytes", "participants", "dataset_id"]
+    missing_keys = [key for key in required_keys if key not in dataset]
+    if missing_keys:
+        raise ValueError(f"Dataset missing required keys: {missing_keys}")
+
+    if not dataset["participants"]:
+        raise ValueError("Dataset has no participants")
+
+    # Validate parameters
+    if central_tendency not in ["mean", "median"]:
+        raise ValueError(
+            f"Invalid central_tendency '{central_tendency}'. "
+            "Must be 'mean' or 'median'."
+        )
+
+    if uncertainty not in ["95ci", "iqr", "sd", "range"]:
+        raise ValueError(
+            f"Invalid uncertainty '{uncertainty}'. "
+            "Must be '95ci', 'iqr', 'sd', or 'range'."
+        )
+
+    # Extract time series data from raw dataset
+    time_series_data = []
+    for participant_id, participant in enumerate(dataset["participants"], 1):
+        measurements = participant.get("measurements", [])
+        for measurement in measurements:
+            analyte_name = measurement.get("analyte")
+            time_series_data.append({
+                "participant_id": participant_id,
+                "time": measurement.get("time"),
+                "value": measurement.get("value"),
+                "analyte": analyte_name,
+            })
+
+    if not time_series_data:
+        raise ValueError("Dataset has no measurements")
+
+    df = pd.DataFrame(time_series_data)
+
+    # Convert time to numeric, filtering out "unknown" values
+    df = df[df["time"] != "unknown"].copy()
+    df["time_num"] = pd.to_numeric(df["time"], errors="coerce")
+
+    # Join with analyte metadata to get specimen and unit information
+    analyte_metadata = {}
+    for analyte_name, analyte_info in dataset["analytes"].items():
+        specimen_value = analyte_info.get("specimen")
+        if isinstance(specimen_value, list):
+            specimen_value = "+".join(specimen_value)
+
+        lod = analyte_info.get("limit_of_detection")
+        lod_numeric = None
+        if lod is not None and lod != "unknown":
+            try:
+                lod_numeric = float(lod)
+            except (ValueError, TypeError):
+                lod_numeric = None
+
+        analyte_metadata[analyte_name] = {
+            "specimen": specimen_value,
+            "unit": analyte_info.get("unit"),
+            "reference_event": analyte_info.get("reference_event"),
+            "biomarker": analyte_info.get("biomarker"),
+            "limit_of_detection": lod_numeric,
+        }
+
+    # Add metadata to DataFrame
+    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["unit"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("unit"))
+    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
+    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["limit_of_detection"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("limit_of_detection"))
+
+    # Filter by biomarker if specified
+    if biomarker is not None:
+        df = df[df["biomarker"] == biomarker]
+        if df.empty:
+            raise ValueError(f"No measurements found for biomarker '{biomarker}'")
+
+    # Filter by specimen if specified
+    if specimen is not None:
+        df = df[df["specimen"] == specimen]
+        if df.empty:
+            raise ValueError(f"No measurements found for specimen '{specimen}'")
+
+    # Determine if each row is CT value or concentration based on unit
+    df["is_ct"] = df["unit"].apply(_is_ct_value)
+
+    # Filter by value type if specified
+    if value is not None:
+        value_lower = value.lower()
+        if value_lower == "concentration":
+            df = df[~df["is_ct"]].copy()
+        elif value_lower == "ct":
+            df = df[df["is_ct"]].copy()
+        else:
+            raise ValueError(
+                f"Invalid value '{value}'. "
+                "Must be 'concentration', 'ct', or None."
+            )
+        if df.empty:
+            raise ValueError(f"No {value} data found in dataset after filtering")
+
+    # Check for mixed CT and concentration data
+    if df["is_ct"].nunique() > 1:
+        raise ValueError(
+            "Dataset contains mixed CT values and concentrations. "
+            "Use value='concentration' or value='ct' to filter."
+        )
+
+    is_ct = df["is_ct"].iloc[0] if not df.empty else False
+
+    # Exclude negative values for trajectory calculation
+    df = df[df["value"] != NEGATIVE_VALUE].copy()
+    df["value_num"] = pd.to_numeric(df["value"], errors="coerce")
+
+    # Drop rows with NaN time or value
+    df = df.dropna(subset=["time_num", "value_num"])
+
+    if df.empty:
+        raise ValueError("No valid numeric measurements found after filtering")
+
+    # Apply time range filter if specified
+    if time_range is not None:
+        df = df[(df["time_num"] >= time_range[0]) & (df["time_num"] <= time_range[1])]
+        if df.empty:
+            raise ValueError(f"No measurements found in time range {time_range}")
+
+    # Create time bins
+    time_min = df["time_num"].min()
+    time_max = df["time_num"].max()
+    if time_range is not None:
+        time_min, time_max = time_range
+
+    # Floor time_min and ceil time_max to bin_size boundaries
+    time_min = np.floor(time_min / time_bin_size) * time_bin_size
+    time_max = np.ceil(time_max / time_bin_size) * time_bin_size
+
+    bins = np.arange(time_min, time_max + time_bin_size, time_bin_size)
+    bin_centers = bins[:-1] + time_bin_size / 2
+
+    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers, include_lowest=True)
+
+    # Calculate statistics per time bin
+    def calc_stats(group):
+        values = group["value_num"].values
+        n = len(values)
+
+        if n < min_observations:
+            return pd.Series({
+                "n": n,
+                "center": np.nan,
+                "lower": np.nan,
+                "upper": np.nan,
+            })
+
+        if central_tendency == "mean":
+            center = np.mean(values)
+        else:  # median
+            center = np.median(values)
+
+        if uncertainty == "95ci":
+            # 95% confidence interval
+            sem = np.std(values, ddof=1) / np.sqrt(n)
+            lower = center - 1.96 * sem
+            upper = center + 1.96 * sem
+        elif uncertainty == "iqr":
+            # Interquartile range
+            lower = np.percentile(values, 25)
+            upper = np.percentile(values, 75)
+        elif uncertainty == "sd":
+            # Standard deviation
+            sd = np.std(values, ddof=1)
+            lower = center - sd
+            upper = center + sd
+        elif uncertainty == "range":
+            # Full range
+            lower = np.min(values)
+            upper = np.max(values)
+
+        return pd.Series({
+            "n": n,
+            "center": center,
+            "lower": lower,
+            "upper": upper,
+        })
+
+    stats_df = df.groupby("time_bin", observed=False).apply(calc_stats).reset_index()
+    stats_df["time"] = stats_df["time_bin"].astype(float)
+
+    # Remove bins with insufficient observations
+    stats_df = stats_df.dropna(subset=["center"])
+
+    if stats_df.empty:
+        raise ValueError(
+            f"No time bins have at least {min_observations} observations. "
+            "Try reducing min_observations or using a larger time_bin_size."
+        )
+
+    # Sort by time
+    stats_df = stats_df.sort_values("time")
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # Plot individual trajectories in background if requested
+    if show_individual:
+        for participant_id in df["participant_id"].unique():
+            participant_data = df[df["participant_id"] == participant_id].sort_values("time_num")
+            ax.plot(
+                participant_data["time_num"],
+                participant_data["value_num"],
+                color="gray",
+                alpha=individual_alpha,
+                linewidth=0.5,
+            )
+
+    # Plot uncertainty band
+    ax.fill_between(
+        stats_df["time"],
+        stats_df["lower"],
+        stats_df["upper"],
+        color=line_color,
+        alpha=fill_alpha,
+        label=f"{uncertainty.upper()}" if uncertainty != "95ci" else "95% CI",
+    )
+
+    # Plot central tendency line
+    ax.plot(
+        stats_df["time"],
+        stats_df["center"],
+        color=line_color,
+        linewidth=2,
+        label=central_tendency.capitalize(),
+    )
+
+    # Set axis scaling
+    if is_ct:
+        ax.invert_yaxis()
+    else:
+        ax.set_yscale("log")
+
+    # Labels and title
+    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
+    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+
+    ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
+    if is_ct:
+        ax.set_ylabel(f"CT value ({unit})", fontsize=12)
+    else:
+        ax.set_ylabel(f"Concentration ({unit})", fontsize=12)
+
+    # Title
+    dataset_id = dataset.get("dataset_id", "Dataset")
+    title_parts = [f"Mean Trajectory: {dataset_id}"]
+    if biomarker_display:
+        title_parts.append(f"({biomarker_display}")
+        if specimen_display:
+            title_parts[-1] += f" - {specimen_display})"
+        else:
+            title_parts[-1] += ")"
+    elif specimen_display:
+        title_parts.append(f"({specimen_display})")
+
+    ax.set_title(" ".join(title_parts), fontsize=14)
+
+    # Add sample size annotations if requested
+    if show_n:
+        # Add n values at the top of the plot
+        y_pos = ax.get_ylim()[0] if is_ct else ax.get_ylim()[1]
+        for _, row in stats_df.iterrows():
+            ax.annotate(
+                f"n={int(row['n'])}",
+                xy=(row["time"], y_pos),
+                fontsize=8,
+                ha="center",
+                va="bottom" if is_ct else "top",
+                alpha=0.7,
+            )
+
+    ax.legend(loc="best", fontsize=10)
+    ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig

@@ -565,3 +565,204 @@ def test_plot_shedding_heatmap_with_real_dataset():
     except Exception as e:
         # If loading fails (e.g., network issues), skip this test
         pytest.skip(f"Could not load real dataset: {e}")
+
+
+# ==================== plot_mean_trajectory tests ====================
+
+
+def test_plot_mean_trajectory_valid(minimal_dataset):
+    """Test plot_mean_trajectory with valid minimal dataset."""
+    fig = sh.plot_mean_trajectory(minimal_dataset)
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_mean_95ci(minimal_dataset):
+    """Test plot_mean_trajectory with mean and 95% CI (default)."""
+    fig = sh.plot_mean_trajectory(
+        minimal_dataset, central_tendency="mean", uncertainty="95ci"
+    )
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_median_iqr(minimal_dataset):
+    """Test plot_mean_trajectory with median and IQR."""
+    fig = sh.plot_mean_trajectory(
+        minimal_dataset, central_tendency="median", uncertainty="iqr"
+    )
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_mean_sd(minimal_dataset):
+    """Test plot_mean_trajectory with mean and standard deviation."""
+    fig = sh.plot_mean_trajectory(
+        minimal_dataset, central_tendency="mean", uncertainty="sd"
+    )
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_mean_range(minimal_dataset):
+    """Test plot_mean_trajectory with mean and full range."""
+    fig = sh.plot_mean_trajectory(
+        minimal_dataset, central_tendency="mean", uncertainty="range"
+    )
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_with_biomarker_filter(minimal_dataset):
+    """Test plot_mean_trajectory with biomarker filtering."""
+    fig = sh.plot_mean_trajectory(minimal_dataset, biomarker="SARS-CoV-2")
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_with_specimen_filter(multi_specimen_dataset):
+    """Test plot_mean_trajectory with specimen filtering."""
+    fig = sh.plot_mean_trajectory(
+        multi_specimen_dataset, specimen="stool", min_observations=1
+    )
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_with_value_concentration(minimal_dataset):
+    """Test plot_mean_trajectory with value='concentration'."""
+    fig = sh.plot_mean_trajectory(minimal_dataset, value="concentration")
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_with_value_ct(ct_dataset):
+    """Test plot_mean_trajectory with value='ct'."""
+    fig = sh.plot_mean_trajectory(ct_dataset, value="ct")
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_with_time_range(minimal_dataset):
+    """Test plot_mean_trajectory with time_range filtering."""
+    fig = sh.plot_mean_trajectory(minimal_dataset, time_range=(0, 2))
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_custom_time_bin_size(minimal_dataset):
+    """Test plot_mean_trajectory with custom time_bin_size."""
+    fig = sh.plot_mean_trajectory(minimal_dataset, time_bin_size=0.5)
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_custom_figsize(minimal_dataset):
+    """Test plot_mean_trajectory with custom figsize."""
+    fig = sh.plot_mean_trajectory(minimal_dataset, figsize=(12, 8))
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+    assert fig.get_size_inches()[0] == 12
+    assert fig.get_size_inches()[1] == 8
+
+
+def test_plot_mean_trajectory_custom_styling(minimal_dataset):
+    """Test plot_mean_trajectory with custom styling parameters."""
+    fig = sh.plot_mean_trajectory(
+        minimal_dataset,
+        line_color="red",
+        fill_alpha=0.5,
+    )
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_show_individual(minimal_dataset):
+    """Test plot_mean_trajectory with individual trajectories shown."""
+    fig = sh.plot_mean_trajectory(
+        minimal_dataset, show_individual=True, individual_alpha=0.2
+    )
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_hide_n(minimal_dataset):
+    """Test plot_mean_trajectory with sample size annotations hidden."""
+    fig = sh.plot_mean_trajectory(minimal_dataset, show_n=False)
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_min_observations(minimal_dataset):
+    """Test plot_mean_trajectory with custom min_observations."""
+    fig = sh.plot_mean_trajectory(minimal_dataset, min_observations=2)
+    assert fig is not None
+    assert isinstance(fig, matplotlib.figure.Figure)
+
+
+def test_plot_mean_trajectory_empty_dataset():
+    """Test plot_mean_trajectory with empty dataset."""
+    with pytest.raises(ValueError, match="Dataset must be a non-empty dictionary"):
+        sh.plot_mean_trajectory({})
+
+
+def test_plot_mean_trajectory_missing_keys():
+    """Test plot_mean_trajectory with missing required keys."""
+    invalid_dataset = {"dataset_id": "test"}
+    with pytest.raises(ValueError, match="Dataset missing required keys"):
+        sh.plot_mean_trajectory(invalid_dataset)
+
+
+def test_plot_mean_trajectory_no_participants():
+    """Test plot_mean_trajectory with no participants."""
+    invalid_dataset = {
+        "dataset_id": "test",
+        "analytes": {"A": {"specimen": "stool", "unit": "gc/mL"}},
+        "participants": [],
+    }
+    with pytest.raises(ValueError, match="Dataset has no participants"):
+        sh.plot_mean_trajectory(invalid_dataset)
+
+
+def test_plot_mean_trajectory_invalid_biomarker(minimal_dataset):
+    """Test plot_mean_trajectory with invalid biomarker filter."""
+    with pytest.raises(ValueError, match="No measurements found for biomarker"):
+        sh.plot_mean_trajectory(minimal_dataset, biomarker="nonexistent")
+
+
+def test_plot_mean_trajectory_invalid_specimen(minimal_dataset):
+    """Test plot_mean_trajectory with invalid specimen filter."""
+    with pytest.raises(ValueError, match="No measurements found for specimen"):
+        sh.plot_mean_trajectory(minimal_dataset, specimen="nonexistent")
+
+
+def test_plot_mean_trajectory_invalid_central_tendency(minimal_dataset):
+    """Test plot_mean_trajectory with invalid central_tendency parameter."""
+    with pytest.raises(ValueError, match="Invalid central_tendency"):
+        sh.plot_mean_trajectory(minimal_dataset, central_tendency="invalid")
+
+
+def test_plot_mean_trajectory_invalid_uncertainty(minimal_dataset):
+    """Test plot_mean_trajectory with invalid uncertainty parameter."""
+    with pytest.raises(ValueError, match="Invalid uncertainty"):
+        sh.plot_mean_trajectory(minimal_dataset, uncertainty="invalid")
+
+
+def test_plot_mean_trajectory_invalid_value(minimal_dataset):
+    """Test plot_mean_trajectory with invalid value parameter."""
+    with pytest.raises(ValueError, match="Invalid value"):
+        sh.plot_mean_trajectory(minimal_dataset, value="invalid")
+
+
+def test_plot_mean_trajectory_with_real_dataset():
+    """Test plot_mean_trajectory with a real dataset from the repository."""
+    try:
+        dataset = sh.load_dataset("woelfel2020virological")
+        fig = sh.plot_mean_trajectory(
+            dataset, specimen="sputum", value="concentration", min_observations=2
+        )
+        assert fig is not None
+        assert isinstance(fig, matplotlib.figure.Figure)
+    except Exception as e:
+        # If loading fails (e.g., network issues), skip this test
+        pytest.skip(f"Could not load real dataset: {e}")

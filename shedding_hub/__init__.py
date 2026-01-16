@@ -17,6 +17,7 @@ from .viz import (
     plot_time_course,
     plot_time_courses,
     plot_shedding_heatmap,
+    plot_mean_trajectory,
 )
 
 __all__ = [
@@ -35,4 +36,5 @@ __all__ = [
     "plot_time_course",
     "plot_time_courses",
     "plot_shedding_heatmap",
+    "plot_mean_trajectory",
 ]
