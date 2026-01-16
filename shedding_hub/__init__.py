@@ -13,6 +13,12 @@ from .shedding_peak import (
     plot_shedding_peaks,
 )
 
+from .viz import (
+    plot_time_course,
+    plot_time_courses,
+    plot_shedding_heatmap,
+)
+
 __all__ = [
     "folded_str",
     "literal_str",
@@ -26,4 +32,7 @@ __all__ = [
     "calc_shedding_peaks",
     "plot_shedding_peak",
     "plot_shedding_peaks",
+    "plot_time_course",
+    "plot_time_courses",
+    "plot_shedding_heatmap",
 ]
