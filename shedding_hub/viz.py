@@ -1399,9 +1399,10 @@ def plot_mean_trajectory(
         # Add offset to avoid clipping at axis boundary
         y_lim = ax.get_ylim()
         if is_ct:
-            # For inverted CT axis, add offset below the lower limit (which is at top)
+            # For inverted CT axis: y_lim[1] is smaller value (top of plot)
+            # Add offset towards larger values (move down visually)
             y_range = abs(y_lim[1] - y_lim[0])
-            y_pos = y_lim[0] + y_range * 0.02
+            y_pos = y_lim[1] + y_range * 0.02
         else:
             # For log scale concentrations, apply offset in log space
             log_range = np.log10(y_lim[1]) - np.log10(y_lim[0])
@@ -1412,7 +1413,7 @@ def plot_mean_trajectory(
                 xy=(row["time"], y_pos),
                 fontsize=8,
                 ha="center",
-                va="bottom" if is_ct else "top",
+                va="bottom",
                 alpha=0.7,
                 rotation=90,
             )
