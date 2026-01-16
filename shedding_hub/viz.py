@@ -1396,7 +1396,16 @@ def plot_mean_trajectory(
     # Add sample size annotations if requested
     if show_n:
         # Add n values at the top of the plot (vertical text to avoid overlap)
-        y_pos = ax.get_ylim()[0] if is_ct else ax.get_ylim()[1]
+        # Add offset to avoid clipping at axis boundary
+        y_lim = ax.get_ylim()
+        if is_ct:
+            # For inverted CT axis, add offset below the lower limit (which is at top)
+            y_range = abs(y_lim[1] - y_lim[0])
+            y_pos = y_lim[0] + y_range * 0.02
+        else:
+            # For log scale concentrations, apply offset in log space
+            log_range = np.log10(y_lim[1]) - np.log10(y_lim[0])
+            y_pos = 10 ** (np.log10(y_lim[1]) - log_range * 0.02)
         for _, row in stats_df.iterrows():
             ax.annotate(
                 f"n={int(row['n'])}",
