@@ -1402,11 +1402,11 @@ def plot_mean_trajectory(
             # For inverted CT axis: y_lim[1] is smaller value (top of plot)
             # Add offset towards larger values (move down visually)
             y_range = abs(y_lim[1] - y_lim[0])
-            y_pos = y_lim[1] + y_range * 0.02
+            y_pos = y_lim[1] + y_range * 0.08
         else:
             # For log scale concentrations, apply offset in log space
             log_range = np.log10(y_lim[1]) - np.log10(y_lim[0])
-            y_pos = 10 ** (np.log10(y_lim[1]) - log_range * 0.02)
+            y_pos = 10 ** (np.log10(y_lim[1]) - log_range * 0.08)
         for _, row in stats_df.iterrows():
             ax.annotate(
                 f"n={int(row['n'])}",
