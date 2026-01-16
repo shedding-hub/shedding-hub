@@ -128,10 +128,10 @@ def plot_time_course(
     # Join with analyte metadata to get specimen and unit information
     analyte_metadata = {}
     for analyte_name, analyte_info in dataset["analytes"].items():
-        specimen = analyte_info.get("specimen")
+        specimen_value = analyte_info.get("specimen")
         # Handle both single specimen and array of specimens
-        if isinstance(specimen, list):
-            specimen = "+".join(specimen)
+        if isinstance(specimen_value, list):
+            specimen_value = "+".join(specimen_value)
 
         # Get limit of detection (could be numeric or "unknown")
         lod = analyte_info.get("limit_of_detection")
@@ -143,7 +143,7 @@ def plot_time_course(
                 lod_numeric = None
 
         analyte_metadata[analyte_name] = {
-            "specimen": specimen,
+            "specimen": specimen_value,
             "unit": analyte_info.get("unit"),
             "reference_event": analyte_info.get("reference_event"),
             "biomarker": analyte_info.get("biomarker"),
@@ -456,9 +456,9 @@ def plot_time_courses(
 
         # Add analyte metadata
         for analyte_name, analyte_info in dataset["analytes"].items():
-            specimen = analyte_info.get("specimen")
-            if isinstance(specimen, list):
-                specimen = "+".join(specimen)
+            specimen_value = analyte_info.get("specimen")
+            if isinstance(specimen_value, list):
+                specimen_value = "+".join(specimen_value)
 
             # Get limit of detection (could be numeric or "unknown")
             lod = analyte_info.get("limit_of_detection")
@@ -469,7 +469,7 @@ def plot_time_courses(
                 except (ValueError, TypeError):
                     lod_numeric = None
 
-            df_dataset.loc[df_dataset["analyte"] == analyte_name, "specimen"] = specimen
+            df_dataset.loc[df_dataset["analyte"] == analyte_name, "specimen"] = specimen_value
             df_dataset.loc[df_dataset["analyte"] == analyte_name, "unit"] = analyte_info.get("unit")
             df_dataset.loc[df_dataset["analyte"] == analyte_name, "reference_event"] = analyte_info.get("reference_event")
             df_dataset.loc[df_dataset["analyte"] == analyte_name, "biomarker"] = analyte_info.get("biomarker")
