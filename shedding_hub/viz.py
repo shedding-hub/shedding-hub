@@ -1077,7 +1077,7 @@ def plot_mean_trajectory(
     line_color: str = "steelblue",
     fill_alpha: float = 0.3,
     show_individual: bool = False,
-    individual_alpha: float = 0.1,
+    individual_alpha: float = 0.5,
     show_n: bool = True,
 ) -> Figure:
     """
@@ -1112,7 +1112,7 @@ def plot_mean_trajectory(
         fill_alpha: Transparency of the uncertainty band (0-1). Defaults to 0.3.
         show_individual: If True, shows individual participant trajectories in background.
             Defaults to False.
-        individual_alpha: Transparency of individual trajectories (0-1). Defaults to 0.1.
+        individual_alpha: Transparency of individual trajectories (0-1). Defaults to 0.5.
         show_n: If True, shows the number of observations at each time point. Defaults to True.
 
     Returns:
@@ -1381,7 +1381,7 @@ def plot_mean_trajectory(
 
     # Title
     dataset_id = dataset.get("dataset_id", "Dataset")
-    title_parts = [f"Mean Trajectory: {dataset_id}"]
+    title_parts = [f"{central_tendency.capitalize()} Trajectory: {dataset_id}"]
     if biomarker_display:
         title_parts.append(f"({biomarker_display}")
         if specimen_display:
@@ -1395,7 +1395,7 @@ def plot_mean_trajectory(
 
     # Add sample size annotations if requested
     if show_n:
-        # Add n values at the top of the plot
+        # Add n values at the top of the plot (vertical text to avoid overlap)
         y_pos = ax.get_ylim()[0] if is_ct else ax.get_ylim()[1]
         for _, row in stats_df.iterrows():
             ax.annotate(
@@ -1405,6 +1405,7 @@ def plot_mean_trajectory(
                 ha="center",
                 va="bottom" if is_ct else "top",
                 alpha=0.7,
+                rotation=90,
             )
 
     ax.legend(loc="best", fontsize=10)
