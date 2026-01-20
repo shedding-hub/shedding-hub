@@ -1796,3 +1796,273 @@ def plot_value_distribution_by_time(
     plt.tight_layout()
     plt.close(fig)
     return fig
+
+
+def plot_detection_probability(
+    dataset: Dict[str, Any],
+    *,
+    biomarker: str | None = None,
+    specimen: str | None = None,
+    time_bin_size: float = 1.0,
+    time_range: tuple[float, float] | None = None,
+    min_observations: int = 3,
+    figsize: tuple[int, int] = (10, 6),
+    line_color: str = "steelblue",
+    show_ci: bool = True,
+    ci_alpha: float = 0.3,
+    show_n: bool = True,
+) -> Figure:
+    """
+    Plot detection probability (proportion of positive measurements) over time.
+
+    Creates a line plot showing the probability of detecting a positive measurement
+    at each time bin, with optional 95% confidence intervals. Useful for understanding
+    when during infection a biomarker is most likely to be detected.
+
+    Args:
+        dataset: Raw dataset dictionary from load_dataset() containing 'analytes',
+            'participants', and 'dataset_id' keys.
+        biomarker: Optional filter for a specific biomarker. If None, uses first biomarker found.
+        specimen: Optional filter for a specific specimen type. If None, uses first specimen found.
+        time_bin_size: Size of time bins in days for aggregating measurements. Defaults to 1.0.
+        time_range: Optional tuple (min_time, max_time) to limit the time axis.
+            If None, uses the full range of data.
+        min_observations: Minimum number of observations required per time bin to include
+            in the plot. Bins with fewer observations are excluded. Defaults to 3.
+        figsize: Figure size as (width, height). Defaults to (10, 6).
+        line_color: Color for the probability line and confidence band. Defaults to "steelblue".
+        show_ci: If True, shows 95% confidence interval band using Wilson score interval.
+            Defaults to True.
+        ci_alpha: Transparency of the confidence interval band (0-1). Defaults to 0.3.
+        show_n: If True, shows the number of observations at each time point. Defaults to True.
+
+    Returns:
+        matplotlib.figure.Figure: The generated figure containing the detection probability plot.
+
+    Raises:
+        ValueError: If dataset is missing required keys, is empty, or has no valid data.
+
+    Note:
+        - Detection probability is calculated as the proportion of non-negative measurements
+        - Confidence intervals use the Wilson score interval for binomial proportions
+        - Y-axis is fixed to 0-1 range
+    """
+    # Validate input
+    if not dataset or not isinstance(dataset, dict):
+        raise ValueError("Dataset must be a non-empty dictionary")
+
+    required_keys = ["analytes", "participants", "dataset_id"]
+    missing_keys = [key for key in required_keys if key not in dataset]
+    if missing_keys:
+        raise ValueError(f"Dataset missing required keys: {missing_keys}")
+
+    if not dataset["participants"]:
+        raise ValueError("Dataset has no participants")
+
+    # Extract time series data from raw dataset
+    time_series_data = []
+    for participant_id, participant in enumerate(dataset["participants"], 1):
+        measurements = participant.get("measurements", [])
+        for measurement in measurements:
+            analyte_name = measurement.get("analyte")
+            time_series_data.append({
+                "participant_id": participant_id,
+                "time": measurement.get("time"),
+                "value": measurement.get("value"),
+                "analyte": analyte_name,
+            })
+
+    if not time_series_data:
+        raise ValueError("Dataset has no measurements")
+
+    df = pd.DataFrame(time_series_data)
+
+    # Convert time to numeric, filtering out "unknown" values
+    df = df[df["time"] != "unknown"].copy()
+    df["time_num"] = pd.to_numeric(df["time"], errors="coerce")
+
+    # Join with analyte metadata to get specimen and unit information
+    analyte_metadata = {}
+    for analyte_name, analyte_info in dataset["analytes"].items():
+        specimen_value = analyte_info.get("specimen")
+        if isinstance(specimen_value, list):
+            specimen_value = "+".join(specimen_value)
+
+        analyte_metadata[analyte_name] = {
+            "specimen": specimen_value,
+            "reference_event": analyte_info.get("reference_event"),
+            "biomarker": analyte_info.get("biomarker"),
+        }
+
+    # Add metadata to DataFrame
+    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
+    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+
+    # Filter by biomarker if specified
+    if biomarker is not None:
+        df = df[df["biomarker"] == biomarker]
+        if df.empty:
+            raise ValueError(f"No measurements found for biomarker '{biomarker}'")
+
+    # Filter by specimen if specified
+    if specimen is not None:
+        df = df[df["specimen"] == specimen]
+        if df.empty:
+            raise ValueError(f"No measurements found for specimen '{specimen}'")
+
+    # Drop rows with NaN time
+    df = df.dropna(subset=["time_num"])
+
+    if df.empty:
+        raise ValueError("No valid measurements found after filtering")
+
+    # Apply time range filter if specified
+    if time_range is not None:
+        df = df[(df["time_num"] >= time_range[0]) & (df["time_num"] <= time_range[1])]
+        if df.empty:
+            raise ValueError(f"No measurements found in time range {time_range}")
+
+    # Mark positive vs negative measurements
+    df["is_positive"] = df["value"] != NEGATIVE_VALUE
+
+    # Create time bins centered at integers (or multiples of bin_size)
+    time_min = df["time_num"].min()
+    time_max = df["time_num"].max()
+    if time_range is not None:
+        time_min, time_max = time_range
+
+    # Round time_min down and time_max up to nearest multiple of bin_size to get bin centers
+    center_min = np.floor(time_min / time_bin_size) * time_bin_size
+    center_max = np.ceil(time_max / time_bin_size) * time_bin_size
+
+    # Create bin edges at ±bin_size/2 around centers
+    bins = np.arange(center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size)
+    bin_centers = np.arange(center_min, center_max + time_bin_size / 2, time_bin_size)
+
+    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True)
+    df["time_bin_num"] = df["time_bin"].astype(float)
+
+    # Calculate detection probability per time bin
+    def calc_detection_stats(group):
+        n = len(group)
+        n_positive = group["is_positive"].sum()
+        p = n_positive / n if n > 0 else 0
+
+        # Wilson score interval for 95% CI
+        z = 1.96
+        if n > 0:
+            denominator = 1 + z**2 / n
+            center = (p + z**2 / (2 * n)) / denominator
+            margin = z * np.sqrt(p * (1 - p) / n + z**2 / (4 * n**2)) / denominator
+            ci_lower = max(0, center - margin)
+            ci_upper = min(1, center + margin)
+        else:
+            ci_lower = 0
+            ci_upper = 0
+
+        return pd.Series({
+            "n": n,
+            "n_positive": n_positive,
+            "probability": p,
+            "ci_lower": ci_lower,
+            "ci_upper": ci_upper,
+        })
+
+    stats_df = df.groupby("time_bin_num", observed=False).apply(calc_detection_stats).reset_index()
+
+    # Filter by min_observations
+    stats_df = stats_df[stats_df["n"] >= min_observations]
+
+    if stats_df.empty:
+        raise ValueError(
+            f"No time bins have at least {min_observations} observations. "
+            "Try reducing min_observations or using a larger time_bin_size."
+        )
+
+    # Sort by time
+    stats_df = stats_df.sort_values("time_bin_num")
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # Plot confidence interval band
+    if show_ci:
+        ax.fill_between(
+            stats_df["time_bin_num"],
+            stats_df["ci_lower"],
+            stats_df["ci_upper"],
+            color=line_color,
+            alpha=ci_alpha,
+            label="95% CI",
+        )
+
+    # Plot probability line
+    ax.plot(
+        stats_df["time_bin_num"],
+        stats_df["probability"],
+        color=line_color,
+        linewidth=2,
+        marker="o",
+        markersize=5,
+        label="Detection probability",
+    )
+
+    # Set y-axis to 0-1 range with buffer for annotations
+    ax.set_ylim(-0.05, 1.15 if show_n else 1.05)
+
+    # Set x-axis ticks to show actual day values with reasonable spacing
+    unique_bins = stats_df["time_bin_num"].tolist()
+    n_bins = len(unique_bins)
+    if n_bins <= 10:
+        ax.set_xticks(unique_bins)
+        ax.set_xticklabels([int(b) for b in unique_bins])
+    else:
+        n_ticks = min(10, n_bins)
+        tick_indices = np.round(np.linspace(0, n_bins - 1, n_ticks)).astype(int)
+        tick_positions = [unique_bins[i] for i in tick_indices]
+        ax.set_xticks(tick_positions)
+        ax.set_xticklabels([int(p) for p in tick_positions])
+
+    # Labels and title
+    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+
+    ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
+    ax.set_ylabel("Detection probability", fontsize=12)
+
+    # Title
+    dataset_id = dataset.get("dataset_id", "Dataset")
+    title_parts = [f"Detection Probability: {dataset_id}"]
+    if biomarker_display:
+        title_parts.append(f"({biomarker_display}")
+        if specimen_display:
+            title_parts[-1] += f" - {specimen_display})"
+        else:
+            title_parts[-1] += ")"
+    elif specimen_display:
+        title_parts.append(f"({specimen_display})")
+
+    ax.set_title(" ".join(title_parts), fontsize=14)
+
+    # Add sample size annotations if requested
+    if show_n:
+        y_pos = 1.02
+        for _, row in stats_df.iterrows():
+            ax.annotate(
+                f"n={int(row['n'])}",
+                xy=(row["time_bin_num"], y_pos),
+                fontsize=8,
+                ha="center",
+                va="bottom",
+                alpha=0.7,
+                rotation=90,
+            )
+
+    ax.legend(loc="best", fontsize=10)
+    ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
