@@ -2066,3 +2066,313 @@ def plot_detection_probability(
     plt.tight_layout()
     plt.close(fig)
     return fig
+
+
+def plot_clearance_curve(
+    dataset: Dict[str, Any],
+    *,
+    biomarker: str | None = None,
+    specimen: str | None = None,
+    figsize: tuple[int, int] = (10, 6),
+    line_color: str = "steelblue",
+    show_ci: bool = True,
+    ci_alpha: float = 0.3,
+    show_censored: bool = True,
+    show_n_at_risk: bool = True,
+) -> Figure:
+    """
+    Plot Kaplan-Meier style clearance curve showing proportion still shedding over time.
+
+    Creates a survival curve showing the proportion of participants who are still
+    shedding at each time point. Clearance is defined as the time of the last
+    positive measurement for each participant.
+
+    Args:
+        dataset: Raw dataset dictionary from load_dataset() containing 'analytes',
+            'participants', and 'dataset_id' keys.
+        biomarker: Optional filter for a specific biomarker. If None, uses first biomarker found.
+        specimen: Optional filter for a specific specimen type. If None, uses first specimen found.
+        figsize: Figure size as (width, height). Defaults to (10, 6).
+        line_color: Color for the survival curve and confidence band. Defaults to "steelblue".
+        show_ci: If True, shows 95% confidence interval band using Greenwood's formula.
+            Defaults to True.
+        ci_alpha: Transparency of the confidence interval band (0-1). Defaults to 0.3.
+        show_censored: If True, shows tick marks for censored observations (participants
+            whose last measurement was positive). Defaults to True.
+        show_n_at_risk: If True, shows the number of participants at risk at key time points.
+            Defaults to True.
+
+    Returns:
+        matplotlib.figure.Figure: The generated figure containing the clearance curve.
+
+    Raises:
+        ValueError: If dataset is missing required keys, is empty, or has no valid data.
+
+    Note:
+        - Clearance time is the time of last positive measurement for each participant
+        - Participants whose last measurement is positive are treated as censored
+        - Confidence intervals use Greenwood's formula for variance estimation
+    """
+    # Validate input
+    if not dataset or not isinstance(dataset, dict):
+        raise ValueError("Dataset must be a non-empty dictionary")
+
+    required_keys = ["analytes", "participants", "dataset_id"]
+    missing_keys = [key for key in required_keys if key not in dataset]
+    if missing_keys:
+        raise ValueError(f"Dataset missing required keys: {missing_keys}")
+
+    if not dataset["participants"]:
+        raise ValueError("Dataset has no participants")
+
+    # Extract time series data from raw dataset
+    time_series_data = []
+    for participant_id, participant in enumerate(dataset["participants"], 1):
+        measurements = participant.get("measurements", [])
+        for measurement in measurements:
+            analyte_name = measurement.get("analyte")
+            time_series_data.append({
+                "participant_id": participant_id,
+                "time": measurement.get("time"),
+                "value": measurement.get("value"),
+                "analyte": analyte_name,
+            })
+
+    if not time_series_data:
+        raise ValueError("Dataset has no measurements")
+
+    df = pd.DataFrame(time_series_data)
+
+    # Convert time to numeric, filtering out "unknown" values
+    df = df[df["time"] != "unknown"].copy()
+    df["time_num"] = pd.to_numeric(df["time"], errors="coerce")
+
+    # Join with analyte metadata to get specimen information
+    analyte_metadata = {}
+    for analyte_name, analyte_info in dataset["analytes"].items():
+        specimen_value = analyte_info.get("specimen")
+        if isinstance(specimen_value, list):
+            specimen_value = "+".join(specimen_value)
+
+        analyte_metadata[analyte_name] = {
+            "specimen": specimen_value,
+            "reference_event": analyte_info.get("reference_event"),
+            "biomarker": analyte_info.get("biomarker"),
+        }
+
+    # Add metadata to DataFrame
+    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
+    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+
+    # Filter by biomarker if specified
+    if biomarker is not None:
+        df = df[df["biomarker"] == biomarker]
+        if df.empty:
+            raise ValueError(f"No measurements found for biomarker '{biomarker}'")
+
+    # Filter by specimen if specified
+    if specimen is not None:
+        df = df[df["specimen"] == specimen]
+        if df.empty:
+            raise ValueError(f"No measurements found for specimen '{specimen}'")
+
+    # Drop rows with NaN time
+    df = df.dropna(subset=["time_num"])
+
+    if df.empty:
+        raise ValueError("No valid measurements found after filtering")
+
+    # Mark positive vs negative measurements
+    df["is_positive"] = df["value"] != NEGATIVE_VALUE
+
+    # Calculate clearance time and censoring status for each participant
+    clearance_data = []
+    for participant_id, participant_df in df.groupby("participant_id"):
+        participant_df = participant_df.sort_values("time_num")
+
+        # Get positive measurements only
+        positive_df = participant_df[participant_df["is_positive"]]
+
+        if positive_df.empty:
+            # No positive measurements - skip this participant
+            continue
+
+        # Check if censored: last measurement overall is positive
+        last_measurement = participant_df.iloc[-1]
+        censored = last_measurement["is_positive"]
+
+        if censored:
+            # Censored: use time of last positive measurement (no future measurements)
+            event_time = positive_df["time_num"].max()
+        else:
+            # Cleared: use time of negative observation (first negative after last positive)
+            last_positive_time = positive_df["time_num"].max()
+            negative_df = participant_df[~participant_df["is_positive"]]
+            # Get the first negative measurement after the last positive
+            negatives_after = negative_df[negative_df["time_num"] > last_positive_time]
+            if not negatives_after.empty:
+                event_time = negatives_after["time_num"].min()
+            else:
+                # Fallback: use the last negative measurement
+                event_time = negative_df["time_num"].max()
+
+        clearance_data.append({
+            "participant_id": participant_id,
+            "clearance_time": event_time,
+            "censored": censored,
+        })
+
+    if not clearance_data:
+        raise ValueError("No participants with positive measurements found")
+
+    clearance_df = pd.DataFrame(clearance_data)
+
+    # Sort by clearance time
+    clearance_df = clearance_df.sort_values("clearance_time")
+
+    # Calculate Kaplan-Meier survival estimates
+    n_total = len(clearance_df)
+    times = [0]  # Start at time 0 with S(0) = 1
+    survival = [1.0]
+    ci_lower = [1.0]
+    ci_upper = [1.0]
+    n_at_risk_times = [0]
+    n_at_risk_values = [n_total]
+
+    # Censored times and survival values for plotting
+    censored_times = []
+    censored_survival = []
+
+    # Group events by time
+    event_times = clearance_df.groupby("clearance_time").agg({
+        "censored": lambda x: (~x).sum(),  # Number of events (cleared)
+        "participant_id": "count"  # Total at this time
+    }).rename(columns={"censored": "events", "participant_id": "total"})
+
+    n_at_risk = n_total
+    cumulative_var = 0.0
+    current_survival = 1.0
+
+    for time, row in event_times.iterrows():
+        d = row["events"]  # Number who cleared (not censored)
+        c = row["total"] - d  # Number censored at this time
+
+        if d > 0 and n_at_risk > 0:
+            # Kaplan-Meier update
+            current_survival = current_survival * (1 - d / n_at_risk)
+
+            # Greenwood's formula for variance
+            if n_at_risk > d:
+                cumulative_var += d / (n_at_risk * (n_at_risk - d))
+
+            times.append(time)
+            survival.append(current_survival)
+
+            # Calculate CI
+            se = current_survival * np.sqrt(cumulative_var) if cumulative_var > 0 else 0
+            ci_lower.append(max(0, current_survival - 1.96 * se))
+            ci_upper.append(min(1, current_survival + 1.96 * se))
+
+            n_at_risk_times.append(time)
+            n_at_risk_values.append(n_at_risk - d - c)
+
+        # Record censored observations
+        if c > 0:
+            # Get the survival value at this time for plotting censored marks
+            censored_times.extend([time] * c)
+            censored_survival.extend([current_survival] * c)
+
+        n_at_risk -= (d + c)
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # Plot confidence interval band
+    if show_ci and len(times) > 1:
+        # Create step-filled CI band
+        ax.fill_between(
+            times,
+            ci_lower,
+            ci_upper,
+            step="post",
+            color=line_color,
+            alpha=ci_alpha,
+            label="95% CI",
+        )
+
+    # Plot survival curve as step function
+    ax.step(
+        times,
+        survival,
+        where="post",
+        color=line_color,
+        linewidth=2,
+        label="Clearance curve",
+    )
+
+    # Plot censored observations
+    if show_censored and censored_times:
+        ax.scatter(
+            censored_times,
+            censored_survival,
+            marker="|",
+            s=100,
+            color=line_color,
+            zorder=3,
+            label="Censored",
+        )
+
+    # Set y-axis to 0-1 range with buffer
+    ax.set_ylim(-0.05, 1.05)
+
+    # Labels and title
+    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+
+    ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
+    ax.set_ylabel("Proportion still shedding", fontsize=12)
+
+    # Title
+    dataset_id = dataset.get("dataset_id", "Dataset")
+    title_parts = [f"Clearance Curve: {dataset_id}"]
+    if biomarker_display:
+        title_parts.append(f"({biomarker_display}")
+        if specimen_display:
+            title_parts[-1] += f" - {specimen_display})"
+        else:
+            title_parts[-1] += ")"
+    elif specimen_display:
+        title_parts.append(f"({specimen_display})")
+
+    ax.set_title(" ".join(title_parts), fontsize=14)
+
+    # Add number at risk annotations
+    if show_n_at_risk and n_at_risk_times:
+        # Select a subset of time points for display
+        n_points = min(6, len(n_at_risk_times))
+        indices = np.round(np.linspace(0, len(n_at_risk_times) - 1, n_points)).astype(int)
+
+        # Add text below the plot
+        risk_text = "At risk: "
+        for i in indices:
+            t = n_at_risk_times[i]
+            n = n_at_risk_values[i]
+            risk_text += f"  t={int(t)}: {n}"
+
+        ax.text(
+            0.5, -0.12,
+            risk_text,
+            transform=ax.transAxes,
+            fontsize=9,
+            ha="center",
+            va="top",
+        )
+
+    ax.legend(loc="best", fontsize=10)
+    ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
