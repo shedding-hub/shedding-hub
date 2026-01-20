@@ -1424,3 +1424,375 @@ def plot_mean_trajectory(
     plt.tight_layout()
     plt.close(fig)
     return fig
+
+
+def plot_value_distribution_by_time(
+    dataset: Dict[str, Any],
+    *,
+    biomarker: str | None = None,
+    specimen: str | None = None,
+    value: str | None = None,
+    plot_type: str = "box",
+    time_bin_size: float = 1.0,
+    time_range: tuple[float, float] | None = None,
+    min_observations: int = 1,
+    figsize: tuple[int, int] = (12, 6),
+    color: str = "steelblue",
+    show_points: bool = False,
+    point_alpha: float = 0.5,
+    show_n: bool = True,
+    show_mean: bool = False,
+    widths: float | None = None,
+) -> Figure:
+    """
+    Plot distribution of measurement values at each time bin.
+
+    Creates box plots or violin plots showing how measurement values are distributed
+    at different time points. Useful for understanding variability in shedding
+    patterns across participants at each stage of infection.
+
+    Args:
+        dataset: Raw dataset dictionary from load_dataset() containing 'analytes',
+            'participants', and 'dataset_id' keys.
+        biomarker: Optional filter for a specific biomarker. If None, uses first biomarker found.
+        specimen: Optional filter for a specific specimen type. If None, uses first specimen found.
+        value: Optional filter for value type. Options are "concentration" or "ct".
+            If None, plots all data (may raise error if mixed). Defaults to None.
+        plot_type: Type of distribution plot. Options:
+            - "box": Box plot showing median, quartiles, and outliers (default)
+            - "violin": Violin plot showing full distribution shape
+        time_bin_size: Size of time bins in days for grouping measurements. Defaults to 1.0.
+        time_range: Optional tuple (min_time, max_time) to limit the time axis.
+            If None, uses the full range of data.
+        min_observations: Minimum number of observations required per time bin to include
+            in the plot. Bins with fewer observations are excluded. Defaults to 1.
+        figsize: Figure size as (width, height). Defaults to (12, 6).
+        color: Color for the box/violin plots. Defaults to "steelblue".
+        show_points: If True, overlays individual data points on the distribution plots.
+            Defaults to False.
+        point_alpha: Transparency of individual points (0-1). Only used if show_points=True.
+            Defaults to 0.5.
+        show_n: If True, shows the number of observations at each time bin. Defaults to True.
+        show_mean: If True, shows mean markers on box plots. Defaults to False.
+        widths: Width of box/violin plots. If None, automatically calculated based on
+            time_bin_size. Defaults to None.
+
+    Returns:
+        matplotlib.figure.Figure: The generated figure containing the distribution plots.
+
+    Raises:
+        ValueError: If dataset is missing required keys, is empty, has no valid data,
+            or if invalid parameters are provided.
+
+    Note:
+        - Negative values are excluded from the distribution calculations
+        - For CT values, the y-axis is inverted (lower CT = higher viral load)
+        - For concentration values, a log scale is used on the y-axis
+    """
+    # Validate input
+    if not dataset or not isinstance(dataset, dict):
+        raise ValueError("Dataset must be a non-empty dictionary")
+
+    required_keys = ["analytes", "participants", "dataset_id"]
+    missing_keys = [key for key in required_keys if key not in dataset]
+    if missing_keys:
+        raise ValueError(f"Dataset missing required keys: {missing_keys}")
+
+    if not dataset["participants"]:
+        raise ValueError("Dataset has no participants")
+
+    # Validate plot_type
+    if plot_type not in ["box", "violin"]:
+        raise ValueError(
+            f"Invalid plot_type '{plot_type}'. "
+            "Must be 'box' or 'violin'."
+        )
+
+    # Extract time series data from raw dataset
+    time_series_data = []
+    for participant_id, participant in enumerate(dataset["participants"], 1):
+        measurements = participant.get("measurements", [])
+        for measurement in measurements:
+            analyte_name = measurement.get("analyte")
+            time_series_data.append({
+                "participant_id": participant_id,
+                "time": measurement.get("time"),
+                "value": measurement.get("value"),
+                "analyte": analyte_name,
+            })
+
+    if not time_series_data:
+        raise ValueError("Dataset has no measurements")
+
+    df = pd.DataFrame(time_series_data)
+
+    # Convert time to numeric, filtering out "unknown" values
+    df = df[df["time"] != "unknown"].copy()
+    df["time_num"] = pd.to_numeric(df["time"], errors="coerce")
+
+    # Join with analyte metadata to get specimen and unit information
+    analyte_metadata = {}
+    for analyte_name, analyte_info in dataset["analytes"].items():
+        specimen_value = analyte_info.get("specimen")
+        if isinstance(specimen_value, list):
+            specimen_value = "+".join(specimen_value)
+
+        lod = analyte_info.get("limit_of_detection")
+        lod_numeric = None
+        if lod is not None and lod != "unknown":
+            try:
+                lod_numeric = float(lod)
+            except (ValueError, TypeError):
+                lod_numeric = None
+
+        analyte_metadata[analyte_name] = {
+            "specimen": specimen_value,
+            "unit": analyte_info.get("unit"),
+            "reference_event": analyte_info.get("reference_event"),
+            "biomarker": analyte_info.get("biomarker"),
+            "limit_of_detection": lod_numeric,
+        }
+
+    # Add metadata to DataFrame
+    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["unit"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("unit"))
+    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
+    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["limit_of_detection"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("limit_of_detection"))
+
+    # Filter by biomarker if specified
+    if biomarker is not None:
+        df = df[df["biomarker"] == biomarker]
+        if df.empty:
+            raise ValueError(f"No measurements found for biomarker '{biomarker}'")
+
+    # Filter by specimen if specified
+    if specimen is not None:
+        df = df[df["specimen"] == specimen]
+        if df.empty:
+            raise ValueError(f"No measurements found for specimen '{specimen}'")
+
+    # Determine if each row is CT value or concentration based on unit
+    df["is_ct"] = df["unit"].apply(_is_ct_value)
+
+    # Filter by value type if specified
+    if value is not None:
+        value_lower = value.lower()
+        if value_lower == "concentration":
+            df = df[~df["is_ct"]].copy()
+        elif value_lower == "ct":
+            df = df[df["is_ct"]].copy()
+        else:
+            raise ValueError(
+                f"Invalid value '{value}'. "
+                "Must be 'concentration', 'ct', or None."
+            )
+        if df.empty:
+            raise ValueError(f"No {value} data found in dataset after filtering")
+
+    # Check for mixed CT and concentration data
+    if df["is_ct"].nunique() > 1:
+        raise ValueError(
+            "Dataset contains mixed CT values and concentrations. "
+            "Use value='concentration' or value='ct' to filter."
+        )
+
+    is_ct = df["is_ct"].iloc[0] if not df.empty else False
+
+    # Exclude negative values for distribution calculation
+    df = df[df["value"] != NEGATIVE_VALUE].copy()
+    df["value_num"] = pd.to_numeric(df["value"], errors="coerce")
+
+    # Drop rows with NaN time or value
+    df = df.dropna(subset=["time_num", "value_num"])
+
+    if df.empty:
+        raise ValueError("No valid numeric measurements found after filtering")
+
+    # Apply time range filter if specified
+    if time_range is not None:
+        df = df[(df["time_num"] >= time_range[0]) & (df["time_num"] <= time_range[1])]
+        if df.empty:
+            raise ValueError(f"No measurements found in time range {time_range}")
+
+    # Create time bins centered at integers (or multiples of bin_size)
+    time_min = df["time_num"].min()
+    time_max = df["time_num"].max()
+    if time_range is not None:
+        time_min, time_max = time_range
+
+    # Round time_min down and time_max up to nearest multiple of bin_size to get bin centers
+    center_min = np.floor(time_min / time_bin_size) * time_bin_size
+    center_max = np.ceil(time_max / time_bin_size) * time_bin_size
+
+    # Create bin edges at ±bin_size/2 around centers (e.g., for center=1 with bin_size=1: edges are 0.5 and 1.5)
+    bins = np.arange(center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size)
+    bin_centers = np.arange(center_min, center_max + time_bin_size / 2, time_bin_size)
+
+    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True)
+    df["time_bin_num"] = df["time_bin"].astype(float)
+
+    # Group by time bin and filter by min_observations
+    bin_counts = df.groupby("time_bin_num").size()
+    valid_bins = bin_counts[bin_counts >= min_observations].index
+    df = df[df["time_bin_num"].isin(valid_bins)]
+
+    if df.empty:
+        raise ValueError(
+            f"No time bins have at least {min_observations} observations. "
+            "Try reducing min_observations or using a larger time_bin_size."
+        )
+
+    # Get unique time bins and sort
+    unique_bins = sorted(df["time_bin_num"].unique())
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # Prepare data for plotting
+    plot_data = [df[df["time_bin_num"] == bin_val]["value_num"].values for bin_val in unique_bins]
+
+    # Calculate widths
+    if widths is None:
+        widths = time_bin_size * 0.7
+
+    # Create distribution plots
+    if plot_type == "box":
+        bp = ax.boxplot(
+            plot_data,
+            positions=unique_bins,
+            widths=widths,
+            patch_artist=True,
+            showmeans=show_mean,
+            meanprops=dict(marker="D", markerfacecolor="white", markeredgecolor="black", markersize=6),
+        )
+        # Style box plots
+        for patch in bp["boxes"]:
+            patch.set_facecolor(color)
+            patch.set_alpha(0.7)
+        for median in bp["medians"]:
+            median.set_color("black")
+            median.set_linewidth(2)
+        for whisker in bp["whiskers"]:
+            whisker.set_color("gray")
+        for cap in bp["caps"]:
+            cap.set_color("gray")
+        for flier in bp["fliers"]:
+            flier.set_markerfacecolor(color)
+            flier.set_markeredgecolor(color)
+            flier.set_alpha(0.5)
+
+    elif plot_type == "violin":
+        vp = ax.violinplot(
+            plot_data,
+            positions=unique_bins,
+            widths=widths,
+            showmeans=show_mean,
+            showmedians=True,
+            showextrema=True,
+        )
+        # Style violin plots
+        for body in vp["bodies"]:
+            body.set_facecolor(color)
+            body.set_alpha(0.7)
+        if "cmedians" in vp:
+            vp["cmedians"].set_color("white")
+            vp["cmedians"].set_linewidth(2)
+        if "cmeans" in vp:
+            vp["cmeans"].set_color("black")
+        if "cbars" in vp:
+            vp["cbars"].set_color("gray")
+        if "cmins" in vp:
+            vp["cmins"].set_color("gray")
+        if "cmaxes" in vp:
+            vp["cmaxes"].set_color("gray")
+
+    # Overlay individual points if requested
+    if show_points:
+        for bin_val, data in zip(unique_bins, plot_data):
+            # Add jitter to x positions for visibility
+            jitter = np.random.RandomState(12345).uniform(-widths / 3, widths / 3, size=len(data))
+            ax.scatter(
+                [bin_val] * len(data) + jitter,
+                data,
+                color="black",
+                alpha=point_alpha,
+                s=15,
+                zorder=3,
+            )
+
+    # Set axis scaling
+    if is_ct:
+        ax.invert_yaxis()
+    else:
+        ax.set_yscale("log")
+
+    # Set x-axis ticks to show actual day values with reasonable spacing
+    n_bins = len(unique_bins)
+    if n_bins <= 10:
+        # Show all ticks if there aren't too many
+        ax.set_xticks(unique_bins)
+        ax.set_xticklabels([int(b) for b in unique_bins])
+    else:
+        # Select a subset of ticks for readability
+        n_ticks = min(10, n_bins)
+        tick_indices = np.round(np.linspace(0, n_bins - 1, n_ticks)).astype(int)
+        tick_positions = [unique_bins[i] for i in tick_indices]
+        ax.set_xticks(tick_positions)
+        ax.set_xticklabels([int(p) for p in tick_positions])
+
+    # Labels and title
+    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
+    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+
+    ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
+    if is_ct:
+        ax.set_ylabel(f"CT value ({unit})", fontsize=12)
+    else:
+        ax.set_ylabel(f"Concentration ({unit})", fontsize=12)
+
+    # Title
+    dataset_id = dataset.get("dataset_id", "Dataset")
+    plot_type_display = "Box Plot" if plot_type == "box" else "Violin Plot"
+    title_parts = [f"Value Distribution ({plot_type_display}): {dataset_id}"]
+    if biomarker_display:
+        title_parts.append(f"({biomarker_display}")
+        if specimen_display:
+            title_parts[-1] += f" - {specimen_display})"
+        else:
+            title_parts[-1] += ")"
+    elif specimen_display:
+        title_parts.append(f"({specimen_display})")
+
+    ax.set_title(" ".join(title_parts), fontsize=14)
+
+    # Add sample size annotations if requested
+    if show_n:
+        y_lim = ax.get_ylim()
+        if is_ct:
+            # For inverted CT axis
+            y_range = abs(y_lim[1] - y_lim[0])
+            y_pos = y_lim[1] + y_range * 0.08
+        else:
+            # For log scale
+            log_range = np.log10(y_lim[1]) - np.log10(y_lim[0])
+            y_pos = 10 ** (np.log10(y_lim[1]) - log_range * 0.08)
+
+        for bin_val, data in zip(unique_bins, plot_data):
+            ax.annotate(
+                f"n={len(data)}",
+                xy=(bin_val, y_pos),
+                fontsize=8,
+                ha="center",
+                va="bottom",
+                alpha=0.7,
+                rotation=90,
+            )
+
+    ax.grid(alpha=0.3, axis="y")
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
