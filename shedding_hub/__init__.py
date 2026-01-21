@@ -20,6 +20,15 @@ from .viz import (
     plot_mean_trajectory,
 )
 
+from .stats import (
+    calc_shedding_summary,
+    calc_detection_summary,
+    calc_clearance_summary,
+    calc_value_summary,
+    calc_dataset_summary,
+    compare_datasets,
+)
+
 __all__ = [
     "folded_str",
     "literal_str",
@@ -37,4 +46,10 @@ __all__ = [
     "plot_time_courses",
     "plot_shedding_heatmap",
     "plot_mean_trajectory",
+    "calc_shedding_summary",
+    "calc_detection_summary",
+    "calc_clearance_summary",
+    "calc_value_summary",
+    "calc_dataset_summary",
+    "compare_datasets",
 ]
