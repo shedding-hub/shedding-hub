@@ -1,6 +1,7 @@
+import warnings
 import pandas as pd
 import numpy as np
-from typing import Dict, Any
+from typing import Dict, Any, Literal
 
 # Constants
 NEGATIVE_VALUE = "negative"
@@ -29,6 +30,7 @@ def calc_shedding_summary(
             - participant_id: Participant identifier
             - biomarker: Biomarker name
             - specimen: Specimen type
+            - value_type: Type of value ('concentration' or 'ct')
             - reference_event: Reference event for time measurements
             - first_positive_time: Time of first positive measurement
             - last_positive_time: Time of last positive measurement
@@ -85,6 +87,13 @@ def calc_shedding_summary(
     df = df[df["time"] != "unknown"].copy()
     df["time_num"] = pd.to_numeric(df["time"], errors="coerce")
 
+    # Helper function to check if unit is CT value
+    def _is_ct_value(unit: str | None) -> bool:
+        if unit is None:
+            return False
+        unit_lower = str(unit).lower()
+        return "ct" in unit_lower or "cycle" in unit_lower
+
     # Join with analyte metadata
     analyte_metadata = {}
     for analyte_name, analyte_info in dataset["analytes"].items():
@@ -92,16 +101,21 @@ def calc_shedding_summary(
         if isinstance(specimen_value, list):
             specimen_value = "+".join(specimen_value)
 
+        unit = analyte_info.get("unit")
+        value_type = "ct" if _is_ct_value(unit) else "concentration"
+
         analyte_metadata[analyte_name] = {
             "specimen": specimen_value,
             "reference_event": analyte_info.get("reference_event"),
             "biomarker": analyte_info.get("biomarker"),
+            "value_type": value_type,
         }
 
     # Add metadata to DataFrame
     df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
     df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
     df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["value_type"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("value_type"))
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -137,6 +151,7 @@ def calc_shedding_summary(
         biomarker_val = group["biomarker"].iloc[0]
         specimen_val = group["specimen"].iloc[0]
         reference_event = group["reference_event"].iloc[0]
+        value_type_val = group["value_type"].iloc[0]
 
         # Positive and negative measurements
         positive_df = group[group["is_positive"]]
@@ -152,6 +167,7 @@ def calc_shedding_summary(
                 "participant_id": participant_id,
                 "biomarker": biomarker_val,
                 "specimen": specimen_val,
+                "value_type": value_type_val,
                 "reference_event": reference_event,
                 "first_positive_time": np.nan,
                 "last_positive_time": np.nan,
@@ -200,6 +216,7 @@ def calc_shedding_summary(
             "participant_id": participant_id,
             "biomarker": biomarker_val,
             "specimen": specimen_val,
+            "value_type": value_type_val,
             "reference_event": reference_event,
             "first_positive_time": first_positive_time,
             "last_positive_time": last_positive_time,
@@ -1040,6 +1057,7 @@ def compare_datasets(
     *,
     biomarker: str | None = None,
     specimen: str | None = None,
+    value: Literal["concentration", "ct"] | None = None,
 ) -> pd.DataFrame:
     """
     Compare key statistics across multiple datasets.
@@ -1049,8 +1067,13 @@ def compare_datasets(
 
     Args:
         datasets: List of dataset dictionaries from load_dataset().
-        biomarker: Optional filter for a specific biomarker. If None, uses first biomarker found.
-        specimen: Optional filter for a specific specimen type. If None, uses first specimen found.
+        biomarker: Optional filter for a specific biomarker. If None and multiple
+            biomarkers exist, a warning is issued.
+        specimen: Optional filter for a specific specimen type. If None and multiple
+            specimens exist, a warning is issued.
+        value: Filter for value type, either 'concentration' or 'ct'. Peak values
+            will only be calculated for analytes matching this value type. If None
+            and both value types exist, peak statistics are excluded from results.
 
     Returns:
         pandas.DataFrame with one row per dataset and columns:
@@ -1060,7 +1083,7 @@ def compare_datasets(
             - pct_positive: Percentage of positive measurements
             - median_shedding_duration: Median duration from first to last positive (days)
             - iqr_shedding_duration: IQR of shedding duration (Q25-Q75)
-            - median_peak_value: Median peak value across participants
+            - median_peak_value: Median peak value across participants (if value type specified)
             - iqr_peak_value: IQR of peak values (Q25-Q75)
             - median_peak_time: Median time to peak (days)
             - pct_cleared: Percentage of participants who cleared
@@ -1074,11 +1097,66 @@ def compare_datasets(
         >>> from shedding_hub.stats import compare_datasets
         >>> data1 = sh.load_dataset('woelfel2020virological', local='./data')
         >>> data2 = sh.load_dataset('young2020epidemiologic', local='./data')
-        >>> comparison = compare_datasets([data1, data2], specimen='sputum')
+        >>> comparison = compare_datasets([data1, data2], specimen='sputum', value='concentration')
         >>> print(comparison)
     """
     if not datasets:
         raise ValueError("datasets list cannot be empty")
+
+    # Helper function to check if unit is CT value
+    def _is_ct_value(unit: str | None) -> bool:
+        if unit is None:
+            return False
+        unit_lower = str(unit).lower()
+        return "ct" in unit_lower or "cycle" in unit_lower
+
+    # Check for multiple biomarkers/specimens across all datasets
+    all_biomarkers = set()
+    all_specimens = set()
+    all_value_types = set()
+
+    for dataset in datasets:
+        if not dataset or not isinstance(dataset, dict):
+            continue
+        for analyte_info in dataset.get("analytes", {}).values():
+            if analyte_info.get("biomarker"):
+                all_biomarkers.add(analyte_info["biomarker"])
+            specimen_val = analyte_info.get("specimen")
+            if specimen_val:
+                if isinstance(specimen_val, list):
+                    specimen_val = "+".join(specimen_val)
+                all_specimens.add(specimen_val)
+            unit = analyte_info.get("unit")
+            value_type = "ct" if _is_ct_value(unit) else "concentration"
+            all_value_types.add(value_type)
+
+    # Warn if multiple biomarkers/specimens exist without filtering
+    if len(all_biomarkers) > 1 and biomarker is None:
+        warnings.warn(
+            f"Multiple biomarkers found ({', '.join(sorted(all_biomarkers))}) "
+            "but no biomarker filter specified. Results will merge data from all biomarkers.",
+            UserWarning,
+            stacklevel=2,
+        )
+
+    if len(all_specimens) > 1 and specimen is None:
+        warnings.warn(
+            f"Multiple specimens found ({', '.join(sorted(all_specimens))}) "
+            "but no specimen filter specified. Results will merge data from all specimens.",
+            UserWarning,
+            stacklevel=2,
+        )
+
+    # Determine if we can compute peak values
+    compute_peak_values = True
+    if len(all_value_types) > 1 and value is None:
+        warnings.warn(
+            "Both concentration and CT value types found but no value filter specified. "
+            "Peak value statistics will be excluded from results.",
+            UserWarning,
+            stacklevel=2,
+        )
+        compute_peak_values = False
 
     comparison_data = []
 
@@ -1094,7 +1172,7 @@ def compare_datasets(
         dataset_id = dataset.get("dataset_id", "Unknown")
 
         try:
-            # Get shedding summary for this dataset
+            # Get shedding summary for this dataset (now includes value_type column)
             shedding_summary = calc_shedding_summary(
                 dataset, biomarker=biomarker, specimen=specimen
             )
@@ -1137,20 +1215,31 @@ def compare_datasets(
                 median_duration = np.nan
                 iqr_duration = None
 
-            # Peak value statistics
-            peak_values = valid_summary["peak_value"].dropna()
-            if not peak_values.empty:
-                median_peak = peak_values.median()
-                q25_peak = peak_values.quantile(0.25)
-                q75_peak = peak_values.quantile(0.75)
-                iqr_peak = f"{q25_peak:.2e}-{q75_peak:.2e}"
+            # Peak value statistics (filtered by value type if specified)
+            if compute_peak_values:
+                if value is not None:
+                    # Filter to specified value type
+                    peak_summary = valid_summary[valid_summary["value_type"] == value]
+                else:
+                    peak_summary = valid_summary
+
+                peak_values = peak_summary["peak_value"].dropna()
+                if not peak_values.empty:
+                    median_peak = peak_values.median()
+                    q25_peak = peak_values.quantile(0.25)
+                    q75_peak = peak_values.quantile(0.75)
+                    iqr_peak = f"{q25_peak:.2e}-{q75_peak:.2e}"
+                else:
+                    median_peak = np.nan
+                    iqr_peak = None
+
+                # Peak time statistics (also filtered by value type)
+                peak_times = peak_summary["peak_time"].dropna()
+                median_peak_time = peak_times.median() if not peak_times.empty else np.nan
             else:
                 median_peak = np.nan
                 iqr_peak = None
-
-            # Peak time statistics
-            peak_times = valid_summary["peak_time"].dropna()
-            median_peak_time = peak_times.median() if not peak_times.empty else np.nan
+                median_peak_time = np.nan
 
             # Clearance statistics
             n_cleared = (valid_summary["clearance_status"] == "cleared").sum()
