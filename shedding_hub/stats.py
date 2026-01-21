@@ -71,12 +71,14 @@ def calc_shedding_summary(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -112,10 +114,18 @@ def calc_shedding_summary(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
-    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
-    df["value_type"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("value_type"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
+    df["reference_event"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("reference_event")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
+    df["value_type"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("value_type")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -163,23 +173,25 @@ def calc_shedding_summary(
 
         # Skip if no positive measurements
         if positive_df.empty:
-            summary_data.append({
-                "participant_id": participant_id,
-                "biomarker": biomarker_val,
-                "specimen": specimen_val,
-                "value_type": value_type_val,
-                "reference_event": reference_event,
-                "first_positive_time": np.nan,
-                "last_positive_time": np.nan,
-                "shedding_duration": np.nan,
-                "peak_value": np.nan,
-                "peak_time": np.nan,
-                "n_positive": n_positive,
-                "n_negative": n_negative,
-                "n_total": n_total,
-                "clearance_status": "no_positive",
-                "clearance_time": np.nan,
-            })
+            summary_data.append(
+                {
+                    "participant_id": participant_id,
+                    "biomarker": biomarker_val,
+                    "specimen": specimen_val,
+                    "value_type": value_type_val,
+                    "reference_event": reference_event,
+                    "first_positive_time": np.nan,
+                    "last_positive_time": np.nan,
+                    "shedding_duration": np.nan,
+                    "peak_value": np.nan,
+                    "peak_time": np.nan,
+                    "n_positive": n_positive,
+                    "n_negative": n_negative,
+                    "n_total": n_total,
+                    "clearance_status": "no_positive",
+                    "clearance_time": np.nan,
+                }
+            )
             continue
 
         # First and last positive times
@@ -212,23 +224,25 @@ def calc_shedding_summary(
             else:
                 clearance_time = negative_df["time_num"].max()
 
-        summary_data.append({
-            "participant_id": participant_id,
-            "biomarker": biomarker_val,
-            "specimen": specimen_val,
-            "value_type": value_type_val,
-            "reference_event": reference_event,
-            "first_positive_time": first_positive_time,
-            "last_positive_time": last_positive_time,
-            "shedding_duration": shedding_duration,
-            "peak_value": peak_value,
-            "peak_time": peak_time,
-            "n_positive": n_positive,
-            "n_negative": n_negative,
-            "n_total": n_total,
-            "clearance_status": clearance_status,
-            "clearance_time": clearance_time,
-        })
+        summary_data.append(
+            {
+                "participant_id": participant_id,
+                "biomarker": biomarker_val,
+                "specimen": specimen_val,
+                "value_type": value_type_val,
+                "reference_event": reference_event,
+                "first_positive_time": first_positive_time,
+                "last_positive_time": last_positive_time,
+                "shedding_duration": shedding_duration,
+                "peak_value": peak_value,
+                "peak_time": peak_time,
+                "n_positive": n_positive,
+                "n_negative": n_negative,
+                "n_total": n_total,
+                "clearance_status": clearance_status,
+                "clearance_time": clearance_time,
+            }
+        )
 
     if not summary_data:
         raise ValueError("No valid participant data found")
@@ -300,12 +314,14 @@ def calc_detection_summary(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -329,8 +345,12 @@ def calc_detection_summary(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -370,10 +390,14 @@ def calc_detection_summary(
     center_max = np.ceil(time_max / time_bin_size) * time_bin_size
 
     # Create bin edges at ±bin_size/2 around centers
-    bins = np.arange(center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size)
+    bins = np.arange(
+        center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size
+    )
     bin_centers = np.arange(center_min, center_max + time_bin_size / 2, time_bin_size)
 
-    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True)
+    df["time_bin"] = pd.cut(
+        df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True
+    )
     df["time_bin_num"] = df["time_bin"].astype(float)
 
     # Calculate detection statistics per time bin
@@ -394,19 +418,27 @@ def calc_detection_summary(
         z = 1.96
         denominator = 1 + z**2 / n_tested
         center = (proportion + z**2 / (2 * n_tested)) / denominator
-        margin = z * np.sqrt(proportion * (1 - proportion) / n_tested + z**2 / (4 * n_tested**2)) / denominator
+        margin = (
+            z
+            * np.sqrt(
+                proportion * (1 - proportion) / n_tested + z**2 / (4 * n_tested**2)
+            )
+            / denominator
+        )
         ci_lower = max(0, center - margin)
         ci_upper = min(1, center + margin)
 
-        summary_data.append({
-            "time": int(time_bin),
-            "n_tested": n_tested,
-            "n_positive": n_positive,
-            "n_negative": n_negative,
-            "proportion": proportion,
-            "ci_lower": ci_lower,
-            "ci_upper": ci_upper,
-        })
+        summary_data.append(
+            {
+                "time": int(time_bin),
+                "n_tested": n_tested,
+                "n_positive": n_positive,
+                "n_negative": n_negative,
+                "proportion": proportion,
+                "ci_lower": ci_lower,
+                "ci_upper": ci_upper,
+            }
+        )
 
     if not summary_data:
         raise ValueError(
@@ -482,12 +514,14 @@ def calc_clearance_summary(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -511,8 +545,12 @@ def calc_clearance_summary(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -564,11 +602,13 @@ def calc_clearance_summary(
             else:
                 event_time = negative_df["time_num"].max()
 
-        clearance_data.append({
-            "participant_id": participant_id,
-            "clearance_time": event_time,
-            "censored": censored,
-        })
+        clearance_data.append(
+            {
+                "participant_id": participant_id,
+                "clearance_time": event_time,
+                "censored": censored,
+            }
+        )
 
     if not clearance_data:
         raise ValueError("No participants with positive measurements found")
@@ -581,10 +621,16 @@ def calc_clearance_summary(
     n_cleared = n_participants - n_censored
 
     # Calculate Kaplan-Meier survival estimates
-    event_times = clearance_df.groupby("clearance_time").agg({
-        "censored": lambda x: (~x).sum(),  # Number of events (cleared)
-        "participant_id": "count"  # Total at this time
-    }).rename(columns={"censored": "events", "participant_id": "total"})
+    event_times = (
+        clearance_df.groupby("clearance_time")
+        .agg(
+            {
+                "censored": lambda x: (~x).sum(),  # Number of events (cleared)
+                "participant_id": "count",  # Total at this time
+            }
+        )
+        .rename(columns={"censored": "events", "participant_id": "total"})
+    )
 
     survival_data = []
     n_at_risk = n_participants
@@ -592,15 +638,17 @@ def calc_clearance_summary(
     current_survival = 1.0
 
     # Add initial point
-    survival_data.append({
-        "time": 0,
-        "n_at_risk": n_at_risk,
-        "n_events": 0,
-        "n_censored": 0,
-        "survival": 1.0,
-        "ci_lower": 1.0,
-        "ci_upper": 1.0,
-    })
+    survival_data.append(
+        {
+            "time": 0,
+            "n_at_risk": n_at_risk,
+            "n_events": 0,
+            "n_censored": 0,
+            "survival": 1.0,
+            "ci_lower": 1.0,
+            "ci_upper": 1.0,
+        }
+    )
 
     for time, row in event_times.iterrows():
         d = row["events"]  # Number who cleared
@@ -619,17 +667,19 @@ def calc_clearance_summary(
             ci_lower = max(0, current_survival - 1.96 * se)
             ci_upper = min(1, current_survival + 1.96 * se)
 
-            survival_data.append({
-                "time": time,
-                "n_at_risk": n_at_risk,
-                "n_events": d,
-                "n_censored": c,
-                "survival": current_survival,
-                "ci_lower": ci_lower,
-                "ci_upper": ci_upper,
-            })
+            survival_data.append(
+                {
+                    "time": time,
+                    "n_at_risk": n_at_risk,
+                    "n_events": d,
+                    "n_censored": c,
+                    "survival": current_survival,
+                    "ci_lower": ci_lower,
+                    "ci_upper": ci_upper,
+                }
+            )
 
-        n_at_risk -= (d + c)
+        n_at_risk -= d + c
 
     survival_table = pd.DataFrame(survival_data)
 
@@ -663,14 +713,16 @@ def calc_clearance_summary(
             ci_upper_at_t = 1.0
             n_at_risk_at_t = n_participants
 
-        time_point_data.append({
-            "time": t,
-            "proportion_shedding": survival_at_t,
-            "proportion_cleared": 1 - survival_at_t,
-            "ci_lower": ci_lower_at_t,
-            "ci_upper": ci_upper_at_t,
-            "n_at_risk": n_at_risk_at_t,
-        })
+        time_point_data.append(
+            {
+                "time": t,
+                "proportion_shedding": survival_at_t,
+                "proportion_cleared": 1 - survival_at_t,
+                "ci_lower": ci_lower_at_t,
+                "ci_upper": ci_upper_at_t,
+                "n_at_risk": n_at_risk_at_t,
+            }
+        )
 
     time_point_summary = pd.DataFrame(time_point_data)
 
@@ -757,12 +809,14 @@ def calc_value_summary(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -787,9 +841,13 @@ def calc_value_summary(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
     df["unit"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("unit"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -822,8 +880,7 @@ def calc_value_summary(
             df = df[df["is_ct"]].copy()
         else:
             raise ValueError(
-                f"Invalid value '{value}'. "
-                "Must be 'concentration', 'ct', or None."
+                f"Invalid value '{value}'. " "Must be 'concentration', 'ct', or None."
             )
         if df.empty:
             raise ValueError(f"No {value} data found in dataset after filtering")
@@ -862,10 +919,14 @@ def calc_value_summary(
     center_max = np.ceil(time_max / time_bin_size) * time_bin_size
 
     # Create bin edges at ±bin_size/2 around centers
-    bins = np.arange(center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size)
+    bins = np.arange(
+        center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size
+    )
     bin_centers = np.arange(center_min, center_max + time_bin_size / 2, time_bin_size)
 
-    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True)
+    df["time_bin"] = pd.cut(
+        df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True
+    )
     df["time_bin_num"] = df["time_bin"].astype(float)
 
     # Calculate summary statistics per time bin
@@ -879,17 +940,19 @@ def calc_value_summary(
         if n < min_observations:
             continue
 
-        summary_data.append({
-            "time": int(time_bin),
-            "n": n,
-            "mean": values.mean(),
-            "std": values.std() if n > 1 else np.nan,
-            "median": values.median(),
-            "q25": values.quantile(0.25),
-            "q75": values.quantile(0.75),
-            "min": values.min(),
-            "max": values.max(),
-        })
+        summary_data.append(
+            {
+                "time": int(time_bin),
+                "n": n,
+                "mean": values.mean(),
+                "std": values.std() if n > 1 else np.nan,
+                "median": values.median(),
+                "q25": values.quantile(0.25),
+                "q75": values.quantile(0.75),
+                "min": values.min(),
+                "max": values.max(),
+            }
+        )
 
     if not summary_data:
         raise ValueError(
@@ -991,16 +1054,18 @@ def calc_dataset_summary(
         value_type = "ct" if is_ct else "concentration"
         value_types.add(value_type)
 
-        analyte_details.append({
-            "analyte": analyte_name,
-            "biomarker": biomarker,
-            "specimen": specimen,
-            "unit": unit,
-            "value_type": value_type,
-            "reference_event": reference_event,
-            "limit_of_detection": lod,
-            "limit_of_quantification": loq,
-        })
+        analyte_details.append(
+            {
+                "analyte": analyte_name,
+                "biomarker": biomarker,
+                "specimen": specimen,
+                "unit": unit,
+                "value_type": value_type,
+                "reference_event": reference_event,
+                "limit_of_detection": lod,
+                "limit_of_quantification": loq,
+            }
+        )
 
     analyte_df = pd.DataFrame(analyte_details)
 
@@ -1178,23 +1243,27 @@ def compare_datasets(
             )
 
             # Filter to participants with positive measurements
-            valid_summary = shedding_summary[shedding_summary["clearance_status"] != "no_positive"]
+            valid_summary = shedding_summary[
+                shedding_summary["clearance_status"] != "no_positive"
+            ]
 
             if valid_summary.empty:
                 # No valid data for this dataset with given filters
-                comparison_data.append({
-                    "dataset_id": dataset_id,
-                    "n_participants": 0,
-                    "n_measurements": np.nan,
-                    "pct_positive": np.nan,
-                    "median_shedding_duration": np.nan,
-                    "iqr_shedding_duration": None,
-                    "median_peak_value": np.nan,
-                    "iqr_peak_value": None,
-                    "median_peak_time": np.nan,
-                    "pct_cleared": np.nan,
-                    "median_clearance_time": np.nan,
-                })
+                comparison_data.append(
+                    {
+                        "dataset_id": dataset_id,
+                        "n_participants": 0,
+                        "n_measurements": np.nan,
+                        "pct_positive": np.nan,
+                        "median_shedding_duration": np.nan,
+                        "iqr_shedding_duration": None,
+                        "median_peak_value": np.nan,
+                        "iqr_peak_value": None,
+                        "median_peak_time": np.nan,
+                        "pct_cleared": np.nan,
+                        "median_clearance_time": np.nan,
+                    }
+                )
                 continue
 
             n_participants = len(valid_summary)
@@ -1202,7 +1271,9 @@ def compare_datasets(
             # Calculate total measurements
             n_measurements = valid_summary["n_total"].sum()
             n_positive = valid_summary["n_positive"].sum()
-            pct_positive = (n_positive / n_measurements * 100) if n_measurements > 0 else np.nan
+            pct_positive = (
+                (n_positive / n_measurements * 100) if n_measurements > 0 else np.nan
+            )
 
             # Shedding duration statistics
             durations = valid_summary["shedding_duration"].dropna()
@@ -1235,7 +1306,9 @@ def compare_datasets(
 
                 # Peak time statistics (also filtered by value type)
                 peak_times = peak_summary["peak_time"].dropna()
-                median_peak_time = peak_times.median() if not peak_times.empty else np.nan
+                median_peak_time = (
+                    peak_times.median() if not peak_times.empty else np.nan
+                )
             else:
                 median_peak = np.nan
                 iqr_peak = None
@@ -1243,7 +1316,9 @@ def compare_datasets(
 
             # Clearance statistics
             n_cleared = (valid_summary["clearance_status"] == "cleared").sum()
-            pct_cleared = (n_cleared / n_participants * 100) if n_participants > 0 else np.nan
+            pct_cleared = (
+                (n_cleared / n_participants * 100) if n_participants > 0 else np.nan
+            )
 
             # Median clearance time (from clearance_summary if >50% cleared)
             if pct_cleared >= 50:
@@ -1257,34 +1332,38 @@ def compare_datasets(
             else:
                 median_clearance_time = np.nan
 
-            comparison_data.append({
-                "dataset_id": dataset_id,
-                "n_participants": n_participants,
-                "n_measurements": n_measurements,
-                "pct_positive": round(pct_positive, 1),
-                "median_shedding_duration": median_duration,
-                "iqr_shedding_duration": iqr_duration,
-                "median_peak_value": median_peak,
-                "iqr_peak_value": iqr_peak,
-                "median_peak_time": median_peak_time,
-                "pct_cleared": round(pct_cleared, 1),
-                "median_clearance_time": median_clearance_time,
-            })
+            comparison_data.append(
+                {
+                    "dataset_id": dataset_id,
+                    "n_participants": n_participants,
+                    "n_measurements": n_measurements,
+                    "pct_positive": round(pct_positive, 1),
+                    "median_shedding_duration": median_duration,
+                    "iqr_shedding_duration": iqr_duration,
+                    "median_peak_value": median_peak,
+                    "iqr_peak_value": iqr_peak,
+                    "median_peak_time": median_peak_time,
+                    "pct_cleared": round(pct_cleared, 1),
+                    "median_clearance_time": median_clearance_time,
+                }
+            )
 
         except ValueError as e:
             # Handle datasets that don't have matching data
-            comparison_data.append({
-                "dataset_id": dataset_id,
-                "n_participants": 0,
-                "n_measurements": np.nan,
-                "pct_positive": np.nan,
-                "median_shedding_duration": np.nan,
-                "iqr_shedding_duration": None,
-                "median_peak_value": np.nan,
-                "iqr_peak_value": None,
-                "median_peak_time": np.nan,
-                "pct_cleared": np.nan,
-                "median_clearance_time": np.nan,
-            })
+            comparison_data.append(
+                {
+                    "dataset_id": dataset_id,
+                    "n_participants": 0,
+                    "n_measurements": np.nan,
+                    "pct_positive": np.nan,
+                    "median_shedding_duration": np.nan,
+                    "iqr_shedding_duration": None,
+                    "median_peak_value": np.nan,
+                    "iqr_peak_value": None,
+                    "median_peak_time": np.nan,
+                    "pct_cleared": np.nan,
+                    "median_clearance_time": np.nan,
+                }
+            )
 
     return pd.DataFrame(comparison_data)

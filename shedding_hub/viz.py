@@ -109,12 +109,14 @@ def plot_time_course(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -151,11 +153,19 @@ def plot_time_course(
         }
 
     # Add specimen and metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
     df["unit"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("unit"))
-    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
-    df["limit_of_detection"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("limit_of_detection"))
+    df["reference_event"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("reference_event")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
+    df["limit_of_detection"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -181,8 +191,7 @@ def plot_time_course(
             df = df[df["is_ct"]].copy()
         else:
             raise ValueError(
-                f"Invalid value '{value}'. "
-                "Must be 'concentration', 'ct', or None."
+                f"Invalid value '{value}'. " "Must be 'concentration', 'ct', or None."
             )
 
         if df.empty:
@@ -197,7 +206,9 @@ def plot_time_course(
         def substitute_negative(row):
             if row["value"] == NEGATIVE_VALUE:
                 # Use limit of detection if available
-                if row["limit_of_detection"] is not None and not pd.isna(row["limit_of_detection"]):
+                if row["limit_of_detection"] is not None and not pd.isna(
+                    row["limit_of_detection"]
+                ):
                     sub_val = row["limit_of_detection"]
                     negative_substitution_values.add(("LOD", sub_val))
                     return sub_val
@@ -232,9 +243,11 @@ def plot_time_course(
     for specimen, group in df.groupby("specimen"):
         unique_participants = group["participant_id"].unique()
         if len(unique_participants) > max_nparticipant:
-            sampled_participants = pd.Series(unique_participants).sample(
-                n=max_nparticipant, random_state=random_seed
-            ).values
+            sampled_participants = (
+                pd.Series(unique_participants)
+                .sample(n=max_nparticipant, random_state=random_seed)
+                .values
+            )
             group = group[group["participant_id"].isin(sampled_participants)]
         dfs.append(group)
     df = pd.concat(dfs, ignore_index=True)
@@ -244,14 +257,19 @@ def plot_time_course(
     n_specimens = len(specimens)
 
     fig, axes = plt.subplots(
-        1, n_specimens,
+        1,
+        n_specimens,
         figsize=(figsize_width_per_specimen * n_specimens, figsize_height),
-        squeeze=False
+        squeeze=False,
     )
     axes = axes.flatten()
 
     # Get reference event and unit for labeling (use first non-null)
-    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    reference_event = (
+        df["reference_event"].dropna().iloc[0]
+        if not df["reference_event"].dropna().empty
+        else "reference"
+    )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
 
     # Check if we have mixed CT and concentration data
@@ -280,7 +298,9 @@ def plot_time_course(
         # For concentrations on log scale, add padding in log space
         if y_min > 0:
             log_y_min, log_y_max = np.log10(y_min), np.log10(y_max)
-            log_padding = (log_y_max - log_y_min) * 0.1 if log_y_max > log_y_min else 0.5
+            log_padding = (
+                (log_y_max - log_y_min) * 0.1 if log_y_max > log_y_min else 0.5
+            )
             y_range = (10 ** (log_y_min - log_padding), 10 ** (log_y_max + log_padding))
         else:
             y_range = (y_min, y_max)
@@ -291,11 +311,17 @@ def plot_time_course(
         specimen_df = df[df["specimen"] == specimen]
 
         # Get biomarker for this specimen (first non-null value)
-        biomarker = specimen_df["biomarker"].dropna().iloc[0] if not specimen_df["biomarker"].dropna().empty else ""
+        biomarker = (
+            specimen_df["biomarker"].dropna().iloc[0]
+            if not specimen_df["biomarker"].dropna().empty
+            else ""
+        )
 
         # Plot each participant's trajectory
         for participant_id in specimen_df["participant_id"].unique():
-            participant_data = specimen_df[specimen_df["participant_id"] == participant_id].sort_values("time_num")
+            participant_data = specimen_df[
+                specimen_df["participant_id"] == participant_id
+            ].sort_values("time_num")
             color = line_color if line_color else None
             ax.plot(
                 participant_data["time_num"],
@@ -304,7 +330,7 @@ def plot_time_course(
                 markersize=markersize,
                 alpha=line_alpha,
                 color=color,
-                linewidth=1.5
+                linewidth=1.5,
             )
 
         # Apply axis scaling and range
@@ -340,13 +366,17 @@ def plot_time_course(
     if show_negative and negative_substitution_values:
         caption_parts = []
         # Check for LOD substitutions
-        lod_values = [item[1] for item in negative_substitution_values if item[0] == "LOD"]
+        lod_values = [
+            item[1] for item in negative_substitution_values if item[0] == "LOD"
+        ]
         if lod_values:
             lod_str = ", ".join([f"{v:.2g}" for v in sorted(set(lod_values))])
             caption_parts.append(f"limit of detection ({lod_str})")
 
         # Check for default substitutions
-        default_items = [item for item in negative_substitution_values if item[0] == "default"]
+        default_items = [
+            item for item in negative_substitution_values if item[0] == "default"
+        ]
         if default_items:
             # Group by CT vs concentration
             ct_vals = [item[1] for item in default_items if item[2]]
@@ -357,8 +387,12 @@ def plot_time_course(
                 caption_parts.append(f"concentration of {conc_vals[0]}")
 
         if caption_parts:
-            caption = "Note: Negative values were substituted with " + " or ".join(caption_parts)
-            fig.text(0.5, -0.05, caption, ha="center", fontsize=9, style="italic", wrap=True)
+            caption = "Note: Negative values were substituted with " + " or ".join(
+                caption_parts
+            )
+            fig.text(
+                0.5, -0.05, caption, ha="center", fontsize=9, style="italic", wrap=True
+            )
 
     plt.tight_layout()
     plt.close(fig)
@@ -444,13 +478,15 @@ def plot_time_courses(
             measurements = participant.get("measurements", [])
             for measurement in measurements:
                 analyte_name = measurement.get("analyte")
-                time_series_data.append({
-                    "participant_id": f"{dataset['dataset_id']}_P{participant_id}",
-                    "time": measurement.get("time"),
-                    "value": measurement.get("value"),
-                    "analyte": analyte_name,
-                    "dataset_id": dataset["dataset_id"],
-                })
+                time_series_data.append(
+                    {
+                        "participant_id": f"{dataset['dataset_id']}_P{participant_id}",
+                        "time": measurement.get("time"),
+                        "value": measurement.get("value"),
+                        "analyte": analyte_name,
+                        "dataset_id": dataset["dataset_id"],
+                    }
+                )
 
         df_dataset = pd.DataFrame(time_series_data)
 
@@ -469,11 +505,21 @@ def plot_time_courses(
                 except (ValueError, TypeError):
                     lod_numeric = None
 
-            df_dataset.loc[df_dataset["analyte"] == analyte_name, "specimen"] = specimen_value
-            df_dataset.loc[df_dataset["analyte"] == analyte_name, "unit"] = analyte_info.get("unit")
-            df_dataset.loc[df_dataset["analyte"] == analyte_name, "reference_event"] = analyte_info.get("reference_event")
-            df_dataset.loc[df_dataset["analyte"] == analyte_name, "biomarker"] = analyte_info.get("biomarker")
-            df_dataset.loc[df_dataset["analyte"] == analyte_name, "limit_of_detection"] = lod_numeric
+            df_dataset.loc[df_dataset["analyte"] == analyte_name, "specimen"] = (
+                specimen_value
+            )
+            df_dataset.loc[df_dataset["analyte"] == analyte_name, "unit"] = (
+                analyte_info.get("unit")
+            )
+            df_dataset.loc[df_dataset["analyte"] == analyte_name, "reference_event"] = (
+                analyte_info.get("reference_event")
+            )
+            df_dataset.loc[df_dataset["analyte"] == analyte_name, "biomarker"] = (
+                analyte_info.get("biomarker")
+            )
+            df_dataset.loc[
+                df_dataset["analyte"] == analyte_name, "limit_of_detection"
+            ] = lod_numeric
 
         all_data.append(df_dataset)
 
@@ -511,8 +557,7 @@ def plot_time_courses(
             df = df[df["is_ct"]].copy()
         else:
             raise ValueError(
-                f"Invalid value '{value}'. "
-                "Must be 'concentration', 'ct', or None."
+                f"Invalid value '{value}'. " "Must be 'concentration', 'ct', or None."
             )
 
         if df.empty:
@@ -527,7 +572,9 @@ def plot_time_courses(
         def substitute_negative(row):
             if row["value"] == NEGATIVE_VALUE:
                 # Use limit of detection if available
-                if row["limit_of_detection"] is not None and not pd.isna(row["limit_of_detection"]):
+                if row["limit_of_detection"] is not None and not pd.isna(
+                    row["limit_of_detection"]
+                ):
                     sub_val = row["limit_of_detection"]
                     negative_substitution_values.add(("LOD", sub_val))
                     return sub_val
@@ -554,9 +601,11 @@ def plot_time_courses(
     for (dataset_id, specimen), group in df.groupby(["dataset_id", "specimen"]):
         unique_participants = group["participant_id"].unique()
         if len(unique_participants) > max_nparticipant:
-            sampled_participants = pd.Series(unique_participants).sample(
-                n=max_nparticipant, random_state=random_seed
-            ).values
+            sampled_participants = (
+                pd.Series(unique_participants)
+                .sample(n=max_nparticipant, random_state=random_seed)
+                .values
+            )
             group = group[group["participant_id"].isin(sampled_participants)]
         dfs.append(group)
     df = pd.concat(dfs, ignore_index=True)
@@ -568,16 +617,24 @@ def plot_time_courses(
     n_datasets = len(dataset_ids)
 
     fig, axes = plt.subplots(
-        n_specimens, n_datasets,
-        figsize=(figsize_width_per_study * n_datasets, figsize_height_per_specimen * n_specimens),
-        squeeze=False
+        n_specimens,
+        n_datasets,
+        figsize=(
+            figsize_width_per_study * n_datasets,
+            figsize_height_per_specimen * n_specimens,
+        ),
+        squeeze=False,
     )
 
     # Color map for datasets
     color_map = list(mcolors.TABLEAU_COLORS.values())
 
     # Get reference event and unit for labeling
-    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    reference_event = (
+        df["reference_event"].dropna().iloc[0]
+        if not df["reference_event"].dropna().empty
+        else "reference"
+    )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
 
     # Check if we have mixed CT and concentration data
@@ -606,7 +663,9 @@ def plot_time_courses(
         # For concentrations on log scale, add padding in log space
         if y_min > 0:
             log_y_min, log_y_max = np.log10(y_min), np.log10(y_max)
-            log_padding = (log_y_max - log_y_min) * 0.1 if log_y_max > log_y_min else 0.5
+            log_padding = (
+                (log_y_max - log_y_min) * 0.1 if log_y_max > log_y_min else 0.5
+            )
             y_range = (10 ** (log_y_min - log_padding), 10 ** (log_y_max + log_padding))
         else:
             y_range = (y_min, y_max)
@@ -615,7 +674,11 @@ def plot_time_courses(
     for spec_idx, specimen in enumerate(specimens):
         # Get biomarker for this specimen (from first available dataset with this specimen)
         specimen_df = df[df["specimen"] == specimen]
-        biomarker = specimen_df["biomarker"].dropna().iloc[0] if not specimen_df["biomarker"].dropna().empty else ""
+        biomarker = (
+            specimen_df["biomarker"].dropna().iloc[0]
+            if not specimen_df["biomarker"].dropna().empty
+            else ""
+        )
 
         for ds_idx, dataset_id in enumerate(dataset_ids):
             ax = axes[spec_idx, ds_idx]
@@ -625,7 +688,9 @@ def plot_time_courses(
                 # Plot each participant's trajectory
                 color = color_map[ds_idx % len(color_map)]
                 for participant_id in subset["participant_id"].unique():
-                    participant_data = subset[subset["participant_id"] == participant_id].sort_values("time_num")
+                    participant_data = subset[
+                        subset["participant_id"] == participant_id
+                    ].sort_values("time_num")
                     ax.plot(
                         participant_data["time_num"],
                         participant_data["value_num"],
@@ -633,7 +698,7 @@ def plot_time_courses(
                         markersize=markersize,
                         alpha=line_alpha,
                         color=color,
-                        linewidth=1.5
+                        linewidth=1.5,
                     )
 
             # Apply axis scaling and range
@@ -653,8 +718,10 @@ def plot_time_courses(
             if ds_idx == 0:
                 # Format specimen name (replace underscores with spaces) and include biomarker
                 specimen_display = specimen.replace("_", " ")
-                ylabel = f"{biomarker} - {specimen_display}\n({unit})" if biomarker and unit else (
-                    f"{specimen_display}\n({unit})" if unit else specimen_display
+                ylabel = (
+                    f"{biomarker} - {specimen_display}\n({unit})"
+                    if biomarker and unit
+                    else (f"{specimen_display}\n({unit})" if unit else specimen_display)
                 )
                 ax.set_ylabel(ylabel)
             if spec_idx == 0:
@@ -667,13 +734,17 @@ def plot_time_courses(
     if show_negative and negative_substitution_values:
         caption_parts = []
         # Check for LOD substitutions
-        lod_values = [item[1] for item in negative_substitution_values if item[0] == "LOD"]
+        lod_values = [
+            item[1] for item in negative_substitution_values if item[0] == "LOD"
+        ]
         if lod_values:
             lod_str = ", ".join([f"{v:.2g}" for v in sorted(set(lod_values))])
             caption_parts.append(f"limit of detection ({lod_str})")
 
         # Check for default substitutions
-        default_items = [item for item in negative_substitution_values if item[0] == "default"]
+        default_items = [
+            item for item in negative_substitution_values if item[0] == "default"
+        ]
         if default_items:
             # Group by CT vs concentration
             ct_vals = [item[1] for item in default_items if item[2]]
@@ -684,8 +755,12 @@ def plot_time_courses(
                 caption_parts.append(f"concentration of {conc_vals[0]}")
 
         if caption_parts:
-            caption = "Note: Negative values were substituted with " + " or ".join(caption_parts)
-            fig.text(0.5, -0.05, caption, ha="center", fontsize=9, style="italic", wrap=True)
+            caption = "Note: Negative values were substituted with " + " or ".join(
+                caption_parts
+            )
+            fig.text(
+                0.5, -0.05, caption, ha="center", fontsize=9, style="italic", wrap=True
+            )
 
     plt.tight_layout()
     plt.close(fig)
@@ -765,12 +840,14 @@ def plot_shedding_heatmap(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -805,11 +882,19 @@ def plot_shedding_heatmap(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
     df["unit"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("unit"))
-    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
-    df["limit_of_detection"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("limit_of_detection"))
+    df["reference_event"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("reference_event")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
+    df["limit_of_detection"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -835,8 +920,7 @@ def plot_shedding_heatmap(
             df = df[df["is_ct"]].copy()
         else:
             raise ValueError(
-                f"Invalid value '{value}'. "
-                "Must be 'concentration', 'ct', or None."
+                f"Invalid value '{value}'. " "Must be 'concentration', 'ct', or None."
             )
         if df.empty:
             raise ValueError(f"No {value} data found in dataset after filtering")
@@ -881,9 +965,11 @@ def plot_shedding_heatmap(
     # Sample participants if needed
     unique_participants = df["participant_id"].unique()
     if len(unique_participants) > max_nparticipant:
-        sampled_participants = pd.Series(unique_participants).sample(
-            n=max_nparticipant, random_state=random_seed
-        ).values
+        sampled_participants = (
+            pd.Series(unique_participants)
+            .sample(n=max_nparticipant, random_state=random_seed)
+            .values
+        )
         df = df[df["participant_id"].isin(sampled_participants)]
 
     # Create time bins
@@ -900,13 +986,23 @@ def plot_shedding_heatmap(
     bins = np.arange(time_min - time_bin_size, time_max + time_bin_size, time_bin_size)
     bin_labels = bins[:-1] + time_bin_size / 2  # Center of each bin
 
-    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_labels, include_lowest=True)
+    df["time_bin"] = pd.cut(
+        df["time_num"], bins=bins, labels=bin_labels, include_lowest=True
+    )
 
     # Aggregate values within each bin (take mean if multiple measurements)
-    pivot_df = df.groupby(["participant_id", "time_bin"], observed=False)["value_num"].mean().unstack()
+    pivot_df = (
+        df.groupby(["participant_id", "time_bin"], observed=False)["value_num"]
+        .mean()
+        .unstack()
+    )
 
     # Create a pivot table for negative values (True if any measurement in bin was negative)
-    negative_pivot = df.groupby(["participant_id", "time_bin"], observed=False)["is_negative"].any().unstack()
+    negative_pivot = (
+        df.groupby(["participant_id", "time_bin"], observed=False)["is_negative"]
+        .any()
+        .unstack()
+    )
 
     # Reindex to ensure all bins are present (fills missing bins with NaN/False)
     pivot_df = pivot_df.reindex(columns=bin_labels, fill_value=np.nan)
@@ -915,16 +1011,22 @@ def plot_shedding_heatmap(
     # Sort participants based on sort_by parameter
     if sort_by == "first_positive":
         # Sort by time of first non-NaN value
-        first_positive_time = pivot_df.apply(lambda row: row.first_valid_index(), axis=1)
+        first_positive_time = pivot_df.apply(
+            lambda row: row.first_valid_index(), axis=1
+        )
         sort_order = first_positive_time.sort_values().index
     elif sort_by == "peak_time":
         # Sort by time of peak value
         if is_ct:
             # For CT, peak is minimum value
-            peak_time = pivot_df.apply(lambda row: row.idxmin() if row.notna().any() else np.nan, axis=1)
+            peak_time = pivot_df.apply(
+                lambda row: row.idxmin() if row.notna().any() else np.nan, axis=1
+            )
         else:
             # For concentration, peak is maximum value
-            peak_time = pivot_df.apply(lambda row: row.idxmax() if row.notna().any() else np.nan, axis=1)
+            peak_time = pivot_df.apply(
+                lambda row: row.idxmax() if row.notna().any() else np.nan, axis=1
+            )
         sort_order = peak_time.sort_values().index
     elif sort_by == "peak_value":
         # Sort by peak measurement value
@@ -991,9 +1093,7 @@ def plot_shedding_heatmap(
                 if negative_mask[i, j] == True:
                     # Draw a rectangle for negative values
                     rect = plt.Rectangle(
-                        (j - 0.5, i - 0.5), 1, 1,
-                        facecolor="skyblue",
-                        edgecolor="none"
+                        (j - 0.5, i - 0.5), 1, 1, facecolor="skyblue", edgecolor="none"
                     )
                     ax.add_patch(rect)
 
@@ -1009,7 +1109,10 @@ def plot_shedding_heatmap(
     # Select evenly spaced tick positions
     xtick_indices = np.round(np.linspace(0, n_cols - 1, n_xticks)).astype(int)
     # Convert bin centers to bin start times for more intuitive labels
-    xtick_labels = [f"{round(float(pivot_df.columns[i]) + time_bin_size / 2)}" for i in xtick_indices]
+    xtick_labels = [
+        f"{round(float(pivot_df.columns[i]) + time_bin_size / 2)}"
+        for i in xtick_indices
+    ]
     ax.set_xticks(xtick_indices)
     ax.set_xticklabels(xtick_labels, fontsize=10)
 
@@ -1037,13 +1140,20 @@ def plot_shedding_heatmap(
     # Add legend for negative values if shown
     if show_negative and negative_pivot.values.any():
         from matplotlib.patches import Patch
-        legend_elements = [Patch(facecolor="skyblue", edgecolor="none", label="Negative")]
+
+        legend_elements = [
+            Patch(facecolor="skyblue", edgecolor="none", label="Negative")
+        ]
         ax.legend(handles=legend_elements, loc="upper right", fontsize=10)
 
     # Add title
     dataset_id = dataset.get("dataset_id", "Dataset")
-    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
-    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    specimen_display = (
+        df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    )
+    biomarker_display = (
+        df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    )
 
     title_parts = [f"Shedding Heatmap: {dataset_id}"]
     if biomarker_display:
@@ -1152,12 +1262,14 @@ def plot_mean_trajectory(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -1192,11 +1304,19 @@ def plot_mean_trajectory(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
     df["unit"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("unit"))
-    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
-    df["limit_of_detection"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("limit_of_detection"))
+    df["reference_event"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("reference_event")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
+    df["limit_of_detection"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -1222,8 +1342,7 @@ def plot_mean_trajectory(
             df = df[df["is_ct"]].copy()
         else:
             raise ValueError(
-                f"Invalid value '{value}'. "
-                "Must be 'concentration', 'ct', or None."
+                f"Invalid value '{value}'. " "Must be 'concentration', 'ct', or None."
             )
         if df.empty:
             raise ValueError(f"No {value} data found in dataset after filtering")
@@ -1266,7 +1385,9 @@ def plot_mean_trajectory(
     bins = np.arange(time_min, time_max + time_bin_size, time_bin_size)
     bin_centers = bins[:-1] + time_bin_size / 2
 
-    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers, include_lowest=True)
+    df["time_bin"] = pd.cut(
+        df["time_num"], bins=bins, labels=bin_centers, include_lowest=True
+    )
 
     # Calculate statistics per time bin
     def calc_stats(group):
@@ -1274,12 +1395,14 @@ def plot_mean_trajectory(
         n = len(values)
 
         if n < min_observations:
-            return pd.Series({
-                "n": n,
-                "center": np.nan,
-                "lower": np.nan,
-                "upper": np.nan,
-            })
+            return pd.Series(
+                {
+                    "n": n,
+                    "center": np.nan,
+                    "lower": np.nan,
+                    "upper": np.nan,
+                }
+            )
 
         if central_tendency == "mean":
             center = np.mean(values)
@@ -1305,12 +1428,14 @@ def plot_mean_trajectory(
             lower = np.min(values)
             upper = np.max(values)
 
-        return pd.Series({
-            "n": n,
-            "center": center,
-            "lower": lower,
-            "upper": upper,
-        })
+        return pd.Series(
+            {
+                "n": n,
+                "center": center,
+                "lower": lower,
+                "upper": upper,
+            }
+        )
 
     stats_df = df.groupby("time_bin", observed=False).apply(calc_stats).reset_index()
     stats_df["time"] = stats_df["time_bin"].astype(float)
@@ -1333,7 +1458,9 @@ def plot_mean_trajectory(
     # Plot individual trajectories in background if requested
     if show_individual:
         for participant_id in df["participant_id"].unique():
-            participant_data = df[df["participant_id"] == participant_id].sort_values("time_num")
+            participant_data = df[df["participant_id"] == participant_id].sort_values(
+                "time_num"
+            )
             ax.plot(
                 participant_data["time_num"],
                 participant_data["value_num"],
@@ -1368,10 +1495,18 @@ def plot_mean_trajectory(
         ax.set_yscale("log")
 
     # Labels and title
-    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    reference_event = (
+        df["reference_event"].dropna().iloc[0]
+        if not df["reference_event"].dropna().empty
+        else "reference"
+    )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
-    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
-    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    specimen_display = (
+        df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    )
+    biomarker_display = (
+        df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    )
 
     ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
     if is_ct:
@@ -1504,8 +1639,7 @@ def plot_value_distribution_by_time(
     # Validate plot_type
     if plot_type not in ["box", "violin"]:
         raise ValueError(
-            f"Invalid plot_type '{plot_type}'. "
-            "Must be 'box' or 'violin'."
+            f"Invalid plot_type '{plot_type}'. " "Must be 'box' or 'violin'."
         )
 
     # Extract time series data from raw dataset
@@ -1514,12 +1648,14 @@ def plot_value_distribution_by_time(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -1554,11 +1690,19 @@ def plot_value_distribution_by_time(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
     df["unit"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("unit"))
-    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
-    df["limit_of_detection"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("limit_of_detection"))
+    df["reference_event"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("reference_event")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
+    df["limit_of_detection"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -1584,8 +1728,7 @@ def plot_value_distribution_by_time(
             df = df[df["is_ct"]].copy()
         else:
             raise ValueError(
-                f"Invalid value '{value}'. "
-                "Must be 'concentration', 'ct', or None."
+                f"Invalid value '{value}'. " "Must be 'concentration', 'ct', or None."
             )
         if df.empty:
             raise ValueError(f"No {value} data found in dataset after filtering")
@@ -1626,10 +1769,14 @@ def plot_value_distribution_by_time(
     center_max = np.ceil(time_max / time_bin_size) * time_bin_size
 
     # Create bin edges at ±bin_size/2 around centers (e.g., for center=1 with bin_size=1: edges are 0.5 and 1.5)
-    bins = np.arange(center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size)
+    bins = np.arange(
+        center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size
+    )
     bin_centers = np.arange(center_min, center_max + time_bin_size / 2, time_bin_size)
 
-    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True)
+    df["time_bin"] = pd.cut(
+        df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True
+    )
     df["time_bin_num"] = df["time_bin"].astype(float)
 
     # Group by time bin and filter by min_observations
@@ -1650,7 +1797,9 @@ def plot_value_distribution_by_time(
     fig, ax = plt.subplots(figsize=figsize)
 
     # Prepare data for plotting
-    plot_data = [df[df["time_bin_num"] == bin_val]["value_num"].values for bin_val in unique_bins]
+    plot_data = [
+        df[df["time_bin_num"] == bin_val]["value_num"].values for bin_val in unique_bins
+    ]
 
     # Calculate widths
     if widths is None:
@@ -1664,7 +1813,12 @@ def plot_value_distribution_by_time(
             widths=widths,
             patch_artist=True,
             showmeans=show_mean,
-            meanprops=dict(marker="D", markerfacecolor="white", markeredgecolor="black", markersize=6),
+            meanprops=dict(
+                marker="D",
+                markerfacecolor="white",
+                markeredgecolor="black",
+                markersize=6,
+            ),
         )
         # Style box plots
         for patch in bp["boxes"]:
@@ -1711,7 +1865,9 @@ def plot_value_distribution_by_time(
     if show_points:
         for bin_val, data in zip(unique_bins, plot_data):
             # Add jitter to x positions for visibility
-            jitter = np.random.RandomState(12345).uniform(-widths / 3, widths / 3, size=len(data))
+            jitter = np.random.RandomState(12345).uniform(
+                -widths / 3, widths / 3, size=len(data)
+            )
             ax.scatter(
                 [bin_val] * len(data) + jitter,
                 data,
@@ -1742,10 +1898,18 @@ def plot_value_distribution_by_time(
         ax.set_xticklabels([int(p) for p in tick_positions])
 
     # Labels and title
-    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
+    reference_event = (
+        df["reference_event"].dropna().iloc[0]
+        if not df["reference_event"].dropna().empty
+        else "reference"
+    )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
-    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
-    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    specimen_display = (
+        df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    )
+    biomarker_display = (
+        df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    )
 
     ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
     if is_ct:
@@ -1865,12 +2029,14 @@ def plot_detection_probability(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -1895,9 +2061,15 @@ def plot_detection_probability(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
-    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
+    df["reference_event"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("reference_event")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -1937,10 +2109,14 @@ def plot_detection_probability(
     center_max = np.ceil(time_max / time_bin_size) * time_bin_size
 
     # Create bin edges at ±bin_size/2 around centers
-    bins = np.arange(center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size)
+    bins = np.arange(
+        center_min - time_bin_size / 2, center_max + time_bin_size, time_bin_size
+    )
     bin_centers = np.arange(center_min, center_max + time_bin_size / 2, time_bin_size)
 
-    df["time_bin"] = pd.cut(df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True)
+    df["time_bin"] = pd.cut(
+        df["time_num"], bins=bins, labels=bin_centers.astype(int), include_lowest=True
+    )
     df["time_bin_num"] = df["time_bin"].astype(float)
 
     # Calculate detection probability per time bin
@@ -1961,15 +2137,21 @@ def plot_detection_probability(
             ci_lower = 0
             ci_upper = 0
 
-        return pd.Series({
-            "n": n,
-            "n_positive": n_positive,
-            "probability": p,
-            "ci_lower": ci_lower,
-            "ci_upper": ci_upper,
-        })
+        return pd.Series(
+            {
+                "n": n,
+                "n_positive": n_positive,
+                "probability": p,
+                "ci_lower": ci_lower,
+                "ci_upper": ci_upper,
+            }
+        )
 
-    stats_df = df.groupby("time_bin_num", observed=False).apply(calc_detection_stats).reset_index()
+    stats_df = (
+        df.groupby("time_bin_num", observed=False)
+        .apply(calc_detection_stats)
+        .reset_index()
+    )
 
     # Filter by min_observations
     stats_df = stats_df[stats_df["n"] >= min_observations]
@@ -2025,9 +2207,17 @@ def plot_detection_probability(
         ax.set_xticklabels([int(p) for p in tick_positions])
 
     # Labels and title
-    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
-    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
-    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    reference_event = (
+        df["reference_event"].dropna().iloc[0]
+        if not df["reference_event"].dropna().empty
+        else "reference"
+    )
+    specimen_display = (
+        df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    )
+    biomarker_display = (
+        df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    )
 
     ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
     ax.set_ylabel("Detection probability", fontsize=12)
@@ -2131,12 +2321,14 @@ def plot_clearance_curve(
         measurements = participant.get("measurements", [])
         for measurement in measurements:
             analyte_name = measurement.get("analyte")
-            time_series_data.append({
-                "participant_id": participant_id,
-                "time": measurement.get("time"),
-                "value": measurement.get("value"),
-                "analyte": analyte_name,
-            })
+            time_series_data.append(
+                {
+                    "participant_id": participant_id,
+                    "time": measurement.get("time"),
+                    "value": measurement.get("value"),
+                    "analyte": analyte_name,
+                }
+            )
 
     if not time_series_data:
         raise ValueError("Dataset has no measurements")
@@ -2161,9 +2353,15 @@ def plot_clearance_curve(
         }
 
     # Add metadata to DataFrame
-    df["specimen"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("specimen"))
-    df["reference_event"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("reference_event"))
-    df["biomarker"] = df["analyte"].map(lambda x: analyte_metadata.get(x, {}).get("biomarker"))
+    df["specimen"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("specimen")
+    )
+    df["reference_event"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("reference_event")
+    )
+    df["biomarker"] = df["analyte"].map(
+        lambda x: analyte_metadata.get(x, {}).get("biomarker")
+    )
 
     # Filter by biomarker if specified
     if biomarker is not None:
@@ -2217,11 +2415,13 @@ def plot_clearance_curve(
                 # Fallback: use the last negative measurement
                 event_time = negative_df["time_num"].max()
 
-        clearance_data.append({
-            "participant_id": participant_id,
-            "clearance_time": event_time,
-            "censored": censored,
-        })
+        clearance_data.append(
+            {
+                "participant_id": participant_id,
+                "clearance_time": event_time,
+                "censored": censored,
+            }
+        )
 
     if not clearance_data:
         raise ValueError("No participants with positive measurements found")
@@ -2245,10 +2445,16 @@ def plot_clearance_curve(
     censored_survival = []
 
     # Group events by time
-    event_times = clearance_df.groupby("clearance_time").agg({
-        "censored": lambda x: (~x).sum(),  # Number of events (cleared)
-        "participant_id": "count"  # Total at this time
-    }).rename(columns={"censored": "events", "participant_id": "total"})
+    event_times = (
+        clearance_df.groupby("clearance_time")
+        .agg(
+            {
+                "censored": lambda x: (~x).sum(),  # Number of events (cleared)
+                "participant_id": "count",  # Total at this time
+            }
+        )
+        .rename(columns={"censored": "events", "participant_id": "total"})
+    )
 
     n_at_risk = n_total
     cumulative_var = 0.0
@@ -2283,7 +2489,7 @@ def plot_clearance_curve(
             censored_times.extend([time] * c)
             censored_survival.extend([current_survival] * c)
 
-        n_at_risk -= (d + c)
+        n_at_risk -= d + c
 
     # Create figure
     fig, ax = plt.subplots(figsize=figsize)
@@ -2327,9 +2533,17 @@ def plot_clearance_curve(
     ax.set_ylim(-0.05, 1.05)
 
     # Labels and title
-    reference_event = df["reference_event"].dropna().iloc[0] if not df["reference_event"].dropna().empty else "reference"
-    specimen_display = df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
-    biomarker_display = df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    reference_event = (
+        df["reference_event"].dropna().iloc[0]
+        if not df["reference_event"].dropna().empty
+        else "reference"
+    )
+    specimen_display = (
+        df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
+    )
+    biomarker_display = (
+        df["biomarker"].dropna().iloc[0] if not df["biomarker"].dropna().empty else ""
+    )
 
     ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
     ax.set_ylabel("Proportion still shedding", fontsize=12)
@@ -2352,7 +2566,9 @@ def plot_clearance_curve(
     if show_n_at_risk and n_at_risk_times:
         # Select a subset of time points for display
         n_points = min(6, len(n_at_risk_times))
-        indices = np.round(np.linspace(0, len(n_at_risk_times) - 1, n_points)).astype(int)
+        indices = np.round(np.linspace(0, len(n_at_risk_times) - 1, n_points)).astype(
+            int
+        )
 
         # Add text below the plot
         risk_text = "At risk: "
@@ -2362,7 +2578,8 @@ def plot_clearance_curve(
             risk_text += f"  t={int(t)}: {n}"
 
         ax.text(
-            0.5, -0.12,
+            0.5,
+            -0.12,
             risk_text,
             transform=ax.transAxes,
             fontsize=9,
