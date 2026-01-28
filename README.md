@@ -18,6 +18,88 @@ You can obtain the data by [downloading it from GitHub](https://github.com/shedd
 
 ```
 
+You can also check whether a paper is already in the dataset collection using the `check_dataset` function.
+
+```python
+>>> sh.check_dataset(doi='10.1038/s41586-020-2196-x')
+True
+
+>>> sh.check_dataset(title='Virological assessment of hospitalized patients with COVID-2019')
+True
+
+```
+
+## 📈 Analyzing the Data
+
+The package provides statistical summaries and visualization tools to analyze shedding patterns across studies.
+
+### Statistical Summaries
+
+Calculate per-participant shedding statistics including duration, peak values, and clearance status.
+
+```python
+>>> data = sh.load_dataset('woelfel2020virological', ref='259ca0d')
+>>> summary = sh.calc_shedding_summary(data, specimen='sputum')
+>>> list(summary.columns)  # doctest: +NORMALIZE_WHITESPACE
+['participant_id', 'biomarker', 'specimen', 'value_type', 'reference_event',
+ 'first_positive_time', 'last_positive_time', 'shedding_duration', 'peak_value',
+ 'peak_time', 'n_positive', 'n_negative', 'n_total', 'clearance_status', 'clearance_time']
+
+```
+
+Analyze detection rates over time with confidence intervals.
+
+```python
+>>> detection = sh.calc_detection_summary(data, specimen='sputum', time_bin_size=7)
+>>> list(detection.columns)
+['time', 'n_tested', 'n_positive', 'n_negative', 'proportion', 'ci_lower', 'ci_upper']
+
+```
+
+Compare shedding patterns across multiple datasets.
+
+```python
+>>> data1 = sh.load_dataset('woelfel2020virological', local='./data')
+>>> data2 = sh.load_dataset('kimse2020viral', local='./data')
+>>> comparison = sh.compare_datasets([data1, data2], specimen='sputum', value='concentration')
+>>> list(comparison.columns)  # doctest: +NORMALIZE_WHITESPACE
+['dataset_id', 'n_participants', 'n_measurements', 'pct_positive',
+ 'median_shedding_duration', 'iqr_shedding_duration', 'median_peak_value',
+ 'iqr_peak_value', 'median_peak_time', 'pct_cleared', 'median_clearance_time']
+
+```
+
+### Visualization
+
+Plot individual shedding trajectories over time.
+
+```python
+>>> fig = sh.plot_time_course(data, specimen='sputum')
+
+```
+
+Visualize aggregate shedding patterns with mean or median trajectories and confidence bands.
+
+```python
+>>> fig = sh.plot_mean_trajectory(data, specimen='sputum', central_tendency='median')
+
+```
+
+Generate heatmaps to compare shedding across participants.
+
+```python
+>>> fig = sh.plot_shedding_heatmap(data, specimen='sputum')
+
+```
+
+Create Kaplan-Meier clearance curves for survival analysis.
+
+```python
+>>> from shedding_hub.viz import plot_clearance_curve
+>>> fig = plot_clearance_curve(data, specimen='sputum')
+
+```
+
 ## 🤝 Contributing
 
 Thank you for contributing your data to the Shedding Hub and supporting wastewater-based epidemiology! If you hit a bump along the road, [create a new issue](https://github.com/shedding-hub/shedding-hub/issues/new) and we'll sort it out together.

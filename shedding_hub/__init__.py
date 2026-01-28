@@ -1,4 +1,4 @@
-from .util import folded_str, literal_str, load_dataset, normalize_str
+from .util import check_dataset, folded_str, literal_str, load_dataset, normalize_str
 from .shedding_duration import (
     calc_shedding_duration,
     calc_shedding_durations,
@@ -30,6 +30,7 @@ from .stats import (
 )
 
 __all__ = [
+    "check_dataset",
     "folded_str",
     "literal_str",
     "load_dataset",

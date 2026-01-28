@@ -1,8 +1,10 @@
+import difflib
 import pathlib
 import re
 import requests
 import textwrap
 from typing import Optional
+import warnings
 import yaml
 
 
@@ -90,6 +92,109 @@ def load_dataset(
     data = yaml.safe_load(response.text)
     data["dataset_id"] = dataset
     return data
+
+
+def check_dataset(
+    *,
+    doi: Optional[str] = None,
+    title: Optional[str] = None,
+    local: Optional[str] = None,
+    similarity_threshold: float = 0.6,
+) -> bool:
+    """
+    Check whether a paper is in the curated datasets.
+
+    Args:
+        doi: DOI of the paper to check.
+        title: Title of the paper to check.
+        local: Local directory containing datasets. Defaults to the ``data``
+            directory in the repository root.
+        similarity_threshold: Minimum similarity ratio (0 to 1) for reporting
+            near-matches when no exact title match is found.
+
+    Returns:
+        True if the paper is found (exact DOI or exact title match), False
+        otherwise.  When a title is provided and no exact match is found, a
+        warning is issued for the most similar dataset above the threshold.
+    """
+    if doi is None and title is None:
+        raise ValueError("At least one of `doi` or `title` must be specified.")
+
+    # Resolve data directory.
+    if local:
+        data_dir = pathlib.Path(local)
+    else:
+        data_dir = pathlib.Path(__file__).parent.parent / "data"
+
+    if not data_dir.is_dir():
+        raise FileNotFoundError(f"Data directory not found: {data_dir}")
+
+    # Collect metadata from all datasets.  Only the first few lines of each
+    # file are read to avoid loading very large YAML files entirely.
+    _header_keys = {"title", "doi", "url"}
+    _stop_keys = ("analyte:", "analytes:", "participants:")
+    datasets = []
+    for yaml_path in sorted(data_dir.glob("*/*.yaml")):
+        if yaml_path.name.startswith("."):
+            continue
+        metadata: dict = {"title": "", "doi": "", "url": ""}
+        current_key = None
+        with yaml_path.open(encoding="utf-8") as fp:
+            for line in fp:
+                # Stop once we reach a section that comes after the header.
+                if line.startswith(_stop_keys):
+                    break
+                # Check if this line starts a new top-level key.
+                matched_key = False
+                for key in _header_keys:
+                    if line.startswith(f"{key}:"):
+                        metadata[key] = line.split(":", 1)[1].strip()
+                        current_key = key
+                        matched_key = True
+                        break
+                if matched_key:
+                    continue
+                # Continuation line for the current key (indented).
+                if current_key and line.startswith((" ", "\t")):
+                    metadata[current_key] += " " + line.strip()
+                else:
+                    current_key = None
+        datasets.append(metadata)
+
+    # Check for exact DOI match.
+    if doi is not None:
+        doi_normalized = doi.strip().lower()
+        for ds in datasets:
+            if ds["doi"] and ds["doi"].strip().lower() == doi_normalized:
+                return True
+
+    # Check for exact title match.
+    if title is not None:
+        title_normalized = title.strip().lower()
+        for ds in datasets:
+            if ds["title"].strip().lower() == title_normalized:
+                return True
+
+        # No exact match — look for the closest title above the threshold.
+        best_match = None
+        best_ratio = 0.0
+        for ds in datasets:
+            ratio = difflib.SequenceMatcher(
+                None, title_normalized, ds["title"].strip().lower()
+            ).ratio()
+            if ratio > best_ratio:
+                best_ratio = ratio
+                best_match = ds
+
+        if best_match and best_ratio >= similarity_threshold:
+            identifier = best_match["doi"] or best_match["url"]
+            warnings.warn(
+                f"No exact title match found, but a similar dataset exists: "
+                f'"{best_match["title"]}" ({identifier}), '
+                f"similarity: {best_ratio:.2f}."
+            )
+
+    return False
 
 
 class folded_str(str):
