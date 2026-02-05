@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=../.schema.yaml
+title: Single Base Substitutions in the Capsid Region of the Norovirus Genome during
+  Viral Shedding in Cases of Infection in Areas Where Norovirus Infection Is Endemic
+doi: 10.1128/jcm.01932-07
+description: >
+  This study investigates the duration of norovirus RNA shedding in two food handlers-one
+  symptomatic and one asymptomatic-using repeated real-time reverse transcription-PCR
+  tests on fecal specimens. Norovirus RNA was detected and quantified over time, and
+  the duration of viral shedding was compared between symptomatic and asymptomatic
+  individuals.
+analytes:
+  stool_Norovirus_copies:
+    description: >
+      Quantitative measurement of norovirus RNA in stool samples using real-time RT-PCR.
+      Results are expressed as copies per gram of feces.
+    specimen: stool
+    biomarker: norovirus
+    genotype: GII.4
+    limit_of_quantification: unknown
+    limit_of_detection: 10000
+    unit: gc/wet gram
+    reference_event: confirmation date
+participants:
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: stool_Norovirus_copies
+    time: 0
+    value: 11220.18454301963
+  - analyte: stool_Norovirus_copies
+    time: 5
+    value: 11220184.54301963
+  - analyte: stool_Norovirus_copies
+    time: 10
+    value: 1513561.2484362072
+  - analyte: stool_Norovirus_copies
+    time: 24
+    value: 407380.27780411305
+  - analyte: stool_Norovirus_copies
+    time: 38
+    value: 6760829.753919818
+  - analyte: stool_Norovirus_copies
+    time: 53
+    value: 4677351.412871981
+  - analyte: stool_Norovirus_copies
+    time: 67
+    value: 11220.18454301963
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: stool_Norovirus_copies
+    time: 0
+    value: 1071519305.2376049
+  - analyte: stool_Norovirus_copies
+    time: 12
+    value: 9332543.007969905
+  - analyte: stool_Norovirus_copies
+    time: 27
+    value: 20892.96130854041
+  - analyte: stool_Norovirus_copies
+    time: 42
+    value: 11220.18454301963

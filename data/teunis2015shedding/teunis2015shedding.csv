@@ -1,0 +1,226 @@
+patientID,symptomatic,age,participate_type,time,ct,concentration
+1,TRUE,20.8843258,healthcare worker,2,19.8,49576887.31
+2,FALSE,26.38466804,healthcare worker,0,27.5,763271.374
+3,TRUE,50.78439425,healthcare worker,6,24.8,3305917.027
+4,TRUE,21.28678987,healthcare worker,6,22.6,10843708.62
+5,TRUE,25.53045859,healthcare worker,7,27.1,947683.0289
+6,TRUE,25.52772074,healthcare worker,4,23.3,7430391.418
+7,TRUE,46.70773443,healthcare worker,9,35.9,7998.840852
+8,TRUE,45.72210815,healthcare worker,6,27.4,805856.5203
+9,TRUE,24.23545517,healthcare worker,6,20.2,39906121.62
+10,TRUE,54.89117043,healthcare worker,0,29.7,231241.9748
+11,TRUE,38.82272416,healthcare worker,7,29.1,320353.928
+12,FALSE,23.33470226,healthcare worker,0,34,22448.48687
+13,FALSE,27.59479808,healthcare worker,0,24.2,4577841.485
+14,FALSE,47.4661191,unknown,0,negative,negative
+15,FALSE,46.90759754,healthcare worker,0,21.5,19656837.07
+16,TRUE,28.38056126,healthcare worker,5,20.8,28830282.24
+17,TRUE,67.68514716,patient,1,25.9,1819419.886
+18,TRUE,64.81040383,patient,3,22.5,11447275.99
+19,TRUE,54.30527036,patient,1,17.4,181340912.1
+20,TRUE,50.58179329,patient,0,20.4,35829336.65
+21,FALSE,73.31416838,patient,0,22.2,13481218.94
+22,FALSE,55.83025325,patient,0,24.4,4108581.009
+23,TRUE,73.61533196,patient,1,30.1,186066.6975
+28,FALSE,53.18275154,healthcare worker,0,24.46,3978396.227
+29,TRUE,48.92539357,healthcare worker,6,21.6,18628397.9
+30,TRUE,18.22039699,healthcare worker,8,26.68,1190289.56
+31,FALSE,18.91854894,healthcare worker,0,25.06,2872266.465
+32,TRUE,42.30800821,healthcare worker,5,28.74,389526.2792
+33,TRUE,44.10677618,healthcare worker,7,29.99,197590.2999
+34,TRUE,22.85557837,healthcare worker,6,31.98,66867.71472
+35,FALSE,38.68856947,healthcare worker,0,27.3,851063.8706
+36,TRUE,48.41615332,healthcare worker,5,29.97,199768.1535
+37,TRUE,41.14989733,healthcare worker,16,26.7,1177594.22
+38,TRUE,47.10198494,healthcare worker,10,26.3,1462808.062
+39,TRUE,18.63107461,healthcare worker,4,24.78,3341778.564
+40,TRUE,48.71457906,healthcare worker,7,29.23,298802.1196
+41,TRUE,59.55373032,healthcare worker,10,28.75,387509.1478
+42,TRUE,83.78918549,patient,8,25.6,2140560.799
+43,TRUE,85.68651608,patient,5,26.75,1145937.787
+44,TRUE,92.3559206,patient,15,25.7,2026535.537
+45,TRUE,75.97262149,patient,6,17.3,191329737.8
+46,FALSE,93.2183436,patient,0,23.9,5377992.477
+47,FALSE,94.16837782,patient,0,21,25840900.53
+48,TRUE,87.80561259,patient,8,23.94,5262073.314
+49,TRUE,82.99247091,patient,7,24.37,4176220.513
+50,TRUE,88.78302533,patient,6,27.1,947683.0289
+51,TRUE,89.7522245,patient,8,25.9,1819419.886
+63,TRUE,51.38945927,healthcare worker,4,24.8,3305917.027
+64,TRUE,23.41136208,healthcare worker,7,29.24,297175.9404
+65,FALSE,23.70704997,healthcare worker,0,30.66,137201.3305
+66,FALSE,18.97604381,healthcare worker,0,31.82,72867.66354
+67,TRUE,40.55852156,healthcare worker,5,31.16,104330.4351
+68,TRUE,54.85557837,healthcare worker,2,24.19,4602659.539
+69,TRUE,44.58590007,healthcare worker,4,33,38493.4449
+70,TRUE,43.58110883,healthcare worker,4,30.11,185034.2486
+71,TRUE,39.09924709,healthcare worker,7,31.2,102086.3095
+72,FALSE,33.47843943,healthcare worker,0,31.14,105475.2769
+73,TRUE,48.78028747,healthcare worker,8,29.54,252469.4474
+74,TRUE,48.29295003,healthcare worker,9,30.67,136432.7489
+75,FALSE,78.12457221,patient,0,34.73,15086.19551
+76,FALSE,83.84120465,patient,0,26.77,1133724.287
+77,FALSE,76.98562628,patient,0,23.76,5797612.165
+78,FALSE,91.50718686,patient,0,15.6,482457277.6
+79,TRUE,71.25530459,patient,6,25.7,2026535.537
+80,FALSE,90.66119097,patient,0,15.3,568239035.7
+81,FALSE,83.62765229,patient,0,23.3,7430391.418
+82,FALSE,75.42231348,patient,0,23.6,6316730.505
+83,TRUE,75.6605065,patient,7,27.05,973906.5822
+84,FALSE,58.90485969,patient,0,27.27,865035.5465
+85,TRUE,79.38398357,patient,6,23.98,5149014.549
+86,TRUE,85.51403149,patient,7,21.4,20765631.05
+87,TRUE,80.98288843,patient,8,24.67,3548113.848
+88,TRUE,93.05954825,patient,9,20.82,28522889.58
+89,TRUE,78.19301848,patient,4,31.29,97210.66577
+90,TRUE,79.61943874,patient,22,27,1001384.694
+98,FALSE,42.86926762,healthcare worker,0,33.8,25025.75289
+99,TRUE,NA,healthcare worker,10,negative,negative
+100,FALSE,NA,healthcare worker,0,24.9,3133186.665
+101,TRUE,NA,healthcare worker,20,negative,negative
+102,FALSE,49.67830253,healthcare worker,0,30.3,166666.6706
+103,FALSE,49.64818617,healthcare worker,0,33.1,36487.4489
+104,FALSE,31.41683778,healthcare worker,0,36.8,4899.64512
+106,TRUE,48.03559206,healthcare worker,8,27.5,763271.374
+107,TRUE,61.34154689,healthcare worker,12,17.1,213279663.2
+108,FALSE,39.78644764,healthcare worker,0,28.8,377003.3176
+109,TRUE,47.57837098,healthcare worker,5,28.5,443719.0283
+110,TRUE,51.51540041,healthcare worker,14,32.8,42928.29977
+111,TRUE,NA,healthcare worker,0,negative,negative
+112,TRUE,81.42915811,patient,11,16.5,295302562.3
+113,TRUE,93.5797399,patient,14,26.6,1243492.792
+114,TRUE,82.68583162,patient,13,14.5,876556128.2
+115,TRUE,90.73785079,patient,12,25.4,2389045.027
+116,TRUE,84.50102669,patient,13,16.7,264669217.5
+117,TRUE,85.5523614,patient,16,21.6,18628397.9
+118,TRUE,92.29568789,patient,8,23,8740789.887
+119,TRUE,87.39219713,patient,17,27.9,614437.0759
+120,TRUE,91.34839151,patient,13,negative,negative
+121,TRUE,90.36276523,patient,16,21.9,15844493.61
+122,FALSE,86.91581109,patient,0,23.6,6316730.505
+123,TRUE,88.15331964,patient,9,20.8,28830282.24
+124,FALSE,83.25530459,patient,0,30,196487.3507
+125,FALSE,NA,patient,0,19.7,52385247.98
+1,TRUE,20.8843258,healthcare worker,11,36.7,5178.784632
+2,FALSE,26.38466804,healthcare worker,10,negative,negative
+3,TRUE,50.78439425,healthcare worker,17,negative,negative
+4,TRUE,21.28678987,healthcare worker,23,28.2,521576.4845
+5,TRUE,25.53045859,healthcare worker,25,negative,negative
+6,TRUE,25.52772074,healthcare worker,19,36.5,5770.915325
+7,TRUE,46.70773443,healthcare worker,25,negative,negative
+8,TRUE,45.72210815,healthcare worker,15,negative,negative
+9,TRUE,24.23545517,healthcare worker,19,35.7,8920.843891
+10,TRUE,54.89117043,healthcare worker,8,28.3,494466.9344
+11,TRUE,38.82272416,healthcare worker,17,37.1,4164.147636
+13,FALSE,27.59479808,healthcare worker,9,negative,negative
+14,FALSE,47.4661191,unknown,3,23.5,6667282.663
+15,FALSE,46.90759754,healthcare worker,10,34.3,19071.73007
+16,TRUE,28.38056126,healthcare worker,18,negative,negative
+17,TRUE,67.68514716,patient,13,29.8,219106.7359
+18,TRUE,64.81040383,patient,13,24.7,3489538.716
+19,TRUE,54.30527036,patient,13,26.3,1462808.062
+20,TRUE,50.58179329,patient,8,32,66155.87479
+21,FALSE,73.31416838,patient,8,30.5,149632.6507
+22,FALSE,55.83025325,patient,13,29.1,320353.928
+28,FALSE,53.18275154,healthcare worker,19,26.2,1544210.453
+29,TRUE,48.92539357,healthcare worker,19,29.7,231241.9748
+30,TRUE,18.22039699,healthcare worker,24,negative,negative
+31,FALSE,18.91854894,healthcare worker,10,negative,negative
+32,TRUE,42.30800821,healthcare worker,19,29.1,320353.928
+35,FALSE,38.68856947,healthcare worker,18,negative,negative
+36,TRUE,48.41615332,healthcare worker,21,34.3,19071.73007
+37,TRUE,41.14989733,healthcare worker,68,negative,negative
+38,TRUE,47.10198494,healthcare worker,23,negative,negative
+39,TRUE,18.63107461,healthcare worker,20,negative,negative
+40,TRUE,48.71457906,healthcare worker,21,negative,negative
+41,TRUE,59.55373032,healthcare worker,23,28.5,443719.0283
+42,TRUE,83.78918549,patient,18,28.9,357144.4003
+43,TRUE,85.68651608,patient,25,28.5,443719.0283
+44,TRUE,92.3559206,patient,20,31.8,73667.1088
+45,TRUE,75.97262149,patient,15,19.4,61633822.73
+46,FALSE,93.2183436,patient,22,35,13036.13925
+47,FALSE,94.16837782,patient,15,32.2,59401.4783
+48,TRUE,87.80561259,patient,26,25.4,2389045.027
+49,TRUE,82.99247091,patient,23,34.9,13765.15227
+50,TRUE,88.78302533,patient,17,35.7,8920.843891
+51,TRUE,89.7522245,patient,17,24.3,4337420.021
+63,TRUE,51.38945927,healthcare worker,18,negative,negative
+65,FALSE,23.70704997,healthcare worker,13,negative,negative
+67,TRUE,40.55852156,healthcare worker,19,negative,negative
+68,TRUE,54.85557837,healthcare worker,13,33.9,23707.29189
+69,TRUE,44.58590007,healthcare worker,14,negative,negative
+70,TRUE,43.58110883,healthcare worker,20,negative,negative
+71,TRUE,39.09924709,healthcare worker,19,negative,negative
+72,FALSE,33.47843943,healthcare worker,12,37.2,3939.822454
+73,TRUE,48.78028747,healthcare worker,19,30.6,141762.0359
+74,TRUE,48.29295003,healthcare worker,23,36.3,6430.868258
+77,FALSE,76.98562628,patient,17,22.9,9220137.574
+79,TRUE,71.25530459,patient,16,26.9,1056686.121
+80,FALSE,90.66119097,patient,19,29.8,219106.7359
+81,FALSE,83.62765229,patient,26,negative,negative
+83,TRUE,75.6605065,patient,23,27.8,649246.4214
+84,FALSE,58.90485969,patient,16,negative,negative
+85,TRUE,79.38398357,patient,27,25,2968216.254
+86,TRUE,85.51403149,patient,17,negative,negative
+87,TRUE,80.98288843,patient,25,36.5,5770.915325
+88,TRUE,93.05954825,patient,35,28.1,551025.5481
+89,TRUE,78.19301848,patient,18,negative,negative
+90,TRUE,79.61943874,patient,35,negative,negative
+98,FALSE,42.86926762,healthcare worker,13,negative,negative
+100,FALSE,NA,healthcare worker,25,negative,negative
+102,FALSE,49.67830253,healthcare worker,16,negative,negative
+103,FALSE,49.64818617,healthcare worker,12,negative,negative
+104,FALSE,31.41683778,healthcare worker,20,negative,negative
+106,TRUE,48.03559206,healthcare worker,35,negative,negative
+107,TRUE,61.34154689,healthcare worker,25,negative,negative
+108,FALSE,39.78644764,healthcare worker,12,negative,negative
+109,TRUE,47.57837098,healthcare worker,22,negative,negative
+110,TRUE,51.51540041,healthcare worker,27,negative,negative
+112,TRUE,81.42915811,patient,28,23.5,6667282.663
+113,TRUE,93.5797399,patient,48,negative,negative
+114,TRUE,82.68583162,patient,30,24.3,4337420.021
+115,TRUE,90.73785079,patient,20,33.3,32724.85634
+116,TRUE,84.50102669,patient,27,23.9,5377992.477
+118,TRUE,92.29568789,patient,36,negative,negative
+120,TRUE,91.34839151,patient,24,32.9,40658.7748
+121,TRUE,90.36276523,patient,24,31.4,91569.85463
+122,FALSE,86.91581109,patient,18,32.7,45351.13766
+123,TRUE,88.15331964,patient,23,30.2,176166.2847
+124,FALSE,83.25530459,patient,17,18.9,80573017.88
+1,TRUE,20.8843258,healthcare worker,20,negative,negative
+6,TRUE,25.52772074,healthcare worker,29,negative,negative
+10,TRUE,54.89117043,healthcare worker,23,negative,negative
+14,FALSE,47.4661191,unknown,15,35.1,12352.36991
+15,FALSE,46.90759754,healthcare worker,18,negative,negative
+17,TRUE,67.68514716,patient,22,31.4,91569.85463
+18,TRUE,64.81040383,patient,29,negative,negative
+19,TRUE,54.30527036,patient,25,30,196487.3507
+20,TRUE,50.58179329,patient,18,negative,negative
+21,FALSE,73.31416838,patient,15,34.3,19071.73007
+22,FALSE,55.83025325,patient,25,33.9,23707.29189
+29,TRUE,48.92539357,healthcare worker,39,negative,negative
+32,TRUE,42.30800821,healthcare worker,36,negative,negative
+41,TRUE,59.55373032,healthcare worker,40,negative,negative
+42,TRUE,83.78918549,patient,33,32.3,56273.86146
+43,TRUE,85.68651608,patient,37,negative,negative
+44,TRUE,92.3559206,patient,28,negative,negative
+45,TRUE,75.97262149,patient,42,28.6,420101.1291
+48,TRUE,87.80561259,patient,36,23.3,7430391.418
+49,TRUE,82.99247091,patient,37,negative,negative
+68,TRUE,54.85557837,healthcare worker,27,negative,negative
+72,FALSE,33.47843943,healthcare worker,28,negative,negative
+73,TRUE,48.78028747,healthcare worker,30,36.1,7168.667692
+74,TRUE,48.29295003,healthcare worker,40,negative,negative
+77,FALSE,76.98562628,patient,49,negative,negative
+79,TRUE,71.25530459,patient,42,37.8,2843.809526
+85,TRUE,79.38398357,patient,43,37.9,2693.822941
+87,TRUE,80.98288843,patient,38,38.9,1565.421156
+88,TRUE,93.05954825,patient,38,36.7,5178.784632
+115,TRUE,90.73785079,patient,50,negative,negative
+120,TRUE,91.34839151,patient,51,negative,negative
+121,TRUE,90.36276523,patient,47,negative,negative
+17,TRUE,67.68514716,patient,26,35.7,8920.843891
+19,TRUE,54.30527036,patient,37,negative,negative
+21,FALSE,73.31416838,patient,19,negative,negative
+42,TRUE,83.78918549,patient,43,33.1,36487.4489
+85,TRUE,79.38398357,patient,75,negative,negative

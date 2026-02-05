@@ -1,0 +1,188 @@
+title: A pilot study on use of live attenuated rotavirus vaccine (Rotarix™) as an
+  infection challenge model
+doi: 10.1016/j.vaccine.2020.09.023
+description: This study evaluates the use of Rotarix™ as a live-attenuated challenge
+  agent in a cohort of 22 Zambian infants. The infants received two standard doses
+  of the vaccine at 6 and 10 weeks of age. The study aimed to assess stool shedding
+  of rotavirus using NSP2 qPCR, with samples collected on days 0, 3, 5, 7, 14, and
+  28 following each dose. The primary outcome was the viral shedding index, calculated
+  as the average natural logarithm of viral copies per gram of stool. The study found
+  that viral shedding was high after the first dose but reduced after the second dose,
+  indicating the induction of mucosal immunity. The study supports the use of Rotarix
+  as a live-attenuated infection challenge model.
+analytes:
+  stool_rotavirus_viral_load:
+    description: Stool shedding of rotavirus was determined by NSP2 qPCR, measuring
+      the viral copies per gram of stool.
+    specimen: stool
+    biomarker: rotavirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+participants:
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 224454.56216991268
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 224454.56216991268
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 2024465252.92102
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 1119700.089297995
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 26332.82213506095
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 224454.56216991268
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 26332.82213506095
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 383518.39318181353
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 9019.4880748964
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 76879.91976467776
+  - analyte: stool_rotavirus_viral_load
+    time: 35
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 876954.6240061788
+  - analyte: stool_rotavirus_viral_load
+    time: 35
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 20626872.212402895
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 4541.681659353768
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 106825.01169603212
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 39.81367817551214
+  - analyte: stool_rotavirus_viral_load
+    time: 35
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 12185892.278788133
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 1585.1289714483792
+  - analyte: stool_rotavirus_viral_load
+    time: 31
+    value: 306073.01084275544
+  - analyte: stool_rotavirus_viral_load
+    time: 33
+    value: 114.073400472843
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 7199151.141341653
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 106825.01169603212
+  - analyte: stool_rotavirus_viral_load
+    time: 33
+    value: 553.2386557631429
+  - analyte: stool_rotavirus_viral_load
+    time: 42
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 1484407.5880219543
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 59099725.63619596
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 2352977466.152483
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 11411583123.857397
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 22026.465794806718
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_viral_load
+    time: 14
+    value: 936.458552472217
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 106825.01169603212
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 13012.74070845036
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 9019.4880748964
+  - analyte: stool_rotavirus_viral_load
+    time: 14
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 169331420.40669832
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 55344443908.18843
+  - analyte: stool_rotavirus_viral_load
+    time: 31
+    value: 180821.05232277882
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 876954.6240061788
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 5
+    value: 180821.05232277882
+  - analyte: stool_rotavirus_viral_load
+    time: 31
+    value: 63109.814799036154
+  - analyte: stool_rotavirus_viral_load
+    time: 42
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 7
+    value: 5364073.093667808
+  - analyte: stool_rotavirus_viral_load
+    time: 14
+    value: 265.6720738029193
+  - analyte: stool_rotavirus_viral_load
+    time: 35
+    value: 113206.22450128818

@@ -1,0 +1,97 @@
+title: A non-enteric adenovirus A12 gastroenteritis outbreak in Rio de Janeiro, Brazil
+doi: 10.1590/0074-02760160030
+description: This study investigates a gastroenteritis outbreak in 2013 in a low-income
+  community in Rio de Janeiro, Brazil, focusing on the presence of enteric viruses.
+  The study involved nine patients, with stool samples collected and analyzed for
+  various viruses, including adenovirus. The outbreak was characterized by symptoms
+  such as fever and diarrhea, and adenovirus A12 was identified as the primary pathogen.
+  The study utilized TaqMan real-time PCR to assess viral loads in stool samples,
+  revealing high viral loads in patients with adenovirus A12. The research highlights
+  the importance of identifying unique viral agents in regions with routine RVA vaccination.
+analytes:
+  stool_adenovirus_viral_load:
+    description: Viral load of adenovirus in stool samples measured using TaqMan real-time
+      PCR assay targeting the conserved region of the HAdV hexon.
+    specimen: stool
+    biomarker: adenovirus
+    gene_target: hexon
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 0.5
+    lineage: a12
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 3
+    value: 22000000.0
+  - analyte: stool_adenovirus_viral_load
+    time: 4
+    value: 28000000.0
+- attributes:
+    sex: male
+    age: 0.6666666666666666
+    lineage: a12
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 4
+    value: 11000000.0
+- attributes:
+    sex: male
+    age: 1.5
+    lineage: f41
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 3
+    value: 1400
+- attributes:
+    sex: male
+    age: 1.8333333333333333
+    lineage: a12
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 4
+    value: 4200000.0
+- attributes:
+    sex: female
+    age: 1.9166666666666667
+    lineage: unknown
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 3
+    value: negative
+- attributes:
+    sex: female
+    age: 2.0833333333333335
+    lineage: a12
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 3
+    value: 32000000.0
+- attributes:
+    sex: male
+    age: 2.5
+    lineage: unknown
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 4
+    value: negative
+- attributes:
+    sex: male
+    age: 31
+    lineage: unknown
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 3
+    value: negative
+- attributes:
+    sex: female
+    age: 53
+    lineage: unknown
+  measurements:
+  - analyte: stool_adenovirus_viral_load
+    time: 4
+    value: negative

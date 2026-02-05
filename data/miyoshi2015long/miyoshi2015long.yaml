@@ -1,0 +1,135 @@
+title: Long-term viral shedding and viral genome mutation in norovirus infection
+doi: 10.1002/jmv.24242
+description: This study investigates the duration of viral shedding in patients from
+  two outbreaks and four sporadic cases of norovirus (NoV) infections. The research
+  highlights the longest period of viral shedding into feces, which was 173 days in
+  an inpatient from one outbreak case. The study also examines the VP1 sequence from
+  two long-term viral shedding cases, revealing several mutations. The findings suggest
+  that the long-term carrier state of norovirus infection contributes to the generation
+  of escape mutants by host immunoselection.
+analytes:
+  stool_norovirus:
+    description: Norovirus viral load measured in stool samples using quantitative
+      PCR methods.
+    specimen: stool
+    biomarker: norovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: stool_norovirus
+    time: 10
+    value: 14458420.32175741
+  - analyte: stool_norovirus
+    time: 22
+    value: 96581.56976445501
+  - analyte: stool_norovirus
+    time: 31
+    value: 255773.1693082243
+  - analyte: stool_norovirus
+    time: 38
+    value: 110998.52827805636
+  - analyte: stool_norovirus
+    time: 43
+    value: 19499.80244449107
+  - analyte: stool_norovirus
+    time: 48
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 3
+    value: 8884653.261140928
+  - analyte: stool_norovirus
+    time: 20
+    value: 4750476.347816857
+  - analyte: stool_norovirus
+    time: 27
+    value: 512825.7082843002
+  - analyte: stool_norovirus
+    time: 35
+    value: 16967.0855947558
+  - analyte: stool_norovirus
+    time: 49
+    value: 20904.591812498944
+  - analyte: stool_norovirus
+    time: 55
+    value: 13771.232471884217
+  - analyte: stool_norovirus
+    time: 63
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 3
+    value: 153925714.5176918
+  - analyte: stool_norovirus
+    time: 21
+    value: 22410.583906743857
+  - analyte: stool_norovirus
+    time: 27
+    value: 2540000.703220395
+  - analyte: stool_norovirus
+    time: 31
+    value: 222552.2678421096
+  - analyte: stool_norovirus
+    time: 41
+    value: 39097.14231186381
+  - analyte: stool_norovirus
+    time: 49
+    value: 31732.959249609146
+  - analyte: stool_norovirus
+    time: 55
+    value: 1455935.0253442016
+  - analyte: stool_norovirus
+    time: 63
+    value: 1793809.9764020648
+  - analyte: stool_norovirus
+    time: 76
+    value: 337832.09496199054
+  - analyte: stool_norovirus
+    time: 91
+    value: 834545.7524229996
+  - analyte: stool_norovirus
+    time: 105
+    value: 96581.56976445501
+  - analyte: stool_norovirus
+    time: 119
+    value: 48170.31166020083
+  - analyte: stool_norovirus
+    time: 174
+    value: 4220.633517560371
+  - analyte: stool_norovirus
+    time: 192
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 2
+    value: 7571014510.536732
+  - analyte: stool_norovirus
+    time: 14
+    value: 10210886.390152905
+  - analyte: stool_norovirus
+    time: 20
+    value: 2540000.703220395
+  - analyte: stool_norovirus
+    time: 30
+    value: 13486813.921624735
+  - analyte: stool_norovirus
+    time: 39
+    value: 677354.0158595557
+  - analyte: stool_norovirus
+    time: 48
+    value: 416231.88654889364
+  - analyte: stool_norovirus
+    time: 55
+    value: 959120.3634976336
+  - analyte: stool_norovirus
+    time: 70
+    value: 19499.80244449107
+  - analyte: stool_norovirus
+    time: 86
+    value: 677354.0158595557
+  - analyte: stool_norovirus
+    time: 211
+    value: negative

@@ -1,0 +1,206 @@
+title: Duration of norovirus excretion and the longitudinal course of viral load in
+  norovirus-infected elderly patients
+doi: 10.1016/j.jhin.2009.12.016
+description: This study investigates the duration of norovirus excretion and the viral
+  load in elderly patients with norovirus gastroenteritis. Conducted in aged-care
+  facilities, the study involved 13 elderly patients aged 60-98 years. A total of
+  63 fecal samples were collected and analyzed using real-time quantitative polymerase
+  chain reaction assays. The study found that the average period of norovirus excretion
+  was 14.3 days, with viral loads varying significantly over time. The findings suggest
+  that monitoring viral load around 16 days after symptom onset could be useful for
+  managing norovirus infections in such settings.
+analytes:
+  stool_norovirus:
+    description: Real-time quantitative polymerase chain reaction assay to measure
+      norovirus viral load in stool samples.
+    specimen: stool
+    biomarker: norovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: stool_norovirus
+    time: 3
+    value: 7943282.347242822
+  - analyte: stool_norovirus
+    time: 11
+    value: 501.18723362727246
+  - analyte: stool_norovirus
+    time: 17
+    value: 8912.509381337459
+  - analyte: stool_norovirus
+    time: 39
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 3
+    value: 3981071.7055349695
+  - analyte: stool_norovirus
+    time: 9
+    value: 70794.57843841374
+  - analyte: stool_norovirus
+    time: 16
+    value: 12589.254117941662
+  - analyte: stool_norovirus
+    time: 38
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 4
+    value: 7943282.347242822
+  - analyte: stool_norovirus
+    time: 9
+    value: 2238.72113856834
+  - analyte: stool_norovirus
+    time: 16
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 5
+    value: 501.18723362727246
+  - analyte: stool_norovirus
+    time: 9
+    value: 707.945784384138
+  - analyte: stool_norovirus
+    time: 16
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 7
+    value: 1660.0676481358753
+  - analyte: stool_norovirus
+    time: 13
+    value: 145.7209564156529
+  - analyte: stool_norovirus
+    time: 22
+    value: negative
+  - analyte: stool_norovirus
+    time: 29
+    value: negative
+  - analyte: stool_norovirus
+    time: 36
+    value: negative
+  - analyte: stool_norovirus
+    time: 43
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 3
+    value: 22177467.42437998
+  - analyte: stool_norovirus
+    time: 10
+    value: 120714.9353146154
+  - analyte: stool_norovirus
+    time: 18
+    value: 30059.892352401483
+  - analyte: stool_norovirus
+    time: 25
+    value: 15000.323629902803
+  - analyte: stool_norovirus
+    time: 32
+    value: 292.0174505176254
+  - analyte: stool_norovirus
+    time: 39
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 2
+    value: 5522533.576216387
+  - analyte: stool_norovirus
+    time: 9
+    value: 152191.33863712254
+  - analyte: stool_norovirus
+    time: 17
+    value: negative
+  - analyte: stool_norovirus
+    time: 38
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 2
+    value: 75945.69223540771
+  - analyte: stool_norovirus
+    time: 10
+    value: 42553.062179488916
+  - analyte: stool_norovirus
+    time: 17
+    value: negative
+  - analyte: stool_norovirus
+    time: 31
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 2
+    value: 304983.7710043741
+  - analyte: stool_norovirus
+    time: 8
+    value: 1863.9757244237046
+  - analyte: stool_norovirus
+    time: 17
+    value: 521.1720682012347
+  - analyte: stool_norovirus
+    time: 24
+    value: negative
+  - analyte: stool_norovirus
+    time: 38
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 7
+    value: 770535.146454338
+  - analyte: stool_norovirus
+    time: 9
+    value: 37898.00528390698
+  - analyte: stool_norovirus
+    time: 16
+    value: 292.0174505176254
+  - analyte: stool_norovirus
+    time: 23
+    value: negative
+  - analyte: stool_norovirus
+    time: 30
+    value: negative
+  - analyte: stool_norovirus
+    time: 37
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 2
+    value: 11066878.882710014
+  - analyte: stool_norovirus
+    time: 9
+    value: 686243.0940595887
+  - analyte: stool_norovirus
+    time: 24
+    value: negative
+  - analyte: stool_norovirus
+    time: 31
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 2
+    value: 3901170.8369098124
+  - analyte: stool_norovirus
+    time: 11
+    value: negative
+- measurements:
+  - analyte: stool_norovirus
+    time: 4
+    value: 431737.85152841354
+  - analyte: stool_norovirus
+    time: 7
+    value: 2962.7711905549754
+  - analyte: stool_norovirus
+    time: 14
+    value: negative
+  - analyte: stool_norovirus
+    time: 21
+    value: negative
+  - analyte: stool_norovirus
+    time: 28
+    value: negative
+  - analyte: stool_norovirus
+    time: 35
+    value: negative
