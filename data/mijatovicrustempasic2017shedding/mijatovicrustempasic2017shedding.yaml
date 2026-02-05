@@ -18,7 +18,7 @@ analytes:
     gene_target: NSP3
     limit_of_detection: unknown
     limit_of_quantification: unknown
-    unit: gc/ml
+    unit: gc/mL
     reference_event: vaccination
     dose: 1
   stool_pcv1_dna:
@@ -28,7 +28,7 @@ analytes:
     biomarker: rotavirus vaccine
     limit_of_detection: unknown
     limit_of_quantification: unknown
-    unit: gc/ml
+    unit: gc/mL
     reference_event: vaccination
     dose: 1
 participants:

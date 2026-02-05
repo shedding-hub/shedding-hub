@@ -14,10 +14,10 @@ analytes:
     description: Hepatitis A virus shedding in stool samples measured by competitive
       nested RT-PCR
     specimen: stool
-    biomarker: hepatitis a virus
+    biomarker: hepatitis A virus
     limit_of_detection: 10
     limit_of_quantification: 100
-    unit: gc/ml
+    unit: gc/mL
     reference_event: symptom onset
 participants:
 - attributes:
@@ -26,28 +26,28 @@ participants:
     age_group: adult
     genotype: 1a
   measurements:
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 13
     value: 2034500.079
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 34
     value: 2129895.073
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 56
     value: 196576.8348
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 75
     value: 20816.51194
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 98
     value: 32.54151822
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 120
     value: negative
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 148
     value: negative
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 183
     value: negative
 - attributes:
@@ -56,28 +56,28 @@ participants:
     age_group: adult
     genotype: 1b
   measurements:
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 14
     value: 1956398.342
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 28
     value: 1956398.342
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 44
     value: 19116.44075
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 70
     value: 30.72112999
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 99
     value: negative
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 126
     value: negative
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 149
     value: negative
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 183
     value: negative
 - attributes:
@@ -86,24 +86,24 @@ participants:
     age_group: child
     genotype: 3a
   measurements:
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 18
     value: 200399.0447
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 33
     value: 200973.1451
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 47
     value: 201511.2918
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 76
     value: 34.27606589
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 109
     value: negative
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 130
     value: negative
-  - analyte: stool_hepatitis_A_virus
+  - analyte: stool_hepatitis_a_virus
     time: 159
     value: negative

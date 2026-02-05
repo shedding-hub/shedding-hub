@@ -53,7 +53,7 @@ analytes:
     reference_event: symptom onset
 participants:
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -69,7 +69,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -85,7 +85,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 11-20
+    age: 11-20
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -95,7 +95,7 @@ participants:
     time: 0.0
     value: 320.4007336
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -111,7 +111,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -127,7 +127,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -143,7 +143,7 @@ participants:
     time: 0.0
     value: 67638.9809065506
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -159,7 +159,7 @@ participants:
     time: 0.0
     value: 67638.9809065506
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -175,7 +175,7 @@ participants:
     time: 8.0
     value: 29.17031479
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -191,7 +191,7 @@ participants:
     time: 8.0
     value: 29.17031479
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -207,7 +207,7 @@ participants:
     time: 8.0
     value: 77578.29005
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -223,7 +223,7 @@ participants:
     time: 8.0
     value: 77578.29005
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -239,7 +239,7 @@ participants:
     time: 0.0
     value: 6309.428894
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -255,7 +255,7 @@ participants:
     time: 0.0
     value: 6309.428894
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -271,7 +271,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -287,7 +287,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -303,7 +303,7 @@ participants:
     time: 14.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -319,7 +319,7 @@ participants:
     time: 14.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -335,7 +335,7 @@ participants:
     time: 11.0
     value: 5.483383595
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -351,7 +351,7 @@ participants:
     time: 11.0
     value: 5.483383595
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -367,7 +367,7 @@ participants:
     time: 9.0
     value: 39.34682048
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -383,7 +383,7 @@ participants:
     time: 9.0
     value: 39.34682048
 - attributes:
-    age_group: 11-20
+    age: 11-20
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -399,7 +399,7 @@ participants:
     time: 0.0
     value: 679.6872707
 - attributes:
-    age_group: 11-20
+    age: 11-20
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -415,7 +415,7 @@ participants:
     time: 0.0
     value: 679.6872707
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -431,7 +431,7 @@ participants:
     time: 0.0
     value: 115.4409515
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -447,7 +447,7 @@ participants:
     time: 0.0
     value: 115.4409515
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -463,7 +463,7 @@ participants:
     time: 10.0
     value: 268.0007688
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -479,7 +479,7 @@ participants:
     time: 10.0
     value: 268.0007688
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -495,7 +495,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -511,7 +511,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -527,7 +527,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -543,7 +543,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -559,7 +559,7 @@ participants:
     time: 8.0
     value: 130.094514291868
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -575,7 +575,7 @@ participants:
     time: 8.0
     value: 130.094514291868
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -591,7 +591,7 @@ participants:
     time: 10.0
     value: 5378.555877
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -607,7 +607,7 @@ participants:
     time: 10.0
     value: 5378.555877
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -617,7 +617,7 @@ participants:
     time: 0.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -633,7 +633,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -649,7 +649,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -659,7 +659,7 @@ participants:
     time: 0.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -675,7 +675,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -691,7 +691,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -707,7 +707,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -723,7 +723,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -739,7 +739,7 @@ participants:
     time: 10.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -755,7 +755,7 @@ participants:
     time: 10.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -765,7 +765,7 @@ participants:
     time: 0.0
     value: 46177.24514
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -781,7 +781,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -797,7 +797,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -807,7 +807,7 @@ participants:
     time: 0.0
     value: 921263.2696
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -823,7 +823,7 @@ participants:
     time: 14.0
     value: negative
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -839,7 +839,7 @@ participants:
     time: 14.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -855,7 +855,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -871,7 +871,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -887,7 +887,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -903,7 +903,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 81-90
+    age: 81-90
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -913,7 +913,7 @@ participants:
     time: 0.0
     value: 374882.0267
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -929,7 +929,7 @@ participants:
     time: 13.0
     value: 112.1504484
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -945,7 +945,7 @@ participants:
     time: 13.0
     value: 112.1504484
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -955,7 +955,7 @@ participants:
     time: 0.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -971,7 +971,7 @@ participants:
     time: 0.0
     value: 236587.6005
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -987,7 +987,7 @@ participants:
     time: 0.0
     value: 236587.6005
 - attributes:
-    age_group: 21-30
+    age: 21-30
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -997,7 +997,7 @@ participants:
     time: 0.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1013,7 +1013,7 @@ participants:
     time: 0.0
     value: 5934159.128
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1029,7 +1029,7 @@ participants:
     time: 0.0
     value: 5934159.128
 - attributes:
-    age_group: 11-20
+    age: 11-20
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1045,7 +1045,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 11-20
+    age: 11-20
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1061,7 +1061,7 @@ participants:
     time: 9.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1077,7 +1077,7 @@ participants:
     time: 12.0
     value: 5378.816149
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1093,7 +1093,7 @@ participants:
     time: 12.0
     value: 5378.816149
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1103,7 +1103,7 @@ participants:
     time: 0.0
     value: 1344028.655
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1119,7 +1119,7 @@ participants:
     time: 10.0
     value: 65895.41966
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1135,7 +1135,7 @@ participants:
     time: 10.0
     value: 65895.41966
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -1145,7 +1145,7 @@ participants:
     time: 0.0
     value: 1759.136306
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1161,7 +1161,7 @@ participants:
     time: 10.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_first_pos
@@ -1177,7 +1177,7 @@ participants:
     time: 10.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -1193,7 +1193,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_first_pos
@@ -1209,7 +1209,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 81-90
+    age: 81-90
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1225,7 +1225,7 @@ participants:
     time: 11.0
     value: 7146.252797
 - attributes:
-    age_group: 81-90
+    age: 81-90
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1241,7 +1241,7 @@ participants:
     time: 11.0
     value: 7146.252797
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1257,7 +1257,7 @@ participants:
     time: 20.0
     value: 300.4782175
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1273,7 +1273,7 @@ participants:
     time: 20.0
     value: 300.4782175
 - attributes:
-    age_group: 21-30
+    age: 21-30
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1289,7 +1289,7 @@ participants:
     time: 12.0
     value: 97.90548075
 - attributes:
-    age_group: 21-30
+    age: 21-30
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1305,7 +1305,7 @@ participants:
     time: 12.0
     value: 97.90548075
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1315,7 +1315,7 @@ participants:
     time: 5.0
     value: 1183.852134
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1331,7 +1331,7 @@ participants:
     time: 10.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1347,7 +1347,7 @@ participants:
     time: 10.0
     value: negative
 - attributes:
-    age_group: 81-90
+    age: 81-90
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1357,7 +1357,7 @@ participants:
     time: 0.0
     value: 1787.816092
 - attributes:
-    age_group: 21-30
+    age: 21-30
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1367,7 +1367,7 @@ participants:
     time: 0.0
     value: 2071.607679
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1383,7 +1383,7 @@ participants:
     time: 13.0
     value: 184.0797817
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1399,7 +1399,7 @@ participants:
     time: 13.0
     value: 184.0797817
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1409,7 +1409,7 @@ participants:
     time: 7.0
     value: 22477.51122
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1425,7 +1425,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1441,7 +1441,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1457,7 +1457,7 @@ participants:
     time: 19.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1473,7 +1473,7 @@ participants:
     time: 19.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1489,7 +1489,7 @@ participants:
     time: 10.0
     value: 78.95406902
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1505,7 +1505,7 @@ participants:
     time: 10.0
     value: 78.95406902
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1515,7 +1515,7 @@ participants:
     time: 10.0
     value: 21194.75624
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1531,7 +1531,7 @@ participants:
     time: 13.0
     value: 2135.834081
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1547,7 +1547,7 @@ participants:
     time: 13.0
     value: 2135.834081
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1563,7 +1563,7 @@ participants:
     time: 15.0
     value: negative
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1579,7 +1579,7 @@ participants:
     time: 15.0
     value: negative
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1595,7 +1595,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 31-40
+    age: 31-40
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1611,7 +1611,7 @@ participants:
     time: 11.0
     value: negative
 - attributes:
-    age_group: 81-90
+    age: 81-90
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1627,7 +1627,7 @@ participants:
     time: 12.0
     value: 21869.53725
 - attributes:
-    age_group: 81-90
+    age: 81-90
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1643,7 +1643,7 @@ participants:
     time: 12.0
     value: 21869.53725
 - attributes:
-    age_group: 11-20
+    age: 11-20
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1659,7 +1659,7 @@ participants:
     time: 12.0
     value: 57.74646184
 - attributes:
-    age_group: 11-20
+    age: 11-20
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1675,7 +1675,7 @@ participants:
     time: 12.0
     value: 57.74646184
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1691,7 +1691,7 @@ participants:
     time: 4.0
     value: 505.3246178
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1707,7 +1707,7 @@ participants:
     time: 4.0
     value: 505.3246178
 - attributes:
-    age_group: 21-30
+    age: 21-30
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1723,7 +1723,7 @@ participants:
     time: 12.0
     value: 48603.33735
 - attributes:
-    age_group: 21-30
+    age: 21-30
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1739,7 +1739,7 @@ participants:
     time: 12.0
     value: 48603.33735
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1749,7 +1749,7 @@ participants:
     time: 3.0
     value: 1891411.788
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1765,7 +1765,7 @@ participants:
     time: 15.0
     value: 840.8996309
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1781,7 +1781,7 @@ participants:
     time: 15.0
     value: 840.8996309
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1797,7 +1797,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1813,7 +1813,7 @@ participants:
     time: 8.0
     value: negative
 - attributes:
-    age_group: 51-60
+    age: 51-60
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1823,7 +1823,7 @@ participants:
     time: 6.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1839,7 +1839,7 @@ participants:
     time: 24.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1855,7 +1855,7 @@ participants:
     time: 24.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1871,7 +1871,7 @@ participants:
     time: 12.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1887,7 +1887,7 @@ participants:
     time: 12.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1903,7 +1903,7 @@ participants:
     time: 12.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1919,7 +1919,7 @@ participants:
     time: 12.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1929,7 +1929,7 @@ participants:
     time: 8.0
     value: 377.0593769
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1939,7 +1939,7 @@ participants:
     time: 2.0
     value: 4693506.915
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1955,7 +1955,7 @@ participants:
     time: 10.0
     value: 3317.486289
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -1971,7 +1971,7 @@ participants:
     time: 10.0
     value: 3317.486289
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -1987,7 +1987,7 @@ participants:
     time: 26.0
     value: 27.89353472
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2003,7 +2003,7 @@ participants:
     time: 26.0
     value: 27.89353472
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2019,7 +2019,7 @@ participants:
     time: 15.0
     value: 279.1883282
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2035,7 +2035,7 @@ participants:
     time: 15.0
     value: 279.1883282
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2051,7 +2051,7 @@ participants:
     time: 18.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2067,7 +2067,7 @@ participants:
     time: 18.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -2083,7 +2083,7 @@ participants:
     time: 23.0
     value: negative
 - attributes:
-    age_group: 61-70
+    age: 61-70
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -2099,7 +2099,7 @@ participants:
     time: 23.0
     value: negative
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2115,7 +2115,7 @@ participants:
     time: 17.0
     value: negative
 - attributes:
-    age_group: 41-50
+    age: 41-50
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2131,7 +2131,7 @@ participants:
     time: 17.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -2147,7 +2147,7 @@ participants:
     time: 14.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: female
   measurements:
   - analyte: RdRp_symptom
@@ -2163,7 +2163,7 @@ participants:
     time: 14.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom
@@ -2179,7 +2179,7 @@ participants:
     time: 26.0
     value: negative
 - attributes:
-    age_group: 71-80
+    age: 71-80
     sex: male
   measurements:
   - analyte: RdRp_symptom

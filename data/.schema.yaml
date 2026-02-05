@@ -3,12 +3,12 @@ $defs:
   negative_positive_number:
     description: >
       A quantitative value, `positive` result above limit of detection but below limit
-      of quantification, or `negative` result below the limit of detection.
+      of quantification, `inconclusive` result not conclusive for test output, or `negative` result below the limit of detection.
     oneOf:
       - type: number
         exclusiveMinimum: 0 # Zero should be coded as `negative`.
       - type: string
-        enum: [positive, negative]
+        enum: [positive, negative, inconclusive]
   specimen_type_enum:
     type: string
     enum:
@@ -185,13 +185,13 @@ properties:
             age:
               description: >
                 Chronological age of the participant in YEARS (how old they are).
-                Can be a numeric value or an age range string (e.g., "2-5", "18-65").
+                Can be a numeric value or an age range string (e.g., "2-5", "18-65",
+                "unknown").
               oneOf:
                 - type: number
                   minimum: 0
                   maximum: 120
                 - type: string
-                - const: unknown
             age_group:
               description: >
                 Age group category when exact numeric age is not available.

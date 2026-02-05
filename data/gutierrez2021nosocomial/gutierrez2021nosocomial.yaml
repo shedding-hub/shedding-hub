@@ -60,7 +60,7 @@ participants:
   - analyte: stool_rotavirus_viral_load
     time: 3
     value: 13000000
-  - analyte: stool_rotavirus_CT
+  - analyte: stool_rotavirus_ct
     time: 3
     value: 21.2
 - attributes:
@@ -72,7 +72,7 @@ participants:
   - analyte: stool_rotavirus_viral_load
     time: 1
     value: 61000000
-  - analyte: stool_rotavirus_CT
+  - analyte: stool_rotavirus_ct
     time: 1
     value: 18.9
 - attributes:
@@ -84,7 +84,7 @@ participants:
   - analyte: stool_rotavirus_viral_load
     time: 0
     value: 30000000
-  - analyte: stool_rotavirus_CT
+  - analyte: stool_rotavirus_ct
     time: 0
     value: 20
 - attributes:
@@ -96,7 +96,7 @@ participants:
   - analyte: stool_norovirus_viral_load
     time: 4
     value: 220000000
-  - analyte: stool_norovirus_CT
+  - analyte: stool_norovirus_ct
     time: 4
     value: 17
 - attributes:
@@ -108,7 +108,7 @@ participants:
   - analyte: stool_norovirus_viral_load
     time: 5
     value: 330000000
-  - analyte: stool_norovirus_CT
+  - analyte: stool_norovirus_ct
     time: 5
     value: 16.4
 - attributes:
@@ -120,7 +120,7 @@ participants:
   - analyte: stool_norovirus_viral_load
     time: 4
     value: 3200000000
-  - analyte: stool_norovirus_CT
+  - analyte: stool_norovirus_ct
     time: 4
     value: 13
 - attributes:
@@ -132,7 +132,7 @@ participants:
   - analyte: stool_norovirus_viral_load
     time: 0
     value: 320
-  - analyte: stool_norovirus_CT
+  - analyte: stool_norovirus_ct
     time: 0
     value: 37
 - attributes:
@@ -144,7 +144,7 @@ participants:
   - analyte: stool_norovirus_viral_load
     time: 1
     value: 840000000
-  - analyte: stool_norovirus_CT
+  - analyte: stool_norovirus_ct
     time: 1
     value: 15
 - attributes:
@@ -156,6 +156,6 @@ participants:
   - analyte: stool_rotavirus_viral_load
     time: 2
     value: 400000000
-  - analyte: stool_rotavirus_CT
+  - analyte: stool_rotavirus_ct
     time: 2
     value: 16.1
