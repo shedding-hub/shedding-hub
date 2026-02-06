@@ -24,6 +24,7 @@ $defs:
       - unknown
       - bronchoalveolar_lavage_fluid
       - serum
+      - emesis
   analyte_specification:
     description: Specification of an analyte.
     type: object
@@ -72,26 +73,27 @@ $defs:
           - sapovirus
           - norovirus
           - SARS
+          - adenovirus
+          - Lanzhou lamb rotavirus vaccine
+          - rotavirus
+          - rotavirus vaccine
+          - hepatitis A virus
+          - hepatitis E virus
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
           metabolites.
         type: string
-      genotype:
-        description: Genotype of the pathogen for the participant.
-        type: string
       unit:
         description: Units in which measurements are reported.
-        oneOf:
-          - type: string
-            enum:
-              - gc/dry gram
-              - gc/mL
-              - gc/swab
-              - gc/wet gram
-              - cycle threshold
-              - pfu/mL
-          - type: "null"
+        type: string
+        enum:
+          - gc/dry gram
+          - gc/mL
+          - gc/swab
+          - gc/wet gram
+          - cycle threshold
+          - pfu/mL
       reference_event:
         description: Event used as reference for `time` fields of measurements.
         type: string
@@ -100,6 +102,24 @@ $defs:
           - confirmation date
           - enrollment
           - hospital admission
+          - vaccination
+      dose:
+        description: >
+          Vaccine dose number for vaccine shedding studies (e.g., 1, 2, 3).
+          Create separate analytes for each dose if shedding is measured after
+          multiple doses.
+        type: integer
+        minimum: 1
+      genogroup:
+        description: >
+          Genogroup classification for the pathogen (e.g., 'GI', 'GII' for norovirus,
+          'G1', 'G2' for rotavirus). Use when the study specifies the genogroup being measured.
+        type: string
+      vaccine_type:
+        description: >
+          Type or brand name of vaccine for vaccine shedding studies
+          (e.g., 'Rotarix (RV1)', 'RotaTeq (RV5)', 'Lanzhou lamb rotavirus vaccine').
+        type: string
     required:
       - biomarker
       - description
@@ -163,12 +183,27 @@ properties:
                 - male
                 - unknown
             age:
-              description: Age of the participant in years.
+              description: >
+                Chronological age of the participant in YEARS (how old they are).
+                Can be a numeric value or an age range string (e.g., "2-5", "18-65",
+                "unknown").
               oneOf:
                 - type: number
                   minimum: 0
                   maximum: 120
-                - const: unknown
+                - type: string
+            age_group:
+              description: >
+                Age group category when exact numeric age is not available.
+                Use neonate (0-28 days), infant (29 days to <1 year),
+                child (1-17 years), or adult (18+ years).
+              type: string
+              enum:
+                - neonate
+                - infant
+                - child
+                - adult
+                - unknown
             race:
               description: Race of the participant.
               type: string
@@ -191,17 +226,29 @@ properties:
                 - type: boolean
                 - type: string
                   constant: unknown
-            hospitalized:
-              description: If the participant was hospitalized.
-              oneOf:
-                - type: boolean
-                - type: string
-                  constant: unknown              
             lineage:
               description: Lineage information of the pathogen for the participant.
               type: string
-            variant: 
+            variant:
               description: Variant information of the pathogen for the participant.
+              type: string
+            genotype:
+              description: >
+                Viral genotype information (e.g., 'IB', 'IA' for hepatitis,
+                'GII.4' for norovirus, 'G1P[8]' for rotavirus).
+              type: string
+            symptomatic:
+              description: >
+                Whether the participant is symptomatic.
+                Use true for symptomatic, false for asymptomatic.
+              oneOf:
+                - type: boolean
+                - type: string
+                  const: unknown
+            participant_type:
+              description: >
+                Type or category of participant (e.g., 'patient', 'healthcare worker',
+                'household contact', 'community control', 'index case').
               type: string
             infant:
               description: If the participant was an infant.
@@ -209,8 +256,10 @@ properties:
                 - type: boolean
                 - type: string
                   constant: unknown
-            symptomatic:
-              description: If the participant was symptomatic.
+            full_term:
+              description: >
+                Whether the infant was born full term.
+                Use true for full-term infants, false for premature infants.
               oneOf:
                 - type: boolean
                 - type: string

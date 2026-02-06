@@ -1,0 +1,827 @@
+title: Rotavirus shedding following administration of RV3-BB human neonatal rotavirus
+  vaccine
+doi: 10.1080/21645515.2017.1323591
+description: This study investigates the shedding and replication of the RV3-BB human
+  neonatal rotavirus vaccine in a phase IIa trial conducted in Dunedin, New Zealand,
+  from January 2012 to April 2014. The trial involved 96 healthy, full-term neonates
+  who were randomly assigned to receive three doses of the RV3-BB vaccine or placebo.
+  The study aimed to characterize rotavirus shedding in stool samples collected on
+  days 3-7 post-vaccination using VP6 RT-PCR. The trial included neonatal and infant
+  vaccination schedules, with the first dose administered at 0-5 days or 8 weeks after
+  birth, respectively. The study found significant rotavirus shedding in both schedules,
+  with >70% of participants shedding the vaccine virus. The study used quantitative
+  qRT-PCR to measure stool viral load and assessed the relationship between viral
+  load and serological response.
+analytes:
+  stool_rotavirus_vaccine_dose1:
+    description: Rotavirus vaccine shedding after dose 1
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: NSP3
+    limit_of_detection: 100
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+    dose: 1
+  stool_rotavirus_vaccine_dose2:
+    description: Rotavirus vaccine shedding after dose 2
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: NSP3
+    limit_of_detection: 100
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+    dose: 2
+  stool_rotavirus_vaccine_dose3:
+    description: Rotavirus vaccine shedding after dose 3
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: NSP3
+    limit_of_detection: 100
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+    dose: 3
+participants:
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 134596032.4
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 35349811.07
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: 1160155.302
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: 2438354.097
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 181160919.4
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 156152300.6
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: 5124805.873
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: 16819243.26
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: 9284145.435
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: 3281927.871
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: 475794.4316
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 190657887.6
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 21127142.62
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: 3139173.265
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: 259425.5457
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: 1.157961894
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 282886943.3
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: 4417344.7
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: 168192.4326
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: 107710.5057
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 328192787.1
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: 475794.4316
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 134596032.4
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 5124805.873
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: 742963.9509
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 3635043.012
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 42482016.96
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 20309176.22
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: 7227271.321
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: 64223.25427
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: 13043213.86
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: 9709111.465
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: 155706.8404
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 41011270.72
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 20309176.22
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 180472.1765
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: 11253355.82
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 134596032.4
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 2828869.433
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: 14497406.72
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: 2828869.433
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: 2438354.097
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: 640400.4273
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 68295942.69
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 215443468.8
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: 42482016.96
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: 4641588.837
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 164649535.6
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 13606861.43
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: 24464426.08
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: 4874141.007
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 255648537.2
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 21127142.62
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: 43985760.18
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: 13606861.43
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: 80252.50531
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 9709111.465
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 20309176.22
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: 8376776.399
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: 88862381.69
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: 1425102.671
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 1507800.729
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 2710946.95
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: 167082.1042
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 36652412.36
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 2571913.808
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: 13043213.86
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: 36652412.36
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: 27283333.77
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 91576373.05
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 5379838.406
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 1345960.324
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 10771050.57
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 742963.9509
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 861953.5665
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 19512934.24
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 86195356.65
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: 3807546.019
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: 8002502.27
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: 16819243.26
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: 10771050.57
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: 551995.4323
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 7
+    value: negative
+- attributes:
+    age_group: neonate
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 1
+    value: 5124805.873
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 2
+    value: 304698.9573
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose1
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 1
+    value: 26263635.29
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 2
+    value: 5124805.873
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 3
+    value: 5945570.703
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 1
+    value: 6897785.373
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 3
+    value: 742963.9509
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_dose3
+    time: 5
+    value: negative

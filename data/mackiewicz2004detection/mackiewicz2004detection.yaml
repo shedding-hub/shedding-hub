@@ -1,0 +1,106 @@
+title: Detection of hepatitis A virus RNA in saliva
+doi: 10.1128/JCM.42.9.4329-4331.2004
+description: This study, conducted from November 2002 to November 2003, investigated
+  the presence of hepatitis A virus (HAV) RNA in saliva and serum samples from six
+  acutely infected patients with HAV viremia. The study was conducted at a hospital
+  in France, and the participants were aged between 15 and 47 years. The study aimed
+  to explore the potential of using saliva samples for outbreak investigations due
+  to the ease of collection. HAV RNA was detected in the saliva of five out of six
+  patients, with viral loads in saliva being 2 logs lower than in serum. The study
+  utilized RT-PCR and real-time PCR assays for detection and quantification, with
+  a focus on the VP1/2A junction of the HAV genome. The study also included phylogenetic
+  analysis to determine HAV genotypes.
+analytes:
+  serum_hav_rna:
+    description: HAV RNA was extracted from 140 μl of serum using the QIAmp viral
+      RNA kit. RT-PCR was performed to amplify a 512-bp fragment encompassing the
+      VP1/2A junction. The sensitivity of the RT-PCR assay was 43 IU/ml. HAV RNA was
+      quantified using a real-time RT-PCR assay on the LightCycler instrument with
+      a sensitivity of 600 genome equivalents/ml.
+    specimen: serum
+    biomarker: hepatitis A virus
+    gene_target: VP1/2A
+    limit_of_detection: 43
+    limit_of_quantification: 600
+    unit: gc/mL
+    reference_event: symptom onset
+  saliva_hav_rna:
+    description: HAV RNA was extracted from 140 μl of saliva using the QIAmp viral
+      RNA kit. RT-PCR was performed to amplify a 512-bp fragment encompassing the
+      VP1/2A junction. The sensitivity of the RT-PCR assay was 43 IU/ml. HAV RNA was
+      quantified using a real-time RT-PCR assay on the LightCycler instrument with
+      a sensitivity of 600 genome equivalents/ml.
+    specimen: saliva
+    biomarker: hepatitis A virus
+    gene_target: VP1/2A
+    limit_of_detection: 43
+    limit_of_quantification: 600
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 34
+    lineage: ia
+  measurements:
+  - analyte: serum_hav_rna
+    time: 4
+    value: 4900000.0
+  - analyte: saliva_hav_rna
+    time: 11
+    value: 930
+- attributes:
+    sex: male
+    age: 47
+    lineage: ia
+  measurements:
+  - analyte: serum_hav_rna
+    time: 8
+    value: 7300
+  - analyte: saliva_hav_rna
+    time: 10
+    value: negative
+- attributes:
+    sex: male
+    age: 25
+    lineage: ia
+  measurements:
+  - analyte: serum_hav_rna
+    time: 2
+    value: 23000000.0
+  - analyte: saliva_hav_rna
+    time: 5
+    value: 19000.0
+- attributes:
+    sex: male
+    age: 34
+    lineage: ia
+  measurements:
+  - analyte: serum_hav_rna
+    time: 4
+    value: 360000.0
+  - analyte: saliva_hav_rna
+    time: 5
+    value: 3500
+- attributes:
+    sex: male
+    age: 28
+    lineage: ib
+  measurements:
+  - analyte: serum_hav_rna
+    time: 4
+    value: 22000.0
+  - analyte: saliva_hav_rna
+    time: 5
+    value: negative
+- attributes:
+    sex: female
+    age: 15
+    lineage: ia
+  measurements:
+  - analyte: serum_hav_rna
+    time: 10
+    value: 41000.0
+  - analyte: saliva_hav_rna
+    time: 10
+    value: 1100

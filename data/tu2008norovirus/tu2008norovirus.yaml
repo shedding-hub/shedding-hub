@@ -1,0 +1,258 @@
+title: Norovirus excretion in an aged-care setting
+doi: 10.1128/JCM.02198-07
+description: This study investigates norovirus genogroup II excretion during an outbreak
+  of gastroenteritis in an aged-care facility in New South Wales, Australia, in June
+  2003. The outbreak affected 28 patients and 43 staff members. Stool specimens were
+  collected from 14 volunteers (6 males and 8 females, median age 85 years) every
+  3 to 7 days from the onset of illness until the second consecutive negative result.
+  The study aimed to determine the duration of viral excretion and the viral load
+  decay rate using quantitative PCR assays. The average duration of viral shedding
+  was 28.7 days, with a viral decay rate of 0.76 per day.
+analytes:
+  stool_norovirus_viral_load:
+    description: Norovirus GII RNA quantified in stool samples using real-time nested
+      reverse transcriptase-PCR. The assay targets a highly conserved region including
+      55 bp at the 3′ end of the polymerase and 344 bp at the 5′ end of the capsid.
+    specimen: stool
+    biomarker: norovirus
+    limit_of_detection: 8930
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 0
+    value: 1927732.321
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 1
+    value: 815107.6197
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 1
+    value: 15713093.04
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 2
+    value: 29966464.98
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 2
+    value: 2522720.632
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 4
+    value: 1969.665704
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 4
+    value: 92744832.24
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 5
+    value: 1366199176
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 6
+    value: 30618.3165
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 7
+    value: 18.26763153
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 7
+    value: 3676381.407
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 8
+    value: 26054.80637
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 9
+    value: 241.6448646
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 9
+    value: 180721.3017
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 11
+    value: 299.6646498
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 12
+    value: 27494.91213
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 12
+    value: 49689.16309
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 12
+    value: 13371133.47
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 13
+    value: 7163.746132
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 16
+    value: 4658.266157
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 15
+    value: 37969.8824
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 16
+    value: 94762.28275
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 15
+    value: 277923.4767
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 17
+    value: 249572.2314
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 20
+    value: 747.8797531
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 19
+    value: 772414.5873
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 20
+    value: 293284.9111
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 21
+    value: 68619.66571
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 22
+    value: 236500.3436
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 25
+    value: 277923.4767
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 25
+    value: 40068.56029
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 26
+    value: 32310.65737
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 26
+    value: 16942.28422
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 26
+    value: 3373.163428
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 27
+    value: 1505.116418
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 25
+    value: 148.9008565
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 7
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 8
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 12
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 16
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 18
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 21
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 28
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 31
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 35
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 37
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 39
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 42
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 44
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 49
+    value: negative
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 31
+    value: 2662156.882
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 31
+    value: 436.7037447
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 32
+    value: 3029.063732
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 32
+    value: 5187.442203
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 34
+    value: 436.7037447
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 38
+    value: 927.4483224
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 39
+    value: 299.6646498
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 44
+    value: 37969.8824
+- measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 43
+    value: 383806.3449

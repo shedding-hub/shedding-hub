@@ -1,0 +1,144 @@
+title: Differentiation between Wild-Type Group A Rotaviruses and Vaccine Strains in
+  Cases of Suspected Horizontal Transmission and Adverse Events Following Vaccination
+doi: 10.3390/v14081670
+description: This study investigates the differentiation between wild-type Group A
+  rotaviruses (RVA) and vaccine strains in cases of suspected horizontal transmission
+  and adverse events following vaccination. Conducted in Germany, the study involved
+  74 patients, including 68 vaccinated children and 6 cases of suspected horizontal
+  transmission, from 2009 to 2019. The study utilized a PCR-based algorithm to distinguish
+  between vaccine-like and wild-type RVA strains in stool samples. The study found
+  that vaccine-like virus was detected in 46 samples, wild-type RVA in 6 samples,
+  and mixed infections in 3 samples. The study also explored co-infections with other
+  pathogens and the shedding of vaccine strains in immunocompromised patients.
+analytes:
+  stool_rotavirus_vaccine_rv1:
+    description: Rotarix (RV1) vaccine shedding after vaccination
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: 130000
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+    vaccine_type: Rotarix (RV1)
+  stool_rotavirus_vaccine_rv5:
+    description: RotaTeq (RV5) vaccine shedding after vaccination
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: 1300000
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+    vaccine_type: RotaTeq (RV5)
+participants:
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 3
+    value: 3812726.9
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 5
+    value: 15983111.42
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 6
+    value: 1393685430.57
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 6
+    value: 90473572604.64
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 7
+    value: 24491535831.19
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 7
+    value: 2853498009.92
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 8
+    value: 2215836729.92
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 10
+    value: 1785320.73
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 11
+    value: 12945777.72
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 12
+    value: 10052829.81
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 12
+    value: 4326688.27
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 15
+    value: 9288880739.9
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 16
+    value: 1386361.31
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 17
+    value: 1794752541.51
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 17
+    value: 1393685430.57
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 23
+    value: 106527063.13
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 33
+    value: 110529.51
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv1
+    time: 34
+    value: 504100.54
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 6
+    value: 430395062051.36
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 5
+    value: 15242.86
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 7
+    value: 83158849069.01
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 7
+    value: 25545984833.4
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 7
+    value: 7806358.88
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 9
+    value: 59042814.01
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 10
+    value: 2025984.68
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 15
+    value: 8142450.91
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 35
+    value: 6879052.18
+- measurements:
+  - analyte: stool_rotavirus_vaccine_rv5
+    time: 45
+    value: 463344.37

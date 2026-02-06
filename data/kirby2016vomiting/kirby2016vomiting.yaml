@@ -1,0 +1,294 @@
+title: "Vomiting as a Symptom and Transmission Risk in Norovirus Illness: Evidence\
+  \ from Human Challenge Studies"
+doi: 10.1371/journal.pone.0143759
+description: This study investigates the role of vomiting in norovirus transmission
+  using data from human challenge studies with GI.1 Norwalk virus, GII.2 Snow Mountain
+  virus, and a pilot study with GII.1 Hawaii virus. The study involved healthy adult
+  subjects who were challenged with norovirus and monitored for symptoms, including
+  vomiting. Emesis samples were collected and analyzed for viral titers using strain-specific
+  quantitative RT-PCR. The study found that vomiting is a common symptom in norovirus
+  infection and contributes significantly to environmental contamination and transmission
+  risk. The study provides quantitative data on virus titers in emesis, which is critical
+  for risk assessment and control measures.
+analytes:
+  emesis_norovirus_gi:
+    description: Norovirus GI viral titers in emesis samples measured using strain-specific
+      quantitative RT-PCR.
+    specimen: emesis
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  emesis_norovirus_gii:
+    description: Norovirus GII viral titers in emesis samples measured using strain-specific
+      quantitative RT-PCR.
+    specimen: emesis
+    biomarker: norovirus
+    genogroup: GII
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  stool_norovirus_gi:
+    description: Norovirus GI viral titers in stool samples measured using strain-specific
+      quantitative RT-PCR.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+  stool_norovirus_gii:
+    description: Norovirus GII viral titers in stool samples measured using strain-specific
+      quantitative RT-PCR.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GII
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: emesis_norovirus_gi
+    time: 1.0833
+    value: negative
+  - analyte: emesis_norovirus_gi
+    time: 1.125
+    value: 39585.71429
+  - analyte: emesis_norovirus_gi
+    time: 1.25
+    value: negative
+  - analyte: emesis_norovirus_gi
+    time: 1.2708
+    value: 480.952381
+  - analyte: emesis_norovirus_gi
+    time: 1.4375
+    value: 81004.7619
+  - analyte: emesis_norovirus_gi
+    time: 1.5625
+    value: 520523.8095
+  - analyte: emesis_norovirus_gi
+    time: 1.625
+    value: 1334857.143
+  - analyte: stool_norovirus_gi
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 2.2917
+    value: 1124732143
+- measurements:
+  - analyte: emesis_norovirus_gi
+    time: 1.5208
+    value: 16211.42857
+  - analyte: emesis_norovirus_gi
+    time: 2
+    value: 677238.0952
+  - analyte: emesis_norovirus_gi
+    time: 2.0208
+    value: 537666.6667
+  - analyte: emesis_norovirus_gi
+    time: 2.1458
+    value: 2620476.19
+  - analyte: stool_norovirus_gi
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0.4167
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 1.0833
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 1.5208
+    value: 574285714.3
+  - analyte: stool_norovirus_gi
+    time: 1.5625
+    value: 4890178571
+  - analyte: stool_norovirus_gi
+    time: 1.6875
+    value: 528303571.4
+  - analyte: stool_norovirus_gi
+    time: 3.1667
+    value: 84776785.71
+- measurements:
+  - analyte: emesis_norovirus_gi
+    time: 2.2917
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 2.2292
+    value: 1123303.571
+  - analyte: stool_norovirus_gi
+    time: 2.2917
+    value: 53741071.43
+  - analyte: stool_norovirus_gi
+    time: 3.25
+    value: 2116071.429
+- measurements:
+  - analyte: emesis_norovirus_gi
+    time: 2.1042
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0.3125
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0.8958
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 1.3125
+    value: 36116.07143
+  - analyte: stool_norovirus_gi
+    time: 1.5833
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 2.2083
+    value: 5600892857
+  - analyte: stool_norovirus_gi
+    time: 3.4167
+    value: negative
+- measurements:
+  - analyte: emesis_norovirus_gi
+    time: 1.75
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0.1458
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 1.0833
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 1.7708
+    value: 1002.678571
+  - analyte: stool_norovirus_gi
+    time: 2.8125
+    value: 3594642857
+  - analyte: stool_norovirus_gi
+    time: 2.8333
+    value: 3425000000
+  - analyte: stool_norovirus_gi
+    time: 3.2292
+    value: 867767857.1
+  - analyte: stool_norovirus_gi
+    time: 3.8333
+    value: 22571428.57
+- measurements:
+  - analyte: emesis_norovirus_gi
+    time: 1.5833
+    value: negative
+  - analyte: emesis_norovirus_gi
+    time: 1.6042
+    value: 1037.619048
+  - analyte: stool_norovirus_gi
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0.2083
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0.9167
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 0.9792
+    value: negative
+  - analyte: stool_norovirus_gi
+    time: 1.625
+    value: 77937.5
+  - analyte: stool_norovirus_gi
+    time: 1.9167
+    value: 979642857.1
+- measurements:
+  - analyte: emesis_norovirus_gii
+    time: 1.1042
+    value: 1767.94873
+  - analyte: emesis_norovirus_gii
+    time: 1.2083
+    value: 906.0024756
+  - analyte: emesis_norovirus_gii
+    time: 1.3125
+    value: 756.2408945
+  - analyte: stool_norovirus_gii
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gii
+    time: 0.0833
+    value: negative
+  - analyte: stool_norovirus_gii
+    time: 1
+    value: 4446.428571
+  - analyte: stool_norovirus_gii
+    time: 1.0833
+    value: 35982.14286
+  - analyte: stool_norovirus_gii
+    time: 5.125
+    value: 10580357.14
+- measurements:
+  - analyte: emesis_norovirus_gii
+    time: 1.2083
+    value: 18.53801772
+  - analyte: emesis_norovirus_gii
+    time: 1.1875
+    value: 9.900388057
+  - analyte: emesis_norovirus_gii
+    time: 1.2083
+    value: 59.24198751
+  - analyte: emesis_norovirus_gii
+    time: 1.2917
+    value: 1.338994778
+  - analyte: emesis_norovirus_gii
+    time: 1.3542
+    value: 12.07657169
+  - analyte: emesis_norovirus_gii
+    time: 1.5417
+    value: 4.887093937
+  - analyte: emesis_norovirus_gii
+    time: 1.625
+    value: 40.89522262
+  - analyte: emesis_norovirus_gii
+    time: 1.7083
+    value: 3.849679512
+  - analyte: emesis_norovirus_gii
+    time: 1.7917
+    value: 223.8244861
+  - analyte: stool_norovirus_gii
+    time: 0
+    value: negative
+  - analyte: stool_norovirus_gii
+    time: 1.1667
+    value: 577
+  - analyte: stool_norovirus_gii
+    time: 2
+    value: 6220
+  - analyte: stool_norovirus_gii
+    time: 3.3333
+    value: 48.2
+- measurements:
+  - analyte: emesis_norovirus_gii
+    time: 1.0833
+    value: negative
+  - analyte: emesis_norovirus_gii
+    time: 1.125
+    value: 5.021376711
+  - analyte: emesis_norovirus_gii
+    time: 1.1667
+    value: 3.241333322
+  - analyte: emesis_norovirus_gii
+    time: 1.625
+    value: 0.004364734
+  - analyte: stool_norovirus_gii
+    time: 2.2917
+    value: negative
+  - analyte: stool_norovirus_gii
+    time: 8
+    value: 92000

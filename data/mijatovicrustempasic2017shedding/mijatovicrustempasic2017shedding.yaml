@@ -1,0 +1,1777 @@
+title: Shedding of porcine circovirus type 1 DNA and rotavirus RNA by infants vaccinated
+  with Rotarix®
+doi: 10.1080/21645515.2016.1255388
+description: This study investigated the shedding of porcine circovirus type 1 (PCV-1)
+  DNA and Rotavirus group A (RVA) RNA in 33 infants aged approximately 2 months following
+  the first dose of Rotarix® vaccine. Stool samples were collected serially post-vaccination
+  and analyzed using molecular methods. The study found that 21% of infants did not
+  shed RVA RNA beyond day 3, suggesting a lack of vaccine virus replication in some
+  cases. The study was conducted in Atlanta, Georgia, and involved both full-term
+  and preterm infants. The analysis used quantitative real-time RT-PCR and qPCR assays
+  to detect viral RNA and DNA in stool samples.
+analytes:
+  stool_rotavirus_vaccine:
+    description: Detection of Rotarix® Rotavirus group A RNA in stool samples post-vaccination
+      using qRT-PCR targeting the NSP3 gene of RVA.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: NSP3
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: vaccination
+    dose: 1
+  stool_pcv1_dna:
+    description: Detection of Rotarix® PCV-1 DNA in stool samples post-vaccination
+      using qPCR.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: vaccination
+    dose: 1
+participants:
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 18000000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 12000000000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 460000000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 560000000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 910000000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 24000000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 200000000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 190000000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: 4800000
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: 150000
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 660
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 27000000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 100000000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 2800000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 13000000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 960
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 27000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: 6400
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 160000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 3800
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 19000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 380
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 6300000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 19000000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 100000000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 5200
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 120
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: 10000
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 51000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 470
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 1100000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 1400000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 800000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 1500000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: 2400
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 120000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 400000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 430000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 920000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 5200000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 4800000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 8400
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 1200000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: 24000
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 24000000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 150000000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 1700000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: 38000
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 31000000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 94000000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 9600000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 100000000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 5900000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: 3400
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: 120000
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 7900
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 17000000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 300000000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 800000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 250000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 330000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 980000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: 5200
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 77000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 160
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 330
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 5200
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 11000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 530
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: 4200000
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 1500000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 5900
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 6400
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 2600
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: 150000
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: 18000
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 2800000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 24000000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 980000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 2400000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 2800000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 5200000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 3400000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 920000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 25000
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 13000000000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 13000000000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 14000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 6400
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 67000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 370000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 430000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 800000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 650000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 11000000
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 150
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 330
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 160
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: 380
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 370000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 2100
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 1200000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 400000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 5500000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 77000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 270000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 20000
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 1500000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 5100
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 430
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 1400000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 530000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 530000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 12000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: 210
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 13000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 5900
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 41000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 200
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 24000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 3800
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 24000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 2400000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 800000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 110000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 9700
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 150000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 1600
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 150000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 2400
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 4800000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 11000000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 14000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 1300000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 150000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 5100
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 400000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: 1100
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 190000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: 810
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: 110000
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: 500
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 21000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 1100
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 100000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 5200000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 120000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 5200
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 800000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 150000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 6800
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: 27000
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 25000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 150
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 25000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 24000
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 2400
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 7800
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 25000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 1800
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 140000
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: 1400
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 19000
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: 620
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 77000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 75000
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 77000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 20000
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 51000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 100000
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 5200
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 5900
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 58000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 4200
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 490000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 5100
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 30
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 30
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 45
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 45
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 51000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 1600
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 15
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 15
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: false
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 190000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 13000
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 1300
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 13
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 13
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 140000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 5100
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 3700
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine
+    time: 11
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 11
+    value: negative
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 1700
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 1700000
+  - analyte: stool_pcv1_dna
+    time: 3
+    value: 570
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: 51000
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 230
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: 81
+- attributes:
+    age_group: infant
+    full_term: true
+  measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 1
+    value: negative
+  - analyte: stool_pcv1_dna
+    time: 1
+    value: negative

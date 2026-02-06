@@ -1,0 +1,161 @@
+title: Nosocomial acute gastroenteritis outbreak caused by an equine-like G3P[8] DS-1-like
+  rotavirus and GII.4 Sydney[P16] norovirus at a pediatric hospital in Rio de Janeiro,
+  Brazil, 2019
+doi: 10.1080/21645515.2021.1963169
+description: This study investigates a nosocomial outbreak of acute gastroenteritis
+  caused by rotavirus and norovirus at a pediatric hospital in Rio de Janeiro, Brazil,
+  in May 2019. The outbreak affected 30 individuals, including children and hospital
+  staff. Nine stool samples were analyzed using RT-qPCR to detect and quantify the
+  viruses. The study identified the circulation of equine-like G3P[8] DS-1-like rotavirus
+  and GII.4 Sydney[P16] norovirus. The study emphasizes the importance of active surveillance
+  and prevention measures to control nosocomial infections in hospital settings.
+analytes:
+  stool_rotavirus_viral_load:
+    description: Detection and quantification of rotavirus in stool samples using
+      RT-qPCR targeting the NSP3 gene segment.
+    specimen: stool
+    biomarker: rotavirus
+    gene_target: NSP3
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+  stool_norovirus_viral_load:
+    description: Detection and quantification of norovirus in stool samples using
+      RT-qPCR targeting the ORF1/2 junction region.
+    specimen: stool
+    biomarker: norovirus
+    gene_target: ORF1/2
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+  stool_rotavirus_ct:
+    description: Ct value for rotavirus detection in stool samples using RT-qPCR targeting
+      the NSP3 gene segment.
+    specimen: stool
+    biomarker: rotavirus
+    gene_target: NSP3
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  stool_norovirus_ct:
+    description: Ct value for norovirus detection in stool samples using RT-qPCR targeting
+      the ORF1/2 junction region.
+    specimen: stool
+    biomarker: norovirus
+    gene_target: ORF1/2
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: female
+    age: 0.8333333333333334
+    vaccinated: false
+    lineage: g3p[8]
+  measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 3
+    value: 13000000
+  - analyte: stool_rotavirus_ct
+    time: 3
+    value: 21.2
+- attributes:
+    sex: male
+    age: 1
+    vaccinated: true
+    lineage: g3p[8]
+  measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 1
+    value: 61000000
+  - analyte: stool_rotavirus_ct
+    time: 1
+    value: 18.9
+- attributes:
+    sex: male
+    age: 0.4166666666666667
+    vaccinated: false
+    lineage: g3p[8]
+  measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 0
+    value: 30000000
+  - analyte: stool_rotavirus_ct
+    time: 0
+    value: 20
+- attributes:
+    sex: female
+    age: 1
+    vaccinated: unknown
+    lineage: 4[p16]
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 4
+    value: 220000000
+  - analyte: stool_norovirus_ct
+    time: 4
+    value: 17
+- attributes:
+    sex: male
+    age: 0.25
+    vaccinated: false
+    lineage: 4[p16]
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 5
+    value: 330000000
+  - analyte: stool_norovirus_ct
+    time: 5
+    value: 16.4
+- attributes:
+    sex: male
+    age: 1
+    vaccinated: true
+    lineage: 4[p16]
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 4
+    value: 3200000000
+  - analyte: stool_norovirus_ct
+    time: 4
+    value: 13
+- attributes:
+    sex: male
+    age: 1
+    vaccinated: true
+    lineage: 4[p16]
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 0
+    value: 320
+  - analyte: stool_norovirus_ct
+    time: 0
+    value: 37
+- attributes:
+    sex: female
+    age: 1
+    vaccinated: unknown
+    lineage: 4[p16]
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 1
+    value: 840000000
+  - analyte: stool_norovirus_ct
+    time: 1
+    value: 15
+- attributes:
+    sex: male
+    age: 36
+    vaccinated: false
+    lineage: g3p[8]
+  measurements:
+  - analyte: stool_rotavirus_viral_load
+    time: 2
+    value: 400000000
+  - analyte: stool_rotavirus_ct
+    time: 2
+    value: 16.1

@@ -1,0 +1,217 @@
+title: Detection of fecal shedding of rotavirus vaccine in infants following their
+  first dose of pentavalent rotavirus vaccine
+doi: 10.1016/j.vaccine.2011.03.074
+description: This study, conducted between May 2008 and February 2009 at the Broadway
+  Practice of the Ambulatory Care Network of New York-Presbyterian Hospital, examined
+  fecal shedding of the pentavalent rotavirus vaccine (RV5) in infants aged 6 to 12
+  weeks following their first dose. The study involved 198 enrolled infants, with
+  103 returning stool collection kits. Rotavirus antigen was detected in 21.4% of
+  the kits. The study used enzyme immunoassay (EIA) and RT-PCR to detect vaccine-type
+  rotavirus in stool samples collected over 9 days post-vaccination. The findings
+  suggest potential for horizontal transmission of vaccine virus, particularly in
+  households with immunocompromised individuals.
+analytes:
+  stool_rotavirus_vaccine:
+    description: Detection of rotavirus vaccine shedding in stool samples using enzyme
+      immunoassay (EIA) and RT-PCR methods.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+    vaccine_type: RotaTeq (RV5)
+participants:
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 2
+    value: 360000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 44000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 4
+    value: 79000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 360000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 4500000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 6300000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 350000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 3600000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 1400000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 440000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 4800000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 32000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 1100000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 790000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 1600000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 790000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 3
+    value: 3200000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 4
+    value: 7000000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 6300000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 56000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 630000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 3200000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 1000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 7800000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 9600000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 540000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 1500000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 66000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 7800000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 3200000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 4000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 32000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 79000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 20000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 350000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 1300000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 200000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 540000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 7800000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 4
+    value: 560000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 700000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 250000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 16000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 56000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 29000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 3000000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 2800000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 2700000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 280000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 35000000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 45000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: 140000000.0
+- measurements:
+  - analyte: stool_rotavirus_vaccine
+    time: 5
+    value: 35000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 6
+    value: 20000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 7
+    value: 44000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 8
+    value: 54000000000.0
+  - analyte: stool_rotavirus_vaccine
+    time: 9
+    value: negative

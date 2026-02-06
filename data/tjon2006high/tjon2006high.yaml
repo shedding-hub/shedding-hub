@@ -1,0 +1,109 @@
+title: High and persistent excretion of hepatitis A virus in immunocompetent patients
+doi: 10.1002/jmv.20711
+description: This study investigates the duration and level of hepatitis A virus (HAV)
+  excretion in blood and feces of 27 patients with acute hepatitis A, with a median
+  age of 33 years, over a period of up to 26 weeks. The study also includes single
+  blood donations from 55 other patients with acute HAV, with a median age of 32 years.
+  Virus loads were quantified using competitive nested RT-PCR. The study found that
+  HAV was excreted in feces for a median period of 81 days after disease onset, with
+  high levels of excretion in the first month. Viraemia was detected for a median
+  period of 42 days. The study highlights the potential for prolonged infectiousness
+  and the need for awareness in blood banks regarding viraemia persistence.
+analytes:
+  stool_hepatitis_a_virus:
+    description: Hepatitis A virus shedding in stool samples measured by competitive
+      nested RT-PCR
+    specimen: stool
+    biomarker: hepatitis A virus
+    limit_of_detection: 10
+    limit_of_quantification: 100
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 26
+    age_group: adult
+    genotype: 1a
+  measurements:
+  - analyte: stool_hepatitis_a_virus
+    time: 13
+    value: 2034500.079
+  - analyte: stool_hepatitis_a_virus
+    time: 34
+    value: 2129895.073
+  - analyte: stool_hepatitis_a_virus
+    time: 56
+    value: 196576.8348
+  - analyte: stool_hepatitis_a_virus
+    time: 75
+    value: 20816.51194
+  - analyte: stool_hepatitis_a_virus
+    time: 98
+    value: 32.54151822
+  - analyte: stool_hepatitis_a_virus
+    time: 120
+    value: negative
+  - analyte: stool_hepatitis_a_virus
+    time: 148
+    value: negative
+  - analyte: stool_hepatitis_a_virus
+    time: 183
+    value: negative
+- attributes:
+    sex: male
+    age: 31
+    age_group: adult
+    genotype: 1b
+  measurements:
+  - analyte: stool_hepatitis_a_virus
+    time: 14
+    value: 1956398.342
+  - analyte: stool_hepatitis_a_virus
+    time: 28
+    value: 1956398.342
+  - analyte: stool_hepatitis_a_virus
+    time: 44
+    value: 19116.44075
+  - analyte: stool_hepatitis_a_virus
+    time: 70
+    value: 30.72112999
+  - analyte: stool_hepatitis_a_virus
+    time: 99
+    value: negative
+  - analyte: stool_hepatitis_a_virus
+    time: 126
+    value: negative
+  - analyte: stool_hepatitis_a_virus
+    time: 149
+    value: negative
+  - analyte: stool_hepatitis_a_virus
+    time: 183
+    value: negative
+- attributes:
+    sex: male
+    age: 11
+    age_group: child
+    genotype: 3a
+  measurements:
+  - analyte: stool_hepatitis_a_virus
+    time: 18
+    value: 200399.0447
+  - analyte: stool_hepatitis_a_virus
+    time: 33
+    value: 200973.1451
+  - analyte: stool_hepatitis_a_virus
+    time: 47
+    value: 201511.2918
+  - analyte: stool_hepatitis_a_virus
+    time: 76
+    value: 34.27606589
+  - analyte: stool_hepatitis_a_virus
+    time: 109
+    value: negative
+  - analyte: stool_hepatitis_a_virus
+    time: 130
+    value: negative
+  - analyte: stool_hepatitis_a_virus
+    time: 159
+    value: negative

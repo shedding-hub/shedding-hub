@@ -1,62 +1,62 @@
-# yaml-language-server: $schema=../.schema.yaml
-title: Single Base Substitutions in the Capsid Region of the Norovirus Genome during
-  Viral Shedding in Cases of Infection in Areas Where Norovirus Infection Is Endemic
-doi: 10.1128/jcm.01932-07
-description: >
-  This study investigates the duration of norovirus RNA shedding in two food handlers-one
-  symptomatic and one asymptomatic-using repeated real-time reverse transcription-PCR
-  tests on fecal specimens. Norovirus RNA was detected and quantified over time, and
-  the duration of viral shedding was compared between symptomatic and asymptomatic
-  individuals.
+title: Single base substitutions in the capsid region of the norovirus genome during
+  viral shedding in cases of infection in areas where norovirus infection is endemic
+doi: 10.1128/JCM.01932-07
+description: This study investigates norovirus (NoV) infections in Toyama Prefecture,
+  Japan, during fiscal year 2006, focusing on viral shedding in feces. The study involved
+  30 individuals from a local hotel outbreak in May 2006, with stool specimens collected
+  and analyzed using real-time PCR. Two employees exhibited long-term viral shedding,
+  with single base substitutions in the NoV capsid region observed. The study highlights
+  the potential for NoV evolution in the gastrointestinal tract, with genetic changes
+  occurring during the infectious course. The research was supported by a Health Labor
+  Sciences Research Grant from the Japanese Ministry of Health, Labor, and Welfare.
 analytes:
-  stool_Norovirus_copies:
-    description: >
-      Quantitative measurement of norovirus RNA in stool samples using real-time RT-PCR.
-      Results are expressed as copies per gram of feces.
+  stool_norovirus:
+    description: Real-time PCR assay for detecting norovirus GII in stool specimens,
+      measuring the log10 copy number of NoVs per gram of feces.
     specimen: stool
     biomarker: norovirus
-    genotype: GII.4
-    limit_of_quantification: unknown
+    genogroup: GII
     limit_of_detection: 10000
+    limit_of_quantification: unknown
     unit: gc/wet gram
     reference_event: confirmation date
 participants:
 - attributes:
     symptomatic: true
   measurements:
-  - analyte: stool_Norovirus_copies
+  - analyte: stool_norovirus
     time: 0
-    value: 11220.18454301963
-  - analyte: stool_Norovirus_copies
+    value: negative
+  - analyte: stool_norovirus
     time: 5
-    value: 11220184.54301963
-  - analyte: stool_Norovirus_copies
+    value: 11300000.0
+  - analyte: stool_norovirus
     time: 10
-    value: 1513561.2484362072
-  - analyte: stool_Norovirus_copies
+    value: 1530000.0
+  - analyte: stool_norovirus
     time: 24
-    value: 407380.27780411305
-  - analyte: stool_Norovirus_copies
+    value: 410000.0
+  - analyte: stool_norovirus
     time: 38
-    value: 6760829.753919818
-  - analyte: stool_Norovirus_copies
+    value: 6740000.0
+  - analyte: stool_norovirus
     time: 53
-    value: 4677351.412871981
-  - analyte: stool_Norovirus_copies
+    value: 4700000.0
+  - analyte: stool_norovirus
     time: 67
-    value: 11220.18454301963
+    value: negative
 - attributes:
     symptomatic: false
   measurements:
-  - analyte: stool_Norovirus_copies
+  - analyte: stool_norovirus
     time: 0
-    value: 1071519305.2376049
-  - analyte: stool_Norovirus_copies
+    value: 1070000000.0
+  - analyte: stool_norovirus
     time: 12
-    value: 9332543.007969905
-  - analyte: stool_Norovirus_copies
+    value: 9240000.0
+  - analyte: stool_norovirus
     time: 27
-    value: 20892.96130854041
-  - analyte: stool_Norovirus_copies
+    value: 21100.0
+  - analyte: stool_norovirus
     time: 42
-    value: 11220.18454301963
+    value: negative

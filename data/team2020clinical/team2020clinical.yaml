@@ -60,7 +60,7 @@ participants:
     time: 26
     value: negative
 - attributes:
-    age_group: 50-59
+    age: 50-59
     sex: male
   measurements:
   - analyte: naso_swab_SARSCoV2_N_Ct
@@ -94,7 +94,7 @@ participants:
     time: 28
     value: negative
 - attributes:
-    age_group: 50-59
+    age: 50-59
     sex: male
   measurements:
   - analyte: naso_swab_SARSCoV2_N_Ct
@@ -140,7 +140,7 @@ participants:
     time: 37
     value: negative
 - attributes:
-    age_group: 50-59
+    age: 50-59
     sex: female
   measurements:
   - analyte: naso_swab_SARSCoV2_N_Ct
@@ -283,7 +283,7 @@ participants:
     time: 29
     value: negative
 - attributes:
-    age_group: 30-39
+    age: 30-39
     sex: male
   measurements:
   - analyte: naso_swab_SARSCoV2_N_Ct
@@ -320,7 +320,7 @@ participants:
     time: 29
     value: negative
 - attributes:
-    age_group: 60-69
+    age: 60-69
     sex: female
   measurements:
   - analyte: naso_swab_SARSCoV2_N_Ct
@@ -348,7 +348,7 @@ participants:
     time: 23
     value: negative
 - attributes:
-    age_group: 60-69
+    age: 60-69
     sex: male
   measurements:
   - analyte: naso_swab_SARSCoV2_N_Ct
@@ -376,7 +376,7 @@ participants:
     time: 11
     value: negative
 - attributes:
-    age_group: 30-39
+    age: 30-39
     sex: male
   measurements:
   - analyte: naso_swab_SARSCoV2_N_Ct
