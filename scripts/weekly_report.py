@@ -340,6 +340,10 @@ def collect_github() -> dict:
                 result["views_last_week"],
                 result["unique_visitors_last_week"],
             ) = _split_traffic_by_week(items)
+        else:
+            result["traffic_error"] = (
+                f"traffic/views {views_resp.status_code}: {views_resp.text[:200]}"
+            )
 
         # Traffic: clones
         clones_resp = _gh_get("traffic/clones")
@@ -610,18 +614,30 @@ def build_html(summary: str, ga: dict, gh: dict, pypi: dict) -> str:
     # GitHub section
     views_delta = gh["views_this_week"] - gh["views_last_week"]
     delta_sign = "+" if views_delta >= 0 else ""
+    traffic_err = gh.get("traffic_error", "")
+    views_value = (
+        f"unavailable ({traffic_err})"
+        if traffic_err
+        else f"{gh['views_this_week']} ({delta_sign}{views_delta} vs last week)"
+    )
     gh_rows = [
         ("Stars", gh["stars"]),
         ("Forks", gh["forks"]),
         ("Open issues", gh["open_issues"]),
         ("Open PRs", gh["open_prs"]),
+        ("Repo views this week", views_value),
         (
-            "Repo views this week",
-            f"{gh['views_this_week']} ({delta_sign}{views_delta} vs last week)",
+            "Unique visitors this week",
+            "unavailable" if traffic_err else gh["unique_visitors_this_week"],
         ),
-        ("Unique visitors this week", gh["unique_visitors_this_week"]),
-        ("Repo clones this week", gh["clones_this_week"]),
-        ("Unique cloners this week", gh["unique_cloners_this_week"]),
+        (
+            "Repo clones this week",
+            "unavailable" if traffic_err else gh["clones_this_week"],
+        ),
+        (
+            "Unique cloners this week",
+            "unavailable" if traffic_err else gh["unique_cloners_this_week"],
+        ),
     ]
     if gh["new_datasets_this_week"]:
         gh_rows.append(("New datasets added", ", ".join(gh["new_datasets_this_week"])))
