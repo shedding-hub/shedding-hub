@@ -431,17 +431,28 @@ def collect_pypi() -> dict:
         "error": None,
     }
 
-    try:
-        resp = requests.get(
-            f"https://pypistats.org/api/packages/{PYPI_PACKAGE}/recent",
-            timeout=20,
-        )
-        resp.raise_for_status()
-        data = resp.json().get("data", {})
-        result["last_week"] = data.get("last_week", 0)
-        result["last_month"] = data.get("last_month", 0)
-    except Exception as exc:
-        result["error"] = str(exc)
+    headers = {"User-Agent": f"shedding-hub-weekly-report/1.0 ({GITHUB_REPO})"}
+
+    for attempt in range(3):
+        try:
+            resp = requests.get(
+                f"https://pypistats.org/api/packages/{PYPI_PACKAGE}/recent",
+                headers=headers,
+                timeout=20,
+            )
+            if resp.status_code == 429:
+                retry_after = int(resp.headers.get("Retry-After", 60))
+                import time
+
+                time.sleep(retry_after)
+                continue
+            resp.raise_for_status()
+            data = resp.json().get("data", {})
+            result["last_week"] = data.get("last_week", 0)
+            result["last_month"] = data.get("last_month", 0)
+            break
+        except Exception as exc:
+            result["error"] = str(exc)
 
     return result
 
