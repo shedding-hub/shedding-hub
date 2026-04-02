@@ -28,6 +28,7 @@ import smtplib
 from datetime import datetime, timedelta, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from pathlib import Path
 
 import anthropic
 import requests
@@ -773,6 +774,70 @@ def send_report(html: str) -> None:
 
 
 # ---------------------------------------------------------------------------
+# 8. Persist metrics for long-term tracking
+# ---------------------------------------------------------------------------
+
+METRICS_FILE = Path(__file__).parent.parent / "metrics" / "weekly_metrics.jsonl"
+
+
+def save_metrics(ga: dict, gh: dict, pypi: dict) -> None:
+    """Append a weekly summary record to metrics/weekly_metrics.jsonl.
+
+    One JSON object per line; appends without modifying prior records.
+    Skips writing if a record with the same week_start already exists.
+    """
+    record = {
+        "week_start": START_LABEL,
+        "week_end": END_LABEL,
+        "collected_at": _now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "github": {
+            "stars": gh["stars"],
+            "forks": gh["forks"],
+            "open_issues": gh["open_issues"],
+            "open_prs": gh["open_prs"],
+            "views_this_week": gh["views_this_week"],
+            "unique_visitors_this_week": gh["unique_visitors_this_week"],
+            "clones_this_week": gh["clones_this_week"],
+            "unique_cloners_this_week": gh["unique_cloners_this_week"],
+            "new_datasets_count": len(gh.get("new_datasets_this_week", [])),
+        },
+        "pypi": {
+            "last_week": pypi["last_week"],
+            "last_month": pypi["last_month"],
+        },
+        "ga4": {
+            "active_users": ga["active_users"],
+            "new_users": ga["new_users"],
+            "page_views": ga["page_views"],
+            "avg_engagement_seconds": ga["avg_engagement_seconds"],
+        },
+    }
+
+    METRICS_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+    # Avoid duplicate entries for the same week
+    if METRICS_FILE.exists():
+        with METRICS_FILE.open() as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    existing = json.loads(line)
+                    if existing.get("week_start") == START_LABEL:
+                        print(
+                            f"  → Metrics for {START_LABEL} already recorded; skipping."
+                        )
+                        return
+                except json.JSONDecodeError:
+                    pass
+
+    with METRICS_FILE.open("a") as f:
+        f.write(json.dumps(record) + "\n")
+    print(f"  → Metrics saved to {METRICS_FILE}")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -788,6 +853,9 @@ def main():
 
     print("  → PyPI download statistics")
     pypi = collect_pypi()
+
+    print("  → Saving metrics snapshot")
+    save_metrics(ga, gh, pypi)
 
     print("  → Claude weekly narrative")
     summary = summarize_with_claude(ga, gh, pypi)
