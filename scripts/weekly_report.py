@@ -810,6 +810,11 @@ def save_metrics(ga: dict, gh: dict, pypi: dict) -> None:
             "new_users": ga["new_users"],
             "page_views": ga["page_views"],
             "avg_engagement_seconds": ga["avg_engagement_seconds"],
+            "traffic_sources": ga["traffic_sources"],
+            "top_countries": ga["top_countries"],
+            "device_types": ga["device_types"],
+            "page_breakdown": ga["page_breakdown"],
+            "daily_users": ga["daily_users"],
         },
     }
 
