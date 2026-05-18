@@ -10,7 +10,7 @@ import logging
 DEFAULT_BIOMARKER = "SARS-CoV-2"
 DEFAULT_FIGURE_SIZE = (8, 6)
 DEFAULT_MULTI_FIGURE_SIZE = (10, 8)
-DEFAULT_MARKERSIZE = 10
+DEFAULT_MARKERSIZE = 4
 NEGATIVE_VALUE = "negative"
 
 # Configure logging
@@ -40,11 +40,12 @@ def plot_time_course(
     biomarker: str | None = None,
     specimen: str | None = None,
     value: str | None = None,
+    reference_event: str | None = None,
     max_nparticipant: int = 30,
     random_seed: int = 12345,
     figsize_width_per_specimen: int = 5,
     figsize_height: int = 6,
-    line_color: str | None = None,
+    line_color: str | None = "steelblue",
     marker: str = "o",
     markersize: int = DEFAULT_MARKERSIZE,
     line_alpha: float = 0.7,
@@ -71,8 +72,9 @@ def plot_time_course(
         figsize_width_per_specimen: Width of each specimen subplot in inches. Defaults to 5.
         figsize_height: Height of the figure in inches. Defaults to 6.
         line_color: Color for all lines. If None, uses default color cycle per participant.
+            Defaults to "steelblue".
         marker: Marker style for data points. Defaults to "o".
-        markersize: Size of markers. Defaults to DEFAULT_MARKERSIZE (10).
+        markersize: Size of markers. Defaults to DEFAULT_MARKERSIZE (4).
         line_alpha: Transparency of lines (0-1). Defaults to 0.7.
         show_negative: If True, plots "negative" values at y=0. If False, excludes them.
             Defaults to False.
@@ -167,13 +169,21 @@ def plot_time_course(
         lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
     )
 
-    # Filter by biomarker if specified
+    # Auto-select biomarker (use first available if not specified)
+    if biomarker is None:
+        available = df["biomarker"].dropna().unique()
+        if len(available) > 0:
+            biomarker = available[0]
     if biomarker is not None:
         df = df[df["biomarker"] == biomarker]
         if df.empty:
             raise ValueError(f"No measurements found for biomarker '{biomarker}'")
 
-    # Filter by specimen if specified
+    # Auto-select specimen (use first available if not specified)
+    if specimen is None:
+        available = df["specimen"].dropna().unique()
+        if len(available) > 0:
+            specimen = available[0]
     if specimen is not None:
         df = df[df["specimen"] == specimen]
         if df.empty:
@@ -181,6 +191,10 @@ def plot_time_course(
 
     # Determine if each row is CT value or concentration based on unit
     df["is_ct"] = df["unit"].apply(_is_ct_value)
+
+    # Auto-select value type (use first available if not specified)
+    if value is None and not df.empty:
+        value = "ct" if df["is_ct"].iloc[0] else "concentration"
 
     # Filter by value type if specified
     if value is not None:
@@ -265,11 +279,12 @@ def plot_time_course(
     axes = axes.flatten()
 
     # Get reference event and unit for labeling (use first non-null)
-    reference_event = (
-        df["reference_event"].dropna().iloc[0]
-        if not df["reference_event"].dropna().empty
-        else "reference"
-    )
+    if reference_event is None:
+        reference_event = (
+            df["reference_event"].dropna().iloc[0]
+            if not df["reference_event"].dropna().empty
+            else "reference"
+        )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
 
     # Check if we have mixed CT and concentration data
@@ -405,6 +420,7 @@ def plot_time_courses(
     biomarker: str | None = None,
     specimen: str | None = None,
     value: str | None = None,
+    reference_event: str | None = None,
     max_nparticipant: int = 10,
     random_seed: int = 12345,
     figsize_width_per_study: int = 4,
@@ -529,13 +545,21 @@ def plot_time_courses(
     if df.empty:
         raise ValueError("No measurements found across all datasets")
 
-    # Filter by biomarker if specified
+    # Auto-select biomarker (use first available if not specified)
+    if biomarker is None:
+        available = df["biomarker"].dropna().unique()
+        if len(available) > 0:
+            biomarker = available[0]
     if biomarker is not None:
         df = df[df["biomarker"] == biomarker]
         if df.empty:
             raise ValueError(f"No measurements found for biomarker '{biomarker}'")
 
-    # Filter by specimen if specified
+    # Auto-select specimen (use first available if not specified)
+    if specimen is None:
+        available = df["specimen"].dropna().unique()
+        if len(available) > 0:
+            specimen = available[0]
     if specimen is not None:
         df = df[df["specimen"] == specimen]
         if df.empty:
@@ -547,6 +571,10 @@ def plot_time_courses(
 
     # Determine if each row is CT value or concentration based on unit
     df["is_ct"] = df["unit"].apply(_is_ct_value)
+
+    # Auto-select value type (use first available if not specified)
+    if value is None and not df.empty:
+        value = "ct" if df["is_ct"].iloc[0] else "concentration"
 
     # Filter by value type if specified
     if value is not None:
@@ -630,11 +658,12 @@ def plot_time_courses(
     color_map = list(mcolors.TABLEAU_COLORS.values())
 
     # Get reference event and unit for labeling
-    reference_event = (
-        df["reference_event"].dropna().iloc[0]
-        if not df["reference_event"].dropna().empty
-        else "reference"
-    )
+    if reference_event is None:
+        reference_event = (
+            df["reference_event"].dropna().iloc[0]
+            if not df["reference_event"].dropna().empty
+            else "reference"
+        )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
 
     # Check if we have mixed CT and concentration data
@@ -773,6 +802,7 @@ def plot_shedding_heatmap(
     biomarker: str | None = None,
     specimen: str | None = None,
     value: str | None = None,
+    reference_event: str | None = None,
     time_bin_size: float = 1.0,
     time_range: tuple[float, float] | None = None,
     sort_by: str = "first_positive",
@@ -896,13 +926,21 @@ def plot_shedding_heatmap(
         lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
     )
 
-    # Filter by biomarker if specified
+    # Auto-select biomarker (use first available if not specified)
+    if biomarker is None:
+        available = df["biomarker"].dropna().unique()
+        if len(available) > 0:
+            biomarker = available[0]
     if biomarker is not None:
         df = df[df["biomarker"] == biomarker]
         if df.empty:
             raise ValueError(f"No measurements found for biomarker '{biomarker}'")
 
-    # Filter by specimen if specified
+    # Auto-select specimen (use first available if not specified)
+    if specimen is None:
+        available = df["specimen"].dropna().unique()
+        if len(available) > 0:
+            specimen = available[0]
     if specimen is not None:
         df = df[df["specimen"] == specimen]
         if df.empty:
@@ -910,6 +948,10 @@ def plot_shedding_heatmap(
 
     # Determine if each row is CT value or concentration based on unit
     df["is_ct"] = df["unit"].apply(_is_ct_value)
+
+    # Auto-select value type (use first available if not specified)
+    if value is None and not df.empty:
+        value = "ct" if df["is_ct"].iloc[0] else "concentration"
 
     # Filter by value type if specified
     if value is not None:
@@ -1097,8 +1139,16 @@ def plot_shedding_heatmap(
                     )
                     ax.add_patch(rect)
 
+    # Resolve reference_event for axis label
+    if reference_event is None:
+        reference_event = (
+            df["reference_event"].dropna().iloc[0]
+            if not df["reference_event"].dropna().empty
+            else "reference"
+        )
+
     # Set axis labels with larger font
-    ax.set_xlabel("Time (days)", fontsize=12)
+    ax.set_xlabel(f"Time after {reference_event} (days)", fontsize=12)
     ax.set_ylabel("Participants", fontsize=12)
 
     # Set x-axis ticks
@@ -1178,6 +1228,7 @@ def plot_mean_trajectory(
     biomarker: str | None = None,
     specimen: str | None = None,
     value: str | None = None,
+    reference_event: str | None = None,
     central_tendency: str = "mean",
     uncertainty: str = "95ci",
     time_bin_size: float = 1.0,
@@ -1318,13 +1369,21 @@ def plot_mean_trajectory(
         lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
     )
 
-    # Filter by biomarker if specified
+    # Auto-select biomarker (use first available if not specified)
+    if biomarker is None:
+        available = df["biomarker"].dropna().unique()
+        if len(available) > 0:
+            biomarker = available[0]
     if biomarker is not None:
         df = df[df["biomarker"] == biomarker]
         if df.empty:
             raise ValueError(f"No measurements found for biomarker '{biomarker}'")
 
-    # Filter by specimen if specified
+    # Auto-select specimen (use first available if not specified)
+    if specimen is None:
+        available = df["specimen"].dropna().unique()
+        if len(available) > 0:
+            specimen = available[0]
     if specimen is not None:
         df = df[df["specimen"] == specimen]
         if df.empty:
@@ -1332,6 +1391,10 @@ def plot_mean_trajectory(
 
     # Determine if each row is CT value or concentration based on unit
     df["is_ct"] = df["unit"].apply(_is_ct_value)
+
+    # Auto-select value type (use first available if not specified)
+    if value is None and not df.empty:
+        value = "ct" if df["is_ct"].iloc[0] else "concentration"
 
     # Filter by value type if specified
     if value is not None:
@@ -1495,11 +1558,12 @@ def plot_mean_trajectory(
         ax.set_yscale("log")
 
     # Labels and title
-    reference_event = (
-        df["reference_event"].dropna().iloc[0]
-        if not df["reference_event"].dropna().empty
-        else "reference"
-    )
+    if reference_event is None:
+        reference_event = (
+            df["reference_event"].dropna().iloc[0]
+            if not df["reference_event"].dropna().empty
+            else "reference"
+        )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
     specimen_display = (
         df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
@@ -1567,6 +1631,7 @@ def plot_value_distribution_by_time(
     biomarker: str | None = None,
     specimen: str | None = None,
     value: str | None = None,
+    reference_event: str | None = None,
     plot_type: str = "box",
     time_bin_size: float = 1.0,
     time_range: tuple[float, float] | None = None,
@@ -1704,13 +1769,21 @@ def plot_value_distribution_by_time(
         lambda x: analyte_metadata.get(x, {}).get("limit_of_detection")
     )
 
-    # Filter by biomarker if specified
+    # Auto-select biomarker (use first available if not specified)
+    if biomarker is None:
+        available = df["biomarker"].dropna().unique()
+        if len(available) > 0:
+            biomarker = available[0]
     if biomarker is not None:
         df = df[df["biomarker"] == biomarker]
         if df.empty:
             raise ValueError(f"No measurements found for biomarker '{biomarker}'")
 
-    # Filter by specimen if specified
+    # Auto-select specimen (use first available if not specified)
+    if specimen is None:
+        available = df["specimen"].dropna().unique()
+        if len(available) > 0:
+            specimen = available[0]
     if specimen is not None:
         df = df[df["specimen"] == specimen]
         if df.empty:
@@ -1718,6 +1791,10 @@ def plot_value_distribution_by_time(
 
     # Determine if each row is CT value or concentration based on unit
     df["is_ct"] = df["unit"].apply(_is_ct_value)
+
+    # Auto-select value type (use first available if not specified)
+    if value is None and not df.empty:
+        value = "ct" if df["is_ct"].iloc[0] else "concentration"
 
     # Filter by value type if specified
     if value is not None:
@@ -1898,11 +1975,12 @@ def plot_value_distribution_by_time(
         ax.set_xticklabels([int(p) for p in tick_positions])
 
     # Labels and title
-    reference_event = (
-        df["reference_event"].dropna().iloc[0]
-        if not df["reference_event"].dropna().empty
-        else "reference"
-    )
+    if reference_event is None:
+        reference_event = (
+            df["reference_event"].dropna().iloc[0]
+            if not df["reference_event"].dropna().empty
+            else "reference"
+        )
     unit = df["unit"].dropna().iloc[0] if not df["unit"].dropna().empty else ""
     specimen_display = (
         df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
@@ -1967,6 +2045,7 @@ def plot_detection_probability(
     *,
     biomarker: str | None = None,
     specimen: str | None = None,
+    reference_event: str | None = None,
     time_bin_size: float = 1.0,
     time_range: tuple[float, float] | None = None,
     min_observations: int = 3,
@@ -2071,13 +2150,21 @@ def plot_detection_probability(
         lambda x: analyte_metadata.get(x, {}).get("biomarker")
     )
 
-    # Filter by biomarker if specified
+    # Auto-select biomarker (use first available if not specified)
+    if biomarker is None:
+        available = df["biomarker"].dropna().unique()
+        if len(available) > 0:
+            biomarker = available[0]
     if biomarker is not None:
         df = df[df["biomarker"] == biomarker]
         if df.empty:
             raise ValueError(f"No measurements found for biomarker '{biomarker}'")
 
-    # Filter by specimen if specified
+    # Auto-select specimen (use first available if not specified)
+    if specimen is None:
+        available = df["specimen"].dropna().unique()
+        if len(available) > 0:
+            specimen = available[0]
     if specimen is not None:
         df = df[df["specimen"] == specimen]
         if df.empty:
@@ -2207,11 +2294,12 @@ def plot_detection_probability(
         ax.set_xticklabels([int(p) for p in tick_positions])
 
     # Labels and title
-    reference_event = (
-        df["reference_event"].dropna().iloc[0]
-        if not df["reference_event"].dropna().empty
-        else "reference"
-    )
+    if reference_event is None:
+        reference_event = (
+            df["reference_event"].dropna().iloc[0]
+            if not df["reference_event"].dropna().empty
+            else "reference"
+        )
     specimen_display = (
         df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
     )
@@ -2263,6 +2351,7 @@ def plot_clearance_curve(
     *,
     biomarker: str | None = None,
     specimen: str | None = None,
+    reference_event: str | None = None,
     figsize: tuple[int, int] = (10, 6),
     line_color: str = "steelblue",
     show_ci: bool = True,
@@ -2363,13 +2452,21 @@ def plot_clearance_curve(
         lambda x: analyte_metadata.get(x, {}).get("biomarker")
     )
 
-    # Filter by biomarker if specified
+    # Auto-select biomarker (use first available if not specified)
+    if biomarker is None:
+        available = df["biomarker"].dropna().unique()
+        if len(available) > 0:
+            biomarker = available[0]
     if biomarker is not None:
         df = df[df["biomarker"] == biomarker]
         if df.empty:
             raise ValueError(f"No measurements found for biomarker '{biomarker}'")
 
-    # Filter by specimen if specified
+    # Auto-select specimen (use first available if not specified)
+    if specimen is None:
+        available = df["specimen"].dropna().unique()
+        if len(available) > 0:
+            specimen = available[0]
     if specimen is not None:
         df = df[df["specimen"] == specimen]
         if df.empty:
@@ -2533,11 +2630,12 @@ def plot_clearance_curve(
     ax.set_ylim(-0.05, 1.05)
 
     # Labels and title
-    reference_event = (
-        df["reference_event"].dropna().iloc[0]
-        if not df["reference_event"].dropna().empty
-        else "reference"
-    )
+    if reference_event is None:
+        reference_event = (
+            df["reference_event"].dropna().iloc[0]
+            if not df["reference_event"].dropna().empty
+            else "reference"
+        )
     specimen_display = (
         df["specimen"].dropna().iloc[0] if not df["specimen"].dropna().empty else ""
     )
