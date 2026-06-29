@@ -27,6 +27,25 @@ jobs:
             google-analytics-data \
             google-auth
 
+      - name: Restore metrics history from metrics-data branch
+        run: |
+          # The accumulating snapshot history lives on the unprotected metrics-data
+          # branch (main is protected and rejects direct pushes). Seed the working
+          # copy with the full history so the report script appends to it rather than
+          # to main's stale one-record seed.
+          if git ls-remote --exit-code --heads origin metrics-data >/dev/null 2>&1; then
+            git fetch --depth=1 origin metrics-data
+            if git show FETCH_HEAD:metrics/weekly_metrics.jsonl > "$RUNNER_TEMP/history.jsonl" 2>/dev/null; then
+              mkdir -p metrics
+              cp "$RUNNER_TEMP/history.jsonl" metrics/weekly_metrics.jsonl
+              echo "Restored $(grep -c . metrics/weekly_metrics.jsonl) record(s) from metrics-data."
+            else
+              echo "metrics-data exists but has no metrics file yet; keeping main's seed."
+            fi
+          else
+            echo "metrics-data branch does not exist yet; using main's file as the seed."
+          fi
+
       - name: Run weekly report
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -40,10 +59,33 @@ jobs:
           REPORT_TO_EMAIL: ${{ secrets.REPORT_TO_EMAIL }}
         run: python scripts/weekly_report.py
 
-      - name: Commit metrics snapshot
+      - name: Persist metrics snapshot to metrics-data branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add metrics/weekly_metrics.jsonl
-          git diff --cached --quiet || git commit -m "chore: add weekly metrics snapshot $(date -u +%Y-%m-%d)"
-          git push
+
+          # The report script appended this week's record to the history we restored
+          # above. Commit it onto the dedicated, unprotected metrics-data branch via an
+          # isolated worktree so the protected main branch is never touched.
+          cp metrics/weekly_metrics.jsonl "$RUNNER_TEMP/weekly_metrics.jsonl"
+
+          if git ls-remote --exit-code --heads origin metrics-data >/dev/null 2>&1; then
+            git fetch --depth=1 origin metrics-data
+            git worktree add -B metrics-data "$RUNNER_TEMP/md" FETCH_HEAD
+          else
+            # First run: create metrics-data as a clean orphan branch holding only metrics.
+            git worktree add --detach "$RUNNER_TEMP/md"
+            git -C "$RUNNER_TEMP/md" checkout --orphan metrics-data
+            git -C "$RUNNER_TEMP/md" rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          mkdir -p "$RUNNER_TEMP/md/metrics"
+          cp "$RUNNER_TEMP/weekly_metrics.jsonl" "$RUNNER_TEMP/md/metrics/weekly_metrics.jsonl"
+          git -C "$RUNNER_TEMP/md" add metrics/weekly_metrics.jsonl
+          if git -C "$RUNNER_TEMP/md" diff --cached --quiet; then
+            echo "No new metrics to commit."
+          else
+            git -C "$RUNNER_TEMP/md" commit -m "chore: weekly metrics snapshot $(date -u +%Y-%m-%d)"
+            git -C "$RUNNER_TEMP/md" push origin metrics-data
+            echo "Pushed metrics snapshot to metrics-data."
+          fi
