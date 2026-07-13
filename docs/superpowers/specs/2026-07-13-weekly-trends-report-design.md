@@ -34,12 +34,22 @@ Chosen approach (of three considered):
 - C — Inline JS charting library (Chart.js). Richest interactivity but a large
   non-deterministic inline blob, harder to test. Rejected for v1.
 
+## Data source (source of truth)
+
+The **`metrics-data` branch is the source of truth** for the accumulating
+history. `weekly_metrics.jsonl` is updated on `metrics-data` every week, never on
+`main` — the copy committed to `main` (and to feature branches) is only the
+initial seed and is intentionally stale. Any code that reads the history must
+read the `metrics-data` version, not the branch-local working copy.
+
 ## Data flow
 
 No new plumbing is required. The workflow already restores the **full history**
-into the working copy `metrics/weekly_metrics.jsonl` before the script runs, and
-`save_metrics()` appends the current week. So at report-build time the local
-JSONL holds every week including the current one.
+from `metrics-data` into the working copy `metrics/weekly_metrics.jsonl` before
+the script runs, and `save_metrics()` appends the current week. So at report-build
+time the local JSONL holds every week including the current one. **This is why the
+report is generated inside the workflow after the restore step** — it reads the
+complete `metrics-data` history, not `main`'s seed.
 
 ```
 weekly-report.yaml
@@ -69,12 +79,22 @@ A self-contained report builder with no dependency on the email/collection code.
 - `build_trends_html(records) -> str` — assembles a full standalone HTML document:
   inline CSS, theme matched to the email's teal (`#1a6b8a`), responsive layout,
   light/dark aware. Returns `""`-safe placeholder content when history is thin.
-- `__main__` CLI: `python scripts/metrics_report.py [JSONL_PATH] [-o OUT.html]`
-  (defaults: `metrics/weekly_metrics.jsonl`, stdout) for local regeneration.
+- `__main__` CLI for local regeneration:
+  - `python scripts/metrics_report.py [JSONL_PATH] [-o OUT.html]` — build from an
+    explicit file (defaults: `metrics/weekly_metrics.jsonl`, stdout).
+  - `--ref <git-ref>` convenience (default when no path given: `origin/metrics-data`)
+    — reads the history via `git show <ref>:metrics/weekly_metrics.jsonl` so a
+    local run reproduces the emailed report from the true source, not `main`'s
+    stale seed. Falls back with a clear message if the ref is unavailable.
+  - Documented one-liner alternative (mirrors `metrics/README.md`):
+    `git show origin/metrics-data:metrics/weekly_metrics.jsonl > hist.jsonl`
+    then `python scripts/metrics_report.py hist.jsonl -o report.html`.
 
 ### Modified: `scripts/weekly_report.py`
 
-- After `save_metrics(...)`, load the JSONL and call `build_trends_html(records)`.
+- After `save_metrics(...)`, load the same `METRICS_FILE` the workflow restored
+  from `metrics-data` (`scripts/../metrics/weekly_metrics.jsonl`) and call
+  `build_trends_html(records)`.
 - `send_report(html, ...)` gains an optional HTML attachment
   (`shedding-hub-trends_<week_end>.html`) via `MIMEApplication` /
   `MIMEText(..., "html")` with a `Content-Disposition: attachment` header. The
@@ -120,7 +140,9 @@ Built entirely from existing JSONL fields — no new data collection.
 
 Determinism: the same JSONL input yields byte-identical HTML (aside from the
 generated-at timestamp, which is injected via a parameter so tests can pin it),
-so local CLI regeneration reproduces the emailed report exactly.
+so a local CLI run **against the same `metrics-data` history** reproduces the
+emailed report exactly. (Running against `main`'s stale seed will differ, by
+design — hence the `--ref origin/metrics-data` default for local runs.)
 
 ## Scope guards (YAGNI)
 
