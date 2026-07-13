@@ -12,7 +12,10 @@ Used two ways:
         python scripts/metrics_report.py path/to/weekly_metrics.jsonl -o report.html
 """
 
+import argparse
 import json
+import subprocess
+import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -401,3 +404,63 @@ def build_trends_html(records, *, generated_at=None):
         f'<div class="grid">{comp}</div>'
     )
     return _shell(body, subtitle, gen_label)
+
+
+def read_history_from_ref(
+    ref="origin/metrics-data", relpath="metrics/weekly_metrics.jsonl"
+):
+    """Return the text of ``relpath`` at git ``ref``, or ``None`` if unavailable."""
+    try:
+        out = subprocess.run(
+            ["git", "show", f"{ref}:{relpath}"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        return out.stdout
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Build the Shedding Hub weekly trends report (HTML)."
+    )
+    parser.add_argument(
+        "path",
+        nargs="?",
+        help="Path to weekly_metrics.jsonl. If omitted, reads from --ref.",
+    )
+    parser.add_argument(
+        "--ref",
+        default="origin/metrics-data",
+        help="Git ref to read history from when no path is given "
+        "(default: origin/metrics-data).",
+    )
+    parser.add_argument("-o", "--output", help="Output HTML file (default: stdout).")
+    args = parser.parse_args(argv)
+
+    if args.path:
+        records = load_records(args.path)
+    else:
+        text = read_history_from_ref(args.ref)
+        if text is None:
+            print(
+                f"Could not read metrics/weekly_metrics.jsonl at ref '{args.ref}'.\n"
+                "Fetch it first:  git fetch origin metrics-data",
+                file=sys.stderr,
+            )
+            return 1
+        records = _parse_jsonl(text)
+
+    html = build_trends_html(records)
+    if args.output:
+        Path(args.output).write_text(html, encoding="utf-8")
+        print(f"Wrote {args.output} ({len(records)} week(s)).")
+    else:
+        sys.stdout.buffer.write(html.encode("utf-8"))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

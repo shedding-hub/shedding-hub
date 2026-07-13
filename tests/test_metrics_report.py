@@ -1,9 +1,12 @@
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import metrics_report as mr  # noqa: E402
+
+SCRIPT = str(Path(__file__).resolve().parent.parent / "scripts" / "metrics_report.py")
 
 
 def test_load_records_sorts_and_skips_bad_lines(tmp_path):
@@ -155,3 +158,29 @@ def test_build_trends_html_deterministic_with_fixed_timestamp():
     b = mr.build_trends_html(SAMPLE, generated_at=ts)
     assert a == b
     assert "2026-07-13 06:00 UTC" in a
+
+
+def test_cli_writes_output_file(tmp_path):
+    src = tmp_path / "m.jsonl"
+    src.write_text(
+        '{"week_start":"2026-06-22","week_end":"2026-06-28","github":{"stars":17}}\n',
+        encoding="utf-8",
+    )
+    out = tmp_path / "r.html"
+    subprocess.check_call([sys.executable, SCRIPT, str(src), "-o", str(out)])
+    assert out.read_text(encoding="utf-8").startswith("<!DOCTYPE html>")
+
+
+def test_cli_writes_to_stdout(tmp_path):
+    src = tmp_path / "m.jsonl"
+    src.write_text(
+        '{"week_start":"2026-06-22","github":{"stars":17}}\n', encoding="utf-8"
+    )
+    res = subprocess.run(
+        [sys.executable, SCRIPT, str(src)], capture_output=True, text=True, check=True
+    )
+    assert "<!DOCTYPE html>" in res.stdout
+
+
+def test_read_history_from_ref_bad_ref_returns_none():
+    assert mr.read_history_from_ref("nonexistent/ref-xyz-123") is None
