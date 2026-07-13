@@ -98,13 +98,18 @@ def sparkline(values, *, width=120, height=28, color=INK):
     )
 
 
-def bar_chart(items, *, width=340, bar_color=INK, value_suffix=""):
+def _truncate(s, n=28):
+    s = str(s)
+    return s if len(s) <= n else s[: n - 1] + "…"
+
+
+def bar_chart(items, *, width=360, bar_color=INK, value_suffix=""):
     items = [(str(label), float(v)) for label, v in items if v is not None]
     if not items:
-        return f'<p style="color:{MUTED};font-size:13px;">No data.</p>'
+        return f'<p style="color:{MUTED};font-size:14px;">No data.</p>'
     vmax = max(v for _, v in items) or 1
-    row_h, label_w = 22, 120
-    bar_w = width - label_w - 52
+    row_h, label_w = 26, 150
+    bar_w = width - label_w - 58
     rows = []
     for i, (label, value) in enumerate(items):
         w = value / vmax * bar_w
@@ -115,9 +120,9 @@ def bar_chart(items, *, width=340, bar_color=INK, value_suffix=""):
             else f"{value:g}{value_suffix}"
         )
         rows.append(
-            f'<text x="0" y="{y + 15}" font-size="12" fill="currentColor">{_esc(label)}</text>'
-            f'<rect x="{label_w}" y="{y + 4}" width="{w:.1f}" height="14" rx="2" fill="{bar_color}"/>'
-            f'<text x="{label_w + w + 6:.1f}" y="{y + 15}" font-size="11" fill="{MUTED}">{val_txt}</text>'
+            f'<text x="0" y="{y + 17}" font-size="13" fill="currentColor">{_esc(_truncate(label, 22))}</text>'
+            f'<rect x="{label_w}" y="{y + 5}" width="{w:.1f}" height="15" rx="2" fill="{bar_color}"/>'
+            f'<text x="{label_w + w + 7:.1f}" y="{y + 17}" font-size="12" fill="{MUTED}">{val_txt}</text>'
         )
     height = len(items) * row_h + 4
     return (
@@ -126,13 +131,13 @@ def bar_chart(items, *, width=340, bar_color=INK, value_suffix=""):
     )
 
 
-def line_chart(series, *, width=680, height=240):
+def line_chart(series, *, width=680, height=280):
     all_pts = [(d, v) for s in series for (d, v) in s["points"] if v is not None]
     if not all_pts:
-        return f'<p style="color:{MUTED};font-size:13px;">No data yet.</p>'
+        return f'<p style="color:{MUTED};font-size:14px;">No data yet.</p>'
     dates = sorted({d for d, _ in all_pts})
     vals = [v for _, v in all_pts]
-    pad_l, pad_r, pad_t, pad_b = 40, 14, 14, 26
+    pad_l, pad_r, pad_t, pad_b = 56, 18, 18, 44
     pw, ph = width - pad_l - pad_r, height - pad_t - pad_b
     ords = [date.fromisoformat(d).toordinal() for d in dates]
     lo, hi = min(ords), max(ords)
@@ -155,8 +160,8 @@ def line_chart(series, *, width=680, height=240):
             f'stroke="{MUTED}" stroke-opacity="0.25" stroke-width="1"/>'
         )
         parts.append(
-            f'<text x="{pad_l - 6}" y="{y + 3:.1f}" text-anchor="end" '
-            f'font-size="10" fill="{MUTED}">{_fmt_num(yv)}</text>'
+            f'<text x="{pad_l - 9}" y="{y + 4:.1f}" text-anchor="end" '
+            f'font-size="13" fill="{MUTED}">{_fmt_num(yv)}</text>'
         )
 
     for i, s in enumerate(series):
@@ -174,13 +179,13 @@ def line_chart(series, *, width=680, height=240):
         for d, v in s["points"]:
             if v is not None:
                 parts.append(
-                    f'<circle cx="{sx(d):.1f}" cy="{sy(v):.1f}" r="2.4" fill="{color}"/>'
+                    f'<circle cx="{sx(d):.1f}" cy="{sy(v):.1f}" r="3" fill="{color}"/>'
                 )
 
     for d in (dates[0], dates[len(dates) // 2], dates[-1]):
         parts.append(
-            f'<text x="{sx(d):.1f}" y="{height - 8}" text-anchor="middle" '
-            f'font-size="10" fill="{MUTED}">{_esc(d[5:])}</text>'
+            f'<text x="{sx(d):.1f}" y="{height - 14}" text-anchor="middle" '
+            f'font-size="13" fill="{MUTED}">{_esc(d[5:])}</text>'
         )
 
     return (
@@ -200,19 +205,18 @@ header h1{margin:0;font-size:22px}
 main{max-width:1040px;margin:0 auto;padding:20px}
 h2{font-size:16px;margin:26px 0 10px;color:var(--ink)}
 h2 .sub{color:var(--muted);font-weight:400;font-size:13px}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--text)}
-.kpi-label{font-size:12px;color:var(--muted)}
-.kpi-value{font-size:26px;font-weight:700;margin:2px 0}
-.delta{font-size:12px;font-weight:600}
-.delta.up{color:#2e8b57}.delta.down{color:#c0504d}.delta.flat{color:var(--muted)}
-.kpi-spark{margin-top:6px;color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.kpi-label{font-size:13px;color:var(--muted)}
+.kpi-value{font-size:28px;font-weight:700;margin:2px 0;font-variant-numeric:tabular-nums}
+.kpi-sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi-spark{margin-top:8px;color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;color:var(--text)}
-.card h3{margin:0 0 8px;font-size:14px}
-.legend{margin-bottom:6px;font-size:12px;color:var(--muted)}
-.legend .lg{margin-right:12px;white-space:nowrap}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.card h3{margin:0 0 8px;font-size:15px}
+.legend{margin-bottom:8px;font-size:14px;color:var(--muted)}
+.legend .lg{margin-right:14px;white-space:nowrap}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:middle}
 .empty{color:var(--muted);font-size:15px;padding:30px 0}
 footer{max-width:1040px;margin:0 auto;padding:16px 20px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
 svg{max-width:100%;height:auto}
@@ -232,40 +236,74 @@ def _points(records, *keys):
     return [(r.get("week_start"), _get(r, *keys)) for r in records]
 
 
-def _pairs(items, label_key, value_key):
-    if not isinstance(items, list):
-        return []
-    out = []
-    for it in items:
-        if isinstance(it, dict) and it.get(value_key) is not None:
-            out.append((it.get(label_key, "?"), it.get(value_key)))
-    return out
+def _is_num(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
 
 
-def _kpi_tile(records, keys, label):
-    vals = [_get(r, *keys) for r in records]
-    present = [v for v in vals if v is not None]
-    latest = present[-1] if present else None
-    prev = present[-2] if len(present) >= 2 else None
-    if latest is None:
-        value_txt, delta_html = "—", ""
+def _sum_metric(records, *keys):
+    """Sum a metric across every week. Returns None if never present."""
+    total, present = 0, False
+    for r in records:
+        v = _get(r, *keys)
+        if _is_num(v):
+            total += v
+            present = True
+    return total if present else None
+
+
+def _latest_metric(records, *keys):
+    """Most recent non-null value (for cumulative snapshots like stars)."""
+    for r in reversed(records):
+        v = _get(r, *keys)
+        if v is not None:
+            return v
+    return None
+
+
+def _avg_metric(records, *keys):
+    """Mean of the weekly values (for rates like avg engagement)."""
+    vals = [v for v in (_get(r, *keys) for r in records) if _is_num(v)]
+    return round(sum(vals) / len(vals), 1) if vals else None
+
+
+def _aggregate_pairs(records, node_key, label_key, value_key, top=8):
+    """Sum a GA4 breakdown list across every week, ranked descending."""
+    totals = {}
+    for r in records:
+        items = _get(r, "ga4", node_key)
+        if not isinstance(items, list):
+            continue
+        for it in items:
+            if isinstance(it, dict) and _is_num(it.get(value_key)):
+                lbl = it.get(label_key, "?")
+                totals[lbl] = totals.get(lbl, 0) + it[value_key]
+    return sorted(totals.items(), key=lambda kv: kv[1], reverse=True)[:top]
+
+
+def _stat_tile(records, keys, label, kind="total", suffix=""):
+    """A whole-period summary tile: a total/current/average plus a sparkline.
+
+    kind: "total" (sum over all weeks), "current" (latest value, for cumulative
+    snapshots like stars), or "avg" (mean of weekly values, for rates).
+    """
+    if kind == "current":
+        val, sub = _latest_metric(records, *keys), "current"
+    elif kind == "avg":
+        val, sub = _avg_metric(records, *keys), "weekly avg"
     else:
-        value_txt = (
-            f"{int(latest):,}" if float(latest) == int(latest) else f"{latest:g}"
-        )
-        if prev is not None:
-            d = latest - prev
-            if d == 0:
-                cls, sign = "flat", "±"
-            else:
-                cls, sign = ("up", "+") if d > 0 else ("down", "−")
-            delta_html = f'<span class="delta {cls}">{sign}{abs(d):g} wk/wk</span>'
-        else:
-            delta_html = '<span class="delta flat">new</span>'
+        val, sub = _sum_metric(records, *keys), "total"
+    if val is None:
+        value_txt = "—"
+    elif float(val) == int(val):
+        value_txt = f"{int(val):,}{suffix}"
+    else:
+        value_txt = f"{val:g}{suffix}"
+    spark_vals = [_get(r, *keys) for r in records]
     return (
         f'<div class="kpi"><div class="kpi-label">{_esc(label)}</div>'
-        f'<div class="kpi-value">{value_txt}</div>{delta_html}'
-        f'<div class="kpi-spark">{sparkline(vals)}</div></div>'
+        f'<div class="kpi-value">{value_txt}</div>'
+        f'<div class="kpi-sub">{sub}</div>'
+        f'<div class="kpi-spark">{sparkline(spark_vals)}</div></div>'
     )
 
 
@@ -319,12 +357,18 @@ def build_trends_html(records, *, generated_at=None):
     last = records[-1].get("week_end") or records[-1].get("week_start", "?")
     subtitle = f"{first} → {last} · {len(records)} week(s)"
 
-    kpis = "".join(
+    stats = "".join(
         [
-            _kpi_tile(records, ("github", "stars"), "GitHub stars"),
-            _kpi_tile(records, ("pypi", "last_week"), "PyPI downloads / wk"),
-            _kpi_tile(records, ("ga4", "active_users"), "Weekly active users"),
-            _kpi_tile(records, ("ga4", "page_views"), "Page views / wk"),
+            _stat_tile(records, ("ga4", "page_views"), "Page views", "total"),
+            _stat_tile(records, ("ga4", "active_users"), "Active users", "total"),
+            _stat_tile(records, ("ga4", "new_users"), "New users", "total"),
+            _stat_tile(records, ("pypi", "last_week"), "PyPI downloads", "total"),
+            _stat_tile(records, ("github", "views_this_week"), "Repo views", "total"),
+            _stat_tile(records, ("github", "clones_this_week"), "Repo clones", "total"),
+            _stat_tile(records, ("github", "stars"), "GitHub stars", "current"),
+            _stat_tile(
+                records, ("ga4", "avg_engagement_seconds"), "Avg engagement", "avg", "s"
+            ),
         ]
     )
 
@@ -364,7 +408,7 @@ def build_trends_html(records, *, generated_at=None):
                 ],
             ),
             _line_card(
-                "Repo traffic (this-week counts)",
+                "Repo views & clones (weekly)",
                 records,
                 [
                     (("github", "views_this_week"), "Views", SERIES[0]),
@@ -374,35 +418,33 @@ def build_trends_html(records, *, generated_at=None):
         ]
     )
 
-    latest = records[-1]
     comp = "".join(
         [
             _bar_card(
                 "Traffic sources",
-                _pairs(_get(latest, "ga4", "traffic_sources"), "source", "sessions"),
+                _aggregate_pairs(records, "traffic_sources", "source", "sessions"),
             ),
             _bar_card(
                 "Top countries",
-                _pairs(_get(latest, "ga4", "top_countries"), "country", "active_users"),
+                _aggregate_pairs(records, "top_countries", "country", "active_users"),
             ),
             _bar_card(
                 "Devices",
-                _pairs(_get(latest, "ga4", "device_types"), "device", "active_users"),
+                _aggregate_pairs(records, "device_types", "device", "active_users"),
             ),
             _bar_card(
                 "Top pages",
-                _pairs(_get(latest, "ga4", "page_breakdown"), "page", "views"),
+                _aggregate_pairs(records, "page_breakdown", "page", "views"),
             ),
         ]
     )
 
     body = (
-        f'<div class="kpis">{kpis}</div>'
+        f'<h2>Totals <span class="sub">· entire tracked period</span></h2>'
+        f'<div class="kpis">{stats}</div>'
         f"<h2>Trends over time</h2>"
         f'<div class="grid">{charts}</div>'
-        f"<h2>Latest week composition "
-        f'<span class="sub">({_esc(latest.get("week_start", ""))} – '
-        f'{_esc(latest.get("week_end", ""))})</span></h2>'
+        f'<h2>Composition <span class="sub">· all {len(records)} weeks combined</span></h2>'
         f'<div class="grid">{comp}</div>'
     )
     return _shell(body, subtitle, gen_label)

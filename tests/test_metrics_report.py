@@ -126,10 +126,16 @@ def test_build_trends_html_structure():
     html = mr.build_trends_html(SAMPLE)
     assert html.startswith("<!DOCTYPE html>")
     assert "Weekly Trends" in html
+    assert "Totals" in html
+    assert "Trends over time" in html
+    assert "Composition" in html
     assert "GitHub stars" in html
     assert "PyPI downloads" in html
     assert "Traffic sources" in html
     assert "<svg" in html
+    # The report no longer compares to last week or spotlights a single week.
+    assert "wk/wk" not in html
+    assert "Latest week" not in html
 
 
 def test_build_trends_html_empty():
@@ -138,9 +144,9 @@ def test_build_trends_html_empty():
     assert "No weekly metrics" in html
 
 
-def test_build_trends_html_single_record_no_prev():
+def test_build_trends_html_single_record():
     html = mr.build_trends_html(SAMPLE[:1])
-    assert "<svg" in html  # renders even with no previous week for deltas
+    assert "<svg" in html  # renders from a single week without error
 
 
 def test_build_trends_html_missing_keys_does_not_raise():
@@ -160,15 +166,29 @@ def test_build_trends_html_deterministic_with_fixed_timestamp():
     assert "2026-07-13 06:00 UTC" in a
 
 
-def test_kpi_zero_delta_renders_flat_not_up():
-    # SAMPLE has github.stars == 17 in both weeks, so the week-over-week delta is
-    # exactly 0. A flat week must render as the neutral "flat" style, not a green
-    # "up" +0, while a real change still renders as up/down.
+def test_stat_tiles_show_period_totals():
+    # Tiles report whole-period figures, not a single week.
     html = mr.build_trends_html(SAMPLE)
-    assert 'class="delta flat">±0 wk/wk' in html
-    assert 'class="delta up">+0' not in html
-    # PyPI downloads drop 23 -> 0 across the two weeks: still rendered as "down".
-    assert 'class="delta down">−23 wk/wk' in html
+    # Flow metrics are summed across both weeks: page views 42+42=84,
+    # repo clones 29+59=88, PyPI downloads 23+0=23.
+    assert 'class="kpi-value">84<' in html
+    assert 'class="kpi-value">88<' in html
+    assert 'class="kpi-value">23<' in html
+    # Cumulative snapshot (stars) shows the latest value, labelled "current".
+    assert 'class="kpi-value">17<' in html
+    assert ">current<" in html
+    # Rate (avg engagement) is a mean of the weekly values: (12.9+9.1)/2 = 11.0.
+    assert 'class="kpi-value">11s<' in html
+    assert ">total<" in html
+
+
+def test_composition_aggregated_over_all_weeks():
+    # Composition bars sum each breakdown across every week rather than showing
+    # only the latest week. Direct sessions: 32 + 34 = 66; devices: 28 + 29 = 57.
+    html = mr.build_trends_html(SAMPLE)
+    assert "Direct" in html and ">66<" in html
+    assert ">57<" in html
+    assert "all 2 weeks combined" in html
 
 
 def test_cli_writes_output_file(tmp_path):

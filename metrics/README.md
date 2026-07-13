@@ -24,8 +24,9 @@ updated by the workflow.
 Each weekly run also builds a standalone HTML trends dashboard
 (`scripts/metrics_report.py`) from the full history and **attaches it to the
 weekly email** as `shedding-hub-trends_<week_end>.html`. Open the attachment in a
-browser to see stars, downloads, active users, and page views over time, plus the
-latest week's traffic-source / country / device / page breakdowns.
+browser to see whole-period totals (page views, active/new users, downloads, repo
+views/clones) and current stars, per-week trend charts, and the traffic-source /
+country / device / page breakdowns aggregated across the entire tracked period.
 
 To regenerate the report locally from the source-of-truth `metrics-data` branch:
 
