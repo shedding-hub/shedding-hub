@@ -101,7 +101,7 @@ def sparkline(values, *, width=120, height=28, color=INK):
 def bar_chart(items, *, width=340, bar_color=INK, value_suffix=""):
     items = [(str(label), float(v)) for label, v in items if v is not None]
     if not items:
-        return '<p style="color:#6b7c85;font-size:13px;">No data.</p>'
+        return f'<p style="color:{MUTED};font-size:13px;">No data.</p>'
     vmax = max(v for _, v in items) or 1
     row_h, label_w = 22, 120
     bar_w = width - label_w - 52
@@ -129,7 +129,7 @@ def bar_chart(items, *, width=340, bar_color=INK, value_suffix=""):
 def line_chart(series, *, width=680, height=240):
     all_pts = [(d, v) for s in series for (d, v) in s["points"] if v is not None]
     if not all_pts:
-        return '<p style="color:#6b7c85;font-size:13px;">No data yet.</p>'
+        return f'<p style="color:{MUTED};font-size:13px;">No data yet.</p>'
     dates = sorted({d for d, _ in all_pts})
     vals = [v for _, v in all_pts]
     pad_l, pad_r, pad_t, pad_b = 40, 14, 14, 26
@@ -255,8 +255,10 @@ def _kpi_tile(records, keys, label):
         )
         if prev is not None:
             d = latest - prev
-            sign = "+" if d >= 0 else "−"
-            cls = "up" if d >= 0 else "down"
+            if d == 0:
+                cls, sign = "flat", "±"
+            else:
+                cls, sign = ("up", "+") if d > 0 else ("down", "−")
             delta_html = f'<span class="delta {cls}">{sign}{abs(d):g} wk/wk</span>'
         else:
             delta_html = '<span class="delta flat">new</span>'

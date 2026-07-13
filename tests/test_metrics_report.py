@@ -160,6 +160,17 @@ def test_build_trends_html_deterministic_with_fixed_timestamp():
     assert "2026-07-13 06:00 UTC" in a
 
 
+def test_kpi_zero_delta_renders_flat_not_up():
+    # SAMPLE has github.stars == 17 in both weeks, so the week-over-week delta is
+    # exactly 0. A flat week must render as the neutral "flat" style, not a green
+    # "up" +0, while a real change still renders as up/down.
+    html = mr.build_trends_html(SAMPLE)
+    assert 'class="delta flat">±0 wk/wk' in html
+    assert 'class="delta up">+0' not in html
+    # PyPI downloads drop 23 -> 0 across the two weeks: still rendered as "down".
+    assert 'class="delta down">−23 wk/wk' in html
+
+
 def test_cli_writes_output_file(tmp_path):
     src = tmp_path / "m.jsonl"
     src.write_text(
