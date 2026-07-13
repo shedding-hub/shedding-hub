@@ -27,3 +27,8 @@ def test_parse_jsonl_from_text():
         '{"week_start":"2026-01-01"}\n\n{"week_start":"2026-01-08"}\n'
     )
     assert [r["week_start"] for r in recs] == ["2026-01-01", "2026-01-08"]
+
+
+def test_parse_jsonl_skips_non_object_json():
+    recs = mr._parse_jsonl('5\n"hello"\nnull\n[1,2]\n{"week_start":"2026-01-01"}\n')
+    assert recs == [{"week_start": "2026-01-01"}]

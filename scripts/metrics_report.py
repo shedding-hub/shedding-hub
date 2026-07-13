@@ -20,6 +20,7 @@ def _parse_jsonl(text):
     """Parse JSONL text into records sorted by ``week_start``.
 
     Blank lines and lines that fail to parse as JSON are skipped.
+    Non-object JSON values are also skipped.
     """
     records = []
     for line in text.splitlines():
@@ -27,9 +28,12 @@ def _parse_jsonl(text):
         if not line:
             continue
         try:
-            records.append(json.loads(line))
+            record = json.loads(line)
         except json.JSONDecodeError:
             continue
+        if not isinstance(record, dict):
+            continue
+        records.append(record)
     records.sort(key=lambda r: r.get("week_start", ""))
     return records
 
