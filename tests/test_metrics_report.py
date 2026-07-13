@@ -1,4 +1,5 @@
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -70,3 +71,87 @@ def test_line_chart_empty_is_safe():
     assert "No data" in mr.line_chart(
         [{"label": "A", "color": "#000000", "points": []}]
     )
+
+
+SAMPLE = [
+    {
+        "week_start": "2026-06-22",
+        "week_end": "2026-06-28",
+        "github": {
+            "stars": 17,
+            "forks": 2,
+            "views_this_week": 26,
+            "clones_this_week": 29,
+        },
+        "pypi": {"last_week": 23},
+        "ga4": {
+            "active_users": 30,
+            "new_users": 28,
+            "page_views": 42,
+            "avg_engagement_seconds": 12.9,
+            "traffic_sources": [{"source": "Direct", "sessions": 32}],
+            "top_countries": [{"country": "United States", "active_users": 19}],
+            "device_types": [{"device": "desktop", "active_users": 28}],
+            "page_breakdown": [{"page": "/", "views": 23}],
+        },
+    },
+    {
+        "week_start": "2026-06-29",
+        "week_end": "2026-07-05",
+        "github": {
+            "stars": 17,
+            "forks": 2,
+            "views_this_week": 61,
+            "clones_this_week": 59,
+        },
+        "pypi": {"last_week": 0},
+        "ga4": {
+            "active_users": 30,
+            "new_users": 27,
+            "page_views": 42,
+            "avg_engagement_seconds": 9.1,
+            "traffic_sources": [{"source": "Direct", "sessions": 34}],
+            "top_countries": [{"country": "Singapore", "active_users": 16}],
+            "device_types": [{"device": "desktop", "active_users": 29}],
+            "page_breakdown": [{"page": "/", "views": 14}],
+        },
+    },
+]
+
+
+def test_build_trends_html_structure():
+    html = mr.build_trends_html(SAMPLE)
+    assert html.startswith("<!DOCTYPE html>")
+    assert "Weekly Trends" in html
+    assert "GitHub stars" in html
+    assert "PyPI downloads" in html
+    assert "Traffic sources" in html
+    assert "<svg" in html
+
+
+def test_build_trends_html_empty():
+    html = mr.build_trends_html([])
+    assert html.startswith("<!DOCTYPE html>")
+    assert "No weekly metrics" in html
+
+
+def test_build_trends_html_single_record_no_prev():
+    html = mr.build_trends_html(SAMPLE[:1])
+    assert "<svg" in html  # renders even with no previous week for deltas
+
+
+def test_build_trends_html_missing_keys_does_not_raise():
+    thin = [
+        {"week_start": "2026-01-01"},
+        {"week_start": "2026-01-08", "github": {"stars": 5}},
+    ]
+    html = mr.build_trends_html(thin)
+    assert "<!DOCTYPE html>" in html
+
+
+def test_build_trends_html_deterministic_with_fixed_timestamp():
+    ts = datetime(2026, 7, 13, 6, 0, 0, tzinfo=timezone.utc)
+    a = mr.build_trends_html(SAMPLE, generated_at=ts)
+    b = mr.build_trends_html(SAMPLE, generated_at=ts)
+    assert a == b
+    assert "2026-07-13 06:00 UTC" in a
