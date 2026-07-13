@@ -184,3 +184,33 @@ def test_cli_writes_to_stdout(tmp_path):
 
 def test_read_history_from_ref_bad_ref_returns_none():
     assert mr.read_history_from_ref("nonexistent/ref-xyz-123") is None
+
+
+import weekly_report as wr  # noqa: E402  (scripts dir already on sys.path)
+
+
+def test_build_email_message_attaches_html():
+    msg = wr.build_email_message(
+        html="<p>weekly body</p>",
+        subject="S",
+        sender="a@b.com",
+        recipients=["c@d.com"],
+        attachments=[("trends.html", "<!DOCTYPE html><p>chart</p>")],
+    )
+    parts = list(msg.walk())
+    dispositions = [p.get("Content-Disposition") for p in parts]
+    assert any(d and "attachment" in d and "trends.html" in d for d in dispositions)
+    bodies = [
+        (p.get_payload(decode=True) or b"").decode()
+        for p in parts
+        if p.get_content_type() == "text/html"
+    ]
+    assert any("weekly body" in b for b in bodies)
+
+
+def test_build_email_message_without_attachments():
+    msg = wr.build_email_message(
+        html="<p>b</p>", subject="S", sender="a@b.com", recipients=["c@d.com"]
+    )
+    assert msg["Subject"] == "S"
+    assert msg["To"] == "c@d.com"
