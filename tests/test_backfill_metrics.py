@@ -29,6 +29,27 @@ def test_read_github_csv_parses_and_skips_blank_rows(tmp_path):
     assert rows[1]["github"]["forks"] == 0
 
 
+def test_norm_date_handles_iso_and_us_slash():
+    assert bf._norm_date("2026-03-30") == "2026-03-30"
+    assert bf._norm_date("3/30/2026") == "2026-03-30"
+    assert bf._norm_date("4/5/2026") == "2026-04-05"
+    assert bf._norm_date("") == ""
+
+
+def test_read_github_csv_normalizes_excel_dates(tmp_path):
+    csv_path = tmp_path / "gh.csv"
+    csv_path.write_text(
+        "week_start,week_end,stars,forks,open_issues,open_prs,views_this_week,"
+        "unique_visitors_this_week,clones_this_week,unique_cloners_this_week,"
+        "new_datasets_count\n"
+        "3/30/2026,4/5/2026,15,2,7,3,125,11,153,76,0\n",
+        encoding="utf-8",
+    )
+    rows = bf.read_github_csv(csv_path)
+    assert rows[0]["week_start"] == "2026-03-30"
+    assert rows[0]["week_end"] == "2026-04-05"
+
+
 def test_pypi_weekly_sums_correct_windows():
     # one download per day for a long stretch -> week=7, month=30
     daily = {}

@@ -51,17 +51,33 @@ PACKAGE = "shedding-hub"
 # ---------------------------------------------------------------------------
 
 
+def _norm_date(s):
+    """Normalize a date to ISO ``YYYY-MM-DD``.
+
+    Accepts ISO already, or the US ``M/D/YYYY`` form Excel tends to write when a
+    spreadsheet re-saves the template.
+    """
+    s = (s or "").strip()
+    if not s:
+        return s
+    if "/" in s:
+        m, d, y = s.split("/")
+        return f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
+    return s
+
+
 def read_github_csv(path):
     """Read filled rows from the GitHub backfill CSV.
 
     Rows with a blank ``week_start`` or with every GitHub column blank are
-    skipped (unfilled template rows). Blank numeric cells become 0.
+    skipped (unfilled template rows). Blank numeric cells become 0. Dates are
+    normalized to ISO ``YYYY-MM-DD`` regardless of how a spreadsheet saved them.
     """
     rows = []
     with open(path, newline="", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
-            week_start = (row.get("week_start") or "").strip()
-            week_end = (row.get("week_end") or "").strip()
+            week_start = _norm_date(row.get("week_start"))
+            week_end = _norm_date(row.get("week_end"))
             if not week_start:
                 continue
             if all(not (row.get(k) or "").strip() for k in GH_INT_FIELDS):
