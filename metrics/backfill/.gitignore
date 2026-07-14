@@ -1,0 +1,4 @@
+# Never commit credentials accidentally dropped in this folder.
+*.json
+service-account*.json
+*key*.json
