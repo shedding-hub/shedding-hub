@@ -49,19 +49,31 @@ weekly job.
 
 ## What lands where
 
-- `main` receives **only the workflow file** (via PR). `workflow_dispatch`
-  requires the workflow to exist on the default branch to be runnable; this also
-  leaves a reusable manual-backfill tool for any future gap.
-- The filled `github_backfill.csv` stays on the `chore/metrics-backfill` branch.
-  Dispatch selecting that branch as the ref so the run reads its CSV; `main`'s CSV
-  keeps the blank template.
+`workflow_dispatch` requires the workflow to exist on the default branch to be
+runnable, and `main` does not yet have the backfill tool at all (it is stacked on
+the in-flight trends-report PR #158, `feature/weekly-trends-report`). The 3
+backfill-unique commits touch **only new files** (`scripts/backfill_metrics.py`,
+`tests/test_backfill_metrics.py`, `metrics/backfill/*`, the two specs), all
+stdlib-only and independent of the trends work, so they land on `main` as a clean
+**adds-only PR** with no conflict with #158.
+
+- `main` receives the whole self-contained backfill unit via an **independent PR
+  off `main`**: the tool, tests, `metrics/backfill/` (README, `.gitignore`, and
+  the **filled** `github_backfill.csv` as the recovery record), the specs, and the
+  new workflow file. This is a reusable manual-backfill tool for any future gap.
+- Because the filled CSV is committed to `main`, the workflow is dispatched
+  **against `main`** — no throwaway branch. `main`'s CSV documents exactly what
+  was recovered.
 
 ## Execution sequence
 
-1. Commit workflow + filled CSV on `chore/metrics-backfill`.
-2. Open a PR adding **the workflow** to `main`; merge it.
-3. Dispatch against `chore/metrics-backfill` with `dry_run=true`; confirm the log
-   shows the 12 weeks with non-zero GA4/PyPI.
+1. Author and validate `.github/workflows/metrics-backfill.yaml`; commit it and
+   the filled CSV on the working branch.
+2. Assemble an adds-only branch off `origin/main` containing only the 7 backfill
+   files + the workflow (final content), verify it is additions-only vs `main`
+   and that `pytest`/`black` pass, and open a PR to `main`.
+3. After the PR merges, dispatch against `main` with `dry_run=true`; confirm the
+   log shows the 12 weeks with non-zero GA4/PyPI.
 4. Re-dispatch with `dry_run=false`.
 5. Verify `metrics-data` lists 16 records.
 
