@@ -2,12 +2,19 @@
 $defs:
   negative_positive_number:
     description: >
-      A quantitative value, or a qualitative result. `positive` is a result above the
-      limit of detection but below the limit of quantification; `strong positive` and
-      `weak positive` are for studies reporting graded immunoassay intensities (e.g.
-      +++/+), and should only be used when the study itself reports such a scale;
-      `negative` is a result below the limit of detection; `inconclusive` is an
-      indeterminate result, which is not the same as a weak one.
+      A quantitative value, or a qualitative result.
+
+      `positive` is a plain detected result, including one above the limit of detection
+      but below the limit of quantification. `strong positive` and `weak positive` are
+      for studies that grade a positive rather than reporting a single `positive` --
+      any qualitative or semiquantitative readout, such as +/++/+++, high/low positive,
+      borderline, or band and signal strength. Record the grade the study reports; do
+      not infer one from a numeric value, and do not invent a grade a study did not
+      report.
+
+      `negative` is a result below the limit of detection. `inconclusive` is an
+      indeterminate result the study could not resolve, which is not the same as a weak
+      one.
     oneOf:
       - type: number
         exclusiveMinimum: 0 # Zero should be coded as `negative`.
