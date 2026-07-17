@@ -2,13 +2,24 @@
 $defs:
   negative_positive_number:
     description: >
-      A quantitative value, `positive` result above limit of detection but below limit
-      of quantification, `inconclusive` result not conclusive for test output, or `negative` result below the limit of detection.
+      A quantitative value, or a qualitative result.
+
+      `positive` is a plain detected result, including one above the limit of detection
+      but below the limit of quantification. `strong positive` and `weak positive` are
+      for studies that grade a positive rather than reporting a single `positive` --
+      any qualitative or semiquantitative readout, such as +/++/+++, high/low positive,
+      borderline, or band and signal strength. Record the grade the study reports; do
+      not infer one from a numeric value, and do not invent a grade a study did not
+      report.
+
+      `negative` is a result below the limit of detection. `inconclusive` is an
+      indeterminate result the study could not resolve, which is not the same as a weak
+      one.
     oneOf:
       - type: number
         exclusiveMinimum: 0 # Zero should be coded as `negative`.
       - type: string
-        enum: [positive, negative, inconclusive]
+        enum: [strong positive, positive, weak positive, negative, inconclusive]
   specimen_type_enum:
     type: string
     enum:
@@ -20,9 +31,15 @@ $defs:
       - nasopharyngeal_swab
       - anterior_nares_swab
       - saliva
+      - buccal_swab
       - rectal_swab
+      - anorectal_swab
+      - genital_swab
       - unknown
       - bronchoalveolar_lavage_fluid
+      - tracheal_aspirate
+      - nasal_lavage_fluid
+      - nasal_discharge
       - serum
       - emesis
   analyte_specification:
@@ -79,6 +96,7 @@ $defs:
           - rotavirus vaccine
           - hepatitis A virus
           - hepatitis E virus
+          - mpox
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
@@ -92,8 +110,10 @@ $defs:
           - gc/mL
           - gc/swab
           - gc/wet gram
+          - gc/reaction
           - cycle threshold
           - pfu/mL
+          - vp/mL
       reference_event:
         description: Event used as reference for `time` fields of measurements.
         type: string
@@ -103,6 +123,9 @@ $defs:
           - enrollment
           - hospital admission
           - vaccination
+          - inoculation
+          - exposure
+          - treatment
       dose:
         description: >
           Vaccine dose number for vaccine shedding studies (e.g., 1, 2, 3).
@@ -172,6 +195,12 @@ properties:
       required:
         - measurements
       properties:
+        patient_id:
+          description: >
+            Identifier of the subject/patient from the data source (e.g., the PatientID
+            column). Retained for traceability; groups all of a subject's measurements
+            into one participant.
+          type: [string, integer]
         attributes:
           type: object
           properties:
@@ -221,11 +250,14 @@ properties:
                 - not hispanic
                 - unknown
             vaccinated:
-              description: If the participant was vaccinated against the condition.
+              description: >
+                Whether the participant was vaccinated against the condition. This is a
+                yes/no question: a participant vaccinated after exposure was still
+                vaccinated, so use true and leave the timing to the dataset description.
               oneOf:
                 - type: boolean
                 - type: string
-                  constant: unknown
+                  const: unknown
             lineage:
               description: Lineage information of the pathogen for the participant.
               type: string
@@ -245,17 +277,31 @@ properties:
                 - type: boolean
                 - type: string
                   const: unknown
+            subtype:
+              description: >
+                Pathogen type/subtype of the participant's infection as a single string.
+                For influenza, the type and (when reported) subtype or lineage, e.g.,
+                'A(H1N1)pdm09', 'A(H3N2)', 'B', 'B/Victoria'.
+              type: string
             participant_type:
               description: >
                 Type or category of participant (e.g., 'patient', 'healthcare worker',
                 'household contact', 'community control', 'index case').
               type: string
+            hospitalized:
+              description: >
+                Whether the participant was hospitalized. Use true for inpatients,
+                false for outpatients.
+              oneOf:
+                - type: boolean
+                - type: string
+                  const: unknown
             infant:
               description: If the participant was an infant.
               oneOf:
                 - type: boolean
                 - type: string
-                  constant: unknown
+                  const: unknown
             full_term:
               description: >
                 Whether the infant was born full term.
@@ -263,7 +309,7 @@ properties:
               oneOf:
                 - type: boolean
                 - type: string
-                  constant: unknown
+                  const: unknown
         measurements:
           type: array
           minItems: 1
