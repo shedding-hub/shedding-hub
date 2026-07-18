@@ -19,18 +19,21 @@ The statistical groundwork already exists but lives in R. The site repo
 (`shedding-hub.github.io/tutorials`) has a hierarchical Bayesian Rstan workflow
 fitting an exponential-decay and a gamma model with a censored likelihood, and a
 JAGS implementation of the Teunis within-host model. This work ports the first
-two models to Python and adds the simulation step.
+two models to Python, fits them across the repository, and adds the simulation
+step.
+
+The intended user journey is: **browse a table of available fitted estimates →
+pick one study, or an ensemble across studies → simulate individuals.**
 
 ## Scope
 
-**In:** exponential and gamma models; censored maximum-likelihood fitting;
-population-level parameter distribution; simulation of synthetic individuals;
-one plotting helper.
+**In:** exponential and gamma models; censored maximum-likelihood fitting per
+analyte; a browsable catalog of estimates shipped with the package; a cross-study
+ensemble; simulation of synthetic individuals; one plotting helper.
 
 **Out (deliberately):** the Teunis two-compartment model with an estimated
-shedding-onset offset; MCMC/posterior inference; cross-study pooling with
-study-level random effects; Ct-scale modelling. Each is a plausible follow-up and
-the parameter interface is designed not to block them.
+shedding-onset offset; MCMC/posterior inference; Ct-scale modelling. Each is a
+plausible follow-up and the interfaces are designed not to block them.
 
 ## Models
 
@@ -68,6 +71,34 @@ possible: drawing a new `theta` from it yields a new plausible individual.
 
 `t = 0` is the dataset's own reference event (usually symptom onset), matching the
 tutorial's stated assumption that shedding begins at symptom onset.
+
+Both models are fitted for every analyte, so the catalog carries both and users
+can compare them on AIC rather than being forced into one.
+
+## The fitting unit is the analyte
+
+A fit is estimated per **(dataset, analyte, model)**. Biomarker, specimen, and
+reference event are *selection keys* carried alongside, not the grouping level.
+
+This matters because 30 strata in the repository contain more than one analyte
+for the same (biomarker, specimen, reference event), for three different reasons:
+
+- **Ct paired with concentration** (`kim2020viral`, `gutierrez2021nosocomial`,
+  `cdc2024nhphrn`) — resolved automatically by rejecting Ct analytes.
+- **Different gene targets on the same subjects** (`arts2023longitudinal` measures
+  both N and ORF1a in stool, same unit) — pooling these would enter each subject
+  twice with correlated repeat measures.
+- **Genuinely different exposures** (`cowley2017rotavirus` has three vaccine
+  doses; `jacobsen2022differentiation` has RV1 and RV5) — these should never be
+  merged; they are distinguished by the schema's `dose` and `vaccine_type`
+  fields.
+
+Fitting per analyte sidesteps all three. Each fit records `analyte`,
+`dataset_id`, `biomarker`, `specimen`, `reference_event`, `unit`, and, where
+present, `gene_target`, `dose`, and `vaccine_type`.
+
+`unit` is treated as a hard constraint everywhere: estimates in `gc/mL`,
+`gc/dry gram`, and `pfu/mL` are not comparable and are never combined.
 
 ## Fitting
 
@@ -119,14 +150,12 @@ later. `SheddingFit` carries an explicit `method` field so a future
 
 ## Data preparation and edge cases
 
-Measurements are extracted per participant per analyte, after filtering by
-`biomarker` and `specimen`, then:
+Measurements are extracted per participant for the analyte being fitted, then:
 
 - **Ct-unit analytes are rejected.** 52 analytes in the repository use
   `cycle threshold`, which is inversely related to concentration and already on a
-  log scale; neither model applies. Raises `ValueError` naming the offending
-  analyte and telling the caller to select a concentration analyte.
-- **Mixed units are rejected** for the same reason, with the units listed.
+  log scale; neither model applies. In catalog building they are skipped with a
+  recorded reason; in a direct `fit_shedding_model` call they raise `ValueError`.
 - **`negative` values become censored observations** at the analyte's
   `limit_of_quantification`, falling back to `limit_of_detection`.
 - **Censoring-limit fallback.** Either limit may be the literal string
@@ -155,14 +184,118 @@ Measurements are extracted per participant per analyte, after filtering by
   25,378 participants averaging ~1.2 samples each and cannot support per-subject
   trajectory fitting at all.
 
-Every exclusion is counted and surfaced on the fit object (`n_excluded_subjects`,
-`n_dropped_measurements`) rather than being silently applied.
+Every exclusion is counted and surfaced on the fit object
+(`n_excluded_subjects`, `n_dropped_measurements`) rather than being silently
+applied.
+
+## The catalog
+
+`SheddingCatalog` is the browse-and-select surface.
+
+**`catalog.table`** — a `DataFrame`, one row per (dataset, analyte, model):
+
+| column | meaning |
+| --- | --- |
+| `dataset_id`, `analyte` | which fit |
+| `biomarker`, `specimen`, `reference_event`, `unit` | selection keys |
+| `gene_target`, `dose`, `vaccine_type` | disambiguators, where present |
+| `model` | `exponential` or `gamma` |
+| `n_subjects`, `n_measurements`, `pct_censored` | how much data backs it |
+| `log_a`, `log_b`, `log_c` | estimated population mean of `theta` |
+| `sigma` | measurement error SD (log10) |
+| `peak_day`, `peak_log10`, `half_life_days` | interpretable summaries |
+| `aic`, `converged` | fit quality |
+
+The interpretable columns are what make the table selectable — a modeler picking a
+row wants "peaks day 4.2 at 6.8 log10 gc/mL, declines with a 1.5 day half-life",
+not raw log-parameters. They are computed at `exp(mu)`, the **median individual**,
+not averaged over the population; by Jensen's inequality the trajectory of the
+median individual is not the mean trajectory, and the docstring says so. For the
+gamma model `peak_day = b0/a0`; the exponential model is monotone so `peak_day` is
+`0` and `peak_log10` is the value at the reference event. `half_life_days =
+ln(2)/a0` describes the late-phase decline for both.
+
+**`catalog.skipped`** — a `DataFrame` of analytes that could not be fitted, with a
+reason (`ct_units`, `too_few_subjects`, `no_positive_measurements`,
+`did_not_converge`). Without this a user cannot tell whether a study is missing
+because it is unsuitable or because of a bug.
+
+**`catalog.select(**keys)`** — returns exactly one `SheddingFit`. If the keys match
+zero rows, or more than one, raise `ValueError` listing the candidates and the
+columns that would disambiguate them. Never silently pick.
+
+**`catalog.ensemble(**keys, weights=..., method=...)`** — returns a
+`SheddingEnsemble` over the matching fits (see below).
+
+### Precomputed and shipped
+
+The catalog is built offline and shipped as package data at
+`shedding_hub/data/shedding_catalog.yaml`, loaded by `load_shedding_catalog()`.
+YAML keeps it human-diffable and reuses the `pyaml` dependency; at roughly 250
+rows of small float vectors the size is negligible.
+
+- `scripts/build_shedding_catalog.py` regenerates it, wired to a `make catalog`
+  target alongside the existing `extraction` targets.
+- A CI check asserts every dataset in `data/` appears in **either** `table` or
+  `skipped`, so adding a dataset without regenerating fails loudly. Datasets that
+  are entirely unfittable (Ct-only, or cross-sectional like
+  `jones2021estimating`) legitimately have no `table` rows, so checking `table`
+  alone would wrongly fail; they must still be accounted for in `skipped`. This is
+  a cheap coverage check, not a full refit — refitting everything on every CI run
+  would be needlessly slow, and coverage catches the drift that actually happens.
+- `pyproject.toml` gains a `package-data` entry so the YAML ships in the wheel.
+
+Users can always build their own catalog from datasets we do not host via
+`fit_shedding_models(...)`, including private data.
+
+## The ensemble
+
+For the same biomarker, specimen, reference event, and unit across studies,
+`catalog.ensemble(...)` combines per-study fits. Two methods, sharing the same
+component fits:
+
+**`method="mixture"` (default)** — each simulated individual first draws a study,
+then draws `theta` from that study's MVN:
+
+```
+s     ~ Categorical(w_1..w_S)
+theta ~ MVN(mu_s, Sigma_s)
+```
+
+This preserves between-study heterogeneity, stays multimodal when studies
+genuinely disagree, assumes nothing beyond the per-study fits, and lets every
+simulated agent be traced to a source study (reported as a `source_dataset_id`
+column in the simulation output). `weights` defaults to `n_subjects`, with
+`"equal"` available to stop one large study dominating.
+
+**`method="moment"`** — collapses to a single Gaussian by moment matching:
+
+```
+mu_ens    = sum_s w_s * mu_s
+Sigma_ens = sum_s w_s * Sigma_s + cov_s(mu_s)     # within + between
+```
+
+Unimodal by construction, but it still accounts for between-study variance and
+gives one tidy MVN to report or hand to another tool.
+
+**One fit per study.** After filtering, if a single study contributes more than
+one analyte (`arts2023longitudinal` would contribute both N and ORF1a), raise
+`ValueError` listing the candidates and suggesting a narrowing key such as
+`gene_target`. Silently averaging gene targets, or silently picking one, would put
+an arbitrary scientific choice inside the package.
+
+**Units must match.** A filter spanning mixed units raises, naming them.
 
 ## Simulation
 
-`simulate_shedding` draws `n_individuals` parameter vectors from
-`MVN(mu, Sigma)`, exponentiates to the natural scale, evaluates the model at the
-requested times, and returns a tidy DataFrame.
+`simulate_shedding` accepts either a `SheddingFit` or a `SheddingEnsemble` — both
+expose the same `sample_params(rng, n)` interface — draws `n_individuals`
+parameter vectors, evaluates the model at the requested times, and returns a tidy
+DataFrame:
+
+```
+individual_id  time  log10_value  value  detected  [source_dataset_id]
+```
 
 - **Measurement error is off by default.** An agent-based model wants the true
   shed concentration; assay noise is a property of sampling, not of the host.
@@ -181,7 +314,7 @@ requested times, and returns a tidy DataFrame.
 Fitting happens in the dataset's native reference-event time. `simulate_shedding`
 accepts `incubation_period`, which shifts the origin:
 
-- `None` (default) — `time` is days since the dataset's reference event.
+- `None` (default) — `time` is days since the fit's reference event.
 - a scalar — every individual shares one incubation period.
 - an array of length `n_individuals`, or a callable `(rng, n) -> array` — per
   individual, which adds realistic timing variability across the cohort.
@@ -189,65 +322,76 @@ accepts `incubation_period`, which shifts the origin:
 When supplied, `time` in the output means **days since infection**, and the curve
 is evaluated at `time - incubation_i`. The offset is never assumed: with no
 `incubation_period` the output is explicitly in reference-event time, and
-`reference_event` is carried on the fit object and echoed in the result
-attributes so it cannot be misread.
+`reference_event` is carried on the fit and echoed in the result's `attrs` so it
+cannot be misread.
+
+Note that reference events differ in how far they sit from infection —
+`symptom onset` (90 analytes), `confirmation date` (24), `enrollment` (18),
+`vaccination` (9), `hospital admission` (4) — which is exactly why
+`reference_event` is a selection key and an ensemble is only formed within one.
 
 ## API
-
-Flat functions returning plain objects, matching the package's existing
-`calc_*`/`plot_*` style.
 
 ```python
 import numpy as np
 import shedding_hub as sh
 
-data = sh.load_dataset("woelfel2020virological", local="./data")
+cat = sh.load_shedding_catalog()
+cat.table.query("biomarker == 'SARS-CoV-2' and specimen == 'stool'")
 
-fit = sh.fit_shedding_model(data, model="gamma", specimen="stool")
-fit.population_mean      # mu over log-params
-fit.population_cov       # Sigma
-fit.sigma                # measurement error SD (log10)
-fit.subject_params       # DataFrame, one row per subject
+# one study
+fit = cat.select(
+    dataset_id="woelfel2020virological", analyte="stool", model="gamma",
+)
+
+# or pool the evidence across studies
+ens = cat.ensemble(
+    biomarker="SARS-CoV-2", specimen="stool",
+    reference_event="symptom onset", unit="gc/mL", model="gamma",
+)
 
 traj = sh.simulate_shedding(
-    fit, n_individuals=1000, times=np.arange(0, 30),
+    ens, n_individuals=1000, times=np.arange(0, 30),
     incubation_period=5.0, seed=42,
 )
-#    individual_id  time  log10_value  value  detected
 
-fig = sh.plot_simulated_shedding(traj, fit=fit, observed=data)
+fig = sh.plot_simulated_shedding(traj, fit=ens)
 ```
 
-`fit_shedding_model` also accepts a list of datasets, pooling their subjects into
-one population (no study-level random effect — a documented simplification).
+Fitting fresh, including on private data:
+
+```python
+data = sh.load_dataset("woelfel2020virological", local="./data")
+fit = sh.fit_shedding_model(data, analyte="stool", model="gamma")
+cat = sh.fit_shedding_models([data], models=("exponential", "gamma"))
+```
 
 `SheddingFit` is a dataclass carrying `model`, `method`, `population_mean`,
-`population_cov`, `sigma`, `subject_params`, `censoring_limit`, `reference_event`,
-`unit`, `specimen`, `biomarker`, `dataset_ids`, `converged`, and the exclusion
-counts (`n_excluded_subjects`, `n_dropped_measurements`). It has
-`to_dict()` / `from_dict()` so a fit can be saved to YAML and reloaded — the
-property that lets an ABM fit once and simulate across many runs without
-refitting.
+`population_cov`, `sigma`, `subject_params`, `censoring_limit`, the stratum keys,
+`converged`, `aic`, and the exclusion counts. `SheddingFit`, `SheddingEnsemble`,
+and `SheddingCatalog` all have `to_dict()`/`from_dict()` so a fit can be saved to
+YAML and reloaded — the property that lets an ABM fit once and simulate across
+many runs without refitting.
 
 ## Errors and validation
 
-`ValueError` for: missing dataset keys; Ct or mixed units; unknown `model`; no
-subject meeting `min_observations`; `n_individuals < 1`; an `incubation_period`
-array whose length differs from `n_individuals`; a non-positive-definite `Sigma`
-(possible when very few subjects survive — the message says so and suggests
-pooling datasets).
+`ValueError` for: missing dataset keys; Ct units in a direct fit call; unknown
+`model`; no subject meeting `min_observations`; `select()` matching zero or many
+rows; `ensemble()` spanning mixed units or drawing two analytes from one study;
+`n_individuals < 1`; an `incubation_period` array whose length differs from
+`n_individuals`; a non-positive-definite `Sigma` (possible with very few
+surviving subjects — the message says so and suggests an ensemble instead).
 
 `UserWarning` for: dropped qualitative/unknown-time/non-positive-time
 measurements; excluded subjects; censoring-limit fallback; optimizer
-non-convergence (fit still returned, `converged=False` on the object).
+non-convergence (fit still returned, `converged=False`).
 
 ## Testing
 
 New file `tests/test_simulate.py`, following the existing test modules.
 
 - **Parameter recovery.** Simulate from known `mu`/`Sigma`/`sigma`, fit, assert
-  recovery within tolerance. Run for both models. This is the core correctness
-  test.
+  recovery within tolerance. Both models. This is the core correctness test.
 - **Censoring correctness.** On synthetic data with a known decay rate and an
   artificially high limit, assert the censored fit recovers the truth
   substantially better than a fit that drops censored points. This pins the
@@ -258,15 +402,36 @@ New file `tests/test_simulate.py`, following the existing test modules.
   posterior (`a0 ≈ 0.74`, `c0 ≈ 20.37`, `sigma ≈ 0.92`). Priors there are flat, so
   the MLE should be close to the posterior mean. This validates the Python port
   against the published R workflow.
+- **Ensemble behaviour.** Mixture draws respect weights and populate
+  `source_dataset_id`; moment-matched covariance equals within-plus-between on a
+  hand-computable two-study example; mixed units raise; two analytes from one
+  study raise.
+- **Catalog.** `select()` raises on ambiguous and on empty matches, listing
+  candidates; the shipped catalog loads, round-trips through
+  `to_dict`/`from_dict`, and covers every dataset in `data/` (the CI staleness
+  check); `skipped` records a reason for each unfitted analyte.
 - **Reproducibility.** Same seed produces identical output; different seeds do
   not.
 - **Incubation shift.** Scalar, per-individual array, and callable forms each
   shift the curve as expected; `None` leaves output in reference-event time.
-- **Edge cases.** Ct dataset rejected; subject with all-censored measurements;
-  subjects below `min_observations`; gamma with `t <= 0`; qualitative values;
-  `to_dict`/`from_dict` round-trip.
+- **Edge cases.** Ct analyte rejected; subject with all-censored measurements;
+  subjects below `min_observations`; gamma with `t <= 0`; qualitative values.
 - **Plot** returns a `Figure` and closes it, matching the convention in
   `shedding_peak.py`.
+
+## Build order
+
+The pieces layer cleanly, and each stage is independently testable:
+
+1. **Models and censored fitting** for a single analyte — `fit_shedding_model`,
+   plus the recovery, censoring, and tutorial-agreement tests. This is the
+   scientific core; nothing else is worth building if it does not recover known
+   parameters.
+2. **Simulation** from a single fit, including the incubation shift.
+3. **Catalog** — `fit_shedding_models`, the table with derived columns,
+   `select()`, `skipped`, serialization, the build script and `make catalog`.
+4. **Ensemble** — mixture and moment methods on top of catalog fits.
+5. **Plotting, README, and the CI coverage check.**
 
 ## Limitations
 
@@ -280,17 +445,26 @@ Recorded in module docstrings so users encounter them:
 3. Both models assume shedding begins at the reference event. Datasets with
    substantial pre-onset sampling (`kissler2021densely`, `kissler2021viral`) are
    poorly served; the Teunis onset-offset model is the future answer.
-4. Pooled fits ignore between-study heterogeneity.
+4. The mixture ensemble represents between-study heterogeneity but does not
+   *explain* it — differences in assay, matrix, and population are conflated.
 5. The exponential model cannot represent a rise and will mis-fit datasets
-   sampled from before peak.
+   sampled from before peak. Compare AIC against the gamma fit before choosing.
 
 ## Files
 
-- `shedding_hub/simulate.py` — new module: models, fitting, simulation, plotting.
-- `shedding_hub/__init__.py` — export `fit_shedding_model`, `simulate_shedding`,
-  `plot_simulated_shedding`, `SheddingFit`.
-- `pyproject.toml` — add `scipy` and `numpy` to `dependencies`. `numpy` is
-  currently only transitive via pandas/matplotlib but is used directly.
+- `shedding_hub/simulate.py` — models, fitting, catalog, ensemble, simulation,
+  plotting. If this grows past a comfortable size, split fitting from simulation;
+  the catalog/ensemble types stay with the fitting side.
+- `shedding_hub/__init__.py` — export `fit_shedding_model`,
+  `fit_shedding_models`, `load_shedding_catalog`, `simulate_shedding`,
+  `plot_simulated_shedding`, `SheddingFit`, `SheddingEnsemble`,
+  `SheddingCatalog`.
+- `shedding_hub/data/shedding_catalog.yaml` — shipped precomputed estimates.
+- `scripts/build_shedding_catalog.py` — regenerates the catalog.
+- `Makefile` — `catalog` target.
+- `pyproject.toml` — add `scipy` and `numpy` to `dependencies` (`numpy` is
+  currently only transitive via pandas/matplotlib but is used directly), plus a
+  `package-data` entry for the catalog.
 - `tests/test_simulate.py` — new tests.
 - `README.md` — a short section under "Analyzing the Data" with a doctest-safe
   example (README doctests run in CI).
