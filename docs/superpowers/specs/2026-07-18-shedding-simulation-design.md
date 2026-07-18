@@ -28,8 +28,9 @@ pick one study, or an ensemble across studies → simulate individuals.**
 ## Scope
 
 **In:** exponential and gamma models; censored maximum-likelihood fitting per
-analyte; a browsable catalog of estimates shipped with the package; a cross-study
-ensemble; simulation of synthetic individuals; one plotting helper.
+analyte; a browsable catalog of estimates shipped with the package; simulation
+from a single study, from a user-chosen subset of studies, or from every matching
+study via a cross-study ensemble; one plotting helper.
 
 **Out (deliberately):** the Teunis two-compartment model with an estimated
 shedding-onset offset; MCMC/posterior inference; Ct-scale modelling. Each is a
@@ -201,19 +202,30 @@ applied.
 | `gene_target`, `dose`, `vaccine_type` | disambiguators, where present |
 | `model` | `exponential` or `gamma` |
 | `n_subjects`, `n_measurements`, `pct_censored` | how much data backs it |
-| `log_a`, `log_b`, `log_c` | estimated population mean of `theta` |
+| `a_median`, `b_median`, `c_median` | model parameters of the median individual |
 | `sigma` | measurement error SD (log10) |
 | `peak_day`, `peak_log10`, `half_life_days` | interpretable summaries |
 | `aic`, `converged` | fit quality |
 
+**Everything in the table describes the median individual, and says so.** Because
+`theta = log(a, b, c)` is normal, the parameters themselves are lognormal, so
+`exp(mu)` is exactly their median — not their mean. Reporting these as medians is
+therefore the accurate label rather than a compromise, and it sidesteps the
+Jensen's-inequality trap of implying a mean. The one thing that remains true and
+is documented: the median individual's *trajectory* is not the population's mean
+trajectory, so a user summing simulated load across a cohort should simulate,
+not scale up this row.
+
 The interpretable columns are what make the table selectable — a modeler picking a
 row wants "peaks day 4.2 at 6.8 log10 gc/mL, declines with a 1.5 day half-life",
-not raw log-parameters. They are computed at `exp(mu)`, the **median individual**,
-not averaged over the population; by Jensen's inequality the trajectory of the
-median individual is not the mean trajectory, and the docstring says so. For the
-gamma model `peak_day = b0/a0`; the exponential model is monotone so `peak_day` is
-`0` and `peak_log10` is the value at the reference event. `half_life_days =
-ln(2)/a0` describes the late-phase decline for both.
+not raw log-parameters. For the gamma model `peak_day = b_median / a_median`; the
+exponential model is monotone so `peak_day` is `0` and `peak_log10` is the value
+at the reference event. `half_life_days = ln(2) / a_median` describes the
+late-phase decline for both.
+
+The table is the browsing surface and carries these human-readable medians; the
+full `mu` and `Sigma` needed to actually simulate live on the `SheddingFit`
+objects (and in the shipped YAML), so no precision is lost to the summary.
 
 **`catalog.skipped`** — a `DataFrame` of analytes that could not be fitted, with a
 reason (`ct_units`, `too_few_subjects`, `no_positive_measurements`,
@@ -224,8 +236,9 @@ because it is unsuitable or because of a bug.
 zero rows, or more than one, raise `ValueError` listing the candidates and the
 columns that would disambiguate them. Never silently pick.
 
-**`catalog.ensemble(**keys, weights=..., method=...)`** — returns a
-`SheddingEnsemble` over the matching fits (see below).
+**`catalog.ensemble(**keys, dataset_ids=None, weights=..., method=...)`** —
+returns a `SheddingEnsemble` over the matching fits, optionally restricted to a
+named subset of studies (see below).
 
 ### Precomputed and shipped
 
@@ -250,9 +263,45 @@ Users can always build their own catalog from datasets we do not host via
 
 ## The ensemble
 
-For the same biomarker, specimen, reference event, and unit across studies,
-`catalog.ensemble(...)` combines per-study fits. Two methods, sharing the same
-component fits:
+### Choosing what goes into it
+
+The user controls which studies contribute, at three levels of specificity:
+
+```python
+# 1. one study only
+fit = cat.select(dataset_id="woelfel2020virological", analyte="stool",
+                 model="gamma")
+
+# 2. a chosen subset of studies
+ens = cat.ensemble(
+    biomarker="SARS-CoV-2", specimen="stool", reference_event="symptom onset",
+    unit="gc/mL", model="gamma",
+    dataset_ids=["woelfel2020virological", "wang2020fecal"],
+)
+
+# 3. every matching study
+ens = cat.ensemble(
+    biomarker="SARS-CoV-2", specimen="stool", reference_event="symptom onset",
+    unit="gc/mL", model="gamma",
+)
+
+# or assemble explicitly, mixing catalog fits with your own fresh ones
+ens = sh.make_ensemble([fit_a, fit_b, my_own_fit], weights="equal")
+```
+
+`dataset_ids` narrows an otherwise-matching filter; `make_ensemble` takes fits
+directly and is the escape hatch for combining catalog estimates with fits from
+private data. A **single-component ensemble is legal** and behaves identically to
+the underlying fit, so a user can write one code path and vary only how many
+studies feed it.
+
+`make_ensemble` still enforces the compatibility rules below — matching unit,
+reference event, biomarker, specimen, and model — because those are correctness
+constraints, not conveniences of the catalog.
+
+### Combining them
+
+Two methods, sharing the same component fits:
 
 **`method="mixture"` (default)** — each simulated individual first draws a study,
 then draws `theta` from that study's MVN:
@@ -285,6 +334,15 @@ one analyte (`arts2023longitudinal` would contribute both N and ORF1a), raise
 an arbitrary scientific choice inside the package.
 
 **Units must match.** A filter spanning mixed units raises, naming them.
+
+**Seeing what went in.** `ens.components` is a DataFrame with one row per
+contributing fit, using the same columns as the catalog table, so the user can
+inspect exactly which studies and medians the ensemble rests on. A single
+median-individual row is well defined only under `method="moment"` (where it is
+`exp(mu_ens)`) and is exposed there as `ens.median_params`. For a mixture there is
+no closed-form median of the mixed distribution, so rather than report a
+misleading one, the docs point users to simulate and take empirical quantiles of
+the result — which is the operation they actually want anyway.
 
 ## Simulation
 
@@ -339,23 +397,32 @@ import shedding_hub as sh
 cat = sh.load_shedding_catalog()
 cat.table.query("biomarker == 'SARS-CoV-2' and specimen == 'stool'")
 
-# one study
-fit = cat.select(
+# one study ...
+source = cat.select(
     dataset_id="woelfel2020virological", analyte="stool", model="gamma",
 )
 
-# or pool the evidence across studies
-ens = cat.ensemble(
+# ... a chosen subset of studies ...
+source = cat.ensemble(
+    biomarker="SARS-CoV-2", specimen="stool",
+    reference_event="symptom onset", unit="gc/mL", model="gamma",
+    dataset_ids=["woelfel2020virological", "wang2020fecal"],
+)
+
+# ... or every matching study
+source = cat.ensemble(
     biomarker="SARS-CoV-2", specimen="stool",
     reference_event="symptom onset", unit="gc/mL", model="gamma",
 )
+source.components      # which studies contribute, and their medians
 
+# identical from here regardless of which was chosen
 traj = sh.simulate_shedding(
-    ens, n_individuals=1000, times=np.arange(0, 30),
+    source, n_individuals=1000, times=np.arange(0, 30),
     incubation_period=5.0, seed=42,
 )
 
-fig = sh.plot_simulated_shedding(traj, fit=ens)
+fig = sh.plot_simulated_shedding(traj, source=source)
 ```
 
 Fitting fresh, including on private data:
@@ -377,10 +444,13 @@ many runs without refitting.
 
 `ValueError` for: missing dataset keys; Ct units in a direct fit call; unknown
 `model`; no subject meeting `min_observations`; `select()` matching zero or many
-rows; `ensemble()` spanning mixed units or drawing two analytes from one study;
-`n_individuals < 1`; an `incubation_period` array whose length differs from
-`n_individuals`; a non-positive-definite `Sigma` (possible with very few
-surviving subjects — the message says so and suggests an ensemble instead).
+rows; `ensemble()` or `make_ensemble()` spanning mixed units, reference events,
+biomarkers, specimens, or models, or drawing two analytes from one study;
+`dataset_ids` naming a study with no matching fit (rather than silently dropping
+it, which would quietly shrink the ensemble); `n_individuals < 1`; an
+`incubation_period` array whose length differs from `n_individuals`; a
+non-positive-definite `Sigma` (possible with very few surviving subjects — the
+message says so and suggests an ensemble instead).
 
 `UserWarning` for: dropped qualitative/unknown-time/non-positive-time
 measurements; excluded subjects; censoring-limit fallback; optimizer
@@ -406,6 +476,14 @@ New file `tests/test_simulate.py`, following the existing test modules.
   `source_dataset_id`; moment-matched covariance equals within-plus-between on a
   hand-computable two-study example; mixed units raise; two analytes from one
   study raise.
+- **Ensemble membership.** `dataset_ids` restricts components to exactly the
+  named studies; an unmatched name raises; `make_ensemble` accepts fits not from
+  the catalog; a single-component ensemble produces the same distribution as the
+  underlying fit (same seed, same draws), which is what lets users keep one code
+  path across all three selection levels; `components` lists the contributing
+  fits.
+- **Median reporting.** Table `a_median`/`b_median`/`c_median` equal `exp(mu)`,
+  and `peak_day` for a gamma row equals `b_median / a_median`.
 - **Catalog.** `select()` raises on ambiguous and on empty matches, listing
   candidates; the shipped catalog loads, round-trips through
   `to_dict`/`from_dict`, and covers every dataset in `data/` (the CI staleness
@@ -430,7 +508,9 @@ The pieces layer cleanly, and each stage is independently testable:
 2. **Simulation** from a single fit, including the incubation shift.
 3. **Catalog** — `fit_shedding_models`, the table with derived columns,
    `select()`, `skipped`, serialization, the build script and `make catalog`.
-4. **Ensemble** — mixture and moment methods on top of catalog fits.
+4. **Ensemble** — mixture and moment methods on top of catalog fits, plus the
+   three selection levels (one study, a chosen subset, everything matching) and
+   `make_ensemble` for explicitly assembled fits.
 5. **Plotting, README, and the CI coverage check.**
 
 ## Limitations
@@ -456,9 +536,9 @@ Recorded in module docstrings so users encounter them:
   plotting. If this grows past a comfortable size, split fitting from simulation;
   the catalog/ensemble types stay with the fitting side.
 - `shedding_hub/__init__.py` — export `fit_shedding_model`,
-  `fit_shedding_models`, `load_shedding_catalog`, `simulate_shedding`,
-  `plot_simulated_shedding`, `SheddingFit`, `SheddingEnsemble`,
-  `SheddingCatalog`.
+  `fit_shedding_models`, `load_shedding_catalog`, `make_ensemble`,
+  `simulate_shedding`, `plot_simulated_shedding`, `SheddingFit`,
+  `SheddingEnsemble`, `SheddingCatalog`.
 - `shedding_hub/data/shedding_catalog.yaml` — shipped precomputed estimates.
 - `scripts/build_shedding_catalog.py` — regenerates the catalog.
 - `Makefile` — `catalog` target.
