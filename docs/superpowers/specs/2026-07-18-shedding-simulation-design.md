@@ -164,8 +164,25 @@ Measurements are extracted per participant for the analyte being fitted, then:
   (the tutorial hit this and hand-set `censlim = 1.96` against a declared limit of
   2). When the resolved limit is unknown or not strictly below the smallest
   observed positive, fall back to just below that smallest positive value and
-  warn. A per-measurement `limit_of_quantification` overrides the analyte-level
-  value when present.
+  warn. This rule reproduces both of the tutorial's hand-set limits
+  automatically — 2.0 for the single-subject fit, 1.96 for the nine-subject fit.
+
+  The schema also allows a **per-measurement** `limit_of_quantification`. It is
+  deliberately **not** implemented: every one of the 271 measurements declaring
+  one belongs to `arts2023longitudinal`'s `stool_crAssphage` analyte, which is
+  now excluded as a non-pathogen indicator (below). No fitted analyte declares a
+  per-measurement limit, so a single scalar limit per fit is correct and the
+  likelihood stays simpler. Revisit if a future dataset declares them on a
+  pathogen analyte.
+- **Non-pathogen indicator biomarkers are rejected.** `crAssphage`, `PMMoV`, and
+  `mtDNA` are fecal-strength and normalization markers, not pathogens shed by
+  infected people — they have no time-since-infection trajectory, so a shedding
+  curve fitted to one is meaningless. This excludes exactly 4 analytes across 2
+  studies (`arts2023longitudinal` stool_PMMoV and stool_crAssphage,
+  `liu2024longitudinal` stool_PMMoV and stool_mtDNA); neither study loses its
+  SARS-CoV-2 analytes. Vaccine-strain biomarkers such as `rotavirus vaccine`
+  stay in scope: live-attenuated shedding after vaccination is a real trajectory
+  with `vaccination` as its reference event.
 - **Qualitative positives are dropped with a warning.** `positive`,
   `weak positive`, `strong positive` and `inconclusive` carry no numeric value and
   cannot enter a normal likelihood. This is 172 measurements repository-wide
@@ -228,7 +245,8 @@ full `mu` and `Sigma` needed to actually simulate live on the `SheddingFit`
 objects (and in the shipped YAML), so no precision is lost to the summary.
 
 **`catalog.skipped`** — a `DataFrame` of analytes that could not be fitted, with a
-reason (`ct_units`, `too_few_subjects`, `no_positive_measurements`,
+reason (`ct_units`, `non_pathogen_biomarker`, `too_few_subjects`,
+`no_positive_measurements`,
 `did_not_converge`). Without this a user cannot tell whether a study is missing
 because it is unsuitable or because of a bug.
 
@@ -519,15 +537,37 @@ Recorded in module docstrings so users encounter them:
 
 1. Two-stage fitting does not shrink individual estimates, so between-subject
    variance is overestimated (see Fitting above).
-2. Point estimates only — no parameter uncertainty propagates into simulations.
+2. **The gamma model's `b0` is downward-biased at realistic sampling densities.**
+   Measured during implementation against known truth, holding 60 subjects and
+   varying observations per subject (mean of 3 seeds, bias in log units):
+
+   | obs/subject | `a0` | `b0` | `c0` |
+   | --- | --- | --- | --- |
+   | 14 | −0.09 | **−0.55** | −0.00 |
+   | 28 | −0.02 | **−0.21** | −0.00 |
+   | 56 | −0.05 | **−0.10** | +0.00 |
+   | 112 | −0.02 | **−0.05** | +0.00 |
+
+   The bias roughly halves as observations double — ordinary finite-sample
+   maximum-likelihood bias, so the estimator is consistent and vanishes
+   asymptotically. But real studies sample sparsely: at ~14 observations per
+   subject, `b0` is low by about half a log unit while `a0` and `c0` are
+   essentially unbiased. Since `peak_day = b0 / a0`, **the catalog's `peak_day`
+   is systematically early for sparsely-sampled studies** — on the order of a
+   third. Read it as a lower bound on time-to-peak, and prefer studies with
+   denser sampling when peak timing is what matters. This strengthens the case
+   for the hierarchical Bayesian backend, which would shrink individual
+   estimates and reduce this bias. A test pins the direction and mechanism so it
+   cannot change silently.
+3. Point estimates only — no parameter uncertainty propagates into simulations.
    Cohort spread reflects between-individual variation, not estimation
    uncertainty.
-3. Both models assume shedding begins at the reference event. Datasets with
+4. Both models assume shedding begins at the reference event. Datasets with
    substantial pre-onset sampling (`kissler2021densely`, `kissler2021viral`) are
    poorly served; the Teunis onset-offset model is the future answer.
-4. The mixture ensemble represents between-study heterogeneity but does not
+5. The mixture ensemble represents between-study heterogeneity but does not
    *explain* it — differences in assay, matrix, and population are conflated.
-5. The exponential model cannot represent a rise and will mis-fit datasets
+6. The exponential model cannot represent a rise and will mis-fit datasets
    sampled from before peak. Compare AIC against the gamma fit before choosing.
 
 ## Files
