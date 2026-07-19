@@ -75,21 +75,6 @@ def test_censoring_limit_falls_back_below_smallest_positive(simple_dataset):
     assert obs.censoring_limit == pytest.approx(5.0 - 0.01)
 
 
-def test_per_measurement_loq_override_takes_effect(simple_dataset):
-    # Subject 1's "negative" measurement (index 2, time=3) declares its own LOQ,
-    # different from the analyte-level LOQ of 100.
-    simple_dataset["participants"][0]["measurements"][2]["limit_of_quantification"] = 50
-    obs = prepare_observations(simple_dataset, "stool", "exponential")
-    assert obs.censoring_limits.shape == obs.times.shape
-    censored_position = np.flatnonzero(obs.censored)[0]
-    assert obs.censoring_limits[censored_position] == pytest.approx(np.log10(50))
-    other_positions = np.flatnonzero(~obs.censored)
-    np.testing.assert_allclose(
-        obs.censoring_limits[other_positions], obs.censoring_limit
-    )
-    assert obs.censoring_limits[censored_position] != pytest.approx(obs.censoring_limit)
-
-
 def test_qualitative_and_unknown_time_are_dropped_with_warning(simple_dataset):
     with pytest.warns(UserWarning):
         obs = prepare_observations(simple_dataset, "stool", "exponential")
@@ -123,6 +108,41 @@ def test_ct_analyte_is_rejected():
     with pytest.raises(SheddingDataError) as excinfo:
         prepare_observations(dataset, "swab", "exponential")
     assert excinfo.value.reason == "ct_units"
+
+
+def test_non_pathogen_biomarker_is_rejected():
+    # Plenty of clean, numeric, positive-time data for both subjects, so a
+    # rejection here can only be the biomarker check, not a data shortage.
+    dataset = {
+        "dataset_id": "crassphage_study",
+        "analytes": {
+            "stool_crAssphage": {
+                "specimen": "stool",
+                "biomarker": "crAssphage",
+                "reference_event": "symptom onset",
+                "unit": "gc/dry gram",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool_crAssphage", "time": 1, "value": 1e6},
+                    {"analyte": "stool_crAssphage", "time": 2, "value": 1e5},
+                ]
+            },
+            {
+                "measurements": [
+                    {"analyte": "stool_crAssphage", "time": 1, "value": 1e7},
+                    {"analyte": "stool_crAssphage", "time": 2, "value": 1e6},
+                ]
+            },
+        ],
+    }
+    with pytest.raises(SheddingDataError) as excinfo:
+        prepare_observations(dataset, "stool_crAssphage", "exponential")
+    assert excinfo.value.reason == "non_pathogen_biomarker"
 
 
 def test_gamma_drops_non_positive_times(simple_dataset):

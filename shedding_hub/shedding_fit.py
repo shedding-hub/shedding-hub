@@ -21,15 +21,22 @@ from .shedding_models import PARAM_NAMES, validate_model
 CENSORING_MARGIN = 0.01
 NEGATIVE_VALUE = "negative"
 
+# Fecal-strength / normalization indicators, not pathogens shed by infected
+# people. They have no time-since-infection trajectory, so fitting a shedding
+# curve to them is meaningless regardless of how much data is available.
+NON_PATHOGEN_BIOMARKERS = frozenset({"crAssphage", "PMMoV", "mtDNA"})
+
 
 class SheddingDataError(ValueError):
     """
     Raised when an analyte cannot be fitted.
 
     Attributes:
-        reason: Machine-readable cause, one of ``ct_units``, ``too_few_subjects``,
-            ``no_positive_measurements``, ``unknown_analyte``. The catalog builder
-            records this so a missing study reads as unsuitable, not as a bug.
+        reason: Machine-readable cause, one of ``ct_units``,
+            ``non_pathogen_biomarker``, ``too_few_subjects``,
+            ``no_positive_measurements``, ``unknown_analyte``. The catalog
+            builder records this so a missing study reads as unsuitable, not
+            as a bug.
     """
 
     def __init__(self, message: str, reason: str):
@@ -39,24 +46,13 @@ class SheddingDataError(ValueError):
 
 @dataclass
 class Observations:
-    """
-    Model-ready observations for a single analyte.
-
-    ``censoring_limit`` is the single representative, analyte-level log10
-    limit — what gets reported and what simulation uses for its ``detected``
-    flag. ``censoring_limits`` is the per-observation log10 limit the
-    likelihood should actually use: it equals ``censoring_limit`` everywhere
-    except at observations whose measurement declared its own
-    ``limit_of_quantification``, which overrides the analyte-level value for
-    that one observation only.
-    """
+    """Model-ready observations for a single analyte."""
 
     subject_index: np.ndarray
     times: np.ndarray
     values: np.ndarray
     censored: np.ndarray
     censoring_limit: float
-    censoring_limits: np.ndarray
     subject_ids: list = field(default_factory=list)
     n_subjects: int = 0
     n_excluded_subjects: int = 0
@@ -122,6 +118,12 @@ def prepare_observations(
     """
     Extract model-ready observations for one analyte of one dataset.
 
+    Only the analyte-level ``limit_of_quantification``/``limit_of_detection``
+    are used to resolve the censoring limit; no analyte in the repository that
+    is eligible for fitting declares a per-measurement limit (the one analyte
+    that did, crAssphage, is a non-pathogen indicator and is rejected before
+    the censoring limit is ever resolved).
+
     Args:
         dataset: Dataset dictionary from ``load_dataset``.
         analyte: Key into ``dataset["analytes"]``.
@@ -136,8 +138,9 @@ def prepare_observations(
         from zero over the retained subjects.
 
     Raises:
-        SheddingDataError: The analyte is unknown, uses cycle-threshold units, has
-            no positive measurements, or leaves no subject with enough data.
+        SheddingDataError: The analyte is unknown, uses cycle-threshold units,
+            is a non-pathogen indicator biomarker, has no positive
+            measurements, or leaves no subject with enough data.
     """
     validate_model(model)
     if not dataset or not isinstance(dataset, dict):
@@ -163,6 +166,16 @@ def prepare_observations(
             "ct_units",
         )
 
+    biomarker = analyte_spec.get("biomarker")
+    if biomarker in NON_PATHOGEN_BIOMARKERS:
+        raise SheddingDataError(
+            f"Analyte {analyte!r} measures {biomarker!r}, a fecal-strength/"
+            "normalization indicator rather than a pathogen shed by infected "
+            "people. It has no time-since-infection trajectory, so neither "
+            "shedding model applies. Select a pathogen analyte instead.",
+            "non_pathogen_biomarker",
+        )
+
     if min_observations is None:
         min_observations = len(PARAM_NAMES[model])
 
@@ -174,7 +187,6 @@ def prepare_observations(
         times: list[float] = []
         values: list[float] = []
         censored: list[bool] = []
-        limits: list[float | None] = []
         for measurement in participant.get("measurements") or []:
             if measurement.get("analyte") != analyte:
                 continue
@@ -192,9 +204,6 @@ def prepare_observations(
                     times.append(time)
                     values.append(np.nan)
                     censored.append(True)
-                    limits.append(
-                        _numeric_limit(measurement.get("limit_of_quantification"))
-                    )
                 else:
                     n_dropped += 1
                 continue
@@ -204,7 +213,6 @@ def prepare_observations(
             times.append(time)
             values.append(math.log10(float(value)))
             censored.append(False)
-            limits.append(None)
 
         if times:
             per_subject.append(
@@ -212,7 +220,6 @@ def prepare_observations(
                     "times": times,
                     "values": values,
                     "censored": censored,
-                    "limits": limits,
                 }
             )
             subject_ids.append(participant.get("patient_id", position + 1))
@@ -263,26 +270,12 @@ def prepare_observations(
 
     censoring_limit = _resolve_censoring_limit(analyte_spec, observed)
 
-    # Per-observation censoring limit: the analyte-level scalar, overridden
-    # wherever that measurement declared its own limit_of_quantification.
-    # `_numeric_limit` already filtered out unusable overrides (e.g. "unknown"
-    # or non-positive), so anything left here is a genuine, positive override.
-    limits_flat = [limit for s in retained for limit in s["limits"]]
-    censoring_limits = np.array(
-        [
-            math.log10(limit) if limit is not None else censoring_limit
-            for limit in limits_flat
-        ],
-        dtype=float,
-    )
-
     return Observations(
         subject_index=subject_index,
         times=times_array,
         values=values_array,
         censored=censored_array,
         censoring_limit=censoring_limit,
-        censoring_limits=censoring_limits,
         subject_ids=retained_ids,
         n_subjects=len(retained),
         n_excluded_subjects=n_excluded,
