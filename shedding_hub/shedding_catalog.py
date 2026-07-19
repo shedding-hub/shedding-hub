@@ -114,6 +114,7 @@ def _fit_to_payload(fit: SheddingFit) -> dict:
             "n_measurements": int(fit.n_measurements),
             "n_censored": int(fit.n_censored),
             "n_excluded_subjects": int(fit.n_excluded_subjects),
+            "n_degenerate_subjects": int(fit.n_degenerate_subjects),
             "n_dropped_measurements": int(fit.n_dropped_measurements),
             "converged": bool(fit.converged),
             "log_likelihood": float(fit.log_likelihood),
@@ -145,6 +146,9 @@ def _fit_from_payload(payload: dict) -> SheddingFit:
         n_measurements=int(payload["n_measurements"]),
         n_censored=int(payload["n_censored"]),
         n_excluded_subjects=int(payload["n_excluded_subjects"]),
+        # Defaulted, not required: catalogs written before degeneracy detection
+        # existed have no such key, and every fit in them predates the concept.
+        n_degenerate_subjects=int(payload.get("n_degenerate_subjects", 0)),
         n_dropped_measurements=int(payload["n_dropped_measurements"]),
         converged=bool(payload["converged"]),
         log_likelihood=float(payload["log_likelihood"]),

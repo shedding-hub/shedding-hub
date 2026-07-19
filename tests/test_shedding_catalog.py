@@ -7,6 +7,42 @@ import pandas as pd
 import pytest
 
 from shedding_hub.shedding_catalog import SheddingCatalog, fit_shedding_models
+from shedding_hub.shedding_fit import SheddingFit
+
+
+def _fit_with_degenerates(n_degenerate):
+    """A directly-constructed fit carrying a chosen ``n_degenerate_subjects``.
+
+    Built by hand rather than fitted so the count is exactly what the test
+    intends, independent of what any optimizer happens to do.
+    """
+    return SheddingFit(
+        model="exponential",
+        method="mle",
+        population_mean=np.array([np.log(0.6), np.log(18.0)]),
+        population_cov=np.diag([0.04, 0.04]),
+        sigma=0.3,
+        subject_params=None,
+        censoring_limit=2.0,
+        dataset_id="synthetic",
+        analyte="stool",
+        biomarker="SARS-CoV-2",
+        specimen="stool",
+        reference_event="symptom onset",
+        unit="gc/mL",
+        gene_target=None,
+        dose=None,
+        vaccine_type=None,
+        n_subjects=10,
+        n_measurements=100,
+        n_censored=5,
+        n_excluded_subjects=0,
+        n_dropped_measurements=0,
+        converged=True,
+        log_likelihood=-10.0,
+        aic=42.0,
+        n_degenerate_subjects=n_degenerate,
+    )
 
 
 @pytest.fixture
@@ -160,7 +196,33 @@ def test_round_trip_serialization(two_study_catalog, tmp_path):
     assert copy.aic == pytest.approx(original.aic)
     assert copy.converged == original.converged
     assert copy.n_subjects == original.n_subjects
+    assert copy.n_excluded_subjects == original.n_excluded_subjects
+    assert copy.n_degenerate_subjects == original.n_degenerate_subjects
+    assert copy.n_dropped_measurements == original.n_dropped_measurements
+    assert copy.n_measurements == original.n_measurements
+    assert copy.n_censored == original.n_censored
+    assert copy.log_likelihood == pytest.approx(original.log_likelihood)
+    assert copy.method == original.method
     assert copy.subject_params is None
+
+
+def test_round_trip_preserves_a_non_zero_degenerate_count():
+    """``n_degenerate_subjects`` must survive serialization on its own merits.
+
+    ``test_round_trip_serialization`` compares fits whose count happens to be
+    zero, which a field dropped from the payload would also satisfy — the
+    default is zero. Round-tripping a non-zero count is what actually pins it.
+    """
+    fit = _fit_with_degenerates(3)
+    restored = SheddingCatalog.from_dict(SheddingCatalog(fits=[fit]).to_dict())
+    assert restored.fits[0].n_degenerate_subjects == 3
+
+
+def test_fit_from_payload_defaults_missing_degenerate_count():
+    """Catalogs written before degeneracy detection existed must still load."""
+    payload = SheddingCatalog(fits=[_fit_with_degenerates(3)]).to_dict()
+    del payload["fits"][0]["n_degenerate_subjects"]
+    assert SheddingCatalog.from_dict(payload).fits[0].n_degenerate_subjects == 0
 
 
 def test_restored_fit_can_still_simulate(two_study_catalog):

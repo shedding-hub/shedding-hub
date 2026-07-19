@@ -323,12 +323,23 @@ def test_gamma_b0_is_downward_biased_at_sparse_sampling(make_synthetic_dataset):
     14/28/56/112 observations per subject: the bias shrinks by about half
     each time the density doubles, then vanishes). At the ~14-point sampling
     density typical of real shedding studies, this shows up as population_mean
-    understating b0 by roughly 0.5 log units, which -- because
-    peak_day = b0 / a0 -- makes the fitted peak-shedding day systematically
-    early. This test pins that direction and mechanism (not just its
-    existence) so that a future change to the aggregation that makes the bias
-    worse, or removes the effect entirely without a corresponding fix
-    elsewhere, is caught rather than silently accepted.
+    understating b0, which -- because peak_day = b0 / a0 -- makes the fitted
+    peak-shedding day somewhat early. This test pins that direction and
+    mechanism (not just its existence) so that a future change to the
+    aggregation that makes the bias worse, or removes the effect entirely
+    without a corresponding fix elsewhere, is caught rather than silently
+    accepted.
+
+    The margin below was 0.2, calibrated when the bias measured roughly 0.5
+    log units. Most of that turned out to be an initialization artifact rather
+    than two-stage bias: the gamma fit was seeded from its own collinear
+    [1, ln(t), -t] design, whose negative coefficients were clipped onto the
+    parameter floor that the optimizer cannot escape. With the fit seeded from
+    the well-conditioned decay design instead, the remaining genuine bias
+    measures 0.15 log units on average over six seeds (range 0.02 to 0.27), so
+    0.2 no longer holds at every seed and the margin is 0.05. Both quantities
+    are seed-noisy at 60 subjects; a failure here means checking the
+    distribution across seeds before concluding anything has regressed.
     """
     mu = np.array([np.log(0.5), np.log(1.5), np.log(12.0)])
     cov = np.diag([0.04, 0.04, 0.04])
@@ -346,7 +357,7 @@ def test_gamma_b0_is_downward_biased_at_sparse_sampling(make_synthetic_dataset):
     dense_error = abs(dense_fit.population_mean[1] - true_b0)
 
     # (a) the sparse fit understates b0 by a clear margin.
-    assert sparse_error > 0.2
+    assert sparse_error > 0.05
     # (b) denser sampling recovers b0 closer to the truth than sparse sampling
     # -- the direction and mechanism (more data shrinks this specific bias),
     # not just that some bias exists.
@@ -444,7 +455,115 @@ def test_subject_params_has_one_row_per_subject(make_synthetic_dataset):
     )
     fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
     assert len(fit.subject_params) == 12
-    assert list(fit.subject_params.columns) == ["subject_id", "a0", "c0"]
+    assert list(fit.subject_params.columns) == [
+        "subject_id",
+        "a0",
+        "c0",
+        "degenerate",
+    ]
+
+
+def _flat_dataset(n_flat, n_decaying=0):
+    """Subjects whose concentration never changes, optionally plus real decays.
+
+    A perfectly flat trajectory has no decay to estimate, so its a0 is driven
+    to the positivity floor -- the collapse this fix detects, reproduced
+    deliberately rather than waited for.
+    """
+    participants = [
+        {
+            "measurements": [
+                {"analyte": "stool", "time": t, "value": 1e5} for t in range(1, 11)
+            ]
+        }
+        for _ in range(n_flat)
+    ]
+    participants += [
+        {
+            "measurements": [
+                {"analyte": "stool", "time": t, "value": 1e7 * np.exp(-rate * t)}
+                for t in range(1, 11)
+            ]
+        }
+        for rate in np.linspace(0.4, 0.7, n_decaying)
+    ]
+    return {
+        "dataset_id": "degenerate_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": participants,
+    }
+
+
+def test_all_subjects_collapsing_raises_degenerate_fit():
+    with pytest.raises(SheddingDataError) as excinfo:
+        fit_shedding_model(_flat_dataset(3), analyte="stool", model="exponential")
+    assert excinfo.value.reason == "degenerate_fit"
+    assert "not identifiable" in str(excinfo.value)
+
+
+def test_degenerate_subject_is_flagged_but_excluded_from_the_population():
+    """The collapsed subject stays inspectable; it just stops voting."""
+    dataset = _flat_dataset(n_flat=1, n_decaying=3)
+    with pytest.warns(UserWarning, match="collapsed onto the bounds"):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+
+    assert fit.n_degenerate_subjects == 1
+    # Retained in subject_params, flagged, and still the 4 subjects fitted.
+    assert len(fit.subject_params) == 4
+    assert fit.n_subjects == 4
+    assert fit.subject_params["degenerate"].sum() == 1
+
+    # The population summary reflects only the three real decays, whose rates
+    # span 0.4 to 0.7 -- the collapsed subject's a0 of ~1e-6 would have dragged
+    # the mean of log(a0) down by several units had it been included.
+    assert 0.4 <= fit.median_params[0] <= 0.7
+    assert fit.half_life_days == pytest.approx(np.log(2) / fit.median_params[0])
+
+
+def test_population_covariance_ignores_degenerate_subjects():
+    """Sigma must be estimated from the retained subjects alone."""
+    dataset = _flat_dataset(n_flat=1, n_decaying=3)
+    with pytest.warns(UserWarning, match="collapsed onto the bounds"):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+
+    theta = np.log(
+        fit.subject_params.loc[
+            ~fit.subject_params["degenerate"], list(fit.param_names)
+        ].to_numpy(dtype=float)
+    )
+    np.testing.assert_allclose(fit.population_mean, theta.mean(axis=0))
+    np.testing.assert_allclose(fit.population_cov, np.cov(theta, rowvar=False, ddof=1))
+
+
+def test_single_subject_fit_still_allowed_when_not_degenerate():
+    """A one-subject fit has no estimable covariance, but is not degenerate.
+
+    The 'fewer than two subjects' guard must key off collapse, not off the
+    subject count -- test_shedding_tutorial_agreement.py fits exactly one
+    subject and must keep working.
+    """
+    dataset = _flat_dataset(n_flat=0, n_decaying=1)
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.n_subjects == 1
+    assert fit.n_degenerate_subjects == 0
+    np.testing.assert_allclose(fit.population_cov, np.zeros((2, 2)))
+
+
+def test_single_degenerate_subject_raises():
+    with pytest.raises(SheddingDataError) as excinfo:
+        fit_shedding_model(
+            _flat_dataset(n_flat=1), analyte="stool", model="exponential"
+        )
+    assert excinfo.value.reason == "degenerate_fit"
 
 
 def _minimal_fit(population_mean, population_cov, model="exponential"):
@@ -502,3 +621,97 @@ def test_sample_params_accepts_zero_covariance_producing_identical_individuals()
     params, sources = fit.sample_params(rng, 4)
     np.testing.assert_allclose(params, np.tile(np.exp(mean), (4, 1)))
     assert set(sources.tolist()) == {"synthetic"}
+
+
+# ---------------------------------------------------------------------------
+# Real-data regression guards.
+#
+# Everything above this line is synthetic, and every one of those tests passed
+# while the fitter was silently broken. Per-subject fits were initialized at the
+# parameter floor _MIN_PARAM and could never escape it -- because the optimizer
+# works on theta = log(param), the gradient carries a factor of param and
+# vanishes as the parameter approaches zero -- and those collapsed subjects were
+# then averaged into the population mean. On woelfel2020virological stool under
+# the gamma model, four of nine subjects pinned at a0 = b0 = 1e-6, which
+# produced a reported SARS-CoV-2 half-life of 278 days and a peak of 0.31 log10
+# (about 2 gc/mL) for data whose concentrations run 10^2 to 10^7. Repository-wide
+# it produced 37 fits with half-lives beyond a year.
+#
+# Synthetic fixtures never reproduced it because they are generated from
+# well-behaved parameters over dense, well-conditioned sampling grids. Only real
+# data has the sparse, post-peak sampling windows that make the gamma design
+# matrix collinear. These tests are therefore the guard that the synthetic suite
+# structurally cannot provide, and they assert physical plausibility rather than
+# exact numbers.
+# ---------------------------------------------------------------------------
+
+import pathlib
+
+import shedding_hub as sh
+from shedding_hub.shedding_fit import _MIN_PARAM
+
+DATA = pathlib.Path(__file__).parent.parent / "data"
+
+
+@pytest.fixture(scope="module")
+def woelfel():
+    """The real SARS-CoV-2 study the collapse was first observed on."""
+    return sh.load_dataset("woelfel2020virological", local=str(DATA))
+
+
+@pytest.fixture(scope="module")
+def woelfel_fits(woelfel):
+    """Every analyte/model combination this bug affected, fitted once."""
+    return {
+        (analyte, model): fit_shedding_model(woelfel, analyte=analyte, model=model)
+        for analyte in ("stool", "sputum")
+        for model in ("exponential", "gamma")
+    }
+
+
+@pytest.mark.parametrize("analyte", ["stool", "sputum"])
+@pytest.mark.parametrize("model", ["exponential", "gamma"])
+def test_woelfel_fit_is_physically_plausible(woelfel_fits, analyte, model):
+    """
+    Real-data guard: a synthetic-only suite missed a 278-day half-life.
+
+    Both analytes are SARS-CoV-2 in gc/mL, so the median individual's peak must
+    land inside the assay's actual dynamic range and its decay must be measured
+    in days. The collapsed fit this guards against reported peak_log10 = 0.31
+    and half_life_days = 278 for stool under the gamma model; some repository
+    fits reached ln(2)/1e-6 = 693147 days exactly.
+
+    The bounds are deliberately loose -- these are plausibility limits, not
+    pinned values, so that legitimate refits are free to move within them while
+    a collapse of the kind described above still fails loudly.
+    """
+    fit = woelfel_fits[(analyte, model)]
+    assert 2.0 < fit.peak_log10 < 10.0, (
+        f"{analyte}/{model} peaks at {fit.peak_log10:.3g} log10 gc/mL, outside "
+        "the plausible range for a SARS-CoV-2 concentration assay"
+    )
+    assert 0.1 < fit.half_life_days < 60.0, (
+        f"{analyte}/{model} has a half-life of {fit.half_life_days:.4g} days; "
+        "SARS-CoV-2 shedding does not decay that slowly"
+    )
+
+
+@pytest.mark.parametrize("analyte", ["stool", "sputum"])
+@pytest.mark.parametrize("model", ["exponential", "gamma"])
+def test_woelfel_no_subject_sits_at_the_parameter_floor(woelfel_fits, analyte, model):
+    """
+    Real-data guard: no per-subject fit may collapse to _MIN_PARAM.
+
+    This is the mechanism behind the 278-day half-life rather than its symptom.
+    A factor of ten above the floor is the margin: the floor is an absorbing
+    state, so a parameter that is genuinely being estimated has no reason to
+    linger anywhere near it, and anything that does was placed there by
+    initialization rather than found by the optimizer.
+    """
+    fit = woelfel_fits[(analyte, model)]
+    params = fit.subject_params.drop(columns=["subject_id", "degenerate"])
+    smallest = params.min().min()
+    assert smallest > 10 * _MIN_PARAM, (
+        f"{analyte}/{model} has a subject parameter at {smallest:.3g}, within a "
+        f"factor of ten of the floor {_MIN_PARAM:.0e}:\n{fit.subject_params}"
+    )

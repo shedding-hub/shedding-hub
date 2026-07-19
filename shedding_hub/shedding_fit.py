@@ -34,9 +34,14 @@ class SheddingDataError(ValueError):
     Attributes:
         reason: Machine-readable cause, one of ``ct_units``,
             ``non_pathogen_biomarker``, ``too_few_subjects``,
-            ``no_positive_measurements``, ``unknown_analyte``. The catalog
-            builder records this so a missing study reads as unsuitable, not
-            as a bug.
+            ``no_positive_measurements``, ``unknown_analyte``,
+            ``degenerate_fit``. The catalog builder records this so a missing
+            study reads as unsuitable, not as a bug.
+
+            All but ``degenerate_fit`` are raised by ``prepare_observations``,
+            before any fitting happens. ``degenerate_fit`` is raised by
+            ``fit_shedding_model`` only after the optimizer has run, because it
+            describes the fit rather than the data.
     """
 
     def __init__(self, message: str, reason: str):
@@ -140,7 +145,12 @@ def prepare_observations(
     Raises:
         SheddingDataError: The analyte is unknown, uses cycle-threshold units,
             is a non-pathogen indicator biomarker, has no positive
-            measurements, or leaves no subject with enough data.
+            measurements, or leaves no subject with enough data — reasons
+            ``unknown_analyte``, ``ct_units``, ``non_pathogen_biomarker``,
+            ``no_positive_measurements`` and ``too_few_subjects``
+            respectively. The remaining reason, ``degenerate_fit``, cannot
+            arise here: it describes a fit that collapsed onto the parameter
+            bounds and so is raised by ``fit_shedding_model`` after optimizing.
     """
     validate_model(model)
     if not dataset or not isinstance(dataset, dict):
@@ -298,9 +308,40 @@ from .shedding_models import (
     peak_day,
 )
 
+# The positivity floor for a natural-scale parameter. Nothing is ever
+# *initialized* here — see _DEFAULT_A0 for why that was a bug — but it remains
+# the reference point that _DEGENERATE_PARAM is judged against.
 _MIN_PARAM = 1e-6
 _THETA_BOUNDS = (-25.0, 25.0)
 _LOG_SIGMA_BOUNDS = (-10.0, 5.0)
+
+# Parameters are optimized as theta = log(param), so the chain rule gives
+# dL/dtheta = param * dL/dparam: the gradient vanishes as a parameter
+# approaches zero. Near-zero is therefore an absorbing state — a parameter
+# started at _MIN_PARAM has a gradient of order 1e-5 against order 1e+1 for a
+# healthy coordinate, and the optimizer can never pull it back. Initialization
+# must consequently never place a parameter at or near the floor, so a
+# least-squares coefficient that is non-positive, non-finite, or merely
+# negligible falls back to one of these data-driven defaults instead.
+_DEFAULT_A0 = math.log(2.0) / 7.0  # a one-week half-life
+_DEFAULT_B0 = 1.0  # rises then falls, peaking at 1/a0 days
+
+# A fitted parameter at or below this magnitude has collapsed rather than been
+# estimated. This sits four orders of magnitude above _MIN_PARAM deliberately:
+# the vanishing gradient above means a collapsing parameter stalls somewhere
+# near zero rather than reaching the bound exactly, so testing proximity to the
+# literal bound does not detect it. Every parameter is already physically
+# meaningless well before this point — a0 <= 1e-2 is a half-life beyond 69
+# days, longer than any shedding episode in the repository; c0 <= 1e-2 puts the
+# log10 intercept below 0.005, orders of magnitude under any assay's detection
+# floor; and b0 <= 1e-2 leaves the gamma curve with no rise phase at all.
+_DEGENERATE_PARAM = 1e-2
+
+# How close to the upper theta bound counts as pinned against it. The upper
+# bound is approached from a region where the gradient is huge rather than
+# vanishing, so unlike the floor it really is reached, and the tolerance can be
+# tight.
+_BOUND_TOLERANCE = 1e-6
 
 
 def _require_positive_semidefinite(cov: np.ndarray, *, advice: str) -> np.ndarray:
@@ -360,13 +401,19 @@ class SheddingFit:
 
     For the gamma model specifically, ``population_mean[1]`` (``b0``, the
     rise-rate/shape parameter) is additionally downward-biased at realistic
-    sampling densities: roughly -0.5 log units at ~14 observations per subject,
-    shrinking toward zero as sampling density rises (confirmed empirically to
-    scale as roughly 1/observations-per-subject). Because ``peak_day = b0 /
-    a0``, this makes fitted peak-shedding timing systematically early for
-    sparsely-sampled studies. This is a property of two-stage maximum
+    sampling densities: roughly -0.15 log units at ~14 observations per
+    subject, shrinking toward zero as sampling density rises. Because
+    ``peak_day = b0 / a0``, this makes fitted peak-shedding timing somewhat
+    early for sparsely-sampled studies. This is a property of two-stage maximum
     likelihood, not a bug, and is the main reason a hierarchical Bayesian
     backend would improve on these estimates.
+
+    That figure was previously about -0.5 log units. Most of the difference was
+    not two-stage bias at all but an initialization artifact: seeding the gamma
+    fit from its own collinear ``[1, ln(t), -t]`` design produced negative
+    coefficients that were clipped onto the parameter floor, which the
+    optimizer could not escape. Measured over six seeds after that fix, the
+    sparse-sampling bias averages 0.15 log units (range 0.02 to 0.27).
     """
 
     model: str
@@ -393,6 +440,13 @@ class SheddingFit:
     converged: bool
     log_likelihood: float
     aic: float
+    # Subjects whose fits collapsed onto the parameter bounds. They are present
+    # in ``subject_params`` (flagged by its ``degenerate`` column) but excluded
+    # from ``population_mean``/``population_cov``, so ``n_subjects`` exceeds the
+    # number actually summarized by exactly this count. Defaults to zero so that
+    # directly-constructed fits and catalogs written before this field existed
+    # both remain loadable.
+    n_degenerate_subjects: int = 0
 
     @property
     def param_names(self) -> tuple[str, ...]:
@@ -468,36 +522,70 @@ def _initial_theta(model: str, observations: Observations) -> np.ndarray:
     Fits each subject's uncensored points; subjects with too few uncensored
     points fall back to a pooled fit across all subjects, so an all-censored or
     nearly all-censored subject still starts somewhere sensible.
+
+    Both models are seeded from the same two-column decay design ``[1, -t]``,
+    even though the gamma model has three parameters. The gamma model's own
+    design ``[1, ln(t), -t]`` is badly conditioned over a realistic sampling
+    window — over ``t = 6..23``, ``ln(t)`` and ``t`` correlate at about 0.98 —
+    so its least-squares solution is unstable and routinely returns negative
+    coefficients, which previously started those parameters at the absorbing
+    floor described on ``_DEFAULT_A0``. ``b0`` is instead seeded from a modest
+    positive default, and ``a0``/``c0`` from the well-conditioned decay design.
+
+    No coefficient is ever clipped to ``_MIN_PARAM``: one that is non-positive,
+    non-finite, or negligible falls back to a data-driven default instead.
     """
-    k = len(PARAM_NAMES[model])
     uncensored = ~observations.censored
 
-    def design(times: np.ndarray) -> np.ndarray:
-        if model == "exponential":
-            return np.column_stack([np.ones_like(times), -times])
-        return np.column_stack([np.ones_like(times), np.log(times), -times])
-
     def solve(times: np.ndarray, values: np.ndarray) -> np.ndarray:
-        coefficients, *_ = np.linalg.lstsq(design(times), values * LN10, rcond=None)
+        design = np.column_stack([np.ones_like(times), -times])
+        coefficients, *_ = np.linalg.lstsq(design, values * LN10, rcond=None)
+        c0, a0 = coefficients
+        if not np.isfinite(a0) or a0 <= _DEGENERATE_PARAM:
+            a0 = _DEFAULT_A0
+        if not np.isfinite(c0) or c0 <= _DEGENERATE_PARAM:
+            # The largest value this subject actually reached, as a natural-log
+            # intercept: a curve starting there is consistent with the data even
+            # when the regression slope through it was not.
+            c0 = LN10 * float(np.max(values))
         if model == "exponential":
-            c0, a0 = coefficients
-            params = np.array([a0, c0])
-        else:
-            c0, b0, a0 = coefficients
-            params = np.array([a0, b0, c0])
-        return np.log(np.clip(params, _MIN_PARAM, None))
+            return np.log([a0, c0])
+        return np.log([a0, _DEFAULT_B0, c0])
 
     pooled = solve(observations.times[uncensored], observations.values[uncensored])
 
     theta = np.tile(pooled, (observations.n_subjects, 1))
     for i in range(observations.n_subjects):
         mask = uncensored & (observations.subject_index == i)
-        if mask.sum() >= k:
+        # Two points determine the decay design, whichever model is being fitted
+        # — the gamma model no longer needs three to seed itself.
+        if mask.sum() >= 2:
             try:
                 theta[i] = solve(observations.times[mask], observations.values[mask])
             except np.linalg.LinAlgError:
                 pass
     return np.clip(theta, *_THETA_BOUNDS)
+
+
+def _degenerate_subjects(theta: np.ndarray) -> np.ndarray:
+    """
+    Flag subjects whose fit collapsed onto the parameter bounds.
+
+    A collapsed subject's ``theta`` is not an estimate but a boundary solution,
+    and averaging it into ``mean(theta_i)`` distorts the population summary out
+    of all proportion: one subject pinned at ``log(1e-6) = -13.8`` is enough to
+    turn a one-day half-life into a 278-day one.
+
+    Args:
+        theta: Fitted log-parameters, shape ``(n_subjects, k)``.
+
+    Returns:
+        Boolean array of length ``n_subjects``, True where any coordinate has
+        collapsed toward zero or run away to the upper bound.
+    """
+    collapsed = theta <= math.log(_DEGENERATE_PARAM)
+    runaway = theta >= _THETA_BOUNDS[1] - _BOUND_TOLERANCE
+    return np.asarray((collapsed | runaway).any(axis=1))
 
 
 def _negative_log_likelihood(
@@ -551,10 +639,16 @@ def fit_shedding_model(
             number of per-subject parameters.
 
     Returns:
-        A ``SheddingFit``.
+        A ``SheddingFit``. Subjects whose parameters collapsed onto the bounds
+        are excluded from the population summary but retained in
+        ``subject_params`` with ``degenerate`` set; ``n_degenerate_subjects``
+        counts them.
 
     Raises:
-        SheddingDataError: The analyte cannot be fitted (see ``reason``).
+        SheddingDataError: The analyte cannot be fitted (see ``reason``). In
+            addition to every reason ``prepare_observations`` can raise, this
+            adds ``degenerate_fit``: too many subjects' fits collapsed onto the
+            parameter bounds for a population covariance to be estimable.
 
     Note:
         ``aic`` is only comparable between models fitted to the same
@@ -583,7 +677,18 @@ def fit_shedding_model(
     # decimal places well before the default ftol would be satisfied). Scaling
     # the budget with problem size and relaxing ftol lets these fits report
     # ``converged=True`` honestly instead of exhausting the default cap.
-    max_evaluations = max(15000, 500 * n_parameters)
+    #
+    # The multiplier is 1000 rather than the 500 that sufficed while
+    # initialization was collapsing subjects onto the parameter floor. That
+    # collapse was flattering these counts: a floor-pinned subject has a
+    # vanishing gradient, so the optimizer stopped working on it almost
+    # immediately and declared success early on a fit that was simply stuck.
+    # With every subject genuinely being optimized, a 60-subject gamma fit
+    # needs about 92k evaluations where 500 * n_parameters allowed only 90.5k —
+    # it was failing by 1.5%, and the extra work buys a converged fit with
+    # identical parameters (verified: nll 644.697 vs 644.709, mean log b0
+    # identical to four decimal places).
+    max_evaluations = max(15000, 1000 * n_parameters)
     result = optimize.minimize(
         _negative_log_likelihood,
         x0,
@@ -602,12 +707,48 @@ def fit_shedding_model(
 
     theta = result.x[: n * k].reshape(n, k)
     sigma = float(np.exp(result.x[-1]))
-    population_mean = theta.mean(axis=0)
-    population_cov = np.cov(theta, rowvar=False, ddof=1) if n > 1 else np.zeros((k, k))
+
+    # Subjects whose fits collapsed onto the bounds stay in subject_params so
+    # the raw fit remains inspectable, but are kept out of the population
+    # summary, which they would otherwise dominate.
+    degenerate = _degenerate_subjects(theta)
+    n_degenerate = int(degenerate.sum())
+    retained = ~degenerate
+    n_retained = int(retained.sum())
+    # A single-subject fit legitimately yields a zero covariance and is allowed;
+    # what is not allowed is *degeneracy* leaving too little behind. Hence
+    # min(2, n) rather than a flat 2: with n == 1 the bar is that the one
+    # subject survived, and only with n >= 2 does Sigma become estimable at all.
+    if n_retained < min(2, n):
+        raise SheddingDataError(
+            f"{n_degenerate} of {n} subject(s) for analyte {analyte!r} collapsed to "
+            f"the parameter bounds under the {model!r} model, leaving {n_retained} "
+            "usable subject(s) — too few to estimate a population covariance. This "
+            "usually means the model is not identifiable from this data: for the "
+            "gamma model, typically because sampling began after peak shedding, so "
+            "there is no rise phase from which to estimate b0.",
+            "degenerate_fit",
+        )
+    if n_degenerate:
+        warnings.warn(
+            f"{n_degenerate} subject(s) excluded from the population summary of "
+            f"analyte {analyte!r}: their fitted parameters collapsed onto the "
+            "bounds. They remain in subject_params, flagged by the 'degenerate' "
+            "column.",
+            UserWarning,
+            stacklevel=2,
+        )
+
+    kept = theta[retained]
+    population_mean = kept.mean(axis=0)
+    population_cov = (
+        np.cov(kept, rowvar=False, ddof=1) if n_retained > 1 else np.zeros((k, k))
+    )
     population_cov = np.atleast_2d(population_cov)
 
     subject_params = pd.DataFrame(np.exp(theta), columns=list(PARAM_NAMES[model]))
     subject_params.insert(0, "subject_id", observations.subject_ids)
+    subject_params["degenerate"] = degenerate
 
     log_likelihood = -float(result.fun)
     analyte_spec = dataset["analytes"][analyte]
@@ -640,4 +781,5 @@ def fit_shedding_model(
         converged=bool(result.success),
         log_likelihood=log_likelihood,
         aic=2.0 * n_parameters - 2.0 * log_likelihood,
+        n_degenerate_subjects=n_degenerate,
     )
