@@ -11,6 +11,7 @@ from shedding_hub.shedding_fit import (
     SheddingDataError,
     _fraction_observing_a_rise,
     prepare_observations,
+    require_estimable_population,
 )
 
 
@@ -574,30 +575,33 @@ def _rise_dataset(n_rising, n_falling, n_short=0):
 
     The rise gate counts subjects, not measurements, so these are built one
     subject at a time with an unambiguous shape each.
+
+    Each subject gets freshly-built measurement dicts. Handing every subject a
+    copy of one shared list would let a caller that edits one subject silently
+    edit them all.
     """
-    rising = {
-        "measurements": [
-            {"analyte": "stool", "time": t, "value": v}
-            for t, v in zip([1, 2, 3, 4, 5], [1e3, 1e5, 1e7, 1e5, 1e3])
-        ]
-    }
-    falling = {
-        "measurements": [
-            {"analyte": "stool", "time": t, "value": v}
-            for t, v in zip([1, 2, 3, 4, 5], [1e7, 1e6, 1e5, 1e4, 1e3])
-        ]
-    }
-    # Three usable measurements, so prepare_observations keeps this subject, but
-    # only two of them are uncensored -- below what the gate needs to judge a
-    # shape. Deliberately built to *look* like a rise, so a gate that forgot its
-    # minimum would count it.
-    short = {
-        "measurements": [
-            {"analyte": "stool", "time": 1, "value": 1e3},
-            {"analyte": "stool", "time": 2, "value": 1e7},
-            {"analyte": "stool", "time": 3, "value": "negative"},
-        ]
-    }
+
+    def subject(times, values):
+        return {
+            "measurements": [
+                {"analyte": "stool", "time": t, "value": v}
+                for t, v in zip(times, values)
+            ]
+        }
+
+    def rising():
+        return subject([1, 2, 3, 4, 5], [1e3, 1e5, 1e7, 1e5, 1e3])
+
+    def falling():
+        return subject([1, 2, 3, 4, 5], [1e7, 1e6, 1e5, 1e4, 1e3])
+
+    def short():
+        # Three usable measurements, so prepare_observations keeps this subject,
+        # but only two are uncensored -- below what the gate needs to judge a
+        # shape. Deliberately built to *look* like a rise, so a gate that forgot
+        # its minimum would count it.
+        return subject([1, 2, 3], [1e3, 1e7, "negative"])
+
     return {
         "dataset_id": "rise_study",
         "analytes": {
@@ -611,9 +615,9 @@ def _rise_dataset(n_rising, n_falling, n_short=0):
             }
         },
         "participants": (
-            [dict(rising) for _ in range(n_rising)]
-            + [dict(falling) for _ in range(n_falling)]
-            + [dict(short) for _ in range(n_short)]
+            [rising() for _ in range(n_rising)]
+            + [falling() for _ in range(n_falling)]
+            + [short() for _ in range(n_short)]
         ),
     }
 
@@ -665,6 +669,141 @@ def test_gamma_refused_when_no_subject_can_be_judged():
         )
     assert excinfo.value.reason == "no_rise_observed"
     assert "no subject had enough readings" in str(excinfo.value)
+
+
+def test_two_subject_exponential_fit_is_refused_as_a_population():
+    """Three subjects are the minimum for a 2-parameter between-subject covariance.
+
+    With two, the covariance is rank-deficient and the "population" is an
+    artefact of averaging too little. The repository's two-subject gamma fit
+    reported a peak of 10^109 gc/mL before this gate existed.
+    """
+    dataset = _flat_dataset(n_flat=0, n_decaying=2)
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.n_subjects == 2  # the fit itself is allowed
+    with pytest.raises(SheddingDataError) as excinfo:
+        require_estimable_population(fit)
+    assert excinfo.value.reason == "too_few_subjects_for_population"
+
+
+def test_three_subject_exponential_fit_is_accepted_as_a_population():
+    """One more subject than parameters is enough; the gate is not stricter."""
+    dataset = _flat_dataset(n_flat=0, n_decaying=3)
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.n_subjects == 3
+    require_estimable_population(fit)  # must not raise
+
+
+def test_population_gate_counts_after_degenerate_exclusion():
+    """What matters is the subjects feeding mu/Sigma, not the subjects fitted."""
+    dataset = _flat_dataset(n_flat=1, n_decaying=3)
+    with pytest.warns(UserWarning, match="collapsed onto the bounds"):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    # 4 fitted, 1 degenerate -> 3 retained, which is exactly enough.
+    assert (fit.n_subjects, fit.n_degenerate_subjects) == (4, 1)
+    require_estimable_population(fit)
+
+    # The same arithmetic one subject lower must refuse, and say so.
+    dataset = _flat_dataset(n_flat=1, n_decaying=2)
+    with pytest.warns(UserWarning, match="collapsed onto the bounds"):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert (fit.n_subjects, fit.n_degenerate_subjects) == (3, 1)
+    with pytest.raises(SheddingDataError, match="excluded as degenerate"):
+        require_estimable_population(fit)
+
+
+def test_single_subject_fit_is_still_allowed_by_the_fitter():
+    """The gate must not live in fit_shedding_model.
+
+    tests/test_shedding_tutorial_agreement.py validates the port against the
+    published Rstan posterior by fitting woelfel subject 3 alone, through
+    fit_shedding_model directly. A one-subject fit is honest about itself -- it
+    carries a zero covariance -- so it is the *catalog* that must refuse it, not
+    the fitter.
+    """
+    dataset = _flat_dataset(n_flat=0, n_decaying=1)
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.n_subjects == 1
+    with pytest.raises(SheddingDataError):
+        require_estimable_population(fit)
+
+
+def test_first_observed_day_is_the_earliest_retained_observation():
+    dataset = _flat_dataset(n_flat=0, n_decaying=3)
+    # _flat_dataset samples days 1..10; move one subject's window later so the
+    # minimum is unambiguously a minimum rather than a shared start day.
+    for measurement in dataset["participants"][0]["measurements"]:
+        measurement["time"] += 20
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.first_observed_day == pytest.approx(1.0)
+
+    for participant in dataset["participants"]:
+        for measurement in participant["measurements"]:
+            measurement["time"] += 5
+    later = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert later.first_observed_day == pytest.approx(6.0)
+
+
+def _gamma_dataset_sampled_before_detectability(a0=0.5, b0=2.0, c0=12.0):
+    """A study whose first sampling day sits below the limit of quantification.
+
+    Sampled from an exact gamma curve so the censored point is consistent data
+    rather than a contradiction: at day 0.5 the curve is 4.50 log10, under a
+    limit of 4.8, and it clears the limit from day 1 onward. Constructing it any
+    other way does not work -- a pure decay is highest at its first reading, so
+    an early `negative` would contradict the very curve being fitted.
+    """
+    limit_log10 = 4.8
+    times = [0.5, 1, 2, 3, 4, 6, 8, 10]
+
+    def log10_at(time):
+        return (c0 + b0 * np.log(time) - a0 * time) / np.log(10.0)
+
+    def subject(offset):
+        measurements = []
+        for time in times:
+            value = 10 ** (log10_at(time) + offset)
+            measurements.append(
+                {
+                    "analyte": "stool",
+                    "time": time,
+                    "value": (
+                        "negative" if value < 10 ** limit_log10 else float(value)
+                    ),
+                }
+            )
+        return {"measurements": measurements}
+
+    return {
+        "dataset_id": "late_start_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 10**limit_log10,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [subject(o) for o in (-0.1, -0.05, 0.0, 0.05, 0.1)],
+    }
+
+
+def test_first_observed_day_counts_censored_observations():
+    """A `negative` still means the study looked, and still constrains the curve."""
+    dataset = _gamma_dataset_sampled_before_detectability()
+    # Guard the fixture: the earliest measurement must actually be censored, or
+    # this test would pass without testing anything.
+    earliest = min(
+        (m for p in dataset["participants"] for m in p["measurements"]),
+        key=lambda m: m["time"],
+    )
+    assert earliest["time"] == 0.5 and earliest["value"] == "negative"
+
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    assert fit.n_degenerate_subjects == 0
+    assert fit.first_observed_day == pytest.approx(0.5)
 
 
 def _minimal_fit(population_mean, population_cov, model="exponential"):

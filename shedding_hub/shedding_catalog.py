@@ -15,7 +15,12 @@ import numpy as np
 import pandas as pd
 import yaml
 
-from .shedding_fit import SheddingDataError, SheddingFit, fit_shedding_model
+from .shedding_fit import (
+    SheddingDataError,
+    SheddingFit,
+    fit_shedding_model,
+    require_estimable_population,
+)
 from .shedding_models import MODELS, PARAM_NAMES
 
 CATALOG_PATH = pathlib.Path(__file__).parent / "data" / "shedding_catalog.yaml"
@@ -49,6 +54,7 @@ _TABLE_COLUMNS = _KEY_COLUMNS + (
     "sigma",
     "peak_day",
     "peak_log10",
+    "first_observed_day",
     "half_life_days",
     "aic",
     "converged",
@@ -67,6 +73,29 @@ def fit_to_row(fit: SheddingFit) -> dict:
     even for models that lack one of them (the exponential model has no
     ``b0``): the missing one is ``NaN`` rather than the key being absent, so a
     row's schema does not depend on which model produced it.
+
+    Three columns qualify the rest, and a row is easy to misread without them:
+
+    ``first_observed_day``
+        Earliest day any retained subject was sampled. ``peak_log10`` is
+        evaluated at the peak — ``t = 0`` for the exponential model, since that
+        model only decays — so when this column is well above zero the peak is a
+        backward extrapolation to a time the study never observed, not a
+        measured concentration. A large ``first_observed_day`` beside a large
+        ``peak_log10`` means precisely that and should not be read as the study
+        having detected 10^`peak_log10` of anything.
+
+    ``pct_censored``
+        Share of measurements that were below the limit of detection. A very
+        high value (the repository reaches 78–93%) means the analyte is rarely
+        detected at all, so the row's estimates describe mostly-censored data —
+        a low ``peak_log10`` there is the fitter reporting honestly on an
+        analyte that is almost never found, not a defect.
+
+    ``pct_subjects_with_rise``
+        Share of adequately-sampled subjects whose highest reading was not their
+        first. The gamma model is refused below 50%; on an exponential row it is
+        informational, and a low value is the normal case rather than a warning.
     """
     row = {column: getattr(fit, column) for column in _KEY_COLUMNS}
     row.update({"a_median": np.nan, "b_median": np.nan, "c_median": np.nan})
@@ -90,6 +119,7 @@ def fit_to_row(fit: SheddingFit) -> dict:
             "sigma": fit.sigma,
             "peak_day": fit.peak_day,
             "peak_log10": fit.peak_log10,
+            "first_observed_day": fit.first_observed_day,
             "half_life_days": fit.half_life_days,
             "aic": fit.aic,
             "converged": fit.converged,
@@ -122,6 +152,7 @@ def _fit_to_payload(fit: SheddingFit) -> dict:
             "n_excluded_subjects": int(fit.n_excluded_subjects),
             "n_degenerate_subjects": int(fit.n_degenerate_subjects),
             "pct_subjects_with_rise": float(fit.pct_subjects_with_rise),
+            "first_observed_day": float(fit.first_observed_day),
             "n_dropped_measurements": int(fit.n_dropped_measurements),
             "converged": bool(fit.converged),
             "log_likelihood": float(fit.log_likelihood),
@@ -161,6 +192,7 @@ def _fit_from_payload(payload: dict) -> SheddingFit:
         pct_subjects_with_rise=float(
             payload.get("pct_subjects_with_rise", float("nan"))
         ),
+        first_observed_day=float(payload.get("first_observed_day", float("nan"))),
         n_dropped_measurements=int(payload["n_dropped_measurements"]),
         converged=bool(payload["converged"]),
         log_likelihood=float(payload["log_likelihood"]),
@@ -260,6 +292,13 @@ def fit_shedding_models(
     repository-wide build — and so a missing study reads as unsuitable rather
     than as a bug.
 
+    Beyond the reasons ``fit_shedding_model`` itself raises, this applies
+    ``require_estimable_population``, so a fit with too few subjects to support
+    a between-subject covariance is recorded as
+    ``too_few_subjects_for_population`` instead of being published. That check
+    lives here rather than in the fitter because fitting a single subject
+    directly is legitimate; publishing it as a population is not.
+
     Args:
         datasets: Dataset dictionaries from ``load_dataset``.
         models: Model names to fit. Defaults to both.
@@ -278,14 +317,19 @@ def fit_shedding_models(
                 try:
                     with warnings.catch_warnings():
                         warnings.simplefilter("ignore", UserWarning)
-                        fits.append(
-                            fit_shedding_model(
-                                dataset,
-                                analyte=analyte,
-                                model=model,
-                                min_observations=min_observations,
-                            )
+                        fit = fit_shedding_model(
+                            dataset,
+                            analyte=analyte,
+                            model=model,
+                            min_observations=min_observations,
                         )
+                    # Applied here rather than inside fit_shedding_model so that
+                    # fitting one subject on purpose stays possible, while a fit
+                    # too thin to describe a population never reaches the
+                    # catalog. Raises SheddingDataError, so the existing handler
+                    # records it with a reason like any other refusal.
+                    require_estimable_population(fit)
+                    fits.append(fit)
                 except SheddingDataError as error:
                     skipped.append(
                         {

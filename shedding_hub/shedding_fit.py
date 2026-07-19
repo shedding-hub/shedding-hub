@@ -35,14 +35,25 @@ class SheddingDataError(ValueError):
         reason: Machine-readable cause, one of ``ct_units``,
             ``non_pathogen_biomarker``, ``too_few_subjects``,
             ``no_positive_measurements``, ``unknown_analyte``,
-            ``no_rise_observed``, ``degenerate_fit``. The catalog builder
-            records this so a missing study reads as unsuitable, not as a bug.
+            ``no_rise_observed``, ``degenerate_fit``,
+            ``too_few_subjects_for_population``. The catalog builder records
+            this so a missing study reads as unsuitable, not as a bug.
 
-            The first five are raised by ``prepare_observations``, before any
-            fitting happens. The last two come from ``fit_shedding_model``:
-            ``no_rise_observed`` once the observations are in hand but before
-            optimizing, and ``degenerate_fit`` only afterwards, because it
-            describes the fit rather than the data.
+            Raised in three places, by increasing lateness:
+
+            - ``prepare_observations`` raises the first five, before any fitting
+              happens. Note that ``too_few_subjects`` there means no *subject*
+              had enough observations — a different failure from
+              ``too_few_subjects_for_population`` below, which means there were
+              not enough subjects.
+            - ``fit_shedding_model`` raises ``no_rise_observed`` once the
+              observations are in hand but before optimizing, and
+              ``degenerate_fit`` only afterwards, because it describes the fit
+              rather than the data.
+            - ``require_estimable_population`` raises
+              ``too_few_subjects_for_population``. It is applied by the catalog
+              builder rather than by ``fit_shedding_model``, so that fitting a
+              single subject on purpose stays possible; see its docstring.
     """
 
     def __init__(self, message: str, reason: str):
@@ -149,10 +160,12 @@ def prepare_observations(
             measurements, or leaves no subject with enough data — reasons
             ``unknown_analyte``, ``ct_units``, ``non_pathogen_biomarker``,
             ``no_positive_measurements`` and ``too_few_subjects``
-            respectively. The remaining two cannot arise here and belong to
-            ``fit_shedding_model``: ``no_rise_observed`` (the gamma model asked
-            of data with no observed rise) and ``degenerate_fit`` (a fit that
-            collapsed onto the parameter bounds).
+            respectively. Note that ``too_few_subjects`` here means no subject
+            cleared ``min_observations``, not that the analyte has few
+            subjects. The remaining three cannot arise here:
+            ``no_rise_observed`` and ``degenerate_fit`` belong to
+            ``fit_shedding_model``, and ``too_few_subjects_for_population`` to
+            ``require_estimable_population``.
     """
     validate_model(model)
     if not dataset or not isinstance(dataset, dict):
@@ -487,6 +500,11 @@ class SheddingFit:
     # exactly what the exponential model is for. NaN when no subject had enough
     # readings to judge.
     pct_subjects_with_rise: float = float("nan")
+    # Earliest observation time among the subjects that feed the population
+    # summary. Everything the fit says about times before this is extrapolation:
+    # see the warning on ``peak_log10``, which is evaluated at t = 0 for the
+    # exponential model however late sampling actually began.
+    first_observed_day: float = float("nan")
 
     @property
     def param_names(self) -> tuple[str, ...]:
@@ -539,6 +557,24 @@ class SheddingFit:
         sampling is unnecessary. It is done anyway so that both models take one
         code path; the two agree to Monte Carlo error, which is what
         ``_PEAK_LOG10_DRAWS`` is sized to keep negligible.
+
+        .. warning::
+            Read this together with ``first_observed_day``. The exponential
+            model's peak is at ``t = 0`` — the reference event — by definition,
+            but many studies only begin sampling well after it. When
+            ``first_observed_day`` is well above zero, ``peak_log10`` is a
+            backward extrapolation to a time the study never observed, not a
+            measured concentration, and it grows as ``a0 * first_observed_day``
+            in log units. A large ``first_observed_day`` together with a large
+            ``peak_log10`` means exactly this and nothing more:
+            ``zuo2020alterations:stool_SARSCoV2_SymptomOnset`` reports 18.17,
+            i.e. 10^18 gc/mL, purely because ``a0 = 1.494`` is projected back
+            over the ~18 days before its first sample.
+
+            The definition is deliberately left at ``t = 0`` regardless, because
+            that is what makes the value comparable across studies that started
+            sampling at different times. The extrapolation is surfaced rather
+            than hidden.
         """
         rng = np.random.default_rng(_PEAK_LOG10_SEED)
         # check_valid="ignore": an all-zero covariance (a single-subject fit) is
@@ -702,6 +738,57 @@ def _fraction_observing_a_rise(observations: Observations) -> float:
     if not verdicts:
         return float("nan")
     return float(np.mean(verdicts))
+
+
+def require_estimable_population(fit: SheddingFit) -> None:
+    """
+    Raise unless enough subjects survived for the population to mean anything.
+
+    ``population_cov`` is a ``k x k`` covariance estimated from the retained
+    subjects' ``theta``. With one subject it is all zeros, so every simulated
+    individual is identical; with ``k`` or fewer it is rank-deficient, and the
+    "population" is an artefact of having too little to average. The damage is
+    not subtle — a two-subject gamma fit in the repository reported
+    ``c_median = 148.6`` and a peak of 10^109 gc/mL. Requiring strictly more
+    subjects than parameters gives the covariance a chance of being full rank.
+
+    Applied by ``fit_shedding_models`` when building the catalog, deliberately
+    **not** by ``fit_shedding_model`` itself. Fitting a single subject is a
+    legitimate thing to ask for directly — validating the port against the
+    published Rstan tutorial does exactly that — and such a fit is honest about
+    itself, carrying a zero covariance. What must not happen is a fit like that
+    being published in the catalog as though it described a population.
+
+    The count is taken after degenerate-subject exclusion, because that is what
+    actually feeds ``mu``/``Sigma``.
+
+    Args:
+        fit: A fit returned by ``fit_shedding_model``.
+
+    Raises:
+        SheddingDataError: With reason ``too_few_subjects_for_population``.
+    """
+    k = len(PARAM_NAMES[fit.model])
+    retained = fit.n_subjects - fit.n_degenerate_subjects
+    if retained > k:
+        return
+    excluded = (
+        ""
+        if not fit.n_degenerate_subjects
+        else (
+            f" ({fit.n_subjects} fitted, {fit.n_degenerate_subjects} excluded as "
+            "degenerate)"
+        )
+    )
+    raise SheddingDataError(
+        f"Analyte {fit.analyte!r} has {retained} subject(s){excluded} feeding the "
+        f"population summary of the {fit.model!r} model, which has {k} parameters. "
+        f"At least {k + 1} are needed for the between-subject covariance to be "
+        "estimable rather than rank-deficient; below that the 'population' is an "
+        "artefact of averaging too few individuals, and simulating from it produces "
+        "near-identical or wildly extrapolated individuals.",
+        "too_few_subjects_for_population",
+    )
 
 
 def _negative_log_likelihood(
@@ -879,6 +966,13 @@ def fit_shedding_model(
             stacklevel=2,
         )
 
+    # Earliest time any retained subject was sampled. Censored observations
+    # count: a `negative` at day 2 still says the study looked at day 2, and it
+    # still constrains the curve there. Taken over retained subjects only, so it
+    # describes exactly the data behind population_mean/population_cov.
+    retained_observations = retained[observations.subject_index]
+    first_observed_day = float(observations.times[retained_observations].min())
+
     kept = theta[retained]
     population_mean = kept.mean(axis=0)
     population_cov = (
@@ -923,4 +1017,5 @@ def fit_shedding_model(
         aic=2.0 * n_parameters - 2.0 * log_likelihood,
         n_degenerate_subjects=n_degenerate,
         pct_subjects_with_rise=100.0 * rise_fraction,
+        first_observed_day=first_observed_day,
     )
