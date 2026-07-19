@@ -303,6 +303,45 @@ _THETA_BOUNDS = (-25.0, 25.0)
 _LOG_SIGMA_BOUNDS = (-10.0, 5.0)
 
 
+def _require_positive_semidefinite(cov: np.ndarray, *, advice: str) -> np.ndarray:
+    """
+    Raise if ``cov`` is not (numerically) positive semi-definite.
+
+    Shared by ``SheddingFit.sample_params`` and ``SheddingEnsemble``'s
+    ``method="moment"`` path, which draws from its own moment-matched
+    covariance rather than delegating to a component fit.
+
+    Args:
+        cov: Candidate covariance matrix.
+        advice: Sentence appended to the error, tailored to how the caller
+            produced ``cov`` (e.g. what to try instead).
+
+    Returns:
+        ``cov`` as a float array, for convenient chaining at the call site.
+
+    Raises:
+        ValueError: If the smallest eigenvalue is negative beyond numerical
+            tolerance.
+    """
+    cov = np.asarray(cov, dtype=float)
+    eigenvalues = np.linalg.eigvalsh(cov)
+    # Tolerance scaled to the matrix, not exact zero: an all-zeros covariance
+    # is legitimate (e.g. a single-subject fit, where no between-subject
+    # variance can be estimated) and must still simulate, producing identical
+    # individuals. Floating-point noise from np.cov can likewise leave a
+    # near-singular but truly PSD matrix with an eigenvalue just below zero;
+    # only a *meaningfully* negative eigenvalue indicates a real problem.
+    tolerance = (
+        max(np.abs(eigenvalues).max(), 1.0) * cov.shape[0] * np.finfo(float).eps * 100
+    )
+    if eigenvalues.min() < -tolerance:
+        raise ValueError(
+            "population_cov is not positive semi-definite (smallest eigenvalue "
+            f"{eigenvalues.min():.3g}, below numerical tolerance). {advice}"
+        )
+    return cov
+
+
 @dataclass
 class SheddingFit:
     """
@@ -409,30 +448,15 @@ class SheddingFit:
         """
         if n < 1:
             raise ValueError("n_individuals must be at least 1")
-        cov = np.asarray(self.population_cov, dtype=float)
-        eigenvalues = np.linalg.eigvalsh(cov)
-        # Tolerance scaled to the matrix, not exact zero: an all-zeros
-        # population_cov is a legitimate single-subject fit (no between-subject
-        # variance can be estimated from one subject) and must still simulate,
-        # producing identical individuals. Floating-point noise from np.cov can
-        # likewise leave a near-singular but truly PSD matrix with an eigenvalue
-        # just below zero; only a *meaningfully* negative eigenvalue indicates a
-        # real problem.
-        tolerance = (
-            max(np.abs(eigenvalues).max(), 1.0)
-            * cov.shape[0]
-            * np.finfo(float).eps
-            * 100
+        cov = _require_positive_semidefinite(
+            self.population_cov,
+            advice=(
+                "This usually means too few subjects survived fitting to "
+                "estimate a stable between-subject covariance. Consider "
+                "pooling multiple studies into a SheddingEnsemble instead of "
+                "simulating from this fit alone."
+            ),
         )
-        if eigenvalues.min() < -tolerance:
-            raise ValueError(
-                "population_cov is not positive semi-definite (smallest "
-                f"eigenvalue {eigenvalues.min():.3g}, below numerical "
-                "tolerance). This usually means too few subjects survived "
-                "fitting to estimate a stable between-subject covariance. "
-                "Consider pooling multiple studies into a SheddingEnsemble "
-                "instead of simulating from this fit alone."
-            )
         theta = rng.multivariate_normal(self.population_mean, cov, n)
         return np.exp(theta), np.full(n, self.dataset_id, dtype=object)
 
