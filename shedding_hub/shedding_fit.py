@@ -35,12 +35,13 @@ class SheddingDataError(ValueError):
         reason: Machine-readable cause, one of ``ct_units``,
             ``non_pathogen_biomarker``, ``too_few_subjects``,
             ``no_positive_measurements``, ``unknown_analyte``,
-            ``degenerate_fit``. The catalog builder records this so a missing
-            study reads as unsuitable, not as a bug.
+            ``no_rise_observed``, ``degenerate_fit``. The catalog builder
+            records this so a missing study reads as unsuitable, not as a bug.
 
-            All but ``degenerate_fit`` are raised by ``prepare_observations``,
-            before any fitting happens. ``degenerate_fit`` is raised by
-            ``fit_shedding_model`` only after the optimizer has run, because it
+            The first five are raised by ``prepare_observations``, before any
+            fitting happens. The last two come from ``fit_shedding_model``:
+            ``no_rise_observed`` once the observations are in hand but before
+            optimizing, and ``degenerate_fit`` only afterwards, because it
             describes the fit rather than the data.
     """
 
@@ -148,9 +149,10 @@ def prepare_observations(
             measurements, or leaves no subject with enough data — reasons
             ``unknown_analyte``, ``ct_units``, ``non_pathogen_biomarker``,
             ``no_positive_measurements`` and ``too_few_subjects``
-            respectively. The remaining reason, ``degenerate_fit``, cannot
-            arise here: it describes a fit that collapsed onto the parameter
-            bounds and so is raised by ``fit_shedding_model`` after optimizing.
+            respectively. The remaining two cannot arise here and belong to
+            ``fit_shedding_model``: ``no_rise_observed`` (the gamma model asked
+            of data with no observed rise) and ``degenerate_fit`` (a fit that
+            collapsed onto the parameter bounds).
     """
     validate_model(model)
     if not dataset or not isinstance(dataset, dict):
@@ -303,8 +305,8 @@ from scipy.stats import norm
 
 from .shedding_models import (
     half_life_days,
-    log10_concentration,
     log10_concentration_pointwise,
+    log10_concentration_rowwise,
     peak_day,
 )
 
@@ -327,14 +329,28 @@ _DEFAULT_A0 = math.log(2.0) / 7.0  # a one-week half-life
 _DEFAULT_B0 = 1.0  # rises then falls, peaking at 1/a0 days
 
 # A fitted parameter at or below this magnitude has collapsed rather than been
-# estimated. This sits four orders of magnitude above _MIN_PARAM deliberately:
-# the vanishing gradient above means a collapsing parameter stalls somewhere
-# near zero rather than reaching the bound exactly, so testing proximity to the
-# literal bound does not detect it. Every parameter is already physically
-# meaningless well before this point — a0 <= 1e-2 is a half-life beyond 69
-# days, longer than any shedding episode in the repository; c0 <= 1e-2 puts the
-# log10 intercept below 0.005, orders of magnitude under any assay's detection
-# floor; and b0 <= 1e-2 leaves the gamma curve with no rise phase at all.
+# estimated. This sits four orders of magnitude above _MIN_PARAM deliberately,
+# and is a magnitude test rather than a proximity-to-the-bound test, because the
+# vanishing gradient described above means a collapsing parameter *stalls* near
+# zero instead of ever reaching the bound. Confirmed three ways on the fit that
+# motivated it (woelfel stool gamma, subject 3, whose c0 is collapsing):
+# with the theta bound at -25 its c0 settles at 2.97e-3; moving the bound up to
+# log(_MIN_PARAM) = -13.82 moves it only to 8.39e-3; and restarting L-BFGS-B
+# twelve times from its own output leaves it there, improving the likelihood by
+# ~1e-6 per restart. It is a boundary MLE, not under-convergence, and no
+# tolerance tight enough to mean "at the bound" would ever fire.
+#
+# The level is set from repository-wide evidence rather than from that one
+# subject. Over 7,739 per-subject fits, the number flagged is nearly flat from
+# 1e-5 to 1e-2 (3,035 -> 3,613, +19%) and then climbs steeply (4,915 by 1e-1,
+# +36% more). 1e-2 is the last point before the threshold starts consuming
+# genuinely-estimated parameters.
+#
+# Each coordinate is independently meaningless by then: a0 <= 1e-2 is a
+# half-life beyond 69 days, longer than any shedding episode in the repository;
+# c0 <= 1e-2 puts the log10 intercept below 0.005, orders of magnitude under any
+# assay's detection floor; and b0 <= 1e-2 leaves the gamma curve with no rise
+# phase at all.
 _DEGENERATE_PARAM = 1e-2
 
 # How close to the upper theta bound counts as pinned against it. The upper
@@ -342,6 +358,23 @@ _DEGENERATE_PARAM = 1e-2
 # vanishing, so unlike the floor it really is reached, and the tolerance can be
 # tight.
 _BOUND_TOLERANCE = 1e-6
+
+# The gamma model is only fitted where a rise is actually observed. Its ``b0``
+# describes the rise to peak, so a study that sampled purely after peak shedding
+# carries no information about it: the profile likelihood is then monotone in
+# ``b0`` until the ``c0 > 0`` constraint binds, and the MLE is a boundary
+# solution no initialization can avoid. A subject counts as observing a rise if
+# its highest reading came later than its first, judged only on subjects with
+# enough readings for "later" to mean anything.
+_MIN_RISE_OBSERVATIONS = 3
+_MIN_RISE_FRACTION = 0.5
+
+# Draws used to summarize peak_log10 by its population median. Large enough that
+# the Monte Carlo error in the median is well under the third decimal place
+# (~1.25 * sd / sqrt(n)), and paired with a fixed seed so a catalog rebuild
+# reproduces exactly.
+_PEAK_LOG10_DRAWS = 10000
+_PEAK_LOG10_SEED = 8601
 
 
 def _require_positive_semidefinite(cov: np.ndarray, *, advice: str) -> np.ndarray:
@@ -447,6 +480,13 @@ class SheddingFit:
     # directly-constructed fits and catalogs written before this field existed
     # both remain loadable.
     n_degenerate_subjects: int = 0
+    # Percentage (0-100, matching ``pct_censored``) of adequately-sampled
+    # subjects whose highest reading came later than their first. The gamma
+    # model is refused below 50%; on exponential fits this is informational, and
+    # a low value there is expected rather than alarming — post-peak sampling is
+    # exactly what the exponential model is for. NaN when no subject had enough
+    # readings to judge.
+    pct_subjects_with_rise: float = float("nan")
 
     @property
     def param_names(self) -> tuple[str, ...]:
@@ -471,17 +511,51 @@ class SheddingFit:
 
     @property
     def peak_log10(self) -> float:
-        """Log10 concentration of the median individual at its peak."""
-        if self.model == "exponential":
-            return float(
-                log10_concentration(
-                    self.model, self.median_params[None, :], np.array([0.0])
-                )[0, 0]
-            )
+        """
+        Population median of the log10 concentration at peak.
+
+        Unlike ``peak_day`` and ``half_life_days``, this is estimated by drawing
+        from ``MVN(population_mean, population_cov)`` rather than evaluated at
+        ``median_params``, because it is the one summary for which those two
+        differ.
+
+        ``peak_day = b0/a0 = exp(theta_b - theta_a)`` and
+        ``half_life_days = ln(2)/a0`` are monotone transforms of a single
+        lognormal quantity, so the value at ``exp(mu)`` *is* their median
+        exactly, and no sampling is needed. At the peak, though, ``a0*t = b0``,
+        making this quantity ``(c0 + b0*(ln b0 - ln a0) - b0) / ln(10)`` — a
+        nonlinear function of all three parameters at once, whose median is not
+        the function evaluated at the median parameters.
+
+        The difference is not academic. Evaluating at ``exp(mu)`` reports a
+        peak below almost every individual subject's own peak whenever the
+        per-subject parameters lie on a correlated ridge, which they do for the
+        gamma model: ``b0`` and ``c0`` trade off against each other, so
+        averaging their logs coordinate-wise lands on a parameter vector no
+        subject actually has.
+
+        For the exponential model the peak is at ``t = 0``, giving
+        ``c0 / ln(10)`` — again a monotone transform of one lognormal, so
+        sampling is unnecessary. It is done anyway so that both models take one
+        code path; the two agree to Monte Carlo error, which is what
+        ``_PEAK_LOG10_DRAWS`` is sized to keep negligible.
+        """
+        rng = np.random.default_rng(_PEAK_LOG10_SEED)
+        # check_valid="ignore": an all-zero covariance (a single-subject fit) is
+        # legitimate here and simply yields identical draws, and floating-point
+        # noise can leave a truly PSD matrix looking marginally indefinite.
+        # sample_params is the path that validates, via
+        # _require_positive_semidefinite.
+        theta = rng.multivariate_normal(
+            self.population_mean,
+            self.population_cov,
+            _PEAK_LOG10_DRAWS,
+            check_valid="ignore",
+        )
+        params = np.exp(theta)
+        peaks = peak_day(self.model, params)
         return float(
-            log10_concentration(
-                self.model, self.median_params[None, :], np.array([self.peak_day])
-            )[0, 0]
+            np.median(log10_concentration_rowwise(self.model, params, peaks[:, None]))
         )
 
     @property
@@ -588,6 +662,48 @@ def _degenerate_subjects(theta: np.ndarray) -> np.ndarray:
     return np.asarray((collapsed | runaway).any(axis=1))
 
 
+def _fraction_observing_a_rise(observations: Observations) -> float:
+    """
+    Share of adequately-sampled subjects whose highest reading is not their first.
+
+    Only subjects with at least ``_MIN_RISE_OBSERVATIONS`` uncensored positive
+    readings at ``t > 0`` are judged: below that, "the maximum came later" is an
+    artefact of having almost no readings rather than evidence about the shape
+    of the trajectory. Censored points are excluded because a ``negative`` result
+    carries no value to be the maximum.
+
+    A subject whose maximum is tied between its first observation and a later
+    one counts as *not* observing a rise — the peak is consistent with having
+    already passed.
+
+    Args:
+        observations: Prepared observations for one analyte.
+
+    Returns:
+        The fraction in ``[0, 1]``, or NaN when no subject has enough readings
+        to judge. NaN is deliberately not zero: it means "no evidence either
+        way", and every comparison against it is False, so a caller gating on
+        ``fraction >= threshold`` must spell out how it treats the undecidable
+        case rather than silently getting one or the other.
+    """
+    usable = (~observations.censored) & (observations.times > 0)
+    verdicts: list[bool] = []
+    for subject in range(observations.n_subjects):
+        mask = usable & (observations.subject_index == subject)
+        if mask.sum() < _MIN_RISE_OBSERVATIONS:
+            continue
+        times = observations.times[mask]
+        values = observations.values[mask]
+        order = np.argsort(times, kind="stable")
+        times, values = times[order], values[order]
+        # argmax takes the earliest maximum, which is what makes a tie with the
+        # first observation read as "no rise".
+        verdicts.append(bool(times[int(np.argmax(values))] > times[0]))
+    if not verdicts:
+        return float("nan")
+    return float(np.mean(verdicts))
+
+
 def _negative_log_likelihood(
     x: np.ndarray, model: str, observations: Observations
 ) -> float:
@@ -647,8 +763,11 @@ def fit_shedding_model(
     Raises:
         SheddingDataError: The analyte cannot be fitted (see ``reason``). In
             addition to every reason ``prepare_observations`` can raise, this
-            adds ``degenerate_fit``: too many subjects' fits collapsed onto the
-            parameter bounds for a population covariance to be estimable.
+            adds two of its own: ``no_rise_observed``, when the gamma model is
+            asked of data in which fewer than half the adequately-sampled
+            subjects show a rise, and ``degenerate_fit``, when too many
+            subjects' fits collapsed onto the parameter bounds for a population
+            covariance to be estimable.
 
     Note:
         ``aic`` is only comparable between models fitted to the same
@@ -660,6 +779,27 @@ def fit_shedding_model(
     observations = prepare_observations(
         dataset, analyte, model, min_observations=min_observations
     )
+
+    rise_fraction = _fraction_observing_a_rise(observations)
+    # `not (x >= t)` rather than `x < t` so that a NaN fraction — no subject had
+    # enough readings to judge — refuses too. Absence of evidence that a rise
+    # was ever observed is not evidence that fitting a rise is justified.
+    if model == "gamma" and not (rise_fraction >= _MIN_RISE_FRACTION):
+        observed = (
+            "no subject had enough readings to judge"
+            if math.isnan(rise_fraction)
+            else f"only {100 * rise_fraction:.0f}% of subjects did"
+        )
+        raise SheddingDataError(
+            f"The gamma model needs a rise to fit, and analyte {analyte!r} does "
+            f"not show one: {observed}, against a required "
+            f"{100 * _MIN_RISE_FRACTION:.0f}%. Sampling here appears to begin at "
+            "or after peak shedding, which leaves b0 unidentifiable — the "
+            "likelihood is monotone in it until the c0 > 0 constraint binds. Fit "
+            "the exponential model instead; it is the appropriate model for "
+            "post-peak sampling.",
+            "no_rise_observed",
+        )
 
     k = len(PARAM_NAMES[model])
     n = observations.n_subjects
@@ -782,4 +922,5 @@ def fit_shedding_model(
         log_likelihood=log_likelihood,
         aic=2.0 * n_parameters - 2.0 * log_likelihood,
         n_degenerate_subjects=n_degenerate,
+        pct_subjects_with_rise=100.0 * rise_fraction,
     )

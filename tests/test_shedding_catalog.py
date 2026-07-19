@@ -42,6 +42,7 @@ def _fit_with_degenerates(n_degenerate):
         log_likelihood=-10.0,
         aic=42.0,
         n_degenerate_subjects=n_degenerate,
+        pct_subjects_with_rise=62.5,
     )
 
 
@@ -198,6 +199,9 @@ def test_round_trip_serialization(two_study_catalog, tmp_path):
     assert copy.n_subjects == original.n_subjects
     assert copy.n_excluded_subjects == original.n_excluded_subjects
     assert copy.n_degenerate_subjects == original.n_degenerate_subjects
+    assert copy.pct_subjects_with_rise == pytest.approx(
+        original.pct_subjects_with_rise, nan_ok=True
+    )
     assert copy.n_dropped_measurements == original.n_dropped_measurements
     assert copy.n_measurements == original.n_measurements
     assert copy.n_censored == original.n_censored
@@ -223,6 +227,36 @@ def test_fit_from_payload_defaults_missing_degenerate_count():
     payload = SheddingCatalog(fits=[_fit_with_degenerates(3)]).to_dict()
     del payload["fits"][0]["n_degenerate_subjects"]
     assert SheddingCatalog.from_dict(payload).fits[0].n_degenerate_subjects == 0
+
+
+def test_round_trip_preserves_the_rise_percentage():
+    fit = _fit_with_degenerates(0)
+    restored = SheddingCatalog.from_dict(SheddingCatalog(fits=[fit]).to_dict())
+    assert restored.fits[0].pct_subjects_with_rise == pytest.approx(62.5)
+
+
+def test_fit_from_payload_defaults_missing_rise_percentage_to_nan():
+    """A catalog predating the rise gate must read as unknown, not as zero.
+
+    Zero would assert that no subject rose, which is a claim the old catalog
+    never made.
+    """
+    payload = SheddingCatalog(fits=[_fit_with_degenerates(0)]).to_dict()
+    del payload["fits"][0]["pct_subjects_with_rise"]
+    assert np.isnan(SheddingCatalog.from_dict(payload).fits[0].pct_subjects_with_rise)
+
+
+def test_table_exposes_the_rise_percentage_for_both_models(make_synthetic_dataset):
+    """The gamma gate must be auditable from the table, not just from absences."""
+    mu = np.array([np.log(0.5), np.log(2.0), np.log(12.0)])
+    dataset = make_synthetic_dataset("gamma", mu, np.diag([0.04] * 3), n_subjects=20)
+    catalog = fit_shedding_models([dataset], models=("gamma", "exponential"))
+    table = catalog.table
+    assert "pct_subjects_with_rise" in table.columns
+    # This synthetic truth peaks at day 4 within a 1..14 window, so essentially
+    # every subject rises -- and the exponential row reports it too.
+    assert (table["pct_subjects_with_rise"] > 50).all()
+    assert set(table["model"]) == {"gamma", "exponential"}
 
 
 def test_restored_fit_can_still_simulate(two_study_catalog):

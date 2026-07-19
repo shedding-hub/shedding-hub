@@ -42,6 +42,7 @@ _TABLE_COLUMNS = _KEY_COLUMNS + (
     "n_subjects",
     "n_measurements",
     "pct_censored",
+    "pct_subjects_with_rise",
     "a_median",
     "b_median",
     "c_median",
@@ -81,6 +82,11 @@ def fit_to_row(fit: SheddingFit) -> dict:
                 if fit.n_measurements
                 else np.nan
             ),
+            # Surfaced for both models so the gamma gate is auditable from the
+            # table rather than implicit in which rows are missing. On an
+            # exponential row it is informational: a low value there is the
+            # normal case, not a warning.
+            "pct_subjects_with_rise": fit.pct_subjects_with_rise,
             "sigma": fit.sigma,
             "peak_day": fit.peak_day,
             "peak_log10": fit.peak_log10,
@@ -115,6 +121,7 @@ def _fit_to_payload(fit: SheddingFit) -> dict:
             "n_censored": int(fit.n_censored),
             "n_excluded_subjects": int(fit.n_excluded_subjects),
             "n_degenerate_subjects": int(fit.n_degenerate_subjects),
+            "pct_subjects_with_rise": float(fit.pct_subjects_with_rise),
             "n_dropped_measurements": int(fit.n_dropped_measurements),
             "converged": bool(fit.converged),
             "log_likelihood": float(fit.log_likelihood),
@@ -149,6 +156,11 @@ def _fit_from_payload(payload: dict) -> SheddingFit:
         # Defaulted, not required: catalogs written before degeneracy detection
         # existed have no such key, and every fit in them predates the concept.
         n_degenerate_subjects=int(payload.get("n_degenerate_subjects", 0)),
+        # Likewise defaulted: NaN reads as "this catalog predates the rise
+        # gate", which is honest, where 0.0 would assert that no subject rose.
+        pct_subjects_with_rise=float(
+            payload.get("pct_subjects_with_rise", float("nan"))
+        ),
         n_dropped_measurements=int(payload["n_dropped_measurements"]),
         converged=bool(payload["converged"]),
         log_likelihood=float(payload["log_likelihood"]),

@@ -2,11 +2,14 @@ import matplotlib
 
 matplotlib.use("Agg")
 
+import math
+
 import numpy as np
 import pytest
 
 from shedding_hub.shedding_fit import (
     SheddingDataError,
+    _fraction_observing_a_rise,
     prepare_observations,
 )
 
@@ -566,6 +569,104 @@ def test_single_degenerate_subject_raises():
     assert excinfo.value.reason == "degenerate_fit"
 
 
+def _rise_dataset(n_rising, n_falling, n_short=0):
+    """Subjects that peak mid-window, subjects that peak at their first reading.
+
+    The rise gate counts subjects, not measurements, so these are built one
+    subject at a time with an unambiguous shape each.
+    """
+    rising = {
+        "measurements": [
+            {"analyte": "stool", "time": t, "value": v}
+            for t, v in zip([1, 2, 3, 4, 5], [1e3, 1e5, 1e7, 1e5, 1e3])
+        ]
+    }
+    falling = {
+        "measurements": [
+            {"analyte": "stool", "time": t, "value": v}
+            for t, v in zip([1, 2, 3, 4, 5], [1e7, 1e6, 1e5, 1e4, 1e3])
+        ]
+    }
+    # Three usable measurements, so prepare_observations keeps this subject, but
+    # only two of them are uncensored -- below what the gate needs to judge a
+    # shape. Deliberately built to *look* like a rise, so a gate that forgot its
+    # minimum would count it.
+    short = {
+        "measurements": [
+            {"analyte": "stool", "time": 1, "value": 1e3},
+            {"analyte": "stool", "time": 2, "value": 1e7},
+            {"analyte": "stool", "time": 3, "value": "negative"},
+        ]
+    }
+    return {
+        "dataset_id": "rise_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": (
+            [dict(rising) for _ in range(n_rising)]
+            + [dict(falling) for _ in range(n_falling)]
+            + [dict(short) for _ in range(n_short)]
+        ),
+    }
+
+
+def test_gamma_refused_when_most_subjects_never_rise():
+    with pytest.raises(SheddingDataError) as excinfo:
+        fit_shedding_model(_rise_dataset(1, 3), analyte="stool", model="gamma")
+    assert excinfo.value.reason == "no_rise_observed"
+    assert "exponential" in str(excinfo.value)
+
+
+def test_gamma_allowed_at_exactly_the_threshold():
+    """The gate is >= 0.5, so a half-and-half analyte fits rather than refuses."""
+    fit = fit_shedding_model(_rise_dataset(2, 2), analyte="stool", model="gamma")
+    assert fit.pct_subjects_with_rise == pytest.approx(50.0)
+
+
+def test_exponential_is_never_gated_on_rise():
+    """Post-peak sampling is what the exponential model is for."""
+    fit = fit_shedding_model(_rise_dataset(0, 4), analyte="stool", model="exponential")
+    assert fit.pct_subjects_with_rise == pytest.approx(0.0)
+
+
+def test_rise_gate_ignores_subjects_with_too_few_readings():
+    """Two rising readings are not evidence of a rise; they are just two points.
+
+    Without the minimum, the three short subjects here would each read as a
+    rise and drag a 1-in-4 analyte to 4-in-7, over the threshold.
+    """
+    with pytest.raises(SheddingDataError) as excinfo:
+        fit_shedding_model(
+            _rise_dataset(1, 3, n_short=3), analyte="stool", model="gamma"
+        )
+    assert excinfo.value.reason == "no_rise_observed"
+
+
+def test_rise_fraction_is_nan_when_no_subject_can_be_judged():
+    observations = prepare_observations(
+        _rise_dataset(0, 0, n_short=4), "stool", "gamma"
+    )
+    assert math.isnan(_fraction_observing_a_rise(observations))
+
+
+def test_gamma_refused_when_no_subject_can_be_judged():
+    """NaN must refuse, not slip through the comparison as neither < nor >=."""
+    with pytest.raises(SheddingDataError) as excinfo:
+        fit_shedding_model(
+            _rise_dataset(0, 0, n_short=4), analyte="stool", model="gamma"
+        )
+    assert excinfo.value.reason == "no_rise_observed"
+    assert "no subject had enough readings" in str(excinfo.value)
+
+
 def _minimal_fit(population_mean, population_cov, model="exponential"):
     """A directly-constructed SheddingFit, bypassing fit_shedding_model entirely.
 
@@ -649,6 +750,7 @@ import pathlib
 
 import shedding_hub as sh
 from shedding_hub.shedding_fit import _MIN_PARAM
+from shedding_hub.shedding_models import log10_concentration_rowwise, peak_day
 
 DATA = pathlib.Path(__file__).parent.parent / "data"
 
@@ -659,18 +761,50 @@ def woelfel():
     return sh.load_dataset("woelfel2020virological", local=str(DATA))
 
 
+# Woelfel sputum under the gamma model is deliberately absent: only 44% of its
+# subjects observe a rise, so the rise gate refuses it. That refusal is asserted
+# directly by test_woelfel_sputum_gamma_is_refused_for_lack_of_a_rise.
+WOELFEL_FITTABLE = [
+    ("stool", "exponential"),
+    ("stool", "gamma"),
+    ("sputum", "exponential"),
+]
+
+
 @pytest.fixture(scope="module")
 def woelfel_fits(woelfel):
-    """Every analyte/model combination this bug affected, fitted once."""
+    """Every analyte/model combination this bug affected that is still fitted."""
     return {
         (analyte, model): fit_shedding_model(woelfel, analyte=analyte, model=model)
-        for analyte in ("stool", "sputum")
-        for model in ("exponential", "gamma")
+        for analyte, model in WOELFEL_FITTABLE
     }
 
 
-@pytest.mark.parametrize("analyte", ["stool", "sputum"])
-@pytest.mark.parametrize("model", ["exponential", "gamma"])
+def test_woelfel_sputum_gamma_is_refused_for_lack_of_a_rise(woelfel):
+    """
+    Real-data guard on the rise gate, on the analyte that motivated it.
+
+    Woelfel sputum was sampled from symptom onset onward and 5 of its 9
+    adequately-sampled subjects peak at their first reading. Fitting a rise
+    parameter to that leaves b0 unidentifiable, so the gamma model is refused
+    outright rather than reported with an arbitrary b0. The exponential fit of
+    the same analyte is unaffected and is covered by the tests below.
+    """
+    with pytest.raises(SheddingDataError) as excinfo:
+        fit_shedding_model(woelfel, analyte="sputum", model="gamma")
+    assert excinfo.value.reason == "no_rise_observed"
+
+    exponential = fit_shedding_model(woelfel, analyte="sputum", model="exponential")
+    assert exponential.pct_subjects_with_rise == pytest.approx(100 * 4 / 9)
+
+
+def test_woelfel_stool_passes_the_rise_gate(woelfel_fits):
+    """Stool clears the gate at exactly the threshold, so pin it deliberately."""
+    fit = woelfel_fits[("stool", "gamma")]
+    assert fit.pct_subjects_with_rise == pytest.approx(50.0)
+
+
+@pytest.mark.parametrize("analyte,model", WOELFEL_FITTABLE)
 def test_woelfel_fit_is_physically_plausible(woelfel_fits, analyte, model):
     """
     Real-data guard: a synthetic-only suite missed a 278-day half-life.
@@ -696,8 +830,7 @@ def test_woelfel_fit_is_physically_plausible(woelfel_fits, analyte, model):
     )
 
 
-@pytest.mark.parametrize("analyte", ["stool", "sputum"])
-@pytest.mark.parametrize("model", ["exponential", "gamma"])
+@pytest.mark.parametrize("analyte,model", WOELFEL_FITTABLE)
 def test_woelfel_no_subject_sits_at_the_parameter_floor(woelfel_fits, analyte, model):
     """
     Real-data guard: no per-subject fit may collapse to _MIN_PARAM.
@@ -715,3 +848,79 @@ def test_woelfel_no_subject_sits_at_the_parameter_floor(woelfel_fits, analyte, m
         f"{analyte}/{model} has a subject parameter at {smallest:.3g}, within a "
         f"factor of ten of the floor {_MIN_PARAM:.0e}:\n{fit.subject_params}"
     )
+
+
+def _subject_peak_log10(fit):
+    """Each subject's own peak, on the same scale as ``fit.peak_log10``."""
+    params = fit.subject_params[list(fit.param_names)].to_numpy(dtype=float)
+    peaks = peak_day(fit.model, params)
+    return log10_concentration_rowwise(fit.model, params, peaks[:, None])[:, 0]
+
+
+def test_woelfel_stool_gamma_peak_lies_within_its_subjects_range(woelfel_fits):
+    """
+    Real-data guard: the population peak must resemble the population.
+
+    Evaluating peak_log10 at exp(population_mean) reported 2.218 for this fit,
+    below the peak of every subject but one. That is a coordinate-wise-average
+    artefact: at the peak the quantity is
+    (c0 + b0*(ln b0 - ln a0) - b0) / ln(10), a nonlinear function of all three
+    parameters, so its population median is not the function evaluated at the
+    median parameters -- and b0 and c0 trade off along a ridge, so the averaged
+    parameter vector belongs to no subject. Taking the median over draws from
+    MVN(mu, Sigma) instead puts it at 3.49, inside the spread of the subjects it
+    is meant to summarize.
+
+    Pinned as an interval rather than a value: the point of the change is that
+    the summary sits among the subjects, not that it equals any number.
+    """
+    fit = woelfel_fits[("stool", "gamma")]
+    subject_peaks = _subject_peak_log10(fit)
+    assert subject_peaks.min() < fit.peak_log10 < subject_peaks.max()
+    # Also comfortably nearer the subjects' own median than the old definition
+    # managed: 3.49 against a subject median of 4.33, where 2.218 was 2.1 away.
+    assert abs(fit.peak_log10 - np.median(subject_peaks)) < 1.0
+
+
+@pytest.mark.parametrize("analyte,model", WOELFEL_FITTABLE)
+def test_woelfel_peak_lies_within_its_subjects_range(woelfel_fits, analyte, model):
+    """The same containment property, required of every real fit."""
+    fit = woelfel_fits[(analyte, model)]
+    subject_peaks = _subject_peak_log10(fit)
+    assert subject_peaks.min() < fit.peak_log10 < subject_peaks.max()
+
+
+def test_exponential_peak_log10_matches_its_closed_form(make_synthetic_dataset):
+    """
+    Sampling must not disturb the case that has an exact answer.
+
+    For the exponential model the peak is at t = 0, so peak_log10 is
+    c0 / ln(10) -- a monotone transform of a single lognormal, whose median is
+    exactly the value at exp(mu). Sampling is used anyway to keep one code path
+    for both models, so the two must agree; the tolerance is Monte Carlo error
+    at _PEAK_LOG10_DRAWS draws, not slack for a real discrepancy.
+    """
+    mu = np.array([np.log(0.6), np.log(18.0)])
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.04, 0.04]), n_subjects=30
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    closed_form = fit.median_params[1] / np.log(10.0)
+    assert fit.peak_log10 == pytest.approx(closed_form, abs=0.05)
+
+
+def test_peak_log10_is_deterministic(woelfel_fits):
+    """A catalog rebuild must reproduce byte-for-byte, so the seed is fixed."""
+    fit = woelfel_fits[("stool", "gamma")]
+    assert fit.peak_log10 == fit.peak_log10
+
+
+def test_peak_log10_with_zero_covariance_is_the_point_value():
+    """A single-subject fit has no spread, so sampling must be a no-op."""
+    mean = np.array([np.log(0.5), np.log(2.0), np.log(12.0)])
+    fit = _minimal_fit(mean, np.zeros((3, 3)), model="gamma")
+    params = np.exp(mean)[None, :]
+    expected = log10_concentration_rowwise(
+        "gamma", params, peak_day("gamma", params)[:, None]
+    )[0, 0]
+    assert fit.peak_log10 == pytest.approx(expected)
