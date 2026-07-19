@@ -130,6 +130,18 @@ def test_cross_sectional_study_is_skipped():
     assert (catalog.skipped["reason"] == "too_few_subjects").all()
 
 
+def test_empty_table_has_same_columns_as_populated_table(two_study_catalog):
+    empty = SheddingCatalog().table
+    populated = two_study_catalog.table
+    assert list(empty.columns) == list(populated.columns)
+
+
+def test_exponential_only_catalog_still_has_b_median_column(two_study_catalog):
+    table = two_study_catalog.table
+    assert "b_median" in table.columns
+    assert table["b_median"].isna().all()
+
+
 def test_round_trip_serialization(two_study_catalog, tmp_path):
     payload = two_study_catalog.to_dict()
     restored = SheddingCatalog.from_dict(payload)
@@ -139,6 +151,15 @@ def test_round_trip_serialization(two_study_catalog, tmp_path):
     np.testing.assert_allclose(copy.population_mean, original.population_mean)
     np.testing.assert_allclose(copy.population_cov, original.population_cov)
     assert copy.sigma == pytest.approx(original.sigma)
+    assert copy.censoring_limit == pytest.approx(original.censoring_limit)
+    assert copy.model == original.model
+    assert copy.biomarker == original.biomarker
+    assert copy.specimen == original.specimen
+    assert copy.reference_event == original.reference_event
+    assert copy.unit == original.unit
+    assert copy.aic == pytest.approx(original.aic)
+    assert copy.converged == original.converged
+    assert copy.n_subjects == original.n_subjects
     assert copy.subject_params is None
 
 

@@ -33,6 +33,26 @@ _KEY_COLUMNS = (
     "model",
 )
 
+# Every column a fit's row can produce, in display order. Both models' medians
+# (a/b/c) are always present so that an empty catalog, an exponential-only
+# catalog (no b0), and a mixed catalog all present exactly the same columns —
+# downstream code should never need to check which model produced a row before
+# indexing into it.
+_TABLE_COLUMNS = _KEY_COLUMNS + (
+    "n_subjects",
+    "n_measurements",
+    "pct_censored",
+    "a_median",
+    "b_median",
+    "c_median",
+    "sigma",
+    "peak_day",
+    "peak_log10",
+    "half_life_days",
+    "aic",
+    "converged",
+)
+
 
 def fit_to_row(fit: SheddingFit) -> dict:
     """
@@ -41,8 +61,14 @@ def fit_to_row(fit: SheddingFit) -> dict:
     Because ``theta = log(params)`` is normal, the parameters are lognormal and
     ``exp(mu)`` is exactly their median. These are therefore labelled ``_median``,
     which is the accurate name rather than a compromise.
+
+    All three of ``a_median``, ``b_median``, ``c_median`` are always present,
+    even for models that lack one of them (the exponential model has no
+    ``b0``): the missing one is ``NaN`` rather than the key being absent, so a
+    row's schema does not depend on which model produced it.
     """
     row = {column: getattr(fit, column) for column in _KEY_COLUMNS}
+    row.update({"a_median": np.nan, "b_median": np.nan, "c_median": np.nan})
     medians = fit.median_params
     for name, value in zip(PARAM_NAMES[fit.model], medians):
         row[f"{name[0]}_median"] = float(value)
@@ -68,8 +94,10 @@ def fit_to_row(fit: SheddingFit) -> dict:
 
 def _fits_to_frame(fits: list[SheddingFit]) -> pd.DataFrame:
     if not fits:
-        return pd.DataFrame(columns=list(_KEY_COLUMNS))
-    return pd.DataFrame([fit_to_row(fit) for fit in fits])
+        return pd.DataFrame(columns=list(_TABLE_COLUMNS))
+    return pd.DataFrame([fit_to_row(fit) for fit in fits]).reindex(
+        columns=list(_TABLE_COLUMNS)
+    )
 
 
 def _fit_to_payload(fit: SheddingFit) -> dict:
