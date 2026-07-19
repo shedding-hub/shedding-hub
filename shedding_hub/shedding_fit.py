@@ -20,12 +20,6 @@ from .shedding_models import PARAM_NAMES, validate_model
 
 CENSORING_MARGIN = 0.01
 NEGATIVE_VALUE = "negative"
-QUALITATIVE_VALUES = (
-    "positive",
-    "weak positive",
-    "strong positive",
-    "inconclusive",
-)
 
 
 class SheddingDataError(ValueError):
@@ -45,13 +39,24 @@ class SheddingDataError(ValueError):
 
 @dataclass
 class Observations:
-    """Model-ready observations for a single analyte."""
+    """
+    Model-ready observations for a single analyte.
+
+    ``censoring_limit`` is the single representative, analyte-level log10
+    limit — what gets reported and what simulation uses for its ``detected``
+    flag. ``censoring_limits`` is the per-observation log10 limit the
+    likelihood should actually use: it equals ``censoring_limit`` everywhere
+    except at observations whose measurement declared its own
+    ``limit_of_quantification``, which overrides the analyte-level value for
+    that one observation only.
+    """
 
     subject_index: np.ndarray
     times: np.ndarray
     values: np.ndarray
     censored: np.ndarray
     censoring_limit: float
+    censoring_limits: np.ndarray
     subject_ids: list = field(default_factory=list)
     n_subjects: int = 0
     n_excluded_subjects: int = 0
@@ -81,6 +86,9 @@ def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> 
     usable, or when the declared limit is not strictly below every observation —
     the likelihood is only coherent if censored points really do sit below the
     limit.
+
+    Assumes ``observed_log10`` is non-empty; ``prepare_observations`` guarantees
+    this by raising ``no_positive_measurements`` itself before ever calling here.
     """
     declared = None
     for key in ("limit_of_quantification", "limit_of_detection"):
@@ -88,15 +96,6 @@ def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> 
         if limit is not None:
             declared = math.log10(limit)
             break
-
-    if observed_log10.size == 0:
-        if declared is None:
-            raise SheddingDataError(
-                "No positive measurements and no declared limit, so the censoring "
-                "limit cannot be resolved.",
-                "no_positive_measurements",
-            )
-        return declared
 
     smallest = float(observed_log10.min())
     if declared is None or declared >= smallest:
@@ -264,12 +263,26 @@ def prepare_observations(
 
     censoring_limit = _resolve_censoring_limit(analyte_spec, observed)
 
+    # Per-observation censoring limit: the analyte-level scalar, overridden
+    # wherever that measurement declared its own limit_of_quantification.
+    # `_numeric_limit` already filtered out unusable overrides (e.g. "unknown"
+    # or non-positive), so anything left here is a genuine, positive override.
+    limits_flat = [limit for s in retained for limit in s["limits"]]
+    censoring_limits = np.array(
+        [
+            math.log10(limit) if limit is not None else censoring_limit
+            for limit in limits_flat
+        ],
+        dtype=float,
+    )
+
     return Observations(
         subject_index=subject_index,
         times=times_array,
         values=values_array,
         censored=censored_array,
         censoring_limit=censoring_limit,
+        censoring_limits=censoring_limits,
         subject_ids=retained_ids,
         n_subjects=len(retained),
         n_excluded_subjects=n_excluded,

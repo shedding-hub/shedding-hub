@@ -75,6 +75,21 @@ def test_censoring_limit_falls_back_below_smallest_positive(simple_dataset):
     assert obs.censoring_limit == pytest.approx(5.0 - 0.01)
 
 
+def test_per_measurement_loq_override_takes_effect(simple_dataset):
+    # Subject 1's "negative" measurement (index 2, time=3) declares its own LOQ,
+    # different from the analyte-level LOQ of 100.
+    simple_dataset["participants"][0]["measurements"][2]["limit_of_quantification"] = 50
+    obs = prepare_observations(simple_dataset, "stool", "exponential")
+    assert obs.censoring_limits.shape == obs.times.shape
+    censored_position = np.flatnonzero(obs.censored)[0]
+    assert obs.censoring_limits[censored_position] == pytest.approx(np.log10(50))
+    other_positions = np.flatnonzero(~obs.censored)
+    np.testing.assert_allclose(
+        obs.censoring_limits[other_positions], obs.censoring_limit
+    )
+    assert obs.censoring_limits[censored_position] != pytest.approx(obs.censoring_limit)
+
+
 def test_qualitative_and_unknown_time_are_dropped_with_warning(simple_dataset):
     with pytest.warns(UserWarning):
         obs = prepare_observations(simple_dataset, "stool", "exponential")
