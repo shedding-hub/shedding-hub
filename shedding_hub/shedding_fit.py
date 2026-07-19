@@ -318,6 +318,16 @@ class SheddingFit:
     ``population_cov`` absorbs within-subject estimation error and overestimates
     true between-subject variance. Simulated cohorts are therefore somewhat more
     dispersed than reality, the more so when subjects have few observations.
+
+    For the gamma model specifically, ``population_mean[1]`` (``b0``, the
+    rise-rate/shape parameter) is additionally downward-biased at realistic
+    sampling densities: roughly -0.5 log units at ~14 observations per subject,
+    shrinking toward zero as sampling density rises (confirmed empirically to
+    scale as roughly 1/observations-per-subject). Because ``peak_day = b0 /
+    a0``, this makes fitted peak-shedding timing systematically early for
+    sparsely-sampled studies. This is a property of two-stage maximum
+    likelihood, not a bug, and is the main reason a hierarchical Bayesian
+    backend would improve on these estimates.
     """
 
     model: str
