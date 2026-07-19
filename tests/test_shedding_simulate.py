@@ -151,3 +151,38 @@ def test_result_attrs_record_the_time_origin(exponential_fit):
 def test_n_individuals_must_be_positive(exponential_fit):
     with pytest.raises(ValueError):
         simulate_shedding(exponential_fit, n_individuals=0, times=[1.0])
+
+
+from matplotlib.figure import Figure
+
+from shedding_hub.shedding_simulate import plot_simulated_shedding
+
+
+def test_plot_returns_a_figure(exponential_fit):
+    traj = simulate_shedding(
+        exponential_fit, n_individuals=40, times=np.arange(0.0, 20.0), seed=0
+    )
+    fig = plot_simulated_shedding(traj, source=exponential_fit)
+    assert isinstance(fig, Figure)
+
+
+def test_plot_rejects_an_empty_frame():
+    with pytest.raises(ValueError, match="empty"):
+        plot_simulated_shedding(pd.DataFrame())
+
+
+def test_public_exports_are_available():
+    import shedding_hub as sh
+
+    for name in [
+        "fit_shedding_model",
+        "fit_shedding_models",
+        "load_shedding_catalog",
+        "make_ensemble",
+        "simulate_shedding",
+        "plot_simulated_shedding",
+        "SheddingFit",
+        "SheddingEnsemble",
+        "SheddingCatalog",
+    ]:
+        assert hasattr(sh, name), name

@@ -69,6 +69,73 @@ Compare shedding patterns across multiple datasets.
 
 ```
 
+### Simulating Shedding
+
+Simulate shedding trajectories for synthetic infected individuals — intended for
+agent-based models of wastewater surveillance. Browse the catalog of fitted
+estimates, pick one study or an ensemble across studies, then simulate.
+
+```python
+>>> import numpy as np
+>>> import shedding_hub as sh
+>>> catalog = sh.load_shedding_catalog()
+>>> catalog.table[['dataset_id', 'specimen', 'model', 'peak_day']].head()  # doctest: +SKIP
+>>> fit = catalog.select(
+...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
+... )  # doctest: +SKIP
+>>> traj = sh.simulate_shedding(
+...     fit, n_individuals=100, times=np.arange(0, 30), seed=42
+... )  # doctest: +SKIP
+>>> list(traj.columns)  # doctest: +SKIP
+['individual_id', 'time', 'log10_value', 'value', 'detected', 'source_dataset_id']
+
+```
+
+The gamma model is only fitted where a rise was actually observed — at least
+half of a study's subjects must have their peak reading later than their first
+sample, since otherwise its rise parameter is unidentifiable. 38 analyte/model
+combinations in the shipped catalog are refused for this reason; `catalog.skipped`
+records why anything is missing.
+
+Pass `incubation_period` to express times as days since infection rather than
+days since the study's reference event:
+
+```python
+>>> traj = sh.simulate_shedding(
+...     fit, n_individuals=100, times=np.arange(0, 30),
+...     incubation_period=5.0, seed=42
+... )  # doctest: +SKIP
+>>> traj.attrs['time_origin']  # doctest: +SKIP
+'infection'
+
+```
+
+The gamma curve is undefined at or before the reference event, so any row
+whose time falls there comes back as `NaN` with `detected=False` — including,
+when `incubation_period` shifts the timeline, every early `times` entry that
+still falls within the incubation window. `pandas` skips `NaN` when summing,
+so aggregating simulated load across a cohort is safe by default, but account
+for it if you do your own arithmetic on `log10_value` or `value`.
+
+To pool evidence across studies, build an ensemble. Each simulated individual is
+drawn from one contributing study, so between-study variation is preserved:
+
+```python
+>>> ensemble = catalog.ensemble(
+...     biomarker='SARS-CoV-2', specimen='stool',
+...     reference_event='symptom onset', unit='gc/mL', model='gamma',
+... )  # doctest: +SKIP
+>>> traj = sh.simulate_shedding(
+...     ensemble, n_individuals=1000, times=np.arange(0, 30), seed=42
+... )  # doctest: +SKIP
+
+```
+
+Estimates come from a censored maximum-likelihood fit, so `negative`
+measurements inform the fit rather than being discarded. Because the two-stage
+fit does not shrink individual estimates toward the population mean, simulated
+cohorts are somewhat more dispersed than reality.
+
 ### Visualization
 
 Plot individual shedding trajectories over time.

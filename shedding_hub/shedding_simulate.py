@@ -8,8 +8,10 @@ times the simulation needs.
 
 from typing import Any, Callable, Sequence
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.figure import Figure
 
 from .shedding_models import log10_concentration_rowwise
 
@@ -129,3 +131,83 @@ def simulate_shedding(
         "specimen": getattr(source, "specimen", None),
     }
     return frame
+
+
+def plot_simulated_shedding(
+    traj: pd.DataFrame,
+    *,
+    source=None,
+    observed: dict | None = None,
+    quantiles: tuple[float, float, float] = (0.05, 0.5, 0.95),
+    figsize: tuple[float, float] = (8, 6),
+) -> Figure:
+    """
+    Plot the median and a credible band of simulated trajectories.
+
+    Args:
+        traj: Output of ``simulate_shedding``.
+        source: Optional fit or ensemble, used to draw the censoring limit.
+        observed: Optional dataset dictionary; its measurements are overlaid as
+            points so simulated and real trajectories can be compared.
+        quantiles: Lower, middle, and upper quantiles for the band.
+        figsize: Figure size in inches.
+
+    Returns:
+        The figure. It is closed in the pyplot state so notebooks do not display
+        it twice, matching the convention in ``shedding_peak.py``.
+    """
+    if traj.empty:
+        raise ValueError("Simulation result is empty, cannot create plot")
+
+    lower, middle, upper = quantiles
+    summary = (
+        traj.dropna(subset=["log10_value"])
+        .groupby("time")["log10_value"]
+        .quantile([lower, middle, upper])
+        .unstack()
+    )
+
+    fig, ax = plt.subplots(figsize=figsize)
+    ax.fill_between(
+        summary.index,
+        summary[lower],
+        summary[upper],
+        alpha=0.25,
+        color="tab:blue",
+        label=f"{int((upper - lower) * 100)}% of simulated individuals",
+    )
+    ax.plot(summary.index, summary[middle], color="tab:blue", lw=2, label="Median")
+
+    if source is not None:
+        ax.axhline(
+            source.censoring_limit,
+            ls=":",
+            color="gray",
+            label="Limit of quantification",
+        )
+
+    if observed is not None:
+        analyte = getattr(source, "analyte", None)
+        times, values = [], []
+        for participant in observed.get("participants", []):
+            for measurement in participant.get("measurements") or []:
+                if analyte is not None and measurement.get("analyte") != analyte:
+                    continue
+                time = measurement.get("time")
+                value = measurement.get("value")
+                if isinstance(time, (int, float)) and isinstance(value, (int, float)):
+                    times.append(float(time))
+                    values.append(np.log10(float(value)))
+        if times:
+            ax.scatter(times, values, s=18, color="black", alpha=0.5, label="Observed")
+
+    origin = traj.attrs.get("time_origin", "reference event")
+    unit = traj.attrs.get("unit", "")
+    ax.set_xlabel(f"Days after {origin}")
+    ax.set_ylabel(f"log10 concentration ({unit})" if unit else "log10 concentration")
+    ax.set_title("Simulated shedding trajectories")
+    ax.grid(alpha=0.3)
+    ax.legend(loc="upper right")
+    plt.tight_layout()
+    plt.close(fig)
+    return fig

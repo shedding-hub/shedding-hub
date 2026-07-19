@@ -29,6 +29,20 @@ from .stats import (
     compare_datasets,
 )
 
+from .shedding_models import MODELS, PARAM_NAMES
+
+from .shedding_fit import SheddingDataError, SheddingFit, fit_shedding_model
+
+from .shedding_catalog import (
+    SheddingCatalog,
+    fit_shedding_models,
+    load_shedding_catalog,
+)
+
+from .shedding_ensemble import SheddingEnsemble, make_ensemble
+
+from .shedding_simulate import plot_simulated_shedding, simulate_shedding
+
 __all__ = [
     "check_dataset",
     "folded_str",
@@ -53,4 +67,16 @@ __all__ = [
     "calc_value_summary",
     "calc_dataset_summary",
     "compare_datasets",
+    "MODELS",
+    "PARAM_NAMES",
+    "SheddingDataError",
+    "SheddingFit",
+    "SheddingCatalog",
+    "SheddingEnsemble",
+    "fit_shedding_model",
+    "fit_shedding_models",
+    "load_shedding_catalog",
+    "make_ensemble",
+    "simulate_shedding",
+    "plot_simulated_shedding",
 ]
