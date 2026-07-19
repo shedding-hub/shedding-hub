@@ -1818,11 +1818,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from shedding_hub.shedding_catalog import (
-    SheddingCatalog,
-    fit_shedding_models,
-    load_shedding_catalog,
-)
+from shedding_hub.shedding_catalog import SheddingCatalog, fit_shedding_models
 
 
 @pytest.fixture
@@ -1968,35 +1964,16 @@ def test_restored_fit_can_still_simulate(two_study_catalog):
         restored.fits[0], n_individuals=5, times=[1.0, 2.0], seed=0
     )
     assert len(traj) == 10
-
-
-def test_shipped_catalog_covers_every_dataset():
-    """CI staleness check: adding a dataset without regenerating must fail."""
-    import pathlib
-
-    data_dir = pathlib.Path(__file__).parent.parent / "data"
-    on_disk = {
-        path.name
-        for path in data_dir.iterdir()
-        if path.is_dir() and not path.name.startswith(".")
-    }
-    catalog = load_shedding_catalog()
-    accounted = set(catalog.table["dataset_id"]) | set(
-        catalog.skipped["dataset_id"]
-    )
-    missing = on_disk - accounted
-    assert not missing, (
-        f"Datasets absent from the shipped catalog: {sorted(missing)}. "
-        "Run `make catalog` to regenerate."
-    )
 ```
+
+The CI staleness check that reads the *shipped* catalog belongs to Task 8, which
+is where the catalog file first exists. Adding it here would commit a test that
+cannot pass yet.
 
 - [ ] **Step 2: Run tests to verify they fail**
 
 Run: `pytest tests/test_shedding_catalog.py -v`
 Expected: FAIL — `ModuleNotFoundError: No module named 'shedding_hub.shedding_catalog'`
-
-The final test (`test_shipped_catalog_covers_every_dataset`) will keep failing until Task 8 generates the catalog file. That is expected and is the point of the check.
 
 - [ ] **Step 3: Implement the catalog**
 
@@ -2300,8 +2277,8 @@ def load_shedding_catalog(path: str | None = None) -> SheddingCatalog:
 
 - [ ] **Step 4: Run tests to verify they pass**
 
-Run: `pytest tests/test_shedding_catalog.py -v -k "not shipped_catalog"`
-Expected: PASS, 10 tests. `test_shipped_catalog_covers_every_dataset` still fails until Task 8; that is expected.
+Run: `pytest tests/test_shedding_catalog.py -v`
+Expected: PASS, 10 tests.
 
 - [ ] **Step 5: Format and commit**
 
@@ -2908,12 +2885,42 @@ shedding_hub = ["data/*.yaml"]
 Run: `python scripts/build_shedding_catalog.py`
 Expected: progress lines per dataset, then a summary such as `wrote N fit(s) to .../shedding_hub/data/shedding_catalog.yaml` and a table of skip reasons. This takes several minutes.
 
-- [ ] **Step 5: Verify the coverage check now passes**
+- [ ] **Step 5: Add the CI staleness check**
+
+Append to `tests/test_shedding_catalog.py`:
+
+```python
+def test_shipped_catalog_covers_every_dataset():
+    """CI staleness check: adding a dataset without regenerating must fail."""
+    import pathlib
+
+    from shedding_hub.shedding_catalog import load_shedding_catalog
+
+    data_dir = pathlib.Path(__file__).parent.parent / "data"
+    on_disk = {
+        path.name
+        for path in data_dir.iterdir()
+        if path.is_dir() and not path.name.startswith(".")
+    }
+    catalog = load_shedding_catalog()
+    accounted = set(catalog.table["dataset_id"]) | set(catalog.skipped["dataset_id"])
+    missing = on_disk - accounted
+    assert not missing, (
+        f"Datasets absent from the shipped catalog: {sorted(missing)}. "
+        "Run `make catalog` to regenerate."
+    )
+```
+
+A dataset that is entirely unfittable (Ct-only, or cross-sectional like
+`jones2021estimating`) legitimately produces no `table` rows, so this checks
+`table` **or** `skipped` — checking `table` alone would wrongly fail.
+
+- [ ] **Step 6: Verify the coverage check passes**
 
 Run: `pytest tests/test_shedding_catalog.py -v`
 Expected: PASS, all 11 tests including `test_shipped_catalog_covers_every_dataset`.
 
-- [ ] **Step 6: Sanity-check the catalog by hand**
+- [ ] **Step 7: Sanity-check the catalog by hand**
 
 Run:
 
@@ -2930,11 +2937,11 @@ print(cat.skipped['reason'].value_counts().to_string())
 
 Expected: woelfel stool/sputum rows with plausible values — peak within roughly the first two weeks and `peak_log10` in the 4–9 range for `gc/mL`. If `peak_day` is negative or `peak_log10` exceeds ~15, stop and investigate the fit rather than shipping the catalog.
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 8: Commit**
 
 ```bash
 black .
-git add scripts/build_shedding_catalog.py shedding_hub/data/shedding_catalog.yaml Makefile pyproject.toml
+git add scripts/build_shedding_catalog.py shedding_hub/data/shedding_catalog.yaml Makefile pyproject.toml tests/test_shedding_catalog.py
 git commit -m "feat: build and ship precomputed shedding catalog"
 ```
 
