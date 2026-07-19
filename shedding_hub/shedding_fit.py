@@ -323,35 +323,37 @@ from .shedding_models import (
     peak_day,
 )
 
-# The positivity floor for a natural-scale parameter. Nothing is ever
-# *initialized* here — see _DEFAULT_A0 for why that was a bug — but it remains
-# the reference point that _DEGENERATE_PARAM is judged against.
-_MIN_PARAM = 1e-6
+# The historical positivity floor for a natural-scale parameter is 1e-6.
+# Nothing is ever *initialized* there — see _DEFAULT_A0 for why that was a
+# bug — but it remains the reference point that _DEGENERATE_PARAM below is
+# judged against, and is not otherwise given a named constant since nothing
+# else in this module reads it directly.
 _THETA_BOUNDS = (-25.0, 25.0)
 _LOG_SIGMA_BOUNDS = (-10.0, 5.0)
 
 # Parameters are optimized as theta = log(param), so the chain rule gives
 # dL/dtheta = param * dL/dparam: the gradient vanishes as a parameter
 # approaches zero. Near-zero is therefore an absorbing state — a parameter
-# started at _MIN_PARAM has a gradient of order 1e-5 against order 1e+1 for a
-# healthy coordinate, and the optimizer can never pull it back. Initialization
-# must consequently never place a parameter at or near the floor, so a
-# least-squares coefficient that is non-positive, non-finite, or merely
-# negligible falls back to one of these data-driven defaults instead.
+# started at the 1e-6 floor above has a gradient of order 1e-5 against order
+# 1e+1 for a healthy coordinate, and the optimizer can never pull it back.
+# Initialization must consequently never place a parameter at or near the
+# floor, so a least-squares coefficient that is non-positive, non-finite, or
+# merely negligible falls back to one of these data-driven defaults instead.
 _DEFAULT_A0 = math.log(2.0) / 7.0  # a one-week half-life
 _DEFAULT_B0 = 1.0  # rises then falls, peaking at 1/a0 days
 
 # A fitted parameter at or below this magnitude has collapsed rather than been
-# estimated. This sits four orders of magnitude above _MIN_PARAM deliberately,
-# and is a magnitude test rather than a proximity-to-the-bound test, because the
-# vanishing gradient described above means a collapsing parameter *stalls* near
-# zero instead of ever reaching the bound. Confirmed three ways on the fit that
-# motivated it (woelfel stool gamma, subject 3, whose c0 is collapsing):
-# with the theta bound at -25 its c0 settles at 2.97e-3; moving the bound up to
-# log(_MIN_PARAM) = -13.82 moves it only to 8.39e-3; and restarting L-BFGS-B
-# twelve times from its own output leaves it there, improving the likelihood by
-# ~1e-6 per restart. It is a boundary MLE, not under-convergence, and no
-# tolerance tight enough to mean "at the bound" would ever fire.
+# estimated. This sits four orders of magnitude above the 1e-6 floor
+# deliberately, and is a magnitude test rather than a proximity-to-the-bound
+# test, because the vanishing gradient described above means a collapsing
+# parameter *stalls* near zero instead of ever reaching the bound. Confirmed
+# three ways on the fit that motivated it (woelfel stool gamma, subject 3,
+# whose c0 is collapsing): with the theta bound at -25 its c0 settles at
+# 2.97e-3; moving the bound up to log(1e-6) = -13.82 moves it only to 8.39e-3;
+# and restarting L-BFGS-B twelve times from its own output leaves it there,
+# improving the likelihood by ~1e-6 per restart. It is a boundary MLE, not
+# under-convergence, and no tolerance tight enough to mean "at the bound"
+# would ever fire.
 #
 # The level is set from repository-wide evidence rather than from that one
 # subject. Over 7,739 per-subject fits, the number flagged is nearly flat from
@@ -655,6 +657,107 @@ class SheddingFit:
         theta = rng.multivariate_normal(self.population_mean, cov, n)
         return np.exp(theta), np.full(n, self.dataset_id, dtype=object)
 
+    def to_dict(self) -> dict:
+        """
+        Serialize this fit to a JSON/YAML-safe dict.
+
+        Everything needed to simulate (``population_mean``, ``population_cov``,
+        ``sigma``, ``censoring_limit``) is included. ``subject_params`` is
+        deliberately omitted to keep the payload small; a deserialized fit can
+        still be passed to ``simulate_shedding``, but has no per-subject table
+        to inspect. This is the single serializer for a fit — the catalog's
+        on-disk format is exactly one of these per fit, plus ``skipped``.
+
+        Returns:
+            A dict of plain Python/numpy-free types.
+        """
+        return {
+            "dataset_id": self.dataset_id,
+            "analyte": self.analyte,
+            "biomarker": self.biomarker,
+            "specimen": self.specimen,
+            "reference_event": self.reference_event,
+            "unit": self.unit,
+            "gene_target": self.gene_target,
+            "dose": self.dose,
+            "vaccine_type": self.vaccine_type,
+            "model": self.model,
+            "method": self.method,
+            "population_mean": [float(v) for v in self.population_mean],
+            "population_cov": [[float(v) for v in row] for row in self.population_cov],
+            "sigma": float(self.sigma),
+            "censoring_limit": float(self.censoring_limit),
+            "n_subjects": int(self.n_subjects),
+            "n_measurements": int(self.n_measurements),
+            "n_censored": int(self.n_censored),
+            "n_excluded_subjects": int(self.n_excluded_subjects),
+            "n_degenerate_subjects": int(self.n_degenerate_subjects),
+            "pct_subjects_with_rise": float(self.pct_subjects_with_rise),
+            "median_first_observed_day": float(self.median_first_observed_day),
+            "n_dropped_measurements": int(self.n_dropped_measurements),
+            "converged": bool(self.converged),
+            "log_likelihood": float(self.log_likelihood),
+            "aic": float(self.aic),
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict) -> "SheddingFit":
+        """
+        Reconstruct a fit from ``to_dict``'s output.
+
+        Optional keys default the same way a catalog predating that field
+        would need to: ``n_degenerate_subjects`` to 0 (no such fit had any),
+        ``pct_subjects_with_rise``/``median_first_observed_day`` to NaN
+        ("unknown", not "zero"). ``subject_params`` is always ``None`` — it is
+        never serialized, so there is nothing to restore it from.
+
+        Args:
+            payload: A dict produced by ``to_dict`` (or a YAML/JSON document
+                loaded from one).
+
+        Returns:
+            A ``SheddingFit`` with ``subject_params is None``.
+        """
+        return cls(
+            model=payload["model"],
+            method=payload.get("method", "mle"),
+            population_mean=np.asarray(payload["population_mean"], dtype=float),
+            population_cov=np.asarray(payload["population_cov"], dtype=float),
+            sigma=float(payload["sigma"]),
+            subject_params=None,
+            censoring_limit=float(payload["censoring_limit"]),
+            dataset_id=payload["dataset_id"],
+            analyte=payload["analyte"],
+            biomarker=payload.get("biomarker"),
+            specimen=payload.get("specimen"),
+            reference_event=payload.get("reference_event"),
+            unit=payload.get("unit"),
+            gene_target=payload.get("gene_target"),
+            dose=payload.get("dose"),
+            vaccine_type=payload.get("vaccine_type"),
+            n_subjects=int(payload["n_subjects"]),
+            n_measurements=int(payload["n_measurements"]),
+            n_censored=int(payload["n_censored"]),
+            n_excluded_subjects=int(payload["n_excluded_subjects"]),
+            # Defaulted, not required: catalogs written before degeneracy
+            # detection existed have no such key, and every fit in them
+            # predates the concept.
+            n_degenerate_subjects=int(payload.get("n_degenerate_subjects", 0)),
+            # Likewise defaulted: NaN reads as "this catalog predates the rise
+            # gate", which is honest, where 0.0 would assert that no subject
+            # rose.
+            pct_subjects_with_rise=float(
+                payload.get("pct_subjects_with_rise", float("nan"))
+            ),
+            median_first_observed_day=float(
+                payload.get("median_first_observed_day", float("nan"))
+            ),
+            n_dropped_measurements=int(payload["n_dropped_measurements"]),
+            converged=bool(payload["converged"]),
+            log_likelihood=float(payload["log_likelihood"]),
+            aic=float(payload["aic"]),
+        )
+
 
 def _initial_theta(model: str, observations: Observations) -> np.ndarray:
     """
@@ -673,8 +776,9 @@ def _initial_theta(model: str, observations: Observations) -> np.ndarray:
     floor described on ``_DEFAULT_A0``. ``b0`` is instead seeded from a modest
     positive default, and ``a0``/``c0`` from the well-conditioned decay design.
 
-    No coefficient is ever clipped to ``_MIN_PARAM``: one that is non-positive,
-    non-finite, or negligible falls back to a data-driven default instead.
+    No coefficient is ever clipped to the 1e-6 parameter floor: one that is
+    non-positive, non-finite, or negligible falls back to a data-driven
+    default instead.
     """
     uncensored = ~observations.censored
 

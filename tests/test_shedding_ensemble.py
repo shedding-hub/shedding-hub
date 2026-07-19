@@ -124,6 +124,34 @@ def test_negative_weight_entries_raise(catalog):
         make_ensemble(fits, weights=[1.0, -2.0, 3.0])
 
 
+def test_weights_accepts_a_numpy_array(catalog):
+    """A numpy array must reach the length/negativity validation, not crash.
+
+    ``if weights == "equal"`` on a numpy array is an elementwise comparison
+    that raises "The truth value of an array ... is ambiguous" before the
+    validation below it ever runs -- even though the docstring documents "an
+    explicit array" as a valid input for a numpy-centric package.
+    """
+    fits = list(catalog.fits)
+    array_weights = np.array([1.0, 2.0, 3.0])
+    ensemble = make_ensemble(fits, weights=array_weights)
+    np.testing.assert_allclose(ensemble.weights, array_weights / array_weights.sum())
+
+
+def test_weights_array_still_validates_length_and_negativity(catalog):
+    fits = list(catalog.fits)
+    with pytest.raises(ValueError, match="length 3"):
+        make_ensemble(fits, weights=np.array([1.0, 2.0]))
+    with pytest.raises(ValueError, match="non-negative"):
+        make_ensemble(fits, weights=np.array([1.0, -2.0, 3.0]))
+
+
+def test_unrecognized_weights_string_raises(catalog):
+    fits = list(catalog.fits)
+    with pytest.raises(ValueError, match="n_subjects.*equal"):
+        make_ensemble(fits, weights="bogus")
+
+
 def test_moment_covariance_is_within_plus_between():
     """Hand-computable two-study example."""
     a = _stub_fit("a", [0.0, 0.0], np.eye(2), 10)
@@ -157,6 +185,29 @@ def test_moment_sample_params_rejects_non_positive_semi_definite_covariance():
 
     with pytest.raises(ValueError, match="positive semi-definite"):
         ensemble.sample_params(np.random.default_rng(0), 5)
+
+
+def test_mixture_sample_params_rejects_a_components_non_positive_semi_definite_covariance():
+    """The mixture path must validate each component's own covariance too.
+
+    Previously only the single-component shortcut (which delegates to
+    SheddingFit.sample_params) validated; a genuine multi-component mixture
+    called rng.multivariate_normal directly on each component's covariance
+    inside the loop, skipping _require_positive_semidefinite entirely. This
+    also means the moment path's advice to "consider method='mixture' instead,
+    which uses ... (already validated) covariances" was false for exactly the
+    case it targets -- this test pins that the mixture path now validates, so
+    the advice is true.
+    """
+    non_psd_cov = np.array([[1.0, 2.0], [2.0, 1.0]])
+    a = _stub_fit("a", [0.0, 0.0], non_psd_cov, 10)
+    b = _stub_fit("b", [5.0, 0.0], np.eye(2), 10)
+    ensemble = make_ensemble([a, b], weights="equal", method="mixture")
+
+    with pytest.raises(ValueError, match="positive semi-definite"):
+        # n large enough that both components are certain to be drawn from
+        # with a fixed seed, so the bad component's covariance is actually used.
+        ensemble.sample_params(np.random.default_rng(0), 200)
 
 
 def test_mixture_sigma_is_root_mean_square_not_arithmetic_mean():
@@ -210,3 +261,36 @@ def test_mixture_has_no_median_params(catalog):
     ensemble = catalog.ensemble(biomarker="SARS-CoV-2", method="mixture")
     with pytest.raises(ValueError, match="mixture"):
         _ = ensemble.median_params
+
+
+def test_ensemble_to_dict_from_dict_round_trip(catalog):
+    """SheddingEnsemble.to_dict()/from_dict() completes the persistence story:
+
+    a fit can be saved and reloaded (SheddingFit.to_dict/from_dict), and so
+    can an ensemble built from several such fits -- its component fits,
+    resolved weights, and combination method all round-trip.
+    """
+    ensemble = catalog.ensemble(biomarker="SARS-CoV-2", weights="equal")
+
+    payload = ensemble.to_dict()
+    restored = SheddingEnsemble.from_dict(payload)
+
+    assert len(restored.fits) == len(ensemble.fits)
+    assert [fit.dataset_id for fit in restored.fits] == [
+        fit.dataset_id for fit in ensemble.fits
+    ]
+    assert all(fit.subject_params is None for fit in restored.fits)
+    np.testing.assert_allclose(restored.weights, ensemble.weights)
+    assert restored.method == ensemble.method
+    np.testing.assert_allclose(restored.population_mean, ensemble.population_mean)
+
+
+def test_deserialized_ensemble_can_still_simulate(catalog):
+    """The property that lets an ABM fit once and simulate across many runs."""
+    from shedding_hub.shedding_simulate import simulate_shedding
+
+    ensemble = catalog.ensemble(biomarker="SARS-CoV-2")
+    restored = SheddingEnsemble.from_dict(ensemble.to_dict())
+    traj = simulate_shedding(restored, n_individuals=30, times=[1.0, 5.0], seed=0)
+    assert len(traj) == 60
+    assert traj["source_dataset_id"].nunique() > 1

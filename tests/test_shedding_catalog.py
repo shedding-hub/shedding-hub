@@ -328,6 +328,33 @@ def test_restored_fit_can_still_simulate(two_study_catalog):
     assert len(traj) == 10
 
 
+def test_unexpected_error_is_recorded_under_that_reason(
+    make_synthetic_dataset, monkeypatch
+):
+    """A raw ValueError/LinAlgError must be filed as 'unexpected_error'.
+
+    Non-convergence itself never raises -- fit_shedding_model returns the fit
+    with converged=False and it is published normally -- so this catch-all
+    reason can only fire for something unanticipated escaping every named
+    SheddingDataError reason, e.g. a malformed dataset. The old name,
+    'did_not_converge', claimed a cause that cannot be true here.
+    """
+    import shedding_hub.shedding_catalog as catalog_module
+
+    def _boom(*args, **kwargs):
+        raise ValueError("boom")
+
+    monkeypatch.setattr(catalog_module, "fit_shedding_model", _boom)
+
+    mu = np.array([np.log(0.6), np.log(18.0)])
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.04, 0.04]), n_subjects=20
+    )
+    catalog = fit_shedding_models([dataset], models=("exponential",))
+    assert catalog.table.empty
+    assert (catalog.skipped["reason"] == "unexpected_error").all()
+
+
 def test_shipped_catalog_covers_every_dataset():
     """CI staleness check: adding a dataset without regenerating must fail."""
     import pathlib

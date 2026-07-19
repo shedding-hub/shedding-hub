@@ -140,69 +140,18 @@ def _fits_to_frame(fits: list[SheddingFit]) -> pd.DataFrame:
 
 
 def _fit_to_payload(fit: SheddingFit) -> dict:
-    """Serialize a fit, omitting per-subject parameters to keep the file small."""
-    payload = {column: getattr(fit, column) for column in _KEY_COLUMNS}
-    payload.update(
-        {
-            "method": fit.method,
-            "population_mean": [float(v) for v in fit.population_mean],
-            "population_cov": [[float(v) for v in row] for row in fit.population_cov],
-            "sigma": float(fit.sigma),
-            "censoring_limit": float(fit.censoring_limit),
-            "n_subjects": int(fit.n_subjects),
-            "n_measurements": int(fit.n_measurements),
-            "n_censored": int(fit.n_censored),
-            "n_excluded_subjects": int(fit.n_excluded_subjects),
-            "n_degenerate_subjects": int(fit.n_degenerate_subjects),
-            "pct_subjects_with_rise": float(fit.pct_subjects_with_rise),
-            "median_first_observed_day": float(fit.median_first_observed_day),
-            "n_dropped_measurements": int(fit.n_dropped_measurements),
-            "converged": bool(fit.converged),
-            "log_likelihood": float(fit.log_likelihood),
-            "aic": float(fit.aic),
-        }
-    )
-    return payload
+    """Serialize a fit, omitting per-subject parameters to keep the file small.
+
+    Delegates to ``SheddingFit.to_dict``, the single serializer for a fit, so
+    the catalog's on-disk format and a fit's own persistence story never
+    diverge into two implementations.
+    """
+    return fit.to_dict()
 
 
 def _fit_from_payload(payload: dict) -> SheddingFit:
-    return SheddingFit(
-        model=payload["model"],
-        method=payload.get("method", "mle"),
-        population_mean=np.asarray(payload["population_mean"], dtype=float),
-        population_cov=np.asarray(payload["population_cov"], dtype=float),
-        sigma=float(payload["sigma"]),
-        subject_params=None,
-        censoring_limit=float(payload["censoring_limit"]),
-        dataset_id=payload["dataset_id"],
-        analyte=payload["analyte"],
-        biomarker=payload.get("biomarker"),
-        specimen=payload.get("specimen"),
-        reference_event=payload.get("reference_event"),
-        unit=payload.get("unit"),
-        gene_target=payload.get("gene_target"),
-        dose=payload.get("dose"),
-        vaccine_type=payload.get("vaccine_type"),
-        n_subjects=int(payload["n_subjects"]),
-        n_measurements=int(payload["n_measurements"]),
-        n_censored=int(payload["n_censored"]),
-        n_excluded_subjects=int(payload["n_excluded_subjects"]),
-        # Defaulted, not required: catalogs written before degeneracy detection
-        # existed have no such key, and every fit in them predates the concept.
-        n_degenerate_subjects=int(payload.get("n_degenerate_subjects", 0)),
-        # Likewise defaulted: NaN reads as "this catalog predates the rise
-        # gate", which is honest, where 0.0 would assert that no subject rose.
-        pct_subjects_with_rise=float(
-            payload.get("pct_subjects_with_rise", float("nan"))
-        ),
-        median_first_observed_day=float(
-            payload.get("median_first_observed_day", float("nan"))
-        ),
-        n_dropped_measurements=int(payload["n_dropped_measurements"]),
-        converged=bool(payload["converged"]),
-        log_likelihood=float(payload["log_likelihood"]),
-        aic=float(payload["aic"]),
-    )
+    """Deserialize a fit. Delegates to ``SheddingFit.from_dict``."""
+    return SheddingFit.from_dict(payload)
 
 
 @dataclass
@@ -258,7 +207,30 @@ class SheddingCatalog:
     def ensemble(
         self, *, dataset_ids=None, weights="n_subjects", method="mixture", **keys
     ):
-        """Build a ``SheddingEnsemble`` from the matching fits. See Task 7."""
+        """
+        Build a ``SheddingEnsemble`` from the catalog's fits matching ``keys``.
+
+        Args:
+            dataset_ids: Optional list restricting components to named
+                studies. A name with no matching fit raises rather than being
+                dropped, which would silently shrink the ensemble.
+            weights: ``"n_subjects"`` (default), ``"equal"``, or an explicit
+                array of length equal to the number of matching fits.
+            method: ``"mixture"`` (default), which draws each simulated
+                individual from one contributing study's own fit, preserving
+                between-study heterogeneity; or ``"moment"``, which collapses
+                the components into a single Gaussian.
+            **keys: Attribute filters, e.g. ``biomarker="SARS-CoV-2"``.
+
+        Returns:
+            A ``SheddingEnsemble``.
+
+        Raises:
+            ValueError: If the matching fits disagree on model, unit,
+                reference event, biomarker, or specimen, or if one study
+                contributes more than one analyte. See ``build_ensemble`` for
+                the full validation this delegates to.
+        """
         from .shedding_ensemble import build_ensemble
 
         return build_ensemble(
@@ -346,12 +318,19 @@ def fit_shedding_models(
                         }
                     )
                 except (ValueError, np.linalg.LinAlgError) as error:
+                    # Not a convergence failure: non-convergence never raises
+                    # (fit_shedding_model returns the fit with converged=False
+                    # and it is published normally). Reaching here means some
+                    # other, unanticipated ValueError/LinAlgError escaped
+                    # every named SheddingDataError reason above -- e.g. a
+                    # malformed dataset -- so it is filed as a catch-all
+                    # rather than misnamed after a cause that cannot be true.
                     skipped.append(
                         {
                             "dataset_id": dataset_id,
                             "analyte": analyte,
                             "model": model,
-                            "reason": "did_not_converge",
+                            "reason": "unexpected_error",
                             "message": str(error),
                         }
                     )

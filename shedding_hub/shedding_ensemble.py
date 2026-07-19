@@ -156,18 +156,82 @@ class SheddingEnsemble:
             count = int(mask.sum())
             if not count:
                 continue
-            theta[mask] = rng.multivariate_normal(
-                fit.population_mean, fit.population_cov, count
+            # Validated here, per component, rather than inherited for free the
+            # way the single-component shortcut above gets it from
+            # fit.sample_params: this loop calls rng.multivariate_normal
+            # directly, so without this check a component with a bad
+            # covariance would slip through silently. This is also what makes
+            # the moment path's advice to "consider method='mixture' instead,
+            # which uses ... (already validated) covariances" actually true.
+            cov = _require_positive_semidefinite(
+                fit.population_cov,
+                advice=(
+                    f"Component {fit.dataset_id!r} of this mixture ensemble "
+                    "has an invalid population covariance; drop it or refit "
+                    "it before building the ensemble."
+                ),
             )
+            theta[mask] = rng.multivariate_normal(fit.population_mean, cov, count)
             sources[mask] = fit.dataset_id
         return np.exp(theta), sources
 
+    def to_dict(self) -> dict:
+        """
+        Serialize this ensemble to a JSON/YAML-safe dict.
+
+        Each component fit is serialized via ``SheddingFit.to_dict`` (so
+        ``subject_params`` is omitted there too, for the same reason),
+        alongside the resolved weights and the combination method.
+
+        Returns:
+            A dict with keys ``fits``, ``weights``, and ``method``.
+        """
+        return {
+            "fits": [fit.to_dict() for fit in self.fits],
+            "weights": [float(w) for w in self.weights],
+            "method": self.method,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict) -> "SheddingEnsemble":
+        """
+        Reconstruct an ensemble from ``to_dict``'s output.
+
+        Component fits come back with ``subject_params is None``, same as any
+        fit loaded from a catalog. Weights are restored exactly as saved
+        rather than re-resolved through ``make_ensemble``, so a round trip
+        cannot perturb them.
+
+        Args:
+            payload: A dict produced by ``to_dict``.
+
+        Returns:
+            A ``SheddingEnsemble``.
+        """
+        return cls(
+            fits=[SheddingFit.from_dict(item) for item in payload["fits"]],
+            weights=np.asarray(payload["weights"], dtype=float),
+            method=payload["method"],
+        )
+
 
 def _resolve_weights(fits: list[SheddingFit], weights) -> np.ndarray:
-    if weights == "equal":
-        raw = np.ones(len(fits))
-    elif weights == "n_subjects":
-        raw = np.array([fit.n_subjects for fit in fits], dtype=float)
+    # Dispatch on isinstance(weights, str) first, rather than comparing
+    # `weights == "equal"` directly: once weights is a numpy array (the
+    # "explicit array" the docstring documents), `weights == "equal"` is an
+    # elementwise comparison that raises ValueError on any array with more
+    # than one element, before the length/negativity validation below ever
+    # runs.
+    if isinstance(weights, str):
+        if weights == "equal":
+            raw = np.ones(len(fits))
+        elif weights == "n_subjects":
+            raw = np.array([fit.n_subjects for fit in fits], dtype=float)
+        else:
+            raise ValueError(
+                f"weights must be 'n_subjects', 'equal', or an array of length "
+                f"{len(fits)}; got {weights!r}."
+            )
     else:
         raw = np.asarray(weights, dtype=float)
         if raw.shape != (len(fits),):

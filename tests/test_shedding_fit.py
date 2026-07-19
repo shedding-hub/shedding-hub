@@ -983,6 +983,59 @@ def test_sample_params_accepts_zero_covariance_producing_identical_individuals()
     assert set(sources.tolist()) == {"synthetic"}
 
 
+def test_to_dict_from_dict_round_trip():
+    """SheddingFit.to_dict()/from_dict() is the fit-level persistence story:
+
+    an ABM should be able to fit once, save to YAML, and simulate across many
+    runs without refitting. subject_params is deliberately not part of the
+    round trip -- everything needed to simulate is.
+    """
+    mean = np.array([np.log(0.6), np.log(18.0)])
+    cov = np.diag([0.04, 0.04])
+    fit = _minimal_fit(mean, cov)
+    fit.n_degenerate_subjects = 2
+    fit.pct_subjects_with_rise = 62.5
+    fit.median_first_observed_day = 3.0
+
+    payload = fit.to_dict()
+    restored = SheddingFit.from_dict(payload)
+
+    np.testing.assert_allclose(restored.population_mean, fit.population_mean)
+    np.testing.assert_allclose(restored.population_cov, fit.population_cov)
+    assert restored.sigma == pytest.approx(fit.sigma)
+    assert restored.censoring_limit == pytest.approx(fit.censoring_limit)
+    assert restored.model == fit.model
+    assert restored.method == fit.method
+    assert restored.dataset_id == fit.dataset_id
+    assert restored.analyte == fit.analyte
+    assert restored.biomarker == fit.biomarker
+    assert restored.specimen == fit.specimen
+    assert restored.reference_event == fit.reference_event
+    assert restored.unit == fit.unit
+    assert restored.gene_target == fit.gene_target
+    assert restored.dose == fit.dose
+    assert restored.vaccine_type == fit.vaccine_type
+    assert restored.n_subjects == fit.n_subjects
+    assert restored.n_degenerate_subjects == fit.n_degenerate_subjects
+    assert restored.pct_subjects_with_rise == pytest.approx(fit.pct_subjects_with_rise)
+    assert restored.median_first_observed_day == pytest.approx(
+        fit.median_first_observed_day
+    )
+    assert restored.converged == fit.converged
+    assert restored.subject_params is None
+
+
+def test_deserialized_fit_can_still_simulate():
+    """The property that lets an ABM fit once and simulate across many runs."""
+    from shedding_hub.shedding_simulate import simulate_shedding
+
+    mean = np.array([np.log(0.6), np.log(18.0)])
+    fit = _minimal_fit(mean, np.diag([0.04, 0.04]))
+    restored = SheddingFit.from_dict(fit.to_dict())
+    traj = simulate_shedding(restored, n_individuals=5, times=[1.0, 2.0], seed=0)
+    assert len(traj) == 10
+
+
 # ---------------------------------------------------------------------------
 # Real-data regression guards.
 #
@@ -1008,10 +1061,15 @@ def test_sample_params_accepts_zero_covariance_producing_identical_individuals()
 import pathlib
 
 import shedding_hub as sh
-from shedding_hub.shedding_fit import _MIN_PARAM
 from shedding_hub.shedding_models import log10_concentration_rowwise, peak_day
 
 DATA = pathlib.Path(__file__).parent.parent / "data"
+
+# Mirrors the historical parameter floor described in shedding_fit.py's
+# _DEGENERATE_PARAM comment. Not imported from there because nothing in that
+# module reads it directly any more -- it survives only as documentation of
+# where _DEGENERATE_PARAM (1e-2) sits relative to it.
+_PARAM_FLOOR = 1e-6
 
 
 @pytest.fixture(scope="module")
@@ -1103,9 +1161,9 @@ def test_woelfel_no_subject_sits_at_the_parameter_floor(woelfel_fits, analyte, m
     fit = woelfel_fits[(analyte, model)]
     params = fit.subject_params.drop(columns=["subject_id", "degenerate"])
     smallest = params.min().min()
-    assert smallest > 10 * _MIN_PARAM, (
+    assert smallest > 10 * _PARAM_FLOOR, (
         f"{analyte}/{model} has a subject parameter at {smallest:.3g}, within a "
-        f"factor of ten of the floor {_MIN_PARAM:.0e}:\n{fit.subject_params}"
+        f"factor of ten of the floor {_PARAM_FLOOR:.0e}:\n{fit.subject_params}"
     )
 
 

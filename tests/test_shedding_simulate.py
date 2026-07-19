@@ -171,6 +171,120 @@ def test_plot_rejects_an_empty_frame():
         plot_simulated_shedding(pd.DataFrame())
 
 
+def test_plot_rejects_an_all_nan_trajectory(gamma_fit):
+    """A non-empty but all-NaN trajectory must fail with a helpful message.
+
+    Reproduction from the review: requesting only times at or before the
+    reference event under the gamma model, further shifted earlier by
+    incubation_period, leaves every row NaN. traj.empty is False (500 rows),
+    so the old guard let execution reach groupby.quantile on an empty frame,
+    which raised a bare KeyError naming a quantile -- useless to the user.
+    """
+    traj = simulate_shedding(
+        gamma_fit,
+        n_individuals=100,
+        times=np.arange(0.0, 5.0),
+        incubation_period=5.0,
+        seed=42,
+    )
+    assert not traj.empty
+    assert traj["log10_value"].isna().all()
+    with pytest.raises(ValueError, match="NaN"):
+        plot_simulated_shedding(traj, source=gamma_fit)
+
+
+def test_plot_requires_a_source_to_overlay_observed_points(exponential_fit):
+    """observed with source=None must raise rather than plot everything.
+
+    Without a source there is no analyte to filter observed measurements to,
+    so silently plotting the whole dataset would be exactly the bug this
+    guards against.
+    """
+    traj = simulate_shedding(
+        exponential_fit, n_individuals=10, times=[1.0, 2.0], seed=0
+    )
+    observed = {
+        "participants": [
+            {"measurements": [{"analyte": "stool", "time": 1.0, "value": 100.0}]}
+        ]
+    }
+    with pytest.raises(ValueError, match="source"):
+        plot_simulated_shedding(traj, source=None, observed=observed)
+
+
+def _stub_fit_for_plotting(analyte, dataset_id):
+    from shedding_hub.shedding_fit import SheddingFit
+
+    return SheddingFit(
+        model="exponential",
+        method="mle",
+        population_mean=np.array([np.log(0.6), np.log(18.0)]),
+        population_cov=np.diag([0.04, 0.04]),
+        sigma=0.3,
+        subject_params=None,
+        censoring_limit=2.0,
+        dataset_id=dataset_id,
+        analyte=analyte,
+        biomarker="SARS-CoV-2",
+        specimen="stool",
+        reference_event="symptom onset",
+        unit="gc/mL",
+        gene_target=None,
+        dose=None,
+        vaccine_type=None,
+        n_subjects=10,
+        n_measurements=100,
+        n_censored=10,
+        n_excluded_subjects=0,
+        n_dropped_measurements=0,
+        converged=True,
+        log_likelihood=-1.0,
+        aic=2.0,
+    )
+
+
+def test_plot_filters_observed_points_to_the_ensembles_own_analytes():
+    """An ensemble source must overlay only its components' analytes.
+
+    Before the fix, getattr(source, "analyte", None) was None for any
+    SheddingEnsemble (which has no analyte of its own), so the filter was
+    skipped entirely and every measurement in `observed` was plotted --
+    mixing unrelated analytes on one axis. A SheddingEnsemble's analyte set is
+    the union of its component fits' analytes.
+    """
+    from matplotlib.collections import PathCollection
+
+    from shedding_hub.shedding_ensemble import make_ensemble
+
+    ensemble = make_ensemble(
+        [
+            _stub_fit_for_plotting("stool_a", "study_a"),
+            _stub_fit_for_plotting("stool_b", "study_b"),
+        ],
+        weights="equal",
+    )
+    traj = simulate_shedding(
+        ensemble, n_individuals=20, times=np.arange(0.0, 20.0), seed=0
+    )
+    observed = {
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool_a", "time": 1.0, "value": 1e3},
+                    {"analyte": "stool_b", "time": 2.0, "value": 1e3},
+                    # A third analyte not in this ensemble -- must be excluded.
+                    {"analyte": "sputum_other", "time": 3.0, "value": 1e3},
+                ]
+            }
+        ]
+    }
+
+    fig = plot_simulated_shedding(traj, source=ensemble, observed=observed)
+    ax = fig.axes[0]
+    scatter = next(c for c in ax.collections if isinstance(c, PathCollection))
+    assert scatter.get_offsets().shape[0] == 2
+
+
 def test_public_exports_are_available():
     import shedding_hub as sh
 

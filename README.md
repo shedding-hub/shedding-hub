@@ -75,6 +75,13 @@ Simulate shedding trajectories for synthetic infected individuals — intended f
 agent-based models of wastewater surveillance. Browse the catalog of fitted
 estimates, pick one study or an ensemble across studies, then simulate.
 
+*The examples in this section run in CI as doctests against the shipped catalog
+(`shedding_hub/data/shedding_catalog.yaml`), deliberately not skipped, so that
+documentation drift fails loudly: if a future catalog rebuild gates out the
+`woelfel2020virological` stool gamma fit used below, update the
+`dataset_id`/`analyte`/`model`/ensemble filters to a fit that still exists
+rather than re-adding `+SKIP`.*
+
 ```python
 >>> import numpy as np
 >>> import shedding_hub as sh
@@ -82,11 +89,11 @@ estimates, pick one study or an ensemble across studies, then simulate.
 >>> catalog.table[['dataset_id', 'specimen', 'model', 'peak_day']].head()  # doctest: +SKIP
 >>> fit = catalog.select(
 ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
-... )  # doctest: +SKIP
+... )
 >>> traj = sh.simulate_shedding(
 ...     fit, n_individuals=100, times=np.arange(0, 30), seed=42
-... )  # doctest: +SKIP
->>> list(traj.columns)  # doctest: +SKIP
+... )
+>>> list(traj.columns)
 ['individual_id', 'time', 'log10_value', 'value', 'detected', 'source_dataset_id']
 
 ```
@@ -104,8 +111,8 @@ days since the study's reference event:
 >>> traj = sh.simulate_shedding(
 ...     fit, n_individuals=100, times=np.arange(0, 30),
 ...     incubation_period=5.0, seed=42
-... )  # doctest: +SKIP
->>> traj.attrs['time_origin']  # doctest: +SKIP
+... )
+>>> traj.attrs['time_origin']
 'infection'
 
 ```
@@ -124,10 +131,10 @@ drawn from one contributing study, so between-study variation is preserved:
 >>> ensemble = catalog.ensemble(
 ...     biomarker='SARS-CoV-2', specimen='stool',
 ...     reference_event='symptom onset', unit='gc/mL', model='gamma',
-... )  # doctest: +SKIP
+... )
 >>> traj = sh.simulate_shedding(
 ...     ensemble, n_individuals=1000, times=np.arange(0, 30), seed=42
-... )  # doctest: +SKIP
+... )
 
 ```
 

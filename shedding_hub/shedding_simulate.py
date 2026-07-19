@@ -146,9 +146,14 @@ def plot_simulated_shedding(
 
     Args:
         traj: Output of ``simulate_shedding``.
-        source: Optional fit or ensemble, used to draw the censoring limit.
+        source: Optional fit or ensemble, used to draw the censoring limit and,
+            when ``observed`` is given, to determine which analyte(s) to
+            overlay.
         observed: Optional dataset dictionary; its measurements are overlaid as
-            points so simulated and real trajectories can be compared.
+            points so simulated and real trajectories can be compared, filtered
+            to the analyte(s) contributed by ``source`` (a ``SheddingFit``'s
+            own analyte, or a ``SheddingEnsemble``'s component analytes).
+            Requires ``source``.
         quantiles: Lower, middle, and upper quantiles for the band.
         figsize: Figure size in inches.
 
@@ -158,6 +163,14 @@ def plot_simulated_shedding(
     """
     if traj.empty:
         raise ValueError("Simulation result is empty, cannot create plot")
+    if traj["log10_value"].isna().all():
+        raise ValueError(
+            "Every simulated value is NaN, so there is nothing to plot. Under "
+            "the gamma model this happens when every requested time falls at "
+            "or before the reference event (or, with incubation_period set, "
+            "within the incubation window). Request later times or reduce "
+            "incubation_period."
+        )
 
     lower, middle, upper = quantiles
     summary = (
@@ -187,11 +200,24 @@ def plot_simulated_shedding(
         )
 
     if observed is not None:
-        analyte = getattr(source, "analyte", None)
+        if source is None:
+            raise ValueError(
+                "observed requires a source (a SheddingFit or SheddingEnsemble) "
+                "to identify which analyte(s) to overlay; pass source=... or "
+                "drop observed."
+            )
+        # Duck-typed rather than isinstance-checked against SheddingEnsemble, to
+        # avoid this plotting module importing shedding_ensemble.py. A
+        # SheddingFit contributes its own analyte; a SheddingEnsemble (which has
+        # no analyte of its own) contributes the analytes of its component fits.
+        if hasattr(source, "fits"):
+            analytes = {fit.analyte for fit in source.fits}
+        else:
+            analytes = {source.analyte}
         times, values = [], []
         for participant in observed.get("participants", []):
             for measurement in participant.get("measurements") or []:
-                if analyte is not None and measurement.get("analyte") != analyte:
+                if measurement.get("analyte") not in analytes:
                     continue
                 time = measurement.get("time")
                 value = measurement.get("value")
