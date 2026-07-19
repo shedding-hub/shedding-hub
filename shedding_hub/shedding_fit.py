@@ -409,7 +409,31 @@ class SheddingFit:
         """
         if n < 1:
             raise ValueError("n_individuals must be at least 1")
-        theta = rng.multivariate_normal(self.population_mean, self.population_cov, n)
+        cov = np.asarray(self.population_cov, dtype=float)
+        eigenvalues = np.linalg.eigvalsh(cov)
+        # Tolerance scaled to the matrix, not exact zero: an all-zeros
+        # population_cov is a legitimate single-subject fit (no between-subject
+        # variance can be estimated from one subject) and must still simulate,
+        # producing identical individuals. Floating-point noise from np.cov can
+        # likewise leave a near-singular but truly PSD matrix with an eigenvalue
+        # just below zero; only a *meaningfully* negative eigenvalue indicates a
+        # real problem.
+        tolerance = (
+            max(np.abs(eigenvalues).max(), 1.0)
+            * cov.shape[0]
+            * np.finfo(float).eps
+            * 100
+        )
+        if eigenvalues.min() < -tolerance:
+            raise ValueError(
+                "population_cov is not positive semi-definite (smallest "
+                f"eigenvalue {eigenvalues.min():.3g}, below numerical "
+                "tolerance). This usually means too few subjects survived "
+                "fitting to estimate a stable between-subject covariance. "
+                "Consider pooling multiple studies into a SheddingEnsemble "
+                "instead of simulating from this fit alone."
+            )
+        theta = rng.multivariate_normal(self.population_mean, cov, n)
         return np.exp(theta), np.full(n, self.dataset_id, dtype=object)
 
 

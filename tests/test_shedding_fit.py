@@ -445,3 +445,60 @@ def test_subject_params_has_one_row_per_subject(make_synthetic_dataset):
     fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
     assert len(fit.subject_params) == 12
     assert list(fit.subject_params.columns) == ["subject_id", "a0", "c0"]
+
+
+def _minimal_fit(population_mean, population_cov, model="exponential"):
+    """A directly-constructed SheddingFit, bypassing fit_shedding_model entirely.
+
+    Only ``population_mean``/``population_cov`` matter for the tests that use
+    this; every other field is a plausible placeholder so the dataclass can be
+    built at all.
+    """
+    return SheddingFit(
+        model=model,
+        method="mle",
+        population_mean=np.asarray(population_mean, dtype=float),
+        population_cov=np.asarray(population_cov, dtype=float),
+        sigma=0.3,
+        subject_params=None,
+        censoring_limit=2.0,
+        dataset_id="synthetic",
+        analyte="stool",
+        biomarker="SARS-CoV-2",
+        specimen="stool",
+        reference_event="symptom onset",
+        unit="gc/mL",
+        gene_target=None,
+        dose=None,
+        vaccine_type=None,
+        n_subjects=1,
+        n_measurements=1,
+        n_censored=0,
+        n_excluded_subjects=0,
+        n_dropped_measurements=0,
+        converged=True,
+        log_likelihood=0.0,
+        aic=0.0,
+    )
+
+
+def test_sample_params_rejects_non_positive_semi_definite_covariance():
+    # Eigenvalues 3 and -1: unambiguously not positive semi-definite, not just
+    # numerical noise near zero.
+    non_psd_cov = np.array([[1.0, 2.0], [2.0, 1.0]])
+    fit = _minimal_fit([np.log(0.6), np.log(18.0)], non_psd_cov)
+    rng = np.random.default_rng(0)
+    with pytest.raises(ValueError, match="positive semi-definite"):
+        fit.sample_params(rng, 5)
+
+
+def test_sample_params_accepts_zero_covariance_producing_identical_individuals():
+    # A single-subject fit legitimately has an all-zero population_cov (no
+    # between-subject variance can be estimated from one subject). This must
+    # still simulate, giving every individual the same parameters.
+    mean = np.array([np.log(0.6), np.log(18.0)])
+    fit = _minimal_fit(mean, np.zeros((2, 2)))
+    rng = np.random.default_rng(0)
+    params, sources = fit.sample_params(rng, 4)
+    np.testing.assert_allclose(params, np.tile(np.exp(mean), (4, 1)))
+    assert set(sources.tolist()) == {"synthetic"}
