@@ -7,7 +7,9 @@ dependencies = [
     "pyaml",
     "requests",
     "pandas",
-    "matplotlib"
+    "matplotlib",
+    "numpy",
+    "scipy"
 ]
 
 [tool.setuptools.packages]
