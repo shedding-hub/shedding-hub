@@ -192,7 +192,8 @@ Measurements are extracted per participant for the analyte being fitted, then:
 
   The fraction is published as a `pct_subjects_with_rise` column so the judgment
   is auditable rather than buried in a threshold. In practice the gate refuses
-  38 analyte/model combinations, taking gamma fits from 67 to 31.
+  38 analyte/model combinations. After the later degeneracy and population-size
+  gates the shipped catalog retains 23 gamma fits.
 - **Non-pathogen indicator biomarkers are rejected.** `crAssphage`, `PMMoV`, and
   `mtDNA` are fecal-strength and normalization markers, not pathogens shed by
   infected people — they have no time-since-infection trajectory, so a shedding
@@ -264,10 +265,22 @@ full `mu` and `Sigma` needed to actually simulate live on the `SheddingFit`
 objects (and in the shipped YAML), so no precision is lost to the summary.
 
 **`catalog.skipped`** — a `DataFrame` of analytes that could not be fitted, with a
-reason (`ct_units`, `non_pathogen_biomarker`, `too_few_subjects`,
-`no_positive_measurements`,
-`did_not_converge`). Without this a user cannot tell whether a study is missing
-because it is unsuitable or because of a bug.
+reason. Without this a user cannot tell whether a study is missing because it is
+unsuitable or because of a bug. The full set, with counts in the shipped catalog:
+
+| reason | count | meaning |
+| --- | --- | --- |
+| `ct_units` | 104 | cycle-threshold analyte; neither model applies |
+| `no_rise_observed` | 38 | gamma refused — the rise is unidentifiable (see gate above) |
+| `too_few_subjects` | 24 | no subject had enough observations |
+| `degenerate_fit` | 16 | too few subjects survived collapse/runaway detection |
+| `too_few_subjects_for_population` | 16 | fewer subjects than parameters, so `Sigma` is not estimable |
+| `non_pathogen_biomarker` | 8 | fecal-strength or normalization marker |
+| `unknown_analyte` | 0 | the requested analyte is not in the dataset |
+| `unexpected_error` | 0 | anything else, with the original message preserved |
+
+The shipped catalog holds **84 fits** (61 exponential, 23 gamma) across 55
+datasets, with 206 analyte/model combinations refused.
 
 **`catalog.select(**keys)`** — returns exactly one `SheddingFit`. If the keys match
 zero rows, or more than one, raise `ValueError` listing the candidates and the
@@ -281,8 +294,8 @@ named subset of studies (see below).
 
 The catalog is built offline and shipped as package data at
 `shedding_hub/data/shedding_catalog.yaml`, loaded by `load_shedding_catalog()`.
-YAML keeps it human-diffable and reuses the `pyaml` dependency; at roughly 250
-rows of small float vectors the size is negligible.
+YAML keeps it human-diffable and reuses the `pyaml` dependency; at 84 fits of
+small float vectors the file is about 166 KB, which is negligible in a wheel.
 
 - `scripts/build_shedding_catalog.py` regenerates it, wired to a `make catalog`
   target alongside the existing `extraction` targets.
