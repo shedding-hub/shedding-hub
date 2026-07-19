@@ -46,8 +46,19 @@ class SheddingEnsemble:
 
     @property
     def sigma(self) -> float:
-        """Weighted mean measurement-error SD across components."""
-        return float(np.sum(self.weights * np.array([f.sigma for f in self.fits])))
+        """
+        Effective measurement-error SD across components.
+
+        An individual is drawn from component ``s`` with probability
+        ``weights[s]``, so the marginal measurement-error variance is the
+        weighted mean of the component *variances*, ``sum_s w_s * sigma_s**2``
+        (variances add across a mixture; standard deviations do not). This is
+        therefore the root-mean-square of the component sigmas weighted by
+        ``weights``, not their weighted arithmetic mean, which would
+        understate the effective noise.
+        """
+        sigmas = np.array([fit.sigma for fit in self.fits])
+        return float(np.sqrt(np.sum(self.weights * sigmas**2)))
 
     @property
     def censoring_limit(self) -> float:
@@ -164,6 +175,12 @@ def _resolve_weights(fits: list[SheddingFit], weights) -> np.ndarray:
                 f"weights must be 'n_subjects', 'equal', or an array of length "
                 f"{len(fits)}; got shape {raw.shape}."
             )
+    negative = raw[raw < 0]
+    if negative.size:
+        raise ValueError(
+            f"Ensemble weights must be non-negative; got negative value(s) "
+            f"{negative.tolist()}."
+        )
     if raw.sum() <= 0:
         raise ValueError("Ensemble weights must sum to a positive value.")
     return raw / raw.sum()

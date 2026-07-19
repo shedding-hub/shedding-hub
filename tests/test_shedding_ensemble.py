@@ -3,10 +3,47 @@ import matplotlib
 matplotlib.use("Agg")
 
 import numpy as np
+import pandas as pd
 import pytest
 
 from shedding_hub.shedding_catalog import fit_shedding_models
 from shedding_hub.shedding_ensemble import SheddingEnsemble, make_ensemble
+from shedding_hub.shedding_fit import SheddingFit
+
+
+def _stub_fit(dataset_id, mean, cov, n_subjects, sigma=0.3):
+    """A directly-constructed SheddingFit for hand-computable ensemble tests.
+
+    Only ``population_mean``/``population_cov``/``sigma``/``n_subjects`` vary
+    across the tests that use this; every other field is a plausible
+    placeholder so the dataclass can be built at all.
+    """
+    return SheddingFit(
+        model="exponential",
+        method="mle",
+        population_mean=np.asarray(mean, float),
+        population_cov=np.asarray(cov, float),
+        sigma=sigma,
+        subject_params=pd.DataFrame(),
+        censoring_limit=2.0,
+        dataset_id=dataset_id,
+        analyte="stool",
+        biomarker="SARS-CoV-2",
+        specimen="stool",
+        reference_event="symptom onset",
+        unit="gc/mL",
+        gene_target=None,
+        dose=None,
+        vaccine_type=None,
+        n_subjects=n_subjects,
+        n_measurements=100,
+        n_censored=10,
+        n_excluded_subjects=0,
+        n_dropped_measurements=0,
+        converged=True,
+        log_likelihood=-1.0,
+        aic=2.0,
+    )
 
 
 @pytest.fixture
@@ -81,41 +118,16 @@ def test_weights_default_to_subject_counts(catalog):
     np.testing.assert_allclose(ensemble.weights, expected / expected.sum())
 
 
+def test_negative_weight_entries_raise(catalog):
+    fits = list(catalog.fits)
+    with pytest.raises(ValueError, match="non-negative"):
+        make_ensemble(fits, weights=[1.0, -2.0, 3.0])
+
+
 def test_moment_covariance_is_within_plus_between():
     """Hand-computable two-study example."""
-    from shedding_hub.shedding_fit import SheddingFit
-    import pandas as pd
-
-    def stub(dataset_id, mean, cov, n_subjects):
-        return SheddingFit(
-            model="exponential",
-            method="mle",
-            population_mean=np.asarray(mean, float),
-            population_cov=np.asarray(cov, float),
-            sigma=0.3,
-            subject_params=pd.DataFrame(),
-            censoring_limit=2.0,
-            dataset_id=dataset_id,
-            analyte="stool",
-            biomarker="SARS-CoV-2",
-            specimen="stool",
-            reference_event="symptom onset",
-            unit="gc/mL",
-            gene_target=None,
-            dose=None,
-            vaccine_type=None,
-            n_subjects=n_subjects,
-            n_measurements=100,
-            n_censored=10,
-            n_excluded_subjects=0,
-            n_dropped_measurements=0,
-            converged=True,
-            log_likelihood=-1.0,
-            aic=2.0,
-        )
-
-    a = stub("a", [0.0, 0.0], np.eye(2), 10)
-    b = stub("b", [2.0, 0.0], np.eye(2), 10)
+    a = _stub_fit("a", [0.0, 0.0], np.eye(2), 10)
+    b = _stub_fit("b", [2.0, 0.0], np.eye(2), 10)
     ensemble = make_ensemble([a, b], weights="equal", method="moment")
 
     np.testing.assert_allclose(ensemble.population_mean, [1.0, 0.0])
@@ -134,48 +146,33 @@ def test_moment_sample_params_rejects_non_positive_semi_definite_covariance():
     so instead we directly force a non-PSD case by constructing components
     whose within/between combination is unambiguously indefinite.
     """
-    from shedding_hub.shedding_fit import SheddingFit
-    import pandas as pd
-
-    def stub(dataset_id, mean, cov, n_subjects):
-        return SheddingFit(
-            model="exponential",
-            method="mle",
-            population_mean=np.asarray(mean, float),
-            population_cov=np.asarray(cov, float),
-            sigma=0.3,
-            subject_params=pd.DataFrame(),
-            censoring_limit=2.0,
-            dataset_id=dataset_id,
-            analyte="stool",
-            biomarker="SARS-CoV-2",
-            specimen="stool",
-            reference_event="symptom onset",
-            unit="gc/mL",
-            gene_target=None,
-            dose=None,
-            vaccine_type=None,
-            n_subjects=n_subjects,
-            n_measurements=100,
-            n_censored=10,
-            n_excluded_subjects=0,
-            n_dropped_measurements=0,
-            converged=True,
-            log_likelihood=-1.0,
-            aic=2.0,
-        )
-
     # Both components share a mean (so "between" contributes nothing) and an
     # indefinite own-covariance (eigenvalues 3 and -1), so within + between is
     # exactly that indefinite matrix -- unambiguously not PSD, not numerical
     # noise near zero.
     non_psd_cov = np.array([[1.0, 2.0], [2.0, 1.0]])
-    a = stub("a", [0.0, 0.0], non_psd_cov, 10)
-    b = stub("b", [0.0, 0.0], non_psd_cov, 10)
+    a = _stub_fit("a", [0.0, 0.0], non_psd_cov, 10)
+    b = _stub_fit("b", [0.0, 0.0], non_psd_cov, 10)
     ensemble = make_ensemble([a, b], weights="equal", method="moment")
 
     with pytest.raises(ValueError, match="positive semi-definite"):
         ensemble.sample_params(np.random.default_rng(0), 5)
+
+
+def test_mixture_sigma_is_root_mean_square_not_arithmetic_mean():
+    """Variances add across a mixture; standard deviations do not.
+
+    With equal weights and component sigmas 0.2 and 0.8, the correct combined
+    sigma is sqrt(mean(sigma**2)) = sqrt(0.5 * (0.04 + 0.64)) ~= 0.583, which
+    is strictly greater than the (wrong) arithmetic mean of 0.5.
+    """
+    a = _stub_fit("a", [0.0, 0.0], np.eye(2), 10, sigma=0.2)
+    b = _stub_fit("b", [0.0, 0.0], np.eye(2), 10, sigma=0.8)
+    ensemble = make_ensemble([a, b], weights="equal")
+
+    expected = np.sqrt(np.mean(np.array([0.2, 0.8]) ** 2))
+    np.testing.assert_allclose(ensemble.sigma, expected)
+    assert ensemble.sigma > np.mean([0.2, 0.8])
 
 
 def test_mixed_units_raise(catalog):
