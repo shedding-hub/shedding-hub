@@ -224,13 +224,17 @@ def prepare_observations(
             )
             subject_ids.append(participant.get("patient_id", position + 1))
 
-    retained = [s for s in per_subject if len(s["times"]) >= min_observations]
-    n_excluded = len(per_subject) - len(retained)
-    retained_ids = [
-        subject_id
+    # Filter subject_ids and per_subject together, from a single zipped list,
+    # so the retention predicate appears exactly once: applying it separately
+    # to each list could silently desync subject_ids from the arrays below.
+    retained_pairs = [
+        (subject_id, subject)
         for subject_id, subject in zip(subject_ids, per_subject)
         if len(subject["times"]) >= min_observations
     ]
+    n_excluded = len(per_subject) - len(retained_pairs)
+    retained_ids = [subject_id for subject_id, _ in retained_pairs]
+    retained = [subject for _, subject in retained_pairs]
 
     if n_excluded:
         warnings.warn(

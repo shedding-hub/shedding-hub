@@ -75,6 +75,16 @@ def test_censoring_limit_falls_back_below_smallest_positive(simple_dataset):
     assert obs.censoring_limit == pytest.approx(5.0 - 0.01)
 
 
+def test_censoring_limit_uses_lod_when_loq_is_unusable(simple_dataset):
+    # LOQ is "unknown" (unusable); LOD is a valid number below the smallest
+    # observed positive (5.0), so the declared LOD should resolve cleanly,
+    # with no fallback-below-smallest-positive warning.
+    simple_dataset["analytes"]["stool"]["limit_of_quantification"] = "unknown"
+    simple_dataset["analytes"]["stool"]["limit_of_detection"] = 10
+    obs = prepare_observations(simple_dataset, "stool", "exponential")
+    assert obs.censoring_limit == pytest.approx(1.0)
+
+
 def test_qualitative_and_unknown_time_are_dropped_with_warning(simple_dataset):
     with pytest.warns(UserWarning):
         obs = prepare_observations(simple_dataset, "stool", "exponential")
@@ -143,6 +153,78 @@ def test_non_pathogen_biomarker_is_rejected():
     with pytest.raises(SheddingDataError) as excinfo:
         prepare_observations(dataset, "stool_crAssphage", "exponential")
     assert excinfo.value.reason == "non_pathogen_biomarker"
+
+
+def test_vaccine_strain_biomarker_is_not_rejected():
+    # Live-attenuated vaccine shedding has a real trajectory (reference event
+    # "vaccination"), unlike the fecal-strength/normalization indicators in
+    # NON_PATHOGEN_BIOMARKERS. Guards against that set later being "tidied"
+    # into a broader substring/category match that would catch this too.
+    dataset = {
+        "dataset_id": "vaccine_study",
+        "analytes": {
+            "stool_rotavirus": {
+                "specimen": "stool",
+                "biomarker": "rotavirus vaccine",
+                "reference_event": "vaccination",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool_rotavirus", "time": 1, "value": 1e6},
+                    {"analyte": "stool_rotavirus", "time": 2, "value": 1e5},
+                ]
+            },
+            {
+                "measurements": [
+                    {"analyte": "stool_rotavirus", "time": 1, "value": 1e7},
+                    {"analyte": "stool_rotavirus", "time": 2, "value": 1e6},
+                ]
+            },
+        ],
+    }
+    obs = prepare_observations(dataset, "stool_rotavirus", "exponential")
+    assert obs.n_subjects == 2
+
+
+def test_no_positive_measurements_raises():
+    # Both subjects have enough censored measurements to clear
+    # min_observations on their own, so they are retained rather than
+    # excluded — the failure must come from having no positives at all.
+    dataset = {
+        "dataset_id": "all_negative_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": 1, "value": "negative"},
+                    {"analyte": "stool", "time": 2, "value": "negative"},
+                ]
+            },
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": 1, "value": "negative"},
+                    {"analyte": "stool", "time": 2, "value": "negative"},
+                ]
+            },
+        ],
+    }
+    with pytest.raises(SheddingDataError) as excinfo:
+        prepare_observations(dataset, "stool", "exponential")
+    assert excinfo.value.reason == "no_positive_measurements"
 
 
 def test_gamma_drops_non_positive_times(simple_dataset):
