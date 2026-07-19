@@ -14,3 +14,6 @@ dependencies = [
 
 [tool.setuptools.packages]
 find = {}
+
+[tool.setuptools.package-data]
+shedding_hub = ["data/*.yaml"]

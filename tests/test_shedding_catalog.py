@@ -326,3 +326,24 @@ def test_restored_fit_can_still_simulate(two_study_catalog):
         restored.fits[0], n_individuals=5, times=[1.0, 2.0], seed=0
     )
     assert len(traj) == 10
+
+
+def test_shipped_catalog_covers_every_dataset():
+    """CI staleness check: adding a dataset without regenerating must fail."""
+    import pathlib
+
+    from shedding_hub.shedding_catalog import load_shedding_catalog
+
+    data_dir = pathlib.Path(__file__).parent.parent / "data"
+    on_disk = {
+        path.name
+        for path in data_dir.iterdir()
+        if path.is_dir() and not path.name.startswith(".")
+    }
+    catalog = load_shedding_catalog()
+    accounted = set(catalog.table["dataset_id"]) | set(catalog.skipped["dataset_id"])
+    missing = on_disk - accounted
+    assert not missing, (
+        f"Datasets absent from the shipped catalog: {sorted(missing)}. "
+        "Run `make catalog` to regenerate."
+    )

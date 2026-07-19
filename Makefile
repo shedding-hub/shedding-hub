@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction
+.PHONY : backup_data assert_data_unchanged extraction catalog
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -33,3 +33,8 @@ assert_data_unchanged : ${DATA_CHECKS}
 
 ${DATA_CHECKS} : ${TMPDIR}%.null : ${TMPDIR}%.yaml
 	python .github/workflows/compare.py data/$*/$*.yaml $<
+
+# Refit every analyte in data/ and rewrite the shipped catalog. Slow by design;
+# run it whenever datasets are added or changed.
+catalog :
+	python scripts/build_shedding_catalog.py
