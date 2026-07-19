@@ -73,8 +73,10 @@ possible: drawing a new `theta` from it yields a new plausible individual.
 `t = 0` is the dataset's own reference event (usually symptom onset), matching the
 tutorial's stated assumption that shedding begins at symptom onset.
 
-Both models are fitted for every analyte, so the catalog carries both and users
-can compare them on AIC rather than being forced into one.
+The exponential model is fitted for every analyte. **The gamma model is fitted
+only where a rise is actually observed** — see the rise gate below — so the
+catalog carries both models where both are identifiable, and users compare them
+on AIC rather than being forced into one.
 
 ## The fitting unit is the analyte
 
@@ -174,6 +176,23 @@ Measurements are extracted per participant for the analyte being fitted, then:
   per-measurement limit, so a single scalar limit per fit is correct and the
   likelihood stays simpler. Revisit if a future dataset declares them on a
   pathogen analyte.
+- **The gamma rise gate.** The gamma model's `b0` controls the rise, so it is
+  unidentifiable when a study starts sampling after peak shedding — which is the
+  common case in shedding studies. Fitting it anyway produces a meaningless
+  `peak_day` and `peak_log10`. Confirmed by profile likelihood during
+  implementation: where sampling is entirely post-peak the likelihood is
+  monotone in `b0` until another parameter binds, so no amount of better
+  initialization helps.
+
+  A subject "observes a rise" if it has at least 3 usable positive observations
+  at `t > 0` and its maximum observed value occurs later than its first
+  observation. If fewer than **50%** of an analyte's subjects observe a rise, the
+  gamma fit is refused with reason `no_rise_observed`. The exponential model is
+  unaffected — post-peak sampling is precisely where it applies.
+
+  The fraction is published as a `pct_subjects_with_rise` column so the judgment
+  is auditable rather than buried in a threshold. In practice the gate refuses
+  38 analyte/model combinations, taking gamma fits from 67 to 31.
 - **Non-pathogen indicator biomarkers are rejected.** `crAssphage`, `PMMoV`, and
   `mtDNA` are fecal-strength and normalization markers, not pathogens shed by
   infected people — they have no time-since-infection trajectory, so a shedding
@@ -537,37 +556,49 @@ Recorded in module docstrings so users encounter them:
 
 1. Two-stage fitting does not shrink individual estimates, so between-subject
    variance is overestimated (see Fitting above).
-2. **The gamma model's `b0` is downward-biased at realistic sampling densities.**
-   Measured during implementation against known truth, holding 60 subjects and
-   varying observations per subject (mean of 3 seeds, bias in log units):
+2. **The gamma model's `b0` is mildly downward-biased at realistic sampling
+   densities** — about **0.15 log units** at ~14 observations per subject
+   (measured over six seeds, range 0.02–0.27). This is ordinary finite-sample
+   maximum-likelihood bias: the estimator is consistent and the bias vanishes as
+   sampling density rises. Since `peak_day = b0 / a0`, the catalog's `peak_day`
+   runs slightly early for sparsely-sampled studies. A test pins the direction
+   and mechanism so it cannot change silently.
 
-   | obs/subject | `a0` | `b0` | `c0` |
-   | --- | --- | --- | --- |
-   | 14 | −0.09 | **−0.55** | −0.00 |
-   | 28 | −0.02 | **−0.21** | −0.00 |
-   | 56 | −0.05 | **−0.10** | +0.00 |
-   | 112 | −0.02 | **−0.05** | +0.00 |
-
-   The bias roughly halves as observations double — ordinary finite-sample
-   maximum-likelihood bias, so the estimator is consistent and vanishes
-   asymptotically. But real studies sample sparsely: at ~14 observations per
-   subject, `b0` is low by about half a log unit while `a0` and `c0` are
-   essentially unbiased. Since `peak_day = b0 / a0`, **the catalog's `peak_day`
-   is systematically early for sparsely-sampled studies** — on the order of a
-   third. Read it as a lower bound on time-to-peak, and prefer studies with
-   denser sampling when peak timing is what matters. This strengthens the case
-   for the hierarchical Bayesian backend, which would shrink individual
-   estimates and reduce this bias. A test pins the direction and mechanism so it
-   cannot change silently.
-3. Point estimates only — no parameter uncertainty propagates into simulations.
+   *This figure was originally measured at 0.55 log units. Most of that was not
+   bias at all but the parameter-collapse artifact described below, which was
+   inflating the apparent effect nearly fourfold. The residual 0.15 is the real
+   finite-sample bias.*
+3. **Optimizing on the log scale makes zero an absorbing state, and the fitter
+   guards against it rather than being immune.** Because parameters are
+   optimized as `theta = log(param)`, the chain rule gives
+   `dL/d(theta) = param * dL/d(param)`, so the gradient vanishes as a parameter
+   approaches zero: a parameter that drifts small can never climb back.
+   Discovered when the first repository-wide build produced 37 fits with
+   half-lives over a year — some at exactly `ln(2)/1e-6` — because the
+   initialization clipped non-positive least-squares seeds straight onto the
+   floor. Initialization now never starts at the floor, and subjects whose
+   parameters still collapse are detected by magnitude, excluded from `mu`/`Sigma`
+   (but kept in `subject_params` with a `degenerate` flag), and counted in
+   `n_degenerate_subjects`. A fit with fewer than two surviving subjects is
+   refused with reason `degenerate_fit`. **Every synthetic test passed while this
+   was shipping 278-day half-lives**, so real-data regression tests now guard it.
+4. **`peak_log10` is a population median over draws, not the value at
+   `exp(mu)`.** Coordinate-wise averaging of log-parameters across a correlated
+   ridge yields a parameter vector no real subject has. `peak_day` and
+   `half_life_days` are unaffected — each is a ratio or transform of a single
+   lognormal, so the value at `exp(mu)` genuinely is the population median — but
+   `peak_log10` is a nonlinear function of all three parameters and was landing
+   below almost every subject's own peak. It is therefore computed as the median
+   over 10,000 draws from `MVN(mu, Sigma)` with a fixed seed.
+5. Point estimates only — no parameter uncertainty propagates into simulations.
    Cohort spread reflects between-individual variation, not estimation
    uncertainty.
-4. Both models assume shedding begins at the reference event. Datasets with
+6. Both models assume shedding begins at the reference event. Datasets with
    substantial pre-onset sampling (`kissler2021densely`, `kissler2021viral`) are
    poorly served; the Teunis onset-offset model is the future answer.
-5. The mixture ensemble represents between-study heterogeneity but does not
+7. The mixture ensemble represents between-study heterogeneity but does not
    *explain* it — differences in assay, matrix, and population are conflated.
-6. The exponential model cannot represent a rise and will mis-fit datasets
+8. The exponential model cannot represent a rise and will mis-fit datasets
    sampled from before peak. Compare AIC against the gamma fit before choosing.
 
 ## Files
