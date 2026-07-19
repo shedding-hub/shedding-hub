@@ -1,0 +1,73 @@
+import matplotlib
+
+matplotlib.use("Agg")
+
+import numpy as np
+import pytest
+
+
+@pytest.fixture
+def make_synthetic_dataset():
+    """
+    Build a dataset by simulating from known population parameters.
+
+    Returns a factory so tests can vary the truth they fit against. Values below
+    ``loq`` are written as ``negative``, reproducing real left-censoring.
+    """
+
+    def _make(
+        model,
+        mu,
+        cov,
+        sigma=0.3,
+        n_subjects=40,
+        seed=0,
+        times=None,
+        loq=1e2,
+        dataset_id="synthetic",
+    ):
+        from shedding_hub.shedding_models import log10_concentration
+
+        rng = np.random.default_rng(seed)
+        times = np.arange(1.0, 15.0) if times is None else np.asarray(times, float)
+        theta = rng.multivariate_normal(
+            np.asarray(mu, float), np.asarray(cov, float), size=n_subjects
+        )
+        truth = log10_concentration(model, np.exp(theta), times)
+        noisy = truth + rng.normal(0.0, sigma, size=truth.shape)
+        limit = np.log10(loq)
+
+        participants = []
+        for row in noisy:
+            measurements = []
+            for time, value in zip(times, row):
+                if value < limit:
+                    measurements.append(
+                        {"analyte": "stool", "time": float(time), "value": "negative"}
+                    )
+                else:
+                    measurements.append(
+                        {
+                            "analyte": "stool",
+                            "time": float(time),
+                            "value": float(10.0**value),
+                        }
+                    )
+            participants.append({"measurements": measurements})
+
+        return {
+            "dataset_id": dataset_id,
+            "analytes": {
+                "stool": {
+                    "specimen": "stool",
+                    "biomarker": "SARS-CoV-2",
+                    "reference_event": "symptom onset",
+                    "unit": "gc/mL",
+                    "limit_of_quantification": loq,
+                    "limit_of_detection": "unknown",
+                }
+            },
+            "participants": participants,
+        }
+
+    return _make

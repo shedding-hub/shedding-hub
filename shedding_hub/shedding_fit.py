@@ -16,7 +16,7 @@ from typing import Any
 
 import numpy as np
 
-from .shedding_models import PARAM_NAMES, validate_model
+from .shedding_models import LN10, PARAM_NAMES, validate_model
 
 CENSORING_MARGIN = 0.01
 NEGATIVE_VALUE = "negative"
@@ -284,4 +284,302 @@ def prepare_observations(
         n_subjects=len(retained),
         n_excluded_subjects=n_excluded,
         n_dropped_measurements=n_dropped,
+    )
+
+
+import pandas as pd
+from scipy import optimize
+from scipy.stats import norm
+
+from .shedding_models import (
+    half_life_days,
+    log10_concentration,
+    log10_concentration_pointwise,
+    peak_day,
+)
+
+_MIN_PARAM = 1e-6
+_THETA_BOUNDS = (-25.0, 25.0)
+_LOG_SIGMA_BOUNDS = (-10.0, 5.0)
+
+
+@dataclass
+class SheddingFit:
+    """
+    A fitted shedding model for one analyte of one dataset.
+
+    ``population_mean`` and ``population_cov`` describe the distribution of
+    ``theta = log(params)`` across subjects; drawing from that multivariate normal
+    and exponentiating produces a new plausible individual, which is what makes
+    simulation possible.
+
+    Two-stage estimation does not shrink individual estimates toward the
+    population mean the way a hierarchical Bayesian fit does, so
+    ``population_cov`` absorbs within-subject estimation error and overestimates
+    true between-subject variance. Simulated cohorts are therefore somewhat more
+    dispersed than reality, the more so when subjects have few observations.
+    """
+
+    model: str
+    method: str
+    population_mean: np.ndarray
+    population_cov: np.ndarray
+    sigma: float
+    subject_params: pd.DataFrame | None
+    censoring_limit: float
+    dataset_id: str
+    analyte: str
+    biomarker: str | None
+    specimen: str | None
+    reference_event: str | None
+    unit: str | None
+    gene_target: str | None
+    dose: int | None
+    vaccine_type: str | None
+    n_subjects: int
+    n_measurements: int
+    n_censored: int
+    n_excluded_subjects: int
+    n_dropped_measurements: int
+    converged: bool
+    log_likelihood: float
+    aic: float
+
+    @property
+    def param_names(self) -> tuple[str, ...]:
+        return PARAM_NAMES[self.model]
+
+    @property
+    def median_params(self) -> np.ndarray:
+        """
+        Parameters of the median individual.
+
+        Because ``theta`` is normal, the parameters are lognormal, so
+        ``exp(population_mean)`` is exactly their median — not their mean. Note
+        that the median individual's trajectory is not the population's mean
+        trajectory; to aggregate load across a cohort, simulate rather than
+        scaling this up.
+        """
+        return np.exp(self.population_mean)
+
+    @property
+    def peak_day(self) -> float:
+        return float(peak_day(self.model, self.median_params[None, :])[0])
+
+    @property
+    def peak_log10(self) -> float:
+        """Log10 concentration of the median individual at its peak."""
+        if self.model == "exponential":
+            return float(
+                log10_concentration(
+                    self.model, self.median_params[None, :], np.array([0.0])
+                )[0, 0]
+            )
+        return float(
+            log10_concentration(
+                self.model, self.median_params[None, :], np.array([self.peak_day])
+            )[0, 0]
+        )
+
+    @property
+    def half_life_days(self) -> float:
+        return float(half_life_days(self.model, self.median_params[None, :])[0])
+
+    def sample_params(
+        self, rng: np.random.Generator, n: int
+    ) -> tuple[np.ndarray, np.ndarray]:
+        """
+        Draw ``n`` individuals' natural-scale parameters.
+
+        Returns:
+            ``(params, sources)`` where ``params`` has shape ``(n, k)`` and
+            ``sources`` names the dataset each individual came from — constant
+            here, but varying for a mixture ensemble, so both share this
+            interface.
+        """
+        if n < 1:
+            raise ValueError("n_individuals must be at least 1")
+        theta = rng.multivariate_normal(self.population_mean, self.population_cov, n)
+        return np.exp(theta), np.full(n, self.dataset_id, dtype=object)
+
+
+def _initial_theta(model: str, observations: Observations) -> np.ndarray:
+    """
+    Initialize per-subject log-parameters by ordinary least squares.
+
+    Fits each subject's uncensored points; subjects with too few uncensored
+    points fall back to a pooled fit across all subjects, so an all-censored or
+    nearly all-censored subject still starts somewhere sensible.
+    """
+    k = len(PARAM_NAMES[model])
+    uncensored = ~observations.censored
+
+    def design(times: np.ndarray) -> np.ndarray:
+        if model == "exponential":
+            return np.column_stack([np.ones_like(times), -times])
+        return np.column_stack([np.ones_like(times), np.log(times), -times])
+
+    def solve(times: np.ndarray, values: np.ndarray) -> np.ndarray:
+        coefficients, *_ = np.linalg.lstsq(design(times), values * LN10, rcond=None)
+        if model == "exponential":
+            c0, a0 = coefficients
+            params = np.array([a0, c0])
+        else:
+            c0, b0, a0 = coefficients
+            params = np.array([a0, b0, c0])
+        return np.log(np.clip(params, _MIN_PARAM, None))
+
+    pooled = solve(observations.times[uncensored], observations.values[uncensored])
+
+    theta = np.tile(pooled, (observations.n_subjects, 1))
+    for i in range(observations.n_subjects):
+        mask = uncensored & (observations.subject_index == i)
+        if mask.sum() >= k:
+            try:
+                theta[i] = solve(observations.times[mask], observations.values[mask])
+            except np.linalg.LinAlgError:
+                pass
+    return np.clip(theta, *_THETA_BOUNDS)
+
+
+def _negative_log_likelihood(
+    x: np.ndarray, model: str, observations: Observations
+) -> float:
+    """
+    Negative log likelihood with left-censored observations.
+
+    Uncensored points contribute a normal density; censored points contribute
+    ``Phi((L - mu) / sigma)``, the probability of falling below the limit. This is
+    the direct analogue of Stan's ``normal_lcdf`` term.
+    """
+    k = len(PARAM_NAMES[model])
+    n = observations.n_subjects
+    theta = x[: n * k].reshape(n, k)
+    log_sigma = x[-1]
+    sigma = math.exp(log_sigma)
+
+    params = np.exp(theta)[observations.subject_index]
+    predicted = log10_concentration_pointwise(model, params, observations.times)
+    if not np.all(np.isfinite(predicted)):
+        return np.inf
+
+    total = 0.0
+    uncensored = ~observations.censored
+    if uncensored.any():
+        residual = (observations.values[uncensored] - predicted[uncensored]) / sigma
+        total += 0.5 * float(np.sum(residual**2))
+        total += float(uncensored.sum()) * (log_sigma + 0.5 * math.log(2 * math.pi))
+    if observations.censored.any():
+        z = (observations.censoring_limit - predicted[observations.censored]) / sigma
+        total -= float(np.sum(norm.logcdf(z)))
+    return total if np.isfinite(total) else np.inf
+
+
+def fit_shedding_model(
+    dataset: dict,
+    *,
+    analyte: str,
+    model: str = "gamma",
+    min_observations: int | None = None,
+) -> SheddingFit:
+    """
+    Fit a shedding model to one analyte by censored maximum likelihood.
+
+    Args:
+        dataset: Dataset dictionary from ``load_dataset``.
+        analyte: Key into ``dataset["analytes"]``.
+        model: ``"exponential"`` or ``"gamma"``.
+        min_observations: Minimum usable measurements per subject; defaults to the
+            number of per-subject parameters.
+
+    Returns:
+        A ``SheddingFit``.
+
+    Raises:
+        SheddingDataError: The analyte cannot be fitted (see ``reason``).
+
+    Note:
+        ``aic`` is only comparable between models fitted to the same
+        observations. The gamma model drops non-positive times while the
+        exponential model keeps them, so compare ``n_measurements`` before
+        comparing ``aic`` across models.
+    """
+    validate_model(model)
+    observations = prepare_observations(
+        dataset, analyte, model, min_observations=min_observations
+    )
+
+    k = len(PARAM_NAMES[model])
+    n = observations.n_subjects
+    n_parameters = n * k + 1  # every subject's k parameters, plus one shared sigma
+    x0 = np.concatenate([_initial_theta(model, observations).ravel(), [math.log(0.5)]])
+    bounds = [_THETA_BOUNDS] * (n * k) + [_LOG_SIGMA_BOUNDS]
+
+    # scipy's L-BFGS-B defaults (maxfun=maxiter=15000, ftol=2.22e-9) are tuned
+    # for small problems. Jointly optimizing every subject's parameters plus one
+    # shared sigma is n_parameters-dimensional, and heavy censoring flattens the
+    # likelihood near its optimum, so the default budget/tolerance combination
+    # can report spurious non-convergence tens of thousands of evaluations
+    # before the fit stops moving in any way that matters (verified against a
+    # fully-converged reference run: the recovered parameters agree to 3+
+    # decimal places well before the default ftol would be satisfied). Scaling
+    # the budget with problem size and relaxing ftol lets these fits report
+    # ``converged=True`` honestly instead of exhausting the default cap.
+    max_evaluations = max(15000, 500 * n_parameters)
+    result = optimize.minimize(
+        _negative_log_likelihood,
+        x0,
+        args=(model, observations),
+        method="L-BFGS-B",
+        bounds=bounds,
+        options={"maxfun": max_evaluations, "maxiter": max_evaluations, "ftol": 1e-6},
+    )
+    if not result.success:
+        warnings.warn(
+            f"Optimizer did not converge for analyte {analyte!r} "
+            f"({result.message}). The fit is returned with converged=False.",
+            UserWarning,
+            stacklevel=2,
+        )
+
+    theta = result.x[: n * k].reshape(n, k)
+    sigma = float(np.exp(result.x[-1]))
+    population_mean = theta.mean(axis=0)
+    population_cov = np.cov(theta, rowvar=False, ddof=1) if n > 1 else np.zeros((k, k))
+    population_cov = np.atleast_2d(population_cov)
+
+    subject_params = pd.DataFrame(np.exp(theta), columns=list(PARAM_NAMES[model]))
+    subject_params.insert(0, "subject_id", observations.subject_ids)
+
+    log_likelihood = -float(result.fun)
+    analyte_spec = dataset["analytes"][analyte]
+    specimen = analyte_spec.get("specimen")
+    if isinstance(specimen, list):
+        specimen = "+".join(specimen)
+
+    return SheddingFit(
+        model=model,
+        method="mle",
+        population_mean=population_mean,
+        population_cov=population_cov,
+        sigma=sigma,
+        subject_params=subject_params,
+        censoring_limit=observations.censoring_limit,
+        dataset_id=dataset.get("dataset_id", "unknown"),
+        analyte=analyte,
+        biomarker=analyte_spec.get("biomarker"),
+        specimen=specimen,
+        reference_event=analyte_spec.get("reference_event"),
+        unit=analyte_spec.get("unit"),
+        gene_target=analyte_spec.get("gene_target"),
+        dose=analyte_spec.get("dose"),
+        vaccine_type=analyte_spec.get("vaccine_type"),
+        n_subjects=n,
+        n_measurements=int(observations.times.size),
+        n_censored=int(observations.censored.sum()),
+        n_excluded_subjects=observations.n_excluded_subjects,
+        n_dropped_measurements=observations.n_dropped_measurements,
+        converged=bool(result.success),
+        log_likelihood=log_likelihood,
+        aic=2.0 * n_parameters - 2.0 * log_likelihood,
     )

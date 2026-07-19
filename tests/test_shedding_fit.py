@@ -276,3 +276,121 @@ def test_subject_index_is_contiguous_after_exclusions(simple_dataset):
     with pytest.warns(UserWarning):
         obs = prepare_observations(simple_dataset, "stool", "exponential")
     assert set(obs.subject_index.tolist()) == {0, 1}
+
+
+from shedding_hub.shedding_fit import SheddingFit, fit_shedding_model
+
+
+def test_recovers_known_exponential_population(make_synthetic_dataset):
+    mu = np.array([np.log(0.6), np.log(18.0)])
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.09, 0.04]), sigma=0.3, n_subjects=60
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    np.testing.assert_allclose(fit.population_mean, mu, atol=0.15)
+    assert fit.sigma == pytest.approx(0.3, abs=0.15)
+    assert fit.converged
+
+
+def test_recovers_known_gamma_population(make_synthetic_dataset):
+    mu = np.array([np.log(0.5), np.log(1.5), np.log(12.0)])
+    dataset = make_synthetic_dataset(
+        "gamma", mu, np.diag([0.04, 0.04, 0.04]), sigma=0.3, n_subjects=60
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    np.testing.assert_allclose(fit.population_mean, mu, atol=0.25)
+    assert fit.converged
+
+
+def test_censored_fit_beats_dropping_negatives(make_synthetic_dataset):
+    """The property the whole design rests on."""
+    mu = np.array([np.log(0.6), np.log(14.0)])
+    # A high limit censors much of the decay phase.
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.04, 0.04]), sigma=0.2, n_subjects=60, loq=1e4
+    )
+
+    censored_fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+
+    dropped = {
+        **dataset,
+        "participants": [
+            {"measurements": [m for m in p["measurements"] if m["value"] != "negative"]}
+            for p in dataset["participants"]
+        ],
+    }
+    naive_fit = fit_shedding_model(dropped, analyte="stool", model="exponential")
+
+    true_decay = mu[0]
+    censored_error = abs(censored_fit.population_mean[0] - true_decay)
+    naive_error = abs(naive_fit.population_mean[0] - true_decay)
+    assert censored_error < naive_error
+    # Dropping negatives should understate the decay rate.
+    assert naive_fit.population_mean[0] < censored_fit.population_mean[0]
+
+
+def test_fit_carries_metadata_and_counts(make_synthetic_dataset):
+    mu = np.array([np.log(0.6), np.log(18.0)])
+    # loq=1e2 (the fixture default) never censors this particular truth curve
+    # over t=1..14 -- its noisy values stay in [2.9, 9.6] on the log10 scale,
+    # nowhere near log10(1e2)=2. A higher loq is needed so this dataset
+    # actually exercises the censored branch it claims to check.
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.04, 0.04]), n_subjects=10, loq=1e5
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert isinstance(fit, SheddingFit)
+    assert fit.dataset_id == "synthetic"
+    assert fit.analyte == "stool"
+    assert fit.biomarker == "SARS-CoV-2"
+    assert fit.specimen == "stool"
+    assert fit.reference_event == "symptom onset"
+    assert fit.unit == "gc/mL"
+    assert fit.method == "mle"
+    assert fit.n_subjects == 10
+    # 10 subjects x 14 time points, none dropped by the exponential model.
+    assert fit.n_measurements == 140
+    assert 0 < fit.n_censored < fit.n_measurements
+    assert fit.param_names == ("a0", "c0")
+
+
+def test_median_params_are_exp_of_population_mean(make_synthetic_dataset):
+    mu = np.array([np.log(0.6), np.log(18.0)])
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.04, 0.04]), n_subjects=10
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    np.testing.assert_allclose(fit.median_params, np.exp(fit.population_mean))
+
+
+def test_gamma_peak_day_is_b_over_a(make_synthetic_dataset):
+    mu = np.array([np.log(0.5), np.log(2.0), np.log(12.0)])
+    dataset = make_synthetic_dataset(
+        "gamma", mu, np.diag([0.04, 0.04, 0.04]), n_subjects=20
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    assert fit.peak_day == pytest.approx(fit.median_params[1] / fit.median_params[0])
+
+
+def test_sample_params_shape_and_source(make_synthetic_dataset):
+    mu = np.array([np.log(0.6), np.log(18.0)])
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.04, 0.04]), n_subjects=20
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    rng = np.random.default_rng(1)
+    params, sources = fit.sample_params(rng, 25)
+    assert params.shape == (25, 2)
+    assert (params > 0).all()
+    assert sources.shape == (25,)
+    assert set(sources.tolist()) == {"synthetic"}
+
+
+def test_subject_params_has_one_row_per_subject(make_synthetic_dataset):
+    mu = np.array([np.log(0.6), np.log(18.0)])
+    dataset = make_synthetic_dataset(
+        "exponential", mu, np.diag([0.04, 0.04]), n_subjects=12
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert len(fit.subject_params) == 12
+    assert list(fit.subject_params.columns) == ["subject_id", "a0", "c0"]
