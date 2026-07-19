@@ -372,6 +372,36 @@ _DEGENERATE_PARAM = 1e-2
 # tight.
 _BOUND_TOLERANCE = 1e-6
 
+# The runaway counterpart to _DEGENERATE_PARAM, expressed on the derived
+# half-life because that is the quantity with physical meaning: a fitted decay
+# implying a shedding half-life under 2.4 hours cannot have been estimated from
+# data sampled roughly daily. Nothing in the observations distinguishes "fell
+# below detection overnight" from "fell a thousandfold overnight", so the
+# optimizer is free to run the decay rate up without penalty, and it does — the
+# repository contained subjects with a0 of 84 to 142, i.e. half-lives of five to
+# eight minutes.
+#
+# Sited like _DEGENERATE_PARAM, from the repository rather than from the cases
+# that prompted it. Half-life alone has no gap to cut in — its distribution is
+# smooth, peaking near 0.7 days — but the *pathology* has a sharp edge, because
+# a runaway decay drags c0 up with it: extrapolating an implausibly steep slope
+# back to t = 0 inflates the intercept. Sweeping the threshold and asking what
+# share of subjects in each half-life band carry an implausible c0 (> 100):
+#
+#     half-life band     < 0.01  0.01-0.05  0.05-0.1  0.1-0.2  0.2-0.5  > 0.5
+#     share with c0>100   59.4%      24.2%      6.8%    0.00%    0.00%  0.00%
+#
+# The pathology vanishes exactly at 0.1 days and never reappears at any slower
+# rate. Cutting there takes the worst surviving c0 from 7792.8 to 75.5 and
+# leaves no subject above 100; cutting at 0.05 leaves five; cutting at 0.2 buys
+# no further improvement and costs 213 more subjects. 0.1 is the knee, and it
+# coincides with the independent physical argument above.
+#
+# It also removes the need for a separate c0 or b0 bound: after this cut the
+# worst c0 is 75.5 and the worst b0 is 33.9, both on smooth tails with no gap to
+# justify cutting into.
+_MIN_HALF_LIFE_DAYS = 0.1
+
 # The gamma model is only fitted where a rise is actually observed. Its ``b0``
 # describes the rise to peak, so a study that sampled purely after peak shedding
 # carries no information about it: the profile likelihood is then monotone in
@@ -500,11 +530,12 @@ class SheddingFit:
     # exactly what the exponential model is for. NaN when no subject had enough
     # readings to judge.
     pct_subjects_with_rise: float = float("nan")
-    # Earliest observation time among the subjects that feed the population
-    # summary. Everything the fit says about times before this is extrapolation:
-    # see the warning on ``peak_log10``, which is evaluated at t = 0 for the
-    # exponential model however late sampling actually began.
-    first_observed_day: float = float("nan")
+    # Median, across the subjects that feed the population summary, of each
+    # subject's own earliest observation time. Everything the fit says about
+    # times before this is extrapolation for most of its subjects: see the
+    # warning on ``peak_log10``, which is evaluated at t = 0 for the exponential
+    # model however late sampling actually began.
+    median_first_observed_day: float = float("nan")
 
     @property
     def param_names(self) -> tuple[str, ...]:
@@ -559,17 +590,17 @@ class SheddingFit:
         ``_PEAK_LOG10_DRAWS`` is sized to keep negligible.
 
         .. warning::
-            Read this together with ``first_observed_day``. The exponential
-            model's peak is at ``t = 0`` — the reference event — by definition,
-            but many studies only begin sampling well after it. When
-            ``first_observed_day`` is well above zero, ``peak_log10`` is a
-            backward extrapolation to a time the study never observed, not a
-            measured concentration, and it grows as ``a0 * first_observed_day``
-            in log units. A large ``first_observed_day`` together with a large
-            ``peak_log10`` means exactly this and nothing more:
-            ``zuo2020alterations:stool_SARSCoV2_SymptomOnset`` reports 18.17,
-            i.e. 10^18 gc/mL, purely because ``a0 = 1.494`` is projected back
-            over the ~18 days before its first sample.
+            Read this together with ``median_first_observed_day``. The
+            exponential model's peak is at ``t = 0`` — the reference event — by
+            definition, but many studies only begin sampling well after it. When
+            ``median_first_observed_day`` is well above zero, ``peak_log10`` is a
+            backward extrapolation to a time most subjects were never observed
+            at, not a measured concentration, and it grows roughly as
+            ``a0 * median_first_observed_day / ln(10)`` log units beyond the last
+            value the study actually saw. A large
+            ``median_first_observed_day`` together with a large ``peak_log10``
+            means precisely that and should not be read as the study having
+            detected ``10 ** peak_log10`` of anything.
 
             The definition is deliberately left at ``t = 0`` regardless, because
             that is what makes the value comparable across studies that started
@@ -677,25 +708,43 @@ def _initial_theta(model: str, observations: Observations) -> np.ndarray:
     return np.clip(theta, *_THETA_BOUNDS)
 
 
-def _degenerate_subjects(theta: np.ndarray) -> np.ndarray:
+def _degenerate_subjects(theta: np.ndarray, model: str) -> np.ndarray:
     """
-    Flag subjects whose fit collapsed onto the parameter bounds.
+    Flag subjects whose fit is an artifact rather than an estimate.
 
-    A collapsed subject's ``theta`` is not an estimate but a boundary solution,
-    and averaging it into ``mean(theta_i)`` distorts the population summary out
-    of all proportion: one subject pinned at ``log(1e-6) = -13.8`` is enough to
-    turn a one-day half-life into a 278-day one.
+    Such a ``theta`` is not an estimate but a boundary or runaway solution, and
+    averaging it into ``mean(theta_i)`` distorts the population summary out of
+    all proportion. One subject pinned at ``log(1e-6) = -13.8`` is enough to
+    turn a one-day half-life into a 278-day one; one subject with ``a0 = 142``
+    is enough to turn a plausible peak into 10^18 gc/mL.
+
+    Three ways to fail, deliberately symmetric — the check used to catch only
+    collapse toward zero, judged against a physically-motivated floor, while
+    the top end was left to the raw optimizer bound of ``exp(25) ~ 7.2e10``,
+    which is so far past meaninglessness that nothing ever reached it:
+
+    - **Collapsed**: any parameter at or below ``_DEGENERATE_PARAM``.
+    - **Runaway decay**: an implied half-life below ``_MIN_HALF_LIFE_DAYS``,
+      faster than roughly-daily sampling can resolve.
+    - **Pinned**: any parameter at the optimizer's own upper bound. Retained for
+      completeness, though the half-life test now fires long before this can.
 
     Args:
         theta: Fitted log-parameters, shape ``(n_subjects, k)``.
+        model: ``"exponential"`` or ``"gamma"``, to locate the decay parameter.
 
     Returns:
-        Boolean array of length ``n_subjects``, True where any coordinate has
-        collapsed toward zero or run away to the upper bound.
+        Boolean array of length ``n_subjects``, True where the subject's fit is
+        degenerate by any of the three criteria.
     """
     collapsed = theta <= math.log(_DEGENERATE_PARAM)
-    runaway = theta >= _THETA_BOUNDS[1] - _BOUND_TOLERANCE
-    return np.asarray((collapsed | runaway).any(axis=1))
+    pinned = theta >= _THETA_BOUNDS[1] - _BOUND_TOLERANCE
+    # ln(2)/a0 < _MIN_HALF_LIFE_DAYS, rearranged to compare on the log scale
+    # theta is already expressed in. Located by name rather than by index so a
+    # future change to PARAM_NAMES cannot silently test the wrong coordinate.
+    decay = theta[:, PARAM_NAMES[model].index("a0")]
+    runaway_decay = decay > math.log(math.log(2.0) / _MIN_HALF_LIFE_DAYS)
+    return np.asarray((collapsed | pinned).any(axis=1) | runaway_decay)
 
 
 def _fraction_observing_a_rise(observations: Observations) -> float:
@@ -842,7 +891,8 @@ def fit_shedding_model(
             number of per-subject parameters.
 
     Returns:
-        A ``SheddingFit``. Subjects whose parameters collapsed onto the bounds
+        A ``SheddingFit``. Subjects whose fits are degenerate — collapsed onto
+        the parameter bounds, or decaying faster than the sampling can resolve —
         are excluded from the population summary but retained in
         ``subject_params`` with ``degenerate`` set; ``n_degenerate_subjects``
         counts them.
@@ -935,10 +985,11 @@ def fit_shedding_model(
     theta = result.x[: n * k].reshape(n, k)
     sigma = float(np.exp(result.x[-1]))
 
-    # Subjects whose fits collapsed onto the bounds stay in subject_params so
-    # the raw fit remains inspectable, but are kept out of the population
-    # summary, which they would otherwise dominate.
-    degenerate = _degenerate_subjects(theta)
+    # Subjects whose fits are artifacts — collapsed, pinned, or decaying faster
+    # than the sampling can resolve — stay in subject_params so the raw fit
+    # remains inspectable, but are kept out of the population summary, which
+    # they would otherwise dominate.
+    degenerate = _degenerate_subjects(theta, model)
     n_degenerate = int(degenerate.sum())
     retained = ~degenerate
     n_retained = int(retained.sum())
@@ -948,30 +999,47 @@ def fit_shedding_model(
     # subject survived, and only with n >= 2 does Sigma become estimable at all.
     if n_retained < min(2, n):
         raise SheddingDataError(
-            f"{n_degenerate} of {n} subject(s) for analyte {analyte!r} collapsed to "
-            f"the parameter bounds under the {model!r} model, leaving {n_retained} "
-            "usable subject(s) — too few to estimate a population covariance. This "
-            "usually means the model is not identifiable from this data: for the "
-            "gamma model, typically because sampling began after peak shedding, so "
-            "there is no rise phase from which to estimate b0.",
+            f"{n_degenerate} of {n} subject(s) for analyte {analyte!r} produced "
+            f"degenerate fits under the {model!r} model — collapsed onto the "
+            "parameter bounds, or decaying faster than the sampling can resolve — "
+            f"leaving {n_retained} usable subject(s), too few to estimate a "
+            "population covariance. This usually means the model is not "
+            "identifiable from this data: for the gamma model, typically because "
+            "sampling began after peak shedding, so there is no rise phase from "
+            "which to estimate b0.",
             "degenerate_fit",
         )
     if n_degenerate:
         warnings.warn(
             f"{n_degenerate} subject(s) excluded from the population summary of "
-            f"analyte {analyte!r}: their fitted parameters collapsed onto the "
-            "bounds. They remain in subject_params, flagged by the 'degenerate' "
-            "column.",
+            f"analyte {analyte!r}: their fitted parameters are degenerate "
+            "(collapsed onto the bounds, or an implied half-life below "
+            f"{_MIN_HALF_LIFE_DAYS} days). They remain in subject_params, flagged "
+            "by the 'degenerate' column.",
             UserWarning,
             stacklevel=2,
         )
 
-    # Earliest time any retained subject was sampled. Censored observations
-    # count: a `negative` at day 2 still says the study looked at day 2, and it
-    # still constrains the curve there. Taken over retained subjects only, so it
-    # describes exactly the data behind population_mean/population_cov.
-    retained_observations = retained[observations.subject_index]
-    first_observed_day = float(observations.times[retained_observations].min())
+    # When the typical retained subject was first sampled: each subject's own
+    # earliest time, then the median across subjects. The median rather than the
+    # overall minimum, because the minimum is the most generous statistic
+    # available and hides how late most subjects started —
+    # zuo2020alterations:stool_SARSCoV2_SymptomOnset has retained first days of
+    # [5, 8, 16, 16, 18, 19, 22], where a minimum of 5 badly understates the
+    # 16-day backward extrapolation behind its peak_log10.
+    #
+    # Censored observations count: a `negative` at day 2 still says the study
+    # looked at day 2, and it still constrains the curve there. Taken over
+    # retained subjects only, so it describes exactly the data behind
+    # population_mean/population_cov.
+    median_first_observed_day = float(
+        np.median(
+            [
+                observations.times[observations.subject_index == subject].min()
+                for subject in np.flatnonzero(retained)
+            ]
+        )
+    )
 
     kept = theta[retained]
     population_mean = kept.mean(axis=0)
@@ -1017,5 +1085,5 @@ def fit_shedding_model(
         aic=2.0 * n_parameters - 2.0 * log_likelihood,
         n_degenerate_subjects=n_degenerate,
         pct_subjects_with_rise=100.0 * rise_fraction,
-        first_observed_day=first_observed_day,
+        median_first_observed_day=median_first_observed_day,
     )

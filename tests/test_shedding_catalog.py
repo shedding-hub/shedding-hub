@@ -43,7 +43,7 @@ def _fit_with_degenerates(n_degenerate):
         aic=42.0,
         n_degenerate_subjects=n_degenerate,
         pct_subjects_with_rise=62.5,
-        first_observed_day=3.0,
+        median_first_observed_day=3.0,
     )
 
 
@@ -203,8 +203,8 @@ def test_round_trip_serialization(two_study_catalog, tmp_path):
     assert copy.pct_subjects_with_rise == pytest.approx(
         original.pct_subjects_with_rise, nan_ok=True
     )
-    assert copy.first_observed_day == pytest.approx(
-        original.first_observed_day, nan_ok=True
+    assert copy.median_first_observed_day == pytest.approx(
+        original.median_first_observed_day, nan_ok=True
     )
     assert copy.n_dropped_measurements == original.n_dropped_measurements
     assert copy.n_measurements == original.n_measurements
@@ -250,21 +250,23 @@ def test_fit_from_payload_defaults_missing_rise_percentage_to_nan():
     assert np.isnan(SheddingCatalog.from_dict(payload).fits[0].pct_subjects_with_rise)
 
 
-def test_round_trip_preserves_the_first_observed_day():
+def test_round_trip_preserves_the_median_first_observed_day():
     fit = _fit_with_degenerates(0)
     restored = SheddingCatalog.from_dict(SheddingCatalog(fits=[fit]).to_dict())
-    assert restored.fits[0].first_observed_day == pytest.approx(3.0)
+    assert restored.fits[0].median_first_observed_day == pytest.approx(3.0)
 
 
-def test_fit_from_payload_defaults_missing_first_observed_day_to_nan():
+def test_fit_from_payload_defaults_missing_median_first_observed_day_to_nan():
     """A catalog predating this column must read as unknown, not as day zero.
 
     Zero would be the strongest possible claim -- that the study sampled the
     reference event itself -- which is exactly the claim being audited.
     """
     payload = SheddingCatalog(fits=[_fit_with_degenerates(0)]).to_dict()
-    del payload["fits"][0]["first_observed_day"]
-    assert np.isnan(SheddingCatalog.from_dict(payload).fits[0].first_observed_day)
+    del payload["fits"][0]["median_first_observed_day"]
+    assert np.isnan(
+        SheddingCatalog.from_dict(payload).fits[0].median_first_observed_day
+    )
 
 
 def test_catalog_refuses_a_two_subject_fit_as_a_population(make_synthetic_dataset):
@@ -289,7 +291,7 @@ def test_catalog_publishes_a_three_subject_fit(make_synthetic_dataset):
     assert catalog.skipped.empty
 
 
-def test_table_exposes_the_first_observed_day(make_synthetic_dataset):
+def test_table_exposes_the_median_first_observed_day(make_synthetic_dataset):
     """The extrapolation behind peak_log10 must be auditable from the table."""
     mu = np.array([np.log(0.6), np.log(18.0)])
     dataset = make_synthetic_dataset(
@@ -297,10 +299,10 @@ def test_table_exposes_the_first_observed_day(make_synthetic_dataset):
     )
     catalog = fit_shedding_models([dataset], models=("exponential",))
     row = catalog.table.iloc[0]
-    assert "first_observed_day" in catalog.table.columns
+    assert "median_first_observed_day" in catalog.table.columns
     # The fixture samples days 1..14, so nothing was observed at t = 0 -- which
     # is precisely where the exponential model reports its peak.
-    assert row["first_observed_day"] == pytest.approx(1.0)
+    assert row["median_first_observed_day"] == pytest.approx(1.0)
 
 
 def test_table_exposes_the_rise_percentage_for_both_models(make_synthetic_dataset):

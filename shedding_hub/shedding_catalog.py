@@ -54,7 +54,7 @@ _TABLE_COLUMNS = _KEY_COLUMNS + (
     "sigma",
     "peak_day",
     "peak_log10",
-    "first_observed_day",
+    "median_first_observed_day",
     "half_life_days",
     "aic",
     "converged",
@@ -76,20 +76,23 @@ def fit_to_row(fit: SheddingFit) -> dict:
 
     Three columns qualify the rest, and a row is easy to misread without them:
 
-    ``first_observed_day``
-        Earliest day any retained subject was sampled. ``peak_log10`` is
-        evaluated at the peak — ``t = 0`` for the exponential model, since that
-        model only decays — so when this column is well above zero the peak is a
-        backward extrapolation to a time the study never observed, not a
-        measured concentration. A large ``first_observed_day`` beside a large
-        ``peak_log10`` means precisely that and should not be read as the study
-        having detected 10^`peak_log10` of anything.
+    ``median_first_observed_day``
+        Median across retained subjects of each subject's own first sampling
+        day — deliberately the median rather than the earliest, since one
+        early-enrolled subject should not make a late-starting study look
+        well-observed. ``peak_log10`` is evaluated at the peak — ``t = 0`` for
+        the exponential model, since that model only decays — so when this
+        column is well above zero the peak is a backward extrapolation to a time
+        most subjects were never observed at, not a measured concentration. A
+        large ``median_first_observed_day`` beside a large ``peak_log10`` means
+        precisely that, and should not be read as the study having detected
+        ``10 ** peak_log10`` of anything.
 
     ``pct_censored``
         Share of measurements that were below the limit of detection. A very
-        high value (the repository reaches 78–93%) means the analyte is rarely
-        detected at all, so the row's estimates describe mostly-censored data —
-        a low ``peak_log10`` there is the fitter reporting honestly on an
+        high value (the repository reaches the low 90s) means the analyte is
+        rarely detected at all, so the row's estimates describe mostly-censored
+        data — a low ``peak_log10`` there is the fitter reporting honestly on an
         analyte that is almost never found, not a defect.
 
     ``pct_subjects_with_rise``
@@ -119,7 +122,7 @@ def fit_to_row(fit: SheddingFit) -> dict:
             "sigma": fit.sigma,
             "peak_day": fit.peak_day,
             "peak_log10": fit.peak_log10,
-            "first_observed_day": fit.first_observed_day,
+            "median_first_observed_day": fit.median_first_observed_day,
             "half_life_days": fit.half_life_days,
             "aic": fit.aic,
             "converged": fit.converged,
@@ -152,7 +155,7 @@ def _fit_to_payload(fit: SheddingFit) -> dict:
             "n_excluded_subjects": int(fit.n_excluded_subjects),
             "n_degenerate_subjects": int(fit.n_degenerate_subjects),
             "pct_subjects_with_rise": float(fit.pct_subjects_with_rise),
-            "first_observed_day": float(fit.first_observed_day),
+            "median_first_observed_day": float(fit.median_first_observed_day),
             "n_dropped_measurements": int(fit.n_dropped_measurements),
             "converged": bool(fit.converged),
             "log_likelihood": float(fit.log_likelihood),
@@ -192,7 +195,9 @@ def _fit_from_payload(payload: dict) -> SheddingFit:
         pct_subjects_with_rise=float(
             payload.get("pct_subjects_with_rise", float("nan"))
         ),
-        first_observed_day=float(payload.get("first_observed_day", float("nan"))),
+        median_first_observed_day=float(
+            payload.get("median_first_observed_day", float("nan"))
+        ),
         n_dropped_measurements=int(payload["n_dropped_measurements"]),
         converged=bool(payload["converged"]),
         log_likelihood=float(payload["log_likelihood"]),

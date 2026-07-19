@@ -8,11 +8,14 @@ import numpy as np
 import pytest
 
 from shedding_hub.shedding_fit import (
+    _MIN_HALF_LIFE_DAYS,
     SheddingDataError,
+    _degenerate_subjects,
     _fraction_observing_a_rise,
     prepare_observations,
     require_estimable_population,
 )
+from shedding_hub.shedding_models import PARAM_NAMES
 
 
 @pytest.fixture
@@ -570,6 +573,100 @@ def test_single_degenerate_subject_raises():
     assert excinfo.value.reason == "degenerate_fit"
 
 
+def _cliff_dataset(n_cliff, n_normal):
+    """Subjects that vanish between two daily samples, plus ordinary decays.
+
+    A subject at the limit on one day and far below it the next constrains the
+    decay only from above: nothing in daily-resolution data distinguishes "fell
+    tenfold overnight" from "fell a millionfold overnight", so the optimizer runs
+    a0 up without penalty. This is the runaway that _MIN_HALF_LIFE_DAYS catches.
+    """
+    cliff = [(1, 1e8), (2, 1e7), (3, "negative"), (4, "negative"), (5, "negative")]
+    normal = [(t, 1e7 * np.exp(-0.5 * t)) for t in range(1, 11)]
+
+    def subject(points):
+        return {
+            "measurements": [
+                {"analyte": "stool", "time": t, "value": v} for t, v in points
+            ]
+        }
+
+    return {
+        "dataset_id": "cliff_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": (
+            [subject(cliff) for _ in range(n_cliff)]
+            + [subject(normal) for _ in range(n_normal)]
+        ),
+    }
+
+
+def test_runaway_decay_is_flagged_degenerate():
+    """The upper end of the check, symmetric with the collapse floor.
+
+    Before this existed the check was asymmetric: a physically-sited floor of
+    1e-2 against a raw optimizer bound of exp(25), so subjects with a0 of 84 to
+    142 -- half-lives of five to eight minutes -- passed as ordinary estimates
+    and pushed population peaks to 10^18 gc/mL.
+    """
+    dataset = _cliff_dataset(n_cliff=1, n_normal=4)
+    with pytest.warns(UserWarning, match="implied half-life"):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+
+    assert fit.n_degenerate_subjects == 1
+    flagged = fit.subject_params[fit.subject_params["degenerate"]]
+    assert (np.log(2.0) / flagged["a0"] < _MIN_HALF_LIFE_DAYS).all()
+    # And the runaway is kept out of the population it would otherwise dominate.
+    assert fit.half_life_days > _MIN_HALF_LIFE_DAYS
+
+
+def test_runaway_subject_is_retained_for_inspection():
+    """Flagged, not deleted -- same contract as a collapsed subject."""
+    dataset = _cliff_dataset(n_cliff=1, n_normal=4)
+    with pytest.warns(UserWarning):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert len(fit.subject_params) == 5
+    assert fit.n_subjects == 5
+
+
+def test_ordinary_fast_decay_is_not_flagged():
+    """The threshold must not reach into legitimately fast but resolvable decay.
+
+    A half-life of 0.5 days is four times _MIN_HALF_LIFE_DAYS and is perfectly
+    estimable from daily samples, so nothing here may be flagged.
+    """
+    dataset = _flat_dataset(n_flat=0, n_decaying=3)
+    for participant in dataset["participants"]:
+        for measurement in participant["measurements"]:
+            measurement["value"] = 1e9 * np.exp(
+                -np.log(2.0) / 0.5 * measurement["time"]
+            )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.n_degenerate_subjects == 0
+    assert fit.half_life_days == pytest.approx(0.5, abs=0.05)
+
+
+def test_degenerate_check_locates_the_decay_parameter_by_name():
+    """Both models must apply the half-life test to a0, wherever it sits."""
+    for model, k in (("exponential", 2), ("gamma", 3)):
+        index = PARAM_NAMES[model].index("a0")
+        theta = np.zeros((1, k))
+        theta[0, index] = np.log(np.log(2.0) / (_MIN_HALF_LIFE_DAYS / 2))
+        assert _degenerate_subjects(theta, model)[0]
+        # A decay comfortably inside the threshold is not flagged.
+        theta[0, index] = np.log(np.log(2.0) / (_MIN_HALF_LIFE_DAYS * 10))
+        assert not _degenerate_subjects(theta, model)[0]
+
+
 def _rise_dataset(n_rising, n_falling, n_short=0):
     """Subjects that peak mid-window, subjects that peak at their first reading.
 
@@ -728,20 +825,43 @@ def test_single_subject_fit_is_still_allowed_by_the_fitter():
         require_estimable_population(fit)
 
 
-def test_first_observed_day_is_the_earliest_retained_observation():
+def test_median_first_observed_day_is_the_median_not_the_minimum():
+    """One early-enrolled subject must not make a late study look well-observed.
+
+    This is the distinction the column's name now carries: with subjects
+    starting on days 1, 21 and 31, the minimum would report 1.0 and imply the
+    study saw the reference event, while the median reports 21.0 and correctly
+    says the typical subject was first sampled three weeks in.
+    """
     dataset = _flat_dataset(n_flat=0, n_decaying=3)
-    # _flat_dataset samples days 1..10; move one subject's window later so the
-    # minimum is unambiguously a minimum rather than a shared start day.
-    for measurement in dataset["participants"][0]["measurements"]:
-        measurement["time"] += 20
+    # _flat_dataset samples days 1..10 for every subject; stagger two of them.
+    for offset, participant in zip((20, 30), dataset["participants"][1:]):
+        for measurement in participant["measurements"]:
+            measurement["time"] += offset
+
     fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
-    assert fit.first_observed_day == pytest.approx(1.0)
+    assert fit.median_first_observed_day == pytest.approx(21.0)
 
     for participant in dataset["participants"]:
         for measurement in participant["measurements"]:
             measurement["time"] += 5
     later = fit_shedding_model(dataset, analyte="stool", model="exponential")
-    assert later.first_observed_day == pytest.approx(6.0)
+    assert later.median_first_observed_day == pytest.approx(26.0)
+
+
+def test_median_first_observed_day_ignores_degenerate_subjects():
+    """It must describe the subjects behind mu/Sigma, not the ones discarded."""
+    dataset = _flat_dataset(n_flat=1, n_decaying=3)
+    # The flat (degenerate) subject is the first participant; start it far later
+    # than the rest, so including it would drag the median upward.
+    for measurement in dataset["participants"][0]["measurements"]:
+        measurement["time"] += 40
+
+    with pytest.warns(UserWarning, match="collapsed onto the bounds"):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.n_degenerate_subjects == 1
+    # The three retained subjects all start on day 1; the discarded one on 41.
+    assert fit.median_first_observed_day == pytest.approx(1.0)
 
 
 def _gamma_dataset_sampled_before_detectability(a0=0.5, b0=2.0, c0=12.0):
@@ -790,7 +910,7 @@ def _gamma_dataset_sampled_before_detectability(a0=0.5, b0=2.0, c0=12.0):
     }
 
 
-def test_first_observed_day_counts_censored_observations():
+def test_median_first_observed_day_counts_censored_observations():
     """A `negative` still means the study looked, and still constrains the curve."""
     dataset = _gamma_dataset_sampled_before_detectability()
     # Guard the fixture: the earliest measurement must actually be censored, or
@@ -803,7 +923,7 @@ def test_first_observed_day_counts_censored_observations():
 
     fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
     assert fit.n_degenerate_subjects == 0
-    assert fit.first_observed_day == pytest.approx(0.5)
+    assert fit.median_first_observed_day == pytest.approx(0.5)
 
 
 def _minimal_fit(population_mean, population_cov, model="exponential"):
