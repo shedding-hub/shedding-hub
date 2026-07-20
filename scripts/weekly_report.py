@@ -26,12 +26,14 @@ import os
 import re
 import smtplib
 from datetime import datetime, timedelta, timezone
+from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
-import anthropic
 import requests
+
+import metrics_report
 
 # ---------------------------------------------------------------------------
 # Config
@@ -464,6 +466,8 @@ def collect_pypi() -> dict:
 
 
 def summarize_with_claude(ga: dict, gh: dict, pypi: dict) -> str:
+    import anthropic
+
     if not ANTHROPIC_API_KEY:
         return "Claude summarization unavailable (no API key)."
 
@@ -755,17 +759,34 @@ def build_html(summary: str, ga: dict, gh: dict, pypi: dict) -> str:
 # ---------------------------------------------------------------------------
 
 
-def send_report(html: str) -> None:
+def build_email_message(html, subject, sender, recipients, attachments=None):
+    """Build a multipart email: HTML body plus optional HTML attachments.
+
+    ``attachments`` is a list of ``(filename, content)`` tuples.
+    """
+    msg = MIMEMultipart("mixed")
+    msg["From"] = sender
+    msg["To"] = ", ".join(recipients)
+    msg["Subject"] = subject
+
+    alternative = MIMEMultipart("alternative")
+    alternative.attach(MIMEText(html, "html", "utf-8"))
+    msg.attach(alternative)
+
+    for filename, content in attachments or []:
+        part = MIMEApplication(content.encode("utf-8"), _subtype="html")
+        part.add_header("Content-Disposition", "attachment", filename=filename)
+        msg.attach(part)
+    return msg
+
+
+def send_report(html: str, attachments=None) -> None:
     recipients = [r.strip() for r in REPORT_TO_EMAIL.split(";") if r.strip()]
     if not recipients:
         raise ValueError("REPORT_TO_EMAIL is not set")
 
     subject = f"Shedding Hub Weekly Report — {WEEK_LABEL}"
-    msg = MIMEMultipart("alternative")
-    msg["From"] = SMTP_USER
-    msg["To"] = ", ".join(recipients)
-    msg["Subject"] = subject
-    msg.attach(MIMEText(html, "html", "utf-8"))
+    msg = build_email_message(html, subject, SMTP_USER, recipients, attachments)
 
     with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
         server.starttls()
@@ -862,12 +883,21 @@ def main():
     print("  → Saving metrics snapshot")
     save_metrics(ga, gh, pypi)
 
+    print("  → Building trends report attachment")
+    attachments = []
+    try:
+        records = metrics_report.load_records(METRICS_FILE)
+        trends_html = metrics_report.build_trends_html(records)
+        attachments.append((f"shedding-hub-trends_{END_LABEL}.html", trends_html))
+    except Exception as exc:
+        print(f"  → Trends report skipped ({exc}); sending email without it.")
+
     print("  → Claude weekly narrative")
     summary = summarize_with_claude(ga, gh, pypi)
 
     print("  → Building and sending email")
     html = build_html(summary, ga, gh, pypi)
-    send_report(html)
+    send_report(html, attachments=attachments)
 
     print(f"Weekly report sent to {REPORT_TO_EMAIL}.")
 
