@@ -1,0 +1,91 @@
+name: Metrics Backfill (one-off)
+
+# One-off / on-demand recovery of missing weekly-metrics records. Fill
+# metrics/backfill/github_backfill.csv with the GitHub numbers from the report
+# emails, then run this workflow. GA4 and PyPI are fetched automatically; GA4
+# uses the same service-account secret as the Weekly Report workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview only — report the weeks in the log, do NOT write to metrics-data."
+        type: boolean
+        default: true
+
+jobs:
+  backfill:
+    name: Backfill weekly metrics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install google-analytics-data google-auth
+
+      - name: Restore metrics history from metrics-data branch
+        run: |
+          # The accumulating snapshot history lives on the unprotected metrics-data
+          # branch (main is protected). Seed the working copy with the full history
+          # so the backfill merges into it rather than main's stale one-record seed.
+          if git ls-remote --exit-code --heads origin metrics-data >/dev/null 2>&1; then
+            git fetch --depth=1 origin metrics-data
+            if git show FETCH_HEAD:metrics/weekly_metrics.jsonl > "$RUNNER_TEMP/history.jsonl" 2>/dev/null; then
+              mkdir -p metrics
+              cp "$RUNNER_TEMP/history.jsonl" metrics/weekly_metrics.jsonl
+              echo "Restored $(grep -c . metrics/weekly_metrics.jsonl) record(s) from metrics-data."
+            else
+              echo "metrics-data exists but has no metrics file yet; keeping main's seed."
+            fi
+          else
+            echo "metrics-data branch does not exist yet; using main's file as the seed."
+          fi
+
+      - name: Run backfill
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "DRY RUN — reporting only, no write."
+            python scripts/backfill_metrics.py --dry-run
+          else
+            python scripts/backfill_metrics.py
+          fi
+
+      - name: Persist metrics snapshot to metrics-data branch
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # The backfill merged the recovered weeks into the history we restored
+          # above. Commit it onto the dedicated, unprotected metrics-data branch via
+          # an isolated worktree so the protected main branch is never touched.
+          cp metrics/weekly_metrics.jsonl "$RUNNER_TEMP/weekly_metrics.jsonl"
+
+          if git ls-remote --exit-code --heads origin metrics-data >/dev/null 2>&1; then
+            git fetch --depth=1 origin metrics-data
+            git worktree add -B metrics-data "$RUNNER_TEMP/md" FETCH_HEAD
+          else
+            git worktree add --detach "$RUNNER_TEMP/md"
+            git -C "$RUNNER_TEMP/md" checkout --orphan metrics-data
+            git -C "$RUNNER_TEMP/md" rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          mkdir -p "$RUNNER_TEMP/md/metrics"
+          cp "$RUNNER_TEMP/weekly_metrics.jsonl" "$RUNNER_TEMP/md/metrics/weekly_metrics.jsonl"
+          git -C "$RUNNER_TEMP/md" add metrics/weekly_metrics.jsonl
+          if git -C "$RUNNER_TEMP/md" diff --cached --quiet; then
+            echo "No new metrics to commit."
+          else
+            git -C "$RUNNER_TEMP/md" commit -m "chore: backfill missing weekly metrics (2026-03-30..2026-06-21)"
+            git -C "$RUNNER_TEMP/md" push origin metrics-data
+            echo "Pushed backfilled metrics to metrics-data."
+          fi
