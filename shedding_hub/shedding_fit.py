@@ -94,35 +94,38 @@ def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> 
     """
     Resolve the log10 censoring limit.
 
-    Prefers the declared limit of quantification, then the limit of detection.
-    Falls back to just below the smallest observed positive value when neither is
-    usable, or when the declared limit is not strictly below every observation —
-    the likelihood is only coherent if censored points really do sit below the
+    Uses the declared limit of quantification, then the limit of detection,
+    whenever one is given, and always uses it as-is. Only ``negative``
+    measurements are censored — at this limit — while every reported positive is
+    kept as observed data, including any that fall below the limit. A number the
+    assay reported below its limit of quantification is still a measurement
+    (detected, if less precisely), so it is used rather than discarded; the limit
+    describes only the value a ``negative`` is known to lie below. The
+    observed-value likelihood term never references the limit, so keeping a
+    positive below it is well defined.
+
+    Falls back to just below the smallest observed positive only when neither
+    limit is declared, so that any ``negative`` still sits below the resolved
     limit.
 
     Assumes ``observed_log10`` is non-empty; ``prepare_observations`` guarantees
     this by raising ``no_positive_measurements`` itself before ever calling here.
     """
-    declared = None
     for key in ("limit_of_quantification", "limit_of_detection"):
         limit = _numeric_limit(analyte_spec.get(key))
         if limit is not None:
-            declared = math.log10(limit)
-            break
+            return math.log10(limit)
 
     smallest = float(observed_log10.min())
-    if declared is None or declared >= smallest:
-        fallback = smallest - CENSORING_MARGIN
-        warnings.warn(
-            "Falling back to a censoring limit of "
-            f"{fallback:.4g} (log10) because the declared limit "
-            f"({'none' if declared is None else f'{declared:.4g}'}) is missing or "
-            f"not below the smallest observed value ({smallest:.4g}).",
-            UserWarning,
-            stacklevel=2,
-        )
-        return fallback
-    return declared
+    fallback = smallest - CENSORING_MARGIN
+    warnings.warn(
+        "Falling back to a censoring limit of "
+        f"{fallback:.4g} (log10) because no limit of quantification or detection "
+        "is declared for this analyte.",
+        UserWarning,
+        stacklevel=2,
+    )
+    return fallback
 
 
 def prepare_observations(

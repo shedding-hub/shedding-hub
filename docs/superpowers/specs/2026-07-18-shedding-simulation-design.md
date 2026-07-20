@@ -159,15 +159,22 @@ Measurements are extracted per participant for the analyte being fitted, then:
   `cycle threshold`, which is inversely related to concentration and already on a
   log scale; neither model applies. In catalog building they are skipped with a
   recorded reason; in a direct `fit_shedding_model` call they raise `ValueError`.
-- **`negative` values become censored observations** at the analyte's
-  `limit_of_quantification`, falling back to `limit_of_detection`.
-- **Censoring-limit fallback.** Either limit may be the literal string
-  `unknown`, and a declared limit can exceed the smallest observed positive value
-  (the tutorial hit this and hand-set `censlim = 1.96` against a declared limit of
-  2). When the resolved limit is unknown or not strictly below the smallest
-  observed positive, fall back to just below that smallest positive value and
-  warn. This rule reproduces both of the tutorial's hand-set limits
-  automatically — 2.0 for the single-subject fit, 1.96 for the nine-subject fit.
+- **`negative` values become censored observations** at the analyte's declared
+  `limit_of_quantification` (falling back to `limit_of_detection`). The declared
+  limit is used **as-is**, and every reported positive is kept as observed data —
+  **including positives below the limit**. A value the assay reported below its
+  limit of quantification is still a measurement (detected, if less precisely),
+  so it is used rather than discarded or re-coded as censored; the limit
+  describes only the value a `negative` is known to lie below. The
+  observed-value likelihood term never references the limit, so an observed
+  positive sitting below it is well defined. 22 analytes carry at least one such
+  sub-limit positive (e.g. woelfel stool has two below its LOQ of 100); all are
+  kept.
+- **Censoring-limit fallback** applies only when **neither** limit is declared
+  (both are the literal string `unknown`): then it falls back to just below the
+  smallest observed positive and warns, so any `negative` still sits below the
+  resolved limit. A declared limit is otherwise always honored, even if it sits
+  above some or all observed positives.
 
   The schema also allows a **per-measurement** `limit_of_quantification`. It is
   deliberately **not** implemented: every one of the 271 measurements declaring

@@ -74,12 +74,24 @@ def test_censoring_limit_uses_declared_loq_when_below_smallest_positive(
     assert obs.censoring_limit == pytest.approx(2.0)
 
 
-def test_censoring_limit_falls_back_below_smallest_positive(simple_dataset):
-    # Declare a limit above every observed value; the fallback must kick in.
-    simple_dataset["analytes"]["stool"]["limit_of_quantification"] = 1e8
+def test_censoring_limit_falls_back_when_no_limit_declared(simple_dataset):
+    # With neither a limit of quantification nor detection declared, fall back to
+    # just below the smallest observed positive (5.0) so any `negative` still
+    # sits below the resolved limit.
+    simple_dataset["analytes"]["stool"]["limit_of_quantification"] = "unknown"
+    simple_dataset["analytes"]["stool"]["limit_of_detection"] = "unknown"
     with pytest.warns(UserWarning, match="censoring limit"):
         obs = prepare_observations(simple_dataset, "stool", "exponential")
     assert obs.censoring_limit == pytest.approx(5.0 - 0.01)
+
+
+def test_declared_limit_above_all_positives_is_still_used(simple_dataset):
+    # A declared limit is always used as-is, even when it sits above every
+    # observed positive: positives stay as data, only `negative`s are censored
+    # (here at log10 1e8 = 8.0). No data-derived fallback.
+    simple_dataset["analytes"]["stool"]["limit_of_quantification"] = 1e8
+    obs = prepare_observations(simple_dataset, "stool", "exponential")
+    assert obs.censoring_limit == pytest.approx(8.0)
 
 
 def test_censoring_limit_uses_lod_when_loq_is_unusable(simple_dataset):
@@ -90,6 +102,30 @@ def test_censoring_limit_uses_lod_when_loq_is_unusable(simple_dataset):
     simple_dataset["analytes"]["stool"]["limit_of_detection"] = 10
     obs = prepare_observations(simple_dataset, "stool", "exponential")
     assert obs.censoring_limit == pytest.approx(1.0)
+
+
+def test_positive_below_loq_is_kept_as_observed(simple_dataset):
+    # A positive reading below the declared LOQ of 100 (log10 2.0): 50 gc/mL is
+    # still a real measurement, so it is kept as observed data rather than
+    # censored, and the declared limit (2.0) is used as-is for the `negative`s —
+    # it is not lowered to accommodate the sub-LOQ positive.
+    simple_dataset["participants"][0]["measurements"].append(
+        {"analyte": "stool", "time": 4, "value": 50.0}  # log10 ~1.70, below LOQ
+    )
+    obs = prepare_observations(simple_dataset, "stool", "exponential")
+
+    # Declared LOQ is used as-is, not lowered to a data-derived fallback.
+    assert obs.censoring_limit == pytest.approx(2.0)
+
+    # The 50 gc/mL reading is kept as an observed (non-censored) value, and an
+    # observed value below the censoring limit is allowed.
+    subj0 = obs.subject_index == 0
+    observed_subj0 = obs.values[subj0 & ~obs.censored]
+    assert np.any(np.isclose(observed_subj0, np.log10(50.0)))
+    assert observed_subj0.min() < obs.censoring_limit
+
+    # Only the original `negative` (t=3) is censored for subject 1.
+    assert obs.censored[subj0].sum() == 1
 
 
 def test_qualitative_and_unknown_time_are_dropped_with_warning(simple_dataset):
@@ -1185,8 +1221,9 @@ def test_woelfel_stool_gamma_peak_lies_within_its_subjects_range(woelfel_fits):
     parameters, so its population median is not the function evaluated at the
     median parameters -- and b0 and c0 trade off along a ridge, so the averaged
     parameter vector belongs to no subject. Taking the median over draws from
-    MVN(mu, Sigma) instead puts it at 3.49, inside the spread of the subjects it
-    is meant to summarize.
+    MVN(mu, Sigma) instead puts it among the subjects it is meant to summarize
+    (about 3.2, against a subject median near 4.2, with negatives censored at the
+    declared LOQ of log10 2.0).
 
     Pinned as an interval rather than a value: the point of the change is that
     the summary sits among the subjects, not that it equals any number.
@@ -1194,9 +1231,12 @@ def test_woelfel_stool_gamma_peak_lies_within_its_subjects_range(woelfel_fits):
     fit = woelfel_fits[("stool", "gamma")]
     subject_peaks = _subject_peak_log10(fit)
     assert subject_peaks.min() < fit.peak_log10 < subject_peaks.max()
-    # Also comfortably nearer the subjects' own median than the old definition
-    # managed: 3.49 against a subject median of 4.33, where 2.218 was 2.1 away.
-    assert abs(fit.peak_log10 - np.median(subject_peaks)) < 1.0
+    # Also comfortably nearer the subjects' own median than the coordinate-average
+    # artefact managed: that put the peak ~2.1 below the median, so a 1.5 bound
+    # cleanly separates a sound summary from that failure while tolerating the
+    # small shifts a methodology change (e.g. the censoring limit) legitimately
+    # produces.
+    assert abs(fit.peak_log10 - np.median(subject_peaks)) < 1.5
 
 
 @pytest.mark.parametrize("analyte,model", WOELFEL_FITTABLE)
