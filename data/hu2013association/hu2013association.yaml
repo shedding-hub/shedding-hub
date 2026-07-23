@@ -1,0 +1,1141 @@
+title: Association between adverse clinical outcome in human disease caused by novel
+  influenza A H7N9 virus and sustained viral shedding and emergence of antiviral resistance
+doi: 10.1016/S0140-6736(13)61125-3
+description: Study of 14 patients with novel influenza A H7N9 admitted to Shanghai
+  Public Health Clinical Centre in April 2013. Viral RNA was quantified sequentially
+  in throat (oropharyngeal) swabs, stool, serum, and urine; viral sequencing of neuraminidase
+  (NA) was performed to assess emergence of resistance. Paper links reduction in viral
+  load after antivirals with improved outcome and reports persistent high viral load
+  and emergence of NA Arg292Lys resistance in some patients. The provided CSV contains
+  69 measurements from patients with IDs 1, 2, and 3 across the four specimen types.
+analytes:
+  oropharyngeal_swab:
+    description: Viral RNA quantified by real-time PCR from throat (oropharyngeal)
+      swabs; reported as gene copies per swab.
+    specimen: oropharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/swab
+    reference_event: symptom onset
+  serum:
+    description: Viral RNA quantified by real-time PCR from serum; reported as gene
+      copies per mL.
+    specimen: serum
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  urine:
+    description: Viral RNA quantified by real-time PCR from urine; reported as gene
+      copies per mL.
+    specimen: urine
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  stool:
+    description: Viral RNA quantified by real-time PCR from stool specimens; reported
+      as gene copies per wet gram.
+    specimen: stool
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 5754.399373371566
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 2089.296130854039
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 7244.359600749898
+  - analyte: serum
+    time: 6
+    value: 3235.936569296281
+  - analyte: urine
+    time: 6
+    value: negative
+  - analyte: stool
+    time: 9
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 40738.02778041131
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 467735.1412871981
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 288403.15031266055
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: 3548.133892335753
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 223872.11385683378
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 107151.9305237607
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 416869.3834703355
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: 33113.112148259075
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: serum
+    time: 8
+    value: negative
+  - analyte: serum
+    time: 9
+    value: negative
+  - analyte: serum
+    time: 10
+    value: 426579.5188015926
+  - analyte: serum
+    time: 12
+    value: 9120.108393559096
+  - analyte: serum
+    time: 13
+    value: negative
+  - analyte: serum
+    time: 14
+    value: negative
+  - analyte: serum
+    time: 15
+    value: negative
+  - analyte: serum
+    time: 16
+    value: negative
+  - analyte: urine
+    time: 8
+    value: negative
+  - analyte: urine
+    time: 9
+    value: 301.9951720402016
+  - analyte: urine
+    time: 10
+    value: negative
+  - analyte: urine
+    time: 12
+    value: 281.8382931264455
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 15
+    value: 1202.2644346174131
+  - analyte: urine
+    time: 17
+    value: negative
+  - analyte: stool
+    time: 10
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 269.1534803926917
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 707.945784384138
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 218776.16239495517
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 114815.36214968817
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 5623.413251903491
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 645.6542290346556
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: 16595.869074375598
+  - analyte: oropharyngeal_swab
+    time: 20
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 23
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 24
+    value: negative
+  - analyte: serum
+    time: 2
+    value: negative
+  - analyte: serum
+    time: 11
+    value: 9549.92586021436
+  - analyte: serum
+    time: 15
+    value: 1023.2929922807537
+  - analyte: urine
+    time: 9
+    value: 426.57951880159254
+  - analyte: urine
+    time: 10
+    value: negative
+  - analyte: urine
+    time: 11
+    value: 691.8309709189363
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 14
+    value: 338.84415613920237
+  - analyte: urine
+    time: 15
+    value: negative
+  - analyte: urine
+    time: 19
+    value: 181.97008586099827
+  - analyte: urine
+    time: 21
+    value: negative
+  - analyte: urine
+    time: 22
+    value: 2238.72113856834
+  - analyte: urine
+    time: 23
+    value: negative
+  - analyte: urine
+    time: 24
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+  - analyte: stool
+    time: 12
+    value: 72443.59600749906
+  - analyte: stool
+    time: 21
+    value: 331.1311214825911
+  - analyte: stool
+    time: 22
+    value: 707.945784384138
+  - analyte: stool
+    time: 23
+    value: 602.5595860743575
+  - analyte: stool
+    time: 24
+    value: 169.82436524617444
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 3090.295432513592
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 1659.5869074375614
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 5011.872336272725
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 1096.4781961431852
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 13489.628825916532
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: serum
+    time: 11
+    value: negative
+  - analyte: serum
+    time: 13
+    value: 8317.63771102671
+  - analyte: serum
+    time: 14
+    value: 3311.311214825911
+  - analyte: urine
+    time: 8
+    value: negative
+  - analyte: urine
+    time: 9
+    value: negative
+  - analyte: urine
+    time: 10
+    value: negative
+  - analyte: urine
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 14
+    value: 724.4359600749899
+  - analyte: urine
+    time: 19
+    value: negative
+  - analyte: urine
+    time: 22
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 19952.62314968879
+  - analyte: stool
+    time: 9
+    value: negative
+  - analyte: stool
+    time: 10
+    value: negative
+  - analyte: stool
+    time: 11
+    value: 912.0108393559096
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 13
+    value: 2137.9620895022326
+  - analyte: stool
+    time: 17
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 56234.13251903491
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: 1000.0
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: serum
+    time: 8
+    value: 2884.031503126606
+  - analyte: serum
+    time: 11
+    value: negative
+  - analyte: serum
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 8
+    value: 1202.2644346174131
+  - analyte: urine
+    time: 11
+    value: 1380.3842646028852
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 14
+    value: negative
+  - analyte: urine
+    time: 15
+    value: negative
+  - analyte: urine
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 190.54607179632464
+  - analyte: stool
+    time: 9
+    value: 54954.08738576248
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 13
+    value: 144.5439770745928
+  - analyte: stool
+    time: 14
+    value: 309.0295432513592
+  - analyte: stool
+    time: 15
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 141.2537544622754
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 575439.9373371566
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 9120.108393559096
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: 851.1380382023768
+  - analyte: oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 23
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 24
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 25
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 26
+    value: negative
+  - analyte: serum
+    time: 13
+    value: 758.5775750291835
+  - analyte: serum
+    time: 19
+    value: negative
+  - analyte: serum
+    time: 21
+    value: negative
+  - analyte: serum
+    time: 23
+    value: negative
+  - analyte: serum
+    time: 24
+    value: negative
+  - analyte: urine
+    time: 9
+    value: 371.5352290971724
+  - analyte: urine
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 14
+    value: negative
+  - analyte: urine
+    time: 15
+    value: negative
+  - analyte: urine
+    time: 19
+    value: negative
+  - analyte: urine
+    time: 21
+    value: 1318.2567385564075
+  - analyte: urine
+    time: 22
+    value: negative
+  - analyte: urine
+    time: 23
+    value: negative
+  - analyte: urine
+    time: 24
+    value: negative
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 13
+    value: negative
+  - analyte: stool
+    time: 14
+    value: 977.2372209558112
+  - analyte: stool
+    time: 15
+    value: 2951.209226666387
+  - analyte: stool
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 17
+    value: 2818.382931264455
+  - analyte: stool
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 21
+    value: negative
+  - analyte: stool
+    time: 25
+    value: negative
+  - analyte: stool
+    time: 26
+    value: 33884.415613920275
+  - analyte: stool
+    time: 27
+    value: 2951.209226666387
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 229.08676527677724
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 20
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: serum
+    time: 11
+    value: 524.8074602497728
+  - analyte: urine
+    time: 11
+    value: 1000.0
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 19
+    value: negative
+  - analyte: urine
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 15
+    value: 144.5439770745928
+  - analyte: stool
+    time: 17
+    value: negative
+  - analyte: stool
+    time: 19
+    value: 204.17379446695296
+  - analyte: stool
+    time: 20
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 5128.613839913648
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 2570.3957827688646
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: serum
+    time: 9
+    value: negative
+  - analyte: serum
+    time: 10
+    value: negative
+  - analyte: serum
+    time: 12
+    value: 6606.934480075957
+  - analyte: urine
+    time: 10
+    value: negative
+  - analyte: urine
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 14
+    value: negative
+  - analyte: stool
+    time: 10
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 13
+    value: 776.247116628692
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: 660.6934480075957
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: serum
+    time: 7
+    value: negative
+  - analyte: serum
+    time: 8
+    value: 436.5158322401661
+  - analyte: urine
+    time: 7
+    value: 851.1380382023768
+  - analyte: urine
+    time: 8
+    value: 301.9951720402016
+  - analyte: urine
+    time: 9
+    value: negative
+  - analyte: stool
+    time: 7
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 2818.382931264455
+  - analyte: stool
+    time: 9
+    value: negative
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 13
+    value: negative
+  - analyte: stool
+    time: 14
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 1122.018454301963
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 275.4228703338166
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 23
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 24
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 25
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 26
+    value: negative
+  - analyte: serum
+    time: 9
+    value: 1412.537544622754
+  - analyte: serum
+    time: 13
+    value: negative
+  - analyte: serum
+    time: 14
+    value: negative
+  - analyte: urine
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 13
+    value: 691.8309709189363
+  - analyte: urine
+    time: 14
+    value: negative
+  - analyte: urine
+    time: 15
+    value: negative
+  - analyte: urine
+    time: 22
+    value: negative
+  - analyte: urine
+    time: 23
+    value: negative
+  - analyte: urine
+    time: 26
+    value: negative
+  - analyte: stool
+    time: 10
+    value: negative
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 13
+    value: negative
+  - analyte: stool
+    time: 14
+    value: negative
+  - analyte: stool
+    time: 17
+    value: negative
+  - analyte: stool
+    time: 18
+    value: negative
+  - analyte: stool
+    time: 25
+    value: negative
+  - analyte: stool
+    time: 26
+    value: 457.0881896148752
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 1288.2495516931335
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 2238.72113856834
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: serum
+    time: 8
+    value: 1698.2436524617442
+  - analyte: urine
+    time: 8
+    value: negative
+  - analyte: urine
+    time: 9
+    value: 870.9635899560806
+  - analyte: urine
+    time: 10
+    value: negative
+  - analyte: urine
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 9
+    value: negative
+  - analyte: stool
+    time: 10
+    value: 602.5595860743575
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 14
+    value: negative
+  - analyte: stool
+    time: 15
+    value: negative
+  - analyte: stool
+    time: 17
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: serum
+    time: 10
+    value: negative
+  - analyte: urine
+    time: 10
+    value: 371.5352290971724
+  - analyte: urine
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 19
+    value: negative
+  - analyte: stool
+    time: 10
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 13
+    value: negative
+  - analyte: stool
+    time: 14
+    value: 1348.9628825916532
+  - analyte: stool
+    time: 15
+    value: negative
+  - analyte: stool
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 17
+    value: negative
+  - analyte: stool
+    time: 19
+    value: negative
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 9332.543007969914
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 323.5936569296281
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: serum
+    time: 6
+    value: 2691.5348039269165
+  - analyte: serum
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 14
+    value: negative
+  - analyte: stool
+    time: 7
+    value: 5623.413251903491
+- attributes:
+    subtype: A(H7N9)
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 346.73685045253166
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 162.18100973589299
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: serum
+    time: 6
+    value: negative
+  - analyte: serum
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 6
+    value: 2089.296130854039
+  - analyte: urine
+    time: 11
+    value: 2511.88643150958
+  - analyte: urine
+    time: 12
+    value: negative
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 14
+    value: negative
+  - analyte: urine
+    time: 15
+    value: negative
+  - analyte: stool
+    time: 6
+    value: 1148.1536214968828
+  - analyte: stool
+    time: 11
+    value: negative
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 13
+    value: negative
+  - analyte: stool
+    time: 14
+    value: negative
+  - analyte: stool
+    time: 15
+    value: negative
+  - analyte: stool
+    time: 16
+    value: negative

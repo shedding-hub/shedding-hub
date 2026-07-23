@@ -1,0 +1,224 @@
+title: 'Clinical features and outcomes of influenza infections in lung transplant
+  recipients: a single-season cohort study'
+doi: 10.1111/tid.12228
+description: Retrospective single-season (2010/2011) cohort study of lung transplant
+  recipients at Zurich University Hospital. Laboratory-confirmed influenza A or B
+  infections (22 infections in 21 patients) were diagnosed by nasopharyngeal swab
+  and real-time RT-PCR. Patients received empirical oseltamivir and serial weekly
+  swabs were performed until virologic results were negative. Study reports Ct values
+  from nasopharyngeal swabs (used here as cycle-threshold measurements relative to
+  symptom onset). Prolonged viral shedding (>=7 days) was common.
+analytes:
+  nasopharyngeal_swab_influenza_CT:
+    description: Real-time RT-PCR cycle threshold (Ct) values measured on nasopharyngeal
+      swab specimens for detection of influenza virus (reported by the study as PCR
+      Ct values from diagnostic qRT-PCR of nasopharyngeal swabs).
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 39.53722334
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 38.53118712
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 37.72635815
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 35.61368209
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 31.38832998
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 30.38229376
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 34.40643863
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 8
+    value: 39.03420523
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 33.19919517
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 7
+    value: 37.12273642
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 31.18712274
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 11
+    value: 34.50704225
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 26.65995976
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 8
+    value: 41.75050302
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 23.23943662
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 9
+    value: 33.40040241
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 22.33400402
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 8
+    value: 32.59557344
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 19.21529175
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 6
+    value: 35.81488934
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 26.96177062
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 9
+    value: 35.11066398
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 26.45875252
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 9
+    value: 25.25150905
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 14
+    value: 33.09859155
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 21
+    value: 40.64386318
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 28
+    value: 35.51307847
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 42
+    value: 36.92152918
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 32.19315895
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 8
+    value: 34.90945674
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 16
+    value: 34.30583501
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 23
+    value: 29.07444668
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 30
+    value: 38.32997988
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 37
+    value: 33.8028169
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 28.37022133
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 10
+    value: 32.49496982
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 24
+    value: 35.51307847
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 38
+    value: 30.68410463
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 31.4889336
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 6
+    value: 34.00402414
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 17
+    value: 40.7444668
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 28.87323944
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 10
+    value: 35.61368209
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 15
+    value: 37.22334004
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 21
+    value: 33.09859155
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 33
+    value: 34.10462777
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 21.42857143
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 3
+    value: 18.20925553
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 6
+    value: 32.89738431
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 13
+    value: 39.93963783
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 20
+    value: 33.29979879
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 28.16901408
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 7
+    value: 31.38832998
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 12
+    value: 32.19315895
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 15
+    value: 36.41851107
+- measurements:
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 1
+    value: 28.37022133
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 8
+    value: 35.91549296
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 10
+    value: 35.61368209
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 15
+    value: 37.22334004
+  - analyte: nasopharyngeal_swab_influenza_CT
+    time: 20
+    value: 33.40040241

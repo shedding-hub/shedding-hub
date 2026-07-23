@@ -1,0 +1,3322 @@
+title: 'Infectious viral shedding of SARS-CoV-2 Delta following vaccination: A longitudinal
+  cohort study'
+doi: 10.1371/journal.ppat.1010802
+description: Longitudinal cohort study (San Francisco Bay Area, Sep 2020–Oct 2021)
+  comparing nasal SARS-CoV-2 RNA and infectious virus shedding in 84 non-hospitalized
+  adults (52 unvaccinated, 32 fully vaccinated). Participants self-collected anterior
+  nasal swabs daily for up to 14 days and intermittently to day 28. RT-qPCR quantified
+  N and E gene copies/mL using plasmid standards; viral culture (CPE) and plaque assays
+  on Vero-hACE2-TMPRSS2 cells assessed infectious virus. Time values are reported
+  relative to symptom onset. The provided CSV contains per-participant quantitative
+  RT-qPCR measurements for N and E (copies/mL) and vaccination category.
+analytes:
+  e:
+    description: RT-qPCR quantification of SARS-CoV-2 envelope (E) gene from anterior
+      nares swabs. Absolute quantification used a 10-fold serial dilution of plasmid
+      standards containing E and N genes; reactions run on a CFX Connect system. Samples
+      were self-collected anterior nasal swabs stored in VTM and processed as described
+      in methods. Values reported as copies per mL derived from the standard curve.
+    specimen: anterior_nares_swab
+    biomarker: SARS-CoV-2
+    gene_target: E
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  n:
+    description: RT-qPCR quantification of SARS-CoV-2 nucleocapsid (N) gene from anterior
+      nares swabs. Absolute quantification used a 10-fold serial dilution of plasmid
+      standards containing N and E genes; reactions run on a CFX Connect system. Samples
+      were self-collected anterior nasal swabs stored in VTM and processed as described
+      in methods. Values reported as copies per mL derived from the standard curve.
+    specimen: anterior_nares_swab
+    biomarker: SARS-CoV-2
+    gene_target: N
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- patient_id: '4508'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 3094325.795
+  - analyte: e
+    time: 6
+    value: 8404.817774
+  - analyte: e
+    time: 7
+    value: 260.0724444
+  - analyte: e
+    time: 9
+    value: 368.1609618
+  - analyte: n
+    time: 5
+    value: 271620.3248
+  - analyte: n
+    time: 6
+    value: 2962.771192
+  - analyte: n
+    time: 7
+    value: 129.7799335
+  - analyte: n
+    time: 9
+    value: 91.67779324
+- patient_id: '4509'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 2
+    value: 5054.796821
+  - analyte: e
+    time: 3
+    value: 7109.709432
+  - analyte: e
+    time: 4
+    value: 5054.796821
+  - analyte: e
+    time: 5
+    value: 2555.09709
+  - analyte: e
+    time: 6
+    value: 3593.813664
+  - analyte: e
+    time: 7
+    value: 234.6228848
+  - analyte: e
+    time: 15
+    value: 10.89022962
+  - analyte: e
+    time: 17
+    value: 84.31909293
+  - analyte: n
+    time: 2
+    value: 2555.09709
+  - analyte: n
+    time: 3
+    value: 3593.813664
+  - analyte: n
+    time: 4
+    value: 1816.599788
+  - analyte: n
+    time: 5
+    value: 918.2542836
+  - analyte: n
+    time: 6
+    value: 1291.549665
+  - analyte: n
+    time: 7
+    value: 118.5971012
+  - analyte: n
+    time: 17
+    value: 30.30271083
+- patient_id: '4512'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 6
+    value: 21.5443469
+  - analyte: e
+    time: 7
+    value: 118.5971012
+  - analyte: n
+    time: 7
+    value: 15.31740464
+- patient_id: '4513'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 7.742636827
+  - analyte: e
+    time: 6
+    value: 10.89022962
+  - analyte: n
+    time: 5
+    value: 30.30271083
+  - analyte: n
+    time: 7
+    value: 7.742636827
+- patient_id: '4519'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 84.31909293
+  - analyte: e
+    time: 14
+    value: 21.5443469
+  - analyte: n
+    time: 5
+    value: 59.94842503
+- patient_id: '4520'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 3
+    value: 271620.3248
+  - analyte: e
+    time: 4
+    value: 770535.1462
+  - analyte: e
+    time: 5
+    value: 2185861.503
+  - analyte: e
+    time: 6
+    value: 33752.18453
+  - analyte: e
+    time: 7
+    value: 47779.90512
+  - analyte: e
+    time: 8
+    value: 47779.90512
+  - analyte: e
+    time: 9
+    value: 5937.244115
+  - analyte: e
+    time: 10
+    value: 183.7176762
+  - analyte: e
+    time: 11
+    value: 32.31721758
+  - analyte: e
+    time: 15
+    value: 16.12676175
+  - analyte: e
+    time: 17
+    value: 32.31721758
+  - analyte: n
+    time: 3
+    value: 33752.18453
+  - analyte: n
+    time: 4
+    value: 95748.52126
+  - analyte: n
+    time: 5
+    value: 135542.4938
+  - analyte: n
+    time: 6
+    value: 4194.126348
+  - analyte: n
+    time: 7
+    value: 8404.817774
+  - analyte: n
+    time: 8
+    value: 8404.817774
+  - analyte: n
+    time: 9
+    value: 1044.402552
+  - analyte: n
+    time: 11
+    value: 2.836809605
+- patient_id: '4521'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 12
+    value: 30.30271083
+  - analyte: e
+    time: 13
+    value: 42.62158829
+  - analyte: n
+    time: 12
+    value: 21.5443469
+  - analyte: n
+    time: 13
+    value: 10.89022962
+- patient_id: '4525'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 6528521.141
+  - analyte: e
+    time: 5
+    value: 3300034.791
+  - analyte: e
+    time: 6
+    value: 1185971.012
+  - analyte: e
+    time: 7
+    value: 77426.36827
+  - analyte: e
+    time: 8
+    value: 3593.813664
+  - analyte: e
+    time: 9
+    value: 27825.59402
+  - analyte: e
+    time: 10
+    value: 27825.59402
+  - analyte: e
+    time: 11
+    value: 166.8100537
+  - analyte: e
+    time: 12
+    value: 59.94842503
+  - analyte: e
+    time: 17
+    value: 30.30271083
+  - analyte: n
+    time: 4
+    value: 2346228.848
+  - analyte: n
+    time: 5
+    value: 1185971.012
+  - analyte: n
+    time: 6
+    value: 426215.8829
+  - analyte: n
+    time: 7
+    value: 39137.45602
+  - analyte: n
+    time: 8
+    value: 1816.599788
+  - analyte: n
+    time: 9
+    value: 10000
+  - analyte: n
+    time: 10
+    value: 14065.27242
+  - analyte: n
+    time: 11
+    value: 84.31909293
+  - analyte: n
+    time: 13
+    value: 3.913745602
+- patient_id: '4526'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 3
+    value: 42.62158829
+  - analyte: e
+    time: 4
+    value: 1816.599788
+  - analyte: e
+    time: 5
+    value: 77426.36827
+  - analyte: e
+    time: 6
+    value: 9182542.836
+  - analyte: e
+    time: 7
+    value: 4641588.834
+  - analyte: e
+    time: 8
+    value: 12915496.65
+  - analyte: e
+    time: 9
+    value: 599484.2503
+  - analyte: e
+    time: 10
+    value: 3593.813664
+  - analyte: e
+    time: 11
+    value: 30.30271083
+  - analyte: e
+    time: 12
+    value: 15.31740464
+  - analyte: e
+    time: 20
+    value: 10.89022962
+  - analyte: n
+    time: 4
+    value: 918.2542836
+  - analyte: n
+    time: 5
+    value: 27825.59402
+  - analyte: n
+    time: 6
+    value: 2346228.848
+  - analyte: n
+    time: 7
+    value: 1185971.012
+  - analyte: n
+    time: 8
+    value: 3300034.791
+  - analyte: n
+    time: 9
+    value: 153174.0464
+  - analyte: n
+    time: 10
+    value: 1816.599788
+  - analyte: n
+    time: 13
+    value: 15.31740464
+- patient_id: '4528'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 3
+    value: 5.504789808
+  - analyte: e
+    time: 4
+    value: 21.5443469
+  - analyte: n
+    time: 4
+    value: 10.89022962
+- patient_id: '4529'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 0
+    value: 330.0034791
+  - analyte: e
+    time: 1
+    value: 118.5971012
+  - analyte: e
+    time: 2
+    value: 42.62158829
+  - analyte: e
+    time: 4
+    value: 21.5443469
+  - analyte: e
+    time: 5
+    value: 10.89022962
+  - analyte: n
+    time: 0
+    value: 84.31909293
+  - analyte: n
+    time: 1
+    value: 21.5443469
+  - analyte: n
+    time: 2
+    value: 15.31740464
+  - analyte: n
+    time: 5
+    value: 2.782559402
+- patient_id: '4530'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 39137.45602
+  - analyte: e
+    time: 6
+    value: 1185971.012
+  - analyte: e
+    time: 7
+    value: 4641588.834
+  - analyte: e
+    time: 8
+    value: 215443.469
+  - analyte: e
+    time: 9
+    value: 153174.0464
+  - analyte: e
+    time: 10
+    value: 234.6228848
+  - analyte: n
+    time: 5
+    value: 10000
+  - analyte: n
+    time: 6
+    value: 108902.2962
+  - analyte: n
+    time: 7
+    value: 426215.8829
+  - analyte: n
+    time: 8
+    value: 27825.59402
+  - analyte: n
+    time: 9
+    value: 14065.27242
+  - analyte: n
+    time: 12
+    value: 2.782559402
+  - analyte: n
+    time: 14
+    value: 10.89022962
+- patient_id: '4531'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: n
+    time: 6
+    value: 3.913745602
+- patient_id: '4532'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 918.2542836
+  - analyte: e
+    time: 6
+    value: 464.1588834
+  - analyte: e
+    time: 7
+    value: 918.2542836
+  - analyte: e
+    time: 8
+    value: 21.5443469
+  - analyte: e
+    time: 9
+    value: 918.2542836
+  - analyte: e
+    time: 10
+    value: 166.8100537
+  - analyte: e
+    time: 11
+    value: 59.94842503
+  - analyte: n
+    time: 5
+    value: 464.1588834
+  - analyte: n
+    time: 6
+    value: 59.94842503
+  - analyte: n
+    time: 7
+    value: 118.5971012
+  - analyte: n
+    time: 9
+    value: 59.94842503
+  - analyte: n
+    time: 10
+    value: 21.5443469
+- patient_id: '4533'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 2346228.848
+  - analyte: e
+    time: 5
+    value: 18165997.88
+  - analyte: e
+    time: 6
+    value: 9182542.836
+  - analyte: e
+    time: 7
+    value: 1668100.537
+  - analyte: e
+    time: 8
+    value: 426215.8829
+  - analyte: e
+    time: 9
+    value: 234.6228848
+  - analyte: e
+    time: 10
+    value: 652.8521141
+  - analyte: e
+    time: 12
+    value: 10000
+  - analyte: n
+    time: 4
+    value: 303027.1083
+  - analyte: n
+    time: 5
+    value: 1668100.537
+  - analyte: n
+    time: 6
+    value: 599484.2503
+  - analyte: n
+    time: 7
+    value: 108902.2962
+  - analyte: n
+    time: 8
+    value: 39137.45602
+  - analyte: n
+    time: 9
+    value: 15.31740464
+  - analyte: n
+    time: 10
+    value: 42.62158829
+  - analyte: n
+    time: 12
+    value: 918.2542836
+- patient_id: '4534'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 599484.2503
+  - analyte: e
+    time: 5
+    value: 599484.2503
+  - analyte: e
+    time: 6
+    value: 19783.18883
+  - analyte: e
+    time: 7
+    value: 27825.59402
+  - analyte: e
+    time: 8
+    value: 39137.45602
+  - analyte: e
+    time: 9
+    value: 3593.813664
+  - analyte: e
+    time: 10
+    value: 166.8100537
+  - analyte: e
+    time: 11
+    value: 59.94842503
+  - analyte: e
+    time: 12
+    value: 84.31909293
+  - analyte: e
+    time: 13
+    value: 118.5971012
+  - analyte: e
+    time: 16
+    value: 30.30271083
+  - analyte: e
+    time: 18
+    value: 7.742636827
+  - analyte: n
+    time: 4
+    value: 215443.469
+  - analyte: n
+    time: 5
+    value: 303027.1083
+  - analyte: n
+    time: 6
+    value: 10000
+  - analyte: n
+    time: 7
+    value: 7109.709432
+  - analyte: n
+    time: 8
+    value: 19783.18883
+  - analyte: n
+    time: 9
+    value: 1816.599788
+  - analyte: n
+    time: 10
+    value: 59.94842503
+  - analyte: n
+    time: 11
+    value: 15.31740464
+- patient_id: '4535'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 6
+    value: 25550970.9
+  - analyte: e
+    time: 7
+    value: 599484.2503
+  - analyte: e
+    time: 8
+    value: 77426.36827
+  - analyte: e
+    time: 9
+    value: 39137.45602
+  - analyte: e
+    time: 10
+    value: 10000
+  - analyte: e
+    time: 11
+    value: 55047.89808
+  - analyte: e
+    time: 12
+    value: 464.1588834
+  - analyte: e
+    time: 13
+    value: 39137.45602
+  - analyte: e
+    time: 14
+    value: 464.1588834
+  - analyte: n
+    time: 6
+    value: 12915496.65
+  - analyte: n
+    time: 7
+    value: 215443.469
+  - analyte: n
+    time: 8
+    value: 27825.59402
+  - analyte: n
+    time: 9
+    value: 19783.18883
+  - analyte: n
+    time: 10
+    value: 7109.709432
+  - analyte: n
+    time: 11
+    value: 19783.18883
+  - analyte: n
+    time: 12
+    value: 464.1588834
+  - analyte: n
+    time: 13
+    value: 7109.709432
+  - analyte: n
+    time: 14
+    value: 166.8100537
+- patient_id: '4536'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 1
+    value: 843190.9293
+  - analyte: e
+    time: 2
+    value: 6528521.141
+  - analyte: e
+    time: 3
+    value: 9182542.836
+  - analyte: e
+    time: 4
+    value: 153174.0464
+  - analyte: e
+    time: 5
+    value: 303027.1083
+  - analyte: e
+    time: 6
+    value: 27825.59402
+  - analyte: e
+    time: 7
+    value: 426215.8829
+  - analyte: e
+    time: 8
+    value: 1291.549665
+  - analyte: e
+    time: 10
+    value: 330.0034791
+  - analyte: e
+    time: 13
+    value: 42.62158829
+  - analyte: e
+    time: 15
+    value: 7.742636827
+  - analyte: n
+    time: 1
+    value: 843190.9293
+  - analyte: n
+    time: 2
+    value: 6528521.141
+  - analyte: n
+    time: 3
+    value: 9182542.836
+  - analyte: n
+    time: 4
+    value: 77426.36827
+  - analyte: n
+    time: 5
+    value: 303027.1083
+  - analyte: n
+    time: 6
+    value: 14065.27242
+  - analyte: n
+    time: 7
+    value: 426215.8829
+  - analyte: n
+    time: 8
+    value: 918.2542836
+- patient_id: '4538'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 599484.2503
+  - analyte: e
+    time: 5
+    value: 2346228.848
+  - analyte: e
+    time: 6
+    value: 1291.549665
+  - analyte: e
+    time: 7
+    value: 3593.813664
+  - analyte: e
+    time: 8
+    value: 234.6228848
+  - analyte: n
+    time: 4
+    value: 153174.0464
+  - analyte: n
+    time: 5
+    value: 215443.469
+  - analyte: n
+    time: 6
+    value: 234.6228848
+  - analyte: n
+    time: 7
+    value: 464.1588834
+  - analyte: n
+    time: 8
+    value: 30.30271083
+- patient_id: '4540'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 278255940.2
+  - analyte: e
+    time: 5
+    value: 140652724.2
+  - analyte: e
+    time: 6
+    value: 18165997.88
+  - analyte: e
+    time: 7
+    value: 1185971.012
+  - analyte: e
+    time: 8
+    value: 599484.2503
+  - analyte: e
+    time: 9
+    value: 215443.469
+  - analyte: e
+    time: 10
+    value: 19783.18883
+  - analyte: e
+    time: 11
+    value: 3593.813664
+  - analyte: e
+    time: 12
+    value: 918.2542836
+  - analyte: e
+    time: 13
+    value: 118.5971012
+  - analyte: e
+    time: 16
+    value: 118.5971012
+  - analyte: e
+    time: 18
+    value: 166.8100537
+  - analyte: e
+    time: 20
+    value: 21.5443469
+  - analyte: n
+    time: 4
+    value: 12915496.65
+  - analyte: n
+    time: 5
+    value: 9182542.836
+  - analyte: n
+    time: 6
+    value: 1185971.012
+  - analyte: n
+    time: 7
+    value: 153174.0464
+  - analyte: n
+    time: 8
+    value: 108902.2962
+  - analyte: n
+    time: 9
+    value: 27825.59402
+  - analyte: n
+    time: 10
+    value: 3593.813664
+  - analyte: n
+    time: 11
+    value: 330.0034791
+  - analyte: n
+    time: 12
+    value: 118.5971012
+  - analyte: n
+    time: 13
+    value: 15.31740464
+  - analyte: n
+    time: 16
+    value: 5.504789808
+  - analyte: n
+    time: 18
+    value: 21.5443469
+- patient_id: '4541'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 100000000
+  - analyte: e
+    time: 6
+    value: 140652724.2
+  - analyte: e
+    time: 7
+    value: 1185971.012
+  - analyte: e
+    time: 8
+    value: 303027.1083
+  - analyte: e
+    time: 9
+    value: 39137.45602
+  - analyte: e
+    time: 10
+    value: 27825.59402
+  - analyte: e
+    time: 11
+    value: 3593.813664
+  - analyte: e
+    time: 12
+    value: 918.2542836
+  - analyte: e
+    time: 13
+    value: 330.0034791
+  - analyte: e
+    time: 15
+    value: 42.62158829
+  - analyte: e
+    time: 19
+    value: 21.5443469
+  - analyte: n
+    time: 5
+    value: 6528521.141
+  - analyte: n
+    time: 6
+    value: 4641588.834
+  - analyte: n
+    time: 7
+    value: 77426.36827
+  - analyte: n
+    time: 8
+    value: 19783.18883
+  - analyte: n
+    time: 9
+    value: 2555.09709
+  - analyte: n
+    time: 10
+    value: 3593.813664
+  - analyte: n
+    time: 11
+    value: 464.1588834
+  - analyte: n
+    time: 12
+    value: 59.94842503
+  - analyte: n
+    time: 13
+    value: 30.30271083
+  - analyte: n
+    time: 15
+    value: 3.913745602
+- patient_id: '4542'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 1668100.537
+  - analyte: e
+    time: 9
+    value: 652.8521141
+  - analyte: e
+    time: 14
+    value: 59.94842503
+  - analyte: n
+    time: 4
+    value: 843190.9293
+- patient_id: '4546'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 77426.36827
+  - analyte: e
+    time: 6
+    value: 27825.59402
+  - analyte: e
+    time: 7
+    value: 108902.2962
+  - analyte: e
+    time: 8
+    value: 918.2542836
+  - analyte: e
+    time: 9
+    value: 1291.549665
+  - analyte: e
+    time: 12
+    value: 84.31909293
+  - analyte: e
+    time: 13
+    value: 330.0034791
+  - analyte: n
+    time: 5
+    value: 14065.27242
+  - analyte: n
+    time: 6
+    value: 5054.796821
+  - analyte: n
+    time: 7
+    value: 19783.18883
+  - analyte: n
+    time: 8
+    value: 118.5971012
+  - analyte: n
+    time: 9
+    value: 166.8100537
+  - analyte: n
+    time: 12
+    value: 2.782559402
+- patient_id: '4547'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 25550970.9
+  - analyte: e
+    time: 5
+    value: 35938136.64
+  - analyte: e
+    time: 6
+    value: 1668100.537
+  - analyte: e
+    time: 7
+    value: 426215.8829
+  - analyte: e
+    time: 8
+    value: 153174.0464
+  - analyte: e
+    time: 9
+    value: 27825.59402
+  - analyte: e
+    time: 10
+    value: 10000
+  - analyte: e
+    time: 11
+    value: 5054.796821
+  - analyte: e
+    time: 12
+    value: 10000
+  - analyte: e
+    time: 13
+    value: 5054.796821
+  - analyte: e
+    time: 16
+    value: 10.89022962
+  - analyte: n
+    time: 4
+    value: 2346228.848
+  - analyte: n
+    time: 5
+    value: 3300034.791
+  - analyte: n
+    time: 6
+    value: 153174.0464
+  - analyte: n
+    time: 7
+    value: 39137.45602
+  - analyte: n
+    time: 8
+    value: 14065.27242
+  - analyte: n
+    time: 9
+    value: 5054.796821
+  - analyte: n
+    time: 10
+    value: 1291.549665
+  - analyte: n
+    time: 11
+    value: 918.2542836
+  - analyte: n
+    time: 12
+    value: 1816.599788
+  - analyte: n
+    time: 13
+    value: 918.2542836
+- patient_id: '4549'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 19783.18883
+  - analyte: e
+    time: 5
+    value: 108902.2962
+  - analyte: e
+    time: 6
+    value: 39137.45602
+  - analyte: e
+    time: 7
+    value: 108902.2962
+  - analyte: e
+    time: 8
+    value: 55047.89808
+  - analyte: e
+    time: 9
+    value: 2555.09709
+  - analyte: n
+    time: 4
+    value: 2555.09709
+  - analyte: n
+    time: 5
+    value: 14065.27242
+  - analyte: n
+    time: 6
+    value: 5054.796821
+  - analyte: n
+    time: 7
+    value: 10000
+  - analyte: n
+    time: 8
+    value: 303027.1083
+  - analyte: n
+    time: 9
+    value: 464.1588834
+- patient_id: '4551'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 2
+    value: 42.62158829
+- patient_id: '4555'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 30.30271083
+  - analyte: e
+    time: 7
+    value: 15.31740464
+  - analyte: e
+    time: 10
+    value: 21.5443469
+  - analyte: e
+    time: 11
+    value: 59.94842503
+  - analyte: n
+    time: 11
+    value: 5.504789808
+- patient_id: '4558'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 166.8100537
+  - analyte: e
+    time: 5
+    value: 50547968.21
+  - analyte: e
+    time: 6
+    value: 35938136.64
+  - analyte: e
+    time: 7
+    value: 303027.1083
+  - analyte: e
+    time: 9
+    value: 426215.8829
+  - analyte: e
+    time: 10
+    value: 153174.0464
+  - analyte: e
+    time: 11
+    value: 55047.89808
+  - analyte: e
+    time: 12
+    value: 30.30271083
+  - analyte: e
+    time: 15
+    value: 59.94842503
+  - analyte: n
+    time: 4
+    value: 84.31909293
+  - analyte: n
+    time: 5
+    value: 1668100.537
+  - analyte: n
+    time: 6
+    value: 14065.27242
+  - analyte: n
+    time: 7
+    value: 19783.18883
+  - analyte: n
+    time: 9
+    value: 27825.59402
+  - analyte: n
+    time: 10
+    value: 10000
+  - analyte: n
+    time: 11
+    value: 3593.813664
+- patient_id: '4560'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 7109.709432
+  - analyte: e
+    time: 5
+    value: 108902.2962
+  - analyte: e
+    time: 6
+    value: 234.6228848
+  - analyte: e
+    time: 7
+    value: 2555.09709
+  - analyte: e
+    time: 8
+    value: 1816.599788
+  - analyte: n
+    time: 4
+    value: 7109.709432
+  - analyte: n
+    time: 5
+    value: 55047.89808
+  - analyte: n
+    time: 6
+    value: 464.1588834
+  - analyte: n
+    time: 7
+    value: 918.2542836
+  - analyte: n
+    time: 8
+    value: 918.2542836
+- patient_id: '4561'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 16435.42725
+  - analyte: e
+    time: 5
+    value: 18.16599788
+  - analyte: e
+    time: 6
+    value: 1554.627727
+  - analyte: e
+    time: 7
+    value: 3121.50424
+  - analyte: e
+    time: 8
+    value: 191339.0189
+  - analyte: e
+    time: 9
+    value: 2.508163697
+  - analyte: n
+    time: 4
+    value: 16313.99731
+  - analyte: n
+    time: 5
+    value: 18.16599788
+  - analyte: n
+    time: 6
+    value: 1554.627727
+  - analyte: n
+    time: 7
+    value: 3121.50424
+  - analyte: n
+    time: 8
+    value: 136036.4827
+- patient_id: '4562'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 30.30271083
+  - analyte: e
+    time: 11
+    value: 1291.549665
+- patient_id: '4563'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 108902.2962
+  - analyte: e
+    time: 5
+    value: 2346228.848
+  - analyte: e
+    time: 6
+    value: 1668100.537
+  - analyte: e
+    time: 7
+    value: 215443.469
+  - analyte: e
+    time: 8
+    value: 234.6228848
+  - analyte: e
+    time: 10
+    value: 464.1588834
+  - analyte: e
+    time: 11
+    value: 21.5443469
+  - analyte: e
+    time: 12
+    value: 21.5443469
+  - analyte: e
+    time: 16
+    value: 15.31740464
+  - analyte: e
+    time: 18
+    value: 234.6228848
+  - analyte: e
+    time: 20
+    value: 84.31909293
+  - analyte: n
+    time: 4
+    value: 7109.709432
+  - analyte: n
+    time: 5
+    value: 215443.469
+  - analyte: n
+    time: 6
+    value: 153174.0464
+  - analyte: n
+    time: 7
+    value: 19783.18883
+  - analyte: n
+    time: 11
+    value: 3.913745602
+  - analyte: n
+    time: 20
+    value: 10.89022962
+- patient_id: '4567'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 599484.2503
+  - analyte: e
+    time: 5
+    value: 1185971.012
+  - analyte: e
+    time: 6
+    value: 303027.1083
+  - analyte: e
+    time: 7
+    value: 3300034.791
+  - analyte: e
+    time: 8
+    value: 843190.9293
+  - analyte: e
+    time: 9
+    value: 303027.1083
+  - analyte: e
+    time: 10
+    value: 42.62158829
+  - analyte: e
+    time: 11
+    value: 21.5443469
+  - analyte: n
+    time: 4
+    value: 55047.89808
+  - analyte: n
+    time: 5
+    value: 108902.2962
+  - analyte: n
+    time: 6
+    value: 39137.45602
+  - analyte: n
+    time: 7
+    value: 426215.8829
+  - analyte: n
+    time: 8
+    value: 108902.2962
+  - analyte: n
+    time: 9
+    value: 27825.59402
+- patient_id: '4568'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: -3
+    value: 27825.59402
+  - analyte: e
+    time: -2
+    value: 1668100.537
+  - analyte: e
+    time: -1
+    value: 18165997.88
+  - analyte: e
+    time: 0
+    value: 140652724.2
+  - analyte: e
+    time: 1
+    value: 12915496.65
+  - analyte: e
+    time: 2
+    value: 19783.18883
+  - analyte: e
+    time: 3
+    value: 3300034.791
+  - analyte: e
+    time: 4
+    value: 7109.709432
+  - analyte: e
+    time: 5
+    value: 2555.09709
+  - analyte: e
+    time: 6
+    value: 118.5971012
+  - analyte: n
+    time: -3
+    value: 10000
+  - analyte: n
+    time: -2
+    value: 599484.2503
+  - analyte: n
+    time: -1
+    value: 6528521.141
+  - analyte: n
+    time: 0
+    value: 35938136.64
+  - analyte: n
+    time: 1
+    value: 2346228.848
+  - analyte: n
+    time: 2
+    value: 5054.796821
+  - analyte: n
+    time: 3
+    value: 843190.9293
+  - analyte: n
+    time: 4
+    value: 3593.813664
+  - analyte: n
+    time: 5
+    value: 918.2542836
+- patient_id: '4571'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 0
+    value: 21.5443469
+  - analyte: e
+    time: 1
+    value: 918.2542836
+  - analyte: e
+    time: 2
+    value: 77426.36827
+  - analyte: e
+    time: 3
+    value: 55047.89808
+  - analyte: e
+    time: 4
+    value: 25550970.9
+  - analyte: e
+    time: 5
+    value: 4641588.834
+  - analyte: e
+    time: 6
+    value: 153174.0464
+  - analyte: e
+    time: 7
+    value: 19783.18883
+  - analyte: e
+    time: 8
+    value: 10000
+  - analyte: e
+    time: 9
+    value: 84.31909293
+  - analyte: e
+    time: 15
+    value: 30.30271083
+  - analyte: n
+    time: 1
+    value: 330.0034791
+  - analyte: n
+    time: 2
+    value: 39137.45602
+  - analyte: n
+    time: 3
+    value: 27825.59402
+  - analyte: n
+    time: 4
+    value: 2346228.848
+  - analyte: n
+    time: 5
+    value: 1185971.012
+  - analyte: n
+    time: 6
+    value: 39137.45602
+  - analyte: n
+    time: 7
+    value: 7109.709432
+  - analyte: n
+    time: 8
+    value: 5054.796821
+- patient_id: '4572'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 70640961.82
+  - analyte: e
+    time: 5
+    value: 4380356.263
+  - analyte: e
+    time: 6
+    value: 47779.90512
+  - analyte: e
+    time: 8
+    value: 16842.83113
+  - analyte: e
+    time: 9
+    value: 8.047488734
+  - analyte: e
+    time: 11
+    value: 8.047488734
+  - analyte: e
+    time: 17
+    value: 11.39209961
+  - analyte: n
+    time: 4
+    value: 6200872.908
+  - analyte: n
+    time: 5
+    value: 1090776.692
+  - analyte: n
+    time: 6
+    value: 16842.83113
+  - analyte: n
+    time: 8
+    value: 4194.126348
+- patient_id: '4576'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 8
+    value: 105.0507547
+  - analyte: e
+    time: 9
+    value: 832.0790912
+  - analyte: e
+    time: 10
+    value: 65409052.8
+  - analyte: e
+    time: 11
+    value: 283042.6306
+  - analyte: e
+    time: 16
+    value: 86.25861271
+  - analyte: n
+    time: 8
+    value: 9.719732685
+  - analyte: n
+    time: 9
+    value: 151.1554701
+  - analyte: n
+    time: 10
+    value: 6006214.292
+  - analyte: n
+    time: 11
+    value: 51417.51828
+  - analyte: n
+    time: 16
+    value: 43.60197613
+- patient_id: '4577'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 4641588.834
+  - analyte: e
+    time: 5
+    value: 2346228.848
+  - analyte: e
+    time: 6
+    value: 108902.2962
+  - analyte: e
+    time: 7
+    value: 2555.09709
+  - analyte: e
+    time: 8
+    value: 10000
+  - analyte: e
+    time: 9
+    value: 652.8521141
+  - analyte: e
+    time: 10
+    value: 19783.18883
+  - analyte: e
+    time: 11
+    value: 1291.549665
+  - analyte: e
+    time: 12
+    value: 118.5971012
+  - analyte: e
+    time: 13
+    value: 84.31909293
+  - analyte: e
+    time: 14
+    value: 42.62158829
+  - analyte: n
+    time: 4
+    value: 4641588.834
+  - analyte: n
+    time: 5
+    value: 303027.1083
+  - analyte: n
+    time: 6
+    value: 14065.27242
+  - analyte: n
+    time: 7
+    value: 234.6228848
+  - analyte: n
+    time: 8
+    value: 1816.599788
+  - analyte: n
+    time: 9
+    value: 234.6228848
+  - analyte: n
+    time: 10
+    value: 3593.813664
+  - analyte: n
+    time: 11
+    value: 330.0034791
+  - analyte: n
+    time: 12
+    value: 21.5443469
+- patient_id: '4578'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 1
+    value: 4908051.272
+  - analyte: e
+    time: 2
+    value: 3096.770997
+  - analyte: e
+    time: 3
+    value: 240889.6729
+  - analyte: e
+    time: 4
+    value: 3096.770997
+  - analyte: e
+    time: 6
+    value: 415.1278003
+  - analyte: e
+    time: 8
+    value: 32291.7
+  - analyte: e
+    time: 9
+    value: 20.37468528
+  - analyte: n
+    time: 1
+    value: 919679.1985
+  - analyte: n
+    time: 2
+    value: 811.1308308
+  - analyte: n
+    time: 3
+    value: 32291.7
+  - analyte: n
+    time: 4
+    value: 811.1308308
+  - analyte: n
+    time: 6
+    value: 151.9911083
+  - analyte: n
+    time: 8
+    value: 6050.875007
+- patient_id: '4580'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 5
+    value: 234.6228848
+  - analyte: e
+    time: 7
+    value: 843190.9293
+  - analyte: e
+    time: 8
+    value: 1291.549665
+  - analyte: n
+    time: 7
+    value: 108902.2962
+- patient_id: '4583'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 3
+    value: 26192793.45
+  - analyte: e
+    time: 4
+    value: 6860624.286
+  - analyte: e
+    time: 5
+    value: 100000000
+  - analyte: e
+    time: 6
+    value: 195393040.5
+  - analyte: e
+    time: 7
+    value: 1042753889
+  - analyte: e
+    time: 8
+    value: 533669923.1
+  - analyte: e
+    time: 9
+    value: 139783060.7
+  - analyte: e
+    time: 10
+    value: 657933.2247
+  - analyte: e
+    time: 11
+    value: 470681.656
+  - analyte: e
+    time: 12
+    value: 123284.6739
+  - analyte: e
+    time: 13
+    value: 2215.412213
+  - analyte: e
+    time: 16
+    value: 77.78737049
+  - analyte: n
+    time: 3
+    value: 4908051.272
+  - analyte: n
+    time: 4
+    value: 1285555.732
+  - analyte: n
+    time: 4
+    value: 13405182.39
+  - analyte: n
+    time: 6
+    value: 18738174.23
+  - analyte: n
+    time: 7
+    value: 139783060.7
+  - analyte: n
+    time: 8
+    value: 71539426.54
+  - analyte: n
+    time: 9
+    value: 18738174.23
+  - analyte: n
+    time: 10
+    value: 470681.656
+  - analyte: n
+    time: 11
+    value: 88197.14876
+  - analyte: n
+    time: 12
+    value: 23101.297
+  - analyte: n
+    time: 13
+    value: 296.9800477
+- patient_id: '4585'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 14065.27242
+  - analyte: e
+    time: 5
+    value: 7109.709432
+  - analyte: e
+    time: 6
+    value: 2555.09709
+  - analyte: e
+    time: 7
+    value: 2555.09709
+  - analyte: e
+    time: 9
+    value: 7109.709432
+  - analyte: e
+    time: 10
+    value: 59.94842503
+  - analyte: e
+    time: 11
+    value: 59.94842503
+  - analyte: e
+    time: 13
+    value: 21.5443469
+  - analyte: n
+    time: 4
+    value: 1291.549665
+  - analyte: n
+    time: 5
+    value: 1816.599788
+  - analyte: n
+    time: 6
+    value: 234.6228848
+  - analyte: n
+    time: 7
+    value: 918.2542836
+  - analyte: n
+    time: 13
+    value: 5.504789808
+- patient_id: '4586'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 1
+    value: 25550970.9
+  - analyte: e
+    time: 2
+    value: 1668100.537
+  - analyte: e
+    time: 3
+    value: 6528521.141
+  - analyte: e
+    time: 4
+    value: 1185971.012
+  - analyte: e
+    time: 4
+    value: 1668100.537
+  - analyte: e
+    time: 6
+    value: 6528521.141
+  - analyte: e
+    time: 7
+    value: 303027.1083
+  - analyte: e
+    time: 8
+    value: 234.6228848
+  - analyte: e
+    time: 9
+    value: 59.94842503
+  - analyte: n
+    time: 1
+    value: 4641588.834
+  - analyte: n
+    time: 2
+    value: 215443.469
+  - analyte: n
+    time: 3
+    value: 1185971.012
+  - analyte: n
+    time: 4
+    value: 108902.2962
+  - analyte: n
+    time: 5
+    value: 426215.8829
+  - analyte: n
+    time: 6
+    value: 1185971.012
+  - analyte: n
+    time: 7
+    value: 39137.45602
+  - analyte: n
+    time: 8
+    value: 21.5443469
+  - analyte: n
+    time: 9
+    value: 7.742636827
+- patient_id: '4588'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: n
+    time: 1
+    value: 8.047488734
+- patient_id: '4596'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 1544113.59
+  - analyte: e
+    time: 5
+    value: 1090776.692
+  - analyte: e
+    time: 6
+    value: 11897.93791
+  - analyte: e
+    time: 7
+    value: 16.12676175
+  - analyte: e
+    time: 10
+    value: 45.74855262
+  - analyte: n
+    time: 4
+    value: 770535.1462
+  - analyte: n
+    time: 5
+    value: 544313.4384
+  - analyte: n
+    time: 6
+    value: 5937.244115
+  - analyte: n
+    time: 7
+    value: 32.31721758
+  - analyte: n
+    time: 10
+    value: 45.74855262
+  - analyte: n
+    time: 11
+    value: 16.12676175
+- patient_id: '4597'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 0
+    value: 3.913745602
+  - analyte: e
+    time: 1
+    value: 39137.45602
+  - analyte: e
+    time: 2
+    value: 18165997.88
+  - analyte: e
+    time: 3
+    value: 12915496.65
+  - analyte: e
+    time: 4
+    value: 9182542.836
+  - analyte: e
+    time: 5
+    value: 19783.18883
+  - analyte: e
+    time: 6
+    value: 19783.18883
+  - analyte: e
+    time: 7
+    value: 652.8521141
+  - analyte: e
+    time: 8
+    value: 918.2542836
+  - analyte: n
+    time: 1
+    value: 27825.59402
+  - analyte: n
+    time: 2
+    value: 18165997.88
+  - analyte: n
+    time: 3
+    value: 12915496.65
+  - analyte: n
+    time: 4
+    value: 9182542.836
+  - analyte: n
+    time: 5
+    value: 19783.18883
+  - analyte: n
+    time: 6
+    value: 19783.18883
+  - analyte: n
+    time: 7
+    value: 652.8521141
+  - analyte: n
+    time: 8
+    value: 918.2542836
+- patient_id: '4600'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 2
+    value: 426215.8829
+  - analyte: e
+    time: 3
+    value: 18165997.88
+  - analyte: e
+    time: 4
+    value: 1668100.537
+  - analyte: e
+    time: 5
+    value: 599484.2503
+  - analyte: e
+    time: 6
+    value: 303027.1083
+  - analyte: e
+    time: 7
+    value: 77426.36827
+  - analyte: e
+    time: 8
+    value: 234.6228848
+  - analyte: e
+    time: 9
+    value: 5.504789808
+  - analyte: e
+    time: 10
+    value: 10.89022962
+  - analyte: e
+    time: 11
+    value: 5.504789808
+  - analyte: n
+    time: 2
+    value: 599484.2503
+  - analyte: n
+    time: 3
+    value: 12915496.65
+  - analyte: n
+    time: 4
+    value: 1668100.537
+  - analyte: n
+    time: 5
+    value: 599484.2503
+  - analyte: n
+    time: 6
+    value: 153174.0464
+  - analyte: n
+    time: 7
+    value: 77426.36827
+  - analyte: n
+    time: 8
+    value: 330.0034791
+- patient_id: '4608'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 4
+    value: 443.1399257
+  - analyte: e
+    time: 5
+    value: 1237.834189
+  - analyte: e
+    time: 6
+    value: 608.2289478
+  - analyte: e
+    time: 7
+    value: 74.42144757
+  - analyte: e
+    time: 8
+    value: 416.5877537
+  - analyte: e
+    time: 9
+    value: 3.136433318
+  - analyte: e
+    time: 10
+    value: 12.40226619
+  - analyte: n
+    time: 4
+    value: 443.1399257
+  - analyte: n
+    time: 5
+    value: 617.6972692
+  - analyte: n
+    time: 6
+    value: 608.2289478
+  - analyte: n
+    time: 7
+    value: 18.53209545
+  - analyte: n
+    time: 8
+    value: 413.3826084
+- patient_id: '4612'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 3
+    value: 3593.813664
+  - analyte: e
+    time: 4
+    value: 1185971.012
+  - analyte: e
+    time: 5
+    value: 1816.599788
+  - analyte: e
+    time: 6
+    value: 42.62158829
+  - analyte: e
+    time: 8
+    value: 30.30271083
+  - analyte: e
+    time: 10
+    value: 15.31740464
+  - analyte: e
+    time: 13
+    value: 3.913745602
+  - analyte: n
+    time: 4
+    value: 599484.2503
+  - analyte: n
+    time: 3
+    value: 1816.599788
+  - analyte: n
+    time: 5
+    value: 918.2542836
+  - analyte: n
+    time: 6
+    value: 21.5443469
+  - analyte: n
+    time: 7
+    value: 1.978318883
+  - analyte: n
+    time: 8
+    value: 30.30271083
+  - analyte: n
+    time: 17
+    value: 5.504789808
+- patient_id: '4637'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 3
+    value: 3300034.791
+  - analyte: e
+    time: 4
+    value: 12915496.65
+  - analyte: e
+    time: 5
+    value: 2346228.848
+  - analyte: e
+    time: 6
+    value: 3593.813664
+  - analyte: e
+    time: 7
+    value: 10000
+  - analyte: e
+    time: 8
+    value: 2555.09709
+  - analyte: e
+    time: 9
+    value: 118.5971012
+  - analyte: e
+    time: 10
+    value: 10.89022962
+  - analyte: e
+    time: 11
+    value: 166.8100537
+  - analyte: e
+    time: 12
+    value: 39137.45602
+  - analyte: e
+    time: 13
+    value: 42.62158829
+  - analyte: e
+    time: 15
+    value: 30.30271083
+  - analyte: n
+    time: 3
+    value: 3300034.791
+  - analyte: n
+    time: 4
+    value: 6528521.141
+  - analyte: n
+    time: 5
+    value: 1668100.537
+  - analyte: n
+    time: 6
+    value: 3593.813664
+  - analyte: n
+    time: 7
+    value: 10000
+  - analyte: n
+    time: 8
+    value: 1291.549665
+  - analyte: n
+    time: 9
+    value: 234.6228848
+  - analyte: n
+    time: 10
+    value: 30.30271083
+  - analyte: n
+    time: 11
+    value: 59.94842503
+  - analyte: n
+    time: 12
+    value: 39137.45602
+  - analyte: n
+    time: 13
+    value: 15.31740464
+  - analyte: n
+    time: 15
+    value: 30.30271083
+- patient_id: '4665'
+  attributes:
+    vaccinated: false
+  measurements:
+  - analyte: e
+    time: 8
+    value: 10.89022962
+  - analyte: n
+    time: 7
+    value: 3.913745602
+- patient_id: '4611'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 11
+    value: 12.1547425
+- patient_id: '4615'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 39194067.75
+  - analyte: e
+    time: 8
+    value: 3352.924149
+  - analyte: e
+    time: 9
+    value: 1795.714494
+  - analyte: e
+    time: 10
+    value: 31.01168927
+  - analyte: e
+    time: 11
+    value: 12.1547425
+  - analyte: e
+    time: 13
+    value: 16.60882783
+  - analyte: n
+    time: 5
+    value: 39194067.75
+  - analyte: n
+    time: 8
+    value: 1795.714494
+  - analyte: n
+    time: 9
+    value: 961.7248711
+  - analyte: n
+    time: 10
+    value: 8.895134973
+  - analyte: n
+    time: 11
+    value: 4.76393801
+- patient_id: '4616'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 15
+    value: 3.486365228
+- patient_id: '4618'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 4
+    value: 11689.51816
+  - analyte: e
+    time: 5
+    value: 3352.924149
+  - analyte: e
+    time: 6
+    value: 376.9390975
+  - analyte: e
+    time: 7
+    value: 3352.924149
+  - analyte: e
+    time: 8
+    value: 376.9390975
+  - analyte: e
+    time: 9
+    value: 12.1547425
+  - analyte: e
+    time: 10
+    value: 57.90443981
+  - analyte: e
+    time: 11
+    value: 3.486365228
+  - analyte: e
+    time: 13
+    value: 3.486365228
+  - analyte: e
+    time: 14
+    value: 16.60882783
+  - analyte: n
+    time: 4
+    value: 6260.516572
+  - analyte: n
+    time: 5
+    value: 3352.924149
+  - analyte: n
+    time: 6
+    value: 275.8531618
+  - analyte: n
+    time: 7
+    value: 1795.714494
+  - analyte: n
+    time: 8
+    value: 376.9390975
+  - analyte: n
+    time: 10
+    value: 22.69510537
+  - analyte: n
+    time: 11
+    value: negative
+  - analyte: n
+    time: 12
+    value: negative
+  - analyte: n
+    time: 14
+    value: 3.486365228
+- patient_id: '4619'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 2
+    value: 57.90443981
+  - analyte: e
+    time: 3
+    value: 4.76393801
+  - analyte: e
+    time: 4
+    value: 42.37587161
+  - analyte: n
+    time: 2
+    value: 31.01168927
+  - analyte: n
+    time: 3
+    value: 12.1547425
+  - analyte: n
+    time: 4
+    value: 42.37587161
+- patient_id: '4620'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 103979.8418
+  - analyte: e
+    time: 6
+    value: 1314.147363
+  - analyte: e
+    time: 7
+    value: 2453.751107
+  - analyte: e
+    time: 8
+    value: 703.8135555
+  - analyte: e
+    time: 9
+    value: 376.9390975
+  - analyte: e
+    time: 10
+    value: 515.0678076
+  - analyte: e
+    time: 12
+    value: 42.37587161
+  - analyte: e
+    time: 14
+    value: 3.486365228
+  - analyte: n
+    time: 5
+    value: 40753.92966
+  - analyte: n
+    time: 6
+    value: 515.0678076
+  - analyte: n
+    time: 7
+    value: 1314.147363
+  - analyte: n
+    time: 8
+    value: 703.8135555
+  - analyte: n
+    time: 9
+    value: 376.9390975
+  - analyte: n
+    time: 10
+    value: 376.9390975
+- patient_id: '4621'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 1
+    value: 11.65914401
+  - analyte: e
+    time: 2
+    value: 184.7849797
+  - analyte: e
+    time: 3
+    value: 34145.48874
+  - analyte: e
+    time: 4
+    value: 135935639.1
+  - analyte: e
+    time: 5
+    value: 11659144.01
+  - analyte: e
+    time: 6
+    value: 398107.1706
+  - analyte: e
+    time: 7
+    value: 2154.43469
+  - analyte: e
+    time: 8
+    value: 184.7849797
+  - analyte: e
+    time: 9
+    value: 184.7849797
+  - analyte: e
+    time: 10
+    value: 6.309573445
+  - analyte: e
+    time: 13
+    value: 11.65914401
+  - analyte: e
+    time: 15
+    value: 3.414548874
+  - analyte: e
+    time: 17
+    value: 6.309573445
+  - analyte: n
+    time: 1
+    value: 39.81071706
+  - analyte: n
+    time: 2
+    value: 184.7849797
+  - analyte: n
+    time: 3
+    value: 25118.86432
+  - analyte: n
+    time: 4
+    value: 100000000
+  - analyte: n
+    time: 5
+    value: 4641588.834
+  - analyte: n
+    time: 6
+    value: 292864.4565
+  - analyte: n
+    time: 7
+    value: 1165.914401
+  - analyte: n
+    time: 8
+    value: 341.4548874
+  - analyte: n
+    time: 9
+    value: 135.9356391
+  - analyte: n
+    time: 10
+    value: 6.309573445
+- patient_id: '4623'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 1
+    value: 53556669.18
+  - analyte: e
+    time: 2
+    value: 20991037.2
+  - analyte: e
+    time: 3
+    value: 136644834.9
+  - analyte: e
+    time: 4
+    value: 362511.705
+  - analyte: e
+    time: 5
+    value: 8554.672536
+  - analyte: e
+    time: 6
+    value: 103979.8418
+  - analyte: e
+    time: 7
+    value: 21826.44728
+  - analyte: e
+    time: 8
+    value: 1795.714494
+  - analyte: e
+    time: 9
+    value: 79.12342619
+  - analyte: e
+    time: 10
+    value: 3352.924149
+  - analyte: e
+    time: 11
+    value: 4581.597669
+  - analyte: e
+    time: 12
+    value: 57.90443981
+  - analyte: e
+    time: 13
+    value: 108.1180751
+  - analyte: e
+    time: 14
+    value: 79.12342619
+  - analyte: e
+    time: 17
+    value: 22.69510537
+  - analyte: n
+    time: 1
+    value: 100000000
+  - analyte: n
+    time: 2
+    value: 39194067.75
+  - analyte: n
+    time: 3
+    value: 186718109.1
+  - analyte: n
+    time: 4
+    value: 362511.705
+  - analyte: n
+    time: 5
+    value: 8554.672536
+  - analyte: n
+    time: 6
+    value: 103979.8418
+  - analyte: n
+    time: 7
+    value: 21826.44728
+  - analyte: n
+    time: 8
+    value: 961.7248711
+  - analyte: n
+    time: 9
+    value: 31.01168927
+  - analyte: n
+    time: 10
+    value: 1795.714494
+  - analyte: n
+    time: 11
+    value: 2453.751107
+  - analyte: n
+    time: 12
+    value: 22.69510537
+  - analyte: n
+    time: 13
+    value: 57.90443981
+  - analyte: n
+    time: 14
+    value: 31.01168927
+  - analyte: n
+    time: 17
+    value: 1.867181091
+- patient_id: '4627'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 194149.1946
+  - analyte: e
+    time: 6
+    value: 11689.51816
+  - analyte: e
+    time: 7
+    value: 1795.714494
+  - analyte: e
+    time: 8
+    value: 108.1180751
+  - analyte: e
+    time: 9
+    value: 376.9390975
+  - analyte: e
+    time: 10
+    value: 8.895134973
+  - analyte: e
+    time: 11
+    value: 12.1547425
+  - analyte: n
+    time: 5
+    value: 142083.0833
+  - analyte: n
+    time: 6
+    value: 8554.672536
+  - analyte: n
+    time: 7
+    value: 1314.147363
+  - analyte: n
+    time: 8
+    value: 108.1180751
+  - analyte: n
+    time: 9
+    value: 376.9390975
+  - analyte: n
+    time: 10
+    value: 8.895134973
+- patient_id: '4629'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 292864.4565
+  - analyte: e
+    time: 6
+    value: 46415.88834
+  - analyte: e
+    time: 7
+    value: 85769.58986
+  - analyte: e
+    time: 8
+    value: 34145.48874
+  - analyte: e
+    time: 9
+    value: 158489.3192
+  - analyte: e
+    time: 12
+    value: 6.309573445
+  - analyte: n
+    time: 5
+    value: 292864.4565
+  - analyte: n
+    time: 6
+    value: 25118.86432
+  - analyte: n
+    time: 7
+    value: 46415.88834
+  - analyte: n
+    time: 8
+    value: 18478.49797
+  - analyte: n
+    time: 9
+    value: 85769.58986
+  - analyte: n
+    time: 10
+    value: 4.641588834
+  - analyte: n
+    time: 12
+    value: 2.511886432
+- patient_id: '4631'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 4
+    value: 2511886.432
+  - analyte: e
+    time: 5
+    value: 2511886.432
+  - analyte: e
+    time: 6
+    value: 630.9573445
+  - analyte: e
+    time: 7
+    value: 251.1886432
+  - analyte: e
+    time: 8
+    value: 1.847849797
+  - analyte: e
+    time: 13
+    value: 54.11695265
+  - analyte: n
+    time: 4
+    value: 2511886.432
+  - analyte: n
+    time: 5
+    value: 2511886.432
+  - analyte: n
+    time: 6
+    value: 341.4548874
+  - analyte: n
+    time: 7
+    value: 184.7849797
+- patient_id: '4632'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 1847849.797
+  - analyte: e
+    time: 6
+    value: 11659144.01
+  - analyte: e
+    time: 7
+    value: 29286445.65
+  - analyte: e
+    time: 8
+    value: 8576958.986
+  - analyte: e
+    time: 9
+    value: 25118.86432
+  - analyte: e
+    time: 10
+    value: 5411.695265
+  - analyte: e
+    time: 11
+    value: 54.11695265
+  - analyte: e
+    time: 13
+    value: 10000
+  - analyte: e
+    time: 16
+    value: 29.28644565
+  - analyte: n
+    time: 5
+    value: 1847849.797
+  - analyte: n
+    time: 6
+    value: 11659144.01
+  - analyte: n
+    time: 7
+    value: 15848931.92
+  - analyte: n
+    time: 8
+    value: 8576958.986
+  - analyte: n
+    time: 9
+    value: 25118.86432
+  - analyte: n
+    time: 10
+    value: 5411.695265
+  - analyte: n
+    time: 11
+    value: 100
+  - analyte: n
+    time: 13
+    value: 3981.071706
+  - analyte: n
+    time: 16
+    value: 29.28644565
+- patient_id: '4633'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 4
+    value: 85769.58986
+  - analyte: e
+    time: 5
+    value: 1165.914401
+  - analyte: e
+    time: 6
+    value: 54.11695265
+  - analyte: e
+    time: 7
+    value: 6.309573445
+  - analyte: e
+    time: 8
+    value: 184.7849797
+  - analyte: e
+    time: 9
+    value: 21.5443469
+  - analyte: e
+    time: 13
+    value: 4.641588834
+  - analyte: n
+    time: 4
+    value: 25118.86432
+  - analyte: n
+    time: 5
+    value: 857.6958986
+  - analyte: n
+    time: 8
+    value: 135.9356391
+- patient_id: '4636'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 4
+    value: 6309573.445
+  - analyte: e
+    time: 5
+    value: 15848931.92
+  - analyte: e
+    time: 6
+    value: 541169.5265
+  - analyte: e
+    time: 7
+    value: 1584.893192
+  - analyte: e
+    time: 8
+    value: 13593.56391
+  - analyte: e
+    time: 9
+    value: 39.81071706
+  - analyte: e
+    time: 11
+    value: 464.1588834
+  - analyte: e
+    time: 12
+    value: 100
+  - analyte: e
+    time: 13
+    value: 2154.43469
+  - analyte: e
+    time: 14
+    value: 2928.644565
+  - analyte: n
+    time: 4
+    value: 6309573.445
+  - analyte: n
+    time: 5
+    value: 15848931.92
+  - analyte: n
+    time: 6
+    value: 735642.2545
+  - analyte: n
+    time: 7
+    value: 1584.893192
+  - analyte: n
+    time: 8
+    value: 13593.56391
+  - analyte: n
+    time: 9
+    value: 39.81071706
+  - analyte: n
+    time: 11
+    value: 464.1588834
+  - analyte: n
+    time: 12
+    value: 184.7849797
+  - analyte: n
+    time: 13
+    value: 2154.43469
+  - analyte: n
+    time: 14
+    value: 2928.644565
+- patient_id: '4638'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 3
+    value: 464.1588834
+  - analyte: e
+    time: 4
+    value: 10000
+  - analyte: e
+    time: 5
+    value: 630.9573445
+  - analyte: e
+    time: 6
+    value: 4.641588834
+  - analyte: n
+    time: 3
+    value: 341.4548874
+  - analyte: n
+    time: 4
+    value: 7356.422545
+  - analyte: n
+    time: 5
+    value: 630.9573445
+- patient_id: '4639'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 3
+    value: 857.6958986
+  - analyte: e
+    time: 4
+    value: 2154.43469
+  - analyte: e
+    time: 5
+    value: 184.7849797
+  - analyte: e
+    time: 6
+    value: 39.81071706
+  - analyte: e
+    time: 7
+    value: 11.65914401
+  - analyte: e
+    time: 8
+    value: 184.7849797
+  - analyte: n
+    time: 3
+    value: 135.9356391
+  - analyte: n
+    time: 4
+    value: 630.9573445
+  - analyte: n
+    time: 5
+    value: 8.576958986
+  - analyte: n
+    time: 6
+    value: 11.65914401
+  - analyte: n
+    time: 7
+    value: 8.576958986
+  - analyte: n
+    time: 8
+    value: 39.81071706
+- patient_id: '4644'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 292864.4565
+  - analyte: e
+    time: 5
+    value: 13593.56391
+  - analyte: e
+    time: 7
+    value: 3981.071706
+  - analyte: e
+    time: 8
+    value: 25118.86432
+  - analyte: e
+    time: 9
+    value: 10000
+  - analyte: e
+    time: 10
+    value: 251.1886432
+  - analyte: n
+    time: 5
+    value: 158489.3192
+  - analyte: n
+    time: 5
+    value: 10000
+  - analyte: n
+    time: 7
+    value: 2928.644565
+  - analyte: n
+    time: 7
+    value: 10000
+  - analyte: n
+    time: 9
+    value: 5411.695265
+  - analyte: n
+    time: 10
+    value: 135.9356391
+- patient_id: '4645'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 3
+    value: 20991037.2
+  - analyte: e
+    time: 4
+    value: 924914.7277
+  - analyte: e
+    time: 5
+    value: 265294.8464
+  - analyte: e
+    time: 6
+    value: 2453.751107
+  - analyte: e
+    time: 8
+    value: 31.01168927
+  - analyte: n
+    time: 3
+    value: 8227241.342
+  - analyte: n
+    time: 4
+    value: 495353.5209
+  - analyte: n
+    time: 5
+    value: 142083.0833
+  - analyte: n
+    time: 6
+    value: 1795.714494
+  - analyte: n
+    time: 7
+    value: 275.8531618
+  - analyte: n
+    time: 8
+    value: 4.76393801
+- patient_id: '4647'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 3414548.874
+  - analyte: e
+    time: 6
+    value: 4641588.834
+  - analyte: e
+    time: 7
+    value: 1847849.797
+  - analyte: e
+    time: 8
+    value: 158489.3192
+  - analyte: e
+    time: 9
+    value: 18478.49797
+  - analyte: e
+    time: 10
+    value: 1165.914401
+  - analyte: e
+    time: 11
+    value: 857.6958986
+  - analyte: e
+    time: 14
+    value: 135.9356391
+  - analyte: n
+    time: 5
+    value: 1847849.797
+  - analyte: n
+    time: 6
+    value: 3414548.874
+  - analyte: n
+    time: 7
+    value: 735642.2545
+  - analyte: n
+    time: 8
+    value: 63095.73445
+  - analyte: n
+    time: 9
+    value: 7356.422545
+  - analyte: n
+    time: 10
+    value: 857.6958986
+  - analyte: n
+    time: 11
+    value: 630.9573445
+  - analyte: n
+    time: 14
+    value: 73.56422545
+- patient_id: '4649'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 5411.695265
+  - analyte: e
+    time: 6
+    value: 73.56422545
+  - analyte: e
+    time: 7
+    value: 251.1886432
+  - analyte: e
+    time: 16
+    value: 29.28644565
+  - analyte: n
+    time: 5
+    value: 5411.695265
+  - analyte: n
+    time: 6
+    value: 39.81071706
+  - analyte: n
+    time: 7
+    value: 73.56422545
+- patient_id: '4651'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 3
+    value: 1847849.797
+  - analyte: e
+    time: 4
+    value: 116591.4401
+  - analyte: e
+    time: 5
+    value: 158489.3192
+  - analyte: e
+    time: 6
+    value: 630.9573445
+  - analyte: n
+    time: 3
+    value: 215443.469
+  - analyte: n
+    time: 4
+    value: 34145.48874
+  - analyte: n
+    time: 5
+    value: 18478.49797
+  - analyte: n
+    time: 6
+    value: 100
+  - analyte: n
+    time: 7
+    value: 4.641588834
+  - analyte: n
+    time: 8
+    value: 4.641588834
+  - analyte: n
+    time: 19
+    value: 464.1588834
+- patient_id: '4654'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 39.81071706
+  - analyte: e
+    time: 6
+    value: 73.56422545
+- patient_id: '4655'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 4
+    value: 215443.469
+  - analyte: e
+    time: 5
+    value: 1847849.797
+  - analyte: e
+    time: 6
+    value: 398107.1706
+  - analyte: e
+    time: 7
+    value: 735642.2545
+  - analyte: e
+    time: 8
+    value: 25118.86432
+  - analyte: e
+    time: 9
+    value: 10000
+  - analyte: e
+    time: 10
+    value: 5411.695265
+  - analyte: e
+    time: 11
+    value: 2154.43469
+  - analyte: e
+    time: 13
+    value: 73.56422545
+  - analyte: e
+    time: 16
+    value: 39.81071706
+  - analyte: e
+    time: 18
+    value: 2928.644565
+  - analyte: e
+    time: 20
+    value: 21.5443469
+  - analyte: n
+    time: 4
+    value: 63095.73445
+  - analyte: n
+    time: 5
+    value: 735642.2545
+  - analyte: n
+    time: 6
+    value: 116591.4401
+  - analyte: n
+    time: 7
+    value: 158489.3192
+  - analyte: n
+    time: 8
+    value: 10000
+  - analyte: n
+    time: 9
+    value: 2154.43469
+  - analyte: n
+    time: 10
+    value: 1165.914401
+  - analyte: n
+    time: 11
+    value: 630.9573445
+  - analyte: n
+    time: 13
+    value: 29.28644565
+- patient_id: '4656'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 8
+    value: 11.65914401
+- patient_id: '4658'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 3
+    value: 495353.5209
+  - analyte: e
+    time: 4
+    value: 4581.597669
+  - analyte: e
+    time: 5
+    value: 3352.924149
+  - analyte: e
+    time: 6
+    value: 703.8135555
+  - analyte: e
+    time: 7
+    value: 1314.147363
+  - analyte: e
+    time: 10
+    value: 8.895134973
+  - analyte: n
+    time: 3
+    value: 103979.8418
+  - analyte: n
+    time: 4
+    value: 961.7248711
+  - analyte: n
+    time: 5
+    value: 703.8135555
+  - analyte: n
+    time: 6
+    value: 201.8760255
+  - analyte: n
+    time: 7
+    value: 376.9390975
+- patient_id: '4659'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 2
+    value: 472518.2694
+  - analyte: e
+    time: 3
+    value: 44788.11562
+  - analyte: e
+    time: 7
+    value: 10.55008148
+  - analyte: e
+    time: 11
+    value: 13.0701048
+  - analyte: n
+    time: 2
+    value: 130701.048
+  - analyte: n
+    time: 3
+    value: 12388.62924
+- patient_id: '4660'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 23555.53775
+  - analyte: e
+    time: 6
+    value: 111.3042193
+  - analyte: e
+    time: 7
+    value: 402.3936909
+  - analyte: n
+    time: 5
+    value: 4245.286227
+  - analyte: n
+    time: 6
+    value: 38.14128748
+  - analyte: n
+    time: 7
+    value: 38.14128748
+- patient_id: '4661'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: -3
+    value: 85159.39318
+  - analyte: e
+    time: -2
+    value: 19013.83704
+  - analyte: e
+    time: -1
+    value: 123886292.4
+  - analyte: e
+    time: 0
+    value: 200597.5301
+  - analyte: e
+    time: 1
+    value: 10000
+  - analyte: n
+    time: -3
+    value: 23555.53775
+  - analyte: n
+    time: -2
+    value: 5259.327709
+  - analyte: n
+    time: -1
+    value: 27660527.95
+  - analyte: n
+    time: 0
+    value: 55486.33588
+  - analyte: n
+    time: 1
+    value: 3426.760253
+- patient_id: '4662'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 7
+    value: 3426.760253
+  - analyte: e
+    time: 8
+    value: 111.3042193
+  - analyte: e
+    time: 9
+    value: 8.515939318
+  - analyte: e
+    time: 10
+    value: 89.84385372
+  - analyte: e
+    time: 12
+    value: 324.8088897
+  - analyte: n
+    time: 7
+    value: 1802.245515
+  - analyte: n
+    time: 8
+    value: 47.25182694
+  - analyte: n
+    time: 10
+    value: 47.25182694
+  - analyte: n
+    time: 12
+    value: 89.84385372
+- patient_id: '4663'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 3
+    value: 2766.052795
+  - analyte: e
+    time: 4
+    value: 6515.586104
+  - analyte: e
+    time: 5
+    value: 765.1048064
+  - analyte: e
+    time: 6
+    value: 19013.83704
+  - analyte: e
+    time: 7
+    value: 10000
+  - analyte: e
+    time: 8
+    value: 765.1048064
+  - analyte: e
+    time: 9
+    value: 765.1048064
+  - analyte: e
+    time: 10
+    value: 20.05975301
+  - analyte: e
+    time: 15
+    value: 10.55008148
+  - analyte: n
+    time: 3
+    value: 765.1048064
+  - analyte: n
+    time: 4
+    value: 2766.052795
+  - analyte: n
+    time: 5
+    value: 170.8276394
+  - analyte: n
+    time: 6
+    value: 6515.586104
+  - analyte: n
+    time: 7
+    value: 3426.760253
+  - analyte: n
+    time: 8
+    value: 170.8276394
+  - analyte: n
+    time: 9
+    value: 137.8906706
+  - analyte: n
+    time: 15
+    value: 1.901383704
+- patient_id: '4666'
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: e
+    time: 5
+    value: 10.84661231
+  - analyte: n
+    time: 5
+    value: 2.955209235

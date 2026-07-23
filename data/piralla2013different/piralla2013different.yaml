@@ -1,0 +1,706 @@
+title: Different drug-resistant influenza A(H3N2) variants in two immunocompromised
+  patients treated with oseltamivir during the 2011–2012 influenza season in Italy
+doi: 10.1016/j.jcv.2013.06.003
+description: Hospital-based study in Italy during the 2011–2012 influenza season assessing
+  influenza A(H3N2) viral kinetics and emergence of oseltamivir resistance. Sequential
+  respiratory samples were analyzed from treated and untreated patients; neuraminidase
+  (NA) sequencing and clonal analysis were performed in patients unresponsive to oseltamivir,
+  identifying resistant mutations including R292K, E119V, N294S, and Del247–250. Figure-derived
+  quantitative viral load time series are available for multiple patients by immune
+  status and treatment, and Table 1 reports clonal proportions of NA mutations over
+  time for two immunocompromised oseltamivir-unresponsive patients (Pavia/14 and Pavia/27).
+analytes:
+  nasopharyngeal_swab:
+    description: Quantitative influenza A(H3N2) viral load time series from nasal/nasopharyngeal
+      swabs (NS) as digitized from Fig. 1; values provided as gene-copy concentration
+      (exact PCR target/assay details not provided in the supplied text/CSV). Time
+      is relative to the figure's reference (not specified in the provided excerpt;
+      CSV provides day values directly).
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  bronchoalveolar_lavage_fluid:
+    description: Quantitative influenza A(H3N2) viral load time series from bronchoalveolar
+      lavage (BAL) as digitized from Fig. 1; values provided as gene-copy concentration
+      (exact PCR target/assay details not provided in the supplied text/CSV). Time
+      is relative to the figure's reference (not specified in the provided excerpt;
+      CSV provides day values directly).
+    specimen: bronchoalveolar_lavage_fluid
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 7214147.231
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 262790.0923
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 5838.050841
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 4399667.95
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 2683210.842
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 1129317.021
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 226375.4344
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 8374611.943
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 16877.67105
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 7103.519747
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 5779507.966
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 3435874.96
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 111966965
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 4352.315331
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 5646672.617
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 292096.7678
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 1119669.65
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 33081165.75
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 988634.7057
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 1222.217149
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 468502.0849
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 1079.18107
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 126807213.8
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 2059.892027
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 988634.7057
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 1079.18107
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 9886.347057
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 60092411.97
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 14180197.98
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: 211020.3429
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: 55120.44833
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 36526109.75
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 4625895.397
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: 36992.96483
+  - analyte: nasopharyngeal_swab
+    time: 25
+    value: 3652.610975
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 126807213.8
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 1220.665867
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 988634.7057
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 1079.18107
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 24505397.13
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 252746.1587
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 3777.297646
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 14945024.95
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 223353.7706
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 3777.297646
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 8054531.206
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 16652.38757
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 8054531.206
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 6290102.436
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 4340941.095
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 223353.7706
+  - analyte: nasopharyngeal_swab
+    time: 25
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 2067455.838
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 252746.1587
+  - analyte: nasopharyngeal_swab
+    time: 25
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 1114242.875
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 286006.4576
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 969.5655616
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 154141.4582
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 856.8127215
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 73412.80397
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 360.6176508
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 7931.016603
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 591.3057205
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 5473.37285
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 281.6206065
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 138337396.3
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 1404.918097
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 16911725.45
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 10313897.68
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 669.1189902
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 6290102.436
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 9114472.599
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: 530679.3821
+  - analyte: nasopharyngeal_swab
+    time: 30
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 679539.592
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 120375.1698
+  - analyte: nasopharyngeal_swab
+    time: 25
+    value: 136216.0204
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 679539.592
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 8974.70401
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: 57330.9663
+  - analyte: nasopharyngeal_swab
+    time: 25
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 18843.76959
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 7931.016603
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 984665.2028
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 11671161.91
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 600514.4884
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 1404.918097
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: untreated
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 679539.592
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 0
+    value: 39069.39937
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 4
+    value: 44.98432669
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompetent
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 0
+    value: 9691579.393
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 8
+    value: 422522.9858
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 0
+    value: 92466920.57
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 8
+    value: 71968567.3
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 13
+    value: 290124.9202
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 18
+    value: 225809.1295
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 25
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+    hospitalized: true
+    immune_status: immunocompromised
+    treatment: oseltamivir-treated
+  measurements:
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 0
+    value: 222299648.3
+  - analyte: bronchoalveolar_lavage_fluid
+    time: 8
+    value: 7543120.063
