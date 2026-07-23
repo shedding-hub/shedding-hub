@@ -30,7 +30,7 @@ analytes:
     limit_of_quantification: unknown
     unit: gc/wet gram
     reference_event: symptom onset
-  stool_rotavirus_ct:
+  stool_rotavirus_CT:
     description: Ct value for rotavirus detection in stool samples using RT-qPCR targeting
       the NSP3 gene segment.
     specimen: stool
@@ -40,7 +40,7 @@ analytes:
     limit_of_quantification: unknown
     unit: cycle threshold
     reference_event: symptom onset
-  stool_norovirus_ct:
+  stool_norovirus_CT:
     description: Ct value for norovirus detection in stool samples using RT-qPCR targeting
       the ORF1/2 junction region.
     specimen: stool
@@ -55,107 +55,107 @@ participants:
     sex: female
     age: 0.8333333333333334
     vaccinated: false
-    lineage: g3p[8]
+    lineage: G3P[8]
   measurements:
   - analyte: stool_rotavirus_viral_load
     time: 3
     value: 13000000
-  - analyte: stool_rotavirus_ct
+  - analyte: stool_rotavirus_CT
     time: 3
     value: 21.2
 - attributes:
     sex: male
     age: 1
     vaccinated: true
-    lineage: g3p[8]
+    lineage: G3P[8]
   measurements:
   - analyte: stool_rotavirus_viral_load
     time: 1
     value: 61000000
-  - analyte: stool_rotavirus_ct
+  - analyte: stool_rotavirus_CT
     time: 1
     value: 18.9
 - attributes:
     sex: male
     age: 0.4166666666666667
     vaccinated: false
-    lineage: g3p[8]
+    lineage: G3P[8]
   measurements:
   - analyte: stool_rotavirus_viral_load
     time: 0
     value: 30000000
-  - analyte: stool_rotavirus_ct
+  - analyte: stool_rotavirus_CT
     time: 0
     value: 20
 - attributes:
     sex: female
     age: 1
     vaccinated: unknown
-    lineage: 4[p16]
+    lineage: GII.4 Sydney[P16]
   measurements:
   - analyte: stool_norovirus_viral_load
     time: 4
     value: 220000000
-  - analyte: stool_norovirus_ct
+  - analyte: stool_norovirus_CT
     time: 4
     value: 17
 - attributes:
     sex: male
     age: 0.25
     vaccinated: false
-    lineage: 4[p16]
+    lineage: GII.4 Sydney[P16]
   measurements:
   - analyte: stool_norovirus_viral_load
     time: 5
     value: 330000000
-  - analyte: stool_norovirus_ct
+  - analyte: stool_norovirus_CT
     time: 5
     value: 16.4
 - attributes:
     sex: male
     age: 1
     vaccinated: true
-    lineage: 4[p16]
+    lineage: GII.4 Sydney[P16]
   measurements:
   - analyte: stool_norovirus_viral_load
     time: 4
     value: 3200000000
-  - analyte: stool_norovirus_ct
+  - analyte: stool_norovirus_CT
     time: 4
     value: 13
 - attributes:
     sex: male
     age: 1
     vaccinated: true
-    lineage: 4[p16]
+    lineage: GII.4 Sydney[P16]
   measurements:
   - analyte: stool_norovirus_viral_load
     time: 0
     value: 320
-  - analyte: stool_norovirus_ct
+  - analyte: stool_norovirus_CT
     time: 0
     value: 37
 - attributes:
     sex: female
     age: 1
     vaccinated: unknown
-    lineage: 4[p16]
+    lineage: GII.4 Sydney[P16]
   measurements:
   - analyte: stool_norovirus_viral_load
     time: 1
     value: 840000000
-  - analyte: stool_norovirus_ct
+  - analyte: stool_norovirus_CT
     time: 1
     value: 15
 - attributes:
     sex: male
     age: 36
     vaccinated: false
-    lineage: g3p[8]
+    lineage: G3P[8]
   measurements:
   - analyte: stool_rotavirus_viral_load
     time: 2
     value: 400000000
-  - analyte: stool_rotavirus_ct
+  - analyte: stool_rotavirus_CT
     time: 2
     value: 16.1

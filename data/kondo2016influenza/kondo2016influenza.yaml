@@ -1,0 +1,363 @@
+title: Influenza Virus Shedding in Laninamivir-Treated Children upon Returning to
+  School
+doi: 10.1620/tjem.238.113
+description: Study of influenza virus shedding in pediatric patients treated with
+  laninamivir during the 2011-2012 influenza season in Niigata Prefecture, Japan.
+  Nasal discharge samples were collected at three visits (before treatment, 3-5 days
+  after first visit, and 5-9 days after first visit) and assessed by virus culture
+  (TCID50) and quantitative real-time PCR targeting the M gene. The paper enrolled
+  28 children (7 infected with influenza A(H3N2) and 21 with influenza B) and evaluated
+  duration of fever, virus isolation, viral RNA detection rates, and antiviral susceptibility.
+  The CSV data provided contain quantitative viral RNA measurements (genome-equivalent
+  copies) for a subset of participants.
+analytes:
+  nasal_discharge_influenza_gc_per_mL:
+    description: Quantitative real-time PCR (TaqMan) targeting the influenza M gene
+      on nasal discharge specimens. Viral load expressed as genome-equivalent copies
+      of viral RNA using a standard curve; samples run in duplicate. A cycle threshold
+      (Ct) < 40 was considered positive. Values reported here are genome-equivalent
+      copies (converted to numeric).
+    specimen: nasal_discharge
+    biomarker: influenza
+    gene_target: M gene
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    subtype: A(H3N2)
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 174711229.1
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: 305240.1359
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 2934788.386
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 4557252.288
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 1889950.858
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 445106.733
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 2934788.386
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 4557252.288
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 24883097.25
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 49298.39321
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 6
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 7535864.931
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: 325046.424
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 8
+    value: negative
+- attributes:
+    subtype: A(H3N2)
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 2934788.386
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 9
+    value: 11610.37953
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 5366976.946
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: 473887.961
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 6
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 1365007.807
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 2
+    value: 106420.9244
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 607832.3128
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 2
+    value: 106420.9244
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 164519.0588
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: negative
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 2543345.761
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: 473887.961
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 6
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 1982883.949
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 8
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 829695.8521
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 12826.49831
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 8
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 154592.7736
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 128264.9831
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 73259.65428
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: negative
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 1064209.244
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 13650.07807
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 8
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 13650.07807
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 10
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 3262.22201
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: 882969.9955
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: 270665.207
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 2
+    value: 3065395.295
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 73259.65428
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 6
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 2
+    value: 445295.851
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 22456.97996
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 8
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 2
+    value: 211020.3429
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: 4738.87961
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 8
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 2
+    value: 93966.48315
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 6
+    value: 198288.3949
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 10
+    value: 6883.95207
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 2
+    value: 60783.23128
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 16451.90588
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 9
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 0
+    value: 175082.7032
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: 100000
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 882969.9955
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 4
+    value: 120526.0937
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: 7325.965428
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 3262.22201
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 3
+    value: 1452653.926
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 7
+    value: negative
+- attributes:
+    subtype: B
+  measurements:
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 1
+    value: 93966.48315
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 5
+    value: negative
+  - analyte: nasal_discharge_influenza_gc_per_mL
+    time: 9
+    value: 6883.95207

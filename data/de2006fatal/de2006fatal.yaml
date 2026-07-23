@@ -1,0 +1,118 @@
+title: Fatal outcome of human influenza A (H5N1) is associated with high viral load
+  and hypercytokinemia
+doi: 10.1038/nm1477
+description: Virological and immunological study of patients hospitalized in Ho Chi
+  Minh City (2004–2005) comparing 18 individuals with influenza A(H5N1) (13 fatal,
+  5 non-fatal) and 8 patients with human influenza (H3N2/H1N1). Pharyngeal (throat)
+  and nasal swabs, rectal swabs and blood were collected; viral RNA was quantified
+  by real-time PCR targeting a conserved region of the influenza A matrix gene (results
+  expressed as cDNA copies per ml of viral transport medium). The study reports higher
+  pharyngeal viral loads and frequent detection of viral RNA in blood and rectum in
+  H5N1 cases, and elevated plasma cytokine/chemokine levels that correlated with pharyngeal
+  viral load.
+analytes:
+  nasopharyngeal_swab_influenza_gc_per_mL:
+    description: Quantitative real-time PCR detection of influenza A viral RNA (matrix
+      gene) in nasal swab specimens (viral transport medium). Values reported as copies
+      per ml of viral transport medium.
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    gene_target: matrix gene
+    limit_of_detection: 1000
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  oropharyngeal_swab_influenza_gc_per_mL:
+    description: Quantitative real-time PCR detection of influenza A viral RNA (matrix
+      gene) in throat (pharyngeal) swab specimens (viral transport medium). Values
+      reported as copies per ml of viral transport medium.
+    specimen: oropharyngeal_swab
+    biomarker: influenza
+    gene_target: matrix gene
+    limit_of_detection: 1000
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  tracheal_aspirate_influenza_gc_per_mL:
+    description: Quantitative real-time PCR detection of influenza A viral RNA (matrix
+      gene) in tracheal aspirate specimens. Values reported as copies per ml of specimen.
+    specimen: tracheal_aspirate
+    biomarker: influenza
+    gene_target: matrix gene
+    limit_of_detection: 1000
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    subtype: A(H5N1)
+  measurements:
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 6
+    value: 9875189.87
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 11
+    value: 142808.2334
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 13
+    value: negative
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 14
+    value: negative
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 5
+    value: 51918803.5
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 8
+    value: 112423.5106
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 9
+    value: 813073.6189
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 11
+    value: 119352.4034
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 14
+    value: 797088.4084
+  - analyte: tracheal_aspirate_influenza_gc_per_mL
+    time: 11
+    value: 124842839
+  - analyte: tracheal_aspirate_influenza_gc_per_mL
+    time: 12
+    value: 28551988.74
+  - analyte: tracheal_aspirate_influenza_gc_per_mL
+    time: 13
+    value: 5707784.036
+  - analyte: tracheal_aspirate_influenza_gc_per_mL
+    time: 15
+    value: 133188.7468
+- attributes:
+    subtype: A(H5N1)
+  measurements:
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 6
+    value: 31980.55479
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 9
+    value: negative
+  - analyte: nasopharyngeal_swab_influenza_gc_per_mL
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 6
+    value: 50156.32789
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 9
+    value: negative
+  - analyte: oropharyngeal_swab_influenza_gc_per_mL
+    time: 12
+    value: negative
+  - analyte: tracheal_aspirate_influenza_gc_per_mL
+    time: 9
+    value: 129047.3782
+  - analyte: tracheal_aspirate_influenza_gc_per_mL
+    time: 12
+    value: 75200.63336

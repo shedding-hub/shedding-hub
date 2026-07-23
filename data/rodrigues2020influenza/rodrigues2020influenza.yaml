@@ -1,0 +1,187 @@
+title: Influenza A(H1N1)pdm09 infection and viral load analysis in patients with different
+  clinical presentations
+doi: 10.1590/0074-02760200009
+description: Study of H1N1pdm09 viral load (VL) in respiratory samples collected 2009-2013
+  at a tertiary hospital in São Paulo, Brazil. Samples from asymptomatic (AS), symptomatic
+  outpatients (OP) and hospitalised patients (HP) were tested by quantitative one-step
+  real-time RT-PCR targeting the M gene; VL reported as Log10 RNA copies/mL in the
+  paper. A subset of 10 hospitalised patients treated with oseltamivir were followed
+  longitudinally and serial VL measurements (days of treatment) are provided (Fig.2
+  / CSV).
+analytes:
+  respiratory_influenza_viral_load:
+    description: Quantitative one-step real-time RT-PCR targeting the influenza M
+      gene. Human RNaseP was used as internal control and Ct values were normalised;
+      viral load expressed as RNA copies per mL (paper reports Log10 RNA copies/mL;
+      CSV measurements are linear copies/mL). Respiratory specimens included nasopharyngeal
+      aspirates (children <2 years) and nasal/oropharyngeal swabs for other patients.
+      Serial measurements in the CSV correspond to days of oseltamivir treatment (Fig.2).
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: influenza
+    gene_target: M gene
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+participants:
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 2
+    value: 31073186.15
+  - analyte: respiratory_influenza_viral_load
+    time: 6
+    value: 2240.029857
+  - analyte: respiratory_influenza_viral_load
+    time: 9
+    value: 126.3347551
+  - analyte: respiratory_influenza_viral_load
+    time: 11
+    value: 314.3850812
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 8
+    value: 192426091.8
+  - analyte: respiratory_influenza_viral_load
+    time: 15
+    value: 95432308.93
+  - analyte: respiratory_influenza_viral_load
+    time: 20
+    value: 31073186.15
+  - analyte: respiratory_influenza_viral_load
+    time: 24
+    value: 2488508.258
+  - analyte: respiratory_influenza_viral_load
+    time: 30
+    value: 4361078.545
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 19019006.08
+  - analyte: respiratory_influenza_viral_load
+    time: 5
+    value: 113720.1866
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 6413669829
+  - analyte: respiratory_influenza_viral_load
+    time: 4
+    value: 88968973.27
+  - analyte: respiratory_influenza_viral_load
+    time: 7
+    value: 1633796.531
+  - analyte: respiratory_influenza_viral_load
+    time: 13
+    value: 839.1853006
+  - analyte: respiratory_influenza_viral_load
+    time: 17
+    value: 1035.686765
+  - analyte: respiratory_influenza_viral_load
+    time: 21
+    value: negative
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 462354.0001
+  - analyte: respiratory_influenza_viral_load
+    time: 3
+    value: 10852579.97
+  - analyte: respiratory_influenza_viral_load
+    time: 6
+    value: negative
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 56398.69247
+  - analyte: respiratory_influenza_viral_load
+    time: 6
+    value: 24310.10317
+  - analyte: respiratory_influenza_viral_load
+    time: 11
+    value: 37027.80081
+  - analyte: respiratory_influenza_viral_load
+    time: 13
+    value: 810269.4068
+  - analyte: respiratory_influenza_viral_load
+    time: 17
+    value: negative
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 10117568.24
+  - analyte: respiratory_influenza_viral_load
+    time: 4
+    value: negative
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 106018.2694
+  - analyte: respiratory_influenza_viral_load
+    time: 9
+    value: negative
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 5574.332799
+  - analyte: respiratory_influenza_viral_load
+    time: 10
+    value: negative
+- attributes:
+    subtype: A(H1N1)pdm09
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: respiratory_influenza_viral_load
+    time: 0
+    value: 19019006.08
+  - analyte: respiratory_influenza_viral_load
+    time: 12
+    value: negative

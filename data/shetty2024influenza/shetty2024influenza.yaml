@@ -1,0 +1,784 @@
+title: Influenza virus infection and aerosol shedding kinetics in a controlled human
+  infection model
+doi: 10.1128/jvi.01612-24
+description: Controlled human infection study (Emory University Hospital, July–September
+  2022) in which eight adults were intranasally inoculated with influenza A/Perth/16/2009
+  (H3N2). Viral shedding was measured in nasopharyngeal swabs, saliva, nasal lavage
+  fluid, stool, urine, exhaled breath aerosols, and environmental surface swabs. Six
+  of eight participants became PCR-positive; infectious virus was measured by plaque
+  assay (MDCK cells) in NP swabs, saliva, and nasal lavage fluid. Respiratory particle
+  emissions were sampled during breathing and speaking and analyzed by ddPCR for viral
+  RNA. Clinical symptom scores and serology (HAI, MN) were also collected.
+analytes:
+  nasopharyngeal_swab_ct:
+    description: Cycle threshold (Ct) values from clinical PCR testing of nasopharyngeal
+      swabs (Xpert Xpress CoV-2/Flu/RSV plus assay; two influenza primer sets). Ct
+      values were obtained from the clinical laboratory.
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: inoculation
+  nasopharyngeal_swab_pfu_ml:
+    description: Infectious virus titer measured by plaque assay on MDCK cells from
+      nasopharyngeal swab specimens (plaque forming units per milliliter).
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+  saliva_pfu_ml:
+    description: Infectious virus titer measured by plaque assay on MDCK cells from
+      saliva specimens (plaque forming units per milliliter).
+    specimen: saliva
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+  nasal_lavage_fluid_pfu_ml:
+    description: Infectious virus titer measured by plaque assay on MDCK cells from
+      nasal lavage fluid specimens (plaque forming units per milliliter).
+    specimen: nasal_lavage_fluid
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+participants:
+- patient_id: F011
+  attributes:
+    sex: female
+    age: 45
+    age_group: adult
+    race: black
+    ethnicity: not hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 26.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 28.1
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 17.1
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 18.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 15.1
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 17.3
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 17.8
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 19.6
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: 25.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: 27.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: 28.1
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: 29.8
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: 35.4
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 2
+    value: 52.69558055
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 3
+    value: 39884.71119
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 4
+    value: 105728.8597
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 5
+    value: 16056.28844
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 4
+    value: 331.2541214
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 8
+    value: negative
+- patient_id: F026
+  attributes:
+    sex: female
+    age: 36
+    age_group: adult
+    race: white
+    ethnicity: not hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 32.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 33.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 23.7
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 26.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 13.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 15.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 22.6
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 24.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: 18.9
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: 20.8
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: 33.1
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: 34.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 3
+    value: 6057.006846
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 4
+    value: 99075.83517
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 5
+    value: 583.6184761
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 6
+    value: 450.0137736
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 17134.48153
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: 2222.154207
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 4
+    value: 12380.60693
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 8
+    value: negative
+- patient_id: F031
+  attributes:
+    sex: female
+    age: 28
+    age_group: adult
+    race: white
+    ethnicity: hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 28.4
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 29.7
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 15.9
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 17.9
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 20.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 21.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 18.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 20.6
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: 19.4
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: 21.6
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: 41.3
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: 36.6
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: 38.4
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 2
+    value: 220.1617839
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 3
+    value: 1845563.669
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 4
+    value: 17134.48153
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 5
+    value: 10187.42715
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 6
+    value: 30754.11442
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 7
+    value: 17.45562824
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 19694.94801
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: 2121.352808
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 4
+    value: 198.7865959
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 8
+    value: negative
+- patient_id: F044
+  attributes:
+    sex: female
+    age: 28
+    age_group: adult
+    race: black
+    ethnicity: not hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 31.6
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 32.8
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 27.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: 29.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 19.6
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 21.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 23.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 24.9
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 3
+    value: 285.5256713
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 4
+    value: 4984.02997
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 9.284145445
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 4
+    value: 45.00137736
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 8
+    value: 157.6088663
+- patient_id: F007
+  attributes:
+    sex: male
+    age: 35
+    age_group: adult
+    race: asian
+    ethnicity: not hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 33.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: 36.2
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 34.8
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 36.8
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 25
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: 26.5
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: 37.8
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 5
+    value: 49.37969318
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: 5.077444223
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: 10.18742715
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 4
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 8
+    value: negative
+- patient_id: F039
+  attributes:
+    sex: female
+    age: 35
+    age_group: adult
+    race: black
+    ethnicity: not hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 29
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: 30.4
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 14.76912747
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 4
+    value: negative
+  - analyte: nasal_lavage_fluid_pfu_ml
+    time: 8
+    value: negative
+- patient_id: F010
+  attributes:
+    sex: female
+    age: 36
+    age_group: adult
+    race: white
+    ethnicity: not hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+- patient_id: F032
+  attributes:
+    sex: female
+    age: 20
+    age_group: adult
+    race: white
+    ethnicity: not hispanic
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 0
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_swab_ct
+    time: 8
+    value: negative

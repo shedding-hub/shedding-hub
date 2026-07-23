@@ -8,7 +8,7 @@ description: This study conducted a survey of hepatitis A virus (HAV) and hepati
   load and genotype, as well as measuring bilirubin levels. The reference event for
   the measurements was symptom onset or diagnosis.
 analytes:
-  stool_hav_viral_load:
+  stool_HAV_viral_load:
     description: HAV viral load measured in stool samples using log copy number per
       gram
     specimen: stool
@@ -21,288 +21,288 @@ participants:
 - attributes:
     age: 9
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 7
     value: 63095.73444801933
 - attributes:
     age: 5.5
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 2
     value: 2511886.43150958
 - attributes:
     age: 15
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 1584893.192461114
 - attributes:
     age: 6
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 12589254.117941663
 - attributes:
     age: 4
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 6
     value: 251188.64315095823
 - attributes:
     age: 12
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 3
     value: 3981071.705534969
 - attributes:
     age: 5
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 7
     value: 1258925.4117941663
 - attributes:
     age: 14
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 6
     value: 1258925.4117941663
 - attributes:
     age: 14
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 4
     value: 79432.82347242821
 - attributes:
     age: 11
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 4
     value: 398107.1705534969
 - attributes:
     age: 2
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 4
     value: 501187.2336272725
 - attributes:
     age: 2
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 2
     value: 316227.7660168379
 - attributes:
     age: 10
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 125892.54117941674
 - attributes:
     age: 3
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 5
     value: 1258925.4117941663
 - attributes:
     age: 5
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 15848931.924611142
 - attributes:
     age: 4.5
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 3981071.705534969
 - attributes:
     age: 4
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 630957.344480193
 - attributes:
     age: 4
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 7
     value: 316227.7660168379
 - attributes:
     age: 6
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 2
     value: 1584893.192461114
 - attributes:
     age: 8
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 5
     value: 794328.2347242822
 - attributes:
     age: 2
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 8
     value: 100000
 - attributes:
     age: 2
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 501187.2336272725
 - attributes:
     age: 3
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 10
     value: 63095.73444801933
 - attributes:
     age: 3
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 7
     value: 630957.344480193
 - attributes:
     age: 3
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 1
     value: 501187.2336272725
 - attributes:
     age: 6
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 6
     value: 50118.72336272725
 - attributes:
     age: 4
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 7
     value: 1995262.3149688796
 - attributes:
     age: 4
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 4
     value: 398107.1705534969
 - attributes:
     age: 9
     age_group: child
-    genotype: negative
+    genotype: unknown
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 4
     value: negative
 - attributes:
     age: 12
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 8
     value: 31622.776601683792
 - attributes:
     age: 1.5
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 10
     value: 39810.71705534969
 - attributes:
     age: 6
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 2
     value: 398107.1705534969
 - attributes:
     age: 3
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 5
     value: 199526.23149688786
 - attributes:
     age: 3
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 2
     value: 794328.2347242822
 - attributes:
     age: 3
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 3
     value: 1258925.4117941663
 - attributes:
     age: 2
     age_group: child
-    genotype: ib
+    genotype: IB
   measurements:
-  - analyte: stool_hav_viral_load
+  - analyte: stool_HAV_viral_load
     time: 3
     value: 1000000.0

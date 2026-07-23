@@ -1,0 +1,1590 @@
+title: 'Presymptomatic viral shedding in high-risk mpox contacts: A prospective cohort
+  study'
+doi: 10.1002/jmv.28769
+description: Prospective cohort of 25 high-risk contacts of clade IIb monkeypox virus
+  (MPXV) cases recruited in Antwerp, Belgium (June 24–July 31, 2022). Participants
+  performed daily self-sampling (anorectal, genital, saliva) and attended weekly clinic
+  visits (blood, oropharyngeal, etc.). Samples were tested by an in‑house MPXV PCR
+  (targeting the MPXV-TNF receptor gene) on an Applied Biosystems QuantStudio. Study
+  documents presymptomatic MPXV DNA detection (Ct values) and culture of replication-competent
+  virus from presymptomatic anorectal samples.
+analytes:
+  serum:
+    description: 'MPXV detected by in-house real-time PCR targeting the MPXV-TNF receptor
+      gene run on an Applied Biosystems QuantStudio (cycle threshold values reported).
+      Specimen: serum collected at clinic visits.'
+    specimen: serum
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: 37
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: exposure
+  saliva:
+    description: 'MPXV detected by in-house real-time PCR targeting the MPXV-TNF receptor
+      gene run on an Applied Biosystems QuantStudio (cycle threshold values reported).
+      Specimen: self-collected saliva.'
+    specimen: saliva
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: 37
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: exposure
+  anorectal_swab:
+    description: 'MPXV detected by in-house real-time PCR targeting the MPXV-TNF receptor
+      gene run on an Applied Biosystems QuantStudio (cycle threshold values reported).
+      Specimen: anorectal swab (self-collected).'
+    specimen: anorectal_swab
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: 37
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: exposure
+  oropharyngeal_swab:
+    description: 'MPXV detected by in-house real-time PCR targeting the MPXV-TNF receptor
+      gene run on an Applied Biosystems QuantStudio (cycle threshold values reported).
+      Specimen: oropharyngeal swab collected at clinic visits.'
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: 37
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: exposure
+  genital_swab:
+    description: 'MPXV detected by in-house real-time PCR targeting the MPXV-TNF receptor
+      gene run on an Applied Biosystems QuantStudio (cycle threshold values reported).
+      Specimen: genital swab (skin swab from coronal sulcus for men or vaginal swab
+      for women).'
+    specimen: genital_swab
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: 37
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: exposure
+participants:
+- patient_id: DI_01
+  attributes:
+    symptomatic: true
+  measurements:
+  - analyte: serum
+    time: 4
+    value: negative
+  - analyte: serum
+    time: 8
+    value: negative
+  - analyte: saliva
+    time: 4
+    value: 30.68493151
+  - analyte: saliva
+    time: 5
+    value: 27.12328767
+  - analyte: saliva
+    time: 6
+    value: 27.12328767
+  - analyte: saliva
+    time: 7
+    value: 25.75342466
+  - analyte: saliva
+    time: 8
+    value: 25.47945205
+  - analyte: anorectal_swab
+    time: 4
+    value: 15.89041096
+  - analyte: anorectal_swab
+    time: 5
+    value: 17.26027397
+  - analyte: anorectal_swab
+    time: 6
+    value: 16.71232877
+  - analyte: anorectal_swab
+    time: 7
+    value: 15.89041096
+  - analyte: anorectal_swab
+    time: 8
+    value: 18.35616438
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: 29.5890411
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 23.01369863
+  - analyte: genital_swab
+    time: 4
+    value: 32.60273973
+  - analyte: genital_swab
+    time: 5
+    value: 35.89041096
+  - analyte: genital_swab
+    time: 6
+    value: 30.68493151
+  - analyte: genital_swab
+    time: 7
+    value: 36.43835616
+  - analyte: genital_swab
+    time: 8
+    value: 35.89041096
+- patient_id: DI_02
+  attributes:
+    symptomatic: true
+  measurements:
+  - analyte: serum
+    time: 4
+    value: negative
+  - analyte: serum
+    time: 8
+    value: negative
+  - analyte: serum
+    time: 13
+    value: negative
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 7
+    value: negative
+  - analyte: saliva
+    time: 9
+    value: negative
+  - analyte: saliva
+    time: 10
+    value: negative
+  - analyte: saliva
+    time: 11
+    value: negative
+  - analyte: saliva
+    time: 12
+    value: negative
+  - analyte: saliva
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 4
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: 16.65303619
+  - analyte: anorectal_swab
+    time: 6
+    value: 16.91269679
+  - analyte: anorectal_swab
+    time: 7
+    value: 16.89838479
+  - analyte: anorectal_swab
+    time: 8
+    value: 15.51625434
+  - analyte: anorectal_swab
+    time: 9
+    value: 16.04988755
+  - analyte: anorectal_swab
+    time: 10
+    value: 16.03557555
+  - analyte: anorectal_swab
+    time: 11
+    value: 15.74933551
+  - analyte: anorectal_swab
+    time: 12
+    value: 18.20077694
+  - analyte: anorectal_swab
+    time: 13
+    value: 15.99468411
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: negative
+  - analyte: genital_swab
+    time: 4
+    value: negative
+  - analyte: genital_swab
+    time: 5
+    value: 35.83111838
+  - analyte: genital_swab
+    time: 6
+    value: negative
+  - analyte: genital_swab
+    time: 7
+    value: negative
+  - analyte: genital_swab
+    time: 8
+    value: negative
+  - analyte: genital_swab
+    time: 9
+    value: negative
+  - analyte: genital_swab
+    time: 10
+    value: negative
+  - analyte: genital_swab
+    time: 11
+    value: negative
+  - analyte: genital_swab
+    time: 12
+    value: negative
+  - analyte: genital_swab
+    time: 13
+    value: negative
+- patient_id: DI_03
+  attributes:
+    symptomatic: true
+  measurements:
+  - analyte: serum
+    time: 5
+    value: negative
+  - analyte: serum
+    time: 11
+    value: 35.61643836
+  - analyte: saliva
+    time: 5
+    value: 28.49315068
+  - analyte: saliva
+    time: 11
+    value: 25.47945205
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 24.38356164
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: 35.06849315
+- patient_id: DI_04
+  attributes:
+    vaccinated: true
+    symptomatic: true
+  measurements:
+  - analyte: serum
+    time: 4
+    value: negative
+  - analyte: serum
+    time: 11
+    value: 35.13513514
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 7
+    value: negative
+  - analyte: saliva
+    time: 8
+    value: negative
+  - analyte: saliva
+    time: 9
+    value: negative
+  - analyte: saliva
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 4
+    value: 28.64864865
+  - analyte: anorectal_swab
+    time: 5
+    value: 19.45945946
+  - analyte: anorectal_swab
+    time: 6
+    value: 20
+  - analyte: anorectal_swab
+    time: 7
+    value: 22.43243243
+  - analyte: anorectal_swab
+    time: 8
+    value: 17.56756757
+  - analyte: anorectal_swab
+    time: 9
+    value: 19.45945946
+  - analyte: anorectal_swab
+    time: 10
+    value: 16.75675676
+  - analyte: anorectal_swab
+    time: 11
+    value: 16.21621622
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: genital_swab
+    time: 8
+    value: negative
+  - analyte: genital_swab
+    time: 9
+    value: 32.43243243
+  - analyte: genital_swab
+    time: 10
+    value: negative
+  - analyte: genital_swab
+    time: 11
+    value: 34.86486486
+- patient_id: DI_05
+  attributes:
+    vaccinated: true
+    symptomatic: false
+  measurements:
+  - analyte: serum
+    time: 11
+    value: negative
+  - analyte: serum
+    time: 18
+    value: negative
+  - analyte: serum
+    time: 25
+    value: negative
+  - analyte: saliva
+    time: 12
+    value: negative
+  - analyte: saliva
+    time: 13
+    value: negative
+  - analyte: saliva
+    time: 14
+    value: negative
+  - analyte: saliva
+    time: 15
+    value: negative
+  - analyte: saliva
+    time: 16
+    value: negative
+  - analyte: saliva
+    time: 17
+    value: negative
+  - analyte: saliva
+    time: 18
+    value: negative
+  - analyte: saliva
+    time: 19
+    value: negative
+  - analyte: saliva
+    time: 20
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: saliva
+    time: 22
+    value: negative
+  - analyte: saliva
+    time: 23
+    value: negative
+  - analyte: saliva
+    time: 24
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: anorectal_swab
+    time: 12
+    value: negative
+  - analyte: anorectal_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: anorectal_swab
+    time: 15
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 22
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: anorectal_swab
+    time: 24
+    value: negative
+  - analyte: anorectal_swab
+    time: 25
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 25
+    value: negative
+  - analyte: genital_swab
+    time: 19
+    value: negative
+  - analyte: genital_swab
+    time: 20
+    value: 33.78378378
+  - analyte: genital_swab
+    time: 21
+    value: negative
+  - analyte: genital_swab
+    time: 22
+    value: negative
+- patient_id: PI_01
+  attributes:
+    vaccinated: true
+    symptomatic: false
+  measurements:
+  - analyte: serum
+    time: 4
+    value: negative
+  - analyte: serum
+    time: 11
+    value: negative
+  - analyte: serum
+    time: 19
+    value: negative
+  - analyte: serum
+    time: 25
+    value: negative
+  - analyte: saliva
+    time: 4
+    value: negative
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 7
+    value: 36.43835616
+  - analyte: saliva
+    time: 8
+    value: 36.16438356
+  - analyte: saliva
+    time: 9
+    value: 35.06849315
+  - analyte: saliva
+    time: 10
+    value: negative
+  - analyte: saliva
+    time: 11
+    value: negative
+  - analyte: saliva
+    time: 12
+    value: 36.48648649
+  - analyte: saliva
+    time: 13
+    value: negative
+  - analyte: saliva
+    time: 14
+    value: negative
+  - analyte: saliva
+    time: 15
+    value: negative
+  - analyte: saliva
+    time: 16
+    value: negative
+  - analyte: saliva
+    time: 18
+    value: negative
+  - analyte: saliva
+    time: 20
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: saliva
+    time: 22
+    value: negative
+  - analyte: saliva
+    time: 23
+    value: negative
+  - analyte: saliva
+    time: 24
+    value: negative
+  - analyte: anorectal_swab
+    time: 4
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: negative
+  - analyte: anorectal_swab
+    time: 6
+    value: negative
+  - analyte: anorectal_swab
+    time: 7
+    value: negative
+  - analyte: anorectal_swab
+    time: 8
+    value: 36.16438356
+  - analyte: anorectal_swab
+    time: 9
+    value: negative
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 12
+    value: negative
+  - analyte: anorectal_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 14
+    value: 34.52054795
+  - analyte: anorectal_swab
+    time: 15
+    value: 35.61643836
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 22
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: anorectal_swab
+    time: 24
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 25
+    value: negative
+  - analyte: genital_swab
+    time: 4
+    value: negative
+  - analyte: genital_swab
+    time: 5
+    value: 35.06849315
+  - analyte: genital_swab
+    time: 6
+    value: 35.34246575
+  - analyte: genital_swab
+    time: 7
+    value: 34.79452055
+  - analyte: genital_swab
+    time: 8
+    value: negative
+  - analyte: genital_swab
+    time: 9
+    value: 36.16438356
+  - analyte: genital_swab
+    time: 10
+    value: negative
+  - analyte: genital_swab
+    time: 11
+    value: negative
+  - analyte: genital_swab
+    time: 12
+    value: negative
+  - analyte: genital_swab
+    time: 13
+    value: 35.34246575
+  - analyte: genital_swab
+    time: 14
+    value: 36.43835616
+  - analyte: genital_swab
+    time: 15
+    value: negative
+  - analyte: genital_swab
+    time: 16
+    value: negative
+  - analyte: genital_swab
+    time: 18
+    value: negative
+  - analyte: genital_swab
+    time: 19
+    value: negative
+  - analyte: genital_swab
+    time: 23
+    value: negative
+  - analyte: genital_swab
+    time: 24
+    value: negative
+  - analyte: genital_swab
+    time: 25
+    value: negative
+- patient_id: PI_02
+  attributes:
+    vaccinated: true
+    symptomatic: false
+  measurements:
+  - analyte: serum
+    time: 17
+    value: negative
+  - analyte: serum
+    time: 25
+    value: negative
+  - analyte: serum
+    time: 32
+    value: negative
+  - analyte: serum
+    time: 39
+    value: negative
+  - analyte: saliva
+    time: 18
+    value: negative
+  - analyte: saliva
+    time: 19
+    value: negative
+  - analyte: saliva
+    time: 20
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: saliva
+    time: 22
+    value: negative
+  - analyte: saliva
+    time: 23
+    value: negative
+  - analyte: saliva
+    time: 24
+    value: negative
+  - analyte: saliva
+    time: 25
+    value: negative
+  - analyte: saliva
+    time: 26
+    value: negative
+  - analyte: saliva
+    time: 27
+    value: negative
+  - analyte: saliva
+    time: 28
+    value: negative
+  - analyte: saliva
+    time: 29
+    value: negative
+  - analyte: saliva
+    time: 30
+    value: negative
+  - analyte: saliva
+    time: 31
+    value: 33.95621122
+  - analyte: saliva
+    time: 32
+    value: negative
+  - analyte: saliva
+    time: 33
+    value: negative
+  - analyte: saliva
+    time: 34
+    value: negative
+  - analyte: saliva
+    time: 35
+    value: negative
+  - analyte: saliva
+    time: 36
+    value: negative
+  - analyte: saliva
+    time: 37
+    value: negative
+  - analyte: saliva
+    time: 38
+    value: negative
+  - analyte: saliva
+    time: 39
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 22
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: anorectal_swab
+    time: 24
+    value: negative
+  - analyte: anorectal_swab
+    time: 25
+    value: negative
+  - analyte: anorectal_swab
+    time: 26
+    value: negative
+  - analyte: anorectal_swab
+    time: 27
+    value: negative
+  - analyte: anorectal_swab
+    time: 28
+    value: negative
+  - analyte: anorectal_swab
+    time: 29
+    value: negative
+  - analyte: anorectal_swab
+    time: 30
+    value: negative
+  - analyte: anorectal_swab
+    time: 31
+    value: negative
+  - analyte: anorectal_swab
+    time: 32
+    value: negative
+  - analyte: anorectal_swab
+    time: 33
+    value: negative
+  - analyte: anorectal_swab
+    time: 34
+    value: negative
+  - analyte: anorectal_swab
+    time: 35
+    value: negative
+  - analyte: anorectal_swab
+    time: 36
+    value: negative
+  - analyte: anorectal_swab
+    time: 37
+    value: negative
+  - analyte: anorectal_swab
+    time: 38
+    value: negative
+  - analyte: anorectal_swab
+    time: 39
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 25
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 32
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 39
+    value: negative
+  - analyte: genital_swab
+    time: 23
+    value: negative
+  - analyte: genital_swab
+    time: 24
+    value: negative
+  - analyte: genital_swab
+    time: 25
+    value: negative
+  - analyte: genital_swab
+    time: 26
+    value: negative
+  - analyte: genital_swab
+    time: 27
+    value: negative
+  - analyte: genital_swab
+    time: 28
+    value: negative
+  - analyte: genital_swab
+    time: 29
+    value: negative
+  - analyte: genital_swab
+    time: 30
+    value: negative
+  - analyte: genital_swab
+    time: 31
+    value: 35.05210163
+  - analyte: genital_swab
+    time: 32
+    value: negative
+  - analyte: genital_swab
+    time: 33
+    value: negative
+  - analyte: genital_swab
+    time: 34
+    value: negative
+  - analyte: genital_swab
+    time: 35
+    value: negative
+  - analyte: genital_swab
+    time: 36
+    value: negative
+  - analyte: genital_swab
+    time: 37
+    value: negative
+  - analyte: genital_swab
+    time: 38
+    value: negative
+  - analyte: genital_swab
+    time: 39
+    value: negative
+- patient_id: PI_03
+  attributes:
+    vaccinated: true
+    symptomatic: false
+    participant_type: contact
+  measurements:
+  - analyte: serum
+    time: 2
+    value: negative
+  - analyte: serum
+    time: 9
+    value: negative
+  - analyte: serum
+    time: 15
+    value: negative
+  - analyte: serum
+    time: 23
+    value: negative
+  - analyte: saliva
+    time: 2
+    value: 36.43835616
+  - analyte: saliva
+    time: 3
+    value: negative
+  - analyte: saliva
+    time: 4
+    value: negative
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 7
+    value: negative
+  - analyte: saliva
+    time: 8
+    value: negative
+  - analyte: saliva
+    time: 9
+    value: negative
+  - analyte: saliva
+    time: 10
+    value: negative
+  - analyte: saliva
+    time: 11
+    value: negative
+  - analyte: saliva
+    time: 12
+    value: negative
+  - analyte: saliva
+    time: 13
+    value: negative
+  - analyte: saliva
+    time: 16
+    value: negative
+  - analyte: saliva
+    time: 17
+    value: negative
+  - analyte: saliva
+    time: 18
+    value: negative
+  - analyte: saliva
+    time: 19
+    value: negative
+  - analyte: saliva
+    time: 20
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: saliva
+    time: 22
+    value: negative
+  - analyte: saliva
+    time: 23
+    value: negative
+  - analyte: genital_swab
+    time: 5
+    value: negative
+  - analyte: genital_swab
+    time: 6
+    value: negative
+  - analyte: genital_swab
+    time: 7
+    value: negative
+  - analyte: anorectal_swab
+    time: 3
+    value: negative
+  - analyte: anorectal_swab
+    time: 4
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: negative
+  - analyte: anorectal_swab
+    time: 6
+    value: negative
+  - analyte: anorectal_swab
+    time: 7
+    value: negative
+  - analyte: anorectal_swab
+    time: 8
+    value: negative
+  - analyte: anorectal_swab
+    time: 9
+    value: negative
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: anorectal_swab
+    time: 12
+    value: negative
+  - analyte: anorectal_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 22
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 23
+    value: negative
+- patient_id: PI_04
+  attributes:
+    symptomatic: false
+  measurements:
+  - analyte: serum
+    time: 1
+    value: negative
+  - analyte: serum
+    time: 13
+    value: negative
+  - analyte: serum
+    time: 22
+    value: negative
+  - analyte: saliva
+    time: 2
+    value: negative
+  - analyte: saliva
+    time: 3
+    value: negative
+  - analyte: saliva
+    time: 4
+    value: negative
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 7
+    value: negative
+  - analyte: saliva
+    time: 8
+    value: negative
+  - analyte: saliva
+    time: 13
+    value: negative
+  - analyte: saliva
+    time: 14
+    value: negative
+  - analyte: saliva
+    time: 15
+    value: negative
+  - analyte: saliva
+    time: 16
+    value: negative
+  - analyte: saliva
+    time: 17
+    value: negative
+  - analyte: saliva
+    time: 18
+    value: negative
+  - analyte: saliva
+    time: 19
+    value: negative
+  - analyte: saliva
+    time: 20
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 1
+    value: negative
+  - analyte: anorectal_swab
+    time: 2
+    value: negative
+  - analyte: anorectal_swab
+    time: 3
+    value: negative
+  - analyte: anorectal_swab
+    time: 4
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: negative
+  - analyte: anorectal_swab
+    time: 6
+    value: negative
+  - analyte: anorectal_swab
+    time: 7
+    value: negative
+  - analyte: anorectal_swab
+    time: 8
+    value: negative
+  - analyte: anorectal_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: anorectal_swab
+    time: 15
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 1
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: genital_swab
+    time: 1
+    value: negative
+  - analyte: genital_swab
+    time: 2
+    value: negative
+  - analyte: genital_swab
+    time: 3
+    value: negative
+  - analyte: genital_swab
+    time: 4
+    value: negative
+  - analyte: genital_swab
+    time: 5
+    value: 35.34246575
+  - analyte: genital_swab
+    time: 6
+    value: negative
+  - analyte: genital_swab
+    time: 7
+    value: negative
+  - analyte: genital_swab
+    time: 8
+    value: negative
+  - analyte: genital_swab
+    time: 17
+    value: negative
+  - analyte: genital_swab
+    time: 18
+    value: negative
+  - analyte: genital_swab
+    time: 19
+    value: negative
+  - analyte: genital_swab
+    time: 20
+    value: negative
+  - analyte: genital_swab
+    time: 21
+    value: negative
+- patient_id: UI_01
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: serum
+    time: 4
+    value: negative
+  - analyte: serum
+    time: 12
+    value: negative
+  - analyte: serum
+    time: 20
+    value: negative
+  - analyte: serum
+    time: 26
+    value: negative
+  - analyte: saliva
+    time: 4
+    value: negative
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 8
+    value: negative
+  - analyte: saliva
+    time: 9
+    value: negative
+  - analyte: saliva
+    time: 10
+    value: negative
+  - analyte: saliva
+    time: 11
+    value: negative
+  - analyte: saliva
+    time: 13
+    value: negative
+  - analyte: saliva
+    time: 14
+    value: negative
+  - analyte: saliva
+    time: 15
+    value: negative
+  - analyte: saliva
+    time: 16
+    value: negative
+  - analyte: saliva
+    time: 17
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: saliva
+    time: 22
+    value: negative
+  - analyte: saliva
+    time: 23
+    value: negative
+  - analyte: saliva
+    time: 24
+    value: negative
+  - analyte: saliva
+    time: 25
+    value: negative
+  - analyte: saliva
+    time: 26
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: negative
+  - analyte: anorectal_swab
+    time: 6
+    value: negative
+  - analyte: anorectal_swab
+    time: 8
+    value: negative
+  - analyte: anorectal_swab
+    time: 9
+    value: negative
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: anorectal_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: anorectal_swab
+    time: 15
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 22
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: anorectal_swab
+    time: 24
+    value: negative
+  - analyte: anorectal_swab
+    time: 25
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 20
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 26
+    value: negative
+  - analyte: genital_swab
+    time: 21
+    value: negative
+  - analyte: genital_swab
+    time: 22
+    value: negative
+  - analyte: genital_swab
+    time: 23
+    value: negative
+  - analyte: genital_swab
+    time: 24
+    value: negative
+  - analyte: genital_swab
+    time: 25
+    value: negative
+- patient_id: UI_02
+  measurements:
+  - analyte: serum
+    time: 1
+    value: negative
+  - analyte: serum
+    time: 8
+    value: negative
+  - analyte: serum
+    time: 15
+    value: negative
+  - analyte: saliva
+    time: 1
+    value: negative
+  - analyte: saliva
+    time: 2
+    value: negative
+  - analyte: saliva
+    time: 3
+    value: negative
+  - analyte: saliva
+    time: 4
+    value: negative
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 7
+    value: negative
+  - analyte: saliva
+    time: 9
+    value: negative
+  - analyte: saliva
+    time: 10
+    value: negative
+  - analyte: saliva
+    time: 11
+    value: negative
+  - analyte: saliva
+    time: 12
+    value: negative
+  - analyte: saliva
+    time: 13
+    value: negative
+  - analyte: saliva
+    time: 15
+    value: negative
+  - analyte: saliva
+    time: 16
+    value: negative
+  - analyte: saliva
+    time: 17
+    value: negative
+  - analyte: saliva
+    time: 18
+    value: negative
+  - analyte: saliva
+    time: 19
+    value: negative
+  - analyte: saliva
+    time: 20
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: saliva
+    time: 22
+    value: negative
+  - analyte: anorectal_swab
+    time: 2
+    value: negative
+  - analyte: anorectal_swab
+    time: 3
+    value: negative
+  - analyte: anorectal_swab
+    time: 4
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: negative
+  - analyte: anorectal_swab
+    time: 6
+    value: negative
+  - analyte: anorectal_swab
+    time: 7
+    value: negative
+  - analyte: anorectal_swab
+    time: 9
+    value: negative
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: anorectal_swab
+    time: 12
+    value: negative
+  - analyte: anorectal_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 22
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 1
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+- patient_id: UI_03
+  attributes:
+    vaccinated: true
+  measurements:
+  - analyte: serum
+    time: 4
+    value: negative
+  - analyte: serum
+    time: 14
+    value: negative
+  - analyte: serum
+    time: 18
+    value: negative
+  - analyte: serum
+    time: 25
+    value: negative
+  - analyte: saliva
+    time: 5
+    value: negative
+  - analyte: saliva
+    time: 6
+    value: negative
+  - analyte: saliva
+    time: 7
+    value: negative
+  - analyte: saliva
+    time: 8
+    value: negative
+  - analyte: saliva
+    time: 9
+    value: negative
+  - analyte: saliva
+    time: 10
+    value: negative
+  - analyte: saliva
+    time: 11
+    value: negative
+  - analyte: saliva
+    time: 15
+    value: negative
+  - analyte: saliva
+    time: 16
+    value: negative
+  - analyte: saliva
+    time: 17
+    value: negative
+  - analyte: saliva
+    time: 19
+    value: negative
+  - analyte: saliva
+    time: 20
+    value: negative
+  - analyte: saliva
+    time: 21
+    value: negative
+  - analyte: saliva
+    time: 22
+    value: negative
+  - analyte: saliva
+    time: 23
+    value: negative
+  - analyte: saliva
+    time: 24
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: negative
+  - analyte: anorectal_swab
+    time: 6
+    value: negative
+  - analyte: anorectal_swab
+    time: 7
+    value: negative
+  - analyte: anorectal_swab
+    time: 8
+    value: negative
+  - analyte: anorectal_swab
+    time: 9
+    value: negative
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: anorectal_swab
+    time: 15
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: anorectal_swab
+    time: 22
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: anorectal_swab
+    time: 24
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 25
+    value: negative

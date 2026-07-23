@@ -1,0 +1,1756 @@
+title: Effective Aerosol Inoculation of Dose-Escalated Seasonal Influenza H3N2 Virus
+  in Controlled Human Infection Model
+doi: 10.1101/2025.07.23.25332064
+description: Dose-escalation controlled human infection study (Feb 2024–Mar 2025)
+  evaluating aerosolized inoculation of influenza A/Perth/16/2009 (H3N2) using two
+  devices (FMAG and a medical nebulizer) in 14 healthy adults (aged 18–49). Participants
+  were challenged in an inpatient unit and monitored daily; molecular (qPCR) and infectious
+  (plaque assay) viral loads were measured at multiple upper airway sites (nasopharynx,
+  anterior nares, buccal, oropharynx, saliva). Study assessed viral shedding kinetics,
+  symptom development (MMID), safety, and seroconversion.
+analytes:
+  nasopharyngeal_gc_ml:
+    description: Quantitative molecular detection of influenza viral RNA from nasopharyngeal
+      swab samples by RT-PCR, reported as gene copies per mL (gc/mL).
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: 501.1872
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: inoculation
+  anterior_nasal_gc_ml:
+    description: Quantitative molecular detection of influenza viral RNA from anterior
+      nasal (anterior nares) swab samples by RT-PCR, reported as gene copies per mL
+      (gc/mL).
+    specimen: anterior_nares_swab
+    biomarker: influenza
+    limit_of_detection: 501.1872
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: inoculation
+  buccal_gc_ml:
+    description: Quantitative molecular detection of influenza viral RNA from buccal
+      swab samples (inner cheek) by RT-PCR, reported as gene copies per mL (gc/mL).
+    specimen: buccal_swab
+    biomarker: influenza
+    limit_of_detection: 501.1872
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: inoculation
+  oropharyngeal_gc_ml:
+    description: Quantitative molecular detection of influenza viral RNA from oropharyngeal
+      swab samples by RT-PCR, reported as gene copies per mL (gc/mL).
+    specimen: oropharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: 501.1872
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: inoculation
+  saliva_gc_ml:
+    description: Quantitative molecular detection of influenza viral RNA from saliva
+      samples by RT-PCR, reported as gene copies per mL (gc/mL).
+    specimen: saliva
+    biomarker: influenza
+    limit_of_detection: 501.1872
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: inoculation
+  nasopharyngeal_pfu_ml:
+    description: Infectious virus quantification by plaque assay from nasopharyngeal
+      swab samples, reported as plaque-forming units per mL (pfu/mL).
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: 5
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+  anterior_nasal_pfu_ml:
+    description: Infectious virus quantification by plaque assay from anterior nasal
+      (anterior nares) swab samples, reported as plaque-forming units per mL (pfu/mL).
+    specimen: anterior_nares_swab
+    biomarker: influenza
+    limit_of_detection: 5
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+  buccal_pfu_ml:
+    description: Infectious virus quantification by plaque assay from buccal swab
+      samples, reported as plaque-forming units per mL (pfu/mL).
+    specimen: buccal_swab
+    biomarker: influenza
+    limit_of_detection: 5
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+  oropharyngeal_pfu_ml:
+    description: Infectious virus quantification by plaque assay from oropharyngeal
+      swab samples, reported as plaque-forming units per mL (pfu/mL).
+    specimen: oropharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: 5
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+  saliva_pfu_ml:
+    description: Infectious virus quantification by plaque assay from saliva samples,
+      reported as plaque-forming units per mL (pfu/mL).
+    specimen: saliva
+    biomarker: influenza
+    limit_of_detection: 5
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+  nasopharyngeal_ct:
+    description: 'RT-PCR cycle threshold (Ct) values from nasopharyngeal swab samples
+      for influenza viral detection (unit: cycle threshold).'
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: inoculation
+participants:
+- patient_id: F078
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: 1023292.992
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: 263026.7992
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: 16982436.52
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: 12589254.12
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: 3890451.45
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: 2398.832919
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: 4365.158322
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: 234422.8815
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: 1202264.435
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: 371535.2291
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: 4073802.778
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 5
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 6
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: 2344.228815
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: 33113.11215
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: 4786300.923
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: 3715.352291
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: 263026.7992
+  - analyte: saliva_gc_ml
+    time: 2
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 3
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 4
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 5
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 6
+    value: 5248.074602
+  - analyte: saliva_gc_ml
+    time: 7
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 5
+    value: 173.78
+  - analyte: nasopharyngeal_pfu_ml
+    time: 6
+    value: 6456.54
+  - analyte: nasopharyngeal_pfu_ml
+    time: 7
+    value: 2137.96
+  - analyte: nasopharyngeal_pfu_ml
+    time: 8
+    value: 100.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 5
+    value: 114.82
+  - analyte: anterior_nasal_pfu_ml
+    time: 6
+    value: 1348.96
+  - analyte: anterior_nasal_pfu_ml
+    time: 7
+    value: 158.49
+  - analyte: anterior_nasal_pfu_ml
+    time: 8
+    value: 14791.08
+  - analyte: buccal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 4
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 4
+    value: 19.95
+  - analyte: oropharyngeal_pfu_ml
+    time: 5
+    value: 144.54
+  - analyte: oropharyngeal_pfu_ml
+    time: 6
+    value: 25703.96
+  - analyte: oropharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 8
+    value: 263.03
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 3
+    value: 28.2
+  - analyte: nasopharyngeal_ct
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 5
+    value: 26.4
+  - analyte: nasopharyngeal_ct
+    time: 6
+    value: 19.9
+  - analyte: nasopharyngeal_ct
+    time: 7
+    value: 21.5
+  - analyte: nasopharyngeal_ct
+    time: 8
+    value: 20.4
+- patient_id: F097
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: 870.96359
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: 5128613.84
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: 11748975.55
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: 7244359.601
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: 707.9457844
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: 4466.835922
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: 3981.071706
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: 3890.45145
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: 9772372.21
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: 398107.1706
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: 58884.36554
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: 158489.3192
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: 61659.50019
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: 15488.16619
+  - analyte: buccal_gc_ml
+    time: 5
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 6
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: 1412.537545
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: 275422.8703
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: 2754228.703
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 2
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 3
+    value: 25118.86432
+  - analyte: saliva_gc_ml
+    time: 4
+    value: 9120108.394
+  - analyte: saliva_gc_ml
+    time: 5
+    value: 380.1893963
+  - analyte: saliva_gc_ml
+    time: 6
+    value: 25703.95783
+  - analyte: saliva_gc_ml
+    time: 7
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 2
+    value: 5.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 3
+    value: 50000.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 4
+    value: 150000.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 5
+    value: 60.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 3
+    value: 42.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 4
+    value: 250000.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 5
+    value: 1300.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 4
+    value: 20.0
+  - analyte: buccal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 4
+    value: 1500.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 6
+    value: 2300.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 15.0
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: 9600.0
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 2
+    value: 35.2
+  - analyte: nasopharyngeal_ct
+    time: 3
+    value: 19.2
+  - analyte: nasopharyngeal_ct
+    time: 4
+    value: 20.7
+  - analyte: nasopharyngeal_ct
+    time: 5
+    value: 21.4
+  - analyte: nasopharyngeal_ct
+    time: 6
+    value: 33.4
+  - analyte: nasopharyngeal_ct
+    time: 7
+    value: 40.0
+  - analyte: nasopharyngeal_ct
+    time: 8
+    value: 31.8
+- patient_id: F102
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: 457088.1896
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: 30199517.2
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: 478630092.3
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: 7244359.601
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: 29512092.27
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: 933254.3008
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: 8128.305162
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: 12589.25412
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: 436515.8322
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: 7585775.75
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: 186208.7137
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: 41686.93835
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: 9549.92586
+  - analyte: buccal_gc_ml
+    time: 5
+    value: 870.96359
+  - analyte: buccal_gc_ml
+    time: 6
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: 14791.08388
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: 1122018.454
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: 131825.6739
+  - analyte: saliva_gc_ml
+    time: 2
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 3
+    value: 8709.6359
+  - analyte: saliva_gc_ml
+    time: 4
+    value: 295120.9227
+  - analyte: saliva_gc_ml
+    time: 5
+    value: 18197.00859
+  - analyte: saliva_gc_ml
+    time: 6
+    value: 72443.59601
+  - analyte: saliva_gc_ml
+    time: 7
+    value: 2238.721139
+  - analyte: saliva_gc_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 3
+    value: 134.9
+  - analyte: nasopharyngeal_pfu_ml
+    time: 4
+    value: 263026.8
+  - analyte: nasopharyngeal_pfu_ml
+    time: 5
+    value: 2398832.92
+  - analyte: nasopharyngeal_pfu_ml
+    time: 6
+    value: 2691.53
+  - analyte: nasopharyngeal_pfu_ml
+    time: 7
+    value: 109.65
+  - analyte: nasopharyngeal_pfu_ml
+    time: 8
+    value: 54.95
+  - analyte: anterior_nasal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 3
+    value: 14.79
+  - analyte: anterior_nasal_pfu_ml
+    time: 4
+    value: 169.82
+  - analyte: anterior_nasal_pfu_ml
+    time: 5
+    value: 2290.87
+  - analyte: anterior_nasal_pfu_ml
+    time: 6
+    value: 147910.84
+  - analyte: anterior_nasal_pfu_ml
+    time: 7
+    value: 302.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 8
+    value: 48.98
+  - analyte: buccal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 4
+    value: 34.67
+  - analyte: buccal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 4
+    value: 229.09
+  - analyte: oropharyngeal_pfu_ml
+    time: 5
+    value: 11481.54
+  - analyte: oropharyngeal_pfu_ml
+    time: 6
+    value: 4.9
+  - analyte: oropharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 8
+    value: 44.67
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 245.47
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: 12882.5
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: 354.81
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: 100.0
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: 48.98
+  - analyte: saliva_pfu_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 3
+    value: 23.4
+  - analyte: nasopharyngeal_ct
+    time: 4
+    value: 18.6
+  - analyte: nasopharyngeal_ct
+    time: 5
+    value: 13.5
+  - analyte: nasopharyngeal_ct
+    time: 6
+    value: 19.9
+  - analyte: nasopharyngeal_ct
+    time: 7
+    value: 21.4
+  - analyte: nasopharyngeal_ct
+    time: 8
+    value: 24.3
+- patient_id: F107
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: 43651.58322
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: 389045.145
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: 10000000
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: 933254.3008
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: 12302687.71
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: 56234.13252
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: 5128613.84
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: 100000
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: 1621.810097
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: 8317.637711
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: 1174.897555
+  - analyte: buccal_gc_ml
+    time: 5
+    value: 1071.519305
+  - analyte: buccal_gc_ml
+    time: 6
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: 5248.074602
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: 8912.509381
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: 616.5950019
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: 4677.351413
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: 18197.00859
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 2
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 3
+    value: 263026.7992
+  - analyte: saliva_gc_ml
+    time: 4
+    value: 117489.7555
+  - analyte: saliva_gc_ml
+    time: 5
+    value: 12882495.52
+  - analyte: saliva_gc_ml
+    time: 6
+    value: 6456.54229
+  - analyte: saliva_gc_ml
+    time: 7
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 4
+    value: 100.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 5
+    value: 6750.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 6
+    value: 24500.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 7
+    value: 195.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 8
+    value: 9000.01
+  - analyte: anterior_nasal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 4
+    value: 130.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 5
+    value: 104999.93
+  - analyte: anterior_nasal_pfu_ml
+    time: 6
+    value: 95.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: buccal_pfu_ml
+    time: 5
+    value: 10.0
+  - analyte: buccal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 3
+    value: 120.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 4
+    value: 155.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 5
+    value: 30.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 6
+    value: 65.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 7
+    value: 165.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 2000.0
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: 550.0
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: 80000.0
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: 10.0
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 4
+    value: 28.2
+  - analyte: nasopharyngeal_ct
+    time: 5
+    value: 27.3
+  - analyte: nasopharyngeal_ct
+    time: 6
+    value: 23.3
+  - analyte: nasopharyngeal_ct
+    time: 7
+    value: 27.7
+  - analyte: nasopharyngeal_ct
+    time: 8
+    value: 20
+- patient_id: F113
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: false
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 5
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 6
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: 398.1071706
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 2
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 3
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 4
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 5
+    value: 4168.693835
+  - analyte: saliva_gc_ml
+    time: 6
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 7
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 8
+    value: negative
+- patient_id: F115
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: 114815.3621
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: 54954087.39
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: 81283.05162
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: 1023292.992
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: 1819.700859
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: 562341.3252
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: 6606934.48
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: 363078.0548
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: 56234.13252
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 5
+    value: 2137.96209
+  - analyte: buccal_gc_ml
+    time: 6
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: 301995.172
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: 40738027.78
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: 6165.950019
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: 3715.352291
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: 5888.436554
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 2
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 3
+    value: 19952.62315
+  - analyte: saliva_gc_ml
+    time: 4
+    value: 239883.2919
+  - analyte: saliva_gc_ml
+    time: 5
+    value: 9332.543008
+  - analyte: saliva_gc_ml
+    time: 6
+    value: 15135.61248
+  - analyte: saliva_gc_ml
+    time: 7
+    value: 17782.7941
+  - analyte: saliva_gc_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 3
+    value: 11500.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 4
+    value: 2399999.99
+  - analyte: nasopharyngeal_pfu_ml
+    time: 5
+    value: 20.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 3
+    value: 115000.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 4
+    value: 18000.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 5
+    value: 11000.0
+  - analyte: anterior_nasal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 4
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 3
+    value: 9000.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 4
+    value: 60000.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 5
+    value: 15.0
+  - analyte: oropharyngeal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: 5.0
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: 1300.0
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: 150.0
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 3
+    value: 20.6
+  - analyte: nasopharyngeal_ct
+    time: 4
+    value: 11.3
+  - analyte: nasopharyngeal_ct
+    time: 5
+    value: 20.3
+  - analyte: nasopharyngeal_ct
+    time: 6
+    value: 23.7
+  - analyte: nasopharyngeal_ct
+    time: 7
+    value: 31.7
+  - analyte: nasopharyngeal_ct
+    time: 8
+    value: 33.7
+- patient_id: F120
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: 1513.561248
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: 74131.02413
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: 9549925.86
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: 10715.19305
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: 87096.359
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 5
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 6
+    value: 3890.45145
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: 7244.359601
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: 3388.441561
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: 36307.80548
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 2
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 3
+    value: 1621.810097
+  - analyte: saliva_gc_ml
+    time: 4
+    value: 4677351.413
+  - analyte: saliva_gc_ml
+    time: 5
+    value: 28840315.03
+  - analyte: saliva_gc_ml
+    time: 6
+    value: 436515832.2
+  - analyte: saliva_gc_ml
+    time: 7
+    value: 11748975.55
+  - analyte: saliva_gc_ml
+    time: 8
+    value: 2454708.916
+  - analyte: nasopharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 6
+    value: 85.0
+  - analyte: nasopharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 4
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 4
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: buccal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 5
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 6
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_pfu_ml
+    time: 8
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 2
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 3
+    value: negative
+  - analyte: saliva_pfu_ml
+    time: 4
+    value: 600.0
+  - analyte: saliva_pfu_ml
+    time: 5
+    value: 3000.0
+  - analyte: saliva_pfu_ml
+    time: 6
+    value: 144000.0
+  - analyte: saliva_pfu_ml
+    time: 7
+    value: 300.0
+  - analyte: saliva_pfu_ml
+    time: 8
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_ct
+    time: 3
+    value: 39.6
+  - analyte: nasopharyngeal_ct
+    time: 4
+    value: 28.8
+  - analyte: nasopharyngeal_ct
+    time: 5
+    value: 33.8
+  - analyte: nasopharyngeal_ct
+    time: 6
+    value: 22.4
+  - analyte: nasopharyngeal_ct
+    time: 7
+    value: 35.4
+  - analyte: nasopharyngeal_ct
+    time: 8
+    value: 32.3
+- patient_id: F124
+  attributes:
+    age_group: adult
+    subtype: A(H3N2)
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 5
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 7
+    value: negative
+  - analyte: nasopharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 2
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 3
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 4
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 5
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 6
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 7
+    value: negative
+  - analyte: anterior_nasal_gc_ml
+    time: 8
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 2
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 3
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 4
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 5
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 6
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 7
+    value: negative
+  - analyte: buccal_gc_ml
+    time: 8
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 4
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 5
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 6
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 7
+    value: negative
+  - analyte: oropharyngeal_gc_ml
+    time: 8
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 2
+    value: 3090.295433
+  - analyte: saliva_gc_ml
+    time: 3
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 4
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 5
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 6
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 7
+    value: negative
+  - analyte: saliva_gc_ml
+    time: 8
+    value: negative

@@ -1,0 +1,168 @@
+title: Shedding of pandemic (H1N1) 2009 virus among health care personnel, Seattle,
+  Washington, USA
+doi: 10.3201/eid1704.100866
+description: Outbreak investigation of pandemic (H1N1) 2009 among hospital-associated
+  retreat attendees in Seattle (September 2009). Sixteen health care personnel with
+  laboratory-confirmed infection provided serial self-collected nasal wash specimens
+  (every Mon/Wed/Fri) and symptom logs; specimens were tested by real-time RT-PCR
+  (quantified as RNA copies/mL) and rapid culture. Study evaluated duration of viral
+  RNA detection and culture positivity relative to symptom onset and fever, and found
+  RT-PCR detection lasted longer (3–13 days) than culture (3–10 days). All infected
+  HCP received oseltamivir early in illness.
+analytes:
+  nasal_lavage_influenza_gc_per_mL:
+    description: Real-time RT-PCR quantification of influenza (pandemic H1N1 2009)
+      viral RNA concentration measured in self-collected nasal wash (nasal lavage)
+      specimens. Samples were also tested by rapid culture (culture not quantified).
+      Real-time RT-PCR performed at the University of Washington Virology Laboratory;
+      lower detection limit reported as 3 log10 copies/mL.
+    specimen: nasal_lavage_fluid
+    biomarker: influenza
+    limit_of_detection: 1000
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 3
+    value: 304698.9571
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 3
+    value: 181160.9194
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 2349458.304
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 103783.6719
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 293590.4574
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 7429.639508
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 3
+    value: 5728811.284
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 2025123.964
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 617053.1599
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 1880154.543
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 715877.4949
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 262636.3528
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 1345960.324
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 572881.1284
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 226380.341
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 3
+    value: 243835.4098
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 594557.0709
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 1449740.67
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 928414.5445
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 89456.70617
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 9284.145445
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 7
+    value: 41011.27071
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 8
+    value: 174556.2824
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 9
+    value: 715877.4949
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 380754.6021
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 68977.85379
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 13459.60324
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 253061.3418
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 68977.85379
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 18801.54543
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 7
+    value: 18801.54543
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 8
+    value: 18801.54543
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 9
+    value: 19512.93423
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 10
+    value: 19512.93423
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 11
+    value: 20251.23964
+- measurements:
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 3
+    value: 1811609194
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 4
+    value: 139688704.7
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 5
+    value: 11601553.02
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 6
+    value: 3534981.105
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 7
+    value: 1160155.302
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 8
+    value: 366873.3193
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 9
+    value: 89456.70617
+  - analyte: nasal_lavage_influenza_gc_per_mL
+    time: 10
+    value: 24383.54098

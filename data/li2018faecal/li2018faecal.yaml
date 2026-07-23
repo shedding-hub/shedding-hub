@@ -1,0 +1,479 @@
+title: Faecal shedding of rotavirus vaccine in Chinese children after vaccination
+  with Lanzhou lamb rotavirus vaccine
+doi: 10.1038/s41598-018-19469-w
+description: Prospective post-marketing study of faecal shedding after oral Lanzhou
+  lamb rotavirus vaccine (LLR) in children in China (September–November 2011/2012).
+  114 children provided 1,184 stool samples collected for 15 days post-vaccination.
+  Shedding was assessed by enzyme immunoassay (EIA, Oxoid Prospect ELISA kit, EIA
+  positive threshold OD=0.21) and by real-time RT-PCR targeting the NSP3 gene (quantified
+  by plasmid standard curve). Viral loads in PCR-positive samples ranged from <1.0×10^3
+  to 1.9×10^8 copies/g stool. Reference time for all measurements is days post-vaccination.
+analytes:
+  stool_lanzhou_lamb_rotavirus_vaccine_EIA:
+    description: Enzyme immunoassay (Oxoid Prospect ELISA Kit) detection of rotavirus
+      antigen in stool. Positive threshold defined as OD >= 0.21 (positive control
+      OD 2.5, negative control OD 0.1). Results reported qualitatively/semiquantitatively
+      in table (e.g., + (weak positive), ++ (positive), +++ (strongpositive), ++++ (strong positive), N).
+    specimen: stool
+    biomarker: Lanzhou lamb rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+  stool_lanzhou_lamb_rotavirus_vaccine_pcr:
+    description: Real-time RT-PCR quantification of rotavirus (vaccine strain) in
+      stool targeting the NSP3 gene. Quantified using serial dilutions of plasmid-derived
+      NSP3 RNA standards and reported as copies per gram of stool.
+    specimen: stool
+    biomarker: Lanzhou lamb rotavirus vaccine
+    gene_target: NSP3
+    limit_of_detection: 1000
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: vaccination
+participants:
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 5
+    value: 21100.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 13000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 13
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: 17000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: strong positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: 178000000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 11000000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 13
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: 370000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 12
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 3
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 5
+    value: 49000.0
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 2
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 9
+    value: 47000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 12
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 4
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 23000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 12
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 5
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: 190000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: strong positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 1800000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 9
+    value: 170000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: weak positive
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 3
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: 390000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 3
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: strong positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 3100000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 12
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 13
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 2
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 430000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 9
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: negative
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 4
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 5
+    value: 2100.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: 46000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: strong positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 190000000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: strong positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 9
+    value: 2400000.0
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: 16000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: 1500000.0
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 2
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 2
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 3
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 3
+    value: 27000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 4
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 4
+    value: 11000.0
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 11
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 12
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 12
+    value: 37000.0
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 4
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 4
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: strong positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 5
+    value: 1300000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: 500000.0
+- measurements:
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 2
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 3
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 5
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 6
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 6
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 7
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 7
+    value: negative
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 8
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 8
+    value: 26000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 9
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 9
+    value: 2700000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 10
+    value: positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+    time: 10
+    value: 13000.0
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 11
+    value: weak positive
+  - analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+    time: 13
+    value: negative
