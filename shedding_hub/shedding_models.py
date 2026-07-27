@@ -24,6 +24,16 @@ PARAM_NAMES = {
     "gamma": ("a0", "b0", "c0"),
 }
 
+# The coordinates each model's population summary is averaged in; see
+# ``to_population_coords`` for why they differ between the two models. Named
+# rather than merely implied, so that a serialized fit records which space its
+# ``population_mean``/``population_cov`` live in and a catalog written under the
+# old convention fails loudly instead of being silently misread.
+POPULATION_COORDS = {
+    "exponential": ("log_a0", "log_c0"),
+    "gamma": ("log_a0", "log_peak_day", "peak_log10"),
+}
+
 LN10 = float(np.log(10.0))
 
 
@@ -113,6 +123,92 @@ def log10_concentration_pointwise(
     return (
         params[:, 2] + params[:, 1] * _safe_log(times) - params[:, 0] * times
     ) / LN10
+
+
+def to_population_coords(model: str, params: np.ndarray) -> np.ndarray:
+    """
+    Map natural-scale parameters into the space the population is summarized in.
+
+    A population summary averages subjects and treats the result as a Gaussian.
+    That is only defensible in coordinates where the subjects actually form a
+    compact, roughly-elliptical cloud, and for the gamma model the natural
+    log-parameters are not such coordinates: ``c0`` is the concentration at
+    ``t = 1``, so what counts as a plausible value depends entirely on ``b0``.
+    Real subjects therefore lie along a *curved* ridge — in
+    ``woelfel2020virological`` stool, ``b0`` spans 0.03 to 13.7 while ``c0``
+    counter-varies from 19.7 down to 0.04 — and the coordinate-wise mean of
+    their logs lands off that ridge, describing a curve no subject resembles.
+    Measured across the repository's gamma fits, that mean sat a median of 2.14
+    log10 away from the subjects' own median curve, and simulating from it
+    produced 95th-percentile concentrations above 10^20 gc/mL in 16 of 23 fits.
+
+    The gamma model is therefore summarized as ``(log a0, log t_peak, y_peak)``:
+    the decay rate, the day of peak shedding, and the log10 concentration
+    reached at that peak. These are the quantities the model is actually
+    identified in — each is separately interpretable, and they are close to
+    uncorrelated in practice (``corr(log t_peak, y_peak)`` is 0.07 for woelfel
+    stool against -0.55 for ``corr(log b0, log c0)``), so averaging them
+    coordinate-wise is meaningful.
+
+    The exponential model needs no such treatment and is returned unchanged, as
+    ``log(params)``. Its ``c0`` *is* the level, with no shape parameter to trade
+    against, so its subjects already form a compact cloud (sd of ``log c0`` 0.57
+    against the gamma's 2.01, and ``corr(log a0, log c0)`` 0.03). Empirically
+    the change would make its median individual slightly *worse* on 31 of 61
+    fits, so it is deliberately left alone; the two models simply declare
+    different spaces, which is the point of routing through this function.
+
+    Args:
+        model: ``"exponential"`` or ``"gamma"``.
+        params: Natural-scale parameters, shape ``(n, k)``, ordered as
+            ``PARAM_NAMES[model]``.
+
+    Returns:
+        Population coordinates, shape ``(n, k)``. Exactly invertible by
+        ``from_population_coords``.
+    """
+    validate_model(model)
+    params = np.atleast_2d(np.asarray(params, dtype=float))
+    if model == "exponential":
+        return np.log(params)
+    a0 = params[:, 0]
+    b0 = params[:, 1]
+    c0 = params[:, 2]
+    peak = b0 / a0
+    # At the peak a0 * t_peak == b0, so the log10 height collapses to this.
+    height = (c0 + b0 * np.log(peak) - b0) / LN10
+    return np.column_stack([np.log(a0), np.log(peak), height])
+
+
+def from_population_coords(model: str, coords: np.ndarray) -> np.ndarray:
+    """
+    Invert ``to_population_coords``, back to natural-scale parameters.
+
+    Args:
+        model: ``"exponential"`` or ``"gamma"``.
+        coords: Population coordinates, shape ``(n, k)``.
+
+    Returns:
+        Natural-scale parameters, shape ``(n, k)``, ordered as
+        ``PARAM_NAMES[model]``.
+
+        ``a0`` and ``b0`` are always strictly positive, being exponentials of
+        the coordinates. ``c0`` may come back non-positive, because ``y_peak``
+        is a log10 concentration and is modelled on the whole real line: a
+        drawn individual whose peak sits below 1 gc/mL is meaningful, and every
+        function in this module evaluates such a curve correctly. Only the
+        *fitted* parameters are constrained positive, by the optimizer.
+    """
+    validate_model(model)
+    coords = np.atleast_2d(np.asarray(coords, dtype=float))
+    if model == "exponential":
+        return np.exp(coords)
+    a0 = np.exp(coords[:, 0])
+    peak = np.exp(coords[:, 1])
+    height = coords[:, 2]
+    b0 = a0 * peak
+    c0 = LN10 * height - b0 * np.log(peak) + b0
+    return np.column_stack([a0, b0, c0])
 
 
 def peak_day(model: str, params: np.ndarray) -> np.ndarray:

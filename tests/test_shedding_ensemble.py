@@ -294,3 +294,67 @@ def test_deserialized_ensemble_can_still_simulate(catalog):
     traj = simulate_shedding(restored, n_individuals=30, times=[1.0, 5.0], seed=0)
     assert len(traj) == 60
     assert traj["source_dataset_id"].nunique() > 1
+
+
+# --- gamma ensembles must use population coordinates, not exp() --------------
+
+
+def _gamma_fit(dataset_id, mean, cov=None, n_subjects=10):
+    """A gamma fit whose population_mean is in population coordinates."""
+    return SheddingFit(
+        model="gamma",
+        method="mle",
+        population_mean=np.asarray(mean, float),
+        population_cov=np.eye(3) * 0.01 if cov is None else np.asarray(cov, float),
+        sigma=0.5,
+        subject_params=None,
+        censoring_limit=2.0,
+        dataset_id=dataset_id,
+        analyte="stool",
+        biomarker="SARS-CoV-2",
+        specimen="stool",
+        reference_event="symptom onset",
+        unit="gc/mL",
+        gene_target=None,
+        dose=None,
+        vaccine_type=None,
+        n_subjects=n_subjects,
+        n_measurements=n_subjects * 10,
+        n_censored=0,
+        n_excluded_subjects=0,
+        n_dropped_measurements=0,
+        converged=True,
+        log_likelihood=-1.0,
+        aic=1.0,
+    )
+
+
+def test_moment_ensemble_median_params_use_population_coordinates():
+    """
+    exp(population_mean) is not the median individual under the gamma model.
+
+    The third gamma coordinate is a log10 peak height, so exponentiating it
+    yields a c0 of 10^b nonsense rather than a curve parameter.
+    """
+    from shedding_hub.shedding_models import from_population_coords
+
+    mean = np.array([np.log(0.5), np.log(3.0), 6.0])
+    ensemble = make_ensemble([_gamma_fit("a", mean)], method="moment")
+    expected = from_population_coords("gamma", mean[None, :])[0]
+    np.testing.assert_allclose(ensemble.median_params, expected)
+
+
+def test_gamma_mixture_ensemble_samples_plausible_individuals():
+    """A mixture of gamma fits must not manufacture 10^300 concentrations."""
+    from shedding_hub.shedding_simulate import simulate_shedding
+
+    fits = [
+        _gamma_fit("a", np.array([np.log(0.5), np.log(3.0), 6.0])),
+        _gamma_fit("b", np.array([np.log(0.7), np.log(5.0), 5.5])),
+    ]
+    ensemble = make_ensemble(fits, method="mixture")
+    traj = simulate_shedding(
+        ensemble, n_individuals=300, times=np.arange(1.0, 15.0), seed=0
+    )
+    peaks = traj["log10_value"].dropna()
+    assert peaks.max() < 9.0

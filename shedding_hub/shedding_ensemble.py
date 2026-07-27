@@ -15,6 +15,7 @@ import pandas as pd
 
 from .shedding_catalog import SheddingCatalog, _fits_to_frame
 from .shedding_fit import SheddingFit, _require_positive_semidefinite
+from .shedding_models import from_population_coords
 
 _COMPATIBILITY_KEYS = (
     "model",
@@ -111,6 +112,10 @@ class SheddingEnsemble:
         median, so rather than report a misleading number, simulate with
         ``simulate_shedding`` and take empirical quantiles of the result — which
         is the quantity you actually want.
+
+        Mapped back through ``from_population_coords`` rather than exponentiated:
+        the components share a model, hence a coordinate space, and for the gamma
+        model that space is not the log-parameters.
         """
         if self.method != "moment":
             raise ValueError(
@@ -118,7 +123,7 @@ class SheddingEnsemble:
                 "mixture ensemble, which has no closed-form median: simulate and "
                 "take empirical quantiles instead."
             )
-        return np.exp(self.population_mean)
+        return from_population_coords(self.model, self.population_mean[None, :])[0]
 
     def sample_params(
         self, rng: np.random.Generator, n: int
@@ -139,7 +144,10 @@ class SheddingEnsemble:
                 ),
             )
             theta = rng.multivariate_normal(self.population_mean, cov, n)
-            return np.exp(theta), np.full(n, "ensemble", dtype=object)
+            return (
+                from_population_coords(self.model, theta),
+                np.full(n, "ensemble", dtype=object),
+            )
 
         if len(self.fits) == 1:
             # Skip the categorical draw entirely so a one-study ensemble consumes
@@ -173,7 +181,9 @@ class SheddingEnsemble:
             )
             theta[mask] = rng.multivariate_normal(fit.population_mean, cov, count)
             sources[mask] = fit.dataset_id
-        return np.exp(theta), sources
+        # One conversion for the whole array: make_ensemble guarantees every
+        # component shares a model, so every row is in the same coordinates.
+        return from_population_coords(self.model, theta), sources
 
     def to_dict(self) -> dict:
         """

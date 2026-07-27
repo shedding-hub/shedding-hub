@@ -15,7 +15,7 @@ from shedding_hub.shedding_fit import (
     prepare_observations,
     require_estimable_population,
 )
-from shedding_hub.shedding_models import PARAM_NAMES
+from shedding_hub.shedding_models import PARAM_NAMES, to_population_coords
 
 
 @pytest.fixture
@@ -353,7 +353,19 @@ def test_recovers_known_gamma_population(make_synthetic_dataset):
         times=np.linspace(1.0, 14.0, 56),
     )
     fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
-    np.testing.assert_allclose(fit.population_mean, mu, atol=0.25)
+
+    # The truth is stated as a lognormal in (a0, b0, c0) while the fit reports
+    # population coordinates, and the map between them is nonlinear, so the
+    # reference is the true population's own mean in those coordinates rather
+    # than a transform of mu. Drawn from the same distribution the fixture
+    # samples subjects from, with enough draws that its Monte Carlo error is far
+    # inside the tolerance.
+    truth = np.random.default_rng(0).multivariate_normal(
+        mu, np.diag([0.04, 0.04, 0.04]), 200_000
+    )
+    expected = to_population_coords("gamma", np.exp(truth)).mean(axis=0)
+
+    np.testing.assert_allclose(fit.population_mean, expected, atol=0.25)
     assert fit.converged
 
 
@@ -395,9 +407,14 @@ def test_gamma_b0_is_downward_biased_at_sparse_sampling(make_synthetic_dataset):
     )
     dense_fit = fit_shedding_model(dense, analyte="stool", model="gamma")
 
+    # log(median_params[1]) is exactly the mean of the subjects' log b0, and so
+    # exactly the quantity this test has always pinned: median_params[1] is
+    # exp(mean log a0) * exp(mean log t_peak), and log t_peak = log b0 - log a0,
+    # so the two log-means telescope. Read this way rather than off
+    # population_mean[1], which is now the mean log peak *day*.
     true_b0 = mu[1]
-    sparse_error = true_b0 - sparse_fit.population_mean[1]
-    dense_error = abs(dense_fit.population_mean[1] - true_b0)
+    sparse_error = true_b0 - np.log(sparse_fit.median_params[1])
+    dense_error = abs(np.log(dense_fit.median_params[1]) - true_b0)
 
     # (a) the sparse fit understates b0 by a clear margin.
     assert sparse_error > 0.05
@@ -1274,10 +1291,263 @@ def test_peak_log10_is_deterministic(woelfel_fits):
 
 def test_peak_log10_with_zero_covariance_is_the_point_value():
     """A single-subject fit has no spread, so sampling must be a no-op."""
-    mean = np.array([np.log(0.5), np.log(2.0), np.log(12.0)])
+    from shedding_hub.shedding_models import from_population_coords
+
+    mean = np.array([np.log(0.5), np.log(2.0), 6.0])
     fit = _minimal_fit(mean, np.zeros((3, 3)), model="gamma")
-    params = np.exp(mean)[None, :]
+    params = from_population_coords("gamma", mean[None, :])
     expected = log10_concentration_rowwise(
         "gamma", params, peak_day("gamma", params)[:, None]
     )[0, 0]
     assert fit.peak_log10 == pytest.approx(expected)
+
+
+def test_gamma_peak_log10_is_the_third_population_coordinate():
+    """
+    The gamma summary carries the peak height directly, so it needs no sampling.
+
+    Worth pinning because it is the whole point of the coordinate change: the
+    quantity that used to require a Monte Carlo median to extract -- and that
+    the coordinate-wise log mean got wrong by orders of magnitude -- is now a
+    coordinate that is simply read off. The sampled estimate must agree with it
+    to Monte Carlo error.
+    """
+    mean = np.array([np.log(0.5), np.log(3.0), 6.25])
+    cov = np.diag([0.3, 0.5, 0.4])
+    fit = _minimal_fit(mean, cov, model="gamma")
+    assert fit.peak_log10 == pytest.approx(mean[2], abs=0.02)
+
+
+# --- population summary on a realistic gamma ridge ---------------------------
+
+
+def _dataset_from_subject_params(params, *, times, sigma=0.3, loq=1e2, seed=0):
+    """
+    Build a gamma dataset from explicit per-subject parameters.
+
+    The conftest factory draws subjects from a lognormal in ``(a0, b0, c0)``,
+    which is the very assumption under test here, so these tests state each
+    subject's curve directly instead.
+    """
+    from shedding_hub.shedding_models import log10_concentration
+
+    rng = np.random.default_rng(seed)
+    truth = log10_concentration("gamma", params, times)
+    noisy = truth + rng.normal(0.0, sigma, size=truth.shape)
+    limit = np.log10(loq)
+    participants = [
+        {
+            "measurements": [
+                {
+                    "analyte": "stool",
+                    "time": float(t),
+                    "value": "negative" if v < limit else float(10.0**v),
+                }
+                for t, v in zip(times, row)
+            ]
+        }
+        for row in noisy
+    ]
+    return {
+        "dataset_id": "ridge",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": loq,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": participants,
+    }
+
+
+def _ridge_population():
+    """
+    Subjects peaking at different times but comparable heights.
+
+    This is what real shedding studies look like, and it is what puts the gamma
+    parameters on a curved ridge: a subject peaking late needs a large ``b0``,
+    which forces a small ``c0`` to keep the peak height in range, and vice
+    versa. Stated as (peak day, peak height) and converted, so the construction
+    commits to no opinion about which coordinates the fit should average in.
+
+    The peak days deliberately span half a day to twelve days. A real cohort
+    mixes people enrolled before their peak with people enrolled after it, and
+    that mixture is what makes the ridge wide enough to matter: ``b0`` spans a
+    factor of 22 here, against a factor of 400 in ``woelfel2020virological``
+    stool. A narrower spread (2 to 9 days, a factor of 4) leaves the
+    coordinate-wise mean only 0.72 log10 off the subjects' median curve, which
+    would let the defect through.
+    """
+    from shedding_hub.shedding_models import LN10
+
+    peak_days = np.array([0.3, 0.5, 0.8, 1.2, 2.0, 3.0, 4.5, 6.0, 8.0, 10.0, 12.0, 7.0])
+    heights = np.array([6.8, 6.2, 7.1, 6.5, 5.9, 6.7, 6.3, 5.7, 6.6, 6.0, 5.5, 6.4])
+    a0 = np.array([0.9, 0.75, 1.1, 0.6, 0.5, 0.45, 0.55, 0.4, 0.6, 0.42, 0.5, 0.38])
+    b0 = a0 * peak_days
+    c0 = LN10 * heights - b0 * np.log(peak_days) + b0
+    return np.column_stack([a0, b0, c0])
+
+
+def test_gamma_median_individual_tracks_the_subjects_it_summarizes():
+    """
+    The population summary must describe a curve its own subjects resemble.
+
+    Averaging log(a0), log(b0), log(c0) coordinate-wise lands off the ridge
+    those parameters lie on -- it picks a small b0 (no rise) together with the
+    small c0 that only a *large* b0 would justify -- and the resulting "median
+    individual" fell orders of magnitude below every subject in the study.
+
+    The assertion is containment rather than closeness to the subjects' median
+    curve, because those are different objects: with peak days spanning 0.3 to
+    12 days the pointwise median across subjects is not itself a gamma curve,
+    and no single individual can equal it. Summarizing the *true* parameters
+    lands 0.95 log10 from it, so demanding better would be demanding the
+    impossible. What a median individual must do is look like one of its own
+    subjects, which is exactly what the old summary failed at.
+    """
+    from shedding_hub.shedding_models import log10_concentration
+
+    params = _ridge_population()
+    times = np.arange(1.0, 21.0)
+    dataset = _dataset_from_subject_params(params, times=times)
+
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+
+    grid = np.arange(1.0, 21.0)
+    curves = log10_concentration("gamma", params, grid)
+    lower = np.percentile(curves, 10, axis=0)
+    upper = np.percentile(curves, 90, axis=0)
+    summary = log10_concentration("gamma", fit.median_params[None, :], grid)[0]
+    outside = np.flatnonzero((summary < lower) | (summary > upper))
+    assert outside.size == 0, (
+        "the median individual leaves the middle 80% of its own population at "
+        f"days {grid[outside].tolist()}: "
+        f"{np.round(summary[outside], 2).tolist()} against a 10th percentile of "
+        f"{np.round(lower[outside], 2).tolist()}"
+    )
+
+
+def test_gamma_simulated_cohort_stays_physically_plausible():
+    """
+    Sampling must not manufacture concentrations no assay could ever see.
+
+    Off-ridge draws (a large rise combined with a large intercept) produced
+    95th-percentile concentrations above 10^20 gc/mL in 16 of the 23 gamma fits
+    in the shipped catalog, the worst reaching 10^132 -- more copies per mL than
+    there are molecules of water in it.
+    """
+    from shedding_hub.shedding_simulate import simulate_shedding
+
+    params = _ridge_population()
+    times = np.arange(1.0, 21.0)
+    dataset = _dataset_from_subject_params(params, times=times)
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+
+    traj = simulate_shedding(fit, n_individuals=500, times=np.arange(1.0, 21.0), seed=0)
+    values = traj["log10_value"].dropna()
+    # Subjects here peak near 10^6; a cohort drawn from them may reach a couple
+    # of orders of magnitude beyond that, but not twenty.
+    assert values.quantile(0.95) < 9.0
+    assert values.max() < 12.0
+
+
+def test_subject_with_no_positive_measurements_is_excluded():
+    """
+    A subject seen only below the limit cannot anchor a shedding curve.
+
+    Its ``negative`` readings say the concentration stayed under the limit and
+    nothing about the shape of a trajectory, so every curve that stays below
+    the limit fits it equally well and the optimizer returns an arbitrary point
+    on that flat ridge. Two-stage estimation then averages that arbitrary
+    vector into the population summary at full weight. Across the shipped
+    catalog 899 of 3,689 retained subjects had no positive reading at all, and
+    the worst-affected gamma fit
+    (``natarajan2022gastrointestinal``/``N1-sgRNA-RT-qPCR-OG``) was 62 such
+    subjects out of 77.
+
+    They are excluded rather than down-weighted because this estimator has no
+    weighting stage; a hierarchical model would instead shrink them toward the
+    population and let them contribute what little they carry.
+    """
+    dataset = {
+        "dataset_id": "silent",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 1e2,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {
+                        "analyte": "stool",
+                        "time": float(t),
+                        "value": 1e7 * 10 ** (-0.2 * t),
+                    }
+                    for t in range(1, 11)
+                ]
+            },
+            {
+                "measurements": [
+                    {
+                        "analyte": "stool",
+                        "time": float(t),
+                        "value": 1e6 * 10 ** (-0.15 * t),
+                    }
+                    for t in range(1, 11)
+                ]
+            },
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": float(t), "value": "negative"}
+                    for t in range(1, 11)
+                ]
+            },
+        ],
+    }
+
+    with pytest.warns(UserWarning, match="no positive"):
+        obs = prepare_observations(dataset, "stool", "exponential")
+
+    assert obs.n_subjects == 2
+    assert obs.n_excluded_subjects == 1
+    # and the retained subjects are the two that were actually detected
+    assert obs.censored.sum() == 0
+
+
+def test_from_dict_rejects_a_catalog_written_in_the_old_coordinates():
+    """
+    A stale catalog must fail loudly rather than be reinterpreted.
+
+    ``population_mean`` is three numbers either way, so a gamma fit serialized
+    as (log a0, log b0, log c0) loads without complaint into a reader that
+    expects (log a0, log peak day, peak log10) and yields silently wrong
+    curves -- the failure mode this whole change exists to remove.
+    """
+    fit = _minimal_fit(np.array([np.log(0.5), np.log(3.0), 6.0]), np.eye(3), "gamma")
+    payload = fit.to_dict()
+    assert payload["population_coords"] == ["log_a0", "log_peak_day", "peak_log10"]
+
+    stale = {k: v for k, v in payload.items() if k != "population_coords"}
+    with pytest.raises(ValueError, match="Rebuild the catalog"):
+        SheddingFit.from_dict(stale)
+
+    mismatched = {**payload, "population_coords": ["log_a0", "log_b0", "log_c0"]}
+    with pytest.raises(ValueError, match="Rebuild the catalog"):
+        SheddingFit.from_dict(mismatched)
+
+
+def test_from_dict_round_trips_a_current_catalog_entry():
+    fit = _minimal_fit(np.array([np.log(0.5), np.log(3.0), 6.0]), np.eye(3), "gamma")
+    restored = SheddingFit.from_dict(fit.to_dict())
+    np.testing.assert_allclose(restored.population_mean, fit.population_mean)
+    np.testing.assert_allclose(restored.median_params, fit.median_params)

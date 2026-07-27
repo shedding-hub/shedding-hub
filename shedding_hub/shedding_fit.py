@@ -152,6 +152,9 @@ def prepare_observations(
             retained. Defaults to the number of per-subject parameters (3 for
             gamma, 2 for exponential). ``sigma`` is shared across subjects, so a
             subject does not need residual degrees of freedom of its own.
+            Independently of this count, a subject with no positive measurement
+            at all is excluded: its readings locate no curve, only an upper
+            bound, so its fitted parameters are arbitrary.
 
     Returns:
         An ``Observations`` instance with subject indices renumbered contiguously
@@ -252,22 +255,50 @@ def prepare_observations(
             )
             subject_ids.append(participant.get("patient_id", position + 1))
 
+    # Checked before the retention filter below, not after it. Every retained
+    # subject now has a positive reading by construction, so asking afterwards
+    # could only ever report the less specific 'too_few_subjects' for an analyte
+    # whose real problem is that nothing was ever detected in it.
+    if all(censored for subject in per_subject for censored in subject["censored"]):
+        raise SheddingDataError(
+            f"Analyte {analyte!r} has no positive measurements to fit.",
+            "no_positive_measurements",
+        )
+
     # Filter subject_ids and per_subject together, from a single zipped list,
     # so the retention predicate appears exactly once: applying it separately
     # to each list could silently desync subject_ids from the arrays below.
-    retained_pairs = [
-        (subject_id, subject)
-        for subject_id, subject in zip(subject_ids, per_subject)
-        if len(subject["times"]) >= min_observations
-    ]
-    n_excluded = len(per_subject) - len(retained_pairs)
+    # The two exclusion reasons are counted apart so each can say what it
+    # actually means, but both land in n_excluded_subjects.
+    retained_pairs = []
+    n_too_few = 0
+    n_no_positive = 0
+    for subject_id, subject in zip(subject_ids, per_subject):
+        if len(subject["times"]) < min_observations:
+            n_too_few += 1
+        elif all(subject["censored"]):
+            n_no_positive += 1
+        else:
+            retained_pairs.append((subject_id, subject))
+    n_excluded = n_too_few + n_no_positive
     retained_ids = [subject_id for subject_id, _ in retained_pairs]
     retained = [subject for _, subject in retained_pairs]
 
-    if n_excluded:
+    if n_too_few:
         warnings.warn(
-            f"{n_excluded} subject(s) excluded from the {analyte!r} fit for having "
+            f"{n_too_few} subject(s) excluded from the {analyte!r} fit for having "
             f"fewer than {min_observations} usable measurements.",
+            UserWarning,
+            stacklevel=2,
+        )
+    if n_no_positive:
+        warnings.warn(
+            f"{n_no_positive} subject(s) excluded from the {analyte!r} fit for "
+            "having no positive measurement: every reading was 'negative'. Such a "
+            "subject constrains the curve only to stay below the limit, which "
+            "every curve that does so satisfies equally, so the optimizer returns "
+            "an arbitrary point estimate that this two-stage estimator would then "
+            "average into the population summary at full weight.",
             UserWarning,
             stacklevel=2,
         )
@@ -293,13 +324,9 @@ def prepare_observations(
     values_array = np.concatenate([np.asarray(s["values"], float) for s in retained])
     censored_array = np.concatenate([np.asarray(s["censored"], bool) for s in retained])
 
+    # Non-empty: retention requires at least one positive per subject, and the
+    # analyte-wide check above already rejected the case where there are none.
     observed = values_array[~censored_array]
-    if observed.size == 0:
-        raise SheddingDataError(
-            f"Analyte {analyte!r} has no positive measurements to fit.",
-            "no_positive_measurements",
-        )
-
     censoring_limit = _resolve_censoring_limit(analyte_spec, observed)
 
     return Observations(
@@ -320,10 +347,13 @@ from scipy import optimize
 from scipy.stats import norm
 
 from .shedding_models import (
+    POPULATION_COORDS,
+    from_population_coords,
     half_life_days,
     log10_concentration_pointwise,
     log10_concentration_rowwise,
     peak_day,
+    to_population_coords,
 )
 
 # The historical positivity floor for a natural-scale parameter is 1e-6.
@@ -547,17 +577,22 @@ class SheddingFit:
         return PARAM_NAMES[self.model]
 
     @property
+    def population_coords(self) -> tuple[str, ...]:
+        """Names of the coordinates ``population_mean``/``population_cov`` use."""
+        return POPULATION_COORDS[self.model]
+
+    @property
     def median_params(self) -> np.ndarray:
         """
         Parameters of the median individual.
 
-        Because ``theta`` is normal, the parameters are lognormal, so
-        ``exp(population_mean)`` is exactly their median — not their mean. Note
-        that the median individual's trajectory is not the population's mean
-        trajectory; to aggregate load across a cohort, simulate rather than
-        scaling this up.
+        ``population_mean`` is the mean of a normal, hence also its median, so
+        mapping it back through ``from_population_coords`` gives the parameters
+        of the median individual in each summarized coordinate. Note that the
+        median individual's trajectory is not the population's mean trajectory;
+        to aggregate load across a cohort, simulate rather than scaling this up.
         """
-        return np.exp(self.population_mean)
+        return from_population_coords(self.model, self.population_mean[None, :])[0]
 
     @property
     def peak_day(self) -> float:
@@ -624,7 +659,7 @@ class SheddingFit:
             _PEAK_LOG10_DRAWS,
             check_valid="ignore",
         )
-        params = np.exp(theta)
+        params = from_population_coords(self.model, theta)
         peaks = peak_day(self.model, params)
         return float(
             np.median(log10_concentration_rowwise(self.model, params, peaks[:, None]))
@@ -658,7 +693,10 @@ class SheddingFit:
             ),
         )
         theta = rng.multivariate_normal(self.population_mean, cov, n)
-        return np.exp(theta), np.full(n, self.dataset_id, dtype=object)
+        return (
+            from_population_coords(self.model, theta),
+            np.full(n, self.dataset_id, dtype=object),
+        )
 
     def to_dict(self) -> dict:
         """
@@ -686,6 +724,10 @@ class SheddingFit:
             "vaccine_type": self.vaccine_type,
             "model": self.model,
             "method": self.method,
+            # Recorded so a catalog cannot be silently misread: the coordinates
+            # are the same *length* under any convention, so without this an
+            # older file loads cleanly and yields wrong curves.
+            "population_coords": list(self.population_coords),
             "population_mean": [float(v) for v in self.population_mean],
             "population_cov": [[float(v) for v in row] for row in self.population_cov],
             "sigma": float(self.sigma),
@@ -721,8 +763,18 @@ class SheddingFit:
         Returns:
             A ``SheddingFit`` with ``subject_params is None``.
         """
+        model = payload["model"]
+        expected = list(POPULATION_COORDS[model])
+        if payload.get("population_coords") != expected:
+            raise ValueError(
+                f"This {model!r} fit records its population summary in "
+                f"{payload.get('population_coords')!r}, but this version of "
+                f"shedding_hub reads {expected!r}. Both are the same length, so "
+                "loading it anyway would silently produce wrong curves rather "
+                "than fail. Rebuild the catalog with `make catalog`."
+            )
         return cls(
-            model=payload["model"],
+            model=model,
             method=payload.get("method", "mle"),
             population_mean=np.asarray(payload["population_mean"], dtype=float),
             population_cov=np.asarray(payload["population_cov"], dtype=float),
@@ -1148,7 +1200,12 @@ def fit_shedding_model(
         )
     )
 
-    kept = theta[retained]
+    # Summarized in population coordinates, not in the log-parameters the
+    # optimizer works in. For the gamma model those are not the same space, and
+    # averaging the log-parameters coordinate-wise lands off the ridge the
+    # subjects lie on — see ``to_population_coords``. The exponential model's
+    # coordinates are its log-parameters, so this is an identity for it.
+    kept = to_population_coords(model, np.exp(theta[retained]))
     population_mean = kept.mean(axis=0)
     population_cov = (
         np.cov(kept, rowvar=False, ddof=1) if n_retained > 1 else np.zeros((k, k))

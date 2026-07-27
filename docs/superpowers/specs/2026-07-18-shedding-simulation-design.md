@@ -251,14 +251,25 @@ applied.
 | `peak_day`, `peak_log10`, `half_life_days` | interpretable summaries |
 | `aic`, `converged` | fit quality |
 
-**Everything in the table describes the median individual, and says so.** Because
-`theta = log(a, b, c)` is normal, the parameters themselves are lognormal, so
-`exp(mu)` is exactly their median — not their mean. Reporting these as medians is
-therefore the accurate label rather than a compromise, and it sidesteps the
-Jensen's-inequality trap of implying a mean. The one thing that remains true and
-is documented: the median individual's *trajectory* is not the population's mean
-trajectory, so a user summing simulated load across a cohort should simulate,
-not scale up this row.
+**Everything in the table describes the median individual, and says so.** `mu` is
+the mean of a normal and hence also its median, so mapping it back through
+`from_population_coords` gives the median individual in each summarized
+coordinate. Reporting these as medians is therefore the accurate label rather
+than a compromise, and it sidesteps the Jensen's-inequality trap of implying a
+mean. The one thing that remains true and is documented: the median individual's
+*trajectory* is not the population's mean trajectory, so a user summing simulated
+load across a cohort should simulate, not scale up this row.
+
+**Which coordinates `mu`/`Sigma` live in is a per-model decision** (see
+`to_population_coords`). The exponential model is summarized in its
+log-parameters. The gamma model is not: its `c0` is the concentration at `t = 1`,
+so its meaning depends on `b0`, and real subjects lie along a *curved* ridge that
+a Gaussian in those coordinates cannot follow — the coordinate-wise mean lands
+off the ridge entirely, describing a curve no subject resembles. The gamma model
+is therefore summarized as `(log a0, log peak_day, peak_log10)`, which are the
+quantities it is identified in and are close to uncorrelated in practice. A
+serialized fit records its coordinate names so that a catalog written under the
+older convention is rejected rather than silently misread.
 
 The interpretable columns are what make the table selectable — a modeler picking a
 row wants "peaks day 4.2 at 6.8 log10 gc/mL, declines with a 1.5 day half-life",
@@ -602,14 +613,26 @@ Recorded in module docstrings so users encounter them:
    `n_degenerate_subjects`. A fit with fewer than two surviving subjects is
    refused with reason `degenerate_fit`. **Every synthetic test passed while this
    was shipping 278-day half-lives**, so real-data regression tests now guard it.
-4. **`peak_log10` is a population median over draws, not the value at
-   `exp(mu)`.** Coordinate-wise averaging of log-parameters across a correlated
-   ridge yields a parameter vector no real subject has. `peak_day` and
-   `half_life_days` are unaffected — each is a ratio or transform of a single
-   lognormal, so the value at `exp(mu)` genuinely is the population median — but
-   `peak_log10` is a nonlinear function of all three parameters and was landing
-   below almost every subject's own peak. It is therefore computed as the median
-   over 10,000 draws from `MVN(mu, Sigma)` with a fixed seed.
+4. **The gamma population is summarized in `(log a0, log peak_day, peak_log10)`,
+   not in log-parameters.** Coordinate-wise averaging of `log(a0, b0, c0)` across
+   the curved `b0`/`c0` ridge yields a parameter vector no real subject has: it
+   picks a small `b0` (no rise) together with the small `c0` that only a *large*
+   `b0` would justify. Across the catalog's gamma fits that summary sat a median
+   of 2.14 log10 from the subjects' own median curve, and sampling from it
+   produced 95th-percentile concentrations above 10^20 gc/mL in 16 of 23 fits
+   (worst: 10^132). Averaging the identical per-subject fits in peak coordinates
+   cuts the first to 0.91 log10 and the second to zero fits above 10^20.
+   `peak_log10` remains computed as the median over 10,000 fixed-seed draws from
+   `MVN(mu, Sigma)` so that both models take one code path; for the gamma model
+   it now simply agrees with `mu[2]` to Monte Carlo error.
+
+   The exponential model keeps its log-parameters deliberately. Its `c0` *is* the
+   level, with no shape parameter to trade against, and the same change measured
+   *worse* on 31 of its 61 fits. Its remaining weakness is the opposite one: a
+   lognormal `c0` gives a heavy upper tail, which is why a handful of exponential
+   fits still simulate implausibly high. Modelling its level as normal on the
+   log10 scale would fix that at the cost of the central summary, and is a
+   deliberate open question rather than an oversight.
 5. Point estimates only — no parameter uncertainty propagates into simulations.
    Cohort spread reflects between-individual variation, not estimation
    uncertainty.
