@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction catalog
+.PHONY : backup_data assert_data_unchanged extraction catalog review
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -38,3 +38,8 @@ ${DATA_CHECKS} : ${TMPDIR}%.null : ${TMPDIR}%.yaml
 # run it whenever datasets are added or changed.
 catalog :
 	python scripts/build_shedding_catalog.py
+
+# Render every catalog fit against the data behind it, one page each, for
+# review. The PDF is regenerable and deliberately untracked.
+review :
+	python scripts/build_catalog_review.py

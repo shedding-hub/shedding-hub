@@ -7,6 +7,7 @@ from matplotlib.figure import Figure
 import logging
 
 from .shedding_models import log10_concentration
+from .shedding_fit import prepare_observations
 
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
@@ -2986,6 +2987,193 @@ def plot_catalog_fits(
 
     for index in range(n_panels, len(axes)):
         fig.delaxes(axes[index])
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
+
+
+# Beyond this many retained subjects, joining each subject's own points hides
+# the scatter it is meant to organize — the largest study in the repository has
+# 455 subjects.
+FIT_DIAGNOSTIC_MAX_SUBJECT_LINES = 40
+
+
+def _fit_diagnostic_legend_rows(fit) -> list[str]:
+    """The estimate block: what was estimated, what it means, and its context.
+
+    Context sits beside the estimates because a parameter cannot be judged
+    without it — 6.8 log10 at peak means one thing from 52 subjects and another
+    from 3, and a fit that did not converge disqualifies the rest of the block.
+    """
+    rows = [
+        f"{name} = {value:.4g}"
+        for name, value in zip(fit.param_names, fit.median_params)
+    ]
+    rows += [
+        f"peak day = {fit.peak_day:.2f}",
+        f"peak log10 = {fit.peak_log10:.2f}",
+        f"half-life = {fit.half_life_days:.2f} d",
+        f"sigma = {fit.sigma:.3f}",
+        f"subjects = {fit.n_subjects}",
+        f"measurements = {fit.n_measurements}",
+        (
+            f"censored = {100.0 * fit.n_censored / fit.n_measurements:.0f}%"
+            if fit.n_measurements
+            else "censored = n/a"
+        ),
+        f"AIC = {fit.aic:.1f}",
+    ]
+    if not fit.converged:
+        rows.append("DID NOT CONVERGE")
+    return rows
+
+
+def plot_fit_diagnostic(
+    fit,
+    dataset: Dict[str, Any],
+    *,
+    figsize: tuple[float, float] = (9, 6),
+    max_subject_lines: int = FIT_DIAGNOSTIC_MAX_SUBJECT_LINES,
+) -> Figure:
+    """
+    Plot one fitted curve against the observations behind it.
+
+    A curve drawn alone shows what the model says, never whether the study
+    agrees. This puts the observations, the fitted median individual, and the
+    parameter estimates on one page, which is what judging a fit requires.
+
+    The points come from the fitter's own ``prepare_observations`` rather than
+    from the dataset's raw measurements, so the page shows exactly what the fit
+    saw: the same resolved censoring limit, and the same excluded subjects.
+    Plotting raw measurements would put points on the page that the curve was
+    never asked to explain. One consequence is worth knowing — ``min_observations``
+    defaults to the parameter count, 2 for exponential and 3 for gamma, so a
+    subject with exactly two readings appears on one model's page and not the
+    other's for the same analyte.
+
+    Censored observations are drawn, as open markers on the censoring limit,
+    which is all the assay established. They are not droppable: across the
+    shipped catalog a median of 40% of measurements are censored and one fit
+    reaches 91%, so a page showing positives alone would flatter every
+    mostly-undetected analyte.
+
+    Args:
+        fit: A ``SheddingFit``.
+        dataset: The dataset dictionary the fit came from, from
+            ``load_dataset``.
+        figsize: Figure size in inches.
+        max_subject_lines: Join each subject's own points only when the fit
+            retains at most this many subjects.
+
+    Returns:
+        The figure. It is closed in the pyplot state so notebooks do not display
+        it twice, matching the convention in ``shedding_peak.py``.
+
+    Raises:
+        ValueError: If ``dataset`` does not contain the fit's analyte, which
+            almost always means the wrong dataset was passed.
+    """
+    analytes = dataset.get("analytes") or {}
+    if fit.analyte not in analytes:
+        raise ValueError(
+            f"Dataset {dataset.get('dataset_id', '<unknown>')!r} does not "
+            f"contain analyte {fit.analyte!r}, which fit {fit.dataset_id!r} was "
+            f"fitted to. Available analytes are {sorted(analytes)}."
+        )
+
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    positive = ~observations.censored
+    limit = observations.censoring_limit
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+    if observations.n_subjects <= max_subject_lines:
+        for subject in range(observations.n_subjects):
+            mine = observations.subject_index == subject
+            # Censored readings are joined at the limit, so a subject's line
+            # does not jump over the stretch where it went undetected.
+            times = observations.times[mine]
+            values = np.where(
+                observations.censored[mine], limit, observations.values[mine]
+            )
+            order = np.argsort(times)
+            ax.plot(
+                times[order],
+                values[order],
+                color="tab:blue",
+                lw=0.8,
+                alpha=0.25,
+                label="_subject",
+            )
+
+    ax.scatter(
+        observations.times[positive],
+        observations.values[positive],
+        s=22,
+        color="tab:blue",
+        alpha=0.75,
+        zorder=3,
+        label="Observed",
+    )
+    ax.scatter(
+        observations.times[observations.censored],
+        np.full(int(observations.censored.sum()), limit),
+        s=30,
+        marker="v",
+        facecolors="none",
+        edgecolors="tab:gray",
+        linewidths=0.9,
+        zorder=3,
+        label="Censored",
+    )
+    ax.axhline(
+        limit,
+        ls=":",
+        color="gray",
+        lw=1.2,
+        label=f"Censoring limit ({limit:.2f})",
+    )
+
+    horizon = float(observations.times.max())
+    times = np.linspace(CATALOG_FIT_START_DAY, horizon, 400)
+    values = log10_concentration(fit.model, fit.median_params[None, :], times)[0]
+    spans = _catalog_fit_spans(times, fit.median_first_observed_day, True)
+    for span, alpha in spans:
+        extrapolated = alpha < 1.0
+        ax.plot(
+            times[span],
+            values[span],
+            color="tab:red",
+            lw=2.0,
+            alpha=alpha,
+            zorder=4,
+            label=(
+                "Extrapolated (before first observation)"
+                if extrapolated
+                else "Median individual"
+            ),
+        )
+
+    ax.set_xlim(0, horizon * 1.02)
+    # The observations set the y range, but the curve's peak can sit above every
+    # one of them — that is exactly the disagreement this page exists to show —
+    # so both are allowed to claim room.
+    top = max(np.nanmax(observations.values[positive]), np.nanmax(values))
+    bottom = min(limit, float(np.nanmin(observations.values[positive])))
+    ax.set_ylim(bottom - 0.5, top + 0.5)
+
+    handles, labels = ax.get_legend_handles_labels()
+    for row in _fit_diagnostic_legend_rows(fit):
+        handles.append(plt.Line2D([], [], color="none"))
+        labels.append(row)
+    ax.legend(handles, labels, fontsize=8, loc="upper right", framealpha=0.9)
+
+    unit = fit.unit or ""
+    ax.set_xlabel(f"Days after {fit.reference_event}")
+    ax.set_ylabel(f"log10 concentration ({unit})" if unit else "log10 concentration")
+    ax.set_title(f"{fit.dataset_id} / {fit.analyte} / {fit.model}", fontsize=11)
+    ax.grid(alpha=0.3)
 
     plt.tight_layout()
     plt.close(fig)

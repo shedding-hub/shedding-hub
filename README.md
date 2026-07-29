@@ -189,6 +189,20 @@ measurement — for half the catalog's gamma fits, that is the entire rise phase
 
 ```
 
+To judge a single fit rather than compare several, plot it against the data
+behind it. The points come from the fitter's own view of the dataset, so the page
+shows exactly what the fit saw — the same censoring limit, the same excluded
+subjects — and censored readings are drawn on the limit rather than dropped. The
+estimated parameters and the fit's context sit in the legend.
+
+```python
+>>> fig = sh.plot_fit_diagnostic(fit, data1)
+
+```
+
+`make review` renders every fit in the catalog this way into a single
+`shedding_catalog_review.pdf`, one page each.
+
 ## 🤝 Contributing
 
 Thank you for contributing your data to the Shedding Hub and supporting wastewater-based epidemiology! If you hit a bump along the road, [create a new issue](https://github.com/shedding-hub/shedding-hub/issues/new) and we'll sort it out together.

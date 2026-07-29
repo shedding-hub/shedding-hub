@@ -8,7 +8,11 @@ import pytest
 import matplotlib.figure
 import matplotlib.pyplot as plt
 import shedding_hub as sh
-from shedding_hub.shedding_fit import SheddingFit
+from shedding_hub.shedding_fit import (
+    SheddingFit,
+    fit_shedding_model,
+    prepare_observations,
+)
 
 
 # Sample minimal datasets for testing
@@ -1103,3 +1107,159 @@ def test_plot_catalog_fits_omits_the_analyte_when_a_study_contributes_one():
         line.get_label() for line in _curves(sh.plot_catalog_fits(fits).axes[0])
     )
     assert labels == ["study_a (exponential)", "study_a (gamma)"]
+
+
+# ---------------------------------------------------------------------------
+# plot_fit_diagnostic
+# ---------------------------------------------------------------------------
+
+
+def _synthetic_gamma_dataset(make_synthetic_dataset, **kwargs):
+    """A dataset whose truth decays below the limit within the sampled window.
+
+    41 of its 168 measurements land below the limit of quantification, so the
+    censored observations this plot has to render honestly actually exist.
+    """
+    return make_synthetic_dataset(
+        "gamma",
+        [0.0, np.log(2.0), np.log(12.0)],
+        np.diag([0.04, 0.04, 0.09]),
+        n_subjects=12,
+        seed=3,
+        **kwargs,
+    )
+
+
+@pytest.fixture
+def fitted_pair(make_synthetic_dataset):
+    """A real fit and the dataset it was fitted to.
+
+    Deliberately a genuine fit rather than a stub: the whole subject of this
+    plot is the relationship between a curve and the data behind it.
+    """
+    dataset = _synthetic_gamma_dataset(make_synthetic_dataset)
+    return fit_shedding_model(dataset, analyte="stool", model="gamma"), dataset
+
+
+def _collection(ax, label):
+    for collection in ax.collections:
+        if collection.get_label() == label:
+            return collection
+    raise AssertionError(f"no collection labelled {label!r} in {ax.collections}")
+
+
+def _rows_sorted(points):
+    points = np.asarray(points, dtype=float)
+    return points[np.lexsort((points[:, 1], points[:, 0]))]
+
+
+def _subject_lines(ax):
+    return [line for line in ax.get_lines() if line.get_label() == "_subject"]
+
+
+def test_plot_fit_diagnostic_plots_the_observed_positives(fitted_pair):
+    fit, dataset = fitted_pair
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+
+    drawn = _collection(ax, "Observed").get_offsets()
+    positive = ~observations.censored
+    expected = np.column_stack(
+        [observations.times[positive], observations.values[positive]]
+    )
+    assert len(drawn) == int(positive.sum())
+    assert np.allclose(_rows_sorted(drawn), _rows_sorted(expected))
+
+
+def test_plot_fit_diagnostic_draws_censored_observations_on_the_limit(fitted_pair):
+    """Censored readings establish only an upper bound, and there are many.
+
+    A median of 40% of the catalog's measurements are censored, so a page
+    showing positives alone would flatter every mostly-undetected analyte.
+    """
+    fit, dataset = fitted_pair
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+
+    drawn = np.asarray(_collection(ax, "Censored").get_offsets(), dtype=float)
+    assert len(drawn) == int(observations.censored.sum()) > 0
+    assert np.allclose(drawn[:, 1], observations.censoring_limit)
+
+
+def test_plot_fit_diagnostic_omits_a_subject_the_fitter_excluded(
+    make_synthetic_dataset,
+):
+    """A subject with no positive reading is dropped before fitting, so its
+    points are not something the curve was ever asked to explain."""
+    dataset = _synthetic_gamma_dataset(make_synthetic_dataset)
+    dataset["participants"].append(
+        {
+            "measurements": [
+                {"analyte": "stool", "time": float(day), "value": "negative"}
+                for day in range(1, 15)
+            ]
+        }
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    observations = prepare_observations(dataset, "stool", "gamma")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+
+    drawn = len(_collection(ax, "Observed").get_offsets()) + len(
+        _collection(ax, "Censored").get_offsets()
+    )
+    raw = sum(len(person["measurements"]) for person in dataset["participants"])
+    assert drawn == observations.values.size
+    assert drawn < raw
+
+
+def test_plot_fit_diagnostic_joins_each_subjects_own_points(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert len(_subject_lines(ax)) == fit.n_subjects
+
+
+def test_plot_fit_diagnostic_suppresses_subject_lines_for_a_large_study(fitted_pair):
+    """The largest study has 455 subjects, where the joins hide the scatter."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset, max_subject_lines=5).axes[0]
+    assert _subject_lines(ax) == []
+
+
+def test_plot_fit_diagnostic_legend_carries_the_estimates(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    legend = "\n".join(text.get_text() for text in ax.get_legend().get_texts())
+
+    for name in fit.param_names:
+        assert f"{name} =" in legend
+    for summary in ("peak day", "peak log10", "half-life", "sigma"):
+        assert summary in legend
+    assert f"{fit.n_subjects}" in legend
+
+
+def test_plot_fit_diagnostic_fades_the_extrapolated_stretch(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    by_label = {line.get_label(): line for line in ax.get_lines()}
+
+    assert by_label["Median individual"].get_alpha() == pytest.approx(1.0)
+    faded = by_label["Extrapolated (before first observation)"]
+    assert faded.get_alpha() == pytest.approx(0.35)
+    assert max(faded.get_xdata()) == pytest.approx(
+        fit.median_first_observed_day, abs=0.2
+    )
+
+
+def test_plot_fit_diagnostic_rejects_a_dataset_without_the_analyte(fitted_pair):
+    fit, dataset = fitted_pair
+    mismatched = dict(dataset, analytes={"urine": dataset["analytes"]["stool"]})
+    with pytest.raises(ValueError, match="does not contain analyte"):
+        sh.plot_fit_diagnostic(fit, mismatched)
+
+
+def test_plot_fit_diagnostic_returns_one_closed_axis(fitted_pair):
+    fit, dataset = fitted_pair
+    fig = sh.plot_fit_diagnostic(fit, dataset)
+    assert isinstance(fig, matplotlib.figure.Figure)
+    assert len(fig.axes) == 1
+    assert fig.number not in plt.get_fignums()

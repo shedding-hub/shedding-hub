@@ -163,3 +163,5 @@ playground
 .idea
 CLAUDE.md
 .claude/
+# Regenerable review artifact; rebuild with `make review`.
+shedding_catalog_review.pdf
