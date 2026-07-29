@@ -1,7 +1,7 @@
 # Catalog fit diagnostics — design
 
 **Date:** 2026-07-29
-**Status:** approved, not yet implemented
+**Status:** implemented 2026-07-29, as designed
 
 ## Problem
 
