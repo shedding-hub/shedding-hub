@@ -143,6 +143,25 @@ measurements inform the fit rather than being discarded. Because the two-stage
 fit does not shrink individual estimates toward the population mean, simulated
 cohorts are somewhat more dispersed than reality.
 
+That over-dispersion matters when a few agents can dominate a total. Pass
+`dispersion` below 1 to scale the between-subject covariance by `dispersion ** 2`,
+narrowing the cohort's spread while leaving its centre and correlation structure
+alone:
+
+```python
+>>> traj = sh.simulate_shedding(
+...     fit, n_individuals=1000, times=np.arange(0, 30),
+...     dispersion=0.7, seed=42,
+... )
+
+```
+
+The default of `1.0` simulates the fitted population exactly as estimated. There
+is no automatic way to choose a lower value — it is a judgement about how much of
+the fitted spread is real estimation noise rather than genuine heterogeneity. What
+makes shrinkage the only direction offered is that the two-stage bias runs one
+way: the fitted spread is too wide, never too narrow.
+
 ### Visualization
 
 Plot individual shedding trajectories over time.
@@ -199,6 +218,12 @@ estimated parameters and the fit's context sit in the legend.
 >>> fig = sh.plot_fit_diagnostic(fit, data1)
 
 ```
+
+Behind the observations it shades the central 5–95% of a simulated cohort drawn
+from the fitted population, because the median individual alone says nothing about
+whether the *spread* is right — which is most of what separates a usable fit from
+an unusable one. Pass `dispersion` to see the narrowed cohort, or
+`show_band=False` to omit it.
 
 `make review` renders every fit in the catalog this way into a single
 `shedding_catalog_review.pdf`, one page each.

@@ -1257,6 +1257,37 @@ def test_plot_fit_diagnostic_rejects_a_dataset_without_the_analyte(fitted_pair):
         sh.plot_fit_diagnostic(fit, mismatched)
 
 
+def test_plot_fit_diagnostic_shades_a_simulated_cohort_band(fitted_pair):
+    """The band is the population the fit implies, which is what the data
+    should be compared against — the median individual alone hides whether the
+    spread is right."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    bands = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()]
+    assert len(bands) == 1
+
+
+def test_plot_fit_diagnostic_band_can_be_disabled(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset, show_band=False).axes[0]
+    assert not [c for c in ax.collections if "simulated" in str(c.get_label()).lower()]
+
+
+def test_plot_fit_diagnostic_band_narrows_with_dispersion(fitted_pair):
+    """The band honours the same dispersion knob simulate_shedding takes."""
+    fit, dataset = fitted_pair
+
+    def height(**kwargs):
+        ax = sh.plot_fit_diagnostic(fit, dataset, **kwargs).axes[0]
+        band = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()][
+            0
+        ]
+        pts = band.get_paths()[0].vertices
+        return pts[:, 1].max() - pts[:, 1].min()
+
+    assert height(dispersion=0.4) < height()
+
+
 def test_plot_fit_diagnostic_returns_one_closed_axis(fitted_pair):
     fit, dataset = fitted_pair
     fig = sh.plot_fit_diagnostic(fit, dataset)

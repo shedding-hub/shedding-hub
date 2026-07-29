@@ -9,6 +9,7 @@ import pytest
 from shedding_hub.shedding_catalog import fit_shedding_models
 from shedding_hub.shedding_ensemble import SheddingEnsemble, make_ensemble
 from shedding_hub.shedding_fit import SheddingFit
+from shedding_hub.shedding_models import from_population_coords
 
 
 def _stub_fit(dataset_id, mean, cov, n_subjects, sigma=0.3):
@@ -162,7 +163,10 @@ def test_moment_covariance_is_within_plus_between():
     # within = I; between = weighted cov of means = [[1, 0], [0, 0]]
     expected = np.eye(2) + np.array([[1.0, 0.0], [0.0, 0.0]])
     np.testing.assert_allclose(ensemble.population_cov, expected)
-    np.testing.assert_allclose(ensemble.median_params, np.exp([1.0, 0.0]))
+    np.testing.assert_allclose(
+        ensemble.median_params,
+        from_population_coords("exponential", np.array([[1.0, 0.0]]))[0],
+    )
 
 
 def test_moment_sample_params_rejects_non_positive_semi_definite_covariance():

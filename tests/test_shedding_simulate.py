@@ -300,3 +300,82 @@ def test_public_exports_are_available():
         "SheddingCatalog",
     ]:
         assert hasattr(sh, name), name
+
+
+# ---------------------------------------------------------------------------
+# dispersion
+# ---------------------------------------------------------------------------
+
+
+def _spread(fit, dispersion, day=0.0, n=4000):
+    traj = simulate_shedding(
+        fit,
+        n_individuals=n,
+        times=np.array([day]),
+        dispersion=dispersion,
+        seed=11,
+    )
+    return traj["log10_value"].std()
+
+
+def test_dispersion_defaults_to_leaving_the_fitted_covariance_alone(exponential_fit):
+    times = np.arange(0.0, 6.0)
+    plain = simulate_shedding(exponential_fit, n_individuals=50, times=times, seed=3)
+    explicit = simulate_shedding(
+        exponential_fit, n_individuals=50, times=times, dispersion=1.0, seed=3
+    )
+    pd.testing.assert_frame_equal(plain, explicit)
+
+
+def test_dispersion_below_one_narrows_the_cohort(exponential_fit):
+    """The knob users reach for when a few agents dominate total shed load."""
+    assert _spread(exponential_fit, 0.5) < _spread(exponential_fit, 1.0)
+
+
+def test_dispersion_scales_the_standard_deviation_it_multiplies(exponential_fit):
+    """Sigma is scaled by dispersion**2, so the spread scales by dispersion."""
+    full = _spread(exponential_fit, 1.0)
+    half = _spread(exponential_fit, 0.5)
+    assert half == pytest.approx(0.5 * full, rel=0.1)
+
+
+def test_dispersion_of_zero_gives_every_agent_the_median_individual(exponential_fit):
+    from shedding_hub.shedding_models import log10_concentration
+
+    times = np.array([0.0, 5.0])
+    traj = simulate_shedding(
+        exponential_fit, n_individuals=25, times=times, dispersion=0.0, seed=3
+    )
+    # Every agent identical *at each time*; the two times of course differ.
+    assert (traj.groupby("time")["log10_value"].std() < 1e-9).all()
+    expected = log10_concentration(
+        exponential_fit.model, exponential_fit.median_params[None, :], times
+    )[0]
+    np.testing.assert_allclose(
+        traj.groupby("time")["log10_value"].first().to_numpy(), expected
+    )
+
+
+def test_dispersion_preserves_the_median(exponential_fit):
+    """Shrinking spread must not move the centre of the cohort."""
+    wide = simulate_shedding(
+        exponential_fit, n_individuals=4000, times=np.array([0.0]), seed=11
+    )["log10_value"].median()
+    narrow = simulate_shedding(
+        exponential_fit,
+        n_individuals=4000,
+        times=np.array([0.0]),
+        dispersion=0.4,
+        seed=11,
+    )["log10_value"].median()
+    assert narrow == pytest.approx(wide, abs=0.15)
+
+
+def test_dispersion_rejects_a_negative_value(exponential_fit):
+    with pytest.raises(ValueError, match="dispersion"):
+        simulate_shedding(
+            exponential_fit,
+            n_individuals=5,
+            times=np.array([0.0]),
+            dispersion=-0.5,
+        )

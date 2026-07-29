@@ -121,15 +121,38 @@ def test_gamma_population_coords_are_decay_peak_day_and_peak_height():
     )
 
 
-def test_exponential_population_coords_are_unchanged_log_parameters():
-    """The exponential's log-parameters are already a defensible space."""
+def test_exponential_population_coords_are_decay_and_peak_height():
+    """The exponential model peaks at t = 0, where log10 c = c0 / ln(10)."""
     params = np.array([[0.6, 18.0]])
+    a0, _ = params[0]
+    coords = to_population_coords("exponential", params)[0]
+    np.testing.assert_allclose(coords[0], np.log(a0))
     np.testing.assert_allclose(
-        to_population_coords("exponential", params), np.log(params)
+        coords[1], log10_concentration("exponential", params, np.array([0.0]))[0, 0]
     )
-    np.testing.assert_allclose(
-        from_population_coords("exponential", np.log(params)), params
-    )
+
+
+def test_exponential_population_coords_round_trip_exactly():
+    params = np.array([[0.6, 18.0], [0.24, 9.1], [1.9, 22.5]])
+    coords = to_population_coords("exponential", params)
+    np.testing.assert_allclose(from_population_coords("exponential", coords), params)
+
+
+def test_exponential_height_coordinate_is_linear_in_log10_concentration():
+    """The property that keeps simulated tails finite.
+
+    Modelling ``log c0`` as normal would make the *log10* concentration
+    lognormal, hence the concentration a double exponential of the draw, so a
+    3.5-sigma individual reached 10**18.8 where the median reached 10**6.1.
+    Making the log10 height itself a coordinate means a draw k units above the
+    mean lands exactly k log10 above it.
+    """
+    for height in (6.0, 9.0, 12.0):
+        params = from_population_coords(
+            "exponential", np.array([[np.log(0.6), height]])
+        )
+        reached = log10_concentration("exponential", params, np.array([0.0]))[0, 0]
+        np.testing.assert_allclose(reached, height)
 
 
 def test_population_coords_reject_unknown_model():

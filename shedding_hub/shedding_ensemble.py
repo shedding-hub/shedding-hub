@@ -14,7 +14,12 @@ import numpy as np
 import pandas as pd
 
 from .shedding_catalog import SheddingCatalog, _fits_to_frame
-from .shedding_fit import SheddingFit, _require_positive_semidefinite
+from .shedding_fit import (
+    SheddingFit,
+    _scaled,
+    validate_dispersion,
+    _require_positive_semidefinite,
+)
 from .shedding_models import from_population_coords
 
 _COMPATIBILITY_KEYS = (
@@ -126,11 +131,17 @@ class SheddingEnsemble:
         return from_population_coords(self.model, self.population_mean[None, :])[0]
 
     def sample_params(
-        self, rng: np.random.Generator, n: int
+        self, rng: np.random.Generator, n: int, dispersion: float = 1.0
     ) -> tuple[np.ndarray, np.ndarray]:
-        """Draw ``n`` individuals' natural-scale parameters."""
+        """Draw ``n`` individuals' natural-scale parameters.
+
+        ``dispersion`` scales each covariance drawn from by ``dispersion ** 2``;
+        under ``method="mixture"`` that shrinks each component around its own
+        mean, leaving the between-study spread of those means intact.
+        """
         if n < 1:
             raise ValueError("n_individuals must be at least 1")
+        validate_dispersion(dispersion)
         if self.method == "moment":
             cov = _require_positive_semidefinite(
                 self.population_cov,
@@ -143,7 +154,9 @@ class SheddingEnsemble:
                     "validated) covariance rather than a combined one."
                 ),
             )
-            theta = rng.multivariate_normal(self.population_mean, cov, n)
+            theta = rng.multivariate_normal(
+                self.population_mean, _scaled(cov, dispersion), n
+            )
             return (
                 from_population_coords(self.model, theta),
                 np.full(n, "ensemble", dtype=object),
@@ -153,7 +166,7 @@ class SheddingEnsemble:
             # Skip the categorical draw entirely so a one-study ensemble consumes
             # the generator exactly as the underlying fit would, making the two
             # interchangeable for a given seed.
-            return self.fits[0].sample_params(rng, n)
+            return self.fits[0].sample_params(rng, n, dispersion)
 
         choices = rng.choice(len(self.fits), size=n, p=self.weights)
         k = self.fits[0].population_mean.size
@@ -179,7 +192,9 @@ class SheddingEnsemble:
                     "it before building the ensemble."
                 ),
             )
-            theta[mask] = rng.multivariate_normal(fit.population_mean, cov, count)
+            theta[mask] = rng.multivariate_normal(
+                fit.population_mean, _scaled(cov, dispersion), count
+            )
             sources[mask] = fit.dataset_id
         # One conversion for the whole array: make_ensemble guarantees every
         # component shares a model, so every row is in the same coordinates.

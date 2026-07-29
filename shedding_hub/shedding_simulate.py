@@ -43,6 +43,7 @@ def simulate_shedding(
     times: Sequence[float] | np.ndarray,
     incubation_period: float | np.ndarray | Callable | None = None,
     include_measurement_error: bool = False,
+    dispersion: float = 1.0,
     seed: int | None = None,
 ) -> pd.DataFrame:
     """
@@ -64,6 +65,21 @@ def simulate_shedding(
             scale. Off by default: an agent-based model wants the true shed
             concentration, and assay noise is a property of sampling rather than
             of the host.
+        dispersion: Scales the between-subject covariance by ``dispersion ** 2``,
+            so the cohort's spread scales by ``dispersion`` while its centre and
+            correlation structure stay put. ``1.0`` (default) simulates the
+            fitted population as estimated.
+
+            Reach for a value below 1 when a handful of agents dominate the
+            cohort's total shed load. Two-stage estimation does not shrink
+            individual estimates toward the population mean, so
+            ``population_cov`` carries within-subject estimation error on top of
+            true between-subject variance and every simulated cohort is somewhat
+            over-dispersed — the more so the fewer observations each subject
+            has. The bias only ever runs one way, which is what makes a
+            shrinkage factor a defensible correction rather than a fudge, but
+            there is no automatic way to choose it: it is a judgement about how
+            much of the fitted spread is real.
         seed: Seed for a ``numpy`` generator, making runs reproducible.
 
     Returns:
@@ -86,7 +102,7 @@ def simulate_shedding(
         raise ValueError("n_individuals must be at least 1")
 
     rng = np.random.default_rng(seed)
-    params, sources = source.sample_params(rng, n_individuals)
+    params, sources = source.sample_params(rng, n_individuals, dispersion)
     times = np.asarray(times, dtype=float)
     offsets, incubation_applied = _resolve_incubation(
         incubation_period, rng, n_individuals

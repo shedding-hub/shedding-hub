@@ -2998,6 +2998,10 @@ def plot_catalog_fits(
 # 455 subjects.
 FIT_DIAGNOSTIC_MAX_SUBJECT_LINES = 40
 
+# Fixed so a page redrawn from the same fit is identical; the band is a summary
+# of the fitted population, not a sample anyone should be reading noise from.
+_FIT_DIAGNOSTIC_BAND_SEED = 20260729
+
 
 def _fit_diagnostic_legend_rows(fit) -> list[str]:
     """The estimate block: what was estimated, what it means, and its context.
@@ -3035,6 +3039,10 @@ def plot_fit_diagnostic(
     *,
     figsize: tuple[float, float] = (9, 6),
     max_subject_lines: int = FIT_DIAGNOSTIC_MAX_SUBJECT_LINES,
+    show_band: bool = True,
+    dispersion: float = 1.0,
+    band_quantiles: tuple[float, float] = (0.05, 0.95),
+    n_simulated: int = 2000,
 ) -> Figure:
     """
     Plot one fitted curve against the observations behind it.
@@ -3065,6 +3073,16 @@ def plot_fit_diagnostic(
         figsize: Figure size in inches.
         max_subject_lines: Join each subject's own points only when the fit
             retains at most this many subjects.
+        show_band: Shade the central ``band_quantiles`` of a simulated cohort
+            drawn from the fitted population. The median individual alone says
+            nothing about whether the *spread* is right, which is most of what
+            distinguishes a usable fit from an unusable one.
+        dispersion: Passed to the simulation behind the band, so the page shows
+            the same cohort ``simulate_shedding`` would produce with that
+            setting.
+        band_quantiles: Lower and upper quantiles of the shaded band.
+        n_simulated: Individuals drawn for the band. Fixed seed, so a page is
+            reproducible.
 
     Returns:
         The figure. It is closed in the pyplot state so notebooks do not display
@@ -3138,6 +3156,29 @@ def plot_fit_diagnostic(
     horizon = float(observations.times.max())
     times = np.linspace(CATALOG_FIT_START_DAY, horizon, 400)
     values = log10_concentration(fit.model, fit.median_params[None, :], times)[0]
+
+    band = None
+    if show_band:
+        # Drawn from the fitted population rather than smoothed from the points:
+        # the question the band answers is whether the population this fit
+        # implies covers the data, which is not what the observations alone say.
+        rng = np.random.default_rng(_FIT_DIAGNOSTIC_BAND_SEED)
+        drawn, _ = fit.sample_params(rng, n_simulated, dispersion)
+        cohort = log10_concentration(fit.model, drawn, times)
+        lower, upper = np.nanquantile(cohort, band_quantiles, axis=0)
+        band = ax.fill_between(
+            times,
+            lower,
+            upper,
+            color="tab:red",
+            alpha=0.12,
+            lw=0,
+            zorder=1,
+            label=(
+                f"Simulated {int(round((band_quantiles[1] - band_quantiles[0]) * 100))}"
+                "% of individuals"
+            ),
+        )
     spans = _catalog_fit_spans(times, fit.median_first_observed_day, True)
     for span, alpha in spans:
         extrapolated = alpha < 1.0
@@ -3158,7 +3199,10 @@ def plot_fit_diagnostic(
     ax.set_xlim(0, horizon * 1.02)
     # The observations set the y range, but the curve's peak can sit above every
     # one of them — that is exactly the disagreement this page exists to show —
-    # so both are allowed to claim room.
+    # so both are allowed to claim room. The band deliberately does not: it can
+    # reach far past any observation, and letting it set the axis would squash
+    # the data into a sliver. It is clipped instead, so an over-dispersed fit
+    # reads as a band filling the panel rather than as a flattened plot.
     top = max(np.nanmax(observations.values[positive]), np.nanmax(values))
     bottom = min(limit, float(np.nanmin(observations.values[positive])))
     ax.set_ylim(bottom - 0.5, top + 0.5)

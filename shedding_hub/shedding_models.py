@@ -30,7 +30,7 @@ PARAM_NAMES = {
 # ``population_mean``/``population_cov`` live in and a catalog written under the
 # old convention fails loudly instead of being silently misread.
 POPULATION_COORDS = {
-    "exponential": ("log_a0", "log_c0"),
+    "exponential": ("log_a0", "peak_log10"),
     "gamma": ("log_a0", "log_peak_day", "peak_log10"),
 }
 
@@ -150,13 +150,30 @@ def to_population_coords(model: str, params: np.ndarray) -> np.ndarray:
     stool against -0.55 for ``corr(log b0, log c0)``), so averaging them
     coordinate-wise is meaningful.
 
-    The exponential model needs no such treatment and is returned unchanged, as
-    ``log(params)``. Its ``c0`` *is* the level, with no shape parameter to trade
-    against, so its subjects already form a compact cloud (sd of ``log c0`` 0.57
-    against the gamma's 2.01, and ``corr(log a0, log c0)`` 0.03). Empirically
-    the change would make its median individual slightly *worse* on 31 of 61
-    fits, so it is deliberately left alone; the two models simply declare
-    different spaces, which is the point of routing through this function.
+    The exponential model takes the same treatment for a different reason. Its
+    ``c0`` *is* the level, with no shape parameter to trade against, so its
+    subjects do form a compact cloud in ``log(params)`` and the *ridge* argument
+    above does not apply to it. What does apply is the tail. Because
+    ``log10 c(0) = c0 / ln(10)``, modelling ``log c0`` as normal makes the log10
+    concentration itself lognormal, hence the concentration a *double*
+    exponential of the draw: on ``woelfel2020virological`` stool that put the
+    99.9th percentile of simulated day-0 concentrations at ``10**16.6`` and the
+    worst draw at ``10**25``, against eight real subjects topping out at
+    ``10**9``, and left the top 0.1% of a simulated cohort carrying
+    essentially all of its shed load. Taking ``peak_log10`` — the model peaks at
+    ``t = 0`` — as the coordinate makes a draw ``k`` units above the mean land
+    exactly ``k`` log10 above it, so concentration is merely lognormal, as it is
+    for the gamma model.
+
+    This is a genuine trade, and it is why the exponential model was originally
+    left in ``log(params)``. The level summary moves from the geometric mean of
+    ``c0`` to the arithmetic mean of the subjects' log10 heights, and measured
+    against the subjects' own pointwise median curve over a 10-fit sample, the
+    new coordinate was closer on only 3 of 10 (median RMS gap 1.10 against 1.16
+    log10, mean 2.36 against 1.85). It is accepted because the two costs are not
+    remotely the same size: the median individual moves by a fraction of a log10,
+    while the simulated maximum falls from ``10**27`` to ``10**15``. Simulation
+    is what the catalog is for.
 
     Args:
         model: ``"exponential"`` or ``"gamma"``.
@@ -170,7 +187,8 @@ def to_population_coords(model: str, params: np.ndarray) -> np.ndarray:
     validate_model(model)
     params = np.atleast_2d(np.asarray(params, dtype=float))
     if model == "exponential":
-        return np.log(params)
+        # The peak is at t = 0, where the log10 concentration is c0 / ln(10).
+        return np.column_stack([np.log(params[:, 0]), params[:, 1] / LN10])
     a0 = params[:, 0]
     b0 = params[:, 1]
     c0 = params[:, 2]
@@ -202,7 +220,7 @@ def from_population_coords(model: str, coords: np.ndarray) -> np.ndarray:
     validate_model(model)
     coords = np.atleast_2d(np.asarray(coords, dtype=float))
     if model == "exponential":
-        return np.exp(coords)
+        return np.column_stack([np.exp(coords[:, 0]), coords[:, 1] * LN10])
     a0 = np.exp(coords[:, 0])
     peak = np.exp(coords[:, 1])
     height = coords[:, 2]

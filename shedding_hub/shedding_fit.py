@@ -455,6 +455,28 @@ _PEAK_LOG10_DRAWS = 10000
 _PEAK_LOG10_SEED = 8601
 
 
+def validate_dispersion(dispersion: float) -> float:
+    """Check a dispersion factor and return it as a float.
+
+    Shared by ``SheddingFit`` and ``SheddingEnsemble`` so both reject the same
+    values with the same message.
+    """
+    dispersion = float(dispersion)
+    if not np.isfinite(dispersion) or dispersion < 0:
+        raise ValueError(
+            f"dispersion must be a finite, non-negative number; got {dispersion!r}. "
+            "It scales the between-subject covariance by dispersion**2, so 1.0 "
+            "leaves the fitted population alone and 0.0 makes every individual "
+            "the median one."
+        )
+    return dispersion
+
+
+def _scaled(cov: np.ndarray, dispersion: float) -> np.ndarray:
+    """The covariance to draw from, after applying ``dispersion``."""
+    return cov * validate_dispersion(dispersion) ** 2
+
+
 def _require_positive_semidefinite(cov: np.ndarray, *, advice: str) -> np.ndarray:
     """
     Raise if ``cov`` is not (numerically) positive semi-definite.
@@ -670,10 +692,19 @@ class SheddingFit:
         return float(half_life_days(self.model, self.median_params[None, :])[0])
 
     def sample_params(
-        self, rng: np.random.Generator, n: int
+        self, rng: np.random.Generator, n: int, dispersion: float = 1.0
     ) -> tuple[np.ndarray, np.ndarray]:
         """
         Draw ``n`` individuals' natural-scale parameters.
+
+        Args:
+            rng: Generator to draw from.
+            n: Number of individuals.
+            dispersion: Scales the between-subject covariance by
+                ``dispersion ** 2``, so the population's spread scales by
+                ``dispersion`` while its centre and correlation structure are
+                untouched. See ``simulate_shedding`` for why you might want it
+                below 1.
 
         Returns:
             ``(params, sources)`` where ``params`` has shape ``(n, k)`` and
@@ -692,7 +723,9 @@ class SheddingFit:
                 "simulating from this fit alone."
             ),
         )
-        theta = rng.multivariate_normal(self.population_mean, cov, n)
+        theta = rng.multivariate_normal(
+            self.population_mean, _scaled(cov, dispersion), n
+        )
         return (
             from_population_coords(self.model, theta),
             np.full(n, self.dataset_id, dtype=object),

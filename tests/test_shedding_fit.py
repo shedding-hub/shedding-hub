@@ -325,12 +325,20 @@ from shedding_hub.shedding_fit import SheddingFit, fit_shedding_model
 
 
 def test_recovers_known_exponential_population(make_synthetic_dataset):
+    from shedding_hub.shedding_models import LN10
+
     mu = np.array([np.log(0.6), np.log(18.0)])
-    dataset = make_synthetic_dataset(
-        "exponential", mu, np.diag([0.09, 0.04]), sigma=0.3, n_subjects=60
-    )
+    cov = np.diag([0.09, 0.04])
+    dataset = make_synthetic_dataset("exponential", mu, cov, sigma=0.3, n_subjects=60)
     fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
-    np.testing.assert_allclose(fit.population_mean, mu, atol=0.15)
+
+    # The truth is generated in log-parameter space, but summarized in
+    # population coordinates, whose second entry is c0/ln(10). c0 is lognormal
+    # there, so the coordinate's population mean is E[c0]/ln(10), not
+    # log(18)/ln(10).
+    np.testing.assert_allclose(fit.population_mean[0], mu[0], atol=0.15)
+    expected_height = np.exp(mu[1] + cov[1, 1] / 2) / LN10
+    np.testing.assert_allclose(fit.population_mean[1], expected_height, atol=0.5)
     assert fit.sigma == pytest.approx(0.3, abs=0.15)
     assert fit.converged
 
@@ -476,13 +484,26 @@ def test_fit_carries_metadata_and_counts(make_synthetic_dataset):
     assert fit.param_names == ("a0", "c0")
 
 
-def test_median_params_are_exp_of_population_mean(make_synthetic_dataset):
+def test_median_params_invert_the_population_coordinates(make_synthetic_dataset):
+    """The median individual is the population mean mapped back to parameters.
+
+    Not ``exp(population_mean)``: neither model is summarized in its
+    log-parameters any more, the exponential model's second coordinate being
+    the log10 height at its peak rather than ``log c0``.
+    """
+    from shedding_hub.shedding_models import from_population_coords
+
     mu = np.array([np.log(0.6), np.log(18.0)])
     dataset = make_synthetic_dataset(
         "exponential", mu, np.diag([0.04, 0.04]), n_subjects=10
     )
     fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
-    np.testing.assert_allclose(fit.median_params, np.exp(fit.population_mean))
+    np.testing.assert_allclose(
+        fit.median_params,
+        from_population_coords("exponential", fit.population_mean[None, :])[0],
+    )
+    # a0 still round-trips through exp, being the one log coordinate.
+    np.testing.assert_allclose(fit.median_params[0], np.exp(fit.population_mean[0]))
 
 
 def test_gamma_peak_day_is_b_over_a(make_synthetic_dataset):
@@ -595,13 +616,14 @@ def test_population_covariance_ignores_degenerate_subjects():
     with pytest.warns(UserWarning, match="collapsed onto the bounds"):
         fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
 
-    theta = np.log(
+    kept = to_population_coords(
+        "exponential",
         fit.subject_params.loc[
             ~fit.subject_params["degenerate"], list(fit.param_names)
-        ].to_numpy(dtype=float)
+        ].to_numpy(dtype=float),
     )
-    np.testing.assert_allclose(fit.population_mean, theta.mean(axis=0))
-    np.testing.assert_allclose(fit.population_cov, np.cov(theta, rowvar=False, ddof=1))
+    np.testing.assert_allclose(fit.population_mean, kept.mean(axis=0))
+    np.testing.assert_allclose(fit.population_cov, np.cov(kept, rowvar=False, ddof=1))
 
 
 def test_single_subject_fit_still_allowed_when_not_degenerate():
@@ -1028,11 +1050,14 @@ def test_sample_params_accepts_zero_covariance_producing_identical_individuals()
     # A single-subject fit legitimately has an all-zero population_cov (no
     # between-subject variance can be estimated from one subject). This must
     # still simulate, giving every individual the same parameters.
-    mean = np.array([np.log(0.6), np.log(18.0)])
+    from shedding_hub.shedding_models import from_population_coords
+
+    mean = np.array([np.log(0.6), 7.8])
     fit = _minimal_fit(mean, np.zeros((2, 2)))
     rng = np.random.default_rng(0)
     params, sources = fit.sample_params(rng, 4)
-    np.testing.assert_allclose(params, np.tile(np.exp(mean), (4, 1)))
+    expected = from_population_coords("exponential", mean[None, :])
+    np.testing.assert_allclose(params, np.tile(expected, (4, 1)))
     assert set(sources.tolist()) == {"synthetic"}
 
 

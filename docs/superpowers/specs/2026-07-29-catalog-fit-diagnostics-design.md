@@ -1,7 +1,12 @@
 # Catalog fit diagnostics — design
 
 **Date:** 2026-07-29
-**Status:** implemented 2026-07-29, as designed
+**Status:** implemented 2026-07-29, as designed. Extended the same day with a
+simulated-cohort band — see
+[2026-07-29-simulation-dispersion-design.md](2026-07-29-simulation-dispersion-design.md),
+which added `show_band`, `dispersion`, `band_quantiles` and `n_simulated` to
+`plot_fit_diagnostic`. The band answers the question the median individual cannot:
+whether the *spread* of the fitted population covers the data.
 
 ## Problem
 
