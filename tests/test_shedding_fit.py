@@ -591,6 +591,80 @@ def test_all_subjects_collapsing_raises_degenerate_fit():
     assert "not identifiable" in str(excinfo.value)
 
 
+def _late_sampled_dataset(n_normal=4, n_steep=1):
+    """Subjects first sampled on day 8, one of them decaying very steeply.
+
+    The exponential model's height coordinate is the level at t = 0, so a steep
+    decay fitted to late samples is extrapolated backwards through many
+    half-lives and implies a peak far above anything the study recorded. This is
+    the fajnzylber2020sars pathology, reproduced deliberately: its
+    Nasopharyngeal subject with a 0.30-day half-life, first sampled on day 30,
+    implied 10**33 gc/mL against a highest observed value of 10**5.5.
+    """
+    participants = [
+        {
+            "measurements": [
+                {"analyte": "stool", "time": t, "value": 1e5 * np.exp(-rate * (t - 8))}
+                for t in range(8, 18)
+            ]
+        }
+        for rate in np.linspace(0.25, 0.45, n_normal)
+    ]
+    participants += [
+        {
+            "measurements": [
+                {"analyte": "stool", "time": t, "value": 1e5 * np.exp(-3.2 * (t - 8))}
+                for t in range(8, 12)
+            ]
+        }
+        for _ in range(n_steep)
+    ]
+    return {
+        "dataset_id": "late_sampled_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 1e-3,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": participants,
+    }
+
+
+def test_over_extrapolated_subject_is_excluded_from_the_population():
+    """A subject implying a peak far above anything observed is not an estimate.
+
+    Its curve is the model reaching back past where any data constrain it, and
+    because the height coordinate is linear in log10 concentration, one such
+    subject drags the population summary above the whole observed cloud.
+    """
+    from shedding_hub.shedding_models import LN10
+
+    dataset = _late_sampled_dataset()
+    with pytest.warns(UserWarning):
+        fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+
+    observed_max = 5.0  # every subject starts at 1e5 gc/mL
+    heights = fit.subject_params["c0"].to_numpy() / LN10
+    assert (heights > observed_max + 3.0).any(), "fixture failed to over-extrapolate"
+    # The retained subjects imply 5.9 to 6.6; the artifact implies 16.1. The
+    # summary must land with the former, so 7.0 separates the two outcomes
+    # cleanly rather than sitting just under the gate.
+    assert fit.peak_log10 < 7.0
+    assert fit.n_degenerate_subjects == 1
+
+
+def test_over_extrapolation_gate_leaves_a_well_behaved_fit_alone():
+    """No subject over-extrapolates here, so nothing may be excluded."""
+    dataset = _late_sampled_dataset(n_normal=5, n_steep=0)
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    assert fit.n_degenerate_subjects == 0
+
+
 def test_degenerate_subject_is_flagged_but_excluded_from_the_population():
     """The collapsed subject stays inspectable; it just stops voting."""
     dataset = _flat_dataset(n_flat=1, n_decaying=3)
@@ -908,11 +982,26 @@ def test_median_first_observed_day_is_the_median_not_the_minimum():
     study saw the reference event, while the median reports 21.0 and correctly
     says the typical subject was first sampled three weeks in.
     """
-    dataset = _flat_dataset(n_flat=0, n_decaying=3)
-    # _flat_dataset samples days 1..10 for every subject; stagger two of them.
-    for offset, participant in zip((20, 30), dataset["participants"][1:]):
-        for measurement in participant["measurements"]:
-            measurement["time"] += offset
+    # Three subjects sampled in staggered windows but lying on one real decay,
+    # so each value is consistent with its own time. Shifting times alone would
+    # leave the late subjects implying a huge backward-extrapolated peak, which
+    # _over_extrapolated_subjects excludes — correctly, but that would make this
+    # test about the wrong thing. The decay is slow enough that the day-40
+    # readings stay well above the limit of quantification.
+    dataset = _flat_dataset(n_flat=0, n_decaying=0)
+    dataset["participants"] = [
+        {
+            "measurements": [
+                {
+                    "analyte": "stool",
+                    "time": float(day),
+                    "value": 1e9 * np.exp(-0.15 * day),
+                }
+                for day in range(start, start + 10)
+            ]
+        }
+        for start in (1, 21, 31)
+    ]
 
     fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
     assert fit.median_first_observed_day == pytest.approx(21.0)

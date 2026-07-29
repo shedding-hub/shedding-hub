@@ -437,6 +437,14 @@ _BOUND_TOLERANCE = 1e-6
 # justify cutting into.
 _MIN_HALF_LIFE_DAYS = 0.1
 
+# How far above the highest observed concentration a subject's implied peak may
+# sit before it is treated as extrapolation rather than estimate, in log10 units.
+# Three is a thousandfold: enough headroom that a study sampling a few days after
+# the reference event still summarizes every real subject, tight enough to
+# exclude the hundred-half-life backward extrapolations that late-starting
+# studies produce. See ``_over_extrapolated_subjects``.
+_MAX_PEAK_ABOVE_OBSERVED = 3.0
+
 # The gamma model is only fitted where a rise is actually observed. Its ``b0``
 # describes the rise to peak, so a study that sampled purely after peak shedding
 # carries no information about it: the profile likelihood is then monotone in
@@ -900,6 +908,58 @@ def _initial_theta(model: str, observations: Observations) -> np.ndarray:
     return np.clip(theta, *_THETA_BOUNDS)
 
 
+def _over_extrapolated_subjects(
+    theta: np.ndarray, model: str, observations: Observations
+) -> np.ndarray:
+    """
+    Flag subjects whose implied peak sits far above anything the study observed.
+
+    A peak is only measured when sampling reaches it. Many studies begin days or
+    weeks after the reference event, and the exponential model's peak is at
+    ``t = 0`` by definition, so a subject with a steep fitted decay is
+    extrapolated backwards through many half-lives. In
+    ``fajnzylber2020sars`` nasopharyngeal, one subject with a 0.30-day half-life
+    first sampled on day 30 implies ``10**33`` gc/mL — a hundred half-lives of
+    extrapolation — while its own highest reading was ``10**2.7`` and the whole
+    analyte never exceeded ``10**5.5``.
+
+    Such a value is not an estimate of a concentration; it is the functional form
+    continued past every observation that constrains it. Averaging it into the
+    population summary is what left 87% of that analyte's observations *below*
+    its median-individual curve.
+
+    The threshold is referenced to the data rather than fixed, since what counts
+    as absurd depends on what the assay can see: more than
+    ``_MAX_PEAK_ABOVE_OBSERVED`` log10 — a thousandfold — above the highest
+    concentration the analyte ever recorded. Measured over the repository this
+    flags 66 subjects across 34 of 92 fits, while leaving well-sampled fits
+    untouched (``tsang2016individual`` NPSOPS loses 4 of 440 and does not move).
+
+    Why this could not be left to the log scale: while the exponential model was
+    summarized in ``log c0``, the logarithm compressed these subjects enough to
+    hide them. Summarizing in ``peak_log10`` — which is what keeps simulated
+    concentrations from being double-exponential — makes the coordinate linear in
+    log10, so one such subject dominates the mean outright. The two changes
+    belong together.
+
+    Args:
+        theta: Fitted log-parameters, shape ``(n_subjects, k)``.
+        model: ``"exponential"`` or ``"gamma"``.
+        observations: The observations the subjects were fitted to.
+
+    Returns:
+        Boolean array of length ``n_subjects``, True where the subject's implied
+        peak is unsupportable. All False when the analyte has no positive
+        reading to reference, which leaves the judgement to the other checks.
+    """
+    positive = ~observations.censored
+    if not positive.any():
+        return np.zeros(theta.shape[0], dtype=bool)
+    ceiling = float(np.nanmax(observations.values[positive])) + _MAX_PEAK_ABOVE_OBSERVED
+    heights = to_population_coords(model, np.exp(theta))[:, -1]
+    return np.asarray(heights > ceiling)
+
+
 def _degenerate_subjects(theta: np.ndarray, model: str) -> np.ndarray:
     """
     Flag subjects whose fit is an artifact rather than an estimate.
@@ -1177,11 +1237,15 @@ def fit_shedding_model(
     theta = result.x[: n * k].reshape(n, k)
     sigma = float(np.exp(result.x[-1]))
 
-    # Subjects whose fits are artifacts — collapsed, pinned, or decaying faster
-    # than the sampling can resolve — stay in subject_params so the raw fit
-    # remains inspectable, but are kept out of the population summary, which
-    # they would otherwise dominate.
-    degenerate = _degenerate_subjects(theta, model)
+    # Subjects whose fits are artifacts — collapsed, pinned, decaying faster than
+    # the sampling can resolve, or implying a peak far above anything the study
+    # observed — stay in subject_params so the raw fit remains inspectable, but
+    # are kept out of the population summary, which they would otherwise
+    # dominate. The last of those is judged against the data rather than against
+    # the parameter bounds, which is why it needs the observations.
+    degenerate = _degenerate_subjects(theta, model) | _over_extrapolated_subjects(
+        theta, model, observations
+    )
     n_degenerate = int(degenerate.sum())
     retained = ~degenerate
     n_retained = int(retained.sum())

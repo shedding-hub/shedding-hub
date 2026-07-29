@@ -49,20 +49,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.9222904565373273
-  - 5.2839480636665
+  - -0.9996073612187754
+  - 5.018423194186894
   population_cov:
-  - - 2.0567296581525483
-    - 1.367762528425047
-  - - 1.367762528425047
-    - 4.488817122687347
+  - - 1.9805251673594015
+    - 0.8687436893731514
+  - - 0.8687436893731514
+    - 2.7663825610116177
   sigma: 1.0393897246052175
   censoring_limit: 1.3269587536076142
   n_subjects: 34
   n_measurements: 290
   n_censored: 98
   n_excluded_subjects: 14
-  n_degenerate_subjects: 8
+  n_degenerate_subjects: 9
   pct_subjects_with_rise: 72.0
   median_first_observed_day: 5.0
   n_dropped_measurements: 0
@@ -126,20 +126,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.8838440248898052
-  - 4.984437424535166
+  - -1.0709736082668693
+  - 4.45537713425612
   population_cov:
-  - - 1.4385287168646972
-    - 1.6837830425351195
-  - - 1.6837830425351195
-    - 6.7008670363839755
+  - - 1.1114009851110596
+    - 0.5458096216425875
+  - - 0.5458096216425875
+    - 3.6261000393254603
   sigma: 1.1211158458556783
   censoring_limit: 1.308555965077593
   n_subjects: 35
   n_measurements: 297
   n_censored: 107
   n_excluded_subjects: 13
-  n_degenerate_subjects: 10
+  n_degenerate_subjects: 12
   pct_subjects_with_rise: 84.0
   median_first_observed_day: 5.0
   n_dropped_measurements: 0
@@ -357,22 +357,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.0061630775687682
-  - 8.011633007184239
+  - -1.442859111340713
+  - 6.943038035737161
   population_cov:
-  - - 3.6143708058206516
-    - 6.597122569952876
-  - - 6.597122569952876
-    - 15.377002675001567
+  - - 2.8017545544979017
+    - 4.2280393947933534
+  - - 4.2280393947933534
+    - 9.451010417683634
   sigma: 1.0766537690622942
   censoring_limit: 1.590032301611677
   n_subjects: 16
   n_measurements: 43
   n_censored: 8
   n_excluded_subjects: 5
-  n_degenerate_subjects: 2
+  n_degenerate_subjects: 4
   pct_subjects_with_rise: 40.0
-  median_first_observed_day: 3.0
+  median_first_observed_day: 4.0
   n_dropped_measurements: 0
   converged: true
   log_likelihood: -54.619600245149805
@@ -427,20 +427,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - 0.6747915300972838
-  - 9.460829870650011
+  - 0.47984157038731734
+  - 8.99911058169521
   population_cov:
-  - - 1.221563662725517
-    - 1.425955304893665
-  - - 1.425955304893665
-    - 2.1183883070935337
+  - - 1.2419134274750152
+    - 1.107352955274186
+  - - 1.107352955274186
+    - 1.0491001204199686
   sigma: 0.979045355872978
   censoring_limit: 2.0
   n_subjects: 12
   n_measurements: 73
   n_censored: 42
   n_excluded_subjects: 1
-  n_degenerate_subjects: 6
+  n_degenerate_subjects: 7
   pct_subjects_with_rise: 33.33333333333333
   median_first_observed_day: 1.0
   n_dropped_measurements: 0
@@ -497,22 +497,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.8644233472610381
-  - 8.941343263217775
+  - -1.2820456405426843
+  - 5.452804524715579
   population_cov:
-  - - 1.5872153237174909
-    - 7.024070198963539
-  - - 7.024070198963539
-    - 71.66583881219245
+  - - 1.4537167590909417
+    - 2.0450541190687637
+  - - 2.0450541190687637
+    - 4.890365754522799
   sigma: 0.8893809193909175
   censoring_limit: 1.6020599913279623
   n_subjects: 16
   n_measurements: 39
   n_censored: 16
   n_excluded_subjects: 48
-  n_degenerate_subjects: 5
+  n_degenerate_subjects: 8
   pct_subjects_with_rise: .nan
-  median_first_observed_day: 10.0
+  median_first_observed_day: 9.5
   n_dropped_measurements: 2
   converged: true
   log_likelihood: -36.08358728040099
@@ -532,22 +532,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.448469193888438
-  - 6.205500764935676
+  - -1.7574516176418928
+  - 4.9393870993905455
   population_cov:
-  - - 2.19791096930212
-    - 4.963645999802332
-  - - 4.963645999802332
-    - 17.218417623768214
+  - - 1.5299196864058107
+    - 1.648896203034035
+  - - 1.648896203034035
+    - 3.1897409109109223
   sigma: 0.34408054176359804
   censoring_limit: 1.6020599913279623
   n_subjects: 10
   n_measurements: 24
   n_censored: 5
   n_excluded_subjects: 36
-  n_degenerate_subjects: 1
+  n_degenerate_subjects: 2
   pct_subjects_with_rise: 100.0
-  median_first_observed_day: 12.0
+  median_first_observed_day: 13.5
   n_dropped_measurements: 1
   converged: true
   log_likelihood: -8.170276501903832
@@ -567,61 +567,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.9591770180785294
-  - 7.887198106498935
+  - -1.0201846539241455
+  - 7.571221421131715
   population_cov:
-  - - 0.40575132196834585
-    - 0.9724261392560549
-  - - 0.9724261392560549
-    - 4.703287844036696
+  - - 0.3768394511498363
+    - 0.7358306102077897
+  - - 0.7358306102077897
+    - 3.4522587708020174
   sigma: 0.450787578276359
   censoring_limit: 1.6020599913279623
   n_subjects: 15
   n_measurements: 36
   n_censored: 6
   n_excluded_subjects: 28
-  n_degenerate_subjects: 0
+  n_degenerate_subjects: 1
   pct_subjects_with_rise: 0.0
-  median_first_observed_day: 17.0
+  median_first_observed_day: 17.5
   n_dropped_measurements: 2
   converged: true
   log_likelihood: -21.565274784492622
   aic: 105.13054956898524
-- dataset_id: fajnzylber2020sars
-  analyte: Plasma_SARSCoV2_N
-  biomarker: SARS-CoV-2
-  specimen: plasma
-  reference_event: symptom onset
-  unit: gc/mL
-  gene_target: N1
-  dose: null
-  vaccine_type: null
-  model: exponential
-  method: mle
-  population_coords:
-  - log_a0
-  - peak_log10
-  population_mean:
-  - -0.29216441788721964
-  - 13.643154098670253
-  population_cov:
-  - - 3.4291549225031646
-    - 18.87817384448373
-  - - 18.87817384448373
-    - 150.33542410430212
-  sigma: 1.3605083014476307
-  censoring_limit: 1.6020599913279623
-  n_subjects: 13
-  n_measurements: 34
-  n_censored: 19
-  n_excluded_subjects: 58
-  n_degenerate_subjects: 9
-  pct_subjects_with_rise: .nan
-  median_first_observed_day: 17.5
-  n_dropped_measurements: 0
-  converged: true
-  log_likelihood: -31.4921939506541
-  aic: 116.9843879013082
 - dataset_id: hakki2022onset
   analyte: asymptomatic_PCR
   biomarker: SARS-CoV-2
@@ -945,22 +910,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.3186056202797963
-  - 9.45895871107945
+  - -0.47081001418443963
+  - 8.69640725223203
   population_cov:
-  - - 0.6215286725053645
-    - 1.6782497613718077
-  - - 1.6782497613718077
-    - 7.394655932112446
+  - - 0.5116247742190243
+    - 0.9503650536328939
+  - - 0.9503650536328939
+    - 3.4902480670260974
   sigma: 0.15747464110780832
   censoring_limit: 5.110589710299249
   n_subjects: 17
   n_measurements: 41
   n_censored: 19
   n_excluded_subjects: 0
-  n_degenerate_subjects: 1
+  n_degenerate_subjects: 3
   pct_subjects_with_rise: 0.0
-  median_first_observed_day: 4.5
+  median_first_observed_day: 4.0
   n_dropped_measurements: 0
   converged: true
   log_likelihood: 8.993503047170977
@@ -1205,26 +1170,26 @@ fits:
   - log_peak_day
   - peak_log10
   population_mean:
-  - 0.18444616817422183
-  - -0.292108837808507
-  - 5.945373975748202
+  - 0.15994080192388044
+  - -0.2574352668942348
+  - 5.704595976703206
   population_cov:
-  - - 1.5103539104617862
-    - -0.1682467747407791
-    - 1.5803663018338587
-  - - -0.1682467747407791
-    - 3.6117811122267427
-    - -2.1643739182670774
-  - - 1.5803663018338587
-    - -2.1643739182670774
-    - 8.170633309911688
+  - - 1.5164287298272545
+    - -0.13209658080908884
+    - 1.3386989264924136
+  - - -0.13209658080908884
+    - 3.6373063421343867
+    - -1.8207989991213236
+  - - 1.3386989264924136
+    - -1.8207989991213236
+    - 5.628914230911694
   sigma: 0.7401344495930702
   censoring_limit: 2.65760968215156
   n_subjects: 51
   n_measurements: 1679
   n_censored: 1525
   n_excluded_subjects: 14
-  n_degenerate_subjects: 5
+  n_degenerate_subjects: 6
   pct_subjects_with_rise: 52.0
   median_first_observed_day: 2.0
   n_dropped_measurements: 391
@@ -1316,20 +1281,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.3590288357734284
-  - 6.269605661085898
+  - -0.5338562640168457
+  - 3.7294597872382202
   population_cov:
-  - - 1.0053084541527146
-    - 5.742532663047998
-  - - 5.742532663047998
-    - 89.40123263945218
+  - - 0.6407121224476697
+    - -0.26397392926609586
+  - - -0.26397392926609586
+    - 2.6072453149511046
   sigma: 0.0019872673074840205
   censoring_limit: 1.3583019895317368
   n_subjects: 38
   n_measurements: 76
   n_censored: 26
   n_excluded_subjects: 27
-  n_degenerate_subjects: 10
+  n_degenerate_subjects: 12
   pct_subjects_with_rise: .nan
   median_first_observed_day: 0.0
   n_dropped_measurements: 0
@@ -1351,20 +1316,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.26952412924046865
-  - 5.248815770671354
+  - -0.40890334060686073
+  - 4.794888976690561
   population_cov:
-  - - 2.6084714482686957
-    - 0.7307516437659254
-  - - 0.7307516437659254
-    - 3.690415928541386
+  - - 2.6126776317155924
+    - 0.004978416470560874
+  - - 0.004978416470560874
+    - 1.4515471096490296
   sigma: 0.7658404286779058
   censoring_limit: 0.8679065979873266
   n_subjects: 48
   n_measurements: 96
   n_censored: 30
   n_excluded_subjects: 17
-  n_degenerate_subjects: 24
+  n_degenerate_subjects: 26
   pct_subjects_with_rise: .nan
   median_first_observed_day: 0.0
   n_dropped_measurements: 0
@@ -1386,22 +1351,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - 0.13803594970341584
-  - 9.490580288416233
+  - -0.18161801753927942
+  - 7.7110426563057155
   population_cov:
-  - - 1.0316274217660242
-    - 3.1678046565826374
-  - - 3.1678046565826374
-    - 14.272770367617692
+  - - 0.934369180005072
+    - 1.3386894011031643
+  - - 1.3386894011031643
+    - 2.4086304468415056
   sigma: 0.7244496180121895
   censoring_limit: 2.0
   n_subjects: 4
   n_measurements: 34
   n_censored: 11
   n_excluded_subjects: 1
-  n_degenerate_subjects: 0
+  n_degenerate_subjects: 1
   pct_subjects_with_rise: 25.0
-  median_first_observed_day: 4.0
+  median_first_observed_day: 2.0
   n_dropped_measurements: 4
   converged: true
   log_likelihood: -26.672950624511024
@@ -1498,22 +1463,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.5758778194360823
-  - 11.49295370206797
+  - -1.4521814159847986
+  - 5.7183466643416025
   population_cov:
-  - - 3.366165185147418
-    - 13.824333119949003
-  - - 13.824333119949003
-    - 92.2945506700036
+  - - 3.0793008008998886
+    - 3.958974051396056
+  - - 3.958974051396056
+    - 5.272778905460307
   sigma: 0.4006337846310509
   censoring_limit: 2.8414345581
   n_subjects: 9
   n_measurements: 41
   n_censored: 20
   n_excluded_subjects: 2
-  n_degenerate_subjects: 1
+  n_degenerate_subjects: 4
   pct_subjects_with_rise: 50.0
-  median_first_observed_day: 13.5
+  median_first_observed_day: 9.0
   n_dropped_measurements: 0
   converged: true
   log_likelihood: -17.012952270016353
@@ -1534,28 +1499,28 @@ fits:
   - log_peak_day
   - peak_log10
   population_mean:
-  - -0.9122846310669211
-  - 1.012260376339387
-  - 7.755641179878484
+  - -1.613289992333604
+  - 1.8304924099344928
+  - 4.58007874629996
   population_cov:
-  - - 2.9276370681404753
-    - -3.203255313347861
-    - 6.939202119037183
-  - - -3.203255313347861
-    - 3.5768462864945985
-    - -8.042409648615969
-  - - 6.939202119037183
-    - -8.042409648615969
-    - 26.128348471827515
+  - - 2.9099458514591143
+    - -3.0399929113045094
+    - 2.632772532602573
+  - - -3.0399929113045094
+    - 3.2782617639524307
+    - -2.977893121970437
+  - - 2.632772532602573
+    - -2.977893121970437
+    - 3.0017367674416873
   sigma: 0.4049619174521071
   censoring_limit: 2.8414345581
   n_subjects: 8
   n_measurements: 39
   n_censored: 19
   n_excluded_subjects: 3
-  n_degenerate_subjects: 2
+  n_degenerate_subjects: 4
   pct_subjects_with_rise: 50.0
-  median_first_observed_day: 15.0
+  median_first_observed_day: 12.0
   n_dropped_measurements: 0
   converged: true
   log_likelihood: -16.3641028860919
@@ -1758,26 +1723,26 @@ fits:
   - log_peak_day
   - peak_log10
   population_mean:
-  - -1.678454712430948
-  - 1.6908930799040924
-  - 3.5543964842753315
+  - -1.7656243113237196
+  - 1.8209908306187188
+  - 3.3997398521493754
   population_cov:
-  - - 2.134374648516805
-    - -1.6865443364336095
-    - 0.791373236222276
-  - - -1.6865443364336095
-    - 3.0973147215505463
-    - -0.9535412075415044
-  - - 0.791373236222276
-    - -0.9535412075415044
-    - 1.4208814551722841
+  - - 1.906178098201834
+    - -1.3031416726022211
+    - 0.30092198651670454
+  - - -1.3031416726022211
+    - 2.5416761205943113
+    - -0.215057261367889
+  - - 0.30092198651670454
+    - -0.215057261367889
+    - 0.5512016801131101
   sigma: 0.25602229322847614
   censoring_limit: 3.0
   n_subjects: 42
   n_measurements: 272
   n_censored: 182
   n_excluded_subjects: 57
-  n_degenerate_subjects: 5
+  n_degenerate_subjects: 6
   pct_subjects_with_rise: 60.0
   median_first_observed_day: 3.0
   n_dropped_measurements: 146
@@ -1799,20 +1764,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.0325585893149873
-  - 5.1152871212863795
+  - -2.116748727933698
+  - 4.903811525488936
   population_cov:
-  - - 1.625690093683296
-    - 1.4827166496278306
-  - - 1.4827166496278306
-    - 3.7964941595004067
+  - - 1.3693158324278456
+    - 0.7720472829915095
+  - - 0.7720472829915095
+    - 2.0132257714535164
   sigma: 0.4397617254857472
   censoring_limit: 3.0
   n_subjects: 54
   n_measurements: 358
   n_censored: 202
   n_excluded_subjects: 46
-  n_degenerate_subjects: 13
+  n_degenerate_subjects: 14
   pct_subjects_with_rise: 31.818181818181817
   median_first_observed_day: 3.0
   n_dropped_measurements: 136
@@ -1834,22 +1799,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.7692443121402057
-  - 4.40011409150934
+  - -2.1367943952130375
+  - 3.748835837976042
   population_cov:
-  - - 3.057210635147809
-    - 2.638681850267378
-  - - 2.638681850267378
-    - 4.636190750790402
+  - - 1.997677529753764
+    - 0.46784315781313895
+  - - 0.46784315781313895
+    - 0.7437015722892735
   sigma: 0.33437168340021894
   censoring_limit: 3.0
   n_subjects: 32
   n_measurements: 194
   n_censored: 124
   n_excluded_subjects: 71
-  n_degenerate_subjects: 2
+  n_degenerate_subjects: 5
   pct_subjects_with_rise: 20.0
-  median_first_observed_day: 2.5
+  median_first_observed_day: 2.0
   n_dropped_measurements: 124
   converged: true
   log_likelihood: -44.19804515839068
@@ -1946,22 +1911,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.8745005376379322
-  - 4.439457956338602
+  - -2.8982386716364106
+  - 4.277017250742969
   population_cov:
-  - - 1.1074746104322135
-    - 0.5460532462093852
-  - - 0.5460532462093852
-    - 1.8945127676302982
+  - - 1.1121755396895332
+    - 0.3979032179730123
+  - - 0.3979032179730123
+    - 0.8334835604303786
   sigma: 0.5002644041117228
   censoring_limit: 3.0
   n_subjects: 71
   n_measurements: 392
   n_censored: 174
   n_excluded_subjects: 32
-  n_degenerate_subjects: 30
+  n_degenerate_subjects: 31
   pct_subjects_with_rise: 42.42424242424242
-  median_first_observed_day: 3.0
+  median_first_observed_day: 2.5
   n_dropped_measurements: 124
   converged: true
   log_likelihood: -235.08799491622278
@@ -1981,20 +1946,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.700248690758244
-  - 6.047983644028371
+  - -2.8239614944221523
+  - 4.860429936570809
   population_cov:
-  - - 1.7093975504594758
-    - 4.100516774561252
-  - - 4.100516774561252
-    - 35.09491585618951
+  - - 1.3754520420362852
+    - 0.8276371306060409
+  - - 0.8276371306060409
+    - 1.8351766063540966
   sigma: 0.4157565712175733
   censoring_limit: 3.0
   n_subjects: 76
   n_measurements: 476
   n_censored: 244
   n_excluded_subjects: 24
-  n_degenerate_subjects: 17
+  n_degenerate_subjects: 20
   pct_subjects_with_rise: 33.33333333333333
   median_first_observed_day: 3.0
   n_dropped_measurements: 136
@@ -2051,20 +2016,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.397823802485034
-  - 4.634451587249688
+  - -2.466693863289925
+  - 4.526321810951713
   population_cov:
-  - - 1.333040644202361
-    - 0.8640352692317097
-  - - 0.8640352692317097
-    - 1.974753440632015
+  - - 1.1294023890544156
+    - 0.5175965570487528
+  - - 0.5175965570487528
+    - 1.4442641357284396
   sigma: 0.40931109934082827
   censoring_limit: 3.0
   n_subjects: 57
   n_measurements: 372
   n_censored: 192
   n_excluded_subjects: 43
-  n_degenerate_subjects: 9
+  n_degenerate_subjects: 10
   pct_subjects_with_rise: 32.142857142857146
   median_first_observed_day: 3.0
   n_dropped_measurements: 136
@@ -2086,22 +2051,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.661555830503482
-  - 3.4694062313069916
+  - -2.771342012027974
+  - 3.195470172852205
   population_cov:
-  - - 1.7294094414999113
-    - 1.4018053810183349
-  - - 1.4018053810183349
-    - 3.4617118525805206
+  - - 1.306711760732057
+    - 0.266172259976974
+  - - 0.266172259976974
+    - 0.6271039719529659
   sigma: 0.5449208407453032
   censoring_limit: 3.0
   n_subjects: 63
   n_measurements: 209
   n_censored: 99
   n_excluded_subjects: 40
-  n_degenerate_subjects: 25
+  n_degenerate_subjects: 26
   pct_subjects_with_rise: 45.45454545454545
-  median_first_observed_day: 2.5
+  median_first_observed_day: 2.0
   n_dropped_measurements: 64
   converged: true
   log_likelihood: -108.2802740841239
@@ -2121,20 +2086,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.567815522085898
-  - 5.638786374395118
+  - -2.6770303992453135
+  - 4.6248284989204755
   population_cov:
-  - - 2.5539958404602516
-    - 6.312572561318938
-  - - 6.312572561318938
-    - 46.38091648310996
+  - - 2.1043500981054244
+    - 1.703060664075424
+  - - 1.703060664075424
+    - 3.2802792173327107
   sigma: 0.48139986972536336
   censoring_limit: 3.0
   n_subjects: 68
   n_measurements: 235
   n_censored: 91
   n_excluded_subjects: 32
-  n_degenerate_subjects: 26
+  n_degenerate_subjects: 27
   pct_subjects_with_rise: 33.33333333333333
   median_first_observed_day: 3.0
   n_dropped_measurements: 68
@@ -2156,22 +2121,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.8941687957303686
-  - 5.014657305783873
+  - -2.24251525639093
+  - 3.0773185834719827
   population_cov:
-  - - 3.0260808522474747
-    - 8.144537917819257
-  - - 8.144537917819257
-    - 41.957720854418845
+  - - 1.8792033656059328
+    - 0.8011355118013981
+  - - 0.8011355118013981
+    - 0.7462514219545465
   sigma: 0.4357608607684141
   censoring_limit: 3.0
   n_subjects: 18
   n_measurements: 41
   n_censored: 16
   n_excluded_subjects: 62
-  n_degenerate_subjects: 7
+  n_degenerate_subjects: 8
   pct_subjects_with_rise: .nan
-  median_first_observed_day: 4.0
+  median_first_observed_day: 3.5
   n_dropped_measurements: 35
   converged: true
   log_likelihood: -18.903529484685844
@@ -2226,20 +2191,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.3580705596705884
-  - 4.701964172692119
+  - -1.600872683132785
+  - 3.9156922972244512
   population_cov:
-  - - 2.824918056434719
-    - 2.494899707050132
-  - - 2.494899707050132
-    - 8.963419255758069
+  - - 2.2456698887824866
+    - 0.014279404671424684
+  - - 0.014279404671424684
+    - 1.0107428157701677
   sigma: 1.138247031233295
   censoring_limit: 3.0
   n_subjects: 20
   n_measurements: 124
   n_censored: 85
   n_excluded_subjects: 82
-  n_degenerate_subjects: 7
+  n_degenerate_subjects: 8
   pct_subjects_with_rise: 100.0
   median_first_observed_day: 2.0
   n_dropped_measurements: 124
@@ -2373,22 +2338,22 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.6640474764229467
-  - 9.393731577395997
+  - -0.9515668419665333
+  - 7.907987825934927
   population_cov:
-  - - 1.187698828196955
-    - 3.427640220447746
-  - - 3.427640220447746
-    - 20.66839141339786
+  - - 0.8110539026226212
+    - 0.9007962888426814
+  - - 0.9007962888426814
+    - 3.0739463926307646
   sigma: 0.31506762383088427
   censoring_limit: 3.184631198828424
   n_subjects: 61
   n_measurements: 152
   n_censored: 43
   n_excluded_subjects: 9
-  n_degenerate_subjects: 2
+  n_degenerate_subjects: 11
   pct_subjects_with_rise: 10.0
-  median_first_observed_day: 7.0
+  median_first_observed_day: 6.5
   n_dropped_measurements: 0
   converged: true
   log_likelihood: -35.992629503763446
@@ -2478,20 +2443,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - 0.2894744160814882
-  - 7.28633846298046
+  - 0.2783565452121745
+  - 7.233371315537631
   population_cov:
-  - - 0.6159554339084559
-    - 0.9431779683782477
-  - - 0.9431779683782477
-    - 3.2526081787136563
+  - - 0.6077942878622886
+    - 0.8871340823754558
+  - - 0.8871340823754558
+    - 2.971332146916029
   sigma: 0.51616146842963
   censoring_limit: 2.9542425094393248
   n_subjects: 455
   n_measurements: 1131
   n_censored: 0
   n_excluded_subjects: 23
-  n_degenerate_subjects: 15
+  n_degenerate_subjects: 19
   pct_subjects_with_rise: 17.71428571428571
   median_first_observed_day: 1.0
   n_dropped_measurements: 0
@@ -2702,20 +2667,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.2423122855111099
-  - 8.751055530730865
+  - -0.4040780520534939
+  - 7.979959925416637
   population_cov:
-  - - 0.4805749297948507
-    - 1.3975183906585815
-  - - 1.3975183906585815
-    - 6.474568320076185
+  - - 0.2800702408793656
+    - 0.314156052135433
+  - - 0.314156052135433
+    - 1.2837399168707873
   sigma: 1.1041485214148112
   censoring_limit: 2.0
   n_subjects: 9
   n_measurements: 147
   n_censored: 24
   n_excluded_subjects: 0
-  n_degenerate_subjects: 0
+  n_degenerate_subjects: 1
   pct_subjects_with_rise: 44.44444444444444
   median_first_observed_day: 4.0
   n_dropped_measurements: 0
@@ -2737,20 +2702,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.027540189361349707
-  - 7.514067353461003
+  - -0.18174265062365536
+  - 6.511399117263126
   population_cov:
-  - - 0.33073790550829757
-    - 1.6574939577212202
-  - - 1.6574939577212202
-    - 10.118873996398472
+  - - 0.1334083588275677
+    - 0.30396430749713593
+  - - 0.30396430749713593
+    - 1.2237504794023184
   sigma: 1.0522183591085448
   censoring_limit: 2.0
   n_subjects: 9
   n_measurements: 153
   n_censored: 57
   n_excluded_subjects: 0
-  n_degenerate_subjects: 0
+  n_degenerate_subjects: 1
   pct_subjects_with_rise: 22.22222222222222
   median_first_observed_day: 4.0
   n_dropped_measurements: 0
@@ -2842,20 +2807,20 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.1853337171214136
-  - 13.122437879753091
+  - -1.720045978889435
+  - 11.833170855970634
   population_cov:
-  - - 3.1591864409929062
-    - 5.081299582940041
-  - - 5.081299582940041
-    - 11.55700164960516
+  - - 2.55387925542094
+    - 2.8023434695093883
+  - - 2.8023434695093883
+    - 5.33305549602813
   sigma: 0.7028814449708524
   censoring_limit: 7.643212513775344
   n_subjects: 19
   n_measurements: 54
   n_censored: 1
   n_excluded_subjects: 3
-  n_degenerate_subjects: 0
+  n_degenerate_subjects: 4
   pct_subjects_with_rise: 66.66666666666666
   median_first_observed_day: 6.0
   n_dropped_measurements: 0
@@ -2878,28 +2843,28 @@ fits:
   - log_peak_day
   - peak_log10
   population_mean:
-  - -0.10894175247483466
-  - -0.9489510445775347
-  - 13.935886285780656
+  - -0.4164222594706133
+  - -0.8575155528157591
+  - 13.120823670366645
   population_cov:
-  - - 1.8241639002479864
-    - -1.5981924216739185
-    - 1.6414823055593075
-  - - -1.5981924216739185
-    - 2.552153815672978
-    - -0.4426008755157948
-  - - 1.6414823055593075
-    - -0.4426008755157948
-    - 3.4506205897840427
+  - - 2.0998644377118
+    - -2.105033109506417
+    - 1.0909875986855089
+  - - -2.105033109506417
+    - 3.491460364114552
+    - -0.3299964155680131
+  - - 1.0909875986855089
+    - -0.3299964155680131
+    - 1.5302177478267607
   sigma: 0.7273461450810617
   censoring_limit: 8.387940008672038
   n_subjects: 9
   n_measurements: 34
   n_censored: 1
   n_excluded_subjects: 13
-  n_degenerate_subjects: 1
+  n_degenerate_subjects: 3
   pct_subjects_with_rise: 66.66666666666666
-  median_first_observed_day: 5.0
+  median_first_observed_day: 4.5
   n_dropped_measurements: 0
   converged: true
   log_likelihood: -37.35585778702867
@@ -2996,68 +2961,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.3238459133615576
-  - 10.68830178403615
+  - -0.6919485827013012
+  - 6.528887628989247
   population_cov:
-  - - 1.2331683433622667
-    - 5.591919659090475
-  - - 5.591919659090475
-    - 45.82188417759558
+  - - 1.4760300367535433
+    - 3.0127108325538563
+  - - 3.0127108325538563
+    - 6.269990308392126
   sigma: 0.8770080559780439
   censoring_limit: 2.5403294747908736
   n_subjects: 9
   n_measurements: 31
   n_censored: 13
   n_excluded_subjects: 3
-  n_degenerate_subjects: 3
-  pct_subjects_with_rise: 50.0
-  median_first_observed_day: 16.0
-  n_dropped_measurements: 0
-  converged: true
-  log_likelihood: -27.134809837735865
-  aic: 92.26961967547173
-- dataset_id: zuo2020alterations
-  analyte: stool_SARSCoV2_SymptomOnset
-  biomarker: SARS-CoV-2
-  specimen: stool
-  reference_event: symptom onset
-  unit: gc/mL
-  gene_target: N1
-  dose: null
-  vaccine_type: null
-  model: gamma
-  method: mle
-  population_coords:
-  - log_a0
-  - log_peak_day
-  - peak_log10
-  population_mean:
-  - -0.17689811559202107
-  - 0.6159321743205505
-  - 8.344064071609633
-  population_cov:
-  - - 1.046219690954076
-    - -1.4114943719607187
-    - 4.823627665181743
-  - - -1.4114943719607187
-    - 2.0646556602801356
-    - -8.086020472215756
-  - - 4.823627665181743
-    - -8.086020472215756
-    - 43.391022877491515
-  sigma: 0.6849407816889405
-  censoring_limit: 2.5403294747908736
-  n_subjects: 6
-  n_measurements: 25
-  n_censored: 12
-  n_excluded_subjects: 6
-  n_degenerate_subjects: 2
+  n_degenerate_subjects: 5
   pct_subjects_with_rise: 50.0
   median_first_observed_day: 12.0
   n_dropped_measurements: 0
   converged: true
-  log_likelihood: -16.88912758295911
-  aic: 71.77825516591821
+  log_likelihood: -27.134809837735865
+  aic: 92.26961967547173
 skipped:
 - dataset_id: alsharrah2020clinical
   analyte: NPS_SARSCoV2
@@ -3286,6 +3209,17 @@ skipped:
     \ exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: fajnzylber2020sars
   analyte: Plasma_SARSCoV2_N
+  model: exponential
+  reason: degenerate_fit
+  message: "12 of 13 subject(s) for analyte 'Plasma_SARSCoV2_N' produced degenerate\
+    \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
+    \ or decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: fajnzylber2020sars
+  analyte: Plasma_SARSCoV2_N
   model: gamma
   reason: no_rise_observed
   message: "The gamma model needs a rise to fit, and analyte 'Plasma_SARSCoV2_N' does\
@@ -3414,12 +3348,14 @@ skipped:
 - dataset_id: han2020sequential
   analyte: NPSOPS_E
   model: exponential
-  reason: too_few_subjects_for_population
-  message: Analyte 'NPSOPS_E' has 1 subject(s) feeding the population summary of the
-    'exponential' model, which has 2 parameters. At least 3 are needed for the between-subject
-    covariance to be estimable rather than rank-deficient; below that the 'population'
-    is an artefact of averaging too few individuals, and simulating from it produces
-    near-identical or wildly extrapolated individuals.
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'NPSOPS_E' produced degenerate fits under\
+    \ the 'exponential' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 0 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
 - dataset_id: han2020sequential
   analyte: NPSOPS_E
   model: gamma
@@ -3487,12 +3423,14 @@ skipped:
 - dataset_id: han2020sequential
   analyte: sputum_E
   model: exponential
-  reason: too_few_subjects_for_population
-  message: Analyte 'sputum_E' has 1 subject(s) feeding the population summary of the
-    'exponential' model, which has 2 parameters. At least 3 are needed for the between-subject
-    covariance to be estimable rather than rank-deficient; below that the 'population'
-    is an artefact of averaging too few individuals, and simulating from it produces
-    near-identical or wildly extrapolated individuals.
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'sputum_E' produced degenerate fits under\
+    \ the 'exponential' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 0 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
 - dataset_id: han2020sequential
   analyte: sputum_E
   model: gamma
@@ -3599,12 +3537,14 @@ skipped:
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_VL
   model: exponential
-  reason: too_few_subjects_for_population
-  message: Analyte 'sputum_SARSCoV2_RdRp_VL' has 2 subject(s) feeding the population
-    summary of the 'exponential' model, which has 2 parameters. At least 3 are needed
-    for the between-subject covariance to be estimable rather than rank-deficient;
-    below that the 'population' is an artefact of averaging too few individuals, and
-    simulating from it produces near-identical or wildly extrapolated individuals.
+  reason: degenerate_fit
+  message: "1 of 2 subject(s) for analyte 'sputum_SARSCoV2_RdRp_VL' produced degenerate\
+    \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
+    \ or decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_VL
   model: gamma
@@ -4628,6 +4568,16 @@ skipped:
   message: Analyte 'urine_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
     log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: zuo2020alterations
+  analyte: stool_SARSCoV2_SymptomOnset
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'stool_SARSCoV2_SymptomOnset' has 3 subject(s) (6 fitted, 3 excluded
+    as degenerate) feeding the population summary of the 'gamma' model, which has
+    3 parameters. At least 4 are needed for the between-subject covariance to be estimable
+    rather than rank-deficient; below that the 'population' is an artefact of averaging
+    too few individuals, and simulating from it produces near-identical or wildly
+    extrapolated individuals.
 - dataset_id: zuo2020alterations
   analyte: stool_SARSCoV2_ConfirmationDate
   model: exponential

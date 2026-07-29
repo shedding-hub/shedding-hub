@@ -143,6 +143,55 @@ Four existing tests encoded `median_params == exp(population_mean)` for the
 exponential model and were rewritten against `from_population_coords`, that
 identity now holding only for `a0`.
 
+## Amendment: over-extrapolated subjects (same day)
+
+Reported immediately after the coordinate change shipped: on
+`fajnzylber2020sars` most observations sat *below* the median-individual curve.
+They did — 87% of them on the nasopharyngeal analyte, with a −2.40 log10 median
+residual.
+
+**The coordinate change did not create this, but it exposed it.** The exponential
+model's peak is at `t = 0` by definition, and these studies begin sampling days to
+weeks later, so a subject with a steep fitted decay is extrapolated backwards
+through many half-lives. One nasopharyngeal subject with a 0.30-day half-life,
+first sampled on **day 30**, implies `10**33` gc/mL — a hundred half-lives of
+extrapolation — against its own highest reading of `10**2.7` and an analyte
+maximum of `10**5.5`. While the model was summarized in `log c0`, the logarithm
+compressed such subjects enough to hide them; summarizing in `peak_log10` makes
+the coordinate linear in log10, so one of them dominates the mean outright.
+
+They were never harmless: under the old coordinates Plasma was already 80% below
+its curve with a −2.52 residual. Across the repository, 66 subjects in 34 of 92
+fits imply peaks more than 3 log10 above anything their analyte recorded, reaching
+`10**47`.
+
+`_over_extrapolated_subjects` therefore excludes a subject from the population
+summary when its implied peak exceeds the analyte's highest observed
+concentration by more than `_MAX_PEAK_ABOVE_OBSERVED = 3.0` log10 — a
+thousandfold. It composes with the existing degenerate flag: the subject stays in
+`subject_params`, flagged and warned about, and if too few survive
+`require_estimable_population` refuses the fit.
+
+The threshold is referenced to the data rather than fixed, because what counts as
+absurd depends on what the assay can see. Results:
+
+| fit | before | after | median residual |
+|---|---|---|---|
+| Nasopharyngeal | 87% below | **48%** | −2.40 → **+0.08** |
+| Oropharyngeal_PBS | 84% below | **47%** | −0.81 → **+0.02** |
+| Sputum | 53% below | 53% | −0.35 → −0.17 |
+| tsang2016 NPSOPS (440 subj) | 55% | 55% | −0.27 → −0.27 |
+
+The catalog goes from 83 fits to 81. `Plasma_SARSCoV2_N` and `Urine_SARSCoV2_N`
+are now refused as `degenerate_fit`, which is the honest outcome: 3 of plasma's 4
+subjects were extrapolation artifacts and its median individual claimed
+`10**13.8` gc/mL in plasma.
+
+**This fixed centring, not over-dispersion.** `woelfel2020virological` stool has
+no gated subjects and its simulated tail is unchanged (99.9th percentile 12.68,
+top 1% of agents still carrying 98% of load). The `dispersion` dial remains the
+tool for that, and variance deconvolution the principled fix.
+
 ## Out of scope
 
 **Variance deconvolution** — the principled fix for cause 2, described above.
