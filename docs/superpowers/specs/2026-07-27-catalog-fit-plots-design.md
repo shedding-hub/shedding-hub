@@ -1,7 +1,7 @@
 # Catalog fit plots — design
 
 **Date:** 2026-07-27
-**Status:** approved, not yet implemented
+**Status:** implemented 2026-07-29, with three amendments recorded below
 
 ## Problem
 
@@ -148,6 +148,44 @@ not move when the catalog is rebuilt.
 - Panels are ordered with the multi-study groups first.
 - The figure returned has one axis per group and is closed in the pyplot state,
   matching the convention in `shedding_peak.py` and `shedding_simulate.py`.
+
+## Amendments found during implementation
+
+Three things the design above did not anticipate, each caught by drawing the
+actual catalog rather than the synthetic fits the tests use.
+
+**A study can contribute several analytes to one panel.** The encoding above
+spends colour on the study and linestyle on the model, which assumes at most one
+fit per (study, model) per panel. Eight (study, panel, model) combinations in the
+catalog break that assumption, and `natarajan2022gastrointestinal` contributes
+*fourteen* stool assays to a single panel — gene target × assay chemistry × lab,
+with median peaks spanning 3.26 to 5.43 log10. Labelling them all
+`natarajan2022gastrointestinal (exponential)` produced fourteen identical legend
+keys for fourteen materially different curves, which is a legend that lies.
+
+The analyte is therefore named in the label — `study analyte (model)` — but only
+for studies contributing more than one analyte to that panel, so the common case
+keeps a short label and both models of one analyte stay distinguished by
+linestyle alone. Colour still means study, as designed: within-study spread reads
+as a band of one colour, which is the honest picture of assay disagreement.
+
+**A crowded legend buries its own panel.** Seventeen entries at 7pt in a
+4.5×3.2 inch panel covered the curves entirely. The legend is capped at six
+entries with a `+ N more` line, so a truncated legend never reads as the whole
+panel.
+
+**The derived horizon can waste most of the y axis.** Deriving the horizon as the
+`max` over a panel's fits means a slow-decaying fit stretches the axis while a
+fast one plunges over that span — to −9.1 log10 gc/mL in one panel, and −30 in a
+synthetic worst case. Ten of the 31 panels gave more than a quarter of their
+height to concentrations below every censoring limit in the panel; one gave 85%.
+
+The y axis is therefore floored just below the panel's lowest censoring limit,
+since nothing under it was measurable by any study there. The floor also clears
+the weakest curve's own peak: two catalog fits (`hakki2022onset`
+asymptomatic_cultivable, `kissler2021viral` AN_OPS_SARSCoV2_viral) have median
+individuals peaking *below* their own limit, and flooring at the limit alone
+would have dropped them off the bottom of the panel.
 
 ## Out of scope
 

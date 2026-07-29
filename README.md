@@ -174,6 +174,21 @@ Create Kaplan-Meier clearance curves for survival analysis.
 
 ```
 
+Compare the fitted curves themselves across studies. Each panel holds one
+`(biomarker, specimen, unit, reference_event)` group, since curves disagreeing on
+either axis cannot honestly be overlaid; colour identifies the study and
+linestyle the model. The stretch of each curve before a study's median first
+observation is faded, marking where the curve is functional form rather than
+measurement — for half the catalog's gamma fits, that is the entire rise phase.
+
+```python
+>>> fig = sh.plot_catalog_fits(
+...     catalog, biomarker='SARS-CoV-2', unit='gc/mL',
+...     reference_event='symptom onset',
+... )
+
+```
+
 ## 🤝 Contributing
 
 Thank you for contributing your data to the Shedding Hub and supporting wastewater-based epidemiology! If you hit a bump along the road, [create a new issue](https://github.com/shedding-hub/shedding-hub/issues/new) and we'll sort it out together.

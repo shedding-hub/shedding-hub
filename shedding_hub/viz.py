@@ -6,6 +6,8 @@ import matplotlib.colors as mcolors
 from matplotlib.figure import Figure
 import logging
 
+from .shedding_models import log10_concentration
+
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
 DEFAULT_FIGURE_SIZE = (8, 6)
@@ -2687,6 +2689,303 @@ def plot_clearance_curve(
 
     ax.legend(loc="best", fontsize=10)
     ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
+
+
+# ---------------------------------------------------------------------------
+# Fitted-curve plots
+# ---------------------------------------------------------------------------
+
+# Curves start here rather than at zero because the gamma model is undefined at
+# t = 0: c(t) = c0*t^b0*e^(-a0*t) sends the concentration to zero as t -> 0, so
+# log10 diverges. The exponential model is defined there and starts at the same
+# day for one code path.
+CATALOG_FIT_START_DAY = 0.05
+# Bounds on the derived x horizon. A fit does not record its last observed day,
+# so the horizon is inferred; the clamp guards both ends, since a runaway decay
+# would otherwise stretch the axis uselessly and a very fast one would give a
+# panel two days wide.
+CATALOG_FIT_MIN_HORIZON = 7.0
+CATALOG_FIT_MAX_HORIZON = 60.0
+# Five half-lives past the peak puts a curve about 1.5 log10 below it: far
+# enough to show the decline, near enough to avoid a long flat tail.
+CATALOG_FIT_HALF_LIVES_SHOWN = 5.0
+CATALOG_FIT_EXTRAPOLATION_ALPHA = 0.35
+# A panel can hold more curves than its legend has room for — one catalog study
+# contributes 14 stool assays to a single panel. Past this many, the legend is
+# truncated and the remainder counted, so it never reads as the whole panel.
+CATALOG_FIT_MAX_LEGEND_ENTRIES = 6
+
+# Curves are comparable only when they share both axes. The catalog spans five
+# units, so the y axis is not shared across all of it, and five reference
+# events, so t = 0 does not mean the same thing either. Grouping on all four
+# keys keeps a panel an honest comparison.
+CATALOG_FIT_GROUP_KEYS = ("biomarker", "specimen", "unit", "reference_event")
+
+# The linestyle channel carries the model and the colour channel the study,
+# which is why extrapolation is left to opacity.
+CATALOG_FIT_LINESTYLES = {"exponential": "-", "gamma": "--"}
+
+
+def _catalog_fit_horizon(fits) -> float:
+    """Days of x axis a panel needs, from the latest peak and slowest decay."""
+    reach = np.array(
+        [
+            fit.peak_day + CATALOG_FIT_HALF_LIVES_SHOWN * fit.half_life_days
+            for fit in fits
+        ],
+        dtype=float,
+    )
+    # A non-finite reach is a decay too slow, or too ill-determined, to say
+    # where the curve ends. It is treated as unbounded and clipped to the upper
+    # limit rather than dropped, which would let it shrink the axis instead.
+    reach = np.where(np.isfinite(reach), reach, np.inf)
+    return float(np.clip(reach.max(), CATALOG_FIT_MIN_HORIZON, CATALOG_FIT_MAX_HORIZON))
+
+
+def _catalog_fit_spans(times: np.ndarray, split: float, show_extrapolation: bool):
+    """
+    Index spans of one curve, each paired with the opacity to draw it at.
+
+    Everything before a study's ``median_first_observed_day`` is functional form
+    rather than measurement, so it is faded. The two spans share their boundary
+    point, so the curve still reads as continuous.
+    """
+    if not (show_extrapolation and np.isfinite(split) and split > times[0]):
+        return [(slice(None), 1.0)]
+    cut = int(np.searchsorted(times, split))
+    spans = []
+    if cut >= 1:
+        spans.append((slice(0, cut + 1), CATALOG_FIT_EXTRAPOLATION_ALPHA))
+    if times.size - cut >= 2:
+        spans.append((slice(cut, None), 1.0))
+    return spans
+
+
+def plot_catalog_fits(
+    catalog,
+    *,
+    biomarker: str | None = None,
+    specimen: str | None = None,
+    unit: str | None = None,
+    reference_event: str | None = None,
+    dataset_ids=None,
+    n_days: float | None = None,
+    show_extrapolation: bool = True,
+    ncols: int = 3,
+    figsize_per_panel: tuple[float, float] = (4.5, 3.2),
+) -> Figure:
+    """
+    Draw the median individual of every fitted curve, grouped for comparison.
+
+    One panel per ``(biomarker, specimen, unit, reference_event)`` group, because
+    curves that disagree on either axis cannot honestly be overlaid. Panels are
+    ordered by descending study count, so the ones supporting a cross-study read
+    come first; single-study panels are still drawn, being a legitimate view of
+    that study.
+
+    Within a panel, colour identifies the study and linestyle the model — solid
+    for exponential, dashed for gamma — so a study fitted with both contributes
+    two lines of one colour. Where the gamma model was refused, there is simply
+    one line, and the absence is itself informative.
+
+    The curve drawn is the fit's median individual, not the median of a
+    simulated cohort, which is a different quantity and would need sampling.
+
+    Args:
+        catalog: A ``SheddingCatalog``, or a bare list of ``SheddingFit`` —
+            which keeps this usable on a fresh fit of private data.
+        biomarker: Optional filter, e.g. ``"SARS-CoV-2"``.
+        specimen: Optional filter, e.g. ``"stool"``.
+        unit: Optional filter, e.g. ``"gc/mL"``.
+        reference_event: Optional filter, e.g. ``"symptom onset"``.
+        dataset_ids: Optional list restricting the plot to named studies.
+        n_days: X horizon for every panel. When ``None`` (default) each panel
+            derives its own from the fits it holds, clamped to ``[7, 60]`` days.
+            Passing a value is also how to put every panel on a common axis.
+        show_extrapolation: When ``True`` (default), the stretch of each curve
+            before that study's ``median_first_observed_day`` is drawn faded,
+            marking where the curve is functional form rather than measurement.
+            Half the catalog's gamma fits peak earlier than their median first
+            observation, so for those the entire rise phase is extrapolated.
+        ncols: Panels per row.
+        figsize_per_panel: Inches per panel, as ``(width, height)``.
+
+    Returns:
+        The figure, with one axis per group. It is closed in the pyplot state so
+        notebooks do not display it twice, matching the convention in
+        ``shedding_peak.py`` and ``shedding_simulate.py``.
+
+    Raises:
+        ValueError: If the catalog holds no fits, or the filters match none — a
+            silently empty figure is worse than a refusal.
+    """
+    fits = list(getattr(catalog, "fits", catalog))
+    if not fits:
+        raise ValueError("Cannot plot a catalog with no fits.")
+
+    filters = {
+        "biomarker": biomarker,
+        "specimen": specimen,
+        "unit": unit,
+        "reference_event": reference_event,
+    }
+    filters = {key: value for key, value in filters.items() if value is not None}
+    matches = [
+        fit
+        for fit in fits
+        if all(getattr(fit, key, None) == value for key, value in filters.items())
+    ]
+    if dataset_ids is not None:
+        # A name with no matching fit raises rather than being dropped, which
+        # would silently shrink the figure. This follows ``build_ensemble``.
+        available = {fit.dataset_id for fit in matches}
+        missing = [name for name in dataset_ids if name not in available]
+        if missing:
+            raise ValueError(
+                f"No fit matching {filters} for dataset_id(s) {missing}. "
+                f"Matching studies are {sorted(available)}."
+            )
+        matches = [fit for fit in matches if fit.dataset_id in set(dataset_ids)]
+
+    if not matches:
+        available = sorted(
+            {
+                tuple(str(getattr(fit, key)) for key in CATALOG_FIT_GROUP_KEYS)
+                for fit in fits
+            }
+        )
+        listed = "\n".join("  " + " | ".join(key) for key in available)
+        criteria = dict(filters)
+        if dataset_ids is not None:
+            criteria["dataset_ids"] = list(dataset_ids)
+        raise ValueError(
+            f"No fits match {criteria}. Available "
+            f"({' | '.join(CATALOG_FIT_GROUP_KEYS)}) combinations are:\n{listed}"
+        )
+
+    groups: Dict[tuple, list] = {}
+    for fit in matches:
+        key = tuple(getattr(fit, name) for name in CATALOG_FIT_GROUP_KEYS)
+        groups.setdefault(key, []).append(fit)
+
+    # Descending study count first, so the cross-study panels lead; the key
+    # breaks ties, which keeps the layout reproducible.
+    ordered = sorted(
+        groups.items(),
+        key=lambda item: (
+            -len({fit.dataset_id for fit in item[1]}),
+            tuple(str(part) for part in item[0]),
+        ),
+    )
+
+    n_panels = len(ordered)
+    n_cols = max(1, min(ncols, n_panels))
+    n_rows = int(np.ceil(n_panels / n_cols))
+    fig, axes = plt.subplots(
+        n_rows,
+        n_cols,
+        figsize=(figsize_per_panel[0] * n_cols, figsize_per_panel[1] * n_rows),
+        squeeze=False,
+    )
+    axes = axes.flatten()
+    color_map = list(mcolors.TABLEAU_COLORS.values())
+
+    for index, (key, panel_fits) in enumerate(ordered):
+        ax = axes[index]
+        group_biomarker, group_specimen, group_unit, group_event = key
+        studies = sorted({fit.dataset_id for fit in panel_fits})
+        colors = {
+            study: color_map[position % len(color_map)]
+            for position, study in enumerate(studies)
+        }
+        # A study can contribute several analytes to one panel — the catalog's
+        # worst case is 14 stool assays from one study, whose peaks span over 2
+        # log10. Colour is spent on the study and linestyle on the model, so the
+        # analyte has to be named, or the legend would show one key per curve
+        # all reading the same thing. Named only where it disambiguates, so the
+        # common one-analyte case keeps a short label.
+        multi_analyte = {
+            study
+            for study in studies
+            if len({fit.analyte for fit in panel_fits if fit.dataset_id == study}) > 1
+        }
+
+        horizon = n_days if n_days is not None else _catalog_fit_horizon(panel_fits)
+        times = np.linspace(CATALOG_FIT_START_DAY, horizon, 400)
+
+        # Limits differ between studies, so one shared line would be wrong. Drawn
+        # once per distinct limit, since a study's two models share theirs.
+        panel_limits = sorted(
+            {(fit.dataset_id, fit.censoring_limit) for fit in panel_fits}
+        )
+        for study, limit in panel_limits:
+            ax.axhline(limit, color=colors[study], ls=":", lw=1.0, alpha=0.6)
+        peaks = []
+
+        for fit in sorted(panel_fits, key=lambda f: (f.dataset_id, f.model)):
+            values = log10_concentration(fit.model, fit.median_params[None, :], times)[
+                0
+            ]
+            peaks.append(float(np.nanmax(values)))
+            spans = _catalog_fit_spans(
+                times, fit.median_first_observed_day, show_extrapolation
+            )
+            # The legend entry goes on the segment drawn at full opacity, so a
+            # faded key never stands for a curve that is mostly solid.
+            labelled = max(range(len(spans)), key=lambda i: spans[i][1])
+            name = (
+                f"{fit.dataset_id} {fit.analyte}"
+                if fit.dataset_id in multi_analyte
+                else fit.dataset_id
+            )
+            for position, (span, alpha) in enumerate(spans):
+                ax.plot(
+                    times[span],
+                    values[span],
+                    color=colors[fit.dataset_id],
+                    ls=CATALOG_FIT_LINESTYLES[fit.model],
+                    alpha=alpha,
+                    lw=1.6,
+                    label=(
+                        f"{name} ({fit.model})"
+                        if position == labelled
+                        else "_nolegend_"
+                    ),
+                )
+
+        specimen_display = str(group_specimen).replace("_", " ")
+        ax.set_title(
+            f"{group_biomarker} - {specimen_display}\n{group_unit}, from {group_event}",
+            fontsize=10,
+        )
+        ax.set_xlabel(f"Days after {group_event}")
+        ax.set_ylabel(f"log10 concentration ({group_unit})")
+        ax.set_xlim(0, horizon)
+        # Nothing below every limit in the panel was measurable by anyone, so a
+        # decline continuing to 10^-30 gc/mL is functional form spending the axis
+        # the informative part needs — one panel otherwise gives 85% of its
+        # height to it. The floor still clears the weakest curve's own peak,
+        # since two catalog fits peak below their limit and would vanish.
+        ax.set_ylim(
+            bottom=min(min(limit for _, limit in panel_limits), min(peaks)) - 1.0
+        )
+        ax.grid(alpha=0.3)
+
+        handles, labels = ax.get_legend_handles_labels()
+        if len(handles) > CATALOG_FIT_MAX_LEGEND_ENTRIES:
+            hidden = len(handles) - CATALOG_FIT_MAX_LEGEND_ENTRIES
+            handles = handles[:CATALOG_FIT_MAX_LEGEND_ENTRIES]
+            labels = labels[:CATALOG_FIT_MAX_LEGEND_ENTRIES]
+            handles.append(plt.Line2D([], [], color="none"))
+            labels.append(f"+ {hidden} more")
+        ax.legend(handles, labels, fontsize=7, loc="upper right")
+
+    for index in range(n_panels, len(axes)):
+        fig.delaxes(axes[index])
 
     plt.tight_layout()
     plt.close(fig)

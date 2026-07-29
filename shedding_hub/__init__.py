@@ -18,6 +18,7 @@ from .viz import (
     plot_time_courses,
     plot_shedding_heatmap,
     plot_mean_trajectory,
+    plot_catalog_fits,
 )
 
 from .stats import (
@@ -61,6 +62,7 @@ __all__ = [
     "plot_time_courses",
     "plot_shedding_heatmap",
     "plot_mean_trajectory",
+    "plot_catalog_fits",
     "calc_shedding_summary",
     "calc_detection_summary",
     "calc_clearance_summary",
