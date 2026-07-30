@@ -93,6 +93,89 @@ def long_lookback_dataset():
     }
 
 
+def test_gamma_shifted_keeps_detected_readings_at_and_before_the_reference_event():
+    """The gamma model discards 26,023 detected readings at exactly t = 0.
+
+    They are measurements, not censored results — thrown away only because
+    ``c(t) = c0*t**b0*exp(-a0*t)`` is undefined at zero. Shifting the onset
+    makes them evaluable.
+    """
+    dataset = {
+        "dataset_id": "onset_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": -4.0, "value": "negative"},
+                    {"analyte": "stool", "time": -2.0, "value": 1e4},
+                    {"analyte": "stool", "time": 0.0, "value": 1e6},
+                    {"analyte": "stool", "time": 3.0, "value": 1e5},
+                    {"analyte": "stool", "time": 5.0, "value": 1e4},
+                    {"analyte": "stool", "time": 7.0, "value": "negative"},
+                ]
+            }
+            for _ in range(6)
+        ],
+    }
+    shifted = prepare_observations(dataset, "stool", "gamma_shifted")
+    # The detected readings at -2 and 0 are kept; the censored one at -4 is not.
+    assert sorted(set(shifted.times)) == [-2.0, 0.0, 3.0, 5.0, 7.0]
+    assert shifted.censored.sum() == 6  # only the t > 0 censored reading
+
+    plain = prepare_observations(dataset, "stool", "gamma")
+    assert plain.times.min() > 0
+
+
+def test_gamma_shifted_drops_censored_readings_before_the_reference_event():
+    """Those are what would pull the onset onto its bound.
+
+    A curve diving toward minus infinity near ``t0`` explains "below the limit"
+    for free, so keeping them makes ``t0`` a support parameter with a boundary
+    optimum. A detected reading does the opposite — it repels ``t0``, because a
+    diving curve mispredicts a measured value badly.
+    """
+    dataset = {
+        "dataset_id": "lookback_onset_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "confirmation date",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": t, "value": "negative"}
+                    for t in (-4.0, -3.0, -1.0)
+                ]
+                + [
+                    {"analyte": "stool", "time": 0.0, "value": 1e6},
+                    {"analyte": "stool", "time": 2.0, "value": 1e5},
+                    {"analyte": "stool", "time": 4.0, "value": 3e4},
+                    {"analyte": "stool", "time": 6.0, "value": 1e4},
+                ]
+            }
+            for _ in range(5)
+        ],
+    }
+    obs = prepare_observations(dataset, "stool", "gamma_shifted")
+    assert obs.times.min() == 0.0
+    assert obs.n_dropped_measurements == 5 * 3
+
+
 def test_prepare_observations_requires_data_after_the_reference_event():
     """A decay from the reference event cannot be estimated from before it.
 

@@ -265,11 +265,20 @@ def prepare_observations(
                 continue
             value = measurement.get("value")
             if isinstance(value, str):
-                if value == NEGATIVE_VALUE:
+                if value == NEGATIVE_VALUE and not (
+                    model == "gamma_shifted" and time <= 0
+                ):
                     times.append(time)
                     values.append(np.nan)
                     censored.append(True)
                 else:
+                    # A censored reading at or before the reference event is
+                    # dropped under gamma_shifted. Its curve dives toward minus
+                    # infinity as t approaches t0, so "below the limit" there is
+                    # explained for free and t0 becomes a support parameter
+                    # pulled onto its own bound. A *detected* reading at the same
+                    # time is kept, and repels t0 instead: a diving curve
+                    # mispredicts a measured value badly.
                     n_dropped += 1
                 continue
             if not isinstance(value, (int, float)) or value <= 0:
