@@ -1316,6 +1316,64 @@ def test_plot_fit_diagnostic_fade_never_covers_an_observation(
     assert max(faded.get_xdata()) <= observations.times.min() + step
 
 
+def test_plot_fit_diagnostic_never_draws_the_exponential_before_day_zero(
+    make_synthetic_dataset,
+):
+    """It is defined there but grows without bound going backwards.
+
+    Drawn back to its earliest reading, the simulated band reached 10**76 for
+    arts2023longitudinal, 10**329 for hakki2022onset symptomatic_cultivable and
+    10**826 for lavezzo2020suppression E_symptom -- an extrapolation nothing
+    constrains, dwarfing the data it was meant to sit beside. The readings
+    themselves are still plotted; only the model's own lines stop at day 0.
+    """
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "exponential",
+            [np.log(0.6), np.log(18.0)],
+            np.diag([0.04, 0.04]),
+            n_subjects=8,
+            seed=4,
+        ),
+        days=(-4.0, -2.0),
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    ax = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), band_inner_quantiles=(0.025, 0.975)
+    ).axes[0]
+
+    modelled = [
+        line
+        for line in ax.get_lines()
+        if line.get_label().startswith(("Median", "Extrapolated", "95%"))
+    ]
+    assert modelled
+    for line in modelled:
+        assert min(line.get_xdata()) >= 0.0
+
+    band = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()][0]
+    assert band.get_paths()[0].vertices[:, 0].min() >= 0.0
+
+    # the observations before day 0 are still shown
+    assert ax.get_xlim()[0] <= -4.0
+    assert min(_collection(ax, "Observed").get_offsets()[:, 0]) < 0.0
+
+
+def test_plot_fit_diagnostic_still_draws_gamma_shifted_before_day_zero(
+    make_synthetic_dataset,
+):
+    """The rise before the reference event is the whole point of that model."""
+    dataset = _with_pre_onset_measurements(
+        _synthetic_gamma_dataset(make_synthetic_dataset), days=(-3.0, -2.0, -1.0)
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma_shifted")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    curve = [line for line in ax.get_lines() if line.get_label().startswith("Median")][
+        0
+    ]
+    assert min(curve.get_xdata()) < 0.0
+
+
 def test_plot_fit_diagnostic_rejects_a_dataset_without_the_analyte(fitted_pair):
     fit, dataset = fitted_pair
     mismatched = dict(dataset, analytes={"urine": dataset["analytes"]["stool"]})

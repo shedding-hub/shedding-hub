@@ -3223,7 +3223,19 @@ def plot_fit_diagnostic(
     # so the minimum is the start day for it; and where a curve is undefined --
     # gamma_shifted below its own t0, which can sit above another subject's
     # earliest reading -- log10_concentration returns NaN and nothing is drawn.
-    start = min(CATALOG_FIT_START_DAY, float(observations.times.min()))
+    # Only gamma_shifted draws before day 0. The exponential model is defined
+    # there but grows without bound going backwards, so continuing it back to
+    # its earliest reading puts an extrapolation nothing constrains on the page:
+    # the simulated band reached 10**76 on arts2023longitudinal, 10**329 on
+    # hakki2022onset symptomatic_cultivable and 10**826 on
+    # lavezzo2020suppression E_symptom, dwarfing the data beside it. The gamma
+    # model's readings are all at t > 0 anyway. The readings themselves are
+    # still plotted either way -- only the model's own lines stop here.
+    start = (
+        min(CATALOG_FIT_START_DAY, float(observations.times.min()))
+        if fit.model == "gamma_shifted"
+        else CATALOG_FIT_START_DAY
+    )
     times = np.linspace(start, horizon, 400)
     values = log10_concentration(fit.model, fit.median_params[None, :], times)[0]
 
