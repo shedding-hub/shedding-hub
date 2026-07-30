@@ -299,21 +299,6 @@ def prepare_observations(
             "no_positive_measurements",
         )
 
-    # Both models describe shedding from the reference event onwards -- the
-    # exponential decays from it, the gamma rises and falls after it -- so an
-    # analyte sampled only up to it cannot constrain either. Checked because
-    # `jones2021estimating` swab_SARSCoV2_confirmation, sampled days -7 to 0,
-    # otherwise optimized to convergence and was published with 1990 of its
-    # 2075 subjects degenerate, a sigma of 5.41 against a catalog median of
-    # 0.84, and a median individual 1.26 log10 below its own censoring limit.
-    if not any(time > 0 for subject in per_subject for time in subject["times"]):
-        raise SheddingDataError(
-            f"Analyte {analyte!r} has no measurement after its reference event "
-            "(every usable reading is at or before day 0), so there is no "
-            "post-event trajectory for either model to describe.",
-            "no_data_after_reference_event",
-        )
-
     # Filter subject_ids and per_subject together, from a single zipped list,
     # so the retention predicate appears exactly once: applying it separately
     # to each list could silently desync subject_ids from the arrays below.
@@ -364,6 +349,28 @@ def prepare_observations(
             f"No subject has at least {min_observations} usable measurements for "
             f"analyte {analyte!r}.",
             "too_few_subjects",
+        )
+
+    # Both models describe shedding from the reference event onwards -- the
+    # exponential decays from it, the gamma rises and falls after it -- so an
+    # analyte sampled only up to it cannot constrain either.
+    #
+    # Checked after the retention filter, unlike no_positive_measurements above.
+    # A cross-sectional study sampled once per subject at day 0 trips both this
+    # and too_few_subjects, and "no subject has enough measurements" is the more
+    # useful diagnosis there; an analyte that reaches here has subjects with
+    # ample readings and genuinely stops at the reference event.
+    #
+    # jones2021estimating swab_SARSCoV2_confirmation is that case: sampled days
+    # -7 to 0, it optimized to convergence and was published with 1990 of its
+    # 2075 subjects degenerate, a sigma of 5.41 against a catalog median of
+    # 0.84, and a median individual 1.26 log10 below its own censoring limit.
+    if not any(time > 0 for subject in retained for time in subject["times"]):
+        raise SheddingDataError(
+            f"Analyte {analyte!r} has no measurement after its reference event "
+            "(every usable reading is at or before day 0), so there is no "
+            "post-event trajectory for either model to describe.",
+            "no_data_after_reference_event",
         )
 
     subject_index = np.concatenate(

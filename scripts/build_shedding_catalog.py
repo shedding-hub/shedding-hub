@@ -31,6 +31,15 @@ def main() -> int:
         "--output", default=str(CATALOG_PATH), help="Catalog file to write."
     )
     parser.add_argument(
+        "--models",
+        nargs="+",
+        default=["exponential", "gamma"],
+        help=(
+            "Models to fit. Defaults to the two the fitter can estimate; "
+            "gamma_shifted exists in the model layer but is not yet fittable."
+        ),
+    )
+    parser.add_argument(
         "--min-time",
         type=float,
         default=None,
@@ -70,6 +79,7 @@ def main() -> int:
         warnings.simplefilter("ignore", UserWarning)
         catalog = fit_shedding_models(
             datasets,
+            models=tuple(args.models),
             min_time=args.min_time,
             max_peak_above_observed=args.max_peak_above_observed,
         )

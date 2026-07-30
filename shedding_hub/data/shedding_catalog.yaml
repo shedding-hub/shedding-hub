@@ -930,41 +930,6 @@ fits:
   converged: true
   log_likelihood: 8.993503047170977
   aic: 52.01299390565805
-- dataset_id: jones2021estimating
-  analyte: swab_SARSCoV2_confirmation
-  biomarker: SARS-CoV-2
-  specimen: nasopharyngeal_swab
-  reference_event: confirmation date
-  unit: gc/swab
-  gene_target: null
-  dose: null
-  vaccine_type: null
-  model: exponential
-  method: mle
-  population_coords:
-  - log_a0
-  - peak_log10
-  population_mean:
-  - -3.187289844274912
-  - 0.5117637118192562
-  population_cov:
-  - - 0.07314040872076219
-    - -0.01663675606304385
-  - - -0.01663675606304385
-    - 1.2856021628008891
-  sigma: 5.411907846910957
-  censoring_limit: 1.7510450231999999
-  n_subjects: 2075
-  n_measurements: 4889
-  n_censored: 2814
-  n_excluded_subjects: 22989
-  n_degenerate_subjects: 1990
-  pct_subjects_with_rise: .nan
-  median_first_observed_day: -4.0
-  n_dropped_measurements: 1483
-  converged: true
-  log_likelihood: -8047.261031853737
-  aic: 24396.522063707474
 - dataset_id: ke2022daily
   analyte: nasal_SARSCoV2
   biomarker: SARS-CoV-2
@@ -3543,6 +3508,13 @@ skipped:
     \ b0 unidentifiable \u2014 the likelihood is monotone in it until the c0 > 0 constraint\
     \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
     \ sampling."
+- dataset_id: jones2021estimating
+  analyte: swab_SARSCoV2_confirmation
+  model: exponential
+  reason: no_data_after_reference_event
+  message: Analyte 'swab_SARSCoV2_confirmation' has no measurement after its reference
+    event (every usable reading is at or before day 0), so there is no post-event
+    trajectory for either model to describe.
 - dataset_id: jones2021estimating
   analyte: swab_SARSCoV2_confirmation
   model: gamma
