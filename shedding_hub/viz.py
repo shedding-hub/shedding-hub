@@ -3188,36 +3188,18 @@ def plot_fit_diagnostic(
         label=f"Censoring limit ({limit:.2f})",
     )
 
-    # The gamma curve is undefined at t <= 0 -- c(t) = c0*t^b0*e^(-a0*t) sends
-    # log10 to -inf as t -> 0 -- so prepare_observations discards readings there,
-    # 391 of them for kissler2021viral. Drawing nothing would imply the study
-    # never sampled before its reference event. They are marked as excluded
-    # rather than shown as observations, because the curve was never asked to
-    # explain them. The exponential model keeps such readings, so they are
-    # ordinary observations there and this does not apply.
-    dropped_times, dropped_values = [], []
-    if fit.model == "gamma":
-        for participant in dataset.get("participants") or []:
-            for measurement in participant.get("measurements") or []:
-                if measurement.get("analyte") != fit.analyte:
-                    continue
-                when = measurement.get("time")
-                if not isinstance(when, (int, float)) or isinstance(when, bool):
-                    continue
-                if when > 0:
-                    continue
-                value = measurement.get("value")
-                if (
-                    isinstance(value, (int, float))
-                    and not isinstance(value, bool)
-                    and value > 0
-                ):
-                    dropped_times.append(float(when))
-                    dropped_values.append(float(np.log10(value)))
-                elif value == NEGATIVE_VALUE:
-                    dropped_times.append(float(when))
-                    dropped_values.append(limit)
-    if dropped_times:
+    # Readings the fitter discarded, marked as excluded rather than shown as
+    # observations: the curve was never asked to explain them. Which readings
+    # those are differs by model -- gamma drops everything at t <= 0, where its
+    # curve is undefined; gamma_shifted drops only the censored ones there; the
+    # cutoff drops anything before -5 days under any model -- so the list comes
+    # from prepare_observations rather than being re-derived here, which would
+    # drift from the fitter the next time a rule changes.
+    dropped_times = observations.dropped_times
+    dropped_values = np.where(
+        np.isnan(observations.dropped_values), limit, observations.dropped_values
+    )
+    if dropped_times.size:
         ax.scatter(
             dropped_times,
             dropped_values,
@@ -3227,7 +3209,7 @@ def plot_fit_diagnostic(
             alpha=0.55,
             linewidths=0.9,
             zorder=2,
-            label="Dropped (t <= 0)",
+            label="Dropped (not fitted)",
         )
 
     horizon = float(observations.times.max())
@@ -3309,7 +3291,11 @@ def plot_fit_diagnostic(
     # still starts just after zero: the exponential model is defined for negative
     # times but grows without bound going backwards, so drawing it there would
     # add an extrapolation nothing constrains.
-    earliest = min(0.0, float(observations.times.min()), *(dropped_times or [0.0]))
+    earliest = min(
+        0.0,
+        float(observations.times.min()),
+        float(dropped_times.min()) if dropped_times.size else 0.0,
+    )
     margin = 0.02 * (horizon - earliest)
     ax.set_xlim(earliest - margin, horizon + margin)
     # The observations set the y range, but the curve's peak can sit above every

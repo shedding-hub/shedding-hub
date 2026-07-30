@@ -294,6 +294,49 @@ def test_gamma_shifted_drops_censored_readings_before_the_reference_event():
     assert obs.n_dropped_measurements == 5 * 3
 
 
+def test_prepare_observations_records_what_it_dropped():
+    """The plot needs to mark discarded readings, and must not re-derive the
+    rules to find them -- one source of truth, or the two drift apart."""
+    dataset = {
+        "dataset_id": "dropped_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": -40.0, "value": "negative"},
+                    {"analyte": "stool", "time": -2.0, "value": 1e4},
+                    {"analyte": "stool", "time": 1.0, "value": 1e6},
+                    {"analyte": "stool", "time": 4.0, "value": 1e5},
+                    {"analyte": "stool", "time": 9.0, "value": 1e4},
+                ]
+            }
+            for _ in range(5)
+        ],
+    }
+    # exponential: the -5 cutoff drops the day -40 reading, nothing else
+    exponential = prepare_observations(dataset, "stool", "exponential")
+    assert list(exponential.dropped_times) == [-40.0] * 5
+    assert np.isnan(exponential.dropped_values).all()  # it was censored
+
+    # gamma: everything at t <= 0 goes, so the detected day -2 reading too
+    gamma = prepare_observations(dataset, "stool", "gamma")
+    assert sorted(set(gamma.dropped_times)) == [-40.0, -2.0]
+
+    # gamma_shifted: keeps the detected day -2, drops only the censored one
+    shifted = prepare_observations(dataset, "stool", "gamma_shifted")
+    assert list(shifted.dropped_times) == [-40.0] * 5
+    assert -2.0 in shifted.times
+
+
 def test_prepare_observations_requires_data_after_the_reference_event():
     """A decay from the reference event cannot be estimated from before it.
 

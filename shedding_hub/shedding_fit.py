@@ -108,6 +108,14 @@ class Observations:
     n_subjects: int = 0
     n_excluded_subjects: int = 0
     n_dropped_measurements: int = 0
+    # The plottable subset of what was dropped: readings with a usable time and
+    # value that a model-specific rule discarded. Recorded so a diagnostic plot
+    # can mark them without re-deriving the rules, which would drift.
+    # ``dropped_values`` is log10, NaN where the reading was censored, matching
+    # ``values``. Readings with no usable time or value are counted in
+    # ``n_dropped_measurements`` but cannot be placed on a plot and are absent.
+    dropped_times: np.ndarray = field(default_factory=lambda: np.empty(0))
+    dropped_values: np.ndarray = field(default_factory=lambda: np.empty(0))
 
 
 def _is_ct_unit(unit: Any) -> bool:
@@ -160,6 +168,17 @@ def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> 
         stacklevel=2,
     )
     return fallback
+
+
+def _record_dropped(measurement: dict, time: float, times: list, values: list) -> None:
+    """Note a discarded reading, if it can be placed on a plot at all."""
+    value = measurement.get("value")
+    if isinstance(value, (int, float)) and not isinstance(value, bool) and value > 0:
+        times.append(time)
+        values.append(math.log10(float(value)))
+    elif value == NEGATIVE_VALUE:
+        times.append(time)
+        values.append(float("nan"))
 
 
 def prepare_observations(
@@ -252,6 +271,8 @@ def prepare_observations(
     per_subject: list[dict[str, list]] = []
     subject_ids: list = []
     n_dropped = 0
+    dropped_times: list[float] = []
+    dropped_values: list[float] = []
 
     for position, participant in enumerate(dataset["participants"]):
         times: list[float] = []
@@ -265,11 +286,10 @@ def prepare_observations(
                 n_dropped += 1
                 continue
             time = float(time)
-            if model == "gamma" and time <= 0:
+            gamma_drops_it = model == "gamma" and time <= 0
+            if gamma_drops_it or time < min_time:
                 n_dropped += 1
-                continue
-            if time < min_time:
-                n_dropped += 1
+                _record_dropped(measurement, time, dropped_times, dropped_values)
                 continue
             value = measurement.get("value")
             if isinstance(value, str):
@@ -288,6 +308,9 @@ def prepare_observations(
                     # time is kept, and repels t0 instead: a diving curve
                     # mispredicts a measured value badly.
                     n_dropped += 1
+                    if value == NEGATIVE_VALUE:
+                        dropped_times.append(time)
+                        dropped_values.append(np.nan)
                 continue
             if not isinstance(value, (int, float)) or value <= 0:
                 n_dropped += 1
@@ -433,6 +456,8 @@ def prepare_observations(
         n_subjects=len(retained),
         n_excluded_subjects=n_excluded,
         n_dropped_measurements=n_dropped,
+        dropped_times=np.asarray(dropped_times, dtype=float),
+        dropped_values=np.asarray(dropped_values, dtype=float),
     )
 
 

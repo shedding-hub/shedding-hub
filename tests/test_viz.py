@@ -1462,9 +1462,65 @@ def test_plot_fit_diagnostic_marks_measurements_the_gamma_model_dropped(
     assert observations.times.min() > 0, "the fitter should have dropped them"
 
     ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
-    dropped = _collection(ax, "Dropped (t <= 0)")
+    dropped = _collection(ax, "Dropped (not fitted)")
     assert len(dropped.get_offsets()) == 12 * 4
     assert ax.get_xlim()[0] <= -3.0
+
+
+def test_plot_fit_diagnostic_marks_what_gamma_shifted_dropped(
+    make_synthetic_dataset,
+):
+    """gamma_shifted discards censored readings at t <= 0; those must show too.
+
+    The marker is driven by what prepare_observations recorded, so every model
+    reports its own discards without the plot re-deriving anyone's rules.
+    """
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "gamma",
+            [0.0, np.log(2.0), np.log(12.0)],
+            np.diag([0.04, 0.04, 0.09]),
+            n_subjects=12,
+            seed=3,
+        ),
+        days=(-3.0, -2.0, -1.0),
+    )
+    # The first two are censored and get dropped; the detected one at day -1 is
+    # kept, and is what lets the analyte through the pre-event gate at all.
+    for participant in dataset["participants"]:
+        for measurement in participant["measurements"][:2]:
+            measurement["value"] = "negative"
+
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma_shifted")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    dropped = _collection(ax, "Dropped (not fitted)")
+    assert len(dropped.get_offsets()) == 12 * 2
+    # censored discards are drawn on the limit, all that was established
+    assert np.allclose(np.asarray(dropped.get_offsets())[:, 1], fit.censoring_limit)
+
+
+def test_plot_fit_diagnostic_marks_what_the_exponential_cutoff_dropped(
+    make_synthetic_dataset,
+):
+    """The -5 day cutoff discards readings too, and said nothing about it."""
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "exponential",
+            [np.log(0.6), np.log(18.0)],
+            np.diag([0.04, 0.04]),
+            n_subjects=8,
+            seed=4,
+        ),
+        days=(-40.0, -20.0),
+    )
+    for participant in dataset["participants"]:
+        for measurement in participant["measurements"][:2]:
+            measurement["value"] = "negative"
+
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert len(_collection(ax, "Dropped (not fitted)").get_offsets()) == 8 * 2
+    assert ax.get_xlim()[0] <= -40.0
 
 
 def test_plot_fit_diagnostic_does_not_double_draw_exponential_pre_onset_points(
