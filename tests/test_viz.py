@@ -947,8 +947,15 @@ def test_plot_catalog_fits_accepts_a_catalog(catalog_fits):
     assert len(sh.plot_catalog_fits(catalog).axes) == 4
 
 
-def test_plot_catalog_fits_fades_the_stretch_before_first_observation():
-    """A curve drawn earlier than the study observed is functional form, not data."""
+def test_plot_catalog_fits_fades_the_stretch_before_the_median_first_observation():
+    """Deliberately the median, not the earliest.
+
+    plot_catalog_fits receives fits and never the datasets behind them, so
+    median_first_observed_day is the only boundary available to it. That makes
+    its fade approximate -- it can cover readings from early-enrolled subjects
+    -- which is why it carries no legend entry claiming otherwise.
+    plot_fit_diagnostic does have the observations and splits at the earliest.
+    """
     fit = _stub_fit("study_a", median_first_observed_day=6.0)
     fig = sh.plot_catalog_fits([fit])
     curves = _curves(fig.axes[0])
@@ -1269,6 +1276,44 @@ def test_plot_fit_diagnostic_fades_the_extrapolated_stretch(fitted_pair):
     assert max(faded.get_xdata()) == pytest.approx(
         fit.median_first_observed_day, abs=0.2
     )
+
+
+def test_plot_fit_diagnostic_fade_never_covers_an_observation(
+    make_synthetic_dataset,
+):
+    """The faded stretch is labelled "before first observation" and must be.
+
+    median_first_observed_day is deliberately a median -- one early-enrolled
+    subject should not make a late-starting study look well-observed -- so it
+    sits later than the earliest reading whenever enrolment is staggered, which
+    is 26 of the catalog's 28 rise-and-fall fits. Splitting there put the fade
+    over real plotted points.
+    """
+    # A late peak (b0/a0 = 8 days) so that subjects enrolled on day 4 still
+    # show a rise and the analyte clears the gamma rise gate.
+    dataset = make_synthetic_dataset(
+        "gamma",
+        [np.log(0.3), np.log(2.4), np.log(12.0)],
+        np.diag([0.04, 0.04, 0.09]),
+        n_subjects=12,
+        seed=5,
+        times=np.arange(1.0, 21.0),
+    )
+    for participant in dataset["participants"][2:]:
+        participant["measurements"] = [
+            m for m in participant["measurements"] if m["time"] >= 4
+        ]
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    observations = prepare_observations(dataset, "stool", "gamma")
+    assert fit.median_first_observed_day > observations.times.min()
+
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    faded = [
+        line for line in ax.get_lines() if line.get_label().startswith("Extrapolated")
+    ][0]
+    # the two segments share their boundary point, so allow one grid step
+    step = np.diff(faded.get_xdata())[0]
+    assert max(faded.get_xdata()) <= observations.times.min() + step
 
 
 def test_plot_fit_diagnostic_rejects_a_dataset_without_the_analyte(fitted_pair):

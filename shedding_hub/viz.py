@@ -3213,7 +3213,18 @@ def plot_fit_diagnostic(
         )
 
     horizon = float(observations.times.max())
-    times = np.linspace(CATALOG_FIT_START_DAY, horizon, 400)
+    # Drawn over the range the fit was estimated on, which for two of the three
+    # models reaches before the reference event: the exponential model is fitted
+    # to readings back to the -5 day cutoff, and gamma_shifted to detected
+    # readings at and before day 0. Starting at CATALOG_FIT_START_DAY regardless
+    # hid the fitted curve exactly where those readings are.
+    #
+    # No model branch is needed. The gamma model's own readings are all at t > 0,
+    # so the minimum is the start day for it; and where a curve is undefined --
+    # gamma_shifted below its own t0, which can sit above another subject's
+    # earliest reading -- log10_concentration returns NaN and nothing is drawn.
+    start = min(CATALOG_FIT_START_DAY, float(observations.times.min()))
+    times = np.linspace(start, horizon, 400)
     values = log10_concentration(fit.model, fit.median_params[None, :], times)[0]
 
     band_bounds = None
@@ -3267,7 +3278,15 @@ def plot_fit_diagnostic(
                 )
             ),
         )
-    spans = _catalog_fit_spans(times, fit.median_first_observed_day, True)
+    # Split at the earliest retained reading, not at median_first_observed_day.
+    # That column is deliberately a median -- one early-enrolled subject should
+    # not make a late-starting study look well-observed -- so it sits later than
+    # the earliest reading whenever enrolment is staggered, which is 26 of the
+    # catalog's 28 rise-and-fall fits. Splitting there drew the faded
+    # "before first observation" stretch straight over real plotted points.
+    # plot_catalog_fits has no observations and must still use the median; it
+    # says so in its label.
+    spans = _catalog_fit_spans(times, float(observations.times.min()), True)
     for span, alpha in spans:
         extrapolated = alpha < 1.0
         ax.plot(
