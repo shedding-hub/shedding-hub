@@ -740,6 +740,297 @@ fits:
   converged: true
   log_likelihood: -21.565274784492622
   aic: 105.13054956898524
+- dataset_id: fraaij2015viral
+  analyte: particles_ml
+  biomarker: influenza
+  specimen: nasopharyngeal_swab+oropharyngeal_swab
+  reference_event: enrollment
+  unit: vp/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.8779646454145353
+  - 5.709256473010268
+  population_cov:
+  - - 0.7592117203270454
+    - -0.05985494853715485
+  - - -0.05985494853715485
+    - 0.773409721976897
+  sigma: 1.0340636928544924
+  censoring_limit: 2.7900000000136336
+  n_subjects: 4
+  n_measurements: 14
+  n_censored: 2
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 50.0
+  median_first_observed_day: 3.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -18.0476557001299
+  aic: 54.0953114002598
+- dataset_id: garciaknight2022infectious
+  analyte: e
+  biomarker: SARS-CoV-2
+  specimen: anterior_nares_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: E
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.44039578518577877
+  - 6.416992474615957
+  population_cov:
+  - - 1.1132933610189544
+    - 2.312181216839363
+  - - 2.312181216839363
+    - 6.8923009739043595
+  sigma: 1.0848645940374866
+  censoring_limit: 0.25666666656741693
+  n_subjects: 74
+  n_measurements: 529
+  n_censored: 0
+  n_excluded_subjects: 6
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 53.03030303030303
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -793.6694625906364
+  aic: 1885.3389251812728
+- dataset_id: garciaknight2022infectious
+  analyte: e
+  biomarker: SARS-CoV-2
+  specimen: anterior_nares_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: E
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.12901374780600194
+  - -1.0043184523043356
+  - 6.397941510403212
+  population_cov:
+  - - 0.7777040040051512
+    - -0.21423672749370642
+    - 0.8342560823909908
+  - - -0.21423672749370642
+    - 4.67745858113516
+    - -2.300498318447137
+  - - 0.8342560823909908
+    - -2.300498318447137
+    - 5.160967612874962
+  sigma: 0.9436937940863116
+  censoring_limit: 0.25666666656741693
+  n_subjects: 66
+  n_measurements: 503
+  n_censored: 0
+  n_excluded_subjects: 14
+  n_degenerate_subjects: 6
+  pct_subjects_with_rise: 53.03030303030303
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 11
+  converged: true
+  log_likelihood: -684.5569121016613
+  aic: 1767.1138242033226
+- dataset_id: garciaknight2022infectious
+  analyte: e
+  biomarker: SARS-CoV-2
+  specimen: anterior_nares_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: E
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.275814504691194
+  - -1.3254857637489044
+  - 5.881419673193893
+  - 1.8031262153825138
+  population_cov:
+  - - 0.6520295196877492
+    - 0.5277539494389749
+    - 0.7774325970038771
+    - -0.3192883655172399
+  - - 0.5277539494389749
+    - 4.040795171428645
+    - -1.3178621215394541
+    - -0.07074979717383341
+  - - 0.7774325970038771
+    - -1.3178621215394541
+    - 3.08743130794522
+    - -0.7226658730204799
+  - - -0.3192883655172399
+    - -0.07074979717383341
+    - -0.7226658730204799
+    - 3.4052493198489726
+  sigma: 0.8955648561664605
+  censoring_limit: 0.25666666656741693
+  n_subjects: 63
+  n_measurements: 503
+  n_censored: 0
+  n_excluded_subjects: 17
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 57.14285714285714
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -658.3262622381588
+  aic: 1822.6525244763177
+- dataset_id: garciaknight2022infectious
+  analyte: n
+  biomarker: SARS-CoV-2
+  specimen: anterior_nares_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: N
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.3541863108340235
+  - 6.407336907540481
+  population_cov:
+  - - 0.9830529916670327
+    - 1.6642903163790794
+  - - 1.6642903163790794
+    - 5.254550387111843
+  sigma: 0.9526840169997622
+  censoring_limit: 0.26118644061006735
+  n_subjects: 66
+  n_measurements: 440
+  n_censored: 2
+  n_excluded_subjects: 10
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 56.451612903225815
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -601.9149763349026
+  aic: 1469.8299526698052
+- dataset_id: garciaknight2022infectious
+  analyte: n
+  biomarker: SARS-CoV-2
+  specimen: anterior_nares_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: N
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.1263994726684318
+  - -0.24054416192694744
+  - 5.895916972113823
+  population_cov:
+  - - 1.1763925578261507
+    - -0.28527547066602993
+    - 0.8100658228732084
+  - - -0.28527547066602993
+    - 3.5543712771355187
+    - -1.3660800492018377
+  - - 0.8100658228732084
+    - -1.3660800492018377
+    - 4.169490119724738
+  sigma: 0.8212194620067287
+  censoring_limit: 0.26118644061006735
+  n_subjects: 62
+  n_measurements: 424
+  n_censored: 2
+  n_excluded_subjects: 14
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 56.451612903225815
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 9
+  converged: true
+  log_likelihood: -517.4145869113356
+  aic: 1408.8291738226712
+- dataset_id: garciaknight2022infectious
+  analyte: n
+  biomarker: SARS-CoV-2
+  specimen: anterior_nares_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: N
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.30751585677520515
+  - -0.7910859396742194
+  - 5.623107246275709
+  - 1.921877773593978
+  population_cov:
+  - - 1.0837172467964242
+    - 0.17055776292075941
+    - 0.518406827713456
+    - 0.021685947247968487
+  - - 0.17055776292075941
+    - 3.7072463329190932
+    - -0.41447051548263003
+    - -0.2510360991043697
+  - - 0.518406827713456
+    - -0.41447051548263003
+    - 2.8593320083561036
+    - -0.4771941717452909
+  - - 0.021685947247968487
+    - -0.2510360991043697
+    - -0.4771941717452909
+    - 3.9839861061482047
+  sigma: 0.7813506541463919
+  censoring_limit: 0.26118644061006735
+  n_subjects: 58
+  n_measurements: 419
+  n_censored: 2
+  n_excluded_subjects: 18
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 60.3448275862069
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -490.54603211088516
+  aic: 1447.0920642217702
 - dataset_id: hakki2022onset
   analyte: asymptomatic_PCR
   biomarker: SARS-CoV-2
@@ -1252,6 +1543,237 @@ fits:
   converged: true
   log_likelihood: -210.93595016545143
   aic: 663.8719003309029
+- dataset_id: hu2013association
+  analyte: oropharyngeal_swab
+  biomarker: influenza
+  specimen: oropharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/swab
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.8910094801040195
+  - 4.995143366725383
+  population_cov:
+  - - 1.0281043834165686
+    - 0.5876355929921456
+  - - 0.5876355929921456
+    - 1.6967798830560519
+  sigma: 1.2999957483635678
+  censoring_limit: 2.14
+  n_subjects: 13
+  n_measurements: 133
+  n_censored: 92
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 5
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 6.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -91.92316828018977
+  aic: 237.84633656037954
+- dataset_id: hu2013association
+  analyte: oropharyngeal_swab
+  biomarker: influenza
+  specimen: oropharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/swab
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - -0.5354310557176457
+  - 0.23940376819244039
+  - 4.8739137548646365
+  population_cov:
+  - - 1.0828740203858684
+    - -0.9087773119554878
+    - 0.7145355648450884
+  - - -0.9087773119554878
+    - 1.6408368869138006
+    - -1.3186177670280337
+  - - 0.7145355648450884
+    - -1.3186177670280337
+    - 3.1880690438042407
+  sigma: 1.2672310421306288
+  censoring_limit: 2.14
+  n_subjects: 13
+  n_measurements: 133
+  n_censored: 92
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 4
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 6.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -90.65885023091744
+  aic: 261.3177004618349
+- dataset_id: hu2013association
+  analyte: urine
+  biomarker: influenza
+  specimen: urine
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -2.2159686380804295
+  - 3.7032942037323915
+  population_cov:
+  - - 4.174522909602235
+    - 3.4291381511847323
+  - - 3.4291381511847323
+    - 3.257817342142886
+  sigma: 0.6113052299665932
+  censoring_limit: 2.25
+  n_subjects: 11
+  n_measurements: 76
+  n_censored: 55
+  n_excluded_subjects: 3
+  n_degenerate_subjects: 4
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 8.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -37.88231328385442
+  aic: 121.76462656770885
+- dataset_id: hu2013association
+  analyte: urine
+  biomarker: influenza
+  specimen: urine
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - -1.8755477105881497
+  - 1.3083122115973629
+  - 3.2866982866083743
+  population_cov:
+  - - 2.179185630362517
+    - -3.0396164018346505
+    - 2.038539778790354
+  - - -3.0396164018346505
+    - 4.4607106322764425
+    - -2.857510794480311
+  - - 2.038539778790354
+    - -2.857510794480311
+    - 2.380947445781094
+  sigma: 0.6095145648871694
+  censoring_limit: 2.25
+  n_subjects: 11
+  n_measurements: 76
+  n_censored: 55
+  n_excluded_subjects: 3
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 8.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -37.55446773763848
+  aic: 143.10893547527695
+- dataset_id: hu2013association
+  analyte: stool
+  biomarker: influenza
+  specimen: stool
+  reference_event: symptom onset
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.799627349499574
+  - 3.919585432296946
+  population_cov:
+  - - 4.396718164070762
+    - 4.592216291844877
+  - - 4.592216291844877
+    - 5.288554427869816
+  sigma: 1.147576874386201
+  censoring_limit: 2.1500000000000004
+  n_subjects: 11
+  n_measurements: 76
+  n_censored: 51
+  n_excluded_subjects: 3
+  n_degenerate_subjects: 4
+  pct_subjects_with_rise: 50.0
+  median_first_observed_day: 9.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -57.27107668078737
+  aic: 160.54215336157472
+- dataset_id: hu2013association
+  analyte: stool
+  biomarker: influenza
+  specimen: stool
+  reference_event: symptom onset
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - -1.4591473741959184
+  - 0.3003581120055558
+  - 3.708342319918753
+  population_cov:
+  - - 2.915023457044603
+    - -4.096615313898679
+    - 3.271085953260365
+  - - -4.096615313898679
+    - 5.88988704110762
+    - -4.57678747091618
+  - - 3.271085953260365
+    - -4.57678747091618
+    - 4.334407302055354
+  sigma: 1.124116628786787
+  censoring_limit: 2.1500000000000004
+  n_subjects: 11
+  n_measurements: 76
+  n_censored: 51
+  n_excluded_subjects: 3
+  n_degenerate_subjects: 4
+  pct_subjects_with_rise: 50.0
+  median_first_observed_day: 9.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -56.62274818859144
+  aic: 181.24549637718286
 - dataset_id: iwakiri2009quantitative
   analyte: stool_SaV
   biomarker: sapovirus
@@ -1287,6 +1809,41 @@ fits:
   converged: true
   log_likelihood: 8.993503047170977
   aic: 52.01299390565805
+- dataset_id: kay2011shedding
+  analyte: nasal_lavage_influenza_gc_per_mL
+  biomarker: influenza
+  specimen: nasal_lavage_fluid
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.059409512099265545
+  - 8.090643978336715
+  population_cov:
+  - - 0.4037557090729655
+    - 0.9435791625825175
+  - - 0.9435791625825175
+    - 2.918413643666376
+  sigma: 0.34000539071283875
+  censoring_limit: 3.0
+  n_subjects: 8
+  n_measurements: 37
+  n_censored: 0
+  n_excluded_subjects: 6
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 12.5
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -12.583063598954173
+  aic: 59.166127197908345
 - dataset_id: ke2022daily
   analyte: nasal_SARSCoV2
   biomarker: SARS-CoV-2
@@ -1544,7 +2101,7 @@ fits:
   log_likelihood: -821.6329577077488
   aic: 2125.2659154154976
 - dataset_id: kirby2016vomiting
-  analyte: emesis_norovirus_gii
+  analyte: emesis_norovirus_GII
   biomarker: norovirus
   specimen: emesis
   reference_event: symptom onset
@@ -1706,6 +2263,83 @@ fits:
   converged: true
   log_likelihood: -323.9627205850093
   aic: 1129.9254411700185
+- dataset_id: kondo2016influenza
+  analyte: nasal_discharge_influenza_gc_per_mL
+  biomarker: influenza
+  specimen: nasal_discharge
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: M gene
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - 0.2267621153599757
+  - 6.499836308356431
+  population_cov:
+  - - 0.4913115878873164
+    - 0.3892460017111102
+  - - 0.3892460017111102
+    - 1.1557220188229267
+  sigma: 0.5856153719305339
+  censoring_limit: 3.5035135135518987
+  n_subjects: 28
+  n_measurements: 84
+  n_censored: 29
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 66.66666666666666
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -57.62863600108465
+  aic: 229.25727200216932
+- dataset_id: kondo2016influenza
+  analyte: nasal_discharge_influenza_gc_per_mL
+  biomarker: influenza
+  specimen: nasal_discharge
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: M gene
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.7282884000700688
+  - -0.19926849523538456
+  - 6.077342904388623
+  population_cov:
+  - - 0.29935514907358574
+    - -0.11839817132109993
+    - 0.15272529558174022
+  - - -0.11839817132109993
+    - 1.3843192774954405
+    - -0.16546920870176163
+  - - 0.15272529558174022
+    - -0.16546920870176163
+    - 0.4211627589213123
+  sigma: 0.27700952978745225
+  censoring_limit: 3.5035135135518987
+  n_subjects: 19
+  n_measurements: 57
+  n_censored: 19
+  n_excluded_subjects: 9
+  n_degenerate_subjects: 6
+  pct_subjects_with_rise: 66.66666666666666
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 9
+  converged: true
+  log_likelihood: -8.206456962930478
+  aic: 132.41291392586095
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_first_pos
   biomarker: SARS-CoV-2
@@ -1881,6 +2515,41 @@ fits:
   converged: true
   log_likelihood: -26.672950624511024
   aic: 71.34590124902205
+- dataset_id: li2018faecal
+  analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+  biomarker: Lanzhou lamb rotavirus vaccine
+  specimen: stool
+  reference_event: vaccination
+  unit: gc/wet gram
+  gene_target: NSP3
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -2.652917342845764
+  - 4.444521253104087
+  population_cov:
+  - - 3.310903411008625
+    - 3.6364731248854674
+  - - 3.6364731248854674
+    - 4.980451824350651
+  sigma: 1.9997298446093332
+  censoring_limit: 3.0
+  n_subjects: 15
+  n_measurements: 50
+  n_censored: 22
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 6
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 6.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -73.537211591975
+  aic: 209.07442318395
 - dataset_id: liu2024longitudinal
   analyte: stool_SARSCoV2_N1
   biomarker: SARS-CoV-2
@@ -3037,6 +3706,426 @@ fits:
   converged: true
   log_likelihood: -65.39122698663625
   aic: 188.7824539732725
+- dataset_id: pereira2022standardization
+  analyte: respiratory_influenzaA_viral_load
+  biomarker: influenza
+  specimen: nasopharyngeal_aspirate+nasopharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/reaction
+  gene_target: M
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.36305691857284167
+  - 6.246228073671211
+  population_cov:
+  - - 1.265516164190559
+    - 0.7714018553734703
+  - - 0.7714018553734703
+    - 2.276190313207482
+  sigma: 0.18018636900088067
+  censoring_limit: 1.3121773564397787
+  n_subjects: 19
+  n_measurements: 38
+  n_censored: 3
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 6
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: 10.339460275541047
+  aic: 57.32107944891791
+- dataset_id: piralla2013different
+  analyte: nasopharyngeal_swab
+  biomarker: influenza
+  specimen: nasopharyngeal_swab
+  reference_event: confirmation date
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - 0.14287523548104722
+  - 6.197398634928804
+  population_cov:
+  - - 0.8853573909494683
+    - 0.2586206209637099
+  - - 0.2586206209637099
+    - 1.7766409157080723
+  sigma: 0.6077546249278998
+  censoring_limit: 2.4396644294538055
+  n_subjects: 44
+  n_measurements: 115
+  n_censored: 30
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 0.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -84.57934683289696
+  aic: 347.1586936657939
+- dataset_id: piralla2013different
+  analyte: bronchoalveolar_lavage_fluid
+  biomarker: influenza
+  specimen: bronchoalveolar_lavage_fluid
+  reference_event: confirmation date
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.4460182115076856
+  - 7.2131816274511475
+  population_cov:
+  - - 0.45401583883606567
+    - -1.006154349185372
+  - - -1.006154349185372
+    - 3.7157808729327053
+  sigma: 0.6351769269078366
+  censoring_limit: 1.6430612244927458
+  n_subjects: 4
+  n_measurements: 12
+  n_censored: 2
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 0.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -10.807137334094744
+  aic: 39.61427466818949
+- dataset_id: rodrigues2020influenza
+  analyte: respiratory_influenza_viral_load
+  biomarker: influenza
+  specimen: nasopharyngeal_swab+oropharyngeal_swab
+  reference_event: treatment
+  unit: gc/mL
+  gene_target: M gene
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.19863251587301298
+  - 7.086049432362377
+  population_cov:
+  - - 0.8895707109468505
+    - -0.5500750774323795
+  - - -0.5500750774323795
+    - 4.242803975093658
+  sigma: 0.8636115058236731
+  censoring_limit: 2.0915228428099675
+  n_subjects: 10
+  n_measurements: 33
+  n_censored: 7
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 25.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -35.43557089541892
+  aic: 112.87114179083784
+- dataset_id: rouphael2025effective
+  analyte: buccal_gc_ml
+  biomarker: influenza
+  specimen: buccal_swab
+  reference_event: inoculation
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.8602897654976188
+  - 2.7524383979705096
+  population_cov:
+  - - 0.1123769156435441
+    - 0.06514320079514704
+  - - 0.06514320079514704
+    - 0.05498861895298361
+  sigma: 1.1886348023508242
+  censoring_limit: 2.6999999708609113
+  n_subjects: 5
+  n_measurements: 35
+  n_censored: 28
+  n_excluded_subjects: 3
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -21.148042715875313
+  aic: 64.29608543175063
+- dataset_id: rouphael2025effective
+  analyte: oropharyngeal_gc_ml
+  biomarker: influenza
+  specimen: oropharyngeal_swab
+  reference_event: inoculation
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -2.071546964168541
+  - 3.08709912850704
+  population_cov:
+  - - 2.1384033809080596
+    - 2.334725437394037
+  - - 2.334725437394037
+    - 3.5046263765750405
+  sigma: 1.8536674795241037
+  censoring_limit: 2.6999999708609113
+  n_subjects: 7
+  n_measurements: 49
+  n_censored: 24
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -65.74063118001189
+  aic: 161.48126236002378
+- dataset_id: rouphael2025effective
+  analyte: saliva_gc_ml
+  biomarker: influenza
+  specimen: saliva
+  reference_event: inoculation
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.9906095960096584
+  - 3.3261601628749973
+  population_cov:
+  - - 2.488174058023752
+    - 2.6912089313757317
+  - - 2.6912089313757317
+    - 4.404647435641705
+  sigma: 1.8748625437322894
+  censoring_limit: 2.6999999708609113
+  n_subjects: 8
+  n_measurements: 56
+  n_censored: 29
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -68.30756226188147
+  aic: 170.61512452376294
+- dataset_id: rouphael2025effective
+  analyte: anterior_nasal_pfu_ml
+  biomarker: influenza
+  specimen: anterior_nares_swab
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.5211671069068692
+  - 3.3839424914459237
+  population_cov:
+  - - 3.494211996505678
+    - 4.314297595318078
+  - - 4.314297595318078
+    - 5.748389635647712
+  sigma: 2.3008459946741606
+  censoring_limit: 0.6989700043360189
+  n_subjects: 5
+  n_measurements: 35
+  n_censored: 15
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 80.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -55.382661440361424
+  aic: 132.76532288072286
+- dataset_id: rouphael2025effective
+  analyte: buccal_pfu_ml
+  biomarker: influenza
+  specimen: buccal_swab
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.1789338579509776
+  - 0.6638596238524136
+  population_cov:
+  - - 0.12694978691072228
+    - 0.024410370586121083
+  - - 0.024410370586121083
+    - 0.007162967313521309
+  sigma: 0.7892661784384899
+  censoring_limit: 0.6989700043360189
+  n_subjects: 3
+  n_measurements: 21
+  n_censored: 17
+  n_excluded_subjects: 3
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -10.507638594381614
+  aic: 35.01527718876323
+- dataset_id: rouphael2025effective
+  analyte: saliva_pfu_ml
+  biomarker: influenza
+  specimen: saliva
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.24066107725492358
+  - 2.6149314508702517
+  population_cov:
+  - - 0.46657840634821757
+    - 0.3726961141057557
+  - - 0.3726961141057557
+    - 0.8911142857436967
+  sigma: 2.086582756824929
+  censoring_limit: 0.6989700043360189
+  n_subjects: 5
+  n_measurements: 35
+  n_censored: 17
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -49.599236072662606
+  aic: 121.19847214532521
+- dataset_id: shetty2024influenza
+  analyte: nasopharyngeal_swab_pfu_ml
+  biomarker: influenza
+  specimen: nasopharyngeal_swab
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.3289940560709976
+  - 3.5291735118164063
+  population_cov:
+  - - 0.6269197811237008
+    - 1.3958081214005331
+  - - 1.3958081214005331
+    - 5.015946575394846
+  sigma: 1.7491138229791676
+  censoring_limit: 1.2319354839869425
+  n_subjects: 5
+  n_measurements: 30
+  n_censored: 13
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -40.47111596216942
+  aic: 102.94223192433884
+- dataset_id: shetty2024influenza
+  analyte: saliva_pfu_ml
+  biomarker: influenza
+  specimen: saliva
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - 0.7574265719681063
+  - 3.1789327405176144
+  population_cov:
+  - - 0.00045721962824889207
+    - 0.030035210175502418
+  - - 0.030035210175502418
+    - 2.405540452712569
+  sigma: 2.0330662920656706
+  censoring_limit: 0.6956451612690909
+  n_subjects: 5
+  n_measurements: 30
+  n_censored: 22
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -25.30202963934036
+  aic: 72.60405927868072
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_concentration_symptomatic
   biomarker: norovirus
@@ -3108,7 +4197,7 @@ fits:
   log_likelihood: -33.14376285472704
   aic: 168.2875257094541
 - dataset_id: tjon2006high
-  analyte: stool_hepatitis_a_virus
+  analyte: stool_hepatitis_A_virus
   biomarker: hepatitis A virus
   specimen: stool
   reference_event: symptom onset
@@ -3884,6 +4973,111 @@ skipped:
   message: Analyte 'stool_norovirus' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: serum
+  model: exponential
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: serum
+  model: gamma
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: serum
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: saliva
+  model: exponential
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: saliva
+  model: gamma
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: saliva
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: anorectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: anorectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: anorectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: genital_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'genital_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: genital_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'genital_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brosius2023presymptomatic
+  analyte: genital_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'genital_swab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_CT
   model: exponential
@@ -4095,6 +5289,88 @@ skipped:
   message: Analyte 'stool_rotavirus_vaccine_dose3' has no detected reading at or before
     its reference event, so a shifted onset has nothing to locate and would only absorb
     curve shape. Fit the 'gamma' model instead.
+- dataset_id: de2006fatal
+  analyte: nasopharyngeal_swab_influenza_gc_per_mL
+  model: exponential
+  reason: degenerate_fit
+  message: "2 of 2 subject(s) for analyte 'nasopharyngeal_swab_influenza_gc_per_mL'\
+    \ produced degenerate fits under the 'exponential' model \u2014 collapsed onto\
+    \ the parameter bounds, or decaying faster than the sampling can resolve \u2014\
+    \ leaving 0 usable subject(s), too few to estimate a population covariance. This\
+    \ usually means the model is not identifiable from this data: for the gamma model,\
+    \ typically because sampling began after peak shedding, so there is no rise phase\
+    \ from which to estimate b0."
+- dataset_id: de2006fatal
+  analyte: nasopharyngeal_swab_influenza_gc_per_mL
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasopharyngeal_swab_influenza_gc_per_mL'\
+    \ does not show one: no subject had enough readings to judge, against a required\
+    \ 50%. Sampling here appears to begin at or after peak shedding, which leaves\
+    \ b0 unidentifiable \u2014 the likelihood is monotone in it until the c0 > 0 constraint\
+    \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
+    \ sampling."
+- dataset_id: de2006fatal
+  analyte: nasopharyngeal_swab_influenza_gc_per_mL
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasopharyngeal_swab_influenza_gc_per_mL' has no detected reading
+    at or before its reference event, so a shifted onset has nothing to locate and
+    would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: de2006fatal
+  analyte: oropharyngeal_swab_influenza_gc_per_mL
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 2 subject(s) for analyte 'oropharyngeal_swab_influenza_gc_per_mL'\
+    \ produced degenerate fits under the 'exponential' model \u2014 collapsed onto\
+    \ the parameter bounds, or decaying faster than the sampling can resolve \u2014\
+    \ leaving 1 usable subject(s), too few to estimate a population covariance. This\
+    \ usually means the model is not identifiable from this data: for the gamma model,\
+    \ typically because sampling began after peak shedding, so there is no rise phase\
+    \ from which to estimate b0."
+- dataset_id: de2006fatal
+  analyte: oropharyngeal_swab_influenza_gc_per_mL
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'oropharyngeal_swab_influenza_gc_per_mL'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: de2006fatal
+  analyte: oropharyngeal_swab_influenza_gc_per_mL
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'oropharyngeal_swab_influenza_gc_per_mL' has no detected reading
+    at or before its reference event, so a shifted onset has nothing to locate and
+    would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: de2006fatal
+  analyte: tracheal_aspirate_influenza_gc_per_mL
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 2 subject(s) for analyte 'tracheal_aspirate_influenza_gc_per_mL'\
+    \ produced degenerate fits under the 'exponential' model \u2014 collapsed onto\
+    \ the parameter bounds, or decaying faster than the sampling can resolve \u2014\
+    \ leaving 1 usable subject(s), too few to estimate a population covariance. This\
+    \ usually means the model is not identifiable from this data: for the gamma model,\
+    \ typically because sampling began after peak shedding, so there is no rise phase\
+    \ from which to estimate b0."
+- dataset_id: de2006fatal
+  analyte: tracheal_aspirate_influenza_gc_per_mL
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'tracheal_aspirate_influenza_gc_per_mL'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: de2006fatal
+  analyte: tracheal_aspirate_influenza_gc_per_mL
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'tracheal_aspirate_influenza_gc_per_mL' has no detected reading
+    at or before its reference event, so a shifted onset has nothing to locate and
+    would only absorb curve shape. Fit the 'gamma' model instead.
 - dataset_id: fajnzylber2020sars
   analyte: Nasopharyngeal_SARSCoV2_N
   model: gamma
@@ -4211,6 +5487,23 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'Urine_SARSCoV2_N'.
+- dataset_id: fraaij2015viral
+  analyte: particles_ml
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'particles_ml' has 2 subject(s) (3 fitted, 1 excluded as degenerate)
+    feeding the population summary of the 'gamma' model, which has 3 parameters. At
+    least 4 are needed for the between-subject covariance to be estimable rather than
+    rank-deficient; below that the 'population' is an artefact of averaging too few
+    individuals, and simulating from it produces near-identical or wildly extrapolated
+    individuals.
+- dataset_id: fraaij2015viral
+  analyte: particles_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'particles_ml' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: gautret2020hydroxychloroquine
   analyte: nasopharyngeal_swab_SARSCoV2_Ct
   model: exponential
@@ -4263,45 +5556,45 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'stool_norovirus_viral_load'.
 - dataset_id: gutierrez2021nosocomial
-  analyte: stool_rotavirus_ct
+  analyte: stool_rotavirus_CT
   model: exponential
   reason: ct_units
-  message: Analyte 'stool_rotavirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+  message: Analyte 'stool_rotavirus_CT' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
 - dataset_id: gutierrez2021nosocomial
-  analyte: stool_rotavirus_ct
+  analyte: stool_rotavirus_CT
   model: gamma
   reason: ct_units
-  message: Analyte 'stool_rotavirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+  message: Analyte 'stool_rotavirus_CT' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
 - dataset_id: gutierrez2021nosocomial
-  analyte: stool_rotavirus_ct
+  analyte: stool_rotavirus_CT
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'stool_rotavirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+  message: Analyte 'stool_rotavirus_CT' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
 - dataset_id: gutierrez2021nosocomial
-  analyte: stool_norovirus_ct
+  analyte: stool_norovirus_CT
   model: exponential
   reason: ct_units
-  message: Analyte 'stool_norovirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+  message: Analyte 'stool_norovirus_CT' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
 - dataset_id: gutierrez2021nosocomial
-  analyte: stool_norovirus_ct
+  analyte: stool_norovirus_CT
   model: gamma
   reason: ct_units
-  message: Analyte 'stool_norovirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+  message: Analyte 'stool_norovirus_CT' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
 - dataset_id: gutierrez2021nosocomial
-  analyte: stool_norovirus_ct
+  analyte: stool_norovirus_CT
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'stool_norovirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+  message: Analyte 'stool_norovirus_CT' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
 - dataset_id: han2020sequential
@@ -4505,6 +5798,137 @@ skipped:
   message: Analyte 'stool_E' has no detected reading at or before its reference event,
     so a shifted onset has nothing to locate and would only absorb curve shape. Fit
     the 'gamma' model instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv5_1
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv5_1
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv5_1
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv5_2
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv5_2
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv5_2
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv1_1
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv1_1
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv1_1
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv1_2
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv1_2
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hiramatsu2018rotavirus
+  analyte: rv1_2
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: hu2013association
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'oropharyngeal_swab' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: hu2013association
+  analyte: serum
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'serum' has 2 subject(s) (9 fitted, 7 excluded as degenerate) feeding
+    the population summary of the 'exponential' model, which has 2 parameters. At
+    least 3 are needed for the between-subject covariance to be estimable rather than
+    rank-deficient; below that the 'population' is an artefact of averaging too few
+    individuals, and simulating from it produces near-identical or wildly extrapolated
+    individuals.
+- dataset_id: hu2013association
+  analyte: serum
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'serum' does not show\
+    \ one: no subject had enough readings to judge, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: hu2013association
+  analyte: serum
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'serum' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: hu2013association
+  analyte: urine
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'urine' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: hu2013association
+  analyte: stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: iwakiri2009quantitative
   analyte: stool_SaV
   model: gamma
@@ -4522,35 +5946,35 @@ skipped:
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
 - dataset_id: jacobsen2022differentiation
-  analyte: stool_rotavirus_vaccine_rv1
+  analyte: stool_rotavirus_vaccine_RV1
   model: exponential
   reason: too_few_subjects
-  message: No subject has at least 2 usable measurements for analyte 'stool_rotavirus_vaccine_rv1'.
+  message: No subject has at least 2 usable measurements for analyte 'stool_rotavirus_vaccine_RV1'.
 - dataset_id: jacobsen2022differentiation
-  analyte: stool_rotavirus_vaccine_rv1
+  analyte: stool_rotavirus_vaccine_RV1
   model: gamma
   reason: too_few_subjects
-  message: No subject has at least 3 usable measurements for analyte 'stool_rotavirus_vaccine_rv1'.
+  message: No subject has at least 3 usable measurements for analyte 'stool_rotavirus_vaccine_RV1'.
 - dataset_id: jacobsen2022differentiation
-  analyte: stool_rotavirus_vaccine_rv1
+  analyte: stool_rotavirus_vaccine_RV1
   model: gamma_shifted
   reason: too_few_subjects
-  message: No subject has at least 4 usable measurements for analyte 'stool_rotavirus_vaccine_rv1'.
+  message: No subject has at least 4 usable measurements for analyte 'stool_rotavirus_vaccine_RV1'.
 - dataset_id: jacobsen2022differentiation
-  analyte: stool_rotavirus_vaccine_rv5
+  analyte: stool_rotavirus_vaccine_RV5
   model: exponential
   reason: too_few_subjects
-  message: No subject has at least 2 usable measurements for analyte 'stool_rotavirus_vaccine_rv5'.
+  message: No subject has at least 2 usable measurements for analyte 'stool_rotavirus_vaccine_RV5'.
 - dataset_id: jacobsen2022differentiation
-  analyte: stool_rotavirus_vaccine_rv5
+  analyte: stool_rotavirus_vaccine_RV5
   model: gamma
   reason: too_few_subjects
-  message: No subject has at least 3 usable measurements for analyte 'stool_rotavirus_vaccine_rv5'.
+  message: No subject has at least 3 usable measurements for analyte 'stool_rotavirus_vaccine_RV5'.
 - dataset_id: jacobsen2022differentiation
-  analyte: stool_rotavirus_vaccine_rv5
+  analyte: stool_rotavirus_vaccine_RV5
   model: gamma_shifted
   reason: too_few_subjects
-  message: No subject has at least 4 usable measurements for analyte 'stool_rotavirus_vaccine_rv5'.
+  message: No subject has at least 4 usable measurements for analyte 'stool_rotavirus_vaccine_RV5'.
 - dataset_id: jones2021estimating
   analyte: swab_SARSCoV2_onset
   model: exponential
@@ -4597,20 +6021,36 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'swab_SARSCoV2_confirmation'.
 - dataset_id: kamel2011presence
-  analyte: stool_hav_viral_load
+  analyte: stool_HAV_viral_load
   model: exponential
   reason: too_few_subjects
-  message: No subject has at least 2 usable measurements for analyte 'stool_hav_viral_load'.
+  message: No subject has at least 2 usable measurements for analyte 'stool_HAV_viral_load'.
 - dataset_id: kamel2011presence
-  analyte: stool_hav_viral_load
+  analyte: stool_HAV_viral_load
   model: gamma
   reason: too_few_subjects
-  message: No subject has at least 3 usable measurements for analyte 'stool_hav_viral_load'.
+  message: No subject has at least 3 usable measurements for analyte 'stool_HAV_viral_load'.
 - dataset_id: kamel2011presence
-  analyte: stool_hav_viral_load
+  analyte: stool_HAV_viral_load
   model: gamma_shifted
   reason: too_few_subjects
-  message: No subject has at least 4 usable measurements for analyte 'stool_hav_viral_load'.
+  message: No subject has at least 4 usable measurements for analyte 'stool_HAV_viral_load'.
+- dataset_id: kay2011shedding
+  analyte: nasal_lavage_influenza_gc_per_mL
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasal_lavage_influenza_gc_per_mL'\
+    \ does not show one: only 12% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: kay2011shedding
+  analyte: nasal_lavage_influenza_gc_per_mL
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasal_lavage_influenza_gc_per_mL' has no detected reading at or
+    before its reference event, so a shifted onset has nothing to locate and would
+    only absorb curve shape. Fit the 'gamma' model instead.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_VL
   model: exponential
@@ -4840,10 +6280,10 @@ skipped:
     already on a log scale, so neither shedding model applies. Select a concentration
     analyte instead.
 - dataset_id: kirby2016vomiting
-  analyte: emesis_norovirus_gi
+  analyte: emesis_norovirus_GI
   model: exponential
   reason: degenerate_fit
-  message: "3 of 3 subject(s) for analyte 'emesis_norovirus_gi' produced degenerate\
+  message: "3 of 3 subject(s) for analyte 'emesis_norovirus_GI' produced degenerate\
     \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
     \ or decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
     \ too few to estimate a population covariance. This usually means the model is\
@@ -4851,10 +6291,10 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
-  analyte: emesis_norovirus_gi
+  analyte: emesis_norovirus_GI
   model: gamma
   reason: degenerate_fit
-  message: "2 of 2 subject(s) for analyte 'emesis_norovirus_gi' produced degenerate\
+  message: "2 of 2 subject(s) for analyte 'emesis_norovirus_GI' produced degenerate\
     \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
     \ decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
     \ too few to estimate a population covariance. This usually means the model is\
@@ -4862,33 +6302,33 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
-  analyte: emesis_norovirus_gi
+  analyte: emesis_norovirus_GI
   model: gamma_shifted
   reason: no_pre_event_readings
-  message: Analyte 'emesis_norovirus_gi' has no detected reading at or before its
+  message: Analyte 'emesis_norovirus_GI' has no detected reading at or before its
     reference event, so a shifted onset has nothing to locate and would only absorb
     curve shape. Fit the 'gamma' model instead.
 - dataset_id: kirby2016vomiting
-  analyte: emesis_norovirus_gii
+  analyte: emesis_norovirus_GII
   model: gamma
   reason: no_rise_observed
-  message: "The gamma model needs a rise to fit, and analyte 'emesis_norovirus_gii'\
+  message: "The gamma model needs a rise to fit, and analyte 'emesis_norovirus_GII'\
     \ does not show one: only 33% of subjects did, against a required 50%. Sampling\
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: kirby2016vomiting
-  analyte: emesis_norovirus_gii
+  analyte: emesis_norovirus_GII
   model: gamma_shifted
   reason: no_pre_event_readings
-  message: Analyte 'emesis_norovirus_gii' has no detected reading at or before its
+  message: Analyte 'emesis_norovirus_GII' has no detected reading at or before its
     reference event, so a shifted onset has nothing to locate and would only absorb
     curve shape. Fit the 'gamma' model instead.
 - dataset_id: kirby2016vomiting
-  analyte: stool_norovirus_gi
+  analyte: stool_norovirus_GI
   model: exponential
   reason: degenerate_fit
-  message: "6 of 6 subject(s) for analyte 'stool_norovirus_gi' produced degenerate\
+  message: "6 of 6 subject(s) for analyte 'stool_norovirus_GI' produced degenerate\
     \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
     \ or decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
     \ too few to estimate a population covariance. This usually means the model is\
@@ -4896,10 +6336,10 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
-  analyte: stool_norovirus_gi
+  analyte: stool_norovirus_GI
   model: gamma
   reason: degenerate_fit
-  message: "4 of 5 subject(s) for analyte 'stool_norovirus_gi' produced degenerate\
+  message: "4 of 5 subject(s) for analyte 'stool_norovirus_GI' produced degenerate\
     \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
     \ decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
     \ too few to estimate a population covariance. This usually means the model is\
@@ -4907,17 +6347,17 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
-  analyte: stool_norovirus_gi
+  analyte: stool_norovirus_GI
   model: gamma_shifted
   reason: no_pre_event_readings
-  message: Analyte 'stool_norovirus_gi' has no detected reading at or before its reference
+  message: Analyte 'stool_norovirus_GI' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
 - dataset_id: kirby2016vomiting
-  analyte: stool_norovirus_gii
+  analyte: stool_norovirus_GII
   model: exponential
   reason: degenerate_fit
-  message: "3 of 3 subject(s) for analyte 'stool_norovirus_gii' produced degenerate\
+  message: "3 of 3 subject(s) for analyte 'stool_norovirus_GII' produced degenerate\
     \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
     \ or decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
     \ too few to estimate a population covariance. This usually means the model is\
@@ -4925,10 +6365,10 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
-  analyte: stool_norovirus_gii
+  analyte: stool_norovirus_GII
   model: gamma
   reason: degenerate_fit
-  message: "2 of 2 subject(s) for analyte 'stool_norovirus_gii' produced degenerate\
+  message: "2 of 2 subject(s) for analyte 'stool_norovirus_GII' produced degenerate\
     \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
     \ decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
     \ too few to estimate a population covariance. This usually means the model is\
@@ -4936,10 +6376,10 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
-  analyte: stool_norovirus_gii
+  analyte: stool_norovirus_GII
   model: gamma_shifted
   reason: no_pre_event_readings
-  message: Analyte 'stool_norovirus_gii' has no detected reading at or before its
+  message: Analyte 'stool_norovirus_GII' has no detected reading at or before its
     reference event, so a shifted onset has nothing to locate and would only absorb
     curve shape. Fit the 'gamma' model instead.
 - dataset_id: kissler2021densely
@@ -4984,6 +6424,11 @@ skipped:
   message: Analyte 'AN_OPS_SARSCoV2_ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: kondo2016influenza
+  analyte: nasal_discharge_influenza_gc_per_mL
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'nasal_discharge_influenza_gc_per_mL'.
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_first_pos
   model: gamma
@@ -5040,6 +6485,41 @@ skipped:
   message: Analyte 'naso_swab_SARSCoV2' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: li2018faecal
+  analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+  model: exponential
+  reason: no_positive_measurements
+  message: Analyte 'stool_lanzhou_lamb_rotavirus_vaccine_EIA' has no positive measurements
+    to fit.
+- dataset_id: li2018faecal
+  analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'stool_lanzhou_lamb_rotavirus_vaccine_EIA' has no positive measurements
+    to fit.
+- dataset_id: li2018faecal
+  analyte: stool_lanzhou_lamb_rotavirus_vaccine_EIA
+  model: gamma_shifted
+  reason: no_positive_measurements
+  message: Analyte 'stool_lanzhou_lamb_rotavirus_vaccine_EIA' has no positive measurements
+    to fit.
+- dataset_id: li2018faecal
+  analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'stool_lanzhou_lamb_rotavirus_vaccine_pcr' has 2 subject(s) (10
+    fitted, 8 excluded as degenerate) feeding the population summary of the 'gamma'
+    model, which has 3 parameters. At least 4 are needed for the between-subject covariance
+    to be estimable rather than rank-deficient; below that the 'population' is an
+    artefact of averaging too few individuals, and simulating from it produces near-identical
+    or wildly extrapolated individuals.
+- dataset_id: li2018faecal
+  analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_lanzhou_lamb_rotavirus_vaccine_pcr' has no detected reading
+    at or before its reference event, so a shifted onset has nothing to locate and
+    would only absorb curve shape. Fit the 'gamma' model instead.
 - dataset_id: liu2024longitudinal
   analyte: stool_SARSCoV2_N1
   model: gamma_shifted
@@ -5097,35 +6577,35 @@ skipped:
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
 - dataset_id: mackiewicz2004detection
-  analyte: serum_hav_rna
+  analyte: serum_HAV_RNA
   model: exponential
   reason: too_few_subjects
-  message: No subject has at least 2 usable measurements for analyte 'serum_hav_rna'.
+  message: No subject has at least 2 usable measurements for analyte 'serum_HAV_RNA'.
 - dataset_id: mackiewicz2004detection
-  analyte: serum_hav_rna
+  analyte: serum_HAV_RNA
   model: gamma
   reason: too_few_subjects
-  message: No subject has at least 3 usable measurements for analyte 'serum_hav_rna'.
+  message: No subject has at least 3 usable measurements for analyte 'serum_HAV_RNA'.
 - dataset_id: mackiewicz2004detection
-  analyte: serum_hav_rna
+  analyte: serum_HAV_RNA
   model: gamma_shifted
   reason: too_few_subjects
-  message: No subject has at least 4 usable measurements for analyte 'serum_hav_rna'.
+  message: No subject has at least 4 usable measurements for analyte 'serum_HAV_RNA'.
 - dataset_id: mackiewicz2004detection
-  analyte: saliva_hav_rna
+  analyte: saliva_HAV_RNA
   model: exponential
   reason: too_few_subjects
-  message: No subject has at least 2 usable measurements for analyte 'saliva_hav_rna'.
+  message: No subject has at least 2 usable measurements for analyte 'saliva_HAV_RNA'.
 - dataset_id: mackiewicz2004detection
-  analyte: saliva_hav_rna
+  analyte: saliva_HAV_RNA
   model: gamma
   reason: too_few_subjects
-  message: No subject has at least 3 usable measurements for analyte 'saliva_hav_rna'.
+  message: No subject has at least 3 usable measurements for analyte 'saliva_HAV_RNA'.
 - dataset_id: mackiewicz2004detection
-  analyte: saliva_hav_rna
+  analyte: saliva_HAV_RNA
   model: gamma_shifted
   reason: too_few_subjects
-  message: No subject has at least 4 usable measurements for analyte 'saliva_hav_rna'.
+  message: No subject has at least 4 usable measurements for analyte 'saliva_HAV_RNA'.
 - dataset_id: mijatovicrustempasic2017shedding
   analyte: stool_rotavirus_vaccine
   model: gamma_shifted
@@ -5149,6 +6629,111 @@ skipped:
   message: Analyte 'stool_pcv1_dna' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV1_dose1
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV1_dose1' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV1_dose1
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV1_dose1' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV1_dose1
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV1_dose1' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV1_dose2
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV1_dose2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV1_dose2
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV1_dose2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV1_dose2
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV1_dose2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose1
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose1' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose1
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose1' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose1
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose1' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose2
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose2
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose2
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose3
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose3' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose3
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose3' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: miura2017rotavirus
+  analyte: stool_rotavirus_vaccine_RV5_dose3
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_vaccine_RV5_dose3' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
 - dataset_id: miyoshi2015long
   analyte: stool_norovirus
   model: gamma
@@ -5409,6 +6994,52 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'NPS_SARS'.
+- dataset_id: pereira2022standardization
+  analyte: respiratory_influenzaA_viral_load
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'respiratory_influenzaA_viral_load'.
+- dataset_id: pereira2022standardization
+  analyte: respiratory_influenzaA_viral_load
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'respiratory_influenzaA_viral_load'.
+- dataset_id: piralla2013different
+  analyte: nasopharyngeal_swab
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasopharyngeal_swab'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: piralla2013different
+  analyte: nasopharyngeal_swab
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasopharyngeal_swab'\
+    \ does not show one: only 25% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: piralla2013different
+  analyte: bronchoalveolar_lavage_fluid
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'bronchoalveolar_lavage_fluid'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: piralla2013different
+  analyte: bronchoalveolar_lavage_fluid
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'bronchoalveolar_lavage_fluid'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: portes2016non
   analyte: stool_adenovirus_viral_load
   model: exponential
@@ -5430,6 +7061,260 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'stool_adenovirus_viral_load'.
+- dataset_id: rodrigues2020influenza
+  analyte: respiratory_influenza_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'respiratory_influenza_viral_load'\
+    \ does not show one: only 25% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: rodrigues2020influenza
+  analyte: respiratory_influenza_viral_load
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'respiratory_influenza_viral_load'\
+    \ does not show one: only 25% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_gc_ml
+  model: exponential
+  reason: degenerate_fit
+  message: "5 of 6 subject(s) for analyte 'nasopharyngeal_gc_ml' produced degenerate\
+    \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
+    \ or decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_gc_ml
+  model: gamma
+  reason: degenerate_fit
+  message: "5 of 6 subject(s) for analyte 'nasopharyngeal_gc_ml' produced degenerate\
+    \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_gc_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasopharyngeal_gc_ml' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: anterior_nasal_gc_ml
+  model: exponential
+  reason: degenerate_fit
+  message: "4 of 5 subject(s) for analyte 'anterior_nasal_gc_ml' produced degenerate\
+    \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
+    \ or decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: rouphael2025effective
+  analyte: anterior_nasal_gc_ml
+  model: gamma
+  reason: degenerate_fit
+  message: "4 of 5 subject(s) for analyte 'anterior_nasal_gc_ml' produced degenerate\
+    \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: rouphael2025effective
+  analyte: anterior_nasal_gc_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'anterior_nasal_gc_ml' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: buccal_gc_ml
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'buccal_gc_ml' does not\
+    \ show one: no subject had enough readings to judge, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: rouphael2025effective
+  analyte: buccal_gc_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'buccal_gc_ml' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: oropharyngeal_gc_ml
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'oropharyngeal_gc_ml' has 2 subject(s) (7 fitted, 5 excluded as
+    degenerate) feeding the population summary of the 'gamma' model, which has 3 parameters.
+    At least 4 are needed for the between-subject covariance to be estimable rather
+    than rank-deficient; below that the 'population' is an artefact of averaging too
+    few individuals, and simulating from it produces near-identical or wildly extrapolated
+    individuals.
+- dataset_id: rouphael2025effective
+  analyte: oropharyngeal_gc_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'oropharyngeal_gc_ml' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: saliva_gc_ml
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'saliva_gc_ml' has 3 subject(s) (8 fitted, 5 excluded as degenerate)
+    feeding the population summary of the 'gamma' model, which has 3 parameters. At
+    least 4 are needed for the between-subject covariance to be estimable rather than
+    rank-deficient; below that the 'population' is an artefact of averaging too few
+    individuals, and simulating from it produces near-identical or wildly extrapolated
+    individuals.
+- dataset_id: rouphael2025effective
+  analyte: saliva_gc_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'saliva_gc_ml' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_pfu_ml
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'nasopharyngeal_pfu_ml' has 2 subject(s) (6 fitted, 4 excluded
+    as degenerate) feeding the population summary of the 'exponential' model, which
+    has 2 parameters. At least 3 are needed for the between-subject covariance to
+    be estimable rather than rank-deficient; below that the 'population' is an artefact
+    of averaging too few individuals, and simulating from it produces near-identical
+    or wildly extrapolated individuals.
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_pfu_ml
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'nasopharyngeal_pfu_ml' has 2 subject(s) (6 fitted, 4 excluded
+    as degenerate) feeding the population summary of the 'gamma' model, which has
+    3 parameters. At least 4 are needed for the between-subject covariance to be estimable
+    rather than rank-deficient; below that the 'population' is an artefact of averaging
+    too few individuals, and simulating from it produces near-identical or wildly
+    extrapolated individuals.
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasopharyngeal_pfu_ml' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: anterior_nasal_pfu_ml
+  model: gamma
+  reason: degenerate_fit
+  message: "4 of 5 subject(s) for analyte 'anterior_nasal_pfu_ml' produced degenerate\
+    \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: rouphael2025effective
+  analyte: anterior_nasal_pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'anterior_nasal_pfu_ml' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: buccal_pfu_ml
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'buccal_pfu_ml' does\
+    \ not show one: no subject had enough readings to judge, against a required 50%.\
+    \ Sampling here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: rouphael2025effective
+  analyte: buccal_pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'buccal_pfu_ml' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: oropharyngeal_pfu_ml
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'oropharyngeal_pfu_ml' has 2 subject(s) (5 fitted, 3 excluded as
+    degenerate) feeding the population summary of the 'exponential' model, which has
+    2 parameters. At least 3 are needed for the between-subject covariance to be estimable
+    rather than rank-deficient; below that the 'population' is an artefact of averaging
+    too few individuals, and simulating from it produces near-identical or wildly
+    extrapolated individuals.
+- dataset_id: rouphael2025effective
+  analyte: oropharyngeal_pfu_ml
+  model: gamma
+  reason: degenerate_fit
+  message: "5 of 5 subject(s) for analyte 'oropharyngeal_pfu_ml' produced degenerate\
+    \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: rouphael2025effective
+  analyte: oropharyngeal_pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'oropharyngeal_pfu_ml' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: saliva_pfu_ml
+  model: gamma
+  reason: degenerate_fit
+  message: "4 of 5 subject(s) for analyte 'saliva_pfu_ml' produced degenerate fits\
+    \ under the 'gamma' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 1 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: rouphael2025effective
+  analyte: saliva_pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'saliva_pfu_ml' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: rouphael2025effective
+  analyte: nasopharyngeal_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
 - dataset_id: salvatore2020epidemiological
   analyte: N1_probe
   model: exponential
@@ -5451,6 +7336,27 @@ skipped:
   message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold values
     are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: schuurmans2014clinical
+  analyte: nasopharyngeal_swab_influenza_CT
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_influenza_CT' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: schuurmans2014clinical
+  analyte: nasopharyngeal_swab_influenza_CT
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_influenza_CT' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: schuurmans2014clinical
+  analyte: nasopharyngeal_swab_influenza_CT
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_influenza_CT' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
 - dataset_id: seah2020assessing
   analyte: nasopharyngeal_swab_SARSCoV2
   model: exponential
@@ -5472,6 +7378,87 @@ skipped:
   message: Analyte 'nasopharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
     log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: shetty2024influenza
+  analyte: nasopharyngeal_swab_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: shetty2024influenza
+  analyte: nasopharyngeal_swab_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: shetty2024influenza
+  analyte: nasopharyngeal_swab_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: shetty2024influenza
+  analyte: nasopharyngeal_swab_pfu_ml
+  model: gamma
+  reason: degenerate_fit
+  message: "5 of 5 subject(s) for analyte 'nasopharyngeal_swab_pfu_ml' produced degenerate\
+    \ fits under the 'gamma' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: shetty2024influenza
+  analyte: nasopharyngeal_swab_pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasopharyngeal_swab_pfu_ml' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: shetty2024influenza
+  analyte: saliva_pfu_ml
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'saliva_pfu_ml' does\
+    \ not show one: no subject had enough readings to judge, against a required 50%.\
+    \ Sampling here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: shetty2024influenza
+  analyte: saliva_pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'saliva_pfu_ml' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: shetty2024influenza
+  analyte: nasal_lavage_fluid_pfu_ml
+  model: exponential
+  reason: degenerate_fit
+  message: "3 of 4 subject(s) for analyte 'nasal_lavage_fluid_pfu_ml' produced degenerate\
+    \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
+    \ or decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: shetty2024influenza
+  analyte: nasal_lavage_fluid_pfu_ml
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasal_lavage_fluid_pfu_ml'\
+    \ does not show one: no subject had enough readings to judge, against a required\
+    \ 50%. Sampling here appears to begin at or after peak shedding, which leaves\
+    \ b0 unidentifiable \u2014 the likelihood is monotone in it until the c0 > 0 constraint\
+    \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
+    \ sampling."
+- dataset_id: shetty2024influenza
+  analyte: nasal_lavage_fluid_pfu_ml
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'nasal_lavage_fluid_pfu_ml'.
 - dataset_id: shrestha2020distribution
   analyte: swab_SARSCoV2_N_Ct
   model: exponential
@@ -5613,19 +7600,19 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: tjon2006high
-  analyte: stool_hepatitis_a_virus
+  analyte: stool_hepatitis_A_virus
   model: gamma
   reason: too_few_subjects_for_population
-  message: Analyte 'stool_hepatitis_a_virus' has 3 subject(s) feeding the population
+  message: Analyte 'stool_hepatitis_A_virus' has 3 subject(s) feeding the population
     summary of the 'gamma' model, which has 3 parameters. At least 4 are needed for
     the between-subject covariance to be estimable rather than rank-deficient; below
     that the 'population' is an artefact of averaging too few individuals, and simulating
     from it produces near-identical or wildly extrapolated individuals.
 - dataset_id: tjon2006high
-  analyte: stool_hepatitis_a_virus
+  analyte: stool_hepatitis_A_virus
   model: gamma_shifted
   reason: no_pre_event_readings
-  message: Analyte 'stool_hepatitis_a_virus' has no detected reading at or before
+  message: Analyte 'stool_hepatitis_A_virus' has no detected reading at or before
     its reference event, so a shifted onset has nothing to locate and would only absorb
     curve shape. Fit the 'gamma' model instead.
 - dataset_id: tsang2016individual
