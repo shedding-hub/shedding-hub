@@ -3002,6 +3002,13 @@ FIT_DIAGNOSTIC_MAX_SUBJECT_LINES = 40
 # of the fitted population, not a sample anyone should be reading noise from.
 _FIT_DIAGNOSTIC_BAND_SEED = 20260729
 
+# How far below zero the y axis will follow a band that sets it. A full-range
+# band descends past 10**-30 gc/mL, which is not a concentration anyone needs to
+# see plotted; -3 keeps a decade of headroom under every censoring limit in the
+# repository while leaving the data legible. It never bounds the observations —
+# see the ylim computation, which takes the lower of this and the data.
+FIT_DIAGNOSTIC_YLIM_FLOOR = -3.0
+
 
 def _fit_diagnostic_legend_rows(fit) -> list[str]:
     """The estimate block: what was estimated, what it means, and its context.
@@ -3043,6 +3050,7 @@ def plot_fit_diagnostic(
     dispersion: float = 1.0,
     band_quantiles: tuple[float, float] = (0.05, 0.95),
     band_sets_ylim: bool = False,
+    band_ylim_floor: float = FIT_DIAGNOSTIC_YLIM_FLOOR,
     n_simulated: int = 2000,
 ) -> Figure:
     """
@@ -3092,6 +3100,10 @@ def plot_fit_diagnostic(
             the band, so the observations stay legible. Set it ``True`` with
             wide ``band_quantiles``, where a clipped band would fill the panel
             and show nothing.
+        band_ylim_floor: How far below zero the axis will follow such a band, in
+            log10 units. Only applies when ``band_sets_ylim`` is set. It bounds
+            the band, never the data: an observation below it keeps its place on
+            the axis.
         n_simulated: Individuals drawn for the band. Fixed seed, so a page is
             reproducible.
 
@@ -3217,7 +3229,16 @@ def plot_fit_diagnostic(
             ),
         )
 
-    ax.set_xlim(0, horizon * 1.02)
+    # Sampling can begin before the reference event, and only the gamma model
+    # drops those readings — an exponential fit is genuinely fitted to them
+    # (kissler2021viral by 323 of them, reaching back to day -53). Starting the
+    # axis at zero would hide data the curve was estimated from. The curve itself
+    # still starts just after zero: the exponential model is defined for negative
+    # times but grows without bound going backwards, so drawing it there would
+    # add an extrapolation nothing constrains.
+    earliest = min(0.0, float(observations.times.min()))
+    margin = 0.02 * (horizon - earliest)
+    ax.set_xlim(earliest - margin, horizon + margin)
     # The observations set the y range, but the curve's peak can sit above every
     # one of them — that is exactly the disagreement this page exists to show —
     # so both are allowed to claim room. The band deliberately does not: it can
@@ -3227,7 +3248,9 @@ def plot_fit_diagnostic(
     top = max(np.nanmax(observations.values[positive]), np.nanmax(values))
     bottom = min(limit, float(np.nanmin(observations.values[positive])))
     if band_sets_ylim and band_bounds is not None:
-        bottom = min(bottom, band_bounds[0])
+        # The floor bounds the band, never the data: taking the lower of the two
+        # means an observation below the floor still keeps its place on the axis.
+        bottom = min(bottom, max(band_bounds[0], band_ylim_floor))
         top = max(top, band_bounds[1])
     ax.set_ylim(bottom - 0.5, top + 0.5)
 

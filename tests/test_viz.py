@@ -13,6 +13,7 @@ from shedding_hub.shedding_fit import (
     fit_shedding_model,
     prepare_observations,
 )
+from shedding_hub.viz import FIT_DIAGNOSTIC_YLIM_FLOOR
 
 
 # Sample minimal datasets for testing
@@ -1312,10 +1313,85 @@ def test_plot_fit_diagnostic_band_can_drive_the_y_axis(fitted_pair):
     band = [
         c for c in expanded.collections if "simulated" in str(c.get_label()).lower()
     ][0]
-    low, high = expanded.get_ylim()
     vertices = band.get_paths()[0].vertices[:, 1]
-    assert low <= np.nanmin(vertices) and high >= np.nanmax(vertices)
+    low, high = expanded.get_ylim()
+    # Upward the axis follows the band completely; downward only to the floor,
+    # which is what band_ylim_floor is for.
+    assert high >= np.nanmax(vertices)
+    assert low <= FIT_DIAGNOSTIC_YLIM_FLOOR
     assert np.ptp(expanded.get_ylim()) > np.ptp(clipped.get_ylim())
+
+    unfloored = sh.plot_fit_diagnostic(
+        fit,
+        dataset,
+        band_quantiles=(0.0, 1.0),
+        band_sets_ylim=True,
+        band_ylim_floor=-np.inf,
+    ).axes[0]
+    assert unfloored.get_ylim()[0] <= np.nanmin(vertices)
+
+
+def test_plot_fit_diagnostic_range_band_floors_the_y_axis(fitted_pair):
+    """A full-range band reaches 10**-30, which is nobody's idea of a
+    concentration; the axis stops at a floor rather than following it down."""
+    fit, dataset = fitted_pair
+    wide = dict(band_quantiles=(0.0, 1.0), band_sets_ylim=True)
+    floored = sh.plot_fit_diagnostic(fit, dataset, **wide).axes[0]
+    unfloored = sh.plot_fit_diagnostic(
+        fit, dataset, band_ylim_floor=-np.inf, **wide
+    ).axes[0]
+
+    assert floored.get_ylim()[0] == pytest.approx(-3.5)  # floor of -3, minus pad
+    assert unfloored.get_ylim()[0] < -10
+
+
+def test_plot_fit_diagnostic_floor_never_hides_an_observation(fitted_pair):
+    """The floor bounds the band, never the data."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(
+        fit,
+        dataset,
+        band_quantiles=(0.0, 1.0),
+        band_sets_ylim=True,
+        band_ylim_floor=99.0,
+    ).axes[0]
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    lowest = float(np.nanmin(observations.values[~observations.censored]))
+    assert ax.get_ylim()[0] <= lowest
+
+
+def test_plot_fit_diagnostic_shows_observations_before_the_reference_event(
+    make_synthetic_dataset,
+):
+    """13 catalog fits are fitted to measurements at negative times.
+
+    ``prepare_observations`` only drops non-positive times under the gamma
+    model, so an exponential fit is genuinely informed by them —
+    ``kissler2021viral`` by 323 readings reaching back to day -53. An axis
+    starting at zero hides data the curve was fitted to.
+    """
+    dataset = make_synthetic_dataset(
+        "exponential",
+        [np.log(0.6), np.log(18.0)],
+        np.diag([0.04, 0.04]),
+        n_subjects=8,
+        seed=4,
+        times=np.arange(-4.0, 12.0),
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    observations = prepare_observations(dataset, "stool", "exponential")
+    assert observations.times.min() == pytest.approx(-4.0), "fixture lost its past"
+
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert ax.get_xlim()[0] <= -4.0
+
+
+def test_plot_fit_diagnostic_keeps_the_axis_at_zero_without_negative_times(
+    fitted_pair,
+):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert ax.get_xlim()[0] == pytest.approx(0.0, abs=0.5)
 
 
 def test_plot_fit_diagnostic_band_narrows_with_dispersion(fitted_pair):
