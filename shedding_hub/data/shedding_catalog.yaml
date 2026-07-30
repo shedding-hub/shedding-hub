@@ -280,26 +280,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.37542145921454456
-  - 7.254300965698573
+  - -0.5082172285348848
+  - 7.122495398667018
   population_cov:
-  - - 0.840812878122106
-    - 0.9473843428027925
-  - - 0.9473843428027925
-    - 3.096100171172836
-  sigma: 1.009046816882529
+  - - 1.12067760403142
+    - 1.2467575062729181
+  - - 1.2467575062729181
+    - 3.310849316750273
+  sigma: 1.0047038293455655
   censoring_limit: 4.0
   n_subjects: 78
-  n_measurements: 1282
-  n_censored: 600
+  n_measurements: 1278
+  n_censored: 596
   n_excluded_subjects: 6
-  n_degenerate_subjects: 4
+  n_degenerate_subjects: 1
   pct_subjects_with_rise: 52.702702702702695
   median_first_observed_day: 1.0
-  n_dropped_measurements: 32
+  n_dropped_measurements: 42
   converged: true
-  log_likelihood: -1043.0777524393511
-  aic: 2400.1555048787022
+  log_likelihood: -1038.2741079648456
+  aic: 2390.548215929691
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_VL
   biomarker: SARS-CoV-2
@@ -756,26 +756,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.9694134499768996
-  - 6.325363611752422
+  - -0.5255410361635696
+  - 6.404014948184089
   population_cov:
-  - - 2.7040646159320407
-    - 0.2752869073840815
-  - - 0.2752869073840815
-    - 1.1183086325107698
-  sigma: 2.59353035881439
+  - - 1.1637713944640478
+    - -0.08129562809778801
+  - - -0.08129562809778801
+    - 1.168358211909355
+  sigma: 2.423646337832958
   censoring_limit: 1.8157103425484347
   n_subjects: 33
-  n_measurements: 472
-  n_censored: 125
+  n_measurements: 452
+  n_censored: 105
   n_excluded_subjects: 0
-  n_degenerate_subjects: 17
+  n_degenerate_subjects: 19
   pct_subjects_with_rise: 87.5
   median_first_observed_day: -1.0
-  n_dropped_measurements: 0
+  n_dropped_measurements: 20
   converged: true
-  log_likelihood: -924.7554912447548
-  aic: 1983.5109824895096
+  log_likelihood: -885.9425405970667
+  aic: 1905.8850811941334
 - dataset_id: hakki2022onset
   analyte: symptomatic_PCR
   biomarker: SARS-CoV-2
@@ -833,26 +833,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.6172847407183775
-  - 2.2381732332463717
+  - -0.756808693253362
+  - 2.1892708149536078
   population_cov:
-  - - 1.9244541396748511
-    - 0.4787190463807457
-  - - 0.4787190463807457
-    - 1.4847657590406438
-  sigma: 2.126629010777867
+  - - 1.9527400444469196
+    - 0.5837890877806083
+  - - 0.5837890877806083
+    - 1.3308172700116836
+  sigma: 2.0577729959022597
   censoring_limit: 0.99
   n_subjects: 31
-  n_measurements: 446
-  n_censored: 268
+  n_measurements: 426
+  n_censored: 248
   n_excluded_subjects: 2
-  n_degenerate_subjects: 13
+  n_degenerate_subjects: 11
   pct_subjects_with_rise: 80.76923076923077
   median_first_observed_day: -1.0
-  n_dropped_measurements: 0
+  n_dropped_measurements: 20
   converged: true
-  log_likelihood: -511.0406532786809
-  aic: 1148.0813065573618
+  log_likelihood: -496.0811421242249
+  aic: 1118.1622842484499
 - dataset_id: hakki2022onset
   analyte: symptomatic_cultivable
   biomarker: SARS-CoV-2
@@ -930,6 +930,41 @@ fits:
   converged: true
   log_likelihood: 8.993503047170977
   aic: 52.01299390565805
+- dataset_id: jones2021estimating
+  analyte: swab_SARSCoV2_confirmation
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab
+  reference_event: confirmation date
+  unit: gc/swab
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -3.187289844274912
+  - 0.5117637118192562
+  population_cov:
+  - - 0.07314040872076219
+    - -0.01663675606304385
+  - - -0.01663675606304385
+    - 1.2856021628008891
+  sigma: 5.411907846910957
+  censoring_limit: 1.7510450231999999
+  n_subjects: 2075
+  n_measurements: 4889
+  n_censored: 2814
+  n_excluded_subjects: 22989
+  n_degenerate_subjects: 1990
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: -4.0
+  n_dropped_measurements: 1483
+  converged: true
+  log_likelihood: -8047.261031853737
+  aic: 24396.522063707474
 - dataset_id: ke2022daily
   analyte: nasal_SARSCoV2
   biomarker: SARS-CoV-2
@@ -1022,26 +1057,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.4187671440237302
-  - 5.733582189196128
+  - -1.0156971547724074
+  - 6.334171627218648
   population_cov:
-  - - 1.5156358043179072
-    - -0.17206834738394988
-  - - -0.17206834738394988
-    - 1.3689392071971935
-  sigma: 1.7312274978663944
+  - - 1.4211290943117219
+    - 0.2895456047933933
+  - - 0.2895456047933933
+    - 1.8030334234858234
+  sigma: 1.4572618991385575
   censoring_limit: 3.055200000000001
   n_subjects: 60
-  n_measurements: 904
-  n_censored: 237
+  n_measurements: 883
+  n_censored: 216
   n_excluded_subjects: 0
-  n_degenerate_subjects: 8
+  n_degenerate_subjects: 5
   pct_subjects_with_rise: 59.64912280701754
-  median_first_observed_day: -4.5
-  n_dropped_measurements: 0
+  median_first_observed_day: -3.0
+  n_dropped_measurements: 21
   converged: true
-  log_likelihood: -1495.6186382401688
-  aic: 3233.2372764803376
+  log_likelihood: -1351.6357338126868
+  aic: 2945.2714676253736
 - dataset_id: ke2022daily
   analyte: saliva_SARSCoV2
   biomarker: SARS-CoV-2
@@ -1134,26 +1169,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.6124843382141333
-  - 3.661220399749238
+  - -0.7671129285656764
+  - 3.7697911557298536
   population_cov:
-  - - 0.682326179272229
-    - 0.9676794945252357
-  - - 0.9676794945252357
-    - 4.12224862067622
-  sigma: 2.017636886651175
+  - - 0.9722416677342889
+    - 0.9860776334484939
+  - - 0.9860776334484939
+    - 3.6062988694292577
+  sigma: 1.7872230797540218
   censoring_limit: 2.65760968215156
-  n_subjects: 68
-  n_measurements: 2411
-  n_censored: 2185
-  n_excluded_subjects: 0
-  n_degenerate_subjects: 18
+  n_subjects: 67
+  n_measurements: 2173
+  n_censored: 1948
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 9
   pct_subjects_with_rise: 52.0
-  median_first_observed_day: -1.5
-  n_dropped_measurements: 0
+  median_first_observed_day: -2.0
+  n_dropped_measurements: 237
   converged: true
-  log_likelihood: -708.9107161429847
-  aic: 1691.8214322859694
+  log_likelihood: -612.8992497148125
+  aic: 1495.798499429625
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_viral
   biomarker: SARS-CoV-2
@@ -1211,26 +1246,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - 0.7565907104874935
-  - 3.1604449388640856
+  - 0.04929337768343884
+  - 3.071319589811576
   population_cov:
-  - - 0.7111880360475865
-    - -0.4203182815366275
-  - - -0.4203182815366275
-    - 2.2157472156311417
-  sigma: 0.549015794687339
-  censoring_limit: 0.8369135368994522
-  n_subjects: 50
-  n_measurements: 100
-  n_censored: 42
-  n_excluded_subjects: 26
-  n_degenerate_subjects: 20
+  - - 0.5567764830398965
+    - 0.02714497617043681
+  - - 0.02714497617043681
+    - 2.255599655542814
+  sigma: 0.06305532281458973
+  censoring_limit: 1.4240609318347086
+  n_subjects: 44
+  n_measurements: 88
+  n_censored: 36
+  n_excluded_subjects: 32
+  n_degenerate_subjects: 16
   pct_subjects_with_rise: .nan
   median_first_observed_day: 0.0
-  n_dropped_measurements: 0
+  n_dropped_measurements: 12
   converged: true
-  log_likelihood: -54.63392300727406
-  aic: 311.2678460145481
+  log_likelihood: 69.96129578996937
+  aic: 38.07740842006126
 - dataset_id: lavezzo2020suppression
   analyte: E_first_pos
   biomarker: SARS-CoV-2
@@ -1246,26 +1281,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -1.1633204625902276
-  - 4.1699340682315045
+  - -1.163330857969248
+  - 4.170928070714929
   population_cov:
-  - - 0.7479167134415234
-    - 0.5609937191643773
-  - - 0.5609937191643773
-    - 1.272759175557938
-  sigma: 3.1141677790836373
+  - - 0.7478935320854284
+    - 0.5613923299120444
+  - - 0.5613923299120444
+    - 1.2765443821127689
+  sigma: 2.736156908290785
   censoring_limit: 0.7290486284048309
-  n_subjects: 52
-  n_measurements: 104
-  n_censored: 40
-  n_excluded_subjects: 24
-  n_degenerate_subjects: 40
+  n_subjects: 40
+  n_measurements: 80
+  n_censored: 28
+  n_excluded_subjects: 36
+  n_degenerate_subjects: 28
   pct_subjects_with_rise: .nan
   median_first_observed_day: 0.0
-  n_dropped_measurements: 0
+  n_dropped_measurements: 12
   converged: true
-  log_likelihood: -175.46151950659626
-  aic: 560.9230390131925
+  log_likelihood: -130.8481832902331
+  aic: 423.6963665804662
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_symptom
   biomarker: SARS-CoV-2
@@ -1297,7 +1332,7 @@ fits:
   n_degenerate_subjects: 12
   pct_subjects_with_rise: .nan
   median_first_observed_day: 0.0
-  n_dropped_measurements: 0
+  n_dropped_measurements: 2
   converged: true
   log_likelihood: 263.1429641190459
   aic: -372.28592823809186
@@ -1316,26 +1351,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -0.40890334060686073
-  - 4.794888976690561
+  - -0.5679102346442234
+  - 4.357899714358313
   population_cov:
-  - - 2.6126776317155924
-    - 0.004978416470560874
-  - - 0.004978416470560874
-    - 1.4515471096490296
-  sigma: 0.7658404286779058
+  - - 3.300535334094271
+    - 0.3828391858362255
+  - - 0.3828391858362255
+    - 2.2591860721904675
+  sigma: 0.7144815749050921
   censoring_limit: 0.8679065979873266
-  n_subjects: 48
-  n_measurements: 96
-  n_censored: 30
-  n_excluded_subjects: 17
-  n_degenerate_subjects: 26
+  n_subjects: 46
+  n_measurements: 92
+  n_censored: 28
+  n_excluded_subjects: 19
+  n_degenerate_subjects: 20
   pct_subjects_with_rise: .nan
   median_first_observed_day: 0.0
-  n_dropped_measurements: 0
+  n_dropped_measurements: 2
   converged: true
-  log_likelihood: -90.64204408909734
-  aic: 375.2840881781947
+  log_likelihood: -83.37080940264623
+  aic: 352.74161880529243
 - dataset_id: lescure2020clinical
   analyte: naso_swab_SARSCoV2
   biomarker: SARS-CoV-2
@@ -3491,7 +3526,7 @@ skipped:
   analyte: swab_SARSCoV2_onset
   model: exponential
   reason: degenerate_fit
-  message: "19 of 19 subject(s) for analyte 'swab_SARSCoV2_onset' produced degenerate\
+  message: "18 of 18 subject(s) for analyte 'swab_SARSCoV2_onset' produced degenerate\
     \ fits under the 'exponential' model \u2014 collapsed onto the parameter bounds,\
     \ or decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
     \ too few to estimate a population covariance. This usually means the model is\
@@ -3508,17 +3543,6 @@ skipped:
     \ b0 unidentifiable \u2014 the likelihood is monotone in it until the c0 > 0 constraint\
     \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
     \ sampling."
-- dataset_id: jones2021estimating
-  analyte: swab_SARSCoV2_confirmation
-  model: exponential
-  reason: degenerate_fit
-  message: "2902 of 2903 subject(s) for analyte 'swab_SARSCoV2_confirmation' produced\
-    \ degenerate fits under the 'exponential' model \u2014 collapsed onto the parameter\
-    \ bounds, or decaying faster than the sampling can resolve \u2014 leaving 1 usable\
-    \ subject(s), too few to estimate a population covariance. This usually means\
-    \ the model is not identifiable from this data: for the gamma model, typically\
-    \ because sampling began after peak shedding, so there is no rise phase from which\
-    \ to estimate b0."
 - dataset_id: jones2021estimating
   analyte: swab_SARSCoV2_confirmation
   model: gamma

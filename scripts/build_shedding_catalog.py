@@ -31,6 +31,16 @@ def main() -> int:
         "--output", default=str(CATALOG_PATH), help="Catalog file to write."
     )
     parser.add_argument(
+        "--min-time",
+        type=float,
+        default=None,
+        help=(
+            "Earliest reading time, in days from the reference event, that the "
+            "fitter may use. Defaults to -5. Only affects the exponential model; "
+            "the gamma model already drops everything at t <= 0."
+        ),
+    )
+    parser.add_argument(
         "--max-peak-above-observed",
         type=float,
         default=None,
@@ -59,7 +69,9 @@ def main() -> int:
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", UserWarning)
         catalog = fit_shedding_models(
-            datasets, max_peak_above_observed=args.max_peak_above_observed
+            datasets,
+            min_time=args.min_time,
+            max_peak_above_observed=args.max_peak_above_observed,
         )
 
     output = pathlib.Path(args.output)

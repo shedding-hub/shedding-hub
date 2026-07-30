@@ -260,6 +260,7 @@ def fit_shedding_models(
     *,
     models=MODELS,
     min_observations: int | None = None,
+    min_time: float | None = None,
     max_peak_above_observed: float | None = None,
 ) -> SheddingCatalog:
     """
@@ -281,6 +282,8 @@ def fit_shedding_models(
         datasets: Dataset dictionaries from ``load_dataset``.
         models: Model names to fit. Defaults to both.
         min_observations: Passed through to the fitter.
+        min_time: Passed through to the fitter as the earliest usable reading
+            time, in days from the reference event. ``None`` keeps its default.
         max_peak_above_observed: Passed through to the fitter, which uses it to
             decide when a subject's implied peak is extrapolation rather than
             estimate. ``None`` keeps the fitter's default. Lower it to rebuild
@@ -299,11 +302,11 @@ def fit_shedding_models(
                 try:
                     with warnings.catch_warnings():
                         warnings.simplefilter("ignore", UserWarning)
-                        extra = (
-                            {}
-                            if max_peak_above_observed is None
-                            else {"max_peak_above_observed": max_peak_above_observed}
-                        )
+                        extra = {}
+                        if max_peak_above_observed is not None:
+                            extra["max_peak_above_observed"] = max_peak_above_observed
+                        if min_time is not None:
+                            extra["min_time"] = min_time
                         fit = fit_shedding_model(
                             dataset,
                             analyte=analyte,

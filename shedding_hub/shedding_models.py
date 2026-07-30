@@ -17,11 +17,15 @@ This module is pure math: no dataset handling, no I/O.
 
 import numpy as np
 
-MODELS = ("exponential", "gamma")
+MODELS = ("exponential", "gamma", "gamma_shifted")
 
 PARAM_NAMES = {
     "exponential": ("a0", "c0"),
     "gamma": ("a0", "b0", "c0"),
+    # t0 is the onset of shedding: the gamma model's support starts there rather
+    # than at the reference event, so readings before the reference event become
+    # evaluable and the onset itself is estimated instead of assumed.
+    "gamma_shifted": ("a0", "b0", "c0", "t0"),
 }
 
 # The coordinates each model's population summary is averaged in; see
@@ -32,6 +36,11 @@ PARAM_NAMES = {
 POPULATION_COORDS = {
     "exponential": ("log_a0", "peak_log10"),
     "gamma": ("log_a0", "log_peak_day", "peak_log10"),
+    # log_rise_days is the interval from onset to peak, b0/a0, which is the
+    # shape quantity; the absolute peak is t0 + b0/a0. t0 rides along
+    # untransformed, being a time on the whole real line rather than a positive
+    # scale.
+    "gamma_shifted": ("log_a0", "log_rise_days", "peak_log10", "t0"),
 }
 
 LN10 = float(np.log(10.0))
@@ -97,6 +106,8 @@ def log10_concentration_rowwise(
     a0 = params[:, 0:1]
     b0 = params[:, 1:2]
     c0 = params[:, 2:3]
+    if model == "gamma_shifted":
+        times = times - params[:, 3:4]
     return (c0 + b0 * _safe_log(times) - a0 * times) / LN10
 
 
@@ -120,9 +131,41 @@ def log10_concentration_pointwise(
     times = np.asarray(times, dtype=float)
     if model == "exponential":
         return (params[:, 1] - params[:, 0] * times) / LN10
+    if model == "gamma_shifted":
+        times = times - params[:, 3]
     return (
         params[:, 2] + params[:, 1] * _safe_log(times) - params[:, 0] * times
     ) / LN10
+
+
+def theta_to_params(model: str, theta: np.ndarray) -> np.ndarray:
+    """
+    Map the optimizer's unconstrained coordinates to natural parameters.
+
+    The fitter works in ``theta`` so that positivity is automatic: every
+    parameter is a positive scale, so ``exp`` both enforces the constraint and
+    puts the optimizer on a well-behaved scale.
+
+    ``gamma_shifted``'s ``t0`` is the exception. It is a *time*, on the whole
+    real line, and exponentiating it would forbid an onset before the reference
+    event — the one thing the model exists to allow. It is therefore carried
+    untransformed, and its constraint (``t0`` below every reading it must
+    explain) is imposed by the optimizer's bounds instead.
+    """
+    validate_model(model)
+    theta = np.atleast_2d(np.asarray(theta, dtype=float))
+    if model == "gamma_shifted":
+        return np.column_stack([np.exp(theta[:, :3]), theta[:, 3]])
+    return np.exp(theta)
+
+
+def params_to_theta(model: str, params: np.ndarray) -> np.ndarray:
+    """Invert ``theta_to_params``."""
+    validate_model(model)
+    params = np.atleast_2d(np.asarray(params, dtype=float))
+    if model == "gamma_shifted":
+        return np.column_stack([np.log(params[:, :3]), params[:, 3]])
+    return np.log(params)
 
 
 def to_population_coords(model: str, params: np.ndarray) -> np.ndarray:
@@ -192,10 +235,14 @@ def to_population_coords(model: str, params: np.ndarray) -> np.ndarray:
     a0 = params[:, 0]
     b0 = params[:, 1]
     c0 = params[:, 2]
-    peak = b0 / a0
-    # At the peak a0 * t_peak == b0, so the log10 height collapses to this.
-    height = (c0 + b0 * np.log(peak) - b0) / LN10
-    return np.column_stack([np.log(a0), np.log(peak), height])
+    rise = b0 / a0
+    # At the peak a0 * rise == b0, so the log10 height collapses to this. The
+    # shift cancels: the height depends on the interval from onset, not on when
+    # the onset was.
+    height = (c0 + b0 * np.log(rise) - b0) / LN10
+    if model == "gamma_shifted":
+        return np.column_stack([np.log(a0), np.log(rise), height, params[:, 3]])
+    return np.column_stack([np.log(a0), np.log(rise), height])
 
 
 def from_population_coords(model: str, coords: np.ndarray) -> np.ndarray:
@@ -222,10 +269,12 @@ def from_population_coords(model: str, coords: np.ndarray) -> np.ndarray:
     if model == "exponential":
         return np.column_stack([np.exp(coords[:, 0]), coords[:, 1] * LN10])
     a0 = np.exp(coords[:, 0])
-    peak = np.exp(coords[:, 1])
+    rise = np.exp(coords[:, 1])
     height = coords[:, 2]
-    b0 = a0 * peak
-    c0 = LN10 * height - b0 * np.log(peak) + b0
+    b0 = a0 * rise
+    c0 = LN10 * height - b0 * np.log(rise) + b0
+    if model == "gamma_shifted":
+        return np.column_stack([a0, b0, c0, coords[:, 3]])
     return np.column_stack([a0, b0, c0])
 
 
@@ -240,7 +289,11 @@ def peak_day(model: str, params: np.ndarray) -> np.ndarray:
     params = np.atleast_2d(np.asarray(params, dtype=float))
     if model == "exponential":
         return np.zeros(params.shape[0])
-    return params[:, 1] / params[:, 0]
+    peak = params[:, 1] / params[:, 0]
+    if model == "gamma_shifted":
+        # Absolute, so it stays comparable with the other models' peak times.
+        return params[:, 3] + peak
+    return peak
 
 
 def half_life_days(model: str, params: np.ndarray) -> np.ndarray:

@@ -53,6 +53,140 @@ def simple_dataset():
     }
 
 
+@pytest.fixture
+def long_lookback_dataset():
+    """Two subjects sampled from long before the reference event.
+
+    Reproduces the repository's shape: everything earlier than about day -3 is
+    below the limit. Across all 55 datasets there is no detected measurement
+    before day -5.
+    """
+    early = [-40.0, -20.0, -8.0, -6.0]
+    return {
+        "dataset_id": "lookback_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "confirmation date",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": t, "value": "negative"} for t in early
+                ]
+                + [
+                    {"analyte": "stool", "time": -5.0, "value": 1e4},
+                    {"analyte": "stool", "time": -1.0, "value": 1e6},
+                    {"analyte": "stool", "time": 2.0, "value": 1e5},
+                    {"analyte": "stool", "time": 5.0, "value": 1e4},
+                    {"analyte": "stool", "time": 8.0, "value": 1e3},
+                ]
+                for _ in [0]
+            }
+            for _ in range(2)
+        ],
+    }
+
+
+def test_prepare_observations_requires_data_after_the_reference_event():
+    """A decay from the reference event cannot be estimated from before it.
+
+    ``jones2021estimating`` swab_SARSCoV2_confirmation samples only days -7 to
+    0. Trimmed to the cutoff it optimized to convergence and was published, but
+    1990 of its 2075 subjects were degenerate, sigma was 5.41 against a catalog
+    median of 0.84, and its median individual sat 1.26 log10 below its own
+    censoring limit. Nothing about that fit describes shedding.
+    """
+    dataset = {
+        "dataset_id": "before_only_study",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "confirmation date",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": t, "value": 10.0**v}
+                    for t, v in [(-4.0, 6.0), (-2.0, 5.5), (-1.0, 5.0), (0.0, 4.5)]
+                ]
+            }
+            for _ in range(4)
+        ],
+    }
+    with pytest.raises(SheddingDataError) as excinfo:
+        prepare_observations(dataset, "stool", "exponential")
+    assert excinfo.value.reason == "no_data_after_reference_event"
+
+
+def test_prepare_observations_drops_readings_before_the_cutoff(long_lookback_dataset):
+    """Beyond a few days back every reading in the repository is censored, and a
+    decay-only model predicts enormous concentrations there, so those points
+    fight the model rather than inform it."""
+    obs = prepare_observations(long_lookback_dataset, "stool", "exponential")
+    assert obs.times.min() == pytest.approx(-5.0)
+    assert obs.times.size == 2 * 5  # five kept per subject, four dropped
+
+
+def test_prepare_observations_keeps_a_reading_exactly_at_the_cutoff(
+    long_lookback_dataset,
+):
+    """The default is -5 because the repository's two earliest detected
+    measurements sit exactly there; no real reading should be lost."""
+    obs = prepare_observations(long_lookback_dataset, "stool", "exponential")
+    assert (obs.times == -5.0).sum() == 2
+
+
+def test_prepare_observations_cutoff_counts_the_dropped_readings(
+    long_lookback_dataset,
+):
+    obs = prepare_observations(long_lookback_dataset, "stool", "exponential")
+    assert obs.n_dropped_measurements == 2 * 4
+
+
+def test_prepare_observations_cutoff_is_configurable(long_lookback_dataset):
+    obs = prepare_observations(
+        long_lookback_dataset, "stool", "exponential", min_time=-100.0
+    )
+    assert obs.times.min() == pytest.approx(-40.0)
+    assert obs.n_dropped_measurements == 0
+
+
+def test_prepare_observations_cutoff_does_not_disturb_gamma(long_lookback_dataset):
+    """The gamma model already drops everything at t <= 0, which is stricter."""
+    obs = prepare_observations(long_lookback_dataset, "stool", "gamma")
+    assert obs.times.min() > 0
+
+
+def test_fit_shedding_model_passes_the_cutoff_through(long_lookback_dataset):
+    """Without the cutoff this fit collapses outright, which is the point of it.
+
+    A decay-only curve peaks at t = 0, so it cannot be below the limit forty
+    days earlier and high afterwards. The censored likelihood has no way to
+    satisfy both and drives every subject onto the parameter bounds.
+    """
+    fit = fit_shedding_model(
+        long_lookback_dataset, analyte="stool", model="exponential"
+    )
+    assert fit.n_measurements == 2 * 5
+
+    with pytest.raises(SheddingDataError) as excinfo:
+        fit_shedding_model(
+            long_lookback_dataset, analyte="stool", model="exponential", min_time=-100.0
+        )
+    assert excinfo.value.reason == "degenerate_fit"
+
+
 def test_extracts_values_on_log10_scale(simple_dataset):
     obs = prepare_observations(simple_dataset, "stool", "exponential")
     assert obs.n_subjects == 2

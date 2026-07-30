@@ -17,9 +17,105 @@ from shedding_hub.shedding_models import (
 
 
 def test_models_and_param_names():
-    assert MODELS == ("exponential", "gamma")
+    assert MODELS == ("exponential", "gamma", "gamma_shifted")
     assert PARAM_NAMES["exponential"] == ("a0", "c0")
     assert PARAM_NAMES["gamma"] == ("a0", "b0", "c0")
+    assert PARAM_NAMES["gamma_shifted"] == ("a0", "b0", "c0", "t0")
+
+
+# ---------------------------------------------------------------------------
+# gamma_shifted: c(t) = c0 * (t - t0)**b0 * exp(-a0 * (t - t0)),  t > t0
+#
+# The gamma model's support starts at the reference event, so every reading at
+# t <= 0 is discarded -- 1,026 of them across 14 catalog fits, and 29% of
+# hakki2022onset's. Freeing the onset lets those readings inform the fit, and
+# makes the onset itself estimable rather than assumed, which matters because
+# the catalog's five reference events do not mean the same thing.
+# ---------------------------------------------------------------------------
+
+
+def test_theta_maps_positive_parameters_through_exp():
+    from shedding_hub.shedding_models import params_to_theta, theta_to_params
+
+    for model, params in [
+        ("exponential", np.array([[0.6, 18.0]])),
+        ("gamma", np.array([[0.5, 2.0, 12.0]])),
+    ]:
+        theta = params_to_theta(model, params)
+        np.testing.assert_allclose(theta, np.log(params))
+        np.testing.assert_allclose(theta_to_params(model, theta), params)
+
+
+def test_theta_leaves_the_onset_untransformed():
+    """t0 is a time, not a positive scale: exponentiating it would forbid an
+    onset before the reference event, which is the whole purpose of the model."""
+    from shedding_hub.shedding_models import params_to_theta, theta_to_params
+
+    params = np.array([[0.5, 2.0, 12.0, -4.0], [1.0, 3.0, 9.0, 0.5]])
+    theta = params_to_theta("gamma_shifted", params)
+    np.testing.assert_allclose(theta[:, :3], np.log(params[:, :3]))
+    np.testing.assert_allclose(theta[:, 3], params[:, 3])
+    np.testing.assert_allclose(theta_to_params("gamma_shifted", theta), params)
+
+
+def test_gamma_shifted_reduces_to_gamma_when_the_shift_is_zero():
+    times = np.array([0.5, 1.0, 4.0, 9.0])
+    plain = log10_concentration("gamma", np.array([[0.5, 2.0, 12.0]]), times)
+    shifted = log10_concentration(
+        "gamma_shifted", np.array([[0.5, 2.0, 12.0, 0.0]]), times
+    )
+    np.testing.assert_allclose(shifted, plain)
+
+
+def test_gamma_shifted_uses_times_before_the_reference_event():
+    """The whole point: readings at t <= 0 become evaluable once t0 < 0."""
+    params = np.array([[0.5, 2.0, 12.0, -4.0]])
+    values = log10_concentration("gamma_shifted", params, np.array([-3.0, -1.0, 2.0]))
+    assert np.isfinite(values).all()
+
+
+def test_gamma_shifted_is_undefined_at_or_before_its_own_onset():
+    params = np.array([[0.5, 2.0, 12.0, -4.0]])
+    values = log10_concentration("gamma_shifted", params, np.array([-5.0, -4.0, -3.9]))
+    assert np.isnan(values[0, 0]) and np.isnan(values[0, 1])
+    assert np.isfinite(values[0, 2])
+
+
+def test_gamma_shifted_peaks_a_rise_after_its_onset():
+    a0, b0, c0, t0 = 0.5, 2.0, 12.0, -4.0
+    params = np.array([[a0, b0, c0, t0]])
+    expected = t0 + b0 / a0
+    np.testing.assert_allclose(peak_day("gamma_shifted", params)[0], expected)
+
+    grid = np.linspace(t0 + 1e-3, t0 + 30.0, 4000)
+    values = log10_concentration("gamma_shifted", params, grid)[0]
+    np.testing.assert_allclose(grid[values.argmax()], expected, atol=0.02)
+
+
+def test_gamma_shifted_half_life_is_the_same_asymptotic_decay():
+    params = np.array([[0.5, 2.0, 12.0, -4.0]])
+    np.testing.assert_allclose(
+        half_life_days("gamma_shifted", params)[0], np.log(2) / 0.5
+    )
+
+
+def test_gamma_shifted_population_coords_round_trip_exactly():
+    params = np.array(
+        [[0.5, 2.0, 12.0, -4.0], [1.2, 0.3, 6.0, 1.5], [0.2, 5.0, 3.0, 0.0]]
+    )
+    coords = to_population_coords("gamma_shifted", params)
+    np.testing.assert_allclose(from_population_coords("gamma_shifted", coords), params)
+
+
+def test_gamma_shifted_height_coordinate_is_the_log10_at_its_peak():
+    params = np.array([[0.5, 2.0, 12.0, -4.0]])
+    coords = to_population_coords("gamma_shifted", params)[0]
+    at_peak = log10_concentration(
+        "gamma_shifted", params, np.array([peak_day("gamma_shifted", params)[0]])
+    )[0, 0]
+    np.testing.assert_allclose(coords[2], at_peak)
+    # the onset rides along untransformed, being a time on the whole real line
+    np.testing.assert_allclose(coords[3], -4.0)
 
 
 def test_exponential_matches_closed_form():

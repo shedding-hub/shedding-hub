@@ -26,6 +26,32 @@ NEGATIVE_VALUE = "negative"
 # curve to them is meaningless regardless of how much data is available.
 NON_PATHOGEN_BIOMARKERS = frozenset({"crAssphage", "PMMoV", "mtDNA"})
 
+# Readings earlier than this many days before the reference event are discarded.
+#
+# Every measurement in the repository earlier than about day -3 is reported
+# `negative`: 5,101 of them, across the bins [-60,-30), [-30,-14), [-14,-7),
+# [-7,-5) and [-5,-3), all 100% censored. There are only 151 detected
+# measurements at negative times at all, and the two earliest sit at exactly
+# day -5.
+#
+# Those censored points are not neutral to a decay-only model. The exponential
+# curve peaks at t = 0 by construction, so at day -53 it predicts
+# c0 * exp(53 * a0) -- astronomically high -- and a reading "below the limit"
+# there is near-impossible under the model. The censored likelihood then pushes
+# hard on a0 and c0 to accommodate it: tsang2016individual NPSOPS had its
+# pre-reference-event readings sitting a median 4.01 log10 below its own fitted
+# curve, against -0.26 for its 1,100-odd later ones.
+#
+# -5 rather than -3 so that no detected measurement in the repository is ever
+# discarded. It is a parameter, so a future dataset with earlier positives does
+# not silently lose them.
+#
+# The gamma model is unaffected: it already drops everything at t <= 0, which is
+# stricter. Were a shifted gamma ever added, this cutoff should NOT apply to it
+# -- a censored reading at day -53 means "shedding had not started yet", which is
+# precisely what would identify the shift.
+_MIN_TIME_DAYS = -5.0
+
 
 class SheddingDataError(ValueError):
     """
@@ -34,8 +60,8 @@ class SheddingDataError(ValueError):
     Attributes:
         reason: Machine-readable cause, one of ``ct_units``,
             ``non_pathogen_biomarker``, ``too_few_subjects``,
-            ``no_positive_measurements``, ``unknown_analyte``,
-            ``no_rise_observed``, ``degenerate_fit``,
+            ``no_positive_measurements``, ``no_data_after_reference_event``,
+            ``unknown_analyte``, ``no_rise_observed``, ``degenerate_fit``,
             ``too_few_subjects_for_population``. The catalog builder records
             this so a missing study reads as unsuitable, not as a bug.
 
@@ -134,6 +160,7 @@ def prepare_observations(
     model: str,
     *,
     min_observations: int | None = None,
+    min_time: float = _MIN_TIME_DAYS,
 ) -> Observations:
     """
     Extract model-ready observations for one analyte of one dataset.
@@ -155,6 +182,9 @@ def prepare_observations(
             Independently of this count, a subject with no positive measurement
             at all is excluded: its readings locate no curve, only an upper
             bound, so its fitted parameters are arbitrary.
+        min_time: Earliest time, in days from the reference event, that a
+            reading may carry and still be used. See ``_MIN_TIME_DAYS`` for why
+            the default is -5 and why it does not affect the gamma model.
 
     Returns:
         An ``Observations`` instance with subject indices renumbered contiguously
@@ -166,7 +196,8 @@ def prepare_observations(
             measurements, or leaves no subject with enough data — reasons
             ``unknown_analyte``, ``ct_units``, ``non_pathogen_biomarker``,
             ``no_positive_measurements`` and ``too_few_subjects``
-            respectively. Note that ``too_few_subjects`` here means no subject
+            respectively, plus ``no_data_after_reference_event`` when every
+            usable reading falls at or before day 0. Note that ``too_few_subjects`` here means no subject
             cleared ``min_observations``, not that the analyte has few
             subjects. The remaining three cannot arise here:
             ``no_rise_observed`` and ``degenerate_fit`` belong to
@@ -229,6 +260,9 @@ def prepare_observations(
             if model == "gamma" and time <= 0:
                 n_dropped += 1
                 continue
+            if time < min_time:
+                n_dropped += 1
+                continue
             value = measurement.get("value")
             if isinstance(value, str):
                 if value == NEGATIVE_VALUE:
@@ -263,6 +297,21 @@ def prepare_observations(
         raise SheddingDataError(
             f"Analyte {analyte!r} has no positive measurements to fit.",
             "no_positive_measurements",
+        )
+
+    # Both models describe shedding from the reference event onwards -- the
+    # exponential decays from it, the gamma rises and falls after it -- so an
+    # analyte sampled only up to it cannot constrain either. Checked because
+    # `jones2021estimating` swab_SARSCoV2_confirmation, sampled days -7 to 0,
+    # otherwise optimized to convergence and was published with 1990 of its
+    # 2075 subjects degenerate, a sigma of 5.41 against a catalog median of
+    # 0.84, and a median individual 1.26 log10 below its own censoring limit.
+    if not any(time > 0 for subject in per_subject for time in subject["times"]):
+        raise SheddingDataError(
+            f"Analyte {analyte!r} has no measurement after its reference event "
+            "(every usable reading is at or before day 0), so there is no "
+            "post-event trajectory for either model to describe.",
+            "no_data_after_reference_event",
         )
 
     # Filter subject_ids and per_subject together, from a single zipped list,
@@ -436,6 +485,7 @@ _BOUND_TOLERANCE = 1e-6
 # worst c0 is 75.5 and the worst b0 is 33.9, both on smooth tails with no gap to
 # justify cutting into.
 _MIN_HALF_LIFE_DAYS = 0.1
+
 
 # How far above the highest observed concentration a subject's implied peak may
 # sit before it is treated as extrapolation rather than estimate, in log10 units.
@@ -1136,6 +1186,7 @@ def fit_shedding_model(
     analyte: str,
     model: str = "gamma",
     min_observations: int | None = None,
+    min_time: float = _MIN_TIME_DAYS,
     max_peak_above_observed: float = _MAX_PEAK_ABOVE_OBSERVED,
 ) -> SheddingFit:
     """
@@ -1145,6 +1196,8 @@ def fit_shedding_model(
         dataset: Dataset dictionary from ``load_dataset``.
         analyte: Key into ``dataset["analytes"]``.
         model: ``"exponential"`` or ``"gamma"``.
+        min_time: Earliest time, in days from the reference event, a reading may
+            carry and still be used. Passed to ``prepare_observations``.
         max_peak_above_observed: How far above the analyte's highest observed
             concentration a subject's implied peak may sit, in log10 units,
             before it is excluded from the population summary as extrapolation.
@@ -1177,7 +1230,7 @@ def fit_shedding_model(
     """
     validate_model(model)
     observations = prepare_observations(
-        dataset, analyte, model, min_observations=min_observations
+        dataset, analyte, model, min_observations=min_observations, min_time=min_time
     )
 
     rise_fraction = _fraction_observing_a_rise(observations)
