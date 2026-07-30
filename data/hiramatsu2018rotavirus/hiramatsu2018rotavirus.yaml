@@ -1,0 +1,685 @@
+title: Rotavirus Vaccination Can Be Performed Without Viral Dissemination in the Neonatal
+  Intensive Care Unit
+doi: 10.1093/infdis/jix590
+description: Prospective NICU study (Oct 2014–Dec 2015) assessing fecal shedding and
+  dissemination of rotavirus vaccine strains after oral vaccination with RotaTeq (RV5)
+  or Rotarix (RV1). Nineteen vaccinated infants (9 RV5, 10 RV1) and 49 nearby unvaccinated
+  infants were enrolled; stool (and some rectal swab) samples were serially collected
+  and tested by vaccine-strain specific real-time RT-PCR. Vaccine-strain shedding
+  was detected in all vaccinated infants but no vaccine genomes were detected in any
+  samples from unvaccinated infants. The provided CSV contains cycle-threshold (Ct)
+  time-series (days after vaccination) extracted from Figure 2 for RV5-vaccinated
+  infants.
+analytes:
+  rv5_1:
+    description: RotaTeq (RV5) vaccine shedding after dose 1 measured by vaccine-strain
+      specific real-time RT-PCR (assay targets VP6). Values are cycle-threshold (Ct)
+      from stool/rectal-swab specimens; time is days after vaccination.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: VP6
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 1
+    vaccine_type: RotaTeq (RV5)
+  rv5_2:
+    description: RotaTeq (RV5) vaccine shedding after dose 2 measured by vaccine-strain
+      specific real-time RT-PCR (assay targets VP6). Values are cycle-threshold (Ct)
+      from stool/rectal-swab specimens; time is days after vaccination.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: VP6
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 2
+    vaccine_type: RotaTeq (RV5)
+  rv1_1:
+    description: Rotarix (RV1) vaccine shedding after dose 1 measured by vaccine-strain
+      specific real-time RT-PCR (assay targets NSP2). Values are cycle-threshold (Ct)
+      from stool/rectal-swab specimens; time is days after vaccination.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: NSP2
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 1
+    vaccine_type: Rotarix (RV1)
+  rv1_2:
+    description: Rotarix (RV1) vaccine shedding after dose 2 measured by vaccine-strain
+      specific real-time RT-PCR (assay targets NSP2). Values are cycle-threshold (Ct)
+      from stool/rectal-swab specimens; time is days after vaccination.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    gene_target: NSP2
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 2
+    vaccine_type: Rotarix (RV1)
+participants:
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 32.5258216
+  - analyte: rv5_1
+    time: 2
+    value: 33.02034429
+  - analyte: rv5_1
+    time: 3
+    value: 31.74960876
+  - analyte: rv5_1
+    time: 4
+    value: 31.79968701
+  - analyte: rv5_1
+    time: 5
+    value: 30.52269171
+  - analyte: rv5_1
+    time: 6
+    value: 29.2456964
+  - analyte: rv5_1
+    time: 7
+    value: 31.9687011
+  - analyte: rv5_1
+    time: 8
+    value: 27.12989045
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 30
+  - analyte: rv5_1
+    time: 2
+    value: 30
+  - analyte: rv5_1
+    time: 3
+    value: negative
+  - analyte: rv5_1
+    time: 4
+    value: 31.30434783
+  - analyte: rv5_1
+    time: 5
+    value: 33.04347826
+  - analyte: rv5_1
+    time: 6
+    value: 35.2173913
+  - analyte: rv5_1
+    time: 7
+    value: 34.34782609
+  - analyte: rv5_1
+    time: 8
+    value: negative
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 24.34782609
+  - analyte: rv5_1
+    time: 2
+    value: 33.04347826
+  - analyte: rv5_1
+    time: 3
+    value: 24.7826087
+  - analyte: rv5_1
+    time: 4
+    value: 25.2173913
+  - analyte: rv5_1
+    time: 5
+    value: 24.7826087
+  - analyte: rv5_1
+    time: 6
+    value: 24.7826087
+  - analyte: rv5_1
+    time: 7
+    value: 24.34782609
+  - analyte: rv5_1
+    time: 8
+    value: 22.60869565
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 27.55555556
+  - analyte: rv5_1
+    time: 2
+    value: 29.77777778
+  - analyte: rv5_1
+    time: 3
+    value: 30.66666667
+  - analyte: rv5_1
+    time: 4
+    value: 31.55555556
+  - analyte: rv5_1
+    time: 5
+    value: 31.11111111
+  - analyte: rv5_1
+    time: 6
+    value: 28.88888889
+  - analyte: rv5_1
+    time: 7
+    value: 30.66666667
+  - analyte: rv5_1
+    time: 8
+    value: 32.44444444
+  - analyte: rv5_2
+    time: 0
+    value: 32.60869565
+  - analyte: rv5_2
+    time: 1
+    value: 31.73913043
+  - analyte: rv5_2
+    time: 2
+    value: 35.65217391
+  - analyte: rv5_2
+    time: 3
+    value: 40.86956522
+  - analyte: rv5_2
+    time: 4
+    value: 41.73913043
+  - analyte: rv5_2
+    time: 5
+    value: 40
+  - analyte: rv5_2
+    time: 6
+    value: negative
+  - analyte: rv5_2
+    time: 7
+    value: negative
+  - analyte: rv5_2
+    time: 8
+    value: negative
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: 44.25531915
+  - analyte: rv5_1
+    time: 1
+    value: 24.25531915
+  - analyte: rv5_1
+    time: 2
+    value: 23.40425532
+  - analyte: rv5_1
+    time: 3
+    value: 23.40425532
+  - analyte: rv5_1
+    time: 4
+    value: 25.53191489
+  - analyte: rv5_1
+    time: 5
+    value: 22.55319149
+  - analyte: rv5_1
+    time: 6
+    value: 21.70212766
+  - analyte: rv5_1
+    time: 7
+    value: 21.70212766
+  - analyte: rv5_1
+    time: 8
+    value: 25.10638298
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 23.40425532
+  - analyte: rv5_1
+    time: 2
+    value: 23.82978723
+  - analyte: rv5_1
+    time: 3
+    value: 29.36170213
+  - analyte: rv5_1
+    time: 4
+    value: 29.36170213
+  - analyte: rv5_1
+    time: 5
+    value: 30.21276596
+  - analyte: rv5_1
+    time: 6
+    value: 30.21276596
+  - analyte: rv5_1
+    time: 7
+    value: 31.06382979
+  - analyte: rv5_1
+    time: 8
+    value: 34.04255319
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 32.17391304
+  - analyte: rv5_1
+    time: 2
+    value: 33.04347826
+  - analyte: rv5_1
+    time: 3
+    value: 32.60869565
+  - analyte: rv5_1
+    time: 4
+    value: 36.95652174
+  - analyte: rv5_1
+    time: 5
+    value: 36.95652174
+  - analyte: rv5_1
+    time: 6
+    value: 33.04347826
+  - analyte: rv5_1
+    time: 7
+    value: 35.65217391
+  - analyte: rv5_1
+    time: 8
+    value: negative
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 32
+  - analyte: rv5_1
+    time: 2
+    value: 29.33333333
+  - analyte: rv5_1
+    time: 3
+    value: 27.11111111
+  - analyte: rv5_1
+    time: 4
+    value: 32
+  - analyte: rv5_1
+    time: 5
+    value: 29.33333333
+  - analyte: rv5_1
+    time: 6
+    value: 28.88888889
+  - analyte: rv5_1
+    time: 7
+    value: 30.22222222
+  - analyte: rv5_1
+    time: 8
+    value: 31.55555556
+- measurements:
+  - analyte: rv5_1
+    time: 0
+    value: negative
+  - analyte: rv5_1
+    time: 1
+    value: 30.86956522
+  - analyte: rv5_1
+    time: 2
+    value: 29.56521739
+  - analyte: rv5_1
+    time: 3
+    value: 27.82608696
+  - analyte: rv5_1
+    time: 4
+    value: 31.30434783
+  - analyte: rv5_1
+    time: 5
+    value: 30.43478261
+  - analyte: rv5_1
+    time: 6
+    value: 33.47826087
+  - analyte: rv5_1
+    time: 7
+    value: 33.04347826
+  - analyte: rv5_1
+    time: 8
+    value: 33.91304348
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: negative
+  - analyte: rv1_1
+    time: 2
+    value: 32.60869565
+  - analyte: rv1_1
+    time: 3
+    value: negative
+  - analyte: rv1_1
+    time: 4
+    value: negative
+  - analyte: rv1_1
+    time: 5
+    value: negative
+  - analyte: rv1_1
+    time: 6
+    value: 38.69565217
+  - analyte: rv1_1
+    time: 7
+    value: 36.52173913
+  - analyte: rv1_1
+    time: 8
+    value: 33.04347826
+  - analyte: rv1_2
+    time: 0
+    value: negative
+  - analyte: rv1_2
+    time: 1
+    value: negative
+  - analyte: rv1_2
+    time: 2
+    value: 28.44444444
+  - analyte: rv1_2
+    time: 3
+    value: negative
+  - analyte: rv1_2
+    time: 4
+    value: negative
+  - analyte: rv1_2
+    time: 5
+    value: negative
+  - analyte: rv1_2
+    time: 6
+    value: negative
+  - analyte: rv1_2
+    time: 7
+    value: negative
+  - analyte: rv1_2
+    time: 8
+    value: negative
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: 30.86956522
+  - analyte: rv1_1
+    time: 2
+    value: 29.56521739
+  - analyte: rv1_1
+    time: 3
+    value: 33.47826087
+  - analyte: rv1_1
+    time: 4
+    value: 27.82608696
+  - analyte: rv1_1
+    time: 5
+    value: 24.34782609
+  - analyte: rv1_1
+    time: 6
+    value: 23.47826087
+  - analyte: rv1_1
+    time: 7
+    value: 26.08695652
+  - analyte: rv1_1
+    time: 8
+    value: 26.08695652
+  - analyte: rv1_2
+    time: 0
+    value: negative
+  - analyte: rv1_2
+    time: 1
+    value: 30.66666667
+  - analyte: rv1_2
+    time: 2
+    value: 38.22222222
+  - analyte: rv1_2
+    time: 3
+    value: negative
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: 27.39130435
+  - analyte: rv1_1
+    time: 2
+    value: 33.47826087
+  - analyte: rv1_1
+    time: 3
+    value: 28.69565217
+  - analyte: rv1_1
+    time: 4
+    value: 26.52173913
+  - analyte: rv1_1
+    time: 5
+    value: 20
+  - analyte: rv1_1
+    time: 6
+    value: 21.73913043
+  - analyte: rv1_1
+    time: 7
+    value: 23.04347826
+  - analyte: rv1_1
+    time: 8
+    value: 25.65217391
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: 34.7826087
+  - analyte: rv1_1
+    time: 2
+    value: negative
+  - analyte: rv1_1
+    time: 3
+    value: 39.56521739
+  - analyte: rv1_1
+    time: 4
+    value: 36.95652174
+  - analyte: rv1_1
+    time: 5
+    value: 35.2173913
+  - analyte: rv1_1
+    time: 6
+    value: 31.73913043
+  - analyte: rv1_1
+    time: 7
+    value: 30
+  - analyte: rv1_1
+    time: 8
+    value: 29.13043478
+  - analyte: rv1_2
+    time: 0
+    value: 35.11111111
+  - analyte: rv1_2
+    time: 1
+    value: 31.11111111
+  - analyte: rv1_2
+    time: 2
+    value: negative
+  - analyte: rv1_2
+    time: 3
+    value: 31.11111111
+  - analyte: rv1_2
+    time: 4
+    value: 33.77777778
+  - analyte: rv1_2
+    time: 5
+    value: 36
+  - analyte: rv1_2
+    time: 6
+    value: 40
+  - analyte: rv1_2
+    time: 7
+    value: 41.33333333
+  - analyte: rv1_2
+    time: 8
+    value: 40
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: 35.55555556
+  - analyte: rv1_1
+    time: 2
+    value: 36
+  - analyte: rv1_1
+    time: 3
+    value: 36
+  - analyte: rv1_1
+    time: 4
+    value: 28.44444444
+  - analyte: rv1_1
+    time: 5
+    value: 30.22222222
+  - analyte: rv1_1
+    time: 6
+    value: 32.88888889
+  - analyte: rv1_1
+    time: 7
+    value: 34.22222222
+  - analyte: rv1_1
+    time: 8
+    value: 30.66666667
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: 35.65217391
+  - analyte: rv1_1
+    time: 2
+    value: 41.30434783
+  - analyte: rv1_1
+    time: 3
+    value: 35.2173913
+  - analyte: rv1_1
+    time: 4
+    value: 30.43478261
+  - analyte: rv1_1
+    time: 5
+    value: 29.56521739
+  - analyte: rv1_1
+    time: 6
+    value: 32.60869565
+  - analyte: rv1_1
+    time: 7
+    value: 34.7826087
+  - analyte: rv1_1
+    time: 8
+    value: 32.17391304
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: 42.9787234
+  - analyte: rv1_1
+    time: 2
+    value: 43.82978723
+  - analyte: rv1_1
+    time: 3
+    value: 37.44680851
+  - analyte: rv1_1
+    time: 4
+    value: 36.17021277
+  - analyte: rv1_1
+    time: 5
+    value: 35.31914894
+  - analyte: rv1_1
+    time: 6
+    value: 37.87234043
+  - analyte: rv1_1
+    time: 7
+    value: 39.14893617
+  - analyte: rv1_1
+    time: 8
+    value: 39.57446809
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: negative
+  - analyte: rv1_1
+    time: 2
+    value: negative
+  - analyte: rv1_1
+    time: 3
+    value: negative
+  - analyte: rv1_1
+    time: 4
+    value: 41.2765957
+  - analyte: rv1_1
+    time: 5
+    value: 41.2765957
+  - analyte: rv1_1
+    time: 6
+    value: 41.7021277
+  - analyte: rv1_1
+    time: 7
+    value: 39.5744681
+  - analyte: rv1_1
+    time: 8
+    value: 37.0212766
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: 40.5361702
+  - analyte: rv1_1
+    time: 2
+    value: 42.7404255
+  - analyte: rv1_1
+    time: 3
+    value: negative
+  - analyte: rv1_1
+    time: 4
+    value: 42.4510638
+  - analyte: rv1_1
+    time: 5
+    value: negative
+  - analyte: rv1_1
+    time: 6
+    value: 34.9361702
+- measurements:
+  - analyte: rv1_1
+    time: 0
+    value: negative
+  - analyte: rv1_1
+    time: 1
+    value: negative
+  - analyte: rv1_1
+    time: 2
+    value: 37.73694391
+  - analyte: rv1_1
+    time: 3
+    value: 38.53642811
+  - analyte: rv1_1
+    time: 4
+    value: 33.79754997
+  - analyte: rv1_1
+    time: 5
+    value: 33.32043843
+  - analyte: rv1_1
+    time: 6
+    value: 36.66666667
+  - analyte: rv1_1
+    time: 7
+    value: 34.48742747
+  - analyte: rv1_1
+    time: 8
+    value: 34.43584784

@@ -1,0 +1,88 @@
+title: Viral shedding and susceptibility to oseltamivir in hospitalized immunocompromised
+  patients with influenza in the Influenza Resistance Information Study (IRIS)
+doi: 10.3851/IMP2957
+description: Observational substudy of the Influenza Resistance Information Study
+  (IRIS) in immunocompromised patients with influenza. Nasal and throat swabs were
+  analysed by RT-PCR on day 1 and then every 3 days until patients were virus-free
+  to assess viral shedding and emergence of oseltamivir resistance (H275Y). Of 42
+  enrolled patients, 29 were influenza RT-PCR positive on day 1 (18 adults, 11 children).
+  Resistance (H275Y) was detected in some post-baseline samples; clinical and virological
+  outcomes were described.
+analytes:
+  particles_ml:
+    description: RT-PCR quantification of influenza virus from nasal and throat (nasopharyngeal
+      and oropharyngeal) swabs. Values reported as particles per mL in the source
+      CSV and represented here as virus particles per mL (vp/mL). Genotype (e.g., H, H+Y)
+      was reported per sample in the CSV; gene target not specified in the provided
+      data.
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: vp/mL
+    reference_event: enrollment
+participants:
+- patient_id: 801/008
+  attributes:
+    age: 52
+    age_group: adult
+  measurements:
+  - analyte: particles_ml
+    time: 3
+    value: 25118.86432
+  - analyte: particles_ml
+    time: 9
+    value: 6309.573445
+- patient_id: 801/012
+  attributes:
+    age: 55
+    age_group: adult
+  measurements:
+  - analyte: particles_ml
+    time: 3
+    value: 6309.573445
+  - analyte: particles_ml
+    time: 6
+    value: 7943.282347
+  - analyte: particles_ml
+    time: 9
+    value: negative
+- patient_id: 802/006
+  attributes:
+    age: 52
+    age_group: adult
+  measurements:
+  - analyte: particles_ml
+    time: 3
+    value: 63095.73445
+  - analyte: particles_ml
+    time: 6
+    value: 10000
+  - analyte: particles_ml
+    time: 9
+    value: 630.9573445
+  - analyte: particles_ml
+    time: 12
+    value: negative
+- patient_id: 804/002
+  attributes:
+    age: 61
+    age_group: adult
+  measurements:
+  - analyte: particles_ml
+    time: 3
+    value: 19952.62315
+  - analyte: particles_ml
+    time: 6
+    value: 251188643.2
+  - analyte: particles_ml
+    time: 9
+    value: 3981071.706
+  - analyte: particles_ml
+    time: 12
+    value: 3981071.706
+  - analyte: particles_ml
+    time: 15
+    value: 12589.25412

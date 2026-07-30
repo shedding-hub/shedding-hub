@@ -1,0 +1,508 @@
+title: Rotavirus vaccine strain transmission by vaccinated infants in the foster home
+doi: 10.1002/jmv.24613
+description: Prospective surveillance in a foster home setting assessing shedding
+  and transmission of rotavirus vaccine strains. Stool samples were collected and
+  tested by quantitative real-time RT-PCR. The study included 4 RV-vaccinated infants
+  (160 samples) and 23 unvaccinated infants (766 samples). Vaccine-strain RNA was
+  persistently detected in stool from the four vaccine recipients and in one unvaccinated
+  infant (who had been vaccinated prior to enrollment). Quantitative RT-PCR data showed
+  a peak RNA load about 1 week after vaccination followed by gradual decrease. Study
+  suggests limited transmission of vaccine strains in close-contact environment.
+analytes:
+  stool_rotavirus_vaccine_RV1_dose1:
+    description: Quantitative real-time RT-PCR measuring rotavirus vaccine (RV1) RNA
+      in stool; values reported as PCR cycle threshold (Ct).
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 1
+    vaccine_type: Rotarix (RV1)
+  stool_rotavirus_vaccine_RV1_dose2:
+    description: Quantitative real-time RT-PCR measuring rotavirus vaccine (RV1) RNA
+      in stool; values reported as PCR cycle threshold (Ct).
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 2
+    vaccine_type: Rotarix (RV1)
+  stool_rotavirus_vaccine_RV5_dose1:
+    description: Quantitative real-time RT-PCR measuring rotavirus vaccine (RV5) RNA
+      in stool; values reported as PCR cycle threshold (Ct).
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 1
+    vaccine_type: RotaTeq (RV5)
+  stool_rotavirus_vaccine_RV5_dose2:
+    description: Quantitative real-time RT-PCR measuring rotavirus vaccine (RV5) RNA
+      in stool; values reported as PCR cycle threshold (Ct).
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 2
+    vaccine_type: RotaTeq (RV5)
+  stool_rotavirus_vaccine_RV5_dose3:
+    description: Quantitative real-time RT-PCR measuring rotavirus vaccine (RV5) RNA
+      in stool; values reported as PCR cycle threshold (Ct).
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 3
+    vaccine_type: RotaTeq (RV5)
+participants:
+- measurements:
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 0
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 2
+    value: 27.89473684
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 3
+    value: 30.96491228
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 4
+    value: 33.15789474
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 5
+    value: 20
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 6
+    value: 32.28070175
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 7
+    value: 24.8245614
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 8
+    value: 29.86842105
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 9
+    value: 27.23684211
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 10
+    value: 35.35087719
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 11
+    value: 39.73684211
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 12
+    value: 41.49122807
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 14
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 15
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 16
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 17
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 18
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 19
+    value: 43.90350877
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 20
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 0
+    value: 41.27192982
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 2
+    value: 35.57017544
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 3
+    value: 38.42105263
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 4
+    value: 41.49122807
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 5
+    value: 42.36842105
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 6
+    value: 35.57017544
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 10
+    value: 38.20175439
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 11
+    value: 43.68421053
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 12
+    value: 42.14912281
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 14
+    value: 38.64035088
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 15
+    value: 36.88596491
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 16
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 17
+    value: 42.80701754
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 18
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 19
+    value: 37.3245614
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 20
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 0
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 1
+    value: 26.02678571
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 2
+    value: 35.84821429
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 3
+    value: 30.04464286
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 5
+    value: 29.375
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 6
+    value: 27.8125
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 7
+    value: 29.82142857
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 8
+    value: 33.16964286
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 9
+    value: 30.49107143
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 10
+    value: 37.1875
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 11
+    value: 38.08035714
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 12
+    value: 37.63392857
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 13
+    value: 41.65178571
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 0
+    value: 32.5
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 1
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 2
+    value: 39.41964286
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 3
+    value: 28.70535714
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 4
+    value: 37.1875
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 5
+    value: 33.61607143
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 6
+    value: 37.41071429
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 7
+    value: 40.08928571
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 8
+    value: 34.28571429
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 10
+    value: 34.0625
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 12
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 13
+    value: 30.04464286
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 0
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 1
+    value: 25.35714286
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 3
+    value: 30.26785714
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 4
+    value: 35.40178571
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 5
+    value: 39.86607143
+- measurements:
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 8
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 10
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 12
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 13
+    value: negative
+- measurements:
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 0
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 1
+    value: 35.13157895
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 2
+    value: 37.54385965
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 3
+    value: 36.00877193
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 4
+    value: 36.22807018
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 5
+    value: 32.71929825
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 6
+    value: 28.11403509
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 7
+    value: 29.42982456
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 8
+    value: 26.57894737
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 9
+    value: 28.77192982
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 10
+    value: 28.77192982
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 11
+    value: 30.30701754
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 12
+    value: 37.98245614
+  - analyte: stool_rotavirus_vaccine_RV1_dose1
+    time: 13
+    value: 38.64035088
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 0
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 1
+    value: 36.44736842
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 2
+    value: 40.1754386
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 3
+    value: 39.51754386
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 5
+    value: 30.96491228
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 6
+    value: 32.93859649
+  - analyte: stool_rotavirus_vaccine_RV1_dose2
+    time: 7
+    value: 36.88596491
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 0
+    value: 29.67640435
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 1
+    value: 23.57710652
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 2
+    value: 32.56955485
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 3
+    value: 29.17461579
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 4
+    value: 27.57982247
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 5
+    value: 23.73443296
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 6
+    value: 25.51967409
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 7
+    value: 26.62758347
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 8
+    value: 27.28669846
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 9
+    value: 33.57644409
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 10
+    value: 37.38871224
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 12
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose1
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 0
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 1
+    value: 28.0357143
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 2
+    value: 29.5982143
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 3
+    value: 29.1517857
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 4
+    value: 28.0357143
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 5
+    value: 26.4732143
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 6
+    value: 30.4910714
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 7
+    value: 31.6071429
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 8
+    value: 34.9553571
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 10
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 12
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose2
+    time: 13
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 1
+    value: 32.72321429
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 2
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 3
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 4
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 5
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 6
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 7
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 8
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 9
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 10
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 11
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 12
+    value: negative
+  - analyte: stool_rotavirus_vaccine_RV5_dose3
+    time: 13
+    value: negative

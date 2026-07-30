@@ -11,7 +11,7 @@ description: This study, conducted from November 2002 to November 2003, investig
   a focus on the VP1/2A junction of the HAV genome. The study also included phylogenetic
   analysis to determine HAV genotypes.
 analytes:
-  serum_hav_rna:
+  serum_HAV_RNA:
     description: HAV RNA was extracted from 140 μl of serum using the QIAmp viral
       RNA kit. RT-PCR was performed to amplify a 512-bp fragment encompassing the
       VP1/2A junction. The sensitivity of the RT-PCR assay was 43 IU/ml. HAV RNA was
@@ -24,7 +24,7 @@ analytes:
     limit_of_quantification: 600
     unit: gc/mL
     reference_event: symptom onset
-  saliva_hav_rna:
+  saliva_HAV_RNA:
     description: HAV RNA was extracted from 140 μl of saliva using the QIAmp viral
       RNA kit. RT-PCR was performed to amplify a 512-bp fragment encompassing the
       VP1/2A junction. The sensitivity of the RT-PCR assay was 43 IU/ml. HAV RNA was
@@ -43,10 +43,10 @@ participants:
     age: 34
     lineage: ia
   measurements:
-  - analyte: serum_hav_rna
+  - analyte: serum_HAV_RNA
     time: 4
     value: 4900000.0
-  - analyte: saliva_hav_rna
+  - analyte: saliva_HAV_RNA
     time: 11
     value: 930
 - attributes:
@@ -54,10 +54,10 @@ participants:
     age: 47
     lineage: ia
   measurements:
-  - analyte: serum_hav_rna
+  - analyte: serum_HAV_RNA
     time: 8
     value: 7300
-  - analyte: saliva_hav_rna
+  - analyte: saliva_HAV_RNA
     time: 10
     value: negative
 - attributes:
@@ -65,10 +65,10 @@ participants:
     age: 25
     lineage: ia
   measurements:
-  - analyte: serum_hav_rna
+  - analyte: serum_HAV_RNA
     time: 2
     value: 23000000.0
-  - analyte: saliva_hav_rna
+  - analyte: saliva_HAV_RNA
     time: 5
     value: 19000.0
 - attributes:
@@ -76,10 +76,10 @@ participants:
     age: 34
     lineage: ia
   measurements:
-  - analyte: serum_hav_rna
+  - analyte: serum_HAV_RNA
     time: 4
     value: 360000.0
-  - analyte: saliva_hav_rna
+  - analyte: saliva_HAV_RNA
     time: 5
     value: 3500
 - attributes:
@@ -87,20 +87,20 @@ participants:
     age: 28
     lineage: ib
   measurements:
-  - analyte: serum_hav_rna
+  - analyte: serum_HAV_RNA
     time: 4
     value: 22000.0
-  - analyte: saliva_hav_rna
+  - analyte: saliva_HAV_RNA
     time: 5
-    value: negative
+    value: positive
 - attributes:
     sex: female
     age: 15
     lineage: ia
   measurements:
-  - analyte: serum_hav_rna
+  - analyte: serum_HAV_RNA
     time: 10
     value: 41000.0
-  - analyte: saliva_hav_rna
+  - analyte: saliva_HAV_RNA
     time: 10
     value: 1100

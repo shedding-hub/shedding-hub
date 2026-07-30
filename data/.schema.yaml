@@ -29,6 +29,7 @@ $defs:
       - plasma
       - oropharyngeal_swab
       - nasopharyngeal_swab
+      - nasopharyngeal_aspirate
       - anterior_nares_swab
       - saliva
       - buccal_swab
@@ -310,6 +311,33 @@ properties:
                 - type: boolean
                 - type: string
                   const: unknown
+            immune_status:
+              description: >
+                Immune competence of the participant. Use immunocompromised for
+                participants described as immunocompromised OR immunosuppressed (e.g.,
+                transplant recipients, chemotherapy or immunosuppressive therapy,
+                primary immunodeficiency, HIV) and immunocompetent otherwise. This
+                describes the subject, not a separate analyte.
+              type: string
+              enum:
+                - immunocompetent
+                - immunocompromised
+                - unknown
+            coinfection:
+              description: >
+                Other pathogen(s) co-detected in the participant besides the study's
+                primary biomarker (e.g., 'CoV-OC43', 'human rhinovirus', 'RSV'), or
+                'none' when screened and none were found. A coinfection is a different
+                pathogen, not a variant of the study pathogen, and not a separate
+                analyte.
+              type: string
+            treatment:
+              description: >
+                Antiviral or other pathogen-directed treatment the participant received
+                that could affect shedding (e.g., 'oseltamivir', 'zanamivir',
+                'remdesivir'), or 'untreated' when explicitly untreated. Describes the
+                subject, not a separate analyte.
+              type: string
         measurements:
           type: array
           minItems: 1

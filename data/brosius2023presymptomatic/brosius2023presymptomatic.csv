@@ -1,0 +1,491 @@
+PatientID,time,value,specimen,vaccination_category,symptom_status
+DI_01,4,negative,serum,unknown,symptomatic
+DI_01,8,negative,serum,unknown,symptomatic
+DI_01,4,30.68493151,saliva,unknown,symptomatic
+DI_01,5,27.12328767,saliva,unknown,symptomatic
+DI_01,6,27.12328767,saliva,unknown,symptomatic
+DI_01,7,25.75342466,saliva,unknown,symptomatic
+DI_01,8,25.47945205,saliva,unknown,symptomatic
+DI_01,4,15.89041096,anorectal,unknown,symptomatic
+DI_01,5,17.26027397,anorectal,unknown,symptomatic
+DI_01,6,16.71232877,anorectal,unknown,symptomatic
+DI_01,7,15.89041096,anorectal,unknown,symptomatic
+DI_01,8,18.35616438,anorectal,unknown,symptomatic
+DI_01,4,29.5890411,oropharyngeal,unknown,symptomatic
+DI_01,8,23.01369863,oropharyngeal,unknown,symptomatic
+DI_01,4,32.60273973,genital,unknown,symptomatic
+DI_01,5,35.89041096,genital,unknown,symptomatic
+DI_01,6,30.68493151,genital,unknown,symptomatic
+DI_01,7,36.43835616,genital,unknown,symptomatic
+DI_01,8,35.89041096,genital,unknown,symptomatic
+DI_02,4,negative,serum,unknown,symptomatic
+DI_02,8,negative,serum,unknown,symptomatic
+DI_02,13,negative,serum,unknown,symptomatic
+DI_02,5,negative,saliva,unknown,symptomatic
+DI_02,6,negative,saliva,unknown,symptomatic
+DI_02,7,negative,saliva,unknown,symptomatic
+DI_02,9,negative,saliva,unknown,symptomatic
+DI_02,10,negative,saliva,unknown,symptomatic
+DI_02,11,negative,saliva,unknown,symptomatic
+DI_02,12,negative,saliva,unknown,symptomatic
+DI_02,13,negative,saliva,unknown,symptomatic
+DI_02,4,negative,anorectal,unknown,symptomatic
+DI_02,5,16.65303619,anorectal,unknown,symptomatic
+DI_02,6,16.91269679,anorectal,unknown,symptomatic
+DI_02,7,16.89838479,anorectal,unknown,symptomatic
+DI_02,8,15.51625434,anorectal,unknown,symptomatic
+DI_02,9,16.04988755,anorectal,unknown,symptomatic
+DI_02,10,16.03557555,anorectal,unknown,symptomatic
+DI_02,11,15.74933551,anorectal,unknown,symptomatic
+DI_02,12,18.20077694,anorectal,unknown,symptomatic
+DI_02,13,15.99468411,anorectal,unknown,symptomatic
+DI_02,4,negative,oropharyngeal,unknown,symptomatic
+DI_02,8,negative,oropharyngeal,unknown,symptomatic
+DI_02,4,negative,genital,unknown,symptomatic
+DI_02,5,35.83111838,genital,unknown,symptomatic
+DI_02,6,negative,genital,unknown,symptomatic
+DI_02,7,negative,genital,unknown,symptomatic
+DI_02,8,negative,genital,unknown,symptomatic
+DI_02,9,negative,genital,unknown,symptomatic
+DI_02,10,negative,genital,unknown,symptomatic
+DI_02,11,negative,genital,unknown,symptomatic
+DI_02,12,negative,genital,unknown,symptomatic
+DI_02,13,negative,genital,unknown,symptomatic
+DI_03,5,negative,serum,unknown,symptomatic
+DI_03,11,35.61643836,serum,unknown,symptomatic
+DI_03,5,28.49315068,saliva,unknown,symptomatic
+DI_03,11,25.47945205,saliva,unknown,symptomatic
+DI_03,11,negative,anorectal,unknown,symptomatic
+DI_03,5,negative,oropharyngeal,unknown,symptomatic
+DI_03,14,24.38356164,oropharyngeal,unknown,symptomatic
+DI_03,17,35.06849315,oropharyngeal,unknown,symptomatic
+DI_04,4,negative,serum,PEV,symptomatic
+DI_04,11,35.13513514,serum,PEV,symptomatic
+DI_04,5,negative,saliva,PEV,symptomatic
+DI_04,6,negative,saliva,PEV,symptomatic
+DI_04,7,negative,saliva,PEV,symptomatic
+DI_04,8,negative,saliva,PEV,symptomatic
+DI_04,9,negative,saliva,PEV,symptomatic
+DI_04,10,negative,saliva,PEV,symptomatic
+DI_04,4,28.64864865,anorectal,PEV,symptomatic
+DI_04,5,19.45945946,anorectal,PEV,symptomatic
+DI_04,6,20,anorectal,PEV,symptomatic
+DI_04,7,22.43243243,anorectal,PEV,symptomatic
+DI_04,8,17.56756757,anorectal,PEV,symptomatic
+DI_04,9,19.45945946,anorectal,PEV,symptomatic
+DI_04,10,16.75675676,anorectal,PEV,symptomatic
+DI_04,11,16.21621622,anorectal,PEV,symptomatic
+DI_04,4,negative,oropharyngeal,PEV,symptomatic
+DI_04,11,negative,oropharyngeal,PEV,symptomatic
+DI_04,8,negative,genital,PEV,symptomatic
+DI_04,9,32.43243243,genital,PEV,symptomatic
+DI_04,10,negative,genital,PEV,symptomatic
+DI_04,11,34.86486486,genital,PEV,symptomatic
+DI_05,11,negative,serum,childhood vaccination,asymptomatic
+DI_05,18,negative,serum,childhood vaccination,asymptomatic
+DI_05,25,negative,serum,childhood vaccination,asymptomatic
+DI_05,12,negative,saliva,childhood vaccination,asymptomatic
+DI_05,13,negative,saliva,childhood vaccination,asymptomatic
+DI_05,14,negative,saliva,childhood vaccination,asymptomatic
+DI_05,15,negative,saliva,childhood vaccination,asymptomatic
+DI_05,16,negative,saliva,childhood vaccination,asymptomatic
+DI_05,17,negative,saliva,childhood vaccination,asymptomatic
+DI_05,18,negative,saliva,childhood vaccination,asymptomatic
+DI_05,19,negative,saliva,childhood vaccination,asymptomatic
+DI_05,20,negative,saliva,childhood vaccination,asymptomatic
+DI_05,21,negative,saliva,childhood vaccination,asymptomatic
+DI_05,22,negative,saliva,childhood vaccination,asymptomatic
+DI_05,23,negative,saliva,childhood vaccination,asymptomatic
+DI_05,24,negative,saliva,childhood vaccination,asymptomatic
+DI_05,11,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,12,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,13,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,14,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,15,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,16,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,17,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,18,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,19,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,20,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,21,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,22,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,23,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,24,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,25,negative,anorectal,childhood vaccination,asymptomatic
+DI_05,11,negative,oropharyngeal,childhood vaccination,asymptomatic
+DI_05,18,negative,oropharyngeal,childhood vaccination,asymptomatic
+DI_05,25,negative,oropharyngeal,childhood vaccination,asymptomatic
+DI_05,19,negative,genital,childhood vaccination,asymptomatic
+DI_05,20,33.78378378,genital,childhood vaccination,asymptomatic
+DI_05,21,negative,genital,childhood vaccination,asymptomatic
+DI_05,22,negative,genital,childhood vaccination,asymptomatic
+PI_01,4,negative,serum,PEV,asymptomatic
+PI_01,11,negative,serum,PEV,asymptomatic
+PI_01,19,negative,serum,PEV,asymptomatic
+PI_01,25,negative,serum,PEV,asymptomatic
+PI_01,4,negative,saliva,PEV,asymptomatic
+PI_01,5,negative,saliva,PEV,asymptomatic
+PI_01,6,negative,saliva,PEV,asymptomatic
+PI_01,7,36.43835616,saliva,PEV,asymptomatic
+PI_01,8,36.16438356,saliva,PEV,asymptomatic
+PI_01,9,35.06849315,saliva,PEV,asymptomatic
+PI_01,10,negative,saliva,PEV,asymptomatic
+PI_01,11,negative,saliva,PEV,asymptomatic
+PI_01,12,36.48648649,saliva,PEV,asymptomatic
+PI_01,13,negative,saliva,PEV,asymptomatic
+PI_01,14,negative,saliva,PEV,asymptomatic
+PI_01,15,negative,saliva,PEV,asymptomatic
+PI_01,16,negative,saliva,PEV,asymptomatic
+PI_01,18,negative,saliva,PEV,asymptomatic
+PI_01,20,negative,saliva,PEV,asymptomatic
+PI_01,21,negative,saliva,PEV,asymptomatic
+PI_01,22,negative,saliva,PEV,asymptomatic
+PI_01,23,negative,saliva,PEV,asymptomatic
+PI_01,24,negative,saliva,PEV,asymptomatic
+PI_01,4,negative,anorectal,PEV,asymptomatic
+PI_01,5,negative,anorectal,PEV,asymptomatic
+PI_01,6,negative,anorectal,PEV,asymptomatic
+PI_01,7,negative,anorectal,PEV,asymptomatic
+PI_01,8,36.16438356,anorectal,PEV,asymptomatic
+PI_01,9,negative,anorectal,PEV,asymptomatic
+PI_01,10,negative,anorectal,PEV,asymptomatic
+PI_01,12,negative,anorectal,PEV,asymptomatic
+PI_01,13,negative,anorectal,PEV,asymptomatic
+PI_01,14,34.52054795,anorectal,PEV,asymptomatic
+PI_01,15,35.61643836,anorectal,PEV,asymptomatic
+PI_01,16,negative,anorectal,PEV,asymptomatic
+PI_01,18,negative,anorectal,PEV,asymptomatic
+PI_01,19,negative,anorectal,PEV,asymptomatic
+PI_01,20,negative,anorectal,PEV,asymptomatic
+PI_01,21,negative,anorectal,PEV,asymptomatic
+PI_01,22,negative,anorectal,PEV,asymptomatic
+PI_01,23,negative,anorectal,PEV,asymptomatic
+PI_01,24,negative,anorectal,PEV,asymptomatic
+PI_01,4,negative,oropharyngeal,PEV,asymptomatic
+PI_01,11,negative,oropharyngeal,PEV,asymptomatic
+PI_01,19,negative,oropharyngeal,PEV,asymptomatic
+PI_01,25,negative,oropharyngeal,PEV,asymptomatic
+PI_01,4,negative,genital,PEV,asymptomatic
+PI_01,5,35.06849315,genital,PEV,asymptomatic
+PI_01,6,35.34246575,genital,PEV,asymptomatic
+PI_01,7,34.79452055,genital,PEV,asymptomatic
+PI_01,8,negative,genital,PEV,asymptomatic
+PI_01,9,36.16438356,genital,PEV,asymptomatic
+PI_01,10,negative,genital,PEV,asymptomatic
+PI_01,11,negative,genital,PEV,asymptomatic
+PI_01,12,negative,genital,PEV,asymptomatic
+PI_01,13,35.34246575,genital,PEV,asymptomatic
+PI_01,14,36.43835616,genital,PEV,asymptomatic
+PI_01,15,negative,genital,PEV,asymptomatic
+PI_01,16,negative,genital,PEV,asymptomatic
+PI_01,18,negative,genital,PEV,asymptomatic
+PI_01,19,negative,genital,PEV,asymptomatic
+PI_01,23,negative,genital,PEV,asymptomatic
+PI_01,24,negative,genital,PEV,asymptomatic
+PI_01,25,negative,genital,PEV,asymptomatic
+PI_02,17,negative,serum,childhood vaccination,asymptomatic
+PI_02,25,negative,serum,childhood vaccination,asymptomatic
+PI_02,32,negative,serum,childhood vaccination,asymptomatic
+PI_02,39,negative,serum,childhood vaccination,asymptomatic
+PI_02,18,negative,saliva,childhood vaccination,asymptomatic
+PI_02,19,negative,saliva,childhood vaccination,asymptomatic
+PI_02,20,negative,saliva,childhood vaccination,asymptomatic
+PI_02,21,negative,saliva,childhood vaccination,asymptomatic
+PI_02,22,negative,saliva,childhood vaccination,asymptomatic
+PI_02,23,negative,saliva,childhood vaccination,asymptomatic
+PI_02,24,negative,saliva,childhood vaccination,asymptomatic
+PI_02,25,negative,saliva,childhood vaccination,asymptomatic
+PI_02,26,negative,saliva,childhood vaccination,asymptomatic
+PI_02,27,negative,saliva,childhood vaccination,asymptomatic
+PI_02,28,negative,saliva,childhood vaccination,asymptomatic
+PI_02,29,negative,saliva,childhood vaccination,asymptomatic
+PI_02,30,negative,saliva,childhood vaccination,asymptomatic
+PI_02,31,33.95621122,saliva,childhood vaccination,asymptomatic
+PI_02,32,negative,saliva,childhood vaccination,asymptomatic
+PI_02,33,negative,saliva,childhood vaccination,asymptomatic
+PI_02,34,negative,saliva,childhood vaccination,asymptomatic
+PI_02,35,negative,saliva,childhood vaccination,asymptomatic
+PI_02,36,negative,saliva,childhood vaccination,asymptomatic
+PI_02,37,negative,saliva,childhood vaccination,asymptomatic
+PI_02,38,negative,saliva,childhood vaccination,asymptomatic
+PI_02,39,negative,saliva,childhood vaccination,asymptomatic
+PI_02,17,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,18,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,19,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,20,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,21,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,22,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,23,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,24,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,25,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,26,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,27,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,28,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,29,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,30,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,31,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,32,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,33,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,34,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,35,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,36,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,37,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,38,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,39,negative,anorectal,childhood vaccination,asymptomatic
+PI_02,17,negative,oropharyngeal,childhood vaccination,asymptomatic
+PI_02,25,negative,oropharyngeal,childhood vaccination,asymptomatic
+PI_02,32,negative,oropharyngeal,childhood vaccination,asymptomatic
+PI_02,39,negative,oropharyngeal,childhood vaccination,asymptomatic
+PI_02,23,negative,genital,childhood vaccination,asymptomatic
+PI_02,24,negative,genital,childhood vaccination,asymptomatic
+PI_02,25,negative,genital,childhood vaccination,asymptomatic
+PI_02,26,negative,genital,childhood vaccination,asymptomatic
+PI_02,27,negative,genital,childhood vaccination,asymptomatic
+PI_02,28,negative,genital,childhood vaccination,asymptomatic
+PI_02,29,negative,genital,childhood vaccination,asymptomatic
+PI_02,30,negative,genital,childhood vaccination,asymptomatic
+PI_02,31,35.05210163,genital,childhood vaccination,asymptomatic
+PI_02,32,negative,genital,childhood vaccination,asymptomatic
+PI_02,33,negative,genital,childhood vaccination,asymptomatic
+PI_02,34,negative,genital,childhood vaccination,asymptomatic
+PI_02,35,negative,genital,childhood vaccination,asymptomatic
+PI_02,36,negative,genital,childhood vaccination,asymptomatic
+PI_02,37,negative,genital,childhood vaccination,asymptomatic
+PI_02,38,negative,genital,childhood vaccination,asymptomatic
+PI_02,39,negative,genital,childhood vaccination,asymptomatic
+PI_03,2,negative,serum,PEV,asymptomatic
+PI_03,9,negative,serum,PEV,asymptomatic
+PI_03,15,negative,serum,PEV,asymptomatic
+PI_03,23,negative,serum,PEV,asymptomatic
+PI_03,2,36.43835616,saliva,PEV,asymptomatic
+PI_03,3,negative,saliva,PEV,asymptomatic
+PI_03,4,negative,saliva,PEV,asymptomatic
+PI_03,5,negative,saliva,PEV,asymptomatic
+PI_03,6,negative,saliva,PEV,asymptomatic
+PI_03,7,negative,saliva,PEV,asymptomatic
+PI_03,8,negative,saliva,PEV,asymptomatic
+PI_03,9,negative,saliva,PEV,asymptomatic
+PI_03,10,negative,saliva,PEV,asymptomatic
+PI_03,11,negative,saliva,PEV,asymptomatic
+PI_03,12,negative,saliva,PEV,asymptomatic
+PI_03,13,negative,saliva,PEV,asymptomatic
+PI_03,16,negative,saliva,PEV,asymptomatic
+PI_03,17,negative,saliva,PEV,asymptomatic
+PI_03,18,negative,saliva,PEV,asymptomatic
+PI_03,19,negative,saliva,PEV,asymptomatic
+PI_03,20,negative,saliva,PEV,asymptomatic
+PI_03,21,negative,saliva,PEV,asymptomatic
+PI_03,22,negative,saliva,PEV,asymptomatic
+PI_03,23,negative,saliva,PEV,asymptomatic
+PI_03,5,negative,genital,PEV,asymptomatic
+PI_03,6,negative,genital,PEV,asymptomatic
+PI_03,7,negative,genital,PEV,asymptomatic
+PI_03,3,negative,anorectal,PEV,asymptomatic
+PI_03,4,negative,anorectal,PEV,asymptomatic
+PI_03,5,negative,anorectal,PEV,asymptomatic
+PI_03,6,negative,anorectal,PEV,asymptomatic
+PI_03,7,negative,anorectal,PEV,asymptomatic
+PI_03,8,negative,anorectal,PEV,asymptomatic
+PI_03,9,negative,anorectal,PEV,asymptomatic
+PI_03,10,negative,anorectal,PEV,asymptomatic
+PI_03,11,negative,anorectal,PEV,asymptomatic
+PI_03,12,negative,anorectal,PEV,asymptomatic
+PI_03,13,negative,anorectal,PEV,asymptomatic
+PI_03,16,negative,anorectal,PEV,asymptomatic
+PI_03,17,negative,anorectal,PEV,asymptomatic
+PI_03,18,negative,anorectal,PEV,asymptomatic
+PI_03,19,negative,anorectal,PEV,asymptomatic
+PI_03,20,negative,anorectal,PEV,asymptomatic
+PI_03,21,negative,anorectal,PEV,asymptomatic
+PI_03,22,negative,anorectal,PEV,asymptomatic
+PI_03,23,negative,anorectal,PEV,asymptomatic
+PI_03,2,negative,oropharyngeal,PEV,asymptomatic
+PI_03,9,negative,oropharyngeal,PEV,asymptomatic
+PI_03,15,negative,oropharyngeal,PEV,asymptomatic
+PI_03,23,negative,oropharyngeal,PEV,asymptomatic
+PI_04,1,negative,serum,unknown,asymptomatic
+PI_04,13,negative,serum,unknown,asymptomatic
+PI_04,22,negative,serum,unknown,asymptomatic
+PI_04,2,negative,saliva,unknown,asymptomatic
+PI_04,3,negative,saliva,unknown,asymptomatic
+PI_04,4,negative,saliva,unknown,asymptomatic
+PI_04,5,negative,saliva,unknown,asymptomatic
+PI_04,6,negative,saliva,unknown,asymptomatic
+PI_04,7,negative,saliva,unknown,asymptomatic
+PI_04,8,negative,saliva,unknown,asymptomatic
+PI_04,13,negative,saliva,unknown,asymptomatic
+PI_04,14,negative,saliva,unknown,asymptomatic
+PI_04,15,negative,saliva,unknown,asymptomatic
+PI_04,16,negative,saliva,unknown,asymptomatic
+PI_04,17,negative,saliva,unknown,asymptomatic
+PI_04,18,negative,saliva,unknown,asymptomatic
+PI_04,19,negative,saliva,unknown,asymptomatic
+PI_04,20,negative,saliva,unknown,asymptomatic
+PI_04,21,negative,saliva,unknown,asymptomatic
+PI_04,1,negative,anorectal,unknown,asymptomatic
+PI_04,2,negative,anorectal,unknown,asymptomatic
+PI_04,3,negative,anorectal,unknown,asymptomatic
+PI_04,4,negative,anorectal,unknown,asymptomatic
+PI_04,5,negative,anorectal,unknown,asymptomatic
+PI_04,6,negative,anorectal,unknown,asymptomatic
+PI_04,7,negative,anorectal,unknown,asymptomatic
+PI_04,8,negative,anorectal,unknown,asymptomatic
+PI_04,13,negative,anorectal,unknown,asymptomatic
+PI_04,14,negative,anorectal,unknown,asymptomatic
+PI_04,15,negative,anorectal,unknown,asymptomatic
+PI_04,16,negative,anorectal,unknown,asymptomatic
+PI_04,17,negative,anorectal,unknown,asymptomatic
+PI_04,18,negative,anorectal,unknown,asymptomatic
+PI_04,19,negative,anorectal,unknown,asymptomatic
+PI_04,20,negative,anorectal,unknown,asymptomatic
+PI_04,21,negative,anorectal,unknown,asymptomatic
+PI_04,1,negative,oropharyngeal,unknown,asymptomatic
+PI_04,13,negative,oropharyngeal,unknown,asymptomatic
+PI_04,16,negative,oropharyngeal,unknown,asymptomatic
+PI_04,22,negative,oropharyngeal,unknown,asymptomatic
+PI_04,1,negative,genital,unknown,asymptomatic
+PI_04,2,negative,genital,unknown,asymptomatic
+PI_04,3,negative,genital,unknown,asymptomatic
+PI_04,4,negative,genital,unknown,asymptomatic
+PI_04,5,35.34246575,genital,unknown,asymptomatic
+PI_04,6,negative,genital,unknown,asymptomatic
+PI_04,7,negative,genital,unknown,asymptomatic
+PI_04,8,negative,genital,unknown,asymptomatic
+PI_04,17,negative,genital,unknown,asymptomatic
+PI_04,18,negative,genital,unknown,asymptomatic
+PI_04,19,negative,genital,unknown,asymptomatic
+PI_04,20,negative,genital,unknown,asymptomatic
+PI_04,21,negative,genital,unknown,asymptomatic
+UI_01,4,negative,serum,childhood vaccination,uninfected
+UI_01,12,negative,serum,childhood vaccination,uninfected
+UI_01,20,negative,serum,childhood vaccination,uninfected
+UI_01,26,negative,serum,childhood vaccination,uninfected
+UI_01,4,negative,saliva,childhood vaccination,uninfected
+UI_01,5,negative,saliva,childhood vaccination,uninfected
+UI_01,6,negative,saliva,childhood vaccination,uninfected
+UI_01,8,negative,saliva,childhood vaccination,uninfected
+UI_01,9,negative,saliva,childhood vaccination,uninfected
+UI_01,10,negative,saliva,childhood vaccination,uninfected
+UI_01,11,negative,saliva,childhood vaccination,uninfected
+UI_01,13,negative,saliva,childhood vaccination,uninfected
+UI_01,14,negative,saliva,childhood vaccination,uninfected
+UI_01,15,negative,saliva,childhood vaccination,uninfected
+UI_01,16,negative,saliva,childhood vaccination,uninfected
+UI_01,17,negative,saliva,childhood vaccination,uninfected
+UI_01,21,negative,saliva,childhood vaccination,uninfected
+UI_01,22,negative,saliva,childhood vaccination,uninfected
+UI_01,23,negative,saliva,childhood vaccination,uninfected
+UI_01,24,negative,saliva,childhood vaccination,uninfected
+UI_01,25,negative,saliva,childhood vaccination,uninfected
+UI_01,26,negative,saliva,childhood vaccination,uninfected
+UI_01,5,negative,anorectal,childhood vaccination,uninfected
+UI_01,6,negative,anorectal,childhood vaccination,uninfected
+UI_01,8,negative,anorectal,childhood vaccination,uninfected
+UI_01,9,negative,anorectal,childhood vaccination,uninfected
+UI_01,10,negative,anorectal,childhood vaccination,uninfected
+UI_01,11,negative,anorectal,childhood vaccination,uninfected
+UI_01,13,negative,anorectal,childhood vaccination,uninfected
+UI_01,14,negative,anorectal,childhood vaccination,uninfected
+UI_01,15,negative,anorectal,childhood vaccination,uninfected
+UI_01,16,negative,anorectal,childhood vaccination,uninfected
+UI_01,17,negative,anorectal,childhood vaccination,uninfected
+UI_01,20,negative,anorectal,childhood vaccination,uninfected
+UI_01,21,negative,anorectal,childhood vaccination,uninfected
+UI_01,22,negative,anorectal,childhood vaccination,uninfected
+UI_01,23,negative,anorectal,childhood vaccination,uninfected
+UI_01,24,negative,anorectal,childhood vaccination,uninfected
+UI_01,25,negative,anorectal,childhood vaccination,uninfected
+UI_01,4,negative,oropharyngeal,childhood vaccination,uninfected
+UI_01,12,negative,oropharyngeal,childhood vaccination,uninfected
+UI_01,20,negative,oropharyngeal,childhood vaccination,uninfected
+UI_01,26,negative,oropharyngeal,childhood vaccination,uninfected
+UI_01,21,negative,genital,childhood vaccination,uninfected
+UI_01,22,negative,genital,childhood vaccination,uninfected
+UI_01,23,negative,genital,childhood vaccination,uninfected
+UI_01,24,negative,genital,childhood vaccination,uninfected
+UI_01,25,negative,genital,childhood vaccination,uninfected
+UI_02,1,negative,serum,unknown,uninfected
+UI_02,8,negative,serum,unknown,uninfected
+UI_02,15,negative,serum,unknown,uninfected
+UI_02,1,negative,saliva,unknown,uninfected
+UI_02,2,negative,saliva,unknown,uninfected
+UI_02,3,negative,saliva,unknown,uninfected
+UI_02,4,negative,saliva,unknown,uninfected
+UI_02,5,negative,saliva,unknown,uninfected
+UI_02,6,negative,saliva,unknown,uninfected
+UI_02,7,negative,saliva,unknown,uninfected
+UI_02,9,negative,saliva,unknown,uninfected
+UI_02,10,negative,saliva,unknown,uninfected
+UI_02,11,negative,saliva,unknown,uninfected
+UI_02,12,negative,saliva,unknown,uninfected
+UI_02,13,negative,saliva,unknown,uninfected
+UI_02,15,negative,saliva,unknown,uninfected
+UI_02,16,negative,saliva,unknown,uninfected
+UI_02,17,negative,saliva,unknown,uninfected
+UI_02,18,negative,saliva,unknown,uninfected
+UI_02,19,negative,saliva,unknown,uninfected
+UI_02,20,negative,saliva,unknown,uninfected
+UI_02,21,negative,saliva,unknown,uninfected
+UI_02,22,negative,saliva,unknown,uninfected
+UI_02,2,negative,anorectal,unknown,uninfected
+UI_02,3,negative,anorectal,unknown,uninfected
+UI_02,4,negative,anorectal,unknown,uninfected
+UI_02,5,negative,anorectal,unknown,uninfected
+UI_02,6,negative,anorectal,unknown,uninfected
+UI_02,7,negative,anorectal,unknown,uninfected
+UI_02,9,negative,anorectal,unknown,uninfected
+UI_02,10,negative,anorectal,unknown,uninfected
+UI_02,11,negative,anorectal,unknown,uninfected
+UI_02,12,negative,anorectal,unknown,uninfected
+UI_02,13,negative,anorectal,unknown,uninfected
+UI_02,14,negative,anorectal,unknown,uninfected
+UI_02,16,negative,anorectal,unknown,uninfected
+UI_02,17,negative,anorectal,unknown,uninfected
+UI_02,18,negative,anorectal,unknown,uninfected
+UI_02,19,negative,anorectal,unknown,uninfected
+UI_02,20,negative,anorectal,unknown,uninfected
+UI_02,21,negative,anorectal,unknown,uninfected
+UI_02,22,negative,anorectal,unknown,uninfected
+UI_02,1,negative,oropharyngeal,unknown,uninfected
+UI_02,8,negative,oropharyngeal,unknown,uninfected
+UI_02,15,negative,oropharyngeal,unknown,uninfected
+UI_03,4,negative,serum,childhood vaccination,uninfected
+UI_03,14,negative,serum,childhood vaccination,uninfected
+UI_03,18,negative,serum,childhood vaccination,uninfected
+UI_03,25,negative,serum,childhood vaccination,uninfected
+UI_03,5,negative,saliva,childhood vaccination,uninfected
+UI_03,6,negative,saliva,childhood vaccination,uninfected
+UI_03,7,negative,saliva,childhood vaccination,uninfected
+UI_03,8,negative,saliva,childhood vaccination,uninfected
+UI_03,9,negative,saliva,childhood vaccination,uninfected
+UI_03,10,negative,saliva,childhood vaccination,uninfected
+UI_03,11,negative,saliva,childhood vaccination,uninfected
+UI_03,15,negative,saliva,childhood vaccination,uninfected
+UI_03,16,negative,saliva,childhood vaccination,uninfected
+UI_03,17,negative,saliva,childhood vaccination,uninfected
+UI_03,19,negative,saliva,childhood vaccination,uninfected
+UI_03,20,negative,saliva,childhood vaccination,uninfected
+UI_03,21,negative,saliva,childhood vaccination,uninfected
+UI_03,22,negative,saliva,childhood vaccination,uninfected
+UI_03,23,negative,saliva,childhood vaccination,uninfected
+UI_03,24,negative,saliva,childhood vaccination,uninfected
+UI_03,5,negative,anorectal,childhood vaccination,uninfected
+UI_03,6,negative,anorectal,childhood vaccination,uninfected
+UI_03,7,negative,anorectal,childhood vaccination,uninfected
+UI_03,8,negative,anorectal,childhood vaccination,uninfected
+UI_03,9,negative,anorectal,childhood vaccination,uninfected
+UI_03,10,negative,anorectal,childhood vaccination,uninfected
+UI_03,11,negative,anorectal,childhood vaccination,uninfected
+UI_03,15,negative,anorectal,childhood vaccination,uninfected
+UI_03,16,negative,anorectal,childhood vaccination,uninfected
+UI_03,17,negative,anorectal,childhood vaccination,uninfected
+UI_03,19,negative,anorectal,childhood vaccination,uninfected
+UI_03,20,negative,anorectal,childhood vaccination,uninfected
+UI_03,21,negative,anorectal,childhood vaccination,uninfected
+UI_03,22,negative,anorectal,childhood vaccination,uninfected
+UI_03,23,negative,anorectal,childhood vaccination,uninfected
+UI_03,24,negative,anorectal,childhood vaccination,uninfected
+UI_03,4,negative,oropharyngeal,childhood vaccination,uninfected
+UI_03,14,negative,oropharyngeal,childhood vaccination,uninfected
+UI_03,18,negative,oropharyngeal,childhood vaccination,uninfected
+UI_03,25,negative,oropharyngeal,childhood vaccination,uninfected

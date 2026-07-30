@@ -1,0 +1,281 @@
+title: Standardization of a high-performance RT-qPCR for viral load absolute quantification
+  of influenza A
+doi: 10.1016/j.jviromet.2021.114439
+description: Methods/assay standardization study that developed and analytically validated
+  an RT-qPCR absolute quantification assay for influenza A (M gene target) using a
+  plasmid DNA standard. The assay (WHO 2009 M-gene RT-qPCR) was applied to clinical
+  respiratory specimens from a cohort at Hospital de Clínicas, Universidade Federal
+  do Paraná (Curitiba, Brazil). Serial viral-load measurements were obtained for 19
+  hospitalized SARI patients with two collections (timed by days from symptom onset),
+  including immunocompetent and immunosuppressed participants, to assess viral-load
+  dynamics.
+analytes:
+  respiratory_influenzaA_viral_load:
+    description: Influenza A viral load by one-step RT-qPCR targeting the influenza
+      A M matrix gene using WHO (2009) primer/probe set on a ViiA 7 Real-Time PCR
+      system. RNA extracted from 200 µL clinical sample (QIAamp Viral RNA Mini Kit).
+      Absolute quantification used a plasmid DNA standard curve (six standards, 10^1
+      to 10^6 copies/reaction in triplicate). The per-patient serial values here are
+      the absolute quantities tabulated in the paper's Table 2, in copies/reaction;
+      LOD 6.77 and LOQ 20.52 are reported in the same unit. (The paper additionally
+      converts these to copies/mL and presents Log10 copies/mL in its figures, but
+      the per-patient data used here are the Table 2 copies/reaction values.)
+    specimen:
+    - nasopharyngeal_aspirate
+    - nasopharyngeal_swab
+    biomarker: influenza
+    gene_target: M
+    limit_of_detection: 6.77
+    limit_of_quantification: 20.52
+    unit: gc/reaction
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 55
+    age_group: adult
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 0
+    value: 39810717.06
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 316227766
+- attributes:
+    sex: male
+    age: 7
+    age_group: child
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 0
+    value: 50118723.36
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 630957344.5
+- attributes:
+    sex: male
+    age: 72
+    age_group: adult
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 0
+    value: 50118723.36
+  - analyte: respiratory_influenzaA_viral_load
+    time: 2
+    value: 2511886.432
+- attributes:
+    sex: female
+    age: 20
+    age_group: adult
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 0
+    value: 79432.82347
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 50118.72336
+- attributes:
+    sex: female
+    age: 71
+    age_group: adult
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompetent
+    coinfection: CoV-OC43
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 0
+    value: 10000
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 31622.7766
+- attributes:
+    sex: female
+    age: 39
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 15848931.92
+  - analyte: respiratory_influenzaA_viral_load
+    time: 4
+    value: negative
+- attributes:
+    sex: male
+    age: 3
+    age_group: child
+    subtype: A(H3N2)
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 3
+    value: 251188.6432
+  - analyte: respiratory_influenzaA_viral_load
+    time: 17
+    value: negative
+- attributes:
+    sex: female
+    age: 65
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 0
+    value: 25118864.32
+  - analyte: respiratory_influenzaA_viral_load
+    time: 6
+    value: 398.1071706
+- attributes:
+    sex: female
+    age: 36
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 2
+    value: 630957.3445
+  - analyte: respiratory_influenzaA_viral_load
+    time: 5
+    value: negative
+- attributes:
+    sex: female
+    age: 70
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 2
+    value: 63095.73445
+  - analyte: respiratory_influenzaA_viral_load
+    time: 9
+    value: 251.1886432
+- attributes:
+    sex: female
+    age: 1
+    age_group: child
+    subtype: A(H3N2)
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 2
+    value: 5011872.336
+  - analyte: respiratory_influenzaA_viral_load
+    time: 13
+    value: 19.95262315
+- attributes:
+    sex: male
+    age: 68
+    age_group: adult
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompetent
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 3
+    value: 1995.262315
+  - analyte: respiratory_influenzaA_viral_load
+    time: 6
+    value: 39.81071706
+- attributes:
+    sex: male
+    age: 22
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompromised
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 316227.766
+  - analyte: respiratory_influenzaA_viral_load
+    time: 4
+    value: 79.43282347
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+    subtype: A(H3N2)
+    immune_status: immunocompromised
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 4
+    value: 1000000
+  - analyte: respiratory_influenzaA_viral_load
+    time: 20
+    value: 316227.766
+- attributes:
+    sex: female
+    age: 20
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompromised
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 0
+    value: 79432823.47
+  - analyte: respiratory_influenzaA_viral_load
+    time: 7
+    value: 2511.886432
+- attributes:
+    sex: female
+    age: 30
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompromised
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 19952.62315
+  - analyte: respiratory_influenzaA_viral_load
+    time: 5
+    value: 3981.071706
+- attributes:
+    sex: male
+    age: 23
+    age_group: adult
+    subtype: A(H3N2)
+    immune_status: immunocompromised
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 1
+    value: 10000
+  - analyte: respiratory_influenzaA_viral_load
+    time: 4
+    value: 1000
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompromised
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 3
+    value: 50118.72336
+  - analyte: respiratory_influenzaA_viral_load
+    time: 9
+    value: 31622.7766
+- attributes:
+    sex: male
+    age: 68
+    age_group: adult
+    subtype: A(H1N1)pdm09
+    immune_status: immunocompromised
+    coinfection: hRV
+  measurements:
+  - analyte: respiratory_influenzaA_viral_load
+    time: 12
+    value: 15848.93192
+  - analyte: respiratory_influenzaA_viral_load
+    time: 20
+    value: 15.84893192
