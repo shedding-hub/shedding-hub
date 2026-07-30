@@ -112,6 +112,57 @@ fits:
   log_likelihood: -245.33189060660385
   aic: 666.6637812132077
 - dataset_id: arts2023longitudinal
+  analyte: stool_SARSCoV2_N
+  biomarker: SARS-CoV-2
+  specimen: stool
+  reference_event: symptom onset
+  unit: gc/dry gram
+  gene_target: N
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.09696268761160133
+  - 1.0665180870491284
+  - 4.0654457855098665
+  - 1.3455505341577803
+  population_cov:
+  - - 0.8545169328977527
+    - -0.2503430830918323
+    - -0.3772220125594238
+    - 1.1267847501705854
+  - - -0.2503430830918323
+    - 2.456603516640905
+    - -0.17846124887190978
+    - -1.2120941713420412
+  - - -0.3772220125594238
+    - -0.17846124887190978
+    - 1.502614270649848
+    - -1.2039159035372788
+  - - 1.1267847501705854
+    - -1.2120941713420412
+    - -1.2039159035372788
+    - 5.33780738795992
+  sigma: 0.7446033943000664
+  censoring_limit: 1.3269587536076142
+  n_subjects: 28
+  n_measurements: 274
+  n_censored: 94
+  n_excluded_subjects: 20
+  n_degenerate_subjects: 9
+  pct_subjects_with_rise: 72.0
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 2
+  converged: true
+  log_likelihood: -221.34104936393658
+  aic: 668.6820987278732
+- dataset_id: arts2023longitudinal
   analyte: stool_SARSCoV2_ORF1a
   biomarker: SARS-CoV-2
   specimen: stool
@@ -188,6 +239,57 @@ fits:
   converged: true
   log_likelihood: -265.5382698055871
   aic: 713.0765396111742
+- dataset_id: arts2023longitudinal
+  analyte: stool_SARSCoV2_ORF1a
+  biomarker: SARS-CoV-2
+  specimen: stool
+  reference_event: symptom onset
+  unit: gc/dry gram
+  gene_target: ORF1a
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -0.5712638321031916
+  - 1.088865288547168
+  - 3.814362228310091
+  - 1.4774090071426047
+  population_cov:
+  - - 2.5304088794961443
+    - -1.3202218561375532
+    - 0.506407290446752
+    - 1.5350972606097006
+  - - -1.3202218561375532
+    - 4.567337641959066
+    - 0.19725229446624715
+    - -2.3059102002741003
+  - - 0.506407290446752
+    - 0.19725229446624715
+    - 2.730124174325247
+    - -0.4132217433632017
+  - - 1.5350972606097006
+    - -2.3059102002741003
+    - -0.4132217433632017
+    - 3.9945638544881272
+  sigma: 0.8081057419556185
+  censoring_limit: 1.308555965077593
+  n_subjects: 29
+  n_measurements: 281
+  n_censored: 104
+  n_excluded_subjects: 19
+  n_degenerate_subjects: 7
+  pct_subjects_with_rise: 91.66666666666666
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 2
+  converged: true
+  log_likelihood: -247.86987021284642
+  aic: 729.7397404256928
 - dataset_id: atmar2008norwalk
   analyte: stool_norovirus
   biomarker: norovirus
@@ -342,6 +444,57 @@ fits:
   converged: true
   log_likelihood: -923.6009667181696
   aic: 2299.2019334363395
+- dataset_id: cdc2024nhphrn
+  analyte: NP_SARSCoV2_VL
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab
+  reference_event: confirmation date
+  unit: gc/mL
+  gene_target: S and N
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -0.042585176329873166
+  - -0.9490361184423545
+  - 7.170460167104183
+  - -0.6117979702281519
+  population_cov:
+  - - 0.9707388407209528
+    - 0.05646750889720402
+    - 0.9975831727694591
+    - -0.28841682977909144
+  - - 0.05646750889720402
+    - 3.5540548076340697
+    - -1.2774896879483022
+    - 0.8970900077194536
+  - - 0.9975831727694591
+    - -1.2774896879483022
+    - 3.0833703841464
+    - -0.6695738893775853
+  - - -0.28841682977909144
+    - 0.8970900077194536
+    - -0.6695738893775853
+    - 2.9222974073869707
+  sigma: 0.9354627875676634
+  censoring_limit: 4.0
+  n_subjects: 75
+  n_measurements: 1265
+  n_censored: 589
+  n_excluded_subjects: 9
+  n_degenerate_subjects: 8
+  pct_subjects_with_rise: 56.75675675675676
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 52
+  converged: true
+  log_likelihood: -963.0756796077435
+  aic: 2528.151359215487
 - dataset_id: chilengi2020pilot
   analyte: stool_rotavirus_viral_load
   biomarker: rotavirus
@@ -665,6 +818,57 @@ fits:
   log_likelihood: -301.31259429304737
   aic: 700.6251885860947
 - dataset_id: hakki2022onset
+  analyte: asymptomatic_PCR
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab+oropharyngeal_swab
+  reference_event: enrollment
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.7286012738354513
+  - 1.1690722032689016
+  - 6.220278095033263
+  - -1.0693761663700407
+  population_cov:
+  - - 0.463675447041318
+    - 0.06055996580211574
+    - 0.058332503690967256
+    - 0.03029479374702118
+  - - 0.06055996580211574
+    - 2.896630752253643
+    - 1.5209166265075054
+    - -0.07525572990797073
+  - - 0.058332503690967256
+    - 1.5209166265075054
+    - 1.668766146902764
+    - 0.6186619104499725
+  - - 0.03029479374702118
+    - -0.07525572990797073
+    - 0.6186619104499725
+    - 1.9953374616509805
+  sigma: 1.511273063656968
+  censoring_limit: 1.4971868861454845
+  n_subjects: 16
+  n_measurements: 228
+  n_censored: 85
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 6
+  pct_subjects_with_rise: 60.0
+  median_first_observed_day: 0.5
+  n_dropped_measurements: 11
+  converged: true
+  log_likelihood: -301.79235311748505
+  aic: 733.5847062349701
+- dataset_id: hakki2022onset
   analyte: asymptomatic_cultivable
   biomarker: SARS-CoV-2
   specimen: nasopharyngeal_swab+oropharyngeal_swab
@@ -741,6 +945,57 @@ fits:
   converged: true
   log_likelihood: -108.17183840845124
   aic: 290.3436768169025
+- dataset_id: hakki2022onset
+  analyte: asymptomatic_cultivable
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab+oropharyngeal_swab
+  reference_event: enrollment
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.18346997286442163
+  - -0.2281269873161989
+  - 1.4995009213241013
+  - -0.04664402243828793
+  population_cov:
+  - - 0.758715489608221
+    - 1.3696140864113269
+    - 0.9824699605451261
+    - 0.10935334870212728
+  - - 1.3696140864113269
+    - 4.887133565221988
+    - 2.5465668854032892
+    - 0.024242877621324117
+  - - 0.9824699605451261
+    - 2.5465668854032892
+    - 1.7364347233124942
+    - 0.1575035018469813
+  - - 0.10935334870212728
+    - 0.024242877621324117
+    - 0.1575035018469813
+    - 0.539193255543261
+  sigma: 1.1981394441642734
+  censoring_limit: 0.99
+  n_subjects: 13
+  n_measurements: 200
+  n_censored: 150
+  n_excluded_subjects: 4
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 62.5
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 15
+  converged: true
+  log_likelihood: -110.8855061457343
+  aic: 327.7710122914686
 - dataset_id: hakki2022onset
   analyte: symptomatic_PCR
   biomarker: SARS-CoV-2
@@ -819,6 +1074,57 @@ fits:
   log_likelihood: -377.2140672200469
   aic: 948.4281344400938
 - dataset_id: hakki2022onset
+  analyte: symptomatic_PCR
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab+oropharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.8503400261874278
+  - 1.6168237586728382
+  - 7.826712456851359
+  - -2.1174237294752123
+  population_cov:
+  - - 1.548380803204626
+    - -1.0744024177063551
+    - -1.5071655759509106
+    - 0.3462884486553145
+  - - -1.0744024177063551
+    - 1.1533661216640019
+    - 1.232073651795203
+    - -0.6414441035030765
+  - - -1.5071655759509106
+    - 1.232073651795203
+    - 2.439835407548413
+    - -0.73926658663614
+  - - 0.3462884486553145
+    - -0.6414441035030765
+    - -0.73926658663614
+    - 2.7286511210969207
+  sigma: 0.9518321564115518
+  censoring_limit: 1.8157103425484347
+  n_subjects: 33
+  n_measurements: 403
+  n_censored: 56
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 96.96969696969697
+  median_first_observed_day: -1.0
+  n_dropped_measurements: 69
+  converged: true
+  log_likelihood: -495.3930087320616
+  aic: 1256.7860174641232
+- dataset_id: hakki2022onset
   analyte: symptomatic_cultivable
   biomarker: SARS-CoV-2
   specimen: nasopharyngeal_swab+oropharyngeal_swab
@@ -895,6 +1201,57 @@ fits:
   converged: true
   log_likelihood: -166.78009755775275
   aic: 515.5601951155055
+- dataset_id: hakki2022onset
+  analyte: symptomatic_cultivable
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab+oropharyngeal_swab
+  reference_event: symptom onset
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 1.1047901406918104
+  - 0.6761504754989976
+  - 4.078873846668025
+  - -1.4275907321604036
+  population_cov:
+  - - 0.33919793774544393
+    - 0.3004551075045944
+    - -0.06747539289675812
+    - 0.1304116639380852
+  - - 0.3004551075045944
+    - 2.0693574893164204
+    - -0.7687075366019941
+    - -0.31674493226774464
+  - - -0.06747539289675812
+    - -0.7687075366019941
+    - 1.169136196421828
+    - -0.4039299638415131
+  - - 0.1304116639380852
+    - -0.31674493226774464
+    - -0.4039299638415131
+    - 3.381996351087716
+  sigma: 0.7257220958858784
+  censoring_limit: 0.99
+  n_subjects: 30
+  n_measurements: 349
+  n_censored: 173
+  n_excluded_subjects: 3
+  n_degenerate_subjects: 13
+  pct_subjects_with_rise: 86.20689655172413
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 102
+  converged: true
+  log_likelihood: -210.93595016545143
+  aic: 663.8719003309029
 - dataset_id: iwakiri2009quantitative
   analyte: stool_SaV
   biomarker: sapovirus
@@ -1008,6 +1365,57 @@ fits:
   log_likelihood: -861.8384011120244
   aic: 2079.6768022240485
 - dataset_id: ke2022daily
+  analyte: nasal_SARSCoV2
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: N1 and N2
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.5559601232296832
+  - -0.6544703563361367
+  - 6.575629842988694
+  - -1.5632056226159343
+  population_cov:
+  - - 0.40087801146091057
+    - 0.9626587961789895
+    - 0.07238058623622325
+    - 0.21692555201266406
+  - - 0.9626587961789895
+    - 5.131569602682805
+    - -0.6234517135645659
+    - 0.6198922410464925
+  - - 0.07238058623622325
+    - -0.6234517135645659
+    - 1.5173697898787801
+    - -0.06714891461754635
+  - - 0.21692555201266406
+    - 0.6198922410464925
+    - -0.06714891461754635
+    - 1.7682540454552829
+  sigma: 0.8887499422696252
+  censoring_limit: 0.8874999999999991
+  n_subjects: 60
+  n_measurements: 792
+  n_censored: 135
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 67.79661016949152
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 3
+  converged: true
+  log_likelihood: -922.9117248256496
+  aic: 2327.823449651299
+- dataset_id: ke2022daily
   analyte: saliva_SARSCoV2
   biomarker: SARS-CoV-2
   specimen: saliva
@@ -1084,6 +1492,57 @@ fits:
   converged: true
   log_likelihood: -710.811466698307
   aic: 1777.622933396614
+- dataset_id: ke2022daily
+  analyte: saliva_SARSCoV2
+  biomarker: SARS-CoV-2
+  specimen: saliva
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: N
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.3897117421774541
+  - 0.7908623730214328
+  - 7.4852303938377664
+  - -3.6032805859290793
+  population_cov:
+  - - 0.2846271726402256
+    - 0.42593118331093677
+    - -0.07448400242236952
+    - -0.28742902783275115
+  - - 0.42593118331093677
+    - 1.9739171173475905
+    - -0.26376689356131094
+    - -0.5900571753338799
+  - - -0.07448400242236952
+    - -0.26376689356131094
+    - 0.7911387893719869
+    - 0.18780612602147614
+  - - -0.28742902783275115
+    - -0.5900571753338799
+    - 0.18780612602147614
+    - 3.3686957241869093
+  sigma: 0.741551845670272
+  censoring_limit: 3.055200000000001
+  n_subjects: 60
+  n_measurements: 843
+  n_censored: 176
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 76.27118644067797
+  median_first_observed_day: -2.0
+  n_dropped_measurements: 61
+  converged: true
+  log_likelihood: -821.6329577077488
+  aic: 2125.2659154154976
 - dataset_id: kirby2016vomiting
   analyte: emesis_norovirus_gii
   biomarker: norovirus
@@ -1196,6 +1655,57 @@ fits:
   converged: true
   log_likelihood: -234.37126732345794
   aic: 776.7425346469158
+- dataset_id: kissler2021viral
+  analyte: AN_OPS_SARSCoV2_viral
+  biomarker: SARS-CoV-2
+  specimen: anterior_nares_swab+oropharyngeal_swab
+  reference_event: confirmation date
+  unit: gc/mL
+  gene_target: N1, N2, RdRp
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.21425794906583814
+  - 0.06997727180944277
+  - 5.699353849976835
+  - -1.5924104272048225
+  population_cov:
+  - - 0.8957435868580044
+    - 0.6154485418390869
+    - 1.0096990733847229
+    - 0.271330465433895
+  - - 0.6154485418390869
+    - 3.2681313928063878
+    - -0.026930452202688457
+    - -0.060702846470036154
+  - - 1.0096990733847229
+    - -0.026930452202688457
+    - 3.760427764804169
+    - 0.7901060702171248
+  - - 0.271330465433895
+    - -0.060702846470036154
+    - 0.7901060702171248
+    - 0.8155677329498556
+  sigma: 0.78549634340936
+  censoring_limit: 2.65760968215156
+  n_subjects: 60
+  n_measurements: 2072
+  n_censored: 1858
+  n_excluded_subjects: 8
+  n_degenerate_subjects: 10
+  pct_subjects_with_rise: 63.1578947368421
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 323
+  converged: true
+  log_likelihood: -323.9627205850093
+  aic: 1129.9254411700185
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_first_pos
   biomarker: SARS-CoV-2
@@ -1750,6 +2260,57 @@ fits:
   log_likelihood: -21.282837727275773
   aic: 296.5656754545515
 - dataset_id: natarajan2022gastrointestinal
+  analyte: E-gRNA-RT-qPCR-OG
+  biomarker: SARS-CoV-2
+  specimen: stool
+  reference_event: enrollment
+  unit: gc/mL
+  gene_target: E
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -1.5345379783409878
+  - 0.8541502895991677
+  - 3.6932130034965645
+  - 0.18817192688226067
+  population_cov:
+  - - 2.409893282476803
+    - -1.6313520482015615
+    - 1.0557636519717422
+    - 0.40589453207793347
+  - - -1.6313520482015615
+    - 3.8499432136934675
+    - -0.7888781595793477
+    - 1.1403632944137552
+  - - 1.0557636519717422
+    - -0.7888781595793477
+    - 0.9955599898021497
+    - -0.07084058619359551
+  - - 0.40589453207793347
+    - 1.1403632944137552
+    - -0.07084058619359551
+    - 2.366477436543379
+  sigma: 0.22817963616514142
+  censoring_limit: 3.0
+  n_subjects: 45
+  n_measurements: 296
+  n_censored: 196
+  n_excluded_subjects: 56
+  n_degenerate_subjects: 10
+  pct_subjects_with_rise: 54.54545454545454
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 132
+  converged: true
+  log_likelihood: -9.985619003369834
+  aic: 381.97123800673967
+- dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
   specimen: stool
@@ -1896,6 +2457,57 @@ fits:
   converged: false
   log_likelihood: 27.45781211484053
   aic: 169.08437577031896
+- dataset_id: natarajan2022gastrointestinal
+  analyte: RdRP-gRNA-RT-qPCR-ZY
+  biomarker: SARS-CoV-2
+  specimen: stool
+  reference_event: enrollment
+  unit: gc/mL
+  gene_target: RdRP
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -0.789486795832829
+  - 0.36280425906155583
+  - 5.323705510232225
+  - 0.42395391345316386
+  population_cov:
+  - - 2.332968953980184
+    - -1.205165971393504
+    - 2.142870010051676
+    - 0.05526122893968901
+  - - -1.205165971393504
+    - 3.2426217870106644
+    - -2.0228078104592573
+    - 0.41517149651294
+  - - 2.142870010051676
+    - -2.0228078104592573
+    - 5.579300514784428
+    - 0.4347616423537335
+  - - 0.05526122893968901
+    - 0.41517149651294
+    - 0.4347616423537335
+    - 1.9889524795025832
+  sigma: 0.16090225390429722
+  censoring_limit: 3.0
+  n_subjects: 40
+  n_measurements: 296
+  n_censored: 182
+  n_excluded_subjects: 60
+  n_degenerate_subjects: 14
+  pct_subjects_with_rise: 61.111111111111114
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 138
+  converged: false
+  log_likelihood: 35.55013946172223
+  aic: 250.89972107655552
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -2071,6 +2683,57 @@ fits:
   converged: true
   log_likelihood: -108.2802740841239
   aic: 470.5605481682478
+- dataset_id: natarajan2022gastrointestinal
+  analyte: N1-gRNA-ddPCR-OG
+  biomarker: SARS-CoV-2
+  specimen: stool
+  reference_event: enrollment
+  unit: gc/mL
+  gene_target: N1
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -2.1974381884128324
+  - 0.7604625163040868
+  - 3.441219679835329
+  - 0.35494890459384604
+  population_cov:
+  - - 1.5751964178125095
+    - -1.4185704378297492
+    - 0.25854171394760694
+    - -1.0039468174596284
+  - - -1.4185704378297492
+    - 5.765645199709719
+    - -0.19124833379752693
+    - 2.281855003199406
+  - - 0.25854171394760694
+    - -0.19124833379752693
+    - 0.8975020658847056
+    - -0.32048193543873466
+  - - -1.0039468174596284
+    - 2.281855003199406
+    - -0.32048193543873466
+    - 2.16529384289059
+  sigma: 0.5324184808256045
+  censoring_limit: 3.0
+  n_subjects: 29
+  n_measurements: 127
+  n_censored: 65
+  n_excluded_subjects: 73
+  n_degenerate_subjects: 14
+  pct_subjects_with_rise: 50.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 68
+  converged: true
+  log_likelihood: -56.98548038956649
+  aic: 347.97096077913295
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-ddPCR-ZY
   biomarker: SARS-CoV-2
@@ -2253,6 +2916,57 @@ fits:
   converged: true
   log_likelihood: -55.10253239433588
   aic: 202.20506478867176
+- dataset_id: natarajan2022gastrointestinal
+  analyte: N1-sgRNA-RT-qPCR-OG
+  biomarker: SARS-CoV-2
+  specimen: stool
+  reference_event: enrollment
+  unit: gc/mL
+  gene_target: N1
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -0.15679956024273015
+  - -0.902364087146189
+  - 5.306107722117401
+  - -0.4229277501960515
+  population_cov:
+  - - 3.259647518186641
+    - -3.108689912452317
+    - 2.1564105888680194
+    - 0.9809216218330574
+  - - -3.108689912452317
+    - 6.543781304718979
+    - -2.010879331006645
+    - -0.00873704980982659
+  - - 2.1564105888680194
+    - -2.010879331006645
+    - 3.150955268959971
+    - 0.70283187844285
+  - - 0.9809216218330574
+    - -0.00873704980982659
+    - 0.70283187844285
+    - 0.9736084903826497
+  sigma: 1.1215045037393938
+  censoring_limit: 3.0
+  n_subjects: 17
+  n_measurements: 117
+  n_censored: 84
+  n_excluded_subjects: 82
+  n_degenerate_subjects: 5
+  pct_subjects_with_rise: 66.66666666666666
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 139
+  converged: true
+  log_likelihood: -60.59018656916888
+  aic: 259.18037313833776
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-sgRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -2541,6 +3255,57 @@ fits:
   log_likelihood: -51.5855461897532
   aic: 135.1710923795064
 - dataset_id: vetter2020daily
+  analyte: NPS_SARSCoV2
+  biomarker: SARS-CoV-2
+  specimen: nasopharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: unknown
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - 0.5341103763604268
+  - 0.5273246044604825
+  - 8.074038805544319
+  - -0.8962295039214851
+  population_cov:
+  - - 0.4681042340464432
+    - 0.7485671426555283
+    - -0.6204815104074078
+    - 1.2413460564230578
+  - - 0.7485671426555283
+    - 3.7762589338089483
+    - -2.554125316675656
+    - -0.3307535609457948
+  - - -0.6204815104074078
+    - -2.554125316675656
+    - 3.3564161393592444
+    - -2.043903266160731
+  - - 1.2413460564230578
+    - -0.3307535609457948
+    - -2.043903266160731
+    - 7.417498260492946
+  sigma: 0.9338979474244516
+  censoring_limit: 3.257171728403014
+  n_subjects: 5
+  n_measurements: 39
+  n_censored: 2
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 60.0
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -50.958319326878254
+  aic: 143.9166386537565
+- dataset_id: vetter2020daily
   analyte: OPS_SARSCoV2
   biomarker: SARS-CoV-2
   specimen: oropharyngeal_swab
@@ -2757,6 +3522,57 @@ fits:
   converged: true
   log_likelihood: -85.82141565587625
   aic: 201.6428313117525
+- dataset_id: xu2020characteristics
+  analyte: rectal_swab_SARSCoV2
+  biomarker: SARS-CoV-2
+  specimen: rectal_swab
+  reference_event: hospital admission
+  unit: gc/mL
+  gene_target: ORF1ab, N
+  dose: null
+  vaccine_type: null
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -0.9691679672217604
+  - 1.9601276725411387
+  - 5.755576423941848
+  - -1.818964957990516
+  population_cov:
+  - - 0.29713630167212063
+    - 0.12969642212741705
+    - 0.030959357330275675
+    - 0.21516427092088314
+  - - 0.12969642212741705
+    - 1.174873327023105
+    - -0.7732558863352227
+    - -1.4064369958723233
+  - - 0.030959357330275675
+    - -0.7732558863352227
+    - 0.9017180458288034
+    - 2.0973298429003857
+  - - 0.21516427092088314
+    - -1.4064369958723233
+    - 2.0973298429003857
+    - 5.5434736606658115
+  sigma: 0.7764569367469264
+  censoring_limit: 2.494154594018443
+  n_subjects: 7
+  n_measurements: 62
+  n_censored: 7
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 1
+  converged: true
+  log_likelihood: -69.29090819567345
+  aic: 196.5818163913469
 - dataset_id: xu2020characteristics
   analyte: nasopharyngeal_swab_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2996,6 +3812,13 @@ skipped:
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: alsharrah2020clinical
+  analyte: NPS_SARSCoV2
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
 - dataset_id: aoki2010duration
   analyte: stool_norovirus
   model: gamma
@@ -3005,6 +3828,13 @@ skipped:
     \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: aoki2010duration
+  analyte: stool_norovirus
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: arts2023longitudinal
   analyte: stool_PMMoV
   model: exponential
@@ -3015,6 +3845,13 @@ skipped:
 - dataset_id: arts2023longitudinal
   analyte: stool_PMMoV
   model: gamma
+  reason: non_pathogen_biomarker
+  message: Analyte 'stool_PMMoV' measures 'PMMoV', a fecal-strength/normalization
+    indicator rather than a pathogen shed by infected people. It has no time-since-infection
+    trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: arts2023longitudinal
+  analyte: stool_PMMoV
+  model: gamma_shifted
   reason: non_pathogen_biomarker
   message: Analyte 'stool_PMMoV' measures 'PMMoV', a fecal-strength/normalization
     indicator rather than a pathogen shed by infected people. It has no time-since-infection
@@ -3033,6 +3870,20 @@ skipped:
   message: Analyte 'stool_crAssphage' measures 'crAssphage', a fecal-strength/normalization
     indicator rather than a pathogen shed by infected people. It has no time-since-infection
     trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: arts2023longitudinal
+  analyte: stool_crAssphage
+  model: gamma_shifted
+  reason: non_pathogen_biomarker
+  message: Analyte 'stool_crAssphage' measures 'crAssphage', a fecal-strength/normalization
+    indicator rather than a pathogen shed by infected people. It has no time-since-infection
+    trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: atmar2008norwalk
+  analyte: stool_norovirus
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_CT
   model: exponential
@@ -3043,6 +3894,13 @@ skipped:
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_CT
   model: gamma
+  reason: ct_units
+  message: Analyte 'NP_SARSCoV2_CT' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: cdc2024nhphrn
+  analyte: NP_SARSCoV2_CT
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'NP_SARSCoV2_CT' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3056,6 +3914,13 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: chilengi2020pilot
+  analyte: stool_rotavirus_viral_load
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_rotavirus_viral_load' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: covid2020clinical
   analyte: Stool_SARSCoV2
   model: exponential
@@ -3066,6 +3931,13 @@ skipped:
 - dataset_id: covid2020clinical
   analyte: Stool_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'Stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: covid2020clinical
+  analyte: Stool_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'Stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3080,6 +3952,13 @@ skipped:
 - dataset_id: covid2020clinical
   analyte: Serum_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'Serum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: covid2020clinical
+  analyte: Serum_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'Serum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3094,6 +3973,13 @@ skipped:
 - dataset_id: covid2020clinical
   analyte: Sputum_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'Sputum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: covid2020clinical
+  analyte: Sputum_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'Sputum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3108,6 +3994,13 @@ skipped:
 - dataset_id: covid2020clinical
   analyte: OPS_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: covid2020clinical
+  analyte: OPS_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3122,6 +4015,13 @@ skipped:
 - dataset_id: covid2020clinical
   analyte: NPS_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: covid2020clinical
+  analyte: NPS_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3136,6 +4036,13 @@ skipped:
 - dataset_id: covid2020clinical
   analyte: Urine_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'Urine_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: covid2020clinical
+  analyte: Urine_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'Urine_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3150,6 +4057,13 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: cowley2017rotavirus
+  analyte: stool_rotavirus_vaccine_dose1
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_rotavirus_vaccine_dose1' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: cowley2017rotavirus
   analyte: stool_rotavirus_vaccine_dose2
   model: gamma
   reason: no_rise_observed
@@ -3159,6 +4073,13 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: cowley2017rotavirus
+  analyte: stool_rotavirus_vaccine_dose2
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_rotavirus_vaccine_dose2' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: cowley2017rotavirus
   analyte: stool_rotavirus_vaccine_dose3
   model: gamma
   reason: no_rise_observed
@@ -3167,6 +4088,13 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: cowley2017rotavirus
+  analyte: stool_rotavirus_vaccine_dose3
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_rotavirus_vaccine_dose3' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: fajnzylber2020sars
   analyte: Nasopharyngeal_SARSCoV2_N
   model: gamma
@@ -3177,6 +4105,13 @@ skipped:
     \ b0 unidentifiable \u2014 the likelihood is monotone in it until the c0 > 0 constraint\
     \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
     \ sampling."
+- dataset_id: fajnzylber2020sars
+  analyte: Nasopharyngeal_SARSCoV2_N
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'Nasopharyngeal_SARSCoV2_N' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: fajnzylber2020sars
   analyte: Oropharyngeal_PBS_SARSCoV2_N
   model: gamma
@@ -3189,6 +4124,11 @@ skipped:
     \ because sampling began after peak shedding, so there is no rise phase from which\
     \ to estimate b0."
 - dataset_id: fajnzylber2020sars
+  analyte: Oropharyngeal_PBS_SARSCoV2_N
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'Oropharyngeal_PBS_SARSCoV2_N'.
+- dataset_id: fajnzylber2020sars
   analyte: Oropharyngeal_VTM_SARSCoV2_N
   model: exponential
   reason: too_few_subjects
@@ -3199,6 +4139,11 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'Oropharyngeal_VTM_SARSCoV2_N'.
 - dataset_id: fajnzylber2020sars
+  analyte: Oropharyngeal_VTM_SARSCoV2_N
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'Oropharyngeal_VTM_SARSCoV2_N'.
+- dataset_id: fajnzylber2020sars
   analyte: Sputum_SARSCoV2_N
   model: gamma
   reason: no_rise_observed
@@ -3207,6 +4152,13 @@ skipped:
     \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: fajnzylber2020sars
+  analyte: Sputum_SARSCoV2_N
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'Sputum_SARSCoV2_N' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: fajnzylber2020sars
   analyte: Plasma_SARSCoV2_N
   model: exponential
@@ -3228,6 +4180,13 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: fajnzylber2020sars
+  analyte: Plasma_SARSCoV2_N
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'Plasma_SARSCoV2_N' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: fajnzylber2020sars
   analyte: Urine_SARSCoV2_N
   model: exponential
   reason: degenerate_fit
@@ -3247,6 +4206,11 @@ skipped:
     \ Sampling here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: fajnzylber2020sars
+  analyte: Urine_SARSCoV2_N
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'Urine_SARSCoV2_N'.
 - dataset_id: gautret2020hydroxychloroquine
   analyte: nasopharyngeal_swab_SARSCoV2_Ct
   model: exponential
@@ -3257,6 +4221,13 @@ skipped:
 - dataset_id: gautret2020hydroxychloroquine
   analyte: nasopharyngeal_swab_SARSCoV2_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_SARSCoV2_Ct' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: gautret2020hydroxychloroquine
+  analyte: nasopharyngeal_swab_SARSCoV2_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_Ct' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -3272,6 +4243,11 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'stool_rotavirus_viral_load'.
 - dataset_id: gutierrez2021nosocomial
+  analyte: stool_rotavirus_viral_load
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_rotavirus_viral_load'.
+- dataset_id: gutierrez2021nosocomial
   analyte: stool_norovirus_viral_load
   model: exponential
   reason: too_few_subjects
@@ -3282,6 +4258,11 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'stool_norovirus_viral_load'.
 - dataset_id: gutierrez2021nosocomial
+  analyte: stool_norovirus_viral_load
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_norovirus_viral_load'.
+- dataset_id: gutierrez2021nosocomial
   analyte: stool_rotavirus_ct
   model: exponential
   reason: ct_units
@@ -3291,6 +4272,13 @@ skipped:
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_rotavirus_ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_rotavirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: gutierrez2021nosocomial
+  analyte: stool_rotavirus_ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_rotavirus_ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3305,6 +4293,13 @@ skipped:
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_norovirus_ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_norovirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: gutierrez2021nosocomial
+  analyte: stool_norovirus_ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_norovirus_ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3328,6 +4323,13 @@ skipped:
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: han2020sequential
+  analyte: nasopharynx_E
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasopharynx_E' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: han2020sequential
   analyte: oropharynx_E
   model: exponential
   reason: too_few_subjects_for_population
@@ -3345,6 +4347,13 @@ skipped:
     \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
     \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
     \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: han2020sequential
+  analyte: oropharynx_E
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'oropharynx_E' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: han2020sequential
   analyte: NPSOPS_E
   model: exponential
@@ -3366,6 +4375,13 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: han2020sequential
+  analyte: NPSOPS_E
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'NPSOPS_E' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: han2020sequential
   analyte: plasma_E
   model: exponential
   reason: too_few_subjects_for_population
@@ -3383,6 +4399,11 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: han2020sequential
+  analyte: plasma_E
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'plasma_E'.
 - dataset_id: han2020sequential
   analyte: saliva_E
   model: exponential
@@ -3402,6 +4423,11 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: han2020sequential
+  analyte: saliva_E
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'saliva_E'.
+- dataset_id: han2020sequential
   analyte: urine_E
   model: exponential
   reason: too_few_subjects_for_population
@@ -3420,6 +4446,13 @@ skipped:
     \ estimate a population covariance. This usually means the model is not identifiable\
     \ from this data: for the gamma model, typically because sampling began after\
     \ peak shedding, so there is no rise phase from which to estimate b0."
+- dataset_id: han2020sequential
+  analyte: urine_E
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'urine_E' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: han2020sequential
   analyte: sputum_E
   model: exponential
@@ -3441,6 +4474,13 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: han2020sequential
+  analyte: sputum_E
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'sputum_E' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: han2020sequential
   analyte: stool_E
   model: exponential
   reason: too_few_subjects_for_population
@@ -3458,6 +4498,13 @@ skipped:
     covariance to be estimable rather than rank-deficient; below that the 'population'
     is an artefact of averaging too few individuals, and simulating from it produces
     near-identical or wildly extrapolated individuals.
+- dataset_id: han2020sequential
+  analyte: stool_E
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_E' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: iwakiri2009quantitative
   analyte: stool_SaV
   model: gamma
@@ -3467,6 +4514,13 @@ skipped:
     \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
     \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
     \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: iwakiri2009quantitative
+  analyte: stool_SaV
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_SaV' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: jacobsen2022differentiation
   analyte: stool_rotavirus_vaccine_rv1
   model: exponential
@@ -3478,6 +4532,11 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'stool_rotavirus_vaccine_rv1'.
 - dataset_id: jacobsen2022differentiation
+  analyte: stool_rotavirus_vaccine_rv1
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_rotavirus_vaccine_rv1'.
+- dataset_id: jacobsen2022differentiation
   analyte: stool_rotavirus_vaccine_rv5
   model: exponential
   reason: too_few_subjects
@@ -3487,6 +4546,11 @@ skipped:
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'stool_rotavirus_vaccine_rv5'.
+- dataset_id: jacobsen2022differentiation
+  analyte: stool_rotavirus_vaccine_rv5
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_rotavirus_vaccine_rv5'.
 - dataset_id: jones2021estimating
   analyte: swab_SARSCoV2_onset
   model: exponential
@@ -3509,6 +4573,13 @@ skipped:
     \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
     \ sampling."
 - dataset_id: jones2021estimating
+  analyte: swab_SARSCoV2_onset
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'swab_SARSCoV2_onset' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: jones2021estimating
   analyte: swab_SARSCoV2_confirmation
   model: exponential
   reason: no_data_after_reference_event
@@ -3520,6 +4591,11 @@ skipped:
   model: gamma
   reason: no_positive_measurements
   message: Analyte 'swab_SARSCoV2_confirmation' has no positive measurements to fit.
+- dataset_id: jones2021estimating
+  analyte: swab_SARSCoV2_confirmation
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'swab_SARSCoV2_confirmation'.
 - dataset_id: kamel2011presence
   analyte: stool_hav_viral_load
   model: exponential
@@ -3530,6 +4606,11 @@ skipped:
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'stool_hav_viral_load'.
+- dataset_id: kamel2011presence
+  analyte: stool_hav_viral_load
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_hav_viral_load'.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_VL
   model: exponential
@@ -3553,6 +4634,13 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kim2020viral
+  analyte: sputum_SARSCoV2_RdRp_VL
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'sputum_SARSCoV2_RdRp_VL' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: kim2020viral
   analyte: swab_SARSCoV2_RdRp_VL
   model: exponential
   reason: too_few_subjects_for_population
@@ -3571,6 +4659,13 @@ skipped:
     that the 'population' is an artefact of averaging too few individuals, and simulating
     from it produces near-identical or wildly extrapolated individuals.
 - dataset_id: kim2020viral
+  analyte: swab_SARSCoV2_RdRp_VL
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'swab_SARSCoV2_RdRp_VL' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: kim2020viral
   analyte: swab_SARSCoV2_E_Ct
   model: exponential
   reason: ct_units
@@ -3580,6 +4675,13 @@ skipped:
 - dataset_id: kim2020viral
   analyte: swab_SARSCoV2_E_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'swab_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kim2020viral
+  analyte: swab_SARSCoV2_E_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3594,6 +4696,13 @@ skipped:
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_E_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'sputum_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kim2020viral
+  analyte: sputum_SARSCoV2_E_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3608,6 +4717,13 @@ skipped:
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_E_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kim2020viral
+  analyte: stool_SARSCoV2_E_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3622,6 +4738,13 @@ skipped:
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_RdRp_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kim2020viral
+  analyte: stool_SARSCoV2_RdRp_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3636,6 +4759,13 @@ skipped:
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'sputum_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kim2020viral
+  analyte: sputum_SARSCoV2_RdRp_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3650,6 +4780,13 @@ skipped:
 - dataset_id: kim2020viral
   analyte: swab_SARSCoV2_RdRp_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'swab_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kim2020viral
+  analyte: swab_SARSCoV2_RdRp_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3665,6 +4802,14 @@ skipped:
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngealswab_SARSCoV2_symptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: kimse2020viral
+  analyte: oropharyngealswab_SARSCoV2_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_symptomatic' is reported in 'cycle
     threshold'. Cycle-threshold values are inversely related to concentration and
@@ -3681,6 +4826,14 @@ skipped:
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngealswab_SARSCoV2_asymptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: kimse2020viral
+  analyte: oropharyngealswab_SARSCoV2_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_asymptomatic' is reported in 'cycle
     threshold'. Cycle-threshold values are inversely related to concentration and
@@ -3709,6 +4862,13 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
+  analyte: emesis_norovirus_gi
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'emesis_norovirus_gi' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
+- dataset_id: kirby2016vomiting
   analyte: emesis_norovirus_gii
   model: gamma
   reason: no_rise_observed
@@ -3717,6 +4877,13 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: kirby2016vomiting
+  analyte: emesis_norovirus_gii
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'emesis_norovirus_gii' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: kirby2016vomiting
   analyte: stool_norovirus_gi
   model: exponential
@@ -3740,6 +4907,13 @@ skipped:
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
 - dataset_id: kirby2016vomiting
+  analyte: stool_norovirus_gi
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus_gi' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: kirby2016vomiting
   analyte: stool_norovirus_gii
   model: exponential
   reason: degenerate_fit
@@ -3761,6 +4935,13 @@ skipped:
     \ not identifiable from this data: for the gamma model, typically because sampling\
     \ began after peak shedding, so there is no rise phase from which to estimate\
     \ b0."
+- dataset_id: kirby2016vomiting
+  analyte: stool_norovirus_gii
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus_gii' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: kissler2021densely
   analyte: AN_OPS_SARSCoV2
   model: exponential
@@ -3771,6 +4952,13 @@ skipped:
 - dataset_id: kissler2021densely
   analyte: AN_OPS_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'AN_OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kissler2021densely
+  analyte: AN_OPS_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3785,6 +4973,13 @@ skipped:
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'AN_OPS_SARSCoV2_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: kissler2021viral
+  analyte: AN_OPS_SARSCoV2_ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2_ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -3795,20 +4990,40 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'RdRp_first_pos'.
 - dataset_id: lavezzo2020suppression
+  analyte: RdRp_first_pos
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'RdRp_first_pos'.
+- dataset_id: lavezzo2020suppression
   analyte: E_first_pos
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'E_first_pos'.
+- dataset_id: lavezzo2020suppression
+  analyte: E_first_pos
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'E_first_pos'.
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_symptom
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'RdRp_symptom'.
 - dataset_id: lavezzo2020suppression
+  analyte: RdRp_symptom
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'RdRp_symptom'.
+- dataset_id: lavezzo2020suppression
   analyte: E_symptom
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'E_symptom'.
+- dataset_id: lavezzo2020suppression
+  analyte: E_symptom
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'E_symptom'.
 - dataset_id: lescure2020clinical
   analyte: naso_swab_SARSCoV2
   model: gamma
@@ -3818,6 +5033,20 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: lescure2020clinical
+  analyte: naso_swab_SARSCoV2
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'naso_swab_SARSCoV2' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: liu2024longitudinal
+  analyte: stool_SARSCoV2_N1
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_SARSCoV2_N1' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: liu2024longitudinal
   analyte: stool_PMMoV
   model: exponential
@@ -3828,6 +5057,13 @@ skipped:
 - dataset_id: liu2024longitudinal
   analyte: stool_PMMoV
   model: gamma
+  reason: non_pathogen_biomarker
+  message: Analyte 'stool_PMMoV' measures 'PMMoV', a fecal-strength/normalization
+    indicator rather than a pathogen shed by infected people. It has no time-since-infection
+    trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: liu2024longitudinal
+  analyte: stool_PMMoV
+  model: gamma_shifted
   reason: non_pathogen_biomarker
   message: Analyte 'stool_PMMoV' measures 'PMMoV', a fecal-strength/normalization
     indicator rather than a pathogen shed by infected people. It has no time-since-infection
@@ -3846,6 +5082,20 @@ skipped:
   message: Analyte 'stool_mtDNA' measures 'mtDNA', a fecal-strength/normalization
     indicator rather than a pathogen shed by infected people. It has no time-since-infection
     trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: liu2024longitudinal
+  analyte: stool_mtDNA
+  model: gamma_shifted
+  reason: non_pathogen_biomarker
+  message: Analyte 'stool_mtDNA' measures 'mtDNA', a fecal-strength/normalization
+    indicator rather than a pathogen shed by infected people. It has no time-since-infection
+    trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: lui2020viral
+  analyte: 2019-nCoV_N1
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '2019-nCoV_N1' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: mackiewicz2004detection
   analyte: serum_hav_rna
   model: exponential
@@ -3857,6 +5107,11 @@ skipped:
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'serum_hav_rna'.
 - dataset_id: mackiewicz2004detection
+  analyte: serum_hav_rna
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'serum_hav_rna'.
+- dataset_id: mackiewicz2004detection
   analyte: saliva_hav_rna
   model: exponential
   reason: too_few_subjects
@@ -3866,6 +5121,18 @@ skipped:
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'saliva_hav_rna'.
+- dataset_id: mackiewicz2004detection
+  analyte: saliva_hav_rna
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'saliva_hav_rna'.
+- dataset_id: mijatovicrustempasic2017shedding
+  analyte: stool_rotavirus_vaccine
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_rotavirus_vaccine' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: mijatovicrustempasic2017shedding
   analyte: stool_pcv1_dna
   model: gamma
@@ -3875,6 +5142,13 @@ skipped:
     \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: mijatovicrustempasic2017shedding
+  analyte: stool_pcv1_dna
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_pcv1_dna' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: miyoshi2015long
   analyte: stool_norovirus
   model: gamma
@@ -3884,12 +5158,28 @@ skipped:
     \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: miyoshi2015long
+  analyte: stool_norovirus
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-ZY
   model: gamma
   reason: no_rise_observed
   message: "The gamma model needs a rise to fit, and analyte 'E-gRNA-RT-qPCR-ZY' does\
     \ not show one: only 32% of subjects did, against a required 50%. Sampling here\
+    \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
+    \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
+    \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
+  analyte: E-gRNA-RT-qPCR-ZY
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'E-gRNA-RT-qPCR-ZY' does\
+    \ not show one: only 38% of subjects did, against a required 50%. Sampling here\
     \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
@@ -3903,8 +5193,26 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: natarajan2022gastrointestinal
+  analyte: RdRP-gRNA-RT-qPCR-OG
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'RdRP-gRNA-RT-qPCR-OG'\
+    \ does not show one: only 17% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-RT-qPCR-OG
   model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'N1-gRNA-RT-qPCR-OG'\
+    \ does not show one: only 42% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
+  analyte: N1-gRNA-RT-qPCR-OG
+  model: gamma_shifted
   reason: no_rise_observed
   message: "The gamma model needs a rise to fit, and analyte 'N1-gRNA-RT-qPCR-OG'\
     \ does not show one: only 42% of subjects did, against a required 50%. Sampling\
@@ -3921,6 +5229,15 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: natarajan2022gastrointestinal
+  analyte: N1-gRNA-RT-qPCR-ZY
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'N1-gRNA-RT-qPCR-ZY'\
+    \ does not show one: only 35% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
   analyte: N2-gRNA-RT-qPCR-OG
   model: gamma
   reason: no_rise_observed
@@ -3930,11 +5247,29 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: natarajan2022gastrointestinal
+  analyte: N2-gRNA-RT-qPCR-OG
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'N2-gRNA-RT-qPCR-OG'\
+    \ does not show one: only 44% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
   analyte: N2-gRNA-RT-qPCR-ZY
   model: gamma
   reason: no_rise_observed
   message: "The gamma model needs a rise to fit, and analyte 'N2-gRNA-RT-qPCR-ZY'\
     \ does not show one: only 32% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
+  analyte: N2-gRNA-RT-qPCR-ZY
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'N2-gRNA-RT-qPCR-ZY'\
+    \ does not show one: only 35% of subjects did, against a required 50%. Sampling\
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
@@ -3957,6 +5292,15 @@ skipped:
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: natarajan2022gastrointestinal
+  analyte: N1-gRNA-ddPCR-ZY
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'N1-gRNA-ddPCR-ZY' does\
+    \ not show one: only 36% of subjects did, against a required 50%. Sampling here\
+    \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
+    \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
+    \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-ddPCR-OG
   model: gamma
   reason: no_rise_observed
@@ -3965,6 +5309,11 @@ skipped:
     \ Sampling here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
+  analyte: E-gRNA-ddPCR-OG
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'E-gRNA-ddPCR-OG'.
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-ddPCR-ZY
   model: gamma
@@ -3975,11 +5324,25 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: natarajan2022gastrointestinal
+  analyte: E-gRNA-ddPCR-ZY
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'E-gRNA-ddPCR-ZY'.
+- dataset_id: natarajan2022gastrointestinal
   analyte: N1-sgRNA-RT-qPCR-ZY
   model: gamma
   reason: no_rise_observed
   message: "The gamma model needs a rise to fit, and analyte 'N1-sgRNA-RT-qPCR-ZY'\
     \ does not show one: only 45% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: natarajan2022gastrointestinal
+  analyte: N1-sgRNA-RT-qPCR-ZY
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'N1-sgRNA-RT-qPCR-ZY'\
+    \ does not show one: only 42% of subjects did, against a required 50%. Sampling\
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
@@ -4001,6 +5364,15 @@ skipped:
     \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
     \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
     \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: obara2008single
+  analyte: stool_norovirus
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'stool_norovirus' does\
+    \ not show one: only 0% of subjects did, against a required 50%. Sampling here\
+    \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
+    \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
+    \ exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: pace2024prevalence
   analyte: stool_SARSCoV2
   model: exponential
@@ -4015,6 +5387,13 @@ skipped:
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: pace2024prevalence
+  analyte: stool_SARSCoV2
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
 - dataset_id: peiris2003clinical
   analyte: NPS_SARS
   model: gamma
@@ -4025,6 +5404,11 @@ skipped:
     rank-deficient; below that the 'population' is an artefact of averaging too few
     individuals, and simulating from it produces near-identical or wildly extrapolated
     individuals.
+- dataset_id: peiris2003clinical
+  analyte: NPS_SARS
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'NPS_SARS'.
 - dataset_id: portes2016non
   analyte: stool_adenovirus_viral_load
   model: exponential
@@ -4041,6 +5425,11 @@ skipped:
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'stool_adenovirus_viral_load'.
+- dataset_id: portes2016non
+  analyte: stool_adenovirus_viral_load
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_adenovirus_viral_load'.
 - dataset_id: salvatore2020epidemiological
   analyte: N1_probe
   model: exponential
@@ -4051,6 +5440,13 @@ skipped:
 - dataset_id: salvatore2020epidemiological
   analyte: N1_probe
   model: gamma
+  reason: ct_units
+  message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold values
+    are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: salvatore2020epidemiological
+  analyte: N1_probe
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold values
     are inversely related to concentration and already on a log scale, so neither
@@ -4065,6 +5461,13 @@ skipped:
 - dataset_id: seah2020assessing
   analyte: nasopharyngeal_swab_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: seah2020assessing
+  analyte: nasopharyngeal_swab_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4079,6 +5482,13 @@ skipped:
 - dataset_id: shrestha2020distribution
   analyte: swab_SARSCoV2_N_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: shrestha2020distribution
+  analyte: swab_SARSCoV2_N_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -4093,6 +5503,13 @@ skipped:
 - dataset_id: tan2021early
   analyte: swab_SARSCoV2_N
   model: gamma
+  reason: ct_units
+  message: Analyte 'swab_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: tan2021early
+  analyte: swab_SARSCoV2_N
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -4107,6 +5524,13 @@ skipped:
 - dataset_id: team2020clinical
   analyte: naso_swab_SARSCoV2_N_Ct
   model: gamma
+  reason: ct_units
+  message: Analyte 'naso_swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: team2020clinical
+  analyte: naso_swab_SARSCoV2_N_Ct
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'naso_swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -4121,6 +5545,13 @@ skipped:
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_norovirus_ct_symptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: teunis2015shedding
+  analyte: stool_norovirus_ct_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_symptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4135,6 +5566,13 @@ skipped:
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_norovirus_ct_asymptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: teunis2015shedding
+  analyte: stool_norovirus_ct_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4149,6 +5587,13 @@ skipped:
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: teunis2015shedding
+  analyte: stool_norovirus_concentration_symptomatic
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus_concentration_symptomatic' has no detected reading
+    at or before its reference event, so a shifted onset has nothing to locate and
+    would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: teunis2015shedding
   analyte: stool_norovirus_concentration_asymptomatic
   model: gamma
   reason: no_rise_observed
@@ -4158,6 +5603,15 @@ skipped:
     \ b0 unidentifiable \u2014 the likelihood is monotone in it until the c0 > 0 constraint\
     \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
     \ sampling."
+- dataset_id: teunis2015shedding
+  analyte: stool_norovirus_concentration_asymptomatic
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'stool_norovirus_concentration_asymptomatic'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: tjon2006high
   analyte: stool_hepatitis_a_virus
   model: gamma
@@ -4167,6 +5621,13 @@ skipped:
     the between-subject covariance to be estimable rather than rank-deficient; below
     that the 'population' is an artefact of averaging too few individuals, and simulating
     from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: tjon2006high
+  analyte: stool_hepatitis_a_virus
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_hepatitis_a_virus' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: tsang2016individual
   analyte: NPSOPS
   model: gamma
@@ -4176,6 +5637,11 @@ skipped:
     \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
     \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
     \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: tsang2016individual
+  analyte: NPSOPS
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'NPSOPS'.
 - dataset_id: tu2008norovirus
   analyte: stool_norovirus_viral_load
   model: exponential
@@ -4186,6 +5652,11 @@ skipped:
   model: gamma
   reason: too_few_subjects
   message: No subject has at least 3 usable measurements for analyte 'stool_norovirus_viral_load'.
+- dataset_id: tu2008norovirus
+  analyte: stool_norovirus_viral_load
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_norovirus_viral_load'.
 - dataset_id: vetter2020daily
   analyte: OPS_SARSCoV2
   model: gamma
@@ -4196,6 +5667,13 @@ skipped:
     rank-deficient; below that the 'population' is an artefact of averaging too few
     individuals, and simulating from it produces near-identical or wildly extrapolated
     individuals.
+- dataset_id: vetter2020daily
+  analyte: OPS_SARSCoV2
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'OPS_SARSCoV2' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_ORF1ab
   model: exponential
@@ -4206,6 +5684,13 @@ skipped:
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_ORF1ab
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_ORF1ab' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: wang2020fecal
+  analyte: stool_SARSCoV2_ORF1ab
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -4224,6 +5709,20 @@ skipped:
   message: Analyte 'stool_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: wang2020fecal
+  analyte: stool_SARSCoV2_N
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: woelfel2020virological
+  analyte: stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: woelfel2020virological
   analyte: sputum
   model: gamma
@@ -4234,6 +5733,13 @@ skipped:
     \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
     \ model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: woelfel2020virological
+  analyte: sputum
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'sputum' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: woelfel2020virological
   analyte: oropharyngeal_swab
   model: gamma
   reason: no_rise_observed
@@ -4242,6 +5748,13 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: woelfel2020virological
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'oropharyngeal_swab' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: xing2020prolonged
   analyte: stool_SARSCoV2
   model: exponential
@@ -4252,6 +5765,13 @@ skipped:
 - dataset_id: xing2020prolonged
   analyte: stool_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: xing2020prolonged
+  analyte: stool_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -4266,6 +5786,13 @@ skipped:
 - dataset_id: xing2020prolonged
   analyte: oropharyngeal_swab_SARSCoV2
   model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: xing2020prolonged
+  analyte: oropharyngeal_swab_SARSCoV2
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4290,6 +5817,16 @@ skipped:
     the between-subject covariance to be estimable rather than rank-deficient; below
     that the 'population' is an artefact of averaging too few individuals, and simulating
     from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: xu2020characteristics
+  analyte: nasopharyngeal_swab_SARSCoV2
+  model: gamma_shifted
+  reason: too_few_subjects_for_population
+  message: Analyte 'nasopharyngeal_swab_SARSCoV2' has 2 subject(s) (6 fitted, 4 excluded
+    as degenerate) feeding the population summary of the 'gamma_shifted' model, which
+    has 4 parameters. At least 5 are needed for the between-subject covariance to
+    be estimable rather than rank-deficient; below that the 'population' is an artefact
+    of averaging too few individuals, and simulating from it produces near-identical
+    or wildly extrapolated individuals.
 - dataset_id: yang2020laboratory
   analyte: upper_resp_tract
   model: exponential
@@ -4300,6 +5837,13 @@ skipped:
 - dataset_id: yang2020laboratory
   analyte: upper_resp_tract
   model: gamma
+  reason: ct_units
+  message: Analyte 'upper_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: yang2020laboratory
+  analyte: upper_resp_tract
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'upper_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
@@ -4318,6 +5862,20 @@ skipped:
   message: Analyte 'lower_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: yang2020laboratory
+  analyte: lower_resp_tract
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'lower_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: yen2011detection
+  analyte: stool_rotavirus_vaccine
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_rotavirus_vaccine' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: yilmaz2020upper
   analyte: oropharyngealswab_SARSCoV2
   model: exponential
@@ -4332,6 +5890,20 @@ skipped:
   message: Analyte 'oropharyngealswab_SARSCoV2' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
     log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yilmaz2020upper
+  analyte: oropharyngealswab_SARSCoV2
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngealswab_SARSCoV2' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: young2020epidemiologic
+  analyte: swab_SARSCoV2_N
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'swab_SARSCoV2_N' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
   model: exponential
@@ -4343,6 +5915,14 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic' is reported in
+    'cycle threshold'. Cycle-threshold values are inversely related to concentration
+    and already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: yuan2021sars
+  analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic' is reported in
     'cycle threshold'. Cycle-threshold values are inversely related to concentration
@@ -4359,6 +5939,14 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic' is reported
+    in 'cycle threshold'. Cycle-threshold values are inversely related to concentration
+    and already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: yuan2021sars
+  analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic' is reported
     in 'cycle threshold'. Cycle-threshold values are inversely related to concentration
@@ -4375,6 +5963,14 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_symptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: yuan2021sars
+  analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_symptomatic' is reported in 'cycle
     threshold'. Cycle-threshold values are inversely related to concentration and
@@ -4391,6 +5987,14 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_asymptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: yuan2021sars
+  analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_asymptomatic' is reported in 'cycle
     threshold'. Cycle-threshold values are inversely related to concentration and
@@ -4406,6 +6010,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: stool_SARSCoV2_ORF1ab_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4420,6 +6031,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: stool_SARSCoV2_ORF1ab_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4434,6 +6052,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: stool_SARSCoV2_N_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4448,6 +6073,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'stool_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: stool_SARSCoV2_N_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4462,6 +6094,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'serum_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: serum_SARSCoV2_ORF1ab_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4476,6 +6115,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'serum_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: serum_SARSCoV2_ORF1ab_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4490,6 +6136,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'serum_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: serum_SARSCoV2_N_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4504,6 +6157,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'serum_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: serum_SARSCoV2_N_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4518,6 +6178,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'urine_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: urine_SARSCoV2_ORF1ab_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4532,6 +6199,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'urine_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: urine_SARSCoV2_ORF1ab_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4546,6 +6220,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_symptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'urine_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: urine_SARSCoV2_N_symptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4560,6 +6241,13 @@ skipped:
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_asymptomatic
   model: gamma
+  reason: ct_units
+  message: Analyte 'urine_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: yuan2021sars
+  analyte: urine_SARSCoV2_N_asymptomatic
+  model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
@@ -4574,6 +6262,13 @@ skipped:
     rather than rank-deficient; below that the 'population' is an artefact of averaging
     too few individuals, and simulating from it produces near-identical or wildly
     extrapolated individuals.
+- dataset_id: zuo2020alterations
+  analyte: stool_SARSCoV2_SymptomOnset
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_SARSCoV2_SymptomOnset' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: zuo2020alterations
   analyte: stool_SARSCoV2_ConfirmationDate
   model: exponential
@@ -4596,3 +6291,10 @@ skipped:
     \ the model is not identifiable from this data: for the gamma model, typically\
     \ because sampling began after peak shedding, so there is no rise phase from which\
     \ to estimate b0."
+- dataset_id: zuo2020alterations
+  analyte: stool_SARSCoV2_ConfirmationDate
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_SARSCoV2_ConfirmationDate' has no detected reading at or
+    before its reference event, so a shifted onset has nothing to locate and would
+    only absorb curve shape. Fit the 'gamma' model instead.

@@ -68,7 +68,8 @@ class SheddingDataError(ValueError):
         reason: Machine-readable cause, one of ``ct_units``,
             ``non_pathogen_biomarker``, ``too_few_subjects``,
             ``no_positive_measurements``, ``no_data_after_reference_event``,
-            ``unknown_analyte``, ``no_rise_observed``, ``degenerate_fit``,
+            ``no_pre_event_readings``, ``unknown_analyte``,
+            ``no_rise_observed``, ``degenerate_fit``,
             ``too_few_subjects_for_population``. The catalog builder records
             this so a missing study reads as unsuitable, not as a bug.
 
@@ -365,6 +366,27 @@ def prepare_observations(
             f"No subject has at least {min_observations} usable measurements for "
             f"analyte {analyte!r}.",
             "too_few_subjects",
+        )
+
+    # gamma_shifted exists to use readings at or before the reference event, and
+    # is only defensible where there are some. Without one, t0 has nothing to
+    # locate and merely absorbs curve shape: on woelfel2020virological stool the
+    # onset came back at +0.97 days -- after the reference event -- and AIC
+    # preferred the plain gamma model, 223.8 against 239.8, on the identical 79
+    # observations.
+    #
+    # This is also what keeps the two rise-and-fall models comparable at all.
+    # Where gamma_shifted is admitted it is fitted to more observations than
+    # gamma, so their AICs are not comparable and the choice between them is
+    # made by data availability -- this gate -- rather than by fit statistic.
+    if model == "gamma_shifted" and not any(
+        time <= 0 for subject in retained for time in subject["times"]
+    ):
+        raise SheddingDataError(
+            f"Analyte {analyte!r} has no detected reading at or before its "
+            "reference event, so a shifted onset has nothing to locate and "
+            "would only absorb curve shape. Fit the 'gamma' model instead.",
+            "no_pre_event_readings",
         )
 
     # Both models describe shedding from the reference event onwards -- the

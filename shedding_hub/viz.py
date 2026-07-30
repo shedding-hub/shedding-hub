@@ -2727,8 +2727,15 @@ CATALOG_FIT_MAX_LEGEND_ENTRIES = 6
 CATALOG_FIT_GROUP_KEYS = ("biomarker", "specimen", "unit", "reference_event")
 
 # The linestyle channel carries the model and the colour channel the study,
-# which is why extrapolation is left to opacity.
-CATALOG_FIT_LINESTYLES = {"exponential": "-", "gamma": "--"}
+# which is why extrapolation is left to opacity. One entry per model in MODELS:
+# a missing one is a KeyError at draw time, which is how gamma_shifted was
+# caught -- by the README doctest against the real catalog, after the synthetic
+# unit tests had passed by only ever building two models.
+CATALOG_FIT_LINESTYLES = {
+    "exponential": "-",
+    "gamma": "--",
+    "gamma_shifted": "-.",
+}
 
 
 def _catalog_fit_horizon(fits) -> float:

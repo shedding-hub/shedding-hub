@@ -98,11 +98,32 @@ rather than re-adding `+SKIP`.*
 
 ```
 
-The gamma model is only fitted where a rise was actually observed — at least
-half of a study's subjects must have their peak reading later than their first
-sample, since otherwise its rise parameter is unidentifiable. 38 analyte/model
-combinations in the shipped catalog are refused for this reason; `catalog.skipped`
-records why anything is missing.
+Three models are available. `exponential` is a pure decay from the reference
+event. `gamma` rises and falls after it. `gamma_shifted` is the same rise and
+fall with a fitted onset `t0`, so its support starts when shedding started
+rather than at the reference event:
+
+```
+c(t) = c0 * (t - t0)**b0 * exp(-a0 * (t - t0)),   t > t0
+```
+
+Both rise-and-fall models are only fitted where a rise was actually observed —
+at least half of a study's subjects must have their peak reading later than
+their first sample, since otherwise the rise parameter is unidentifiable.
+`catalog.skipped` records why anything is missing.
+
+`gamma_shifted` exists because `gamma` is undefined at `t <= 0` and therefore
+discards every reading there, including **26,023 detected measurements at
+exactly the reference event**. It is offered only for analytes that have a
+detected reading at or before their reference event; without one, `t0` has
+nothing to locate and merely absorbs curve shape.
+
+**Do not compare `gamma` and `gamma_shifted` by AIC.** Where `gamma_shifted` is
+admitted it is fitted to *more observations* than `gamma` — 2072 against 1679
+for `kissler2021viral` — and AIC is only comparable across models fitted to the
+same data. The choice between them is made by data availability, which is what
+the gate above encodes, not by fit statistic. Comparing `exponential` against
+either is likewise only meaningful when `n_measurements` matches.
 
 Pass `incubation_period` to express times as days since infection rather than
 days since the study's reference event:

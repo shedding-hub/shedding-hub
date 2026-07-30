@@ -20,6 +20,7 @@ from shedding_hub.shedding_catalog import (  # noqa: E402
     CATALOG_PATH,
     fit_shedding_models,
 )
+from shedding_hub.shedding_models import MODELS  # noqa: E402
 
 
 def main() -> int:
@@ -33,10 +34,11 @@ def main() -> int:
     parser.add_argument(
         "--models",
         nargs="+",
-        default=["exponential", "gamma"],
+        default=list(MODELS),
         help=(
-            "Models to fit. Defaults to the two the fitter can estimate; "
-            "gamma_shifted exists in the model layer but is not yet fittable."
+            "Models to fit. Defaults to all of them. gamma_shifted is refused "
+            "for any analyte without a detected reading at or before its "
+            "reference event, so it appears only where it is identifiable."
         ),
     )
     parser.add_argument(

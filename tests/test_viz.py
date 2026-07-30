@@ -810,6 +810,8 @@ def _stub_fit(
     a0 = np.log(2.0) / half_life
     if model == "exponential":
         mean = np.array([np.log(a0), np.log(peak_log10 * LN10)])
+    elif model == "gamma_shifted":
+        mean = np.array([np.log(a0), np.log(peak_day), peak_log10, -1.0])
     else:
         mean = np.array([np.log(a0), np.log(peak_day), peak_log10])
     return SheddingFit(
@@ -842,8 +844,10 @@ def _stub_fit(
 
 
 def _curves(ax):
-    """The model curves in a panel: solid for exponential, dashed for gamma."""
-    return [line for line in ax.get_lines() if line.get_linestyle() in ("-", "--")]
+    """The model curves in a panel, one linestyle per model."""
+    return [
+        line for line in ax.get_lines() if line.get_linestyle() in ("-", "--", "-.")
+    ]
 
 
 def _limits(ax):
@@ -891,6 +895,22 @@ def test_plot_catalog_fits_draws_both_models_of_a_study_in_one_colour():
     assert len(curves) == 2
     assert len({curve.get_color() for curve in curves}) == 1
     assert {curve.get_linestyle() for curve in curves} == {"-", "--"}
+
+
+def test_plot_catalog_fits_draws_every_model_with_its_own_linestyle():
+    """Three models now, and the catalog holds fits of all three.
+
+    Caught by the README doctest against the real catalog, which the synthetic
+    unit tests had missed by only ever building two.
+    """
+    fits = [
+        _stub_fit("study_a", model="exponential"),
+        _stub_fit("study_a", model="gamma"),
+        _stub_fit("study_a", model="gamma_shifted"),
+    ]
+    curves = _curves(sh.plot_catalog_fits(fits).axes[0])
+    assert len(curves) == 3
+    assert {curve.get_linestyle() for curve in curves} == {"-", "--", "-."}
 
 
 def test_plot_catalog_fits_gives_each_study_its_own_colour():

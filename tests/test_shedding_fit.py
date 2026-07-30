@@ -145,6 +145,28 @@ def _shifted_truth_dataset(n_subjects=25, seed=0, t0=-2.5):
     }
 
 
+def test_gamma_shifted_refuses_an_analyte_with_no_pre_event_readings():
+    """Without a reading at or before the reference event, t0 only absorbs shape.
+
+    On ``woelfel2020virological`` stool, which has none, the onset comes back at
+    +0.97 days — after the reference event — and AIC prefers the plain gamma
+    model, 223.8 against 239.8, on the identical 79 observations. The fourth
+    parameter has nothing to locate, so it should not be offered.
+    """
+    dataset = _shifted_truth_dataset()
+    for participant in dataset["participants"]:
+        participant["measurements"] = [
+            m for m in participant["measurements"] if m["time"] > 0
+        ]
+
+    with pytest.raises(SheddingDataError) as excinfo:
+        prepare_observations(dataset, "stool", "gamma_shifted")
+    assert excinfo.value.reason == "no_pre_event_readings"
+
+    # the plain gamma model is unaffected and still fits it
+    assert prepare_observations(dataset, "stool", "gamma").times.min() > 0
+
+
 def test_gamma_shifted_fits_and_recovers_a_known_onset():
     """End to end: the fitter must estimate the fourth parameter, not just carry it."""
     fit = fit_shedding_model(
