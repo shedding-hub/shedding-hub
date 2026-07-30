@@ -909,7 +909,10 @@ def _initial_theta(model: str, observations: Observations) -> np.ndarray:
 
 
 def _over_extrapolated_subjects(
-    theta: np.ndarray, model: str, observations: Observations
+    theta: np.ndarray,
+    model: str,
+    observations: Observations,
+    margin: float = _MAX_PEAK_ABOVE_OBSERVED,
 ) -> np.ndarray:
     """
     Flag subjects whose implied peak sits far above anything the study observed.
@@ -946,6 +949,8 @@ def _over_extrapolated_subjects(
         theta: Fitted log-parameters, shape ``(n_subjects, k)``.
         model: ``"exponential"`` or ``"gamma"``.
         observations: The observations the subjects were fitted to.
+        margin: Log10 units of headroom above the highest observed
+            concentration. Defaults to ``_MAX_PEAK_ABOVE_OBSERVED``.
 
     Returns:
         Boolean array of length ``n_subjects``, True where the subject's implied
@@ -955,7 +960,7 @@ def _over_extrapolated_subjects(
     positive = ~observations.censored
     if not positive.any():
         return np.zeros(theta.shape[0], dtype=bool)
-    ceiling = float(np.nanmax(observations.values[positive])) + _MAX_PEAK_ABOVE_OBSERVED
+    ceiling = float(np.nanmax(observations.values[positive])) + margin
     heights = to_population_coords(model, np.exp(theta))[:, -1]
     return np.asarray(heights > ceiling)
 
@@ -1131,6 +1136,7 @@ def fit_shedding_model(
     analyte: str,
     model: str = "gamma",
     min_observations: int | None = None,
+    max_peak_above_observed: float = _MAX_PEAK_ABOVE_OBSERVED,
 ) -> SheddingFit:
     """
     Fit a shedding model to one analyte by censored maximum likelihood.
@@ -1139,6 +1145,11 @@ def fit_shedding_model(
         dataset: Dataset dictionary from ``load_dataset``.
         analyte: Key into ``dataset["analytes"]``.
         model: ``"exponential"`` or ``"gamma"``.
+        max_peak_above_observed: How far above the analyte's highest observed
+            concentration a subject's implied peak may sit, in log10 units,
+            before it is excluded from the population summary as extrapolation.
+            See ``_over_extrapolated_subjects``. Lower it to judge the catalog
+            under a stricter reading of what counts as supportable.
         min_observations: Minimum usable measurements per subject; defaults to the
             number of per-subject parameters.
 
@@ -1244,7 +1255,7 @@ def fit_shedding_model(
     # dominate. The last of those is judged against the data rather than against
     # the parameter bounds, which is why it needs the observations.
     degenerate = _degenerate_subjects(theta, model) | _over_extrapolated_subjects(
-        theta, model, observations
+        theta, model, observations, max_peak_above_observed
     )
     n_degenerate = int(degenerate.sum())
     retained = ~degenerate

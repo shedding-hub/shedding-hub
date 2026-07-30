@@ -225,12 +225,28 @@ whether the *spread* is right — which is most of what separates a usable fit f
 an unusable one. Pass `dispersion` to see the narrowed cohort, or
 `show_band=False` to omit it.
 
+Measurements the fitter discarded are drawn too, marked as excluded rather than as
+data the curve should explain. The gamma model is undefined at `t <= 0`, so
+readings there are dropped — 391 of them for `kissler2021viral` — and a page that
+drew nothing would imply the study never sampled before its reference event.
+
 `make review` renders every fit in the catalog this way into a single
 `shedding_catalog_review.pdf`, one page each. `make review_range` writes a second
 PDF shading the full range of the simulated cohort rather than its central 90%,
-with the y axis widened to fit — what each fit considers *possible* rather than
-typical. Expect those axes to be startling; a range is also a property of how many
-individuals were drawn, which is why each page names its draw count.
+with the 95% interval drawn inside it as two dashed lines and the y axis widened
+to fit — what each fit considers *possible* rather than typical. A range is also a
+property of how many individuals were drawn, which is why each page names its
+draw count.
+
+To judge how much the over-extrapolation gate matters, rebuild the catalog at a
+different threshold and render it:
+
+```bash
+python scripts/build_shedding_catalog.py --max-peak-above-observed 2 \
+    --output shedding_catalog_gate2.yaml
+python scripts/build_catalog_review.py --catalog shedding_catalog_gate2.yaml \
+    --output shedding_catalog_review_gate2.pdf
+```
 
 ## 🤝 Contributing
 

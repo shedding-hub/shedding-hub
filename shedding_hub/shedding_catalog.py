@@ -260,6 +260,7 @@ def fit_shedding_models(
     *,
     models=MODELS,
     min_observations: int | None = None,
+    max_peak_above_observed: float | None = None,
 ) -> SheddingCatalog:
     """
     Fit every analyte of every dataset, for every requested model.
@@ -280,6 +281,10 @@ def fit_shedding_models(
         datasets: Dataset dictionaries from ``load_dataset``.
         models: Model names to fit. Defaults to both.
         min_observations: Passed through to the fitter.
+        max_peak_above_observed: Passed through to the fitter, which uses it to
+            decide when a subject's implied peak is extrapolation rather than
+            estimate. ``None`` keeps the fitter's default. Lower it to rebuild
+            the catalog under a stricter reading and compare.
 
     Returns:
         A ``SheddingCatalog``.
@@ -294,11 +299,17 @@ def fit_shedding_models(
                 try:
                     with warnings.catch_warnings():
                         warnings.simplefilter("ignore", UserWarning)
+                        extra = (
+                            {}
+                            if max_peak_above_observed is None
+                            else {"max_peak_above_observed": max_peak_above_observed}
+                        )
                         fit = fit_shedding_model(
                             dataset,
                             analyte=analyte,
                             model=model,
                             min_observations=min_observations,
+                            **extra,
                         )
                     # Applied here rather than inside fit_shedding_model so that
                     # fitting one subject on purpose stays possible, while a fit

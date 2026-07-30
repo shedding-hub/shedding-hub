@@ -66,6 +66,9 @@ def main() -> int:
     args = parser.parse_args()
 
     quantiles = (0.0, 1.0) if args.range else (0.05, 0.95)
+    # A range band shows the extremes but not where the mass is, so the range
+    # variant also draws the 95% interval as two dashed lines inside it.
+    inner = (0.025, 0.975) if args.range else None
     default_name = (
         "shedding_catalog_review_range.pdf"
         if args.range
@@ -105,6 +108,7 @@ def main() -> int:
                         fit,
                         datasets[fit.dataset_id],
                         band_quantiles=quantiles,
+                        band_inner_quantiles=inner,
                         band_sets_ylim=args.range,
                         n_simulated=args.n_simulated,
                     )

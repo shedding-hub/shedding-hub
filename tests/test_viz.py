@@ -1331,6 +1331,32 @@ def test_plot_fit_diagnostic_band_can_drive_the_y_axis(fitted_pair):
     assert unfloored.get_ylim()[0] <= np.nanmin(vertices)
 
 
+def test_plot_fit_diagnostic_draws_inner_quantile_lines(fitted_pair):
+    """A range band alone says nothing about where the mass is; two dashed
+    lines give the reader the 95% interval inside it."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), band_inner_quantiles=(0.025, 0.975)
+    ).axes[0]
+
+    inner = [
+        line
+        for line in ax.get_lines()
+        if line.get_linestyle() == "--" and "95%" in line.get_label()
+    ]
+    assert len(inner) == 1  # one labelled; its pair carries no legend entry
+    dashed = [line for line in ax.get_lines() if line.get_linestyle() == "--"]
+    assert len(dashed) == 2
+    lower, upper = sorted(dashed, key=lambda line: np.nanmedian(line.get_ydata()))
+    assert (np.nanmedian(lower.get_ydata())) < np.nanmedian(upper.get_ydata())
+
+
+def test_plot_fit_diagnostic_inner_quantiles_are_off_by_default(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert not [line for line in ax.get_lines() if line.get_linestyle() == "--"]
+
+
 def test_plot_fit_diagnostic_range_band_floors_the_y_axis(fitted_pair):
     """A full-range band reaches 10**-30, which is nobody's idea of a
     concentration; the axis stops at a floor rather than following it down."""
@@ -1384,6 +1410,61 @@ def test_plot_fit_diagnostic_shows_observations_before_the_reference_event(
 
     ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
     assert ax.get_xlim()[0] <= -4.0
+
+
+def _with_pre_onset_measurements(dataset, days=(-3.0, -2.0, -1.0, 0.0)):
+    """Give every participant readings at or before the reference event."""
+    for participant in dataset["participants"]:
+        participant["measurements"] = [
+            {"analyte": "stool", "time": day, "value": 5e4} for day in days
+        ] + participant["measurements"]
+    return dataset
+
+
+def test_plot_fit_diagnostic_marks_measurements_the_gamma_model_dropped(
+    make_synthetic_dataset,
+):
+    """The gamma curve is undefined at t <= 0, so the fitter discards those
+    readings — 391 of them for kissler2021viral. Drawing nothing there implies
+    the study never sampled before its reference event, which is false.
+    """
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "gamma",
+            [0.0, np.log(2.0), np.log(12.0)],
+            np.diag([0.04, 0.04, 0.09]),
+            n_subjects=12,
+            seed=3,
+        )
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    observations = prepare_observations(dataset, "stool", "gamma")
+    assert observations.times.min() > 0, "the fitter should have dropped them"
+
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    dropped = _collection(ax, "Dropped (t <= 0)")
+    assert len(dropped.get_offsets()) == 12 * 4
+    assert ax.get_xlim()[0] <= -3.0
+
+
+def test_plot_fit_diagnostic_does_not_double_draw_exponential_pre_onset_points(
+    make_synthetic_dataset,
+):
+    """The exponential model keeps t <= 0 readings, so they are ordinary
+    observations and must not also appear as dropped."""
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "exponential",
+            [np.log(0.6), np.log(18.0)],
+            np.diag([0.04, 0.04]),
+            n_subjects=8,
+            seed=4,
+        )
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert not [c for c in ax.collections if "dropped" in str(c.get_label()).lower()]
+    assert ax.get_xlim()[0] <= -3.0
 
 
 def test_plot_fit_diagnostic_keeps_the_axis_at_zero_without_negative_times(

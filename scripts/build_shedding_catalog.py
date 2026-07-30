@@ -30,6 +30,17 @@ def main() -> int:
     parser.add_argument(
         "--output", default=str(CATALOG_PATH), help="Catalog file to write."
     )
+    parser.add_argument(
+        "--max-peak-above-observed",
+        type=float,
+        default=None,
+        help=(
+            "Log10 headroom above an analyte's highest observed concentration "
+            "before a subject's implied peak counts as extrapolation and is "
+            "kept out of the population summary. Defaults to the fitter's 3.0. "
+            "Write a stricter catalog elsewhere with --output to compare."
+        ),
+    )
     args = parser.parse_args()
 
     data_dir = pathlib.Path(args.data)
@@ -47,7 +58,9 @@ def main() -> int:
     print(f"fitting {len(datasets)} dataset(s)", flush=True)
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", UserWarning)
-        catalog = fit_shedding_models(datasets)
+        catalog = fit_shedding_models(
+            datasets, max_peak_above_observed=args.max_peak_above_observed
+        )
 
     output = pathlib.Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)

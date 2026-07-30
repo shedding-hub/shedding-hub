@@ -3049,6 +3049,7 @@ def plot_fit_diagnostic(
     show_band: bool = True,
     dispersion: float = 1.0,
     band_quantiles: tuple[float, float] = (0.05, 0.95),
+    band_inner_quantiles: tuple[float, float] | None = None,
     band_sets_ylim: bool = False,
     band_ylim_floor: float = FIT_DIAGNOSTIC_YLIM_FLOOR,
     n_simulated: int = 2000,
@@ -3095,6 +3096,10 @@ def plot_fit_diagnostic(
             range is not a fixed property of the population: it grows with
             ``n_simulated``, since drawing more individuals reaches further into
             the tails.
+        band_inner_quantiles: When given, draw a dashed line at each of these
+            two quantiles inside the band. Useful with a full-range band, which
+            shows the extremes but says nothing about where the mass sits;
+            ``(0.025, 0.975)`` puts the 95% interval back on the page.
         band_sets_ylim: Let the band widen the y axis to fit. ``False``
             (default) keeps the axis on the data and the median curve, clipping
             the band, so the observations stay legible. Set it ``True`` with
@@ -3176,6 +3181,48 @@ def plot_fit_diagnostic(
         label=f"Censoring limit ({limit:.2f})",
     )
 
+    # The gamma curve is undefined at t <= 0 -- c(t) = c0*t^b0*e^(-a0*t) sends
+    # log10 to -inf as t -> 0 -- so prepare_observations discards readings there,
+    # 391 of them for kissler2021viral. Drawing nothing would imply the study
+    # never sampled before its reference event. They are marked as excluded
+    # rather than shown as observations, because the curve was never asked to
+    # explain them. The exponential model keeps such readings, so they are
+    # ordinary observations there and this does not apply.
+    dropped_times, dropped_values = [], []
+    if fit.model == "gamma":
+        for participant in dataset.get("participants") or []:
+            for measurement in participant.get("measurements") or []:
+                if measurement.get("analyte") != fit.analyte:
+                    continue
+                when = measurement.get("time")
+                if not isinstance(when, (int, float)) or isinstance(when, bool):
+                    continue
+                if when > 0:
+                    continue
+                value = measurement.get("value")
+                if (
+                    isinstance(value, (int, float))
+                    and not isinstance(value, bool)
+                    and value > 0
+                ):
+                    dropped_times.append(float(when))
+                    dropped_values.append(float(np.log10(value)))
+                elif value == NEGATIVE_VALUE:
+                    dropped_times.append(float(when))
+                    dropped_values.append(limit)
+    if dropped_times:
+        ax.scatter(
+            dropped_times,
+            dropped_values,
+            s=26,
+            marker="x",
+            color="tab:orange",
+            alpha=0.55,
+            linewidths=0.9,
+            zorder=2,
+            label="Dropped (t <= 0)",
+        )
+
     horizon = float(observations.times.max())
     times = np.linspace(CATALOG_FIT_START_DAY, horizon, 400)
     values = log10_concentration(fit.model, fit.median_params[None, :], times)[0]
@@ -3190,6 +3237,25 @@ def plot_fit_diagnostic(
         cohort = log10_concentration(fit.model, drawn, times)
         lower, upper = np.nanquantile(cohort, band_quantiles, axis=0)
         band_bounds = (float(np.nanmin(lower)), float(np.nanmax(upper)))
+        if band_inner_quantiles is not None:
+            # A range band shows the extremes but not where the mass sits. These
+            # two dashed lines put an interval back inside it. Only the first is
+            # labelled, so the legend gets one entry for the pair.
+            inner = np.nanquantile(cohort, band_inner_quantiles, axis=0)
+            width = int(
+                round((band_inner_quantiles[1] - band_inner_quantiles[0]) * 100)
+            )
+            for index, edge in enumerate(inner):
+                ax.plot(
+                    times,
+                    edge,
+                    ls="--",
+                    color="tab:red",
+                    lw=1.1,
+                    alpha=0.75,
+                    zorder=2,
+                    label=f"{width}% of individuals" if index == 0 else "_nolegend_",
+                )
         ax.fill_between(
             times,
             lower,
@@ -3236,7 +3302,7 @@ def plot_fit_diagnostic(
     # still starts just after zero: the exponential model is defined for negative
     # times but grows without bound going backwards, so drawing it there would
     # add an extrapolation nothing constrains.
-    earliest = min(0.0, float(observations.times.min()))
+    earliest = min(0.0, float(observations.times.min()), *(dropped_times or [0.0]))
     margin = 0.02 * (horizon - earliest)
     ax.set_xlim(earliest - margin, horizon + margin)
     # The observations set the y range, but the curve's peak can sit above every

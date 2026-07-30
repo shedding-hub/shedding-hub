@@ -658,6 +658,28 @@ def test_over_extrapolated_subject_is_excluded_from_the_population():
     assert fit.n_degenerate_subjects == 1
 
 
+def test_over_extrapolation_gate_threshold_is_adjustable():
+    """Tightening the gate excludes more subjects, loosening it fewer.
+
+    The default of 3 log10 is a judgement about how much backward extrapolation
+    is tolerable, so it is worth being able to rebuild the catalog at another
+    value and compare.
+    """
+    dataset = _late_sampled_dataset(n_normal=4, n_steep=1)
+    loose = fit_shedding_model(
+        dataset, analyte="stool", model="exponential", max_peak_above_observed=3.0
+    )
+    with pytest.warns(UserWarning):
+        tight = fit_shedding_model(
+            dataset, analyte="stool", model="exponential", max_peak_above_observed=1.5
+        )
+    # Subjects imply 5.9, 6.1, 6.3, 6.6 and 16.1 against an observed max of 5.0.
+    # A 3 log10 gate (ceiling 8.0) reaches only the artifact; a 1.5 one
+    # (ceiling 6.5) also takes the highest two real subjects.
+    assert loose.n_degenerate_subjects == 1
+    assert tight.n_degenerate_subjects == 2
+
+
 def test_over_extrapolation_gate_leaves_a_well_behaved_fit_alone():
     """No subject over-extrapolates here, so nothing may be excluded."""
     dataset = _late_sampled_dataset(n_normal=5, n_steep=0)
