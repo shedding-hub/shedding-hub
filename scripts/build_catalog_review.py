@@ -40,10 +40,38 @@ def main() -> int:
     )
     parser.add_argument(
         "--output",
-        default=str(REPO_ROOT / "shedding_catalog_review.pdf"),
-        help="PDF to write.",
+        default=None,
+        help="PDF to write. Defaults to shedding_catalog_review[_range].pdf.",
+    )
+    parser.add_argument(
+        "--range",
+        action="store_true",
+        help=(
+            "Shade the full range of the simulated cohort instead of its central "
+            "90%%, and let that range set the y axis. Shows what the fit "
+            "considers possible rather than typical; the axis widens a long way, "
+            "which is the point."
+        ),
+    )
+    parser.add_argument(
+        "--n-simulated",
+        type=int,
+        default=2000,
+        help=(
+            "Individuals drawn per page for the band. Raising it widens a "
+            "--range band, a range being a property of the sample size as much "
+            "as of the population."
+        ),
     )
     args = parser.parse_args()
+
+    quantiles = (0.0, 1.0) if args.range else (0.05, 0.95)
+    default_name = (
+        "shedding_catalog_review_range.pdf"
+        if args.range
+        else "shedding_catalog_review.pdf"
+    )
+    output = pathlib.Path(args.output or (REPO_ROOT / default_name))
 
     catalog = load_shedding_catalog(args.catalog)
     if not catalog.fits:
@@ -58,7 +86,6 @@ def main() -> int:
 
     datasets: dict = {}
     failures = []
-    output = pathlib.Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
 
     with PdfPages(output) as pdf:
@@ -74,7 +101,13 @@ def main() -> int:
             try:
                 with warnings.catch_warnings():
                     warnings.simplefilter("ignore", UserWarning)
-                    figure = plot_fit_diagnostic(fit, datasets[fit.dataset_id])
+                    figure = plot_fit_diagnostic(
+                        fit,
+                        datasets[fit.dataset_id],
+                        band_quantiles=quantiles,
+                        band_sets_ylim=args.range,
+                        n_simulated=args.n_simulated,
+                    )
             except Exception as error:  # noqa: BLE001
                 # One unrenderable fit should not cost the other 82 pages, but it
                 # is reported rather than passed over: a missing page would

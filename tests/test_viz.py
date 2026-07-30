@@ -1273,6 +1273,51 @@ def test_plot_fit_diagnostic_band_can_be_disabled(fitted_pair):
     assert not [c for c in ax.collections if "simulated" in str(c.get_label()).lower()]
 
 
+def test_plot_fit_diagnostic_band_can_span_the_full_simulated_range(fitted_pair):
+    """Quantiles of 0 and 1 shade every value the simulated cohort took."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset, band_quantiles=(0.0, 1.0)).axes[0]
+    band = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()][0]
+    narrow = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    inner = [
+        c for c in narrow.collections if "simulated" in str(c.get_label()).lower()
+    ][0]
+    span = lambda c: np.ptp(c.get_paths()[0].vertices[:, 1])
+    assert span(band) > span(inner)
+
+
+def test_plot_fit_diagnostic_full_range_band_names_the_sample_size(fitted_pair):
+    """A range is a property of the draw count as much as of the population, so
+    the page has to say how many were drawn rather than claim '100%'."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), n_simulated=750
+    ).axes[0]
+    labels = [text.get_text() for text in ax.get_legend().get_texts()]
+    assert any("range" in label.lower() and "750" in label for label in labels)
+
+
+def test_plot_fit_diagnostic_band_can_drive_the_y_axis(fitted_pair):
+    """Otherwise a full-range band is clipped away and shows nothing.
+
+    The default keeps the band clipped so the data stay legible; a reviewer
+    asking what values the fit considers possible needs the opposite.
+    """
+    fit, dataset = fitted_pair
+    clipped = sh.plot_fit_diagnostic(fit, dataset, band_quantiles=(0.0, 1.0)).axes[0]
+    expanded = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), band_sets_ylim=True
+    ).axes[0]
+
+    band = [
+        c for c in expanded.collections if "simulated" in str(c.get_label()).lower()
+    ][0]
+    low, high = expanded.get_ylim()
+    vertices = band.get_paths()[0].vertices[:, 1]
+    assert low <= np.nanmin(vertices) and high >= np.nanmax(vertices)
+    assert np.ptp(expanded.get_ylim()) > np.ptp(clipped.get_ylim())
+
+
 def test_plot_fit_diagnostic_band_narrows_with_dispersion(fitted_pair):
     """The band honours the same dispersion knob simulate_shedding takes."""
     fit, dataset = fitted_pair

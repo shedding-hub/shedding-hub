@@ -3042,6 +3042,7 @@ def plot_fit_diagnostic(
     show_band: bool = True,
     dispersion: float = 1.0,
     band_quantiles: tuple[float, float] = (0.05, 0.95),
+    band_sets_ylim: bool = False,
     n_simulated: int = 2000,
 ) -> Figure:
     """
@@ -3080,7 +3081,17 @@ def plot_fit_diagnostic(
         dispersion: Passed to the simulation behind the band, so the page shows
             the same cohort ``simulate_shedding`` would produce with that
             setting.
-        band_quantiles: Lower and upper quantiles of the shaded band.
+        band_quantiles: Lower and upper quantiles of the shaded band. ``(0, 1)``
+            shades the full range the simulated cohort took, which is how to see
+            what the fit considers possible rather than typical. Note that a
+            range is not a fixed property of the population: it grows with
+            ``n_simulated``, since drawing more individuals reaches further into
+            the tails.
+        band_sets_ylim: Let the band widen the y axis to fit. ``False``
+            (default) keeps the axis on the data and the median curve, clipping
+            the band, so the observations stay legible. Set it ``True`` with
+            wide ``band_quantiles``, where a clipped band would fill the panel
+            and show nothing.
         n_simulated: Individuals drawn for the band. Fixed seed, so a page is
             reproducible.
 
@@ -3157,7 +3168,7 @@ def plot_fit_diagnostic(
     times = np.linspace(CATALOG_FIT_START_DAY, horizon, 400)
     values = log10_concentration(fit.model, fit.median_params[None, :], times)[0]
 
-    band = None
+    band_bounds = None
     if show_band:
         # Drawn from the fitted population rather than smoothed from the points:
         # the question the band answers is whether the population this fit
@@ -3166,7 +3177,8 @@ def plot_fit_diagnostic(
         drawn, _ = fit.sample_params(rng, n_simulated, dispersion)
         cohort = log10_concentration(fit.model, drawn, times)
         lower, upper = np.nanquantile(cohort, band_quantiles, axis=0)
-        band = ax.fill_between(
+        band_bounds = (float(np.nanmin(lower)), float(np.nanmax(upper)))
+        ax.fill_between(
             times,
             lower,
             upper,
@@ -3174,9 +3186,18 @@ def plot_fit_diagnostic(
             alpha=0.12,
             lw=0,
             zorder=1,
+            # A full-range band is labelled by its draw count, not as "100% of
+            # individuals": the extremes it reaches are a property of how many
+            # were drawn as much as of the population, and the page should not
+            # imply otherwise.
             label=(
-                f"Simulated {int(round((band_quantiles[1] - band_quantiles[0]) * 100))}"
-                "% of individuals"
+                f"Simulated range, {n_simulated} individuals"
+                if (band_quantiles[0] <= 0.0 and band_quantiles[1] >= 1.0)
+                else (
+                    "Simulated "
+                    f"{int(round((band_quantiles[1] - band_quantiles[0]) * 100))}"
+                    "% of individuals"
+                )
             ),
         )
     spans = _catalog_fit_spans(times, fit.median_first_observed_day, True)
@@ -3205,6 +3226,9 @@ def plot_fit_diagnostic(
     # reads as a band filling the panel rather than as a flattened plot.
     top = max(np.nanmax(observations.values[positive]), np.nanmax(values))
     bottom = min(limit, float(np.nanmin(observations.values[positive])))
+    if band_sets_ylim and band_bounds is not None:
+        bottom = min(bottom, band_bounds[0])
+        top = max(top, band_bounds[1])
     ax.set_ylim(bottom - 0.5, top + 0.5)
 
     handles, labels = ax.get_legend_handles_labels()

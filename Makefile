@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction catalog review
+.PHONY : backup_data assert_data_unchanged extraction catalog review review_range
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -43,3 +43,9 @@ catalog :
 # review. The PDF is regenerable and deliberately untracked.
 review :
 	python scripts/build_catalog_review.py
+
+# The same pages, but shading the full range of the simulated cohort rather than
+# its central 90%, with the y axis widened to fit. Shows what each fit considers
+# possible rather than typical.
+review_range :
+	python scripts/build_catalog_review.py --range
