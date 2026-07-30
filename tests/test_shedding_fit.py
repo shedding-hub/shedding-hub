@@ -93,6 +93,102 @@ def long_lookback_dataset():
     }
 
 
+def _shifted_truth_dataset(n_subjects=25, seed=0, t0=-2.5):
+    """Subjects whose shedding starts at ``t0``, sampled from day -3.
+
+    Simulated from the shifted gamma directly, so a recovered ``t0`` can be
+    checked against a known answer rather than eyeballed.
+    """
+    from shedding_hub.shedding_models import log10_concentration_rowwise
+
+    rng = np.random.default_rng(seed)
+    times = np.arange(-3.0, 15.0)
+    mu = np.array([np.log(0.55), np.log(2.2), np.log(11.0), t0])
+    cov = np.diag([0.05, 0.05, 0.09, 0.09])
+    draws = rng.multivariate_normal(mu, cov, size=n_subjects)
+    params = np.column_stack([np.exp(draws[:, :3]), draws[:, 3]])
+    truth = log10_concentration_rowwise(
+        "gamma_shifted", params, np.broadcast_to(times, (n_subjects, times.size))
+    )
+    noisy = truth + rng.normal(0.0, 0.25, size=truth.shape)
+
+    participants = []
+    for row in noisy:
+        measurements = []
+        for time, value in zip(times, row):
+            if not np.isfinite(value) or value < 2.0:
+                measurements.append(
+                    {"analyte": "stool", "time": float(time), "value": "negative"}
+                )
+            else:
+                measurements.append(
+                    {
+                        "analyte": "stool",
+                        "time": float(time),
+                        "value": float(10.0**value),
+                    }
+                )
+        participants.append({"measurements": measurements})
+    return {
+        "dataset_id": "shifted_truth",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_quantification": 100,
+                "limit_of_detection": "unknown",
+            }
+        },
+        "participants": participants,
+    }
+
+
+def test_gamma_shifted_fits_and_recovers_a_known_onset():
+    """End to end: the fitter must estimate the fourth parameter, not just carry it."""
+    fit = fit_shedding_model(
+        _shifted_truth_dataset(), analyte="stool", model="gamma_shifted"
+    )
+    assert fit.param_names == ("a0", "b0", "c0", "t0")
+    assert fit.population_mean.size == 4
+    assert fit.population_cov.shape == (4, 4)
+    # t0 is the last population coordinate and is carried untransformed.
+    assert fit.population_mean[3] == pytest.approx(-2.5, abs=1.0)
+    assert fit.converged
+
+
+def test_gamma_shifted_onset_stays_below_every_reading_it_explains():
+    """Otherwise the curve is undefined at that subject's own observations."""
+    dataset = _shifted_truth_dataset()
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma_shifted")
+    observations = prepare_observations(dataset, "stool", "gamma_shifted")
+    for index, row in fit.subject_params.reset_index(drop=True).iterrows():
+        mine = observations.times[observations.subject_index == index]
+        assert row["t0"] < mine.min()
+
+
+def test_gamma_shifted_uses_the_readings_the_gamma_model_discards():
+    dataset = _shifted_truth_dataset()
+    shifted = prepare_observations(dataset, "stool", "gamma_shifted")
+    plain = prepare_observations(dataset, "stool", "gamma")
+    assert shifted.times.size > plain.times.size
+    assert shifted.times.min() <= 0.0 < plain.times.min()
+
+
+def test_degenerate_check_does_not_read_the_onset_as_collapsed():
+    """t0 is a time, so an ordinary -6.0 sits below the log(1e-2) = -4.6 floor.
+
+    Judging it by the positive-parameter floor would condemn every subject
+    whose shedding began more than 4.6 days before the reference event.
+    """
+    theta = np.array([[np.log(0.5), np.log(2.0), np.log(12.0), -6.0]])
+    assert not _degenerate_subjects(theta, "gamma_shifted")[0]
+    # a genuinely collapsed decay in the same row is still caught
+    collapsed = np.array([[np.log(1e-9), np.log(2.0), np.log(12.0), -6.0]])
+    assert _degenerate_subjects(collapsed, "gamma_shifted")[0]
+
+
 def test_gamma_shifted_keeps_detected_readings_at_and_before_the_reference_event():
     """The gamma model discards 26,023 detected readings at exactly t = 0.
 

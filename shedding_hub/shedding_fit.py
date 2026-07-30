@@ -16,7 +16,7 @@ from typing import Any
 
 import numpy as np
 
-from .shedding_models import LN10, PARAM_NAMES, validate_model
+from .shedding_models import LN10, PARAM_NAMES, theta_to_params, validate_model
 
 CENSORING_MARGIN = 0.01
 NEGATIVE_VALUE = "negative"
@@ -51,6 +51,13 @@ NON_PATHOGEN_BIOMARKERS = frozenset({"crAssphage", "PMMoV", "mtDNA"})
 # -- a censored reading at day -53 means "shedding had not started yet", which is
 # precisely what would identify the shift.
 _MIN_TIME_DAYS = -5.0
+
+# How far below a subject's earliest retained reading its shedding onset must
+# sit, under gamma_shifted. The curve is undefined at t <= t0 and dives steeply
+# just above it, so the onset needs clearance from the first reading it has to
+# explain. Half a day is small enough not to distort a real onset and large
+# enough to keep ln(t - t0) finite in the optimizer's arithmetic.
+_ONSET_MARGIN_DAYS = 0.5
 
 
 class SheddingDataError(ValueError):
@@ -957,6 +964,12 @@ def _initial_theta(model: str, observations: Observations) -> np.ndarray:
             c0 = LN10 * float(np.max(values))
         if model == "exponential":
             return np.log([a0, c0])
+        if model == "gamma_shifted":
+            # Start the onset one margin below the earliest reading it must
+            # explain, which is both feasible and the least presumptuous guess:
+            # shedding began shortly before this subject was first sampled.
+            onset = float(np.min(times)) - _ONSET_MARGIN_DAYS
+            return np.array([np.log(a0), np.log(_DEFAULT_B0), np.log(c0), onset])
         return np.log([a0, _DEFAULT_B0, c0])
 
     pooled = solve(observations.times[uncensored], observations.values[uncensored])
@@ -1027,7 +1040,7 @@ def _over_extrapolated_subjects(
     if not positive.any():
         return np.zeros(theta.shape[0], dtype=bool)
     ceiling = float(np.nanmax(observations.values[positive])) + margin
-    heights = to_population_coords(model, np.exp(theta))[:, -1]
+    heights = to_population_coords(model, theta_to_params(model, theta))[:, -1]
     return np.asarray(heights > ceiling)
 
 
@@ -1060,8 +1073,17 @@ def _degenerate_subjects(theta: np.ndarray, model: str) -> np.ndarray:
         Boolean array of length ``n_subjects``, True where the subject's fit is
         degenerate by any of the three criteria.
     """
-    collapsed = theta <= math.log(_DEGENERATE_PARAM)
-    pinned = theta >= _THETA_BOUNDS[1] - _BOUND_TOLERANCE
+    # The floor and ceiling tests apply to the log-parameters only. Under
+    # gamma_shifted the last coordinate is t0, an absolute time: an onset of
+    # -6.0 days is entirely ordinary yet sits below log(1e-2) = -4.6, so
+    # including it here would condemn every subject whose shedding began more
+    # than 4.6 days before the reference event. Its own boundary -- landing on
+    # the per-subject bound below its first reading -- is judged in
+    # ``_onset_on_its_bound``, which needs the observations to know where that
+    # bound was.
+    scales = theta[:, :3] if model == "gamma_shifted" else theta
+    collapsed = scales <= math.log(_DEGENERATE_PARAM)
+    pinned = scales >= _THETA_BOUNDS[1] - _BOUND_TOLERANCE
     # ln(2)/a0 < _MIN_HALF_LIFE_DAYS, rearranged to compare on the log scale
     # theta is already expressed in. Located by name rather than by index so a
     # future change to PARAM_NAMES cannot silently test the wrong coordinate.
@@ -1070,7 +1092,9 @@ def _degenerate_subjects(theta: np.ndarray, model: str) -> np.ndarray:
     return np.asarray((collapsed | pinned).any(axis=1) | runaway_decay)
 
 
-def _fraction_observing_a_rise(observations: Observations) -> float:
+def _fraction_observing_a_rise(
+    observations: Observations, model: str = "gamma"
+) -> float:
     """
     Share of adequately-sampled subjects whose highest reading is not their first.
 
@@ -1094,7 +1118,13 @@ def _fraction_observing_a_rise(observations: Observations) -> float:
         ``fraction >= threshold`` must spell out how it treats the undecidable
         case rather than silently getting one or the other.
     """
-    usable = (~observations.censored) & (observations.times > 0)
+    # Judged over the readings the model will use. gamma_shifted retains
+    # detected readings at t <= 0, and those are exactly where a rise crossing
+    # the reference event shows itself, so excluding them would hide the very
+    # shape the gate is looking for.
+    usable = ~observations.censored
+    if model != "gamma_shifted":
+        usable = usable & (observations.times > 0)
     verdicts: list[bool] = []
     for subject in range(observations.n_subjects):
         mask = usable & (observations.subject_index == subject)
@@ -1179,7 +1209,7 @@ def _negative_log_likelihood(
     log_sigma = x[-1]
     sigma = math.exp(log_sigma)
 
-    params = np.exp(theta)[observations.subject_index]
+    params = theta_to_params(model, theta)[observations.subject_index]
     predicted = log10_concentration_pointwise(model, params, observations.times)
     if not np.all(np.isfinite(predicted)):
         return np.inf
@@ -1249,11 +1279,13 @@ def fit_shedding_model(
         dataset, analyte, model, min_observations=min_observations, min_time=min_time
     )
 
-    rise_fraction = _fraction_observing_a_rise(observations)
+    rise_fraction = _fraction_observing_a_rise(observations, model)
     # `not (x >= t)` rather than `x < t` so that a NaN fraction — no subject had
     # enough readings to judge — refuses too. Absence of evidence that a rise
     # was ever observed is not evidence that fitting a rise is justified.
-    if model == "gamma" and not (rise_fraction >= _MIN_RISE_FRACTION):
+    if model in ("gamma", "gamma_shifted") and not (
+        rise_fraction >= _MIN_RISE_FRACTION
+    ):
         observed = (
             "no subject had enough readings to judge"
             if math.isnan(rise_fraction)
@@ -1275,6 +1307,18 @@ def fit_shedding_model(
     n_parameters = n * k + 1  # every subject's k parameters, plus one shared sigma
     x0 = np.concatenate([_initial_theta(model, observations).ravel(), [math.log(0.5)]])
     bounds = [_THETA_BOUNDS] * (n * k) + [_LOG_SIGMA_BOUNDS]
+    if model == "gamma_shifted":
+        # t0 must sit below every reading the subject has, or its own curve is
+        # undefined at its own observations. Imposed as a per-subject upper
+        # bound rather than by reparameterizing, so t0 stays interpretable as an
+        # absolute time and the population summary can average it directly.
+        onset_index = PARAM_NAMES[model].index("t0")
+        for subject in range(n):
+            mine = observations.times[observations.subject_index == subject]
+            bounds[subject * k + onset_index] = (
+                _THETA_BOUNDS[0],
+                float(mine.min()) - _ONSET_MARGIN_DAYS,
+            )
 
     # scipy's L-BFGS-B defaults (maxfun=maxiter=15000, ftol=2.22e-9) are tuned
     # for small problems. Jointly optimizing every subject's parameters plus one
@@ -1297,7 +1341,14 @@ def fit_shedding_model(
     # it was failing by 1.5%, and the extra work buys a converged fit with
     # identical parameters (verified: nll 644.697 vs 644.709, mean log b0
     # identical to four decimal places).
-    max_evaluations = max(15000, 1000 * n_parameters)
+    # gamma_shifted needs more than the others: its fourth coordinate is
+    # bounded per subject, and the constrained surface takes longer to settle.
+    # Measured on a 25-subject synthetic fit (101 parameters), it converged at
+    # 148,716 evaluations -- past the 101,000 that a multiplier of 1000 allows
+    # -- and raising the cap further changed nothing (identical nll to four
+    # decimals at 4000 and 8000).
+    multiplier = 2000 if model == "gamma_shifted" else 1000
+    max_evaluations = max(15000, multiplier * n_parameters)
     result = optimize.minimize(
         _negative_log_likelihood,
         x0,
@@ -1382,14 +1433,16 @@ def fit_shedding_model(
     # averaging the log-parameters coordinate-wise lands off the ridge the
     # subjects lie on — see ``to_population_coords``. The exponential model's
     # coordinates are its log-parameters, so this is an identity for it.
-    kept = to_population_coords(model, np.exp(theta[retained]))
+    kept = to_population_coords(model, theta_to_params(model, theta[retained]))
     population_mean = kept.mean(axis=0)
     population_cov = (
         np.cov(kept, rowvar=False, ddof=1) if n_retained > 1 else np.zeros((k, k))
     )
     population_cov = np.atleast_2d(population_cov)
 
-    subject_params = pd.DataFrame(np.exp(theta), columns=list(PARAM_NAMES[model]))
+    subject_params = pd.DataFrame(
+        theta_to_params(model, theta), columns=list(PARAM_NAMES[model])
+    )
     subject_params.insert(0, "subject_id", observations.subject_ids)
     subject_params["degenerate"] = degenerate
 
