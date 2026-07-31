@@ -248,9 +248,13 @@ def test_sars_cov_2_stool_ranking_is_pinned(shipped_catalog):
     # Rule 4 losing to rule 3 within a settled unit, which is intended: the
     # 2-study gamma is preferred to the 3-study exponential.
     assert list(top["n_studies"]) == [2, 3]
-    # Every gc/dry gram group ranks below every gc/mL one.
-    assert options[options["unit"] == "gc/mL"]["rank"].max() < (
-        options[options["unit"] == "gc/dry gram"]["rank"].min()
+    # Within one event class, every gc/dry gram group ranks below every gc/mL
+    # one. Deliberately not asserted globally: rule 1 puts a landmark
+    # gc/dry gram group (rank 3) above an administrative gc/mL one (rank 6),
+    # which is the clock outranking the unit, exactly as intended.
+    landmark = options[options["event_class"] == "landmark"]
+    assert landmark[landmark["unit"] == "gc/mL"]["rank"].max() < (
+        landmark[landmark["unit"] == "gc/dry gram"]["rank"].min()
     )
 
 
