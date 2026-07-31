@@ -1,7 +1,21 @@
 # Shedding Simulation from Fitted Models — Design
 
 **Date:** 2026-07-18
-**Status:** Draft (awaiting review)
+**Status:** implemented 2026-07-19. Superseded in part; read as a record of the
+original design, not as a description of what ships today.
+
+Two things have moved since. A third curve, `gamma_shifted`, was added later and
+has no design document of its own — it is described in `docs/modeling-methods.md`
+along with the other two. And the catalog was rebuilt over a merged, larger set of
+datasets, so every count below is the 2026-07-19 one and is now low: the shipped
+catalog holds 126 fits over 40 datasets (81 exponential, 27 gamma, 18
+`gamma_shifted`). The counts here are left as they were rather than chased,
+because a design record that tracks the data drifts out of date on every merge.
+For current numbers see `docs/shedding_parameters.csv`, which is generated.
+
+Three follow-on specs extend this one: `2026-07-27-catalog-fit-plots-design.md`,
+`2026-07-29-catalog-fit-diagnostics-design.md`, and
+`2026-07-29-simulation-dispersion-design.md`.
 
 ## Problem
 
