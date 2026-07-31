@@ -14,7 +14,7 @@
 - No change to any fitted number, to `shedding_hub/data/shedding_catalog.yaml`, to `docs/shedding_parameters.{json,csv}`, or to the compatibility keys `make_ensemble` enforces. `tests/test_parameter_export.py` and `test_shipped_catalog_covers_every_dataset` must stay green without regenerating anything.
 - `black --check .` must pass. Run `black .` before every commit.
 - Reference-event classes are exactly `"exposure"`, `"landmark"`, `"administrative"`. An unrecognised event classifies as `"administrative"`.
-- Ranking order is fixed: event class, then model, then studies, then subjects, then measurements, then the sorted key tuple. Model order is `gamma_shifted`, `gamma`, `exponential`.
+- Ranking order is fixed: event class, then unit (by how many studies report it), then model, then studies, then subjects, then measurements, then the sorted key tuple. Model order is `gamma_shifted`, `gamma`, `exponential`.
 - Every group reported must be buildable: reduce to one fit per study before counting or building.
 - Tests must not fit models where a fixture will do — the full suite already takes ~5 minutes. Use `load_shedding_catalog()` and the `make_synthetic_dataset` fixture in `tests/conftest.py`.
 
@@ -161,7 +161,7 @@ git commit -m "feat: classify reference events by their relation to infection"
 
 **Interfaces:**
 - Consumes: `classify_reference_event` from Task 1; `load_shedding_catalog`, `SheddingCatalog` from `shedding_hub.shedding_catalog`.
-- Produces: `shedding_options(catalog=None, **keys) -> pd.DataFrame` with columns `biomarker, specimen, reference_event, event_class, unit, model, n_studies, n_subjects, n_measurements, rank`, sorted best first, `rank` starting at 1. Also `_reduce_to_one_fit_per_study(fits: list) -> list` and `_rank_key(row: dict) -> tuple`, used by Task 3.
+- Produces: `shedding_options(catalog=None, **keys) -> pd.DataFrame` with columns `biomarker, specimen, reference_event, event_class, unit, n_unit_studies, model, n_studies, n_subjects, n_measurements, rank`, sorted best first, `rank` starting at 1. Also `_reduce_to_one_fit_per_study(fits: list) -> list` and `_rank_key(row: dict) -> tuple`, used by Task 3.
 
 - [ ] **Step 1: Write the failing tests**
 
@@ -179,7 +179,7 @@ def test_options_lists_groups_best_first():
 
 
 def test_options_prefers_the_rise_capable_model_within_a_clock():
-    """Rule 2, held apart from rule 1 by fixing the reference event."""
+    """Rule 3, held apart from rules 1 and 2 by fixing the reference event."""
     from shedding_hub.shedding_select import shedding_options
 
     options = shedding_options(
@@ -210,21 +210,39 @@ def test_options_counts_one_study_once():
 
 
 def test_sars_cov_2_stool_ranking_is_pinned():
-    """
-    Pin the shipped outcome so a rule change shows up in a diff, not silently.
+    """Pin the shipped outcome so a rule change shows in a diff, not silently."""
+    from shedding_hub.shedding_select import shedding_options
 
-    Note what this encodes: a one-study gc/dry gram gamma_shifted outranks a
-    three-study gc/mL exponential, because model beats evidence and unit is not
-    ranked at all. That trade is documented in the spec under "Known
-    consequence"; this test is what makes revisiting it visible.
+    options = shedding_options(biomarker="SARS-CoV-2", specimen="stool")
+    top = options.head(2)
+    assert list(top["reference_event"]) == ["symptom onset", "symptom onset"]
+    assert list(top["unit"]) == ["gc/mL", "gc/mL"]
+    assert list(top["model"]) == ["gamma", "exponential"]
+    # Rule 4 losing to rule 3 within a settled unit, which is intended: the
+    # 2-study gamma is preferred to the 3-study exponential.
+    assert list(top["n_studies"]) == [2, 3]
+    # Every gc/dry gram group ranks below every gc/mL one.
+    assert options[options["unit"] == "gc/mL"]["rank"].max() < (
+        options[options["unit"] == "gc/dry gram"]["rank"].min()
+    )
+
+
+def test_a_better_represented_unit_outranks_a_richer_model():
+    """
+    Rule 2 in isolation: without it, unit is settled as a side effect.
+
+    gc/mL is reported by 4 SARS-CoV-2 stool studies and gc/dry gram by 2, so
+    gc/mL wins the unit outright -- even though gamma_shifted is identifiable on
+    gc/dry gram and not on gc/mL, and would otherwise have taken rank 1.
     """
     from shedding_hub.shedding_select import shedding_options
 
-    top = shedding_options(biomarker="SARS-CoV-2", specimen="stool").head(2)
-    assert list(top["reference_event"]) == ["symptom onset", "symptom onset"]
-    assert list(top["unit"]) == ["gc/dry gram", "gc/mL"]
-    assert list(top["model"]) == ["gamma_shifted", "gamma"]
-    assert list(top["n_studies"]) == [1, 2]
+    options = shedding_options(biomarker="SARS-CoV-2", specimen="stool")
+    assert options.iloc[0]["unit"] == "gc/mL"
+    assert options.iloc[0]["n_unit_studies"] == 4
+    shifted = options[options["model"] == "gamma_shifted"].iloc[0]
+    assert shifted["unit"] == "gc/dry gram"
+    assert shifted["rank"] > options.iloc[0]["rank"]
 
 
 def test_options_raises_when_nothing_matches():
@@ -278,11 +296,18 @@ _GROUP_KEYS = ("biomarker", "specimen", "reference_event", "unit", "model")
 # timeline; an administrative date does not.
 _EVENT_CLASS_RANK = {"exposure": 0, "landmark": 0, "administrative": 1}
 
-# Rule 2. Rise-capable first: for a wastewater model the pre-symptomatic rise is
+# Rule 3. Rise-capable first: for a wastewater model the pre-symptomatic rise is
 # the epidemiologically interesting part, and an exponential asserts by
 # construction that an agent sheds maximally on the day of the reference event. A
 # model only reaches the catalog if its gates passed, so presence is already the
 # identifiability signal and no separate check is needed here.
+#
+# Rule 2 -- the unit, by how many studies report it -- sits between these two and
+# is computed per candidate set rather than being a constant, so it lives on the
+# row as n_unit_studies. Units are incommensurable, and without an explicit rule
+# the unit would be settled by whichever one happened to carry the richest model:
+# SARS-CoV-2 stool would return a 1-study gc/dry gram gamma_shifted ahead of a
+# 3-study gc/mL exponential.
 _MODEL_RANK = {"gamma_shifted": 0, "gamma": 1, "exponential": 2}
 
 
@@ -318,6 +343,7 @@ def _rank_key(row) -> tuple:
     """The ranking, in one place. Lower sorts first."""
     return (
         _EVENT_CLASS_RANK[row["event_class"]],
+        -row["n_unit_studies"],
         _MODEL_RANK[row["model"]],
         -row["n_studies"],
         -row["n_subjects"],
@@ -373,10 +399,18 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
             "combinations, or call shedding_options() with fewer keys."
         )
 
+    # Rule 2's input: how many distinct studies report each unit anywhere in the
+    # candidate set. A property of the unit, not of any one group, so it is
+    # counted once here and carried on every row that shares the unit.
+    studies_by_unit = {}
+    for fit in matches:
+        studies_by_unit.setdefault(_sortable(fit.unit), set()).add(fit.dataset_id)
+
     rows = []
     for signature, group in _grouped(matches).items():
         row = dict(zip(_GROUP_KEYS, signature))
         row["event_class"] = classify_reference_event(row["reference_event"])
+        row["n_unit_studies"] = len(studies_by_unit[_sortable(row["unit"])])
         row["n_studies"] = len(group)
         row["n_subjects"] = sum(fit.n_subjects for fit in group)
         row["n_measurements"] = sum(fit.n_measurements for fit in group)
@@ -392,6 +426,7 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
             "reference_event",
             "event_class",
             "unit",
+            "n_unit_studies",
             "model",
             "n_studies",
             "n_subjects",
@@ -404,7 +439,7 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
 - [ ] **Step 4: Run tests to verify they pass**
 
 Run: `python -m pytest tests/test_shedding_select.py -q`
-Expected: PASS, 15 tests.
+Expected: PASS, 16 tests.
 
 - [ ] **Step 5: Format and commit**
 
@@ -600,6 +635,7 @@ class Selection:
 # The ranking rules in order, paired with how to describe the one that decided.
 _RULE_REASONS = (
     ("event_class", "its reference event supports an infection time origin"),
+    ("n_unit_studies", "its unit is reported by more studies"),
     ("model", "its model resolves the rise"),
     ("n_studies", "it rests on more studies"),
     ("n_subjects", "it rests on more subjects"),
@@ -682,7 +718,8 @@ def shedding_for(
     ensemble = make_ensemble(components, weights=weights, method=method)
     ensemble.selection = Selection(
         picked={key: best[key] for key in list(_GROUP_KEYS) + [
-            "event_class", "n_studies", "n_subjects", "n_measurements"
+            "event_class", "n_unit_studies", "n_studies", "n_subjects",
+            "n_measurements",
         ]},
         passed_over=options.iloc[1:].reset_index(drop=True),
         reason=_reason(best, runner_up),
@@ -967,7 +1004,7 @@ which hold a single study. To see the choice, and to have it made for you:
 >>> import shedding_hub as sh
 >>> options = sh.shedding_options(biomarker='SARS-CoV-2', specimen='stool')
 >>> list(options.columns)
-['biomarker', 'specimen', 'reference_event', 'event_class', 'unit', 'model', 'n_studies', 'n_subjects', 'n_measurements', 'rank']
+['biomarker', 'specimen', 'reference_event', 'event_class', 'unit', 'n_unit_studies', 'model', 'n_studies', 'n_subjects', 'n_measurements', 'rank']
 >>> source = sh.shedding_for('SARS-CoV-2', 'stool')
 >>> source.selection.picked['event_class']
 'landmark'
@@ -975,9 +1012,10 @@ which hold a single study. To see the choice, and to have it made for you:
 ```
 
 `shedding_for` takes rank 1 from `shedding_options`, preferring a reference event
-that supports an infection time origin, then a model that resolves the rise, then
-the weight of evidence. Pass `model=`, `unit=` or `reference_event=` to pin any of
-them, and read `source.selection` for what was chosen and what it beat.
+that supports an infection time origin, then the unit most studies report, then a
+model that resolves the rise, then the weight of evidence. Pass `model=`, `unit=`
+or `reference_event=` to pin any of them, and read `source.selection` for what was
+chosen and what it beat.
 ````
 
 - [ ] **Step 6: Verify the README doctests pass**

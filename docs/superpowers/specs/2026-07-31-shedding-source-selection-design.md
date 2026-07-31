@@ -78,29 +78,43 @@ defensible clock it has not earned.
 One rule, applied in strict order:
 
 1. **Reference-event class** — `exposure` and `landmark` before `administrative`.
-2. **Model** — `gamma_shifted`, then `gamma`, then `exponential`.
-3. **Evidence** — studies, then subjects, then measurements.
-4. **The sorted key tuple**, so ties resolve deterministically and a given
+2. **Unit** — the unit backed by the most studies across the candidate set.
+3. **Model** — `gamma_shifted`, then `gamma`, then `exponential`.
+4. **Evidence** — studies, then subjects, then measurements.
+5. **The sorted key tuple**, so ties resolve deterministically and a given
    catalog always yields the same pick.
 
-Rule 2 prefers the rise-capable models because for a wastewater model the
+Rule 1 comes first because a defensible clock beats everything else about a
+curve. A three-study exponential on symptom onset is preferred to a one-study
+`gamma_shifted` on enrollment: the latter resolves a rise, but measures it from a
+date with no fixed relation to infection, so the shape it recovers cannot be
+placed in an agent's timeline.
+
+Rule 2 exists because units are incommensurable and must not be settled as a
+side effect of something else. Without it, unit is decided by whichever unit
+happens to carry the highest-ranked model — so SARS-CoV-2 in stool would return
+a one-study `gc/dry gram` estimate ahead of a three-study `gc/mL` one, purely
+because `gamma_shifted` was identifiable on the former. Ranking the unit by how
+many studies report it settles the incommensurable choice on the only ground
+available — weight of evidence — before any within-unit comparison begins. On
+the shipped catalog `gc/mL` carries 4 studies for SARS-CoV-2 stool against
+`gc/dry gram`'s 2, so `gc/mL` wins and the model comparison happens inside it.
+
+Rule 3 prefers the rise-capable models because for a wastewater model the
 pre-symptomatic rise is the epidemiologically interesting part, and an
 exponential asserts by construction that an agent sheds maximally on the day of
 the reference event. A model appears in the catalog only if its gates passed, so
 presence is already the identifiability signal; the ranking needs no separate
 check.
 
-Rule 1 outranks rule 2 because a defensible clock beats a better curve shape. A
-three-study exponential on symptom onset is preferred to a one-study
-`gamma_shifted` on enrollment: the latter resolves a rise, but measures it from a
-date with no fixed relation to infection, so the shape it recovers cannot be
-placed in an agent's timeline.
-
-Rule 3 comes last of the substantive rules, which is the deliberate cost of this
-design: the default will often pass over a better-supported fit for a
-worse-supported one with a better clock or curve. `shedding_options` exists so
-that trade is visible rather than hidden, and any key can be pinned to override
-it.
+Rule 4 comes last of the substantive rules, which is the deliberate and
+remaining cost of this design: **within** a settled clock and unit, the default
+will pass over a better-supported fit for a worse-supported one with a better
+curve — for SARS-CoV-2 stool, the 2-study `gamma` ahead of the 3-study
+`exponential`. That trade is the one the design intends, since the exponential's
+missing rise is a structural misstatement rather than a matter of precision.
+`shedding_options` shows the whole table so it stays visible, and any key can be
+pinned to override it.
 
 ## Amendment: one analyte per study (found while planning)
 
@@ -125,30 +139,20 @@ reported by `shedding_options` are the post-reduction ones, so what it advertise
 is what gets built, and `Selection` records which analyte was taken for each
 study that offered a choice.
 
-## Known consequence: unit is decided as a side effect
+## Worked example
 
-Unit appears nowhere in the ranking rules. It is therefore settled by whichever
-unit happens to carry the highest-ranked model, which is arbitrary with respect
-to the unit question itself. Worked on the shipped catalog, SARS-CoV-2 in stool
-ranks:
+SARS-CoV-2 in stool, on the catalog as shipped. `gc/mL` is reported by 4 studies
+and `gc/dry gram` by 2, so rule 2 settles the unit before any model is compared:
 
 | rank | reference event | unit | model | studies | subjects |
 |---|---|---|---|---|---|
-| 1 | symptom onset | gc/dry gram | gamma_shifted | 1 | 29 |
-| 2 | symptom onset | gc/mL | gamma | 2 | 16 |
-| 3 | symptom onset | gc/dry gram | gamma | 1 | 30 |
-| 4 | symptom onset | gc/mL | exponential | 3 | 26 |
+| 1 | symptom onset | gc/mL | gamma | 2 | 16 |
+| 2 | symptom onset | gc/mL | exponential | 3 | 26 |
+| 3 | symptom onset | gc/dry gram | gamma_shifted | 1 | 29 |
+| 4 | symptom onset | gc/dry gram | gamma | 1 | 30 |
 
-So the default returns a single-study `gc/dry gram` estimate ahead of a
-three-study `gc/mL` one, purely because `gamma_shifted` was identifiable on the
-former. For wastewater work `gc/mL` is usually the working unit, and a modeller
-who wanted it must pass `unit="gc/mL"`.
-
-This is a real cost of ranking model above evidence, and it is recorded rather
-than hidden: `shedding_options` shows the whole table, and `Selection.reason`
-names the rule that decided. If it proves to be the wrong trade in practice, the
-fix is to add unit to the ranking — for example by preferring the unit with the
-most studies before comparing models — which is a change to `_rank_key` alone.
+The `n_unit_studies` column is published alongside the group counts so a reader
+can see why a unit won without recomputing it.
 
 ## API
 
@@ -203,11 +207,12 @@ false claim merely stops being silent.
 - Every `reference_event` in the shipped catalog is classified deliberately —
   the same shape of guard as `test_shipped_catalog_covers_every_dataset`, so a
   new event is a decision rather than a silent fallback.
-- The SARS-CoV-2 stool ranking is pinned explicitly to whatever the stated rules
-  produce, so that any future change to them is visible in a diff rather than
-  silent. On the catalog as shipped that is `symptom onset / gc/dry gram /
-  gamma_shifted` — one study, 29 subjects — ahead of `symptom onset / gc/mL /
-  exponential` at three studies. See the consequence noted below.
+- The SARS-CoV-2 stool ranking is pinned explicitly, so any future change to the
+  rules is visible in a diff rather than silent: `symptom onset / gc/mL / gamma`
+  first, `symptom onset / gc/mL / exponential` second, both ahead of every
+  `gc/dry gram` group.
+- Rule 2 is tested in isolation: a unit reported by more studies outranks one
+  carrying a richer model.
 - `shedding_options(...).iloc[0]` and `shedding_for(...)` agree, on the shipped
   catalog and on synthetic catalogs — the property that keeps the two surfaces
   honest.
