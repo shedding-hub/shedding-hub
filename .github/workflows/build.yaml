@@ -31,6 +31,24 @@ jobs:
         run: python -m build
       - name: Validate package
         run: twine check dist/*.tar.gz dist/*.whl
+      # twine check validates metadata, not contents. Auto-discovery used to
+      # sweep `tests` and `scripts` into the wheel as top-level packages, so an
+      # install claimed those names in site-packages; every wheel up to 0.1.3
+      # carries them. This fails the build if that returns.
+      - name: Assert the wheel ships only the package
+        run: |
+          python - <<'PY'
+          import glob, zipfile
+          names = zipfile.ZipFile(glob.glob("dist/*.whl")[0]).namelist()
+          tops = {n.split("/")[0] for n in names}
+          allowed = {"shedding_hub"} | {t for t in tops if t.endswith(".dist-info")}
+          assert tops <= allowed, f"wheel ships unexpected top-level entries: {sorted(tops - allowed)}"
+          assert "shedding_hub/data/shedding_catalog.yaml" in names, (
+              "the shipped catalog is missing from the wheel; load_shedding_catalog() "
+              "would fail for every pip user"
+          )
+          print("wheel contents OK:", sorted(tops))
+          PY
   data-validation:
     runs-on: ubuntu-latest
     steps:
