@@ -583,6 +583,34 @@ def test_every_advertised_group_can_actually_be_built(shipped_catalog):
         assert len(source.fits) == row["n_studies"]
 
 
+def test_reason_does_not_credit_a_rule_that_tied():
+    """
+    'exposure' and 'landmark' share rank 0, so differing on the label is not
+    winning on rule 1. Reading the column instead of the ranked value would
+    credit the clock for a decision the alphabetical tie-break actually made.
+    """
+    import pandas as pd
+
+    from shedding_hub.shedding_select import _reason
+
+    tied = {
+        "n_unit_studies": 1,
+        "model": "exponential",
+        "n_studies": 1,
+        "n_subjects": 10,
+        "n_measurements": 50,
+    }
+    best = pd.Series({"event_class": "landmark", **tied})
+    runner_up = pd.Series({"event_class": "exposure", **tied})
+    assert _reason(best, runner_up) == "it sorted first among otherwise equal candidates"
+
+    # A genuine rule-1 win is still reported as one.
+    administrative = pd.Series({"event_class": "administrative", **tied})
+    assert _reason(best, administrative) == (
+        "its reference event supports an infection time origin"
+    )
+
+
 def test_for_is_deterministic(shipped_catalog):
     from shedding_hub.shedding_select import shedding_for
 
@@ -677,13 +705,20 @@ class Selection:
 
 
 # The ranking rules in order, paired with how to describe the one that decided.
+# Each reads the *ranked* quantity, not the raw column, because those differ:
+# _EVENT_CLASS_RANK maps 'exposure' and 'landmark' both to 0, so a winner and
+# runner-up that differ in event_class may still tie on rule 1. Comparing the
+# labels would then credit rule 1 for a decision some later rule actually made.
 _RULE_REASONS = (
-    ("event_class", "its reference event supports an infection time origin"),
-    ("n_unit_studies", "its unit is reported by more studies"),
-    ("model", "its model resolves the rise"),
-    ("n_studies", "it rests on more studies"),
-    ("n_subjects", "it rests on more subjects"),
-    ("n_measurements", "it rests on more measurements"),
+    (
+        lambda row: _EVENT_CLASS_RANK[row["event_class"]],
+        "its reference event supports an infection time origin",
+    ),
+    (lambda row: row["n_unit_studies"], "its unit is reported by more studies"),
+    (lambda row: _MODEL_RANK[row["model"]], "its model resolves the rise"),
+    (lambda row: row["n_studies"], "it rests on more studies"),
+    (lambda row: row["n_subjects"], "it rests on more subjects"),
+    (lambda row: row["n_measurements"], "it rests on more measurements"),
 )
 
 
@@ -691,8 +726,8 @@ def _reason(best, runner_up) -> str:
     """Name the first rule on which the winner beat the runner-up."""
     if runner_up is None:
         return "it was the only candidate"
-    for column, description in _RULE_REASONS:
-        if best[column] != runner_up[column]:
+    for ranked_value, description in _RULE_REASONS:
+        if ranked_value(best) != ranked_value(runner_up):
             return description
     return "it sorted first among otherwise equal candidates"
 
