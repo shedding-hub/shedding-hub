@@ -193,3 +193,124 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
             "rank",
         ]
     ]
+
+
+@dataclass
+class Selection:
+    """Why ``shedding_for`` returned what it did."""
+
+    picked: dict
+    passed_over: pd.DataFrame
+    reason: str
+    analytes: dict = field(default_factory=dict)
+
+    def __str__(self) -> str:
+        keys = self.picked
+        return (
+            f"picked {keys['reference_event']} / {keys['unit']} / {keys['model']} "
+            f"({keys['n_studies']} study/studies, {keys['n_subjects']} subjects); "
+            f"{self.reason}"
+        )
+
+
+# The ranking rules in order, paired with how to describe the one that decided.
+_RULE_REASONS = (
+    ("event_class", "its reference event supports an infection time origin"),
+    ("n_unit_studies", "its unit is reported by more studies"),
+    ("model", "its model resolves the rise"),
+    ("n_studies", "it rests on more studies"),
+    ("n_subjects", "it rests on more subjects"),
+    ("n_measurements", "it rests on more measurements"),
+)
+
+
+def _reason(best, runner_up) -> str:
+    """Name the first rule on which the winner beat the runner-up."""
+    if runner_up is None:
+        return "it was the only candidate"
+    for column, description in _RULE_REASONS:
+        if best[column] != runner_up[column]:
+            return description
+    return "it sorted first among otherwise equal candidates"
+
+
+def shedding_for(
+    biomarker=None,
+    specimen=None,
+    *,
+    catalog: SheddingCatalog | None = None,
+    weights="n_subjects",
+    method: str = "mixture",
+    **keys,
+):
+    """
+    Return the best-ranked simulable source for a biomarker and specimen.
+
+    Equivalent to taking ``rank`` 1 from ``shedding_options`` and building it,
+    and implemented that way so the two cannot disagree. Any of
+    ``reference_event``, ``unit`` or ``model`` may be passed to pin that key and
+    rank within the remainder.
+
+    Always returns a ``SheddingEnsemble``, single-component when one study
+    matched -- ``make_ensemble`` guarantees a one-component ensemble consumes the
+    generator exactly as the underlying fit does, so callers keep one code path
+    however many studies backed the answer.
+
+    Args:
+        biomarker: e.g. ``"SARS-CoV-2"``. Optional, but omitting it will usually
+            leave candidates from different biomarkers to rank against one
+            another.
+        specimen: e.g. ``"stool"``.
+        catalog: Catalog to choose from. Defaults to the shipped one.
+        weights: Passed to ``make_ensemble``.
+        method: Passed to ``make_ensemble``.
+        **keys: Further filters, e.g. ``model="exponential"``.
+
+    Returns:
+        A ``SheddingEnsemble`` whose ``selection`` records the choice.
+
+    Raises:
+        ValueError: If nothing matches.
+    """
+    from .shedding_ensemble import make_ensemble
+
+    if biomarker is not None:
+        keys["biomarker"] = biomarker
+    if specimen is not None:
+        keys["specimen"] = specimen
+
+    catalog = load_shedding_catalog() if catalog is None else catalog
+    options = shedding_options(catalog=catalog, **keys)
+    best = options.iloc[0]
+    runner_up = options.iloc[1] if len(options) > 1 else None
+
+    groups = _grouped(_matching_fits(catalog, keys))
+    # Matched on the sortable form rather than by indexing with a tuple built
+    # from the row: pandas may hand back NaN where the fit held None, and NaN
+    # does not equal itself, so a direct dict lookup would miss the group for
+    # any fit with no unit or no reference event.
+    target = tuple(_sortable(best[key]) for key in _GROUP_KEYS)
+    components = next(
+        group
+        for signature, group in groups.items()
+        if tuple(_sortable(value) for value in signature) == target
+    )
+
+    ensemble = make_ensemble(components, weights=weights, method=method)
+    ensemble.selection = Selection(
+        picked={
+            key: best[key]
+            for key in list(_GROUP_KEYS)
+            + [
+                "event_class",
+                "n_unit_studies",
+                "n_studies",
+                "n_subjects",
+                "n_measurements",
+            ]
+        },
+        passed_over=options.iloc[1:].reset_index(drop=True),
+        reason=_reason(best, runner_up),
+        analytes={fit.dataset_id: fit.analyte for fit in components},
+    )
+    return ensemble

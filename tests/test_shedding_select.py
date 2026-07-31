@@ -161,3 +161,122 @@ def test_options_accepts_an_explicit_catalog(make_synthetic_dataset):
     options = shedding_options(catalog=catalog)
     assert set(options["model"]) == {"exponential", "gamma"}
     assert options.iloc[0]["model"] == "gamma"
+
+
+def test_for_returns_a_simulable_ensemble(shipped_catalog):
+    import numpy as np
+
+    from shedding_hub import simulate_shedding
+    from shedding_hub.shedding_select import shedding_for
+
+    source = shedding_for("SARS-CoV-2", "stool", catalog=shipped_catalog)
+    traj = simulate_shedding(source, n_individuals=20, times=np.arange(1, 11), seed=1)
+    assert len(traj) == 200
+    # times start at 1, not 0: the gamma models are undefined at their own origin.
+
+
+def test_for_agrees_with_options_rank_one(shipped_catalog):
+    """The property that keeps the two surfaces from drifting apart."""
+    from shedding_hub.shedding_select import shedding_for, shedding_options
+
+    best = shedding_options(
+        catalog=shipped_catalog, biomarker="SARS-CoV-2", specimen="stool"
+    ).iloc[0]
+    source = shedding_for("SARS-CoV-2", "stool", catalog=shipped_catalog)
+    assert source.selection.picked["model"] == best["model"]
+    assert source.selection.picked["reference_event"] == best["reference_event"]
+    assert source.selection.picked["unit"] == best["unit"]
+
+
+def test_for_explains_what_it_passed_over(shipped_catalog):
+    from shedding_hub.shedding_select import shedding_for
+
+    selection = shedding_for("SARS-CoV-2", "stool", catalog=shipped_catalog).selection
+    assert selection.reason
+    assert len(selection.passed_over) > 0
+    assert "rank" in selection.passed_over.columns
+
+
+def test_for_pins_an_overridden_key(shipped_catalog):
+    from shedding_hub.shedding_select import shedding_for
+
+    source = shedding_for(
+        "SARS-CoV-2", "stool", catalog=shipped_catalog, model="exponential"
+    )
+    assert source.selection.picked["model"] == "exponential"
+    assert source.model == "exponential"
+
+
+def test_for_records_the_analyte_taken_from_each_study(shipped_catalog):
+    """natarajan offers 14 analytes to this group; exactly one must be taken."""
+    from shedding_hub.shedding_select import shedding_for
+
+    source = shedding_for(
+        "SARS-CoV-2",
+        "stool",
+        catalog=shipped_catalog,
+        reference_event="enrollment",
+        model="exponential",
+    )
+    assert len(source.fits) == 1
+    assert set(source.selection.analytes) == {"natarajan2022gastrointestinal"}
+
+
+def test_every_advertised_group_can_actually_be_built(shipped_catalog):
+    """
+    The regression guard for the one-analyte-per-study reduction.
+
+    Without it this fails on 13 of the shipped catalog's groups, where one study
+    contributes several analytes and make_ensemble refuses the duplicate.
+    """
+    from shedding_hub.shedding_select import shedding_for, shedding_options
+
+    options = shedding_options(catalog=shipped_catalog)
+    for _, row in options.iterrows():
+        source = shedding_for(
+            row["biomarker"],
+            row["specimen"],
+            catalog=shipped_catalog,
+            reference_event=row["reference_event"],
+            unit=row["unit"],
+            model=row["model"],
+        )
+        assert len(source.fits) == row["n_studies"]
+
+
+def test_for_is_deterministic(shipped_catalog):
+    from shedding_hub.shedding_select import shedding_for
+
+    first = shedding_for(
+        "SARS-CoV-2", "stool", catalog=shipped_catalog
+    ).selection.picked
+    second = shedding_for(
+        "SARS-CoV-2", "stool", catalog=shipped_catalog
+    ).selection.picked
+    assert first == second
+
+
+def test_single_component_matches_the_bare_fit(make_synthetic_dataset):
+    """A one-study answer must simulate exactly as the fit would."""
+    import numpy as np
+    import pandas as pd
+
+    from shedding_hub import simulate_shedding
+    from shedding_hub.shedding_catalog import fit_shedding_models
+    from shedding_hub.shedding_select import shedding_for
+
+    dataset = make_synthetic_dataset(
+        "gamma",
+        [0.0, np.log(2.0), np.log(12.0)],
+        np.diag([0.04, 0.04, 0.09]),
+        n_subjects=12,
+        seed=3,
+    )
+    catalog = fit_shedding_models([dataset], models=("gamma",))
+    source = shedding_for(catalog=catalog)
+    times = np.arange(0, 8)
+    pd.testing.assert_frame_equal(
+        simulate_shedding(source, n_individuals=10, times=times, seed=7),
+        simulate_shedding(catalog.fits[0], n_individuals=10, times=times, seed=7),
+        check_like=True,
+    )

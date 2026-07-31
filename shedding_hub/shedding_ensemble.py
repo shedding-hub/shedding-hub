@@ -38,6 +38,12 @@ class SheddingEnsemble:
     fits: list[SheddingFit]
     weights: np.ndarray
     method: str
+    # Provenance, not statistics: set by shedding_for to record why this
+    # combination was chosen over the alternatives. Typed loosely to keep
+    # shedding_ensemble free of an import from shedding_select, which imports it.
+    # Deliberately absent from to_dict: it describes a choice made against one
+    # catalog, and would be misleading if restored beside fits from another.
+    selection: object = None
 
     @property
     def components(self) -> pd.DataFrame:
