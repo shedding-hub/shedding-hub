@@ -75,6 +75,10 @@ Simulate shedding trajectories for synthetic infected individuals — intended f
 agent-based models of wastewater surveillance. Browse the catalog of fitted
 estimates, pick one study or an ensemble across studies, then simulate.
 
+`examples/simulating-shedding.ipynb` walks through the whole workflow, including
+what the estimates do *not* support — run it top to bottom; it refits nothing and
+takes seconds.
+
 *The examples in this section run in CI as doctests against the shipped catalog
 (`shedding_hub/data/shedding_catalog.yaml`), deliberately not skipped, so that
 documentation drift fails loudly: if a future catalog rebuild gates out the
