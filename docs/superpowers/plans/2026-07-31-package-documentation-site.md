@@ -689,15 +689,30 @@ def test_every_public_name_appears_in_the_reference():
     )
 
 
-def test_every_public_name_has_a_runnable_example():
+def test_every_callable_has_a_runnable_example():
+    """
+    Constants are exempt, and cannot not be.
+
+    ``inspect.getdoc`` on a module-level constant returns its *container type's*
+    docstring -- ``tuple.__doc__`` for MODELS, ``dict.__doc__`` for PARAM_NAMES
+    and REFERENCE_EVENT_CLASSES -- so no example can ever be attached to the
+    name itself. Those three carry executed examples in their defining module's
+    docstring instead, and test_every_public_name_appears_in_the_reference still
+    holds all 45 to appearing in the reference.
+    """
     import inspect
 
+    needs_example = [
+        n
+        for n in sh.__all__
+        if callable(getattr(sh, n)) or inspect.isclass(getattr(sh, n))
+    ]
     missing = sorted(
-        n for n in sh.__all__ if ">>>" not in (inspect.getdoc(getattr(sh, n)) or "")
+        n for n in needs_example if ">>>" not in (inspect.getdoc(getattr(sh, n)) or "")
     )
     assert not missing, (
-        f"{len(missing)} public name(s) have no worked example: {missing}. "
-        "Add an Examples: block; it is executed by --doctest-modules."
+        f"{len(missing)} callable(s) have no worked example: {missing}. "
+        "Add an Example: block; it is executed by --doctest-modules."
     )
 ```
 
