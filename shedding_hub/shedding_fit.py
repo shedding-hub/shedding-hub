@@ -483,6 +483,12 @@ from .shedding_models import (
 _THETA_BOUNDS = (-25.0, 25.0)
 _LOG_SIGMA_BOUNDS = (-10.0, 5.0)
 
+# How many times the optimizer may be handed its own result and told to keep
+# going. Six is well past what any fit in the repository needs -- the worst
+# observed is a second round -- and exists so that a pathological surface
+# terminates instead of running forever.
+_MAX_OPTIMIZER_ROUNDS = 6
+
 # Parameters are optimized as theta = log(param), so the chain rule gives
 # dL/dtheta = param * dL/dparam: the gradient vanishes as a parameter
 # approaches zero. Near-zero is therefore an absorbing state — a parameter
@@ -1391,19 +1397,59 @@ def fit_shedding_model(
     # gamma_shifted needs more than the others: its fourth coordinate is
     # bounded per subject, and the constrained surface takes longer to settle.
     # Measured on a 25-subject synthetic fit (101 parameters), it converged at
-    # 148,716 evaluations -- past the 101,000 that a multiplier of 1000 allows
-    # -- and raising the cap further changed nothing (identical nll to four
-    # decimals at 4000 and 8000).
+    # 148,716 evaluations -- past the 101,000 that a multiplier of 1000 allows.
+    #
+    # That measurement was taken on one machine, and a count measured on one
+    # machine is not a property of the problem. The same synthetic fit exhausts
+    # a multiplier of 2000 on Linux, where it is still descending: it reaches
+    # log-likelihood 9.828 against Windows' 9.749 -- a *better* optimum -- and
+    # then reports failure for having run out of allowance rather than for
+    # having stopped improving. Heavy censoring flattens this surface near its
+    # optimum, so exactly where L-BFGS-B satisfies ftol depends on the BLAS
+    # underneath, and any fixed cap will be generous on one platform and mean on
+    # another.
+    #
+    # So the cap is no longer asked to be right. It is a chunk size, and when a
+    # round ends *only* because the chunk ran out (status 1), the optimizer is
+    # handed its own result and told to keep going. Convergence then depends on
+    # the problem rather than on the machine, and the reported flag means what
+    # it says. Restarting also resets the limited-memory Hessian approximation,
+    # which is often what a stalled L-BFGS-B run needs.
+    #
+    # status 2 -- a genuine breakdown, such as a line-search failure -- is not
+    # retried: repeating it would only burn evaluations to fail identically.
+    #
+    # The per-model multiplier stays as it was, deliberately. Every fit that
+    # already converged still runs one round with the same budget it always
+    # had, so its result is bit-identical and the shipped catalog can only move
+    # where it was previously reporting non-convergence.
     multiplier = 2000 if model == "gamma_shifted" else 1000
     max_evaluations = max(15000, multiplier * n_parameters)
+    options = {
+        "maxfun": max_evaluations,
+        "maxiter": max_evaluations,
+        "ftol": 1e-6,
+    }
     result = optimize.minimize(
         _negative_log_likelihood,
         x0,
         args=(model, observations),
         method="L-BFGS-B",
         bounds=bounds,
-        options={"maxfun": max_evaluations, "maxiter": max_evaluations, "ftol": 1e-6},
+        options=options,
     )
+    rounds = 1
+    while not result.success and result.status == 1 and rounds < _MAX_OPTIMIZER_ROUNDS:
+        result = optimize.minimize(
+            _negative_log_likelihood,
+            result.x,
+            args=(model, observations),
+            method="L-BFGS-B",
+            bounds=bounds,
+            options=options,
+        )
+        rounds += 1
+
     if not result.success:
         warnings.warn(
             f"Optimizer did not converge for analyte {analyte!r} "

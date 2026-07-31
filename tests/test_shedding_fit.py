@@ -180,15 +180,12 @@ def test_gamma_shifted_fits_and_recovers_a_known_onset():
     # away from the -2.5 that generated the data. The tolerance covers that
     # bias; the platform spread is a fortieth of it.
     assert fit.population_mean[3] == pytest.approx(-2.5, abs=1.5)
-    # `converged` is deliberately not asserted. Heavy censoring flattens this
-    # surface near its optimum, so whether L-BFGS-B satisfies ftol before
-    # exhausting its evaluation budget depends on the BLAS underneath: this fit
-    # reports converged=True at log-likelihood 9.749 on Windows and
-    # converged=False at 9.828 -- a better optimum, reached by grinding on past
-    # the budget -- on Linux CI. Since the flag gates nothing (the shipped
-    # catalog carries five non-converged fits, surfaced for the reader to judge)
-    # and the estimates agree to ~1%, asserting it here would test the
-    # platform's linear algebra rather than the fitter.
+    # Asserted again now that the optimizer continues a round that ended only
+    # for want of budget. This fit used to converge on Windows and exhaust its
+    # allowance on Linux while still descending, so the flag reported which
+    # BLAS was underneath rather than whether the fit had settled. It is a
+    # statement about the fitter once more.
+    assert fit.converged
 
 
 def test_gamma_shifted_onset_stays_below_every_reading_it_explains():
@@ -2076,3 +2073,115 @@ def test_from_dict_round_trips_a_current_catalog_entry():
     restored = SheddingFit.from_dict(fit.to_dict())
     np.testing.assert_allclose(restored.population_mean, fit.population_mean)
     np.testing.assert_allclose(restored.median_params, fit.median_params)
+
+
+def _budget_dataset(make_synthetic_dataset):
+    """A small, quick fit — these tests are about control flow, not estimation."""
+    return make_synthetic_dataset(
+        "exponential",
+        np.array([np.log(0.6), np.log(18.0)]),
+        np.diag([0.04, 0.04]),
+        n_subjects=6,
+        seed=11,
+    )
+
+
+def _patch_minimize(monkeypatch, verdicts):
+    """
+    Run the real optimizer, but stamp a chosen (success, status) on each round.
+
+    Returns the list that records one entry per call, so a test can assert how
+    many rounds ran. ``verdicts`` is indexed by round; rounds past its end keep
+    whatever the real optimizer reported.
+    """
+    from shedding_hub import shedding_fit as fit_module
+
+    real = fit_module.optimize.minimize
+    calls = []
+
+    def fake(*args, **kwargs):
+        result = real(*args, **kwargs)
+        index = len(calls)
+        calls.append(kwargs.get("options", {}).get("maxfun"))
+        if index < len(verdicts):
+            success, status = verdicts[index]
+            result.success = success
+            result.status = status
+            result.message = "STOP: TOTAL NO. OF F,G EVALUATIONS EXCEEDS LIMIT"
+        return result
+
+    monkeypatch.setattr(fit_module.optimize, "minimize", fake)
+    return calls
+
+
+def test_optimizer_retries_when_it_only_ran_out_of_budget(
+    monkeypatch, make_synthetic_dataset
+):
+    """
+    A budget cap is a statement about this machine, not about the problem.
+
+    L-BFGS-B reports status 1 when it stops purely because it exhausted its
+    evaluation allowance, which is exactly the case where continuing is
+    warranted -- and which platform it is running on decides how often that
+    happens.
+    """
+    from shedding_hub.shedding_fit import fit_shedding_model
+
+    calls = _patch_minimize(monkeypatch, [(False, 1)])
+    fit = fit_shedding_model(
+        _budget_dataset(make_synthetic_dataset), analyte="stool", model="exponential"
+    )
+    assert len(calls) == 2, "a budget-exhausted round must be continued, not accepted"
+    assert fit.converged, "the final round's verdict is the one that counts"
+
+
+def test_optimizer_does_not_retry_a_genuine_failure(
+    monkeypatch, make_synthetic_dataset
+):
+    """Status 2 is a real breakdown; repeating it would only burn evaluations."""
+    from shedding_hub.shedding_fit import fit_shedding_model
+
+    calls = _patch_minimize(monkeypatch, [(False, 2)] * 10)
+    with pytest.warns(UserWarning, match="did not converge"):
+        fit = fit_shedding_model(
+            _budget_dataset(make_synthetic_dataset),
+            analyte="stool",
+            model="exponential",
+        )
+    assert len(calls) == 1
+    assert not fit.converged
+
+
+def test_optimizer_gives_up_after_the_round_cap(monkeypatch, make_synthetic_dataset):
+    """Persistence is bounded: a fit that never settles must still return."""
+    from shedding_hub.shedding_fit import _MAX_OPTIMIZER_ROUNDS, fit_shedding_model
+
+    calls = _patch_minimize(monkeypatch, [(False, 1)] * 50)
+    with pytest.warns(UserWarning, match="did not converge"):
+        fit = fit_shedding_model(
+            _budget_dataset(make_synthetic_dataset),
+            analyte="stool",
+            model="exponential",
+        )
+    assert len(calls) == _MAX_OPTIMIZER_ROUNDS
+    assert not fit.converged
+
+
+def test_a_fit_that_converges_first_time_is_left_alone(
+    monkeypatch, make_synthetic_dataset
+):
+    """
+    The property that bounds this change's blast radius.
+
+    Every fit that already converged runs exactly one round with an unchanged
+    budget, so its result is bit-identical and the shipped catalog can only
+    move where it was previously reporting non-convergence.
+    """
+    from shedding_hub.shedding_fit import fit_shedding_model
+
+    calls = _patch_minimize(monkeypatch, [])
+    fit = fit_shedding_model(
+        _budget_dataset(make_synthetic_dataset), analyte="stool", model="exponential"
+    )
+    assert len(calls) == 1
+    assert fit.converged

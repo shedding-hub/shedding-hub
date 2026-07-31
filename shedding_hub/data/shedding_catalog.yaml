@@ -2902,20 +2902,20 @@ fits:
   - log_peak_day
   - peak_log10
   population_mean:
-  - -1.7656243113237196
-  - 1.8209908306187188
-  - 3.3997398521493754
+  - -1.7655394640712556
+  - 1.8275363548246386
+  - 3.401146126242101
   population_cov:
-  - - 1.906178098201834
-    - -1.3031416726022211
-    - 0.30092198651670454
-  - - -1.3031416726022211
-    - 2.5416761205943113
-    - -0.215057261367889
-  - - 0.30092198651670454
-    - -0.215057261367889
-    - 0.5512016801131101
-  sigma: 0.25602229322847614
+  - - 1.9079753270499715
+    - -1.308967658378071
+    - 0.30415488702435584
+  - - -1.308967658378071
+    - 2.5560949339670342
+    - -0.21118285045418617
+  - - 0.30415488702435584
+    - -0.21118285045418617
+    - 0.5584114780188019
+  sigma: 0.25578770640410126
   censoring_limit: 3.0
   n_subjects: 42
   n_measurements: 272
@@ -2925,9 +2925,9 @@ fits:
   pct_subjects_with_rise: 60.0
   median_first_observed_day: 3.0
   n_dropped_measurements: 146
-  converged: false
-  log_likelihood: -21.282837727275773
-  aic: 296.5656754545515
+  converged: true
+  log_likelihood: -21.150950954470176
+  aic: 296.30190190894035
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -2994,14 +2994,14 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.116748727933698
-  - 4.903811525488936
+  - -2.1167511308994538
+  - 4.903856847806023
   population_cov:
-  - - 1.3693158324278456
-    - 0.7720472829915095
-  - - 0.7720472829915095
-    - 2.0132257714535164
-  sigma: 0.4397617254857472
+  - - 1.369303274974913
+    - 0.7721064214641923
+  - - 0.7721064214641923
+    - 2.013517466400141
+  sigma: 0.43975321305724946
   censoring_limit: 3.0
   n_subjects: 54
   n_measurements: 358
@@ -3011,9 +3011,9 @@ fits:
   pct_subjects_with_rise: 31.818181818181817
   median_first_observed_day: 3.0
   n_dropped_measurements: 136
-  converged: false
-  log_likelihood: -119.85522403362398
-  aic: 457.71044806724797
+  converged: true
+  log_likelihood: -119.82163743694979
+  aic: 457.6432748738996
 - dataset_id: natarajan2022gastrointestinal
   analyte: RdRP-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3064,26 +3064,26 @@ fits:
   - log_a0
   - peak_log10
   population_mean:
-  - -2.2719341748918445
-  - 4.5641918990590336
+  - -2.014571653415168
+  - 4.803502450159917
   population_cov:
-  - - 1.8047183290661475
-    - 0.6104630477923874
-  - - 0.6104630477923874
-    - 1.1030793661876015
-  sigma: 0.5363358151083787
+  - - 1.8007437331412424
+    - 0.8191905035846726
+  - - 0.8191905035846726
+    - 1.352820626029314
+  sigma: 0.2893063189093503
   censoring_limit: 3.0
   n_subjects: 45
   n_measurements: 306
   n_censored: 182
   n_excluded_subjects: 55
-  n_degenerate_subjects: 14
+  n_degenerate_subjects: 17
   pct_subjects_with_rise: 56.25
   median_first_observed_day: 2.0
   n_dropped_measurements: 136
-  converged: false
-  log_likelihood: -122.57642135535008
-  aic: 427.15284271070016
+  converged: true
+  log_likelihood: -46.40757634696242
+  aic: 274.81515269392486
 - dataset_id: natarajan2022gastrointestinal
   analyte: RdRP-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3100,32 +3100,32 @@ fits:
   - log_peak_day
   - peak_log10
   population_mean:
-  - -0.9464415529212117
-  - 1.5632266539865887
-  - 4.723506447607605
+  - -0.807387235375838
+  - 1.4694130075955618
+  - 4.746716808064307
   population_cov:
-  - - 2.632989470868484
-    - -1.8285545515964539
-    - 1.1653412804397423
-  - - -1.8285545515964539
-    - 3.090564667792706
-    - -1.2441836175357728
-  - - 1.1653412804397423
-    - -1.2441836175357728
-    - 1.6505812647231493
-  sigma: 0.1671125704003914
+  - - 2.2640381521443103
+    - -1.4311466176718557
+    - 1.116517416879275
+  - - -1.4311466176718557
+    - 2.7532538134060482
+    - -1.1898705372009017
+  - - 1.116517416879275
+    - -1.1898705372009017
+    - 1.6796017358031659
+  sigma: 0.16614923057369455
   censoring_limit: 3.0
   n_subjects: 37
   n_measurements: 268
   n_censored: 164
   n_excluded_subjects: 62
-  n_degenerate_subjects: 7
+  n_degenerate_subjects: 8
   pct_subjects_with_rise: 56.25
-  median_first_observed_day: 4.0
+  median_first_observed_day: 3.0
   n_dropped_measurements: 150
-  converged: false
-  log_likelihood: 27.45781211484053
-  aic: 169.08437577031896
+  converged: true
+  log_likelihood: 28.571949650143893
+  aic: 166.85610069971221
 - dataset_id: natarajan2022gastrointestinal
   analyte: RdRP-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3143,28 +3143,28 @@ fits:
   - peak_log10
   - t0
   population_mean:
-  - -0.789486795832829
-  - 0.36280425906155583
-  - 5.323705510232225
-  - 0.42395391345316386
+  - -0.7890486866259774
+  - 0.3615750961576569
+  - 5.323249013747285
+  - 0.4230148564037003
   population_cov:
-  - - 2.332968953980184
-    - -1.205165971393504
-    - 2.142870010051676
-    - 0.05526122893968901
-  - - -1.205165971393504
-    - 3.2426217870106644
-    - -2.0228078104592573
-    - 0.41517149651294
-  - - 2.142870010051676
-    - -2.0228078104592573
-    - 5.579300514784428
-    - 0.4347616423537335
-  - - 0.05526122893968901
-    - 0.41517149651294
-    - 0.4347616423537335
-    - 1.9889524795025832
-  sigma: 0.16090225390429722
+  - - 2.3329653866274094
+    - -1.2024632623990557
+    - 2.1418488623751335
+    - 0.05270663009678819
+  - - -1.2024632623990557
+    - 3.2348780518132543
+    - -2.021547417845824
+    - 0.423077886502457
+  - - 2.1418488623751335
+    - -2.021547417845824
+    - 5.573201102177122
+    - 0.4324208726041026
+  - - 0.05270663009678819
+    - 0.423077886502457
+    - 0.4324208726041026
+    - 1.9890661093325466
+  sigma: 0.16023331298104856
   censoring_limit: 3.0
   n_subjects: 40
   n_measurements: 296
@@ -3174,9 +3174,9 @@ fits:
   pct_subjects_with_rise: 61.111111111111114
   median_first_observed_day: 2.0
   n_dropped_measurements: 138
-  converged: false
-  log_likelihood: 35.55013946172223
-  aic: 250.89972107655552
+  converged: true
+  log_likelihood: 35.64160634199042
+  aic: 250.71678731601918
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2

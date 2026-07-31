@@ -208,8 +208,13 @@ exposure, so there is no incubation period to shift back through.
   subjects were never observed at, not a measured concentration.
 - **A high `pct_censored` is not a defect.** It means the analyte is rarely
   detected, and a low `peak_log10` there is the fitter reporting honestly.
-- **`converged=False` disqualifies the rest of the row.** Five fits currently
-  carry it, all `natarajan2022gastrointestinal`.
+- **`converged=False` disqualifies the rest of the row.** No fit in the shipped
+  catalog currently carries it. The five that used to — all
+  `natarajan2022gastrointestinal` — were not failures of the model but of the
+  evaluation budget: L-BFGS-B stopped for want of allowance while still
+  descending. The optimizer now continues a round that ended only for that
+  reason, and all five converge. One had been badly short rather than
+  marginally so, gaining 76 log-likelihood units when allowed to finish.
 - **`n_subjects` counts subjects fitted, not subjects summarised.**
   `n_degenerate_subjects` is the difference.
 
