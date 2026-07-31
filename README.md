@@ -75,9 +75,16 @@ Simulate shedding trajectories for synthetic infected individuals — intended f
 agent-based models of wastewater surveillance. Browse the catalog of fitted
 estimates, pick one study or an ensemble across studies, then simulate.
 
-`examples/simulating-shedding.ipynb` walks through the whole workflow, including
-what the estimates do *not* support — run it top to bottom; it refits nothing and
-takes seconds.
+`examples/simulating-shedding.md` walks through the whole workflow, including how
+to override the default choice and what the estimates do *not* support. It refits
+nothing and runs in seconds. It is a [jupytext](https://jupytext.readthedocs.io)
+notebook, like the extraction scripts, so open it directly in Jupyter or convert
+it first:
+
+```bash
+jupytext --to ipynb examples/simulating-shedding.md
+jupyter lab examples/simulating-shedding.ipynb
+```
 
 *The examples in this section run in CI as doctests against the shipped catalog
 (`shedding_hub/data/shedding_catalog.yaml`), deliberately not skipped, so that
