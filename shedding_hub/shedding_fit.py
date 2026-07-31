@@ -88,6 +88,14 @@ class SheddingDataError(ValueError):
               ``too_few_subjects_for_population``. It is applied by the catalog
               builder rather than by ``fit_shedding_model``, so that fitting a
               single subject on purpose stays possible; see its docstring.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> error = sh.SheddingDataError(
+        ...     "no positive measurements", "no_positive_measurements"
+        ... )
+        >>> error.reason
+        'no_positive_measurements'
     """
 
     def __init__(self, message: str, reason: str):
@@ -681,6 +689,17 @@ class SheddingFit:
     coefficients that were clipped onto the parameter floor, which the
     optimizer could not escape. Measured over six seeds after that fix, the
     sparse-sampling bias averages 0.15 log units (range 0.02 to 0.27).
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> fit = catalog.select(
+        ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
+        ... )
+        >>> fit.param_names
+        ('a0', 'b0', 'c0')
+        >>> round(fit.peak_day, 2)
+        1.18
     """
 
     model: str
@@ -1326,6 +1345,21 @@ def fit_shedding_model(
         observations. The gamma model drops non-positive times while the
         exponential model keeps them, so compare ``n_measurements`` before
         comparing ``aic`` across models.
+
+    Example:
+        Fitting is a joint optimization over every subject's parameters and
+        takes seconds to minutes per analyte, so this is not run here; the
+        call shape is shown for reference.
+
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset(
+        ...     'woelfel2020virological', local='./data'
+        ... )  # doctest: +SKIP
+        >>> fit = sh.fit_shedding_model(
+        ...     data, analyte='stool', model='gamma'
+        ... )  # doctest: +SKIP
+        >>> fit.model  # doctest: +SKIP
+        'gamma'
     """
     validate_model(model)
     observations = prepare_observations(

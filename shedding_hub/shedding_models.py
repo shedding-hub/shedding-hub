@@ -13,6 +13,13 @@ expressed on the log10 scale, which is the scale likelihoods are evaluated on:
 ``c0 / ln(10)``. All parameters are strictly positive.
 
 This module is pure math: no dataset handling, no I/O.
+
+Example:
+    >>> import shedding_hub as sh
+    >>> sh.MODELS
+    ('exponential', 'gamma', 'gamma_shifted')
+    >>> sh.PARAM_NAMES['gamma']
+    ('a0', 'b0', 'c0')
 """
 
 import numpy as np

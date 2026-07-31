@@ -11,6 +11,11 @@ observation sets and so are not AIC-comparable.
 This module makes that choice visible (``shedding_options``) and makes a
 documented, overridable default (``shedding_for``). It adds no statistical
 assumption: nothing here pools across units or reference events.
+
+Example:
+    >>> import shedding_hub as sh
+    >>> sorted(sh.REFERENCE_EVENT_CLASSES)[:3]
+    ['confirmation date', 'enrollment', 'hospital admission']
 """
 
 from dataclasses import dataclass, field
@@ -44,6 +49,11 @@ def classify_reference_event(event: str | None) -> str:
     the conservative direction: a reference event the package has never seen has
     not demonstrated a defined offset from infection, so it should not inherit
     one.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> sh.classify_reference_event('enrollment')
+        'administrative'
     """
     return REFERENCE_EVENT_CLASSES.get(event, "administrative")
 
@@ -158,6 +168,15 @@ def shedding_options(
 
     Raises:
         ValueError: If nothing matches ``keys``.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> options = sh.shedding_options('SARS-CoV-2', 'stool', catalog=catalog)
+        >>> options.shape
+        (10, 11)
+        >>> options.iloc[0]['model']
+        'gamma'
     """
     if biomarker is not None:
         keys["biomarker"] = biomarker
@@ -226,7 +245,20 @@ def shedding_options(
 
 @dataclass
 class Selection:
-    """Why ``shedding_for`` returned what it did."""
+    """
+    Why ``shedding_for`` returned what it did.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> selection = sh.shedding_for(
+        ...     'SARS-CoV-2', 'stool', catalog=catalog
+        ... ).selection
+        >>> selection.reason
+        'its model resolves the rise'
+        >>> str(selection)
+        'picked symptom onset / gc/mL / gamma (2 study/studies, 16 subjects); its model resolves the rise'
+    """
 
     picked: dict
     passed_over: pd.DataFrame
@@ -309,6 +341,15 @@ def shedding_for(
 
     Raises:
         ValueError: If nothing matches.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> source = sh.shedding_for('SARS-CoV-2', 'stool', catalog=catalog)
+        >>> source.model
+        'gamma'
+        >>> source.selection.reason
+        'its model resolves the rise'
     """
     from .shedding_ensemble import make_ensemble
 

@@ -156,7 +156,20 @@ def _fit_from_payload(payload: dict) -> SheddingFit:
 
 @dataclass
 class SheddingCatalog:
-    """A collection of fitted models with a browsable summary table."""
+    """
+    A collection of fitted models with a browsable summary table.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> catalog.table.shape
+        (126, 24)
+        >>> fit = catalog.select(
+        ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
+        ... )
+        >>> fit.dataset_id
+        'woelfel2020virological'
+    """
 
     fits: list[SheddingFit] = field(default_factory=list)
     skipped: pd.DataFrame = field(
@@ -291,6 +304,18 @@ def fit_shedding_models(
 
     Returns:
         A ``SheddingCatalog``.
+
+    Example:
+        Fitting every analyte of every dataset can take minutes, so this is
+        not run here; the call shape is shown for reference.
+
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset(
+        ...     'woelfel2020virological', local='./data'
+        ... )  # doctest: +SKIP
+        >>> catalog = sh.fit_shedding_models([data])  # doctest: +SKIP
+        >>> len(catalog.fits)  # doctest: +SKIP
+        4
     """
     fits: list[SheddingFit] = []
     skipped: list[dict] = []
@@ -368,6 +393,12 @@ def load_shedding_catalog(path: str | None = None) -> SheddingCatalog:
         A ``SheddingCatalog``. Loaded fits carry ``subject_params is None``
         because per-subject values are not serialized; everything needed to
         simulate (``mu``, ``Sigma``, ``sigma``) is present.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> len(catalog.fits)
+        126
     """
     catalog_path = pathlib.Path(path) if path else CATALOG_PATH
     if not catalog_path.is_file():

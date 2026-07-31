@@ -106,6 +106,17 @@ def simulate_shedding(
         The exponential model is defined for negative times but grows without
         bound going backwards, so simulating before the reference event
         extrapolates into implausible concentrations. Prefer ``times >= 0``.
+
+    Example:
+        >>> import numpy as np
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> source = sh.shedding_for('SARS-CoV-2', 'stool', catalog=catalog)
+        >>> traj = sh.simulate_shedding(
+        ...     source, n_individuals=10, times=np.arange(1, 8), seed=42
+        ... )
+        >>> list(traj.columns)
+        ['individual_id', 'time', 'log10_value', 'value', 'detected', 'source_dataset_id']
     """
     if n_individuals < 1:
         raise ValueError("n_individuals must be at least 1")
@@ -238,6 +249,18 @@ def plot_simulated_shedding(
     Returns:
         The figure. It is closed in the pyplot state so notebooks do not display
         it twice, matching the convention in ``shedding_peak.py``.
+
+    Example:
+        >>> import numpy as np
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> source = sh.shedding_for('SARS-CoV-2', 'stool', catalog=catalog)
+        >>> traj = sh.simulate_shedding(
+        ...     source, n_individuals=50, times=np.arange(1, 15), seed=42
+        ... )
+        >>> fig = sh.plot_simulated_shedding(traj, source=source)
+        >>> type(fig).__name__
+        'Figure'
     """
     if traj.empty:
         raise ValueError("Simulation result is empty, cannot create plot")
