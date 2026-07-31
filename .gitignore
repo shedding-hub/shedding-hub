@@ -163,3 +163,14 @@ playground
 .idea
 CLAUDE.md
 .claude/
+# Regenerable review artifact; rebuild with `make review`.
+shedding_catalog_review.pdf
+
+# Regenerable review artifact; rebuild with `make review_range`.
+shedding_catalog_review_range.pdf
+
+# Alternative-threshold catalog and its review PDFs; rebuild with
+# `python scripts/build_shedding_catalog.py --max-peak-above-observed 2 --output shedding_catalog_gate2.yaml`
+shedding_catalog_gate2.yaml
+shedding_catalog_review_gate2*.pdf
+shedding_catalog_nogate.yaml

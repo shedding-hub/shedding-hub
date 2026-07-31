@@ -1,14 +1,25 @@
 [project]
 name = "shedding-hub"
-version = "0.1.3"
+version = "0.2.0"
 readme = "README.md"
 description = "Data and statistical models for biomarker shedding."
 dependencies = [
     "pyaml",
     "requests",
     "pandas",
-    "matplotlib"
+    "matplotlib",
+    "numpy",
+    "scipy"
 ]
 
 [tool.setuptools.packages]
-find = {}
+# Restricted to the package itself. Bare auto-discovery also treats `tests` and
+# `scripts` as importable packages, so installing shedding-hub put a top-level
+# `tests` module into site-packages -- claiming a name any other distribution
+# might also want, and shadowing a user's own. Published wheels up to 0.1.3 all
+# carry it. The build workflow asserts the wheel's top-level contents so this
+# cannot quietly come back.
+find = { include = ["shedding_hub*"] }
+
+[tool.setuptools.package-data]
+shedding_hub = ["data/*.yaml"]
