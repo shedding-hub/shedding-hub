@@ -379,3 +379,77 @@ def test_dispersion_rejects_a_negative_value(exponential_fit):
             times=np.array([0.0]),
             dispersion=-0.5,
         )
+
+
+def _fit_with_reference_event(make_synthetic_dataset, event):
+    import numpy as np
+
+    from shedding_hub.shedding_fit import fit_shedding_model
+
+    dataset = make_synthetic_dataset(
+        "exponential",
+        np.array([np.log(0.6), np.log(18.0)]),
+        np.diag([0.04, 0.04]),
+        n_subjects=12,
+        seed=5,
+    )
+    for analyte in dataset["analytes"].values():
+        analyte["reference_event"] = event
+    return fit_shedding_model(dataset, analyte="stool", model="exponential")
+
+
+def test_symptom_onset_shifts_to_infection(make_synthetic_dataset):
+    import numpy as np
+
+    from shedding_hub import simulate_shedding
+
+    fit = _fit_with_reference_event(make_synthetic_dataset, "symptom onset")
+    traj = simulate_shedding(
+        fit, n_individuals=5, times=np.arange(0, 6), incubation_period=5.0, seed=1
+    )
+    assert traj.attrs["time_origin"] == "infection"
+    assert traj.attrs["reference_event_class"] == "landmark"
+
+
+def test_administrative_event_warns_and_does_not_claim_infection(
+    make_synthetic_dataset,
+):
+    import numpy as np
+    import pytest
+
+    from shedding_hub import simulate_shedding
+
+    fit = _fit_with_reference_event(make_synthetic_dataset, "enrollment")
+    with pytest.warns(UserWarning, match="administrative"):
+        traj = simulate_shedding(
+            fit, n_individuals=5, times=np.arange(0, 6), incubation_period=5.0, seed=1
+        )
+    assert traj.attrs["time_origin"] == "enrollment_shifted"
+    assert traj.attrs["reference_event_class"] == "administrative"
+
+
+def test_exposure_event_warns_because_there_is_nothing_to_bridge(
+    make_synthetic_dataset,
+):
+    import numpy as np
+    import pytest
+
+    from shedding_hub import simulate_shedding
+
+    fit = _fit_with_reference_event(make_synthetic_dataset, "inoculation")
+    with pytest.warns(UserWarning, match="already the exposure"):
+        traj = simulate_shedding(
+            fit, n_individuals=5, times=np.arange(0, 6), incubation_period=5.0, seed=1
+        )
+    assert traj.attrs["time_origin"] == "inoculation_shifted"
+
+
+def test_no_incubation_period_leaves_the_origin_alone(make_synthetic_dataset):
+    import numpy as np
+
+    from shedding_hub import simulate_shedding
+
+    fit = _fit_with_reference_event(make_synthetic_dataset, "enrollment")
+    traj = simulate_shedding(fit, n_individuals=5, times=np.arange(0, 6), seed=1)
+    assert traj.attrs["time_origin"] == "enrollment"
+    assert traj.attrs["incubation_applied"] is False

@@ -6,6 +6,7 @@ population distribution, then evaluate each one's shedding curve at whatever
 times the simulation needs.
 """
 
+import warnings
 from typing import Any, Callable, Sequence
 
 import matplotlib.pyplot as plt
@@ -14,6 +15,7 @@ import pandas as pd
 from matplotlib.figure import Figure
 
 from .shedding_models import log10_concentration_rowwise
+from .shedding_select import classify_reference_event
 
 
 def _resolve_incubation(
@@ -61,6 +63,13 @@ def simulate_shedding(
             an array of length ``n_individuals`` or a callable
             ``(rng, n) -> array`` gives each individual its own, which adds
             realistic timing variability across the cohort.
+
+            Only meaningful for a reference event that is a natural-history
+            landmark (symptom onset). Applying it to an administrative event
+            (enrollment, confirmation date, hospital admission, treatment) or to
+            the exposure itself (inoculation, vaccination) warns, and
+            ``attrs["time_origin"]`` records ``"<event>_shifted"`` rather than
+            ``"infection"``.
         include_measurement_error: Add ``N(0, sigma)`` assay noise on the log10
             scale. Off by default: an agent-based model wants the true shed
             concentration, and assay noise is a property of sampling rather than
@@ -138,8 +147,36 @@ def simulate_shedding(
             "source_dataset_id",
         ]
     ]
+    event = source.reference_event
+    event_class = classify_reference_event(event)
+    time_origin = event
+    if incubation_applied:
+        if event_class == "landmark":
+            time_origin = "infection"
+        else:
+            time_origin = f"{event}_shifted"
+            if event_class == "exposure":
+                warnings.warn(
+                    f"{event!r} is already the exposure, so there is no "
+                    "incubation period to bridge: shifting moves the origin to "
+                    f"before the exposure itself. time_origin is recorded as "
+                    f"{time_origin!r}, not 'infection'.",
+                    UserWarning,
+                    stacklevel=2,
+                )
+            else:
+                warnings.warn(
+                    f"{event!r} is an administrative reference event, which has "
+                    "no fixed offset from infection -- it reflects testing "
+                    "behaviour and health-system access. time_origin is recorded "
+                    f"as {time_origin!r}, not 'infection'.",
+                    UserWarning,
+                    stacklevel=2,
+                )
+
     frame.attrs = {
-        "time_origin": "infection" if incubation_applied else source.reference_event,
+        "time_origin": time_origin,
+        "reference_event_class": event_class,
         "incubation_applied": incubation_applied,
         "model": source.model,
         "unit": source.unit,
