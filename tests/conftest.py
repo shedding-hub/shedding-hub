@@ -71,3 +71,16 @@ def make_synthetic_dataset():
         }
 
     return _make
+
+
+@pytest.fixture(scope="session")
+def shipped_catalog():
+    """
+    The shipped catalog, loaded once for the whole session.
+
+    Parsing it costs ~2.2s, and the selection tests need it dozens of times.
+    Session scope is safe because nothing in these tests mutates a catalog.
+    """
+    from shedding_hub import load_shedding_catalog
+
+    return load_shedding_catalog()
