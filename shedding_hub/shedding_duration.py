@@ -39,6 +39,19 @@ def calc_shedding_duration(
     Raises:
         ValueError: If dataset is missing required keys or is empty.
         KeyError: If required analyte information is missing.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> durations = sh.calc_shedding_duration(data)
+        >>> list(durations.columns)  # doctest: +NORMALIZE_WHITESPACE
+        ['dataset_id', 'participant_id', 'n_sample', 'first_sample', 'last_sample',
+         'first_detect', 'last_detect', 'specimen', 'biomarker', 'reference_event',
+         'shedding_duration']
+        >>> durations.shape
+        (27, 11)
+        >>> durations.loc[0, 'shedding_duration']
+        11
     """
     if not dataset or not isinstance(dataset, dict):
         raise ValueError("Dataset must be a non-empty dictionary")
@@ -170,6 +183,14 @@ def plot_shedding_duration(
 
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> durations = sh.calc_shedding_duration(data)
+        >>> fig = sh.plot_shedding_duration(durations)
+        >>> type(fig).__name__
+        'Figure'
     """
     if df_shedding_duration.empty:
         raise ValueError("DataFrame is empty, cannot create plot")
@@ -280,6 +301,19 @@ def calc_shedding_durations(
 
     Raises:
         ValueError: If dataset_ids is empty or contains invalid entries.
+
+    Example:
+        This fetches each dataset from GitHub, so it is not run here; the call
+        shape is shown for reference.
+
+        >>> import shedding_hub as sh
+        >>> durations = sh.calc_shedding_durations(
+        ...     ['woelfel2020virological', 'young2020epidemiologic']
+        ... )  # doctest: +SKIP
+        >>> list(durations.columns)  # doctest: +SKIP
+        ['dataset_id', 'biomarker', 'specimen', 'reference_event',
+         'shedding_duration_min', 'shedding_duration_max', 'shedding_duration_mean',
+         'n_sample', 'n_participant']
     """
     if not dataset_ids:
         raise ValueError("dataset_ids cannot be empty")
@@ -313,6 +347,14 @@ def plot_shedding_durations(
 
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> durations_summary = sh.calc_shedding_duration(data, output='summary')
+        >>> fig = sh.plot_shedding_durations(durations_summary)
+        >>> type(fig).__name__
+        'Figure'
     """
     if df_shedding_durations.empty:
         raise ValueError("DataFrame is empty, cannot create plot")

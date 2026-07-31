@@ -40,6 +40,16 @@ def calc_shedding_peak(
     Raises:
         ValueError: If dataset is missing required keys or is empty.
         KeyError: If required analyte information is missing.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> peaks = sh.calc_shedding_peak(data)
+        >>> list(peaks.columns)  # doctest: +NORMALIZE_WHITESPACE
+        ['dataset_id', 'participant_id', 'n_sample', 'first_sample', 'last_sample',
+         'shedding_peak', 'specimen', 'biomarker', 'reference_event', 'unit']
+        >>> peaks.shape
+        (26, 10)
     """
     if not dataset or not isinstance(dataset, dict):
         raise ValueError("Dataset must be a non-empty dictionary")
@@ -208,6 +218,14 @@ def plot_shedding_peak(
         - Participants are labeled as P1, P2, etc. on the y-axis
         - Error bars show the full shedding window from first to last sample
         - Diamond markers show the peak shedding time point
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> peaks = sh.calc_shedding_peak(data)
+        >>> fig = sh.plot_shedding_peak(peaks)
+        >>> type(fig).__name__
+        'Figure'
     """
     if df_shedding_peak.empty:
         raise ValueError("DataFrame is empty, cannot create plot")
@@ -321,6 +339,19 @@ def calc_shedding_peaks(
 
     Raises:
         ValueError: If dataset_ids is empty or contains invalid entries.
+
+    Example:
+        This fetches each dataset from GitHub, so it is not run here; the call
+        shape is shown for reference.
+
+        >>> import shedding_hub as sh
+        >>> peaks = sh.calc_shedding_peaks(
+        ...     ['woelfel2020virological', 'young2020epidemiologic']
+        ... )  # doctest: +SKIP
+        >>> list(peaks.columns)  # doctest: +SKIP
+        ['dataset_id', 'biomarker', 'specimen', 'reference_event', 'shedding_peak_min',
+         'shedding_peak_q25', 'shedding_peak_median', 'shedding_peak_q75',
+         'shedding_peak_max', 'shedding_peak_mean', 'n_sample', 'n_participant']
     """
     if not dataset_ids:
         raise ValueError("dataset_ids cannot be empty")
@@ -359,6 +390,14 @@ def plot_shedding_peaks(
 
     Returns:
         matplotlib.figure.Figure: Box plot showing shedding peaks across studies.
+
+    Example:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> peaks_summary = sh.calc_shedding_peak(data, output='summary')
+        >>> fig = sh.plot_shedding_peaks(peaks_summary)
+        >>> type(fig).__name__
+        'Figure'
     """
     # Filter summary based on criteria
     df_filtered = df_shedding_peaks.query(
