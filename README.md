@@ -114,10 +114,21 @@ which hold a single study. To see the choice, and to have it made for you:
 ```
 
 `shedding_for` takes rank 1 from `shedding_options`, preferring a reference event
-that supports an infection time origin, then the unit most studies report, then a
-model that resolves the rise, then the weight of evidence. Pass `model=`, `unit=`
-or `reference_event=` to pin any of them, and read `source.selection` for what was
-chosen and what it beat.
+that can be placed on an infection timeline, then the unit most studies report
+for that biomarker and specimen, then a model that resolves the rise, then the
+weight of evidence. Pass `model=`, `unit=` or `reference_event=` to pin any of
+them, and read `source.selection` for what was chosen and what it beat.
+
+`source.selection` is a `Selection`: `picked` (the winning group's keys and
+counts), `passed_over` (the rest of the ranked table), `reason` (the rule that
+decided it) and `analytes` (which analyte was taken from each study offering
+more than one). `str(selection)` summarises all of it in one line:
+
+```python
+>>> print(sh.shedding_for('SARS-CoV-2', 'stool').selection)
+picked symptom onset / gc/mL / gamma (2 study/studies, 16 subjects); ...
+
+```
 
 Three models are available. `exponential` is a pure decay from the reference
 event. `gamma` rises and falls after it. `gamma_shifted` is the same rise and

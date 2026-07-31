@@ -14,7 +14,7 @@
 - No change to any fitted number, to `shedding_hub/data/shedding_catalog.yaml`, to `docs/shedding_parameters.{json,csv}`, or to the compatibility keys `make_ensemble` enforces. `tests/test_parameter_export.py` and `test_shipped_catalog_covers_every_dataset` must stay green without regenerating anything.
 - `black --check .` must pass. Run `black .` before every commit.
 - Reference-event classes are exactly `"exposure"`, `"landmark"`, `"administrative"`. An unrecognised event classifies as `"administrative"`.
-- Ranking order is fixed: event class, then unit (by how many studies report it), then model, then studies, then subjects, then measurements, then the sorted key tuple. Model order is `gamma_shifted`, `gamma`, `exponential`.
+- Ranking order is fixed: event class, then unit (by how many studies report it among the candidates sharing its biomarker and specimen), then model, then studies, then subjects, then measurements, then the sorted key tuple. Model order is `gamma_shifted`, `gamma`, `exponential`.
 - Every group reported must be buildable: reduce to one fit per study before counting or building.
 - Tests must not fit models where a fixture will do, and must not reload the shipped catalog per test — it costs ~2.2s and the suite already takes ~5 minutes. Use the session-scoped `shipped_catalog` fixture (added in Task 1) and the existing `make_synthetic_dataset` fixture, both in `tests/conftest.py`. Never call `load_shedding_catalog()` directly in a test.
 
@@ -335,9 +335,10 @@ _EVENT_CLASS_RANK = {"exposure": 0, "landmark": 0, "administrative": 1}
 # model only reaches the catalog if its gates passed, so presence is already the
 # identifiability signal and no separate check is needed here.
 #
-# Rule 2 -- the unit, by how many studies report it -- sits between these two and
-# is computed per candidate set rather than being a constant, so it lives on the
-# row as n_unit_studies. Units are incommensurable, and without an explicit rule
+# Rule 2 -- the unit, by how many studies report it within its own biomarker and
+# specimen -- sits between these two and is computed from the candidate set rather
+# than being a constant, so it lives on the row as n_unit_studies. Units are
+# incommensurable across biomarkers and specimens, and without an explicit rule
 # the unit would be settled by whichever one happened to carry the richest model:
 # SARS-CoV-2 stool would return a 1-study gc/dry gram gamma_shifted ahead of a
 # 3-study gc/mL exponential.
@@ -432,18 +433,33 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
             "combinations, or call shedding_options() with fewer keys."
         )
 
-    # Rule 2's input: how many distinct studies report each unit anywhere in the
-    # candidate set. A property of the unit, not of any one group, so it is
-    # counted once here and carried on every row that shares the unit.
+    # Rule 2's input: how many distinct studies report each unit, counted within
+    # one biomarker and specimen. Scoped that way because units are only
+    # commensurable there -- counting a unit across the whole candidate set would
+    # let gc/mL's SARS-CoV-2 studies decide a rotavirus vaccine row, and would make
+    # a group's rank depend on what else the caller happened to leave unfiltered.
     studies_by_unit = {}
     for fit in matches:
-        studies_by_unit.setdefault(_sortable(fit.unit), set()).add(fit.dataset_id)
+        signature = (
+            _sortable(fit.biomarker),
+            _sortable(fit.specimen),
+            _sortable(fit.unit),
+        )
+        studies_by_unit.setdefault(signature, set()).add(fit.dataset_id)
 
     rows = []
     for signature, group in _grouped(matches).items():
         row = dict(zip(_GROUP_KEYS, signature))
         row["event_class"] = classify_reference_event(row["reference_event"])
-        row["n_unit_studies"] = len(studies_by_unit[_sortable(row["unit"])])
+        row["n_unit_studies"] = len(
+            studies_by_unit[
+                (
+                    _sortable(row["biomarker"]),
+                    _sortable(row["specimen"]),
+                    _sortable(row["unit"]),
+                )
+            ]
+        )
         row["n_studies"] = len(group)
         row["n_subjects"] = sum(fit.n_subjects for fit in group)
         row["n_measurements"] = sum(fit.n_measurements for fit in group)
@@ -607,7 +623,7 @@ def test_reason_does_not_credit_a_rule_that_tied():
     # A genuine rule-1 win is still reported as one.
     administrative = pd.Series({"event_class": "administrative", **tied})
     assert _reason(best, administrative) == (
-        "its reference event supports an infection time origin"
+        "its reference event can be placed on an infection timeline"
     )
 
 
@@ -712,7 +728,7 @@ class Selection:
 _RULE_REASONS = (
     (
         lambda row: _EVENT_CLASS_RANK[row["event_class"]],
-        "its reference event supports an infection time origin",
+        "its reference event can be placed on an infection timeline",
     ),
     (lambda row: row["n_unit_studies"], "its unit is reported by more studies"),
     (lambda row: _MODEL_RANK[row["model"]], "its model resolves the rise"),
@@ -1091,10 +1107,10 @@ which hold a single study. To see the choice, and to have it made for you:
 ```
 
 `shedding_for` takes rank 1 from `shedding_options`, preferring a reference event
-that supports an infection time origin, then the unit most studies report, then a
-model that resolves the rise, then the weight of evidence. Pass `model=`, `unit=`
-or `reference_event=` to pin any of them, and read `source.selection` for what was
-chosen and what it beat.
+that can be placed on an infection timeline, then the unit most studies report
+for that biomarker and specimen, then a model that resolves the rise, then the
+weight of evidence. Pass `model=`, `unit=` or `reference_event=` to pin any of
+them, and read `source.selection` for what was chosen and what it beat.
 ````
 
 - [ ] **Step 6: Verify the README doctests pass**

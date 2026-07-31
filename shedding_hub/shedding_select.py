@@ -36,7 +36,7 @@ REFERENCE_EVENT_CLASSES = {
 }
 
 
-def classify_reference_event(event) -> str:
+def classify_reference_event(event: str | None) -> str:
     """
     Classify a reference event as ``exposure``, ``landmark`` or ``administrative``.
 
@@ -61,9 +61,10 @@ _EVENT_CLASS_RANK = {"exposure": 0, "landmark": 0, "administrative": 1}
 # model only reaches the catalog if its gates passed, so presence is already the
 # identifiability signal and no separate check is needed here.
 #
-# Rule 2 -- the unit, by how many studies report it -- sits between these two and
-# is computed per candidate set rather than being a constant, so it lives on the
-# row as n_unit_studies. Units are incommensurable, and without an explicit rule
+# Rule 2 -- the unit, by how many studies report it within its own biomarker and
+# specimen -- sits between these two and is computed from the candidate set rather
+# than being a constant, so it lives on the row as n_unit_studies. Units are
+# incommensurable across biomarkers and specimens, and without an explicit rule
 # the unit would be settled by whichever one happened to carry the richest model:
 # SARS-CoV-2 stool would return a 1-study gc/dry gram gamma_shifted ahead of a
 # 3-study gc/mL exponential.
@@ -131,7 +132,13 @@ def _grouped(fits: list) -> dict:
     }
 
 
-def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataFrame:
+def shedding_options(
+    biomarker=None,
+    specimen=None,
+    *,
+    catalog: SheddingCatalog | None = None,
+    **keys,
+) -> pd.DataFrame:
     """
     List every group that could be simulated from, best first.
 
@@ -141,8 +148,10 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
     returns for the same arguments.
 
     Args:
+        biomarker: e.g. ``"SARS-CoV-2"``. Positional, matching ``shedding_for``.
+        specimen: e.g. ``"stool"``.
         catalog: Catalog to search. Defaults to the shipped one.
-        **keys: Attribute filters, e.g. ``biomarker="SARS-CoV-2"``.
+        **keys: Further attribute filters, e.g. ``model="gamma"``.
 
     Returns:
         A ``DataFrame`` with one row per group.
@@ -150,6 +159,11 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
     Raises:
         ValueError: If nothing matches ``keys``.
     """
+    if biomarker is not None:
+        keys["biomarker"] = biomarker
+    if specimen is not None:
+        keys["specimen"] = specimen
+
     catalog = load_shedding_catalog() if catalog is None else catalog
     matches = _matching_fits(catalog, keys)
     if not matches:
@@ -158,18 +172,33 @@ def shedding_options(catalog: SheddingCatalog | None = None, **keys) -> pd.DataF
             "combinations, or call shedding_options() with fewer keys."
         )
 
-    # Rule 2's input: how many distinct studies report each unit anywhere in the
-    # candidate set. A property of the unit, not of any one group, so it is
-    # counted once here and carried on every row that shares the unit.
+    # Rule 2's input: how many distinct studies report each unit, counted within
+    # one biomarker and specimen. Scoped that way because units are only
+    # commensurable there -- counting a unit across the whole candidate set would
+    # let gc/mL's SARS-CoV-2 studies decide a rotavirus vaccine row, and would make
+    # a group's rank depend on what else the caller happened to leave unfiltered.
     studies_by_unit = {}
     for fit in matches:
-        studies_by_unit.setdefault(_sortable(fit.unit), set()).add(fit.dataset_id)
+        signature = (
+            _sortable(fit.biomarker),
+            _sortable(fit.specimen),
+            _sortable(fit.unit),
+        )
+        studies_by_unit.setdefault(signature, set()).add(fit.dataset_id)
 
     rows = []
     for signature, group in _grouped(matches).items():
         row = dict(zip(_GROUP_KEYS, signature))
         row["event_class"] = classify_reference_event(row["reference_event"])
-        row["n_unit_studies"] = len(studies_by_unit[_sortable(row["unit"])])
+        row["n_unit_studies"] = len(
+            studies_by_unit[
+                (
+                    _sortable(row["biomarker"]),
+                    _sortable(row["specimen"]),
+                    _sortable(row["unit"]),
+                )
+            ]
+        )
         row["n_studies"] = len(group)
         row["n_subjects"] = sum(fit.n_subjects for fit in group)
         row["n_measurements"] = sum(fit.n_measurements for fit in group)
@@ -221,7 +250,7 @@ class Selection:
 _RULE_REASONS = (
     (
         lambda row: _EVENT_CLASS_RANK[row["event_class"]],
-        "its reference event supports an infection time origin",
+        "its reference event can be placed on an infection timeline",
     ),
     (lambda row: row["n_unit_studies"], "its unit is reported by more studies"),
     (lambda row: _MODEL_RANK[row["model"]], "its model resolves the rise"),
@@ -269,7 +298,9 @@ def shedding_for(
             another.
         specimen: e.g. ``"stool"``.
         catalog: Catalog to choose from. Defaults to the shipped one.
-        weights: Passed to ``make_ensemble``.
+        weights: Passed to ``make_ensemble``. An explicit array is applied in
+            component order, which is by ``dataset_id`` -- see
+            ``ensemble.components``.
         method: Passed to ``make_ensemble``.
         **keys: Further filters, e.g. ``model="exponential"``.
 
@@ -292,10 +323,10 @@ def shedding_for(
     runner_up = options.iloc[1] if len(options) > 1 else None
 
     groups = _grouped(_matching_fits(catalog, keys))
-    # Matched on the sortable form rather than by indexing with a tuple built
-    # from the row: pandas may hand back NaN where the fit held None, and NaN
-    # does not equal itself, so a direct dict lookup would miss the group for
-    # any fit with no unit or no reference event.
+    # Matched on the sortable form for the same reason _sortable exists at all:
+    # None and str do not compare, and both appear in these keys, so a group
+    # signature holding None must be compared in the normalised form rather than
+    # raw.
     target = tuple(_sortable(best[key]) for key in _GROUP_KEYS)
     components = next(
         group

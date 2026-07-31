@@ -136,6 +136,63 @@ def test_a_better_represented_unit_outranks_a_richer_model(shipped_catalog):
     assert shifted["rank"] > options.iloc[0]["rank"]
 
 
+def test_unit_counts_do_not_leak_across_biomarkers(shipped_catalog):
+    """
+    Rule 2 counts studies per unit *within* a biomarker and specimen.
+
+    Counted across the whole candidate set instead, gc/mL's 24 SARS-CoV-2 studies
+    would be stamped on an influenza or rotavirus vaccine row and rank it, so the
+    unfiltered listing would show one order and the filtered listing -- which is
+    what shedding_for acts on -- another.
+    """
+    from shedding_hub.shedding_select import shedding_options
+
+    unfiltered = shedding_options(catalog=shipped_catalog)
+    pairs = unfiltered[["biomarker", "specimen"]].drop_duplicates()
+    for _, pair in pairs.iterrows():
+        within = unfiltered[
+            (unfiltered["biomarker"] == pair["biomarker"])
+            & (unfiltered["specimen"] == pair["specimen"])
+        ].iloc[0]
+        filtered = shedding_options(
+            catalog=shipped_catalog,
+            biomarker=pair["biomarker"],
+            specimen=pair["specimen"],
+        ).iloc[0]
+        for key in ("unit", "model", "reference_event"):
+            assert within[key] == filtered[key], (
+                f"{pair['biomarker']} / {pair['specimen']} ranks {key} "
+                f"{within[key]!r} first unfiltered but {filtered[key]!r} when "
+                "filtered to its own biomarker and specimen."
+            )
+
+
+def test_group_keys_match_the_ensemble_compatibility_keys():
+    """The advertised groups stop being buildable the moment these two diverge."""
+    from shedding_hub.shedding_ensemble import _COMPATIBILITY_KEYS
+    from shedding_hub.shedding_select import _GROUP_KEYS
+
+    assert set(_GROUP_KEYS) == set(_COMPATIBILITY_KEYS), (
+        "shedding_select._GROUP_KEYS must equal "
+        "shedding_ensemble._COMPATIBILITY_KEYS: shedding_options groups on the "
+        "former and make_ensemble enforces agreement on the latter."
+    )
+
+
+def test_options_takes_biomarker_and_specimen_positionally(shipped_catalog):
+    """The two public entry points must accept the common keys the same way."""
+    import pandas as pd
+
+    from shedding_hub.shedding_select import shedding_options
+
+    pd.testing.assert_frame_equal(
+        shedding_options("SARS-CoV-2", "stool", catalog=shipped_catalog),
+        shedding_options(
+            catalog=shipped_catalog, biomarker="SARS-CoV-2", specimen="stool"
+        ),
+    )
+
+
 def test_options_raises_when_nothing_matches(shipped_catalog):
     from shedding_hub.shedding_select import shedding_options
 
@@ -270,7 +327,7 @@ def test_reason_does_not_credit_a_rule_that_tied():
     # A genuine rule-1 win is still reported as one.
     administrative = pd.Series({"event_class": "administrative", **tied})
     assert _reason(best, administrative) == (
-        "its reference event supports an infection time origin"
+        "its reference event can be placed on an infection timeline"
     )
 
 

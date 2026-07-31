@@ -194,6 +194,12 @@ warns when an incubation period is applied to either of the others, and records
 prefers the classes that can be anchored, which is why it will pass over a
 better-supported fit measured from an administrative date.
 
+These are two different ideas and the ranking uses the weaker one: exposure and
+landmark events can both be *placed* on an infection timeline, which is what
+`shedding_for` prefers, but only a landmark *earns*
+`attrs["time_origin"] == "infection"` — an exposure event already is the
+exposure, so there is no incubation period to shift back through.
+
 ## 6. Reading an estimate honestly
 
 - **`peak_log10` is evaluated at the peak, which for the exponential model is

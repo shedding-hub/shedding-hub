@@ -78,7 +78,8 @@ defensible clock it has not earned.
 One rule, applied in strict order:
 
 1. **Reference-event class** — `exposure` and `landmark` before `administrative`.
-2. **Unit** — the unit backed by the most studies across the candidate set.
+2. **Unit** — the unit backed by the most studies among the candidates sharing
+   its biomarker and specimen.
 3. **Model** — `gamma_shifted`, then `gamma`, then `exponential`.
 4. **Evidence** — studies, then subjects, then measurements.
 5. **The sorted key tuple**, so ties resolve deterministically and a given
@@ -99,6 +100,14 @@ many studies report it settles the incommensurable choice on the only ground
 available — weight of evidence — before any within-unit comparison begins. On
 the shipped catalog `gc/mL` carries 4 studies for SARS-CoV-2 stool against
 `gc/dry gram`'s 2, so `gc/mL` wins and the model comparison happens inside it.
+
+That count is taken **among the candidates sharing the row's biomarker and
+specimen**, not across the whole candidate set, because that is the only scope in
+which two units are commensurable at all. Counted globally, `gc/mL`'s 24
+SARS-CoV-2 studies would be stamped on a `rotavirus vaccine` / stool row and rank
+it, so a group's position would depend on what else the caller happened to leave
+unfiltered — the unfiltered table would show one order and `shedding_for`, which
+filters, would act on another.
 
 Rule 3 prefers the rise-capable models because for a wastewater model the
 pre-symptomatic rise is the epidemiologically interesting part, and an

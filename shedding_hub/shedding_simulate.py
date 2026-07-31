@@ -154,7 +154,7 @@ def simulate_shedding(
         if event_class == "landmark":
             time_origin = "infection"
         else:
-            time_origin = f"{event}_shifted"
+            time_origin = f"{event}_shifted" if event else "shifted reference event"
             if event_class == "exposure":
                 warnings.warn(
                     f"{event!r} is already the exposure, so there is no "
