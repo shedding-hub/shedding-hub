@@ -84,3 +84,11 @@ def shipped_catalog():
     from shedding_hub import load_shedding_catalog
 
     return load_shedding_catalog()
+
+
+@pytest.fixture(scope="session")
+def woelfel_dataset():
+    """A real dataset for plot smoke tests, read from the repo rather than the network."""
+    from shedding_hub import load_dataset
+
+    return load_dataset("woelfel2020virological", local="./data")

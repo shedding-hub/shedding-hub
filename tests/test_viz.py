@@ -7,6 +7,7 @@ import pandas as pd
 import pytest
 import matplotlib.figure
 import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 import shedding_hub as sh
 from shedding_hub.shedding_fit import (
     SheddingFit,
@@ -1675,3 +1676,52 @@ def test_plot_fit_diagnostic_returns_one_closed_axis(fitted_pair):
     assert isinstance(fig, matplotlib.figure.Figure)
     assert len(fig.axes) == 1
     assert fig.number not in plt.get_fignums()
+
+
+# ---------------------------------------------------------------------------
+# orphaned plotting functions: plot_clearance_curve, plot_detection_probability,
+# plot_value_distribution_by_time
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        "plot_clearance_curve",
+        "plot_detection_probability",
+        "plot_value_distribution_by_time",
+    ],
+)
+def test_orphaned_plots_are_exported(name):
+    """
+    All three are implemented and were documented on the project website, but
+    never exported, so every call in that documentation raised AttributeError.
+    """
+    import shedding_hub as sh
+
+    assert hasattr(sh, name), f"sh.{name} is documented but not exported"
+    assert name in sh.__all__
+
+
+def test_plot_clearance_curve_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_clearance_curve(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_detection_probability_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_detection_probability(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_value_distribution_by_time_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_value_distribution_by_time(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
