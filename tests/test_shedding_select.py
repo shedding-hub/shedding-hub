@@ -244,6 +244,36 @@ def test_every_advertised_group_can_actually_be_built(shipped_catalog):
         assert len(source.fits) == row["n_studies"]
 
 
+def test_reason_does_not_credit_a_rule_that_tied():
+    """
+    'exposure' and 'landmark' share rank 0, so differing on the label is not
+    winning on rule 1. Reading the column instead of the ranked value would
+    credit the clock for a decision the alphabetical tie-break actually made.
+    """
+    import pandas as pd
+
+    from shedding_hub.shedding_select import _reason
+
+    tied = {
+        "n_unit_studies": 1,
+        "model": "exponential",
+        "n_studies": 1,
+        "n_subjects": 10,
+        "n_measurements": 50,
+    }
+    best = pd.Series({"event_class": "landmark", **tied})
+    runner_up = pd.Series({"event_class": "exposure", **tied})
+    assert (
+        _reason(best, runner_up) == "it sorted first among otherwise equal candidates"
+    )
+
+    # A genuine rule-1 win is still reported as one.
+    administrative = pd.Series({"event_class": "administrative", **tied})
+    assert _reason(best, administrative) == (
+        "its reference event supports an infection time origin"
+    )
+
+
 def test_for_is_deterministic(shipped_catalog):
     from shedding_hub.shedding_select import shedding_for
 
