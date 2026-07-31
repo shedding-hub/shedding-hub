@@ -102,6 +102,54 @@ worse-supported one with a better clock or curve. `shedding_options` exists so
 that trade is visible rather than hidden, and any key can be pinned to override
 it.
 
+## Amendment: one analyte per study (found while planning)
+
+Grouping by the five keys is not by itself enough to hand a group to
+`make_ensemble`, which rejects any ensemble where one study contributes more
+than one analyte — otherwise that study's subjects enter the mixture twice.
+Measured on the shipped catalog, **13 of the 82 groups contain such a study**.
+The worst is SARS-CoV-2 / stool / enrollment / gc/mL / exponential, which holds
+14 fits from a single study; `rotavirus vaccine` / stool / vaccination /
+gc/wet gram holds 4 fits from 2 studies.
+
+So the naive picker would raise on 13 groups, and `shedding_options` would
+advertise combinations that cannot be built. Both must reduce each group to **one
+fit per study** before counting or building. The rule, applied within a study:
+most subjects, then most measurements, then the analyte name alphabetically for
+determinism.
+
+This is the narrowing that `make_ensemble`'s own error already advises
+("Narrow the selection, for example by gene_target or analyte"), done
+automatically and by a stated rule instead of being left to the caller. Counts
+reported by `shedding_options` are the post-reduction ones, so what it advertises
+is what gets built, and `Selection` records which analyte was taken for each
+study that offered a choice.
+
+## Known consequence: unit is decided as a side effect
+
+Unit appears nowhere in the ranking rules. It is therefore settled by whichever
+unit happens to carry the highest-ranked model, which is arbitrary with respect
+to the unit question itself. Worked on the shipped catalog, SARS-CoV-2 in stool
+ranks:
+
+| rank | reference event | unit | model | studies | subjects |
+|---|---|---|---|---|---|
+| 1 | symptom onset | gc/dry gram | gamma_shifted | 1 | 29 |
+| 2 | symptom onset | gc/mL | gamma | 2 | 16 |
+| 3 | symptom onset | gc/dry gram | gamma | 1 | 30 |
+| 4 | symptom onset | gc/mL | exponential | 3 | 26 |
+
+So the default returns a single-study `gc/dry gram` estimate ahead of a
+three-study `gc/mL` one, purely because `gamma_shifted` was identifiable on the
+former. For wastewater work `gc/mL` is usually the working unit, and a modeller
+who wanted it must pass `unit="gc/mL"`.
+
+This is a real cost of ranking model above evidence, and it is recorded rather
+than hidden: `shedding_options` shows the whole table, and `Selection.reason`
+names the rule that decided. If it proves to be the wrong trade in practice, the
+fix is to add unit to the ranking — for example by preferring the unit with the
+most studies before comparing models — which is a change to `_rank_key` alone.
+
 ## API
 
 ```python
@@ -155,14 +203,22 @@ false claim merely stops being silent.
 - Every `reference_event` in the shipped catalog is classified deliberately —
   the same shape of guard as `test_shipped_catalog_covers_every_dataset`, so a
   new event is a decision rather than a silent fallback.
-- The SARS-CoV-2 stool ranking is pinned explicitly, including that it picks the
-  two-study `gamma` on symptom onset over the three-study `exponential`, and over
-  every administrative group.
+- The SARS-CoV-2 stool ranking is pinned explicitly to whatever the stated rules
+  produce, so that any future change to them is visible in a diff rather than
+  silent. On the catalog as shipped that is `symptom onset / gc/dry gram /
+  gamma_shifted` — one study, 29 subjects — ahead of `symptom onset / gc/mL /
+  exponential` at three studies. See the consequence noted below.
 - `shedding_options(...).iloc[0]` and `shedding_for(...)` agree, on the shipped
   catalog and on synthetic catalogs — the property that keeps the two surfaces
   honest.
 - Each of `model`, `unit` and `reference_event` pins correctly and ranks within
   the remainder.
+- Every group `shedding_options` reports can actually be built: iterating the
+  whole shipped catalog, `shedding_for` on each row's keys returns an ensemble
+  rather than raising. This is the regression guard for the one-analyte-per-study
+  reduction, and it would have failed on 13 groups without it.
+- The reduction picks by the stated rule, and `Selection` records the analyte
+  taken for each study that offered more than one.
 - Ranking is deterministic across repeated calls and independent of catalog fit
   order.
 - A single-component result simulates identically to the bare fit for a fixed
