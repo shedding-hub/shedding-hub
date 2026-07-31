@@ -12,6 +12,16 @@ dependencies = [
     "scipy"
 ]
 
+# PyPI renders these as the project sidebar. Without them a visitor who arrives
+# from a dependency listing or a search has no route back to the source, the
+# issue tracker or the docs -- the README's own relative links cannot supply it,
+# because on PyPI they resolve against pypi.org.
+[project.urls]
+Homepage = "https://shedding-hub.github.io"
+Documentation = "https://github.com/shedding-hub/shedding-hub/blob/main/docs/modeling-methods.md"
+Repository = "https://github.com/shedding-hub/shedding-hub"
+Issues = "https://github.com/shedding-hub/shedding-hub/issues"
+
 [tool.setuptools.packages]
 # Restricted to the package itself. Bare auto-discovery also treats `tests` and
 # `scripts` as importable packages, so installing shedding-hub put a top-level
