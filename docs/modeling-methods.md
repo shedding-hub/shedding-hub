@@ -178,6 +178,22 @@ mean within-subject estimation covariance. It is **not implemented** — it need
 per-subject uncertainty the fitter does not estimate and the catalog does not
 serialize.
 
+### Reference events are not interchangeable
+
+The catalog spans seven reference events, in three classes. `inoculation` and
+`vaccination` *are* the exposure, so nothing separates them from time zero.
+`symptom onset` is a natural-history landmark, a defined and documented offset
+from infection. `enrollment`, `confirmation date`, `hospital admission` and
+`treatment` are administrative: they record when a subject entered a study, was
+tested, or was admitted, which depends on testing behaviour and health-system
+access rather than on their infection.
+
+Only the landmark class earns an infection time origin. `simulate_shedding`
+warns when an incubation period is applied to either of the others, and records
+`time_origin` as `"<event>_shifted"` rather than `"infection"`. `shedding_for`
+prefers the classes that can be anchored, which is why it will pass over a
+better-supported fit measured from an administrative date.
+
 ## 6. Reading an estimate honestly
 
 - **`peak_log10` is evaluated at the peak, which for the exponential model is

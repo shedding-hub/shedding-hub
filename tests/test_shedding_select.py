@@ -310,3 +310,13 @@ def test_single_component_matches_the_bare_fit(make_synthetic_dataset):
         simulate_shedding(catalog.fits[0], n_individuals=10, times=times, seed=7),
         check_like=True,
     )
+
+
+def test_public_exports():
+    import shedding_hub as sh
+
+    assert callable(sh.shedding_options)
+    assert callable(sh.shedding_for)
+    assert callable(sh.classify_reference_event)
+    for name in ("shedding_options", "shedding_for", "classify_reference_event"):
+        assert name in sh.__all__

@@ -43,6 +43,14 @@ from .shedding_catalog import (
 
 from .shedding_ensemble import SheddingEnsemble, make_ensemble
 
+from .shedding_select import (
+    REFERENCE_EVENT_CLASSES,
+    Selection,
+    classify_reference_event,
+    shedding_for,
+    shedding_options,
+)
+
 from .shedding_simulate import plot_simulated_shedding, simulate_shedding
 
 __all__ = [
@@ -81,6 +89,11 @@ __all__ = [
     "fit_shedding_models",
     "load_shedding_catalog",
     "make_ensemble",
+    "REFERENCE_EVENT_CLASSES",
+    "Selection",
+    "classify_reference_event",
+    "shedding_for",
+    "shedding_options",
     "simulate_shedding",
     "plot_simulated_shedding",
 ]
