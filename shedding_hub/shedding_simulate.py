@@ -186,16 +186,35 @@ def simulate_shedding(
     return frame
 
 
+# How far below zero the y axis will follow a band that sets it. A simulated
+# range descends past 10**-100 gc/mL -- measured at -137 log10 on a
+# gamma_shifted cohort from the shipped catalog -- which is not a concentration
+# anyone needs plotted, and following it leaves the data a ribbon at the top of
+# the panel. -3 sits below every censoring limit in the repository (the lowest
+# is -2.37) while keeping the data legible. It bounds the band and never the
+# observations: the axis takes the lower of this and the data. Same value and
+# same rule as ``viz.FIT_DIAGNOSTIC_YLIM_FLOOR``, so the two agree.
+SIMULATION_YLIM_FLOOR = -3.0
+
+
 def plot_simulated_shedding(
     traj: pd.DataFrame,
     *,
     source=None,
     observed: dict | None = None,
-    quantiles: tuple[float, float, float] = (0.05, 0.5, 0.95),
+    band_quantiles: tuple[float, float] = (0.0, 1.0),
+    band_inner_quantiles: tuple[float, float] | None = (0.025, 0.975),
+    ylim_floor: float = SIMULATION_YLIM_FLOOR,
     figsize: tuple[float, float] = (8, 6),
 ) -> Figure:
     """
-    Plot the median and a credible band of simulated trajectories.
+    Plot the median, an outer band, and an inner interval of a simulated cohort.
+
+    The layout follows the review pages ``make review_range`` produces: the wide
+    interval is shaded, the narrow one is drawn inside it as a dashed pair, and
+    the median is solid. Shading the range shows what the fit considers
+    possible; the dashed interval shows where the mass actually sits, which the
+    range alone hides.
 
     Args:
         traj: Output of ``simulate_shedding``.
@@ -207,7 +226,13 @@ def plot_simulated_shedding(
             to the analyte(s) contributed by ``source`` (a ``SheddingFit``'s
             own analyte, or a ``SheddingEnsemble``'s component analytes).
             Requires ``source``.
-        quantiles: Lower, middle, and upper quantiles for the band.
+        band_quantiles: Lower and upper quantiles of the shaded band. Defaults
+            to ``(0.0, 1.0)``, the full simulated range.
+        band_inner_quantiles: Lower and upper quantiles of the dashed interval
+            drawn inside the band, or ``None`` to omit it. Defaults to the
+            central 95%.
+        ylim_floor: How far below zero the axis will follow the band. Never
+            clips the observations.
         figsize: Figure size in inches.
 
     Returns:
@@ -225,24 +250,62 @@ def plot_simulated_shedding(
             "incubation_period."
         )
 
-    lower, middle, upper = quantiles
+    defined = traj.dropna(subset=["log10_value"])
+    lower, upper = band_quantiles
     summary = (
-        traj.dropna(subset=["log10_value"])
-        .groupby("time")["log10_value"]
-        .quantile([lower, middle, upper])
-        .unstack()
+        defined.groupby("time")["log10_value"].quantile([lower, 0.5, upper]).unstack()
     )
 
     fig, ax = plt.subplots(figsize=figsize)
+
+    if band_inner_quantiles is not None:
+        # Drawn before the fill so the shading does not sit on top of it. Only
+        # the first edge carries a label, so the legend gets one entry for the
+        # pair rather than two identical ones.
+        inner = (
+            defined.groupby("time")["log10_value"]
+            .quantile(list(band_inner_quantiles))
+            .unstack()
+        )
+        width = int(round((band_inner_quantiles[1] - band_inner_quantiles[0]) * 100))
+        for index, quantile in enumerate(band_inner_quantiles):
+            ax.plot(
+                inner.index,
+                inner[quantile],
+                ls="--",
+                color="tab:blue",
+                lw=1.1,
+                alpha=0.75,
+                zorder=3,
+                label=f"{width}% of individuals" if index == 0 else "_nolegend_",
+            )
+
     ax.fill_between(
         summary.index,
         summary[lower],
         summary[upper],
-        alpha=0.25,
+        alpha=0.18,
         color="tab:blue",
-        label=f"{int((upper - lower) * 100)}% of simulated individuals",
+        lw=0,
+        zorder=1,
+        # A full-range band is labelled by its draw count, not "100% of
+        # individuals": how far the extremes reach is a property of how many
+        # individuals were drawn as much as of the population, and the figure
+        # should not imply otherwise.
+        label=(
+            f"Simulated range, {traj['individual_id'].nunique()} individuals"
+            if lower <= 0.0 and upper >= 1.0
+            else f"Simulated {int(round((upper - lower) * 100))}% of individuals"
+        ),
     )
-    ax.plot(summary.index, summary[middle], color="tab:blue", lw=2, label="Median")
+    ax.plot(
+        summary.index, summary[0.5], color="tab:blue", lw=2, zorder=4, label="Median"
+    )
+
+    # The values the axis must keep whatever the band does: real readings and
+    # the censoring limit, never the simulated band itself.
+    protected_low = None
+    protected_high = None
 
     if source is not None:
         ax.axhline(
@@ -251,6 +314,7 @@ def plot_simulated_shedding(
             color="gray",
             label="Limit of quantification",
         )
+        protected_low = float(source.censoring_limit)
 
     if observed is not None:
         if source is None:
@@ -279,6 +343,37 @@ def plot_simulated_shedding(
                     values.append(np.log10(float(value)))
         if times:
             ax.scatter(times, values, s=18, color="black", alpha=0.5, label="Observed")
+            finite = [value for value in values if np.isfinite(value)]
+            if finite:
+                seen_low, seen_high = min(finite), max(finite)
+                protected_low = (
+                    seen_low if protected_low is None else min(protected_low, seen_low)
+                )
+                protected_high = (
+                    seen_high
+                    if protected_high is None
+                    else max(protected_high, seen_high)
+                )
+
+    # The axis follows the inner interval, not the band. A range over a few
+    # hundred draws reaches both directions of nonsense -- 10**-137 and 10**76
+    # gc/mL were both measured on the shipped catalog -- and letting it set the
+    # limits hands the panel to one agent and leaves everything real a ribbon in
+    # the middle. The band is still drawn; it is simply allowed to clip.
+    focus = inner if band_inner_quantiles is not None else summary[[lower, upper]]
+    low, high = float(np.nanmin(focus.values)), float(np.nanmax(focus.values))
+    pad = 0.05 * (high - low) if high > low else 1.0
+    bottom, top = low - pad, high + pad
+
+    # Anything the study actually recorded, and the limit it was read against,
+    # outrank that: the axis bounds the simulation, never the data.
+    if protected_low is not None:
+        bottom = min(bottom, protected_low - pad)
+    if protected_high is not None:
+        top = max(top, protected_high + pad)
+    if protected_low is None or protected_low >= ylim_floor:
+        bottom = max(bottom, ylim_floor)
+    ax.set_ylim(bottom, top)
 
     origin = traj.attrs.get("time_origin", "reference event")
     unit = traj.attrs.get("unit", "")

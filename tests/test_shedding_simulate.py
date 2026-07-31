@@ -453,3 +453,146 @@ def test_no_incubation_period_leaves_the_origin_alone(make_synthetic_dataset):
     traj = simulate_shedding(fit, n_individuals=5, times=np.arange(0, 6), seed=1)
     assert traj.attrs["time_origin"] == "enrollment"
     assert traj.attrs["incubation_applied"] is False
+
+
+def _wide_traj(exponential_fit, low_tail=False):
+    """A cohort whose band descends far below any plottable concentration."""
+    return simulate_shedding(
+        exponential_fit,
+        n_individuals=400,
+        times=np.arange(1.0, 25.0),
+        dispersion=3.0 if low_tail else 1.0,
+        seed=5,
+    )
+
+
+def test_plot_floors_the_axis_rather_than_following_the_band_down(exponential_fit):
+    """
+    A range band descends past concentrations nobody needs plotted.
+
+    Left to autoscale it squashes every real value into a ribbon at the top of
+    the panel: measured on the shipped catalog, a gamma_shifted cohort dragged
+    the axis to -137 log10.
+    """
+    from shedding_hub.shedding_simulate import SIMULATION_YLIM_FLOOR
+
+    traj = _wide_traj(exponential_fit, low_tail=True)
+    fig = plot_simulated_shedding(traj, source=exponential_fit)
+    bottom, _ = fig.axes[0].get_ylim()
+    assert bottom >= SIMULATION_YLIM_FLOOR
+    # and the floor is genuinely binding on this cohort
+    assert traj["log10_value"].min() < SIMULATION_YLIM_FLOOR
+
+
+def test_the_floor_never_hides_a_real_observation(exponential_fit):
+    """It bounds the simulated band, never the data the study actually saw."""
+    from shedding_hub.shedding_simulate import SIMULATION_YLIM_FLOOR
+
+    traj = _wide_traj(exponential_fit, low_tail=True)
+    observed = {
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": exponential_fit.analyte, "time": 3.0, "value": 10.0**-6}
+                ]
+            }
+        ]
+    }
+    fig = plot_simulated_shedding(traj, source=exponential_fit, observed=observed)
+    bottom, _ = fig.axes[0].get_ylim()
+    assert bottom <= -6.0, "an observation below the floor must keep its place"
+    assert bottom < SIMULATION_YLIM_FLOOR
+
+
+def test_plot_leaves_an_ordinary_band_alone(exponential_fit):
+    """The floor must not drag a well-behaved axis down to meet it."""
+    from shedding_hub.shedding_simulate import SIMULATION_YLIM_FLOOR
+
+    traj = _wide_traj(exponential_fit)
+    fig = plot_simulated_shedding(traj, source=exponential_fit)
+    bottom, _ = fig.axes[0].get_ylim()
+    assert bottom > SIMULATION_YLIM_FLOOR
+
+
+def test_plot_draws_the_inner_interval_as_dashed_lines(exponential_fit):
+    """Two dashed edges, one legend entry between them."""
+    traj = _wide_traj(exponential_fit)
+    fig = plot_simulated_shedding(
+        traj, source=exponential_fit, band_inner_quantiles=(0.025, 0.975)
+    )
+    ax = fig.axes[0]
+    dashed = [line for line in ax.get_lines() if line.get_linestyle() == "--"]
+    assert len(dashed) == 2
+    labelled = [l for l in dashed if not l.get_label().startswith("_")]
+    assert len(labelled) == 1
+    assert "95%" in labelled[0].get_label()
+
+
+def test_inner_interval_can_be_switched_off(exponential_fit):
+    traj = _wide_traj(exponential_fit)
+    fig = plot_simulated_shedding(
+        traj, source=exponential_fit, band_inner_quantiles=None
+    )
+    dashed = [l for l in fig.axes[0].get_lines() if l.get_linestyle() == "--"]
+    assert dashed == []
+
+
+def test_a_full_range_band_is_labelled_by_draw_count(exponential_fit):
+    """
+    The extremes a range reaches depend on how many individuals were drawn.
+
+    Calling it "100% of individuals" would imply the population reaches there,
+    so the label names the cohort size instead -- the same wording the review
+    pages use.
+    """
+    traj = _wide_traj(exponential_fit)
+    fig = plot_simulated_shedding(
+        traj, source=exponential_fit, band_quantiles=(0.0, 1.0)
+    )
+    labels = [t.get_text() for t in fig.axes[0].get_legend().get_texts()]
+    assert any("range" in l and "400" in l for l in labels), labels
+    assert not any("100% of individuals" in l for l in labels), labels
+
+
+def test_the_bands_extremes_do_not_drive_the_axis(exponential_fit):
+    """
+    Shading the range must not hand the axis to one absurd agent.
+
+    Over a few hundred draws the range reaches concentrations no biology
+    supports -- 10**76 gc/mL was measured on the shipped catalog -- so the axis
+    follows the inner interval and the band is allowed to clip.
+    """
+    traj = _wide_traj(exponential_fit, low_tail=True)
+    fig = plot_simulated_shedding(
+        traj,
+        source=exponential_fit,
+        band_quantiles=(0.0, 1.0),
+        band_inner_quantiles=(0.025, 0.975),
+    )
+    bottom, top = fig.axes[0].get_ylim()
+    inner_high = traj["log10_value"].quantile(0.975)
+    band_high = traj["log10_value"].max()
+    assert top < band_high, "the band's extreme must not set the top"
+    assert top >= inner_high, "the inner interval must remain visible"
+
+
+def test_an_observation_above_the_interval_still_fits(exponential_fit):
+    """The axis bounds the band, never the data — at the top as at the bottom."""
+    traj = _wide_traj(exponential_fit)
+    high = float(traj["log10_value"].quantile(0.975)) + 5.0
+    observed = {
+        "participants": [
+            {
+                "measurements": [
+                    {
+                        "analyte": exponential_fit.analyte,
+                        "time": 3.0,
+                        "value": 10.0**high,
+                    }
+                ]
+            }
+        ]
+    }
+    fig = plot_simulated_shedding(traj, source=exponential_fit, observed=observed)
+    _, top = fig.axes[0].get_ylim()
+    assert top >= high
