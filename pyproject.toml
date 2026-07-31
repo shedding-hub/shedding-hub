@@ -22,6 +22,14 @@ Documentation = "https://github.com/shedding-hub/shedding-hub/blob/main/docs/mod
 Repository = "https://github.com/shedding-hub/shedding-hub"
 Issues = "https://github.com/shedding-hub/shedding-hub/issues"
 
+[tool.pytest.ini_options]
+# Docstring examples are documentation users copy, so they are tested like any
+# other claim. Six examples predating this setting had never been executed and
+# all six were broken.
+addopts = "--doctest-modules"
+testpaths = ["tests", "shedding_hub"]
+doctest_optionflags = "ELLIPSIS NORMALIZE_WHITESPACE"
+
 [tool.setuptools.packages]
 # Restricted to the package itself. Bare auto-discovery also treats `tests` and
 # `scripts` as importable packages, so installing shedding-hub put a top-level

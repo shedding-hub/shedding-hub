@@ -25,7 +25,7 @@ jobs:
         run: black --check .
       - name: Run tests
         run: pytest -v --cov=shedding_hub --cov-report=term-missing
-      - name: Run doctests
+      - name: Run README doctests
         run: python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE README.md
       - name: Build package
         run: python -m build

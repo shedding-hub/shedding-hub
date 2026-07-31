@@ -51,7 +51,12 @@ def calc_shedding_summary(
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> from shedding_hub.stats import calc_shedding_summary
         >>> summary = calc_shedding_summary(data, specimen='sputum')
-        >>> print(summary[['participant_id', 'shedding_duration', 'peak_value', 'clearance_status']])
+        >>> list(summary.columns)  # doctest: +NORMALIZE_WHITESPACE
+        ['participant_id', 'biomarker', 'specimen', 'value_type', 'reference_event',
+         'first_positive_time', 'last_positive_time', 'shedding_duration', 'peak_value',
+         'peak_time', 'n_positive', 'n_negative', 'n_total', 'clearance_status', 'clearance_time']
+        >>> summary.loc[0, 'clearance_status']
+        'censored'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -294,7 +299,10 @@ def calc_detection_summary(
         >>> from shedding_hub.stats import calc_detection_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> detection = calc_detection_summary(data, specimen='sputum', time_bin_size=7)
-        >>> print(detection[['time', 'n_tested', 'n_positive', 'proportion']])
+        >>> list(detection.columns)
+        ['time', 'n_tested', 'n_positive', 'n_negative', 'proportion', 'ci_lower', 'ci_upper']
+        >>> detection.loc[1, 'n_tested']
+        52
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -490,8 +498,10 @@ def calc_clearance_summary(
         >>> from shedding_hub.stats import calc_clearance_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> summary = calc_clearance_summary(data, specimen='sputum')
-        >>> print(f"Median clearance: {summary['median_clearance_time']} days")
-        >>> print(summary['time_point_summary'])
+        >>> summary['median_clearance_time']
+        27
+        >>> list(summary['time_point_summary'].columns)
+        ['time', 'proportion_shedding', 'proportion_cleared', 'ci_lower', 'ci_upper', 'n_at_risk']
     """
     if time_points is None:
         time_points = [7, 14, 21, 28]
@@ -789,7 +799,10 @@ def calc_value_summary(
         >>> from shedding_hub.stats import calc_value_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> summary = calc_value_summary(data, specimen='sputum', time_bin_size=7)
-        >>> print(summary[['time', 'n', 'mean', 'median']])
+        >>> list(summary.columns)
+        ['time', 'n', 'mean', 'std', 'median', 'q25', 'q75', 'min', 'max']
+        >>> summary.loc[0, 'n']
+        4
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -997,11 +1010,12 @@ def calc_dataset_summary(
 
     Example:
         >>> import shedding_hub as sh
-        >>> from shedding_hub.stats import calc_dataset_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
-        >>> summary = calc_dataset_summary(data)
-        >>> print(f"Participants: {summary['n_participants']}")
-        >>> print(f"Biomarkers: {summary['biomarkers']}")
+        >>> summary = sh.calc_dataset_summary(data)
+        >>> sorted(summary)  # doctest: +ELLIPSIS
+        [...]
+        >>> summary['n_participants']
+        9
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -1163,7 +1177,12 @@ def compare_datasets(
         >>> data1 = sh.load_dataset('woelfel2020virological', local='./data')
         >>> data2 = sh.load_dataset('young2020epidemiologic', local='./data')
         >>> comparison = compare_datasets([data1, data2], specimen='sputum', value='concentration')
-        >>> print(comparison)
+        >>> list(comparison.columns)  # doctest: +NORMALIZE_WHITESPACE
+        ['dataset_id', 'n_participants', 'n_measurements', 'pct_positive',
+         'median_shedding_duration', 'iqr_shedding_duration', 'median_peak_value',
+         'iqr_peak_value', 'median_peak_time', 'pct_cleared', 'median_clearance_time']
+        >>> comparison.loc[0, 'dataset_id']
+        'woelfel2020virological'
     """
     if not datasets:
         raise ValueError("datasets list cannot be empty")
