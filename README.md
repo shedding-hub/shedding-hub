@@ -183,6 +183,13 @@ the fitted spread is real estimation noise rather than genuine heterogeneity. Wh
 makes shrinkage the only direction offered is that the two-stage bias runs one
 way: the fitted spread is too wide, never too narrow.
 
+For how the estimates are produced, what they mean, and where they should not
+be trusted, see [docs/modeling-methods.md](docs/modeling-methods.md). `make
+parameters` writes the fitted parameters for every dataset to
+`docs/shedding_parameters.json` (reusable: each record carries the population
+mean and covariance, so it can be simulated from without refitting) and
+`docs/shedding_parameters.csv` (flat, one row per fit).
+
 ### Visualization
 
 Plot individual shedding trajectories over time.
