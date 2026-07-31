@@ -65,6 +65,65 @@ site carries a banner stating that it documents the development version and
 naming the current release. Adding tags later turns the banner into a real
 `stable`/`latest` split without rework.
 
+## Worked examples for every function
+
+Rendering docstrings gives a reader signatures and prose. It does not show them
+how to call anything or what comes back, which is most of what a reference is
+for. So every public name gains a worked example — and the way those examples
+are written matters more than that they exist.
+
+**Six of the 42 names already have an `Examples:` block**, all in `stats.py`.
+Every one of them is broken. They were written as illustration —
+`>>> print(comparison)` with no expected output beneath it — and CI runs
+doctests against `README.md` only, never against module docstrings, so they have
+never once been executed. Running them for the first time fails all six:
+
+```
+FAILED shedding_hub/stats.py::shedding_hub.stats.calc_clearance_summary
+FAILED shedding_hub/stats.py::shedding_hub.stats.calc_dataset_summary
+FAILED shedding_hub/stats.py::shedding_hub.stats.calc_detection_summary
+FAILED shedding_hub/stats.py::shedding_hub.stats.calc_shedding_summary
+FAILED shedding_hub/stats.py::shedding_hub.stats.calc_value_summary
+FAILED shedding_hub/stats.py::shedding_hub.stats.compare_datasets
+6 failed
+```
+
+That is the same failure as `package.html`, one layer down: documentation nobody
+executes is documentation that is wrong. Adding 36 more examples in that style
+would produce 42 unverifiable ones. So examples are written as **real doctests
+with their expected output**, `pytest --doctest-modules` runs them in CI, and
+the six existing ones are repaired rather than left.
+
+The public surface splits by what its output is:
+
+| kind | count | how the example shows the output |
+|---|---|---|
+| data-returning functions | 21 | doctest with the returned value beneath it |
+| classes | 7 | doctest constructing or describing an instance |
+| constants | 3 | doctest showing the value |
+| `plot_*` functions | 11, becoming 14 | doctest asserts the type; a rendered image shows the chart |
+
+**Examples must be deterministic and offline.** The shipped catalog is inside
+the package, so fitting, simulation and selection examples use
+`load_shedding_catalog()` and need no network. Dataset examples use
+`load_dataset(..., local='./data')`, which resolves in the repository where both
+CI and the docs build run.
+
+## Rendered figures
+
+A doctest on a plotting function can assert `Figure` and nothing more, which
+tells a reader choosing between `plot_shedding_heatmap` and
+`plot_mean_trajectory` nothing at all. So a build step runs each `plot_*`
+function against a fixed dataset and writes a PNG that its reference entry
+embeds.
+
+Regenerating on every build is the point, not a cost: an image committed once
+goes stale silently the moment a plot changes, which is the failure this design
+exists to correct. A plot that breaks, or whose shape changes, shows up in the
+docs build. The generator lives beside the existing `scripts/`, writes into a
+git-ignored output directory, and fails the build if any figure cannot be
+produced.
+
 ## Structure
 
 MkDocs defaults to `docs/` as its source, and that directory already holds
@@ -76,12 +135,14 @@ explicitly via `exclude_docs`, native since MkDocs 1.6.
 ```
 mkdocs.yml
 .readthedocs.yaml
+scripts/build_doc_figures.py   renders the plot_* example images
 docs/
   index.md              what the package is; install
   getting-started.md    load a dataset, summarise, visualise
   tutorial.md           the simulation walkthrough
   modeling-methods.md   already present, rendered unchanged
   reference/            one mkdocstrings stub per module
+  images/               generated, git-ignored
   superpowers/          excluded from the build
 ```
 
@@ -114,6 +175,13 @@ fails the build rather than the published site.
 
 - Every name in `__all__` is reachable in the generated reference; the failure
   message names the omissions.
+- Every name in `__all__` carries a runnable example, so a function added
+  without one fails rather than shipping undocumented.
+- `pytest --doctest-modules` passes over `shedding_hub/`, which it does not
+  today: all six existing module doctests fail, and repairing them is part of
+  this work.
+- Each `plot_*` function produces its example figure; a plot that raises fails
+  the docs build rather than leaving a stale image in place.
 - The three newly exported functions each return a `Figure` and honour their
   `biomarker` / `specimen` filters — the smoke coverage they have never had.
 - `mkdocs build --strict` succeeds, so warnings (broken internal links, missing
