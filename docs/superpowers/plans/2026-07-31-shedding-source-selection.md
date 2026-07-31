@@ -16,7 +16,7 @@
 - Reference-event classes are exactly `"exposure"`, `"landmark"`, `"administrative"`. An unrecognised event classifies as `"administrative"`.
 - Ranking order is fixed: event class, then unit (by how many studies report it), then model, then studies, then subjects, then measurements, then the sorted key tuple. Model order is `gamma_shifted`, `gamma`, `exponential`.
 - Every group reported must be buildable: reduce to one fit per study before counting or building.
-- Tests must not fit models where a fixture will do — the full suite already takes ~5 minutes. Use `load_shedding_catalog()` and the `make_synthetic_dataset` fixture in `tests/conftest.py`.
+- Tests must not fit models where a fixture will do, and must not reload the shipped catalog per test — it costs ~2.2s and the suite already takes ~5 minutes. Use the session-scoped `shipped_catalog` fixture (added in Task 1) and the existing `make_synthetic_dataset` fixture, both in `tests/conftest.py`. Never call `load_shedding_catalog()` directly in a test.
 
 ---
 
@@ -24,13 +24,34 @@
 
 **Files:**
 - Create: `shedding_hub/shedding_select.py`
+- Modify: `tests/conftest.py`
 - Test: `tests/test_shedding_select.py`
 
 **Interfaces:**
 - Consumes: nothing.
-- Produces: `REFERENCE_EVENT_CLASSES: dict[str, str]`, `classify_reference_event(event: str | None) -> str`. Later tasks rank on the return value, which is one of `"exposure"`, `"landmark"`, `"administrative"`.
+- Produces: `REFERENCE_EVENT_CLASSES: dict[str, str]`, `classify_reference_event(event: str | None) -> str`. Later tasks rank on the return value, which is one of `"exposure"`, `"landmark"`, `"administrative"`. Also the `shipped_catalog` pytest fixture, which Tasks 2 and 3 use throughout.
 
-- [ ] **Step 1: Write the failing tests**
+- [ ] **Step 1: Add the session-scoped catalog fixture**
+
+Loading the shipped catalog costs about 2.2 seconds, and the tests across Tasks 1-3 need it roughly 97 times — 82 of those inside a single loop. Loading per test would add over three minutes to a suite that currently runs in five. Load it once per session instead.
+
+Append to `tests/conftest.py`:
+
+```python
+@pytest.fixture(scope="session")
+def shipped_catalog():
+    """
+    The shipped catalog, loaded once for the whole session.
+
+    Parsing it costs ~2.2s, and the selection tests need it dozens of times.
+    Session scope is safe because nothing in these tests mutates a catalog.
+    """
+    from shedding_hub import load_shedding_catalog
+
+    return load_shedding_catalog()
+```
+
+- [ ] **Step 2: Write the failing tests**
 
 Create `tests/test_shedding_select.py`:
 
@@ -65,16 +86,14 @@ def test_unknown_event_is_administrative():
     assert classify_reference_event(None) == "administrative"
 
 
-def test_every_shipped_reference_event_is_classified_deliberately():
+def test_every_shipped_reference_event_is_classified_deliberately(shipped_catalog):
     """
     Staleness check, in the shape of test_shipped_catalog_covers_every_dataset.
 
     A dataset introducing a new reference event must be a decision, not a silent
     fall through to 'administrative'.
     """
-    from shedding_hub import load_shedding_catalog
-
-    events = set(load_shedding_catalog().table["reference_event"].dropna())
+    events = set(shipped_catalog.table["reference_event"].dropna())
     missing = events - set(REFERENCE_EVENT_CLASSES)
     assert not missing, (
         f"Reference event(s) {sorted(missing)} appear in the shipped catalog but "
@@ -84,12 +103,12 @@ def test_every_shipped_reference_event_is_classified_deliberately():
     )
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [ ] **Step 3: Run tests to verify they fail**
 
 Run: `python -m pytest tests/test_shedding_select.py -q`
 Expected: FAIL — `ModuleNotFoundError: No module named 'shedding_hub.shedding_select'`
 
-- [ ] **Step 3: Implement the taxonomy**
+- [ ] **Step 4: Implement the taxonomy**
 
 Create `shedding_hub/shedding_select.py`:
 
@@ -138,16 +157,16 @@ def classify_reference_event(event) -> str:
     return REFERENCE_EVENT_CLASSES.get(event, "administrative")
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [ ] **Step 5: Run tests to verify they pass**
 
 Run: `python -m pytest tests/test_shedding_select.py -q`
 Expected: PASS, 9 tests.
 
-- [ ] **Step 5: Format and commit**
+- [ ] **Step 6: Format and commit**
 
 ```bash
-black shedding_hub/shedding_select.py tests/test_shedding_select.py
-git add shedding_hub/shedding_select.py tests/test_shedding_select.py
+black shedding_hub/shedding_select.py tests/test_shedding_select.py tests/conftest.py
+git add shedding_hub/shedding_select.py tests/test_shedding_select.py tests/conftest.py
 git commit -m "feat: classify reference events by their relation to infection"
 ```
 
@@ -168,28 +187,33 @@ git commit -m "feat: classify reference events by their relation to infection"
 Append to `tests/test_shedding_select.py`:
 
 ```python
-def test_options_lists_groups_best_first():
+def test_options_lists_groups_best_first(shipped_catalog):
     from shedding_hub.shedding_select import shedding_options
 
-    options = shedding_options(biomarker="SARS-CoV-2", specimen="stool")
+    options = shedding_options(
+        catalog=shipped_catalog, biomarker="SARS-CoV-2", specimen="stool"
+    )
     assert len(options) > 1
     assert list(options["rank"]) == list(range(1, len(options) + 1))
     # Rule 1: a defensible clock outranks a better curve.
     assert options.iloc[0]["event_class"] in ("exposure", "landmark")
 
 
-def test_options_prefers_the_rise_capable_model_within_a_clock():
+def test_options_prefers_the_rise_capable_model_within_a_clock(shipped_catalog):
     """Rule 3, held apart from rules 1 and 2 by fixing the reference event."""
     from shedding_hub.shedding_select import shedding_options
 
     options = shedding_options(
-        biomarker="SARS-CoV-2", specimen="stool", reference_event="symptom onset"
+        catalog=shipped_catalog,
+        biomarker="SARS-CoV-2",
+        specimen="stool",
+        reference_event="symptom onset",
     )
     order = list(options["model"])
     assert order.index("gamma") < order.index("exponential")
 
 
-def test_options_counts_one_study_once():
+def test_options_counts_one_study_once(shipped_catalog):
     """
     natarajan contributes 14 exponential fits to one group, one per assay.
 
@@ -199,6 +223,7 @@ def test_options_counts_one_study_once():
     from shedding_hub.shedding_select import shedding_options
 
     options = shedding_options(
+        catalog=shipped_catalog,
         biomarker="SARS-CoV-2",
         specimen="stool",
         reference_event="enrollment",
@@ -209,11 +234,13 @@ def test_options_counts_one_study_once():
     assert options.iloc[0]["n_studies"] == 1
 
 
-def test_sars_cov_2_stool_ranking_is_pinned():
+def test_sars_cov_2_stool_ranking_is_pinned(shipped_catalog):
     """Pin the shipped outcome so a rule change shows in a diff, not silently."""
     from shedding_hub.shedding_select import shedding_options
 
-    options = shedding_options(biomarker="SARS-CoV-2", specimen="stool")
+    options = shedding_options(
+        catalog=shipped_catalog, biomarker="SARS-CoV-2", specimen="stool"
+    )
     top = options.head(2)
     assert list(top["reference_event"]) == ["symptom onset", "symptom onset"]
     assert list(top["unit"]) == ["gc/mL", "gc/mL"]
@@ -227,7 +254,7 @@ def test_sars_cov_2_stool_ranking_is_pinned():
     )
 
 
-def test_a_better_represented_unit_outranks_a_richer_model():
+def test_a_better_represented_unit_outranks_a_richer_model(shipped_catalog):
     """
     Rule 2 in isolation: without it, unit is settled as a side effect.
 
@@ -237,7 +264,9 @@ def test_a_better_represented_unit_outranks_a_richer_model():
     """
     from shedding_hub.shedding_select import shedding_options
 
-    options = shedding_options(biomarker="SARS-CoV-2", specimen="stool")
+    options = shedding_options(
+        catalog=shipped_catalog, biomarker="SARS-CoV-2", specimen="stool"
+    )
     assert options.iloc[0]["unit"] == "gc/mL"
     assert options.iloc[0]["n_unit_studies"] == 4
     shifted = options[options["model"] == "gamma_shifted"].iloc[0]
@@ -245,11 +274,11 @@ def test_a_better_represented_unit_outranks_a_richer_model():
     assert shifted["rank"] > options.iloc[0]["rank"]
 
 
-def test_options_raises_when_nothing_matches():
+def test_options_raises_when_nothing_matches(shipped_catalog):
     from shedding_hub.shedding_select import shedding_options
 
     with pytest.raises(ValueError, match="No fits match"):
-        shedding_options(biomarker="not a biomarker")
+        shedding_options(catalog=shipped_catalog, biomarker="not a biomarker")
 
 
 def test_options_accepts_an_explicit_catalog(make_synthetic_dataset):
@@ -467,13 +496,13 @@ git commit -m "feat: list the simulable groups, ranked"
 Append to `tests/test_shedding_select.py`:
 
 ```python
-def test_for_returns_a_simulable_ensemble():
+def test_for_returns_a_simulable_ensemble(shipped_catalog):
     import numpy as np
 
     from shedding_hub import simulate_shedding
     from shedding_hub.shedding_select import shedding_for
 
-    source = shedding_for("SARS-CoV-2", "stool")
+    source = shedding_for("SARS-CoV-2", "stool", catalog=shipped_catalog)
     traj = simulate_shedding(
         source, n_individuals=20, times=np.arange(1, 11), seed=1
     )
@@ -481,46 +510,54 @@ def test_for_returns_a_simulable_ensemble():
     # times start at 1, not 0: the gamma models are undefined at their own origin.
 
 
-def test_for_agrees_with_options_rank_one():
+def test_for_agrees_with_options_rank_one(shipped_catalog):
     """The property that keeps the two surfaces from drifting apart."""
     from shedding_hub.shedding_select import shedding_for, shedding_options
 
-    best = shedding_options(biomarker="SARS-CoV-2", specimen="stool").iloc[0]
-    source = shedding_for("SARS-CoV-2", "stool")
+    best = shedding_options(
+        catalog=shipped_catalog, biomarker="SARS-CoV-2", specimen="stool"
+    ).iloc[0]
+    source = shedding_for("SARS-CoV-2", "stool", catalog=shipped_catalog)
     assert source.selection.picked["model"] == best["model"]
     assert source.selection.picked["reference_event"] == best["reference_event"]
     assert source.selection.picked["unit"] == best["unit"]
 
 
-def test_for_explains_what_it_passed_over():
+def test_for_explains_what_it_passed_over(shipped_catalog):
     from shedding_hub.shedding_select import shedding_for
 
-    selection = shedding_for("SARS-CoV-2", "stool").selection
+    selection = shedding_for("SARS-CoV-2", "stool", catalog=shipped_catalog).selection
     assert selection.reason
     assert len(selection.passed_over) > 0
     assert "rank" in selection.passed_over.columns
 
 
-def test_for_pins_an_overridden_key():
+def test_for_pins_an_overridden_key(shipped_catalog):
     from shedding_hub.shedding_select import shedding_for
 
-    source = shedding_for("SARS-CoV-2", "stool", model="exponential")
+    source = shedding_for(
+        "SARS-CoV-2", "stool", catalog=shipped_catalog, model="exponential"
+    )
     assert source.selection.picked["model"] == "exponential"
     assert source.model == "exponential"
 
 
-def test_for_records_the_analyte_taken_from_each_study():
+def test_for_records_the_analyte_taken_from_each_study(shipped_catalog):
     """natarajan offers 14 analytes to this group; exactly one must be taken."""
     from shedding_hub.shedding_select import shedding_for
 
     source = shedding_for(
-        "SARS-CoV-2", "stool", reference_event="enrollment", model="exponential"
+        "SARS-CoV-2",
+        "stool",
+        catalog=shipped_catalog,
+        reference_event="enrollment",
+        model="exponential",
     )
     assert len(source.fits) == 1
     assert set(source.selection.analytes) == {"natarajan2022gastrointestinal"}
 
 
-def test_every_advertised_group_can_actually_be_built():
+def test_every_advertised_group_can_actually_be_built(shipped_catalog):
     """
     The regression guard for the one-analyte-per-study reduction.
 
@@ -529,11 +566,12 @@ def test_every_advertised_group_can_actually_be_built():
     """
     from shedding_hub.shedding_select import shedding_for, shedding_options
 
-    options = shedding_options()
+    options = shedding_options(catalog=shipped_catalog)
     for _, row in options.iterrows():
         source = shedding_for(
             row["biomarker"],
             row["specimen"],
+            catalog=shipped_catalog,
             reference_event=row["reference_event"],
             unit=row["unit"],
             model=row["model"],
@@ -541,11 +579,13 @@ def test_every_advertised_group_can_actually_be_built():
         assert len(source.fits) == row["n_studies"]
 
 
-def test_for_is_deterministic():
+def test_for_is_deterministic(shipped_catalog):
     from shedding_hub.shedding_select import shedding_for
 
-    first = shedding_for("SARS-CoV-2", "stool").selection.picked
-    second = shedding_for("SARS-CoV-2", "stool").selection.picked
+    first = shedding_for("SARS-CoV-2", "stool", catalog=shipped_catalog).selection.picked
+    second = shedding_for(
+        "SARS-CoV-2", "stool", catalog=shipped_catalog
+    ).selection.picked
     assert first == second
 
 
