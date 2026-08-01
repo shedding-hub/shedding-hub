@@ -6,6 +6,10 @@ edit_uri: blob/main/docs/
 
 theme:
   name: material
+  # The mark alone, recoloured white -- it sits on the brand-teal header, and
+  # the full lockup would repeat the site name standing right next to it.
+  logo: assets/logo-mark.png
+  favicon: assets/favicon.png
   features:
     - navigation.sections
     - content.code.copy
@@ -13,10 +17,17 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: custom
+      accent: custom
       toggle: {icon: material/weather-night, name: Dark mode}
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: custom
+      accent: custom
       toggle: {icon: material/weather-sunny, name: Light mode}
+
+extra_css:
+  - assets/brand.css
 
 # docs/ holds the project's internal design records. A default build would
 # publish every one of them as a page.
@@ -44,8 +55,14 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - attr_list
+  # The home page wraps the logo in a div to size it, and Markdown inside raw
+  # HTML is inert without this.
+  - md_in_html
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.snippets:
       base_path: ["."]
 
