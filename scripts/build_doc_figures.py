@@ -80,7 +80,12 @@ def main() -> int:
             sh.calc_shedding_peak(data, output="summary")
         ),
         "plot_fit_diagnostic": lambda: sh.plot_fit_diagnostic(fit, data),
-        "plot_catalog_fits": lambda: sh.plot_catalog_fits(catalog),
+        # Scoped to one biomarker and specimen: the whole catalog renders a
+        # panel per fit, which came out at 1.4 MB against <=129 KB for every
+        # other figure, and grows with every dataset added.
+        "plot_catalog_fits": lambda: sh.plot_catalog_fits(
+            catalog, biomarker="SARS-CoV-2", specimen="stool"
+        ),
         "plot_simulated_shedding": lambda: sh.plot_simulated_shedding(
             traj, source=source
         ),

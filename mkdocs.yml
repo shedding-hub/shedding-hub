@@ -1,0 +1,64 @@
+site_name: Shedding Hub
+site_description: Data and statistical models for biomarker shedding.
+site_url: https://shedding-hub.readthedocs.io/
+repo_url: https://github.com/shedding-hub/shedding-hub
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: {icon: material/weather-sunny, name: Light mode}
+
+# docs/ holds the project's internal design records. A default build would
+# publish every one of them as a page.
+exclude_docs: |
+  superpowers/
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            # Several pre-existing signatures (shedding_catalog, shedding_select,
+            # shedding_simulate, shedding_ensemble, viz) lack type annotations on
+            # some parameters. Annotating them is a source change outside this
+            # task; this only silences the resulting griffe warning so a
+            # --strict build isn't blocked by it.
+            docstring_options:
+              warn_missing_types: false
+            show_source: false
+            show_root_heading: true
+            heading_level: 3
+            members_order: source
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["."]
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Tutorial: tutorial.md
+  - Modeling methods: modeling-methods.md
+  - Reference:
+      - Datasets: reference/datasets.md
+      - Statistics: reference/statistics.md
+      - Visualisation: reference/visualisation.md
+      - Fitting: reference/fitting.md
+      - Catalog and ensembles: reference/catalog.md
+      - Simulation: reference/simulation.md
+      - Choosing a source: reference/selection.md
