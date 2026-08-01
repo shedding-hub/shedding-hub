@@ -2883,9 +2883,15 @@ def plot_catalog_fits(
             silently empty figure is worse than a refusal.
 
     Examples:
+        Narrowed to one biomarker and specimen, matching the figure rendered
+        below: the unfiltered catalog draws a panel per fit, which is a great
+        deal of output to page through.
+
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
-        >>> fig = sh.plot_catalog_fits(catalog)
+        >>> fig = sh.plot_catalog_fits(
+        ...     catalog, biomarker='SARS-CoV-2', specimen='stool'
+        ... )
         >>> type(fig).__name__
         'Figure'
     """

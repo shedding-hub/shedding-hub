@@ -75,6 +75,10 @@ Simulate shedding trajectories for synthetic infected individuals — intended f
 agent-based models of wastewater surveillance. Browse the catalog of fitted
 estimates, pick one study or an ensemble across studies, then simulate.
 
+Full documentation — a tutorial, the modeling methods, and a generated API
+reference covering every public name with a worked example — is at
+**[shedding-hub.readthedocs.io](https://shedding-hub.readthedocs.io/)**.
+
 [`examples/simulating-shedding.md`](https://github.com/shedding-hub/shedding-hub/blob/main/examples/simulating-shedding.md) walks through the whole workflow, including how
 to override the default choice and what the estimates do *not* support. It refits
 nothing and runs in seconds. It is a [jupytext](https://jupytext.readthedocs.io)

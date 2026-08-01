@@ -1012,8 +1012,10 @@ def calc_dataset_summary(
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> summary = sh.calc_dataset_summary(data)
-        >>> sorted(summary)  # doctest: +ELLIPSIS
-        [...]
+        >>> sorted(summary)
+        ['analyte_details', 'biomarkers', 'dataset_id', 'doi', 'n_analytes',
+         'n_measurements', 'n_negative', 'n_participants', 'n_positive',
+         'reference_events', 'specimens', 'time_range', 'title', 'value_types']
         >>> summary['n_participants']
         9
     """

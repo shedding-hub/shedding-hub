@@ -712,7 +712,7 @@ def test_every_callable_has_a_runnable_example():
     )
     assert not missing, (
         f"{len(missing)} callable(s) have no worked example: {missing}. "
-        "Add an Example: block; it is executed by --doctest-modules."
+        "Add an Examples: block; it is executed by --doctest-modules."
     )
 ```
 

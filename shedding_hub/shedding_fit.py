@@ -209,7 +209,7 @@ def prepare_observations(
     Args:
         dataset: Dataset dictionary from ``load_dataset``.
         analyte: Key into ``dataset["analytes"]``.
-        model: ``"exponential"`` or ``"gamma"``.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``.
         min_observations: Minimum usable measurements a subject must have to be
             retained. Defaults to the number of per-subject parameters (3 for
             gamma, 2 for exponential). ``sigma`` is shared across subjects, so a
@@ -1098,7 +1098,7 @@ def _over_extrapolated_subjects(
 
     Args:
         theta: Fitted log-parameters, shape ``(n_subjects, k)``.
-        model: ``"exponential"`` or ``"gamma"``.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``.
         observations: The observations the subjects were fitted to.
         margin: Log10 units of headroom above the highest observed
             concentration. Defaults to ``_MAX_PEAK_ABOVE_OBSERVED``.
@@ -1139,7 +1139,8 @@ def _degenerate_subjects(theta: np.ndarray, model: str) -> np.ndarray:
 
     Args:
         theta: Fitted log-parameters, shape ``(n_subjects, k)``.
-        model: ``"exponential"`` or ``"gamma"``, to locate the decay parameter.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``, to
+            locate the decay parameter.
 
     Returns:
         Boolean array of length ``n_subjects``, True where the subject's fit is
@@ -1313,7 +1314,7 @@ def fit_shedding_model(
     Args:
         dataset: Dataset dictionary from ``load_dataset``.
         analyte: Key into ``dataset["analytes"]``.
-        model: ``"exponential"`` or ``"gamma"``.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``.
         min_time: Earliest time, in days from the reference event, a reading may
             carry and still be used. Passed to ``prepare_observations``.
         max_peak_above_observed: How far above the analyte's highest observed
@@ -1347,18 +1348,17 @@ def fit_shedding_model(
         comparing ``aic`` across models.
 
     Examples:
-        Fitting is a joint optimization over every subject's parameters and
-        takes seconds to minutes per analyte, so this is not run here; the
-        call shape is shown for reference.
+        Fitting is a joint optimization over every subject's parameters. One
+        analyte of one study, as below, takes about a second; a
+        repository-wide build over every analyte of every study is what takes
+        minutes.
 
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset(
         ...     'woelfel2020virological', local='./data'
-        ... )  # doctest: +SKIP
-        >>> fit = sh.fit_shedding_model(
-        ...     data, analyte='stool', model='gamma'
-        ... )  # doctest: +SKIP
-        >>> fit.model  # doctest: +SKIP
+        ... )
+        >>> fit = sh.fit_shedding_model(data, analyte='stool', model='gamma')
+        >>> fit.model
         'gamma'
     """
     validate_model(model)

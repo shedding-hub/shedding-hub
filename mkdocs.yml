@@ -23,6 +23,13 @@ theme:
 exclude_docs: |
   superpowers/
 
+# MkDocs 1.6 defaults `nav.omitted_files` to INFO, so a new reference page that
+# nobody adds to the nav still passes `--strict`. Promoted to a warning, which
+# `--strict` turns into a build failure -- the same rot this site replaced.
+validation:
+  nav: {omitted_files: warn, absolute_links: warn}
+  links: {not_found: warn, absolute_links: warn, unrecognized_links: warn, anchors: warn}
+
 plugins:
   - search
   - mkdocstrings:

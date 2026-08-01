@@ -295,7 +295,9 @@ def fit_shedding_models(
 
     Args:
         datasets (Iterable[dict]): Dataset dictionaries from ``load_dataset``.
-        models (Sequence[str]): Model names to fit. Defaults to both.
+        models (Sequence[str]): Model names to fit, drawn from ``MODELS``:
+            ``"exponential"``, ``"gamma"`` and ``"gamma_shifted"``. Defaults
+            to all three.
         min_observations: Passed through to the fitter.
         min_time: Passed through to the fitter as the earliest usable reading
             time, in days from the reference event. ``None`` keeps its default.
@@ -308,15 +310,16 @@ def fit_shedding_models(
         A ``SheddingCatalog``.
 
     Examples:
-        Fitting every analyte of every dataset can take minutes, so this is
-        not run here; the call shape is shown for reference.
+        Cost scales with the number of analytes fitted: the single study
+        below takes a second or so, while a repository-wide build over every
+        analyte of every dataset takes minutes.
 
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset(
         ...     'woelfel2020virological', local='./data'
-        ... )  # doctest: +SKIP
-        >>> catalog = sh.fit_shedding_models([data])  # doctest: +SKIP
-        >>> len(catalog.fits)  # doctest: +SKIP
+        ... )
+        >>> catalog = sh.fit_shedding_models([data])
+        >>> len(catalog.fits)
         4
     """
     fits: list[SheddingFit] = []
