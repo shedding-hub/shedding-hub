@@ -12,17 +12,20 @@ shedding kinetics from parameters estimated on real studies.
 </p>
 
 Biomarkers — viral RNA, drug metabolites, antibody titres — are shed into
-stool, urine, saliva and respiratory specimens on a time course that governs
-what wastewater surveillance and clinical testing can actually detect. That
-time course is scattered across hundreds of papers, buried in tables, figures
-and supplementary files, in units and reference events that no two studies
-agree on.
+stool, urine, saliva and respiratory specimens on a time course that decides
+what testing and surveillance can actually detect. How long someone stays
+positive, which specimen to sample and when, how much virus reaches a sewer:
+these are questions about shedding kinetics, and the answers are scattered
+across thousands of papers, buried in tables, figures and supplementary
+files, in units and reference events that no two studies agree on.
 
-Shedding Hub collects it. Every dataset is curated from a peer-reviewed study
-into validated YAML against a shared JSON schema, reviewed by at least two
-people in the open on GitHub, and re-derived from its extraction script on
-every commit so the numbers can never silently drift from the paper they came
-from. This package is how you use that collection from Python.
+Shedding Hub collects them. Every dataset is curated from a peer-reviewed
+study into validated YAML against a shared JSON schema, reviewed by at least
+two people in the open on GitHub, and re-derived from its extraction script on
+every commit, so the numbers cannot silently drift from the paper they came
+from. The result is a FAIR repository — findable, accessible, interoperable,
+reusable — and this package is how you use it from Python, without writing the
+preprocessing yourself.
 
 ```bash
 pip install shedding-hub
@@ -84,6 +87,19 @@ Where several studies measure the same biomarker in the same specimen —
 usually with different units, reference events and populations —
 [`shedding_for`](reference/selection.md) picks a defensible default and tells
 you why, or pools them into a cross-study ensemble. You can always override it.
+
+## What people use it for
+
+The simulation path draws synthetic trajectories by Monte Carlo from the
+fitted parameter distributions, carrying inter-individual variability rather
+than tracing one average curve. That makes the fits usable as inputs to new
+work, not just as descriptions of past studies:
+
+- **Diagnostic testing strategy** — which specimen to sample, and how long after exposure a test can still find something.
+- **Surveillance design** — case-based and wastewater-based, where the shed load per infected person sets what a catchment signal means.
+- **Disease control measures** — how long isolation or quarantine has to run to cover the infectious period.
+- **Transmission and wastewater models** — per-agent shedding trajectories, the input an agent-based model consumes directly.
+- **Study planning** — scenario analysis, power calculations and sensitivity analyses against parameter distributions taken from the literature rather than from one convenient study.
 
 ## Where to go next
 
