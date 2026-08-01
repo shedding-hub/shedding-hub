@@ -301,7 +301,7 @@ def calc_detection_summary(
         >>> detection = calc_detection_summary(data, specimen='sputum', time_bin_size=7)
         >>> list(detection.columns)
         ['time', 'n_tested', 'n_positive', 'n_negative', 'proportion', 'ci_lower', 'ci_upper']
-        >>> detection.loc[1, 'n_tested']
+        >>> int(detection.loc[1, 'n_tested'])
         52
     """
     # Validate input
@@ -498,7 +498,7 @@ def calc_clearance_summary(
         >>> from shedding_hub.stats import calc_clearance_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> summary = calc_clearance_summary(data, specimen='sputum')
-        >>> summary['median_clearance_time']
+        >>> int(summary['median_clearance_time'])
         27
         >>> list(summary['time_point_summary'].columns)
         ['time', 'proportion_shedding', 'proportion_cleared', 'ci_lower', 'ci_upper', 'n_at_risk']
@@ -801,7 +801,7 @@ def calc_value_summary(
         >>> summary = calc_value_summary(data, specimen='sputum', time_bin_size=7)
         >>> list(summary.columns)
         ['time', 'n', 'mean', 'std', 'median', 'q25', 'q75', 'min', 'max']
-        >>> summary.loc[0, 'n']
+        >>> int(summary.loc[0, 'n'])
         4
     """
     # Validate input

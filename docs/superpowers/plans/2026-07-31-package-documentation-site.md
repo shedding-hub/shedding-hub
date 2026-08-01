@@ -13,6 +13,11 @@
 - No new entries in `pyproject.toml`'s `dependencies`. Docs tooling goes in `requirements.in` (pip-compile source) and a separate `docs/requirements.txt` for Read the Docs.
 - `black --check .` must pass. Run `black .` before every commit.
 - **Never invent doctest expected output.** Write the example, run it, paste what it actually printed, run it again. An invented value that happens to be wrong is worse than no example.
+- **Never let a numpy scalar be a doctest's expected value.** Indexing a DataFrame
+  returns `np.int64`/`np.float64`, whose repr changed in numpy 2: `4` under 1.x,
+  `np.int64(4)` under 2.x. Four examples written against local numpy 1.26 failed
+  CI on the pinned 2.3.5. Wrap the lookup in `int(...)` or `float(...)`, which
+  reprs identically on both.
 - **Do not print DataFrames in doctests.** Their repr depends on terminal width and pandas version. Follow the convention the README already uses: assert on `list(df.columns)`, `df.shape`, or a single indexed value.
 - Examples must run **offline and deterministically**. Use `sh.load_shedding_catalog()` (ships inside the package) for the fitting/simulation/selection surface, and `sh.load_dataset(name, local='./data')` for the dataset surface.
 - The shipped catalog holds 126 fits over 40 datasets; `sh.MODELS` is `('exponential', 'gamma', 'gamma_shifted')`. Do not restate other counts in docstrings — they go stale.

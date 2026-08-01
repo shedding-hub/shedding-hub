@@ -50,7 +50,7 @@ def calc_shedding_duration(
          'shedding_duration']
         >>> durations.shape
         (27, 11)
-        >>> durations.loc[0, 'shedding_duration']
+        >>> int(durations.loc[0, 'shedding_duration'])
         11
     """
     if not dataset or not isinstance(dataset, dict):
