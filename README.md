@@ -2,7 +2,7 @@
 
 The Shedding Hub collates data and statistical models for biomarker shedding (such as viral RNA or drug metabolites) in different human specimen (such as stool or sputum samples). Developing wastewater-based epidemiology into a quantitative, reliable epidemiological monitoring tool motivates the project.
 
-Datasets are extracted from appendices, figures, and supplementary materials of peer-reviewed studies. Each dataset is stored as a [`.yaml`](https://en.wikipedia.org/wiki/YAML) file and validated against our [data schema](data/.schema.yaml) to verify its integrity.
+Datasets are extracted from appendices, figures, and supplementary materials of peer-reviewed studies. Each dataset is stored as a [`.yaml`](https://en.wikipedia.org/wiki/YAML) file and validated against our [data schema](https://github.com/shedding-hub/shedding-hub/blob/main/data/.schema.yaml) to verify its integrity.
 
 ## 📊 Getting the Data
 
@@ -75,7 +75,11 @@ Simulate shedding trajectories for synthetic infected individuals — intended f
 agent-based models of wastewater surveillance. Browse the catalog of fitted
 estimates, pick one study or an ensemble across studies, then simulate.
 
-`examples/simulating-shedding.md` walks through the whole workflow, including how
+Full documentation — a tutorial, the modeling methods, and a generated API
+reference covering every public name with a worked example — is at
+**[shedding-hub.readthedocs.io](https://shedding-hub.readthedocs.io/)**.
+
+[`examples/simulating-shedding.md`](https://github.com/shedding-hub/shedding-hub/blob/main/examples/simulating-shedding.md) walks through the whole workflow, including how
 to override the default choice and what the estimates do *not* support. It refits
 nothing and runs in seconds. It is a [jupytext](https://jupytext.readthedocs.io)
 notebook, like the extraction scripts, so open it directly in Jupyter or convert
@@ -227,7 +231,7 @@ makes shrinkage the only direction offered is that the two-stage bias runs one
 way: the fitted spread is too wide, never too narrow.
 
 For how the estimates are produced, what they mean, and where they should not
-be trusted, see [docs/modeling-methods.md](docs/modeling-methods.md). `make
+be trusted, see [docs/modeling-methods.md](https://github.com/shedding-hub/shedding-hub/blob/main/docs/modeling-methods.md). `make
 parameters` writes the fitted parameters for every dataset to
 `docs/shedding_parameters.json` (reusable: each record carries the population
 mean and covariance, so it can be simulated from without refitting) and
@@ -326,7 +330,7 @@ Thank you for contributing your data to the Shedding Hub and supporting wastewat
 We use [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to add and update data, allowing for review and quality assurance. Learn more about the general workflow [here](https://docs.github.com/en/get-started/using-github/github-flow). To contribute your data, follow these easy steps (if you're already familiar with pull requests, steps 2 and 3 are for you):
 
 1. Create a [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) of the Shedding Hub repository by clicking [here](https://github.com/shedding-hub/shedding-hub/fork) and [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the fork to your computer. You only have to do this once.
-2. Create a new `my_cool_study/my_cool_study.yaml` file in the [`data`](data) directory and populate it with your data. See [here](data/woelfel2020virological/woelfel2020virological.yaml) for a comprehensive example from [Wölfel et al. (2020)](https://www.nature.com/articles/s41586-020-2196-x). A minimal example for studies with a single analyte (e.g., SARS-CoV-2 RNA concentration in stool samples) is available [here](tests/examples/valid_single_analyte.yaml), and a minimal example for studies with multiple analytes (e.g., crAssphage RNA concentration in stool samples and caffeine metabolites in urine) is available [here](tests/examples/valid_multiple_analytes.yaml).
+2. Create a new `my_cool_study/my_cool_study.yaml` file in the [`data`](https://github.com/shedding-hub/shedding-hub/tree/main/data) directory and populate it with your data. See [here](https://github.com/shedding-hub/shedding-hub/blob/main/data/woelfel2020virological/woelfel2020virological.yaml) for a comprehensive example from [Wölfel et al. (2020)](https://www.nature.com/articles/s41586-020-2196-x). A minimal example for studies with a single analyte (e.g., SARS-CoV-2 RNA concentration in stool samples) is available [here](https://github.com/shedding-hub/shedding-hub/blob/main/tests/examples/valid_single_analyte.yaml), and a minimal example for studies with multiple analytes (e.g., crAssphage RNA concentration in stool samples and caffeine metabolites in urine) is available [here](https://github.com/shedding-hub/shedding-hub/blob/main/tests/examples/valid_multiple_analytes.yaml).
 3. Optionally, if you have a recent version of [Python](https://www.python.org) installed, you can validate your data to ensure it has the right structure before contributing it to the Shedding Hub.
     - Run `pip install -r requirements.txt` from the command line to install all the Python packages you need.
     - Run `pytest` from the command line to validate all datasets, including the one you just created.

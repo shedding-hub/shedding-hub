@@ -11,6 +11,11 @@ observation sets and so are not AIC-comparable.
 This module makes that choice visible (``shedding_options``) and makes a
 documented, overridable default (``shedding_for``). It adds no statistical
 assumption: nothing here pools across units or reference events.
+
+Examples:
+    >>> import shedding_hub as sh
+    >>> sorted(sh.REFERENCE_EVENT_CLASSES)[:3]
+    ['confirmation date', 'enrollment', 'hospital admission']
 """
 
 from dataclasses import dataclass, field
@@ -44,6 +49,11 @@ def classify_reference_event(event: str | None) -> str:
     the conservative direction: a reference event the package has never seen has
     not demonstrated a defined offset from infection, so it should not inherit
     one.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> sh.classify_reference_event('enrollment')
+        'administrative'
     """
     return REFERENCE_EVENT_CLASSES.get(event, "administrative")
 
@@ -148,16 +158,26 @@ def shedding_options(
     returns for the same arguments.
 
     Args:
-        biomarker: e.g. ``"SARS-CoV-2"``. Positional, matching ``shedding_for``.
-        specimen: e.g. ``"stool"``.
+        biomarker (str | None): e.g. ``"SARS-CoV-2"``. Positional, matching
+            ``shedding_for``.
+        specimen (str | None): e.g. ``"stool"``.
         catalog: Catalog to search. Defaults to the shipped one.
-        **keys: Further attribute filters, e.g. ``model="gamma"``.
+        **keys (Any): Further attribute filters, e.g. ``model="gamma"``.
 
     Returns:
         A ``DataFrame`` with one row per group.
 
     Raises:
         ValueError: If nothing matches ``keys``.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> options = sh.shedding_options('SARS-CoV-2', 'stool', catalog=catalog)
+        >>> options.shape
+        (10, 11)
+        >>> options.iloc[0]['model']
+        'gamma'
     """
     if biomarker is not None:
         keys["biomarker"] = biomarker
@@ -226,7 +246,20 @@ def shedding_options(
 
 @dataclass
 class Selection:
-    """Why ``shedding_for`` returned what it did."""
+    """
+    Why ``shedding_for`` returned what it did.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> selection = sh.shedding_for(
+        ...     'SARS-CoV-2', 'stool', catalog=catalog
+        ... ).selection
+        >>> selection.reason
+        'its model resolves the rise'
+        >>> str(selection)
+        'picked symptom onset / gc/mL / gamma (2 study/studies, 16 subjects); its model resolves the rise'
+    """
 
     picked: dict
     passed_over: pd.DataFrame
@@ -293,22 +326,31 @@ def shedding_for(
     however many studies backed the answer.
 
     Args:
-        biomarker: e.g. ``"SARS-CoV-2"``. Optional, but omitting it will usually
-            leave candidates from different biomarkers to rank against one
-            another.
-        specimen: e.g. ``"stool"``.
+        biomarker (str | None): e.g. ``"SARS-CoV-2"``. Optional, but omitting
+            it will usually leave candidates from different biomarkers to
+            rank against one another.
+        specimen (str | None): e.g. ``"stool"``.
         catalog: Catalog to choose from. Defaults to the shipped one.
-        weights: Passed to ``make_ensemble``. An explicit array is applied in
-            component order, which is by ``dataset_id`` -- see
-            ``ensemble.components``.
+        weights (str | Sequence[float]): Passed to ``make_ensemble``. An
+            explicit array is applied in component order, which is by
+            ``dataset_id`` -- see ``ensemble.components``.
         method: Passed to ``make_ensemble``.
-        **keys: Further filters, e.g. ``model="exponential"``.
+        **keys (Any): Further filters, e.g. ``model="exponential"``.
 
     Returns:
-        A ``SheddingEnsemble`` whose ``selection`` records the choice.
+        source (SheddingEnsemble): Whose ``selection`` records the choice.
 
     Raises:
         ValueError: If nothing matches.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> source = sh.shedding_for('SARS-CoV-2', 'stool', catalog=catalog)
+        >>> source.model
+        'gamma'
+        >>> source.selection.reason
+        'its model resolves the rise'
     """
     from .shedding_ensemble import make_ensemble
 

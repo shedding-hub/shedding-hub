@@ -12,6 +12,7 @@ jupyter:
     name: python3
 ---
 
+<!-- --8<-- [start:body] -->
 # Simulating shedding for synthetic individuals
 
 A short tour of the workflow an agent-based model needs: **browse the
@@ -420,3 +421,4 @@ in `docs/modeling-methods.md`:
   observation sets — `gamma` discards every reading at or before the
   reference event, `gamma_shifted` keeps the detected ones — so the
   numbers are not commensurable. Compare `n_measurements` first.
+<!-- --8<-- [end:body] -->

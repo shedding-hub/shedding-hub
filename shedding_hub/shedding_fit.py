@@ -88,6 +88,14 @@ class SheddingDataError(ValueError):
               ``too_few_subjects_for_population``. It is applied by the catalog
               builder rather than by ``fit_shedding_model``, so that fitting a
               single subject on purpose stays possible; see its docstring.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> error = sh.SheddingDataError(
+        ...     "no positive measurements", "no_positive_measurements"
+        ... )
+        >>> error.reason
+        'no_positive_measurements'
     """
 
     def __init__(self, message: str, reason: str):
@@ -201,7 +209,7 @@ def prepare_observations(
     Args:
         dataset: Dataset dictionary from ``load_dataset``.
         analyte: Key into ``dataset["analytes"]``.
-        model: ``"exponential"`` or ``"gamma"``.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``.
         min_observations: Minimum usable measurements a subject must have to be
             retained. Defaults to the number of per-subject parameters (3 for
             gamma, 2 for exponential). ``sigma`` is shared across subjects, so a
@@ -681,6 +689,17 @@ class SheddingFit:
     coefficients that were clipped onto the parameter floor, which the
     optimizer could not escape. Measured over six seeds after that fix, the
     sparse-sampling bias averages 0.15 log units (range 0.02 to 0.27).
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> fit = catalog.select(
+        ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
+        ... )
+        >>> fit.param_names
+        ('a0', 'b0', 'c0')
+        >>> round(fit.peak_day, 2)
+        1.18
     """
 
     model: str
@@ -1079,7 +1098,7 @@ def _over_extrapolated_subjects(
 
     Args:
         theta: Fitted log-parameters, shape ``(n_subjects, k)``.
-        model: ``"exponential"`` or ``"gamma"``.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``.
         observations: The observations the subjects were fitted to.
         margin: Log10 units of headroom above the highest observed
             concentration. Defaults to ``_MAX_PEAK_ABOVE_OBSERVED``.
@@ -1093,7 +1112,14 @@ def _over_extrapolated_subjects(
     if not positive.any():
         return np.zeros(theta.shape[0], dtype=bool)
     ceiling = float(np.nanmax(observations.values[positive])) + margin
-    heights = to_population_coords(model, theta_to_params(model, theta))[:, -1]
+    # Indexed by name, not by position. `peak_log10` is last for `exponential`
+    # and `gamma`, so `[:, -1]` read correctly for those two -- but
+    # `gamma_shifted` ends ('...', 'peak_log10', 't0'), so the same expression
+    # returned an onset in days. Comparing a t0 of about -3 against a ceiling of
+    # about 9 log10 is never true, and the gate did nothing at all for every
+    # gamma_shifted fit.
+    peak = POPULATION_COORDS[model].index("peak_log10")
+    heights = to_population_coords(model, theta_to_params(model, theta))[:, peak]
     return np.asarray(heights > ceiling)
 
 
@@ -1120,7 +1146,8 @@ def _degenerate_subjects(theta: np.ndarray, model: str) -> np.ndarray:
 
     Args:
         theta: Fitted log-parameters, shape ``(n_subjects, k)``.
-        model: ``"exponential"`` or ``"gamma"``, to locate the decay parameter.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``, to
+            locate the decay parameter.
 
     Returns:
         Boolean array of length ``n_subjects``, True where the subject's fit is
@@ -1294,7 +1321,7 @@ def fit_shedding_model(
     Args:
         dataset: Dataset dictionary from ``load_dataset``.
         analyte: Key into ``dataset["analytes"]``.
-        model: ``"exponential"`` or ``"gamma"``.
+        model: ``"exponential"``, ``"gamma"`` or ``"gamma_shifted"``.
         min_time: Earliest time, in days from the reference event, a reading may
             carry and still be used. Passed to ``prepare_observations``.
         max_peak_above_observed: How far above the analyte's highest observed
@@ -1326,6 +1353,20 @@ def fit_shedding_model(
         observations. The gamma model drops non-positive times while the
         exponential model keeps them, so compare ``n_measurements`` before
         comparing ``aic`` across models.
+
+    Examples:
+        Fitting is a joint optimization over every subject's parameters. One
+        analyte of one study, as below, takes about a second; a
+        repository-wide build over every analyte of every study is what takes
+        minutes.
+
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset(
+        ...     'woelfel2020virological', local='./data'
+        ... )
+        >>> fit = sh.fit_shedding_model(data, analyte='stool', model='gamma')
+        >>> fit.model
+        'gamma'
     """
     validate_model(model)
     observations = prepare_observations(

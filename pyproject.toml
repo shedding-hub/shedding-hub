@@ -1,6 +1,6 @@
 [project]
 name = "shedding-hub"
-version = "0.2.0"
+version = "0.2.1"
 readme = "README.md"
 description = "Data and statistical models for biomarker shedding."
 dependencies = [
@@ -11,6 +11,24 @@ dependencies = [
     "numpy",
     "scipy"
 ]
+
+# PyPI renders these as the project sidebar. Without them a visitor who arrives
+# from a dependency listing or a search has no route back to the source, the
+# issue tracker or the docs -- the README's own relative links cannot supply it,
+# because on PyPI they resolve against pypi.org.
+[project.urls]
+Homepage = "https://shedding-hub.github.io"
+Documentation = "https://shedding-hub.readthedocs.io/"
+Repository = "https://github.com/shedding-hub/shedding-hub"
+Issues = "https://github.com/shedding-hub/shedding-hub/issues"
+
+[tool.pytest.ini_options]
+# Docstring examples are documentation users copy, so they are tested like any
+# other claim. Six examples predating this setting had never been executed and
+# all six were broken.
+addopts = "--doctest-modules"
+testpaths = ["tests", "shedding_hub"]
+doctest_optionflags = "ELLIPSIS NORMALIZE_WHITESPACE"
 
 [tool.setuptools.packages]
 # Restricted to the package itself. Bare auto-discovery also treats `tests` and

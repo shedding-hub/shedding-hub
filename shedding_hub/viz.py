@@ -95,6 +95,13 @@ def plot_time_course(
         - Non-numeric values (except "negative"/"positive") are excluded
         - If more than max_nparticipant per specimen, randomly samples participants
         - Axis labels are derived from the reference_event in analyte metadata
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_time_course(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -471,6 +478,13 @@ def plot_time_courses(
         - Datasets are distinguished by color using TABLEAU_COLORS
         - All datasets should ideally measure the same analyte for comparison
         - Time axis and measurement units should be consistent across datasets
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_time_courses([data], specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not datasets or not isinstance(datasets, list):
@@ -854,6 +868,13 @@ def plot_shedding_heatmap(
 
     Raises:
         ValueError: If dataset is missing required keys, is empty, or has no valid data.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_shedding_heatmap(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -1284,6 +1305,13 @@ def plot_mean_trajectory(
 
     Raises:
         ValueError: If dataset is missing required keys, is empty, or has no valid data.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_mean_trajectory(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -1691,6 +1719,13 @@ def plot_value_distribution_by_time(
         - Negative values are excluded from the distribution calculations
         - For CT values, the y-axis is inverted (lower CT = higher viral load)
         - For concentration values, a log scale is used on the y-axis
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_value_distribution_by_time(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -2092,6 +2127,13 @@ def plot_detection_probability(
         - Detection probability is calculated as the proportion of non-negative measurements
         - Confidence intervals use the Wilson score interval for binomial proportions
         - Y-axis is fixed to 0-1 range
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_detection_probability(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -2394,6 +2436,13 @@ def plot_clearance_curve(
         - Clearance time is the time of last positive measurement for each participant
         - Participants whose last measurement is positive are treated as censored
         - Confidence intervals use Greenwood's formula for variance estimation
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_clearance_curve(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -2804,13 +2853,15 @@ def plot_catalog_fits(
     simulated cohort, which is a different quantity and would need sampling.
 
     Args:
-        catalog: A ``SheddingCatalog``, or a bare list of ``SheddingFit`` —
-            which keeps this usable on a fresh fit of private data.
+        catalog (SheddingCatalog | list[SheddingFit]): A ``SheddingCatalog``,
+            or a bare list of ``SheddingFit`` — which keeps this usable on a
+            fresh fit of private data.
         biomarker: Optional filter, e.g. ``"SARS-CoV-2"``.
         specimen: Optional filter, e.g. ``"stool"``.
         unit: Optional filter, e.g. ``"gc/mL"``.
         reference_event: Optional filter, e.g. ``"symptom onset"``.
-        dataset_ids: Optional list restricting the plot to named studies.
+        dataset_ids (list[str] | None): Optional list restricting the plot to
+            named studies.
         n_days: X horizon for every panel. When ``None`` (default) each panel
             derives its own from the fits it holds, clamped to ``[7, 60]`` days.
             Passing a value is also how to put every panel on a common axis.
@@ -2830,6 +2881,19 @@ def plot_catalog_fits(
     Raises:
         ValueError: If the catalog holds no fits, or the filters match none — a
             silently empty figure is worse than a refusal.
+
+    Examples:
+        Narrowed to one biomarker and specimen, matching the figure rendered
+        below: the unfiltered catalog draws a panel per fit, which is a great
+        deal of output to page through.
+
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> fig = sh.plot_catalog_fits(
+        ...     catalog, biomarker='SARS-CoV-2', specimen='stool'
+        ... )
+        >>> type(fig).__name__
+        'Figure'
     """
     fits = list(getattr(catalog, "fits", catalog))
     if not fits:
@@ -3084,7 +3148,7 @@ def plot_fit_diagnostic(
     mostly-undetected analyte.
 
     Args:
-        fit: A ``SheddingFit``.
+        fit (SheddingFit): The fitted curve to diagnose.
         dataset: The dataset dictionary the fit came from, from
             ``load_dataset``.
         figsize: Figure size in inches.
@@ -3126,6 +3190,17 @@ def plot_fit_diagnostic(
     Raises:
         ValueError: If ``dataset`` does not contain the fit's analyte, which
             almost always means the wrong dataset was passed.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> fit = catalog.select(
+        ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
+        ... )
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_fit_diagnostic(fit, data)
+        >>> type(fig).__name__
+        'Figure'
     """
     analytes = dataset.get("analytes") or {}
     if fit.analyte not in analytes:

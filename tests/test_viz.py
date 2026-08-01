@@ -7,6 +7,7 @@ import pandas as pd
 import pytest
 import matplotlib.figure
 import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 import shedding_hub as sh
 from shedding_hub.shedding_fit import (
     SheddingFit,
@@ -1675,3 +1676,105 @@ def test_plot_fit_diagnostic_returns_one_closed_axis(fitted_pair):
     assert isinstance(fig, matplotlib.figure.Figure)
     assert len(fig.axes) == 1
     assert fig.number not in plt.get_fignums()
+
+
+# ---------------------------------------------------------------------------
+# orphaned plotting functions: plot_clearance_curve, plot_detection_probability,
+# plot_value_distribution_by_time
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        "plot_clearance_curve",
+        "plot_detection_probability",
+        "plot_value_distribution_by_time",
+    ],
+)
+def test_orphaned_plots_are_exported(name):
+    """
+    All three are implemented and were documented on the project website, but
+    never exported, so every call in that documentation raised AttributeError.
+    """
+    import shedding_hub as sh
+
+    assert hasattr(sh, name), f"sh.{name} is documented but not exported"
+    assert name in sh.__all__
+
+
+def _step_xy(fig):
+    """The first line's plotted data, as a comparable tuple."""
+    (line,) = fig.axes[0].get_lines()
+    return tuple(line.get_xdata()), tuple(line.get_ydata())
+
+
+def test_plot_clearance_curve_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_clearance_curve(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_clearance_curve_honours_the_specimen_filter(woelfel_dataset):
+    """
+    A filter that is accepted but ignored would leave every specimen showing
+    the pooled curve. Woelfel's sputum and stool clear on different schedules,
+    so the two curves must not be the same data.
+    """
+    import shedding_hub as sh
+
+    sputum = sh.plot_clearance_curve(woelfel_dataset, specimen="sputum")
+    stool = sh.plot_clearance_curve(woelfel_dataset, specimen="stool")
+
+    assert _step_xy(sputum) != _step_xy(stool)
+    assert "sputum" in sputum.axes[0].get_title()
+    assert "stool" in stool.axes[0].get_title()
+
+
+def test_plot_detection_probability_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_detection_probability(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_detection_probability_honours_the_specimen_filter(woelfel_dataset):
+    """
+    The two specimens are detectable over different time spans, so an honoured
+    filter changes both the binned probabilities and the range they cover.
+    """
+    import shedding_hub as sh
+
+    sputum = sh.plot_detection_probability(woelfel_dataset, specimen="sputum")
+    stool = sh.plot_detection_probability(woelfel_dataset, specimen="stool")
+
+    sputum_x, sputum_y = _step_xy(sputum)
+    stool_x, stool_y = _step_xy(stool)
+    assert (sputum_x, sputum_y) != (stool_x, stool_y)
+    # Not merely a reordering of one pooled series: the spans differ outright.
+    assert (min(sputum_x), max(sputum_x)) != (min(stool_x), max(stool_x))
+
+
+def test_plot_value_distribution_by_time_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_value_distribution_by_time(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_value_distribution_by_time_honours_the_specimen_filter(woelfel_dataset):
+    """
+    One box is drawn per populated time bin, and the two specimens were
+    sampled over different days, so an honoured filter changes the box count.
+    """
+    import shedding_hub as sh
+
+    sputum = sh.plot_value_distribution_by_time(woelfel_dataset, specimen="sputum")
+    stool = sh.plot_value_distribution_by_time(woelfel_dataset, specimen="stool")
+
+    assert len(sputum.axes[0].patches) != len(stool.axes[0].patches)
+    assert sputum.axes[0].get_xticks().tolist() != stool.axes[0].get_xticks().tolist()

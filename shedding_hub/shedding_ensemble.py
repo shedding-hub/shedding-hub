@@ -33,7 +33,24 @@ _COMPATIBILITY_KEYS = (
 
 @dataclass
 class SheddingEnsemble:
-    """An ensemble of per-study fits sharing a biomarker, specimen, and unit."""
+    """
+    An ensemble of per-study fits sharing a biomarker, specimen, and unit.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> ensemble = sh.shedding_for('SARS-CoV-2', 'stool', catalog=catalog)
+        >>> ensemble.model
+        'gamma'
+        >>> ensemble.components.shape
+        (2, 25)
+        >>> ensemble.median_params
+        Traceback (most recent call last):
+            ...
+        ValueError: median_params is only defined for method='moment'. This is a
+            mixture ensemble, which has no closed-form median: simulate and
+            take empirical quantiles instead.
+    """
 
     fits: list[SheddingFit]
     weights: np.ndarray
@@ -297,7 +314,8 @@ def make_ensemble(
         fits: Component fits. A single-component ensemble is legal and behaves
             identically to the underlying fit, so callers can keep one code path
             regardless of how many studies they selected.
-        weights: ``"n_subjects"`` (default), ``"equal"``, or an explicit array.
+        weights (str | Sequence[float]): ``"n_subjects"`` (default),
+            ``"equal"``, or an explicit array.
         method: ``"mixture"`` (default) or ``"moment"``.
 
     Returns:
@@ -307,6 +325,20 @@ def make_ensemble(
         ValueError: If the fits disagree on model, unit, reference event,
             biomarker, or specimen, or if one study contributes more than one
             analyte.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> fits = [
+        ...     fit for fit in catalog.fits
+        ...     if fit.dataset_id in ('lui2020viral', 'woelfel2020virological')
+        ...     and fit.model == 'gamma' and fit.specimen == 'stool'
+        ... ]
+        >>> ensemble = sh.make_ensemble(fits)
+        >>> ensemble.method
+        'mixture'
+        >>> len(ensemble.fits)
+        2
     """
     fits = list(fits)
     if not fits:

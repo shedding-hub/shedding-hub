@@ -465,3 +465,34 @@ widgetsnbextension==4.0.15
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
+
+# --- documentation toolchain -------------------------------------------------
+# Appended by hand rather than by re-running pip-compile. Regenerating this file
+# on Windows produced a platform-locked lockfile: it ADDED pywinpty,
+# pywin32-ctypes and colorama, and DROPPED appnope, pexpect and ptyprocess, so
+# CI on ubuntu-latest tried to compile pywinpty from Rust source and every job
+# failed at the install step. pip-compile emits no environment markers here, so
+# the file is only valid for the platform it was generated on.
+#
+# These entries come from resolving `mkdocs-material` and `mkdocstrings[python]`
+# in a clean virtualenv, filtered to packages the base lockfile does not already
+# pin. They are pure Python and platform neutral.
+#
+# The durable fix is to regenerate the whole file on Linux, matching CI.
+Markdown==3.10.3
+backrefs==8.0
+colorama==0.4.6
+ghp-import==2.1.0
+griffelib==2.1.0
+mergedeep==1.3.4
+mkdocs-autorefs==1.4.4
+mkdocs-get-deps==0.2.2
+mkdocs-material-extensions==1.3.1
+mkdocs-material==9.7.7
+mkdocs==1.6.1
+mkdocstrings-python==2.0.5
+mkdocstrings==1.0.6
+paginate==0.5.7
+pymdown-extensions==11.0.1
+pyyaml_env_tag==1.1
+watchdog==6.0.0

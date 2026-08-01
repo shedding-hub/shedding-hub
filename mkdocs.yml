@@ -1,0 +1,64 @@
+site_name: Shedding Hub
+site_description: Data and statistical models for biomarker shedding.
+site_url: https://shedding-hub.readthedocs.io/
+repo_url: https://github.com/shedding-hub/shedding-hub
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: {icon: material/weather-sunny, name: Light mode}
+
+# docs/ holds the project's internal design records. A default build would
+# publish every one of them as a page.
+exclude_docs: |
+  superpowers/
+
+# MkDocs 1.6 defaults `nav.omitted_files` to INFO, so a new reference page that
+# nobody adds to the nav still passes `--strict`. Promoted to a warning, which
+# `--strict` turns into a build failure -- the same rot this site replaced.
+validation:
+  nav: {omitted_files: warn, absolute_links: warn}
+  links: {not_found: warn, absolute_links: warn, unrecognized_links: warn, anchors: warn}
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: false
+            show_root_heading: true
+            heading_level: 3
+            members_order: source
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["."]
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Tutorial: tutorial.md
+  - Modeling methods: modeling-methods.md
+  - Reference:
+      - Datasets: reference/datasets.md
+      - Statistics: reference/statistics.md
+      - Visualisation: reference/visualisation.md
+      - Fitting: reference/fitting.md
+      - Catalog and ensembles: reference/catalog.md
+      - Simulation: reference/simulation.md
+      - Choosing a source: reference/selection.md

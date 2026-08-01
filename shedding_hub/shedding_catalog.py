@@ -156,7 +156,20 @@ def _fit_from_payload(payload: dict) -> SheddingFit:
 
 @dataclass
 class SheddingCatalog:
-    """A collection of fitted models with a browsable summary table."""
+    """
+    A collection of fitted models with a browsable summary table.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> catalog.table.shape
+        (126, 24)
+        >>> fit = catalog.select(
+        ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
+        ... )
+        >>> fit.dataset_id
+        'woelfel2020virological'
+    """
 
     fits: list[SheddingFit] = field(default_factory=list)
     skipped: pd.DataFrame = field(
@@ -211,19 +224,21 @@ class SheddingCatalog:
         Build a ``SheddingEnsemble`` from the catalog's fits matching ``keys``.
 
         Args:
-            dataset_ids: Optional list restricting components to named
-                studies. A name with no matching fit raises rather than being
-                dropped, which would silently shrink the ensemble.
-            weights: ``"n_subjects"`` (default), ``"equal"``, or an explicit
-                array of length equal to the number of matching fits.
-            method: ``"mixture"`` (default), which draws each simulated
-                individual from one contributing study's own fit, preserving
-                between-study heterogeneity; or ``"moment"``, which collapses
-                the components into a single Gaussian.
-            **keys: Attribute filters, e.g. ``biomarker="SARS-CoV-2"``.
+            dataset_ids (list[str] | None): Optional list restricting
+                components to named studies. A name with no matching fit
+                raises rather than being dropped, which would silently
+                shrink the ensemble.
+            weights (str | Sequence[float]): ``"n_subjects"`` (default),
+                ``"equal"``, or an explicit array of length equal to the
+                number of matching fits.
+            method (str): ``"mixture"`` (default), which draws each
+                simulated individual from one contributing study's own fit,
+                preserving between-study heterogeneity; or ``"moment"``,
+                which collapses the components into a single Gaussian.
+            **keys (Any): Attribute filters, e.g. ``biomarker="SARS-CoV-2"``.
 
         Returns:
-            A ``SheddingEnsemble``.
+            ensemble (SheddingEnsemble): The built ensemble.
 
         Raises:
             ValueError: If the matching fits disagree on model, unit,
@@ -279,8 +294,10 @@ def fit_shedding_models(
     directly is legitimate; publishing it as a population is not.
 
     Args:
-        datasets: Dataset dictionaries from ``load_dataset``.
-        models: Model names to fit. Defaults to both.
+        datasets (Iterable[dict]): Dataset dictionaries from ``load_dataset``.
+        models (Sequence[str]): Model names to fit, drawn from ``MODELS``:
+            ``"exponential"``, ``"gamma"`` and ``"gamma_shifted"``. Defaults
+            to all three.
         min_observations: Passed through to the fitter.
         min_time: Passed through to the fitter as the earliest usable reading
             time, in days from the reference event. ``None`` keeps its default.
@@ -291,6 +308,19 @@ def fit_shedding_models(
 
     Returns:
         A ``SheddingCatalog``.
+
+    Examples:
+        Cost scales with the number of analytes fitted: the single study
+        below takes a second or so, while a repository-wide build over every
+        analyte of every dataset takes minutes.
+
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset(
+        ...     'woelfel2020virological', local='./data'
+        ... )
+        >>> catalog = sh.fit_shedding_models([data])
+        >>> len(catalog.fits)
+        4
     """
     fits: list[SheddingFit] = []
     skipped: list[dict] = []
@@ -368,6 +398,12 @@ def load_shedding_catalog(path: str | None = None) -> SheddingCatalog:
         A ``SheddingCatalog``. Loaded fits carry ``subject_params is None``
         because per-subject values are not serialized; everything needed to
         simulate (``mu``, ``Sigma``, ``sigma``) is present.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> len(catalog.fits)
+        126
     """
     catalog_path = pathlib.Path(path) if path else CATALOG_PATH
     if not catalog_path.is_file():
