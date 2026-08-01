@@ -49,6 +49,10 @@ jobs:
           )
           print("wheel contents OK:", sorted(tops))
           PY
+      - name: Build the documentation
+        run: |
+          python scripts/build_doc_figures.py
+          python -m mkdocs build --strict
   data-validation:
     runs-on: ubuntu-latest
     steps:
