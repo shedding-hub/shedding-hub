@@ -46,7 +46,7 @@ def calc_shedding_summary(
     Raises:
         ValueError: If dataset is missing required keys, is empty, or has no valid data.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> from shedding_hub.stats import calc_shedding_summary
@@ -294,7 +294,7 @@ def calc_detection_summary(
     Raises:
         ValueError: If dataset is missing required keys, is empty, or has no valid data.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> from shedding_hub.stats import calc_detection_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
@@ -493,7 +493,7 @@ def calc_clearance_summary(
     Raises:
         ValueError: If dataset is missing required keys, is empty, or has no valid data.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> from shedding_hub.stats import calc_clearance_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
@@ -794,7 +794,7 @@ def calc_value_summary(
         ValueError: If dataset is missing required keys, is empty, has no valid data,
             or contains mixed CT and concentration values without filtering.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> from shedding_hub.stats import calc_value_summary
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
@@ -1008,7 +1008,7 @@ def calc_dataset_summary(
     Raises:
         ValueError: If dataset is missing required keys or is empty.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> summary = sh.calc_dataset_summary(data)
@@ -1171,7 +1171,7 @@ def compare_datasets(
     Raises:
         ValueError: If datasets is empty or contains invalid datasets.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> from shedding_hub.stats import compare_datasets
         >>> data1 = sh.load_dataset('woelfel2020virological', local='./data')

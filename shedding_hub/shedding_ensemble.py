@@ -36,7 +36,7 @@ class SheddingEnsemble:
     """
     An ensemble of per-study fits sharing a biomarker, specimen, and unit.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> ensemble = sh.shedding_for('SARS-CoV-2', 'stool', catalog=catalog)
@@ -314,7 +314,8 @@ def make_ensemble(
         fits: Component fits. A single-component ensemble is legal and behaves
             identically to the underlying fit, so callers can keep one code path
             regardless of how many studies they selected.
-        weights: ``"n_subjects"`` (default), ``"equal"``, or an explicit array.
+        weights (str | Sequence[float]): ``"n_subjects"`` (default),
+            ``"equal"``, or an explicit array.
         method: ``"mixture"`` (default) or ``"moment"``.
 
     Returns:
@@ -325,7 +326,7 @@ def make_ensemble(
             biomarker, or specimen, or if one study contributes more than one
             analyte.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> fits = [

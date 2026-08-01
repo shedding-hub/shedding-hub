@@ -41,7 +41,7 @@ def calc_shedding_peak(
         ValueError: If dataset is missing required keys or is empty.
         KeyError: If required analyte information is missing.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> peaks = sh.calc_shedding_peak(data)
@@ -219,7 +219,7 @@ def plot_shedding_peak(
         - Error bars show the full shedding window from first to last sample
         - Diamond markers show the peak shedding time point
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> peaks = sh.calc_shedding_peak(data)
@@ -340,7 +340,7 @@ def calc_shedding_peaks(
     Raises:
         ValueError: If dataset_ids is empty or contains invalid entries.
 
-    Example:
+    Examples:
         This fetches each dataset from GitHub, so it is not run here; the call
         shape is shown for reference.
 
@@ -391,7 +391,7 @@ def plot_shedding_peaks(
     Returns:
         matplotlib.figure.Figure: Box plot showing shedding peaks across studies.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> peaks_summary = sh.calc_shedding_peak(data, output='summary')

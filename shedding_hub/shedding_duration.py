@@ -40,7 +40,7 @@ def calc_shedding_duration(
         ValueError: If dataset is missing required keys or is empty.
         KeyError: If required analyte information is missing.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> durations = sh.calc_shedding_duration(data)
@@ -184,7 +184,7 @@ def plot_shedding_duration(
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> durations = sh.calc_shedding_duration(data)
@@ -302,7 +302,7 @@ def calc_shedding_durations(
     Raises:
         ValueError: If dataset_ids is empty or contains invalid entries.
 
-    Example:
+    Examples:
         This fetches each dataset from GitHub, so it is not run here; the call
         shape is shown for reference.
 
@@ -348,7 +348,7 @@ def plot_shedding_durations(
     Raises:
         ValueError: If DataFrame is empty or missing required columns.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> durations_summary = sh.calc_shedding_duration(data, output='summary')

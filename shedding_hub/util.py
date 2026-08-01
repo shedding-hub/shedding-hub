@@ -20,7 +20,7 @@ def normalize_str(
         strip: Remove leading and trailing whitespace.
         unwrap: Unwrap lines separated by a single line break.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> sh.normalize_str("\\n    line one\\n    line two\\n")
         'line one line two'
@@ -57,7 +57,7 @@ def load_dataset(
     Returns:
         Loaded dataset.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> sorted(data.keys())
@@ -130,7 +130,7 @@ def check_dataset(
         otherwise.  When a title is provided and no exact match is found, a
         warning is issued for the most similar dataset above the threshold.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> sh.check_dataset(doi='10.1038/s41586-020-2196-x', local='./data')
         True
@@ -221,7 +221,7 @@ class folded_str(str):
     """
     Folded string in yaml representation.
 
-    Example:
+    Examples:
         >>> import yaml
         >>> import shedding_hub as sh
         >>> print(yaml.dump({"description": sh.folded_str("This is a long description that will be wrapped nicely.")}))
@@ -235,7 +235,7 @@ class literal_str(str):
     """
     Literal string in yaml representation.
 
-    Example:
+    Examples:
         >>> import yaml
         >>> import shedding_hub as sh
         >>> print(yaml.dump({"description": sh.literal_str("Line one.\\nLine two.\\n")}))

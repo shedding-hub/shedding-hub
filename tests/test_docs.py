@@ -7,6 +7,7 @@ the project website documenting 19 of 42 names, three of which did not exist.
 """
 
 import pathlib
+import re
 
 import shedding_hub as sh
 
@@ -15,7 +16,13 @@ REFERENCE = pathlib.Path(__file__).parent.parent / "docs" / "reference"
 
 def _documented_names() -> set:
     text = "\n".join(p.read_text(encoding="utf-8") for p in REFERENCE.glob("*.md"))
-    return {name for name in sh.__all__ if f"shedding_hub.{name}" in text}
+    # Anchored to a `::: shedding_hub.<name>` directive on its own line, rather
+    # than an unanchored substring match: otherwise a name that is a strict
+    # prefix of another (e.g. `calc_shedding_duration` inside
+    # `calc_shedding_durations`) could be deleted from the reference and this
+    # test would still pass.
+    entries = set(re.findall(r"^::: shedding_hub\.(\w+)\s*$", text, re.M))
+    return {name for name in sh.__all__ if name in entries}
 
 
 def test_every_public_name_appears_in_the_reference():

@@ -234,11 +234,11 @@ and `catalog.select(...)` returns a fit ready to simulate.
 
 ## 8. Design records
 
-Each decision above was recorded when it was made:
+Each decision above was recorded when it was made, in the project's internal
+design records:
 
-- `docs/superpowers/specs/2026-07-18-shedding-simulation-design.md` — the fitting
-  and simulation pipeline
-- `docs/superpowers/specs/2026-07-27-catalog-fit-plots-design.md` — `plot_catalog_fits`
-- `docs/superpowers/specs/2026-07-29-catalog-fit-diagnostics-design.md` — `plot_fit_diagnostic`
-- `docs/superpowers/specs/2026-07-29-simulation-dispersion-design.md` — the
-  exponential coordinate change, `dispersion`, and the over-extrapolation gate
+- the fitting and simulation pipeline
+- `plot_catalog_fits`
+- `plot_fit_diagnostic`
+- the exponential coordinate change, `dispersion`, and the over-extrapolation
+  gate

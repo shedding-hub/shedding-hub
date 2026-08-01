@@ -14,7 +14,7 @@ expressed on the log10 scale, which is the scale likelihoods are evaluated on:
 
 This module is pure math: no dataset handling, no I/O.
 
-Example:
+Examples:
     >>> import shedding_hub as sh
     >>> sh.MODELS
     ('exponential', 'gamma', 'gamma_shifted')

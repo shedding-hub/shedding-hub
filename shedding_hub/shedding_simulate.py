@@ -52,8 +52,8 @@ def simulate_shedding(
     Simulate shedding trajectories for synthetic individuals.
 
     Args:
-        source: A ``SheddingFit`` or ``SheddingEnsemble``. Each individual's
-            parameters are drawn from its population distribution.
+        source (SheddingFit | SheddingEnsemble): Each individual's parameters
+            are drawn from its population distribution.
         n_individuals: Number of individuals to simulate.
         times: Times at which to evaluate each trajectory. Measured from the
             fit's reference event, or from infection when ``incubation_period``
@@ -107,7 +107,7 @@ def simulate_shedding(
         bound going backwards, so simulating before the reference event
         extrapolates into implausible concentrations. Prefer ``times >= 0``.
 
-    Example:
+    Examples:
         >>> import numpy as np
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
@@ -229,9 +229,9 @@ def plot_simulated_shedding(
 
     Args:
         traj: Output of ``simulate_shedding``.
-        source: Optional fit or ensemble, used to draw the censoring limit and,
-            when ``observed`` is given, to determine which analyte(s) to
-            overlay.
+        source (SheddingFit | SheddingEnsemble | None): Used to draw the
+            censoring limit and, when ``observed`` is given, to determine
+            which analyte(s) to overlay.
         observed: Optional dataset dictionary; its measurements are overlaid as
             points so simulated and real trajectories can be compared, filtered
             to the analyte(s) contributed by ``source`` (a ``SheddingFit``'s
@@ -250,7 +250,7 @@ def plot_simulated_shedding(
         The figure. It is closed in the pyplot state so notebooks do not display
         it twice, matching the convention in ``shedding_peak.py``.
 
-    Example:
+    Examples:
         >>> import numpy as np
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()

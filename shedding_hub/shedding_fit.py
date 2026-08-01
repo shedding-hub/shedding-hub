@@ -89,7 +89,7 @@ class SheddingDataError(ValueError):
               builder rather than by ``fit_shedding_model``, so that fitting a
               single subject on purpose stays possible; see its docstring.
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> error = sh.SheddingDataError(
         ...     "no positive measurements", "no_positive_measurements"
@@ -690,7 +690,7 @@ class SheddingFit:
     optimizer could not escape. Measured over six seeds after that fix, the
     sparse-sampling bias averages 0.15 log units (range 0.02 to 0.27).
 
-    Example:
+    Examples:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> fit = catalog.select(
@@ -1346,7 +1346,7 @@ def fit_shedding_model(
         exponential model keeps them, so compare ``n_measurements`` before
         comparing ``aic`` across models.
 
-    Example:
+    Examples:
         Fitting is a joint optimization over every subject's parameters and
         takes seconds to minutes per analyte, so this is not run here; the
         call shape is shown for reference.

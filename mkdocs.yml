@@ -30,13 +30,6 @@ plugins:
         python:
           options:
             docstring_style: google
-            # Several pre-existing signatures (shedding_catalog, shedding_select,
-            # shedding_simulate, shedding_ensemble, viz) lack type annotations on
-            # some parameters. Annotating them is a source change outside this
-            # task; this only silences the resulting griffe warning so a
-            # --strict build isn't blocked by it.
-            docstring_options:
-              warn_missing_types: false
             show_source: false
             show_root_heading: true
             heading_level: 3
