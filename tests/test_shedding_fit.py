@@ -2185,3 +2185,46 @@ def test_a_fit_that_converges_first_time_is_left_alone(
     )
     assert len(calls) == 1
     assert fit.converged
+
+
+def test_over_extrapolation_gate_reads_the_peak_not_the_onset():
+    """
+    The gate indexed the last population coordinate as the peak height.
+
+    That is right for `exponential` ('log_a0', 'peak_log10') and for `gamma`
+    (..., 'peak_log10'), where the peak IS last. It is wrong for
+    `gamma_shifted`, whose coordinates end ('...', 'peak_log10', 't0'): the last
+    one is an onset in days. Comparing a t0 of about -3 against a ceiling of
+    about 9 log10 is never true, so the gate silently did nothing for every
+    gamma_shifted fit in the shipped catalog.
+    """
+    import numpy as np
+
+    from shedding_hub.shedding_fit import _over_extrapolated_subjects
+    from shedding_hub.shedding_models import POPULATION_COORDS
+
+    # The coordinate layout that makes [:, -1] wrong.
+    assert POPULATION_COORDS["gamma_shifted"][-1] == "t0"
+    assert POPULATION_COORDS["gamma_shifted"].index("peak_log10") == 2
+
+    class _Obs:
+        censored = np.array([False, False])
+        values = np.array([3.0, 4.0])  # ceiling = 4.0 + margin
+
+    # One absurd subject: a huge c0 puts its peak far above anything observed,
+    # while its t0 stays an ordinary small negative number.
+    absurd = np.array([[np.log(0.5), np.log(2.0), np.log(1e30), -3.0]])
+    flagged = _over_extrapolated_subjects(absurd, "gamma_shifted", _Obs(), margin=3.0)
+    assert flagged[0], (
+        "a subject whose implied peak is far above every observation must be "
+        "flagged; reading t0 instead of peak_log10 lets it through"
+    )
+
+    # A reasonable subject is still not flagged. c0 is a natural-log-scale
+    # intercept, so c0=12 implies a peak of 5.55 log10 -- under the 7.0 ceiling.
+    # (c0=20 would imply 9.02 and is correctly flagged, which is why it is not
+    # the example here.)
+    ordinary = np.array([[np.log(0.5), np.log(2.0), np.log(12.0), -3.0]])
+    assert not _over_extrapolated_subjects(
+        ordinary, "gamma_shifted", _Obs(), margin=3.0
+    )[0]

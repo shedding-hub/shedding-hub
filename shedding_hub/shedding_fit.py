@@ -1112,7 +1112,14 @@ def _over_extrapolated_subjects(
     if not positive.any():
         return np.zeros(theta.shape[0], dtype=bool)
     ceiling = float(np.nanmax(observations.values[positive])) + margin
-    heights = to_population_coords(model, theta_to_params(model, theta))[:, -1]
+    # Indexed by name, not by position. `peak_log10` is last for `exponential`
+    # and `gamma`, so `[:, -1]` read correctly for those two -- but
+    # `gamma_shifted` ends ('...', 'peak_log10', 't0'), so the same expression
+    # returned an onset in days. Comparing a t0 of about -3 against a ceiling of
+    # about 9 log10 is never true, and the gate did nothing at all for every
+    # gamma_shifted fit.
+    peak = POPULATION_COORDS[model].index("peak_log10")
+    heights = to_population_coords(model, theta_to_params(model, theta))[:, peak]
     return np.asarray(heights > ceiling)
 
 
