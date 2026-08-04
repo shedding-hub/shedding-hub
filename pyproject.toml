@@ -1,8 +1,14 @@
 [project]
 name = "shedding-hub"
-version = "0.2.1"
+version = "0.2.2"
 readme = "README.md"
 description = "Data and statistical models for biomarker shedding."
+# The package annotates with PEP 604 unions (`int | None`), which the
+# interpreter evaluates as a module is imported, so 3.10 is a hard floor.
+# Every release through 0.2.1 declared no floor at all, so pip on 3.9 installed
+# them and `import shedding_hub` died on the first such annotation with
+# "TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'".
+requires-python = ">=3.10"
 dependencies = [
     "pyaml",
     "requests",

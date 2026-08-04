@@ -31,6 +31,8 @@ preprocessing yourself.
 pip install shedding-hub
 ```
 
+Python 3.10 or newer is required.
+
 ## What it does
 
 === "Load"
