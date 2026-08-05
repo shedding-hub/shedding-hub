@@ -4,6 +4,8 @@
 pip install shedding-hub
 ```
 
+Python 3.10 or newer is required.
+
 This page walks the whole arc: load a curated study, describe it, fit a
 shedding curve to it, and simulate synthetic individuals from fitted
 parameters. The [tutorial](tutorial.md) goes deeper on the last step.
