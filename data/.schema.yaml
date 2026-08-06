@@ -264,7 +264,8 @@ properties:
                 - not hispanic
                 - unknown
             vaccinated:
-              description: Whether the participant was vaccinated against the condition. This is a
+              description: >
+                Whether the participant was vaccinated against the condition. This is a
                 yes/no question: a participant vaccinated after exposure was still
                 vaccinated, so use true and leave the timing to the dataset description.
               oneOf:
