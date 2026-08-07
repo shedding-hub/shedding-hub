@@ -19,6 +19,11 @@ def normalize_str(
         dedent: Remove any common leading whitespace.
         strip: Remove leading and trailing whitespace.
         unwrap: Unwrap lines separated by a single line break.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> sh.normalize_str("\\n    line one\\n    line two\\n")
+        'line one line two'
     """
     if dedent:
         value = textwrap.dedent(value)
@@ -51,6 +56,14 @@ def load_dataset(
 
     Returns:
         Loaded dataset.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> sorted(data.keys())
+        ['analytes', 'dataset_id', 'description', 'doi', 'participants', 'title']
+        >>> data['dataset_id']
+        'woelfel2020virological'
     """
     # Check that at most one of `ref`, `pr`, and `local` is given.
     specified = {"ref": ref, "pr": pr, "local": local}
@@ -116,6 +129,13 @@ def check_dataset(
         True if the paper is found (exact DOI or exact title match), False
         otherwise.  When a title is provided and no exact match is found, a
         warning is issued for the most similar dataset above the threshold.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> sh.check_dataset(doi='10.1038/s41586-020-2196-x', local='./data')
+        True
+        >>> sh.check_dataset(doi='10.1000/nonexistent-doi', local='./data')
+        False
     """
     if doi is None and title is None:
         raise ValueError("At least one of `doi` or `title` must be specified.")
@@ -200,12 +220,29 @@ def check_dataset(
 class folded_str(str):
     """
     Folded string in yaml representation.
+
+    Examples:
+        >>> import yaml
+        >>> import shedding_hub as sh
+        >>> print(yaml.dump({"description": sh.folded_str("This is a long description that will be wrapped nicely.")}))
+        description: >-
+          This is a long description that will be wrapped nicely.
+        <BLANKLINE>
     """
 
 
 class literal_str(str):
     """
     Literal string in yaml representation.
+
+    Examples:
+        >>> import yaml
+        >>> import shedding_hub as sh
+        >>> print(yaml.dump({"description": sh.literal_str("Line one.\\nLine two.\\n")}))
+        description: |
+          Line one.
+          Line two.
+        <BLANKLINE>
     """
 
 

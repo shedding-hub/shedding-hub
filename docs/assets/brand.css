@@ -1,0 +1,60 @@
+/* Shedding Hub brand palette.
+ *
+ * #214a5b is sampled from the logo ink itself (the median RGB of the opaque
+ * pixels in shedding-hub-logo.png), so the header and the mark cannot drift
+ * apart. Material only ships a fixed set of named primaries, so the palette in
+ * mkdocs.yml declares `custom` and the actual values live here. */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #214a5b;
+  --md-primary-fg-color--light: #33607a;
+  --md-primary-fg-color--dark: #16323e;
+  --md-accent-fg-color: #2f7c96;
+}
+
+[data-md-color-scheme="slate"] {
+  /* Material uses the primary as the header background in both schemes, so it
+   * stays the brand teal here -- lightening it put a white mark and white text
+   * on pale blue. Body links are the thing that needs lifting on a dark
+   * background, and they have their own variable. */
+  --md-primary-fg-color: #214a5b;
+  --md-primary-fg-color--light: #33607a;
+  --md-primary-fg-color--dark: #16323e;
+  --md-accent-fg-color: #9fcada;
+  --md-typeset-a-color: #7fb4c6;
+}
+
+/* The hero lockup already carries the wordmark, so a visible <h1> beside it
+ * would just repeat it -- but dropping the heading entirely leaves MkDocs
+ * titling the page "Home" and leaves screen readers and search engines with no
+ * heading at all. Present to both, invisible on screen. */
+.sh-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Home-page hero. The lockup is 1600px wide; left at full bleed it dwarfs the
+ * text that follows it. */
+.sh-hero {
+  margin: 0 auto 1.6rem;
+  max-width: 26rem;
+}
+
+.sh-hero img {
+  display: block;
+  width: 100%;
+}
+
+.sh-tagline {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 34rem;
+  color: var(--md-default-fg-color--light);
+}
