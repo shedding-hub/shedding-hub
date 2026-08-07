@@ -28,6 +28,7 @@ $defs:
       - urine
       - plasma
       - oropharyngeal_swab
+      - oropharyngeal_lavage_fluid
       - nasopharyngeal_swab
       - nasopharyngeal_aspirate
       - anterior_nares_swab
@@ -92,6 +93,8 @@ $defs:
           - norovirus
           - SARS
           - adenovirus
+          - RSV
+          - rhinovirus
           - Lanzhou lamb rotavirus vaccine
           - rotavirus
           - rotavirus vaccine
@@ -112,6 +115,7 @@ $defs:
           - gc/swab
           - gc/wet gram
           - gc/reaction
+          - gc/ng
           - cycle threshold
           - pfu/mL
           - vp/mL
@@ -136,8 +140,17 @@ $defs:
         minimum: 1
       genogroup:
         description: >
-          Genogroup classification for the pathogen (e.g., 'GI', 'GII' for norovirus,
-          'G1', 'G2' for rotavirus). Use when the study specifies the genogroup being measured.
+          Genogroup/genotype classification this analyte specifically targets or measures,
+          at whatever level of specificity the study reports (e.g., 'GI', 'GII', or the more
+          specific 'GI.1', 'GII.4' for norovirus; 'G1', 'G2' for rotavirus). Use this
+          analyte-level field when the classification is fixed by which analyte/assay was
+          used rather than varying per participant.
+        type: string
+      transport_medium:
+        description: >
+          Transport/storage medium the specimen was collected or preserved in before
+          testing (e.g., 'UTM', 'VTM', 'saline'). Use when the study distinguishes results
+          by transport medium.
         type: string
       vaccine_type:
         description: >
@@ -215,8 +228,7 @@ properties:
             age:
               description: >
                 Chronological age of the participant in YEARS (how old they are).
-                Can be a numeric value or an age range string (e.g., "2-5", "18-65",
-                "unknown").
+                Can be a numeric value or an age range string (e.g., "2-5", "18-65").
               oneOf:
                 - type: number
                   minimum: 0
@@ -226,13 +238,14 @@ properties:
               description: >
                 Age group category when exact numeric age is not available.
                 Use neonate (0-28 days), infant (29 days to <1 year),
-                child (1-17 years), or adult (18+ years).
+                child (1-17 years), adult (18-65 years), or elderly (over 65 years).
               type: string
               enum:
                 - neonate
                 - infant
                 - child
                 - adult
+                - elderly
                 - unknown
             race:
               description: Race of the participant.
@@ -270,6 +283,14 @@ properties:
                 Viral genotype information (e.g., 'IB', 'IA' for hepatitis,
                 'GII.4' for norovirus, 'G1P[8]' for rotavirus).
               type: string
+            subtype:
+              description: >
+                Pathogen type/subtype of the participant's infection as a single string --
+                a specific subtype/lineage designation, never just the pathogen or biomarker
+                name itself (e.g., not 'RSV' or 'SARS-CoV-2'). For influenza, the type and
+                (when reported) subtype or lineage, e.g., 'A(H1N1)pdm09', 'A(H3N2)', 'B',
+                'B/Victoria'. For RSV, 'A' or 'B' when reported per participant.
+              type: string
             symptomatic:
               description: >
                 Whether the participant is symptomatic.
@@ -278,12 +299,6 @@ properties:
                 - type: boolean
                 - type: string
                   const: unknown
-            subtype:
-              description: >
-                Pathogen type/subtype of the participant's infection as a single string.
-                For influenza, the type and (when reported) subtype or lineage, e.g.,
-                'A(H1N1)pdm09', 'A(H3N2)', 'B', 'B/Victoria'.
-              type: string
             participant_type:
               description: >
                 Type or category of participant (e.g., 'patient', 'healthcare worker',
