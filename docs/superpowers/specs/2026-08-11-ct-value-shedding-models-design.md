@@ -37,23 +37,33 @@ written on the log10 scale already, so a gamma curve in concentration *is* a
 gamma curve in Ct — reflected and rescaled. What is missing is a transform of
 the response, not a new model family.
 
-## Decision: model Ct directly, anchored at the detection cutoff
+## Decision: model Ct directly, anchored at a fixed reference
 
 The response variable is
 
 ```
-depth(t) = Ct_cutoff − Ct(t)          "cycles below the detection cutoff"
+CT_REFERENCE = 40.0                   # fixed for every Ct analyte
+depth(t) = CT_REFERENCE − Ct(t)       "cycles below the reference"
 ```
 
 fitted with the existing `gamma`, `gamma_shifted` and `exponential` forms,
 unchanged.
 
-Anchoring at the cutoff does four things at once. It makes the response
-increase with viral load, so the curve is a peak rather than a trough and no
-sign flip enters the model itself. It gives the response a meaningful zero. It
-keeps the response non-negative for detections, which matters because
-`theta_to_params` enforces `c0 > 0` through `exp(θ)`. And it puts non-detects
-exactly at zero, which is what makes the censoring work (below).
+Negating Ct is what makes the response increase with viral load, so the curve is
+a peak rather than a trough and no sign flip enters the model itself. Adding a
+constant offset keeps fitted levels positive, which matters because
+`theta_to_params` enforces `c0 > 0` through `exp(θ)`; 40 sits above the observed
+Ct median of 31.0 and above 95% of all readings, so fitted peak heights — which
+occur at *low* Ct — are comfortably positive.
+
+The reference is a **single constant across all analytes**, not each study's own
+detection cutoff. Recorded cutoffs range from 37 to 41, so anchoring per study
+would make two studies measuring identical samples report peak heights differing
+by up to 4 cycles purely from the anchoring convention. A fixed reference puts
+every Ct fit's height on one scale across all 27 studies.
+
+Each study's own cutoff still does the job it should: it sets that analyte's
+censoring limit (below). Nothing is lost by not anchoring to it.
 
 ### Alternatives rejected
 
@@ -73,6 +83,12 @@ constraint that is otherwise doing useful work.
 a standard curve, a single study's Ct time series cannot separate the assay
 intercept from the subject's shedding level.
 
+**Anchoring at each study's own detection cutoff.** Puts non-detects at exactly
+zero, which is tidy, but buys that tidiness with the cross-study height
+incomparability described above. The censoring machinery resolves a limit per
+analyte already, so a varying limit costs nothing while a varying anchor costs
+comparability.
+
 ## What is comparable across value types
 
 Let the true standard-curve slope be β. Fitting `depth` returns
@@ -83,7 +99,7 @@ Let the true standard-curve slope be β. Fitting `depth` returns
 | `peak_day` = `b0/a0` | days to peak shedding | **yes — exactly** |
 | `t0` (gamma_shifted) | onset of shedding | **yes** |
 | rise duration `b0/a0` | onset-to-peak interval | **yes** |
-| peak height | max cycles below cutoff (= min Ct) | no — α is assay-specific |
+| peak height | cycles below reference (= 40 − min Ct) | no — α is assay-specific, but comparable across all Ct studies |
 | `a0` | decay in Ct units per day | only after dividing by an assumed β |
 | half-life `ln2/a0` | — | no, for the same reason |
 
@@ -100,13 +116,23 @@ variants are where the value is.
 
 ## Censoring falls out unchanged
 
-A non-detect means `Ct ≥ cutoff`, hence `depth ≤ 0`: left-censored at zero,
-which is exactly the left-censored normal likelihood already in
-`shedding_fit.py`. No new likelihood, and the ~37% of repository measurements
-recorded as `negative` keep contributing an inequality rather than being
-discarded.
+A non-detect means `Ct ≥ cutoff_analyte`, hence
 
-## Resolving the cutoff
+```
+depth ≤ CT_REFERENCE − cutoff_analyte
+```
+
+which is left-censored at an analyte-specific limit — exactly the shape of the
+left-censored normal likelihood already in `shedding_fit.py`, and exactly the
+kind of per-analyte value `_resolve_censoring_limit` already resolves. No new
+likelihood, and the ~37% of repository measurements recorded as `negative` keep
+contributing an inequality rather than being discarded.
+
+The limit sits near zero: exactly zero where the cutoff is 40, negative where an
+assay runs to 41, positive where it stops at 37. Nothing in the likelihood cares
+which side of zero it falls on.
+
+## Resolving the censoring limit
 
 Every one of the 69 Ct analytes records a detection limit, and most record it
 numerically:
@@ -123,9 +149,12 @@ is needed.
 
 ## API changes
 
-`SheddingFit` gains `value_type: Literal["concentration", "ct"]`, the resolved
+`SheddingFit` gains `value_type: Literal["concentration", "ct"]`, the
+`ct_reference` the height is measured against, the analyte's resolved
 `ct_cutoff`, and per-parameter comparability tags, so the tiering above is
-machine-readable.
+machine-readable. Recording the reference rather than assuming it means a fit
+serialized under one convention cannot be silently misread under another, and it
+lets a height be turned back into a minimum Ct as `ct_reference − height`.
 
 `POPULATION_COORDS` needs a value-type-aware height name — `peak_cycles` rather
 than `peak_log10` for Ct fits. That dict exists precisely so a catalog written
