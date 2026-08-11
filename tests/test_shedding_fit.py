@@ -12,6 +12,7 @@ from shedding_hub.shedding_fit import (
     _MIN_HALF_LIFE_DAYS,
     Observations,
     SheddingDataError,
+    _declared_limit,
     _degenerate_subjects,
     _fraction_observing_a_rise,
     _record_dropped,
@@ -540,6 +541,18 @@ def test_censoring_limit_uses_lod_when_loq_is_unusable(simple_dataset):
     simple_dataset["analytes"]["stool"]["limit_of_detection"] = 10
     obs = prepare_observations(simple_dataset, "stool", "exponential")
     assert obs.censoring_limit == pytest.approx(1.0)
+
+
+def test_declared_limit_prefers_quantification_when_both_are_declared_and_differ():
+    # Regression: _resolve_censoring_limit and the ct_cutoff construction site
+    # each resolve this precedence independently, and once had it inverted
+    # relative to each other. Both now delegate to _declared_limit, so this
+    # test covers both call sites at once; a reintroduced inversion here would
+    # make a fit's censoring_limit and ct_cutoff describe different cutoffs of
+    # the same analyte. Every other fixture declares only one of the two
+    # limits, so only this test would catch that regression.
+    spec = {"limit_of_quantification": 100, "limit_of_detection": 500}
+    assert _declared_limit(spec) == pytest.approx(100.0)
 
 
 def test_positive_below_loq_is_kept_as_observed(simple_dataset):
@@ -2347,14 +2360,8 @@ def test_observations_default_to_concentration():
 
 
 def test_ct_fit_records_its_scale(ct_dataset):
-    # exponential rather than gamma: comparable_with and the new fields are
-    # entirely model-independent -- they only read value_type -- so either
-    # model exercises what this test cares about. (An earlier version of
-    # ct_dataset made gamma fit degenerately here -- an implied half-life just
-    # under the 0.1-day floor -- which no longer applies: the fixture's curve
-    # and subject count were revised in review, and gamma now fits it cleanly
-    # with 0 degenerate subjects. exponential is kept regardless, since the
-    # model choice is immaterial to what this test verifies.)
+    # exponential rather than gamma: model choice is immaterial to what this
+    # test checks, since value_type and the new fields never read the model.
     fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
     assert fit.value_type == "ct"
     assert fit.ct_reference == 40.0

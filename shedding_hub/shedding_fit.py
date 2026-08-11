@@ -38,6 +38,17 @@ CT_REFERENCE = 40.0
 # with no assumption about PCR efficiency. Everything else carries either the
 # slope (a0, half-life) or the assay intercept (height), and studies report
 # neither.
+#
+# These are names of QUANTITIES, not attributes of ``SheddingFit`` --
+# ``getattr(fit, name)`` does not work for most of them. ``peak_day`` and
+# ``half_life_days`` are properties on the fit. ``a0`` and ``t0`` are model
+# parameter names: found as columns of ``subject_params`` and as coordinates
+# of ``population_mean`` (via ``population_coords``), not as attributes.
+# ``rise_days`` and ``peak_height`` are derived quantities with no attribute
+# at all -- ``peak_height`` is deliberately left scale-neutral rather than
+# named after a coordinate, since a later task names the underlying quantity
+# ``peak_log10`` for concentration fits and ``peak_cycles`` for Ct fits, and
+# pinning it to either here would be wrong.
 VALUE_TYPE_INVARIANT_PARAMETERS = ("peak_day", "t0", "rise_days")
 
 ALL_COMPARABLE_PARAMETERS = VALUE_TYPE_INVARIANT_PARAMETERS + (
@@ -184,6 +195,20 @@ def _numeric_limit(value: Any) -> float | None:
     return float(value) if value > 0 else None
 
 
+def _declared_limit(analyte_spec: dict) -> float | None:
+    """Resolve the analyte's declared detection limit: quantification, then detection.
+
+    Shared by ``_resolve_censoring_limit`` and the ``ct_cutoff`` recorded on
+    ``SheddingFit``, so the two can never disagree about which limit an analyte
+    declared.
+    """
+    for key in ("limit_of_quantification", "limit_of_detection"):
+        limit = _numeric_limit(analyte_spec.get(key))
+        if limit is not None:
+            return limit
+    return None
+
+
 def _resolve_censoring_limit(
     analyte_spec: dict,
     observed: np.ndarray,
@@ -216,10 +241,9 @@ def _resolve_censoring_limit(
     special case: ``observed`` has already been transformed, so "just below the
     smallest response" means the same thing on either scale.
     """
-    for key in ("limit_of_quantification", "limit_of_detection"):
-        limit = _numeric_limit(analyte_spec.get(key))
-        if limit is not None:
-            return _to_response(limit, value_type)
+    limit = _declared_limit(analyte_spec)
+    if limit is not None:
+        return _to_response(limit, value_type)
 
     smallest = float(observed.min())
     fallback = smallest - CENSORING_MARGIN
@@ -918,10 +942,26 @@ class SheddingFit:
 
     def comparable_with(self, other: "SheddingFit") -> tuple[str, ...]:
         """
-        Parameters of this fit that may be compared with ``other``'s.
+        Names of quantities that may be compared between this fit and ``other``'s.
 
         Within one value type everything compares. Across value types only the
         temporal parameters do — see ``VALUE_TYPE_INVARIANT_PARAMETERS``.
+
+        The returned names are quantities, not attributes: ``getattr(fit, name)``
+        does not work for most of them. ``peak_day`` and ``half_life_days`` are
+        properties on the fit; ``a0`` and ``t0`` are model parameter names, found
+        as columns of ``subject_params`` and coordinates of ``population_mean``;
+        ``rise_days`` and ``peak_height`` are derived quantities with no
+        attribute at all. See ``ALL_COMPARABLE_PARAMETERS`` for where each one
+        lives.
+
+        A full-comparability answer is not a guarantee that two Ct fits are
+        truly on the same footing, even within one value type: two fits from
+        *different assays* have different standard-curve slopes and
+        intercepts, so ``a0``, ``half_life_days`` and ``peak_height`` are no
+        more transferable between them than they are across value types. This
+        method cannot detect that — the datasets do not record assay identity
+        — so it returns everything for any pair sharing a ``value_type``.
 
         Examples:
             >>> import shedding_hub as sh
@@ -1726,11 +1766,6 @@ def fit_shedding_model(
         value_type=observations.value_type,
         ct_reference=CT_REFERENCE if observations.value_type == "ct" else None,
         ct_cutoff=(
-            (
-                _numeric_limit(analyte_spec.get("limit_of_quantification"))
-                or _numeric_limit(analyte_spec.get("limit_of_detection"))
-            )
-            if observations.value_type == "ct"
-            else None
+            _declared_limit(analyte_spec) if observations.value_type == "ct" else None
         ),
     )
