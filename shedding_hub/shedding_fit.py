@@ -32,6 +32,20 @@ NEGATIVE_VALUE = "negative"
 # peak heights -- which occur at LOW Ct -- stay comfortably positive.
 CT_REFERENCE = 40.0
 
+# Peak time, onset and rise duration are ratios of b0 to a0. Fitting Ct returns
+# a0 and b0 both multiplied by the unknown standard-curve slope, so the slope
+# cancels in the ratio and these three transfer between value types exactly,
+# with no assumption about PCR efficiency. Everything else carries either the
+# slope (a0, half-life) or the assay intercept (height), and studies report
+# neither.
+VALUE_TYPE_INVARIANT_PARAMETERS = ("peak_day", "t0", "rise_days")
+
+ALL_COMPARABLE_PARAMETERS = VALUE_TYPE_INVARIANT_PARAMETERS + (
+    "a0",
+    "half_life_days",
+    "peak_height",
+)
+
 
 def _to_response(value: float, value_type: str) -> float:
     """
@@ -794,6 +808,16 @@ class SheddingFit:
     # warning on ``peak_log10``, which is evaluated at t = 0 for the exponential
     # model however late sampling actually began.
     median_first_observed_day: float = float("nan")
+    # Which scale this fit's heights live on. Defaults to concentration so a
+    # catalog serialized before Ct support stays loadable and reads correctly.
+    value_type: str = "concentration"
+    # The reference heights are measured below, and the analyte's own detection
+    # cutoff. Recorded rather than assumed: a fit serialized under one
+    # convention must not be silently reinterpreted under another, and a height
+    # reads back as a minimum Ct via ``ct_reference - height``. Both None for
+    # concentration fits.
+    ct_reference: float | None = None
+    ct_cutoff: float | None = None
 
     @property
     def param_names(self) -> tuple[str, ...]:
@@ -891,6 +915,24 @@ class SheddingFit:
     @property
     def half_life_days(self) -> float:
         return float(half_life_days(self.model, self.median_params[None, :])[0])
+
+    def comparable_with(self, other: "SheddingFit") -> tuple[str, ...]:
+        """
+        Parameters of this fit that may be compared with ``other``'s.
+
+        Within one value type everything compares. Across value types only the
+        temporal parameters do — see ``VALUE_TYPE_INVARIANT_PARAMETERS``.
+
+        Examples:
+            >>> import shedding_hub as sh
+            >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+            >>> fit = sh.fit_shedding_model(data, analyte='stool', model='gamma')
+            >>> 'half_life_days' in fit.comparable_with(fit)
+            True
+        """
+        if self.value_type == other.value_type:
+            return ALL_COMPARABLE_PARAMETERS
+        return VALUE_TYPE_INVARIANT_PARAMETERS
 
     def sample_params(
         self, rng: np.random.Generator, n: int, dispersion: float = 1.0
@@ -1662,4 +1704,14 @@ def fit_shedding_model(
         n_degenerate_subjects=n_degenerate,
         pct_subjects_with_rise=100.0 * rise_fraction,
         median_first_observed_day=median_first_observed_day,
+        value_type=observations.value_type,
+        ct_reference=CT_REFERENCE if observations.value_type == "ct" else None,
+        ct_cutoff=(
+            (
+                _numeric_limit(analyte_spec.get("limit_of_quantification"))
+                or _numeric_limit(analyte_spec.get("limit_of_detection"))
+            )
+            if observations.value_type == "ct"
+            else None
+        ),
     )

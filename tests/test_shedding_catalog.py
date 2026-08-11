@@ -151,7 +151,6 @@ def test_catalog_skips_ct_analytes_by_default(ct_dataset):
     assert (catalog.skipped["reason"] == "ct_units").all()
 
 
-@pytest.mark.xfail(reason="enabled by Task 6", strict=False)
 def test_catalog_fits_ct_analytes_when_asked(ct_dataset):
     catalog = fit_shedding_models(
         [ct_dataset], models=("gamma",), value_types=("concentration", "ct")

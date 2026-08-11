@@ -38,7 +38,13 @@ from .stats import (
 
 from .shedding_models import MODELS, PARAM_NAMES
 
-from .shedding_fit import SheddingDataError, SheddingFit, fit_shedding_model
+from .shedding_fit import (
+    CT_REFERENCE,
+    VALUE_TYPE_INVARIANT_PARAMETERS,
+    SheddingDataError,
+    SheddingFit,
+    fit_shedding_model,
+)
 
 from .shedding_catalog import (
     SheddingCatalog,
@@ -89,6 +95,8 @@ __all__ = [
     "compare_datasets",
     "MODELS",
     "PARAM_NAMES",
+    "CT_REFERENCE",
+    "VALUE_TYPE_INVARIANT_PARAMETERS",
     "SheddingDataError",
     "SheddingFit",
     "SheddingCatalog",

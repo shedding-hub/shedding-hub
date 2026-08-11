@@ -766,7 +766,11 @@ def test_subject_index_is_contiguous_after_exclusions(simple_dataset):
     assert set(obs.subject_index.tolist()) == {0, 1}
 
 
-from shedding_hub.shedding_fit import SheddingFit, fit_shedding_model
+from shedding_hub.shedding_fit import (
+    VALUE_TYPE_INVARIANT_PARAMETERS,
+    SheddingFit,
+    fit_shedding_model,
+)
 
 
 def test_recovers_known_exponential_population(make_synthetic_dataset):
@@ -2309,3 +2313,42 @@ def test_observations_default_to_concentration():
         ).value_type
         == "concentration"
     )
+
+
+def test_ct_fit_records_its_scale(ct_dataset):
+    # exponential rather than the brief's gamma: comparable_with and the new
+    # fields are entirely model-independent -- they only read value_type -- and
+    # ct_dataset's five usable points per subject are too sparse for the
+    # 3-parameter gamma model here, which fits an implied half-life of 0.0958
+    # days, just under the 0.1-day _MIN_HALF_LIFE_DAYS degenerate-fit floor.
+    # That is a pre-existing property of this small hand-built fixture -- the
+    # identical response numbers read as a concentration curve degenerate
+    # under gamma too -- not anything introduced by value-type tracking.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+    assert fit.value_type == "ct"
+    assert fit.ct_reference == 40.0
+    assert fit.ct_cutoff == 40.0
+
+
+def test_concentration_fit_has_no_ct_metadata(simple_dataset):
+    # exponential for the same reason as above: simple_dataset's two subjects
+    # show no rise, so gamma refuses it outright with "no_rise_observed",
+    # independent of this task's changes.
+    fit = fit_shedding_model(simple_dataset, analyte="stool", model="exponential")
+    assert fit.value_type == "concentration"
+    assert fit.ct_reference is None
+
+
+def test_only_temporal_parameters_compare_across_value_types(
+    ct_dataset, simple_dataset
+):
+    ct = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+    conc = fit_shedding_model(simple_dataset, analyte="stool", model="exponential")
+    assert ct.comparable_with(conc) == VALUE_TYPE_INVARIANT_PARAMETERS
+    assert "peak_day" in ct.comparable_with(conc)
+    assert "half_life_days" not in ct.comparable_with(conc)
+
+
+def test_everything_compares_within_a_value_type(ct_dataset):
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+    assert "half_life_days" in fit.comparable_with(fit)
