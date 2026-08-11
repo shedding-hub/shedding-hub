@@ -165,7 +165,11 @@ def _numeric_limit(value: Any) -> float | None:
     return float(value) if value > 0 else None
 
 
-def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> float:
+def _resolve_censoring_limit(
+    analyte_spec: dict,
+    observed: np.ndarray,
+    value_type: str = "concentration",
+) -> float:
     """
     Resolve the log10 censoring limit.
 
@@ -183,20 +187,28 @@ def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> 
     limit is declared, so that any ``negative`` still sits below the resolved
     limit.
 
-    Assumes ``observed_log10`` is non-empty; ``prepare_observations`` guarantees
+    Assumes ``observed`` is non-empty; ``prepare_observations`` guarantees
     this by raising ``no_positive_measurements`` itself before ever calling here.
+
+    For a cycle-threshold analyte the declared limit is itself a Ct, so it is
+    transformed the same way the observations are and the resolved limit is
+    ``CT_REFERENCE - cutoff`` — zero at a cutoff of 40, negative where an assay
+    runs to 41, positive where it stops at 37. The fallback branch needs no
+    special case: ``observed`` has already been transformed, so "just below the
+    smallest response" means the same thing on either scale.
     """
     for key in ("limit_of_quantification", "limit_of_detection"):
         limit = _numeric_limit(analyte_spec.get(key))
         if limit is not None:
-            return math.log10(limit)
+            return _to_response(limit, value_type)
 
-    smallest = float(observed_log10.min())
+    smallest = float(observed.min())
     fallback = smallest - CENSORING_MARGIN
+    scale = "cycles below reference" if value_type == "ct" else "log10"
     warnings.warn(
         "Falling back to a censoring limit of "
-        f"{fallback:.4g} (log10) because no limit of quantification or detection "
-        "is declared for this analyte.",
+        f"{fallback:.4g} ({scale}) because no limit of quantification or "
+        "detection is declared for this analyte.",
         UserWarning,
         stacklevel=2,
     )

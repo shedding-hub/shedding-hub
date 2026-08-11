@@ -13,6 +13,7 @@ from shedding_hub.shedding_fit import (
     SheddingDataError,
     _degenerate_subjects,
     _fraction_observing_a_rise,
+    _resolve_censoring_limit,
     _to_response,
     prepare_observations,
     require_estimable_population,
@@ -165,6 +166,33 @@ def test_to_response_is_decreasing_in_ct():
 
 def test_ct_reference_is_forty():
     assert CT_REFERENCE == 40.0
+
+
+def test_censoring_limit_on_the_ct_scale():
+    # An assay running to Ct 41 detects one cycle PAST the reference, so the
+    # limit is negative. Nothing in the likelihood cares.
+    spec = {"limit_of_detection": 41, "limit_of_quantification": "unknown"}
+    assert _resolve_censoring_limit(spec, np.array([9.0, 5.0]), "ct") == -1.0
+
+
+def test_censoring_limit_on_the_ct_scale_for_a_stricter_assay():
+    spec = {"limit_of_detection": 37, "limit_of_quantification": "unknown"}
+    assert _resolve_censoring_limit(spec, np.array([9.0]), "ct") == 3.0
+
+
+def test_censoring_limit_for_concentration_is_unchanged():
+    spec = {"limit_of_quantification": 100, "limit_of_detection": "unknown"}
+    assert _resolve_censoring_limit(spec, np.array([6.0]), "concentration") == 2.0
+
+
+def test_censoring_limit_falls_back_below_the_smallest_observed_ct():
+    # No declared limit: fall back below the smallest response, which on the Ct
+    # scale means just past the HIGHEST observed Ct. The fallback arithmetic is
+    # identical in both spaces because `observed` is already transformed.
+    spec = {"limit_of_detection": "unknown", "limit_of_quantification": "unknown"}
+    with pytest.warns(UserWarning, match="cycles below"):
+        limit = _resolve_censoring_limit(spec, np.array([9.0, 2.0]), "ct")
+    assert limit < 2.0
 
 
 def test_gamma_shifted_refuses_an_analyte_with_no_pre_event_readings():
