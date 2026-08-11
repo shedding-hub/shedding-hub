@@ -1,7 +1,7 @@
 # Modelling cycle-threshold data — design
 
 **Date:** 2026-08-11
-**Status:** approved, not yet implemented
+**Status:** implemented 2026-08-11
 
 ## Problem
 
@@ -166,9 +166,17 @@ instead. `fit_shedding_model`'s mathematics is untouched.
 
 ## Visualisation
 
-`plot_fit_diagnostic` on a Ct analyte draws the Ct axis **inverted**, so low Ct
-sits high and the fit reads as a shedding peak like the concentration plots,
-with the cutoff drawn as a reference line and non-detects placed on it.
+`plot_fit_diagnostic` on a Ct analyte plots the fitted response — cycles below
+`CT_REFERENCE` — and converts the tick labels back to Ct, so the reader sees the
+numbers the study reported. The cutoff is drawn as a reference line and
+non-detects are placed on it.
+
+The axis is deliberately **not inverted**. An earlier draft of this design said
+it should be, which was wrong: the plotted response is already `40 − Ct` and so
+already rises with viral load, meaning the curve reads as a peak on its own.
+Inverting on top of that would turn the peak upside down. Only the tick labels
+need converting, and the legend's own figures — the peak and the censoring
+limit — are reported in Ct for the same reason.
 
 ## Verification
 
