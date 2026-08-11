@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 import shedding_hub as sh
 from shedding_hub.shedding_fit import (
+    CT_REFERENCE,
     SheddingFit,
     fit_shedding_model,
     prepare_observations,
@@ -1705,6 +1706,52 @@ def test_fit_diagnostic_concentration_label_unchanged(woelfel_dataset):
     fit = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
     fig = sh.plot_fit_diagnostic(fit, woelfel_dataset)
     assert "log10 concentration" in fig.axes[0].get_ylabel()
+
+
+def _legend_labels(fig):
+    return [text.get_text() for text in fig.axes[0].get_legend().get_texts()]
+
+
+def test_fit_diagnostic_ct_legend_reports_a_peak_ct_not_a_log10(ct_dataset):
+    """The height is cycles below the reference, so it is shown as the Ct it is.
+
+    "peak log10" on an axis labelled "Ct (cycle threshold)" contradicts its own
+    page, and taken literally claims a concentration ten trillion times too
+    large.
+    """
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    labels = _legend_labels(fig)
+
+    assert not any(label.startswith("peak log10") for label in labels)
+    peak_row = next(label for label in labels if label.startswith("peak Ct"))
+    assert float(peak_row.split("=")[1]) == pytest.approx(
+        CT_REFERENCE - fit.peak_log10, abs=0.01
+    )
+    # The analyte's readings run Ct 25-36, so its peak must land in that range
+    # rather than at the 13-odd cycles the unconverted number would show.
+    assert 20.0 < float(peak_row.split("=")[1]) < 30.0
+
+
+def test_fit_diagnostic_ct_censoring_limit_reads_as_a_ct(ct_dataset):
+    """ct_dataset is cut off at Ct 40, which is 0.00 on the fitted scale.
+
+    "Censoring limit (0.00)" on a Ct axis reads as a cutoff of zero cycles.
+    """
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    assert "Censoring limit (Ct 40.00)" in _legend_labels(fig)
+
+
+def test_fit_diagnostic_concentration_legend_unchanged(woelfel_dataset):
+    """Neither conversion may touch the concentration path."""
+    fit = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    labels = _legend_labels(sh.plot_fit_diagnostic(fit, woelfel_dataset))
+
+    assert any(label.startswith("peak log10 =") for label in labels)
+    assert not any("Ct" in label for label in labels)
+    limit_row = next(label for label in labels if label.startswith("Censoring limit"))
+    assert limit_row == f"Censoring limit ({fit.censoring_limit:.2f})"
 
 
 # ---------------------------------------------------------------------------

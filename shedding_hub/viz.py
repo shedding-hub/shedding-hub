@@ -3093,9 +3093,22 @@ def _fit_diagnostic_legend_rows(fit) -> list[str]:
         f"{name} = {value:.4g}"
         for name, value in zip(fit.param_names, fit.median_params)
     ]
+    # The height is whatever the fit was estimated on. On a Ct fit that is
+    # cycles below CT_REFERENCE, so it is converted back to the Ct the study
+    # reported and labelled as one -- the same conversion the y-axis tick
+    # labels already make. Left unconverted it read "peak log10 = 13.51" on an
+    # axis labelled "Ct (cycle threshold)", which is a contradiction on its own
+    # page and, taken at face value, a concentration ten trillion times too
+    # large.
+    is_ct = getattr(fit, "value_type", "concentration") == "ct"
+    peak_row = (
+        f"peak Ct = {(fit.ct_reference or CT_REFERENCE) - fit.peak_log10:.2f}"
+        if is_ct
+        else f"peak log10 = {fit.peak_log10:.2f}"
+    )
     rows += [
         f"peak day = {fit.peak_day:.2f}",
-        f"peak log10 = {fit.peak_log10:.2f}",
+        peak_row,
         f"half-life = {fit.half_life_days:.2f} d",
         f"sigma = {fit.sigma:.3f}",
         f"subjects = {fit.n_subjects}",
@@ -3256,12 +3269,23 @@ def plot_fit_diagnostic(
         zorder=3,
         label="Censored",
     )
+    # The line is drawn at the limit on the fitted scale -- that is where the
+    # censored points sit -- but labelled in the units the reader sees on the
+    # axis. A Ct analyte cut off at 40 resolves to a limit of 0.00 cycles below
+    # the reference, and "Censoring limit (0.00)" on a Ct axis reads as a
+    # cutoff of zero cycles rather than of forty.
+    ct_fit = getattr(fit, "value_type", "concentration") == "ct"
+    limit_label = (
+        f"Censoring limit (Ct {(fit.ct_reference or CT_REFERENCE) - limit:.2f})"
+        if ct_fit
+        else f"Censoring limit ({limit:.2f})"
+    )
     ax.axhline(
         limit,
         ls=":",
         color="gray",
         lw=1.2,
-        label=f"Censoring limit ({limit:.2f})",
+        label=limit_label,
     )
 
     # Readings the fitter discarded, marked as excluded rather than shown as
