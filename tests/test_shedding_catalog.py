@@ -145,6 +145,21 @@ def test_ct_analyte_is_recorded_in_skipped():
     assert set(catalog.skipped["dataset_id"]) == {"ct_study"}
 
 
+def test_catalog_skips_ct_analytes_by_default(ct_dataset):
+    catalog = fit_shedding_models([ct_dataset], models=("gamma",))
+    assert len(catalog.fits) == 0
+    assert (catalog.skipped["reason"] == "ct_units").all()
+
+
+@pytest.mark.xfail(reason="enabled by Task 6", strict=False)
+def test_catalog_fits_ct_analytes_when_asked(ct_dataset):
+    catalog = fit_shedding_models(
+        [ct_dataset], models=("gamma",), value_types=("concentration", "ct")
+    )
+    assert len(catalog.fits) == 1
+    assert catalog.fits[0].value_type == "ct"
+
+
 def test_cross_sectional_study_is_skipped():
     dataset = {
         "dataset_id": "cross_sectional",

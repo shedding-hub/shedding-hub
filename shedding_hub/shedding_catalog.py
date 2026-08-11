@@ -18,6 +18,7 @@ import yaml
 from .shedding_fit import (
     SheddingDataError,
     SheddingFit,
+    _is_ct_unit,
     fit_shedding_model,
     require_estimable_population,
 )
@@ -277,6 +278,7 @@ def fit_shedding_models(
     min_observations: int | None = None,
     min_time: float | None = None,
     max_peak_above_observed: float | None = None,
+    value_types: tuple[str, ...] = ("concentration",),
 ) -> SheddingCatalog:
     """
     Fit every analyte of every dataset, for every requested model.
@@ -305,6 +307,13 @@ def fit_shedding_models(
             decide when a subject's implied peak is extrapolation rather than
             estimate. ``None`` keeps the fitter's default. Lower it to rebuild
             the catalog under a stricter reading and compare.
+        value_types: Which measurement scales may enter the catalog. Defaults
+            to concentration only. Cycle-threshold fits are individually valid
+            -- ``fit_shedding_model`` produces them -- but their heights are
+            cycles below ``CT_REFERENCE`` rather than log10 concentrations, so
+            an ensemble that averaged the two would be averaging incommensurable
+            quantities. Opt in with ``("concentration", "ct")`` once that is
+            resolved.
 
     Returns:
         A ``SheddingCatalog``.
@@ -327,7 +336,29 @@ def fit_shedding_models(
 
     for dataset in datasets:
         dataset_id = dataset.get("dataset_id", "unknown")
-        for analyte in dataset.get("analytes", {}):
+        for analyte, analyte_spec in dataset.get("analytes", {}).items():
+            # Skipped here rather than left to prepare_observations, which now
+            # accepts Ct analytes. Keeping the decision in the catalog builder is
+            # what lets a caller fit one directly while the published catalog
+            # stays concentration-only.
+            if _is_ct_unit(analyte_spec.get("unit")) and "ct" not in value_types:
+                for model in models:
+                    skipped.append(
+                        {
+                            "dataset_id": dataset_id,
+                            "analyte": analyte,
+                            "model": model,
+                            "reason": "ct_units",
+                            "message": (
+                                f"Analyte {analyte!r} is reported in "
+                                f"{analyte_spec.get('unit')!r}. Cycle-threshold "
+                                "fits are supported but excluded from the "
+                                "catalog, whose heights are log10 "
+                                "concentrations."
+                            ),
+                        }
+                    )
+                continue
             for model in models:
                 try:
                     with warnings.catch_warnings():
