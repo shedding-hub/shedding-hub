@@ -1019,6 +1019,11 @@ class SheddingFit:
             "converged": bool(self.converged),
             "log_likelihood": float(self.log_likelihood),
             "aic": float(self.aic),
+            "value_type": self.value_type,
+            "ct_reference": (
+                None if self.ct_reference is None else float(self.ct_reference)
+            ),
+            "ct_cutoff": None if self.ct_cutoff is None else float(self.ct_cutoff),
         }
 
     @classmethod
@@ -1087,6 +1092,20 @@ class SheddingFit:
             converged=bool(payload["converged"]),
             log_likelihood=float(payload["log_likelihood"]),
             aic=float(payload["aic"]),
+            # Defaulted the same way: catalogs written before Ct support existed
+            # have no such keys, and every fit in them predates value tracking,
+            # so "concentration" with no Ct metadata is the honest reading.
+            value_type=payload.get("value_type", "concentration"),
+            ct_reference=(
+                None
+                if payload.get("ct_reference") is None
+                else float(payload["ct_reference"])
+            ),
+            ct_cutoff=(
+                None
+                if payload.get("ct_cutoff") is None
+                else float(payload["ct_cutoff"])
+            ),
         )
 
 

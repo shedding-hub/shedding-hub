@@ -582,15 +582,15 @@ def test_prepare_observations_accepts_ct_analytes(ct_dataset):
 
 def test_ct_values_are_cycles_below_the_reference(ct_dataset):
     obs = prepare_observations(ct_dataset, "swab", "gamma")
-    # First subject, day 1, Ct 32.0 -> 40 - 32 = 8.0.
-    assert obs.values[0] == pytest.approx(8.0)
+    # First subject, day 1, Ct 30.0 -> 40 - 30 = 10.0.
+    assert obs.values[0] == pytest.approx(10.0)
 
 
 def test_ct_response_peaks_where_ct_is_lowest(ct_dataset):
     # The sign-flip guard at the level that matters. The fixture's lowest Ct is
-    # 22.0 at day 5; that must be the LARGEST response, not the smallest.
+    # 25.0 at day 5; that must be the LARGEST response, not the smallest.
     obs = prepare_observations(ct_dataset, "swab", "gamma")
-    # Exclude the censored (NaN) day-16 reading: np.argmax treats NaN as the
+    # Exclude the censored (NaN) day-30 reading: np.argmax treats NaN as the
     # maximum, so leaving it in picks the censored point instead of the peak.
     first = (obs.subject_index == 0) & ~obs.censored
     assert obs.times[first][np.argmax(obs.values[first])] == 5
@@ -1661,6 +1661,37 @@ def test_to_dict_from_dict_round_trip():
     )
     assert restored.converged == fit.converged
     assert restored.subject_params is None
+
+
+def test_ct_fit_round_trips_its_value_type():
+    """A Ct fit's scale must survive serialization, or its height is silently
+    reinterpreted as a log10 concentration on the other side of the round trip.
+    """
+    fit = _minimal_fit([np.log(0.6), np.log(18.0)], np.diag([0.04, 0.04]))
+    fit.value_type = "ct"
+    fit.ct_reference = 40.0
+    fit.ct_cutoff = 3.0
+
+    restored = SheddingFit.from_dict(fit.to_dict())
+
+    assert restored.value_type == "ct"
+    assert restored.ct_reference == pytest.approx(40.0)
+    assert restored.ct_cutoff == pytest.approx(3.0)
+
+
+def test_from_dict_defaults_missing_value_type_to_concentration():
+    """A catalog serialized before Ct support existed has no such keys."""
+    fit = _minimal_fit([np.log(0.6), np.log(18.0)], np.diag([0.04, 0.04]))
+    payload = fit.to_dict()
+    del payload["value_type"]
+    del payload["ct_reference"]
+    del payload["ct_cutoff"]
+
+    restored = SheddingFit.from_dict(payload)
+
+    assert restored.value_type == "concentration"
+    assert restored.ct_reference is None
+    assert restored.ct_cutoff is None
 
 
 def test_deserialized_fit_can_still_simulate():

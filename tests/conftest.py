@@ -97,7 +97,16 @@ def woelfel_dataset():
 @pytest.fixture
 def ct_dataset():
     """One analyte in cycle threshold, three subjects that rise then fall."""
-    curve = [(1, 32.0), (3, 24.0), (5, 22.0), (8, 27.0), (12, 33.0), (16, "negative")]
+    curve = [
+        (1, 30.0),
+        (3, 26.0),
+        (5, 25.0),
+        (8, 27.0),
+        (12, 30.0),
+        (18, 33.0),
+        (25, 36.0),
+        (30, "negative"),
+    ]
     shifts = (0.0, 1.5, -1.0)
 
     participants = []
