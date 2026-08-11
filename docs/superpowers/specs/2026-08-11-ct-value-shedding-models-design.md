@@ -178,9 +178,14 @@ same biomarker and specimen, and they pair at the subject and timepoint level:
 
 | study | subjects with both | matched same-timepoint pairs |
 |---|---|---|
-| `kissler2021viral` | 68 | 2,406 |
+| `kissler2021viral` | 68 | 225 |
 | `teunis2015shedding` | 70 | 161 |
 | `gutierrez2021nosocomial` | 4 | 4 |
+
+`kissler2021viral` records 2,406 timepoints carrying both analytes, but only
+**225** of them have both analytes numerically detected. The rest are
+qualitative `negative` strings on one or both, which cannot be regressed. The
+figure that matters for verification is 225.
 
 plus `cdc2024nhphrn`, `kim2020viral`, `rouphael2025effective` and
 `shetty2024influenza`. The verification plan is therefore:
@@ -188,10 +193,10 @@ plus `cdc2024nhphrn`, `kim2020viral`, `rouphael2025effective` and
 1. **Peak-time agreement.** Fit both analytes of a paired study and check that
    the peak times agree within uncertainty. This tests the invariance claim
    directly, and it is the claim the feature rests on.
-2. **Empirical β.** Regress Ct on log10 concentration over the 2,406 matched
-   `kissler2021viral` pairs to estimate the study's effective slope, then check
-   that the fitted `a0*/a0` ratio matches it. This tests the scaling claim
-   quantitatively.
+2. **Empirical β.** Regress Ct on log10 concentration over the 225 numerically
+   detected `kissler2021viral` pairs to estimate the study's effective slope,
+   then check that the fitted `a0*/a0` ratio matches it. This tests the scaling
+   claim quantitatively.
 3. **Sign-flip guard.** A dedicated test that a Ct fit recovers a peak, not a
    trough. Omitting the flip produces an inverted curve that converges happily
    and is entirely wrong, which is the one failure mode here that would not

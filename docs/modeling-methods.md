@@ -72,6 +72,10 @@ coordinates for any of the three models.
 | `gamma` | `log_a0`, `log_peak_day`, `peak_log10` |
 | `gamma_shifted` | `log_a0`, `log_rise_days`, `peak_log10`, `t0` |
 
+A cycle-threshold fit names its height `peak_cycles` instead — it is cycles
+below `CT_REFERENCE`, not a log10 concentration. The temporal coordinates are
+unchanged, because they mean the same thing on either scale.
+
 **For the rise-and-fall models, `c0` is not separately meaningful.** It is the
 concentration at `t = 1`, so a plausible value depends entirely on `b0`. On
 `woelfel2020virological` stool, `b0` spans 0.024 to 6.80 while `c0` counter-varies
@@ -118,6 +122,10 @@ A subject is excluded from the population summary — but kept in
 - **over-extrapolated**: implied peak more than **3 log10** above the highest
   concentration the analyte ever recorded
 
+The last two thresholds are calibrated in log10 units and applied to whatever
+scale the fit is on, so on a cycle-threshold fit they are stricter by roughly
+the standard-curve slope. See *Cycle-threshold fits* below.
+
 The last of these is judged against the data rather than a fixed bound, because
 what counts as absurd depends on what the assay can see. It matters: when the gate was
 introduced, 66 subjects across 34 fits implied peaks beyond that ceiling,
@@ -159,6 +167,42 @@ slope, that slope cancels in `b0/a0`. **Peak time, onset and rise duration
 therefore compare directly with concentration fits, with no assumption about
 PCR efficiency.** Decay rate, half-life and peak height do not:
 `SheddingFit.comparable_with` says which is which for any pair of fits.
+
+Onset is invariant for a different reason from the other two, and it is worth
+being exact about which. Rise duration is `b0/a0` and peak time is that ratio,
+so for them the slope cancels. `t0` is a *time*: the transform rescales and
+offsets the response axis and leaves the time axis untouched, so an onset in
+days is the same number on either scale — there is no slope in it to cancel.
+
+A Ct fit's height coordinate is named `peak_cycles`, not `peak_log10`, and
+`catalog.table` carries a `value_type` column, so a height in cycles cannot be
+read as a log10 concentration by accident. `simulate_shedding` **refuses a Ct
+source** for the same reason: turning cycles into a concentration needs that
+assay's standard curve, which the studies do not report.
+
+### What is *not* invariant across scales: which subjects are kept
+
+Two of the subject-level gates in §4 are calibrated in log10 units and applied
+unchanged to the Ct response, which is in cycles:
+
+| gate | calibrated as | on the Ct scale |
+|---|---|---|
+| over-extrapolation margin | 3 log10 above the highest observation | 3 *cycles*, ≈ 0.9 log10 at a slope of 3.3 |
+| minimum half-life | 0.1 days | ≈ 0.1 days on a decay rate carrying the slope, so ≈ 0.33 days in concentration terms |
+
+Both are therefore roughly **β times stricter** on the Ct scale, β being the
+standard-curve slope (about 3.3 for a fully efficient assay). They are
+deliberately not rescaled: dividing by a nominal slope would put an assumed PCR
+efficiency back into the fitting path, and this package fits Ct directly
+precisely so that no efficiency is ever assumed.
+
+The consequence is that **subject retention is not scale-invariant even though
+the parameter mathematics is.** The same cohort measured both ways can keep
+slightly different subjects, so a population peak time can differ across scales
+for a reason that has nothing to do with the invariance argument above. Expect
+agreement to within sampling noise, not to the last digit — on
+`kissler2021viral`, which reports both scales for the same subjects, the two
+fits land 0.53 days apart.
 
 ## 5. Simulation
 
