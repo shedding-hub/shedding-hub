@@ -159,6 +159,38 @@ def test_catalog_fits_ct_analytes_when_asked(ct_dataset):
     assert catalog.fits[0].value_type == "ct"
 
 
+def test_mixed_catalog_table_distinguishes_ct_rows(ct_dataset, make_synthetic_dataset):
+    """
+    A mixed table must say which scale each row's peak_log10 is on.
+
+    Both scales produce a plausible-looking number in that column -- a Ct row's
+    is cycles below CT_REFERENCE -- so without value_type the two are
+    indistinguishable to a reader browsing the table.
+    """
+    concentration = make_synthetic_dataset(
+        "gamma",
+        np.array([np.log(0.5), np.log(2.0), np.log(12.0)]),
+        np.diag([0.04, 0.04, 0.04]),
+        n_subjects=12,
+        seed=5,
+    )
+    catalog = fit_shedding_models(
+        [concentration, ct_dataset],
+        models=("gamma",),
+        value_types=("concentration", "ct"),
+    )
+    table = catalog.table
+
+    assert "value_type" in table.columns
+    by_dataset = table.set_index("dataset_id")["value_type"].to_dict()
+    assert by_dataset == {"synthetic": "concentration", "ct_study": "ct"}
+
+
+def test_concentration_only_table_still_reads_as_concentration(two_study_catalog):
+    """The column exists on every table, not only on a mixed one."""
+    assert set(two_study_catalog.table["value_type"]) == {"concentration"}
+
+
 def test_cross_sectional_study_is_skipped():
     dataset = {
         "dataset_id": "cross_sectional",

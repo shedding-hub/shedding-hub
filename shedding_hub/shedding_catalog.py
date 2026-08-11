@@ -27,12 +27,20 @@ from .shedding_models import MODELS, PARAM_NAMES
 CATALOG_PATH = pathlib.Path(__file__).parent / "data" / "shedding_catalog.yaml"
 
 _KEY_COLUMNS = (
+    # value_type sits beside unit, which it is derived from, and is the third
+    # place this key has to appear: shedding_ensemble._COMPATIBILITY_KEYS
+    # refuses to mix scales, shedding_select._GROUP_KEYS keeps them in separate
+    # groups, and this list is what makes the difference visible to a person
+    # reading the table. Without it a mixed catalog shows peak_log10 = 13.51 on
+    # a Ct row -- cycles below CT_REFERENCE -- with nothing to distinguish it
+    # from a log10 concentration.
     "dataset_id",
     "analyte",
     "biomarker",
     "specimen",
     "reference_event",
     "unit",
+    "value_type",
     "gene_target",
     "dose",
     "vaccine_type",
@@ -75,7 +83,16 @@ def fit_to_row(fit: SheddingFit) -> dict:
     ``b0``): the missing one is ``NaN`` rather than the key being absent, so a
     row's schema does not depend on which model produced it.
 
-    Three columns qualify the rest, and a row is easy to misread without them:
+    Four columns qualify the rest, and a row is easy to misread without them:
+
+    ``value_type``
+        Which scale the row's heights are on. ``peak_log10`` on a ``ct`` row is
+        cycles below ``CT_REFERENCE`` — the fitted response for a
+        cycle-threshold analyte — not a log10 concentration, and the two are
+        not comparable. Only ``peak_day`` is (see
+        ``SheddingFit.comparable_with``). The shipped catalog is
+        concentration-only; a ``ct`` row appears only in a catalog built with
+        ``value_types`` widened.
 
     ``median_first_observed_day``
         Median across retained subjects of each subject's own first sampling
