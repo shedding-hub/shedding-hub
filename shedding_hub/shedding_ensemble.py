@@ -108,6 +108,19 @@ class SheddingEnsemble:
         return self.fits[0].unit
 
     @property
+    def value_type(self) -> str:
+        """
+        The scale every component is on.
+
+        Taken from the first component rather than reconciled, because
+        ``value_type`` is a ``_COMPATIBILITY_KEYS`` entry: ``make_ensemble``
+        has already refused any ensemble whose components disagree. Exposed so
+        that a consumer handed either a fit or an ensemble -- ``simulate_shedding``
+        is the one that matters -- can ask one question of both.
+        """
+        return self.fits[0].value_type
+
+    @property
     def biomarker(self) -> str | None:
         return self.fits[0].biomarker
 
