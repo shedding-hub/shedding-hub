@@ -181,7 +181,7 @@ class SheddingCatalog:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> catalog.table.shape
-        (126, 24)
+        (126, 25)
         >>> fit = catalog.select(
         ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
         ... )

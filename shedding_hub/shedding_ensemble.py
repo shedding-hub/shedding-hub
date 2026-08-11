@@ -48,7 +48,7 @@ class SheddingEnsemble:
         >>> ensemble.model
         'gamma'
         >>> ensemble.components.shape
-        (2, 25)
+        (2, 26)
         >>> ensemble.median_params
         Traceback (most recent call last):
             ...
