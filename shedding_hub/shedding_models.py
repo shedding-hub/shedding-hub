@@ -50,6 +50,31 @@ POPULATION_COORDS = {
     "gamma_shifted": ("log_a0", "log_rise_days", "peak_log10", "t0"),
 }
 
+
+def population_coord_names(
+    model: str, value_type: str = "concentration"
+) -> tuple[str, ...]:
+    """
+    Coordinate names for a model's population summary on a given value scale.
+
+    Only the height coordinate differs. On the Ct scale it is cycles below
+    ``CT_REFERENCE``, not a log10 concentration, and naming it ``peak_log10``
+    there would invite exactly the cross-scale comparison that is invalid. The
+    temporal coordinates keep their names because they mean the same thing on
+    either scale.
+
+    Examples:
+        >>> from shedding_hub.shedding_models import population_coord_names
+        >>> population_coord_names('gamma', 'ct')
+        ('log_a0', 'log_peak_day', 'peak_cycles')
+    """
+    validate_model(model)
+    names = POPULATION_COORDS[model]
+    if value_type != "ct":
+        return names
+    return tuple("peak_cycles" if name == "peak_log10" else name for name in names)
+
+
 LN10 = float(np.log(10.0))
 
 
