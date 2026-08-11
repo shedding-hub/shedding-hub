@@ -32,12 +32,20 @@ NEGATIVE_VALUE = "negative"
 # peak heights -- which occur at LOW Ct -- stay comfortably positive.
 CT_REFERENCE = 40.0
 
-# Peak time, onset and rise duration are ratios of b0 to a0. Fitting Ct returns
-# a0 and b0 both multiplied by the unknown standard-curve slope, so the slope
-# cancels in the ratio and these three transfer between value types exactly,
-# with no assumption about PCR efficiency. Everything else carries either the
-# slope (a0, half-life) or the assay intercept (height), and studies report
-# neither.
+# These three transfer between value types exactly, with no assumption about
+# PCR efficiency, but for two different reasons.
+#
+# Rise duration is b0/a0, and peak time is that ratio (plus t0, under
+# gamma_shifted). Fitting Ct returns a0 and b0 both multiplied by the unknown
+# standard-curve slope, so the slope cancels in the ratio.
+#
+# t0 is invariant for a simpler reason, and NOT by cancellation: it is a time.
+# The Ct transform rescales and offsets the response axis and leaves the time
+# axis alone, so an onset in days is the same number whichever scale the
+# readings were reported on -- there is no slope in it to cancel.
+#
+# Everything else carries either the slope (a0, half-life) or the assay
+# intercept (height), and studies report neither.
 #
 # These are names of QUANTITIES, not attributes of ``SheddingFit`` --
 # ``getattr(fit, name)`` does not work for most of them. ``peak_day`` and
@@ -200,9 +208,11 @@ def _numeric_limit(value: Any) -> float | None:
 def _declared_limit(analyte_spec: dict) -> float | None:
     """Resolve the analyte's declared detection limit: quantification, then detection.
 
-    Shared by ``_resolve_censoring_limit`` and the ``ct_cutoff`` recorded on
-    ``SheddingFit``, so the two can never disagree about which limit an analyte
-    declared.
+    The single reading of that precedence. ``_resolve_censoring_limit`` is its
+    only caller, and everything that needs the cutoff an analyte was actually
+    fitted against -- the ``ct_cutoff`` recorded on ``SheddingFit`` -- reads it
+    back off that resolved limit rather than re-deriving it here, so the two can
+    never describe different cutoffs of the same analyte.
     """
     for key in ("limit_of_quantification", "limit_of_detection"):
         limit = _numeric_limit(analyte_spec.get(key))
@@ -657,6 +667,24 @@ _BOUND_TOLERANCE = 1e-6
 # It also removes the need for a separate c0 or b0 bound: after this cut the
 # worst c0 is 75.5 and the worst b0 is 33.9, both on smooth tails with no gap to
 # justify cutting into.
+#
+# Calibrated on concentration fits, in log10 units, and applied unchanged to a
+# Ct fit. A Ct fit's a0 comes back multiplied by the assay's standard-curve
+# slope -- about 3.3 for a fully efficient assay -- so the half-life it implies
+# is about 3.3 times shorter than the same subject's on the concentration
+# scale, and this gate is correspondingly about 3.3 times stricter there: it
+# cuts at a concentration-scale half-life of roughly a third of a day rather
+# than a tenth.
+#
+# Deliberately not rescaled. Dividing by a nominal slope would put an assumed
+# PCR efficiency back into the fitting path, which is exactly what fitting Ct
+# directly exists to avoid, and the assumption would then be invisible in every
+# Ct estimate rather than stated once here. The price is that subject
+# *retention* is not scale-invariant even though the parameter mathematics is:
+# the same cohort measured both ways can keep slightly different subjects, so a
+# population peak time can differ across scales for a reason that is not in the
+# mathematics. Same caveat as _MAX_PEAK_ABOVE_OBSERVED below; both are stated
+# in docs/modeling-methods.md so a reader comparing two fits meets it there.
 _MIN_HALF_LIFE_DAYS = 0.1
 
 
@@ -666,6 +694,14 @@ _MIN_HALF_LIFE_DAYS = 0.1
 # the reference event still summarizes every real subject, tight enough to
 # exclude the hundred-half-life backward extrapolations that late-starting
 # studies produce. See ``_over_extrapolated_subjects``.
+#
+# Compared against the fitted response, so on a Ct fit these are cycles, not
+# log10 units: three cycles is about 0.9 log10 at a standard-curve slope of
+# 3.3, making the gate roughly that much stricter on the Ct scale. Not rescaled,
+# for the reason given at _MIN_HALF_LIFE_DAYS above -- a nominal slope here
+# would be an assumed PCR efficiency in the fitting path -- and with the same
+# consequence: subject retention is not scale-invariant, so a cohort measured
+# both ways may not summarize exactly the same subjects.
 _MAX_PEAK_ABOVE_OBSERVED = 3.0
 
 # The gamma model is only fitted where a rise is actually observed. Its ``b0``
@@ -838,11 +874,14 @@ class SheddingFit:
     # Which scale this fit's heights live on. Defaults to concentration so a
     # catalog serialized before Ct support stays loadable and reads correctly.
     value_type: str = "concentration"
-    # The reference heights are measured below, and the analyte's own detection
-    # cutoff. Recorded rather than assumed: a fit serialized under one
+    # The reference heights are measured below, and the Ct cutoff this fit
+    # censored against. Recorded rather than assumed: a fit serialized under one
     # convention must not be silently reinterpreted under another, and a height
-    # reads back as a minimum Ct via ``ct_reference - height``. Both None for
-    # concentration fits.
+    # reads back as a minimum Ct via ``ct_reference - height``. ``ct_cutoff`` is
+    # the cutoff that was applied, which is the analyte's declared limit where
+    # it declares one and the data-derived fallback where it does not — the
+    # same number ``censoring_limit`` carries, expressed as a Ct rather than as
+    # cycles below the reference. Both None for concentration fits.
     ct_reference: float | None = None
     ct_cutoff: float | None = None
 
@@ -1791,7 +1830,18 @@ def fit_shedding_model(
         median_first_observed_day=median_first_observed_day,
         value_type=observations.value_type,
         ct_reference=CT_REFERENCE if observations.value_type == "ct" else None,
+        # The cutoff actually applied, read back off the resolved censoring
+        # limit rather than off the analyte's declaration. The two agree
+        # wherever a limit is declared -- the limit IS CT_REFERENCE minus the
+        # cutoff -- and where none is (about 15 analytes in the repository)
+        # this reports the fallback the fitter fell back to instead of None,
+        # which would have read as "this fit censored nothing" when it had
+        # censored against a resolved cutoff all along. Deriving it from the
+        # limit also makes it impossible for the two to describe different
+        # cutoffs of the same analyte.
         ct_cutoff=(
-            _declared_limit(analyte_spec) if observations.value_type == "ct" else None
+            CT_REFERENCE - observations.censoring_limit
+            if observations.value_type == "ct"
+            else None
         ),
     )

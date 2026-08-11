@@ -545,12 +545,12 @@ def test_censoring_limit_uses_lod_when_loq_is_unusable(simple_dataset):
 
 def test_declared_limit_prefers_quantification_when_both_are_declared_and_differ():
     # Regression: _resolve_censoring_limit and the ct_cutoff construction site
-    # each resolve this precedence independently, and once had it inverted
-    # relative to each other. Both now delegate to _declared_limit, so this
-    # test covers both call sites at once; a reintroduced inversion here would
-    # make a fit's censoring_limit and ct_cutoff describe different cutoffs of
-    # the same analyte. Every other fixture declares only one of the two
-    # limits, so only this test would catch that regression.
+    # each resolved this precedence independently, and once had it inverted
+    # relative to each other, so a fit's censoring_limit and ct_cutoff could
+    # describe different cutoffs of the same analyte. ct_cutoff is now read back
+    # off the resolved limit, leaving this the single reading of the
+    # precedence -- and every other fixture declares only one of the two limits,
+    # so only this test pins it.
     spec = {"limit_of_quantification": 100, "limit_of_detection": 500}
     assert _declared_limit(spec) == pytest.approx(100.0)
 
@@ -2425,6 +2425,26 @@ def test_ct_fit_records_its_scale(ct_dataset):
     assert fit.value_type == "ct"
     assert fit.ct_reference == 40.0
     assert fit.ct_cutoff == 40.0
+
+
+def test_ct_fit_records_the_cutoff_it_actually_censored_against(ct_dataset):
+    """
+    About 15 analytes in the repository declare no numeric limit, and the
+    fitter resolves one from the data for them. Reporting None there would say
+    "no cutoff" for a fit that censored against a cutoff all along, so the
+    resolved fallback is recorded instead -- as a Ct, matching the declared
+    case, and always consistent with censoring_limit.
+    """
+    del ct_dataset["analytes"]["swab"]["limit_of_detection"]
+
+    with pytest.warns(UserWarning, match="Falling back"):
+        fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+
+    assert fit.ct_cutoff is not None
+    assert fit.ct_cutoff == pytest.approx(CT_REFERENCE - fit.censoring_limit)
+    # The fallback sits just above the highest Ct the study reported (37.5,
+    # the lowest response), so every `negative` still lies beyond it.
+    assert fit.ct_cutoff == pytest.approx(37.51)
 
 
 def test_concentration_fit_has_no_ct_metadata(simple_dataset):
