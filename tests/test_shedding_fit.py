@@ -577,7 +577,7 @@ def test_qualitative_and_unknown_time_are_dropped_with_warning(simple_dataset):
 def test_prepare_observations_accepts_ct_analytes(ct_dataset):
     obs = prepare_observations(ct_dataset, "swab", "gamma")
     assert obs.value_type == "ct"
-    assert obs.n_subjects == 3
+    assert obs.n_subjects == 4
 
 
 def test_ct_values_are_cycles_below_the_reference(ct_dataset):
@@ -2347,14 +2347,14 @@ def test_observations_default_to_concentration():
 
 
 def test_ct_fit_records_its_scale(ct_dataset):
-    # exponential rather than the brief's gamma: comparable_with and the new
-    # fields are entirely model-independent -- they only read value_type -- and
-    # ct_dataset's five usable points per subject are too sparse for the
-    # 3-parameter gamma model here, which fits an implied half-life of 0.0958
-    # days, just under the 0.1-day _MIN_HALF_LIFE_DAYS degenerate-fit floor.
-    # That is a pre-existing property of this small hand-built fixture -- the
-    # identical response numbers read as a concentration curve degenerate
-    # under gamma too -- not anything introduced by value-type tracking.
+    # exponential rather than gamma: comparable_with and the new fields are
+    # entirely model-independent -- they only read value_type -- so either
+    # model exercises what this test cares about. (An earlier version of
+    # ct_dataset made gamma fit degenerately here -- an implied half-life just
+    # under the 0.1-day floor -- which no longer applies: the fixture's curve
+    # and subject count were revised in review, and gamma now fits it cleanly
+    # with 0 degenerate subjects. exponential is kept regardless, since the
+    # model choice is immaterial to what this test verifies.)
     fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
     assert fit.value_type == "ct"
     assert fit.ct_reference == 40.0
