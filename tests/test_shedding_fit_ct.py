@@ -8,7 +8,6 @@ import numpy as np
 import pytest
 
 from shedding_hub import fit_shedding_model
-from shedding_hub.shedding_fit import CT_REFERENCE
 from shedding_hub.shedding_models import log10_concentration
 
 

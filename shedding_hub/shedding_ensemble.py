@@ -328,8 +328,8 @@ def make_ensemble(
 
     Raises:
         ValueError: If the fits disagree on model, unit, reference event,
-            biomarker, or specimen, or if one study contributes more than one
-            analyte.
+            biomarker, specimen, or value type, or if one study contributes
+            more than one analyte.
 
     Examples:
         >>> import shedding_hub as sh

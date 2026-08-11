@@ -411,5 +411,5 @@ def test_ensemble_accepts_ct_fits_on_their_own(ct_dataset):
 
     ensemble = make_ensemble([ct1, ct2])
 
-    assert ensemble is not None
+    assert ensemble.fits == [ct1, ct2]
     assert all(fit.value_type == "ct" for fit in ensemble.fits)

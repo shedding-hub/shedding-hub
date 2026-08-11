@@ -243,9 +243,9 @@ class SheddingCatalog:
 
         Raises:
             ValueError: If the matching fits disagree on model, unit,
-                reference event, biomarker, or specimen, or if one study
-                contributes more than one analyte. See ``build_ensemble`` for
-                the full validation this delegates to.
+                reference event, biomarker, specimen, or value type, or if one
+                study contributes more than one analyte. See
+                ``build_ensemble`` for the full validation this delegates to.
         """
         from .shedding_ensemble import build_ensemble
 

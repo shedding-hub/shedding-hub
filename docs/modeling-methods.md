@@ -137,7 +137,7 @@ earliest reading, so a curve is never undefined at its own observations.
 
 | reason | n | meaning |
 |---|---|---|
-| `ct_units` | 207 | Cycle thresholds, not concentrations |
+| `ct_units` | 207 | Cycle thresholds. Fittable directly with `fit_shedding_model`, but excluded from the catalog: their heights are cycles below `CT_REFERENCE`, not log10 concentrations, so an ensemble cannot average them together |
 | `no_rise_observed` | 63 | Fewer than 50% of subjects peaked later than their first reading, leaving `b0` unidentifiable |
 | `no_pre_event_readings` | 61 | `gamma_shifted` only: no detected reading at or before day 0, so `t0` has nothing to locate |
 | `too_few_subjects` | 50 | No subject cleared the per-subject minimum |
@@ -146,6 +146,19 @@ earliest reading, so a curve is never undefined at its own observations.
 | `non_pathogen_biomarker` | 12 | crAssphage, PMMoV, mtDNA — indicators, not shed pathogens |
 | `no_positive_measurements` | 4 | Nothing ever detected |
 | `no_data_after_reference_event` | 1 | Sampling stopped at day 0, so no post-event trajectory exists |
+
+### Cycle-threshold fits
+
+`Ct = α − β·log10 C` is affine, so a gamma curve in concentration is a gamma
+curve in Ct. Cycle-threshold analytes are fitted on `CT_REFERENCE − Ct` —
+cycles below a fixed reference of 40, which rises with viral load exactly as a
+log10 concentration does.
+
+Because `a0` and `b0` both come back multiplied by the unknown standard-curve
+slope, that slope cancels in `b0/a0`. **Peak time, onset and rise duration
+therefore compare directly with concentration fits, with no assumption about
+PCR efficiency.** Decay rate, half-life and peak height do not:
+`SheddingFit.comparable_with` says which is which for any pair of fits.
 
 ## 5. Simulation
 

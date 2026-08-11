@@ -174,9 +174,11 @@ class Observations:
     # The plottable subset of what was dropped: readings with a usable time and
     # value that a model-specific rule discarded. Recorded so a diagnostic plot
     # can mark them without re-deriving the rules, which would drift.
-    # ``dropped_values`` is log10, NaN where the reading was censored, matching
-    # ``values``. Readings with no usable time or value are counted in
-    # ``n_dropped_measurements`` but cannot be placed on a plot and are absent.
+    # ``dropped_values`` is on the same scale as ``values`` — see
+    # ``value_type`` for whether that is log10 concentration or cycles below
+    # ``CT_REFERENCE`` — and NaN where the reading was censored. Readings with
+    # no usable time or value are counted in ``n_dropped_measurements`` but
+    # cannot be placed on a plot and are absent.
     dropped_times: np.ndarray = field(default_factory=lambda: np.empty(0))
     dropped_values: np.ndarray = field(default_factory=lambda: np.empty(0))
 
