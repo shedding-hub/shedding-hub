@@ -8,10 +8,12 @@ import numpy as np
 import pytest
 
 from shedding_hub.shedding_fit import (
+    CT_REFERENCE,
     _MIN_HALF_LIFE_DAYS,
     SheddingDataError,
     _degenerate_subjects,
     _fraction_observing_a_rise,
+    _to_response,
     prepare_observations,
     require_estimable_population,
 )
@@ -143,6 +145,26 @@ def _shifted_truth_dataset(n_subjects=25, seed=0, t0=-2.5):
         },
         "participants": participants,
     }
+
+
+def test_to_response_maps_concentration_to_log10():
+    assert _to_response(1e6, "concentration") == 6.0
+
+
+def test_to_response_maps_ct_to_cycles_below_the_reference():
+    # Ct 31 is the repository median; 40 - 31 = 9 cycles below the reference.
+    assert _to_response(31.0, "ct") == 9.0
+
+
+def test_to_response_is_decreasing_in_ct():
+    # The sign flip is the whole point: less virus means a HIGHER Ct, so a
+    # higher Ct must map to a LOWER response. Drop the negation and every
+    # fitted curve inverts while still converging happily.
+    assert _to_response(20.0, "ct") > _to_response(35.0, "ct")
+
+
+def test_ct_reference_is_forty():
+    assert CT_REFERENCE == 40.0
 
 
 def test_gamma_shifted_refuses_an_analyte_with_no_pre_event_readings():

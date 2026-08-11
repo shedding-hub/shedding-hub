@@ -21,6 +21,31 @@ from .shedding_models import LN10, PARAM_NAMES, theta_to_params, validate_model
 CENSORING_MARGIN = 0.01
 NEGATIVE_VALUE = "negative"
 
+# Ct is affine in log10 concentration (Ct = alpha - beta * log10 C), so the
+# shedding models describe it unchanged once it is negated -- Ct falls as
+# shedding rises -- and offset to keep fitted levels positive.
+#
+# The offset is one constant for every analyte, not each study's own cutoff.
+# Recorded cutoffs run 37 to 41, so anchoring per study would put two studies
+# measuring identical samples up to 4 cycles apart on height alone. 40 sits
+# above the observed Ct median of 31 and above 95% of all readings, so fitted
+# peak heights -- which occur at LOW Ct -- stay comfortably positive.
+CT_REFERENCE = 40.0
+
+
+def _to_response(value: float, value_type: str) -> float:
+    """
+    Map a reported measurement onto the scale the models are fitted on.
+
+    Concentrations are fitted on log10. Cycle thresholds are fitted as cycles
+    below ``CT_REFERENCE``, which is decreasing in Ct and therefore increasing
+    in viral load, exactly like a log10 concentration.
+    """
+    if value_type == "ct":
+        return CT_REFERENCE - float(value)
+    return math.log10(float(value))
+
+
 # Fecal-strength / normalization indicators, not pathogens shed by infected
 # people. They have no time-since-infection trajectory, so fitting a shedding
 # curve to them is meaningless regardless of how much data is available.
