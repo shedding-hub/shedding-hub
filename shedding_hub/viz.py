@@ -4,10 +4,11 @@ from typing import List, Dict, Any
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from matplotlib.figure import Figure
+from matplotlib.ticker import FuncFormatter
 import logging
 
 from .shedding_models import log10_concentration
-from .shedding_fit import prepare_observations
+from .shedding_fit import CT_REFERENCE, prepare_observations
 
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
@@ -3427,7 +3428,19 @@ def plot_fit_diagnostic(
 
     unit = fit.unit or ""
     ax.set_xlabel(f"Days after {fit.reference_event}")
-    ax.set_ylabel(f"log10 concentration ({unit})" if unit else "log10 concentration")
+    if getattr(fit, "value_type", "concentration") == "ct":
+        # Points are plotted as cycles below CT_REFERENCE, which rises with
+        # viral load, so the curve already reads as a peak and the axis must
+        # NOT be inverted. Only the tick labels need converting back to the Ct
+        # the study actually reported.
+        ax.set_ylabel("Ct (cycle threshold)")
+        ax.yaxis.set_major_formatter(
+            FuncFormatter(lambda value, _: f"{CT_REFERENCE - value:.0f}")
+        )
+    else:
+        ax.set_ylabel(
+            f"log10 concentration ({unit})" if unit else "log10 concentration"
+        )
     ax.set_title(f"{fit.dataset_id} / {fit.analyte} / {fit.model}", fontsize=11)
     ax.grid(alpha=0.3)
 

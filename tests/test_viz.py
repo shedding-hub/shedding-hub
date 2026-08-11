@@ -351,7 +351,7 @@ def test_plot_time_courses_with_real_datasets():
 
 
 @pytest.fixture
-def ct_dataset():
+def ct_value_dataset():
     """Dataset with CT values."""
     return {
         "dataset_id": "test_ct_dataset",
@@ -415,9 +415,9 @@ def test_plot_shedding_heatmap_with_value_concentration(minimal_dataset):
     assert isinstance(fig, matplotlib.figure.Figure)
 
 
-def test_plot_shedding_heatmap_with_value_ct(ct_dataset):
+def test_plot_shedding_heatmap_with_value_ct(ct_value_dataset):
     """Test plot_shedding_heatmap with value='ct'."""
-    fig = sh.plot_shedding_heatmap(ct_dataset, value="ct")
+    fig = sh.plot_shedding_heatmap(ct_value_dataset, value="ct")
     assert fig is not None
     assert isinstance(fig, matplotlib.figure.Figure)
 
@@ -646,9 +646,9 @@ def test_plot_mean_trajectory_with_value_concentration(minimal_dataset):
     assert isinstance(fig, matplotlib.figure.Figure)
 
 
-def test_plot_mean_trajectory_with_value_ct(ct_dataset):
+def test_plot_mean_trajectory_with_value_ct(ct_value_dataset):
     """Test plot_mean_trajectory with value='ct'."""
-    fig = sh.plot_mean_trajectory(ct_dataset, value="ct")
+    fig = sh.plot_mean_trajectory(ct_value_dataset, value="ct")
     assert fig is not None
     assert isinstance(fig, matplotlib.figure.Figure)
 
@@ -1676,6 +1676,35 @@ def test_plot_fit_diagnostic_returns_one_closed_axis(fitted_pair):
     assert isinstance(fig, matplotlib.figure.Figure)
     assert len(fig.axes) == 1
     assert fig.number not in plt.get_fignums()
+
+
+def test_fit_diagnostic_labels_the_ct_axis(ct_dataset):
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    assert fig.axes[0].get_ylabel() == "Ct (cycle threshold)"
+
+
+def test_fit_diagnostic_ct_ticks_read_as_ct_not_as_depth(ct_dataset):
+    # A response of 8.0 is Ct 32. The tick must say 32.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    formatter = fig.axes[0].yaxis.get_major_formatter()
+    assert formatter(8.0, None) == "32"
+
+
+def test_fit_diagnostic_is_not_inverted_for_ct(ct_dataset):
+    # The response already increases with viral load. Inverting would put the
+    # peak at the bottom.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    bottom, top = fig.axes[0].get_ylim()
+    assert bottom < top
+
+
+def test_fit_diagnostic_concentration_label_unchanged(woelfel_dataset):
+    fit = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, woelfel_dataset)
+    assert "log10 concentration" in fig.axes[0].get_ylabel()
 
 
 # ---------------------------------------------------------------------------
