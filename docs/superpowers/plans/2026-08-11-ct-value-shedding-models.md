@@ -18,7 +18,7 @@ Design: `docs/superpowers/specs/2026-08-11-ct-value-shedding-models-design.md`
 - Doctests must not print numpy scalars directly — local and CI numpy versions repr them differently. Wrap in `int()` / `float()`.
 - `CT_REFERENCE` is exactly `40.0`. It is a published convention: once a fit is serialized carrying it, changing it silently reinterprets stored heights.
 - **New `SheddingFit` fields must have defaults.** Catalogs serialized before a field existed must stay loadable — precedent is `n_degenerate_subjects`.
-- The published catalog (`shedding_hub/data/shedding_catalog.yaml`) must not gain or lose fits in this work. It currently records **207** skips with `reason: ct_units` and that count must stay 207.
+- The published catalog (`shedding_hub/data/shedding_catalog.yaml`) must not gain or lose fits in this work, and no fitted number in it may change. It currently records **207** skips with `reason: ct_units` and that count must stay 207. The skip *message* text does change (Task 4) — that is the only permitted difference, and Task 12 verifies it is the only one.
 
 ---
 
@@ -1165,20 +1165,53 @@ PCR efficiency.** Decay rate, half-life and peak height do not:
 `SheddingFit.comparable_with` says which is which for any pair of fits.
 ```
 
-- [ ] **Step 2: Verify the catalog is untouched**
+- [ ] **Step 2: Verify the catalog gained and lost no fits**
+
+Task 4 deliberately writes a new, accurate skip message — the old one claimed "neither shedding model applies," which is no longer true — so the rebuilt catalog **will** differ. The diff must be confined to those message strings. Nothing else may move.
 
 ```bash
 python scripts/build_shedding_catalog.py
-git diff --stat shedding_hub/data/shedding_catalog.yaml
 ```
-
-Expected: **no diff**. If the file changed, Task 4's gate is not holding — the message text in the skip record is the likely culprit. Reconcile before committing: either match the old message exactly or accept the new one and note it in the commit.
 
 ```bash
-grep -c "reason: ct_units" shedding_hub/data/shedding_catalog.yaml
+python - <<'PY'
+import subprocess, yaml
+
+before = yaml.safe_load(
+    subprocess.run(
+        ["git", "show", "HEAD:shedding_hub/data/shedding_catalog.yaml"],
+        capture_output=True, text=True, check=True,
+    ).stdout
+)
+after = yaml.safe_load(open("shedding_hub/data/shedding_catalog.yaml", encoding="utf-8"))
+
+def key(row):
+    return (row["dataset_id"], row["analyte"], row["model"], row["reason"])
+
+b_skip = sorted(map(key, before["skipped"]))
+a_skip = sorted(map(key, after["skipped"]))
+assert b_skip == a_skip, "the set of skipped analytes changed, not just the message"
+
+assert len(before["fits"]) == len(after["fits"]), (
+    f"fit count changed: {len(before['fits'])} -> {len(after['fits'])}"
+)
+assert before["fits"] == after["fits"], "a fit's numbers changed"
+
+n_ct = sum(1 for row in after["skipped"] if row["reason"] == "ct_units")
+assert n_ct == 207, f"expected 207 ct_units skips, got {n_ct}"
+print(f"catalog OK: {len(after['fits'])} fits unchanged, {n_ct} ct_units skips")
+PY
 ```
 
-Expected: `207`
+Expected: `catalog OK: ... fits unchanged, 207 ct_units skips`. If the fit count moved, Task 4's gate is not holding — that is a stop-and-fix, not a number to update.
+
+Then confirm the textual diff really is message-only:
+
+```bash
+git diff --unified=0 shedding_hub/data/shedding_catalog.yaml | grep -E "^[-+]" | grep -v "^[-+][-+]" | grep -vc "message:"
+```
+
+Expected: `0`
 
 - [ ] **Step 3: Run everything**
 
