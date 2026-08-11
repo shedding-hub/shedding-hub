@@ -568,6 +568,7 @@ from .shedding_models import (
     log10_concentration_pointwise,
     log10_concentration_rowwise,
     peak_day,
+    population_coord_names,
     to_population_coords,
 )
 
@@ -851,8 +852,24 @@ class SheddingFit:
 
     @property
     def population_coords(self) -> tuple[str, ...]:
-        """Names of the coordinates ``population_mean``/``population_cov`` use."""
-        return POPULATION_COORDS[self.model]
+        """
+        Names of the coordinates ``population_mean``/``population_cov`` use.
+
+        Value-type aware, via ``population_coord_names``: a Ct fit's height is
+        cycles below ``ct_reference``, so it is named ``peak_cycles`` rather
+        than ``peak_log10``. The two are the same length and both plausible
+        numbers, so a Ct height under the log10 name would read as a
+        concentration a hundred billion times too large rather than as
+        anything obviously wrong. The temporal coordinates keep their names on
+        either scale, because they mean the same thing on either scale.
+
+        Examples:
+            >>> import shedding_hub as sh
+            >>> fit = sh.load_shedding_catalog().fits[0]
+            >>> 'peak_log10' in fit.population_coords
+            True
+        """
+        return population_coord_names(self.model, self.value_type)
 
     @property
     def median_params(self) -> np.ndarray:
@@ -1087,7 +1104,13 @@ class SheddingFit:
             A ``SheddingFit`` with ``subject_params is None``.
         """
         model = payload["model"]
-        expected = list(POPULATION_COORDS[model])
+        # Resolved before the coordinate check, not after: the height coordinate
+        # is named for the scale it lives on (``peak_cycles`` for Ct), so the
+        # names a payload is checked against depend on its own value type. A
+        # payload predating Ct support has no such key and reads as
+        # concentration, exactly as the fit it describes.
+        value_type = payload.get("value_type", "concentration")
+        expected = list(population_coord_names(model, value_type))
         if payload.get("population_coords") != expected:
             raise ValueError(
                 f"This {model!r} fit records its population summary in "
@@ -1137,7 +1160,8 @@ class SheddingFit:
             # Defaulted the same way: catalogs written before Ct support existed
             # have no such keys, and every fit in them predates value tracking,
             # so "concentration" with no Ct metadata is the honest reading.
-            value_type=payload.get("value_type", "concentration"),
+            # Resolved above, since the coordinate-name check depends on it.
+            value_type=value_type,
             ct_reference=(
                 None
                 if payload.get("ct_reference") is None

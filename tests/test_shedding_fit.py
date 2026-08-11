@@ -1692,6 +1692,65 @@ def test_ct_fit_round_trips_its_value_type():
     assert restored.ct_cutoff == pytest.approx(3.0)
 
 
+def test_ct_fit_round_trips_with_peak_cycles_in_its_coordinate_names():
+    """
+    The height coordinate is named for the scale it lives on, both ways.
+
+    A Ct fit's height is cycles below CT_REFERENCE, so it serializes as
+    ``peak_cycles``; ``from_dict`` must expect that same name for a Ct payload,
+    or the fit this package just wrote would fail to load back.
+    """
+    fit = _minimal_fit(np.array([np.log(0.5), np.log(3.0), 13.5]), np.eye(3), "gamma")
+    fit.value_type = "ct"
+    fit.ct_reference = 40.0
+
+    assert fit.population_coords == ("log_a0", "log_peak_day", "peak_cycles")
+
+    payload = fit.to_dict()
+    assert payload["population_coords"] == ["log_a0", "log_peak_day", "peak_cycles"]
+
+    restored = SheddingFit.from_dict(payload)
+    assert restored.population_coords == fit.population_coords
+    assert restored.value_type == "ct"
+    np.testing.assert_allclose(restored.population_mean, fit.population_mean)
+
+
+def test_ct_payload_naming_its_height_peak_log10_is_rejected():
+    """A Ct height under the log10 name is exactly the misreading to prevent.
+
+    Both names are the same length and 13.5 is a plausible number on either
+    scale -- as a log10 concentration it is 3.2e13 gc/mL -- so this has to fail
+    loudly rather than load.
+    """
+    fit = _minimal_fit(np.array([np.log(0.5), np.log(3.0), 13.5]), np.eye(3), "gamma")
+    fit.value_type = "ct"
+    mislabelled = {
+        **fit.to_dict(),
+        "population_coords": ["log_a0", "log_peak_day", "peak_log10"],
+    }
+    with pytest.raises(ValueError, match="Rebuild the catalog"):
+        SheddingFit.from_dict(mislabelled)
+
+
+@pytest.mark.parametrize("model", ["exponential", "gamma", "gamma_shifted"])
+def test_concentration_fits_keep_the_log10_height_name(model):
+    """The value-type-aware naming must not touch the concentration path."""
+    from shedding_hub.shedding_models import POPULATION_COORDS
+
+    k = len(POPULATION_COORDS[model])
+    fit = _minimal_fit(np.full(k, 0.5), np.eye(k), model)
+
+    assert fit.population_coords == POPULATION_COORDS[model]
+    assert "peak_log10" in fit.population_coords
+    assert "peak_cycles" not in fit.population_coords
+
+    payload = fit.to_dict()
+    assert payload["population_coords"] == list(POPULATION_COORDS[model])
+    restored = SheddingFit.from_dict(payload)
+    assert restored.population_coords == POPULATION_COORDS[model]
+    np.testing.assert_allclose(restored.population_mean, fit.population_mean)
+
+
 def test_from_dict_defaults_missing_value_type_to_concentration():
     """A catalog serialized before Ct support existed has no such keys."""
     fit = _minimal_fit([np.log(0.6), np.log(18.0)], np.diag([0.04, 0.04]))

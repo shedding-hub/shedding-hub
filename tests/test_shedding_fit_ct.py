@@ -78,6 +78,23 @@ def test_ct_decay_rate_carries_the_assay_slope():
     assert a0_ct / a0_conc == pytest.approx(3.5, rel=0.35)
 
 
+def test_a_fitted_ct_analyte_reports_its_height_in_cycles():
+    """
+    End-to-end: value_type comes from the analyte's unit, and the coordinate
+    names follow it, so a fitted Ct analyte never labels its height
+    ``peak_log10``. Round-tripped here too, because ``from_dict`` validates the
+    names it is handed and would otherwise reject what ``to_dict`` just wrote.
+    """
+    from shedding_hub.shedding_fit import SheddingFit
+
+    fit = fit_shedding_model(_synthetic("ct"), analyte="a", model="gamma")
+    assert fit.value_type == "ct"
+    assert fit.population_coords == ("log_a0", "log_peak_day", "peak_cycles")
+
+    restored = SheddingFit.from_dict(fit.to_dict())
+    assert restored.population_coords == fit.population_coords
+
+
 def test_a_ct_fit_is_a_peak_not_a_trough():
     # If the sign flip were dropped anywhere in the chain, the optimizer would
     # still converge -- on an inverted curve. Assert the fitted median rises
