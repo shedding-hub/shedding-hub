@@ -1,12 +1,13 @@
 """
 Choose which fitted estimate to simulate from.
 
-The catalog's five compatibility keys -- biomarker, specimen, reference event,
-unit and model -- cut 126 fits into 82 groups, 71 of them a single study. So the
-user's problem is not combining many estimates but choosing among incommensurable
-ones: gc/mL and gc/dry gram are different quantities, symptom onset and
-enrollment are different clocks, and the three models are fitted to different
-observation sets and so are not AIC-comparable.
+The catalog's six compatibility keys -- biomarker, specimen, reference event,
+unit, value type and model -- cut 126 fits into 82 groups, 71 of them a single
+study. So the user's problem is not combining many estimates but choosing among
+incommensurable ones: gc/mL and gc/dry gram are different quantities, symptom
+onset and enrollment are different clocks, a Ct fit's height and a
+concentration fit's are different scales, and the three models are fitted to
+different observation sets and so are not AIC-comparable.
 
 This module makes that choice visible (``shedding_options``) and makes a
 documented, overridable default (``shedding_for``). It adds no statistical
@@ -58,7 +59,14 @@ def classify_reference_event(event: str | None) -> str:
     return REFERENCE_EVENT_CLASSES.get(event, "administrative")
 
 
-_GROUP_KEYS = ("biomarker", "specimen", "reference_event", "unit", "model")
+_GROUP_KEYS = (
+    "biomarker",
+    "specimen",
+    "reference_event",
+    "unit",
+    "value_type",
+    "model",
+)
 
 # Rule 1. 'exposure' and 'landmark' tie: an inoculation is infection, and a
 # symptom onset is a fixed, documented offset from it. Both give an agent a
@@ -131,7 +139,7 @@ def _matching_fits(catalog: SheddingCatalog, keys: dict) -> list:
 
 
 def _grouped(fits: list) -> dict:
-    """Group fits by the five compatibility keys, reduced to one per study."""
+    """Group fits by the six compatibility keys, reduced to one per study."""
     groups = {}
     for fit in fits:
         signature = tuple(getattr(fit, key, None) for key in _GROUP_KEYS)
@@ -152,7 +160,7 @@ def shedding_options(
     """
     List every group that could be simulated from, best first.
 
-    Each row is one combination of the five keys ``make_ensemble`` requires
+    Each row is one combination of the six keys ``make_ensemble`` requires
     agreement on, so each row can actually be built -- counts are reported after
     reducing each study to a single analyte. ``rank`` 1 is what ``shedding_for``
     returns for the same arguments.
@@ -175,7 +183,7 @@ def shedding_options(
         >>> catalog = sh.load_shedding_catalog()
         >>> options = sh.shedding_options('SARS-CoV-2', 'stool', catalog=catalog)
         >>> options.shape
-        (10, 11)
+        (10, 12)
         >>> options.iloc[0]['model']
         'gamma'
     """
@@ -234,6 +242,7 @@ def shedding_options(
             "reference_event",
             "event_class",
             "unit",
+            "value_type",
             "n_unit_studies",
             "model",
             "n_studies",

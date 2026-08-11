@@ -113,15 +113,16 @@ rather than re-adding `+SKIP`.*
 
 ```
 
-Picking a fit by hand means naming five keys — biomarker, specimen, reference
-event, unit and model — and those keys cut the catalog into 82 groups, 71 of
-which hold a single study. To see the choice, and to have it made for you:
+Picking a fit by hand means naming six keys — biomarker, specimen, reference
+event, unit, value type and model — and those keys cut the catalog into 82
+groups, 71 of which hold a single study. To see the choice, and to have it
+made for you:
 
 ```python
 >>> import shedding_hub as sh
 >>> options = sh.shedding_options(biomarker='SARS-CoV-2', specimen='stool')
 >>> list(options.columns)
-['biomarker', 'specimen', 'reference_event', 'event_class', 'unit', 'n_unit_studies', 'model', 'n_studies', 'n_subjects', 'n_measurements', 'rank']
+['biomarker', 'specimen', 'reference_event', 'event_class', 'unit', 'value_type', 'n_unit_studies', 'model', 'n_studies', 'n_subjects', 'n_measurements', 'rank']
 >>> source = sh.shedding_for('SARS-CoV-2', 'stool')
 >>> source.selection.picked['event_class']
 'landmark'

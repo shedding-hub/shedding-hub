@@ -57,11 +57,11 @@ catalog.skipped["reason"].value_counts()
 
 ## 2. See the choice
 
-Picking a fit by hand means agreeing on five keys — biomarker,
-specimen, reference event, unit and model — and those keys cut the
-catalog into 82 groups, 71 of which hold a single study. So the hard
-part is not *combining* estimates; it is choosing among ones that are
-not comparable.
+Picking a fit by hand means agreeing on six keys — biomarker,
+specimen, reference event, unit, value type and model — and those keys
+cut the catalog into 82 groups, 71 of which hold a single study. So the
+hard part is not *combining* estimates; it is choosing among ones that
+are not comparable.
 
 `shedding_options` lists every group that can actually be built, best
 first. `rank` 1 is what `shedding_for` will return.
