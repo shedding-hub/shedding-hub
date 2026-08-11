@@ -10,9 +10,11 @@ import pytest
 from shedding_hub.shedding_fit import (
     CT_REFERENCE,
     _MIN_HALF_LIFE_DAYS,
+    Observations,
     SheddingDataError,
     _degenerate_subjects,
     _fraction_observing_a_rise,
+    _record_dropped,
     _resolve_censoring_limit,
     _to_response,
     prepare_observations,
@@ -2278,3 +2280,25 @@ def test_over_extrapolation_gate_reads_the_peak_not_the_onset():
     assert not _over_extrapolated_subjects(
         ordinary, "gamma_shifted", _Obs(), margin=3.0
     )[0]
+
+
+def test_dropped_ct_readings_are_recorded_on_the_response_scale():
+    # Dropped points are drawn on the diagnostic plot, so they must share the
+    # scale of the points that were kept or they land in the wrong place.
+    times: list[float] = []
+    values: list[float] = []
+    _record_dropped({"value": 28.0}, -1.0, times, values, "ct")
+    assert values == [12.0]
+
+
+def test_observations_default_to_concentration():
+    assert (
+        Observations(
+            subject_index=np.zeros(1, int),
+            times=np.zeros(1),
+            values=np.zeros(1),
+            censored=np.zeros(1, bool),
+            censoring_limit=0.0,
+        ).value_type
+        == "concentration"
+    )

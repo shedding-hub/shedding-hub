@@ -137,6 +137,11 @@ class Observations:
     values: np.ndarray
     censored: np.ndarray
     censoring_limit: float
+    # Which scale ``values`` and ``censoring_limit`` are on: log10 concentration,
+    # or cycles below CT_REFERENCE. Carried on the observations rather than
+    # re-derived downstream, so a plot or a fit cannot disagree with the fitter
+    # about what its own numbers mean.
+    value_type: str = "concentration"
     subject_ids: list = field(default_factory=list)
     n_subjects: int = 0
     n_excluded_subjects: int = 0
@@ -215,12 +220,18 @@ def _resolve_censoring_limit(
     return fallback
 
 
-def _record_dropped(measurement: dict, time: float, times: list, values: list) -> None:
+def _record_dropped(
+    measurement: dict,
+    time: float,
+    times: list,
+    values: list,
+    value_type: str = "concentration",
+) -> None:
     """Note a discarded reading, if it can be placed on a plot at all."""
     value = measurement.get("value")
     if isinstance(value, (int, float)) and not isinstance(value, bool) and value > 0:
         times.append(time)
-        values.append(math.log10(float(value)))
+        values.append(_to_response(float(value), value_type))
     elif value == NEGATIVE_VALUE:
         times.append(time)
         values.append(float("nan"))
