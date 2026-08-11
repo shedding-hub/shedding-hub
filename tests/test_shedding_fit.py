@@ -574,31 +574,38 @@ def test_qualitative_and_unknown_time_are_dropped_with_warning(simple_dataset):
     assert obs.n_dropped_measurements == 2
 
 
-def test_ct_analyte_is_rejected():
-    dataset = {
-        "dataset_id": "ct_study",
-        "analytes": {
-            "swab": {
-                "specimen": "saliva",
-                "biomarker": "SARS-CoV-2",
-                "reference_event": "symptom onset",
-                "unit": "cycle threshold",
-                "limit_of_quantification": "unknown",
-                "limit_of_detection": "unknown",
-            }
-        },
-        "participants": [
-            {
-                "measurements": [
-                    {"analyte": "swab", "time": 1, "value": 20.0},
-                    {"analyte": "swab", "time": 2, "value": 25.0},
-                ]
-            }
-        ],
-    }
-    with pytest.raises(SheddingDataError) as excinfo:
-        prepare_observations(dataset, "swab", "exponential")
-    assert excinfo.value.reason == "ct_units"
+def test_prepare_observations_accepts_ct_analytes(ct_dataset):
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    assert obs.value_type == "ct"
+    assert obs.n_subjects == 3
+
+
+def test_ct_values_are_cycles_below_the_reference(ct_dataset):
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    # First subject, day 1, Ct 32.0 -> 40 - 32 = 8.0.
+    assert obs.values[0] == pytest.approx(8.0)
+
+
+def test_ct_response_peaks_where_ct_is_lowest(ct_dataset):
+    # The sign-flip guard at the level that matters. The fixture's lowest Ct is
+    # 22.0 at day 5; that must be the LARGEST response, not the smallest.
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    # Exclude the censored (NaN) day-16 reading: np.argmax treats NaN as the
+    # maximum, so leaving it in picks the censored point instead of the peak.
+    first = (obs.subject_index == 0) & ~obs.censored
+    assert obs.times[first][np.argmax(obs.values[first])] == 5
+
+
+def test_ct_censoring_limit_comes_from_the_declared_cutoff(ct_dataset):
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    # Cutoff 40 == CT_REFERENCE, so the limit is exactly zero.
+    assert obs.censoring_limit == pytest.approx(0.0)
+
+
+def test_concentration_analytes_are_untouched(simple_dataset):
+    obs = prepare_observations(simple_dataset, "stool", "gamma")
+    assert obs.value_type == "concentration"
+    assert obs.values[0] == pytest.approx(6.0)
 
 
 def test_non_pathogen_biomarker_is_rejected():

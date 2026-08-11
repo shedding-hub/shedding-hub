@@ -90,7 +90,7 @@ class SheddingDataError(ValueError):
     Raised when an analyte cannot be fitted.
 
     Attributes:
-        reason: Machine-readable cause, one of ``ct_units``,
+        reason: Machine-readable cause, one of
             ``non_pathogen_biomarker``, ``too_few_subjects``,
             ``no_positive_measurements``, ``no_data_after_reference_event``,
             ``no_pre_event_readings``, ``unknown_analyte``,
@@ -270,17 +270,19 @@ def prepare_observations(
             the default is -5 and why it does not affect the gamma model.
 
     Returns:
-        An ``Observations`` instance with subject indices renumbered contiguously
-        from zero over the retained subjects.
+        An ``Observations`` instance with subject indices renumbered
+        contiguously. For a cycle-threshold analyte, ``values`` are cycles
+        below ``CT_REFERENCE`` rather than log10 concentrations, and
+        ``value_type`` says which.
 
     Raises:
-        SheddingDataError: The analyte is unknown, uses cycle-threshold units,
-            is a non-pathogen indicator biomarker, has no positive
-            measurements, or leaves no subject with enough data — reasons
-            ``unknown_analyte``, ``ct_units``, ``non_pathogen_biomarker``,
-            ``no_positive_measurements`` and ``too_few_subjects``
-            respectively, plus ``no_data_after_reference_event`` when every
-            usable reading falls at or before day 0. Note that ``too_few_subjects`` here means no subject
+        SheddingDataError: The analyte is unknown, is a non-pathogen
+            indicator biomarker, has no positive measurements, or leaves no
+            subject with enough data — reasons ``unknown_analyte``,
+            ``non_pathogen_biomarker``, ``no_positive_measurements`` and
+            ``too_few_subjects`` respectively, plus
+            ``no_data_after_reference_event`` when every usable reading
+            falls at or before day 0. Note that ``too_few_subjects`` here means no subject
             cleared ``min_observations``, not that the analyte has few
             subjects. The remaining three cannot arise here:
             ``no_rise_observed`` and ``degenerate_fit`` belong to
@@ -302,14 +304,9 @@ def prepare_observations(
         )
     analyte_spec = analytes[analyte]
 
-    if _is_ct_unit(analyte_spec.get("unit")):
-        raise SheddingDataError(
-            f"Analyte {analyte!r} is reported in {analyte_spec.get('unit')!r}. "
-            "Cycle-threshold values are inversely related to concentration and "
-            "already on a log scale, so neither shedding model applies. Select a "
-            "concentration analyte instead.",
-            "ct_units",
-        )
+    # Cycle thresholds are affine in log10 concentration, so both models
+    # describe them once the response is transformed. See ``_to_response``.
+    value_type = "ct" if _is_ct_unit(analyte_spec.get("unit")) else "concentration"
 
     biomarker = analyte_spec.get("biomarker")
     if biomarker in NON_PATHOGEN_BIOMARKERS:
@@ -345,7 +342,9 @@ def prepare_observations(
             gamma_drops_it = model == "gamma" and time <= 0
             if gamma_drops_it or time < min_time:
                 n_dropped += 1
-                _record_dropped(measurement, time, dropped_times, dropped_values)
+                _record_dropped(
+                    measurement, time, dropped_times, dropped_values, value_type
+                )
                 continue
             value = measurement.get("value")
             if isinstance(value, str):
@@ -372,7 +371,7 @@ def prepare_observations(
                 n_dropped += 1
                 continue
             times.append(time)
-            values.append(math.log10(float(value)))
+            values.append(_to_response(float(value), value_type))
             censored.append(False)
 
         if times:
@@ -500,7 +499,7 @@ def prepare_observations(
     # Non-empty: retention requires at least one positive per subject, and the
     # analyte-wide check above already rejected the case where there are none.
     observed = values_array[~censored_array]
-    censoring_limit = _resolve_censoring_limit(analyte_spec, observed)
+    censoring_limit = _resolve_censoring_limit(analyte_spec, observed, value_type)
 
     return Observations(
         subject_index=subject_index,
@@ -508,6 +507,7 @@ def prepare_observations(
         values=values_array,
         censored=censored_array,
         censoring_limit=censoring_limit,
+        value_type=value_type,
         subject_ids=retained_ids,
         n_subjects=len(retained),
         n_excluded_subjects=n_excluded,
