@@ -83,7 +83,7 @@ def _assert_same(fresh, committed, path="fits"):
 
     Structure and labels must match exactly; only floats are given a tolerance.
     The path is threaded through so a failure names the record and field rather
-    than dumping all 126 of them.
+    than dumping all 144 of them.
     """
     assert type(fresh) is type(committed) or isinstance(
         fresh, (int, float)

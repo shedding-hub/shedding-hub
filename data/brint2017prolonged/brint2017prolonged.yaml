@@ -1,0 +1,863 @@
+title: Prolonged viral replication and longitudinal viral dynamic differences among
+  respiratory syncytial virus infected infants
+doi: 10.1038/pr.2017.173
+description: Longitudinal RSV viral load study in 51 naturally infected, hospitalized
+  RSV-PCR+ infants (<1 year old) during the 2014–2015 RSV season. Quantitative nasal
+  aspirate/nasal wash samples were collected serially during hospitalization and follow-up
+  visits up to ~1 month after symptom onset. Viral load was measured using TaqMan-based
+  real-time qRT-PCR targeting the RSV N gene with subtype-specific primers (RSV-A
+  and RSV-B), and results were reported as plaque-forming unit equivalents per mL.
+analytes:
+  nasal_aspirate_respiratory_syncytial_virus_viral_load:
+    description: RSV viral load quantified from nasal aspirate/nasal wash using RNA
+      extraction (Qiagen EZ1 Virus Minikit v2.0 on EZ1 Advanced XL) followed by reverse
+      transcription and TaqMan-based real-time qRT-PCR (ABI Prism 7900HT and 7500Fast).
+      Assay used custom RSV-A and RSV-B subtype-specific primers targeting the RSV
+      N gene; quantification used 10-fold dilution internal standard curves from quantitatively
+      cultured RSV-A and RSV-B whole virus. Results reported as PFU equivalents per
+      mL; CSV values provided in linear scale corresponding to PFUe/mL (converted
+      from reported log10 PFUe/mL in the paper figures).
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    gene_target: N gene
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 85878469.80686328
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 5982180.380106281
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 23997.46070781152
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 7661.212713002803
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 9
+    value: 944.510111339759
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 1671.6313057451332
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: 5236.1040060253845
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 17782.794100389263
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 14677.992676220736
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 82.54041852680173
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 6.812920690579622
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 24
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 31
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 100000.0000000002
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 4641.588833612792
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 31622.776601683792
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 26.10157215682545
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 46.41588833612794
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 3.8311868495572927
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 1000000.0000000021
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 2154434.690031891
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 12115276.5862859
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 2154434.690031891
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 215443.46900318866
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 12115.276586285901
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 4641.588833612792
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 56.23413251903491
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 18
+    value: 2.1544346900318865
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 25
+    value: 146.77992676220674
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 5623413.251903491
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 31622776.60168379
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 17782794.100389227
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 562341.3251903491
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 56234.13251903491
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 6.8129206905795945
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 10.000000000000082
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 17782.794100389227
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 17.782794100389374
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 9
+    value: 2610.157215682544
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 17782.794100389227
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: 121.15276586285962
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 1.7782794100389228
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: 17.782794100389374
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 20
+    value: 8.254041852680208
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 22
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 2
+    value: 464.15888336127915
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 261.0157215682544
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 121.15276586285962
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 9
+    value: 3.831186849557277
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 2.1544346900318776
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 160920.57297269074
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 9
+    value: 1909816.9151133476
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 109982.17754274413
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 51374.049715216606
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 29027.51895691746
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 30
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 121152.76586285951
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 316227.7660168379
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 6812.920690579657
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 681.2920690579657
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 177.82794100389228
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 24
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 31
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 681292.069057965
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 46415.88833612754
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 383118.68495573086
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 9
+    value: 56234.132519035826
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 215443.46900318956
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 14677.992676220856
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: 121.15276586285962
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 23
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 30
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 3831186.8495573085
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 6812.920690579657
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 3162.2776601683795
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 9
+    value: 1000.0000000000164
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 16
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 27416785.161915302
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 51374.04971521702
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 51374.04971521702
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: 3578.6482100128674
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 1142.4869279186194
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 25
+    value: 37.17473949786091
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 32
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 222385997.25966594
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 1491261202.0020823
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 18738174.22860387
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 504056.6385053429
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 1671.6313057451332
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 1381.9612567338204
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 364.74006492530043
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 28
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 2
+    value: 160920.5729726881
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 29027.51895691746
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 9267.063710089673
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 2022.0184963444326
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 2958.519118851416
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: 21.004582303213212
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 22
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 33
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 11209.51382293656
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 737511.1576368387
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 504056.6385053429
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 504056.6385053429
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 160920.5729726881
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 65.79332246575602
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: 35111.917342150846
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 25
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 88891.14947558155
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 158214.83310287484
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 74463.20752124986
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 66.79253509737599
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 173.94256050146734
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: 55.951424086293294
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 18
+    value: 1.8762904032990415
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 20
+    value: 1.9012004253680006
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 25
+    value: 1.9630817461085206
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 32
+    value: 2.050021654565343
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 84503453.78448218
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 48299890.261770554
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 3759.7906870761963
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 2888404.1823096923
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 1901425.626643615
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 64930.852591875504
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 56698.539199322026
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 11.931847765612995
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 272016.11843481526
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 18
+    value: 3979.8640977140813
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 25
+    value: 1.1376195202625277
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 166287228.76614055
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 4865377.746586315
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 1364486.757514488
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: 2367.190061697738
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 440729.1533211993
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 500.4797418903315
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: 107318.56245833915
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 26132.3167785335
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: 1784.5706346363165
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 24
+    value: 2055.338870042775
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 31
+    value: 69.26132531994926
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 71246040.95423307
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 11355721.265971813
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 191517555.11453566
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 8
+    value: 107318.56245833893
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 9
+    value: 163954.72095739716
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 188831.14199591783
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 26132.3167785335
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 7328.762954222955
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 673318.9831779413
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 16
+    value: 70246.67408703102
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 45980.81736517087
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 52957.36653552697
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 19700.558012878166
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 1014.2265364188473
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 13
+    value: 14.643475730989524
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 69.26132531994926
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 19
+    value: 9.585065655119017
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 24
+    value: 1549.4731289444226
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 34
+    value: 39.363347532246536
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 2
+    value: 31622776.60168379
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 3
+    value: 2526033.026331524
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 2526033.026331524
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 1087890.9547925573
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 844.9466108283314
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 713934.7751502837
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 734.2664053621826
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 16
+    value: 2.0177996797972004
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 22
+    value: 43067.170676405054
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 29
+    value: 152379.60002208262
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 23880794.99862202
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 6941.661220595694
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 67.4944857411922
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 25.260330263315044
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: 18547.811900706034
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 19
+    value: 363.89459900993745
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 25
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 32
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 4
+    value: 9686.767182882963
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 6386.818180161156
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: 111.46909406842325
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 16
+    value: 96867.67182883051
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 18
+    value: 13695.735682493743
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 24
+    value: 641.6778869075633
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 5
+    value: 1704.9330007751369
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 6
+    value: 86900.9232006215
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 7
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 10
+    value: negative
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 11
+    value: 554.5011344733041
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 12
+    value: 1704.9330007751369
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 207.52631321450383
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 14
+    value: 2210621.4580987147
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 15
+    value: 715998.2473190231
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 16
+    value: 27890.898997167504
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 17
+    value: 114856.23325435867
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 20
+    value: 3394.6449609888728
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 21
+    value: 132.23454120551554
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 23
+    value: 24.43077343349229
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 28
+    value: 849.6668323672528
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 34
+    value: 34127.535876307884
+  - analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+    time: 41
+    value: 1.0073653234448912

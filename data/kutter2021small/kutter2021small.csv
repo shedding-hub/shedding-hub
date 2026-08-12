@@ -1,0 +1,59 @@
+PatientID,time,value,group,biomarker,specimen,unit
+infant_1,0,20.47619047619047,infant,RSV,nasopharyngeal aspirate,ct
+infant_1,2,22.857142857142854,infant,RSV,nasopharyngeal aspirate,ct
+infant_1,3,33.33333333333333,infant,RSV,nasopharyngeal aspirate,ct
+infant_1,5,22.619047619047613,infant,RSV,nasopharyngeal aspirate,ct
+infant_1,6,27.619047619047613,infant,RSV,nasopharyngeal aspirate,ct
+mother_1,2,21.190476190476183,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+mother_1,6,33.57142857142856,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_1,5,28.095238095238088,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_1,6,31.19047619047619,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+infant_2,0,22.85714285714286,infant,RSV,nasopharyngeal aspirate,ct
+infant_2,2,31.904761904761905,infant,RSV,nasopharyngeal aspirate,ct
+mother_2,2,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+mother_2,5,35.47619047619048,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_2,2,negative,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_2,5,negative,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+infant_3,0,19.644970414201183,infant,RSV,nasopharyngeal aspirate,ct
+infant_3,2,12.307692307692307,infant,RSV,nasopharyngeal aspirate,ct
+infant_3,3,20.59171597633136,infant,RSV,nasopharyngeal aspirate,ct
+infant_3,4,17.988165680473386,infant,RSV,nasopharyngeal aspirate,ct
+infant_3,5,23.668639053254438,infant,RSV,nasopharyngeal aspirate,ct
+infant_3,6,22.248520710059168,infant,RSV,nasopharyngeal aspirate,ct
+mother_3,2,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+mother_3,6,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_3,2,negative,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+infant_4,0,25.23809523809524,infant,RSV,nasopharyngeal aspirate,ct
+infant_4,2,20.95238095238096,infant,RSV,nasopharyngeal aspirate,ct
+infant_4,3,23.095238095238102,infant,RSV,nasopharyngeal aspirate,ct
+infant_4,4,26.42857142857143,infant,RSV,nasopharyngeal aspirate,ct
+infant_4,5,27.142857142857153,infant,RSV,nasopharyngeal aspirate,ct
+infant_4,6,28.095238095238102,infant,RSV,nasopharyngeal aspirate,ct
+infant_4,0,26.42857142857143,infant,RV,nasopharyngeal aspirate,ct
+infant_4,2,26.42857142857143,infant,RV,nasopharyngeal aspirate,ct
+infant_4,3,26.904761904761912,infant,RV,nasopharyngeal aspirate,ct
+infant_4,4,28.80952380952381,infant,RV,nasopharyngeal aspirate,ct
+infant_4,5,negative,infant,RV,nasopharyngeal aspirate,ct
+infant_4,6,30.238095238095255,infant,RV,nasopharyngeal aspirate,ct
+mother_4,2,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+mother_4,6,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_4,2,37.14285714285715,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_4,6,negative,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+infant_5,0,21.666666666666686,infant,RSV,nasopharyngeal aspirate,ct
+infant_5,2,17.14285714285714,infant,RSV,nasopharyngeal aspirate,ct
+infant_5,3,22.61904761904762,infant,RSV,nasopharyngeal aspirate,ct
+infant_5,4,26.428571428571416,infant,RSV,nasopharyngeal aspirate,ct
+infant_5,0,29.047619047619037,infant,RV,nasopharyngeal aspirate,ct
+infant_5,2,negative,infant,RV,nasopharyngeal aspirate,ct
+infant_5,3,negative,infant,RV,nasopharyngeal aspirate,ct
+infant_5,4,27.85714285714286,infant,RV,nasopharyngeal aspirate,ct
+mother_5,2,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+mother_5,4,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_5,2,22.14285714285714,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_5,4,20.0,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+infant_6,0,23.571428571428584,infant,RSV,nasopharyngeal aspirate,ct
+infant_6,3,26.90476190476187,infant,RSV,nasopharyngeal aspirate,ct
+infant_6,4,24.76190476190476,infant,RSV,nasopharyngeal aspirate,ct
+infant_6,6,34.99999999999997,infant,RSV,nasopharyngeal aspirate,ct
+mother_6,4,negative,mother,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct
+father_6,5,negative,father,RSV,"oropharyngeal swab, nasopharyngeal swab ",ct

@@ -1,0 +1,2815 @@
+title: 'Viral dynamics of the Respiratory Syncytial Virus during experimental human
+  challenge: insights for transmission and protection'
+doi: 10.1093/infdis/jiag206
+description: Human RSV challenge study in adults analyzing high-resolution viral kinetics
+  using mathematical models. Figure-derived CSV data provide RSV RNA concentrations
+  (gc/mL) and infectious virus titers (pfu/mL) over days post-exposure for individual
+  participants (PatientID). The study report the specimen as nasal samples, and we consider these to 
+  be nasopharyngeal aspirates based on the methods description. The study does not provide assay details for the viral RNA or infectious virus measurements.
+analytes:
+  gc_ml:
+    description: RSV viral RNA concentration quantified from respiratory samples;
+      values provided as gene copies per mL (gc/mL) from figure-derived CSV. Assay
+      method/gene target not provided in the supplied text/CSV.
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: 630.9573
+    unit: gc/mL
+    reference_event: inoculation
+  pfu_ml:
+    description: RSV infectious virus titer measured as plaque forming units per mL
+      (pfu/mL) from figure-derived CSV. Assay method not provided in the supplied
+      text/CSV.
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: 100
+    unit: pfu/mL
+    reference_event: inoculation
+participants:
+- patient_id: '111406'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 2
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 3
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 3
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 4
+    value: 562.341325190349
+  - analyte: gc_ml
+    time: 4
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 5
+    value: 12115.276586285901
+  - analyte: gc_ml
+    time: 6
+    value: 383118.6849557293
+  - analyte: gc_ml
+    time: 6
+    value: 681292.0690579636
+  - analyte: gc_ml
+    time: 7
+    value: 12115276.5862859
+  - analyte: gc_ml
+    time: 7
+    value: 31622776.60168379
+  - analyte: gc_ml
+    time: 8
+    value: 3831186.849557293
+  - analyte: gc_ml
+    time: 8
+    value: 3162277.6601683856
+  - analyte: gc_ml
+    time: 9
+    value: 14677992.676220736
+  - analyte: gc_ml
+    time: 9
+    value: 1211527.6586285902
+  - analyte: gc_ml
+    time: 10
+    value: 6812920.690579622
+  - analyte: gc_ml
+    time: 10
+    value: 2610157.2156825387
+  - analyte: gc_ml
+    time: 11
+    value: 121152.76586285901
+  - analyte: gc_ml
+    time: 11
+    value: 383118.6849557293
+  - analyte: gc_ml
+    time: 12
+    value: 261015.7215682544
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 5
+    value: 177.82794100389228
+  - analyte: pfu_ml
+    time: 6
+    value: 825.4041852680207
+  - analyte: pfu_ml
+    time: 7
+    value: 31622.776601683792
+  - analyte: pfu_ml
+    time: 8
+    value: 38311.868495572926
+  - analyte: pfu_ml
+    time: 9
+    value: 1000.0000000000041
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+- patient_id: '126046'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 3
+    value: 3162.2776601683922
+  - analyte: gc_ml
+    time: 3
+    value: 56234.132519035025
+  - analyte: gc_ml
+    time: 4
+    value: 464.1588833612773
+  - analyte: gc_ml
+    time: 4
+    value: 38311.868495572926
+  - analyte: gc_ml
+    time: 5
+    value: 100000.0
+  - analyte: gc_ml
+    time: 6
+    value: 6812920.690579622
+  - analyte: gc_ml
+    time: 6
+    value: 3162277.6601683856
+  - analyte: gc_ml
+    time: 7
+    value: 10000000.0
+  - analyte: gc_ml
+    time: 7
+    value: 562341.3251903502
+  - analyte: gc_ml
+    time: 7
+    value: 12115276.5862859
+  - analyte: gc_ml
+    time: 8
+    value: 68129.20690579622
+  - analyte: gc_ml
+    time: 8
+    value: 1778.2794100389228
+  - analyte: gc_ml
+    time: 9
+    value: 464.1588833612773
+  - analyte: gc_ml
+    time: 9
+    value: 12115.276586285901
+  - analyte: gc_ml
+    time: 10
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 11
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 11
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 12
+    value: 26.10157215682545
+  - analyte: gc_ml
+    time: 12
+    value: 26.10157215682545
+  - analyte: pfu_ml
+    time: 2
+    value: 12.115276586285901
+  - analyte: pfu_ml
+    time: 3
+    value: 12.115276586285901
+  - analyte: pfu_ml
+    time: 4
+    value: 82.54041852680211
+  - analyte: pfu_ml
+    time: 5
+    value: 261.0157215682544
+  - analyte: pfu_ml
+    time: 6
+    value: 4641.588833612773
+  - analyte: pfu_ml
+    time: 7
+    value: 12.115276586285901
+  - analyte: pfu_ml
+    time: 8
+    value: 12.115276586285901
+  - analyte: pfu_ml
+    time: 9
+    value: 12.115276586285901
+  - analyte: pfu_ml
+    time: 10
+    value: 12.115276586285901
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+- patient_id: '127359'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 488.7374631624417
+  - analyte: gc_ml
+    time: 2
+    value: 1059.766248676075
+  - analyte: gc_ml
+    time: 3
+    value: 162212.3939129173
+  - analyte: gc_ml
+    time: 4
+    value: 238864.30789846004
+  - analyte: gc_ml
+    time: 4
+    value: 628520.326924011
+  - analyte: gc_ml
+    time: 5
+    value: 762698.5859023468
+  - analyte: gc_ml
+    time: 5
+    value: 13894954.943731388
+  - analyte: gc_ml
+    time: 6
+    value: 24828928.8056033
+  - analyte: gc_ml
+    time: 6
+    value: 65332014.5959377
+  - analyte: gc_ml
+    time: 7
+    value: 13894954.943731388
+  - analyte: gc_ml
+    time: 7
+    value: 24828928.8056033
+  - analyte: gc_ml
+    time: 8
+    value: 6408002.744415997
+  - analyte: gc_ml
+    time: 8
+    value: 1653816.7833956731
+  - analyte: gc_ml
+    time: 9
+    value: 628520.326924011
+  - analyte: gc_ml
+    time: 9
+    value: 289857.7214651074
+  - analyte: gc_ml
+    time: 10
+    value: 238864.30789846004
+  - analyte: gc_ml
+    time: 11
+    value: 1362867.9593557755
+  - analyte: gc_ml
+    time: 12
+    value: 50802.180469130224
+  - analyte: gc_ml
+    time: 12
+    value: 34499.68470549716
+  - analyte: pfu_ml
+    time: 2
+    value: 12.371916345321646
+  - analyte: pfu_ml
+    time: 3
+    value: 4982.863514647321
+  - analyte: pfu_ml
+    time: 4
+    value: 10.195378685327302
+  - analyte: pfu_ml
+    time: 5
+    value: 133675.0699919709
+  - analyte: pfu_ml
+    time: 6
+    value: 426827.21311638254
+  - analyte: pfu_ml
+    time: 7
+    value: 61647.57056337174
+  - analyte: pfu_ml
+    time: 8
+    value: 3383.855153428247
+  - analyte: pfu_ml
+    time: 9
+    value: 10.195378685327302
+  - analyte: pfu_ml
+    time: 10
+    value: 10.195378685327302
+  - analyte: pfu_ml
+    time: 11
+    value: 10.195378685327302
+  - analyte: pfu_ml
+    time: 12
+    value: 10.195378685327302
+- patient_id: '131034'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 22.894456220755476
+  - analyte: gc_ml
+    time: 3
+    value: 23.070324119635014
+  - analyte: gc_ml
+    time: 3
+    value: 513.3813743218951
+  - analyte: gc_ml
+    time: 4
+    value: 4626391.358960792
+  - analyte: gc_ml
+    time: 4
+    value: 12253468.323684184
+  - analyte: gc_ml
+    time: 5
+    value: 5688177.96609256
+  - analyte: gc_ml
+    time: 6
+    value: 85959199.21624187
+  - analyte: gc_ml
+    time: 6
+    value: 71302924.7894766
+  - analyte: gc_ml
+    time: 7
+    value: 22477823.722249504
+  - analyte: gc_ml
+    time: 7
+    value: 12661991.503287757
+  - analyte: gc_ml
+    time: 8
+    value: 10503087.93096959
+  - analyte: gc_ml
+    time: 8
+    value: 83724.10161601072
+  - analyte: gc_ml
+    time: 8
+    value: 38865.534023749526
+  - analyte: gc_ml
+    time: 9
+    value: 12252.128860580318
+  - analyte: gc_ml
+    time: 9
+    value: 6901.7514082688385
+  - analyte: gc_ml
+    time: 10
+    value: 722128.744106847
+  - analyte: gc_ml
+    time: 11
+    value: 39898.72592284049
+  - analyte: gc_ml
+    time: 11
+    value: 5800.580927613602
+  - analyte: gc_ml
+    time: 12
+    value: 22623.270145790444
+  - analyte: gc_ml
+    time: 12
+    value: 1249.970538344508
+  - analyte: pfu_ml
+    time: 2
+    value: 10.569894321085123
+  - analyte: pfu_ml
+    time: 3
+    value: 10.70946656582745
+  - analyte: pfu_ml
+    time: 4
+    value: 516.7597807645564
+  - analyte: pfu_ml
+    time: 4
+    value: 44507.75056297215
+  - analyte: pfu_ml
+    time: 5
+    value: 312225.9344249911
+  - analyte: pfu_ml
+    time: 6
+    value: 214831.98501083383
+  - analyte: pfu_ml
+    time: 7
+    value: 100383.34924390586
+  - analyte: pfu_ml
+    time: 8
+    value: 13.84643244272836
+  - analyte: pfu_ml
+    time: 9
+    value: 14.029270378378175
+  - analyte: pfu_ml
+    time: 10
+    value: 14.214522633445773
+  - analyte: pfu_ml
+    time: 11
+    value: 99.71617427291548
+- patient_id: '132291'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 533.6699231206296
+  - analyte: gc_ml
+    time: 3
+    value: 25.950242113997334
+  - analyte: gc_ml
+    time: 3
+    value: 25.950242113997334
+  - analyte: gc_ml
+    time: 4
+    value: 25.950242113997334
+  - analyte: gc_ml
+    time: 4
+    value: 25.950242113997334
+  - analyte: gc_ml
+    time: 5
+    value: 25.950242113997334
+  - analyte: gc_ml
+    time: 5
+    value: 533.6699231206296
+  - analyte: gc_ml
+    time: 5
+    value: 13848.863713938688
+  - analyte: gc_ml
+    time: 6
+    value: 112332.40329780242
+  - analyte: gc_ml
+    time: 6
+    value: 141747.4162926799
+  - analyte: gc_ml
+    time: 7
+    value: 1450828.7784959343
+  - analyte: gc_ml
+    time: 8
+    value: 2310129.7000831533
+  - analyte: gc_ml
+    time: 8
+    value: 533.6699231206296
+  - analyte: gc_ml
+    time: 9
+    value: 911162.7561154868
+  - analyte: gc_ml
+    time: 9
+    value: 10974.9876549305
+  - analyte: gc_ml
+    time: 10
+    value: 911162.7561154868
+  - analyte: gc_ml
+    time: 10
+    value: 70548.02310718616
+  - analyte: gc_ml
+    time: 11
+    value: 1830738.2802953622
+  - analyte: gc_ml
+    time: 11
+    value: 533.6699231206296
+  - analyte: gc_ml
+    time: 12
+    value: 35111.9173421512
+  - analyte: gc_ml
+    time: 12
+    value: 533.6699231206296
+  - analyte: pfu_ml
+    time: 2
+    value: 10.235310218990268
+  - analyte: pfu_ml
+    time: 3
+    value: 10.235310218990268
+  - analyte: pfu_ml
+    time: 4
+    value: 10.235310218990268
+  - analyte: pfu_ml
+    time: 5
+    value: 10.235310218990268
+  - analyte: pfu_ml
+    time: 6
+    value: 1072.267222010321
+  - analyte: pfu_ml
+    time: 7
+    value: 10974.9876549305
+  - analyte: pfu_ml
+    time: 8
+    value: 10974.9876549305
+  - analyte: pfu_ml
+    time: 9
+    value: 10.235310218990268
+  - analyte: pfu_ml
+    time: 10
+    value: 10.235310218990268
+  - analyte: pfu_ml
+    time: 11
+    value: 10.235310218990268
+- patient_id: '133795'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 26.196498325369685
+  - analyte: gc_ml
+    time: 3
+    value: 26.40107565484573
+  - analyte: gc_ml
+    time: 3
+    value: 133144.83516026483
+  - analyte: gc_ml
+    time: 4
+    value: 6735.632416221446
+  - analyte: gc_ml
+    time: 4
+    value: 214662.78363080168
+  - analyte: gc_ml
+    time: 4
+    value: 85992.27910313122
+  - analyte: gc_ml
+    time: 5
+    value: 109103.28772409745
+  - analyte: gc_ml
+    time: 6
+    value: 174538.76227829786
+  - analyte: gc_ml
+    time: 6
+    value: 1395065.4866980042
+  - analyte: gc_ml
+    time: 6
+    value: 3531611.91170397
+  - analyte: gc_ml
+    time: 7
+    value: 14169396.43770281
+  - analyte: gc_ml
+    time: 8
+    value: 9010102.461344527
+  - analyte: gc_ml
+    time: 8
+    value: 22809097.839179672
+  - analyte: gc_ml
+    time: 9
+    value: 2893919.7684138296
+  - analyte: gc_ml
+    time: 9
+    value: 2916519.368199527
+  - analyte: gc_ml
+    time: 10
+    value: 2334765.3708304977
+  - analyte: gc_ml
+    time: 10
+    value: 186905.30213054788
+  - analyte: gc_ml
+    time: 11
+    value: 47315.12589614812
+  - analyte: gc_ml
+    time: 11
+    value: 30086.96483086257
+  - analyte: gc_ml
+    time: 11
+    value: 760.4682401337371
+  - analyte: gc_ml
+    time: 12
+    value: 766.4069942292509
+  - analyte: pfu_ml
+    time: 2
+    value: 10.429013826722388
+  - analyte: pfu_ml
+    time: 3
+    value: 10.592537251772935
+  - analyte: pfu_ml
+    time: 4
+    value: 1705.127099824547
+  - analyte: pfu_ml
+    time: 5
+    value: 866.6382194049812
+  - analyte: pfu_ml
+    time: 6
+    value: 88022.68148629353
+  - analyte: pfu_ml
+    time: 8
+    value: 143915.67802597745
+  - analyte: pfu_ml
+    time: 9
+    value: 11.610872735383813
+  - analyte: pfu_ml
+    time: 10
+    value: 11.792927310155793
+  - analyte: pfu_ml
+    time: 11
+    value: 11.977836439357219
+- patient_id: '139268'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 630.9573444801943
+  - analyte: gc_ml
+    time: 2
+    value: 39810.71705534986
+  - analyte: gc_ml
+    time: 3
+    value: 100000.0
+  - analyte: gc_ml
+    time: 4
+    value: 501187.2336272715
+  - analyte: gc_ml
+    time: 4
+    value: 1584893.192461124
+  - analyte: gc_ml
+    time: 5
+    value: 100000000.00000082
+  - analyte: gc_ml
+    time: 5
+    value: 12589254.117941713
+  - analyte: gc_ml
+    time: 6
+    value: 79432823.47242855
+  - analyte: gc_ml
+    time: 6
+    value: 100000000.00000082
+  - analyte: gc_ml
+    time: 7
+    value: 50118723.36272714
+  - analyte: gc_ml
+    time: 7
+    value: 125892.54117941714
+  - analyte: gc_ml
+    time: 8
+    value: 25118864.315095924
+  - analyte: gc_ml
+    time: 8
+    value: 5011872.336272715
+  - analyte: gc_ml
+    time: 9
+    value: 10000000.000000102
+  - analyte: gc_ml
+    time: 9
+    value: 199526.2314968883
+  - analyte: gc_ml
+    time: 10
+    value: 7943282.347242854
+  - analyte: gc_ml
+    time: 10
+    value: 79432.82347242789
+  - analyte: gc_ml
+    time: 11
+    value: 501187.2336272715
+  - analyte: gc_ml
+    time: 11
+    value: 10000.0
+  - analyte: gc_ml
+    time: 12
+    value: 794328.2347242789
+  - analyte: gc_ml
+    time: 12
+    value: 25118.864315095925
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 794.3282347242854
+  - analyte: pfu_ml
+    time: 4
+    value: 158489.3192461124
+  - analyte: pfu_ml
+    time: 5
+    value: 79432.82347242789
+  - analyte: pfu_ml
+    time: 6
+    value: 39810.71705534986
+  - analyte: pfu_ml
+    time: 7
+    value: 10.0
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+- patient_id: '142667'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 630.9573444801943
+  - analyte: gc_ml
+    time: 3
+    value: 39810.71705534986
+  - analyte: gc_ml
+    time: 4
+    value: 25118864.315095924
+  - analyte: gc_ml
+    time: 5
+    value: 63095734.44801943
+  - analyte: gc_ml
+    time: 6
+    value: 25118864.315095924
+  - analyte: gc_ml
+    time: 7
+    value: 50118723.36272714
+  - analyte: gc_ml
+    time: 8
+    value: 1584893.192461124
+  - analyte: gc_ml
+    time: 9
+    value: 398107.17055349855
+  - analyte: gc_ml
+    time: 10
+    value: 251188.64315095925
+  - analyte: gc_ml
+    time: 11
+    value: 12589.254117941611
+  - analyte: gc_ml
+    time: 12
+    value: 1258.9254117941714
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 199.5262314968883
+  - analyte: pfu_ml
+    time: 4
+    value: 199.5262314968883
+  - analyte: pfu_ml
+    time: 4
+    value: 630.9573444801943
+  - analyte: pfu_ml
+    time: 4
+    value: 3162.2776601683795
+  - analyte: pfu_ml
+    time: 5
+    value: 19952.62314968883
+  - analyte: pfu_ml
+    time: 6
+    value: 3162.2776601683795
+  - analyte: pfu_ml
+    time: 6
+    value: 158.48931924611125
+  - analyte: pfu_ml
+    time: 7
+    value: 7943.282347242797
+  - analyte: pfu_ml
+    time: 7
+    value: 100.0
+  - analyte: pfu_ml
+    time: 8
+    value: 398.1071705534986
+  - analyte: pfu_ml
+    time: 8
+    value: 316.22776601684086
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '170076'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 2660725.059798836
+  - analyte: gc_ml
+    time: 4
+    value: 27024443.32792901
+  - analyte: gc_ml
+    time: 5
+    value: 6894670.463039517
+  - analyte: gc_ml
+    time: 6
+    value: 8815973.382457616
+  - analyte: gc_ml
+    time: 7
+    value: 5649721.3308077995
+  - analyte: gc_ml
+    time: 8
+    value: 3614.99838914953
+  - analyte: gc_ml
+    time: 9
+    value: 14617.222739682664
+  - analyte: gc_ml
+    time: 10
+    value: 59104.64614944481
+  - analyte: gc_ml
+    time: 11
+    value: 30.08696483086232
+  - analyte: gc_ml
+    time: 12
+    value: 767.6002988282602
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 1059.253725177294
+  - analyte: pfu_ml
+    time: 4
+    value: 268.15035631103257
+  - analyte: pfu_ml
+    time: 4
+    value: 2146.627836308017
+  - analyte: pfu_ml
+    time: 5
+    value: 17184.43014958206
+  - analyte: pfu_ml
+    time: 5
+    value: 21802.862379492643
+  - analyte: pfu_ml
+    time: 6
+    value: 1101.2651395597381
+  - analyte: pfu_ml
+    time: 6
+    value: 88.15973382457615
+  - analyte: pfu_ml
+    time: 7
+    value: 2231.7659570551787
+  - analyte: pfu_ml
+    time: 7
+    value: 10.0
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '207684'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 30.559659773775877
+  - analyte: gc_ml
+    time: 3
+    value: 743.5105387260154
+  - analyte: gc_ml
+    time: 4
+    value: 42049649.122403726
+  - analyte: gc_ml
+    time: 5
+    value: 26652783.66645571
+  - analyte: gc_ml
+    time: 6
+    value: 165128403.5451047
+  - analyte: gc_ml
+    time: 7
+    value: 1375985.512721177
+  - analyte: gc_ml
+    time: 8
+    value: 2726738.9657354946
+  - analyte: gc_ml
+    time: 9
+    value: 440113.1616874838
+  - analyte: gc_ml
+    time: 10
+    value: 1850.660402311028
+  - analyte: gc_ml
+    time: 11
+    value: 743.5105387260154
+  - analyte: gc_ml
+    time: 12
+    value: 743.5105387260154
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 120.00737073062898
+  - analyte: pfu_ml
+    time: 4
+    value: 120.00737073062898
+  - analyte: pfu_ml
+    time: 5
+    value: 89226.74486302251
+  - analyte: pfu_ml
+    time: 5
+    value: 1173.0240887216157
+  - analyte: pfu_ml
+    time: 6
+    value: 22721.429101683847
+  - analyte: pfu_ml
+    time: 6
+    value: 14401.769029678595
+  - analyte: pfu_ml
+    time: 7
+    value: 2919.7558324779015
+  - analyte: pfu_ml
+    time: 7
+    value: 7267.518376864215
+  - analyte: pfu_ml
+    time: 8
+    value: 298.70846131809304
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '215997'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 3
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 3
+    value: 15848.931924610979
+  - analyte: gc_ml
+    time: 4
+    value: 251188.64315095718
+  - analyte: gc_ml
+    time: 4
+    value: 2511886.431509572
+  - analyte: gc_ml
+    time: 4
+    value: 6309573.444801891
+  - analyte: gc_ml
+    time: 5
+    value: 125892.54117941507
+  - analyte: gc_ml
+    time: 6
+    value: 1995262.3149688665
+  - analyte: gc_ml
+    time: 6
+    value: 125892.54117941507
+  - analyte: gc_ml
+    time: 6
+    value: 31622.776601683792
+  - analyte: gc_ml
+    time: 7
+    value: 39810.71705534986
+  - analyte: gc_ml
+    time: 8
+    value: 3981.0717055349205
+  - analyte: gc_ml
+    time: 8
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 9
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 9
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 13
+    value: 25.11886431509572
+  - analyte: pfu_ml
+    time: 2
+    value: 316.22776601683796
+  - analyte: pfu_ml
+    time: 3
+    value: 316227.7660168379
+  - analyte: pfu_ml
+    time: 4
+    value: 794328.2347242789
+  - analyte: pfu_ml
+    time: 4
+    value: 63095.73444801891
+  - analyte: pfu_ml
+    time: 5
+    value: 125892.54117941507
+  - analyte: pfu_ml
+    time: 5
+    value: 50118.723362726734
+  - analyte: pfu_ml
+    time: 5
+    value: 31622.776601683792
+  - analyte: pfu_ml
+    time: 6
+    value: 10
+  - analyte: pfu_ml
+    time: 7
+    value: 10
+  - analyte: pfu_ml
+    time: 7
+    value: 10
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 13
+    value: 10
+- patient_id: '416851'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 30.559659773776126
+  - analyte: gc_ml
+    time: 3
+    value: 30.559659773776126
+  - analyte: gc_ml
+    time: 3
+    value: 743.5105387260154
+  - analyte: gc_ml
+    time: 3
+    value: 1473.386993275728
+  - analyte: gc_ml
+    time: 4
+    value: 112074.02013097773
+  - analyte: gc_ml
+    time: 4
+    value: 552807.9211966407
+  - analyte: gc_ml
+    time: 5
+    value: 6787083.125912116
+  - analyte: gc_ml
+    time: 5
+    value: 2726738.9657354504
+  - analyte: gc_ml
+    time: 6
+    value: 872155.7721439947
+  - analyte: gc_ml
+    time: 6
+    value: 8524974.12128867
+  - analyte: gc_ml
+    time: 7
+    value: 1095478.7571223227
+  - analyte: gc_ml
+    time: 8
+    value: 2726738.9657354504
+  - analyte: gc_ml
+    time: 8
+    value: 28539.446400919154
+  - analyte: gc_ml
+    time: 9
+    value: 22721.429101684033
+  - analyte: gc_ml
+    time: 9
+    value: 9128.42894942908
+  - analyte: gc_ml
+    time: 10
+    value: 743.5105387260154
+  - analyte: gc_ml
+    time: 10
+    value: 1173.0240887216253
+  - analyte: gc_ml
+    time: 10
+    value: 1173.0240887216253
+  - analyte: gc_ml
+    time: 11
+    value: 933.8928054889508
+  - analyte: gc_ml
+    time: 11
+    value: 743.5105387260154
+  - analyte: gc_ml
+    time: 12
+    value: 743.5105387260154
+  - analyte: pfu_ml
+    time: 3
+    value: 12.277470827878775
+  - analyte: pfu_ml
+    time: 4
+    value: 12.277470827878775
+  - analyte: pfu_ml
+    time: 4
+    value: 120.00737073062898
+  - analyte: pfu_ml
+    time: 4
+    value: 28539.446400919154
+  - analyte: pfu_ml
+    time: 5
+    value: 18089.465828118464
+  - analyte: pfu_ml
+    time: 5
+    value: 176817.29913172396
+  - analyte: pfu_ml
+    time: 6
+    value: 1850.660402311028
+  - analyte: pfu_ml
+    time: 6
+    value: 440113.16168747656
+  - analyte: pfu_ml
+    time: 7
+    value: 14401.769029678595
+  - analyte: pfu_ml
+    time: 8
+    value: 278961.6829636368
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+- patient_id: '425466'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 26.202279621330604
+  - analyte: gc_ml
+    time: 2
+    value: 26.365861250954804
+  - analyte: gc_ml
+    time: 3
+    value: 667.5982198207514
+  - analyte: gc_ml
+    time: 3
+    value: 672.8120741274145
+  - analyte: gc_ml
+    time: 4
+    value: 3398.753624704616
+  - analyte: gc_ml
+    time: 5
+    value: 27211.91497683646
+  - analyte: gc_ml
+    time: 5
+    value: 10917.185335232845
+  - analyte: gc_ml
+    time: 6
+    value: 138536.31108768933
+  - analyte: gc_ml
+    time: 6
+    value: 555882.2018732046
+  - analyte: gc_ml
+    time: 7
+    value: 140708.66172155243
+  - analyte: gc_ml
+    time: 7
+    value: 89471.74852193877
+  - analyte: gc_ml
+    time: 8
+    value: 28512.201088286856
+  - analyte: gc_ml
+    time: 8
+    value: 1812.7097280185071
+  - analyte: gc_ml
+    time: 9
+    value: 1451.1092646155919
+  - analyte: gc_ml
+    time: 9
+    value: 731.7836948236862
+  - analyte: gc_ml
+    time: 9
+    value: 737.4988292496389
+  - analyte: gc_ml
+    time: 10
+    value: 29.629277551177246
+  - analyte: gc_ml
+    time: 11
+    value: 29.860678312558843
+  - analyte: gc_ml
+    time: 11
+    value: 30.047099436622528
+  - analyte: gc_ml
+    time: 11
+    value: 30.281763331985267
+  - analyte: gc_ml
+    time: 12
+    value: 30.518259921511646
+  - analyte: pfu_ml
+    time: 3
+    value: 10.577755885417151
+  - analyte: pfu_ml
+    time: 3
+    value: 10.660366767891974
+  - analyte: pfu_ml
+    time: 4
+    value: 10.743622830495298
+  - analyte: pfu_ml
+    time: 4
+    value: 10.827529111999436
+  - analyte: pfu_ml
+    time: 5
+    value: 10.912090690528323
+  - analyte: pfu_ml
+    time: 5
+    value: 347.8467352644951
+  - analyte: pfu_ml
+    time: 6
+    value: 2785.013810999681
+  - analyte: pfu_ml
+    time: 7
+    value: 5600.492648644452
+  - analyte: pfu_ml
+    time: 7
+    value: 112.41240624433112
+  - analyte: pfu_ml
+    time: 8
+    value: 11.344908566464218
+  - analyte: pfu_ml
+    time: 8
+    value: 11.433510810496138
+  - analyte: pfu_ml
+    time: 8
+    value: 11.504890566675225
+  - analyte: pfu_ml
+    time: 9
+    value: 11.594742249090924
+  - analyte: pfu_ml
+    time: 10
+    value: 11.703491032883207
+  - analyte: pfu_ml
+    time: 10
+    value: 11.794893758823923
+  - analyte: pfu_ml
+    time: 11
+    value: 11.979846315537262
+  - analyte: pfu_ml
+    time: 12
+    value: 12.148781989593333
+- patient_id: '425855'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 743.5105387260154
+  - analyte: gc_ml
+    time: 3
+    value: 7267.518376864274
+  - analyte: gc_ml
+    time: 3
+    value: 440113.16168747656
+  - analyte: gc_ml
+    time: 4
+    value: 2726738.9657354504
+  - analyte: gc_ml
+    time: 4
+    value: 1095478.7571223227
+  - analyte: gc_ml
+    time: 4
+    value: 2726738.9657354504
+  - analyte: gc_ml
+    time: 5
+    value: 1728318.435121528
+  - analyte: gc_ml
+    time: 6
+    value: 33477458.107057314
+  - analyte: gc_ml
+    time: 6
+    value: 140771.53669117184
+  - analyte: gc_ml
+    time: 7
+    value: 71037.08771708766
+  - analyte: gc_ml
+    time: 8
+    value: 1375985.5127211544
+  - analyte: gc_ml
+    time: 8
+    value: 28539.446400919154
+  - analyte: gc_ml
+    time: 9
+    value: 45026.20522961248
+  - analyte: gc_ml
+    time: 9
+    value: 71037.08771708766
+  - analyte: gc_ml
+    time: 10
+    value: 11465.841675756266
+  - analyte: gc_ml
+    time: 10
+    value: 18089.465828118464
+  - analyte: gc_ml
+    time: 11
+    value: 5785.970800743669
+  - analyte: gc_ml
+    time: 11
+    value: 14401.769029678595
+  - analyte: gc_ml
+    time: 12
+    value: 222092.88899663428
+  - analyte: gc_ml
+    time: 12
+    value: 11465.841675756266
+  - analyte: pfu_ml
+    time: 2
+    value: 10
+  - analyte: pfu_ml
+    time: 2
+    value: 1473.386993275728
+  - analyte: pfu_ml
+    time: 3
+    value: 56555.552251423745
+  - analyte: pfu_ml
+    time: 4
+    value: 176817.29913172396
+  - analyte: pfu_ml
+    time: 4
+    value: 222092.88899663428
+  - analyte: pfu_ml
+    time: 5
+    value: 694359.1429214284
+  - analyte: pfu_ml
+    time: 5
+    value: 140771.53669117184
+  - analyte: pfu_ml
+    time: 6
+    value: 71037.08771708766
+  - analyte: pfu_ml
+    time: 6
+    value: 9128.42894942908
+  - analyte: pfu_ml
+    time: 6
+    value: 2919.7558324779284
+  - analyte: pfu_ml
+    time: 7
+    value: 10
+  - analyte: pfu_ml
+    time: 7
+    value: 10
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+- patient_id: '427123'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 4
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 4
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 5
+    value: 31622.776601683792
+  - analyte: gc_ml
+    time: 5
+    value: 398107.17055349203
+  - analyte: gc_ml
+    time: 5
+    value: 5011872.336272674
+  - analyte: gc_ml
+    time: 6
+    value: 5011872.336272674
+  - analyte: gc_ml
+    time: 6
+    value: 6309573.444801891
+  - analyte: gc_ml
+    time: 7
+    value: 10000000
+  - analyte: gc_ml
+    time: 7
+    value: 794328.2347242789
+  - analyte: gc_ml
+    time: 8
+    value: 251188.64315095718
+  - analyte: gc_ml
+    time: 8
+    value: 100000
+  - analyte: gc_ml
+    time: 9
+    value: 50118.723362726734
+  - analyte: gc_ml
+    time: 9
+    value: 3162.2776601683795
+  - analyte: gc_ml
+    time: 10
+    value: 158489.31924610978
+  - analyte: gc_ml
+    time: 10
+    value: 6309.573444801891
+  - analyte: gc_ml
+    time: 11
+    value: 39810.71705534986
+  - analyte: gc_ml
+    time: 11
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 12
+    value: 2511.886431509572
+  - analyte: gc_ml
+    time: 12
+    value: 25.11886431509572
+  - analyte: pfu_ml
+    time: 2
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 10
+  - analyte: pfu_ml
+    time: 4
+    value: 10
+  - analyte: pfu_ml
+    time: 5
+    value: 251188.64315095718
+  - analyte: pfu_ml
+    time: 6
+    value: 999999.9999999836
+  - analyte: pfu_ml
+    time: 6
+    value: 125892.54117941507
+  - analyte: pfu_ml
+    time: 7
+    value: 501187.23362726736
+  - analyte: pfu_ml
+    time: 7
+    value: 398107.17055349203
+  - analyte: pfu_ml
+    time: 8
+    value: 63095.73444801891
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 99.99999999999837
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+- patient_id: '433503'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 2
+    value: 630.9573444801995
+  - analyte: gc_ml
+    time: 3
+    value: 630.9573444801995
+  - analyte: gc_ml
+    time: 3
+    value: 19.952623149689003
+  - analyte: gc_ml
+    time: 4
+    value: 19952.623149688992
+  - analyte: gc_ml
+    time: 4
+    value: 6309.5734448019875
+  - analyte: gc_ml
+    time: 5
+    value: 50118.72336272756
+  - analyte: gc_ml
+    time: 6
+    value: 158489.3192461124
+  - analyte: gc_ml
+    time: 6
+    value: 794328.2347242789
+  - analyte: gc_ml
+    time: 6
+    value: 3981071.7055349858
+  - analyte: gc_ml
+    time: 7
+    value: 2511886.431509613
+  - analyte: gc_ml
+    time: 7
+    value: 158489.3192461124
+  - analyte: gc_ml
+    time: 8
+    value: 31622.776601684312
+  - analyte: gc_ml
+    time: 8
+    value: 6309.5734448019875
+  - analyte: gc_ml
+    time: 9
+    value: 630.9573444801995
+  - analyte: gc_ml
+    time: 9
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 10
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 11
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 11
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 12
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 12
+    value: 25.11886431509572
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 100.0
+  - analyte: pfu_ml
+    time: 5
+    value: 10.0
+  - analyte: pfu_ml
+    time: 6
+    value: 1995.262314968899
+  - analyte: pfu_ml
+    time: 6
+    value: 1258.9254117941714
+  - analyte: pfu_ml
+    time: 6
+    value: 10.0
+  - analyte: pfu_ml
+    time: 7
+    value: 251.1886431509613
+  - analyte: pfu_ml
+    time: 7
+    value: 251.1886431509613
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '473401'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 658.0262869655987
+  - analyte: gc_ml
+    time: 3
+    value: 26.401075654845513
+  - analyte: gc_ml
+    time: 3
+    value: 6673.049160573275
+  - analyte: gc_ml
+    time: 3
+    value: 337056.49685794464
+  - analyte: gc_ml
+    time: 4
+    value: 26982431.368634425
+  - analyte: gc_ml
+    time: 4
+    value: 136288577.75477076
+  - analyte: gc_ml
+    time: 5
+    value: 109103287.72409655
+  - analyte: gc_ml
+    time: 5
+    value: 219389690.87628916
+  - analyte: gc_ml
+    time: 6
+    value: 221102979.2905113
+  - analyte: gc_ml
+    time: 6
+    value: 353161191.17039984
+  - analyte: gc_ml
+    time: 7
+    value: 282716627.38002753
+  - analyte: gc_ml
+    time: 8
+    value: 71569787.82804736
+  - analyte: gc_ml
+    time: 8
+    value: 1811791.0422249103
+  - analyte: gc_ml
+    time: 9
+    value: 1152090.2108120748
+  - analyte: gc_ml
+    time: 9
+    value: 58192.21186245371
+  - analyte: gc_ml
+    time: 10
+    value: 738317.6373911964
+  - analyte: gc_ml
+    time: 10
+    value: 469484.89239892416
+  - analyte: gc_ml
+    time: 10
+    value: 188072.07853648125
+  - analyte: gc_ml
+    time: 11
+    value: 119778.36439357122
+  - analyte: gc_ml
+    time: 11
+    value: 47982.30213563095
+  - analyte: gc_ml
+    time: 12
+    value: 60972.65903420809
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 105.76070187550827
+  - analyte: pfu_ml
+    time: 3
+    value: 3370.5649685794465
+  - analyte: pfu_ml
+    time: 4
+    value: 10.741899406820838
+  - analyte: pfu_ml
+    time: 4
+    value: 10825.78653810299
+  - analyte: pfu_ml
+    time: 5
+    value: 109103.28772409655
+  - analyte: pfu_ml
+    time: 5
+    value: 2193896.9087628913
+  - analyte: pfu_ml
+    time: 6
+    value: 1108139.9053736017
+  - analyte: pfu_ml
+    time: 6
+    value: 1769998.8042720323
+  - analyte: pfu_ml
+    time: 7
+    value: 2827166.2738002753
+  - analyte: pfu_ml
+    time: 8
+    value: 451574.8327299607
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '482023'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 26.203985288583326
+  - analyte: gc_ml
+    time: 3
+    value: 26.451419282878618
+  - analyte: gc_ml
+    time: 3
+    value: 668.6056896941634
+  - analyte: gc_ml
+    time: 3
+    value: 26826.957952797384
+  - analyte: gc_ml
+    time: 4
+    value: 53947682.03328043
+  - analyte: gc_ml
+    time: 4
+    value: 216458253.32711506
+  - analyte: gc_ml
+    time: 5
+    value: 218160193.53377953
+  - analyte: gc_ml
+    time: 6
+    value: 875340193.6471636
+  - analyte: gc_ml
+    time: 6
+    value: 111065258.38388118
+  - analyte: gc_ml
+    time: 7
+    value: 177410611.0966358
+  - analyte: gc_ml
+    time: 7
+    value: 71183764.6258529
+  - analyte: gc_ml
+    time: 7
+    value: 28516882.147934843
+  - analyte: gc_ml
+    time: 8
+    value: 2878615.592354583
+  - analyte: gc_ml
+    time: 9
+    value: 3652456.3463791786
+  - analyte: gc_ml
+    time: 9
+    value: 46270.7056184307
+  - analyte: gc_ml
+    time: 10
+    value: 234092.63765291596
+  - analyte: gc_ml
+    time: 10
+    value: 47074.86851342675
+  - analyte: gc_ml
+    time: 11
+    value: 237416.12048163713
+  - analyte: gc_ml
+    time: 11
+    value: 477432.0442837615
+  - analyte: gc_ml
+    time: 12
+    value: 76262.83138939645
+  - analyte: gc_ml
+    time: 12
+    value: 484969.342852825
+  - analyte: pfu_ml
+    time: 2
+    value: 10
+  - analyte: pfu_ml
+    time: 2
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 213.0941015366765
+  - analyte: pfu_ml
+    time: 4
+    value: 107.63977694092745
+  - analyte: pfu_ml
+    time: 4
+    value: 4318.90995627577
+  - analyte: pfu_ml
+    time: 5
+    value: 275077.9520150823
+  - analyte: pfu_ml
+    time: 6
+    value: 1101988.013747245
+  - analyte: pfu_ml
+    time: 6
+    value: 221604.3245556417
+  - analyte: pfu_ml
+    time: 7
+    value: 561021.6121477117
+  - analyte: pfu_ml
+    time: 7
+    value: 89615.05019466123
+  - analyte: pfu_ml
+    time: 8
+    value: 22687.27383083328
+  - analyte: pfu_ml
+    time: 8
+    value: 114.42038410972143
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+- patient_id: '488922'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 5011.872336272756
+  - analyte: gc_ml
+    time: 3
+    value: 39810.71705534986
+  - analyte: gc_ml
+    time: 4
+    value: 3981071.7055349858
+  - analyte: gc_ml
+    time: 4
+    value: 19952623.149688993
+  - analyte: gc_ml
+    time: 5
+    value: 10000000.000000164
+  - analyte: gc_ml
+    time: 5
+    value: 10000000.000000164
+  - analyte: gc_ml
+    time: 6
+    value: 19952623.149688993
+  - analyte: gc_ml
+    time: 6
+    value: 12589254.117941713
+  - analyte: gc_ml
+    time: 7
+    value: 10000000.000000164
+  - analyte: gc_ml
+    time: 7
+    value: 39810.71705534986
+  - analyte: gc_ml
+    time: 8
+    value: 100000
+  - analyte: gc_ml
+    time: 8
+    value: 12589.254117941713
+  - analyte: gc_ml
+    time: 9
+    value: 7943.282347242797
+  - analyte: gc_ml
+    time: 9
+    value: 31622.776601684312
+  - analyte: gc_ml
+    time: 10
+    value: 5011.872336272756
+  - analyte: gc_ml
+    time: 10
+    value: 630.9573444801995
+  - analyte: gc_ml
+    time: 11
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 11
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 12
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 12
+    value: 25.11886431509572
+  - analyte: pfu_ml
+    time: 2
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 10
+  - analyte: pfu_ml
+    time: 4
+    value: 12589.254117941713
+  - analyte: pfu_ml
+    time: 4
+    value: 158489.3192461124
+  - analyte: pfu_ml
+    time: 5
+    value: 7943.282347242797
+  - analyte: pfu_ml
+    time: 5
+    value: 316.22776601683796
+  - analyte: pfu_ml
+    time: 6
+    value: 3162.2776601683795
+  - analyte: pfu_ml
+    time: 6
+    value: 10
+  - analyte: pfu_ml
+    time: 7
+    value: 39810.71705534986
+  - analyte: pfu_ml
+    time: 7
+    value: 10
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 8
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+- patient_id: '527151'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 630.9573444801995
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509572
+  - analyte: gc_ml
+    time: 3
+    value: 2511.886431509572
+  - analyte: gc_ml
+    time: 4
+    value: 50118.72336272756
+  - analyte: gc_ml
+    time: 4
+    value: 2511.886431509572
+  - analyte: gc_ml
+    time: 5
+    value: 31622.776601684312
+  - analyte: gc_ml
+    time: 5
+    value: 3162277.6601684312
+  - analyte: gc_ml
+    time: 6
+    value: 15848931.924611498
+  - analyte: gc_ml
+    time: 6
+    value: 125892541.17941919
+  - analyte: gc_ml
+    time: 7
+    value: 63095734.448019944
+  - analyte: gc_ml
+    time: 7
+    value: 251188643.1509613
+  - analyte: gc_ml
+    time: 8
+    value: 12589254.117941713
+  - analyte: gc_ml
+    time: 8
+    value: 1258925.4117941714
+  - analyte: gc_ml
+    time: 9
+    value: 1000000.0000000164
+  - analyte: gc_ml
+    time: 9
+    value: 6309573.444801995
+  - analyte: gc_ml
+    time: 10
+    value: 7943282.347242919
+  - analyte: gc_ml
+    time: 10
+    value: 630957.3444801994
+  - analyte: gc_ml
+    time: 11
+    value: 12589.254117941713
+  - analyte: gc_ml
+    time: 11
+    value: 100000.0
+  - analyte: gc_ml
+    time: 12
+    value: 316227.7660168379
+  - analyte: gc_ml
+    time: 12
+    value: 63095.734448019946
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 5
+    value: 100.0
+  - analyte: pfu_ml
+    time: 5
+    value: 10.0
+  - analyte: pfu_ml
+    time: 6
+    value: 199526.23149688993
+  - analyte: pfu_ml
+    time: 6
+    value: 1995262.3149688991
+  - analyte: pfu_ml
+    time: 7
+    value: 63095.734448019946
+  - analyte: pfu_ml
+    time: 7
+    value: 1258925.4117941714
+  - analyte: pfu_ml
+    time: 8
+    value: 10000.000000000164
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '538409'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 3
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 4
+    value: 3981.0717055349855
+  - analyte: gc_ml
+    time: 4
+    value: 15848.931924611239
+  - analyte: gc_ml
+    time: 5
+    value: 6309573.444801995
+  - analyte: gc_ml
+    time: 5
+    value: 1258925.4117941714
+  - analyte: gc_ml
+    time: 5
+    value: 31622776.60168431
+  - analyte: gc_ml
+    time: 6
+    value: 79432823.47242789
+  - analyte: gc_ml
+    time: 7
+    value: 50118723.36272756
+  - analyte: gc_ml
+    time: 7
+    value: 199526231.49688992
+  - analyte: gc_ml
+    time: 8
+    value: 19952623.149689317
+  - analyte: gc_ml
+    time: 8
+    value: 25118864.31509613
+  - analyte: gc_ml
+    time: 9
+    value: 100000.00000000163
+  - analyte: gc_ml
+    time: 9
+    value: 501187.2336272838
+  - analyte: gc_ml
+    time: 10
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 10
+    value: 3981.0717055349855
+  - analyte: gc_ml
+    time: 11
+    value: 19952.623149688992
+  - analyte: gc_ml
+    time: 11
+    value: 3981.0717055349855
+  - analyte: gc_ml
+    time: 12
+    value: 1584.8931924611497
+  - analyte: gc_ml
+    time: 12
+    value: 9999.999999999836
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 5
+    value: 10.0
+  - analyte: pfu_ml
+    time: 5
+    value: 15848.931924611239
+  - analyte: pfu_ml
+    time: 6
+    value: 398107.17055349203
+  - analyte: pfu_ml
+    time: 6
+    value: 1000000.0
+  - analyte: pfu_ml
+    time: 6
+    value: 1995262.3149688665
+  - analyte: pfu_ml
+    time: 7
+    value: 31622.776601683792
+  - analyte: pfu_ml
+    time: 8
+    value: 398107.17055349203
+  - analyte: pfu_ml
+    time: 8
+    value: 3162.2776601683795
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '633457'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 4
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 4
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 4
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 5
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 5
+    value: 125892.54117941714
+  - analyte: gc_ml
+    time: 6
+    value: 501187.2336272838
+  - analyte: gc_ml
+    time: 6
+    value: 794328.234724292
+  - analyte: gc_ml
+    time: 7
+    value: 15848931.92461098
+  - analyte: gc_ml
+    time: 8
+    value: 12589254.117941713
+  - analyte: gc_ml
+    time: 8
+    value: 7943282.347242789
+  - analyte: gc_ml
+    time: 9
+    value: 25118.864315095718
+  - analyte: gc_ml
+    time: 9
+    value: 3162.2776601683795
+  - analyte: gc_ml
+    time: 10
+    value: 25118.864315095718
+  - analyte: gc_ml
+    time: 10
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 11
+    value: 6309.573444801891
+  - analyte: gc_ml
+    time: 11
+    value: 1995.262314968899
+  - analyte: gc_ml
+    time: 11
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 12
+    value: 630.9573444801891
+  - analyte: pfu_ml
+    time: 5
+    value: 10.0
+  - analyte: pfu_ml
+    time: 5
+    value: 10.0
+  - analyte: pfu_ml
+    time: 5
+    value: 1258.9254117941507
+  - analyte: pfu_ml
+    time: 6
+    value: 100.0
+  - analyte: pfu_ml
+    time: 6
+    value: 10.0
+  - analyte: pfu_ml
+    time: 7
+    value: 100000.00000000163
+  - analyte: pfu_ml
+    time: 8
+    value: 15848.931924611239
+  - analyte: pfu_ml
+    time: 8
+    value: 100.0
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '641077'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 3
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 3
+    value: 12589.254117941919
+  - analyte: gc_ml
+    time: 4
+    value: 79432.82347242918
+  - analyte: gc_ml
+    time: 5
+    value: 25118864.31509613
+  - analyte: gc_ml
+    time: 5
+    value: 79432823.47242789
+  - analyte: gc_ml
+    time: 6
+    value: 63095734.448019944
+  - analyte: gc_ml
+    time: 6
+    value: 50118723.36272756
+  - analyte: gc_ml
+    time: 7
+    value: 31622776.60168431
+  - analyte: gc_ml
+    time: 7
+    value: 3981071.7055350505
+  - analyte: gc_ml
+    time: 8
+    value: 3981071.7055350505
+  - analyte: gc_ml
+    time: 8
+    value: 100000.00000000163
+  - analyte: gc_ml
+    time: 8
+    value: 398107.17055349203
+  - analyte: gc_ml
+    time: 9
+    value: 39810.71705534986
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 630.9573444801891
+  - analyte: pfu_ml
+    time: 5
+    value: 316227.7660168379
+  - analyte: pfu_ml
+    time: 5
+    value: 794328.234724292
+  - analyte: pfu_ml
+    time: 6
+    value: 199526.23149688993
+  - analyte: pfu_ml
+    time: 6
+    value: 501187.2336272838
+  - analyte: pfu_ml
+    time: 6
+    value: 79432.82347242918
+  - analyte: pfu_ml
+    time: 7
+    value: 25118.864315095718
+  - analyte: pfu_ml
+    time: 8
+    value: 12589.254117941919
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 8
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+- patient_id: '644782'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 26.19649832536947
+  - analyte: gc_ml
+    time: 3
+    value: 663.1650371466521
+  - analyte: gc_ml
+    time: 3
+    value: 668.343917568619
+  - analyte: gc_ml
+    time: 4
+    value: 13439.353527569783
+  - analyte: gc_ml
+    time: 4
+    value: 3402.1758445121586
+  - analyte: gc_ml
+    time: 5
+    value: 5434193.95647482
+  - analyte: gc_ml
+    time: 5
+    value: 435024.29664254456
+  - analyte: gc_ml
+    time: 6
+    value: 27662529.615546465
+  - analyte: gc_ml
+    time: 6
+    value: 55538557.36461864
+  - analyte: gc_ml
+    time: 6
+    value: 280525905.5555119
+  - analyte: gc_ml
+    time: 7
+    value: 178659875.50590855
+  - analyte: gc_ml
+    time: 8
+    value: 17977517.89512911
+  - analyte: gc_ml
+    time: 8
+    value: 1439156.780259798
+  - analyte: gc_ml
+    time: 9
+    value: 364322.91361497034
+  - analyte: gc_ml
+    time: 9
+    value: 23166.73681281156
+  - analyte: gc_ml
+    time: 10
+    value: 92948.6835687642
+  - analyte: gc_ml
+    time: 10
+    value: 2962.249409816022
+  - analyte: gc_ml
+    time: 11
+    value: 47315.125896149286
+  - analyte: gc_ml
+    time: 11
+    value: 18983.59143315051
+  - analyte: gc_ml
+    time: 12
+    value: 761.652298023598
+  - analyte: gc_ml
+    time: 12
+    value: 30.55871830825388
+  - analyte: pfu_ml
+    time: 2
+    value: 10.0
+  - analyte: pfu_ml
+    time: 3
+    value: 105.10457528519574
+  - analyte: pfu_ml
+    time: 3
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 4
+    value: 10.0
+  - analyte: pfu_ml
+    time: 5
+    value: 34287.44588167652
+  - analyte: pfu_ml
+    time: 5
+    value: 109.27316281134193
+  - analyte: pfu_ml
+    time: 6
+    value: 69485.13280252172
+  - analyte: pfu_ml
+    time: 6
+    value: 350970.2218965129
+  - analyte: pfu_ml
+    time: 6
+    value: 176999.8804272061
+  - analyte: pfu_ml
+    time: 7
+    value: 112726.76061436924
+  - analyte: pfu_ml
+    time: 8
+    value: 568.4990322504498
+  - analyte: pfu_ml
+    time: 8
+    value: 4551.013335695412
+  - analyte: pfu_ml
+    time: 9
+    value: 10.0
+  - analyte: pfu_ml
+    time: 9
+    value: 116.10872735384002
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 10
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 11
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+  - analyte: pfu_ml
+    time: 12
+    value: 10.0
+- patient_id: '645502'
+  attributes:
+    age_group: adult
+  measurements:
+  - analyte: gc_ml
+    time: 2
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 3
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 4
+    value: 25.11886431509532
+  - analyte: gc_ml
+    time: 4
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 4
+    value: 5011.872336272756
+  - analyte: gc_ml
+    time: 5
+    value: 630.9573444801891
+  - analyte: gc_ml
+    time: 6
+    value: 5011.872336272756
+  - analyte: gc_ml
+    time: 6
+    value: 1584893.192461124
+  - analyte: gc_ml
+    time: 6
+    value: 25118864.31509613
+  - analyte: gc_ml
+    time: 7
+    value: 1584893.192461124
+  - analyte: gc_ml
+    time: 8
+    value: 100000000
+  - analyte: gc_ml
+    time: 8
+    value: 25118864.31509613
+  - analyte: gc_ml
+    time: 9
+    value: 12589254.117941713
+  - analyte: gc_ml
+    time: 9
+    value: 12589254.117941713
+  - analyte: gc_ml
+    time: 10
+    value: 12589254.117941713
+  - analyte: gc_ml
+    time: 10
+    value: 158489.3192461124
+  - analyte: gc_ml
+    time: 11
+    value: 9999.999999999836
+  - analyte: gc_ml
+    time: 11
+    value: 6309.573444801891
+  - analyte: gc_ml
+    time: 11
+    value: 15848.931924611239
+  - analyte: gc_ml
+    time: 12
+    value: 19952.623149688992
+  - analyte: pfu_ml
+    time: 2
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 10
+  - analyte: pfu_ml
+    time: 3
+    value: 10
+  - analyte: pfu_ml
+    time: 4
+    value: 10
+  - analyte: pfu_ml
+    time: 4
+    value: 10
+  - analyte: pfu_ml
+    time: 4
+    value: 10
+  - analyte: pfu_ml
+    time: 5
+    value: 10
+  - analyte: pfu_ml
+    time: 5
+    value: 10
+  - analyte: pfu_ml
+    time: 6
+    value: 2511.886431509613
+  - analyte: pfu_ml
+    time: 6
+    value: 100000.00000000163
+  - analyte: pfu_ml
+    time: 7
+    value: 10
+  - analyte: pfu_ml
+    time: 8
+    value: 50118.723362726734
+  - analyte: pfu_ml
+    time: 8
+    value: 316227.7660168379
+  - analyte: pfu_ml
+    time: 9
+    value: 10
+  - analyte: pfu_ml
+    time: 9
+    value: 79432.82347242918
+  - analyte: pfu_ml
+    time: 10
+    value: 158489.3192461124
+  - analyte: pfu_ml
+    time: 10
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 11
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
+  - analyte: pfu_ml
+    time: 12
+    value: 10
