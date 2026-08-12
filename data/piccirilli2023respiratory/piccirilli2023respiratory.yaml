@@ -1,0 +1,670 @@
+title: 'Respiratory Syncytial Virus-Load Kinetics and Clinical Course of Acute Bronchiolitis
+  in Hospitalized Infants: Interim Results and Review of the Literature'
+doi: 10.3390/pathogens12050645
+description: Prospective monocentric observational study in Bologna, Italy (IRCCS
+  Policlinico di Sant’Orsola) enrolling previously healthy infants (≤1 year) hospitalized
+  for a first episode of RSV bronchiolitis (Mar 2019–Nov 2021). Nasopharyngeal aspirates
+  were collected at admission (d0) and every 48 hours during hospitalization; RSV-positive-only
+  samples were quantified retrospectively by RT-qPCR targeting the RSV matrix gene
+  and normalized to human DNA (reported as log10 copies/ng hDNA). This extraction
+  uses the provided figure-derived CSV time series (PatientID-level) with time in
+  days from hospital admission.
+analytes:
+  nasopharyngeal_aspirate_RSV_viral_load:
+    description: RSV RNA quantified from nasopharyngeal aspirate (NPA) using nucleic
+      acid extraction (NucliSENS easyMag; 200 µL input eluted in 50 µL) followed by
+      home-made RT-qPCR TaqMan assay on LIAISON MDX targeting RSV matrix gene; quantification
+      via standard curve from synthetic 770 bp matrix-gene fragment; viral load normalized
+      by human DNA quantified via NanoDrop and reported as log10 copies/ng human DNA
+      (hDNA). CSV values provided are treated as already-converted linear-scale quantities
+      for this extraction.
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    gene_target: M gene
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/ng hDNA
+    reference_event: hospital admission
+participants:
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 1257112.2006590823
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 1724265.2304455722
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 268396.91225837445
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 8
+    value: 278.27364748117003
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 632899.6065427545
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 119074.77157913579
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 55270.66814015738
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 8
+    value: 6927.084923504627
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 528327.7875582423
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 46556.10294419361
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 14009.295087044191
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 342505.98042418493
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 48268.39902874079
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 2542.424725502188
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 256553.51128207784
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 26121.386649539498
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 2565.437160656717
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 230207.32553976128
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 2588.6578899512656
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 49.59571799454066
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 8
+    value: 49.15083543737074
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 192170.96317456145
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 283350.1903207395
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 82232.54553545776
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 160419.21776750905
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 31291.5877645791
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 5477.383459136498
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 138838.94223435465
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 2683.8666486076513
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 51.419808680012125
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 115899.06269383701
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 2322.8214909437174
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 90006.94105227676
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 22607.426607532063
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 4253.723185230127
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 90006.94105227676
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 2565.437160656717
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 75135.40463517768
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 751311.0167015722
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 46138.48628357861
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 62721.040885202696
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 64439.63775910923
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 15472.547654235414
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 58349.979531775876
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 1078158.229484013
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 8
+    value: 5188.720961523868
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 35191.10184088732
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 3583.0356529341825
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 195.66926482861626
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 21223.891742777607
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 106854.81504270832
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 27826.302298968058
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 21223.891742777607
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 32442.46723730429
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 2859.039824196761
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 9940.615072303286
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 5526.961301267111
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 1836.8412884445636
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 9247.848534015693
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 4783.450957542055
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 50.04462734978863
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 8298.161531189597
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 941.5837889967545
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 153.34341569747232
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 7446.0004988656565
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 50.497599951167196
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 50.04462734978863
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 6215.723519268009
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 698951.7684627116
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 78603.9158247685
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 5577.413774282815
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 474.045203976738
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 5379.557952259006
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 283328.55410586036
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 5477.801736234865
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 5004.653812726682
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 3714.8168272877656
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 2859.25815305592
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 4490.7121470399625
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 656.1395669719367
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 49.59571799454066
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 8
+    value: 49.15083543737074
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 4490.7121470399625
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 3244.4325306713677
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 138.83099100131327
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 114.85284920841423
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 2911.2528300532763
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 1400.902764695693
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: negative
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 1956.7300026312214
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 55770.94358735735
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 6561.520930392294
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 399.3326550667754
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 21807.105190953578
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 4102.824591090301
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 199238.85689843938
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 18202.60238676902
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 6
+    value: 718.1172056052736
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 52.83277875582423
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 4959.761163199945
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 50.04462734978863
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 62721.040885202696
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 26121.386649539498
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 4
+    value: 137.58565191179932
+- attributes:
+    age_group: infant
+    infant: true
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 0
+    value: 222040.84166858296
+  - analyte: nasopharyngeal_aspirate_RSV_viral_load
+    time: 2
+    value: 6386.038342786864

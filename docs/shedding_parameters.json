@@ -1,6 +1,6 @@
 {
-  "n_fits": 126,
-  "n_datasets": 40,
+  "n_fits": 144,
+  "n_datasets": 48,
   "models": [
     "exponential",
     "gamma",
@@ -559,6 +559,59 @@
       }
     },
     {
+      "dataset_id": "brint2017prolonged",
+      "analyte": "nasal_aspirate_respiratory_syncytial_virus_viral_load",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_aspirate",
+      "unit": "pfu/mL",
+      "reference_event": "symptom onset",
+      "gene_target": "N gene",
+      "parameters": {
+        "a0": 0.5990422287173053,
+        "c0": 16.02693582880941
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 6.998294636739724,
+        "half_life_days": 1.1570923506413588
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.5124231846582727,
+          6.960409792269446
+        ],
+        "covariance": [
+          [
+            0.9912204182045274,
+            1.469370510081884
+          ],
+          [
+            1.469370510081884,
+            4.673131000991756
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.1639749925700436,
+      "censoring_limit_log10": -0.006813002947966834,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 212,
+        "pct_censored": 14.150943396226415,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 4.0,
+        "pct_subjects_with_rise": 44.0
+      },
+      "fit": {
+        "aic": 694.9514517363058,
+        "converged": true
+      }
+    },
+    {
       "dataset_id": "cdc2024nhphrn",
       "analyte": "NP_SARSCoV2_VL",
       "model": "exponential",
@@ -962,6 +1015,250 @@
       }
     },
     {
+      "dataset_id": "el2011respiratory",
+      "analyte": "respiratory_secretions_RSV_viral_load",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_aspirate",
+      "unit": "pfu/mL",
+      "reference_event": "enrollment",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.825410765763931,
+        "c0": 15.263264065795363
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 6.612352111319753,
+        "half_life_days": 0.37972120771943874
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          0.6018050388393186,
+          6.628751359607118
+        ],
+        "covariance": [
+          [
+            0.3748205547751842,
+            0.13854365665399793
+          ],
+          [
+            0.13854365665399793,
+            0.988060426381592
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.3908718376248183,
+      "censoring_limit_log10": 0.7529757785467133,
+      "data": {
+        "n_subjects": 8,
+        "n_measurements": 30,
+        "pct_censored": 13.333333333333334,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 12.5
+      },
+      "fit": {
+        "aic": 60.38380928734084,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "enya2023similarities",
+      "analyte": "1_gc_reaction",
+      "model": "gamma",
+      "biomarker": "rotavirus vaccine",
+      "specimen": "stool",
+      "unit": "gc/reaction",
+      "reference_event": "vaccination",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.8236856162745385,
+        "b0": 3.2584208956494454,
+        "c0": 15.55542302489217
+      },
+      "summary": {
+        "peak_day": 3.95590360116644,
+        "peak_log10": 7.304995214304771,
+        "half_life_days": 0.8415191025126701
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.1939663555225505,
+          1.3752090457098867,
+          7.286598037449093
+        ],
+        "covariance": [
+          [
+            1.6254873423206742,
+            -0.9511540126680738,
+            -0.9071092189504255
+          ],
+          [
+            -0.9511540126680738,
+            2.620202826583013,
+            0.6669906980735248
+          ],
+          [
+            -0.9071092189504255,
+            0.6669906980735248,
+            2.2564174715912593
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.48308100386496233,
+      "censoring_limit_log10": 1.7777984084880651,
+      "data": {
+        "n_subjects": 20,
+        "n_measurements": 156,
+        "pct_censored": 5.769230769230769,
+        "n_degenerate_subjects": 3,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 85.0
+      },
+      "fit": {
+        "aic": 329.39941129846454,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "enya2023similarities",
+      "analyte": "2_gc_reaction",
+      "model": "exponential",
+      "biomarker": "rotavirus vaccine",
+      "specimen": "stool",
+      "unit": "gc/reaction",
+      "reference_event": "vaccination",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.46747150307144447,
+        "c0": 10.686195166562403
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 4.616836684545488,
+        "half_life_days": 1.4827581489047694
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.7604168881081979,
+          4.640955593379252
+        ],
+        "covariance": [
+          [
+            1.7561729768922907,
+            0.517628210589091
+          ],
+          [
+            0.517628210589091,
+            2.852275036656033
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.1424442404386799,
+      "censoring_limit_log10": 2.2212138728323705,
+      "data": {
+        "n_subjects": 20,
+        "n_measurements": 171,
+        "pct_censored": 29.239766081871345,
+        "n_degenerate_subjects": 2,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": 31.25
+      },
+      "fit": {
+        "aic": 513.9408431966324,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "enya2023similarities",
+      "analyte": "2_gc_reaction",
+      "model": "gamma_shifted",
+      "biomarker": "rotavirus vaccine",
+      "specimen": "stool",
+      "unit": "gc/reaction",
+      "reference_event": "vaccination",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.9627150701458347,
+        "b0": 0.34347324508903954,
+        "c0": 13.66813163330002,
+        "t0": -1.2127194540627162
+      },
+      "summary": {
+        "peak_day": -0.8559438558195005,
+        "peak_log10": 5.637902366230527,
+        "half_life_days": 0.719992033006137
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_rise_days",
+          "peak_log10",
+          "t0"
+        ],
+        "mean": [
+          -0.0379977882791536,
+          -1.0306482711889717,
+          5.633085318508068,
+          -1.2127194540627162
+        ],
+        "covariance": [
+          [
+            1.028858072727658,
+            0.2889561165369337,
+            1.3458931077411775,
+            -0.5805344310434386
+          ],
+          [
+            0.2889561165369337,
+            4.828636040931252,
+            -1.076656078254506,
+            0.894570278997915
+          ],
+          [
+            1.3458931077411775,
+            -1.076656078254506,
+            3.1059549268492814,
+            -0.4884706946333011
+          ],
+          [
+            -0.5805344310434386,
+            0.894570278997915,
+            -0.4884706946333011,
+            2.6840468574311203
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.6833658364816128,
+      "censoring_limit_log10": 2.2212138728323705,
+      "data": {
+        "n_subjects": 20,
+        "n_measurements": 161,
+        "pct_censored": 24.84472049689441,
+        "n_degenerate_subjects": 3,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": 50.0
+      },
+      "fit": {
+        "aic": 440.0255006552938,
+        "converged": true
+      }
+    },
+    {
       "dataset_id": "fajnzylber2020sars",
       "analyte": "Nasopharyngeal_SARSCoV2_N",
       "model": "exponential",
@@ -1117,6 +1414,122 @@
       },
       "fit": {
         "aic": 105.13054956898524,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "falsey2003comparison",
+      "analyte": "nasal_respiratory_syncytial_virus_quant_rt_pcr",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasal_lavage_fluid",
+      "unit": "pfu/mL",
+      "reference_event": "inoculation",
+      "gene_target": "F gene",
+      "parameters": {
+        "a0": 0.1645071296049674,
+        "c0": 3.7007807313905636
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 1.5888041579388172,
+        "half_life_days": 4.213478055476418
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.8048013686522755,
+          1.607228650376802
+        ],
+        "covariance": [
+          [
+            0.24465572700554858,
+            0.2666255388531822
+          ],
+          [
+            0.2666255388531822,
+            1.1277336772315119
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.749849573462305,
+      "censoring_limit_log10": 1.0,
+      "data": {
+        "n_subjects": 11,
+        "n_measurements": 154,
+        "pct_censored": 53.896103896103895,
+        "n_degenerate_subjects": 2,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 418.2042004630352,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "falsey2003comparison",
+      "analyte": "nasal_respiratory_syncytial_virus_quant_rt_pcr",
+      "model": "gamma",
+      "biomarker": "RSV",
+      "specimen": "nasal_lavage_fluid",
+      "unit": "pfu/mL",
+      "reference_event": "inoculation",
+      "gene_target": "F gene",
+      "parameters": {
+        "a0": 1.9897463885202544,
+        "b0": 8.29259988535099,
+        "c0": 2.297002643363461
+      },
+      "summary": {
+        "peak_day": 4.167666760545336,
+        "peak_log10": 2.536871370094242,
+        "half_life_days": 0.34835956208239627
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.6880071876602116,
+          1.427356349370227,
+          2.536669708722955
+        ],
+        "covariance": [
+          [
+            1.0205254029017317,
+            0.07803860464406695,
+            1.5403265233959602
+          ],
+          [
+            0.07803860464406695,
+            0.022502485611801504,
+            0.20518357738275517
+          ],
+          [
+            1.5403265233959602,
+            0.20518357738275517,
+            3.1505275816197855
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8746170630757014,
+      "censoring_limit_log10": 1.0,
+      "data": {
+        "n_subjects": 11,
+        "n_measurements": 143,
+        "pct_censored": 50.34965034965035,
+        "n_degenerate_subjects": 7,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 299.31229184062545,
         "converged": true
       }
     },
@@ -1552,6 +1965,218 @@
       },
       "fit": {
         "aic": 1447.0920642217702,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "golantripto2024viral",
+      "analyte": "utm_vp_ml_nasal_lavage_fluid",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasal_lavage_fluid",
+      "unit": "vp/mL",
+      "reference_event": "hospital admission",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.0417734579167397,
+        "c0": 17.08516509836536
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 7.404958558353842,
+        "half_life_days": 0.6653530816057158
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          0.04092450886555021,
+          7.4199929246261025
+        ],
+        "covariance": [
+          [
+            0.39031153523057777,
+            0.2654223357290441
+          ],
+          [
+            0.2654223357290441,
+            1.0995542110640328
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.059525650218468326,
+      "censoring_limit_log10": 4.390000000084791,
+      "data": {
+        "n_subjects": 12,
+        "n_measurements": 24,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 2,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": null
+      },
+      "fit": {
+        "aic": -17.326452373035664,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "golantripto2024viral",
+      "analyte": "utm_vp_ml_nasopharyngeal_swab",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_swab",
+      "unit": "vp/mL",
+      "reference_event": "hospital admission",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.8749496096924291,
+        "c0": 13.055666863193148
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 5.699669765528007,
+        "half_life_days": 0.7922138290953775
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.13358898320576645,
+          5.670004076251921
+        ],
+        "covariance": [
+          [
+            1.0162290781282275,
+            0.46110007809073134
+          ],
+          [
+            0.46110007809073134,
+            1.1290181575022151
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.11280937109129295,
+      "censoring_limit_log10": 2.59000000005073,
+      "data": {
+        "n_subjects": 12,
+        "n_measurements": 24,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 2,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": null
+      },
+      "fit": {
+        "aic": 13.337186647680582,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "golantripto2024viral",
+      "analyte": "vcm_vp_ml_nasal_lavage_fluid",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasal_lavage_fluid",
+      "unit": "vp/mL",
+      "reference_event": "hospital admission",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.9182322626050012,
+        "c0": 17.154255644684596
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 7.430949779644106,
+        "half_life_days": 0.7548712986772046
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.08530491098948086,
+          7.449998567644229
+        ],
+        "covariance": [
+          [
+            0.7787955350669454,
+            0.3945251047186307
+          ],
+          [
+            0.3945251047186307,
+            1.229448169225016
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.03240795087617452,
+      "censoring_limit_log10": 4.290000000006774,
+      "data": {
+        "n_subjects": 12,
+        "n_measurements": 24,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 2,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": null
+      },
+      "fit": {
+        "aic": -46.696207160716625,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "golantripto2024viral",
+      "analyte": "vcm_vp_ml_nasopharyngeal_swab",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_swab",
+      "unit": "vp/mL",
+      "reference_event": "hospital admission",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.8646189386078028,
+        "c0": 12.74789981907635
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 5.520411312940786,
+        "half_life_days": 0.8016793868476222
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.14546640251498813,
+          5.536342547280321
+        ],
+        "covariance": [
+          [
+            0.4957196340548995,
+            0.045734213131835066
+          ],
+          [
+            0.045734213131835066,
+            0.830477131734445
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.20207922010465143,
+      "censoring_limit_log10": 2.390000000084792,
+      "data": {
+        "n_subjects": 12,
+        "n_measurements": 24,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 1,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": null
+      },
+      "fit": {
+        "aic": 41.35089657150481,
         "converged": true
       }
     },
@@ -5625,6 +6250,59 @@
       }
     },
     {
+      "dataset_id": "piccirilli2023respiratory",
+      "analyte": "nasopharyngeal_aspirate_RSV_viral_load",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_aspirate",
+      "unit": "gc/ng hDNA",
+      "reference_event": "hospital admission",
+      "gene_target": "M gene",
+      "parameters": {
+        "a0": 0.7165654300848877,
+        "c0": 10.885495453468895
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 4.758273584506229,
+        "half_life_days": 0.9673187561920644
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.33328571685338904,
+          4.727510608224477
+        ],
+        "covariance": [
+          [
+            0.9969191385793816,
+            0.29075159221632296
+          ],
+          [
+            0.29075159221632296,
+            0.8287559481961587
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.4508472063015802,
+      "censoring_limit_log10": 1.681530904116405,
+      "data": {
+        "n_subjects": 36,
+        "n_measurements": 118,
+        "pct_censored": 11.016949152542374,
+        "n_degenerate_subjects": 6,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": 0.0
+      },
+      "fit": {
+        "aic": 285.5914043103925,
+        "converged": true
+      }
+    },
+    {
       "dataset_id": "piralla2013different",
       "analyte": "bronchoalveolar_lavage_fluid",
       "model": "exponential",
@@ -6098,6 +6776,238 @@
       },
       "fit": {
         "aic": 121.19847214532521,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "schumer2026viral",
+      "analyte": "gc_ml",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_aspirate",
+      "unit": "gc/mL",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.3480848187129069,
+        "c0": 13.906319717457436
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 6.061875000101459,
+        "half_life_days": 1.9913168954709242
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.0553090969718244,
+          6.039437916874152
+        ],
+        "covariance": [
+          [
+            0.8172463163819621,
+            1.0230866317354674
+          ],
+          [
+            1.0230866317354674,
+            2.633541447395892
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.8066860688989705,
+      "censoring_limit_log10": 2.799999969383821,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 476,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 13,
+        "median_first_observed_day": 2.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 2015.9175136628105,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "schumer2026viral",
+      "analyte": "gc_ml",
+      "model": "gamma",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_aspirate",
+      "unit": "gc/mL",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 2.502623655290194,
+        "b0": 16.372277955915497,
+        "c0": -0.6552224523917864
+      },
+      "summary": {
+        "peak_day": 6.542045553396256,
+        "peak_log10": 5.967582776202711,
+        "half_life_days": 0.2769682045859072
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.9173396436898453,
+          1.8782498923136328,
+          5.960139732110803
+        ],
+        "covariance": [
+          [
+            1.0426051565988292,
+            -0.6666389715365164,
+            -0.14010431386735556
+          ],
+          [
+            -0.6666389715365164,
+            0.44305419162643644,
+            0.19146081906047221
+          ],
+          [
+            -0.14010431386735556,
+            0.19146081906047221,
+            1.0510820839383803
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.224296480111305,
+      "censoring_limit_log10": 2.799999969383821,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 476,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 9,
+        "median_first_observed_day": 2.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 1695.818389927209,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "schumer2026viral",
+      "analyte": "pfu_ml",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_aspirate",
+      "unit": "pfu/mL",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.3243428089670466,
+        "c0": 7.944492074861408
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 3.4670826643407846,
+        "half_life_days": 2.1370820052013837
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.125954270165278,
+          3.450249069636425
+        ],
+        "covariance": [
+          [
+            0.553504456907845,
+            0.7280659159317787
+          ],
+          [
+            0.7280659159317787,
+            1.1574376575084189
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.5484951985712752,
+      "censoring_limit_log10": 2.0,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 419,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 4,
+        "median_first_observed_day": 2.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 1657.5486591667452,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "schumer2026viral",
+      "analyte": "pfu_ml",
+      "model": "gamma",
+      "biomarker": "RSV",
+      "specimen": "nasopharyngeal_aspirate",
+      "unit": "pfu/mL",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.8517615707798263,
+        "b0": 8.705565514362764,
+        "c0": 2.195973805565999
+      },
+      "summary": {
+        "peak_day": 4.701234571304241,
+        "peak_log10": 3.025861461352939,
+        "half_life_days": 0.3743177261573921
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.6161373864565166,
+          1.5478251489686252,
+          3.0249051605173047
+        ],
+        "covariance": [
+          [
+            0.2112712296179816,
+            -0.009568096833602609,
+            0.2669672050320212
+          ],
+          [
+            -0.009568096833602609,
+            0.11225923565880652,
+            -0.1770998289490085
+          ],
+          [
+            0.2669672050320212,
+            -0.1770998289490085,
+            0.7105459872070803
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.2975092558804187,
+      "censoring_limit_log10": 2.0,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 419,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 7,
+        "median_first_observed_day": 2.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 1559.3434161820576,
         "converged": true
       }
     },
@@ -6660,6 +7570,122 @@
       },
       "fit": {
         "aic": 116.36153035500566,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "walsh2013viral",
+      "analyte": "pfu_ml",
+      "model": "exponential",
+      "biomarker": "RSV",
+      "specimen": "anterior_nares_swab+sputum",
+      "unit": "pfu/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.7370476405589275,
+        "c0": 11.177431893142108
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 4.876687754716357,
+        "half_life_days": 0.9404374187186991
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.3051027476893777,
+          4.854296993041035
+        ],
+        "covariance": [
+          [
+            0.38420914949606805,
+            0.6338811046763049
+          ],
+          [
+            0.6338811046763049,
+            1.6528469068557796
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8226035820011742,
+      "censoring_limit_log10": 0.17181818181817976,
+      "data": {
+        "n_subjects": 22,
+        "n_measurements": 120,
+        "pct_censored": 12.5,
+        "n_degenerate_subjects": 5,
+        "median_first_observed_day": 5.0,
+        "pct_subjects_with_rise": 90.47619047619048
+      },
+      "fit": {
+        "aic": 369.37853668019,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "walsh2013viral",
+      "analyte": "pfu_ml",
+      "model": "gamma",
+      "biomarker": "RSV",
+      "specimen": "anterior_nares_swab+sputum",
+      "unit": "pfu/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.10429901353918,
+        "b0": 5.921775462421315,
+        "c0": 2.9213923186191524
+      },
+      "summary": {
+        "peak_day": 5.362474646647154,
+        "peak_log10": 3.0014633336357295,
+        "half_life_days": 0.6276807024742966
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.09921075677993964,
+          1.6794255563449922,
+          3.0160874088238683
+        ],
+        "covariance": [
+          [
+            1.8843909964829715,
+            -0.6440499021838235,
+            0.2631160971560949
+          ],
+          [
+            -0.6440499021838235,
+            0.5973792277450449,
+            -0.22522472140655214
+          ],
+          [
+            0.2631160971560949,
+            -0.22522472140655214,
+            0.6597550834033657
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.7159927108896285,
+      "censoring_limit_log10": 0.17181818181817976,
+      "data": {
+        "n_subjects": 22,
+        "n_measurements": 120,
+        "pct_censored": 12.5,
+        "n_degenerate_subjects": 8,
+        "median_first_observed_day": 5.0,
+        "pct_subjects_with_rise": 90.47619047619048
+      },
+      "fit": {
+        "aic": 381.1445766577981,
         "converged": true
       }
     },

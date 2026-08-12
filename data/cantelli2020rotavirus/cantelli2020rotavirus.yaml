@@ -1,0 +1,372 @@
+title: Rotavirus A shedding and HBGA host genetic susceptibility in a birth community-cohort,
+  Rio de Janeiro, Brazil, 2014-2018
+doi: 10.1038/s41598-020-64025-0
+description: Prospective birth community-cohort study in Manguinhos, Rio de Janeiro,
+  Brazil (2014–2018) following infants through <1 year of age who received Rotarix
+  (RV1) oral rotavirus vaccine. Stool samples were collected and screened for rotavirus
+  A shedding using RT-qPCR (Ct), with RV1 G1P[8] characterization and VP8* sequencing
+  (including F167L mutation). This extraction captures individual Ct values and days
+  post-vaccination (or pre-dose/non-vaccinated sampling) from the provided CSV/table
+  for Le(a+b+) secretor children.
+analytes:
+  '1':
+    description: Rotavirus A (vaccine-derived RV1 G1P[8]) RT-qPCR cycle threshold
+      (Ct) values measured in stool samples collected after RV1 dose 1; positivity
+      defined as Ct ≤ 40. Genotype/VP8* Sanger sequencing used to classify RV1 and
+      F167L mutation status (reported separately in table/CSV as gene_type).
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 1
+    vaccine_type: Rotarix (RV1)
+  '2':
+    description: Rotavirus A (vaccine-derived RV1 G1P[8]) RT-qPCR cycle threshold
+      (Ct) values measured in stool samples collected after RV1 dose 2; positivity
+      defined as Ct ≤ 40. Genotype/VP8* Sanger sequencing used to classify RV1 and
+      F167L mutation status (reported separately in table/CSV as gene_type).
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: vaccination
+    dose: 2
+    vaccine_type: Rotarix (RV1)
+participants:
+- patient_id: '033'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 38.5
+- patient_id: '037'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 39.5
+- patient_id: '043'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 5
+    value: 34.1
+- patient_id: '053'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 5
+    value: 39.7
+- patient_id: '057'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 34.9
+- patient_id: '071'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 5
+    value: 33.7
+- patient_id: '072'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 5
+    value: 30.3
+- patient_id: 090
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 10
+    value: 33.1
+- patient_id: 094
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 9
+    value: 31.6
+- patient_id: 096
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 6
+    value: 36.6
+- patient_id: 097
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 37.2
+- patient_id: 099
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 16
+    value: 38.1
+- patient_id: '101'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 34.1
+- patient_id: '113'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 7
+    value: 28.4
+- patient_id: '122'
+  attributes:
+    genotype: 'RV1 G1P[8], F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 7
+    value: 35.8
+  - analyte: '2'
+    time: unknown
+    value: 37.5
+- patient_id: '142'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 17
+    value: 36.7
+- patient_id: '144'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 12
+    value: 26.3
+- patient_id: '160'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 12
+    value: 33.9
+- patient_id: '164'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 7
+    value: 36.7
+- patient_id: '173'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 9
+    value: 35.4
+- patient_id: '204'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 38
+- patient_id: '211'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 32.8
+- patient_id: '225'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 7
+    value: 23.3
+- patient_id: '226'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 8
+    value: 37.7
+- patient_id: '233'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 37.2
+- patient_id: '234'
+  attributes:
+    genotype: 'RV1 G1P[8], F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 5
+    value: 24.5
+  - analyte: '2'
+    time: 9
+    value: 35.4
+- patient_id: '235'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 21.9
+- patient_id: '236'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 19.8
+- patient_id: '240'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 9
+    value: 39.6
+- patient_id: '244'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 8
+    value: 19.6
+- patient_id: '245'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 6
+    value: 21.6
+- patient_id: '249'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 5
+    value: 34.5
+- patient_id: '250'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 6
+    value: 22.6
+- patient_id: '253'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 22
+    value: 30
+- patient_id: '259'
+  attributes:
+    genotype: 'RV1 G1P[8], F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 6
+    value: 26.5
+  - analyte: '2'
+    time: 7
+    value: 30.7
+- patient_id: '261'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 7
+    value: 22.7
+  - analyte: '2'
+    time: 24
+    value: 36.1
+- patient_id: '264'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 5
+    value: 27.1
+- patient_id: '265'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 58
+    value: 38.6
+- patient_id: '266'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '2'
+    time: 10
+    value: 33.7
+- patient_id: '270'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 31
+    value: 32.9
+- patient_id: '275'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 6
+    value: 20.3
+- patient_id: '281'
+  attributes:
+    genotype: 'F167L RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 6
+    value: 19.9
+- patient_id: '282'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 3
+    value: 32
+- patient_id: '284'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 4
+    value: 26.6
+- patient_id: '292'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 4
+    value: 22.9
+- patient_id: '293'
+  attributes:
+    genotype: 'RV1 G1P[8]'
+  measurements:
+  - analyte: '1'
+    time: 5
+    value: 35.9

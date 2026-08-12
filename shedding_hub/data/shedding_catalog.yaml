@@ -367,6 +367,41 @@ fits:
   converged: true
   log_likelihood: -141.9510425936274
   aic: 381.9020851872548
+- dataset_id: brint2017prolonged
+  analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+  biomarker: RSV
+  specimen: nasopharyngeal_aspirate
+  reference_event: symptom onset
+  unit: pfu/mL
+  gene_target: N gene
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.5124231846582727
+  - 6.960409792269446
+  population_cov:
+  - - 0.9912204182045274
+    - 1.469370510081884
+  - - 1.469370510081884
+    - 4.673131000991756
+  sigma: 1.1639749925700436
+  censoring_limit: -0.006813002947966834
+  n_subjects: 25
+  n_measurements: 212
+  n_censored: 30
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 44.0
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -296.4757258681529
+  aic: 694.9514517363058
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_VL
   biomarker: SARS-CoV-2
@@ -635,6 +670,169 @@ fits:
   converged: true
   log_likelihood: -34.06317964005969
   aic: 106.12635928011937
+- dataset_id: el2011respiratory
+  analyte: respiratory_secretions_RSV_viral_load
+  biomarker: RSV
+  specimen: nasopharyngeal_aspirate
+  reference_event: enrollment
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - 0.6018050388393186
+  - 6.628751359607118
+  population_cov:
+  - - 0.3748205547751842
+    - 0.13854365665399793
+  - - 0.13854365665399793
+    - 0.988060426381592
+  sigma: 0.3908718376248183
+  censoring_limit: 0.7529757785467133
+  n_subjects: 8
+  n_measurements: 30
+  n_censored: 4
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 12.5
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -13.191904643670417
+  aic: 60.38380928734084
+- dataset_id: enya2023similarities
+  analyte: 1_gc_reaction
+  biomarker: rotavirus vaccine
+  specimen: stool
+  reference_event: vaccination
+  unit: gc/reaction
+  gene_target: null
+  dose: 1
+  vaccine_type: Rotarix (RV1)
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - -0.1939663555225505
+  - 1.3752090457098867
+  - 7.286598037449093
+  population_cov:
+  - - 1.6254873423206742
+    - -0.9511540126680738
+    - -0.9071092189504255
+  - - -0.9511540126680738
+    - 2.620202826583013
+    - 0.6669906980735248
+  - - -0.9071092189504255
+    - 0.6669906980735248
+    - 2.2564174715912593
+  sigma: 0.48308100386496233
+  censoring_limit: 1.7777984084880651
+  n_subjects: 20
+  n_measurements: 156
+  n_censored: 9
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 85.0
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 20
+  converged: true
+  log_likelihood: -103.69970564923229
+  aic: 329.39941129846454
+- dataset_id: enya2023similarities
+  analyte: 2_gc_reaction
+  biomarker: rotavirus vaccine
+  specimen: stool
+  reference_event: vaccination
+  unit: gc/reaction
+  gene_target: null
+  dose: 2
+  vaccine_type: Rotarix (RV1)
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.7604168881081979
+  - 4.640955593379252
+  population_cov:
+  - - 1.7561729768922907
+    - 0.517628210589091
+  - - 0.517628210589091
+    - 2.852275036656033
+  sigma: 1.1424442404386799
+  censoring_limit: 2.2212138728323705
+  n_subjects: 20
+  n_measurements: 171
+  n_censored: 50
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 31.25
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -215.97042159831616
+  aic: 513.9408431966324
+- dataset_id: enya2023similarities
+  analyte: 2_gc_reaction
+  biomarker: rotavirus vaccine
+  specimen: stool
+  reference_event: vaccination
+  unit: gc/reaction
+  gene_target: null
+  dose: 2
+  vaccine_type: Rotarix (RV1)
+  model: gamma_shifted
+  method: mle
+  population_coords:
+  - log_a0
+  - log_rise_days
+  - peak_log10
+  - t0
+  population_mean:
+  - -0.0379977882791536
+  - -1.0306482711889717
+  - 5.633085318508068
+  - -1.2127194540627162
+  population_cov:
+  - - 1.028858072727658
+    - 0.2889561165369337
+    - 1.3458931077411775
+    - -0.5805344310434386
+  - - 0.2889561165369337
+    - 4.828636040931252
+    - -1.076656078254506
+    - 0.894570278997915
+  - - 1.3458931077411775
+    - -1.076656078254506
+    - 3.1059549268492814
+    - -0.4884706946333011
+  - - -0.5805344310434386
+    - 0.894570278997915
+    - -0.4884706946333011
+    - 2.6840468574311203
+  sigma: 0.6833658364816128
+  censoring_limit: 2.2212138728323705
+  n_subjects: 20
+  n_measurements: 161
+  n_censored: 40
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 50.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 10
+  converged: true
+  log_likelihood: -139.0127503276469
+  aic: 440.0255006552938
 - dataset_id: fajnzylber2020sars
   analyte: Nasopharyngeal_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -740,6 +938,83 @@ fits:
   converged: true
   log_likelihood: -21.565274784492622
   aic: 105.13054956898524
+- dataset_id: falsey2003comparison
+  analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+  biomarker: RSV
+  specimen: nasal_lavage_fluid
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: F gene
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.8048013686522755
+  - 1.607228650376802
+  population_cov:
+  - - 0.24465572700554858
+    - 0.2666255388531822
+  - - 0.2666255388531822
+    - 1.1277336772315119
+  sigma: 1.749849573462305
+  censoring_limit: 1.0
+  n_subjects: 11
+  n_measurements: 154
+  n_censored: 83
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -186.1021002315176
+  aic: 418.2042004630352
+- dataset_id: falsey2003comparison
+  analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+  biomarker: RSV
+  specimen: nasal_lavage_fluid
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: F gene
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.6880071876602116
+  - 1.427356349370227
+  - 2.536669708722955
+  population_cov:
+  - - 1.0205254029017317
+    - 0.07803860464406695
+    - 1.5403265233959602
+  - - 0.07803860464406695
+    - 0.022502485611801504
+    - 0.20518357738275517
+  - - 1.5403265233959602
+    - 0.20518357738275517
+    - 3.1505275816197855
+  sigma: 0.8746170630757014
+  censoring_limit: 1.0
+  n_subjects: 11
+  n_measurements: 143
+  n_censored: 72
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 7
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 12
+  converged: true
+  log_likelihood: -115.65614592031271
+  aic: 299.31229184062545
 - dataset_id: fraaij2015viral
   analyte: particles_ml
   biomarker: influenza
@@ -1031,6 +1306,146 @@ fits:
   converged: true
   log_likelihood: -490.54603211088516
   aic: 1447.0920642217702
+- dataset_id: golantripto2024viral
+  analyte: utm_vp_ml_nasopharyngeal_swab
+  biomarker: RSV
+  specimen: nasopharyngeal_swab
+  reference_event: hospital admission
+  unit: vp/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.13358898320576645
+  - 5.670004076251921
+  population_cov:
+  - - 1.0162290781282275
+    - 0.46110007809073134
+  - - 0.46110007809073134
+    - 1.1290181575022151
+  sigma: 0.11280937109129295
+  censoring_limit: 2.59000000005073
+  n_subjects: 12
+  n_measurements: 24
+  n_censored: 0
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: 18.33140667615971
+  aic: 13.337186647680582
+- dataset_id: golantripto2024viral
+  analyte: vcm_vp_ml_nasopharyngeal_swab
+  biomarker: RSV
+  specimen: nasopharyngeal_swab
+  reference_event: hospital admission
+  unit: vp/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.14546640251498813
+  - 5.536342547280321
+  population_cov:
+  - - 0.4957196340548995
+    - 0.045734213131835066
+  - - 0.045734213131835066
+    - 0.830477131734445
+  sigma: 0.20207922010465143
+  censoring_limit: 2.390000000084792
+  n_subjects: 12
+  n_measurements: 24
+  n_censored: 0
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: 4.324551714247594
+  aic: 41.35089657150481
+- dataset_id: golantripto2024viral
+  analyte: utm_vp_ml_nasal_lavage_fluid
+  biomarker: RSV
+  specimen: nasal_lavage_fluid
+  reference_event: hospital admission
+  unit: vp/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - 0.04092450886555021
+  - 7.4199929246261025
+  population_cov:
+  - - 0.39031153523057777
+    - 0.2654223357290441
+  - - 0.2654223357290441
+    - 1.0995542110640328
+  sigma: 0.059525650218468326
+  censoring_limit: 4.390000000084791
+  n_subjects: 12
+  n_measurements: 24
+  n_censored: 0
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: 33.66322618651783
+  aic: -17.326452373035664
+- dataset_id: golantripto2024viral
+  analyte: vcm_vp_ml_nasal_lavage_fluid
+  biomarker: RSV
+  specimen: nasal_lavage_fluid
+  reference_event: hospital admission
+  unit: vp/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.08530491098948086
+  - 7.449998567644229
+  population_cov:
+  - - 0.7787955350669454
+    - 0.3945251047186307
+  - - 0.3945251047186307
+    - 1.229448169225016
+  sigma: 0.03240795087617452
+  censoring_limit: 4.290000000006774
+  n_subjects: 12
+  n_measurements: 24
+  n_censored: 0
+  n_excluded_subjects: 1
+  n_degenerate_subjects: 2
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: 48.34810358035831
+  aic: -46.696207160716625
 - dataset_id: hakki2022onset
   analyte: asymptomatic_PCR
   biomarker: SARS-CoV-2
@@ -3741,6 +4156,41 @@ fits:
   converged: true
   log_likelihood: 10.339460275541047
   aic: 57.32107944891791
+- dataset_id: piccirilli2023respiratory
+  analyte: nasopharyngeal_aspirate_RSV_viral_load
+  biomarker: RSV
+  specimen: nasopharyngeal_aspirate
+  reference_event: hospital admission
+  unit: gc/ng hDNA
+  gene_target: M gene
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.33328571685338904
+  - 4.727510608224477
+  population_cov:
+  - - 0.9969191385793816
+    - 0.29075159221632296
+  - - 0.29075159221632296
+    - 0.8287559481961587
+  sigma: 0.4508472063015802
+  censoring_limit: 1.681530904116405
+  n_subjects: 36
+  n_measurements: 118
+  n_censored: 13
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 6
+  pct_subjects_with_rise: 0.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -69.79570215519622
+  aic: 285.5914043103925
 - dataset_id: piralla2013different
   analyte: nasopharyngeal_swab
   biomarker: influenza
@@ -4056,6 +4506,160 @@ fits:
   converged: true
   log_likelihood: -49.599236072662606
   aic: 121.19847214532521
+- dataset_id: schumer2026viral
+  analyte: gc_ml
+  biomarker: RSV
+  specimen: nasopharyngeal_aspirate
+  reference_event: inoculation
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.0553090969718244
+  - 6.039437916874152
+  population_cov:
+  - - 0.8172463163819621
+    - 1.0230866317354674
+  - - 1.0230866317354674
+    - 2.633541447395892
+  sigma: 1.8066860688989705
+  censoring_limit: 2.799999969383821
+  n_subjects: 25
+  n_measurements: 476
+  n_censored: 0
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 13
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -956.9587568314053
+  aic: 2015.9175136628105
+- dataset_id: schumer2026viral
+  analyte: gc_ml
+  biomarker: RSV
+  specimen: nasopharyngeal_aspirate
+  reference_event: inoculation
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.9173396436898453
+  - 1.8782498923136328
+  - 5.960139732110803
+  population_cov:
+  - - 1.0426051565988292
+    - -0.6666389715365164
+    - -0.14010431386735556
+  - - -0.6666389715365164
+    - 0.44305419162643644
+    - 0.19146081906047221
+  - - -0.14010431386735556
+    - 0.19146081906047221
+    - 1.0510820839383803
+  sigma: 1.224296480111305
+  censoring_limit: 2.799999969383821
+  n_subjects: 25
+  n_measurements: 476
+  n_censored: 0
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 9
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -771.9091949636045
+  aic: 1695.818389927209
+- dataset_id: schumer2026viral
+  analyte: pfu_ml
+  biomarker: RSV
+  specimen: nasopharyngeal_aspirate
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.125954270165278
+  - 3.450249069636425
+  population_cov:
+  - - 0.553504456907845
+    - 0.7280659159317787
+  - - 0.7280659159317787
+    - 1.1574376575084189
+  sigma: 1.5484951985712752
+  censoring_limit: 2.0
+  n_subjects: 25
+  n_measurements: 419
+  n_censored: 0
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 4
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -777.7743295833726
+  aic: 1657.5486591667452
+- dataset_id: schumer2026viral
+  analyte: pfu_ml
+  biomarker: RSV
+  specimen: nasopharyngeal_aspirate
+  reference_event: inoculation
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.6161373864565166
+  - 1.5478251489686252
+  - 3.0249051605173047
+  population_cov:
+  - - 0.2112712296179816
+    - -0.009568096833602609
+    - 0.2669672050320212
+  - - -0.009568096833602609
+    - 0.11225923565880652
+    - -0.1770998289490085
+  - - 0.2669672050320212
+    - -0.1770998289490085
+    - 0.7105459872070803
+  sigma: 1.2975092558804187
+  censoring_limit: 2.0
+  n_subjects: 25
+  n_measurements: 419
+  n_censored: 0
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 7
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -703.6717080910288
+  aic: 1559.3434161820576
 - dataset_id: shetty2024influenza
   analyte: nasopharyngeal_swab_pfu_ml
   biomarker: influenza
@@ -4429,6 +5033,83 @@ fits:
   converged: true
   log_likelihood: -47.18076517750283
   aic: 116.36153035500566
+- dataset_id: walsh2013viral
+  analyte: pfu_ml
+  biomarker: RSV
+  specimen: anterior_nares_swab+sputum
+  reference_event: symptom onset
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.3051027476893777
+  - 4.854296993041035
+  population_cov:
+  - - 0.38420914949606805
+    - 0.6338811046763049
+  - - 0.6338811046763049
+    - 1.6528469068557796
+  sigma: 0.8226035820011742
+  censoring_limit: 0.17181818181817976
+  n_subjects: 22
+  n_measurements: 120
+  n_censored: 15
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 5
+  pct_subjects_with_rise: 90.47619047619048
+  median_first_observed_day: 5.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -139.689268340095
+  aic: 369.37853668019
+- dataset_id: walsh2013viral
+  analyte: pfu_ml
+  biomarker: RSV
+  specimen: anterior_nares_swab+sputum
+  reference_event: symptom onset
+  unit: pfu/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.09921075677993964
+  - 1.6794255563449922
+  - 3.0160874088238683
+  population_cov:
+  - - 1.8843909964829715
+    - -0.6440499021838235
+    - 0.2631160971560949
+  - - -0.6440499021838235
+    - 0.5973792277450449
+    - -0.22522472140655214
+  - - 0.2631160971560949
+    - -0.22522472140655214
+    - 0.6597550834033657
+  sigma: 0.7159927108896285
+  censoring_limit: 0.17181818181817976
+  n_subjects: 22
+  n_measurements: 120
+  n_censored: 15
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 8
+  pct_subjects_with_rise: 90.47619047619048
+  median_first_observed_day: 5.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -123.57228832889905
+  aic: 381.1445766577981
 - dataset_id: woelfel2020virological
   analyte: stool
   biomarker: SARS-CoV-2
@@ -4973,6 +5654,64 @@ skipped:
   message: Analyte 'stool_norovirus' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: baier2018influenza
+  analyte: respiratory_influenza_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'respiratory_influenza_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: baier2018influenza
+  analyte: respiratory_influenza_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'respiratory_influenza_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: baier2018influenza
+  analyte: respiratory_influenza_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'respiratory_influenza_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: baier2018influenza
+  analyte: respiratory_RSV_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'respiratory_RSV_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: baier2018influenza
+  analyte: respiratory_RSV_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'respiratory_RSV_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: baier2018influenza
+  analyte: respiratory_RSV_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'respiratory_RSV_ct' is reported in 'cycle threshold'. Cycle-threshold
+    values are inversely related to concentration and already on a log scale, so neither
+    shedding model applies. Select a concentration analyte instead.
+- dataset_id: brint2017prolonged
+  analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasal_aspirate_respiratory_syncytial_virus_viral_load'\
+    \ does not show one: only 44% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: brint2017prolonged
+  analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasal_aspirate_respiratory_syncytial_virus_viral_load' has no
+    detected reading at or before its reference event, so a shifted onset has nothing
+    to locate and would only absorb curve shape. Fit the 'gamma' model instead.
 - dataset_id: brosius2023presymptomatic
   analyte: serum
   model: exponential
@@ -5078,6 +5817,48 @@ skipped:
   message: Analyte 'genital_swab' is reported in 'cycle threshold'. Cycle-threshold
     values are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: cantelli2020rotavirus
+  analyte: '1'
+  model: exponential
+  reason: ct_units
+  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold values are
+    inversely related to concentration and already on a log scale, so neither shedding
+    model applies. Select a concentration analyte instead.
+- dataset_id: cantelli2020rotavirus
+  analyte: '1'
+  model: gamma
+  reason: ct_units
+  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold values are
+    inversely related to concentration and already on a log scale, so neither shedding
+    model applies. Select a concentration analyte instead.
+- dataset_id: cantelli2020rotavirus
+  analyte: '1'
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold values are
+    inversely related to concentration and already on a log scale, so neither shedding
+    model applies. Select a concentration analyte instead.
+- dataset_id: cantelli2020rotavirus
+  analyte: '2'
+  model: exponential
+  reason: ct_units
+  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold values are
+    inversely related to concentration and already on a log scale, so neither shedding
+    model applies. Select a concentration analyte instead.
+- dataset_id: cantelli2020rotavirus
+  analyte: '2'
+  model: gamma
+  reason: ct_units
+  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold values are
+    inversely related to concentration and already on a log scale, so neither shedding
+    model applies. Select a concentration analyte instead.
+- dataset_id: cantelli2020rotavirus
+  analyte: '2'
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold values are
+    inversely related to concentration and already on a log scale, so neither shedding
+    model applies. Select a concentration analyte instead.
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_CT
   model: exponential
@@ -5115,6 +5896,54 @@ skipped:
   message: Analyte 'stool_rotavirus_viral_load' has no detected reading at or before
     its reference event, so a shifted onset has nothing to locate and would only absorb
     curve shape. Fit the 'gamma' model instead.
+- dataset_id: coppee2023temporal
+  analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_RSV_ct_symptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: coppee2023temporal
+  analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_RSV_ct_symptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: coppee2023temporal
+  analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_RSV_ct_symptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: coppee2023temporal
+  analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_RSV_ct_asymptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: coppee2023temporal
+  analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_RSV_ct_asymptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: coppee2023temporal
+  analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab_RSV_ct_asymptomatic' is reported in 'cycle
+    threshold'. Cycle-threshold values are inversely related to concentration and
+    already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
 - dataset_id: covid2020clinical
   analyte: Stool_SARSCoV2
   model: exponential
@@ -5371,6 +6200,72 @@ skipped:
   message: Analyte 'tracheal_aspirate_influenza_gc_per_mL' has no detected reading
     at or before its reference event, so a shifted onset has nothing to locate and
     would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: devincenzo2022safety
+  analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents'
+    has 2 subject(s) (5 fitted, 3 excluded as degenerate) feeding the population summary
+    of the 'exponential' model, which has 2 parameters. At least 3 are needed for
+    the between-subject covariance to be estimable rather than rank-deficient; below
+    that the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: devincenzo2022safety
+  analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: devincenzo2022safety
+  analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents'.
+- dataset_id: el2011respiratory
+  analyte: respiratory_secretions_RSV_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'respiratory_secretions_RSV_viral_load'\
+    \ does not show one: only 12% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: el2011respiratory
+  analyte: respiratory_secretions_RSV_viral_load
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'respiratory_secretions_RSV_viral_load' has no detected reading
+    at or before its reference event, so a shifted onset has nothing to locate and
+    would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: enya2023similarities
+  analyte: 1_gc_reaction
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte '1_gc_reaction' has 2 subject(s) (20 fitted, 18 excluded as degenerate)
+    feeding the population summary of the 'exponential' model, which has 2 parameters.
+    At least 3 are needed for the between-subject covariance to be estimable rather
+    than rank-deficient; below that the 'population' is an artefact of averaging too
+    few individuals, and simulating from it produces near-identical or wildly extrapolated
+    individuals.
+- dataset_id: enya2023similarities
+  analyte: 1_gc_reaction
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '1_gc_reaction' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: enya2023similarities
+  analyte: 2_gc_reaction
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte '2_gc_reaction' does\
+    \ not show one: only 31% of subjects did, against a required 50%. Sampling here\
+    \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
+    \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
+    \ exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: fajnzylber2020sars
   analyte: Nasopharyngeal_SARSCoV2_N
   model: gamma
@@ -5487,6 +6382,13 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'Urine_SARSCoV2_N'.
+- dataset_id: falsey2003comparison
+  analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'nasal_respiratory_syncytial_virus_quant_rt_pcr' has no detected
+    reading at or before its reference event, so a shifted onset has nothing to locate
+    and would only absorb curve shape. Fit the 'gamma' model instead.
 - dataset_id: fraaij2015viral
   analyte: particles_ml
   model: gamma
@@ -5525,6 +6427,46 @@ skipped:
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_Ct' is reported in 'cycle threshold'.
     Cycle-threshold values are inversely related to concentration and already on a
     log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: golantripto2024viral
+  analyte: utm_vp_ml_nasopharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'utm_vp_ml_nasopharyngeal_swab'.
+- dataset_id: golantripto2024viral
+  analyte: utm_vp_ml_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'utm_vp_ml_nasopharyngeal_swab'.
+- dataset_id: golantripto2024viral
+  analyte: vcm_vp_ml_nasopharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'vcm_vp_ml_nasopharyngeal_swab'.
+- dataset_id: golantripto2024viral
+  analyte: vcm_vp_ml_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'vcm_vp_ml_nasopharyngeal_swab'.
+- dataset_id: golantripto2024viral
+  analyte: utm_vp_ml_nasal_lavage_fluid
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'utm_vp_ml_nasal_lavage_fluid'.
+- dataset_id: golantripto2024viral
+  analyte: utm_vp_ml_nasal_lavage_fluid
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'utm_vp_ml_nasal_lavage_fluid'.
+- dataset_id: golantripto2024viral
+  analyte: vcm_vp_ml_nasal_lavage_fluid
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'vcm_vp_ml_nasal_lavage_fluid'.
+- dataset_id: golantripto2024viral
+  analyte: vcm_vp_ml_nasal_lavage_fluid
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'vcm_vp_ml_nasal_lavage_fluid'.
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_rotavirus_viral_load
   model: exponential
@@ -6429,6 +7371,72 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'nasal_discharge_influenza_gc_per_mL'.
+- dataset_id: kutter2021small
+  analyte: rsv_nasopharyngeal_aspirate_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rsv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: kutter2021small
+  analyte: rsv_nasopharyngeal_aspirate_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rsv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: kutter2021small
+  analyte: rsv_nasopharyngeal_aspirate_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rsv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: kutter2021small
+  analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rsv_oropharyngeal_swab_nasopharyngeal_swab_ct' is reported in
+    'cycle threshold'. Cycle-threshold values are inversely related to concentration
+    and already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: kutter2021small
+  analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rsv_oropharyngeal_swab_nasopharyngeal_swab_ct' is reported in
+    'cycle threshold'. Cycle-threshold values are inversely related to concentration
+    and already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: kutter2021small
+  analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rsv_oropharyngeal_swab_nasopharyngeal_swab_ct' is reported in
+    'cycle threshold'. Cycle-threshold values are inversely related to concentration
+    and already on a log scale, so neither shedding model applies. Select a concentration
+    analyte instead.
+- dataset_id: kutter2021small
+  analyte: rv_nasopharyngeal_aspirate_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: kutter2021small
+  analyte: rv_nasopharyngeal_aspirate_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
+- dataset_id: kutter2021small
+  analyte: rv_nasopharyngeal_aspirate_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
+    Cycle-threshold values are inversely related to concentration and already on a
+    log scale, so neither shedding model applies. Select a concentration analyte instead.
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_first_pos
   model: gamma
@@ -7004,6 +8012,24 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'respiratory_influenzaA_viral_load'.
+- dataset_id: piccirilli2023respiratory
+  analyte: nasopharyngeal_aspirate_RSV_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasopharyngeal_aspirate_RSV_viral_load'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: piccirilli2023respiratory
+  analyte: nasopharyngeal_aspirate_RSV_viral_load
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'nasopharyngeal_aspirate_RSV_viral_load'\
+    \ does not show one: only 22% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: piralla2013different
   analyte: nasopharyngeal_swab
   model: gamma
@@ -7336,6 +8362,20 @@ skipped:
   message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold values
     are inversely related to concentration and already on a log scale, so neither
     shedding model applies. Select a concentration analyte instead.
+- dataset_id: schumer2026viral
+  analyte: gc_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'gc_ml' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: schumer2026viral
+  analyte: pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'pfu_ml' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: schuurmans2014clinical
   analyte: nasopharyngeal_swab_influenza_CT
   model: exponential
@@ -7661,6 +8701,13 @@ skipped:
   message: Analyte 'OPS_SARSCoV2' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: walsh2013viral
+  analyte: pfu_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'pfu_ml' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_ORF1ab
   model: exponential
