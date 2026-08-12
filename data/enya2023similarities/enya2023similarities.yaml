@@ -1,0 +1,1176 @@
+title: Similarities in rotavirus vaccine viral shedding and immune responses in pairs
+  of twins
+doi: 10.20407/fmj.2022-039
+description: Prospective cohort study of 20 infants (four twin pairs and twelve singletons)
+  admitted to the neonatal intensive care unit at Fujita Health University Hospital
+  (Japan), born Nov 2018–Jun 2020, receiving two doses of Rotarix (RV1). Stool was
+  collected daily from vaccination day (day 0) through day 8 after each dose to quantify
+  fecal RV1 vaccine-strain shedding by RV1-specific qRT-PCR (reported here as gene
+  copies per PCR reaction from figure-derived CSV).
+analytes:
+  1_gc_reaction:
+    description: Fecal rotavirus vaccine strain (Rotarix/RV1) RNA shedding quantified
+      by RV1-specific qRT-PCR from stool suspensions; values reported as gene copies
+      per PCR reaction (gc/reaction) after dose 1.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/reaction
+    reference_event: vaccination
+    dose: 1
+    vaccine_type: Rotarix (RV1)
+  2_gc_reaction:
+    description: Fecal rotavirus vaccine strain (Rotarix/RV1) RNA shedding quantified
+      by RV1-specific qRT-PCR from stool suspensions; values reported as gene copies
+      per PCR reaction (gc/reaction) after dose 2.
+    specimen: stool
+    biomarker: rotavirus vaccine
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/reaction
+    reference_event: vaccination
+    dose: 2
+    vaccine_type: Rotarix (RV1)
+participants:
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 28942.661247167576
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 16908.952762443198
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 125355.45456681003
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 367271.08450555074
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 2239404.909536701
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 5666509.873957798
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 2351542.2448789193
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 40745.492876145996
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 15469.407652461987
+  - analyte: 2_gc_reaction
+    time: 2
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 3
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 4
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 6
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 47178.057248814715
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 131632.58050588047
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 28417175.00504865
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 51076697.81037991
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 38097971.866722055
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 101229021.70895301
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 59140268.120041445
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 31334388.24225666
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 20691.3808111479
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 1049669.6290308766
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 15469.407652461987
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 695.1927961775606
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 12742.749857031347
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 5324.9531298375205
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 4832.930238571747
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 4832.930238571747
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 31913.819164703928
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 60233.881304560484
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 4438281.602389686
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 727895.3843983175
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 225312.4271027729
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 3152635.3436923022
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 7122.485584859906
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 11565.326417902514
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 25118.864315095823
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 32008.340465997644
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 57265.72150091953
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 26366.508987303554
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 8646.535029500343
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 2335.7214690901214
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 145145.54603575423
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 38802.473987887926
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 279.012295507755
+  - analyte: 1_gc_reaction
+    time: 4
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 6
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 8
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 952680.7029019818
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 327936.28590208833
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 30493.728293872584
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 843.9481965654006
+  - analyte: 2_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 3442.2475956860853
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 2019.5897501643776
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 1075.42207611256
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 214568.01659948906
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 194591.85962249138
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 11792829.976631708
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 68476848.8028527
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 6248215.043811714
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 7977315.414440457
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 10184918.536774216
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 13375.677515263376
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 76596.78234751822
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 19712.27921517696
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 26366.508987303554
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 317194.9467612155
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 287664.2825493175
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 2859126.835225343
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 2859126.835225343
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 1841840.377028867
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 2132615.0358465235
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 3833137.3091256768
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 113684.93498968372
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 26366.508987303554
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 118490.68510006636
+  - analyte: 2_gc_reaction
+    time: 3
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 4
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 6
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 385662.042116348
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 5950258.165858918
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 27062053.15258796
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 106298025.8472399
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 25771552.6157469
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 28417175.00504865
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 5396292.607251321
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 3650347.565593629
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 907600.5216818141
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 344224.75956860924
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 32008.340465997644
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 729.7227644686392
+  - analyte: 2_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 6
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 1129927.0299020482
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 660128.7494076323
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 1934069.822059628
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 446547.2035635087
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 63250.069631222024
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 54626.14214873055
+  - analyte: 1_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 8
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 784759.9703514606
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 158489.3192461111
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 124376.07347260132
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 586706.7065993104
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 952680.7029019818
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 5867.067065993086
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 2019.5897501643776
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 1590711.833796703
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 1841840.377028867
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 929329.5812236357
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 3152635.3436923022
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 25771552.6157469
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 46321487.087472595
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 2239404.909536701
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 2239404.909536701
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 379269.0190732246
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 183298.07108324338
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 92986.74652605254
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 11018.063301098226
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 1924.0241827602372
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 2019.5897501643776
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 16601951.897200607
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 885012.9021930688
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 194591.85962249138
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 598671.1485396965
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 802618.7180967651
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 9236708.571873885
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 10694924.396155741
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 97605.3637307899
+  - analyte: 2_gc_reaction
+    time: 1
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 1546940.7652461985
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 112883.78916846884
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 270133.8121133005
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 270133.8121133005
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 88586.67904100814
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 54555.947811685146
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 54555.947811685146
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 2
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 307.6547753339331
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 4520.35365636025
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 19578.399600390458
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 2395.026619987491
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 3904.0191233714786
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 61.3477174240676
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 2019.5897501643776
+  - analyte: 2_gc_reaction
+    time: 2
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 3
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 4
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 2701.3381211330047
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 1514856.004828388
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 194591.85962249138
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 468907.88219687407
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 103100.93396630308
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 2030917.620904739
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 2132615.0358465235
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 8376776.400682941
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 11792829.976631708
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 124376.07347260132
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 747625.680163768
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 166361.42493842193
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 27676.12370754225
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 38857.39518570976
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 32008.340465997644
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 23930.257311804995
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 4386.370005779546
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 14265457.829751803
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 21169679.630636454
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 538801221.2525963
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 1186549100.0980434
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 1096478196.1431828
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 1013244571.6052176
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 4913925540.405705
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 2613020741.9916906
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 11257153.068624837
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 3877675195.3101783
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 2414666421.66515
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 1096478196.1431828
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 164870462.8438737
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 1054040.12263555
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 1760.817256261361
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 1284.0189361682887
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 1335716.484324281
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 22908676.5276777
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 178413852.64956173
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 2061986009.5022066
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 3583320996.182554
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 1013244571.6052176
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 936329208.8239379
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 3583320996.182554
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 39810717.05534961
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 48496.93428528191
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 14265457.829751803
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 2941517.4464092106
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 1186.549100098053
+  - analyte: 2_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 25788.647827168134
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 5754.399373371555
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 13789067.060798477
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 42452862.27393853
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 2997396.4322973667
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 2173748.5350396126
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 269297.64661463647
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 436048.5872092668
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 180224.55152500002
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 111304.21932675205
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 16192.068244593687
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 49851.06244585516
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 74489.150808323
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 17546.32004025116
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 2173.7485350396123
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 5259.3277088596615
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 1143.245590242693
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 554.8633588145087
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 20604.09237844233
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 10836367.396184612
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 14942339.672143979
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 4478811.562345985
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 4133130.041274666
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 269297.64661463647
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 601270.3210795026
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 554863.3588145098
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 1851151.0617540514
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 14942.339672143979
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 13789.067060798478
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 8515.939318253846
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 6175.863298586846
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 9999.99999999998
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 7252.122247218163
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 5259.3277088596615
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 3814.1287482832113
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 1851.1510617540514
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 32461130.18266744
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 23713737.05661665
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 27744814.03275884
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 21923459.72483451
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 9245046.309020061
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 4216965.03428584
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 1644027.5496186647
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 949014.2360424715
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 349025.4878959622
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 44815.53356637858
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 12672.349521045115
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 5317.583102360104
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 2613.020741991712
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 3877.67519531021
+  - analyte: 2_gc_reaction
+    time: 6
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 22022.01949987387
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 10821.45640717427
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 13688.74509537082
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 10000
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 369983.0414406981
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 547818.0827445247
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 1778279.410038923
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 342051.0351671328
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 592553.0975545687
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 8547088.125592545
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 322530.97435625124
+  - analyte: 2_gc_reaction
+    time: 2
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 3
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 4
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 5
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 6
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 22223.927378707467
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 587200.1085172679
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 378472807.7592621
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 274983324.6123732
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 409936664.4083592
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 911040265.968095
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 322604573.67033815
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 5950678.32070068
+  - analyte: 2_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 109764.63251460946
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 16147.02380528253
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 2024.689270995328
+  - analyte: 2_gc_reaction
+    time: 4
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 170.29969604826678
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 322.60457367033945
+  - analyte: 2_gc_reaction
+    time: 7
+    value: negative
+  - analyte: 2_gc_reaction
+    time: 8
+    value: negative
+- attributes:
+    age_group: infant
+    infant: true
+    hospitalized: true
+  measurements:
+  - analyte: 1_gc_reaction
+    time: 0
+    value: negative
+  - analyte: 1_gc_reaction
+    time: 1
+    value: 363658.4150728564
+  - analyte: 1_gc_reaction
+    time: 2
+    value: 128773.52663610887
+  - analyte: 1_gc_reaction
+    time: 3
+    value: 29390575.659914993
+  - analyte: 1_gc_reaction
+    time: 4
+    value: 13224744.285330027
+  - analyte: 1_gc_reaction
+    time: 5
+    value: 2282346.1023140093
+  - analyte: 1_gc_reaction
+    time: 6
+    value: 688890.6479490113
+  - analyte: 1_gc_reaction
+    time: 7
+    value: 6445380.412393644
+  - analyte: 1_gc_reaction
+    time: 8
+    value: 243940.12217551732
+  - analyte: 2_gc_reaction
+    time: 0
+    value: 20518.174939528057
+  - analyte: 2_gc_reaction
+    time: 1
+    value: 18943.344066739028
+  - analyte: 2_gc_reaction
+    time: 2
+    value: 12707.094005036084
+  - analyte: 2_gc_reaction
+    time: 3
+    value: 3269.2705857061956
+  - analyte: 2_gc_reaction
+    time: 4
+    value: 1869.2883554087693
+  - analyte: 2_gc_reaction
+    time: 5
+    value: 1593.353500173133
+  - analyte: 2_gc_reaction
+    time: 6
+    value: 4154.292866046762
+  - analyte: 2_gc_reaction
+    time: 7
+    value: 274.98332461237203
+  - analyte: 2_gc_reaction
+    time: 8
+    value: 2193.0092445192527
