@@ -1350,6 +1350,10 @@
     "analyte": "stool_lanzhou_lamb_rotavirus_vaccine_pcr",
     "figures": [
      {
+      "file": "stool_lanzhou_lamb_rotavirus_vaccine_pcr__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "stool_lanzhou_lamb_rotavirus_vaccine_pcr__exponential.png",
       "model": "exponential"
      }
@@ -1827,6 +1831,10 @@
     "analyte": "oropharyngeal_gc_ml",
     "figures": [
      {
+      "file": "oropharyngeal_gc_ml__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "oropharyngeal_gc_ml__exponential.png",
       "model": "exponential"
      }
@@ -1902,6 +1910,10 @@
    {
     "analyte": "N1_probe",
     "figures": [
+     {
+      "file": "N1_probe__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
      {
       "file": "N1_probe__gamma.png",
       "model": "gamma"
@@ -2162,6 +2174,10 @@
    {
     "analyte": "OPS_SARSCoV2",
     "figures": [
+     {
+      "file": "OPS_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
      {
       "file": "OPS_SARSCoV2__exponential.png",
       "model": "exponential"
@@ -2428,10 +2444,6 @@
    {
     "analyte": "stool_SARSCoV2_N_symptomatic",
     "figures": [
-     {
-      "file": "stool_SARSCoV2_N_symptomatic__gamma.png",
-      "model": "gamma"
-     },
      {
       "file": "stool_SARSCoV2_N_symptomatic__exponential.png",
       "model": "exponential"
