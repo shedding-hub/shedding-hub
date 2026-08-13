@@ -145,15 +145,25 @@ earliest reading, so a curve is never undefined at its own observations.
 
 | reason | n | meaning |
 |---|---|---|
-| `ct_units` | 207 | Cycle thresholds. Fittable directly with `fit_shedding_model`, but excluded from the catalog: their heights are cycles below `CT_REFERENCE`, not log10 concentrations, so an ensemble cannot average them together |
-| `no_rise_observed` | 63 | Fewer than 50% of subjects peaked later than their first reading, leaving `b0` unidentifiable |
-| `no_pre_event_readings` | 61 | `gamma_shifted` only: no detected reading at or before day 0, so `t0` has nothing to locate |
-| `too_few_subjects` | 50 | No subject cleared the per-subject minimum |
+| `ct_units` | 234 | Cycle thresholds, **excluded from this catalog but not unfitted** — see below |
+| `no_rise_observed` | 69 | Fewer than 50% of subjects peaked later than their first reading, leaving `b0` unidentifiable |
+| `no_pre_event_readings` | 68 | `gamma_shifted` only: no detected reading at or before day 0, so `t0` has nothing to locate |
+| `too_few_subjects` | 59 | No subject cleared the per-subject minimum |
 | `degenerate_fit` | 31 | Too few subjects survived the checks above |
-| `too_few_subjects_for_population` | 24 | Too few subjects to estimate a covariance |
+| `too_few_subjects_for_population` | 26 | Too few subjects to estimate a covariance |
 | `non_pathogen_biomarker` | 12 | crAssphage, PMMoV, mtDNA — indicators, not shed pathogens |
 | `no_positive_measurements` | 4 | Nothing ever detected |
 | `no_data_after_reference_event` | 1 | Sampling stopped at day 0, so no post-event trajectory exists |
+
+`ct_units` is a routing decision, not a refusal. Cycle-threshold analytes **are**
+fitted — 50 converged fits over 23 studies at the time of writing — and those
+fits are what the [website's dataset pages](https://shedding-hub.github.io/)
+draw for a Ct analyte. They are kept out of *this* catalog because its heights
+are log10 concentrations and a Ct fit's are cycles below `CT_REFERENCE`, so an
+ensemble averaging the two would be averaging incommensurable quantities. Build
+them into a catalog of their own with
+`fit_shedding_models(datasets, value_types=("ct",))`, or fit one directly with
+`fit_shedding_model`, which needs no opting in at all.
 
 ### Cycle-threshold fits
 
