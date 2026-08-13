@@ -362,6 +362,31 @@ by_hand = sh.make_ensemble(
 print("hand-built components:", [f.dataset_id for f in by_hand.fits])
 ```
 
+#### One kind of fit you cannot simulate from
+
+A fit of your own may well be a **cycle-threshold** fit — 78 of the
+repository's 216 analytes report Ct rather than concentration, and
+`fit_shedding_model` fits them directly. `simulate_shedding` refuses
+such a source, raising rather than returning numbers:
+
+    ValueError: This fit was estimated on cycle thresholds, and
+    simulation produces concentrations.
+
+That is deliberate. A Ct fit's height is cycles below `CT_REFERENCE`,
+and converting it to a concentration needs the assay's standard curve,
+which the studies do not report. Simulating anyway would exponentiate
+cycles as though they were log10 concentrations — a fit peaking 13.5
+cycles below the reference would silently claim 3.2e13 gc/mL.
+`make_ensemble` refuses a mixed set for the same reason.
+
+What does carry across is timing. `fit.comparable_with(other)` returns
+`('peak_day', 't0', 'rise_days')` for a Ct-versus-concentration pair,
+because the unknown standard-curve slope multiplies `a0` and `b0` alike
+and cancels in their ratio. So a Ct fit can tell you *when* a cohort
+peaks, and a concentration fit has to tell you *how high*. See
+[modeling methods](modeling-methods.md) for how far that comparison
+holds in practice.
+
 ### Whatever you choose, it stays auditable
 
 `selection.reason` names the rule that decided and `passed_over` is
