@@ -365,7 +365,16 @@ merge a dataset PR into main
 
 A page with no figure is expected in the meantime and is not a fault: the layout omits the figure when the dataset has no entry yet, so the page is complete apart from the illustration.
 
-**Reviewing the figures pull request.** Expect nearly all 282 figures to show as changed even when nothing meaningful has. Fits are not bit-reproducible across platforms — `tests/test_parameter_export.py` carries a `DRIFT_RTOL` for the same reason — so a Linux runner reproduces them only to within that tolerance, and the re-rendered images differ in ways no one can see. What is worth reading is **which figures were added or removed**: those are analytes that gained or lost a converged fit, which is a real change in what the catalog supports.
+**Reviewing the figures pull request.** Nearly every figure will show as changed, but not all of those changes are cosmetic, and the difference between the two matters.
+
+Rendering itself is deterministic: measured across a full refresh, all 88 observations-only figures came back **pixel-for-pixel identical**, differing only in PNG encoding bytes. Every visible difference comes from *refitting*. Of the 194 fitted figures, 192 differed, by a median of 7% of their pixels.
+
+Most of those are slight, but the tail is not. The largest in that refresh, `mijatovicrustempasic2017shedding / rotavirus vaccine_stool / exponential`, moved its half-life from **2.28 days to 1.97 days** — 14% — while its AIC changed by 0.1. Both fits explain the data equally well; the likelihood is simply flat along that direction, so the optimizer can settle anywhere along it. That is a property of the study's data rather than of the machine, and it is a caution worth carrying into any estimate drawn from a weakly-identified analyte.
+
+So read the diff at two levels:
+
+- **Added or removed figures** are the clearest signal: an analyte gained or lost a converged fit, changing what the catalog supports.
+- **Among changed figures, read the legend numbers rather than the picture.** Parameters that shift by a few percent mark analytes whose fits are weakly identified. Note that `DRIFT_RTOL` in `tests/test_parameter_export.py` does *not* cover this — it is the noise floor for re-exporting one catalog, and its own comment says a genuine refit moves values by percent rather than by `1e-4`.
 
 **Regenerating by hand.** `refresh-figures.yaml` only watches `data/**`, so a change to the fitting or plotting code does not raise a pull request on its own. Trigger one deliberately with `gh workflow run "Refresh Dataset Figures"`, or rebuild locally:
 
