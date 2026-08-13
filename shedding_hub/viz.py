@@ -8,7 +8,14 @@ from matplotlib.ticker import FuncFormatter
 import logging
 
 from .shedding_models import log10_concentration
-from .shedding_fit import CT_REFERENCE, prepare_observations
+from .shedding_fit import (
+    CT_REFERENCE,
+    _declared_limit,
+    _is_ct_unit,
+    _resolve_censoring_limit,
+    _to_response,
+    prepare_observations,
+)
 
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
@@ -3144,6 +3151,7 @@ def plot_fit_diagnostic(
     band_sets_ylim: bool = False,
     band_ylim_floor: float = FIT_DIAGNOSTIC_YLIM_FLOOR,
     n_simulated: int = 2000,
+    x_from_fitted: bool = False,
 ) -> Figure:
     """
     Plot one fitted curve against the observations behind it.
@@ -3202,6 +3210,12 @@ def plot_fit_diagnostic(
             the axis.
         n_simulated: Individuals drawn for the band. Fixed seed, so a page is
             reproducible.
+        x_from_fitted: Let only the fitted readings set the time axis, so that
+            readings the fitter discarded cannot stretch it. Off by default,
+            which keeps every reading on the page. Turn it on where the page has
+            to be legible at a fixed size — the website's dataset figures do —
+            and any dropped reading left outside is counted in the legend rather
+            than disappearing quietly.
 
     Returns:
         The figure. It is closed in the pyplot state so notebooks do not display
@@ -3431,8 +3445,22 @@ def plot_fit_diagnostic(
     earliest = min(
         0.0,
         float(observations.times.min()),
-        float(dropped_times.min()) if dropped_times.size else 0.0,
+        (
+            float(dropped_times.min())
+            if dropped_times.size and not x_from_fitted
+            else 0.0
+        ),
     )
+    n_offscale = 0
+    if x_from_fitted and dropped_times.size:
+        # Excluded readings can sit far earlier than anything the curve was
+        # fitted to -- kissler2021viral drops readings back to day -53 against
+        # observations starting at day 1 -- and letting them set the axis
+        # squeezes the data into a third of the panel. Across the catalog 15
+        # fits are stretched by more than half again. They stay plotted, so
+        # nothing is hidden where the axis does reach; the count of those that
+        # fall outside is reported rather than left to be inferred from a gap.
+        n_offscale = int((dropped_times < earliest).sum())
     margin = 0.02 * (horizon - earliest)
     ax.set_xlim(earliest - margin, horizon + margin)
     # The observations set the y range, but the curve's peak can sit above every
@@ -3451,6 +3479,9 @@ def plot_fit_diagnostic(
     ax.set_ylim(bottom - 0.5, top + 0.5)
 
     handles, labels = ax.get_legend_handles_labels()
+    if n_offscale:
+        handles.append(plt.Line2D([], [], color="none"))
+        labels.append(f"{n_offscale} dropped reading(s) off-scale")
     for row in _fit_diagnostic_legend_rows(fit):
         handles.append(plt.Line2D([], [], color="none"))
         labels.append(row)
@@ -3476,6 +3507,209 @@ def plot_fit_diagnostic(
     # the page. The analyte moves into the legend block rather than being lost.
     ax.set_title(
         f"{fit.dataset_id} / {fit.biomarker}_{fit.specimen} / {fit.model}",
+        fontsize=11,
+    )
+    ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
+
+
+def plot_analyte_observations(
+    dataset: Dict[str, Any],
+    analyte: str,
+    *,
+    figsize: tuple[float, float] = (9, 6),
+    max_subject_lines: int = FIT_DIAGNOSTIC_MAX_SUBJECT_LINES,
+) -> Figure:
+    """
+    Plot an analyte's measurements alone, with no fitted curve.
+
+    The companion to ``plot_fit_diagnostic`` for analytes that have no fit. Of
+    the 216 analytes in the repository, 88 have none, and they are not a
+    negligible tail: they include the cross-sectional studies, where one reading
+    per participant means no trajectory exists to fit at any sample size, and
+    the analytes that were never detected at all.
+
+    Reads the dataset directly rather than going through ``prepare_observations``.
+    The fitter refuses 28 of those 88 outright -- ``too_few_subjects``,
+    ``no_positive_measurements``, ``non_pathogen_biomarker`` -- so a page built
+    on its pipeline would leave blank exactly the analytes this function exists
+    to cover. The cost is that the reading-level exclusions the fitter applies
+    are not applied here: this shows what the study measured, not what a fit
+    would have used.
+
+    Layout, axes, markers and censoring line match ``plot_fit_diagnostic``, so
+    the two read as one family on a dataset page that carries both.
+
+    Args:
+        dataset: Dataset dictionary from ``load_dataset``.
+        analyte: Which analyte to draw.
+        figsize: Figure size in inches.
+        max_subject_lines: Join each participant's own points only when the
+            analyte has at most this many participants.
+
+    Returns:
+        The figure. It is closed in the pyplot state so notebooks do not display
+        it twice, matching the convention in ``plot_fit_diagnostic``.
+
+    Raises:
+        ValueError: If ``dataset`` does not contain ``analyte``, or if the
+            analyte has nothing plottable.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_analyte_observations(data, 'stool')
+        >>> type(fig).__name__
+        'Figure'
+    """
+    analytes = dataset.get("analytes") or {}
+    if analyte not in analytes:
+        raise ValueError(
+            f"Dataset {dataset.get('dataset_id', '<unknown>')!r} does not "
+            f"contain analyte {analyte!r}. Available analytes are "
+            f"{sorted(analytes)}."
+        )
+    analyte_spec = analytes[analyte]
+    value_type = "ct" if _is_ct_unit(analyte_spec.get("unit")) else "concentration"
+
+    subjects: list[int] = []
+    times: list[float] = []
+    responses: list[float] = []
+    censored: list[bool] = []
+    n_qualitative = 0
+    for index, participant in enumerate(dataset.get("participants") or []):
+        for measurement in participant.get("measurements") or []:
+            if measurement.get("analyte", analyte) != analyte:
+                continue
+            time = measurement.get("time")
+            if not isinstance(time, (int, float)) or isinstance(time, bool):
+                continue
+            value = measurement.get("value")
+            if isinstance(value, (int, float)) and not isinstance(value, bool):
+                if value <= 0:
+                    continue
+                subjects.append(index)
+                times.append(float(time))
+                responses.append(_to_response(float(value), value_type))
+                censored.append(False)
+            elif value == "negative":
+                subjects.append(index)
+                times.append(float(time))
+                responses.append(float("nan"))
+                censored.append(True)
+            else:
+                # "positive" and "inconclusive" carry no value to place on the y
+                # axis. Counted into the legend rather than dropped in silence.
+                n_qualitative += 1
+
+    if not times:
+        raise ValueError(
+            f"Analyte {analyte!r} of dataset "
+            f"{dataset.get('dataset_id', '<unknown>')!r} has no measurement with "
+            "both a numeric time and a usable value, so there is nothing to plot."
+        )
+
+    subject_index = np.asarray(subjects)
+    time_values = np.asarray(times, dtype=float)
+    response_values = np.asarray(responses, dtype=float)
+    is_censored = np.asarray(censored, dtype=bool)
+    detected = response_values[~is_censored]
+
+    if detected.size:
+        limit = _resolve_censoring_limit(analyte_spec, detected, value_type)
+    else:
+        # Nothing was ever detected, so there is no smallest positive for the
+        # shared fallback to sit under. A declared limit is all there is; with
+        # neither, the censored readings have no anchor and no line is drawn.
+        declared = _declared_limit(analyte_spec)
+        limit = _to_response(declared, value_type) if declared is not None else None
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+    participants = np.unique(subject_index)
+    if participants.size <= max_subject_lines and limit is not None:
+        for subject in participants:
+            mine = subject_index == subject
+            # Censored readings are joined at the limit, so a participant's line
+            # does not jump over the stretch where nothing was detected.
+            joined = np.where(is_censored[mine], limit, response_values[mine])
+            order = np.argsort(time_values[mine])
+            ax.plot(
+                time_values[mine][order],
+                joined[order],
+                color="tab:blue",
+                lw=0.8,
+                alpha=0.25,
+                zorder=1,
+            )
+
+    ax.scatter(
+        time_values[~is_censored],
+        response_values[~is_censored],
+        s=22,
+        color="tab:blue",
+        alpha=0.75,
+        zorder=3,
+        label="Observed",
+    )
+    if is_censored.any() and limit is not None:
+        ax.scatter(
+            time_values[is_censored],
+            np.full(int(is_censored.sum()), limit),
+            s=30,
+            marker="v",
+            facecolors="none",
+            edgecolors="tab:gray",
+            linewidths=0.9,
+            zorder=3,
+            label="Censored",
+        )
+    if limit is not None:
+        limit_label = (
+            f"Censoring limit (Ct {CT_REFERENCE - limit:.2f})"
+            if value_type == "ct"
+            else f"Censoring limit ({limit:.2f})"
+        )
+        ax.axhline(limit, ls=":", color="gray", lw=1.2, label=limit_label)
+
+    handles, labels = ax.get_legend_handles_labels()
+    rows = [
+        f"analyte = {analyte}",
+        f"participants = {participants.size}",
+        f"measurements = {time_values.size + n_qualitative}",
+        f"censored = {100.0 * is_censored.mean():.0f}%",
+    ]
+    if n_qualitative:
+        rows.append(f"not plottable = {n_qualitative}")
+    rows.append("no fit -- observations only")
+    for row in rows:
+        handles.append(plt.Line2D([], [], color="none"))
+        labels.append(row)
+    ax.legend(handles, labels, fontsize=8, loc="upper right", framealpha=0.9)
+
+    ax.set_xlabel(f"Days after {analyte_spec.get('reference_event')}")
+    if value_type == "ct":
+        ax.set_ylabel("Ct (cycle threshold)")
+        ax.yaxis.set_major_formatter(
+            FuncFormatter(lambda value, _: f"{CT_REFERENCE - value:.0f}")
+        )
+    else:
+        unit = analyte_spec.get("unit") or ""
+        ax.set_ylabel(
+            f"log10 concentration ({unit})" if unit else "log10 concentration"
+        )
+    specimen = analyte_spec.get("specimen")
+    if isinstance(specimen, list):
+        specimen = "+".join(specimen)
+    # Same three-part line as a fit page, with the model slot spelled
+    # "observations": the two kinds sit together on a dataset page and a reader
+    # should not have to work out which is which.
+    ax.set_title(
+        f"{dataset.get('dataset_id', 'unknown')} / "
+        f"{analyte_spec.get('biomarker')}_{specimen} / observations",
         fontsize=11,
     )
     ax.grid(alpha=0.3)

@@ -19,6 +19,7 @@ from .viz import (
     plot_shedding_heatmap,
     plot_mean_trajectory,
     plot_catalog_fits,
+    plot_analyte_observations,
     plot_fit_diagnostic,
     # Implemented since before 0.1.3 and documented on the project website, but
     # never exported until now, so every documented call raised AttributeError.
@@ -83,6 +84,7 @@ __all__ = [
     "plot_shedding_heatmap",
     "plot_mean_trajectory",
     "plot_catalog_fits",
+    "plot_analyte_observations",
     "plot_fit_diagnostic",
     "plot_clearance_curve",
     "plot_detection_probability",

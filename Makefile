@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range
+.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range catalog_gate2 figures
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -43,6 +43,21 @@ catalog :
 # catalog. Fits nothing; run it after `make catalog`.
 parameters :
 	python scripts/export_parameter_table.py
+
+# The concentration catalog under a 2 log10 over-extrapolation gate, which is
+# what the website's dataset figures are drawn from. Note that the Ct build's
+# gate of 2 is 2 *cycles*, roughly 0.57 log10, so the two are not a matched
+# pair -- see catalog_ct_gate2.
+catalog_gate2 :
+	python scripts/build_shedding_catalog.py --max-peak-above-observed 2 --output shedding_catalog_gate2.yaml
+
+# One figure per analyte for the website's dataset pages, plus an index naming
+# each analyte's default figure and alternatives. Fits nothing; run it after
+# both gate-2 catalogs exist. Unlike the review PDFs these ARE committed: the
+# website copies them out of the repository archive it already downloads for
+# the dataset YAML, and has no Python to regenerate them with.
+figures :
+	python scripts/build_dataset_figures.py
 
 # Render every catalog fit against the data behind it, one page each, for
 # review. The PDF is regenerable and deliberately untracked.

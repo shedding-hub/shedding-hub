@@ -80,6 +80,12 @@ def main() -> int:
             sh.calc_shedding_peak(data, output="summary")
         ),
         "plot_fit_diagnostic": lambda: sh.plot_fit_diagnostic(fit, data),
+        # A fitted analyte, drawn without its fit: the reference page is about
+        # the layout, and using an unfittable analyte here would need a second
+        # dataset loaded for one figure.
+        "plot_analyte_observations": lambda: sh.plot_analyte_observations(
+            data, "stool"
+        ),
         # Scoped to one biomarker and specimen: the whole catalog renders a
         # panel per fit, which came out at 1.4 MB against <=129 KB for every
         # other figure, and grows with every dataset added.

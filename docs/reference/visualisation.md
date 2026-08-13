@@ -24,6 +24,10 @@
 
 ![plot_fit_diagnostic](../images/plot_fit_diagnostic.png)
 
+::: shedding_hub.plot_analyte_observations
+
+![plot_analyte_observations](../images/plot_analyte_observations.png)
+
 ::: shedding_hub.plot_clearance_curve
 
 ![plot_clearance_curve](../images/plot_clearance_curve.png)
