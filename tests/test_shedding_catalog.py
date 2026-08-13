@@ -159,6 +159,35 @@ def test_catalog_fits_ct_analytes_when_asked(ct_dataset):
     assert catalog.fits[0].value_type == "ct"
 
 
+def test_ct_only_catalog_excludes_concentration(ct_dataset, make_synthetic_dataset):
+    """
+    ``value_types`` is the admitted set, not a list of additions.
+
+    A one-sided gate -- one that only decided whether Ct was allowed in -- let
+    ``("ct",)`` return a catalog of 126 concentration fits with 48 Ct fits
+    mixed into it, which is exactly the file the value_type split exists to
+    prevent.
+    """
+    concentration = make_synthetic_dataset(
+        "gamma",
+        np.array([np.log(0.5), np.log(2.0), np.log(12.0)]),
+        np.diag([0.04, 0.04, 0.04]),
+        n_subjects=12,
+        seed=5,
+    )
+    catalog = fit_shedding_models(
+        [concentration, ct_dataset], models=("gamma",), value_types=("ct",)
+    )
+
+    assert {fit.value_type for fit in catalog.fits} == {"ct"}
+    assert set(catalog.table["dataset_id"]) == {"ct_study"}
+    skipped = catalog.skipped
+    assert (
+        skipped.loc[skipped["dataset_id"] == "synthetic", "reason"]
+        == "concentration_units"
+    ).all()
+
+
 def test_mixed_catalog_table_distinguishes_ct_rows(ct_dataset, make_synthetic_dataset):
     """
     A mixed table must say which scale each row's peak_log10 is on.

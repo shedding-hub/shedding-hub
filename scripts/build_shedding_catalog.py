@@ -52,6 +52,19 @@ def main() -> int:
         ),
     )
     parser.add_argument(
+        "--value-types",
+        nargs="+",
+        default=["concentration"],
+        choices=["concentration", "ct"],
+        help=(
+            "Measurement scales allowed into the catalog. Defaults to "
+            "concentration alone, which is what the shipped catalog holds. "
+            "Cycle-threshold fits are valid individually but their heights are "
+            "cycles rather than log10 concentrations, so build them to a "
+            "separate --output for review instead of into the shipped file."
+        ),
+    )
+    parser.add_argument(
         "--max-peak-above-observed",
         type=float,
         default=None,
@@ -63,6 +76,19 @@ def main() -> int:
         ),
     )
     args = parser.parse_args()
+
+    # The shipped catalog is concentration-only by contract: ensembles average
+    # its heights, and cycles below CT_REFERENCE are not log10 concentrations.
+    # Writing a ct build over it would put incommensurable rows in the file the
+    # package loads by default, so it is refused rather than warned about.
+    if (
+        "ct" in args.value_types
+        and pathlib.Path(args.output).resolve() == CATALOG_PATH.resolve()
+    ):
+        parser.error(
+            "refusing to write cycle-threshold fits into the shipped catalog; "
+            "pass --output shedding_catalog_ct.yaml (or another path) instead"
+        )
 
     data_dir = pathlib.Path(args.data)
     dataset_ids = sorted(
@@ -84,6 +110,7 @@ def main() -> int:
             models=tuple(args.models),
             min_time=args.min_time,
             max_peak_above_observed=args.max_peak_above_observed,
+            value_types=tuple(args.value_types),
         )
 
     output = pathlib.Path(args.output)

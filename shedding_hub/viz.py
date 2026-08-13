@@ -3089,7 +3089,13 @@ def _fit_diagnostic_legend_rows(fit) -> list[str]:
     without it — 6.8 log10 at peak means one thing from 52 subjects and another
     from 3, and a fit that did not converge disqualifies the rest of the block.
     """
-    rows = [
+    # The analyte leads the block because the title no longer carries it, and
+    # biomarker and specimen alone do not identify a page: 60 of the 126 shipped
+    # concentration fits share a dataset/biomarker/specimen/model with at least
+    # one sibling. natarajan2022gastrointestinal alone has 14 stool analytes
+    # separating gene targets, gRNA from sgRNA, and ddPCR from RT-qPCR.
+    rows = [f"analyte = {fit.analyte}"]
+    rows += [
         f"{name} = {value:.4g}"
         for name, value in zip(fit.param_names, fit.median_params)
     ]
@@ -3465,7 +3471,13 @@ def plot_fit_diagnostic(
         ax.set_ylabel(
             f"log10 concentration ({unit})" if unit else "log10 concentration"
         )
-    ax.set_title(f"{fit.dataset_id} / {fit.analyte} / {fit.model}", fontsize=11)
+    # Unit and reference event are deliberately absent: they are already the y
+    # and x axis labels, and repeating them here crowds the line that identifies
+    # the page. The analyte moves into the legend block rather than being lost.
+    ax.set_title(
+        f"{fit.dataset_id} / {fit.biomarker}_{fit.specimen} / {fit.model}",
+        fontsize=11,
+    )
     ax.grid(alpha=0.3)
 
     plt.tight_layout()

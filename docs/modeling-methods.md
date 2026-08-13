@@ -163,10 +163,16 @@ cycles below a fixed reference of 40, which rises with viral load exactly as a
 log10 concentration does.
 
 Because `a0` and `b0` both come back multiplied by the unknown standard-curve
-slope, that slope cancels in `b0/a0`. **Peak time, onset and rise duration
-therefore compare directly with concentration fits, with no assumption about
-PCR efficiency.** Decay rate, half-life and peak height do not:
+slope, that slope cancels in `b0/a0`. **Peak time, onset and rise duration are
+therefore invariant as algebra, with no assumption about PCR efficiency** —
+where the two fits converge to corresponding solutions they agree to about
+0.01 days. Decay rate, half-life and peak height are not invariant:
 `SheddingFit.comparable_with` says which is which for any pair of fits.
+
+That invariance is a statement about the parameters, not a promise about the
+estimates. Measured on the studies that report both scales, the two fitted
+population peak times are **not interchangeable**; see *How far invariance
+actually gets you* below before comparing one against the other.
 
 Onset is invariant for a different reason from the other two, and it is worth
 being exact about which. Rise duration is `b0/a0` and peak time is that ratio,
@@ -197,12 +203,46 @@ efficiency back into the fitting path, and this package fits Ct directly
 precisely so that no efficiency is ever assumed.
 
 The consequence is that **subject retention is not scale-invariant even though
-the parameter mathematics is.** The same cohort measured both ways can keep
-slightly different subjects, so a population peak time can differ across scales
-for a reason that has nothing to do with the invariance argument above. Expect
-agreement to within sampling noise, not to the last digit — on
-`kissler2021viral`, which reports both scales for the same subjects, the two
-fits land 0.53 days apart.
+the parameter mathematics is.** It is not a marginal effect: on
+`cdc2024nhphrn`, 40% of the subjects retained on the Ct scale sit within twice
+the minimum half-life, against 2.8% on the concentration scale, and 20 subjects
+are excluded as degenerate on Ct alone against 4 on concentration alone.
+
+### How far invariance actually gets you
+
+Three studies report both a Ct and a concentration analyte on the same specimen
+and subjects. `teunis2015shedding` supports only the exponential model, whose
+`peak_day` is pinned to 0 by construction, so it tests nothing; the evidence is
+`kissler2021viral` and `cdc2024nhphrn`. Comparing subjects retained as
+non-degenerate on *both* scales, so that retention differences are excluded:
+
+| study | model | n | median \|Δ peak day\| | IQR | max |
+|---|---|---|---|---|---|
+| `kissler2021viral` | gamma | 33 | 0.46 d | 0.07–1.66 | 105.9 |
+| `kissler2021viral` | gamma_shifted | 35 | 0.57 d | 0.24–0.86 | 4.9 |
+| `cdc2024nhphrn` | gamma | 51 | 0.19 d | 0.05–0.60 | 4.0 |
+| `cdc2024nhphrn` | gamma_shifted | 48 | 1.03 d | 0.45–1.50 | 2.7 |
+
+The algebra is not what fails. `a0_ct/a0_conc` should equal the standard-curve
+slope, and `kissler2021viral` reports one of −3.61: among the nine subjects
+whose ratio lands within 2% of it, the median peak-time difference is
+**0.013 days**. Between 2% and 10% it is 0.38 days, and beyond 10% it is
+1.97 days — a rank correlation of 0.83 between ratio error and peak
+disagreement. What diverges is the *optimiser*, on subjects too weakly
+identified to pin down: `kissler2021viral` is 91% censored.
+
+Two cautions on top of that. Under `gamma` the disagreement is directional —
+Ct peaks earlier than concentration in both studies — which convergence noise
+alone does not explain, and the over-extrapolation gate above is a plausible
+but unconfirmed cause. And in both studies the concentration column is derived
+from Ct through a standard curve rather than measured independently, so these
+numbers test the transform's algebra, not two independent assays.
+
+**Practical guidance.** Treat a Ct fit's peak time as comparable with a
+concentration fit's in kind, not in value. It is sound for ranking and for
+order-of-magnitude reasoning, and for well-identified subjects it is accurate;
+it is not a drop-in substitute at the study level, and a difference of half a
+day between scales is ordinary rather than a sign of error.
 
 ## 5. Simulation
 

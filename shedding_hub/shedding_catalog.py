@@ -92,7 +92,7 @@ def fit_to_row(fit: SheddingFit) -> dict:
         not comparable. Only ``peak_day`` is (see
         ``SheddingFit.comparable_with``). The shipped catalog is
         concentration-only; a ``ct`` row appears only in a catalog built with
-        ``value_types`` widened.
+        ``"ct"`` among its ``value_types``.
 
     ``median_first_observed_day``
         Median across retained subjects of each subject's own first sampling
@@ -324,12 +324,15 @@ def fit_shedding_models(
             decide when a subject's implied peak is extrapolation rather than
             estimate. ``None`` keeps the fitter's default. Lower it to rebuild
             the catalog under a stricter reading and compare.
-        value_types: Which measurement scales may enter the catalog. Defaults
-            to concentration only. Cycle-threshold fits are individually valid
-            -- ``fit_shedding_model`` produces them -- but their heights are
+        value_types: The complete set of measurement scales admitted, not a
+            list of additions to a default -- ``("ct",)`` builds a Ct-only
+            catalog and skips every concentration analyte as
+            ``concentration_units``. Defaults to concentration only.
+            Cycle-threshold fits are individually valid --
+            ``fit_shedding_model`` produces them -- but their heights are
             cycles below ``CT_REFERENCE`` rather than log10 concentrations, so
             an ensemble that averaged the two would be averaging incommensurable
-            quantities. Opt in with ``("concentration", "ct")`` once that is
+            quantities. Admit both with ``("concentration", "ct")`` once that is
             resolved.
 
     Returns:
@@ -358,20 +361,39 @@ def fit_shedding_models(
             # accepts Ct analytes. Keeping the decision in the catalog builder is
             # what lets a caller fit one directly while the published catalog
             # stays concentration-only.
-            if _is_ct_unit(analyte_spec.get("unit")) and "ct" not in value_types:
+            # ``value_types`` is the whole admitted set, not a list of additions:
+            # ("ct",) builds a Ct-only catalog rather than adding Ct to the
+            # concentration default. Both directions are gated here so the two
+            # scales never silently share a file, whose heights would then mix
+            # cycles with log10 concentrations.
+            analyte_value_type = (
+                "ct" if _is_ct_unit(analyte_spec.get("unit")) else "concentration"
+            )
+            if analyte_value_type not in value_types:
                 for model in models:
                     skipped.append(
                         {
                             "dataset_id": dataset_id,
                             "analyte": analyte,
                             "model": model,
-                            "reason": "ct_units",
+                            "reason": (
+                                "ct_units"
+                                if analyte_value_type == "ct"
+                                else "concentration_units"
+                            ),
                             "message": (
                                 f"Analyte {analyte!r} is reported in "
                                 f"{analyte_spec.get('unit')!r}. Cycle-threshold "
                                 "fits are supported but excluded from the "
                                 "catalog, whose heights are log10 "
                                 "concentrations."
+                                if analyte_value_type == "ct"
+                                else (
+                                    f"Analyte {analyte!r} is reported in "
+                                    f"{analyte_spec.get('unit')!r}, a "
+                                    "concentration, and this build admits only "
+                                    f"{sorted(value_types)}."
+                                )
                             ),
                         }
                     )

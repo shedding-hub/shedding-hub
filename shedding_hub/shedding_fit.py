@@ -1021,6 +1021,14 @@ class SheddingFit:
         method cannot detect that — the datasets do not record assay identity
         — so it returns everything for any pair sharing a ``value_type``.
 
+        Comparability is a statement about the parameters, not about the
+        estimates. Invariance is exact where both fits reach corresponding
+        optima, but on heavily censored data the optimisers need not, and two
+        population peak times can then differ by a median of half a day. See
+        *How far invariance actually gets you* in ``docs/modeling-methods.md``
+        for the measured spread before treating one as a substitute for the
+        other.
+
         Examples:
             >>> import shedding_hub as sh
             >>> data = sh.load_dataset('woelfel2020virological', local='./data')
