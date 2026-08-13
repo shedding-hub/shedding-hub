@@ -57,6 +57,17 @@ jobs:
       - name: Open a pull request if anything changed
         uses: peter-evans/create-pull-request@v7
         with:
+          # GITHUB_TOKEN cannot open the pull request: this repository has
+          # "Allow GitHub Actions to create and approve pull requests" turned
+          # off, and a workflow-level permissions block cannot override that --
+          # the first run pushed its branch and then failed on the API call.
+          # The same personal access token the dispatch workflows already use
+          # opens it as a person instead.
+          #
+          # It also means the pull request runs CI. A pull request opened with
+          # GITHUB_TOKEN deliberately does not trigger workflows, so the figures
+          # would otherwise arrive unchecked.
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           add-paths: figures
           branch: figures/refresh
           # Reused rather than accumulating one branch per run: successive
