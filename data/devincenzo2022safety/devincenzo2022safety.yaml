@@ -1,0 +1,105 @@
+title: Safety and Antiviral Effects of Nebulized PC786 in a Respiratory Syncytial
+  Virus Challenge Study
+doi: 10.1093/infdis/jiaa716
+description: Randomized, single-blind, placebo-controlled RSV-A (Memphis 37b) human
+  challenge study in healthy adult volunteers (18–55 years). Participants were inoculated
+  intranasally on study day 0 and received nebulized PC786 (5 mg) or placebo twice
+  daily for 5 days starting ~12 hours after RSV detection or on day 6. RSV viral load
+  was monitored in nasal wash samples by Simplexa RT-qPCR; this extraction includes
+  individual-level measurements digitized to CSV (PatientID, day, value, treatment).
+analytes:
+  nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents:
+    description: RSV RNA viral load in nasal wash samples measured using a Simplexa
+      reverse-transcription quantitative PCR (RT-qPCR) assay; reported in plaque-forming
+      unit equivalents (PFUe) per mL as used in the manuscript for RSV RNA quantification/cutoffs
+      (e.g., >0 log10 PFUe/mL; >=1 log10 PFUe/mL). CSV provides numeric viral load
+      values over time (days) after inoculation/treatment period (exact reference
+      event for CSV not specified).
+    specimen: nasal_lavage_fluid
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+participants:
+- patient_id: '1002'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 7
+    value: 346736.8505
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 10
+    value: 3467.368505
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 12
+    value: 1071.519305
+- patient_id: '1003'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 7
+    value: 933254.3008
+- patient_id: '1004'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 10
+    value: 20.41737945
+- patient_id: '1010'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 9
+    value: 2754.228703
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 9
+    value: 13.48962883
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 11
+    value: 102.3292992
+- patient_id: '1018'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 5
+    value: 1288249.552
+- patient_id: '1027'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 9
+    value: 104.7128548
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 10
+    value: 616.5950019
+- patient_id: '1034'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 8
+    value: 331.1311215
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 9
+    value: 1995.262315
+- patient_id: '1035'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 8
+    value: 1513.561248
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 28
+    value: 34.67368505
+- patient_id: '1036'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 7
+    value: 138.0384265
+- patient_id: '1044'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 9
+    value: 28.18382931
+- patient_id: '1045'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 9
+    value: 104.7128548
+- patient_id: '1046'
+  measurements:
+  - analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
+    time: 7
+    value: 138.0384265

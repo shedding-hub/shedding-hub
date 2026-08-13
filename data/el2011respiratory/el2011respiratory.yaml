@@ -1,0 +1,118 @@
+title: Respiratory syncytial virus load, viral dynamics, and disease severity in previously
+  healthy naturally infected children
+doi: 10.1093/infdis/jir494
+description: Observational study of previously healthy children <2 years old with
+  naturally acquired RSV infection; RSV load in respiratory secretions was measured
+  by fresh quantitative culture over serial hospital days to evaluate viral dynamics
+  and associations with disease severity outcomes (eg, length of hospitalization,
+  ICU requirement, respiratory failure).
+analytes:
+  respiratory_secretions_RSV_viral_load:
+    description: RSV viral load in respiratory secretions measured by fresh quantitative
+      culture (reported as quantitative values; negatives indicate not detected by
+      culture).
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: enrollment
+participants:
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 6053505.208437406
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 393691.20184066065
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 3
+    value: 668743.4102923456
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 4
+    value: 71845.79984923084
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 5887029.251900306
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 1158.8142866185738
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 3
+    value: 349.3434421770631
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 5
+    value: negative
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 1984165.3203316035
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 372335.3374823654
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 4
+    value: 18322.122334592088
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 8
+    value: negative
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 550154.1952580782
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 201603.59393433473
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 5
+    value: 21659.086632883427
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 452594.57349680597
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 6053505.208437406
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 3
+    value: 812895.2803852505
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 7
+    value: 6529.48446193367
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 161291.86244016458
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 11727.465182461274
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 4
+    value: 545.7882999241875
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 8
+    value: negative
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 80323.80823811908
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 44721.77488094364
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 3
+    value: 2140.1776628448797
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 6
+    value: negative
+- measurements:
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 1
+    value: 3843.9266027232006
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 2
+    value: 577.0928249803891
+  - analyte: respiratory_secretions_RSV_viral_load
+    time: 3
+    value: 5.7939638145552665

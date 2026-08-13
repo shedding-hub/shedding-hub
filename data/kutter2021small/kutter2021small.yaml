@@ -1,0 +1,335 @@
+title: Small quantities of respiratory syncytial virus RNA only in large droplets
+  around infants hospitalized with acute respiratory infections
+doi: 10.1186/s13756-021-00968-x
+description: Hospital-based observational study in Delft, The Netherlands (Nov 2017–Apr
+  2020) of 6 hospitalized infants (0–2 years) with laboratory-confirmed RSV-B infection
+  (two with rhinovirus co-infection). Longitudinal RSV (and RV where applicable) RNA
+  detection was performed by qRT-PCR (Ct values; Ct>40 negative) on nasopharyngeal
+  aspirates from infants and nose/throat swabs from parents; air sampling around infants
+  used a six-stage Andersen cascade impactor with subsequent qRT-PCR, and infectious
+  RSV was assessed by culture (TCID50) on HEp-2 cells (not extracted here because
+  no individual-level TCID50 values were provided in the supplied CSV/table extraction).
+  Times in the provided figure-derived CSV are treated as days relative to symptom
+  onset (reference event).
+analytes:
+  rsv_nasopharyngeal_aspirate_ct:
+    description: RSV-B RNA detection in infant nasopharyngeal aspirates by qRT-PCR
+      (MagNA Pure LC extraction; TaqMan Fast Virus 1-Step Master Mix). Ct>40 considered
+      negative.
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  rsv_oropharyngeal_swab_nasopharyngeal_swab_ct:
+    description: RSV-B RNA detection in parent nose/throat swabs (oropharyngeal and/or
+      nasopharyngeal swab per figure CSV labeling) by qRT-PCR; Ct>40 considered negative.
+    specimen:
+    - oropharyngeal_swab
+    - nasopharyngeal_swab
+    biomarker: RSV
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  rv_nasopharyngeal_aspirate_ct:
+    description: Rhinovirus (RV) RNA detection in infant nasopharyngeal aspirates
+      by qRT-PCR (performed for RV co-infected infants); Ct>40 considered negative.
+    specimen: nasopharyngeal_aspirate
+    biomarker: rhinovirus
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- patient_id: infant_1
+  attributes:
+    sex: male
+    age: 0.16666666666666666
+    age_group: infant
+    subtype: B
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 20.47619047619047
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 2
+    value: 22.857142857142854
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 3
+    value: 33.33333333333333
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 5
+    value: 22.619047619047613
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 6
+    value: 27.619047619047613
+- patient_id: mother_1
+  attributes:
+    age_group: adult
+    participant_type: mother
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: 21.190476190476183
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 6
+    value: 33.57142857142856
+- patient_id: father_1
+  attributes:
+    age_group: adult
+    participant_type: father
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 5
+    value: 28.095238095238088
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 6
+    value: 31.19047619047619
+- patient_id: infant_2
+  attributes:
+    sex: female
+    age: 0.08333333333333333
+    age_group: infant
+    subtype: B
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 22.85714285714286
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 2
+    value: 31.904761904761905
+- patient_id: mother_2
+  attributes:
+    age_group: adult
+    participant_type: mother
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 5
+    value: 35.47619047619048
+- patient_id: father_2
+  attributes:
+    age_group: adult
+    participant_type: father
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 5
+    value: negative
+- patient_id: infant_3
+  attributes:
+    sex: male
+    age: 0.0273972602739726
+    age_group: neonate
+    subtype: B
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 19.644970414201183
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 2
+    value: 12.307692307692307
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 3
+    value: 20.59171597633136
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 4
+    value: 17.988165680473386
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 5
+    value: 23.668639053254438
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 6
+    value: 22.248520710059168
+- patient_id: mother_3
+  attributes:
+    age_group: adult
+    participant_type: mother
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+- patient_id: father_3
+  attributes:
+    age_group: adult
+    participant_type: father
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+- patient_id: infant_4
+  attributes:
+    sex: male
+    age: 0.16666666666666666
+    age_group: infant
+    subtype: B
+    participant_type: patient
+    hospitalized: true
+    coinfection: rhinovirus
+  measurements:
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 25.23809523809524
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 2
+    value: 20.95238095238096
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 3
+    value: 23.095238095238102
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 4
+    value: 26.42857142857143
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 5
+    value: 27.142857142857153
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 6
+    value: 28.095238095238102
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 26.42857142857143
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 2
+    value: 26.42857142857143
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 3
+    value: 26.904761904761912
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 4
+    value: 28.80952380952381
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 5
+    value: negative
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 6
+    value: 30.238095238095255
+- patient_id: mother_4
+  attributes:
+    age_group: adult
+    participant_type: mother
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+- patient_id: father_4
+  attributes:
+    age_group: adult
+    participant_type: father
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: 37.14285714285715
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 6
+    value: negative
+- patient_id: infant_5
+  attributes:
+    sex: male
+    age: 0.5833333333333334
+    age_group: infant
+    subtype: B
+    participant_type: patient
+    hospitalized: true
+    coinfection: rhinovirus
+  measurements:
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 21.666666666666686
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 2
+    value: 17.14285714285714
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 3
+    value: 22.61904761904762
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 4
+    value: 26.428571428571416
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 29.047619047619037
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 2
+    value: negative
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 3
+    value: negative
+  - analyte: rv_nasopharyngeal_aspirate_ct
+    time: 4
+    value: 27.85714285714286
+- patient_id: mother_5
+  attributes:
+    age_group: adult
+    participant_type: mother
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: negative
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 4
+    value: negative
+- patient_id: father_5
+  attributes:
+    age_group: adult
+    participant_type: father
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 2
+    value: 22.14285714285714
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 4
+    value: 20
+- patient_id: infant_6
+  attributes:
+    sex: female
+    age: 0.25
+    age_group: infant
+    subtype: B
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 0
+    value: 23.571428571428584
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 3
+    value: 26.90476190476187
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 4
+    value: 24.76190476190476
+  - analyte: rsv_nasopharyngeal_aspirate_ct
+    time: 6
+    value: 34.99999999999997
+- patient_id: mother_6
+  attributes:
+    age_group: adult
+    participant_type: mother
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 4
+    value: negative
+- patient_id: father_6
+  attributes:
+    age_group: adult
+    participant_type: father
+  measurements:
+  - analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
+    time: 5
+    value: negative

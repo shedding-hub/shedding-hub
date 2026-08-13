@@ -2,7 +2,7 @@
 Choose which fitted estimate to simulate from.
 
 The catalog's six compatibility keys -- biomarker, specimen, reference event,
-unit, value type and model -- cut 126 fits into 82 groups, 71 of them a single
+unit, value type and model -- cut 144 fits into 98 groups, 87 of them a single
 study. So the user's problem is not combining many estimates but choosing among
 incommensurable ones: gc/mL and gc/dry gram are different quantities, symptom
 onset and enrollment are different clocks, a Ct fit's height and a
