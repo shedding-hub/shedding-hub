@@ -340,3 +340,37 @@ We use [pull requests](https://docs.github.com/en/pull-requests/collaborating-wi
 6. Push the dataset to your fork by running `git push origin my_cool_study`. This will send the data to GitHub, and the output of the command will include a line `Create a pull reuqest for 'my_cool_study' on GitHub by visiting: https://github.com/[your-username]/shedding-hub/pull/new/my_cool_study`. Click on the link and follow the next steps to create a new pull request.
 
 Congratulations, you've just created your first pull request to contribute a new dataset! We'll now [review the changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) you've made to make sure everything looks good. Once any questions have been resolved, we'll [merge your changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) into the repository. You've just contributed your first dataset to help make wastewater-based epidemiology a more quantitative public health monitoring tool–thank you!
+
+## 🔄 What happens after a dataset is merged
+
+Each dataset gets a page on [the website](https://shedding-hub.github.io/), and each of its analytes gets a figure there: the fitted shedding curve where a model could be fitted, and the measurements alone where none could. Those figures live in [`figures/`](https://github.com/shedding-hub/shedding-hub/tree/main/figures) in this repository, because the website has no Python to generate them with — it copies them out of the archive it already downloads for the dataset YAML.
+
+Merging a dataset therefore sets off two things at once, and **one step in the middle is manual**:
+
+```
+merge a dataset PR into main
+        │
+        ├── github-pages.yaml  (any push to main)
+        │      └── tells the website to rebuild, immediately
+        │          → the new dataset's page goes live, with no figure yet
+        │
+        └── refresh-figures.yaml  (pushes touching data/**)
+               └── ~45 min: rebuilds both gate-2 catalogs, re-renders every
+                   figure, and opens a "figures: refresh the dataset pages" PR
+                      │
+                      └── a maintainer merges it        ← the manual step
+                             │
+                             └── the website rebuilds again, now with figures
+```
+
+A page with no figure is expected in the meantime and is not a fault: the layout omits the figure when the dataset has no entry yet, so the page is complete apart from the illustration.
+
+**Reviewing the figures pull request.** Expect nearly all 282 figures to show as changed even when nothing meaningful has. Fits are not bit-reproducible across platforms — `tests/test_parameter_export.py` carries a `DRIFT_RTOL` for the same reason — so a Linux runner reproduces them only to within that tolerance, and the re-rendered images differ in ways no one can see. What is worth reading is **which figures were added or removed**: those are analytes that gained or lost a converged fit, which is a real change in what the catalog supports.
+
+**Regenerating by hand.** `refresh-figures.yaml` only watches `data/**`, so a change to the fitting or plotting code does not raise a pull request on its own. Trigger one deliberately with `gh workflow run "Refresh Dataset Figures"`, or rebuild locally:
+
+```bash
+make catalog_gate2      # concentration fits, 2 log10 extrapolation gate
+make catalog_ct_gate2   # cycle-threshold fits, 2 cycles — a stricter gate, see docs/modeling-methods.md
+make figures            # 282 figures plus figures/index.json
+```
