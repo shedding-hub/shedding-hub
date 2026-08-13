@@ -23,6 +23,11 @@ from .shedding_fit import (
 from .shedding_models import from_population_coords
 
 _COMPATIBILITY_KEYS = (
+    # Checked first: a Ct/concentration mismatch always co-occurs with a unit
+    # mismatch too (value_type is derived from unit -- see _is_ct_unit), so if
+    # "unit" were checked first its generic message would fire instead and the
+    # value_type-specific explanation below would never be reached.
+    "value_type",
     "model",
     "unit",
     "reference_event",
@@ -43,7 +48,7 @@ class SheddingEnsemble:
         >>> ensemble.model
         'gamma'
         >>> ensemble.components.shape
-        (2, 25)
+        (2, 26)
         >>> ensemble.median_params
         Traceback (most recent call last):
             ...
@@ -101,6 +106,19 @@ class SheddingEnsemble:
     @property
     def unit(self) -> str | None:
         return self.fits[0].unit
+
+    @property
+    def value_type(self) -> str:
+        """
+        The scale every component is on.
+
+        Taken from the first component rather than reconciled, because
+        ``value_type`` is a ``_COMPATIBILITY_KEYS`` entry: ``make_ensemble``
+        has already refused any ensemble whose components disagree. Exposed so
+        that a consumer handed either a fit or an ensemble -- ``simulate_shedding``
+        is the one that matters -- can ask one question of both.
+        """
+        return self.fits[0].value_type
 
     @property
     def biomarker(self) -> str | None:
@@ -323,8 +341,8 @@ def make_ensemble(
 
     Raises:
         ValueError: If the fits disagree on model, unit, reference event,
-            biomarker, or specimen, or if one study contributes more than one
-            analyte.
+            biomarker, specimen, or value type, or if one study contributes
+            more than one analyte.
 
     Examples:
         >>> import shedding_hub as sh
@@ -351,10 +369,21 @@ def make_ensemble(
     for key in _COMPATIBILITY_KEYS:
         values = {getattr(fit, key) for fit in fits}
         if len(values) > 1:
-            raise ValueError(
+            message = (
                 f"Ensemble components disagree on {key}: {sorted(map(str, values))}. "
                 "Estimates are only comparable within one of these."
             )
+            if key == "value_type":
+                message += (
+                    " A Ct fit's height is cycles below CT_REFERENCE, while a "
+                    "concentration fit's height is a log10 concentration -- "
+                    "those are not the same quantity, so averaging them would "
+                    "average incommensurable quantities. Peak time is still "
+                    "comparable across value types (see "
+                    "SheddingFit.comparable_with); it is the population "
+                    "summary built here that is not."
+                )
+            raise ValueError(message)
 
     dataset_ids = [fit.dataset_id for fit in fits]
     duplicated = {name for name in dataset_ids if dataset_ids.count(name) > 1}

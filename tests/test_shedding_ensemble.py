@@ -8,7 +8,7 @@ import pytest
 
 from shedding_hub.shedding_catalog import fit_shedding_models
 from shedding_hub.shedding_ensemble import SheddingEnsemble, make_ensemble
-from shedding_hub.shedding_fit import SheddingFit
+from shedding_hub.shedding_fit import SheddingFit, fit_shedding_model
 from shedding_hub.shedding_models import from_population_coords
 
 
@@ -362,3 +362,54 @@ def test_gamma_mixture_ensemble_samples_plausible_individuals():
     )
     peaks = traj["log10_value"].dropna()
     assert peaks.max() < 9.0
+
+
+# --- ensembles must not mix Ct and concentration fits ------------------------
+
+
+def test_ensemble_refuses_to_mix_value_types(ct_dataset, woelfel_dataset):
+    ct = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    conc = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    with pytest.raises(ValueError, match="value_type"):
+        make_ensemble([ct, conc])
+
+
+def test_value_type_mismatch_message_explains_the_scales_and_the_exception(
+    ct_dataset, woelfel_dataset
+):
+    """The generic disagreement message alone doesn't say why this key is special.
+
+    A reader needs to know both what makes a Ct height and a concentration
+    height incommensurable, and that peak time is the exception -- it does
+    transfer across value types (see SheddingFit.comparable_with) even though
+    the population summary does not.
+    """
+    ct = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    conc = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    with pytest.raises(ValueError, match="value_type") as excinfo:
+        make_ensemble([ct, conc])
+    message = str(excinfo.value)
+    assert "CT_REFERENCE" in message
+    assert "log10" in message
+    assert "peak" in message.lower()
+    assert "comparable_with" in message
+
+
+def test_ensemble_accepts_ct_fits_on_their_own(ct_dataset):
+    """A homogeneous Ct ensemble is allowed -- only mixing is refused.
+
+    Two components, not one, so this actually exercises the multi-fit path
+    (weights, components frame, ...) rather than just the single-fit
+    shortcut. The two fits come from the same dataset dict, so the second's
+    dataset_id is reassigned first: make_ensemble refuses two components that
+    share a dataset_id, since that would enter one study's subjects twice --
+    an unrelated guard that passing the very same fit twice would trip.
+    """
+    ct1 = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    ct2 = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    ct2.dataset_id = "ct_study_2"
+
+    ensemble = make_ensemble([ct1, ct2])
+
+    assert ensemble.fits == [ct1, ct2]
+    assert all(fit.value_type == "ct" for fit in ensemble.fits)

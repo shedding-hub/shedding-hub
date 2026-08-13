@@ -102,10 +102,24 @@ def simulate_shedding(
         ``result.attrs`` records ``time_origin``, ``incubation_applied``,
         ``model``, ``unit``, ``biomarker``, and ``specimen``.
 
+    Raises:
+        ValueError: If ``source`` was fitted to cycle thresholds. Simulation
+            produces concentrations, and a Ct fit's height is cycles below
+            ``CT_REFERENCE`` rather than a log10 concentration, so there is
+            nothing sound to exponentiate. See the note below.
+
     Note:
         The exponential model is defined for negative times but grows without
         bound going backwards, so simulating before the reference event
         extrapolates into implausible concentrations. Prefer ``times >= 0``.
+
+    Note:
+        **Cycle-threshold fits cannot be simulated.** Recovering a
+        concentration from a Ct needs that assay's standard curve, which the
+        studies do not report; this package deliberately fits Ct directly
+        rather than assume a PCR efficiency anywhere. Peak time still
+        transfers across scales (see ``SheddingFit.comparable_with``) — it is
+        the height, and therefore every simulated value, that does not.
 
     Examples:
         >>> import numpy as np
@@ -120,6 +134,26 @@ def simulate_shedding(
     """
     if n_individuals < 1:
         raise ValueError("n_individuals must be at least 1")
+
+    # Checked here, before anything is drawn, because this is the one place
+    # every source passes through: a SheddingFit carries value_type itself, and
+    # a SheddingEnsemble reports its components' (make_ensemble refuses to mix
+    # them). Without this the fitted height -- cycles below CT_REFERENCE -- is
+    # exponentiated like a log10 concentration, and a perfectly ordinary Ct fit
+    # peaking 13.5 cycles below the reference silently reports 3.2e13 in a
+    # column named "value".
+    if getattr(source, "value_type", "concentration") == "ct":
+        raise ValueError(
+            "This fit was estimated on cycle thresholds, and simulation "
+            "produces concentrations. A Ct fit's height is cycles below "
+            "CT_REFERENCE, not a log10 concentration, so 10 ** height is not a "
+            "concentration at all -- it would come back around 1e13. Turning "
+            "cycles into a concentration needs the assay's own standard curve, "
+            "which the studies do not report, so this package does not attempt "
+            "it. Fit a concentration analyte instead (several studies report "
+            "both); a Ct fit's peak time is still comparable with one -- see "
+            "SheddingFit.comparable_with."
+        )
 
     rng = np.random.default_rng(seed)
     params, sources = source.sample_params(rng, n_individuals, dispersion)

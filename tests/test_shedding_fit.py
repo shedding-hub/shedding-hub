@@ -8,10 +8,16 @@ import numpy as np
 import pytest
 
 from shedding_hub.shedding_fit import (
+    CT_REFERENCE,
     _MIN_HALF_LIFE_DAYS,
+    Observations,
     SheddingDataError,
+    _declared_limit,
     _degenerate_subjects,
     _fraction_observing_a_rise,
+    _record_dropped,
+    _resolve_censoring_limit,
+    _to_response,
     prepare_observations,
     require_estimable_population,
 )
@@ -143,6 +149,53 @@ def _shifted_truth_dataset(n_subjects=25, seed=0, t0=-2.5):
         },
         "participants": participants,
     }
+
+
+def test_to_response_maps_concentration_to_log10():
+    assert _to_response(1e6, "concentration") == 6.0
+
+
+def test_to_response_maps_ct_to_cycles_below_the_reference():
+    # Ct 31 is the repository median; 40 - 31 = 9 cycles below the reference.
+    assert _to_response(31.0, "ct") == 9.0
+
+
+def test_to_response_is_decreasing_in_ct():
+    # The sign flip is the whole point: less virus means a HIGHER Ct, so a
+    # higher Ct must map to a LOWER response. Drop the negation and every
+    # fitted curve inverts while still converging happily.
+    assert _to_response(20.0, "ct") > _to_response(35.0, "ct")
+
+
+def test_ct_reference_is_forty():
+    assert CT_REFERENCE == 40.0
+
+
+def test_censoring_limit_on_the_ct_scale():
+    # An assay running to Ct 41 detects one cycle PAST the reference, so the
+    # limit is negative. Nothing in the likelihood cares.
+    spec = {"limit_of_detection": 41, "limit_of_quantification": "unknown"}
+    assert _resolve_censoring_limit(spec, np.array([9.0, 5.0]), "ct") == -1.0
+
+
+def test_censoring_limit_on_the_ct_scale_for_a_stricter_assay():
+    spec = {"limit_of_detection": 37, "limit_of_quantification": "unknown"}
+    assert _resolve_censoring_limit(spec, np.array([9.0]), "ct") == 3.0
+
+
+def test_censoring_limit_for_concentration_is_unchanged():
+    spec = {"limit_of_quantification": 100, "limit_of_detection": "unknown"}
+    assert _resolve_censoring_limit(spec, np.array([6.0]), "concentration") == 2.0
+
+
+def test_censoring_limit_falls_back_below_the_smallest_observed_ct():
+    # No declared limit: fall back below the smallest response, which on the Ct
+    # scale means just past the HIGHEST observed Ct. The fallback arithmetic is
+    # identical in both spaces because `observed` is already transformed.
+    spec = {"limit_of_detection": "unknown", "limit_of_quantification": "unknown"}
+    with pytest.warns(UserWarning, match="cycles below"):
+        limit = _resolve_censoring_limit(spec, np.array([9.0, 2.0]), "ct")
+    assert limit < 2.0
 
 
 def test_gamma_shifted_refuses_an_analyte_with_no_pre_event_readings():
@@ -490,6 +543,18 @@ def test_censoring_limit_uses_lod_when_loq_is_unusable(simple_dataset):
     assert obs.censoring_limit == pytest.approx(1.0)
 
 
+def test_declared_limit_prefers_quantification_when_both_are_declared_and_differ():
+    # Regression: _resolve_censoring_limit and the ct_cutoff construction site
+    # each resolved this precedence independently, and once had it inverted
+    # relative to each other, so a fit's censoring_limit and ct_cutoff could
+    # describe different cutoffs of the same analyte. ct_cutoff is now read back
+    # off the resolved limit, leaving this the single reading of the
+    # precedence -- and every other fixture declares only one of the two limits,
+    # so only this test pins it.
+    spec = {"limit_of_quantification": 100, "limit_of_detection": 500}
+    assert _declared_limit(spec) == pytest.approx(100.0)
+
+
 def test_positive_below_loq_is_kept_as_observed(simple_dataset):
     # A positive reading below the declared LOQ of 100 (log10 2.0): 50 gc/mL is
     # still a real measurement, so it is kept as observed data rather than
@@ -522,31 +587,38 @@ def test_qualitative_and_unknown_time_are_dropped_with_warning(simple_dataset):
     assert obs.n_dropped_measurements == 2
 
 
-def test_ct_analyte_is_rejected():
-    dataset = {
-        "dataset_id": "ct_study",
-        "analytes": {
-            "swab": {
-                "specimen": "saliva",
-                "biomarker": "SARS-CoV-2",
-                "reference_event": "symptom onset",
-                "unit": "cycle threshold",
-                "limit_of_quantification": "unknown",
-                "limit_of_detection": "unknown",
-            }
-        },
-        "participants": [
-            {
-                "measurements": [
-                    {"analyte": "swab", "time": 1, "value": 20.0},
-                    {"analyte": "swab", "time": 2, "value": 25.0},
-                ]
-            }
-        ],
-    }
-    with pytest.raises(SheddingDataError) as excinfo:
-        prepare_observations(dataset, "swab", "exponential")
-    assert excinfo.value.reason == "ct_units"
+def test_prepare_observations_accepts_ct_analytes(ct_dataset):
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    assert obs.value_type == "ct"
+    assert obs.n_subjects == 4
+
+
+def test_ct_values_are_cycles_below_the_reference(ct_dataset):
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    # First subject, day 1, Ct 30.0 -> 40 - 30 = 10.0.
+    assert obs.values[0] == pytest.approx(10.0)
+
+
+def test_ct_response_peaks_where_ct_is_lowest(ct_dataset):
+    # The sign-flip guard at the level that matters. The fixture's lowest Ct is
+    # 25.0 at day 5; that must be the LARGEST response, not the smallest.
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    # Exclude the censored (NaN) day-30 reading: np.argmax treats NaN as the
+    # maximum, so leaving it in picks the censored point instead of the peak.
+    first = (obs.subject_index == 0) & ~obs.censored
+    assert obs.times[first][np.argmax(obs.values[first])] == 5
+
+
+def test_ct_censoring_limit_comes_from_the_declared_cutoff(ct_dataset):
+    obs = prepare_observations(ct_dataset, "swab", "gamma")
+    # Cutoff 40 == CT_REFERENCE, so the limit is exactly zero.
+    assert obs.censoring_limit == pytest.approx(0.0)
+
+
+def test_concentration_analytes_are_untouched(simple_dataset):
+    obs = prepare_observations(simple_dataset, "stool", "gamma")
+    assert obs.value_type == "concentration"
+    assert obs.values[0] == pytest.approx(6.0)
 
 
 def test_non_pathogen_biomarker_is_rejected():
@@ -707,7 +779,11 @@ def test_subject_index_is_contiguous_after_exclusions(simple_dataset):
     assert set(obs.subject_index.tolist()) == {0, 1}
 
 
-from shedding_hub.shedding_fit import SheddingFit, fit_shedding_model
+from shedding_hub.shedding_fit import (
+    VALUE_TYPE_INVARIANT_PARAMETERS,
+    SheddingFit,
+    fit_shedding_model,
+)
 
 
 def test_recovers_known_exponential_population(make_synthetic_dataset):
@@ -1600,6 +1676,96 @@ def test_to_dict_from_dict_round_trip():
     assert restored.subject_params is None
 
 
+def test_ct_fit_round_trips_its_value_type():
+    """A Ct fit's scale must survive serialization, or its height is silently
+    reinterpreted as a log10 concentration on the other side of the round trip.
+    """
+    fit = _minimal_fit([np.log(0.6), np.log(18.0)], np.diag([0.04, 0.04]))
+    fit.value_type = "ct"
+    fit.ct_reference = 40.0
+    fit.ct_cutoff = 3.0
+
+    restored = SheddingFit.from_dict(fit.to_dict())
+
+    assert restored.value_type == "ct"
+    assert restored.ct_reference == pytest.approx(40.0)
+    assert restored.ct_cutoff == pytest.approx(3.0)
+
+
+def test_ct_fit_round_trips_with_peak_cycles_in_its_coordinate_names():
+    """
+    The height coordinate is named for the scale it lives on, both ways.
+
+    A Ct fit's height is cycles below CT_REFERENCE, so it serializes as
+    ``peak_cycles``; ``from_dict`` must expect that same name for a Ct payload,
+    or the fit this package just wrote would fail to load back.
+    """
+    fit = _minimal_fit(np.array([np.log(0.5), np.log(3.0), 13.5]), np.eye(3), "gamma")
+    fit.value_type = "ct"
+    fit.ct_reference = 40.0
+
+    assert fit.population_coords == ("log_a0", "log_peak_day", "peak_cycles")
+
+    payload = fit.to_dict()
+    assert payload["population_coords"] == ["log_a0", "log_peak_day", "peak_cycles"]
+
+    restored = SheddingFit.from_dict(payload)
+    assert restored.population_coords == fit.population_coords
+    assert restored.value_type == "ct"
+    np.testing.assert_allclose(restored.population_mean, fit.population_mean)
+
+
+def test_ct_payload_naming_its_height_peak_log10_is_rejected():
+    """A Ct height under the log10 name is exactly the misreading to prevent.
+
+    Both names are the same length and 13.5 is a plausible number on either
+    scale -- as a log10 concentration it is 3.2e13 gc/mL -- so this has to fail
+    loudly rather than load.
+    """
+    fit = _minimal_fit(np.array([np.log(0.5), np.log(3.0), 13.5]), np.eye(3), "gamma")
+    fit.value_type = "ct"
+    mislabelled = {
+        **fit.to_dict(),
+        "population_coords": ["log_a0", "log_peak_day", "peak_log10"],
+    }
+    with pytest.raises(ValueError, match="Rebuild the catalog"):
+        SheddingFit.from_dict(mislabelled)
+
+
+@pytest.mark.parametrize("model", ["exponential", "gamma", "gamma_shifted"])
+def test_concentration_fits_keep_the_log10_height_name(model):
+    """The value-type-aware naming must not touch the concentration path."""
+    from shedding_hub.shedding_models import POPULATION_COORDS
+
+    k = len(POPULATION_COORDS[model])
+    fit = _minimal_fit(np.full(k, 0.5), np.eye(k), model)
+
+    assert fit.population_coords == POPULATION_COORDS[model]
+    assert "peak_log10" in fit.population_coords
+    assert "peak_cycles" not in fit.population_coords
+
+    payload = fit.to_dict()
+    assert payload["population_coords"] == list(POPULATION_COORDS[model])
+    restored = SheddingFit.from_dict(payload)
+    assert restored.population_coords == POPULATION_COORDS[model]
+    np.testing.assert_allclose(restored.population_mean, fit.population_mean)
+
+
+def test_from_dict_defaults_missing_value_type_to_concentration():
+    """A catalog serialized before Ct support existed has no such keys."""
+    fit = _minimal_fit([np.log(0.6), np.log(18.0)], np.diag([0.04, 0.04]))
+    payload = fit.to_dict()
+    del payload["value_type"]
+    del payload["ct_reference"]
+    del payload["ct_cutoff"]
+
+    restored = SheddingFit.from_dict(payload)
+
+    assert restored.value_type == "concentration"
+    assert restored.ct_reference is None
+    assert restored.ct_cutoff is None
+
+
 def test_deserialized_fit_can_still_simulate():
     """The property that lets an ABM fit once and simulate across many runs."""
     from shedding_hub.shedding_simulate import simulate_shedding
@@ -2228,3 +2394,78 @@ def test_over_extrapolation_gate_reads_the_peak_not_the_onset():
     assert not _over_extrapolated_subjects(
         ordinary, "gamma_shifted", _Obs(), margin=3.0
     )[0]
+
+
+def test_dropped_ct_readings_are_recorded_on_the_response_scale():
+    # Dropped points are drawn on the diagnostic plot, so they must share the
+    # scale of the points that were kept or they land in the wrong place.
+    times: list[float] = []
+    values: list[float] = []
+    _record_dropped({"value": 28.0}, -1.0, times, values, "ct")
+    assert values == [12.0]
+
+
+def test_observations_default_to_concentration():
+    assert (
+        Observations(
+            subject_index=np.zeros(1, int),
+            times=np.zeros(1),
+            values=np.zeros(1),
+            censored=np.zeros(1, bool),
+            censoring_limit=0.0,
+        ).value_type
+        == "concentration"
+    )
+
+
+def test_ct_fit_records_its_scale(ct_dataset):
+    # exponential rather than gamma: model choice is immaterial to what this
+    # test checks, since value_type and the new fields never read the model.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+    assert fit.value_type == "ct"
+    assert fit.ct_reference == 40.0
+    assert fit.ct_cutoff == 40.0
+
+
+def test_ct_fit_records_the_cutoff_it_actually_censored_against(ct_dataset):
+    """
+    About 15 analytes in the repository declare no numeric limit, and the
+    fitter resolves one from the data for them. Reporting None there would say
+    "no cutoff" for a fit that censored against a cutoff all along, so the
+    resolved fallback is recorded instead -- as a Ct, matching the declared
+    case, and always consistent with censoring_limit.
+    """
+    del ct_dataset["analytes"]["swab"]["limit_of_detection"]
+
+    with pytest.warns(UserWarning, match="Falling back"):
+        fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+
+    assert fit.ct_cutoff is not None
+    assert fit.ct_cutoff == pytest.approx(CT_REFERENCE - fit.censoring_limit)
+    # The fallback sits just above the highest Ct the study reported (37.5,
+    # the lowest response), so every `negative` still lies beyond it.
+    assert fit.ct_cutoff == pytest.approx(37.51)
+
+
+def test_concentration_fit_has_no_ct_metadata(simple_dataset):
+    # exponential for the same reason as above: simple_dataset's two subjects
+    # show no rise, so gamma refuses it outright with "no_rise_observed",
+    # independent of this task's changes.
+    fit = fit_shedding_model(simple_dataset, analyte="stool", model="exponential")
+    assert fit.value_type == "concentration"
+    assert fit.ct_reference is None
+
+
+def test_only_temporal_parameters_compare_across_value_types(
+    ct_dataset, simple_dataset
+):
+    ct = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+    conc = fit_shedding_model(simple_dataset, analyte="stool", model="exponential")
+    assert ct.comparable_with(conc) == VALUE_TYPE_INVARIANT_PARAMETERS
+    assert "peak_day" in ct.comparable_with(conc)
+    assert "half_life_days" not in ct.comparable_with(conc)
+
+
+def test_everything_compares_within_a_value_type(ct_dataset):
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="exponential")
+    assert "half_life_days" in fit.comparable_with(fit)

@@ -1,0 +1,2546 @@
+{
+ "alsharrah2020clinical": {
+  "analytes": [
+   {
+    "analyte": "NPS_SARSCoV2",
+    "figures": [
+     {
+      "file": "NPS_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "aoki2010duration": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus",
+    "figures": [
+     {
+      "file": "stool_norovirus__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "arts2023longitudinal": {
+  "analytes": [
+   {
+    "analyte": "stool_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_N__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "stool_SARSCoV2_N__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_SARSCoV2_N__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_ORF1a",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_ORF1a__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "stool_SARSCoV2_ORF1a__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_SARSCoV2_ORF1a__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_PMMoV",
+    "figures": [
+     {
+      "file": "stool_PMMoV__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_crAssphage",
+    "figures": [
+     {
+      "file": "stool_crAssphage__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "atmar2008norwalk": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus",
+    "figures": [
+     {
+      "file": "stool_norovirus__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_norovirus__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "baier2018influenza": {
+  "analytes": [
+   {
+    "analyte": "respiratory_influenza_ct",
+    "figures": [
+     {
+      "file": "respiratory_influenza_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "respiratory_RSV_ct",
+    "figures": [
+     {
+      "file": "respiratory_RSV_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "brint2017prolonged": {
+  "analytes": [
+   {
+    "analyte": "nasal_aspirate_respiratory_syncytial_virus_viral_load",
+    "figures": [
+     {
+      "file": "nasal_aspirate_respiratory_syncytial_virus_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "brosius2023presymptomatic": {
+  "analytes": [
+   {
+    "analyte": "serum",
+    "figures": [
+     {
+      "file": "serum__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva",
+    "figures": [
+     {
+      "file": "saliva__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "anorectal_swab",
+    "figures": [
+     {
+      "file": "anorectal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "genital_swab",
+    "figures": [
+     {
+      "file": "genital_swab__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "genital_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "cantelli2020rotavirus": {
+  "analytes": [
+   {
+    "analyte": "1",
+    "figures": [
+     {
+      "file": "1__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "2",
+    "figures": [
+     {
+      "file": "2__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "cdc2024nhphrn": {
+  "analytes": [
+   {
+    "analyte": "NP_SARSCoV2_VL",
+    "figures": [
+     {
+      "file": "NP_SARSCoV2_VL__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "NP_SARSCoV2_VL__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "NP_SARSCoV2_VL__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "NP_SARSCoV2_CT",
+    "figures": [
+     {
+      "file": "NP_SARSCoV2_CT__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "NP_SARSCoV2_CT__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "NP_SARSCoV2_CT__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "chilengi2020pilot": {
+  "analytes": [
+   {
+    "analyte": "stool_rotavirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_rotavirus_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "coppee2023temporal": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_RSV_ct_symptomatic",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_RSV_ct_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab_RSV_ct_asymptomatic",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_RSV_ct_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "covid2020clinical": {
+  "analytes": [
+   {
+    "analyte": "Stool_SARSCoV2",
+    "figures": [
+     {
+      "file": "Stool_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "Serum_SARSCoV2",
+    "figures": [
+     {
+      "file": "Serum_SARSCoV2__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "Sputum_SARSCoV2",
+    "figures": [
+     {
+      "file": "Sputum_SARSCoV2__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "OPS_SARSCoV2",
+    "figures": [
+     {
+      "file": "OPS_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "NPS_SARSCoV2",
+    "figures": [
+     {
+      "file": "NPS_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "Urine_SARSCoV2",
+    "figures": [
+     {
+      "file": "Urine_SARSCoV2__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "cowley2017rotavirus": {
+  "analytes": [
+   {
+    "analyte": "stool_rotavirus_vaccine_dose1",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_dose1__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_vaccine_dose2",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_dose2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_vaccine_dose3",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_dose3__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "de2006fatal": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_influenza_gc_per_mL",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_influenza_gc_per_mL__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab_influenza_gc_per_mL",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab_influenza_gc_per_mL__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "tracheal_aspirate_influenza_gc_per_mL",
+    "figures": [
+     {
+      "file": "tracheal_aspirate_influenza_gc_per_mL__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "devincenzo2022safety": {
+  "analytes": [
+   {
+    "analyte": "nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents",
+    "figures": [
+     {
+      "file": "nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "el2011respiratory": {
+  "analytes": [
+   {
+    "analyte": "respiratory_secretions_RSV_viral_load",
+    "figures": [
+     {
+      "file": "respiratory_secretions_RSV_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "enya2023similarities": {
+  "analytes": [
+   {
+    "analyte": "1_gc_reaction",
+    "figures": [
+     {
+      "file": "1_gc_reaction__gamma.png",
+      "model": "gamma"
+     }
+    ]
+   },
+   {
+    "analyte": "2_gc_reaction",
+    "figures": [
+     {
+      "file": "2_gc_reaction__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "2_gc_reaction__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "fajnzylber2020sars": {
+  "analytes": [
+   {
+    "analyte": "Nasopharyngeal_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "Nasopharyngeal_SARSCoV2_N__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "Oropharyngeal_PBS_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "Oropharyngeal_PBS_SARSCoV2_N__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "Oropharyngeal_VTM_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "Oropharyngeal_VTM_SARSCoV2_N__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "Sputum_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "Sputum_SARSCoV2_N__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "Plasma_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "Plasma_SARSCoV2_N__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "Urine_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "Urine_SARSCoV2_N__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "falsey2003comparison": {
+  "analytes": [
+   {
+    "analyte": "nasal_respiratory_syncytial_virus_quant_rt_pcr",
+    "figures": [
+     {
+      "file": "nasal_respiratory_syncytial_virus_quant_rt_pcr__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "nasal_respiratory_syncytial_virus_quant_rt_pcr__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "fraaij2015viral": {
+  "analytes": [
+   {
+    "analyte": "particles_ml",
+    "figures": [
+     {
+      "file": "particles_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "garciaknight2022infectious": {
+  "analytes": [
+   {
+    "analyte": "e",
+    "figures": [
+     {
+      "file": "e__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "e__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "e__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "n",
+    "figures": [
+     {
+      "file": "n__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "n__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "n__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "gautret2020hydroxychloroquine": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_SARSCoV2_Ct",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2_Ct__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "golantripto2024viral": {
+  "analytes": [
+   {
+    "analyte": "utm_vp_ml_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "utm_vp_ml_nasopharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "vcm_vp_ml_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "vcm_vp_ml_nasopharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "utm_vp_ml_nasal_lavage_fluid",
+    "figures": [
+     {
+      "file": "utm_vp_ml_nasal_lavage_fluid__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "vcm_vp_ml_nasal_lavage_fluid",
+    "figures": [
+     {
+      "file": "vcm_vp_ml_nasal_lavage_fluid__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "gutierrez2021nosocomial": {
+  "analytes": [
+   {
+    "analyte": "stool_rotavirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_rotavirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_norovirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_CT",
+    "figures": [
+     {
+      "file": "stool_rotavirus_CT__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_CT",
+    "figures": [
+     {
+      "file": "stool_norovirus_CT__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "hakki2022onset": {
+  "analytes": [
+   {
+    "analyte": "asymptomatic_PCR",
+    "figures": [
+     {
+      "file": "asymptomatic_PCR__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "asymptomatic_PCR__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "asymptomatic_PCR__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "asymptomatic_cultivable",
+    "figures": [
+     {
+      "file": "asymptomatic_cultivable__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "asymptomatic_cultivable__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "asymptomatic_cultivable__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "symptomatic_PCR",
+    "figures": [
+     {
+      "file": "symptomatic_PCR__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "symptomatic_PCR__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "symptomatic_PCR__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "symptomatic_cultivable",
+    "figures": [
+     {
+      "file": "symptomatic_cultivable__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "symptomatic_cultivable__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "symptomatic_cultivable__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "han2020sequential": {
+  "analytes": [
+   {
+    "analyte": "nasopharynx_E",
+    "figures": [
+     {
+      "file": "nasopharynx_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharynx_E",
+    "figures": [
+     {
+      "file": "oropharynx_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "NPSOPS_E",
+    "figures": [
+     {
+      "file": "NPSOPS_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma_E",
+    "figures": [
+     {
+      "file": "plasma_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_E",
+    "figures": [
+     {
+      "file": "saliva_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine_E",
+    "figures": [
+     {
+      "file": "urine_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "sputum_E",
+    "figures": [
+     {
+      "file": "sputum_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_E",
+    "figures": [
+     {
+      "file": "stool_E__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "hiramatsu2018rotavirus": {
+  "analytes": [
+   {
+    "analyte": "rv5_1",
+    "figures": [
+     {
+      "file": "rv5_1__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "rv5_1__gamma.png",
+      "model": "gamma"
+     }
+    ]
+   },
+   {
+    "analyte": "rv5_2",
+    "figures": [
+     {
+      "file": "rv5_2__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "rv1_1",
+    "figures": [
+     {
+      "file": "rv1_1__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "rv1_2",
+    "figures": [
+     {
+      "file": "rv1_2__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "hu2013association": {
+  "analytes": [
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "oropharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "serum",
+    "figures": [
+     {
+      "file": "serum__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine",
+    "figures": [
+     {
+      "file": "urine__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "urine__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool",
+    "figures": [
+     {
+      "file": "stool__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "iwakiri2009quantitative": {
+  "analytes": [
+   {
+    "analyte": "stool_SaV",
+    "figures": [
+     {
+      "file": "stool_SaV__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "jacobsen2022differentiation": {
+  "analytes": [
+   {
+    "analyte": "stool_rotavirus_vaccine_RV1",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_RV1__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_vaccine_RV5",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_RV5__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "jones2021estimating": {
+  "analytes": [
+   {
+    "analyte": "swab_SARSCoV2_onset",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_onset__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "swab_SARSCoV2_confirmation",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_confirmation__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "kamel2011presence": {
+  "analytes": [
+   {
+    "analyte": "stool_HAV_viral_load",
+    "figures": [
+     {
+      "file": "stool_HAV_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "kay2011shedding": {
+  "analytes": [
+   {
+    "analyte": "nasal_lavage_influenza_gc_per_mL",
+    "figures": [
+     {
+      "file": "nasal_lavage_influenza_gc_per_mL__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "ke2022daily": {
+  "analytes": [
+   {
+    "analyte": "nasal_SARSCoV2",
+    "figures": [
+     {
+      "file": "nasal_SARSCoV2__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "nasal_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "nasal_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_SARSCoV2",
+    "figures": [
+     {
+      "file": "saliva_SARSCoV2__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "saliva_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "saliva_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "kim2020viral": {
+  "analytes": [
+   {
+    "analyte": "sputum_SARSCoV2_RdRp_VL",
+    "figures": [
+     {
+      "file": "sputum_SARSCoV2_RdRp_VL__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "swab_SARSCoV2_RdRp_VL",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_RdRp_VL__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "swab_SARSCoV2_E_Ct",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_E_Ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "sputum_SARSCoV2_E_Ct",
+    "figures": [
+     {
+      "file": "sputum_SARSCoV2_E_Ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_E_Ct",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_E_Ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_RdRp_Ct",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_RdRp_Ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "sputum_SARSCoV2_RdRp_Ct",
+    "figures": [
+     {
+      "file": "sputum_SARSCoV2_RdRp_Ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "swab_SARSCoV2_RdRp_Ct",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_RdRp_Ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "kimse2020viral": {
+  "analytes": [
+   {
+    "analyte": "oropharyngealswab_SARSCoV2_symptomatic",
+    "figures": [
+     {
+      "file": "oropharyngealswab_SARSCoV2_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngealswab_SARSCoV2_asymptomatic",
+    "figures": [
+     {
+      "file": "oropharyngealswab_SARSCoV2_asymptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "kirby2016vomiting": {
+  "analytes": [
+   {
+    "analyte": "emesis_norovirus_GI",
+    "figures": [
+     {
+      "file": "emesis_norovirus_GI__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "emesis_norovirus_GII",
+    "figures": [
+     {
+      "file": "emesis_norovirus_GII__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_GI",
+    "figures": [
+     {
+      "file": "stool_norovirus_GI__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_GII",
+    "figures": [
+     {
+      "file": "stool_norovirus_GII__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "kissler2021densely": {
+  "analytes": [
+   {
+    "analyte": "AN_OPS_SARSCoV2",
+    "figures": [
+     {
+      "file": "AN_OPS_SARSCoV2__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "AN_OPS_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "AN_OPS_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "kissler2021viral": {
+  "analytes": [
+   {
+    "analyte": "AN_OPS_SARSCoV2_ct",
+    "figures": [
+     {
+      "file": "AN_OPS_SARSCoV2_ct__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "AN_OPS_SARSCoV2_ct__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "AN_OPS_SARSCoV2_ct__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "AN_OPS_SARSCoV2_viral",
+    "figures": [
+     {
+      "file": "AN_OPS_SARSCoV2_viral__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "AN_OPS_SARSCoV2_viral__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "AN_OPS_SARSCoV2_viral__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "kondo2016influenza": {
+  "analytes": [
+   {
+    "analyte": "nasal_discharge_influenza_gc_per_mL",
+    "figures": [
+     {
+      "file": "nasal_discharge_influenza_gc_per_mL__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "nasal_discharge_influenza_gc_per_mL__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "kutter2021small": {
+  "analytes": [
+   {
+    "analyte": "rsv_nasopharyngeal_aspirate_ct",
+    "figures": [
+     {
+      "file": "rsv_nasopharyngeal_aspirate_ct__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "rsv_oropharyngeal_swab_nasopharyngeal_swab_ct",
+    "figures": [
+     {
+      "file": "rsv_oropharyngeal_swab_nasopharyngeal_swab_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "rv_nasopharyngeal_aspirate_ct",
+    "figures": [
+     {
+      "file": "rv_nasopharyngeal_aspirate_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "lavezzo2020suppression": {
+  "analytes": [
+   {
+    "analyte": "RdRp_first_pos",
+    "figures": [
+     {
+      "file": "RdRp_first_pos__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "E_first_pos",
+    "figures": [
+     {
+      "file": "E_first_pos__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "RdRp_symptom",
+    "figures": [
+     {
+      "file": "RdRp_symptom__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "E_symptom",
+    "figures": [
+     {
+      "file": "E_symptom__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "lescure2020clinical": {
+  "analytes": [
+   {
+    "analyte": "naso_swab_SARSCoV2",
+    "figures": [
+     {
+      "file": "naso_swab_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "li2018faecal": {
+  "analytes": [
+   {
+    "analyte": "stool_lanzhou_lamb_rotavirus_vaccine_EIA",
+    "figures": [
+     {
+      "file": "stool_lanzhou_lamb_rotavirus_vaccine_EIA__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_lanzhou_lamb_rotavirus_vaccine_pcr",
+    "figures": [
+     {
+      "file": "stool_lanzhou_lamb_rotavirus_vaccine_pcr__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "liu2024longitudinal": {
+  "analytes": [
+   {
+    "analyte": "stool_SARSCoV2_N1",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_N1__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_SARSCoV2_N1__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_PMMoV",
+    "figures": [
+     {
+      "file": "stool_PMMoV__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_mtDNA",
+    "figures": [
+     {
+      "file": "stool_mtDNA__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "lui2020viral": {
+  "analytes": [
+   {
+    "analyte": "2019-nCoV_N1",
+    "figures": [
+     {
+      "file": "2019-nCoV_N1__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "2019-nCoV_N1__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "mackiewicz2004detection": {
+  "analytes": [
+   {
+    "analyte": "serum_HAV_RNA",
+    "figures": [
+     {
+      "file": "serum_HAV_RNA__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_HAV_RNA",
+    "figures": [
+     {
+      "file": "saliva_HAV_RNA__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "mijatovicrustempasic2017shedding": {
+  "analytes": [
+   {
+    "analyte": "stool_rotavirus_vaccine",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_rotavirus_vaccine__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_pcv1_dna",
+    "figures": [
+     {
+      "file": "stool_pcv1_dna__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "miura2017rotavirus": {
+  "analytes": [
+   {
+    "analyte": "stool_rotavirus_vaccine_RV1_dose1",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_RV1_dose1__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_vaccine_RV1_dose2",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_RV1_dose2__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_vaccine_RV5_dose1",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_RV5_dose1__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_vaccine_RV5_dose2",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_RV5_dose2__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_rotavirus_vaccine_RV5_dose3",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine_RV5_dose3__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "miyoshi2015long": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus",
+    "figures": [
+     {
+      "file": "stool_norovirus__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "natarajan2022gastrointestinal": {
+  "analytes": [
+   {
+    "analyte": "E-gRNA-RT-qPCR-OG",
+    "figures": [
+     {
+      "file": "E-gRNA-RT-qPCR-OG__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "E-gRNA-RT-qPCR-OG__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "E-gRNA-RT-qPCR-OG__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "E-gRNA-RT-qPCR-ZY",
+    "figures": [
+     {
+      "file": "E-gRNA-RT-qPCR-ZY__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "RdRP-gRNA-RT-qPCR-OG",
+    "figures": [
+     {
+      "file": "RdRP-gRNA-RT-qPCR-OG__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "RdRP-gRNA-RT-qPCR-ZY",
+    "figures": [
+     {
+      "file": "RdRP-gRNA-RT-qPCR-ZY__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "RdRP-gRNA-RT-qPCR-ZY__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "RdRP-gRNA-RT-qPCR-ZY__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N1-gRNA-RT-qPCR-OG",
+    "figures": [
+     {
+      "file": "N1-gRNA-RT-qPCR-OG__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N1-gRNA-RT-qPCR-ZY",
+    "figures": [
+     {
+      "file": "N1-gRNA-RT-qPCR-ZY__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N2-gRNA-RT-qPCR-OG",
+    "figures": [
+     {
+      "file": "N2-gRNA-RT-qPCR-OG__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N2-gRNA-RT-qPCR-ZY",
+    "figures": [
+     {
+      "file": "N2-gRNA-RT-qPCR-ZY__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N1-gRNA-ddPCR-OG",
+    "figures": [
+     {
+      "file": "N1-gRNA-ddPCR-OG__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "N1-gRNA-ddPCR-OG__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N1-gRNA-ddPCR-ZY",
+    "figures": [
+     {
+      "file": "N1-gRNA-ddPCR-ZY__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "E-gRNA-ddPCR-OG",
+    "figures": [
+     {
+      "file": "E-gRNA-ddPCR-OG__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "E-gRNA-ddPCR-ZY",
+    "figures": [
+     {
+      "file": "E-gRNA-ddPCR-ZY__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N1-sgRNA-RT-qPCR-OG",
+    "figures": [
+     {
+      "file": "N1-sgRNA-RT-qPCR-OG__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "N1-sgRNA-RT-qPCR-OG__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "N1-sgRNA-RT-qPCR-OG__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "N1-sgRNA-RT-qPCR-ZY",
+    "figures": [
+     {
+      "file": "N1-sgRNA-RT-qPCR-ZY__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "obara2008single": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus",
+    "figures": [
+     {
+      "file": "stool_norovirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "pace2024prevalence": {
+  "analytes": [
+   {
+    "analyte": "stool_SARSCoV2",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "peiris2003clinical": {
+  "analytes": [
+   {
+    "analyte": "NPS_SARS",
+    "figures": [
+     {
+      "file": "NPS_SARS__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "pereira2022standardization": {
+  "analytes": [
+   {
+    "analyte": "respiratory_influenzaA_viral_load",
+    "figures": [
+     {
+      "file": "respiratory_influenzaA_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "piccirilli2023respiratory": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_aspirate_RSV_viral_load",
+    "figures": [
+     {
+      "file": "nasopharyngeal_aspirate_RSV_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "piralla2013different": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "bronchoalveolar_lavage_fluid",
+    "figures": [
+     {
+      "file": "bronchoalveolar_lavage_fluid__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "portes2016non": {
+  "analytes": [
+   {
+    "analyte": "stool_adenovirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_adenovirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "rodrigues2020influenza": {
+  "analytes": [
+   {
+    "analyte": "respiratory_influenza_viral_load",
+    "figures": [
+     {
+      "file": "respiratory_influenza_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "rouphael2025effective": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_gc_ml",
+    "figures": [
+     {
+      "file": "nasopharyngeal_gc_ml__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "anterior_nasal_gc_ml",
+    "figures": [
+     {
+      "file": "anterior_nasal_gc_ml__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "buccal_gc_ml",
+    "figures": [
+     {
+      "file": "buccal_gc_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_gc_ml",
+    "figures": [
+     {
+      "file": "oropharyngeal_gc_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_gc_ml",
+    "figures": [
+     {
+      "file": "saliva_gc_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_pfu_ml",
+    "figures": [
+     {
+      "file": "nasopharyngeal_pfu_ml__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "anterior_nasal_pfu_ml",
+    "figures": [
+     {
+      "file": "anterior_nasal_pfu_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "buccal_pfu_ml",
+    "figures": [
+     {
+      "file": "buccal_pfu_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_pfu_ml",
+    "figures": [
+     {
+      "file": "oropharyngeal_pfu_ml__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_pfu_ml",
+    "figures": [
+     {
+      "file": "saliva_pfu_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_ct",
+    "figures": [
+     {
+      "file": "nasopharyngeal_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "salvatore2020epidemiological": {
+  "analytes": [
+   {
+    "analyte": "N1_probe",
+    "figures": [
+     {
+      "file": "N1_probe__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "N1_probe__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "schumer2026viral": {
+  "analytes": [
+   {
+    "analyte": "gc_ml",
+    "figures": [
+     {
+      "file": "gc_ml__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "gc_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "pfu_ml",
+    "figures": [
+     {
+      "file": "pfu_ml__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "pfu_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "schuurmans2014clinical": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_influenza_CT",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_influenza_CT__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "seah2020assessing": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_SARSCoV2",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "shetty2024influenza": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_ct",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab_pfu_ml",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_pfu_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_pfu_ml",
+    "figures": [
+     {
+      "file": "saliva_pfu_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "nasal_lavage_fluid_pfu_ml",
+    "figures": [
+     {
+      "file": "nasal_lavage_fluid_pfu_ml__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "shrestha2020distribution": {
+  "analytes": [
+   {
+    "analyte": "swab_SARSCoV2_N_Ct",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_N_Ct__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "tan2021early": {
+  "analytes": [
+   {
+    "analyte": "swab_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_N__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "swab_SARSCoV2_N__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "swab_SARSCoV2_N__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "team2020clinical": {
+  "analytes": [
+   {
+    "analyte": "naso_swab_SARSCoV2_N_Ct",
+    "figures": [
+     {
+      "file": "naso_swab_SARSCoV2_N_Ct__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "teunis2015shedding": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus_ct_symptomatic",
+    "figures": [
+     {
+      "file": "stool_norovirus_ct_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_ct_asymptomatic",
+    "figures": [
+     {
+      "file": "stool_norovirus_ct_asymptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_concentration_symptomatic",
+    "figures": [
+     {
+      "file": "stool_norovirus_concentration_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_concentration_asymptomatic",
+    "figures": [
+     {
+      "file": "stool_norovirus_concentration_asymptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "tjon2006high": {
+  "analytes": [
+   {
+    "analyte": "stool_hepatitis_A_virus",
+    "figures": [
+     {
+      "file": "stool_hepatitis_A_virus__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "tsang2016individual": {
+  "analytes": [
+   {
+    "analyte": "NPSOPS",
+    "figures": [
+     {
+      "file": "NPSOPS__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "tu2008norovirus": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_norovirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "vetter2020daily": {
+  "analytes": [
+   {
+    "analyte": "NPS_SARSCoV2",
+    "figures": [
+     {
+      "file": "NPS_SARSCoV2__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "NPS_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "NPS_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "OPS_SARSCoV2",
+    "figures": [
+     {
+      "file": "OPS_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "walsh2013viral": {
+  "analytes": [
+   {
+    "analyte": "pfu_ml",
+    "figures": [
+     {
+      "file": "pfu_ml__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "pfu_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "wang2020fecal": {
+  "analytes": [
+   {
+    "analyte": "stool_SARSCoV2_ORF1ab",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_ORF1ab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_N__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_SARSCoV2_N__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "woelfel2020virological": {
+  "analytes": [
+   {
+    "analyte": "stool",
+    "figures": [
+     {
+      "file": "stool__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "sputum",
+    "figures": [
+     {
+      "file": "sputum__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "xing2020prolonged": {
+  "analytes": [
+   {
+    "analyte": "stool_SARSCoV2",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab_SARSCoV2",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab_SARSCoV2__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "xu2020characteristics": {
+  "analytes": [
+   {
+    "analyte": "rectal_swab_SARSCoV2",
+    "figures": [
+     {
+      "file": "rectal_swab_SARSCoV2__gamma_shifted.png",
+      "model": "gamma_shifted"
+     },
+     {
+      "file": "rectal_swab_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab_SARSCoV2",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "yang2020laboratory": {
+  "analytes": [
+   {
+    "analyte": "upper_resp_tract",
+    "figures": [
+     {
+      "file": "upper_resp_tract__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "upper_resp_tract__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "lower_resp_tract",
+    "figures": [
+     {
+      "file": "lower_resp_tract__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "yen2011detection": {
+  "analytes": [
+   {
+    "analyte": "stool_rotavirus_vaccine",
+    "figures": [
+     {
+      "file": "stool_rotavirus_vaccine__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_rotavirus_vaccine__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "yilmaz2020upper": {
+  "analytes": [
+   {
+    "analyte": "oropharyngealswab_SARSCoV2",
+    "figures": [
+     {
+      "file": "oropharyngealswab_SARSCoV2__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "young2020epidemiologic": {
+  "analytes": [
+   {
+    "analyte": "swab_SARSCoV2_N",
+    "figures": [
+     {
+      "file": "swab_SARSCoV2_N__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "swab_SARSCoV2_N__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "yuan2021sars": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab_SARSCoV2_N_symptomatic",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2_N_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab_SARSCoV2_N_asymptomatic",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_SARSCoV2_N_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_ORF1ab_symptomatic",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_ORF1ab_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_ORF1ab_asymptomatic",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_ORF1ab_asymptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_N_symptomatic",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_N_symptomatic__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_SARSCoV2_N_symptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_N_asymptomatic",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_N_asymptomatic__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_SARSCoV2_ORF1ab_symptomatic",
+    "figures": [
+     {
+      "file": "serum_SARSCoV2_ORF1ab_symptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_SARSCoV2_ORF1ab_asymptomatic",
+    "figures": [
+     {
+      "file": "serum_SARSCoV2_ORF1ab_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_SARSCoV2_N_symptomatic",
+    "figures": [
+     {
+      "file": "serum_SARSCoV2_N_symptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_SARSCoV2_N_asymptomatic",
+    "figures": [
+     {
+      "file": "serum_SARSCoV2_N_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine_SARSCoV2_ORF1ab_symptomatic",
+    "figures": [
+     {
+      "file": "urine_SARSCoV2_ORF1ab_symptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine_SARSCoV2_ORF1ab_asymptomatic",
+    "figures": [
+     {
+      "file": "urine_SARSCoV2_ORF1ab_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine_SARSCoV2_N_symptomatic",
+    "figures": [
+     {
+      "file": "urine_SARSCoV2_N_symptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine_SARSCoV2_N_asymptomatic",
+    "figures": [
+     {
+      "file": "urine_SARSCoV2_N_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "zuo2020alterations": {
+  "analytes": [
+   {
+    "analyte": "stool_SARSCoV2_SymptomOnset",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_SymptomOnset__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_SARSCoV2_ConfirmationDate",
+    "figures": [
+     {
+      "file": "stool_SARSCoV2_ConfirmationDate__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ }
+}

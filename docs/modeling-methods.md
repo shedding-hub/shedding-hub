@@ -72,6 +72,10 @@ coordinates for any of the three models.
 | `gamma` | `log_a0`, `log_peak_day`, `peak_log10` |
 | `gamma_shifted` | `log_a0`, `log_rise_days`, `peak_log10`, `t0` |
 
+A cycle-threshold fit names its height `peak_cycles` instead — it is cycles
+below `CT_REFERENCE`, not a log10 concentration. The temporal coordinates are
+unchanged, because they mean the same thing on either scale.
+
 **For the rise-and-fall models, `c0` is not separately meaningful.** It is the
 concentration at `t = 1`, so a plausible value depends entirely on `b0`. On
 `woelfel2020virological` stool, `b0` spans 0.024 to 6.80 while `c0` counter-varies
@@ -103,7 +107,7 @@ simulate rather than scaling it up.
 
 | rule | applies to | reason |
 |---|---|---|
-| `t < −5` days | all models | Every measurement in the repository earlier than about day −3 is censored, and across all 71 datasets the earliest detected reading anywhere is day −5, so no measured value is ever discarded by this rule. Under a decay-only model those censored points are near-impossible and distort the fit: `tsang2016individual` NPSOPS had its pre-event readings a median 4.01 log10 below its own curve. |
+| `t < −5` days | all models | Every measurement in the repository earlier than about day −3 is censored, and across all 84 datasets the earliest detected reading anywhere is day −5, so no measured value is ever discarded by this rule. Under a decay-only model those censored points are near-impossible and distort the fit: `tsang2016individual` NPSOPS had its pre-event readings a median 4.01 log10 below its own curve. |
 | `t ≤ 0` | `gamma` | `ln(t)` is undefined. Not a judgement — there is nothing to evaluate. |
 | `t ≤ 0` and censored | `gamma_shifted` | The curve dives toward −∞ near `t0`, so "below the limit" there is explained for free and `t0` becomes a support parameter pulled onto its own bound. A *detected* reading at the same time is kept, and repels `t0` instead. |
 
@@ -117,6 +121,10 @@ A subject is excluded from the population summary — but kept in
 - **runaway decay**: implied half-life below 0.1 days
 - **over-extrapolated**: implied peak more than **3 log10** above the highest
   concentration the analyte ever recorded
+
+The last two thresholds are calibrated in log10 units and applied to whatever
+scale the fit is on, so on a cycle-threshold fit they are stricter by roughly
+the standard-curve slope. See *Cycle-threshold fits* below.
 
 The last of these is judged against the data rather than a fixed bound, because
 what counts as absurd depends on what the assay can see. It matters: when the gate was
@@ -137,7 +145,7 @@ earliest reading, so a curve is never undefined at its own observations.
 
 | reason | n | meaning |
 |---|---|---|
-| `ct_units` | 207 | Cycle thresholds, not concentrations |
+| `ct_units` | 207 | Cycle thresholds. Fittable directly with `fit_shedding_model`, but excluded from the catalog: their heights are cycles below `CT_REFERENCE`, not log10 concentrations, so an ensemble cannot average them together |
 | `no_rise_observed` | 63 | Fewer than 50% of subjects peaked later than their first reading, leaving `b0` unidentifiable |
 | `no_pre_event_readings` | 61 | `gamma_shifted` only: no detected reading at or before day 0, so `t0` has nothing to locate |
 | `too_few_subjects` | 50 | No subject cleared the per-subject minimum |
@@ -146,6 +154,95 @@ earliest reading, so a curve is never undefined at its own observations.
 | `non_pathogen_biomarker` | 12 | crAssphage, PMMoV, mtDNA — indicators, not shed pathogens |
 | `no_positive_measurements` | 4 | Nothing ever detected |
 | `no_data_after_reference_event` | 1 | Sampling stopped at day 0, so no post-event trajectory exists |
+
+### Cycle-threshold fits
+
+`Ct = α − β·log10 C` is affine, so a gamma curve in concentration is a gamma
+curve in Ct. Cycle-threshold analytes are fitted on `CT_REFERENCE − Ct` —
+cycles below a fixed reference of 40, which rises with viral load exactly as a
+log10 concentration does.
+
+Because `a0` and `b0` both come back multiplied by the unknown standard-curve
+slope, that slope cancels in `b0/a0`. **Peak time, onset and rise duration are
+therefore invariant as algebra, with no assumption about PCR efficiency** —
+where the two fits converge to corresponding solutions they agree to about
+0.01 days. Decay rate, half-life and peak height are not invariant:
+`SheddingFit.comparable_with` says which is which for any pair of fits.
+
+That invariance is a statement about the parameters, not a promise about the
+estimates. Measured on the studies that report both scales, the two fitted
+population peak times are **not interchangeable**; see *How far invariance
+actually gets you* below before comparing one against the other.
+
+Onset is invariant for a different reason from the other two, and it is worth
+being exact about which. Rise duration is `b0/a0` and peak time is that ratio,
+so for them the slope cancels. `t0` is a *time*: the transform rescales and
+offsets the response axis and leaves the time axis untouched, so an onset in
+days is the same number on either scale — there is no slope in it to cancel.
+
+A Ct fit's height coordinate is named `peak_cycles`, not `peak_log10`, and
+`catalog.table` carries a `value_type` column, so a height in cycles cannot be
+read as a log10 concentration by accident. `simulate_shedding` **refuses a Ct
+source** for the same reason: turning cycles into a concentration needs that
+assay's standard curve, which the studies do not report.
+
+### What is *not* invariant across scales: which subjects are kept
+
+Two of the subject-level gates in §4 are calibrated in log10 units and applied
+unchanged to the Ct response, which is in cycles:
+
+| gate | calibrated as | on the Ct scale |
+|---|---|---|
+| over-extrapolation margin | 3 log10 above the highest observation | 3 *cycles*, ≈ 0.9 log10 at a slope of 3.3 |
+| minimum half-life | 0.1 days | ≈ 0.1 days on a decay rate carrying the slope, so ≈ 0.33 days in concentration terms |
+
+Both are therefore roughly **β times stricter** on the Ct scale, β being the
+standard-curve slope (about 3.3 for a fully efficient assay). They are
+deliberately not rescaled: dividing by a nominal slope would put an assumed PCR
+efficiency back into the fitting path, and this package fits Ct directly
+precisely so that no efficiency is ever assumed.
+
+The consequence is that **subject retention is not scale-invariant even though
+the parameter mathematics is.** It is not a marginal effect: on
+`cdc2024nhphrn`, 40% of the subjects retained on the Ct scale sit within twice
+the minimum half-life, against 2.8% on the concentration scale, and 20 subjects
+are excluded as degenerate on Ct alone against 4 on concentration alone.
+
+### How far invariance actually gets you
+
+Three studies report both a Ct and a concentration analyte on the same specimen
+and subjects. `teunis2015shedding` supports only the exponential model, whose
+`peak_day` is pinned to 0 by construction, so it tests nothing; the evidence is
+`kissler2021viral` and `cdc2024nhphrn`. Comparing subjects retained as
+non-degenerate on *both* scales, so that retention differences are excluded:
+
+| study | model | n | median \|Δ peak day\| | IQR | max |
+|---|---|---|---|---|---|
+| `kissler2021viral` | gamma | 33 | 0.46 d | 0.07–1.66 | 105.9 |
+| `kissler2021viral` | gamma_shifted | 35 | 0.57 d | 0.24–0.86 | 4.9 |
+| `cdc2024nhphrn` | gamma | 51 | 0.19 d | 0.05–0.60 | 4.0 |
+| `cdc2024nhphrn` | gamma_shifted | 48 | 1.03 d | 0.45–1.50 | 2.7 |
+
+The algebra is not what fails. `a0_ct/a0_conc` should equal the standard-curve
+slope, and `kissler2021viral` reports one of −3.61: among the nine subjects
+whose ratio lands within 2% of it, the median peak-time difference is
+**0.013 days**. Between 2% and 10% it is 0.38 days, and beyond 10% it is
+1.97 days — a rank correlation of 0.83 between ratio error and peak
+disagreement. What diverges is the *optimiser*, on subjects too weakly
+identified to pin down: `kissler2021viral` is 91% censored.
+
+Two cautions on top of that. Under `gamma` the disagreement is directional —
+Ct peaks earlier than concentration in both studies — which convergence noise
+alone does not explain, and the over-extrapolation gate above is a plausible
+but unconfirmed cause. And in both studies the concentration column is derived
+from Ct through a standard curve rather than measured independently, so these
+numbers test the transform's algebra, not two independent assays.
+
+**Practical guidance.** Treat a Ct fit's peak time as comparable with a
+concentration fit's in kind, not in value. It is sound for ranking and for
+order-of-magnitude reasoning, and for well-identified subjects it is accurate;
+it is not a drop-in substitute at the study level, and a difference of half a
+day between scales is ordinary rather than a sign of error.
 
 ## 5. Simulation
 

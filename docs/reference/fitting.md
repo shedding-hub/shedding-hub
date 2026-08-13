@@ -9,3 +9,7 @@
 ::: shedding_hub.MODELS
 
 ::: shedding_hub.PARAM_NAMES
+
+::: shedding_hub.CT_REFERENCE
+
+::: shedding_hub.VALUE_TYPE_INVARIANT_PARAMETERS
