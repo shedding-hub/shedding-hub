@@ -365,16 +365,14 @@ merge a dataset PR into main
 
 A page with no figure is expected in the meantime and is not a fault: the layout omits the figure when the dataset has no entry yet, so the page is complete apart from the illustration.
 
-**Reviewing the figures pull request.** Nearly every figure will show as changed, but not all of those changes are cosmetic, and the difference between the two matters.
+**Reviewing the figures pull request.** Expect it to be small, and read all of it. The runner reproduces its own output exactly: a refresh run against figures the runner itself generated came back with *no differences at all*, and the workflow deleted its branch without opening anything. So a pull request that does appear contains real changes, and every file in it is worth a look.
 
-Rendering itself is deterministic: measured across a full refresh, all 88 observations-only figures came back **pixel-for-pixel identical**, differing only in PNG encoding bytes. Every visible difference comes from *refitting*. Of the 194 fitted figures, 192 differed, by a median of 7% of their pixels.
+That was not true of the first refresh, which rewrote 282 of 286 files. Those figures had been generated on a contributor's Windows machine, and refitting on Linux moves the numbers — the same reason `tests/test_parameter_export.py` compares with a `DRIFT_RTOL` rather than exactly. That was a one-time cost of moving the committed set onto the runner, not the standing behaviour.
 
-Most of those are slight, but the tail is not. The largest in that refresh, `mijatovicrustempasic2017shedding / rotavirus vaccine_stool / exponential`, moved its half-life from **2.28 days to 1.97 days** — 14% — while its AIC changed by 0.1. Both fits explain the data equally well; the likelihood is simply flat along that direction, so the optimizer can settle anywhere along it. That is a property of the study's data rather than of the machine, and it is a caution worth carrying into any estimate drawn from a weakly-identified analyte.
+Two things to read for:
 
-So read the diff at two levels:
-
-- **Added or removed figures** are the clearest signal: an analyte gained or lost a converged fit, changing what the catalog supports.
-- **Among changed figures, read the legend numbers rather than the picture.** Parameters that shift by a few percent mark analytes whose fits are weakly identified. Note that `DRIFT_RTOL` in `tests/test_parameter_export.py` does *not* cover this — it is the noise floor for re-exporting one catalog, and its own comment says a genuine refit moves values by percent rather than by `1e-4`.
+- **Added or removed figures** are the clearest signal: an analyte gained or lost a converged fit, which changes what the catalog supports.
+- **Changed figures deserve their legend read, not just their picture.** A parameter that moves while the AIC does not marks an analyte whose fit is weakly identified. During that first refresh `mijatovicrustempasic2017shedding / rotavirus vaccine_stool / exponential` moved its half-life from **2.28 days to 1.97 days**, 14%, while its AIC changed by 0.1: both fits explain the data equally well, because the likelihood is flat along that direction. That is a property of the study's data rather than of any machine, and it is worth carrying into any estimate drawn from that analyte.
 
 **Regenerating by hand.** `refresh-figures.yaml` only watches `data/**`, so a change to the fitting or plotting code does not raise a pull request on its own. Trigger one deliberately with `gh workflow run "Refresh Dataset Figures"`, or rebuild locally:
 
