@@ -80,6 +80,32 @@ def main() -> int:
             sh.calc_shedding_peak(data, output="summary")
         ),
         "plot_fit_diagnostic": lambda: sh.plot_fit_diagnostic(fit, data),
+        # The variant the website's dataset pages carry: a stricter
+        # extrapolation gate, the full range of a simulated cohort rather than
+        # its central 90%, and the axis held to the readings the curve was
+        # fitted to. Refitted here rather than taken from the shipped catalog,
+        # which is built at the default gate of 3.
+        "plot_fit_diagnostic_range": lambda: sh.plot_fit_diagnostic(
+            sh.fit_shedding_model(
+                data, analyte="stool", model="gamma", max_peak_above_observed=2
+            ),
+            data,
+            band_quantiles=(0.0, 1.0),
+            band_inner_quantiles=(0.025, 0.975),
+            band_sets_ylim=True,
+            x_from_fitted=True,
+        ),
+        # A cycle-threshold fit, which no catalog ships: the axis carries real
+        # Ct numbers and the height is reported as a Ct rather than a log10.
+        # wang2020fecal is small enough to refit during a docs build.
+        "plot_fit_diagnostic_ct": lambda: sh.plot_fit_diagnostic(
+            sh.fit_shedding_model(
+                sh.load_dataset("wang2020fecal", local=str(REPO_ROOT / "data")),
+                analyte="stool_SARSCoV2_N",
+                model="gamma",
+            ),
+            sh.load_dataset("wang2020fecal", local=str(REPO_ROOT / "data")),
+        ),
         # A fitted analyte, drawn without its fit: the reference page is about
         # the layout, and using an unfittable analyte here would need a second
         # dataset loaded for one figure.

@@ -84,6 +84,75 @@ observations and the curve land on the same page:
 fig = sh.plot_fit_diagnostic(fit, data)
 ```
 
+![plot_fit_diagnostic](images/plot_fit_diagnostic.png)
+
+### Seeing what the fit implies, not just what it fitted
+
+The median individual says nothing about spread, which is most of what
+separates a usable fit from an unusable one. Widen the band to the full range
+of a simulated cohort and the page stops describing the curve and starts
+describing the population it would generate — which is what a simulation drawn
+from this fit will actually produce:
+
+```python
+fig = sh.plot_fit_diagnostic(
+    fit,
+    data,
+    band_quantiles=(0.0, 1.0),        # the whole simulated range, not its middle 90%
+    band_inner_quantiles=(0.025, 0.975),  # with the central 95% dashed inside it
+    band_sets_ylim=True,              # let that range widen the axis
+    x_from_fitted=True,               # and keep discarded readings from stretching time
+)
+```
+
+![plot_fit_diagnostic_range](images/plot_fit_diagnostic_range.png)
+
+A range is not a fixed property of the population: it grows with
+`n_simulated`, because drawing more individuals reaches further into the tails.
+Read it as what the fit considers *possible*, and the dashed lines as where the
+mass actually sits. This is the view the
+[dataset pages](https://shedding-hub.github.io/) carry, fitted under a stricter
+extrapolation gate — pass `max_peak_above_observed=2` to `fit_shedding_model`
+to reproduce it.
+
+## Fit cycle-threshold data
+
+**78 of the repository's 216 analytes report cycle thresholds** rather than
+concentrations — 31 datasets and 12,698 measurements. They are fitted by the
+same function, with no conversion and no assumption about PCR efficiency:
+
+```python
+data = sh.load_dataset("wang2020fecal")
+fit = sh.fit_shedding_model(data, analyte="stool_SARSCoV2_N", model="gamma")
+
+fit.value_type     # 'ct'
+fit.peak_day       # days to peak — comparable with a concentration fit
+fit.ct_cutoff      # the Ct at or above which a reading counts as a non-detect
+```
+
+![plot_fit_diagnostic_ct](images/plot_fit_diagnostic_ct.png)
+
+Because `Ct = α − β·log10 C` is affine, a gamma curve in concentration is a
+gamma curve in Ct, and the analyte is fitted on `CT_REFERENCE − Ct`. The
+unknown slope `β` multiplies both `a0` and `b0`, so it **cancels in `b0/a0`**:
+
+```python
+fit.comparable_with(concentration_fit)
+# ('peak_day', 't0', 'rise_days')
+```
+
+Peak time, onset and rise duration therefore compare across the two scales.
+Decay rate, half-life and peak height do not — they carry `β`, so a Ct fit's
+`half_life_days` is *not* a viral half-life. Heights are reported as Ct rather
+than log10, and the axis carries real Ct numbers.
+
+Two deliberate limits: the shipped catalog is concentration-only, so Ct fits
+need `fit_shedding_models(..., value_types=("ct",))` to build; and
+`simulate_shedding` **refuses a Ct source**, because turning cycles back into
+concentrations needs a standard curve the studies do not report. See
+[modeling methods](modeling-methods.md) for how far the cross-scale comparison
+actually gets you — the algebra is exact, the estimates less so.
+
 ## Use fits that are already computed
 
 You do not have to fit anything. The package ships a catalog of **144
