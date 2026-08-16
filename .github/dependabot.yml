@@ -1,0 +1,39 @@
+version: 2
+
+# The repository had vulnerability alerts switched on and automated security
+# fixes switched off, so it reported 78 problems it was never configured to
+# open a pull request about. Every one of them was in requirements.txt, and
+# almost all in the notebook toolchain that runs the extraction scripts --
+# jupyter-server, jupyterlab, nbconvert, tornado, mistune, pillow -- rather
+# than in anything the published package depends on, which is pyaml, requests,
+# pandas, matplotlib, numpy and scipy alone.
+#
+# Grouped deliberately. Ungrouped, a backlog that size opens a pull request per
+# package and each one re-runs a fourteen-minute build; grouped, the toolchain
+# moves as the single unit it actually is.
+
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # requirements.txt is pip-compiled from requirements.in, so a bumped pin
+    # stays consistent with the source: requirements.in names packages without
+    # pinning them. Re-run `pip-compile --upgrade` on Linux when the two do
+    # drift -- never on Windows, which resolves different markers.
+    open-pull-requests-limit: 5
+    groups:
+      notebook-toolchain:
+        patterns:
+          - "jupyter*"
+          - "nb*"
+          - "notebook"
+          - "ipython*"
+          - "tornado"
+          - "mistune"
+          - "bleach"
+          - "pillow"
+          - "Pillow"
+      everything-else:
+        patterns:
+          - "*"
