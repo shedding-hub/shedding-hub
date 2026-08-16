@@ -6,7 +6,6 @@ import re
 import requests
 import yaml
 
-
 DATA_PATHS = list(Path("data").glob("*/*.yaml"))
 VALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("valid_*.yaml"))
 INVALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("invalid_*.yaml"))

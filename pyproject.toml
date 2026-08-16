@@ -47,3 +47,11 @@ find = { include = ["shedding_hub*"] }
 
 [tool.setuptools.package-data]
 shedding_hub = ["data/*.yaml"]
+
+[tool.black]
+# Pinned to the floor in requires-python. Left unset, black 26 targets the
+# newest Python it knows about and then cannot run its own AST safety check on
+# an older interpreter -- CI runs 3.11 and got "Python 3.11 cannot parse code
+# formatted for Python 3.15", meaning the equivalence check that makes
+# reformatting safe was being skipped silently.
+target-version = ["py310"]
