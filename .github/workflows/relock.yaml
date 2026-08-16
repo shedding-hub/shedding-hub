@@ -27,13 +27,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
-        # 3.13, matching the header the committed lockfile carries. pip-compile
-        # resolves for the interpreter it runs on, so compiling under a
-        # different one rewrites the file for reasons that have nothing to do
-        # with upgrading it.
+        # The version that INSTALLS the lockfile, not the one that last
+        # compiled it. pip-compile resolves for the interpreter it runs on, so
+        # compiling on 3.13 picked scipy 1.18, which requires >=3.12, and the
+        # Build job -- running 3.11 -- then could not install the file at all.
+        # The committed lockfile carries a "compiled with Python 3.13" header
+        # for the same reason and had only been getting away with it.
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.11"
       - name: Install pip-tools
         # The version the lockfile itself pins, so the tool cannot drift from
         # the file it maintains.
