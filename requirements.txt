@@ -10,8 +10,6 @@ anyio==4.12.0
     # via
     #   httpx
     #   jupyter-server
-appnope==0.1.4
-    # via ipykernel
 argon2-cffi==25.1.0
     # via jupyter-server
 argon2-cffi-bindings==25.1.0
@@ -27,10 +25,16 @@ attrs==25.4.0
     #   jsonschema
     #   referencing
 babel==2.17.0
-    # via jupyterlab-server
+    # via
+    #   jupyterlab-server
+    #   mkdocs-material
+backports-tarfile==1.2.0
+    # via jaraco-context
+backrefs==8.0
+    # via mkdocs-material
 beautifulsoup4==4.14.3
     # via nbconvert
-black==25.11.0
+black==26.5.1
     # via -r requirements.in
 bleach[css]==6.3.0
     # via nbconvert
@@ -42,21 +46,28 @@ certifi==2025.11.12
     #   httpx
     #   requests
 cffi==2.0.0
-    # via argon2-cffi-bindings
+    # via
+    #   argon2-cffi-bindings
+    #   cryptography
 charset-normalizer==3.4.4
     # via requests
 click==8.3.1
     # via
     #   black
+    #   mkdocs
     #   pip-tools
+colorama==0.4.6
+    # via mkdocs-material
 comm==0.2.3
     # via
     #   ipykernel
     #   ipywidgets
-contourpy==1.3.3
+contourpy==1.3.2
     # via matplotlib
 coverage[toml]==7.12.0
     # via pytest-cov
+cryptography==50.0.0
+    # via secretstorage
 cycler==0.12.1
     # via matplotlib
 debugpy==1.8.17
@@ -69,6 +80,11 @@ docutils==0.22.3
     # via readme-renderer
 et-xmlfile==2.0.0
     # via openpyxl
+exceptiongroup==1.3.1
+    # via
+    #   anyio
+    #   ipython
+    #   pytest
 executing==2.2.1
     # via stack-data
 fastjsonschema==2.21.2
@@ -77,6 +93,10 @@ fonttools==4.61.0
     # via matplotlib
 fqdn==1.5.1
     # via jsonschema
+ghp-import==2.1.0
+    # via mkdocs
+griffelib==2.1.0
+    # via mkdocstrings-python
 h11==0.16.0
     # via httpcore
 httpcore==1.0.9
@@ -91,6 +111,8 @@ idna==3.11
     #   httpx
     #   jsonschema
     #   requests
+importlib-metadata==9.0.0
+    # via keyring
 iniconfig==2.3.0
     # via pytest
 ipykernel==7.1.0
@@ -98,13 +120,11 @@ ipykernel==7.1.0
     #   jupyter
     #   jupyter-console
     #   jupyterlab
-ipython==9.7.0
+ipython==8.39.0
     # via
     #   ipykernel
     #   ipywidgets
     #   jupyter-console
-ipython-pygments-lexers==1.1.1
-    # via ipython
 ipywidgets==8.1.8
     # via jupyter
 isoduration==20.11.0
@@ -117,11 +137,18 @@ jaraco-functools==4.3.0
     # via keyring
 jedi==0.19.2
     # via ipython
+jeepney==0.9.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.6
     # via
     #   jupyter-server
     #   jupyterlab
     #   jupyterlab-server
+    #   mkdocs
+    #   mkdocs-material
+    #   mkdocstrings
     #   nbconvert
 joblib==1.5.2
     # via scikit-learn
@@ -129,7 +156,7 @@ json5==0.12.1
     # via jupyterlab-server
 jsonpointer==3.0.0
     # via jsonschema
-jsonschema[format-nongpl]==4.25.1
+jsonschema[format-nongpl]==4.26.0
     # via
     #   -r requirements.in
     #   jupyter-events
@@ -182,7 +209,7 @@ jupyterlab-server==2.28.0
     #   notebook
 jupyterlab-widgets==3.0.16
     # via ipywidgets
-jupytext==1.18.1
+jupytext==1.19.5
     # via -r requirements.in
 keyring==25.7.0
     # via twine
@@ -190,6 +217,13 @@ kiwisolver==1.4.9
     # via matplotlib
 lark==1.3.1
     # via rfc3987-syntax
+markdown==3.10.3
+    # via
+    #   mkdocs
+    #   mkdocs-autorefs
+    #   mkdocs-material
+    #   mkdocstrings
+    #   pymdown-extensions
 markdown-it-py==4.0.0
     # via
     #   jupytext
@@ -198,8 +232,11 @@ markdown-it-py==4.0.0
 markupsafe==3.0.3
     # via
     #   jinja2
+    #   mkdocs
+    #   mkdocs-autorefs
+    #   mkdocstrings
     #   nbconvert
-matplotlib==3.10.7
+matplotlib==3.10.9
     # via
     #   -r requirements.in
     #   shedding-hub
@@ -211,8 +248,33 @@ mdit-py-plugins==0.5.0
     # via jupytext
 mdurl==0.1.2
     # via markdown-it-py
+mergedeep==1.3.4
+    # via
+    #   mkdocs
+    #   mkdocs-get-deps
 mistune==3.1.4
     # via nbconvert
+mkdocs==1.6.1
+    # via
+    #   mkdocs-autorefs
+    #   mkdocs-material
+    #   mkdocstrings
+mkdocs-autorefs==1.4.4
+    # via
+    #   mkdocstrings
+    #   mkdocstrings-python
+mkdocs-get-deps==0.2.2
+    # via mkdocs
+mkdocs-material==9.7.7
+    # via -r requirements.in
+mkdocs-material-extensions==1.3.1
+    # via mkdocs-material
+mkdocstrings[python]==1.0.6
+    # via
+    #   -r requirements.in
+    #   mkdocstrings-python
+mkdocstrings-python==2.0.5
+    # via mkdocstrings
 more-itertools==10.8.0
     # via
     #   jaraco-classes
@@ -241,16 +303,19 @@ notebook-shim==0.2.4
     # via
     #   jupyterlab
     #   notebook
-numpy==2.3.5
+numpy==2.2.6
     # via
     #   contourpy
     #   matplotlib
     #   pandas
     #   scikit-learn
     #   scipy
+    #   shedding-hub
 openpyxl==3.1.5
     # via -r requirements.in
-packaging==25.0
+overrides==7.7.0
+    # via jupyter-server
+packaging==26.3
     # via
     #   black
     #   build
@@ -261,9 +326,12 @@ packaging==25.0
     #   jupyterlab-server
     #   jupytext
     #   matplotlib
+    #   mkdocs
     #   nbconvert
     #   pytest
     #   twine
+paginate==0.5.7
+    # via mkdocs-material
 pandas==2.3.3
     # via
     #   -r requirements.in
@@ -272,18 +340,21 @@ pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.5
     # via jedi
-pathspec==0.12.1
-    # via black
+pathspec==1.1.1
+    # via
+    #   black
+    #   mkdocs
 pexpect==4.9.0
     # via ipython
 pillow==12.0.0
     # via matplotlib
-pip-tools==7.5.2
+pip-tools==7.6.1
     # via -r requirements.in
 platformdirs==4.5.0
     # via
     #   black
     #   jupyter-core
+    #   mkdocs-get-deps
 pluggy==1.6.0
     # via
     #   pytest
@@ -302,7 +373,7 @@ ptyprocess==0.7.0
     #   terminado
 pure-eval==0.2.3
     # via stack-data
-pyaml==25.7.0
+pyaml==26.7.0
     # via
     #   -r requirements.in
     #   shedding-hub
@@ -311,13 +382,17 @@ pycparser==2.23
 pygments==2.19.2
     # via
     #   ipython
-    #   ipython-pygments-lexers
     #   jupyter-console
+    #   mkdocs-material
     #   nbconvert
     #   pytest
     #   readme-renderer
     #   rich
-pymupdf==1.26.6
+pymdown-extensions==11.0.1
+    # via
+    #   mkdocs-material
+    #   mkdocstrings
+pymupdf==1.28.2
     # via -r requirements.in
 pyparsing==3.2.5
     # via matplotlib
@@ -325,21 +400,22 @@ pyproject-hooks==1.2.0
     # via
     #   build
     #   pip-tools
-pytest==9.0.1
+pytest==9.1.1
     # via
     #   -r requirements.in
     #   pytest-cov
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via
     #   arrow
+    #   ghp-import
     #   jupyter-client
     #   matplotlib
     #   pandas
 python-json-logger==4.0.0
     # via jupyter-events
-pytokens==0.3.0
+pytokens==0.4.1
     # via black
 pytz==2025.2
     # via pandas
@@ -347,7 +423,13 @@ pyyaml==6.0.3
     # via
     #   jupyter-events
     #   jupytext
+    #   mkdocs
+    #   mkdocs-get-deps
     #   pyaml
+    #   pymdown-extensions
+    #   pyyaml-env-tag
+pyyaml-env-tag==1.1
+    # via mkdocs
 pyzmq==27.1.0
     # via
     #   ipykernel
@@ -365,6 +447,7 @@ requests==2.32.5
     # via
     #   id
     #   jupyterlab-server
+    #   mkdocs-material
     #   requests-toolbelt
     #   shedding-hub
     #   twine
@@ -382,7 +465,7 @@ rfc3986-validator==0.1.1
     #   jupyter-events
 rfc3987-syntax==1.1.0
     # via jsonschema
-rich==14.2.0
+rich==15.0.0
     # via twine
 rpds-py==0.30.0
     # via
@@ -390,8 +473,12 @@ rpds-py==0.30.0
     #   referencing
 scikit-learn==1.7.2
     # via -r requirements.in
-scipy==1.16.3
-    # via scikit-learn
+scipy==1.15.3
+    # via
+    #   scikit-learn
+    #   shedding-hub
+secretstorage==3.5.0
+    # via keyring
 send2trash==1.8.3
     # via jupyter-server
 six==1.17.0
@@ -410,6 +497,15 @@ threadpoolctl==3.6.0
     # via scikit-learn
 tinycss2==1.4.0
     # via bleach
+tomli==2.4.1
+    # via
+    #   black
+    #   build
+    #   coverage
+    #   jupyterlab
+    #   jupytext
+    #   pip-tools
+    #   pytest
 tornado==6.5.2
     # via
     #   ipykernel
@@ -433,10 +529,21 @@ traitlets==5.14.3
     #   nbclient
     #   nbconvert
     #   nbformat
-twine==6.2.0
+twine==7.0.0
     # via -r requirements.in
 typing-extensions==4.15.0
-    # via beautifulsoup4
+    # via
+    #   anyio
+    #   async-lru
+    #   beautifulsoup4
+    #   black
+    #   cryptography
+    #   exceptiongroup
+    #   ipython
+    #   mistune
+    #   mkdocstrings-python
+    #   pip-tools
+    #   referencing
 tzdata==2025.2
     # via
     #   arrow
@@ -447,6 +554,8 @@ urllib3==2.5.0
     # via
     #   requests
     #   twine
+watchdog==6.0.0
+    # via mkdocs
 wcwidth==0.2.14
     # via prompt-toolkit
 webcolors==25.10.0
@@ -461,38 +570,9 @@ wheel==0.45.1
     # via pip-tools
 widgetsnbextension==4.0.15
     # via ipywidgets
+zipp==4.1.0
+    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
-
-# --- documentation toolchain -------------------------------------------------
-# Appended by hand rather than by re-running pip-compile. Regenerating this file
-# on Windows produced a platform-locked lockfile: it ADDED pywinpty,
-# pywin32-ctypes and colorama, and DROPPED appnope, pexpect and ptyprocess, so
-# CI on ubuntu-latest tried to compile pywinpty from Rust source and every job
-# failed at the install step. pip-compile emits no environment markers here, so
-# the file is only valid for the platform it was generated on.
-#
-# These entries come from resolving `mkdocs-material` and `mkdocstrings[python]`
-# in a clean virtualenv, filtered to packages the base lockfile does not already
-# pin. They are pure Python and platform neutral.
-#
-# The durable fix is to regenerate the whole file on Linux, matching CI.
-Markdown==3.10.3
-backrefs==8.0
-colorama==0.4.6
-ghp-import==2.1.0
-griffelib==2.1.0
-mergedeep==1.3.4
-mkdocs-autorefs==1.4.4
-mkdocs-get-deps==0.2.2
-mkdocs-material-extensions==1.3.1
-mkdocs-material==9.7.7
-mkdocs==1.6.1
-mkdocstrings-python==2.0.5
-mkdocstrings==1.0.6
-paginate==0.5.7
-pymdown-extensions==11.0.1
-pyyaml_env_tag==1.1
-watchdog==6.0.0

@@ -71,9 +71,7 @@ def test_load(kwargs: dict, expected_sha1: str) -> None:
 def test_str_representer() -> None:
     x = {"a": util.folded_str("foo\nbar\n"), "b": util.literal_str("foo\nbar\n")}
     dumped = yaml.dump(x)
-    assert (
-        dumped.strip()
-        == """
+    assert dumped.strip() == """
 a: >
   foo
 
@@ -82,7 +80,6 @@ b: |
   foo
   bar
 """.strip()
-    )
     y = yaml.safe_load(io.StringIO(dumped))
     assert x == y
 
