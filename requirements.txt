@@ -346,7 +346,7 @@ pathspec==1.1.1
     #   mkdocs
 pexpect==4.9.0
     # via ipython
-pillow==12.0.0
+pillow==12.3.0
     # via matplotlib
 pip-tools==7.6.1
     # via -r requirements.in
