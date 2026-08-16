@@ -197,7 +197,7 @@ jupyter-server==2.17.0
     #   notebook-shim
 jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.5.0
+jupyterlab==4.5.10
     # via
     #   jupyter
     #   notebook
@@ -540,6 +540,7 @@ typing-extensions==4.15.0
     #   cryptography
     #   exceptiongroup
     #   ipython
+    #   jupyterlab
     #   mistune
     #   mkdocstrings-python
     #   pip-tools
