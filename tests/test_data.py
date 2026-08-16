@@ -4,11 +4,35 @@ from pathlib import Path
 import pytest
 import re
 import requests
+import time
 import yaml
 
 DATA_PATHS = list(Path("data").glob("*/*.yaml"))
 VALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("valid_*.yaml"))
 INVALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("invalid_*.yaml"))
+
+# Every dataset's doi is resolved against the publisher, so one run makes as
+# many requests as there are datasets -- 84 and climbing. Publishers drop
+# connections under that, and a single dropped connection failed a whole
+# 9-minute job with "RemoteDisconnected('Remote end closed connection without
+# response')". Retried rather than re-run: a transient refusal says nothing
+# about whether the doi resolves.
+DOI_RETRIES = 3
+DOI_BACKOFF_SECONDS = 2
+REQUEST_TIMEOUT_SECONDS = 30
+
+
+def _get_with_retry(url: str, **kwargs) -> requests.Response:
+    """GET a URL, retrying only transport failures -- never a real HTTP status."""
+    for attempt in range(DOI_RETRIES):
+        try:
+            return requests.get(url, timeout=REQUEST_TIMEOUT_SECONDS, **kwargs)
+        except requests.exceptions.RequestException:
+            # The last attempt raises: a URL that never answers is a genuine
+            # failure of this check, not something to swallow.
+            if attempt == DOI_RETRIES - 1:
+                raise
+            time.sleep(DOI_BACKOFF_SECONDS * (attempt + 1))
 
 
 def load_and_validate(path: Path, skip_filename_check: bool = False):
@@ -37,12 +61,12 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
     doi_or_url = False
     doi = data.get("doi")
     if doi:
-        response = requests.get(f"https://doi.org/{doi}", allow_redirects=False)
+        response = _get_with_retry(f"https://doi.org/{doi}", allow_redirects=False)
         assert response.status_code == 302, f"doi `{doi}` could not be resolved."
         doi_or_url = True
     url = data.get("url")
     if url:
-        response = requests.get(url)
+        response = _get_with_retry(url)
         response.raise_for_status()
         doi_or_url = True
     assert doi_or_url, "At least one of `doi` or `url` must be given."
