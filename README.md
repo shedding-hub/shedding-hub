@@ -381,3 +381,16 @@ make catalog_gate2      # concentration fits, 2 log10 extrapolation gate
 make catalog_ct_gate2   # cycle-threshold fits, 2 cycles — a stricter gate, see docs/modeling-methods.md
 make figures            # 282 figures plus figures/index.json
 ```
+
+## Licence
+
+Two licences, because this repository holds two kinds of work:
+
+- **Software** — the `shedding_hub` package, `scripts/`, and the extraction
+  notebooks: [MIT](LICENSE).
+- **Data** — everything under `data/`, including the dataset YAML files and
+  `data/.schema.yaml`: [CC BY 4.0](LICENSE-DATA).
+
+Attribution is a condition of reusing the data. Cite Shedding Hub, and cite the
+study a dataset was extracted from — every dataset records its own source in a
+`doi` or `url` field.
