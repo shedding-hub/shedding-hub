@@ -44,7 +44,6 @@ $defs:
       - nasal_lavage_fluid
       - nasal_discharge
       - serum
-      - peripheral_blood_leukocytes
       - emesis
   analyte_specification:
     description: Specification of an analyte.
@@ -102,9 +101,7 @@ $defs:
           - rotavirus vaccine
           - hepatitis A virus
           - hepatitis E virus
-          - polyomavirus
           - BK polyomavirus
-          - JC polyomavirus
           - mpox
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
