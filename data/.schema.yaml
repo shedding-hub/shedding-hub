@@ -39,6 +39,7 @@ $defs:
       - genital_swab
       - unknown
       - bronchoalveolar_lavage_fluid
+      - bronchial_aspirate
       - tracheal_aspirate
       - nasal_lavage_fluid
       - nasal_discharge
@@ -100,6 +101,7 @@ $defs:
           - rotavirus vaccine
           - hepatitis A virus
           - hepatitis E virus
+          - BK polyomavirus
           - mpox
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
@@ -139,6 +141,13 @@ $defs:
           multiple doses.
         type: integer
         minimum: 1
+      challenge_dose:
+        description: >
+          Inoculum dose/titer used in a human challenge study (e.g., '10^5 TCID50',
+          '10^3 PFU'), as distinct from a vaccine `dose` number. Use when the study
+          exposes participants to different challenge doses and shedding is
+          compared across them.
+        type: string
       genogroup:
         description: >
           Genogroup/genotype classification this analyte specifically targets or measures,
@@ -349,10 +358,10 @@ properties:
               type: string
             treatment:
               description: >
-                Antiviral or other pathogen-directed treatment the participant received
+                Antiviral or other pathogen-directed treatment the participant received 
                 that could affect shedding (e.g., 'oseltamivir', 'zanamivir',
-                'remdesivir'), or 'untreated' when explicitly untreated. Describes the
-                subject, not a separate analyte.
+                'remdesivir', 'BMT' for bone marrow transplantation), or 'untreated' when
+                explicitly untreated. Describes the subject, not a separate analyte.
               type: string
         measurements:
           type: array
