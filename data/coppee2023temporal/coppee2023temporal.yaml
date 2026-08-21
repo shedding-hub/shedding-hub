@@ -1,0 +1,190 @@
+title: Temporal dynamics of RSV shedding and genetic diversity in adults during the
+  COVID-19 pandemic in a French hospital, early 2021
+doi: 10.1016/j.virusres.2022.198950
+description: Hospital-based observational study in adults admitted to Foch hospital
+  (Suresnes, France) between Jan 1 and Mar 31, 2021. Systematic nasopharyngeal swab
+  testing using the Alinity M RESP-4-Plex RT-PCR assay identified 8 RSV-positive adults
+  (patients A–H). This extraction captures RSV RT-PCR cycle threshold (Ct) values
+  over time from a figure-derived CSV; symptomatic participants are timed from symptom
+  onset, and asymptomatic participants are timed from first positive PCR (confirmation
+  date).
+analytes:
+  nasopharyngeal_swab_RSV_ct_symptomatic:
+    description: RSV RNA detection in nasopharyngeal swabs (NPS) using Alinity M RESP-4-Plex
+      (Abbott Molecular) RT-PCR. RSV positive defined per manufacturer; Ct value ≤40
+      considered positive and Ct >40 considered negative. Time for symptomatic participants
+      is days after symptom onset (as used for duration of positive PCR in symptomatic
+      individuals).
+    specimen: nasopharyngeal_swab
+    biomarker: RSV
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  nasopharyngeal_swab_RSV_ct_asymptomatic:
+    description: RSV RNA detection in nasopharyngeal swabs (NPS) using Alinity M RESP-4-Plex
+      (Abbott Molecular) RT-PCR. RSV positive defined per manufacturer; Ct value ≤40
+      considered positive and Ct >40 considered negative. For asymptomatic individuals,
+      timing is days after first positive PCR (confirmation date).
+    specimen: nasopharyngeal_swab
+    biomarker: RSV
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- patient_id: A
+  attributes:
+    sex: female
+    age: 62
+    subtype: A
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 7
+    value: 23.98692810457517
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 11
+    value: 35.05718954248366
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 15
+    value: 33.05555555555556
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 16
+    value: 32.07516339869281
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 19
+    value: negative
+- patient_id: B
+  attributes:
+    sex: female
+    age: 68
+    subtype: A
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 3
+    value: 22.02614379084968
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 5
+    value: 19.00326797385621
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 11
+    value: 37.01797385620915
+- patient_id: C
+  attributes:
+    sex: female
+    age: 71
+    subtype: A
+    symptomatic: false
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 0
+    value: 25.90686274509805
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 8
+    value: 34.97549019607843
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 13
+    value: 37.9983660130719
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 18
+    value: negative
+- patient_id: D
+  attributes:
+    sex: male
+    age: 61
+    subtype: A
+    symptomatic: false
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 0
+    value: 15.000000000000004
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 14
+    value: 31.993464052287585
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 21
+    value: 35.016339869281055
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 28
+    value: 37.01797385620915
+  - analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
+    time: 30
+    value: 39.01960784313726
+- patient_id: E
+  attributes:
+    sex: female
+    age: 36
+    subtype: A
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 2
+    value: 23.006535947712425
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 4
+    value: 23.98692810457517
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 7
+    value: 24.027777777777786
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 14
+    value: negative
+- patient_id: F
+  attributes:
+    sex: male
+    age: 81
+    subtype: B
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 0
+    value: 27.050653594771248
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 4
+    value: 20.02450980392157
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 8
+    value: 31.05392156862745
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 15
+    value: negative
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 19
+    value: negative
+- patient_id: G
+  attributes:
+    sex: male
+    age: 58
+    subtype: A
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 2
+    value: 18.02287581699347
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 5
+    value: 22.02614379084968
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 10
+    value: 23.04738562091504
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 17
+    value: 38.03921568627452
+- patient_id: H
+  attributes:
+    sex: female
+    age: 72
+    subtype: B
+    symptomatic: true
+  measurements:
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 5
+    value: 21.04575163398693
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 8
+    value: 20.02450980392157
+  - analyte: nasopharyngeal_swab_RSV_ct_symptomatic
+    time: 13
+    value: 35.05718954248366

@@ -25,12 +25,72 @@ jobs:
         run: black --check .
       - name: Run tests
         run: pytest -v --cov=shedding_hub --cov-report=term-missing
-      - name: Run doctests
+        env:
+          # test_load resolves a pull request through api.github.com, which
+          # allows 60 requests an hour unauthenticated and has twice failed a
+          # run with "403 rate limit exceeded". Actions supplies this token to
+          # every workflow -- nothing has to be created for it -- and it raises
+          # the ceiling to 5,000.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run README doctests
         run: python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE README.md
       - name: Build package
         run: python -m build
       - name: Validate package
         run: twine check dist/*.tar.gz dist/*.whl
+      # twine check validates metadata, not contents. Auto-discovery used to
+      # sweep `tests` and `scripts` into the wheel as top-level packages, so an
+      # install claimed those names in site-packages; every wheel up to 0.1.3
+      # carries them. This fails the build if that returns.
+      - name: Assert the wheel ships only the package
+        run: |
+          python - <<'PY'
+          import glob, zipfile
+          zf = zipfile.ZipFile(glob.glob("dist/*.whl")[0])
+          names = zf.namelist()
+          tops = {n.split("/")[0] for n in names}
+          allowed = {"shedding_hub"} | {t for t in tops if t.endswith(".dist-info")}
+          assert tops <= allowed, f"wheel ships unexpected top-level entries: {sorted(tops - allowed)}"
+          assert "shedding_hub/data/shedding_catalog.yaml" in names, (
+              "the shipped catalog is missing from the wheel; load_shedding_catalog() "
+              "would fail for every pip user"
+          )
+          meta = zf.read(next(n for n in names if n.endswith(".dist-info/METADATA"))).decode()
+          assert "Requires-Python:" in meta, (
+              "the wheel declares no Requires-Python, so pip installs it on interpreters "
+              "too old to import it -- which is how 0.2.1 reached Python 3.9 users"
+          )
+          print("wheel contents OK:", sorted(tops))
+          PY
+      - name: Build the documentation
+        run: |
+          python scripts/build_doc_figures.py
+          python -m mkdocs build --strict
+  # Every other job runs 3.11, so "works on the oldest Python we claim to
+  # support" was never a tested claim -- 0.2.1 shipped `int | None` annotations
+  # that cannot be imported below 3.10 and nothing noticed. This job is the
+  # claim's only enforcement; keep its python-version equal to the lower bound
+  # of requires-python in pyproject.toml.
+  minimum-python:
+    name: Minimum supported Python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      # Deliberately not requirements.txt: those pins (numpy 2.3.5, scipy
+      # 1.16.3) themselves need 3.11+, so they cannot be installed here at all.
+      # Installing the project resolves the dependency versions a real 3.10
+      # user gets, which is the combination actually worth testing.
+      - name: Install the package as a user would
+        run: pip install . pytest jsonschema
+      - name: Run tests
+        run: pytest -q
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   data-validation:
     runs-on: ubuntu-latest
     steps:

@@ -1,0 +1,461 @@
+title: 'Viral load in hospitalized infants with respiratory syncytial virus bronchiolitis:
+  a three-way comparative analysis'
+doi: 10.1007/s00431-024-05614-3
+description: 'Prospective cohort study of hospitalized infants (<12 months) with acute
+  bronchiolitis at Soroka Medical Center. For each infant, paired respiratory specimens
+  were collected at hospital admission (day 0) and ~48 hours later (day 2): nasopharyngeal
+  swabs and nasal lavage (nasal wash) fluid, each placed in two different transport
+  media (UTM and VCM). Quantitative RT-PCR viral load results (reported as virus particles
+  per mL, vp/mL) are provided here from figure-derived CSV data, stratified by specimen
+  type and transport medium; RSV subtype (A or B) is available per patient in the
+  CSV.'
+analytes:
+  utm_vp_ml_nasopharyngeal_swab:
+    description: Quantitative RT-PCR viral load reported as virus particles per mL
+      (vp/mL) from nasopharyngeal (nasal) swab specimens collected at hospital admission
+      (day 0) and 48 hours later (day 2), stored and tested as described in the paper;
+      specimen placed into UTM transport medium.
+    specimen: nasopharyngeal_swab
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: vp/mL
+    reference_event: hospital admission
+  vcm_vp_ml_nasopharyngeal_swab:
+    description: Quantitative RT-PCR viral load reported as virus particles per mL
+      (vp/mL) from nasopharyngeal (nasal) swab specimens collected at hospital admission
+      (day 0) and 48 hours later (day 2), stored and tested as described in the paper;
+      specimen placed into VCM transport medium.
+    specimen: nasopharyngeal_swab
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: vp/mL
+    reference_event: hospital admission
+  utm_vp_ml_nasal_lavage_fluid:
+    description: Quantitative RT-PCR viral load reported as virus particles per mL
+      (vp/mL) from nasal lavage (nasal wash) fluid specimens collected at hospital
+      admission (day 0) and 48 hours later (day 2), stored and tested as described
+      in the paper; specimen placed into UTM transport medium.
+    specimen: nasal_lavage_fluid
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: vp/mL
+    reference_event: hospital admission
+  vcm_vp_ml_nasal_lavage_fluid:
+    description: Quantitative RT-PCR viral load reported as virus particles per mL
+      (vp/mL) from nasal lavage (nasal wash) fluid specimens collected at hospital
+      admission (day 0) and 48 hours later (day 2), stored and tested as described
+      in the paper; specimen placed into VCM transport medium.
+    specimen: nasal_lavage_fluid
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: vp/mL
+    reference_event: hospital admission
+participants:
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 7943282.347
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 39810.71706
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 19952623.15
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 25118.86432
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 31622776.6
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 316227.766
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 31622776.6
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 501187.2336
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 1995262.315
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 794328.2347
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 1258925.412
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 630957.3445
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 39810717.06
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 5011872.336
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 79432823.47
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 5011872.336
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 3162.27766
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 398.1071706
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 3981.071706
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 251.1886432
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 125892.5412
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 25118.86432
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 158489.3192
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 19952.62315
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 2511886.432
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 630957.3445
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 1584893.192
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 630957.3445
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 63095734.45
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 25118864.32
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 100000000
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 63095734.45
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 100000
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 79432.82347
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 630957.3445
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 100000
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 100000000
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 251188643.2
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 158489319.2
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 199526231.5
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 1258925.412
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 50118.72336
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 501187.2336
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 251188.6432
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 199526231.5
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 1584893.192
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 316227766
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 7943282.347
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 19952.62315
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 10000
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 125892.5412
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 15848.93192
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 1258925.412
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 316227.766
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 1584893.192
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 630957.3445
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 25118.86432
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 100000
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 100000
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 39810.71706
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 5011872.336
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 6309573.445
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 5011872.336
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 3162277.66
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 1000000
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 199526.2315
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 316227.766
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 39810.71706
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 31622776.6
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 7943282.347
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 39810717.06
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 7943282.347
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 100000
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 316227.766
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 10000
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 251188.6432
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 50118723.36
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 10000000
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 19952623.15
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 31622776.6
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 1000000
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 6309.573445
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 199526.2315
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 12589.25412
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 100000000
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 25118864.32
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 125892541.2
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 6309573.445
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 1584893.192
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 15848.93192
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 199526.2315
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 2
+    value: 15848.93192
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 398107170.6
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 1995262.315
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 630957344.5
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 2
+    value: 3162277.66
+- attributes:
+    age_group: infant
+    infant: true
+    subtype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+  measurements:
+  - analyte: utm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 5011.872336
+  - analyte: vcm_vp_ml_nasopharyngeal_swab
+    time: 0
+    value: 2511.886432
+  - analyte: utm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 398107.1706
+  - analyte: vcm_vp_ml_nasal_lavage_fluid
+    time: 0
+    value: 398107.1706

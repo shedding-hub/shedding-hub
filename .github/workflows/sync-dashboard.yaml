@@ -1,0 +1,24 @@
+name: Sync Dashboard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/**"
+  workflow_dispatch:
+
+jobs:
+  notify-dashboard:
+    name: Notify
+    runs-on: ubuntu-latest
+    steps:
+      # `event-type` must stay `data-updated`: the receiving workflow,
+      # shedding-hub-dash/.github/workflows/sync-data.yml, filters on that exact
+      # name. GITHUB_TOKEN cannot dispatch across repositories, hence the PAT.
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repository: shedding-hub/shedding-hub-dash
+          event-type: data-updated
