@@ -21,6 +21,64 @@ from .shedding_models import LN10, PARAM_NAMES, theta_to_params, validate_model
 CENSORING_MARGIN = 0.01
 NEGATIVE_VALUE = "negative"
 
+# Ct is affine in log10 concentration (Ct = alpha - beta * log10 C), so the
+# shedding models describe it unchanged once it is negated -- Ct falls as
+# shedding rises -- and offset to keep fitted levels positive.
+#
+# The offset is one constant for every analyte, not each study's own cutoff.
+# Recorded cutoffs run 37 to 41, so anchoring per study would put two studies
+# measuring identical samples up to 4 cycles apart on height alone. 40 sits
+# above the observed Ct median of 31 and above 95% of all readings, so fitted
+# peak heights -- which occur at LOW Ct -- stay comfortably positive.
+CT_REFERENCE = 40.0
+
+# These three transfer between value types exactly, with no assumption about
+# PCR efficiency, but for two different reasons.
+#
+# Rise duration is b0/a0, and peak time is that ratio (plus t0, under
+# gamma_shifted). Fitting Ct returns a0 and b0 both multiplied by the unknown
+# standard-curve slope, so the slope cancels in the ratio.
+#
+# t0 is invariant for a simpler reason, and NOT by cancellation: it is a time.
+# The Ct transform rescales and offsets the response axis and leaves the time
+# axis alone, so an onset in days is the same number whichever scale the
+# readings were reported on -- there is no slope in it to cancel.
+#
+# Everything else carries either the slope (a0, half-life) or the assay
+# intercept (height), and studies report neither.
+#
+# These are names of QUANTITIES, not attributes of ``SheddingFit`` --
+# ``getattr(fit, name)`` does not work for most of them. ``peak_day`` and
+# ``half_life_days`` are properties on the fit. ``a0`` and ``t0`` are model
+# parameter names: found as columns of ``subject_params`` and as coordinates
+# of ``population_mean`` (via ``population_coords``), not as attributes.
+# ``rise_days`` and ``peak_height`` are derived quantities with no attribute
+# at all -- ``peak_height`` is deliberately left scale-neutral rather than
+# named after a coordinate, since a later task names the underlying quantity
+# ``peak_log10`` for concentration fits and ``peak_cycles`` for Ct fits, and
+# pinning it to either here would be wrong.
+VALUE_TYPE_INVARIANT_PARAMETERS = ("peak_day", "t0", "rise_days")
+
+ALL_COMPARABLE_PARAMETERS = VALUE_TYPE_INVARIANT_PARAMETERS + (
+    "a0",
+    "half_life_days",
+    "peak_height",
+)
+
+
+def _to_response(value: float, value_type: str) -> float:
+    """
+    Map a reported measurement onto the scale the models are fitted on.
+
+    Concentrations are fitted on log10. Cycle thresholds are fitted as cycles
+    below ``CT_REFERENCE``, which is decreasing in Ct and therefore increasing
+    in viral load, exactly like a log10 concentration.
+    """
+    if value_type == "ct":
+        return CT_REFERENCE - float(value)
+    return math.log10(float(value))
+
+
 # Fecal-strength / normalization indicators, not pathogens shed by infected
 # people. They have no time-since-infection trajectory, so fitting a shedding
 # curve to them is meaningless regardless of how much data is available.
@@ -65,7 +123,7 @@ class SheddingDataError(ValueError):
     Raised when an analyte cannot be fitted.
 
     Attributes:
-        reason: Machine-readable cause, one of ``ct_units``,
+        reason: Machine-readable cause, one of
             ``non_pathogen_biomarker``, ``too_few_subjects``,
             ``no_positive_measurements``, ``no_data_after_reference_event``,
             ``no_pre_event_readings``, ``unknown_analyte``,
@@ -112,6 +170,11 @@ class Observations:
     values: np.ndarray
     censored: np.ndarray
     censoring_limit: float
+    # Which scale ``values`` and ``censoring_limit`` are on: log10 concentration,
+    # or cycles below CT_REFERENCE. Carried on the observations rather than
+    # re-derived downstream, so a plot or a fit cannot disagree with the fitter
+    # about what its own numbers mean.
+    value_type: str = "concentration"
     subject_ids: list = field(default_factory=list)
     n_subjects: int = 0
     n_excluded_subjects: int = 0
@@ -119,9 +182,11 @@ class Observations:
     # The plottable subset of what was dropped: readings with a usable time and
     # value that a model-specific rule discarded. Recorded so a diagnostic plot
     # can mark them without re-deriving the rules, which would drift.
-    # ``dropped_values`` is log10, NaN where the reading was censored, matching
-    # ``values``. Readings with no usable time or value are counted in
-    # ``n_dropped_measurements`` but cannot be placed on a plot and are absent.
+    # ``dropped_values`` is on the same scale as ``values`` — see
+    # ``value_type`` for whether that is log10 concentration or cycles below
+    # ``CT_REFERENCE`` — and NaN where the reading was censored. Readings with
+    # no usable time or value are counted in ``n_dropped_measurements`` but
+    # cannot be placed on a plot and are absent.
     dropped_times: np.ndarray = field(default_factory=lambda: np.empty(0))
     dropped_values: np.ndarray = field(default_factory=lambda: np.empty(0))
 
@@ -140,7 +205,27 @@ def _numeric_limit(value: Any) -> float | None:
     return float(value) if value > 0 else None
 
 
-def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> float:
+def _declared_limit(analyte_spec: dict) -> float | None:
+    """Resolve the analyte's declared detection limit: quantification, then detection.
+
+    The single reading of that precedence. ``_resolve_censoring_limit`` is its
+    only caller, and everything that needs the cutoff an analyte was actually
+    fitted against -- the ``ct_cutoff`` recorded on ``SheddingFit`` -- reads it
+    back off that resolved limit rather than re-deriving it here, so the two can
+    never describe different cutoffs of the same analyte.
+    """
+    for key in ("limit_of_quantification", "limit_of_detection"):
+        limit = _numeric_limit(analyte_spec.get(key))
+        if limit is not None:
+            return limit
+    return None
+
+
+def _resolve_censoring_limit(
+    analyte_spec: dict,
+    observed: np.ndarray,
+    value_type: str = "concentration",
+) -> float:
     """
     Resolve the log10 censoring limit.
 
@@ -158,32 +243,45 @@ def _resolve_censoring_limit(analyte_spec: dict, observed_log10: np.ndarray) -> 
     limit is declared, so that any ``negative`` still sits below the resolved
     limit.
 
-    Assumes ``observed_log10`` is non-empty; ``prepare_observations`` guarantees
+    Assumes ``observed`` is non-empty; ``prepare_observations`` guarantees
     this by raising ``no_positive_measurements`` itself before ever calling here.
-    """
-    for key in ("limit_of_quantification", "limit_of_detection"):
-        limit = _numeric_limit(analyte_spec.get(key))
-        if limit is not None:
-            return math.log10(limit)
 
-    smallest = float(observed_log10.min())
+    For a cycle-threshold analyte the declared limit is itself a Ct, so it is
+    transformed the same way the observations are and the resolved limit is
+    ``CT_REFERENCE - cutoff`` — zero at a cutoff of 40, negative where an assay
+    runs to 41, positive where it stops at 37. The fallback branch needs no
+    special case: ``observed`` has already been transformed, so "just below the
+    smallest response" means the same thing on either scale.
+    """
+    limit = _declared_limit(analyte_spec)
+    if limit is not None:
+        return _to_response(limit, value_type)
+
+    smallest = float(observed.min())
     fallback = smallest - CENSORING_MARGIN
+    scale = "cycles below reference" if value_type == "ct" else "log10"
     warnings.warn(
         "Falling back to a censoring limit of "
-        f"{fallback:.4g} (log10) because no limit of quantification or detection "
-        "is declared for this analyte.",
+        f"{fallback:.4g} ({scale}) because no limit of quantification or "
+        "detection is declared for this analyte.",
         UserWarning,
         stacklevel=2,
     )
     return fallback
 
 
-def _record_dropped(measurement: dict, time: float, times: list, values: list) -> None:
+def _record_dropped(
+    measurement: dict,
+    time: float,
+    times: list,
+    values: list,
+    value_type: str = "concentration",
+) -> None:
     """Note a discarded reading, if it can be placed on a plot at all."""
     value = measurement.get("value")
     if isinstance(value, (int, float)) and not isinstance(value, bool) and value > 0:
         times.append(time)
-        values.append(math.log10(float(value)))
+        values.append(_to_response(float(value), value_type))
     elif value == NEGATIVE_VALUE:
         times.append(time)
         values.append(float("nan"))
@@ -222,17 +320,19 @@ def prepare_observations(
             the default is -5 and why it does not affect the gamma model.
 
     Returns:
-        An ``Observations`` instance with subject indices renumbered contiguously
-        from zero over the retained subjects.
+        An ``Observations`` instance with subject indices renumbered
+        contiguously. For a cycle-threshold analyte, ``values`` are cycles
+        below ``CT_REFERENCE`` rather than log10 concentrations, and
+        ``value_type`` says which.
 
     Raises:
-        SheddingDataError: The analyte is unknown, uses cycle-threshold units,
-            is a non-pathogen indicator biomarker, has no positive
-            measurements, or leaves no subject with enough data — reasons
-            ``unknown_analyte``, ``ct_units``, ``non_pathogen_biomarker``,
-            ``no_positive_measurements`` and ``too_few_subjects``
-            respectively, plus ``no_data_after_reference_event`` when every
-            usable reading falls at or before day 0. Note that ``too_few_subjects`` here means no subject
+        SheddingDataError: The analyte is unknown, is a non-pathogen
+            indicator biomarker, has no positive measurements, or leaves no
+            subject with enough data — reasons ``unknown_analyte``,
+            ``non_pathogen_biomarker``, ``no_positive_measurements`` and
+            ``too_few_subjects`` respectively, plus
+            ``no_data_after_reference_event`` when every usable reading
+            falls at or before day 0. Note that ``too_few_subjects`` here means no subject
             cleared ``min_observations``, not that the analyte has few
             subjects. The remaining three cannot arise here:
             ``no_rise_observed`` and ``degenerate_fit`` belong to
@@ -254,14 +354,9 @@ def prepare_observations(
         )
     analyte_spec = analytes[analyte]
 
-    if _is_ct_unit(analyte_spec.get("unit")):
-        raise SheddingDataError(
-            f"Analyte {analyte!r} is reported in {analyte_spec.get('unit')!r}. "
-            "Cycle-threshold values are inversely related to concentration and "
-            "already on a log scale, so neither shedding model applies. Select a "
-            "concentration analyte instead.",
-            "ct_units",
-        )
+    # Cycle thresholds are affine in log10 concentration, so both models
+    # describe them once the response is transformed. See ``_to_response``.
+    value_type = "ct" if _is_ct_unit(analyte_spec.get("unit")) else "concentration"
 
     biomarker = analyte_spec.get("biomarker")
     if biomarker in NON_PATHOGEN_BIOMARKERS:
@@ -297,7 +392,9 @@ def prepare_observations(
             gamma_drops_it = model == "gamma" and time <= 0
             if gamma_drops_it or time < min_time:
                 n_dropped += 1
-                _record_dropped(measurement, time, dropped_times, dropped_values)
+                _record_dropped(
+                    measurement, time, dropped_times, dropped_values, value_type
+                )
                 continue
             value = measurement.get("value")
             if isinstance(value, str):
@@ -324,7 +421,7 @@ def prepare_observations(
                 n_dropped += 1
                 continue
             times.append(time)
-            values.append(math.log10(float(value)))
+            values.append(_to_response(float(value), value_type))
             censored.append(False)
 
         if times:
@@ -452,7 +549,7 @@ def prepare_observations(
     # Non-empty: retention requires at least one positive per subject, and the
     # analyte-wide check above already rejected the case where there are none.
     observed = values_array[~censored_array]
-    censoring_limit = _resolve_censoring_limit(analyte_spec, observed)
+    censoring_limit = _resolve_censoring_limit(analyte_spec, observed, value_type)
 
     return Observations(
         subject_index=subject_index,
@@ -460,6 +557,7 @@ def prepare_observations(
         values=values_array,
         censored=censored_array,
         censoring_limit=censoring_limit,
+        value_type=value_type,
         subject_ids=retained_ids,
         n_subjects=len(retained),
         n_excluded_subjects=n_excluded,
@@ -480,6 +578,7 @@ from .shedding_models import (
     log10_concentration_pointwise,
     log10_concentration_rowwise,
     peak_day,
+    population_coord_names,
     to_population_coords,
 )
 
@@ -568,6 +667,24 @@ _BOUND_TOLERANCE = 1e-6
 # It also removes the need for a separate c0 or b0 bound: after this cut the
 # worst c0 is 75.5 and the worst b0 is 33.9, both on smooth tails with no gap to
 # justify cutting into.
+#
+# Calibrated on concentration fits, in log10 units, and applied unchanged to a
+# Ct fit. A Ct fit's a0 comes back multiplied by the assay's standard-curve
+# slope -- about 3.3 for a fully efficient assay -- so the half-life it implies
+# is about 3.3 times shorter than the same subject's on the concentration
+# scale, and this gate is correspondingly about 3.3 times stricter there: it
+# cuts at a concentration-scale half-life of roughly a third of a day rather
+# than a tenth.
+#
+# Deliberately not rescaled. Dividing by a nominal slope would put an assumed
+# PCR efficiency back into the fitting path, which is exactly what fitting Ct
+# directly exists to avoid, and the assumption would then be invisible in every
+# Ct estimate rather than stated once here. The price is that subject
+# *retention* is not scale-invariant even though the parameter mathematics is:
+# the same cohort measured both ways can keep slightly different subjects, so a
+# population peak time can differ across scales for a reason that is not in the
+# mathematics. Same caveat as _MAX_PEAK_ABOVE_OBSERVED below; both are stated
+# in docs/modeling-methods.md so a reader comparing two fits meets it there.
 _MIN_HALF_LIFE_DAYS = 0.1
 
 
@@ -577,6 +694,14 @@ _MIN_HALF_LIFE_DAYS = 0.1
 # the reference event still summarizes every real subject, tight enough to
 # exclude the hundred-half-life backward extrapolations that late-starting
 # studies produce. See ``_over_extrapolated_subjects``.
+#
+# Compared against the fitted response, so on a Ct fit these are cycles, not
+# log10 units: three cycles is about 0.9 log10 at a standard-curve slope of
+# 3.3, making the gate roughly that much stricter on the Ct scale. Not rescaled,
+# for the reason given at _MIN_HALF_LIFE_DAYS above -- a nominal slope here
+# would be an assumed PCR efficiency in the fitting path -- and with the same
+# consequence: subject retention is not scale-invariant, so a cohort measured
+# both ways may not summarize exactly the same subjects.
 _MAX_PEAK_ABOVE_OBSERVED = 3.0
 
 # The gamma model is only fitted where a rise is actually observed. Its ``b0``
@@ -746,6 +871,19 @@ class SheddingFit:
     # warning on ``peak_log10``, which is evaluated at t = 0 for the exponential
     # model however late sampling actually began.
     median_first_observed_day: float = float("nan")
+    # Which scale this fit's heights live on. Defaults to concentration so a
+    # catalog serialized before Ct support stays loadable and reads correctly.
+    value_type: str = "concentration"
+    # The reference heights are measured below, and the Ct cutoff this fit
+    # censored against. Recorded rather than assumed: a fit serialized under one
+    # convention must not be silently reinterpreted under another, and a height
+    # reads back as a minimum Ct via ``ct_reference - height``. ``ct_cutoff`` is
+    # the cutoff that was applied, which is the analyte's declared limit where
+    # it declares one and the data-derived fallback where it does not — the
+    # same number ``censoring_limit`` carries, expressed as a Ct rather than as
+    # cycles below the reference. Both None for concentration fits.
+    ct_reference: float | None = None
+    ct_cutoff: float | None = None
 
     @property
     def param_names(self) -> tuple[str, ...]:
@@ -753,8 +891,24 @@ class SheddingFit:
 
     @property
     def population_coords(self) -> tuple[str, ...]:
-        """Names of the coordinates ``population_mean``/``population_cov`` use."""
-        return POPULATION_COORDS[self.model]
+        """
+        Names of the coordinates ``population_mean``/``population_cov`` use.
+
+        Value-type aware, via ``population_coord_names``: a Ct fit's height is
+        cycles below ``ct_reference``, so it is named ``peak_cycles`` rather
+        than ``peak_log10``. The two are the same length and both plausible
+        numbers, so a Ct height under the log10 name would read as a
+        concentration a hundred billion times too large rather than as
+        anything obviously wrong. The temporal coordinates keep their names on
+        either scale, because they mean the same thing on either scale.
+
+        Examples:
+            >>> import shedding_hub as sh
+            >>> fit = sh.load_shedding_catalog().fits[0]
+            >>> 'peak_log10' in fit.population_coords
+            True
+        """
+        return population_coord_names(self.model, self.value_type)
 
     @property
     def median_params(self) -> np.ndarray:
@@ -844,6 +998,48 @@ class SheddingFit:
     def half_life_days(self) -> float:
         return float(half_life_days(self.model, self.median_params[None, :])[0])
 
+    def comparable_with(self, other: "SheddingFit") -> tuple[str, ...]:
+        """
+        Names of quantities that may be compared between this fit and ``other``'s.
+
+        Within one value type everything compares. Across value types only the
+        temporal parameters do — see ``VALUE_TYPE_INVARIANT_PARAMETERS``.
+
+        The returned names are quantities, not attributes: ``getattr(fit, name)``
+        does not work for most of them. ``peak_day`` and ``half_life_days`` are
+        properties on the fit; ``a0`` and ``t0`` are model parameter names, found
+        as columns of ``subject_params`` and coordinates of ``population_mean``;
+        ``rise_days`` and ``peak_height`` are derived quantities with no
+        attribute at all. See ``ALL_COMPARABLE_PARAMETERS`` for where each one
+        lives.
+
+        A full-comparability answer is not a guarantee that two Ct fits are
+        truly on the same footing, even within one value type: two fits from
+        *different assays* have different standard-curve slopes and
+        intercepts, so ``a0``, ``half_life_days`` and ``peak_height`` are no
+        more transferable between them than they are across value types. This
+        method cannot detect that — the datasets do not record assay identity
+        — so it returns everything for any pair sharing a ``value_type``.
+
+        Comparability is a statement about the parameters, not about the
+        estimates. Invariance is exact where both fits reach corresponding
+        optima, but on heavily censored data the optimisers need not, and two
+        population peak times can then differ by a median of half a day. See
+        *How far invariance actually gets you* in ``docs/modeling-methods.md``
+        for the measured spread before treating one as a substitute for the
+        other.
+
+        Examples:
+            >>> import shedding_hub as sh
+            >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+            >>> fit = sh.fit_shedding_model(data, analyte='stool', model='gamma')
+            >>> 'half_life_days' in fit.comparable_with(fit)
+            True
+        """
+        if self.value_type == other.value_type:
+            return ALL_COMPARABLE_PARAMETERS
+        return VALUE_TYPE_INVARIANT_PARAMETERS
+
     def sample_params(
         self, rng: np.random.Generator, n: int, dispersion: float = 1.0
     ) -> tuple[np.ndarray, np.ndarray]:
@@ -929,6 +1125,11 @@ class SheddingFit:
             "converged": bool(self.converged),
             "log_likelihood": float(self.log_likelihood),
             "aic": float(self.aic),
+            "value_type": self.value_type,
+            "ct_reference": (
+                None if self.ct_reference is None else float(self.ct_reference)
+            ),
+            "ct_cutoff": None if self.ct_cutoff is None else float(self.ct_cutoff),
         }
 
     @classmethod
@@ -950,7 +1151,13 @@ class SheddingFit:
             A ``SheddingFit`` with ``subject_params is None``.
         """
         model = payload["model"]
-        expected = list(POPULATION_COORDS[model])
+        # Resolved before the coordinate check, not after: the height coordinate
+        # is named for the scale it lives on (``peak_cycles`` for Ct), so the
+        # names a payload is checked against depend on its own value type. A
+        # payload predating Ct support has no such key and reads as
+        # concentration, exactly as the fit it describes.
+        value_type = payload.get("value_type", "concentration")
+        expected = list(population_coord_names(model, value_type))
         if payload.get("population_coords") != expected:
             raise ValueError(
                 f"This {model!r} fit records its population summary in "
@@ -997,6 +1204,21 @@ class SheddingFit:
             converged=bool(payload["converged"]),
             log_likelihood=float(payload["log_likelihood"]),
             aic=float(payload["aic"]),
+            # Defaulted the same way: catalogs written before Ct support existed
+            # have no such keys, and every fit in them predates value tracking,
+            # so "concentration" with no Ct metadata is the honest reading.
+            # Resolved above, since the coordinate-name check depends on it.
+            value_type=value_type,
+            ct_reference=(
+                None
+                if payload.get("ct_reference") is None
+                else float(payload["ct_reference"])
+            ),
+            ct_cutoff=(
+                None
+                if payload.get("ct_cutoff") is None
+                else float(payload["ct_cutoff"])
+            ),
         )
 
 
@@ -1614,4 +1836,20 @@ def fit_shedding_model(
         n_degenerate_subjects=n_degenerate,
         pct_subjects_with_rise=100.0 * rise_fraction,
         median_first_observed_day=median_first_observed_day,
+        value_type=observations.value_type,
+        ct_reference=CT_REFERENCE if observations.value_type == "ct" else None,
+        # The cutoff actually applied, read back off the resolved censoring
+        # limit rather than off the analyte's declaration. The two agree
+        # wherever a limit is declared -- the limit IS CT_REFERENCE minus the
+        # cutoff -- and where none is (about 15 analytes in the repository)
+        # this reports the fallback the fitter fell back to instead of None,
+        # which would have read as "this fit censored nothing" when it had
+        # censored against a resolved cutoff all along. Deriving it from the
+        # limit also makes it impossible for the two to describe different
+        # cutoffs of the same analyte.
+        ct_cutoff=(
+            CT_REFERENCE - observations.censoring_limit
+            if observations.value_type == "ct"
+            else None
+        ),
     )

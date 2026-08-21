@@ -19,6 +19,7 @@ from .viz import (
     plot_shedding_heatmap,
     plot_mean_trajectory,
     plot_catalog_fits,
+    plot_analyte_observations,
     plot_fit_diagnostic,
     # Implemented since before 0.1.3 and documented on the project website, but
     # never exported until now, so every documented call raised AttributeError.
@@ -38,7 +39,13 @@ from .stats import (
 
 from .shedding_models import MODELS, PARAM_NAMES
 
-from .shedding_fit import SheddingDataError, SheddingFit, fit_shedding_model
+from .shedding_fit import (
+    CT_REFERENCE,
+    VALUE_TYPE_INVARIANT_PARAMETERS,
+    SheddingDataError,
+    SheddingFit,
+    fit_shedding_model,
+)
 
 from .shedding_catalog import (
     SheddingCatalog,
@@ -77,6 +84,7 @@ __all__ = [
     "plot_shedding_heatmap",
     "plot_mean_trajectory",
     "plot_catalog_fits",
+    "plot_analyte_observations",
     "plot_fit_diagnostic",
     "plot_clearance_curve",
     "plot_detection_probability",
@@ -89,6 +97,8 @@ __all__ = [
     "compare_datasets",
     "MODELS",
     "PARAM_NAMES",
+    "CT_REFERENCE",
+    "VALUE_TYPE_INVARIANT_PARAMETERS",
     "SheddingDataError",
     "SheddingFit",
     "SheddingCatalog",

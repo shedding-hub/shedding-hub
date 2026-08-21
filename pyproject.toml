@@ -1,8 +1,12 @@
 [project]
 name = "shedding-hub"
-version = "0.2.2"
+version = "0.2.3"
 readme = "README.md"
 description = "Data and statistical models for biomarker shedding."
+# The package is MIT; the datasets under data/ are CC BY 4.0 and are not
+# shipped in the wheel, so only the software licence belongs in this metadata.
+license = "MIT"
+license-files = ["LICENSE"]
 # The package annotates with PEP 604 unions (`int | None`), which the
 # interpreter evaluates as a module is imported, so 3.10 is a hard floor.
 # Every release through 0.2.1 declared no floor at all, so pip on 3.9 installed
@@ -47,3 +51,11 @@ find = { include = ["shedding_hub*"] }
 
 [tool.setuptools.package-data]
 shedding_hub = ["data/*.yaml"]
+
+[tool.black]
+# Pinned to the floor in requires-python. Left unset, black 26 targets the
+# newest Python it knows about and then cannot run its own AST safety check on
+# an older interpreter -- CI runs 3.11 and got "Python 3.11 cannot parse code
+# formatted for Python 3.15", meaning the equivalence check that makes
+# reformatting safe was being skipped silently.
+target-version = ["py310"]

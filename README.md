@@ -113,15 +113,16 @@ rather than re-adding `+SKIP`.*
 
 ```
 
-Picking a fit by hand means naming five keys — biomarker, specimen, reference
-event, unit and model — and those keys cut the catalog into 82 groups, 71 of
-which hold a single study. To see the choice, and to have it made for you:
+Picking a fit by hand means naming six keys — biomarker, specimen, reference
+event, unit, value type and model — and those keys cut the catalog into 82
+groups, 71 of which hold a single study. To see the choice, and to have it
+made for you:
 
 ```python
 >>> import shedding_hub as sh
 >>> options = sh.shedding_options(biomarker='SARS-CoV-2', specimen='stool')
 >>> list(options.columns)
-['biomarker', 'specimen', 'reference_event', 'event_class', 'unit', 'n_unit_studies', 'model', 'n_studies', 'n_subjects', 'n_measurements', 'rank']
+['biomarker', 'specimen', 'reference_event', 'event_class', 'unit', 'value_type', 'n_unit_studies', 'model', 'n_studies', 'n_subjects', 'n_measurements', 'rank']
 >>> source = sh.shedding_for('SARS-CoV-2', 'stool')
 >>> source.selection.picked['event_class']
 'landmark'
@@ -339,3 +340,57 @@ We use [pull requests](https://docs.github.com/en/pull-requests/collaborating-wi
 6. Push the dataset to your fork by running `git push origin my_cool_study`. This will send the data to GitHub, and the output of the command will include a line `Create a pull reuqest for 'my_cool_study' on GitHub by visiting: https://github.com/[your-username]/shedding-hub/pull/new/my_cool_study`. Click on the link and follow the next steps to create a new pull request.
 
 Congratulations, you've just created your first pull request to contribute a new dataset! We'll now [review the changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) you've made to make sure everything looks good. Once any questions have been resolved, we'll [merge your changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) into the repository. You've just contributed your first dataset to help make wastewater-based epidemiology a more quantitative public health monitoring tool–thank you!
+
+## 🔄 What happens after a dataset is merged
+
+Each dataset gets a page on [the website](https://shedding-hub.github.io/), and each of its analytes gets a figure there: the fitted shedding curve where a model could be fitted, and the measurements alone where none could. Those figures live in [`figures/`](https://github.com/shedding-hub/shedding-hub/tree/main/figures) in this repository, because the website has no Python to generate them with — it copies them out of the archive it already downloads for the dataset YAML.
+
+Merging a dataset therefore sets off two things at once, and **one step in the middle is manual**:
+
+```
+merge a dataset PR into main
+        │
+        ├── github-pages.yaml  (any push to main)
+        │      └── tells the website to rebuild, immediately
+        │          → the new dataset's page goes live, with no figure yet
+        │
+        └── refresh-figures.yaml  (pushes touching data/**)
+               └── ~45 min: rebuilds both gate-2 catalogs, re-renders every
+                   figure, and opens a "figures: refresh the dataset pages" PR
+                      │
+                      └── a maintainer merges it        ← the manual step
+                             │
+                             └── the website rebuilds again, now with figures
+```
+
+A page with no figure is expected in the meantime and is not a fault: the layout omits the figure when the dataset has no entry yet, so the page is complete apart from the illustration.
+
+**Reviewing the figures pull request.** Expect it to be small, and read all of it. The runner reproduces its own output exactly: a refresh run against figures the runner itself generated came back with *no differences at all*, and the workflow deleted its branch without opening anything. So a pull request that does appear contains real changes, and every file in it is worth a look.
+
+That was not true of the first refresh, which rewrote 282 of 286 files. Those figures had been generated on a contributor's Windows machine, and refitting on Linux moves the numbers — the same reason `tests/test_parameter_export.py` compares with a `DRIFT_RTOL` rather than exactly. That was a one-time cost of moving the committed set onto the runner, not the standing behaviour.
+
+Two things to read for:
+
+- **Added or removed figures** are the clearest signal: an analyte gained or lost a converged fit, which changes what the catalog supports.
+- **Changed figures deserve their legend read, not just their picture.** A parameter that moves while the AIC does not marks an analyte whose fit is weakly identified. During that first refresh `mijatovicrustempasic2017shedding / rotavirus vaccine_stool / exponential` moved its half-life from **2.28 days to 1.97 days**, 14%, while its AIC changed by 0.1: both fits explain the data equally well, because the likelihood is flat along that direction. That is a property of the study's data rather than of any machine, and it is worth carrying into any estimate drawn from that analyte.
+
+**Regenerating by hand.** `refresh-figures.yaml` only watches `data/**`, so a change to the fitting or plotting code does not raise a pull request on its own. Trigger one deliberately with `gh workflow run "Refresh Dataset Figures"`, or rebuild locally:
+
+```bash
+make catalog_gate2      # concentration fits, 2 log10 extrapolation gate
+make catalog_ct_gate2   # cycle-threshold fits, 2 cycles — a stricter gate, see docs/modeling-methods.md
+make figures            # 282 figures plus figures/index.json
+```
+
+## Licence
+
+Two licences, because this repository holds two kinds of work:
+
+- **Software** — the `shedding_hub` package, `scripts/`, and the extraction
+  notebooks: [MIT](LICENSE).
+- **Data** — everything under `data/`, including the dataset YAML files and
+  `data/.schema.yaml`: [CC BY 4.0](LICENSE-DATA).
+
+Attribution is a condition of reusing the data. Cite Shedding Hub, and cite the
+study a dataset was extracted from — every dataset records its own source in a
+`doi` or `url` field.

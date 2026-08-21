@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 import shedding_hub as sh
 from shedding_hub.shedding_fit import (
+    CT_REFERENCE,
+    SheddingDataError,
     SheddingFit,
     fit_shedding_model,
     prepare_observations,
@@ -351,7 +353,7 @@ def test_plot_time_courses_with_real_datasets():
 
 
 @pytest.fixture
-def ct_dataset():
+def ct_value_dataset():
     """Dataset with CT values."""
     return {
         "dataset_id": "test_ct_dataset",
@@ -415,9 +417,9 @@ def test_plot_shedding_heatmap_with_value_concentration(minimal_dataset):
     assert isinstance(fig, matplotlib.figure.Figure)
 
 
-def test_plot_shedding_heatmap_with_value_ct(ct_dataset):
+def test_plot_shedding_heatmap_with_value_ct(ct_value_dataset):
     """Test plot_shedding_heatmap with value='ct'."""
-    fig = sh.plot_shedding_heatmap(ct_dataset, value="ct")
+    fig = sh.plot_shedding_heatmap(ct_value_dataset, value="ct")
     assert fig is not None
     assert isinstance(fig, matplotlib.figure.Figure)
 
@@ -646,9 +648,9 @@ def test_plot_mean_trajectory_with_value_concentration(minimal_dataset):
     assert isinstance(fig, matplotlib.figure.Figure)
 
 
-def test_plot_mean_trajectory_with_value_ct(ct_dataset):
+def test_plot_mean_trajectory_with_value_ct(ct_value_dataset):
     """Test plot_mean_trajectory with value='ct'."""
-    fig = sh.plot_mean_trajectory(ct_dataset, value="ct")
+    fig = sh.plot_mean_trajectory(ct_value_dataset, value="ct")
     assert fig is not None
     assert isinstance(fig, matplotlib.figure.Figure)
 
@@ -1678,6 +1680,81 @@ def test_plot_fit_diagnostic_returns_one_closed_axis(fitted_pair):
     assert fig.number not in plt.get_fignums()
 
 
+def test_fit_diagnostic_labels_the_ct_axis(ct_dataset):
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    assert fig.axes[0].get_ylabel() == "Ct (cycle threshold)"
+
+
+def test_fit_diagnostic_ct_ticks_read_as_ct_not_as_depth(ct_dataset):
+    # A response of 8.0 is Ct 32. The tick must say 32.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    formatter = fig.axes[0].yaxis.get_major_formatter()
+    assert formatter(8.0, None) == "32"
+
+
+def test_fit_diagnostic_is_not_inverted_for_ct(ct_dataset):
+    # The response already increases with viral load. Inverting would put the
+    # peak at the bottom.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    bottom, top = fig.axes[0].get_ylim()
+    assert bottom < top
+
+
+def test_fit_diagnostic_concentration_label_unchanged(woelfel_dataset):
+    fit = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, woelfel_dataset)
+    assert "log10 concentration" in fig.axes[0].get_ylabel()
+
+
+def _legend_labels(fig):
+    return [text.get_text() for text in fig.axes[0].get_legend().get_texts()]
+
+
+def test_fit_diagnostic_ct_legend_reports_a_peak_ct_not_a_log10(ct_dataset):
+    """The height is cycles below the reference, so it is shown as the Ct it is.
+
+    "peak log10" on an axis labelled "Ct (cycle threshold)" contradicts its own
+    page, and taken literally claims a concentration ten trillion times too
+    large.
+    """
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    labels = _legend_labels(fig)
+
+    assert not any(label.startswith("peak log10") for label in labels)
+    peak_row = next(label for label in labels if label.startswith("peak Ct"))
+    assert float(peak_row.split("=")[1]) == pytest.approx(
+        CT_REFERENCE - fit.peak_log10, abs=0.01
+    )
+    # The analyte's readings run Ct 25-36, so its peak must land in that range
+    # rather than at the 13-odd cycles the unconverted number would show.
+    assert 20.0 < float(peak_row.split("=")[1]) < 30.0
+
+
+def test_fit_diagnostic_ct_censoring_limit_reads_as_a_ct(ct_dataset):
+    """ct_dataset is cut off at Ct 40, which is 0.00 on the fitted scale.
+
+    "Censoring limit (0.00)" on a Ct axis reads as a cutoff of zero cycles.
+    """
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    assert "Censoring limit (Ct 40.00)" in _legend_labels(fig)
+
+
+def test_fit_diagnostic_concentration_legend_unchanged(woelfel_dataset):
+    """Neither conversion may touch the concentration path."""
+    fit = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    labels = _legend_labels(sh.plot_fit_diagnostic(fit, woelfel_dataset))
+
+    assert any(label.startswith("peak log10 =") for label in labels)
+    assert not any("Ct" in label for label in labels)
+    limit_row = next(label for label in labels if label.startswith("Censoring limit"))
+    assert limit_row == f"Censoring limit ({fit.censoring_limit:.2f})"
+
+
 # ---------------------------------------------------------------------------
 # orphaned plotting functions: plot_clearance_curve, plot_detection_probability,
 # plot_value_distribution_by_time
@@ -1778,3 +1855,183 @@ def test_plot_value_distribution_by_time_honours_the_specimen_filter(woelfel_dat
 
     assert len(sputum.axes[0].patches) != len(stool.axes[0].patches)
     assert sputum.axes[0].get_xticks().tolist() != stool.axes[0].get_xticks().tolist()
+
+
+@pytest.fixture
+def dataset_with_pre_event_readings(make_synthetic_dataset):
+    """A fittable gamma dataset carrying a reading long before the data.
+
+    Mirrors the real shape: kissler2021viral is fitted to readings from day 1
+    but drops readings back to day -53, and under the gamma model everything at
+    ``t <= 0`` is discarded because ``ln(t)`` is undefined there.
+    """
+    dataset = make_synthetic_dataset(
+        "gamma",
+        np.array([np.log(0.5), np.log(2.0), np.log(12.0)]),
+        np.diag([0.04, 0.04, 0.04]),
+        n_subjects=8,
+        seed=3,
+    )
+    for participant in dataset["participants"]:
+        participant["measurements"].insert(
+            0, {"analyte": "stool", "time": -20.0, "value": "negative"}
+        )
+    return dataset
+
+
+def test_x_from_fitted_keeps_dropped_readings_from_stretching_the_axis(
+    dataset_with_pre_event_readings,
+):
+    """Excluded readings stretch the axis on 15 of the catalog's fits.
+
+    At the fixed width a web page gives a figure, that squeezes the data the
+    curve was actually fitted to into a fraction of the panel.
+    """
+    dataset = dataset_with_pre_event_readings
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    wide = sh.plot_fit_diagnostic(fit, dataset)
+    narrow = sh.plot_fit_diagnostic(fit, dataset, x_from_fitted=True)
+
+    assert wide.axes[0].get_xlim()[0] < -19, "the dropped reading should stretch it"
+    assert narrow.axes[0].get_xlim()[0] > -1, "and x_from_fitted should not"
+
+
+def test_x_from_fitted_reports_what_it_pushed_off_the_axis(
+    dataset_with_pre_event_readings,
+):
+    """Anything left outside is counted, so a missing point is never silent."""
+    dataset = dataset_with_pre_event_readings
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    labels = _legend_labels(sh.plot_fit_diagnostic(fit, dataset, x_from_fitted=True))
+    assert "8 dropped reading(s) off-scale" in labels
+
+    # Off by default, so the review PDFs keep every reading on the page.
+    assert not any(
+        "off-scale" in label
+        for label in _legend_labels(sh.plot_fit_diagnostic(fit, dataset))
+    )
+
+
+def test_analyte_observations_matches_the_fit_page_title_format(woelfel_dataset):
+    """Both page kinds sit on one dataset page, so they share the identity line."""
+    fig = sh.plot_analyte_observations(woelfel_dataset, "stool")
+    assert (
+        fig.axes[0].get_title()
+        == "woelfel2020virological / SARS-CoV-2_stool / observations"
+    )
+
+
+def test_analyte_observations_draws_no_fitted_curve(woelfel_dataset):
+    """The whole point: observations without a model on top of them."""
+    fig = sh.plot_analyte_observations(woelfel_dataset, "stool")
+    labels = _legend_labels(fig)
+    assert "no fit -- observations only" in labels
+    assert not any("peak" in label or "half-life" in label for label in labels)
+
+
+def test_analyte_observations_marks_censored_at_the_limit(woelfel_dataset):
+    fig = sh.plot_analyte_observations(woelfel_dataset, "stool")
+    assert any("Censoring limit" in label for label in _legend_labels(fig))
+    assert any("Censored" in label for label in _legend_labels(fig))
+
+
+def test_analyte_observations_labels_a_ct_axis_in_cycles(ct_value_dataset):
+    fig = sh.plot_analyte_observations(ct_value_dataset, "A")
+    assert fig.axes[0].get_ylabel() == "Ct (cycle threshold)"
+    assert any(
+        "Censoring limit (Ct" in label for label in _legend_labels(fig)
+    ), "a Ct page must report its cutoff as a Ct, not as cycles below the reference"
+
+
+def test_analyte_observations_works_where_the_fitter_refuses():
+    """Its reason for existing: the fitter rejects 28 of the 88 unfitted analytes.
+
+    A cross-sectional analyte -- one reading per participant -- is refused as
+    ``too_few_subjects``, so a page built on ``prepare_observations`` would be
+    blank for exactly the analytes this covers.
+    """
+    dataset = {
+        "dataset_id": "cross_sectional",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "norovirus",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_detection": 100,
+                "limit_of_quantification": "unknown",
+            }
+        },
+        "participants": [
+            {"measurements": [{"analyte": "stool", "time": 1, "value": 5000.0}]},
+            {"measurements": [{"analyte": "stool", "time": 2, "value": 8000.0}]},
+            {"measurements": [{"analyte": "stool", "time": 3, "value": "negative"}]},
+        ],
+    }
+    with pytest.raises(SheddingDataError):
+        prepare_observations(dataset, "stool", "exponential")
+
+    fig = sh.plot_analyte_observations(dataset, "stool")
+    assert "participants = 3" in _legend_labels(fig)
+
+
+def test_analyte_observations_handles_an_analyte_never_detected():
+    """No positive means no smallest positive; the declared limit is the anchor."""
+    dataset = {
+        "dataset_id": "all_negative",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_detection": 100,
+                "limit_of_quantification": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": 1, "value": "negative"},
+                    {"analyte": "stool", "time": 2, "value": "negative"},
+                ]
+            }
+        ],
+    }
+    fig = sh.plot_analyte_observations(dataset, "stool")
+    assert "censored = 100%" in _legend_labels(fig)
+    # log10(100) = 2.0, taken from the declared limit rather than from the data.
+    assert any("Censoring limit (2.00)" in label for label in _legend_labels(fig))
+
+
+def test_analyte_observations_counts_qualitative_readings_it_cannot_place():
+    """A "positive" with no number has no y value, and is reported not dropped."""
+    dataset = {
+        "dataset_id": "qualitative",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_detection": 100,
+                "limit_of_quantification": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": 1, "value": 5000.0},
+                    {"analyte": "stool", "time": 2, "value": "positive"},
+                ]
+            }
+        ],
+    }
+    labels = _legend_labels(sh.plot_analyte_observations(dataset, "stool"))
+    assert "not plottable = 1" in labels
+    assert "measurements = 2" in labels
+
+
+def test_analyte_observations_rejects_an_unknown_analyte(woelfel_dataset):
+    with pytest.raises(ValueError, match="does not contain analyte"):
+        sh.plot_analyte_observations(woelfel_dataset, "nope")

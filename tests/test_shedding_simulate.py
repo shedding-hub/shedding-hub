@@ -243,6 +243,42 @@ def _stub_fit_for_plotting(analyte, dataset_id):
     )
 
 
+def _as_ct(fit):
+    """The same fit, relabelled as the Ct fit it would be on the other scale."""
+    import dataclasses
+
+    return dataclasses.replace(
+        fit, value_type="ct", unit="cycle threshold", ct_reference=40.0
+    )
+
+
+def test_refuses_to_simulate_a_ct_fit(exponential_fit):
+    """
+    10 ** height is nonsense for a Ct fit: the height is cycles below
+    CT_REFERENCE, so an ordinary fit would report about 1e13 in a column named
+    "value", with nothing on the frame to say otherwise.
+    """
+    with pytest.raises(ValueError, match="cycle thresholds"):
+        simulate_shedding(_as_ct(exponential_fit), n_individuals=5, times=[1.0], seed=0)
+
+
+def test_refuses_to_simulate_a_ct_ensemble(exponential_fit):
+    """The ensemble route reaches the same code and must be caught there too."""
+    from shedding_hub.shedding_ensemble import make_ensemble
+
+    ensemble = make_ensemble([_as_ct(exponential_fit)])
+    assert ensemble.value_type == "ct"
+    with pytest.raises(ValueError, match="cycle thresholds"):
+        simulate_shedding(ensemble, n_individuals=5, times=[1.0], seed=0)
+
+
+def test_a_concentration_fit_still_simulates(exponential_fit):
+    """The guard must not touch the path every existing caller is on."""
+    traj = simulate_shedding(exponential_fit, n_individuals=5, times=[1.0], seed=0)
+    assert len(traj) == 5
+    assert traj["value"].notna().all()
+
+
 def test_plot_filters_observed_points_to_the_ensembles_own_analytes():
     """An ensemble source must overlay only its components' analytes.
 

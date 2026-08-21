@@ -1,4 +1,5 @@
 import difflib
+import os
 import pathlib
 import re
 import requests
@@ -6,6 +7,31 @@ import textwrap
 from typing import Optional
 import warnings
 import yaml
+
+# Every network call here gets one. Without it a hung connection blocks until
+# the caller gives up, which in CI means a job sitting at its step timeout
+# rather than failing in seconds with something readable.
+REQUEST_TIMEOUT_SECONDS = 30
+
+
+def _github_api_headers() -> dict:
+    """
+    Authorization for api.github.com, when the environment offers a token.
+
+    The unauthenticated API allows 60 requests an hour per address, which a
+    busy CI account exhausts easily: ``test_load`` resolves a pull request
+    through it, and has twice failed a run with "403 rate limit exceeded".
+    A token raises that to 5,000, and GitHub Actions supplies one to every
+    workflow without any secret needing to be created.
+
+    Read from the environment rather than taken as an argument, because the
+    caller of ``load_dataset`` is usually a test or a notebook that should not
+    have to know about it. Sent only to ``api.github.com`` -- never to
+    ``raw.githubusercontent.com``, which needs no credential and should not be
+    handed one.
+    """
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    return {"Authorization": f"Bearer {token}"} if token else {}
 
 
 def normalize_str(
@@ -83,7 +109,11 @@ def load_dataset(
 
     # If a PR is specified, resolve it so we can get the relevant file.
     if pr:
-        response = requests.get(f"https://api.github.com/repos/{repo}/pulls/{pr}")
+        response = requests.get(
+            f"https://api.github.com/repos/{repo}/pulls/{pr}",
+            headers=_github_api_headers(),
+            timeout=REQUEST_TIMEOUT_SECONDS,
+        )
         response.raise_for_status()
         response = response.json()
         repo = response["head"]["repo"]["full_name"]
@@ -93,13 +123,18 @@ def load_dataset(
 
     # Download the contents and parse the file.
     ref = ref or "main"
+    # No Authorization header on these two: raw.githubusercontent.com serves
+    # public content without one, and a credential should not be sent where it
+    # is not needed.
     response = requests.get(
-        f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}/{dataset}.yaml"
+        f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}/{dataset}.yaml",
+        timeout=REQUEST_TIMEOUT_SECONDS,
     )
     # Backwards compatibility before change of folder structure.
     if response.status_code == 404:
         response = requests.get(
-            f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}.yaml"
+            f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}.yaml",
+            timeout=REQUEST_TIMEOUT_SECONDS,
         )
     response.raise_for_status()
     data = yaml.safe_load(response.text)

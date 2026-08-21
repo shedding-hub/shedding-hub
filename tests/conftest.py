@@ -92,3 +92,42 @@ def woelfel_dataset():
     from shedding_hub import load_dataset
 
     return load_dataset("woelfel2020virological", local="./data")
+
+
+@pytest.fixture
+def ct_dataset():
+    """One analyte in cycle threshold, four subjects that rise then fall."""
+    curve = [
+        (1, 30.0),
+        (3, 26.0),
+        (5, 25.0),
+        (8, 27.0),
+        (12, 30.0),
+        (18, 33.0),
+        (25, 36.0),
+        (30, "negative"),
+    ]
+    shifts = (0.0, 1.5, -1.0, 0.7)
+
+    participants = []
+    for shift in shifts:
+        measurements = []
+        for time, value in curve:
+            shifted = value if isinstance(value, str) else value + shift
+            measurements.append({"analyte": "swab", "time": time, "value": shifted})
+        participants.append({"measurements": measurements})
+
+    return {
+        "dataset_id": "ct_study",
+        "analytes": {
+            "swab": {
+                "specimen": "nasopharyngeal_swab",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "cycle threshold",
+                "limit_of_detection": 40,
+                "limit_of_quantification": "unknown",
+            }
+        },
+        "participants": participants,
+    }

@@ -18,6 +18,7 @@ import yaml
 from .shedding_fit import (
     SheddingDataError,
     SheddingFit,
+    _is_ct_unit,
     fit_shedding_model,
     require_estimable_population,
 )
@@ -26,12 +27,20 @@ from .shedding_models import MODELS, PARAM_NAMES
 CATALOG_PATH = pathlib.Path(__file__).parent / "data" / "shedding_catalog.yaml"
 
 _KEY_COLUMNS = (
+    # value_type sits beside unit, which it is derived from, and is the third
+    # place this key has to appear: shedding_ensemble._COMPATIBILITY_KEYS
+    # refuses to mix scales, shedding_select._GROUP_KEYS keeps them in separate
+    # groups, and this list is what makes the difference visible to a person
+    # reading the table. Without it a mixed catalog shows peak_log10 = 13.51 on
+    # a Ct row -- cycles below CT_REFERENCE -- with nothing to distinguish it
+    # from a log10 concentration.
     "dataset_id",
     "analyte",
     "biomarker",
     "specimen",
     "reference_event",
     "unit",
+    "value_type",
     "gene_target",
     "dose",
     "vaccine_type",
@@ -74,7 +83,16 @@ def fit_to_row(fit: SheddingFit) -> dict:
     ``b0``): the missing one is ``NaN`` rather than the key being absent, so a
     row's schema does not depend on which model produced it.
 
-    Three columns qualify the rest, and a row is easy to misread without them:
+    Four columns qualify the rest, and a row is easy to misread without them:
+
+    ``value_type``
+        Which scale the row's heights are on. ``peak_log10`` on a ``ct`` row is
+        cycles below ``CT_REFERENCE`` — the fitted response for a
+        cycle-threshold analyte — not a log10 concentration, and the two are
+        not comparable. Only ``peak_day`` is (see
+        ``SheddingFit.comparable_with``). The shipped catalog is
+        concentration-only; a ``ct`` row appears only in a catalog built with
+        ``"ct"`` among its ``value_types``.
 
     ``median_first_observed_day``
         Median across retained subjects of each subject's own first sampling
@@ -163,7 +181,7 @@ class SheddingCatalog:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> catalog.table.shape
-        (144, 24)
+        (144, 25)
         >>> fit = catalog.select(
         ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
         ... )
@@ -242,9 +260,9 @@ class SheddingCatalog:
 
         Raises:
             ValueError: If the matching fits disagree on model, unit,
-                reference event, biomarker, or specimen, or if one study
-                contributes more than one analyte. See ``build_ensemble`` for
-                the full validation this delegates to.
+                reference event, biomarker, specimen, or value type, or if one
+                study contributes more than one analyte. See
+                ``build_ensemble`` for the full validation this delegates to.
         """
         from .shedding_ensemble import build_ensemble
 
@@ -277,6 +295,7 @@ def fit_shedding_models(
     min_observations: int | None = None,
     min_time: float | None = None,
     max_peak_above_observed: float | None = None,
+    value_types: tuple[str, ...] = ("concentration",),
 ) -> SheddingCatalog:
     """
     Fit every analyte of every dataset, for every requested model.
@@ -305,6 +324,16 @@ def fit_shedding_models(
             decide when a subject's implied peak is extrapolation rather than
             estimate. ``None`` keeps the fitter's default. Lower it to rebuild
             the catalog under a stricter reading and compare.
+        value_types: The complete set of measurement scales admitted, not a
+            list of additions to a default -- ``("ct",)`` builds a Ct-only
+            catalog and skips every concentration analyte as
+            ``concentration_units``. Defaults to concentration only.
+            Cycle-threshold fits are individually valid --
+            ``fit_shedding_model`` produces them -- but their heights are
+            cycles below ``CT_REFERENCE`` rather than log10 concentrations, so
+            an ensemble that averaged the two would be averaging incommensurable
+            quantities. Admit both with ``("concentration", "ct")`` once that is
+            resolved.
 
     Returns:
         A ``SheddingCatalog``.
@@ -327,7 +356,48 @@ def fit_shedding_models(
 
     for dataset in datasets:
         dataset_id = dataset.get("dataset_id", "unknown")
-        for analyte in dataset.get("analytes", {}):
+        for analyte, analyte_spec in dataset.get("analytes", {}).items():
+            # Skipped here rather than left to prepare_observations, which now
+            # accepts Ct analytes. Keeping the decision in the catalog builder is
+            # what lets a caller fit one directly while the published catalog
+            # stays concentration-only.
+            # ``value_types`` is the whole admitted set, not a list of additions:
+            # ("ct",) builds a Ct-only catalog rather than adding Ct to the
+            # concentration default. Both directions are gated here so the two
+            # scales never silently share a file, whose heights would then mix
+            # cycles with log10 concentrations.
+            analyte_value_type = (
+                "ct" if _is_ct_unit(analyte_spec.get("unit")) else "concentration"
+            )
+            if analyte_value_type not in value_types:
+                for model in models:
+                    skipped.append(
+                        {
+                            "dataset_id": dataset_id,
+                            "analyte": analyte,
+                            "model": model,
+                            "reason": (
+                                "ct_units"
+                                if analyte_value_type == "ct"
+                                else "concentration_units"
+                            ),
+                            "message": (
+                                f"Analyte {analyte!r} is reported in "
+                                f"{analyte_spec.get('unit')!r}. Cycle-threshold "
+                                "fits are supported but excluded from the "
+                                "catalog, whose heights are log10 "
+                                "concentrations."
+                                if analyte_value_type == "ct"
+                                else (
+                                    f"Analyte {analyte!r} is reported in "
+                                    f"{analyte_spec.get('unit')!r}, a "
+                                    "concentration, and this build admits only "
+                                    f"{sorted(value_types)}."
+                                )
+                            ),
+                        }
+                    )
+                continue
             for model in models:
                 try:
                     with warnings.catch_warnings():

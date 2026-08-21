@@ -5,12 +5,14 @@ from shedding_hub.shedding_models import (
     LN10,
     MODELS,
     PARAM_NAMES,
+    POPULATION_COORDS,
     half_life_days,
     log10_concentration,
     log10_concentration_pointwise,
     log10_concentration_rowwise,
     from_population_coords,
     peak_day,
+    population_coord_names,
     to_population_coords,
     validate_model,
 )
@@ -254,3 +256,20 @@ def test_exponential_height_coordinate_is_linear_in_log10_concentration():
 def test_population_coords_reject_unknown_model():
     with pytest.raises(ValueError, match="Unknown model"):
         to_population_coords("weibull", np.array([[1.0, 1.0]]))
+
+
+def test_population_coord_names_default_to_concentration():
+    assert population_coord_names("gamma") == POPULATION_COORDS["gamma"]
+
+
+def test_population_coord_names_rename_the_height_for_ct():
+    assert population_coord_names("gamma", "ct") == (
+        "log_a0",
+        "log_peak_day",
+        "peak_cycles",
+    )
+
+
+def test_population_coord_names_leave_temporal_coordinates_alone():
+    # t0 is a time on either scale and must not be renamed.
+    assert population_coord_names("gamma_shifted", "ct")[-1] == "t0"
