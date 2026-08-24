@@ -1,0 +1,58 @@
+title: 'Detection of Norovirus in Saliva Samples from Acute Gastroenteritis Cases
+  and Asymptomatic Subjects: Association with Age and Higher Shedding in Stool'
+doi: 10.3390/v12121369
+description: Outbreak investigation study in Catalonia (Spain) during 2017–2018 assessing
+  human norovirus (HuNoV) RNA detection/quantification in saliva (and paired stool
+  for many participants) from symptomatic acute gastroenteritis cases and asymptomatic
+  exposed subjects in closed/semi-closed institutions. Saliva HuNoV screening/quantification
+  was performed by RT-qPCR following ISO 15216-1:2017, with genogroup-specific limits
+  of quantification reported for GI and GII; the figure-derived CSV provided here
+  contains individual saliva GII measurements over days relative to symptom onset
+  (as used for symptomatic individuals in the paper).
+analytes:
+  saliva_gii:
+    description: Human norovirus genogroup II (GII) RNA in saliva quantified by RT-qPCR
+      according to ISO 15216-1:2017 after RNA extraction from 0.2–0.5 mL saliva; saliva
+      collected by spitting 2–3 mL into sterile tube and stored at −20 °C until testing.
+      The paper reports a genogroup-specific limit of quantification (LOQ) for saliva
+      of 2.95 log10 genome copies/mL for GII (i.e., ~8.91e2 gc/mL).
+    specimen: saliva
+    biomarker: norovirus
+    genogroup: GII
+    limit_of_detection: 357.145785
+    limit_of_quantification: 891.2509381337456
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- measurements:
+  - analyte: saliva_gii
+    time: 0
+    value: 1999.00099
+- measurements:
+  - analyte: saliva_gii
+    time: 1
+    value: positive
+- measurements:
+  - analyte: saliva_gii
+    time: 1
+    value: 3017.6912
+- measurements:
+  - analyte: saliva_gii
+    time: 2
+    value: positive
+- measurements:
+  - analyte: saliva_gii
+    time: 4
+    value: 1427.15632
+- measurements:
+  - analyte: saliva_gii
+    time: 6
+    value: 4555.50561
+- measurements:
+  - analyte: saliva_gii
+    time: 6
+    value: 3017.6912
+- measurements:
+  - analyte: saliva_gii
+    time: 6
+    value: positive

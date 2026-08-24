@@ -1,0 +1,2536 @@
+title: An oral norovirus vaccine generates mucosal immunity and reduces viral shedding
+  in a phase 2 placebo-controlled challenge study
+doi: 10.1126/scitranslmed.adh9906
+description: Phase 2b randomized, placebo-controlled vaccination and human challenge
+  study of an oral tablet norovirus vaccine (VXA-G1.1-NN) assessing immunogenicity
+  and efficacy against norovirus GI.1 challenge, including quantification of viral
+  shedding in stool and emesis over post-challenge days. This extraction includes
+  individual participant stool and emesis shedding measurements from provided figure-derived
+  CSV rows for placebo recipients.
+analytes:
+  emesis:
+    description: Norovirus shedding measurement in emesis, from figure-derived CSV
+      data (quantitative values and negatives). Assay/method details not provided
+      in the supplied text/CSV excerpt.
+    specimen: emesis
+    biomarker: norovirus
+    limit_of_detection: 30566
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: inoculation
+  stool:
+    description: Norovirus shedding measurement in stool, from figure-derived CSV
+      data (quantitative values and negatives). Assay/method details not provided
+      in the supplied text/CSV excerpt.
+    specimen: stool
+    biomarker: norovirus
+    limit_of_detection: 152381
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: inoculation
+participants:
+- patient_id: P006
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 2097008.93331637
+  - analyte: stool
+    time: 3
+    value: 223501350.192247
+  - analyte: stool
+    time: 4
+    value: 45921220.224317
+  - analyte: stool
+    time: 8
+    value: 4974677.8
+- patient_id: P007
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 331317.902
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 251064245.5
+  - analyte: stool
+    time: 5
+    value: 4313046929
+  - analyte: stool
+    time: 8
+    value: 59730510.3
+- patient_id: P013
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: emesis
+    time: 3
+    value: 196532.4
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 3684269.30722839
+  - analyte: stool
+    time: 8
+    value: 78864273.1
+- patient_id: P017
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 10012287
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 1871893.05411105
+  - analyte: stool
+    time: 4
+    value: 103285697.8
+  - analyte: stool
+    time: 8
+    value: 14464283.4
+- patient_id: P021
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 63104.127
+  - analyte: emesis
+    time: 3
+    value: 574325.9
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 1426476
+  - analyte: stool
+    time: 8
+    value: 1286398.6
+- patient_id: P023
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 2226378.35301076
+  - analyte: stool
+    time: 8
+    value: 351611364.9
+- patient_id: P033
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 35798.0579
+  - analyte: emesis
+    time: 3
+    value: 137303.023
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 4306013.9
+  - analyte: stool
+    time: 4
+    value: 264157435.4
+  - analyte: stool
+    time: 8
+    value: 32523999.6
+- patient_id: P038
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 37121.4628
+  - analyte: emesis
+    time: 3
+    value: 115810.381
+  - analyte: stool
+    time: 2
+    value: 1123288.84640496
+  - analyte: stool
+    time: 3
+    value: 192125632.497184
+  - analyte: stool
+    time: 4
+    value: 454522323.1
+  - analyte: stool
+    time: 8
+    value: 9099189.9
+- patient_id: P041
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 241870.449
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 1489351
+- patient_id: P047
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 497407.432
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 42633339.5791366
+  - analyte: stool
+    time: 3
+    value: 1259799591.72765
+  - analyte: stool
+    time: 8
+    value: 701216182.4
+- patient_id: P055
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 16157446.1665049
+  - analyte: stool
+    time: 4
+    value: 56869217.1
+  - analyte: stool
+    time: 8
+    value: 129826764.9
+- patient_id: P061
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 39282.3512
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 3439722.71513718
+  - analyte: stool
+    time: 3
+    value: 151471404.3
+  - analyte: stool
+    time: 4
+    value: 179390447.5
+  - analyte: stool
+    time: 5
+    value: 23680174.8
+  - analyte: stool
+    time: 8
+    value: 30472911.8
+- patient_id: P062
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 189890.237
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 35533636.3270513
+  - analyte: stool
+    time: 3
+    value: 471548230.095506
+  - analyte: stool
+    time: 4
+    value: 3049412.66951067
+  - analyte: stool
+    time: 5
+    value: 194575564.1
+  - analyte: stool
+    time: 8
+    value: 4227445.8
+- patient_id: P064
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 23196247.5
+  - analyte: emesis
+    time: 3
+    value: 19050868.7
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 71148973.1518655
+  - analyte: stool
+    time: 4
+    value: 1169273622
+  - analyte: stool
+    time: 5
+    value: 776892732.8
+  - analyte: stool
+    time: 8
+    value: 9406427.1
+- patient_id: P065
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 547099.2
+  - analyte: emesis
+    time: 3
+    value: 22881631.3
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 81027368
+  - analyte: stool
+    time: 5
+    value: 280331502.8
+  - analyte: stool
+    time: 8
+    value: 16838330.7
+- patient_id: V005
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 526963.868539861
+  - analyte: stool
+    time: 3
+    value: 131058698.877731
+  - analyte: stool
+    time: 4
+    value: 144697781.9
+  - analyte: stool
+    time: 5
+    value: 108342675.156794
+  - analyte: stool
+    time: 8
+    value: 554778.1
+- patient_id: V006
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: emesis
+    time: 3
+    value: 126504.234
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 1874620629.88157
+  - analyte: stool
+    time: 5
+    value: 896356999.4
+  - analyte: stool
+    time: 8
+    value: 115919066.3
+- patient_id: V008
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 39307.8211
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 17371744.3582106
+  - analyte: stool
+    time: 3
+    value: 92889545.085771
+  - analyte: stool
+    time: 4
+    value: 551600507
+  - analyte: stool
+    time: 8
+    value: 410631.5
+- patient_id: V019
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 932239.469114508
+  - analyte: stool
+    time: 3
+    value: 261432696.3
+  - analyte: stool
+    time: 4
+    value: 433470764
+  - analyte: stool
+    time: 5
+    value: 350323158.2
+  - analyte: stool
+    time: 8
+    value: 10755117.3
+- patient_id: V020
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 32874.7539
+  - analyte: stool
+    time: 2
+    value: 14416604.2745137
+  - analyte: stool
+    time: 3
+    value: 2138982968.26155
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V031
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 121131.993
+  - analyte: stool
+    time: 2
+    value: 3542960.76803766
+  - analyte: stool
+    time: 3
+    value: 15075661.8429912
+  - analyte: stool
+    time: 8
+    value: 42620945.6
+- patient_id: V036
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 2853725.7
+  - analyte: stool
+    time: 8
+    value: 945511753.500001
+- patient_id: V049
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 81497673.1382098
+  - analyte: stool
+    time: 3
+    value: 318767930.844218
+  - analyte: stool
+    time: 5
+    value: 125838335.5
+  - analyte: stool
+    time: 8
+    value: 18939308.3
+- patient_id: V050
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 215053.919
+  - analyte: stool
+    time: 2
+    value: 86133317.371476
+  - analyte: stool
+    time: 3
+    value: 282325657.793424
+  - analyte: stool
+    time: 8
+    value: 8299509.8
+- patient_id: V062
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: emesis
+    time: 3
+    value: 260036.966
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 1303617087.85646
+  - analyte: stool
+    time: 4
+    value: 9847022234
+  - analyte: stool
+    time: 5
+    value: 555192768.3
+  - analyte: stool
+    time: 8
+    value: 44374278.6
+- patient_id: V070
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: 42441.4743
+  - analyte: stool
+    time: 2
+    value: 2042740.262451
+  - analyte: stool
+    time: 3
+    value: 67400916.7210408
+  - analyte: stool
+    time: 4
+    value: 78635688.9948471
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V072
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 2
+    value: negative
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 633104.961030978
+  - analyte: stool
+    time: 3
+    value: 8575082.45528307
+  - analyte: stool
+    time: 4
+    value: 6415834.6849758
+  - analyte: stool
+    time: 5
+    value: 187366
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P001
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 1094747.38692951
+  - analyte: stool
+    time: 3
+    value: 1350204338.46395
+  - analyte: stool
+    time: 4
+    value: 36636720330
+  - analyte: stool
+    time: 8
+    value: 32014816.3
+- patient_id: P014
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 2123148.5
+  - analyte: stool
+    time: 8
+    value: 53730943.8
+- patient_id: P022
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 5568594.3
+  - analyte: stool
+    time: 8
+    value: 70524393.5
+- patient_id: P024
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 1403427.29882976
+  - analyte: stool
+    time: 8
+    value: 67824989.1
+- patient_id: P026
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 220404.86857729
+  - analyte: stool
+    time: 4
+    value: 1225894.18525399
+  - analyte: stool
+    time: 8
+    value: 26637317.2
+- patient_id: P027
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 1495010.35682908
+  - analyte: stool
+    time: 3
+    value: 23746420.0716743
+  - analyte: stool
+    time: 8
+    value: 15701419.3
+- patient_id: P030
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 16398993
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 1038206084
+  - analyte: stool
+    time: 4
+    value: 1939865761
+- patient_id: P034
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 610965.175153753
+  - analyte: stool
+    time: 3
+    value: 378607814.336293
+  - analyte: stool
+    time: 4
+    value: 1500412706
+  - analyte: stool
+    time: 5
+    value: 187615677.420141
+  - analyte: stool
+    time: 8
+    value: 12617665.6
+- patient_id: P035
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 19712622.4315409
+  - analyte: stool
+    time: 8
+    value: 29625709.5
+- patient_id: P036
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 685958.5
+  - analyte: stool
+    time: 8
+    value: 507114.6
+- patient_id: P037
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 16904069.1144591
+  - analyte: stool
+    time: 4
+    value: 20828508.6
+  - analyte: stool
+    time: 8
+    value: 10018867.4
+- patient_id: P044
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 16422497.2
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 56930893.8392628
+  - analyte: stool
+    time: 4
+    value: 68225909.7999999
+  - analyte: stool
+    time: 8
+    value: 637736.3
+- patient_id: P046
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 183647.749
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 122825524.402188
+  - analyte: stool
+    time: 4
+    value: 2134660373
+  - analyte: stool
+    time: 8
+    value: 15936604.6
+- patient_id: P052
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 895971.737
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 7280832.54625655
+  - analyte: stool
+    time: 4
+    value: 63729156.5
+  - analyte: stool
+    time: 5
+    value: 3081570.9
+  - analyte: stool
+    time: 8
+    value: 1101743.9
+- patient_id: P053
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 38459.2
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 83346038.869719
+  - analyte: stool
+    time: 4
+    value: 178816590.360505
+  - analyte: stool
+    time: 5
+    value: 90441057
+  - analyte: stool
+    time: 8
+    value: 1209166.5
+- patient_id: P059
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 32541.6513
+  - analyte: stool
+    time: 3
+    value: 3502034.24873795
+  - analyte: stool
+    time: 4
+    value: 23163329.6
+  - analyte: stool
+    time: 8
+    value: 501551.1
+- patient_id: P063
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 30741.5708
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 304097
+  - analyte: stool
+    time: 4
+    value: 227477939.8
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V010
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 28517139.0445662
+  - analyte: stool
+    time: 8
+    value: 1102696.3
+- patient_id: V011
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 18770294.6
+  - analyte: stool
+    time: 8
+    value: 1224071.2
+- patient_id: V013
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 5801967.74334658
+  - analyte: stool
+    time: 4
+    value: 5036184.81925097
+  - analyte: stool
+    time: 5
+    value: 294932.0697606
+  - analyte: stool
+    time: 8
+    value: 165406.6
+- patient_id: V015
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 2119927.18
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 5580110.77597674
+  - analyte: stool
+    time: 8
+    value: 14954938.1
+- patient_id: V021
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 1381506.53463255
+  - analyte: stool
+    time: 3
+    value: 161573233.722599
+  - analyte: stool
+    time: 4
+    value: 12174043.2483295
+  - analyte: stool
+    time: 8
+    value: 542167.5
+- patient_id: V027
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 288261.685453426
+  - analyte: stool
+    time: 3
+    value: 7857125143.53006
+  - analyte: stool
+    time: 8
+    value: 671607035.4
+- patient_id: V028
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 399320.100627554
+  - analyte: stool
+    time: 3
+    value: 2761357.99955186
+  - analyte: stool
+    time: 8
+    value: 740559.4
+- patient_id: V035
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 436097.746
+  - analyte: stool
+    time: 2
+    value: 327385.736037553
+  - analyte: stool
+    time: 3
+    value: 1615178.97342774
+  - analyte: stool
+    time: 8
+    value: 753113
+- patient_id: V039
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 21203414.6
+  - analyte: stool
+    time: 8
+    value: 173605.2
+- patient_id: V042
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 5411494.6
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V051
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 15137962.5750087
+  - analyte: stool
+    time: 8
+    value: 118252362
+- patient_id: V054
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V056
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 4171575.99
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 325121026.531211
+  - analyte: stool
+    time: 4
+    value: 1064541496
+  - analyte: stool
+    time: 5
+    value: 631648708.5
+  - analyte: stool
+    time: 8
+    value: 6895058.4
+- patient_id: V061
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 5306946.30999693
+  - analyte: stool
+    time: 4
+    value: 70927369.6
+  - analyte: stool
+    time: 8
+    value: 173198.2
+- patient_id: V064
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: 248122.493
+  - analyte: stool
+    time: 2
+    value: 1086607
+  - analyte: stool
+    time: 3
+    value: 85481533.8999999
+  - analyte: stool
+    time: 8
+    value: 36394280
+- patient_id: V073
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: emesis
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 66427055.7757455
+  - analyte: stool
+    time: 4
+    value: 1595756954.04078
+  - analyte: stool
+    time: 5
+    value: 1614380694
+- patient_id: P002
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P005
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P012
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P015
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P028
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 152842.5
+  - analyte: stool
+    time: 4
+    value: 1098334.7
+  - analyte: stool
+    time: 8
+    value: 11041721.9
+- patient_id: P031
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 157563.1
+  - analyte: stool
+    time: 8
+    value: 11964402.8
+- patient_id: P032
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P043
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 144810622.827572
+  - analyte: stool
+    time: 8
+    value: 40415706.9
+- patient_id: P045
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 25304654.4218429
+  - analyte: stool
+    time: 5
+    value: 314659473.5
+  - analyte: stool
+    time: 8
+    value: 2801005.5
+- patient_id: P048
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 1862898.5
+- patient_id: P049
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 297814.990139574
+  - analyte: stool
+    time: 8
+    value: 9000415.19999999
+- patient_id: P051
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 1132253.25082028
+  - analyte: stool
+    time: 4
+    value: 18257913.7
+  - analyte: stool
+    time: 5
+    value: 25835293.5
+  - analyte: stool
+    time: 8
+    value: 161131.5
+- patient_id: P054
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P056
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V001
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V002
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V007
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 5940856.2
+  - analyte: stool
+    time: 8
+    value: 1723850.9
+- patient_id: V014
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 8237855.8
+  - analyte: stool
+    time: 4
+    value: 180197590.2
+  - analyte: stool
+    time: 5
+    value: 61878561.5
+  - analyte: stool
+    time: 8
+    value: 26686960
+- patient_id: V016
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V026
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V032
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V033
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V034
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 8432051.73932962
+  - analyte: stool
+    time: 4
+    value: 14195097.8564448
+  - analyte: stool
+    time: 5
+    value: 5630864.3
+  - analyte: stool
+    time: 8
+    value: 454603.9
+- patient_id: V037
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V038
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V043
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V044
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V046
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V047
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V048
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 194685531.624167
+  - analyte: stool
+    time: 4
+    value: 260263593
+  - analyte: stool
+    time: 5
+    value: 126974496.1
+  - analyte: stool
+    time: 8
+    value: 10758135.1
+- patient_id: V055
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 276886.899991314
+  - analyte: stool
+    time: 3
+    value: 182119520.7
+  - analyte: stool
+    time: 4
+    value: 303942399.3
+  - analyte: stool
+    time: 5
+    value: 275029122.7
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V057
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V060
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 557263.918456997
+  - analyte: stool
+    time: 3
+    value: 83989564.8815342
+  - analyte: stool
+    time: 4
+    value: 275425551.2
+  - analyte: stool
+    time: 5
+    value: 18633211.3
+  - analyte: stool
+    time: 8
+    value: 290376.1
+- patient_id: V065
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V067
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 22981255.1661306
+  - analyte: stool
+    time: 5
+    value: 1970600.9
+  - analyte: stool
+    time: 8
+    value: 6512320.4
+- patient_id: V068
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 7868094
+- patient_id: V074
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: 450319.6
+  - analyte: stool
+    time: 3
+    value: 187437667.144325
+  - analyte: stool
+    time: 8
+    value: 572533.8
+- patient_id: V075
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 1
+    value: negative
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P003
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 355404425.657366
+  - analyte: stool
+    time: 8
+    value: 1759440.2
+- patient_id: P008
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P009
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 22310517.7
+  - analyte: stool
+    time: 5
+    value: 42648295.8
+  - analyte: stool
+    time: 8
+    value: 37439863.3
+- patient_id: P010
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 10337819.1469956
+  - analyte: stool
+    time: 4
+    value: 106158172.230562
+  - analyte: stool
+    time: 8
+    value: 444300.5
+- patient_id: P011
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 8
+    value: 177919614.4
+- patient_id: P018
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: 286269.32854665
+  - analyte: stool
+    time: 3
+    value: 105635837.751011
+  - analyte: stool
+    time: 5
+    value: 729761788
+  - analyte: stool
+    time: 8
+    value: 165488.1
+- patient_id: P020
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 40615484.72293
+  - analyte: stool
+    time: 8
+    value: 2411505.6
+- patient_id: P025
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 107621634.6
+  - analyte: stool
+    time: 5
+    value: 764848463.9
+  - analyte: stool
+    time: 8
+    value: 1011247.3
+- patient_id: P029
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 9558077.8
+  - analyte: stool
+    time: 4
+    value: 300185777.9
+  - analyte: stool
+    time: 8
+    value: 257456097.2
+- patient_id: P040
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P050
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: 243547.111826131
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P057
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 12575772.0886198
+  - analyte: stool
+    time: 4
+    value: 243519008.9
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P058
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 3423634.84862374
+  - analyte: stool
+    time: 8
+    value: 646398.7
+- patient_id: P060
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 2
+    value: 16973937.4708816
+  - analyte: stool
+    time: 3
+    value: 1176385263.14678
+  - analyte: stool
+    time: 4
+    value: 256089840
+  - analyte: stool
+    time: 5
+    value: 86672464.3439899
+  - analyte: stool
+    time: 8
+    value: 3566517.3
+- patient_id: V004
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: 224588.1
+  - analyte: stool
+    time: 8
+    value: 3596124.4
+- patient_id: V012
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 21829897.3372738
+  - analyte: stool
+    time: 4
+    value: 94998199.1
+  - analyte: stool
+    time: 8
+    value: 5635338.4
+- patient_id: V017
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 281197.659587789
+  - analyte: stool
+    time: 4
+    value: 46506007.3415036
+  - analyte: stool
+    time: 5
+    value: 933005.8
+  - analyte: stool
+    time: 8
+    value: 51458801.3
+- patient_id: V018
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V022
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V023
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V024
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V025
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V030
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V040
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V041
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V045
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 122051880
+  - analyte: stool
+    time: 8
+    value: 10571247.8
+- patient_id: V053
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 41179474.4353316
+  - analyte: stool
+    time: 8
+    value: 1026835
+- patient_id: V058
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V059
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 303754.1
+  - analyte: stool
+    time: 4
+    value: 41138386.3
+  - analyte: stool
+    time: 5
+    value: 9601308
+  - analyte: stool
+    time: 8
+    value: 1512660.5
+- patient_id: V066
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V069
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V071
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 3
+    value: 94150164.617818
+  - analyte: stool
+    time: 8
+    value: 21940889.3
+- patient_id: V076
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 2
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P019
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P042
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V003
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V009
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 3
+    value: 797839158.100001
+  - analyte: stool
+    time: 8
+    value: 23373984.4
+- patient_id: V029
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V052
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: V063
+  attributes:
+    treatment: VXA-G1.1-NN
+  measurements:
+  - analyte: stool
+    time: 3
+    value: negative
+  - analyte: stool
+    time: 4
+    value: negative
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P016
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 5
+    value: negative
+  - analyte: stool
+    time: 8
+    value: negative
+- patient_id: P004
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 8
+    value: 653553.5
+- patient_id: P039
+  attributes:
+    treatment: Placebo
+  measurements:
+  - analyte: stool
+    time: 8
+    value: 3136255.8

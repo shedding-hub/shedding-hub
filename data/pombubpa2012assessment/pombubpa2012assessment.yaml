@@ -1,0 +1,77 @@
+title: Assessment of a rapid immunochromatographic test for the diagnosis of norovirus
+  gastroenteritis
+doi: 10.1007/s10096-012-1579-9
+description: Evaluation study in Thailand assessing the commercial immunochromatographic
+  assay RIDA® QUICK Norovirus for detection of norovirus in stool from patients with
+  acute gastroenteritis, using RT-PCR/quantitative real-time RT-PCR as reference.
+  CSV-provided data include quantitative norovirus concentrations for individual patients
+  and genogroups (GI or GII) at specified days after a reference event (not specified
+  in provided text/CSV).
+analytes:
+  gii:
+    description: Quantitative norovirus genogroup II (GII) measurement in stool by
+      commercial quantitative real-time RT-PCR (as referenced in the abstract) used
+      to compare with RIDA® QUICK Norovirus immunochromatographic assay performance.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GII
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gi:
+    description: Quantitative norovirus genogroup I (GI) measurement in stool by commercial
+      quantitative real-time RT-PCR (as referenced in the abstract) used to compare
+      with RIDA® QUICK Norovirus immunochromatographic assay performance.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age: 35
+    age_group: adult
+  measurements:
+  - analyte: gii
+    time: 1
+    value: 109000
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: gii
+    time: 2
+    value: 144000
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: gii
+    time: 2
+    value: 211000
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: gi
+    time: 3
+    value: 5900000
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: gii
+    time: 3
+    value: 18500
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: gii
+    time: 3
+    value: 428000
+- attributes:
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: gii
+    time: 5
+    value: 380000
