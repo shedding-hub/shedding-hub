@@ -1,5 +1,6 @@
 import jsonschema
 import numpy as np
+import os
 from pathlib import Path
 import pytest
 import re
@@ -57,17 +58,25 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
         data = yaml.safe_load(fp)
     jsonschema.validate(data, schema)
 
-    # If there is a doi, validate it.
+    # If there is a doi, validate it. Resolving it is a network round trip per
+    # dataset, and three CI jobs load this file, so a pull request used to make
+    # that trip three times over. Setting SHEDDING_HUB_SKIP_LINK_CHECKS drops
+    # only the request -- every offline check below still runs, including the
+    # requirement that a doi or url be present at all. The one job that leaves
+    # it unset (data-validation) keeps the guarantee for the whole pull request.
+    skip_link_checks = os.environ.get("SHEDDING_HUB_SKIP_LINK_CHECKS") == "1"
     doi_or_url = False
     doi = data.get("doi")
     if doi:
-        response = _get_with_retry(f"https://doi.org/{doi}", allow_redirects=False)
-        assert response.status_code == 302, f"doi `{doi}` could not be resolved."
+        if not skip_link_checks:
+            response = _get_with_retry(f"https://doi.org/{doi}", allow_redirects=False)
+            assert response.status_code == 302, f"doi `{doi}` could not be resolved."
         doi_or_url = True
     url = data.get("url")
     if url:
-        response = _get_with_retry(url)
-        response.raise_for_status()
+        if not skip_link_checks:
+            response = _get_with_retry(url)
+            response.raise_for_status()
         doi_or_url = True
     assert doi_or_url, "At least one of `doi` or `url` must be given."
 
