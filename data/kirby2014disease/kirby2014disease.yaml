@@ -1,0 +1,698 @@
+title: Disease course and viral shedding in experimental Norwalk virus and Snow Mountain
+  virus infection
+doi: 10.1002/jmv.23905
+description: Human challenge study characterizing norovirus stool shedding kinetics
+  following experimental inoculation with Norwalk virus (NV; GI.1) or Snow Mountain
+  virus (SMV; GII.2). Viral stool titers were measured by quantitative real-time RT-PCR
+  over time post-challenge (relative to inoculation); symptomatic status is recorded
+  per participant.
+analytes:
+  stool_norovirus_gc_wet_gram_gi:
+    description: Quantitative real-time RT-PCR measurement of Norwalk virus (NV;
+      norovirus genogroup GI) RNA concentration in stool. Values provided as gene
+      copies per gram (wet weight).
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: 3570
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: inoculation
+  stool_norovirus_gc_wet_gram_gii:
+    description: Quantitative real-time RT-PCR measurement of Snow Mountain virus
+      (SMV; norovirus genogroup GII) RNA concentration in stool. Values provided
+      as gene copies per gram (wet weight).
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GII
+    limit_of_detection: 1790
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: inoculation
+participants:
+- attributes:
+    genotype: '1'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 1643184291.5062706
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 12532543355.087744
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 8
+    value: 17984648.77298639
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 9
+    value: 35401332.3973657
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 16
+    value: 762698.585902342
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 23
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 37
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 63668.05292623676
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 87332616.23828402
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 8
+    value: 28247524.380591005
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 15
+    value: 762698.585902342
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 22
+    value: 79792.26336320865
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 27
+    value: 1501310.7289081712
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 33
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 3703628.786353596
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 15
+    value: 109449979.93195432
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 26
+    value: 955855.3094685273
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 29
+    value: 63668.05292623676
+- attributes:
+    genotype: '1'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 2955209.235202882
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 9
+    value: 157064.64294715523
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 14
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 28
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 30
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 36
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 157064.64294715523
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 5817091.329374346
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 2358028.3358869525
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 6
+    value: 387467.51204561285
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 8
+    value: 25808.615404180713
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 13
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 20
+    value: 25808.615404180713
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 29
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 34
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 1046183444.3918166
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 12
+    value: 28247524.380591005
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 19
+    value: 196841.94472866112
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 14350358.313889315
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 3703628.7863535886
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 14350358.313889315
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 6
+    value: 137168661.87106955
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 8
+    value: 69684671.15083134
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 23
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 35
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 531484001.4580945
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 424083114.1767642
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 6
+    value: 17984648.77298639
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 14
+    value: 1197929.8107105107
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 20
+    value: 63668.0529262365
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 27
+    value: 79792.26336320833
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 34
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: 32344.759148768084
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 5080218046.91295
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 6
+    value: 171907220.18585572
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 9
+    value: 44366873.30978589
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 14
+    value: 171907220.18585572
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 19
+    value: 7290294.928588898
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 28
+    value: 387467.5120456112
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 34
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 5080218046.91295
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 6
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 8
+    value: 4641588.833612754
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 9
+    value: 196841.94472866112
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 16
+    value: 99999.99999999919
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 23
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 30
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 37
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 531484001.4580945
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 7
+    value: 485595.3393399625
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 109449979.93195343
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 12532543355.087692
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 8
+    value: 2059327837.3701472
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 15
+    value: 873.3261623828366
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 23
+    value: 485595.3393399625
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 30
+    value: 125325.43355087691
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 45
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 1094.4997993195343
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 3234475914.876808
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 5
+    value: 22539339.047347844
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 7
+    value: 1311133937.421547
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 13
+    value: 16431.84291506257
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 21
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 28
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 35
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 3
+    value: 35401332.39736563
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 2358028.3358869334
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 6
+    value: 35401332.39736563
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 7
+    value: 87332616.23828366
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 14
+    value: 485595.3393399625
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 22
+    value: 1719.0722018585711
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 28
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 36
+    value: negative
+- attributes:
+    genotype: '1'
+    symptomatic: false
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 4
+    value: 69684671.15083134
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 7
+    value: 8347.734492114161
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 14
+    value: 556.0297632845796
+  - analyte: stool_norovirus_gc_wet_gram_gi
+    time: 21
+    value: negative
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 3
+    value: 125325.43355087897
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 4
+    value: 834773449.2114161
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 5
+    value: 69684671.15083347
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 6
+    value: 1881524.1799500114
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 7
+    value: 246693.02064117763
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 8
+    value: 50802.18046912992
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 17
+    value: 873.3261623828508
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 22
+    value: 1094.4997993195432
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 27
+    value: 1719.0722018585711
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 2
+    value: 40536.20963418119
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 6
+    value: 11450475.699382905
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 9
+    value: 125325.43355087897
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 24
+    value: 10461.834443918338
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 2
+    value: 32344.759148768084
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 6
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 7
+    value: 16431.84291506284
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 16
+    value: negative
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 3
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 4
+    value: 1881524.1799500114
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 5
+    value: 28247524.380591236
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 7
+    value: 32344.759148768084
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 8
+    value: 10461.834443918338
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 9
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 15
+    value: negative
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 3
+    value: 171907220.18585992
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 4
+    value: 2358028.3358869334
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 5
+    value: 387467.51204561756
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 7
+    value: 5817091.329374369
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 8
+    value: 157064.6429471578
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 17
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 24
+    value: negative
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 2
+    value: 8347.734492114161
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 5
+    value: 1881524.1799500114
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 11
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 16
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 24
+    value: negative
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 2
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 3
+    value: 16431.84291506284
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 4
+    value: 5817091.329374369
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 5
+    value: 16431.84291506284
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 6
+    value: 25808.615404180873
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 7
+    value: 50802.18046912992
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 8
+    value: 2154.434690031898
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 9
+    value: 10461.834443918338
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 22
+    value: negative
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 3
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 4
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 5
+    value: 4240.831141767638
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 6
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 7
+    value: 1371.6866187107178
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 9
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 11
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 16
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 23
+    value: negative
+- attributes:
+    genotype: '2'
+    symptomatic: true
+  measurements:
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 1
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 2
+    value: 100000.0
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 3
+    value: 11450475.699382905
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 9
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 17
+    value: negative
+  - analyte: stool_norovirus_gc_wet_gram_gii
+    time: 23
+    value: negative

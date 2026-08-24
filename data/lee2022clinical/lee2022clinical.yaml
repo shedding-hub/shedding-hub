@@ -1,0 +1,287 @@
+title: Clinical and virological characteristics of viral shedding in children with
+  norovirus gastroenteritis
+doi: 10.1016/j.jmii.2021.10.006
+description: Study of pediatric norovirus gastroenteritis cases admitted to Chang
+  Gung Memorial Hospital (Taiwan) during 2017–2018. Norovirus was quantified from
+  fecal specimens using a SYBR Green-based real-time qRT-PCR method and genotypes
+  were characterized by sequencing. CSV figure data provide norovirus concentrations
+  over days after symptom onset, reported either as gc/mL (many participants) or gc/wet
+  gram (one immunocompromised patient with prolonged shedding).
+analytes:
+  gc_ml:
+    description: Norovirus RNA concentration measured by SYBR Green-based real-time
+      quantitative RT-PCR (qRT-PCR) from fecal specimen extract; values reported as
+      gene copies per mL (gc/mL).
+    specimen: stool
+    biomarker: norovirus
+    gene_target: RdRp
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  gc_wet_gram:
+    description: Norovirus RNA concentration measured by SYBR Green-based real-time
+      quantitative RT-PCR (qRT-PCR) from stool; values reported as gene copies per
+      wet gram (gc/wet gram).
+    specimen: stool
+    biomarker: norovirus
+    gene_target: RdRp
+    limit_of_detection: 50
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: confirmation date
+participants:
+- measurements:
+  - analyte: gc_ml
+    time: 1
+    value: negative
+- measurements:
+  - analyte: gc_ml
+    time: 2
+    value: negative
+- measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 965967258
+- measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 313502206.3
+- measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 60527799.76
+- measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 27772119.32
+- measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 564780.5074
+- measurements:
+  - analyte: gc_ml
+    time: 3
+    value: 129652.8163
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 2295631924
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 1365646657
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 156851516.4
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 85571831.45
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 50905759.02
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 6951927.962
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 4509572.136
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 2069138.081
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 671533.4791
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 129652.8163
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 77129.06118
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 35389.31695
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 196.4414281
+- measurements:
+  - analyte: gc_ml
+    time: 4
+    value: 116.8608855
+- measurements:
+  - analyte: gc_ml
+    time: 5
+    value: 313502206.3
+- measurements:
+  - analyte: gc_ml
+    time: 5
+    value: 36007334.85
+- measurements:
+  - analyte: gc_ml
+    time: 5
+    value: 25469184.39
+- measurements:
+  - analyte: gc_ml
+    time: 5
+    value: 7580524.368
+- measurements:
+  - analyte: gc_ml
+    time: 5
+    value: 3478190.651
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 1252403755
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 93309274.35
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 50905759.02
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 36007334.85
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 949387.7179
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 435609.9031
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 308121.3589
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 183298.0711
+- measurements:
+  - analyte: gc_ml
+    time: 6
+    value: 100000
+- measurements:
+  - analyte: gc_ml
+    time: 7
+    value: 4135626.918
+- measurements:
+  - analyte: gc_ml
+    time: 7
+    value: 2069138.081
+- measurements:
+  - analyte: gc_ml
+    time: 7
+    value: 25032.0398
+- measurements:
+  - analyte: gc_ml
+    time: 7
+    value: 17705.99351
+- measurements:
+  - analyte: gc_ml
+    time: 7
+    value: 5746.434969
+- measurements:
+  - analyte: gc_ml
+    time: 7
+    value: 13894954.94
+- measurements:
+  - analyte: gc_ml
+    time: 8
+    value: 2503203980
+- measurements:
+  - analyte: gc_ml
+    time: 8
+    value: 19644142.81
+- measurements:
+  - analyte: gc_ml
+    time: 8
+    value: 10717048.3
+- measurements:
+  - analyte: gc_ml
+    time: 8
+    value: 2069138.081
+- measurements:
+  - analyte: gc_ml
+    time: 9
+    value: 341849214.6
+- measurements:
+  - analyte: gc_ml
+    time: 10
+    value: 35389.31695
+- measurements:
+  - analyte: gc_ml
+    time: 10
+    value: negative
+- measurements:
+  - analyte: gc_ml
+    time: 12
+    value: 719.685673
+- measurements:
+  - analyte: gc_ml
+    time: 12
+    value: negative
+- measurements:
+  - analyte: gc_ml
+    time: 15
+    value: negative
+- measurements:
+  - analyte: gc_ml
+    time: 17
+    value: 1.541593693
+- measurements:
+  - analyte: gc_ml
+    time: 19
+    value: negative
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompromised
+    treatment: BMT
+  measurements:
+  - analyte: gc_wet_gram
+    time: 3
+    value: 131000000000
+  - analyte: gc_wet_gram
+    time: 9
+    value: 37693909754
+  - analyte: gc_wet_gram
+    time: 38
+    value: 1000000000000
+  - analyte: gc_wet_gram
+    time: 42
+    value: 12638482029
+  - analyte: gc_wet_gram
+    time: 78
+    value: 1660882783
+  - analyte: gc_wet_gram
+    time: 83
+    value: 1039798418
+  - analyte: gc_wet_gram
+    time: 89
+    value: 15361749.47
+  - analyte: gc_wet_gram
+    time: 110
+    value: 924914.7277
+  - analyte: gc_wet_gram
+    time: 144
+    value: 602.0894493
+  - analyte: gc_wet_gram
+    time: 151
+    value: 703.8135555
