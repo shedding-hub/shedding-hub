@@ -23,8 +23,12 @@ jobs:
         run: pip install -r requirements.txt
       - name: Lint code
         run: black --check .
+      # -n auto splits the suite across the runner's cores. The fitting tests
+      # dominate the wall clock and are independent of each other, so this is
+      # close to a linear win: 4m19s to 1m07s on a four-core machine, with the
+      # same 647 tests passing.
       - name: Run tests
-        run: pytest -v --cov=shedding_hub --cov-report=term-missing
+        run: pytest -v -n auto --cov=shedding_hub --cov-report=term-missing
         env:
           # test_load resolves a pull request through api.github.com, which
           # allows 60 requests an hour unauthenticated and has twice failed a
@@ -32,6 +36,13 @@ jobs:
           # every workflow -- nothing has to be created for it -- and it raises
           # the ceiling to 5,000.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Every dataset's doi is resolved against its publisher, one request
+          # each. Three jobs run tests/test_data.py, so a pull request made
+          # that round trip three times over -- some 280 external requests for
+          # a guarantee that only means anything once, and a documented source
+          # of dropped connections. data-validation is the job that keeps it;
+          # this one and minimum-python skip it.
+          SHEDDING_HUB_SKIP_LINK_CHECKS: "1"
       - name: Run README doctests
         run: python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE README.md
       - name: Build package
@@ -86,11 +97,16 @@ jobs:
       # Installing the project resolves the dependency versions a real 3.10
       # user gets, which is the combination actually worth testing.
       - name: Install the package as a user would
-        run: pip install . pytest jsonschema
+        run: pip install . pytest pytest-xdist jsonschema
+      # Deliberately still the whole suite. This job's worth is that it runs
+      # everything on the oldest interpreter we claim to support, so trimming
+      # it to a smoke test would hand back the time and take the guarantee
+      # with it. -n auto buys the time instead.
       - name: Run tests
-        run: pytest -q
+        run: pytest -q -n auto
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHEDDING_HUB_SKIP_LINK_CHECKS: "1"
   data-validation:
     runs-on: ubuntu-latest
     steps:
