@@ -23,12 +23,25 @@ jobs:
         run: pip install -r requirements.txt
       - name: Lint code
         run: black --check .
-      # -n auto splits the suite across the runner's cores. The fitting tests
-      # dominate the wall clock and are independent of each other, so this is
-      # close to a linear win: 4m19s to 1m07s on a four-core machine, with the
-      # same 647 tests passing.
+      # How much parallelism the runner actually has, printed because the first
+      # attempt at this tuned against a 32-core laptop and mispredicted the
+      # runner badly. Read it before changing -n below.
+      - name: Report available parallelism
+        run: |
+          echo "nproc:            $(nproc)"
+          python -c "import os; print('os.cpu_count():  ', os.cpu_count())"
+          python -c "import os; print('sched_getaffinity:', len(os.sched_getaffinity(0)))"
+      # -n 2 rather than -n auto. The fitting tests are independent and split
+      # well, but `auto` reads os.cpu_count(), which on a throttled runner
+      # reports more than is usable -- it made the 3.10 job *slower* (7m33s to
+      # 9m23s). Two workers is the conservative floor; raise it once the step
+      # above says the cores are really there.
+      #
+      # The thread pins stop the other half of the same mistake: scipy's BLAS
+      # spawns a thread pool per process, so N workers each spawning N threads
+      # thrash a small runner. Pinned, -n 2 goes 149s to 132s locally.
       - name: Run tests
-        run: pytest -v -n auto --cov=shedding_hub --cov-report=term-missing
+        run: pytest -v -n 2 --cov=shedding_hub --cov-report=term-missing
         env:
           # test_load resolves a pull request through api.github.com, which
           # allows 60 requests an hour unauthenticated and has twice failed a
@@ -43,6 +56,9 @@ jobs:
           # of dropped connections. data-validation is the job that keeps it;
           # this one and minimum-python skip it.
           SHEDDING_HUB_SKIP_LINK_CHECKS: "1"
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
       - name: Run README doctests
         run: python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE README.md
       - name: Build package
@@ -101,12 +117,16 @@ jobs:
       # Deliberately still the whole suite. This job's worth is that it runs
       # everything on the oldest interpreter we claim to support, so trimming
       # it to a smoke test would hand back the time and take the guarantee
-      # with it. -n auto buys the time instead.
+      # with it. Parallelism buys the time instead -- see the note on -n in the
+      # build job; this is the job `auto` actually slowed down.
       - name: Run tests
-        run: pytest -q -n auto
+        run: pytest -q -n 2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHEDDING_HUB_SKIP_LINK_CHECKS: "1"
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
   data-validation:
     runs-on: ubuntu-latest
     steps:
