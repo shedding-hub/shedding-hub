@@ -3097,7 +3097,7 @@ def _fit_diagnostic_legend_rows(fit) -> list[str]:
     from 3, and a fit that did not converge disqualifies the rest of the block.
     """
     # The analyte leads the block because the title no longer carries it, and
-    # biomarker and specimen alone do not identify a page: 68 of the 144 shipped
+    # biomarker and specimen alone do not identify a page: 78 of the 159 shipped
     # concentration fits share a dataset/biomarker/specimen/model with at least
     # one sibling. natarajan2022gastrointestinal alone has 14 stool analytes
     # separating gene targets, gRNA from sgRNA, and ddPCR from RT-qPCR.

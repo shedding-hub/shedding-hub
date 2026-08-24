@@ -1,0 +1,1610 @@
+title: Effect of Norovirus Inoculum Dose on Virus Kinetics, Shedding, and Symptoms
+doi: 10.3201/eid2907.230117
+description: Secondary analysis of a human norovirus GI.1 challenge study (ClinicalTrials.gov
+  NCT00138476) examining how inoculum dose (0.48, 4.8, 48, 4,800 RT-PCR units) affects
+  shedding kinetics and symptoms. Feces and vomit samples were collected frequently
+  during the first 96 hours after inoculation and then for 4–8 weeks postinoculation.
+  Virus shedding was measured by IMC RT-PCR (qualitative) and qRT-PCR (quantitative
+  genomic equivalent copies). This extraction contains digitized fecal shedding measurements
+  for dose 4,800 RT-PCR units from the provided figure-data CSV (Batch 1/8).
+analytes:
+  4800_stool:
+    description: Norovirus GI.1 challenge study fecal shedding measurement for participants
+      inoculated with 4,800 RT-PCR units. Virus shedding concentration measured by
+      IMC RT-PCR (qualitative positive/negative) and/or real-time quantitative RT-PCR
+      (qRT-PCR) reported as genomic equivalent copies per gram of stool; values below
+      assay limits may appear as qualitative results in the digitized dataset.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: 15000
+    limit_of_quantification: 40000000
+    unit: gc/wet gram
+    reference_event: inoculation
+  48_stool:
+    description: Required CSV analyte key present in study instructions (not populated
+      in this CSV batch).
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: 15000
+    limit_of_quantification: 40000000
+    unit: gc/wet gram
+    reference_event: inoculation
+  4_8_stool:
+    description: Required CSV analyte key present in study instructions (not populated
+      in this CSV batch).
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: 15000
+    limit_of_quantification: 40000000
+    unit: gc/wet gram
+    reference_event: inoculation
+  0_48_stool:
+    description: Required CSV analyte key present in study instructions (not populated
+      in this CSV batch).
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: 15000
+    limit_of_quantification: 40000000
+    unit: gc/wet gram
+    reference_event: inoculation
+  48_emesis:
+    description: Required CSV analyte key present in study instructions (not populated
+      in this CSV batch). The limit of detection (LOD) for emesis samples was set
+      by the study authors at 220 (genomic equivalent copies).
+    specimen: emesis
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: unknown
+    limit_of_quantification: 2200
+    unit: gc/mL
+    reference_event: inoculation
+  4_8_emesis:
+    description: Required CSV analyte key present in study instructions (not populated
+      in this CSV batch). The limit of detection (LOD) for emesis samples was set
+      by the study authors at 220 (genomic equivalent copies).
+    specimen: emesis
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: unknown
+    limit_of_quantification: 2200
+    unit: gc/mL
+    reference_event: inoculation
+  0_48_emesis:
+    description: Required CSV analyte key present in study instructions (not populated
+      in this CSV batch). The limit of detection (LOD) for emesis samples was set
+      by the study authors at 220 (genomic equivalent copies).
+    specimen: emesis
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: unknown
+    limit_of_quantification: 2200
+    unit: gc/mL
+    reference_event: inoculation
+  4800_emesis:
+    description: Required CSV analyte key present in study instructions (not populated
+      in this CSV batch). The limit of detection (LOD) for emesis samples was set
+      by the study authors at 220 (genomic equivalent copies).
+    specimen: emesis
+    biomarker: norovirus
+    genogroup: GI
+    limit_of_detection: unknown
+    limit_of_quantification: 2200
+    unit: gc/mL
+    reference_event: inoculation
+participants:
+- patient_id: ID1
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4800_stool
+    time: 0.76
+    value: positive
+  - analyte: 4800_stool
+    time: 2.63
+    value: 27745872500
+  - analyte: 4800_stool
+    time: 3.9
+    value: 66483170000
+  - analyte: 4800_stool
+    time: 7.61
+    value: 1144217500
+  - analyte: 4800_stool
+    time: 7.79
+    value: 358807500
+  - analyte: 4800_stool
+    time: 9.77
+    value: 261277500
+  - analyte: 4800_stool
+    time: 10.69
+    value: 64957500
+  - analyte: 4800_stool
+    time: 11.58
+    value: positive
+  - analyte: 4800_stool
+    time: 14.04
+    value: 41995000
+  - analyte: 4800_stool
+    time: 16.73
+    value: positive
+  - analyte: 4800_stool
+    time: 18.73
+    value: positive
+  - analyte: 4800_stool
+    time: 20.85
+    value: positive
+  - analyte: 4800_stool
+    time: 28.81
+    value: positive
+  - analyte: 4800_stool
+    time: 90.81
+    value: negative
+- patient_id: ID2
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4800_stool
+    time: 0.69
+    value: negative
+  - analyte: 4800_stool
+    time: 1.01
+    value: positive
+  - analyte: 4800_stool
+    time: 1.32
+    value: 58560000
+  - analyte: 4800_stool
+    time: 1.52
+    value: 193612500
+  - analyte: 4800_stool
+    time: 1.77
+    value: 48441427500
+  - analyte: 4800_stool
+    time: 2.73
+    value: 6804707500
+  - analyte: 4800_stool
+    time: 3.67
+    value: 1635920000
+  - analyte: 4800_stool
+    time: 4.19
+    value: 6468637500
+  - analyte: 4800_stool
+    time: 4.65
+    value: 975642500
+  - analyte: 4800_stool
+    time: 5.08
+    value: 289537500
+  - analyte: 4800_stool
+    time: 5.61
+    value: 104002500
+  - analyte: 4800_stool
+    time: 6.08
+    value: 58007500
+  - analyte: 4800_stool
+    time: 6.73
+    value: positive
+  - analyte: 4800_stool
+    time: 7.19
+    value: 153420000
+  - analyte: 4800_stool
+    time: 7.71
+    value: positive
+  - analyte: 4800_stool
+    time: 8.88
+    value: 51915000
+  - analyte: 4800_stool
+    time: 9.77
+    value: positive
+  - analyte: 4800_stool
+    time: 10.98
+    value: positive
+  - analyte: 4800_stool
+    time: 11.85
+    value: positive
+  - analyte: 4800_stool
+    time: 12.9
+    value: positive
+  - analyte: 4800_stool
+    time: 13.62
+    value: positive
+  - analyte: 4800_stool
+    time: 13.96
+    value: negative
+  - analyte: 4800_stool
+    time: 15.04
+    value: negative
+  - analyte: 4800_stool
+    time: 16.21
+    value: negative
+  - analyte: 4800_stool
+    time: 16.92
+    value: positive
+  - analyte: 4800_stool
+    time: 17.92
+    value: positive
+  - analyte: 4800_stool
+    time: 18.67
+    value: positive
+  - analyte: 4800_stool
+    time: 19.86
+    value: positive
+  - analyte: 4800_stool
+    time: 20.62
+    value: positive
+  - analyte: 4800_stool
+    time: 31.9
+    value: positive
+- patient_id: ID3
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4800_stool
+    time: 0.65
+    value: negative
+  - analyte: 4800_stool
+    time: 1.73
+    value: negative
+  - analyte: 4800_stool
+    time: 3.66
+    value: 366910000
+  - analyte: 4800_stool
+    time: 5.1
+    value: 1435117500
+  - analyte: 4800_stool
+    time: 5.68
+    value: 1007447500
+  - analyte: 4800_stool
+    time: 6.75
+    value: 971380000
+  - analyte: 4800_stool
+    time: 6.9
+    value: 511165000
+  - analyte: 4800_stool
+    time: 7.19
+    value: 135695000
+  - analyte: 4800_stool
+    time: 7.67
+    value: 158845000
+  - analyte: 4800_stool
+    time: 9.62
+    value: 240460000
+  - analyte: 4800_stool
+    time: 10.1
+    value: positive
+  - analyte: 4800_stool
+    time: 11.09
+    value: positive
+  - analyte: 4800_stool
+    time: 12.5
+    value: positive
+  - analyte: 4800_stool
+    time: 14.66
+    value: positive
+  - analyte: 4800_stool
+    time: 16.12
+    value: negative
+  - analyte: 4800_stool
+    time: 16.13
+    value: positive
+  - analyte: 4800_stool
+    time: 16.95
+    value: negative
+  - analyte: 4800_stool
+    time: 17.61
+    value: negative
+  - analyte: 4800_stool
+    time: 18.66
+    value: positive
+  - analyte: 4800_stool
+    time: 20.02
+    value: positive
+  - analyte: 4800_stool
+    time: 20.67
+    value: positive
+  - analyte: 4800_stool
+    time: 31.53
+    value: negative
+- patient_id: ID4
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4800_stool
+    time: 0.62
+    value: negative
+  - analyte: 4800_stool
+    time: 1.2
+    value: negative
+  - analyte: 4800_stool
+    time: 1.32
+    value: 1056800000
+  - analyte: 4800_stool
+    time: 1.32
+    value: 6524395000
+  - analyte: 4800_stool
+    time: 1.38
+    value: 31876045000
+  - analyte: 4800_stool
+    time: 1.38
+    value: 24122177500
+  - analyte: 4800_stool
+    time: 1.38
+    value: 5815110000
+  - analyte: 4800_stool
+    time: 1.41
+    value: 51613815000
+  - analyte: 4800_stool
+    time: 1.53
+    value: 129479122500
+  - analyte: 4800_stool
+    time: 1.61
+    value: 115736282500
+  - analyte: 4800_stool
+    time: 2.99
+    value: 104313862500
+  - analyte: 4800_stool
+    time: 3.74
+    value: 1463052500
+  - analyte: 4800_stool
+    time: 4.43
+    value: 1250525000
+  - analyte: 4800_stool
+    time: 5.51
+    value: 20344902500
+  - analyte: 4800_stool
+    time: 6.46
+    value: 4894695000
+  - analyte: 4800_stool
+    time: 7.52
+    value: 1280827500
+  - analyte: 4800_stool
+    time: 8.88
+    value: 1943170000
+  - analyte: 4800_stool
+    time: 9.51
+    value: 2716157500
+  - analyte: 4800_stool
+    time: 11.14
+    value: 255167500
+  - analyte: 4800_stool
+    time: 11.47
+    value: 178155000
+  - analyte: 4800_stool
+    time: 12.88
+    value: 549315000
+  - analyte: 4800_stool
+    time: 13.59
+    value: 511407500
+  - analyte: 4800_stool
+    time: 14.72
+    value: 57380000
+  - analyte: 4800_stool
+    time: 15.95
+    value: positive
+  - analyte: 4800_stool
+    time: 16.93
+    value: positive
+  - analyte: 4800_stool
+    time: 17.8
+    value: positive
+  - analyte: 4800_stool
+    time: 18.47
+    value: positive
+  - analyte: 4800_stool
+    time: 19.51
+    value: positive
+  - analyte: 4800_stool
+    time: 20.47
+    value: positive
+  - analyte: 4800_stool
+    time: 27.48
+    value: positive
+  - analyte: 4800_stool
+    time: 34.86
+    value: negative
+  - analyte: 4800_stool
+    time: 42.02
+    value: negative
+  - analyte: 4800_stool
+    time: 49.61
+    value: negative
+  - analyte: 4800_stool
+    time: 56.72
+    value: negative
+  - analyte: 4800_emesis
+    time: 1.41
+    value: 3871
+- patient_id: ID5
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4800_stool
+    time: 0.15
+    value: negative
+  - analyte: 4800_stool
+    time: 0.82
+    value: positive
+  - analyte: 4800_stool
+    time: 1.09
+    value: positive
+  - analyte: 4800_stool
+    time: 1.12
+    value: 213202500
+  - analyte: 4800_stool
+    time: 1.15
+    value: 134540000
+  - analyte: 4800_stool
+    time: 1.18
+    value: 606145000
+  - analyte: 4800_stool
+    time: 1.18
+    value: 453172500
+  - analyte: 4800_stool
+    time: 1.22
+    value: 494312500
+  - analyte: 4800_stool
+    time: 1.3
+    value: 788162500
+  - analyte: 4800_stool
+    time: 1.35
+    value: 203902500
+  - analyte: 4800_stool
+    time: 1.38
+    value: 2793807500
+  - analyte: 4800_stool
+    time: 1.45
+    value: 3256015000
+  - analyte: 4800_stool
+    time: 1.61
+    value: 3038917500
+  - analyte: 4800_stool
+    time: 1.64
+    value: 2001747500
+  - analyte: 4800_stool
+    time: 2.64
+    value: 165795000
+  - analyte: 4800_stool
+    time: 2.77
+    value: 85447500
+  - analyte: 4800_stool
+    time: 3.1
+    value: 195402500
+  - analyte: 4800_stool
+    time: 3.66
+    value: 55280000
+  - analyte: 4800_stool
+    time: 3.85
+    value: 388330000
+  - analyte: 4800_stool
+    time: 5.91
+    value: 550475000
+  - analyte: 4800_stool
+    time: 6.76
+    value: 181460000
+  - analyte: 4800_stool
+    time: 8.1
+    value: 112432500
+  - analyte: 4800_stool
+    time: 8.84
+    value: 113482500
+  - analyte: 4800_stool
+    time: 10.14
+    value: positive
+  - analyte: 4800_stool
+    time: 10.86
+    value: positive
+  - analyte: 4800_stool
+    time: 11.69
+    value: positive
+  - analyte: 4800_stool
+    time: 13
+    value: positive
+  - analyte: 4800_stool
+    time: 15.14
+    value: positive
+  - analyte: 4800_stool
+    time: 15.73
+    value: positive
+  - analyte: 4800_stool
+    time: 16.91
+    value: positive
+  - analyte: 4800_stool
+    time: 18.09
+    value: positive
+  - analyte: 4800_stool
+    time: 18.91
+    value: positive
+  - analyte: 4800_stool
+    time: 19.89
+    value: positive
+  - analyte: 4800_stool
+    time: 21.02
+    value: positive
+  - analyte: 4800_stool
+    time: 29.76
+    value: positive
+  - analyte: 4800_stool
+    time: 35.12
+    value: negative
+  - analyte: 4800_stool
+    time: 42.14
+    value: negative
+  - analyte: 4800_stool
+    time: 57.66
+    value: negative
+  - analyte: 4800_emesis
+    time: 1.15
+    value: negative
+  - analyte: 4800_emesis
+    time: 1.18
+    value: 40991.9365831365
+  - analyte: 4800_emesis
+    time: 1.22
+    value: 235741.255756849
+  - analyte: 4800_emesis
+    time: 1.28
+    value: 49474.5220384304
+  - analyte: 4800_emesis
+    time: 1.45
+    value: 47051.7731724228
+- patient_id: ID6
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4800_stool
+    time: 0.18
+    value: negative
+  - analyte: 4800_stool
+    time: 0.82
+    value: negative
+  - analyte: 4800_stool
+    time: 0.83
+    value: positive
+  - analyte: 4800_stool
+    time: 0.84
+    value: positive
+  - analyte: 4800_stool
+    time: 0.84
+    value: positive
+  - analyte: 4800_stool
+    time: 0.89
+    value: negative
+  - analyte: 4800_stool
+    time: 1.15
+    value: 184022500
+  - analyte: 4800_stool
+    time: 1.15
+    value: 98070000
+  - analyte: 4800_stool
+    time: 1.17
+    value: 227045000
+  - analyte: 4800_stool
+    time: 1.61
+    value: 2907165000
+  - analyte: 4800_stool
+    time: 4.78
+    value: 86113605000
+  - analyte: 4800_stool
+    time: 6.64
+    value: 1402847500
+  - analyte: 4800_stool
+    time: 6.77
+    value: positive
+  - analyte: 4800_stool
+    time: 7.14
+    value: 324855000
+  - analyte: 4800_stool
+    time: 8.72
+    value: 1074270000
+  - analyte: 4800_stool
+    time: 9.72
+    value: 78327500
+  - analyte: 4800_stool
+    time: 10.81
+    value: positive
+  - analyte: 4800_stool
+    time: 11.81
+    value: positive
+  - analyte: 4800_stool
+    time: 12.96
+    value: positive
+  - analyte: 4800_stool
+    time: 14.87
+    value: positive
+  - analyte: 4800_stool
+    time: 15.68
+    value: positive
+  - analyte: 4800_stool
+    time: 16.79
+    value: positive
+  - analyte: 4800_stool
+    time: 18
+    value: positive
+  - analyte: 4800_stool
+    time: 29.71
+    value: positive
+  - analyte: 4800_stool
+    time: 35.01
+    value: negative
+  - analyte: 4800_stool
+    time: 42.16
+    value: negative
+  - analyte: 4800_stool
+    time: 48.91
+    value: negative
+  - analyte: 4800_stool
+    time: 57.02
+    value: negative
+  - analyte: 4800_emesis
+    time: 0.83
+    value: 22000
+  - analyte: 4800_emesis
+    time: 1.06
+    value: negative
+  - analyte: 4800_emesis
+    time: 1.11
+    value: 98166.7288555459
+- patient_id: ID7
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 48_stool
+    time: 0.58
+    value: negative
+  - analyte: 48_stool
+    time: 0.75
+    value: negative
+  - analyte: 48_stool
+    time: 0.96
+    value: negative
+  - analyte: 48_stool
+    time: 1.13
+    value: positive
+  - analyte: 48_stool
+    time: 1.58
+    value: 4228970000
+  - analyte: 48_stool
+    time: 1.68
+    value: 23574792500
+  - analyte: 48_stool
+    time: 2.55
+    value: 469715092500
+  - analyte: 48_stool
+    time: 2.61
+    value: 121992512500
+  - analyte: 48_stool
+    time: 2.76
+    value: 175565532500
+  - analyte: 48_stool
+    time: 4.72
+    value: 9580257500
+  - analyte: 48_stool
+    time: 6.55
+    value: 718010000
+  - analyte: 48_stool
+    time: 13.68
+    value: positive
+  - analyte: 48_stool
+    time: 22.6
+    value: 66072500
+  - analyte: 48_stool
+    time: 27.55
+    value: positive
+  - analyte: 48_stool
+    time: 50.68
+    value: negative
+  - analyte: 48_stool
+    time: 59.97
+    value: negative
+- patient_id: ID8
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 48_stool
+    time: 0.67
+    value: negative
+  - analyte: 48_stool
+    time: 0.92
+    value: negative
+  - analyte: 48_stool
+    time: 1.65
+    value: positive
+  - analyte: 48_stool
+    time: 2.3
+    value: 962085000
+  - analyte: 48_stool
+    time: 2.75
+    value: 7144560000
+  - analyte: 48_stool
+    time: 3.66
+    value: 11295710000
+  - analyte: 48_stool
+    time: 4.76
+    value: 370470000
+  - analyte: 48_stool
+    time: 6.51
+    value: 336025000
+  - analyte: 48_stool
+    time: 8.59
+    value: 60820000
+  - analyte: 48_stool
+    time: 9.59
+    value: 87017500
+  - analyte: 48_stool
+    time: 10.51
+    value: positive
+  - analyte: 48_stool
+    time: 11.59
+    value: positive
+  - analyte: 48_stool
+    time: 13.09
+    value: positive
+  - analyte: 48_stool
+    time: 13.65
+    value: negative
+  - analyte: 48_stool
+    time: 16.12
+    value: positive
+  - analyte: 48_stool
+    time: 17.97
+    value: positive
+  - analyte: 48_stool
+    time: 18.51
+    value: positive
+  - analyte: 48_stool
+    time: 19.51
+    value: positive
+  - analyte: 48_stool
+    time: 20.55
+    value: negative
+  - analyte: 48_stool
+    time: 27.55
+    value: negative
+  - analyte: 48_stool
+    time: 36.81
+    value: negative
+  - analyte: 48_stool
+    time: 41.87
+    value: negative
+  - analyte: 48_stool
+    time: 50.03
+    value: negative
+  - analyte: 48_stool
+    time: 55.84
+    value: negative
+- patient_id: ID9
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 48_stool
+    time: 0.91
+    value: negative
+  - analyte: 48_stool
+    time: 1.9
+    value: 506162500
+  - analyte: 48_stool
+    time: 2.55
+    value: 486870000
+  - analyte: 48_stool
+    time: 2.69
+    value: 307800000
+  - analyte: 48_stool
+    time: 3.8
+    value: 2030230000
+  - analyte: 48_stool
+    time: 5.58
+    value: positive
+  - analyte: 48_stool
+    time: 6.65
+    value: positive
+  - analyte: 48_stool
+    time: 9.1
+    value: positive
+  - analyte: 48_stool
+    time: 12.98
+    value: positive
+  - analyte: 48_stool
+    time: 16.09
+    value: negative
+  - analyte: 48_stool
+    time: 20.86
+    value: negative
+  - analyte: 48_stool
+    time: 29.07
+    value: negative
+  - analyte: 48_stool
+    time: 42.57
+    value: negative
+  - analyte: 48_stool
+    time: 50.97
+    value: negative
+  - analyte: 48_stool
+    time: 58.85
+    value: negative
+- patient_id: ID10
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 48_stool
+    time: 0.66
+    value: negative
+  - analyte: 48_stool
+    time: 1.17
+    value: negative
+  - analyte: 48_stool
+    time: 1.56
+    value: 4787012500
+  - analyte: 48_stool
+    time: 2.99
+    value: 17754982500
+  - analyte: 48_stool
+    time: 3.6
+    value: 353615890000
+  - analyte: 48_stool
+    time: 4.18
+    value: 45991482500
+  - analyte: 48_stool
+    time: 5.99
+    value: 3813545000
+  - analyte: 48_stool
+    time: 6.57
+    value: 1755245000
+  - analyte: 48_stool
+    time: 9.16
+    value: 1702560000
+  - analyte: 48_stool
+    time: 9.7
+    value: 219210000
+  - analyte: 48_stool
+    time: 13.59
+    value: 92390000
+  - analyte: 48_stool
+    time: 16.57
+    value: 43555000
+  - analyte: 48_stool
+    time: 18.07
+    value: positive
+  - analyte: 48_stool
+    time: 20.53
+    value: positive
+  - analyte: 48_stool
+    time: 28.11
+    value: positive
+  - analyte: 48_stool
+    time: 36.66
+    value: positive
+  - analyte: 48_stool
+    time: 41.05
+    value: positive
+  - analyte: 48_stool
+    time: 48.76
+    value: positive
+  - analyte: 48_stool
+    time: 55.57
+    value: positive
+  - analyte: 48_emesis
+    time: 1.56
+    value: 3664380.57734533
+- patient_id: ID11
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 48_stool
+    time: 0.62
+    value: negative
+  - analyte: 48_stool
+    time: 0.69
+    value: negative
+  - analyte: 48_stool
+    time: 0.89
+    value: negative
+  - analyte: 48_stool
+    time: 1.75
+    value: 83072517500
+  - analyte: 48_stool
+    time: 2.88
+    value: 376939672500
+  - analyte: 48_stool
+    time: 3.72
+    value: 550306690000
+  - analyte: 48_stool
+    time: 4.6
+    value: 245189025000
+  - analyte: 48_stool
+    time: 6.56
+    value: 62337417500
+  - analyte: 48_stool
+    time: 7.56
+    value: 68733372500
+  - analyte: 48_stool
+    time: 8.91
+    value: 7785485000
+  - analyte: 48_stool
+    time: 9.83
+    value: 6654507500
+  - analyte: 48_stool
+    time: 10.6
+    value: 448175000
+  - analyte: 48_stool
+    time: 11.57
+    value: 149057500
+  - analyte: 48_stool
+    time: 12.56
+    value: 211120000
+  - analyte: 48_stool
+    time: 13.75
+    value: 939422500
+  - analyte: 48_stool
+    time: 14.66
+    value: 238420000
+  - analyte: 48_stool
+    time: 15.62
+    value: positive
+  - analyte: 48_stool
+    time: 18.1
+    value: 469635000
+  - analyte: 48_stool
+    time: 18.73
+    value: 150232500
+  - analyte: 48_stool
+    time: 19.61
+    value: positive
+  - analyte: 48_stool
+    time: 20.73
+    value: positive
+  - analyte: 48_stool
+    time: 26.58
+    value: negative
+  - analyte: 48_stool
+    time: 36.03
+    value: negative
+  - analyte: 48_stool
+    time: 41.73
+    value: negative
+  - analyte: 48_emesis
+    time: 1.51
+    value: positive
+  - analyte: 48_emesis
+    time: 1.51
+    value: negative
+  - analyte: 48_emesis
+    time: 1.59
+    value: 6880038.00725196
+  - analyte: 48_emesis
+    time: 1.59
+    value: 31314.0238457571
+  - analyte: 48_emesis
+    time: 1.51
+    value: negative
+- patient_id: ID12
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 48_stool
+    time: 0.67
+    value: negative
+  - analyte: 48_stool
+    time: 0.94
+    value: negative
+  - analyte: 48_stool
+    time: 1.55
+    value: 9963187500
+  - analyte: 48_stool
+    time: 3.9
+    value: 538098845000
+  - analyte: 48_stool
+    time: 5.53
+    value: 422416532500
+  - analyte: 48_stool
+    time: 6.75
+    value: 41267517500
+  - analyte: 48_stool
+    time: 7.53
+    value: 20492645000
+  - analyte: 48_stool
+    time: 9.8
+    value: 1185995000
+  - analyte: 48_stool
+    time: 10.99
+    value: 363480000
+  - analyte: 48_stool
+    time: 11.82
+    value: 541555000
+  - analyte: 48_stool
+    time: 12.82
+    value: 127080000
+  - analyte: 48_stool
+    time: 13.72
+    value: 508285000
+  - analyte: 48_stool
+    time: 14.61
+    value: 476390000
+  - analyte: 48_stool
+    time: 17.89
+    value: 61502500
+  - analyte: 48_stool
+    time: 19.53
+    value: 227462500
+  - analyte: 48_stool
+    time: 20.7
+    value: positive
+  - analyte: 48_stool
+    time: 32.82
+    value: positive
+  - analyte: 48_stool
+    time: 42.82
+    value: positive
+  - analyte: 48_stool
+    time: 47.61
+    value: positive
+  - analyte: 48_stool
+    time: 56.86
+    value: negative
+  - analyte: 48_emesis
+    time: 1.55
+    value: 11529.9065533386
+- patient_id: ID13
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 48_stool
+    time: 0.09
+    value: negative
+  - analyte: 48_stool
+    time: 0.85
+    value: positive
+  - analyte: 48_stool
+    time: 1.37
+    value: 11998330000
+  - analyte: 48_stool
+    time: 3.76
+    value: 1635192500000
+  - analyte: 48_stool
+    time: 6.11
+    value: 2843200000
+  - analyte: 48_stool
+    time: 7.77
+    value: 4824620000
+  - analyte: 48_stool
+    time: 9.62
+    value: 217602500
+  - analyte: 48_stool
+    time: 11.1
+    value: 288872500
+  - analyte: 48_stool
+    time: 13.04
+    value: 327505000
+  - analyte: 48_stool
+    time: 13.72
+    value: 274157500
+  - analyte: 48_stool
+    time: 15.08
+    value: 182922500
+  - analyte: 48_stool
+    time: 15.72
+    value: 174202500
+  - analyte: 48_stool
+    time: 17.88
+    value: 95837500
+  - analyte: 48_stool
+    time: 19.23
+    value: positive
+  - analyte: 48_stool
+    time: 19.84
+    value: positive
+  - analyte: 48_stool
+    time: 21.8
+    value: positive
+  - analyte: 48_stool
+    time: 26.77
+    value: positive
+  - analyte: 48_stool
+    time: 43.77
+    value: positive
+  - analyte: 48_stool
+    time: 49.8
+    value: positive
+  - analyte: 48_stool
+    time: 55.93
+    value: negative
+- patient_id: ID14
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4_8_stool
+    time: 1
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.45
+    value: 7186085000
+  - analyte: 4_8_stool
+    time: 1.45
+    value: 9057192500
+  - analyte: 4_8_stool
+    time: 2.08
+    value: 56520542500
+  - analyte: 4_8_stool
+    time: 3.03
+    value: 257202330000
+  - analyte: 4_8_stool
+    time: 4.84
+    value: 30152855000
+  - analyte: 4_8_stool
+    time: 5.75
+    value: 12337352500
+  - analyte: 4_8_stool
+    time: 7.71
+    value: 2077565000
+  - analyte: 4_8_stool
+    time: 9
+    value: 570625000
+  - analyte: 4_8_stool
+    time: 9.92
+    value: 128700000
+  - analyte: 4_8_stool
+    time: 10.71
+    value: 82242500
+  - analyte: 4_8_stool
+    time: 11.92
+    value: positive
+  - analyte: 4_8_stool
+    time: 12.67
+    value: 158405000
+  - analyte: 4_8_stool
+    time: 13.96
+    value: 210715000
+  - analyte: 4_8_stool
+    time: 14.8
+    value: positive
+  - analyte: 4_8_stool
+    time: 16.92
+    value: positive
+  - analyte: 4_8_stool
+    time: 18.17
+    value: positive
+  - analyte: 4_8_stool
+    time: 18.92
+    value: positive
+  - analyte: 4_8_stool
+    time: 19.59
+    value: positive
+  - analyte: 4_8_stool
+    time: 21.84
+    value: negative
+  - analyte: 4_8_stool
+    time: 27
+    value: positive
+  - analyte: 4_8_stool
+    time: 35.75
+    value: positive
+  - analyte: 4_8_stool
+    time: 42.84
+    value: positive
+  - analyte: 4_8_stool
+    time: 47.84
+    value: negative
+  - analyte: 4_8_stool
+    time: 56.05
+    value: positive
+  - analyte: 4_8_emesis
+    time: 1.45
+    value: negative
+  - analyte: 4_8_emesis
+    time: 1.45
+    value: negative
+  - analyte: 4_8_emesis
+    time: 1.48
+    value: negative
+- patient_id: ID15
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4_8_stool
+    time: 1.19
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.57
+    value: negative
+  - analyte: 4_8_stool
+    time: 2.92
+    value: negative
+  - analyte: 4_8_stool
+    time: 4.56
+    value: 9095982500
+  - analyte: 4_8_stool
+    time: 6.49
+    value: positive
+  - analyte: 4_8_stool
+    time: 7.49
+    value: 623690000
+  - analyte: 4_8_stool
+    time: 8.6
+    value: 102697500
+  - analyte: 4_8_stool
+    time: 9.52
+    value: positive
+  - analyte: 4_8_stool
+    time: 12.51
+    value: negative
+  - analyte: 4_8_stool
+    time: 18.5
+    value: negative
+  - analyte: 4_8_emesis
+    time: 2.09
+    value: negative
+- patient_id: ID16
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4_8_stool
+    time: 0.7
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.15
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.71
+    value: 12466245000
+  - analyte: 4_8_stool
+    time: 2.17
+    value: 218402760000
+  - analyte: 4_8_stool
+    time: 3.1
+    value: 848030562500
+  - analyte: 4_8_stool
+    time: 3.76
+    value: 7705602500
+  - analyte: 4_8_stool
+    time: 5.72
+    value: 815990000
+  - analyte: 4_8_stool
+    time: 6.93
+    value: 58842500
+  - analyte: 4_8_stool
+    time: 8.77
+    value: positive
+  - analyte: 4_8_stool
+    time: 11.24
+    value: positive
+  - analyte: 4_8_stool
+    time: 13.82
+    value: positive
+  - analyte: 4_8_stool
+    time: 14.68
+    value: positive
+  - analyte: 4_8_stool
+    time: 21.79
+    value: negative
+  - analyte: 4_8_stool
+    time: 23.72
+    value: negative
+  - analyte: 4_8_stool
+    time: 28.91
+    value: negative
+  - analyte: 4_8_stool
+    time: 41.96
+    value: negative
+  - analyte: 4_8_stool
+    time: 47.79
+    value: negative
+  - analyte: 4_8_stool
+    time: 55.89
+    value: negative
+  - analyte: 4_8_emesis
+    time: 1.64
+    value: positive
+  - analyte: 4_8_emesis
+    time: 1.58
+    value: negative
+- patient_id: ID17
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4_8_stool
+    time: 0.66
+    value: negative
+  - analyte: 4_8_stool
+    time: 0.76
+    value: negative
+  - analyte: 4_8_stool
+    time: 0.96
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.68
+    value: positive
+  - analyte: 4_8_stool
+    time: 1.77
+    value: 2117151000
+  - analyte: 4_8_stool
+    time: 1.89
+    value: 6380351750
+  - analyte: 4_8_stool
+    time: 1.94
+    value: 1268903500
+  - analyte: 4_8_stool
+    time: 1.97
+    value: 6454589500
+  - analyte: 4_8_stool
+    time: 2.07
+    value: 50005066500
+  - analyte: 4_8_stool
+    time: 3.71
+    value: 10690897500
+  - analyte: 4_8_stool
+    time: 4.64
+    value: 1757785000
+  - analyte: 4_8_stool
+    time: 5.59
+    value: 512015500
+  - analyte: 4_8_stool
+    time: 6.64
+    value: 714013500
+  - analyte: 4_8_stool
+    time: 7.59
+    value: 418643675
+  - analyte: 4_8_stool
+    time: 8.74
+    value: positive
+  - analyte: 4_8_stool
+    time: 10.22
+    value: positive
+  - analyte: 4_8_stool
+    time: 10.82
+    value: positive
+  - analyte: 4_8_stool
+    time: 11.63
+    value: positive
+  - analyte: 4_8_stool
+    time: 12.57
+    value: positive
+  - analyte: 4_8_stool
+    time: 13.88
+    value: positive
+  - analyte: 4_8_stool
+    time: 14.93
+    value: positive
+  - analyte: 4_8_stool
+    time: 16.16
+    value: positive
+  - analyte: 4_8_stool
+    time: 17.22
+    value: positive
+  - analyte: 4_8_stool
+    time: 17.89
+    value: 109509475
+  - analyte: 4_8_stool
+    time: 18.62
+    value: 178054900
+  - analyte: 4_8_stool
+    time: 19.68
+    value: positive
+  - analyte: 4_8_stool
+    time: 20.65
+    value: positive
+  - analyte: 4_8_stool
+    time: 27.76
+    value: negative
+  - analyte: 4_8_stool
+    time: 32.68
+    value: negative
+  - analyte: 4_8_stool
+    time: 38.63
+    value: negative
+  - analyte: 4_8_emesis
+    time: 1.9
+    value: negative
+  - analyte: 4_8_emesis
+    time: 1.99
+    value: negative
+  - analyte: 4_8_emesis
+    time: 2.18
+    value: positive
+- patient_id: ID18
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4_8_stool
+    time: 0.98
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.64
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.99
+    value: negative
+  - analyte: 4_8_stool
+    time: 2.58
+    value: negative
+  - analyte: 4_8_stool
+    time: 3.1
+    value: positive
+  - analyte: 4_8_stool
+    time: 3.57
+    value: positive
+  - analyte: 4_8_stool
+    time: 4.84
+    value: 541621250
+  - analyte: 4_8_stool
+    time: 5.93
+    value: 64836225
+  - analyte: 4_8_stool
+    time: 6.9
+    value: 46050850
+  - analyte: 4_8_stool
+    time: 7.87
+    value: 159870425
+  - analyte: 4_8_stool
+    time: 8.96
+    value: positive
+  - analyte: 4_8_stool
+    time: 9.86
+    value: positive
+  - analyte: 4_8_stool
+    time: 10.86
+    value: positive
+  - analyte: 4_8_stool
+    time: 21.02
+    value: negative
+  - analyte: 4_8_stool
+    time: 28.9
+    value: negative
+  - analyte: 4_8_stool
+    time: 35.99
+    value: negative
+- patient_id: ID19
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 4_8_stool
+    time: 0.87
+    value: negative
+  - analyte: 4_8_stool
+    time: 1.72
+    value: negative
+  - analyte: 4_8_stool
+    time: 2.07
+    value: positive
+  - analyte: 4_8_stool
+    time: 2.62
+    value: 5207471175
+  - analyte: 4_8_stool
+    time: 3.64
+    value: 12225323700
+  - analyte: 4_8_stool
+    time: 5.69
+    value: 1091967000
+  - analyte: 4_8_stool
+    time: 6.7
+    value: 629175500
+  - analyte: 4_8_stool
+    time: 8.61
+    value: 235118850
+  - analyte: 4_8_stool
+    time: 11.97
+    value: positive
+  - analyte: 4_8_stool
+    time: 12.61
+    value: positive
+  - analyte: 4_8_stool
+    time: 13.7
+    value: positive
+  - analyte: 4_8_stool
+    time: 19.91
+    value: positive
+  - analyte: 4_8_stool
+    time: 21.1
+    value: positive
+  - analyte: 4_8_stool
+    time: 21.59
+    value: positive
+  - analyte: 4_8_stool
+    time: 35.69
+    value: negative
+  - analyte: 4_8_stool
+    time: 43.97
+    value: negative
+- patient_id: ID20
+  attributes:
+    age_group: adult
+    genotype: '1'
+    immune_status: immunocompetent
+  measurements:
+  - analyte: 0_48_stool
+    time: 1.19
+    value: negative
+  - analyte: 0_48_stool
+    time: 1.98
+    value: 252893960950
+  - analyte: 0_48_stool
+    time: 3.86
+    value: 136857320325
+  - analyte: 0_48_stool
+    time: 4.86
+    value: 8068931642.5
+  - analyte: 0_48_stool
+    time: 6.79
+    value: 1403902797.5
+  - analyte: 0_48_stool
+    time: 8.74
+    value: positive
+  - analyte: 0_48_stool
+    time: 9.64
+    value: 209510650
+  - analyte: 0_48_stool
+    time: 10.65
+    value: positive
+  - analyte: 0_48_stool
+    time: 11.68
+    value: 52571880
+  - analyte: 0_48_stool
+    time: 12.68
+    value: positive
+  - analyte: 0_48_stool
+    time: 13.7
+    value: positive
+  - analyte: 0_48_stool
+    time: 15.71
+    value: positive
+  - analyte: 0_48_stool
+    time: 16.99
+    value: positive
+  - analyte: 0_48_stool
+    time: 18.82
+    value: positive
+  - analyte: 0_48_stool
+    time: 19.82
+    value: positive
+  - analyte: 0_48_stool
+    time: 20.78
+    value: positive
+  - analyte: 0_48_stool
+    time: 28.73
+    value: negative
+  - analyte: 0_48_stool
+    time: 34.7
+    value: negative
+  - analyte: 0_48_stool
+    time: 41.97
+    value: negative
+  - analyte: 0_48_emesis
+    time: 1.52
+    value: 12368073.6350519

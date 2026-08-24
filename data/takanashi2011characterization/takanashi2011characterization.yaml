@@ -1,0 +1,62 @@
+title: Characterization of emerging GII.g/GII.12 noroviruses from a gastroenteritis
+  outbreak in the United States in 2010
+doi: 10.1128/JCM.00305-11
+description: Study of a norovirus gastroenteritis outbreak in Ohio (January 2010).
+  Stool and saliva samples were obtained from six infected individuals; two representative
+  strains were sequenced and characterized as recombinant GII.g (polymerase)/GII.12
+  (capsid). Real-time RT-PCR was used to detect/quantify norovirus shedding; one immunocompetent
+  2-year-old male shed virus up to 30 days. HBGA typing was performed on saliva to
+  assess host susceptibility patterns.
+analytes:
+  stool_norovirus_gc_ml:
+    description: Norovirus genome quantification in stool by real-time reverse transcription
+      PCR (RT-qPCR), reported as genomic equivalents per mL.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GII
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- patient_id: A
+  attributes:
+    sex: male
+    age: 2
+    age_group: child
+    participant_type: patient
+    immune_status: immunocompetent
+  measurements:
+  - analyte: stool_norovirus_gc_ml
+    time: 3
+    value: 1610000000000
+  - analyte: stool_norovirus_gc_ml
+    time: 6
+    value: 67093867999
+  - analyte: stool_norovirus_gc_ml
+    time: 7
+    value: 14240236114
+  - analyte: stool_norovirus_gc_ml
+    time: 10
+    value: 2293547798
+  - analyte: stool_norovirus_gc_ml
+    time: 12
+    value: 958437492.6
+  - analyte: stool_norovirus_gc_ml
+    time: 14
+    value: 72413158.36
+  - analyte: stool_norovirus_gc_ml
+    time: 17
+    value: 78698403.55
+  - analyte: stool_norovirus_gc_ml
+    time: 18
+    value: 167778576.5
+  - analyte: stool_norovirus_gc_ml
+    time: 24
+    value: 211766.7789
+  - analyte: stool_norovirus_gc_ml
+    time: 28
+    value: 1380161.661
+  - analyte: stool_norovirus_gc_ml
+    time: 30
+    value: 250152.7064

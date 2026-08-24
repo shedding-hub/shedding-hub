@@ -181,7 +181,7 @@ class SheddingCatalog:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> catalog.table.shape
-        (144, 25)
+        (159, 25)
         >>> fit = catalog.select(
         ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
         ... )
@@ -473,7 +473,7 @@ def load_shedding_catalog(path: str | None = None) -> SheddingCatalog:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> len(catalog.fits)
-        144
+        159
     """
     catalog_path = pathlib.Path(path) if path else CATALOG_PATH
     if not catalog_path.is_file():

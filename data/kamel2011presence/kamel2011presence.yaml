@@ -18,23 +18,26 @@ analytes:
     unit: gc/wet gram
     reference_event: symptom onset
 participants:
-- attributes:
+- patient_id: H1
+  attributes:
     age: 9
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 7
-    value: 63095.73444801933
-- attributes:
+    value: 6309.57344480193
+- patient_id: H2
+  attributes:
     age: 5.5
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 2
-    value: 2511886.43150958
-- attributes:
+    value: 25118864.315095823
+- patient_id: H3
+  attributes:
     age: 15
     age_group: child
     genotype: IB
@@ -42,15 +45,17 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 1
     value: 1584893.192461114
-- attributes:
+- patient_id: H4
+  attributes:
     age: 6
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 1
-    value: 12589254.117941663
-- attributes:
+    value: 125892541.17941661
+- patient_id: H5
+  attributes:
     age: 4
     age_group: child
     genotype: IB
@@ -58,15 +63,17 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 6
     value: 251188.64315095823
-- attributes:
+- patient_id: H6
+  attributes:
     age: 12
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 3
-    value: 3981071.705534969
-- attributes:
+    value: 2511886.4315095823
+- patient_id: H7
+  attributes:
     age: 5
     age_group: child
     genotype: IB
@@ -74,7 +81,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 7
     value: 1258925.4117941663
-- attributes:
+- patient_id: H8
+  attributes:
     age: 14
     age_group: child
     genotype: IB
@@ -82,15 +90,17 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 6
     value: 1258925.4117941663
-- attributes:
+- patient_id: H9
+  attributes:
     age: 14
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 4
-    value: 79432.82347242821
-- attributes:
+    value: 7943.282347242814
+- patient_id: H10
+  attributes:
     age: 11
     age_group: child
     genotype: IB
@@ -98,7 +108,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 4
     value: 398107.1705534969
-- attributes:
+- patient_id: H11
+  attributes:
     age: 2
     age_group: child
     genotype: IB
@@ -106,7 +117,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 4
     value: 501187.2336272725
-- attributes:
+- patient_id: H12
+  attributes:
     age: 2
     age_group: child
     genotype: IB
@@ -114,7 +126,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 2
     value: 316227.7660168379
-- attributes:
+- patient_id: H13
+  attributes:
     age: 10
     age_group: child
     genotype: IB
@@ -122,7 +135,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 1
     value: 125892.54117941674
-- attributes:
+- patient_id: H14
+  attributes:
     age: 3
     age_group: child
     genotype: IB
@@ -130,31 +144,35 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 5
     value: 1258925.4117941663
-- attributes:
+- patient_id: H15
+  attributes:
     age: 5
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 1
-    value: 15848931.924611142
-- attributes:
+    value: 158489319.2461111
+- patient_id: H16
+  attributes:
     age: 4.5
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 1
-    value: 3981071.705534969
-- attributes:
+    value: 39810717.05534969
+- patient_id: H17
+  attributes:
     age: 4
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 1
-    value: 630957.344480193
-- attributes:
+    value: 6309573.44480193
+- patient_id: H18
+  attributes:
     age: 4
     age_group: child
     genotype: IB
@@ -162,7 +180,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 7
     value: 316227.7660168379
-- attributes:
+- patient_id: H19
+  attributes:
     age: 6
     age_group: child
     genotype: IB
@@ -170,7 +189,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 2
     value: 1584893.192461114
-- attributes:
+- patient_id: H20
+  attributes:
     age: 8
     age_group: child
     genotype: IB
@@ -178,7 +198,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 5
     value: 794328.2347242822
-- attributes:
+- patient_id: H21
+  attributes:
     age: 2
     age_group: child
     genotype: IB
@@ -186,7 +207,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 8
     value: 100000
-- attributes:
+- patient_id: H22
+  attributes:
     age: 2
     age_group: child
     genotype: IB
@@ -194,7 +216,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 1
     value: 501187.2336272725
-- attributes:
+- patient_id: H23
+  attributes:
     age: 3
     age_group: child
     genotype: IB
@@ -202,7 +225,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 10
     value: 63095.73444801933
-- attributes:
+- patient_id: H24
+  attributes:
     age: 3
     age_group: child
     genotype: IB
@@ -210,7 +234,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 7
     value: 630957.344480193
-- attributes:
+- patient_id: H25
+  attributes:
     age: 3
     age_group: child
     genotype: IB
@@ -218,7 +243,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 1
     value: 501187.2336272725
-- attributes:
+- patient_id: H26
+  attributes:
     age: 6
     age_group: child
     genotype: IB
@@ -226,7 +252,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 6
     value: 50118.72336272725
-- attributes:
+- patient_id: H27
+  attributes:
     age: 4
     age_group: child
     genotype: IB
@@ -234,7 +261,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 7
     value: 1995262.3149688796
-- attributes:
+- patient_id: H28
+  attributes:
     age: 4
     age_group: child
     genotype: IB
@@ -242,7 +270,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 4
     value: 398107.1705534969
-- attributes:
+- patient_id: H29
+  attributes:
     age: 9
     age_group: child
     genotype: unknown
@@ -250,7 +279,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 4
     value: negative
-- attributes:
+- patient_id: H30
+  attributes:
     age: 12
     age_group: child
     genotype: IB
@@ -258,15 +288,17 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 8
     value: 31622.776601683792
-- attributes:
+- patient_id: H31
+  attributes:
     age: 1.5
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 10
-    value: 39810.71705534969
-- attributes:
+    value: 3981.0717055349733
+- patient_id: H32
+  attributes:
     age: 6
     age_group: child
     genotype: IB
@@ -274,7 +306,8 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 2
     value: 398107.1705534969
-- attributes:
+- patient_id: H33
+  attributes:
     age: 3
     age_group: child
     genotype: IB
@@ -282,23 +315,26 @@ participants:
   - analyte: stool_HAV_viral_load
     time: 5
     value: 199526.23149688786
-- attributes:
+- patient_id: H34
+  attributes:
     age: 3
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 2
-    value: 794328.2347242822
-- attributes:
+    value: 7943282.347242822
+- patient_id: H35
+  attributes:
     age: 3
     age_group: child
     genotype: IB
   measurements:
   - analyte: stool_HAV_viral_load
     time: 3
-    value: 1258925.4117941663
-- attributes:
+    value: 12589254.117941663
+- patient_id: H36
+  attributes:
     age: 2
     age_group: child
     genotype: IB
