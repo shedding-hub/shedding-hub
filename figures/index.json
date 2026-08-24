@@ -12,6 +12,19 @@
    }
   ]
  },
+ "anfrunsestrada2020detection": {
+  "analytes": [
+   {
+    "analyte": "saliva_gii",
+    "figures": [
+     {
+      "file": "saliva_gii__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "aoki2010duration": {
   "analytes": [
    {
@@ -528,6 +541,32 @@
    }
   ]
  },
+ "flitter2025oral": {
+  "analytes": [
+   {
+    "analyte": "emesis",
+    "figures": [
+     {
+      "file": "emesis__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool",
+    "figures": [
+     {
+      "file": "stool__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "fraaij2015viral": {
   "analytes": [
    {
@@ -587,6 +626,94 @@
      {
       "file": "nasopharyngeal_swab_SARSCoV2_Ct__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "ge2023effect": {
+  "analytes": [
+   {
+    "analyte": "4800_stool",
+    "figures": [
+     {
+      "file": "4800_stool__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "4800_stool__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "48_stool",
+    "figures": [
+     {
+      "file": "48_stool__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "48_stool__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "4_8_stool",
+    "figures": [
+     {
+      "file": "4_8_stool__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "4_8_stool__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "0_48_stool",
+    "figures": [
+     {
+      "file": "0_48_stool__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "48_emesis",
+    "figures": [
+     {
+      "file": "48_emesis__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "4_8_emesis",
+    "figures": [
+     {
+      "file": "4_8_emesis__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "0_48_emesis",
+    "figures": [
+     {
+      "file": "0_48_emesis__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "4800_emesis",
+    "figures": [
+     {
+      "file": "4800_emesis__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -1135,6 +1262,36 @@
    }
   ]
  },
+ "kirby2014disease": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus_gc_wet_gram_gi",
+    "figures": [
+     {
+      "file": "stool_norovirus_gc_wet_gram_gi__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_norovirus_gc_wet_gram_gi__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_norovirus_gc_wet_gram_gii",
+    "figures": [
+     {
+      "file": "stool_norovirus_gc_wet_gram_gii__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_norovirus_gc_wet_gram_gii__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "kirby2016vomiting": {
   "analytes": [
    {
@@ -1322,6 +1479,28 @@
    }
   ]
  },
+ "lee2022clinical": {
+  "analytes": [
+   {
+    "analyte": "gc_ml",
+    "figures": [
+     {
+      "file": "gc_ml__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_wet_gram",
+    "figures": [
+     {
+      "file": "gc_wet_gram__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "lescure2020clinical": {
   "analytes": [
    {
@@ -1391,6 +1570,19 @@
      {
       "file": "stool_mtDNA__observations.png",
       "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "ludwig2008quantitative": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_norovirus_viral_load__exponential.png",
+      "model": "exponential"
      }
     ]
    }
@@ -1681,6 +1873,23 @@
    }
   ]
  },
+ "newman2016norovirus": {
+  "analytes": [
+   {
+    "analyte": "gec_g",
+    "figures": [
+     {
+      "file": "gec_g__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "gec_g__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "obara2008single": {
   "analytes": [
    {
@@ -1767,6 +1976,28 @@
      {
       "file": "bronchoalveolar_lavage_fluid__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "pombubpa2012assessment": {
+  "analytes": [
+   {
+    "analyte": "gii",
+    "figures": [
+     {
+      "file": "gii__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gi",
+    "figures": [
+     {
+      "file": "gi__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -2034,6 +2265,19 @@
      {
       "file": "swab_SARSCoV2_N_Ct__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "takanashi2011characterization": {
+  "analytes": [
+   {
+    "analyte": "stool_norovirus_gc_ml",
+    "figures": [
+     {
+      "file": "stool_norovirus_gc_ml__observations.png",
+      "model": "observations"
      }
     ]
    }

@@ -2091,6 +2091,24 @@ skipped:
     \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
     \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
     \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: anfrunsestrada2020detection
+  analyte: saliva_gii
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'saliva_gii' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: anfrunsestrada2020detection
+  analyte: saliva_gii
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'saliva_gii' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: anfrunsestrada2020detection
+  analyte: saliva_gii
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'saliva_gii' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
 - dataset_id: aoki2010duration
   analyte: stool_norovirus
   model: exponential
@@ -2912,6 +2930,42 @@ skipped:
   reason: concentration_units
   message: Analyte 'nasal_respiratory_syncytial_virus_quant_rt_pcr' is reported in
     'pfu/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: flitter2025oral
+  analyte: emesis
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'emesis' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: flitter2025oral
+  analyte: emesis
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'emesis' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: flitter2025oral
+  analyte: emesis
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'emesis' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: flitter2025oral
+  analyte: stool
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: flitter2025oral
+  analyte: stool
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: flitter2025oral
+  analyte: stool
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
 - dataset_id: fraaij2015viral
   analyte: particles_ml
   model: exponential
@@ -2982,6 +3036,150 @@ skipped:
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_Ct' has no detected reading at or
     before its reference event, so a shifted onset has nothing to locate and would
     only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: ge2023effect
+  analyte: 4800_stool
+  model: exponential
+  reason: concentration_units
+  message: Analyte '4800_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4800_stool
+  model: gamma
+  reason: concentration_units
+  message: Analyte '4800_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4800_stool
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '4800_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 48_stool
+  model: exponential
+  reason: concentration_units
+  message: Analyte '48_stool' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 48_stool
+  model: gamma
+  reason: concentration_units
+  message: Analyte '48_stool' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 48_stool
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '48_stool' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4_8_stool
+  model: exponential
+  reason: concentration_units
+  message: Analyte '4_8_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4_8_stool
+  model: gamma
+  reason: concentration_units
+  message: Analyte '4_8_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4_8_stool
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '4_8_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 0_48_stool
+  model: exponential
+  reason: concentration_units
+  message: Analyte '0_48_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 0_48_stool
+  model: gamma
+  reason: concentration_units
+  message: Analyte '0_48_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 0_48_stool
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '0_48_stool' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 48_emesis
+  model: exponential
+  reason: concentration_units
+  message: Analyte '48_emesis' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 48_emesis
+  model: gamma
+  reason: concentration_units
+  message: Analyte '48_emesis' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 48_emesis
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '48_emesis' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4_8_emesis
+  model: exponential
+  reason: concentration_units
+  message: Analyte '4_8_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4_8_emesis
+  model: gamma
+  reason: concentration_units
+  message: Analyte '4_8_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4_8_emesis
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '4_8_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 0_48_emesis
+  model: exponential
+  reason: concentration_units
+  message: Analyte '0_48_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 0_48_emesis
+  model: gamma
+  reason: concentration_units
+  message: Analyte '0_48_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 0_48_emesis
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '0_48_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4800_emesis
+  model: exponential
+  reason: concentration_units
+  message: Analyte '4800_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4800_emesis
+  model: gamma
+  reason: concentration_units
+  message: Analyte '4800_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: ge2023effect
+  analyte: 4800_emesis
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte '4800_emesis' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
 - dataset_id: golantripto2024viral
   analyte: utm_vp_ml_nasopharyngeal_swab
   model: exponential
@@ -3904,6 +4102,42 @@ skipped:
   message: Analyte 'oropharyngealswab_SARSCoV2_asymptomatic' has no detected reading
     at or before its reference event, so a shifted onset has nothing to locate and
     would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gi
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_wet_gram_gi' is reported in 'gc/wet gram',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gi
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_wet_gram_gi' is reported in 'gc/wet gram',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gi
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_wet_gram_gi' is reported in 'gc/wet gram',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gii
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_wet_gram_gii' is reported in 'gc/wet gram',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gii
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_wet_gram_gii' is reported in 'gc/wet gram',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gii
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_wet_gram_gii' is reported in 'gc/wet gram',
+    a concentration, and this build admits only ['ct'].
 - dataset_id: kirby2016vomiting
   analyte: emesis_norovirus_GI
   model: exponential
@@ -4152,6 +4386,42 @@ skipped:
   reason: concentration_units
   message: Analyte 'E_symptom' is reported in 'gc/mL', a concentration, and this build
     admits only ['ct'].
+- dataset_id: lee2022clinical
+  analyte: gc_ml
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lee2022clinical
+  analyte: gc_ml
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lee2022clinical
+  analyte: gc_ml
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lee2022clinical
+  analyte: gc_wet_gram
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_wet_gram' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: lee2022clinical
+  analyte: gc_wet_gram
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_wet_gram' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: lee2022clinical
+  analyte: gc_wet_gram
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_wet_gram' is reported in 'gc/wet gram', a concentration, and
+    this build admits only ['ct'].
 - dataset_id: lescure2020clinical
   analyte: naso_swab_SARSCoV2
   model: exponential
@@ -4260,6 +4530,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'stool_mtDNA' is reported in 'gc/dry gram', a concentration, and
     this build admits only ['ct'].
+- dataset_id: ludwig2008quantitative
+  analyte: stool_norovirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_viral_load' is reported in 'gc/wet gram', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: ludwig2008quantitative
+  analyte: stool_norovirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_viral_load' is reported in 'gc/wet gram', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: ludwig2008quantitative
+  analyte: stool_norovirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_viral_load' is reported in 'gc/wet gram', a concentration,
+    and this build admits only ['ct'].
 - dataset_id: lui2020viral
   analyte: 2019-nCoV_N1
   model: exponential
@@ -4769,6 +5057,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'N1-sgRNA-RT-qPCR-ZY' is reported in 'gc/mL', a concentration,
     and this build admits only ['ct'].
+- dataset_id: newman2016norovirus
+  analyte: gec_g
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gec_g' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: newman2016norovirus
+  analyte: gec_g
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gec_g' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: newman2016norovirus
+  analyte: gec_g
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gec_g' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
 - dataset_id: obara2008single
   analyte: stool_norovirus
   model: exponential
@@ -4884,6 +5190,42 @@ skipped:
   reason: concentration_units
   message: Analyte 'bronchoalveolar_lavage_fluid' is reported in 'gc/mL', a concentration,
     and this build admits only ['ct'].
+- dataset_id: pombubpa2012assessment
+  analyte: gii
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gii' is reported in 'gc/mL', a concentration, and this build admits
+    only ['ct'].
+- dataset_id: pombubpa2012assessment
+  analyte: gii
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gii' is reported in 'gc/mL', a concentration, and this build admits
+    only ['ct'].
+- dataset_id: pombubpa2012assessment
+  analyte: gii
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gii' is reported in 'gc/mL', a concentration, and this build admits
+    only ['ct'].
+- dataset_id: pombubpa2012assessment
+  analyte: gi
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gi' is reported in 'gc/mL', a concentration, and this build admits
+    only ['ct'].
+- dataset_id: pombubpa2012assessment
+  analyte: gi
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gi' is reported in 'gc/mL', a concentration, and this build admits
+    only ['ct'].
+- dataset_id: pombubpa2012assessment
+  analyte: gi
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gi' is reported in 'gc/mL', a concentration, and this build admits
+    only ['ct'].
 - dataset_id: portes2016non
   analyte: stool_adenovirus_viral_load
   model: exponential
@@ -5288,6 +5630,24 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: takanashi2011characterization
+  analyte: stool_norovirus_gc_ml
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_ml' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: takanashi2011characterization
+  analyte: stool_norovirus_gc_ml
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_ml' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: takanashi2011characterization
+  analyte: stool_norovirus_gc_ml
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_norovirus_gc_ml' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
 - dataset_id: team2020clinical
   analyte: naso_swab_SARSCoV2_N_Ct
   model: gamma
