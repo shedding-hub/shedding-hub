@@ -34,6 +34,9 @@ fits:
   converged: true
   log_likelihood: -25.73237253503738
   aic: 105.46474507007477
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: arts2023longitudinal
   analyte: stool_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -69,6 +72,9 @@ fits:
   converged: true
   log_likelihood: -310.74887120596225
   aic: 759.4977424119245
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: arts2023longitudinal
   analyte: stool_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -111,6 +117,9 @@ fits:
   converged: true
   log_likelihood: -245.33189060660385
   aic: 666.6637812132077
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: arts2023longitudinal
   analyte: stool_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -162,6 +171,9 @@ fits:
   converged: true
   log_likelihood: -221.34104936393658
   aic: 668.6820987278732
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: arts2023longitudinal
   analyte: stool_SARSCoV2_ORF1a
   biomarker: SARS-CoV-2
@@ -197,6 +209,9 @@ fits:
   converged: true
   log_likelihood: -336.01861367662207
   aic: 814.0372273532441
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: arts2023longitudinal
   analyte: stool_SARSCoV2_ORF1a
   biomarker: SARS-CoV-2
@@ -239,6 +254,9 @@ fits:
   converged: true
   log_likelihood: -265.5382698055871
   aic: 713.0765396111742
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: arts2023longitudinal
   analyte: stool_SARSCoV2_ORF1a
   biomarker: SARS-CoV-2
@@ -290,6 +308,9 @@ fits:
   converged: true
   log_likelihood: -247.86987021284642
   aic: 729.7397404256928
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: atmar2008norwalk
   analyte: stool_norovirus
   biomarker: norovirus
@@ -325,6 +346,9 @@ fits:
   converged: true
   log_likelihood: -173.3601432267733
   aic: 412.7202864535466
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: atmar2008norwalk
   analyte: stool_norovirus
   biomarker: norovirus
@@ -367,6 +391,9 @@ fits:
   converged: true
   log_likelihood: -141.9510425936274
   aic: 381.9020851872548
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: brint2017prolonged
   analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
   biomarker: RSV
@@ -402,6 +429,9 @@ fits:
   converged: true
   log_likelihood: -296.4757258681529
   aic: 694.9514517363058
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_VL
   biomarker: SARS-CoV-2
@@ -437,6 +467,9 @@ fits:
   converged: true
   log_likelihood: -1038.2741079648456
   aic: 2390.548215929691
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_VL
   biomarker: SARS-CoV-2
@@ -479,6 +512,9 @@ fits:
   converged: true
   log_likelihood: -923.6009667181696
   aic: 2299.2019334363395
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_VL
   biomarker: SARS-CoV-2
@@ -530,6 +566,9 @@ fits:
   converged: true
   log_likelihood: -963.0756796077435
   aic: 2528.151359215487
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: chilengi2020pilot
   analyte: stool_rotavirus_viral_load
   biomarker: rotavirus
@@ -565,6 +604,9 @@ fits:
   converged: true
   log_likelihood: -54.619600245149805
   aic: 175.2392004902996
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: cowley2017rotavirus
   analyte: stool_rotavirus_vaccine_dose1
   biomarker: rotavirus vaccine
@@ -600,6 +642,9 @@ fits:
   converged: true
   log_likelihood: -59.45165085700265
   aic: 172.9033017140053
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: cowley2017rotavirus
   analyte: stool_rotavirus_vaccine_dose2
   biomarker: rotavirus vaccine
@@ -635,6 +680,9 @@ fits:
   converged: true
   log_likelihood: -49.170651174089585
   aic: 148.34130234817917
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: cowley2017rotavirus
   analyte: stool_rotavirus_vaccine_dose3
   biomarker: rotavirus vaccine
@@ -670,6 +718,9 @@ fits:
   converged: true
   log_likelihood: -34.06317964005969
   aic: 106.12635928011937
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: el2011respiratory
   analyte: respiratory_secretions_RSV_viral_load
   biomarker: RSV
@@ -705,6 +756,9 @@ fits:
   converged: true
   log_likelihood: -13.191904643670417
   aic: 60.38380928734084
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: enya2023similarities
   analyte: 1_gc_reaction
   biomarker: rotavirus vaccine
@@ -747,6 +801,9 @@ fits:
   converged: true
   log_likelihood: -103.69970564923229
   aic: 329.39941129846454
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: enya2023similarities
   analyte: 2_gc_reaction
   biomarker: rotavirus vaccine
@@ -782,6 +839,9 @@ fits:
   converged: true
   log_likelihood: -215.97042159831616
   aic: 513.9408431966324
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: enya2023similarities
   analyte: 2_gc_reaction
   biomarker: rotavirus vaccine
@@ -833,6 +893,9 @@ fits:
   converged: true
   log_likelihood: -139.0127503276469
   aic: 440.0255006552938
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: fajnzylber2020sars
   analyte: Nasopharyngeal_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -868,6 +931,9 @@ fits:
   converged: true
   log_likelihood: -36.08358728040099
   aic: 138.16717456080198
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: fajnzylber2020sars
   analyte: Oropharyngeal_PBS_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -903,6 +969,9 @@ fits:
   converged: true
   log_likelihood: -8.170276501903832
   aic: 58.34055300380766
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: fajnzylber2020sars
   analyte: Sputum_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -938,6 +1007,9 @@ fits:
   converged: true
   log_likelihood: -21.565274784492622
   aic: 105.13054956898524
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: falsey2003comparison
   analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
   biomarker: RSV
@@ -973,6 +1045,9 @@ fits:
   converged: true
   log_likelihood: -186.1021002315176
   aic: 418.2042004630352
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: falsey2003comparison
   analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
   biomarker: RSV
@@ -1015,6 +1090,92 @@ fits:
   converged: true
   log_likelihood: -115.65614592031271
   aic: 299.31229184062545
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: flitter2025oral
+  analyte: stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.7864751612076584
+  - 7.784667113660845
+  population_cov:
+  - - 2.9683410362137406
+    - 1.3083852217408976
+  - - 1.3083852217408976
+    - 1.5417772369301255
+  sigma: 1.5033672498271542
+  censoring_limit: 5.1829308193029915
+  n_subjects: 94
+  n_measurements: 386
+  n_censored: 109
+  n_excluded_subjects: 47
+  n_degenerate_subjects: 75
+  pct_subjects_with_rise: 94.91525423728814
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -602.0241270154618
+  aic: 1582.0482540309235
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: flitter2025oral
+  analyte: stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.7701324940297961
+  - 1.9004866235270392
+  - 8.200983692962682
+  population_cov:
+  - - 2.103553620290879
+    - -0.954314269723386
+    - -0.026833790465151743
+  - - -0.954314269723386
+    - 0.5769162859317314
+    - 0.2610592050006438
+  - - -0.026833790465151743
+    - 0.2610592050006438
+    - 1.1039267567374096
+  sigma: 0.32488412029137204
+  censoring_limit: 5.1829308193029915
+  n_subjects: 86
+  n_measurements: 370
+  n_censored: 106
+  n_excluded_subjects: 55
+  n_degenerate_subjects: 28
+  pct_subjects_with_rise: 94.91525423728814
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -94.06123131218308
+  aic: 706.1224626243661
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: fraaij2015viral
   analyte: particles_ml
   biomarker: influenza
@@ -1050,6 +1211,9 @@ fits:
   converged: true
   log_likelihood: -18.0476557001299
   aic: 54.0953114002598
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: garciaknight2022infectious
   analyte: e
   biomarker: SARS-CoV-2
@@ -1085,6 +1249,9 @@ fits:
   converged: true
   log_likelihood: -793.6694625906364
   aic: 1885.3389251812728
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: garciaknight2022infectious
   analyte: e
   biomarker: SARS-CoV-2
@@ -1127,6 +1294,9 @@ fits:
   converged: true
   log_likelihood: -684.5569121016613
   aic: 1767.1138242033226
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: garciaknight2022infectious
   analyte: e
   biomarker: SARS-CoV-2
@@ -1178,6 +1348,9 @@ fits:
   converged: true
   log_likelihood: -658.3262622381588
   aic: 1822.6525244763177
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: garciaknight2022infectious
   analyte: n
   biomarker: SARS-CoV-2
@@ -1213,6 +1386,9 @@ fits:
   converged: true
   log_likelihood: -601.9149763349026
   aic: 1469.8299526698052
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: garciaknight2022infectious
   analyte: n
   biomarker: SARS-CoV-2
@@ -1255,6 +1431,9 @@ fits:
   converged: true
   log_likelihood: -517.4145869113356
   aic: 1408.8291738226712
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: garciaknight2022infectious
   analyte: n
   biomarker: SARS-CoV-2
@@ -1306,6 +1485,258 @@ fits:
   converged: true
   log_likelihood: -490.54603211088516
   aic: 1447.0920642217702
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: ge2023effect
+  analyte: 4800_stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.3362901684104764
+  - 9.444556901779182
+  population_cov:
+  - - 0.39666616309515274
+    - 0.5818052060470257
+  - - 0.5818052060470257
+    - 1.1724506545578177
+  sigma: 0.8669741076536216
+  censoring_limit: 7.6020599913279625
+  n_subjects: 6
+  n_measurements: 105
+  n_censored: 28
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 0.635
+  n_dropped_measurements: 61
+  converged: true
+  log_likelihood: -112.96001516932274
+  aic: 251.9200303386455
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: ge2023effect
+  analyte: 4800_stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.3107192319018993
+  - 1.0098555663188729
+  - 9.777048693152677
+  population_cov:
+  - - 0.37010242636865853
+    - 0.27240457629990605
+    - -0.00979786751351628
+  - - 0.27240457629990605
+    - 0.5367395790146021
+    - -0.34928718491141464
+  - - -0.00979786751351628
+    - -0.34928718491141464
+    - 0.8033033167495713
+  sigma: 0.6337440335667406
+  censoring_limit: 7.6020599913279625
+  n_subjects: 6
+  n_measurements: 105
+  n_censored: 28
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 0.635
+  n_dropped_measurements: 61
+  converged: true
+  log_likelihood: -78.93053414859962
+  aic: 195.86106829719924
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: ge2023effect
+  analyte: 48_stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.4484597866921345
+  - 9.46900348191204
+  population_cov:
+  - - 0.1522604794866267
+    - -0.12128927819739321
+  - - -0.12128927819739321
+    - 0.23025400342928876
+  sigma: 1.4232257548471887
+  censoring_limit: 7.6020599913279625
+  n_subjects: 7
+  n_measurements: 102
+  n_censored: 34
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 0.66
+  n_dropped_measurements: 36
+  converged: true
+  log_likelihood: -139.81715031361762
+  aic: 309.63430062723523
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: ge2023effect
+  analyte: 48_stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.29275038114882257
+  - 1.5746514870253658
+  - 10.256888197842368
+  population_cov:
+  - - 0.12138592461997902
+    - -0.013034164506015794
+    - -0.17611033858904995
+  - - -0.013034164506015794
+    - 0.03648565486198824
+    - 0.07954231430499595
+  - - -0.17611033858904995
+    - 0.07954231430499595
+    - 0.43967817011648763
+  sigma: 0.8494212607690397
+  censoring_limit: 7.6020599913279625
+  n_subjects: 7
+  n_measurements: 102
+  n_censored: 34
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 0.66
+  n_dropped_measurements: 36
+  converged: true
+  log_likelihood: -92.58650842590681
+  aic: 229.17301685181363
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: ge2023effect
+  analyte: 4_8_stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.5744452624098748
+  - 8.87341046778013
+  population_cov:
+  - - 0.34896853528665256
+    - 0.6471436839705255
+  - - 0.6471436839705255
+    - 1.3107250041884333
+  sigma: 1.2793067798007058
+  censoring_limit: 7.6020599913279625
+  n_subjects: 6
+  n_measurements: 75
+  n_censored: 33
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 66.66666666666666
+  median_first_observed_day: 0.925
+  n_dropped_measurements: 40
+  converged: true
+  log_likelihood: -87.56673398726728
+  aic: 201.13346797453457
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: ge2023effect
+  analyte: 4_8_stool
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.8515574333834556
+  - 1.6074716380914444
+  - 9.591421362020371
+  population_cov:
+  - - 0.7005500563037775
+    - 0.004501443496376177
+    - -0.147920992342745
+  - - 0.004501443496376177
+    - 0.025103142006251872
+    - -0.09872409926570219
+  - - -0.147920992342745
+    - -0.09872409926570219
+    - 0.6651484302438915
+  sigma: 0.689986068365907
+  censoring_limit: 7.6020599913279625
+  n_subjects: 6
+  n_measurements: 75
+  n_censored: 33
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 66.66666666666666
+  median_first_observed_day: 0.98
+  n_dropped_measurements: 40
+  converged: true
+  log_likelihood: -49.75343259226745
+  aic: 137.5068651845349
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: golantripto2024viral
   analyte: utm_vp_ml_nasopharyngeal_swab
   biomarker: RSV
@@ -1341,6 +1772,9 @@ fits:
   converged: true
   log_likelihood: 18.33140667615971
   aic: 13.337186647680582
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: golantripto2024viral
   analyte: vcm_vp_ml_nasopharyngeal_swab
   biomarker: RSV
@@ -1376,6 +1810,9 @@ fits:
   converged: true
   log_likelihood: 4.324551714247594
   aic: 41.35089657150481
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: golantripto2024viral
   analyte: utm_vp_ml_nasal_lavage_fluid
   biomarker: RSV
@@ -1411,6 +1848,9 @@ fits:
   converged: true
   log_likelihood: 33.66322618651783
   aic: -17.326452373035664
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: golantripto2024viral
   analyte: vcm_vp_ml_nasal_lavage_fluid
   biomarker: RSV
@@ -1446,6 +1886,9 @@ fits:
   converged: true
   log_likelihood: 48.34810358035831
   aic: -46.696207160716625
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: asymptomatic_PCR
   biomarker: SARS-CoV-2
@@ -1481,6 +1924,9 @@ fits:
   converged: true
   log_likelihood: -412.05661131200577
   aic: 894.1132226240115
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: asymptomatic_PCR
   biomarker: SARS-CoV-2
@@ -1523,6 +1969,9 @@ fits:
   converged: true
   log_likelihood: -301.31259429304737
   aic: 700.6251885860947
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: asymptomatic_PCR
   biomarker: SARS-CoV-2
@@ -1574,6 +2023,9 @@ fits:
   converged: true
   log_likelihood: -301.79235311748505
   aic: 733.5847062349701
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: asymptomatic_cultivable
   biomarker: SARS-CoV-2
@@ -1609,6 +2061,9 @@ fits:
   converged: true
   log_likelihood: -159.4750808882554
   aic: 376.9501617765108
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: asymptomatic_cultivable
   biomarker: SARS-CoV-2
@@ -1651,6 +2106,9 @@ fits:
   converged: true
   log_likelihood: -108.17183840845124
   aic: 290.3436768169025
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: asymptomatic_cultivable
   biomarker: SARS-CoV-2
@@ -1702,6 +2160,9 @@ fits:
   converged: true
   log_likelihood: -110.8855061457343
   aic: 327.7710122914686
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: symptomatic_PCR
   biomarker: SARS-CoV-2
@@ -1737,6 +2198,9 @@ fits:
   converged: true
   log_likelihood: -885.9425405970667
   aic: 1905.8850811941334
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: symptomatic_PCR
   biomarker: SARS-CoV-2
@@ -1779,6 +2243,9 @@ fits:
   converged: true
   log_likelihood: -377.2140672200469
   aic: 948.4281344400938
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: symptomatic_PCR
   biomarker: SARS-CoV-2
@@ -1830,6 +2297,9 @@ fits:
   converged: true
   log_likelihood: -495.3930087320616
   aic: 1256.7860174641232
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: symptomatic_cultivable
   biomarker: SARS-CoV-2
@@ -1865,6 +2335,9 @@ fits:
   converged: true
   log_likelihood: -496.0811421242249
   aic: 1118.1622842484499
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: symptomatic_cultivable
   biomarker: SARS-CoV-2
@@ -1907,6 +2380,9 @@ fits:
   converged: true
   log_likelihood: -166.78009755775275
   aic: 515.5601951155055
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hakki2022onset
   analyte: symptomatic_cultivable
   biomarker: SARS-CoV-2
@@ -1958,6 +2434,9 @@ fits:
   converged: true
   log_likelihood: -210.93595016545143
   aic: 663.8719003309029
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hu2013association
   analyte: oropharyngeal_swab
   biomarker: influenza
@@ -1993,6 +2472,9 @@ fits:
   converged: true
   log_likelihood: -91.92316828018977
   aic: 237.84633656037954
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hu2013association
   analyte: oropharyngeal_swab
   biomarker: influenza
@@ -2035,6 +2517,9 @@ fits:
   converged: true
   log_likelihood: -90.65885023091744
   aic: 261.3177004618349
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hu2013association
   analyte: urine
   biomarker: influenza
@@ -2070,6 +2555,9 @@ fits:
   converged: true
   log_likelihood: -37.88231328385442
   aic: 121.76462656770885
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hu2013association
   analyte: urine
   biomarker: influenza
@@ -2112,6 +2600,9 @@ fits:
   converged: true
   log_likelihood: -37.55446773763848
   aic: 143.10893547527695
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hu2013association
   analyte: stool
   biomarker: influenza
@@ -2147,6 +2638,9 @@ fits:
   converged: true
   log_likelihood: -57.27107668078737
   aic: 160.54215336157472
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hu2013association
   analyte: stool
   biomarker: influenza
@@ -2189,6 +2683,9 @@ fits:
   converged: true
   log_likelihood: -56.62274818859144
   aic: 181.24549637718286
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: iwakiri2009quantitative
   analyte: stool_SaV
   biomarker: sapovirus
@@ -2224,6 +2721,9 @@ fits:
   converged: true
   log_likelihood: 8.993503047170977
   aic: 52.01299390565805
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: kay2011shedding
   analyte: nasal_lavage_influenza_gc_per_mL
   biomarker: influenza
@@ -2259,6 +2759,9 @@ fits:
   converged: true
   log_likelihood: -12.583063598954173
   aic: 59.166127197908345
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: ke2022daily
   analyte: nasal_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2294,6 +2797,9 @@ fits:
   converged: true
   log_likelihood: -1136.6705504450779
   aic: 2515.3411008901558
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: ke2022daily
   analyte: nasal_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2336,6 +2842,9 @@ fits:
   converged: true
   log_likelihood: -861.8384011120244
   aic: 2079.6768022240485
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: ke2022daily
   analyte: nasal_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2387,6 +2896,9 @@ fits:
   converged: true
   log_likelihood: -922.9117248256496
   aic: 2327.823449651299
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: ke2022daily
   analyte: saliva_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2422,6 +2934,9 @@ fits:
   converged: true
   log_likelihood: -1351.6357338126868
   aic: 2945.2714676253736
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: ke2022daily
   analyte: saliva_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2464,6 +2979,9 @@ fits:
   converged: true
   log_likelihood: -710.811466698307
   aic: 1777.622933396614
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: ke2022daily
   analyte: saliva_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2515,6 +3033,175 @@ fits:
   converged: true
   log_likelihood: -821.6329577077488
   aic: 2125.2659154154976
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gi
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.2549622209151312
+  - 5.93390112181395
+  population_cov:
+  - - 0.376183323001622
+    - 0.13208892973046613
+  - - 0.13208892973046613
+    - 1.2399994290093115
+  sigma: 2.7173318127728088
+  censoring_limit: 3.552668216112193
+  n_subjects: 15
+  n_measurements: 121
+  n_censored: 51
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 69.23076923076923
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -204.23659980770134
+  aic: 470.4731996154027
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gi
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.6222856366561508
+  - 2.0427438572508336
+  - 7.671282753198001
+  population_cov:
+  - - 0.23003764295451942
+    - -0.09417863258097782
+    - 0.013103695422771183
+  - - -0.09417863258097782
+    - 0.05412558094309834
+    - 0.09935393375391663
+  - - 0.013103695422771183
+    - 0.09935393375391663
+    - 1.5461316955691566
+  sigma: 1.6306237809213526
+  censoring_limit: 3.552668216112193
+  n_subjects: 15
+  n_measurements: 121
+  n_censored: 51
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 69.23076923076923
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -149.34699227528282
+  aic: 390.69398455056563
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gii
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.3125659285208793
+  - 4.596206405566037
+  population_cov:
+  - - 1.3127842184940484
+    - 0.1452203172303528
+  - - 0.1452203172303528
+    - 1.3616210424883044
+  sigma: 1.898356017872072
+  censoring_limit: 3.2528530309798933
+  n_subjects: 9
+  n_measurements: 69
+  n_censored: 32
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 80.0
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -93.80082453305411
+  aic: 225.60164906610822
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gii
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.7161562305257054
+  - 1.6850086725417543
+  - 5.33840544608286
+  population_cov:
+  - - 0.4509155748452604
+    - -0.19492650589811575
+    - -0.08157909112600831
+  - - -0.19492650589811575
+    - 0.1109474103349035
+    - 0.16627158505388948
+  - - -0.08157909112600831
+    - 0.16627158505388948
+    - 2.4458480990270406
+  sigma: 1.0873948829568016
+  censoring_limit: 3.2528530309798933
+  n_subjects: 9
+  n_measurements: 69
+  n_censored: 32
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 80.0
+  median_first_observed_day: 1.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -63.153588977630946
+  aic: 182.3071779552619
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: kirby2016vomiting
   analyte: emesis_norovirus_GII
   biomarker: norovirus
@@ -2550,6 +3237,9 @@ fits:
   converged: true
   log_likelihood: -20.513449273798848
   aic: 55.026898547597696
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_viral
   biomarker: SARS-CoV-2
@@ -2585,6 +3275,9 @@ fits:
   converged: true
   log_likelihood: -612.8992497148125
   aic: 1495.798499429625
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_viral
   biomarker: SARS-CoV-2
@@ -2627,6 +3320,9 @@ fits:
   converged: true
   log_likelihood: -234.37126732345794
   aic: 776.7425346469158
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_viral
   biomarker: SARS-CoV-2
@@ -2678,6 +3374,9 @@ fits:
   converged: true
   log_likelihood: -323.9627205850093
   aic: 1129.9254411700185
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: kondo2016influenza
   analyte: nasal_discharge_influenza_gc_per_mL
   biomarker: influenza
@@ -2713,6 +3412,9 @@ fits:
   converged: true
   log_likelihood: -57.62863600108465
   aic: 229.25727200216932
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: kondo2016influenza
   analyte: nasal_discharge_influenza_gc_per_mL
   biomarker: influenza
@@ -2755,6 +3457,9 @@ fits:
   converged: true
   log_likelihood: -8.206456962930478
   aic: 132.41291392586095
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_first_pos
   biomarker: SARS-CoV-2
@@ -2790,6 +3495,9 @@ fits:
   converged: true
   log_likelihood: 69.96129578996937
   aic: 38.07740842006126
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: lavezzo2020suppression
   analyte: E_first_pos
   biomarker: SARS-CoV-2
@@ -2825,6 +3533,9 @@ fits:
   converged: true
   log_likelihood: -130.8481832902331
   aic: 423.6963665804662
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_symptom
   biomarker: SARS-CoV-2
@@ -2860,6 +3571,9 @@ fits:
   converged: true
   log_likelihood: 263.1429641190459
   aic: -372.28592823809186
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: lavezzo2020suppression
   analyte: E_symptom
   biomarker: SARS-CoV-2
@@ -2895,6 +3609,9 @@ fits:
   converged: true
   log_likelihood: -83.37080940264623
   aic: 352.74161880529243
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: lescure2020clinical
   analyte: naso_swab_SARSCoV2
   biomarker: SARS-CoV-2
@@ -2930,6 +3647,9 @@ fits:
   converged: true
   log_likelihood: -26.672950624511024
   aic: 71.34590124902205
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: li2018faecal
   analyte: stool_lanzhou_lamb_rotavirus_vaccine_pcr
   biomarker: Lanzhou lamb rotavirus vaccine
@@ -2965,6 +3685,9 @@ fits:
   converged: true
   log_likelihood: -73.537211591975
   aic: 209.07442318395
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: liu2024longitudinal
   analyte: stool_SARSCoV2_N1
   biomarker: SARS-CoV-2
@@ -3000,6 +3723,9 @@ fits:
   converged: true
   log_likelihood: -64.2346067076986
   aic: 194.4692134153972
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: liu2024longitudinal
   analyte: stool_SARSCoV2_N1
   biomarker: SARS-CoV-2
@@ -3042,6 +3768,47 @@ fits:
   converged: true
   log_likelihood: -50.81515275724149
   aic: 193.63030551448298
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: ludwig2008quantitative
+  analyte: stool_norovirus_viral_load
+  biomarker: norovirus
+  specimen: stool
+  reference_event: symptom onset
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.826453747477886
+  - 9.135704200437152
+  population_cov:
+  - - 0.5207343600052351
+    - 0.297662610025589
+  - - 0.297662610025589
+    - 0.2562223951337913
+  sigma: 0.8642325145050705
+  censoring_limit: 3.5085185185185193
+  n_subjects: 9
+  n_measurements: 80
+  n_censored: 0
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 3
+  pct_subjects_with_rise: 37.5
+  median_first_observed_day: 5.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -101.85535720219124
+  aic: 241.7107144043825
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: lui2020viral
   analyte: 2019-nCoV_N1
   biomarker: SARS-CoV-2
@@ -3077,6 +3844,9 @@ fits:
   converged: true
   log_likelihood: -17.012952270016353
   aic: 72.02590454003271
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: lui2020viral
   analyte: 2019-nCoV_N1
   biomarker: SARS-CoV-2
@@ -3119,6 +3889,9 @@ fits:
   converged: true
   log_likelihood: -16.3641028860919
   aic: 82.7282057721838
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: mijatovicrustempasic2017shedding
   analyte: stool_rotavirus_vaccine
   biomarker: rotavirus vaccine
@@ -3154,6 +3927,9 @@ fits:
   converged: true
   log_likelihood: -348.2447724059962
   aic: 818.4895448119923
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: mijatovicrustempasic2017shedding
   analyte: stool_rotavirus_vaccine
   biomarker: rotavirus vaccine
@@ -3196,6 +3972,9 @@ fits:
   converged: true
   log_likelihood: -316.59925672136455
   aic: 809.1985134427291
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: mijatovicrustempasic2017shedding
   analyte: stool_pcv1_dna
   biomarker: rotavirus vaccine
@@ -3231,6 +4010,9 @@ fits:
   converged: true
   log_likelihood: -67.18135196090768
   aic: 228.36270392181535
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: miyoshi2015long
   analyte: stool_norovirus
   biomarker: norovirus
@@ -3266,6 +4048,9 @@ fits:
   converged: true
   log_likelihood: -41.687934400381955
   aic: 101.37586880076391
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3301,6 +4086,9 @@ fits:
   converged: true
   log_likelihood: -74.40765965447557
   aic: 358.81531930895113
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3343,6 +4131,9 @@ fits:
   converged: true
   log_likelihood: -21.150950954470176
   aic: 296.30190190894035
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3394,6 +4185,9 @@ fits:
   converged: true
   log_likelihood: -9.985619003369834
   aic: 381.97123800673967
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3429,6 +4223,9 @@ fits:
   converged: true
   log_likelihood: -119.82163743694979
   aic: 457.6432748738996
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: RdRP-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3464,6 +4261,9 @@ fits:
   converged: true
   log_likelihood: -44.19804515839068
   aic: 218.39609031678134
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: RdRP-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3499,6 +4299,9 @@ fits:
   converged: true
   log_likelihood: -46.40757634696242
   aic: 274.81515269392486
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: RdRP-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3541,6 +4344,9 @@ fits:
   converged: true
   log_likelihood: 28.571949650143893
   aic: 166.85610069971221
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: RdRP-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3592,6 +4398,9 @@ fits:
   converged: true
   log_likelihood: 35.64160634199042
   aic: 250.71678731601918
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3627,6 +4436,9 @@ fits:
   converged: true
   log_likelihood: -235.08799491622278
   aic: 756.1759898324456
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3662,6 +4474,9 @@ fits:
   converged: true
   log_likelihood: -188.45074572044112
   aic: 682.9014914408822
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N2-gRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3697,6 +4512,9 @@ fits:
   converged: true
   log_likelihood: -73.88194355322543
   aic: 397.76388710645085
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N2-gRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -3732,6 +4550,9 @@ fits:
   converged: true
   log_likelihood: -123.69638193018368
   aic: 477.3927638603674
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-ddPCR-OG
   biomarker: SARS-CoV-2
@@ -3767,6 +4588,9 @@ fits:
   converged: true
   log_likelihood: -108.2802740841239
   aic: 470.5605481682478
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-ddPCR-OG
   biomarker: SARS-CoV-2
@@ -3818,6 +4642,9 @@ fits:
   converged: true
   log_likelihood: -56.98548038956649
   aic: 347.97096077913295
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-gRNA-ddPCR-ZY
   biomarker: SARS-CoV-2
@@ -3853,6 +4680,9 @@ fits:
   converged: true
   log_likelihood: -113.0168951375967
   aic: 500.0337902751934
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-ddPCR-OG
   biomarker: SARS-CoV-2
@@ -3888,6 +4718,9 @@ fits:
   converged: true
   log_likelihood: -18.903529484685844
   aic: 111.8070589693717
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-ddPCR-ZY
   biomarker: SARS-CoV-2
@@ -3923,6 +4756,9 @@ fits:
   converged: true
   log_likelihood: -13.530214143266381
   aic: 93.06042828653275
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-sgRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -3958,6 +4794,9 @@ fits:
   converged: true
   log_likelihood: -76.02052311306322
   aic: 234.04104622612644
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-sgRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -4000,6 +4839,9 @@ fits:
   converged: true
   log_likelihood: -55.10253239433588
   aic: 202.20506478867176
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-sgRNA-RT-qPCR-OG
   biomarker: SARS-CoV-2
@@ -4051,6 +4893,9 @@ fits:
   converged: true
   log_likelihood: -60.59018656916888
   aic: 259.18037313833776
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: natarajan2022gastrointestinal
   analyte: N1-sgRNA-RT-qPCR-ZY
   biomarker: SARS-CoV-2
@@ -4086,6 +4931,92 @@ fits:
   converged: true
   log_likelihood: -196.43416520296614
   aic: 562.8683304059323
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: newman2016norovirus
+  analyte: gec_g
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.689984176651142
+  - 5.369462731060286
+  population_cov:
+  - - 1.0972655333166834
+    - 0.3840928332607752
+  - - 0.3840928332607752
+    - 0.9555657272945279
+  sigma: 2.5972818012559133
+  censoring_limit: 3.552668216112193
+  n_subjects: 25
+  n_measurements: 263
+  n_censored: 104
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 5
+  pct_subjects_with_rise: 91.30434782608695
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -454.1912804722019
+  aic: 1010.3825609444038
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: newman2016norovirus
+  analyte: gec_g
+  biomarker: norovirus
+  specimen: stool
+  reference_event: inoculation
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - 0.23535919647687878
+  - 1.856442245011043
+  - 7.068937401693219
+  population_cov:
+  - - 0.6290903408163276
+    - 0.09786265728672314
+    - 0.45478282970650896
+  - - 0.09786265728672314
+    - 0.4453878371634827
+    - 0.07896961923494508
+  - - 0.45478282970650896
+    - 0.07896961923494508
+    - 1.7753370867192957
+  sigma: 1.5873087357136575
+  censoring_limit: 3.552668216112193
+  n_subjects: 25
+  n_measurements: 238
+  n_censored: 79
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 91.30434782608695
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 25
+  converged: true
+  log_likelihood: -332.7127792754946
+  aic: 817.4255585509892
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: peiris2003clinical
   analyte: NPS_SARS
   biomarker: SARS
@@ -4121,6 +5052,9 @@ fits:
   converged: true
   log_likelihood: -65.39122698663625
   aic: 188.7824539732725
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: pereira2022standardization
   analyte: respiratory_influenzaA_viral_load
   biomarker: influenza
@@ -4156,6 +5090,9 @@ fits:
   converged: true
   log_likelihood: 10.339460275541047
   aic: 57.32107944891791
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: piccirilli2023respiratory
   analyte: nasopharyngeal_aspirate_RSV_viral_load
   biomarker: RSV
@@ -4191,6 +5128,9 @@ fits:
   converged: true
   log_likelihood: -69.79570215519622
   aic: 285.5914043103925
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: piralla2013different
   analyte: nasopharyngeal_swab
   biomarker: influenza
@@ -4226,6 +5166,9 @@ fits:
   converged: true
   log_likelihood: -84.57934683289696
   aic: 347.1586936657939
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: piralla2013different
   analyte: bronchoalveolar_lavage_fluid
   biomarker: influenza
@@ -4261,6 +5204,9 @@ fits:
   converged: true
   log_likelihood: -10.807137334094744
   aic: 39.61427466818949
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: rodrigues2020influenza
   analyte: respiratory_influenza_viral_load
   biomarker: influenza
@@ -4296,6 +5242,9 @@ fits:
   converged: true
   log_likelihood: -35.43557089541892
   aic: 112.87114179083784
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: rouphael2025effective
   analyte: buccal_gc_ml
   biomarker: influenza
@@ -4331,6 +5280,9 @@ fits:
   converged: true
   log_likelihood: -21.148042715875313
   aic: 64.29608543175063
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: rouphael2025effective
   analyte: oropharyngeal_gc_ml
   biomarker: influenza
@@ -4366,6 +5318,9 @@ fits:
   converged: true
   log_likelihood: -65.74063118001189
   aic: 161.48126236002378
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: rouphael2025effective
   analyte: saliva_gc_ml
   biomarker: influenza
@@ -4401,6 +5356,9 @@ fits:
   converged: true
   log_likelihood: -68.30756226188147
   aic: 170.61512452376294
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: rouphael2025effective
   analyte: anterior_nasal_pfu_ml
   biomarker: influenza
@@ -4436,6 +5394,9 @@ fits:
   converged: true
   log_likelihood: -55.382661440361424
   aic: 132.76532288072286
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: rouphael2025effective
   analyte: buccal_pfu_ml
   biomarker: influenza
@@ -4471,6 +5432,9 @@ fits:
   converged: true
   log_likelihood: -10.507638594381614
   aic: 35.01527718876323
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: rouphael2025effective
   analyte: saliva_pfu_ml
   biomarker: influenza
@@ -4506,6 +5470,9 @@ fits:
   converged: true
   log_likelihood: -49.599236072662606
   aic: 121.19847214532521
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: schumer2026viral
   analyte: gc_ml
   biomarker: RSV
@@ -4541,6 +5508,9 @@ fits:
   converged: true
   log_likelihood: -956.9587568314053
   aic: 2015.9175136628105
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: schumer2026viral
   analyte: gc_ml
   biomarker: RSV
@@ -4583,6 +5553,9 @@ fits:
   converged: true
   log_likelihood: -771.9091949636045
   aic: 1695.818389927209
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: schumer2026viral
   analyte: pfu_ml
   biomarker: RSV
@@ -4618,6 +5591,9 @@ fits:
   converged: true
   log_likelihood: -777.7743295833726
   aic: 1657.5486591667452
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: schumer2026viral
   analyte: pfu_ml
   biomarker: RSV
@@ -4660,6 +5636,9 @@ fits:
   converged: true
   log_likelihood: -703.6717080910288
   aic: 1559.3434161820576
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: shetty2024influenza
   analyte: nasopharyngeal_swab_pfu_ml
   biomarker: influenza
@@ -4695,6 +5674,9 @@ fits:
   converged: true
   log_likelihood: -40.47111596216942
   aic: 102.94223192433884
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: shetty2024influenza
   analyte: saliva_pfu_ml
   biomarker: influenza
@@ -4730,6 +5712,9 @@ fits:
   converged: true
   log_likelihood: -25.30202963934036
   aic: 72.60405927868072
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_concentration_symptomatic
   biomarker: norovirus
@@ -4765,6 +5750,9 @@ fits:
   converged: true
   log_likelihood: -35.992629503763446
   aic: 317.9852590075269
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_concentration_asymptomatic
   biomarker: norovirus
@@ -4800,6 +5788,9 @@ fits:
   converged: true
   log_likelihood: -33.14376285472704
   aic: 168.2875257094541
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: tjon2006high
   analyte: stool_hepatitis_A_virus
   biomarker: hepatitis A virus
@@ -4835,6 +5826,9 @@ fits:
   converged: true
   log_likelihood: -13.161447053525686
   aic: 40.32289410705137
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: tsang2016individual
   analyte: NPSOPS
   biomarker: influenza
@@ -4870,6 +5864,9 @@ fits:
   converged: true
   log_likelihood: -856.2828282041753
   aic: 3534.5656564083506
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: vetter2020daily
   analyte: NPS_SARSCoV2
   biomarker: SARS-CoV-2
@@ -4905,6 +5902,9 @@ fits:
   converged: true
   log_likelihood: -55.11595734257158
   aic: 132.23191468514318
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: vetter2020daily
   analyte: NPS_SARSCoV2
   biomarker: SARS-CoV-2
@@ -4947,6 +5947,9 @@ fits:
   converged: true
   log_likelihood: -51.5855461897532
   aic: 135.1710923795064
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: vetter2020daily
   analyte: NPS_SARSCoV2
   biomarker: SARS-CoV-2
@@ -4998,6 +6001,9 @@ fits:
   converged: true
   log_likelihood: -50.958319326878254
   aic: 143.9166386537565
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: vetter2020daily
   analyte: OPS_SARSCoV2
   biomarker: SARS-CoV-2
@@ -5033,6 +6039,9 @@ fits:
   converged: true
   log_likelihood: -47.18076517750283
   aic: 116.36153035500566
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: walsh2013viral
   analyte: pfu_ml
   biomarker: RSV
@@ -5068,6 +6077,9 @@ fits:
   converged: true
   log_likelihood: -139.689268340095
   aic: 369.37853668019
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: walsh2013viral
   analyte: pfu_ml
   biomarker: RSV
@@ -5110,6 +6122,9 @@ fits:
   converged: true
   log_likelihood: -123.57228832889905
   aic: 381.1445766577981
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: woelfel2020virological
   analyte: stool
   biomarker: SARS-CoV-2
@@ -5145,6 +6160,9 @@ fits:
   converged: true
   log_likelihood: -89.19452710031499
   aic: 212.38905420062997
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: woelfel2020virological
   analyte: stool
   biomarker: SARS-CoV-2
@@ -5187,6 +6205,9 @@ fits:
   converged: true
   log_likelihood: -86.89249758075424
   aic: 223.78499516150848
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: woelfel2020virological
   analyte: sputum
   biomarker: SARS-CoV-2
@@ -5222,6 +6243,9 @@ fits:
   converged: true
   log_likelihood: -198.13951784636467
   aic: 434.27903569272934
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: woelfel2020virological
   analyte: oropharyngeal_swab
   biomarker: SARS-CoV-2
@@ -5257,6 +6281,9 @@ fits:
   converged: true
   log_likelihood: -152.1933264532463
   aic: 342.3866529064926
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: xu2020characteristics
   analyte: rectal_swab_SARSCoV2
   biomarker: SARS-CoV-2
@@ -5292,6 +6319,9 @@ fits:
   converged: true
   log_likelihood: -85.82141565587625
   aic: 201.6428313117525
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: xu2020characteristics
   analyte: rectal_swab_SARSCoV2
   biomarker: SARS-CoV-2
@@ -5343,6 +6373,9 @@ fits:
   converged: true
   log_likelihood: -69.29090819567345
   aic: 196.5818163913469
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: xu2020characteristics
   analyte: nasopharyngeal_swab_SARSCoV2
   biomarker: SARS-CoV-2
@@ -5378,6 +6411,9 @@ fits:
   converged: true
   log_likelihood: -12.18442048040928
   aic: 54.36884096081856
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: yen2011detection
   analyte: stool_rotavirus_vaccine
   biomarker: rotavirus vaccine
@@ -5413,6 +6449,9 @@ fits:
   converged: true
   log_likelihood: -57.73651074271638
   aic: 193.47302148543275
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: yen2011detection
   analyte: stool_rotavirus_vaccine
   biomarker: rotavirus vaccine
@@ -5455,6 +6494,9 @@ fits:
   converged: true
   log_likelihood: -37.35585778702867
   aic: 130.71171557405734
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: young2020epidemiologic
   analyte: swab_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -5490,6 +6532,9 @@ fits:
   converged: true
   log_likelihood: -266.51873484162417
   aic: 607.0374696832483
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: young2020epidemiologic
   analyte: swab_SARSCoV2_N
   biomarker: SARS-CoV-2
@@ -5532,6 +6577,9 @@ fits:
   converged: true
   log_likelihood: -251.29447484739694
   aic: 612.5889496947939
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: zuo2020alterations
   analyte: stool_SARSCoV2_SymptomOnset
   biomarker: SARS-CoV-2
@@ -5567,28 +6615,43 @@ fits:
   converged: true
   log_likelihood: -27.134809837735865
   aic: 92.26961967547173
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 skipped:
 - dataset_id: alsharrah2020clinical
   analyte: NPS_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: alsharrah2020clinical
   analyte: NPS_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: alsharrah2020clinical
   analyte: NPS_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: anfrunsestrada2020detection
+  analyte: saliva_gii
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'saliva_gii'.
+- dataset_id: anfrunsestrada2020detection
+  analyte: saliva_gii
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'saliva_gii'.
+- dataset_id: anfrunsestrada2020detection
+  analyte: saliva_gii
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'saliva_gii'.
 - dataset_id: aoki2010duration
   analyte: stool_norovirus
   model: gamma
@@ -5659,43 +6722,37 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'respiratory_influenza_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: baier2018influenza
   analyte: respiratory_influenza_ct
   model: gamma
   reason: ct_units
   message: Analyte 'respiratory_influenza_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: baier2018influenza
   analyte: respiratory_influenza_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'respiratory_influenza_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: baier2018influenza
   analyte: respiratory_RSV_ct
   model: exponential
   reason: ct_units
   message: Analyte 'respiratory_RSV_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: baier2018influenza
   analyte: respiratory_RSV_ct
   model: gamma
   reason: ct_units
   message: Analyte 'respiratory_RSV_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: baier2018influenza
   analyte: respiratory_RSV_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'respiratory_RSV_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brint2017prolonged
   analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
   model: gamma
@@ -5716,170 +6773,146 @@ skipped:
   analyte: serum
   model: exponential
   reason: ct_units
-  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: serum
   model: gamma
   reason: ct_units
-  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: serum
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: saliva
   model: exponential
   reason: ct_units
-  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: saliva
   model: gamma
   reason: ct_units
-  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: saliva
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: anorectal_swab
   model: exponential
   reason: ct_units
   message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: anorectal_swab
   model: gamma
   reason: ct_units
   message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: anorectal_swab
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: oropharyngeal_swab
   model: exponential
   reason: ct_units
   message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: oropharyngeal_swab
   model: gamma
   reason: ct_units
   message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: oropharyngeal_swab
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: genital_swab
   model: exponential
   reason: ct_units
   message: Analyte 'genital_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: genital_swab
   model: gamma
   reason: ct_units
   message: Analyte 'genital_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: brosius2023presymptomatic
   analyte: genital_swab
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'genital_swab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cantelli2020rotavirus
   analyte: '1'
   model: exponential
   reason: ct_units
-  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold values are
-    inversely related to concentration and already on a log scale, so neither shedding
-    model applies. Select a concentration analyte instead.
+  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cantelli2020rotavirus
   analyte: '1'
   model: gamma
   reason: ct_units
-  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold values are
-    inversely related to concentration and already on a log scale, so neither shedding
-    model applies. Select a concentration analyte instead.
+  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cantelli2020rotavirus
   analyte: '1'
   model: gamma_shifted
   reason: ct_units
-  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold values are
-    inversely related to concentration and already on a log scale, so neither shedding
-    model applies. Select a concentration analyte instead.
+  message: Analyte '1' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cantelli2020rotavirus
   analyte: '2'
   model: exponential
   reason: ct_units
-  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold values are
-    inversely related to concentration and already on a log scale, so neither shedding
-    model applies. Select a concentration analyte instead.
+  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cantelli2020rotavirus
   analyte: '2'
   model: gamma
   reason: ct_units
-  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold values are
-    inversely related to concentration and already on a log scale, so neither shedding
-    model applies. Select a concentration analyte instead.
+  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cantelli2020rotavirus
   analyte: '2'
   model: gamma_shifted
   reason: ct_units
-  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold values are
-    inversely related to concentration and already on a log scale, so neither shedding
-    model applies. Select a concentration analyte instead.
+  message: Analyte '2' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_CT
   model: exponential
   reason: ct_units
   message: Analyte 'NP_SARSCoV2_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_CT
   model: gamma
   reason: ct_units
   message: Analyte 'NP_SARSCoV2_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_CT
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'NP_SARSCoV2_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: chilengi2020pilot
   analyte: stool_rotavirus_viral_load
   model: gamma
@@ -5901,175 +6934,151 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_RSV_ct_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: coppee2023temporal
   analyte: nasopharyngeal_swab_RSV_ct_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_RSV_ct_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: coppee2023temporal
   analyte: nasopharyngeal_swab_RSV_ct_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_RSV_ct_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: coppee2023temporal
   analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_RSV_ct_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: coppee2023temporal
   analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_RSV_ct_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: coppee2023temporal
   analyte: nasopharyngeal_swab_RSV_ct_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_RSV_ct_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Stool_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'Stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Stool_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'Stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Stool_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'Stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Serum_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'Serum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Serum_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'Serum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Serum_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'Serum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Sputum_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'Sputum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Sputum_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'Sputum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Sputum_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'Sputum_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: OPS_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: OPS_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: OPS_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: NPS_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: NPS_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: NPS_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'NPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Urine_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'Urine_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Urine_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'Urine_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Urine_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'Urine_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cowley2017rotavirus
   analyte: stool_rotavirus_vaccine_dose1
   model: gamma
@@ -6389,6 +7398,33 @@ skipped:
   message: Analyte 'nasal_respiratory_syncytial_virus_quant_rt_pcr' has no detected
     reading at or before its reference event, so a shifted onset has nothing to locate
     and would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: flitter2025oral
+  analyte: emesis
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'emesis' has 2 subject(s) (10 fitted, 8 excluded as degenerate)
+    feeding the population summary of the 'exponential' model, which has 2 parameters.
+    At least 3 are needed for the between-subject covariance to be estimable rather
+    than rank-deficient; below that the 'population' is an artefact of averaging too
+    few individuals, and simulating from it produces near-identical or wildly extrapolated
+    individuals.
+- dataset_id: flitter2025oral
+  analyte: emesis
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'emesis'.
+- dataset_id: flitter2025oral
+  analyte: emesis
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'emesis'.
+- dataset_id: flitter2025oral
+  analyte: stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: fraaij2015viral
   analyte: particles_ml
   model: gamma
@@ -6411,22 +7447,151 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_Ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: gautret2020hydroxychloroquine
   analyte: nasopharyngeal_swab_SARSCoV2_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_Ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: gautret2020hydroxychloroquine
   analyte: nasopharyngeal_swab_SARSCoV2_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_Ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
+- dataset_id: ge2023effect
+  analyte: 4800_stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '4800_stool' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: ge2023effect
+  analyte: 48_stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '48_stool' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: ge2023effect
+  analyte: 4_8_stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '4_8_stool' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: ge2023effect
+  analyte: 0_48_stool
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte '0_48_stool' has 1 subject(s) feeding the population summary of
+    the 'exponential' model, which has 2 parameters. At least 3 are needed for the
+    between-subject covariance to be estimable rather than rank-deficient; below that
+    the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: ge2023effect
+  analyte: 0_48_stool
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte '0_48_stool' does not\
+    \ show one: only 0% of subjects did, against a required 50%. Sampling here appears\
+    \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
+    \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
+    \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: ge2023effect
+  analyte: 0_48_stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '0_48_stool' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: ge2023effect
+  analyte: 48_emesis
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte '48_emesis' has 1 subject(s) feeding the population summary of
+    the 'exponential' model, which has 2 parameters. At least 3 are needed for the
+    between-subject covariance to be estimable rather than rank-deficient; below that
+    the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: ge2023effect
+  analyte: 48_emesis
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte '48_emesis' does not\
+    \ show one: no subject had enough readings to judge, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: ge2023effect
+  analyte: 48_emesis
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '48_emesis' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: ge2023effect
+  analyte: 4_8_emesis
+  model: exponential
+  reason: no_positive_measurements
+  message: Analyte '4_8_emesis' has no positive measurements to fit.
+- dataset_id: ge2023effect
+  analyte: 4_8_emesis
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte '4_8_emesis' has no positive measurements to fit.
+- dataset_id: ge2023effect
+  analyte: 4_8_emesis
+  model: gamma_shifted
+  reason: no_positive_measurements
+  message: Analyte '4_8_emesis' has no positive measurements to fit.
+- dataset_id: ge2023effect
+  analyte: 0_48_emesis
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte '0_48_emesis'.
+- dataset_id: ge2023effect
+  analyte: 0_48_emesis
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte '0_48_emesis'.
+- dataset_id: ge2023effect
+  analyte: 0_48_emesis
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte '0_48_emesis'.
+- dataset_id: ge2023effect
+  analyte: 4800_emesis
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 2 subject(s) for analyte '4800_emesis' produced degenerate fits under\
+    \ the 'exponential' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 1 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: ge2023effect
+  analyte: 4800_emesis
+  model: gamma
+  reason: degenerate_fit
+  message: "2 of 2 subject(s) for analyte '4800_emesis' produced degenerate fits under\
+    \ the 'gamma' model \u2014 collapsed onto the parameter bounds, or decaying faster\
+    \ than the sampling can resolve \u2014 leaving 0 usable subject(s), too few to\
+    \ estimate a population covariance. This usually means the model is not identifiable\
+    \ from this data: for the gamma model, typically because sampling began after\
+    \ peak shedding, so there is no rise phase from which to estimate b0."
+- dataset_id: ge2023effect
+  analyte: 4800_emesis
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte '4800_emesis' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: golantripto2024viral
   analyte: utm_vp_ml_nasopharyngeal_swab
   model: gamma
@@ -6502,43 +7667,37 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'stool_rotavirus_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_rotavirus_CT
   model: gamma
   reason: ct_units
   message: Analyte 'stool_rotavirus_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_rotavirus_CT
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_rotavirus_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_norovirus_CT
   model: exponential
   reason: ct_units
   message: Analyte 'stool_norovirus_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_norovirus_CT
   model: gamma
   reason: ct_units
   message: Analyte 'stool_norovirus_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: gutierrez2021nosocomial
   analyte: stool_norovirus_CT
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_norovirus_CT' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: han2020sequential
   analyte: nasopharynx_E
   model: exponential
@@ -6744,86 +7903,74 @@ skipped:
   analyte: rv5_1
   model: exponential
   reason: ct_units
-  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv5_1
   model: gamma
   reason: ct_units
-  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv5_1
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv5_1' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv5_2
   model: exponential
   reason: ct_units
-  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv5_2
   model: gamma
   reason: ct_units
-  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv5_2
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv5_2' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv1_1
   model: exponential
   reason: ct_units
-  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv1_1
   model: gamma
   reason: ct_units
-  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv1_1
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv1_1' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv1_2
   model: exponential
   reason: ct_units
-  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv1_2
   model: gamma
   reason: ct_units
-  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv1_2
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'rv1_2' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: hu2013association
   analyte: oropharyngeal_swab
   model: gamma_shifted
@@ -7052,175 +8199,165 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: swab_SARSCoV2_E_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: swab_SARSCoV2_E_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_E_Ct
   model: exponential
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_E_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_E_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_E_Ct
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_E_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_E_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_E_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_RdRp_Ct
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_RdRp_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: stool_SARSCoV2_RdRp_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_Ct
   model: exponential
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: sputum_SARSCoV2_RdRp_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'sputum_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: swab_SARSCoV2_RdRp_Ct
   model: exponential
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: swab_SARSCoV2_RdRp_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kim2020viral
   analyte: swab_SARSCoV2_RdRp_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_RdRp_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kimse2020viral
   analyte: oropharyngealswab_SARSCoV2_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gi
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus_gc_wet_gram_gi' has no detected reading at or
+    before its reference event, so a shifted onset has nothing to locate and would
+    only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: kirby2014disease
+  analyte: stool_norovirus_gc_wet_gram_gii
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus_gc_wet_gram_gii' has no detected reading at or
+    before its reference event, so a shifted onset has nothing to locate and would
+    only absorb curve shape. Fit the 'gamma' model instead.
 - dataset_id: kirby2016vomiting
   analyte: emesis_norovirus_GI
   model: exponential
@@ -7329,43 +8466,37 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kissler2021densely
   analyte: AN_OPS_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kissler2021densely
   analyte: AN_OPS_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_ct
   model: exponential
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_ct
   model: gamma
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kissler2021viral
   analyte: AN_OPS_SARSCoV2_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'AN_OPS_SARSCoV2_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: kondo2016influenza
   analyte: nasal_discharge_influenza_gc_per_mL
   model: gamma_shifted
@@ -7376,67 +8507,64 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'rsv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rsv_nasopharyngeal_aspirate_ct
   model: gamma
   reason: ct_units
   message: Analyte 'rsv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rsv_nasopharyngeal_aspirate_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'rsv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
   model: exponential
   reason: ct_units
   message: Analyte 'rsv_oropharyngeal_swab_nasopharyngeal_swab_ct' is reported in
-    'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    'cycle threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
   model: gamma
   reason: ct_units
   message: Analyte 'rsv_oropharyngeal_swab_nasopharyngeal_swab_ct' is reported in
-    'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    'cycle threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rsv_oropharyngeal_swab_nasopharyngeal_swab_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'rsv_oropharyngeal_swab_nasopharyngeal_swab_ct' is reported in
-    'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    'cycle threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rv_nasopharyngeal_aspirate_ct
   model: exponential
   reason: ct_units
   message: Analyte 'rv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rv_nasopharyngeal_aspirate_ct
   model: gamma
   reason: ct_units
   message: Analyte 'rv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: kutter2021small
   analyte: rv_nasopharyngeal_aspirate_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'rv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_first_pos
   model: gamma
@@ -7477,6 +8605,46 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'E_symptom'.
+- dataset_id: lee2022clinical
+  analyte: gc_ml
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'gc_ml'.
+- dataset_id: lee2022clinical
+  analyte: gc_ml
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'gc_ml'.
+- dataset_id: lee2022clinical
+  analyte: gc_ml
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'gc_ml'.
+- dataset_id: lee2022clinical
+  analyte: gc_wet_gram
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'gc_wet_gram' has 1 subject(s) feeding the population summary of
+    the 'exponential' model, which has 2 parameters. At least 3 are needed for the
+    between-subject covariance to be estimable rather than rank-deficient; below that
+    the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: lee2022clinical
+  analyte: gc_wet_gram
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'gc_wet_gram' has 1 subject(s) feeding the population summary of
+    the 'gamma' model, which has 3 parameters. At least 4 are needed for the between-subject
+    covariance to be estimable rather than rank-deficient; below that the 'population'
+    is an artefact of averaging too few individuals, and simulating from it produces
+    near-identical or wildly extrapolated individuals.
+- dataset_id: lee2022clinical
+  analyte: gc_wet_gram
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'gc_wet_gram' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: lescure2020clinical
   analyte: naso_swab_SARSCoV2
   model: gamma
@@ -7577,6 +8745,22 @@ skipped:
   message: Analyte 'stool_mtDNA' measures 'mtDNA', a fecal-strength/normalization
     indicator rather than a pathogen shed by infected people. It has no time-since-infection
     trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: ludwig2008quantitative
+  analyte: stool_norovirus_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'stool_norovirus_viral_load'\
+    \ does not show one: only 38% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: ludwig2008quantitative
+  analyte: stool_norovirus_viral_load
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus_viral_load' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: lui2020viral
   analyte: 2019-nCoV_N1
   model: gamma_shifted
@@ -7642,106 +8826,106 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV1_dose1' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV1_dose1
   model: gamma
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV1_dose1' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV1_dose1
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV1_dose1' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV1_dose2
   model: exponential
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV1_dose2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV1_dose2
   model: gamma
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV1_dose2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV1_dose2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV1_dose2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose1
   model: exponential
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose1' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose1
   model: gamma
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose1' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose1
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose1' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose2
   model: exponential
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose2
   model: gamma
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose3
   model: exponential
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose3' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose3
   model: gamma
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose3' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV5_dose3
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_rotavirus_vaccine_RV5_dose3' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: miyoshi2015long
   analyte: stool_norovirus
   model: gamma
@@ -7939,6 +9123,13 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: newman2016norovirus
+  analyte: gec_g
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'gec_g' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: obara2008single
   analyte: stool_norovirus
   model: exponential
@@ -7971,22 +9162,19 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: pace2024prevalence
   analyte: stool_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: pace2024prevalence
   analyte: stool_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: peiris2003clinical
   analyte: NPS_SARS
   model: gamma
@@ -8066,6 +9254,36 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: pombubpa2012assessment
+  analyte: gii
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'gii'.
+- dataset_id: pombubpa2012assessment
+  analyte: gii
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'gii'.
+- dataset_id: pombubpa2012assessment
+  analyte: gii
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'gii'.
+- dataset_id: pombubpa2012assessment
+  analyte: gi
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'gi'.
+- dataset_id: pombubpa2012assessment
+  analyte: gi
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'gi'.
+- dataset_id: pombubpa2012assessment
+  analyte: gi
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'gi'.
 - dataset_id: portes2016non
   analyte: stool_adenovirus_viral_load
   model: exponential
@@ -8325,43 +9543,37 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: rouphael2025effective
   analyte: nasopharyngeal_ct
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: rouphael2025effective
   analyte: nasopharyngeal_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: salvatore2020epidemiological
   analyte: N1_probe
   model: exponential
   reason: ct_units
-  message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: salvatore2020epidemiological
   analyte: N1_probe
   model: gamma
   reason: ct_units
-  message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: salvatore2020epidemiological
   analyte: N1_probe
   model: gamma_shifted
   reason: ct_units
-  message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold values
-    are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+  message: Analyte 'N1_probe' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: schumer2026viral
   analyte: gc_ml
   model: gamma_shifted
@@ -8381,64 +9593,61 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_influenza_CT' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: schuurmans2014clinical
   analyte: nasopharyngeal_swab_influenza_CT
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_influenza_CT' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: schuurmans2014clinical
   analyte: nasopharyngeal_swab_influenza_CT
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_influenza_CT' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: seah2020assessing
   analyte: nasopharyngeal_swab_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: seah2020assessing
   analyte: nasopharyngeal_swab_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: seah2020assessing
   analyte: nasopharyngeal_swab_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: shetty2024influenza
   analyte: nasopharyngeal_swab_ct
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: shetty2024influenza
   analyte: nasopharyngeal_swab_ct
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: shetty2024influenza
   analyte: nasopharyngeal_swab_ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: shetty2024influenza
   analyte: nasopharyngeal_swab_pfu_ml
   model: gamma
@@ -8504,106 +9713,122 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: shrestha2020distribution
   analyte: swab_SARSCoV2_N_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: shrestha2020distribution
   analyte: swab_SARSCoV2_N_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: takanashi2011characterization
+  analyte: stool_norovirus_gc_ml
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'stool_norovirus_gc_ml' has 1 subject(s) feeding the population
+    summary of the 'exponential' model, which has 2 parameters. At least 3 are needed
+    for the between-subject covariance to be estimable rather than rank-deficient;
+    below that the 'population' is an artefact of averaging too few individuals, and
+    simulating from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: takanashi2011characterization
+  analyte: stool_norovirus_gc_ml
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'stool_norovirus_gc_ml'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: takanashi2011characterization
+  analyte: stool_norovirus_gc_ml
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_norovirus_gc_ml' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: tan2021early
   analyte: swab_SARSCoV2_N
   model: exponential
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: tan2021early
   analyte: swab_SARSCoV2_N
   model: gamma
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: tan2021early
   analyte: swab_SARSCoV2_N
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: team2020clinical
   analyte: naso_swab_SARSCoV2_N_Ct
   model: exponential
   reason: ct_units
   message: Analyte 'naso_swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: team2020clinical
   analyte: naso_swab_SARSCoV2_N_Ct
   model: gamma
   reason: ct_units
   message: Analyte 'naso_swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: team2020clinical
   analyte: naso_swab_SARSCoV2_N_Ct
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'naso_swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_ct_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_norovirus_ct_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_concentration_symptomatic
   model: gamma
@@ -8713,43 +9938,37 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_ORF1ab
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_ORF1ab
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_N
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_N
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: wang2020fecal
   analyte: stool_SARSCoV2_N
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: woelfel2020virological
   analyte: stool
   model: gamma_shifted
@@ -8794,43 +10013,40 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: xing2020prolonged
   analyte: stool_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: xing2020prolonged
   analyte: stool_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: xing2020prolonged
   analyte: oropharyngeal_swab_SARSCoV2
   model: exponential
   reason: ct_units
   message: Analyte 'oropharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: xing2020prolonged
   analyte: oropharyngeal_swab_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'oropharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: xing2020prolonged
   analyte: oropharyngeal_swab_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngeal_swab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: xu2020characteristics
   analyte: rectal_swab_SARSCoV2
   model: gamma
@@ -8866,43 +10082,37 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'upper_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: yang2020laboratory
   analyte: upper_resp_tract
   model: gamma
   reason: ct_units
   message: Analyte 'upper_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: yang2020laboratory
   analyte: upper_resp_tract
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'upper_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: yang2020laboratory
   analyte: lower_resp_tract
   model: exponential
   reason: ct_units
   message: Analyte 'lower_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: yang2020laboratory
   analyte: lower_resp_tract
   model: gamma
   reason: ct_units
   message: Analyte 'lower_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: yang2020laboratory
   analyte: lower_resp_tract
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'lower_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
-    values are inversely related to concentration and already on a log scale, so neither
-    shedding model applies. Select a concentration analyte instead.
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: yen2011detection
   analyte: stool_rotavirus_vaccine
   model: gamma_shifted
@@ -8915,22 +10125,22 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yilmaz2020upper
   analyte: oropharyngealswab_SARSCoV2
   model: gamma
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yilmaz2020upper
   analyte: oropharyngealswab_SARSCoV2
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'oropharyngealswab_SARSCoV2' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: young2020epidemiologic
   analyte: swab_SARSCoV2_N
   model: gamma_shifted
@@ -8943,349 +10153,337 @@ skipped:
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic' is reported in
-    'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    'cycle threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic' is reported in
-    'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    'cycle threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic' is reported in
-    'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    'cycle threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic' is reported
-    in 'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    in 'cycle threshold'. Cycle-threshold fits are supported but excluded from the
+    catalog, whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic' is reported
-    in 'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    in 'cycle threshold'. Cycle-threshold fits are supported but excluded from the
+    catalog, whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_ORF1ab_asymptomatic' is reported
-    in 'cycle threshold'. Cycle-threshold values are inversely related to concentration
-    and already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    in 'cycle threshold'. Cycle-threshold fits are supported but excluded from the
+    catalog, whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_symptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: nasopharyngeal_swab_SARSCoV2_N_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'nasopharyngeal_swab_SARSCoV2_N_asymptomatic' is reported in 'cycle
-    threshold'. Cycle-threshold values are inversely related to concentration and
-    already on a log scale, so neither shedding model applies. Select a concentration
-    analyte instead.
+    threshold'. Cycle-threshold fits are supported but excluded from the catalog,
+    whose heights are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_ORF1ab_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: stool_SARSCoV2_N_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_ORF1ab_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: serum_SARSCoV2_N_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'serum_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_ORF1ab_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_ORF1ab_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_symptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_symptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_symptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_symptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_asymptomatic
   model: exponential
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_asymptomatic
   model: gamma
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: yuan2021sars
   analyte: urine_SARSCoV2_N_asymptomatic
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'urine_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
-    Cycle-threshold values are inversely related to concentration and already on a
-    log scale, so neither shedding model applies. Select a concentration analyte instead.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: zuo2020alterations
   analyte: stool_SARSCoV2_SymptomOnset
   model: gamma

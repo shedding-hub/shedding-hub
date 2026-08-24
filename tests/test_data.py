@@ -12,7 +12,7 @@ VALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("valid_*.yaml"))
 INVALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("invalid_*.yaml"))
 
 # Every dataset's doi is resolved against the publisher, so one run makes as
-# many requests as there are datasets -- 84 and climbing. Publishers drop
+# many requests as there are datasets -- 93 and climbing. Publishers drop
 # connections under that, and a single dropped connection failed a whole
 # 9-minute job with "RemoteDisconnected('Remote end closed connection without
 # response')". Retried rather than re-run: a transient refusal says nothing

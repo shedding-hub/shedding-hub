@@ -1,6 +1,6 @@
 {
-  "n_fits": 144,
-  "n_datasets": 48,
+  "n_fits": 159,
+  "n_datasets": 53,
   "models": [
     "exponential",
     "gamma",
@@ -1534,6 +1534,122 @@
       }
     },
     {
+      "dataset_id": "flitter2025oral",
+      "analyte": "stool",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.16754971576693983,
+        "c0": 17.924858449836446
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 7.820132428410064,
+        "half_life_days": 4.136964228122636
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.7864751612076584,
+          7.784667113660845
+        ],
+        "covariance": [
+          [
+            2.9683410362137406,
+            1.3083852217408976
+          ],
+          [
+            1.3083852217408976,
+            1.5417772369301255
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.5033672498271542,
+      "censoring_limit_log10": 5.1829308193029915,
+      "data": {
+        "n_subjects": 94,
+        "n_measurements": 386,
+        "pct_censored": 28.238341968911918,
+        "n_degenerate_subjects": 75,
+        "median_first_observed_day": 2.0,
+        "pct_subjects_with_rise": 94.91525423728814
+      },
+      "fit": {
+        "aic": 1582.0482540309235,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "flitter2025oral",
+      "analyte": "stool",
+      "model": "gamma",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 2.1600524288771235,
+        "b0": 14.448911999288905,
+        "c0": 5.872410819424145
+      },
+      "summary": {
+        "peak_day": 6.689148747560721,
+        "peak_log10": 8.213823987203003,
+        "half_life_days": 0.32089368354835224
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.7701324940297961,
+          1.9004866235270392,
+          8.200983692962682
+        ],
+        "covariance": [
+          [
+            2.103553620290879,
+            -0.954314269723386,
+            -0.026833790465151743
+          ],
+          [
+            -0.954314269723386,
+            0.5769162859317314,
+            0.2610592050006438
+          ],
+          [
+            -0.026833790465151743,
+            0.2610592050006438,
+            1.1039267567374096
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.32488412029137204,
+      "censoring_limit_log10": 5.1829308193029915,
+      "data": {
+        "n_subjects": 86,
+        "n_measurements": 370,
+        "pct_censored": 28.64864864864865,
+        "n_degenerate_subjects": 28,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 94.91525423728814
+      },
+      "fit": {
+        "aic": 706.1224626243661,
+        "converged": true
+      }
+    },
+    {
       "dataset_id": "fraaij2015viral",
       "analyte": "particles_ml",
       "model": "exponential",
@@ -1965,6 +2081,354 @@
       },
       "fit": {
         "aic": 1447.0920642217702,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "ge2023effect",
+      "analyte": "4800_stool",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.2628188760148717,
+        "c0": 21.746895931970776
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 9.462854720823671,
+        "half_life_days": 2.6373569169389617
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.3362901684104764,
+          9.444556901779182
+        ],
+        "covariance": [
+          [
+            0.39666616309515274,
+            0.5818052060470257
+          ],
+          [
+            0.5818052060470257,
+            1.1724506545578177
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8669741076536216,
+      "censoring_limit_log10": 7.6020599913279625,
+      "data": {
+        "n_subjects": 6,
+        "n_measurements": 105,
+        "pct_censored": 26.666666666666668,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 0.635,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 251.9200303386455,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "ge2023effect",
+      "analyte": "4800_stool",
+      "model": "gamma",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.3644060857008482,
+        "b0": 3.745573707726714,
+        "c0": 22.475571824251542
+      },
+      "summary": {
+        "peak_day": 2.745204486392145,
+        "peak_log10": 9.777477424051774,
+        "half_life_days": 0.5080211733326443
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.3107192319018993,
+          1.0098555663188729,
+          9.777048693152677
+        ],
+        "covariance": [
+          [
+            0.37010242636865853,
+            0.27240457629990605,
+            -0.00979786751351628
+          ],
+          [
+            0.27240457629990605,
+            0.5367395790146021,
+            -0.34928718491141464
+          ],
+          [
+            -0.00979786751351628,
+            -0.34928718491141464,
+            0.8033033167495713
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.6337440335667406,
+      "censoring_limit_log10": 7.6020599913279625,
+      "data": {
+        "n_subjects": 6,
+        "n_measurements": 105,
+        "pct_censored": 26.666666666666668,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 0.635,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 195.86106829719924,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "ge2023effect",
+      "analyte": "48_stool",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.23493185474655728,
+        "c0": 21.80318626295938
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 9.46489934456989,
+        "half_life_days": 2.9504180321042766
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.4484597866921345,
+          9.46900348191204
+        ],
+        "covariance": [
+          [
+            0.1522604794866267,
+            -0.12128927819739321
+          ],
+          [
+            -0.12128927819739321,
+            0.23025400342928876
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.4232257548471887,
+      "censoring_limit_log10": 7.6020599913279625,
+      "data": {
+        "n_subjects": 7,
+        "n_measurements": 102,
+        "pct_censored": 33.333333333333336,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 0.66,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 309.63430062723523,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "ge2023effect",
+      "analyte": "48_stool",
+      "model": "gamma",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.3401082323999978,
+        "b0": 6.471460829901151,
+        "c0": 19.898523275729296
+      },
+      "summary": {
+        "peak_day": 4.829058335319246,
+        "peak_log10": 10.262987609162725,
+        "half_life_days": 0.5172322382637625
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.29275038114882257,
+          1.5746514870253658,
+          10.256888197842368
+        ],
+        "covariance": [
+          [
+            0.12138592461997902,
+            -0.013034164506015794,
+            -0.17611033858904995
+          ],
+          [
+            -0.013034164506015794,
+            0.03648565486198824,
+            0.07954231430499595
+          ],
+          [
+            -0.17611033858904995,
+            0.07954231430499595,
+            0.43967817011648763
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8494212607690397,
+      "censoring_limit_log10": 7.6020599913279625,
+      "data": {
+        "n_subjects": 7,
+        "n_measurements": 102,
+        "pct_censored": 33.333333333333336,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 0.66,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 229.17301685181363,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "ge2023effect",
+      "analyte": "4_8_stool",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.20712241940956502,
+        "c0": 20.43178266712785
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 8.890001569964326,
+        "half_life_days": 3.346557956091234
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.5744452624098748,
+          8.87341046778013
+        ],
+        "covariance": [
+          [
+            0.34896853528665256,
+            0.6471436839705255
+          ],
+          [
+            0.6471436839705255,
+            1.3107250041884333
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.2793067798007058,
+      "censoring_limit_log10": 7.6020599913279625,
+      "data": {
+        "n_subjects": 6,
+        "n_measurements": 75,
+        "pct_censored": 44.0,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 0.925,
+        "pct_subjects_with_rise": 66.66666666666666
+      },
+      "fit": {
+        "aic": 201.13346797453457,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "ge2023effect",
+      "analyte": "4_8_stool",
+      "model": "gamma",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 2.3432935350345674,
+        "b0": 11.693452519866439,
+        "c0": 14.981623091624963
+      },
+      "summary": {
+        "peak_day": 4.990178287541744,
+        "peak_log10": 9.597556796083655,
+        "half_life_days": 0.2958004066484655
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.8515574333834556,
+          1.6074716380914444,
+          9.591421362020371
+        ],
+        "covariance": [
+          [
+            0.7005500563037775,
+            0.004501443496376177,
+            -0.147920992342745
+          ],
+          [
+            0.004501443496376177,
+            0.025103142006251872,
+            -0.09872409926570219
+          ],
+          [
+            -0.147920992342745,
+            -0.09872409926570219,
+            0.6651484302438915
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.689986068365907,
+      "censoring_limit_log10": 7.6020599913279625,
+      "data": {
+        "n_subjects": 6,
+        "n_measurements": 75,
+        "pct_censored": 44.0,
+        "n_degenerate_subjects": 1,
+        "median_first_observed_day": 0.98,
+        "pct_subjects_with_rise": 66.66666666666666
+      },
+      "fit": {
+        "aic": 137.5068651845349,
         "converged": true
       }
     },
@@ -3781,6 +4245,238 @@
       }
     },
     {
+      "dataset_id": "kirby2014disease",
+      "analyte": "stool_norovirus_gc_wet_gram_gi",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.2850866183325588,
+        "c0": 13.663312266389447
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 5.914138856348572,
+        "half_life_days": 2.431356422879787
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.2549622209151312,
+          5.93390112181395
+        ],
+        "covariance": [
+          [
+            0.376183323001622,
+            0.13208892973046613
+          ],
+          [
+            0.13208892973046613,
+            1.2399994290093115
+          ]
+        ]
+      },
+      "measurement_error_sd": 2.7173318127728088,
+      "censoring_limit_log10": 3.552668216112193,
+      "data": {
+        "n_subjects": 15,
+        "n_measurements": 121,
+        "pct_censored": 42.14876033057851,
+        "n_degenerate_subjects": 3,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 69.23076923076923
+      },
+      "fit": {
+        "aic": 470.4731996154027,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "kirby2014disease",
+      "analyte": "stool_norovirus_gc_wet_gram_gi",
+      "model": "gamma",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.8631817352669136,
+        "b0": 14.368373319213552,
+        "c0": 2.681248294359337
+      },
+      "summary": {
+        "peak_day": 7.711740109536434,
+        "peak_log10": 7.668871410714202,
+        "half_life_days": 0.3720233874344239
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.6222856366561508,
+          2.0427438572508336,
+          7.671282753198001
+        ],
+        "covariance": [
+          [
+            0.23003764295451942,
+            -0.09417863258097782,
+            0.013103695422771183
+          ],
+          [
+            -0.09417863258097782,
+            0.05412558094309834,
+            0.09935393375391663
+          ],
+          [
+            0.013103695422771183,
+            0.09935393375391663,
+            1.5461316955691566
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.6306237809213526,
+      "censoring_limit_log10": 3.552668216112193,
+      "data": {
+        "n_subjects": 15,
+        "n_measurements": 121,
+        "pct_censored": 42.14876033057851,
+        "n_degenerate_subjects": 1,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 69.23076923076923
+      },
+      "fit": {
+        "aic": 390.69398455056563,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "kirby2014disease",
+      "analyte": "stool_norovirus_gc_wet_gram_gii",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.26912860489343093,
+        "c0": 10.583156353780103
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 4.562915055282229,
+        "half_life_days": 2.575523998403724
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.3125659285208793,
+          4.596206405566037
+        ],
+        "covariance": [
+          [
+            1.3127842184940484,
+            0.1452203172303528
+          ],
+          [
+            0.1452203172303528,
+            1.3616210424883044
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.898356017872072,
+      "censoring_limit_log10": 3.2528530309798933,
+      "data": {
+        "n_subjects": 9,
+        "n_measurements": 69,
+        "pct_censored": 46.3768115942029,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 80.0
+      },
+      "fit": {
+        "aic": 225.60164906610822,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "kirby2014disease",
+      "analyte": "stool_norovirus_gc_wet_gram_gii",
+      "model": "gamma",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 2.0465516002325352,
+        "b0": 11.03602479474612,
+        "c0": 4.732360105721696
+      },
+      "summary": {
+        "peak_day": 5.392497698808168,
+        "peak_log10": 5.346181217373321,
+        "half_life_days": 0.33869030249771753
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.7161562305257054,
+          1.6850086725417543,
+          5.33840544608286
+        ],
+        "covariance": [
+          [
+            0.4509155748452604,
+            -0.19492650589811575,
+            -0.08157909112600831
+          ],
+          [
+            -0.19492650589811575,
+            0.1109474103349035,
+            0.16627158505388948
+          ],
+          [
+            -0.08157909112600831,
+            0.16627158505388948,
+            2.4458480990270406
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.0873948829568016,
+      "censoring_limit_log10": 3.2528530309798933,
+      "data": {
+        "n_subjects": 9,
+        "n_measurements": 69,
+        "pct_censored": 46.3768115942029,
+        "n_degenerate_subjects": 3,
+        "median_first_observed_day": 1.0,
+        "pct_subjects_with_rise": 80.0
+      },
+      "fit": {
+        "aic": 182.3071779552619,
+        "converged": true
+      }
+    },
+    {
       "dataset_id": "kirby2016vomiting",
       "analyte": "emesis_norovirus_GII",
       "model": "exponential",
@@ -4571,6 +5267,59 @@
       },
       "fit": {
         "aic": 193.63030551448298,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "ludwig2008quantitative",
+      "analyte": "stool_norovirus_viral_load",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.16098344466092204,
+        "c0": 21.035736305929674
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 9.148383620959592,
+        "half_life_days": 4.305704738893585
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.826453747477886,
+          9.135704200437152
+        ],
+        "covariance": [
+          [
+            0.5207343600052351,
+            0.297662610025589
+          ],
+          [
+            0.297662610025589,
+            0.2562223951337913
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8642325145050705,
+      "censoring_limit_log10": 3.5085185185185193,
+      "data": {
+        "n_subjects": 9,
+        "n_measurements": 80,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 3,
+        "median_first_observed_day": 5.0,
+        "pct_subjects_with_rise": 37.5
+      },
+      "fit": {
+        "aic": 241.7107144043825,
         "converged": true
       }
     },
@@ -6140,6 +6889,122 @@
       },
       "fit": {
         "aic": 250.71678731601918,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "newman2016norovirus",
+      "analyte": "gec_g",
+      "model": "exponential",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.18452244373288848,
+        "c0": 12.363644841926511
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 5.3984867273387485,
+        "half_life_days": 3.7564383309562777
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.689984176651142,
+          5.369462731060286
+        ],
+        "covariance": [
+          [
+            1.0972655333166834,
+            0.3840928332607752
+          ],
+          [
+            0.3840928332607752,
+            0.9555657272945279
+          ]
+        ]
+      },
+      "measurement_error_sd": 2.5972818012559133,
+      "censoring_limit_log10": 3.552668216112193,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 263,
+        "pct_censored": 39.543726235741445,
+        "n_degenerate_subjects": 5,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": 91.30434782608695
+      },
+      "fit": {
+        "aic": 1010.3825609444038,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "newman2016norovirus",
+      "analyte": "gec_g",
+      "model": "gamma",
+      "biomarker": "norovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "inoculation",
+      "gene_target": null,
+      "parameters": {
+        "a0": 1.2653632011165632,
+        "b0": 8.099492792338067,
+        "c0": 9.340082093926094
+      },
+      "summary": {
+        "peak_day": 6.400923296323958,
+        "peak_log10": 7.064974876068474,
+        "half_life_days": 0.5477851576119083
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          0.23535919647687878,
+          1.856442245011043,
+          7.068937401693219
+        ],
+        "covariance": [
+          [
+            0.6290903408163276,
+            0.09786265728672314,
+            0.45478282970650896
+          ],
+          [
+            0.09786265728672314,
+            0.4453878371634827,
+            0.07896961923494508
+          ],
+          [
+            0.45478282970650896,
+            0.07896961923494508,
+            1.7753370867192957
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.5873087357136575,
+      "censoring_limit_log10": 3.552668216112193,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 238,
+        "pct_censored": 33.19327731092437,
+        "n_degenerate_subjects": 1,
+        "median_first_observed_day": 2.0,
+        "pct_subjects_with_rise": 91.30434782608695
+      },
+      "fit": {
+        "aic": 817.4255585509892,
         "converged": true
       }
     },
