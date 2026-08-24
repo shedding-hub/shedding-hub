@@ -1,0 +1,885 @@
+title: 'Norovirus in symptomatic and asymptomatic individuals: cytokines and viral
+  shedding'
+doi: 10.1111/cei.12772
+description: Human norovirus GI.1 challenge study comparing symptomatic vs asymptomatic
+  infected individuals, relating stool norovirus RNA titers (from prior RT-qPCR quantification)
+  to serum cytokine responses. This extraction contains stool viral shedding measurements
+  (GEC/g) digitized from a figure-data CSV (batch 1/4) for 6 symptomatic participants
+  (PatientID 1-6), with time in days relative to inoculation/challenge (day 0 = prechallenge).
+analytes:
+  gec_g:
+    description: Stool norovirus GI.1 RNA quantity measured as genome equivalent copies
+      per gram (GEC/g), quantified previously by RT-qPCR; values here are from figure-data
+      CSV for symptomatic participants.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GI.1
+    limit_of_detection: 3570
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: inoculation
+participants:
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 1124732143
+  - analyte: gec_g
+    time: 12.0
+    value: 29267857.14
+  - analyte: gec_g
+    time: 19.0
+    value: 182321.4286
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 13721428.57
+  - analyte: gec_g
+    time: 4.0
+    value: 3349107.143
+  - analyte: gec_g
+    time: 5.0
+    value: 13274107.14
+  - analyte: gec_g
+    time: 6.0
+    value: 17724107.14
+  - analyte: gec_g
+    time: 6.5
+    value: 134303571.4
+  - analyte: gec_g
+    time: 8.0
+    value: 61910714.29
+  - analyte: gec_g
+    time: 23.0
+    value: negative
+  - analyte: gec_g
+    time: 35.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 1123303.571
+  - analyte: gec_g
+    time: 3.5
+    value: 53741071.43
+  - analyte: gec_g
+    time: 4.0
+    value: 2116071.429
+  - analyte: gec_g
+    time: 6.0
+    value: 57741071.43
+  - analyte: gec_g
+    time: 7.0
+    value: 83214285.71
+  - analyte: gec_g
+    time: 14.0
+    value: 450982.1429
+  - analyte: gec_g
+    time: 22.0
+    value: 1572.321429
+  - analyte: gec_g
+    time: 28.0
+    value: negative
+  - analyte: gec_g
+    time: 36.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 2.5
+    value: negative
+  - analyte: gec_g
+    time: 4.0
+    value: 84098214.29
+  - analyte: gec_g
+    time: 5.0
+    value: 414821428.6
+  - analyte: gec_g
+    time: 5.0
+    value: 11927678571
+  - analyte: gec_g
+    time: 8.0
+    value: 1670625000
+  - analyte: gec_g
+    time: 15.0
+    value: 753.5714286
+  - analyte: gec_g
+    time: 23.0
+    value: 508035.7143
+  - analyte: gec_g
+    time: 30.0
+    value: 111294.6429
+  - analyte: gec_g
+    time: 45.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 2.5
+    value: 36116.07143
+  - analyte: gec_g
+    time: 3.0
+    value: negative
+  - analyte: gec_g
+    time: 3.5
+    value: 5600892857
+  - analyte: gec_g
+    time: 4.0
+    value: negative
+  - analyte: gec_g
+    time: 6.0
+    value: 219410714.3
+  - analyte: gec_g
+    time: 8.0
+    value: 108875000
+  - analyte: gec_g
+    time: 9.0
+    value: 39125000
+  - analyte: gec_g
+    time: 14.0
+    value: 170696428.6
+  - analyte: gec_g
+    time: 19.0
+    value: 6992857.143
+  - analyte: gec_g
+    time: 28.0
+    value: 413928.5714
+  - analyte: gec_g
+    time: 34.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 1002.678571
+  - analyte: gec_g
+    time: 4.0
+    value: 3594642857
+  - analyte: gec_g
+    time: 4.3
+    value: 3425000000
+  - analyte: gec_g
+    time: 4.6
+    value: 867767857.1
+  - analyte: gec_g
+    time: 5.0
+    value: 22571428.57
+  - analyte: gec_g
+    time: 6.0
+    value: 83562500
+  - analyte: gec_g
+    time: 7.0
+    value: 1556250000
+  - analyte: gec_g
+    time: 13.0
+    value: 15871.42857
+  - analyte: gec_g
+    time: 21.0
+    value: negative
+  - analyte: gec_g
+    time: 28.0
+    value: negative
+  - analyte: gec_g
+    time: 35.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 2.5
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 534285714.3
+  - analyte: gec_g
+    time: 4.0
+    value: 686428571.4
+  - analyte: gec_g
+    time: 5.0
+    value: 409107142.9
+  - analyte: gec_g
+    time: 6.0
+    value: 15169642.86
+  - analyte: gec_g
+    time: 14.0
+    value: 1038214.286
+  - analyte: gec_g
+    time: 20.0
+    value: 53946.42857
+  - analyte: gec_g
+    time: 27.0
+    value: 70776.78571
+  - analyte: gec_g
+    time: 34.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 2.5
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 77937.5
+  - analyte: gec_g
+    time: 3.5
+    value: 979642857.1
+  - analyte: gec_g
+    time: 6.0
+    value: negative
+  - analyte: gec_g
+    time: 8.0
+    value: 6578571.429
+  - analyte: gec_g
+    time: 9.0
+    value: 195973.2143
+  - analyte: gec_g
+    time: 16.0
+    value: 89508.92857
+  - analyte: gec_g
+    time: 23.0
+    value: negative
+  - analyte: gec_g
+    time: 30.0
+    value: negative
+  - analyte: gec_g
+    time: 37.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 2.5
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 678571428.6
+  - analyte: gec_g
+    time: 4.0
+    value: 407500000
+  - analyte: gec_g
+    time: 5.0
+    value: 321517857.1
+  - analyte: gec_g
+    time: 7.0
+    value: 385178.5714
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 574285714.3
+  - analyte: gec_g
+    time: 3.3
+    value: 4890178571
+  - analyte: gec_g
+    time: 3.6
+    value: 528303571.4
+  - analyte: gec_g
+    time: 4.0
+    value: 84776785.71
+  - analyte: gec_g
+    time: 7.0
+    value: 7004.464286
+  - analyte: gec_g
+    time: 14.0
+    value: 452.6785714
+  - analyte: gec_g
+    time: 21.0
+    value: negative
+  - analyte: gec_g
+    time: 28.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: 1050.857143
+  - analyte: gec_g
+    time: 2.2
+    value: 102766.2857
+  - analyte: gec_g
+    time: 2.5
+    value: 347453940
+  - analyte: gec_g
+    time: 2.6
+    value: 758048108.6
+  - analyte: gec_g
+    time: 2.8
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: negative
+  - analyte: gec_g
+    time: 5.0
+    value: 4097773.714
+  - analyte: gec_g
+    time: 6.0
+    value: 316109.1429
+  - analyte: gec_g
+    time: 13.0
+    value: 5715.428571
+  - analyte: gec_g
+    time: 22.0
+    value: negative
+  - analyte: gec_g
+    time: 28.0
+    value: negative
+  - analyte: gec_g
+    time: 34.0
+    value: 8720.571429
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: 9533.142857
+  - analyte: gec_g
+    time: 2.3
+    value: 8618616
+  - analyte: gec_g
+    time: 2.6
+    value: 38079694.29
+  - analyte: gec_g
+    time: 5.0
+    value: 192376546.3
+  - analyte: gec_g
+    time: 8.0
+    value: 9346443.429
+  - analyte: gec_g
+    time: 8.5
+    value: 628501.7143
+  - analyte: gec_g
+    time: 9.0
+    value: 153195.4286
+  - analyte: gec_g
+    time: 14.0
+    value: 1522.285714
+  - analyte: gec_g
+    time: 21.0
+    value: 874.2857143
+  - analyte: gec_g
+    time: 28.0
+    value: 13974.85714
+  - analyte: gec_g
+    time: 35.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: 552853.7143
+  - analyte: gec_g
+    time: 5.0
+    value: 6567493.714
+  - analyte: gec_g
+    time: 7.5
+    value: 357174.8571
+  - analyte: gec_g
+    time: 9.0
+    value: 13690037.14
+  - analyte: gec_g
+    time: 12.0
+    value: 4667149.714
+  - analyte: gec_g
+    time: 21.0
+    value: 149120.5714
+  - analyte: gec_g
+    time: 28.0
+    value: 3481.714286
+  - analyte: gec_g
+    time: 34.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 2.3
+    value: 117370.2857
+  - analyte: gec_g
+    time: 2.5
+    value: 8655348
+  - analyte: gec_g
+    time: 2.8
+    value: 30957312
+  - analyte: gec_g
+    time: 3.0
+    value: 4255887.429
+  - analyte: gec_g
+    time: 3.5
+    value: 6299336.571
+  - analyte: gec_g
+    time: 5.0
+    value: 1984740
+  - analyte: gec_g
+    time: 7.0
+    value: 85937.14286
+  - analyte: gec_g
+    time: 8.0
+    value: negative
+  - analyte: gec_g
+    time: 14.0
+    value: 8741.142857
+  - analyte: gec_g
+    time: 21.0
+    value: 306.8571429
+  - analyte: gec_g
+    time: 28.0
+    value: 11029.71429
+  - analyte: gec_g
+    time: 35.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 785989.7143
+  - analyte: gec_g
+    time: 4.0
+    value: 10343120.57
+  - analyte: gec_g
+    time: 5.0
+    value: 188069196
+  - analyte: gec_g
+    time: 7.0
+    value: 7485783.429
+  - analyte: gec_g
+    time: 8.0
+    value: 1362855.429
+  - analyte: gec_g
+    time: 9.0
+    value: 10026.85714
+  - analyte: gec_g
+    time: 12.0
+    value: 3854016
+  - analyte: gec_g
+    time: 21.0
+    value: 342797.1429
+  - analyte: gec_g
+    time: 27.0
+    value: negative
+  - analyte: gec_g
+    time: 35.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 2.5
+    value: 1007638.286
+  - analyte: gec_g
+    time: 5.0
+    value: 118690.2857
+  - analyte: gec_g
+    time: 6.0
+    value: 3278586.857
+  - analyte: gec_g
+    time: 14.0
+    value: negative
+  - analyte: gec_g
+    time: 21.0
+    value: negative
+  - analyte: gec_g
+    time: 28.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 1.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: 201377.1429
+  - analyte: gec_g
+    time: 2.2
+    value: 12371905.71
+  - analyte: gec_g
+    time: 2.3
+    value: 386596450.3
+  - analyte: gec_g
+    time: 2.5
+    value: 166920353.1
+  - analyte: gec_g
+    time: 2.6
+    value: 763758000
+  - analyte: gec_g
+    time: 2.8
+    value: 1144038027
+  - analyte: gec_g
+    time: 4.0
+    value: 85802036.57
+  - analyte: gec_g
+    time: 6.0
+    value: 2170753.714
+  - analyte: gec_g
+    time: 6.5
+    value: 809333.1429
+  - analyte: gec_g
+    time: 7.0
+    value: 3397697.143
+  - analyte: gec_g
+    time: 14.0
+    value: 79464
+  - analyte: gec_g
+    time: 21.0
+    value: 54857.14286
+  - analyte: gec_g
+    time: 28.0
+    value: 393680.5714
+  - analyte: gec_g
+    time: 35.0
+    value: 4311.428571
+  - analyte: gec_g
+    time: 48.0
+    value: negative
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 2.0
+    value: negative
+  - analyte: gec_g
+    time: 3.0
+    value: 1416432
+  - analyte: gec_g
+    time: 6.0
+    value: 210813274.3
+  - analyte: gec_g
+    time: 7.0
+    value: negative
+  - analyte: gec_g
+    time: 20.0
+    value: 512833.7143
+  - analyte: gec_g
+    time: 22.0
+    value: 841282.2857
+  - analyte: gec_g
+    time: 28.0
+    value: 860.5714286
+  - analyte: gec_g
+    time: 36.0
+    value: 135.4285714
+- attributes:
+    symptomatic: true
+  measurements:
+  - analyte: gec_g
+    time: 0.0
+    value: negative
+  - analyte: gec_g
+    time: 4.0
+    value: 196220.5714
+  - analyte: gec_g
+    time: 14.0
+    value: 40080
+  - analyte: gec_g
+    time: 35.0
+    value: negative
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: gec_g
+    time: 0
+    value: negative
+  - analyte: gec_g
+    time: 2
+    value: negative
+  - analyte: gec_g
+    time: 3
+    value: 6672.321429
+  - analyte: gec_g
+    time: 3.5
+    value: 173758.9286
+  - analyte: gec_g
+    time: 4
+    value: 6499107.143
+  - analyte: gec_g
+    time: 5
+    value: 2623214.286
+  - analyte: gec_g
+    time: 6
+    value: 391875
+  - analyte: gec_g
+    time: 8
+    value: 25794.64286
+  - analyte: gec_g
+    time: 13
+    value: negative
+  - analyte: gec_g
+    time: 20
+    value: 26583.92857
+  - analyte: gec_g
+    time: 29
+    value: negative
+  - analyte: gec_g
+    time: 34
+    value: negative
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: gec_g
+    time: 0
+    value: negative
+  - analyte: gec_g
+    time: 2
+    value: negative
+  - analyte: gec_g
+    time: 4
+    value: 5253571.429
+  - analyte: gec_g
+    time: 15
+    value: 112366071.4
+  - analyte: gec_g
+    time: 26
+    value: 1010625
+  - analyte: gec_g
+    time: 29
+    value: 60633.92857
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: gec_g
+    time: 0
+    value: negative
+  - analyte: gec_g
+    time: 2
+    value: negative
+  - analyte: gec_g
+    time: 3
+    value: 87812.5
+  - analyte: gec_g
+    time: 5
+    value: 107919642.9
+  - analyte: gec_g
+    time: 8
+    value: 32946428.57
+  - analyte: gec_g
+    time: 15
+    value: 865625
+  - analyte: gec_g
+    time: 22
+    value: 80875
+  - analyte: gec_g
+    time: 27
+    value: 1425178.571
+  - analyte: gec_g
+    time: 33
+    value: negative
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: gec_g
+    time: 0
+    value: negative
+  - analyte: gec_g
+    time: 2
+    value: negative
+  - analyte: gec_g
+    time: 5
+    value: 2745535.714
+  - analyte: gec_g
+    time: 9
+    value: 129401.7857
+  - analyte: gec_g
+    time: 14
+    value: negative
+  - analyte: gec_g
+    time: 28
+    value: negative
+  - analyte: gec_g
+    time: 30
+    value: negative
+  - analyte: gec_g
+    time: 36
+    value: negative
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: gec_g
+    time: 0
+    value: negative
+  - analyte: gec_g
+    time: 1
+    value: negative
+  - analyte: gec_g
+    time: 2
+    value: negative
+  - analyte: gec_g
+    time: 3
+    value: 1789375000
+  - analyte: gec_g
+    time: 4
+    value: 11725892857
+  - analyte: gec_g
+    time: 8
+    value: 19855357.14
+  - analyte: gec_g
+    time: 9
+    value: 29571428.57
+  - analyte: gec_g
+    time: 16
+    value: 687410.7143
+  - analyte: gec_g
+    time: 23
+    value: negative
+  - analyte: gec_g
+    time: 37
+    value: negative
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: gec_g
+    time: 0
+    value: negative
+  - analyte: gec_g
+    time: 2
+    value: negative
+  - analyte: gec_g
+    time: 3
+    value: negative
+  - analyte: gec_g
+    time: 4
+    value: 1280.571429
+  - analyte: gec_g
+    time: 4.5
+    value: 1940.571429
+  - analyte: gec_g
+    time: 5
+    value: negative
+  - analyte: gec_g
+    time: 7
+    value: 1248
+  - analyte: gec_g
+    time: 14
+    value: 243723.4286
+  - analyte: gec_g
+    time: 21
+    value: 44540.57143
+  - analyte: gec_g
+    time: 29
+    value: negative
+  - analyte: gec_g
+    time: 35
+    value: 286.2857143

@@ -1,0 +1,342 @@
+title: Quantitative detection of norovirus excretion in pediatric patients with cancer
+  and prolonged gastroenteritis and shedding of norovirus
+doi: 10.1002/jmv.21217
+description: Retrospective study of nine pediatric patients with hematologic/oncologic
+  disorders and prolonged gastroenteritis, assessing prolonged fecal norovirus shedding
+  measured by one-step real-time PCR and correlating quantitative shedding with clinical
+  symptoms. Measurements are reported as fecal norovirus concentrations over time
+  (days after symptom onset).
+analytes:
+  stool_norovirus_viral_load:
+    description: Quantitative norovirus detection/excretion measured in fecal samples
+      using a one-step real-time PCR assay (as described in the abstract). CSV provides
+      per-patient longitudinal quantitative values over days after symptom onset.
+    specimen: stool
+    biomarker: norovirus
+    genogroup: GII
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 1.7
+    age_group: child
+    genotype: 4 2006
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 9
+    value: 447303616.6359711
+  - analyte: stool_norovirus_viral_load
+    time: 14
+    value: 205708866.93214977
+  - analyte: stool_norovirus_viral_load
+    time: 23
+    value: 35827529.92908632
+  - analyte: stool_norovirus_viral_load
+    time: 30
+    value: 169400880.22878757
+  - analyte: stool_norovirus_viral_load
+    time: 38
+    value: 737004.0586690031
+  - analyte: stool_norovirus_viral_load
+    time: 46
+    value: 128361.19008195814
+  - analyte: stool_norovirus_viral_load
+    time: 59
+    value: 128361.19008195814
+- attributes:
+    sex: female
+    age: 2.7
+    age_group: child
+    genotype: 4 2006b
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 5
+    value: 659594625.7418731
+  - analyte: stool_norovirus_viral_load
+    time: 12
+    value: 972639285.9944849
+  - analyte: stool_norovirus_viral_load
+    time: 16
+    value: 303338622.9164342
+  - analyte: stool_norovirus_viral_load
+    time: 19
+    value: 35827529.92908632
+  - analyte: stool_norovirus_viral_load
+    time: 20
+    value: 1086787.3591186379
+  - analyte: stool_norovirus_viral_load
+    time: 24
+    value: 18410.27352562167
+  - analyte: stool_norovirus_viral_load
+    time: 37
+    value: 2869665.822228791
+- attributes:
+    sex: female
+    age: 15.8
+    age_group: child
+    genotype: 4 2006b
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 14
+    value: 16476595.119256485
+  - analyte: stool_norovirus_viral_load
+    time: 22
+    value: 8466.635113189062
+- attributes:
+    sex: male
+    age: 1.8
+    age_group: child
+    genotype: 4 2006b
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 2
+    value: 3118716540.493029
+  - analyte: stool_norovirus_viral_load
+    time: 16
+    value: 1946061.7942055622
+  - analyte: stool_norovirus_viral_load
+    time: 20
+    value: 35827529.92908632
+  - analyte: stool_norovirus_viral_load
+    time: 34
+    value: 499798.7673826904
+- attributes:
+    sex: male
+    age: 0.7
+    age_group: infant
+    genotype: 4 2006
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 5
+    value: 353818459.9286108
+  - analyte: stool_norovirus_viral_load
+    time: 25
+    value: 8449466.108283348
+  - analyte: stool_norovirus_viral_load
+    time: 31
+    value: 1440577.3606943376
+  - analyte: stool_norovirus_viral_load
+    time: 34
+    value: 442936.49367376894
+  - analyte: stool_norovirus_viral_load
+    time: 43
+    value: 2134363.0444392627
+- attributes:
+    sex: male
+    age: 6.9
+    age_group: child
+    genotype: 4 2006
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 4
+    value: 2075263132.1450639
+  - analyte: stool_norovirus_viral_load
+    time: 19
+    value: 49558933.42695471
+  - analyte: stool_norovirus_viral_load
+    time: 54
+    value: 28263.081587144326
+- attributes:
+    sex: male
+    age: 2.0
+    age_group: child
+    genotype: 4 2006b
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 13
+    value: 8449466.108283348
+  - analyte: stool_norovirus_viral_load
+    time: 18
+    value: 34402.13263039766
+  - analyte: stool_norovirus_viral_load
+    time: 33
+    value: 136190.35171665496
+  - analyte: stool_norovirus_viral_load
+    time: 46
+    value: 89375711.51054259
+- attributes:
+    sex: male
+    age: 0.8
+    age_group: infant
+    genotype: 4 2006b
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 8
+    value: 186898122.33247578
+  - analyte: stool_norovirus_viral_load
+    time: 14
+    value: 25550970.903524913
+  - analyte: stool_norovirus_viral_load
+    time: 23
+    value: 31176485.82644846
+  - analyte: stool_norovirus_viral_load
+    time: 37
+    value: 153174046.37020734
+  - analyte: stool_norovirus_viral_load
+    time: 40
+    value: 84319092.92866217
+  - analyte: stool_norovirus_viral_load
+    time: 47
+    value: 46415888.336127914
+  - analyte: stool_norovirus_viral_load
+    time: 54
+    value: 17162000.142216835
+  - analyte: stool_norovirus_viral_load
+    time: 61
+    value: 84319092.92866217
+  - analyte: stool_norovirus_viral_load
+    time: 72
+    value: 20940529.274115216
+  - analyte: stool_norovirus_viral_load
+    time: 87
+    value: 31176485.82644846
+  - analyte: stool_norovirus_viral_load
+    time: 101
+    value: 1058501.2080886024
+  - analyte: stool_norovirus_viral_load
+    time: 110
+    value: 7742636.826811277
+  - analyte: stool_norovirus_viral_load
+    time: 113
+    value: 25550970.903524913
+  - analyte: stool_norovirus_viral_load
+    time: 122
+    value: 391374.5601980376
+  - analyte: stool_norovirus_viral_load
+    time: 134
+    value: 262877.3005589448
+- attributes:
+    sex: male
+    age: 0.5
+    age_group: infant
+    genotype: 3 Toronto
+    symptomatic: true
+    participant_type: patient
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_norovirus_viral_load
+    time: 16
+    value: 14065272.421052393
+  - analyte: stool_norovirus_viral_load
+    time: 28
+    value: 2346228.8481422625
+  - analyte: stool_norovirus_viral_load
+    time: 35
+    value: 5200551.27551086
+  - analyte: stool_norovirus_viral_load
+    time: 36
+    value: 1575908.0145144495
+  - analyte: stool_norovirus_viral_load
+    time: 47
+    value: 215443.46900318778
+  - analyte: stool_norovirus_viral_load
+    time: 62
+    value: 477542.84856405674
+  - analyte: stool_norovirus_viral_load
+    time: 74
+    value: 1575908.0145144495
+  - analyte: stool_norovirus_viral_load
+    time: 76
+    value: 477542.84856405674
+  - analyte: stool_norovirus_viral_load
+    time: 83
+    value: 46415888.336127914
+  - analyte: stool_norovirus_viral_load
+    time: 92
+    value: 2862794.1656659567
+  - analyte: stool_norovirus_viral_load
+    time: 97
+    value: 710970.9432312424
+  - analyte: stool_norovirus_viral_load
+    time: 118
+    value: 215443.46900318778
+  - analyte: stool_norovirus_viral_load
+    time: 125
+    value: 3300.034791125289
+  - analyte: stool_norovirus_viral_load
+    time: 126
+    value: 19783.188827841543
+  - analyte: stool_norovirus_viral_load
+    time: 137
+    value: 118597.10123376755
+  - analyte: stool_norovirus_viral_load
+    time: 144
+    value: 1575908.0145144495
+  - analyte: stool_norovirus_viral_load
+    time: 158
+    value: 43850.57662800799
+  - analyte: stool_norovirus_viral_load
+    time: 161
+    value: 53505.08541873295
+  - analyte: stool_norovirus_viral_load
+    time: 182
+    value: 176568.64338395058
+  - analyte: stool_norovirus_viral_load
+    time: 187
+    value: 867504.23764161
+  - analyte: stool_norovirus_viral_load
+    time: 196
+    value: 1291549.6650148828
+  - analyte: stool_norovirus_viral_load
+    time: 203
+    value: 215443.46900318778
+  - analyte: stool_norovirus_viral_load
+    time: 208
+    value: 477542.84856405674
+  - analyte: stool_norovirus_viral_load
+    time: 222
+    value: 867504.23764161
+  - analyte: stool_norovirus_viral_load
+    time: 246
+    value: 118597.10123376755
+  - analyte: stool_norovirus_viral_load
+    time: 268
+    value: 144708.42848332945
+  - analyte: stool_norovirus_viral_load
+    time: 275
+    value: 582682.6661888262
+  - analyte: stool_norovirus_viral_load
+    time: 280
+    value: 1058501.2080886024
+  - analyte: stool_norovirus_viral_load
+    time: 336
+    value: 1575908.0145144495
+  - analyte: stool_norovirus_viral_load
+    time: 363
+    value: 7742636.826811277
+  - analyte: stool_norovirus_viral_load
+    time: 384
+    value: 17162000.142216835
+  - analyte: stool_norovirus_viral_load
+    time: 398
+    value: 339519089.4769218
+  - analyte: stool_norovirus_viral_load
+    time: 434
+    value: 17162000.142216835

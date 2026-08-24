@@ -3,8 +3,8 @@
 How the fitted estimates in `shedding_hub/data/shedding_catalog.yaml` are
 produced, what they mean, and where they should not be trusted.
 
-The catalog currently holds **144 fits over 48 studies and 94 analytes**: 93
-exponential, 32 gamma, 19 gamma_shifted, across 10 biomarkers.
+The catalog currently holds **159 fits over 53 studies and 102 analytes**: 101
+exponential, 39 gamma, 19 gamma_shifted, across 10 biomarkers.
 
 ## 1. Models
 
@@ -107,7 +107,7 @@ simulate rather than scaling it up.
 
 | rule | applies to | reason |
 |---|---|---|
-| `t < −5` days | all models | Every measurement in the repository earlier than about day −3 is censored, and across all 84 datasets the earliest detected reading anywhere is day −5, so no measured value is ever discarded by this rule. Under a decay-only model those censored points are near-impossible and distort the fit: `tsang2016individual` NPSOPS had its pre-event readings a median 4.01 log10 below its own curve. |
+| `t < −5` days | all models | Every measurement in the repository earlier than about day −3 is censored, and across all 93 datasets the earliest detected reading anywhere is day −5, so no measured value is ever discarded by this rule. Under a decay-only model those censored points are near-impossible and distort the fit: `tsang2016individual` NPSOPS had its pre-event readings a median 4.01 log10 below its own curve. |
 | `t ≤ 0` | `gamma` | `ln(t)` is undefined. Not a judgement — there is nothing to evaluate. |
 | `t ≤ 0` and censored | `gamma_shifted` | The curve dives toward −∞ near `t0`, so "below the limit" there is explained for free and `t0` becomes a support parameter pulled onto its own bound. A *detected* reading at the same time is kept, and repels `t0` instead. |
 
