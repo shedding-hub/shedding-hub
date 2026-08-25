@@ -1,0 +1,129 @@
+"""
+Regenerate the precomputed shedding-model catalog shipped with the package.
+
+Run via `make catalog`. Fitting every analyte of every dataset takes a while,
+which is exactly why the result is precomputed rather than fitted on demand.
+"""
+
+import argparse
+import pathlib
+import sys
+import warnings
+
+import yaml
+
+REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from shedding_hub import load_dataset  # noqa: E402
+from shedding_hub.shedding_catalog import (  # noqa: E402
+    CATALOG_PATH,
+    fit_shedding_models,
+)
+from shedding_hub.shedding_models import MODELS  # noqa: E402
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--data", default=str(REPO_ROOT / "data"), help="Directory of datasets."
+    )
+    parser.add_argument(
+        "--output", default=str(CATALOG_PATH), help="Catalog file to write."
+    )
+    parser.add_argument(
+        "--models",
+        nargs="+",
+        default=list(MODELS),
+        help=(
+            "Models to fit. Defaults to all of them. gamma_shifted is refused "
+            "for any analyte without a detected reading at or before its "
+            "reference event, so it appears only where it is identifiable."
+        ),
+    )
+    parser.add_argument(
+        "--min-time",
+        type=float,
+        default=None,
+        help=(
+            "Earliest reading time, in days from the reference event, that the "
+            "fitter may use. Defaults to -5. Only affects the exponential model; "
+            "the gamma model already drops everything at t <= 0."
+        ),
+    )
+    parser.add_argument(
+        "--value-types",
+        nargs="+",
+        default=["concentration"],
+        choices=["concentration", "ct"],
+        help=(
+            "Measurement scales allowed into the catalog. Defaults to "
+            "concentration alone, which is what the shipped catalog holds. "
+            "Cycle-threshold fits are valid individually but their heights are "
+            "cycles rather than log10 concentrations, so build them to a "
+            "separate --output for review instead of into the shipped file."
+        ),
+    )
+    parser.add_argument(
+        "--max-peak-above-observed",
+        type=float,
+        default=None,
+        help=(
+            "Log10 headroom above an analyte's highest observed concentration "
+            "before a subject's implied peak counts as extrapolation and is "
+            "kept out of the population summary. Defaults to the fitter's 3.0. "
+            "Write a stricter catalog elsewhere with --output to compare."
+        ),
+    )
+    args = parser.parse_args()
+
+    # The shipped catalog is concentration-only by contract: ensembles average
+    # its heights, and cycles below CT_REFERENCE are not log10 concentrations.
+    # Writing a ct build over it would put incommensurable rows in the file the
+    # package loads by default, so it is refused rather than warned about.
+    if (
+        "ct" in args.value_types
+        and pathlib.Path(args.output).resolve() == CATALOG_PATH.resolve()
+    ):
+        parser.error(
+            "refusing to write cycle-threshold fits into the shipped catalog; "
+            "pass --output shedding_catalog_ct.yaml (or another path) instead"
+        )
+
+    data_dir = pathlib.Path(args.data)
+    dataset_ids = sorted(
+        path.name
+        for path in data_dir.iterdir()
+        if path.is_dir() and not path.name.startswith(".")
+    )
+
+    datasets = []
+    for dataset_id in dataset_ids:
+        print(f"loading {dataset_id}", flush=True)
+        datasets.append(load_dataset(dataset_id, local=str(data_dir)))
+
+    print(f"fitting {len(datasets)} dataset(s)", flush=True)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", UserWarning)
+        catalog = fit_shedding_models(
+            datasets,
+            models=tuple(args.models),
+            min_time=args.min_time,
+            max_peak_above_observed=args.max_peak_above_observed,
+            value_types=tuple(args.value_types),
+        )
+
+    output = pathlib.Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", encoding="utf-8") as stream:
+        yaml.safe_dump(catalog.to_dict(), stream, sort_keys=False)
+
+    print(f"wrote {len(catalog.fits)} fit(s) to {output}")
+    print(f"skipped {len(catalog.skipped)} analyte/model combination(s)")
+    if not catalog.skipped.empty:
+        print(catalog.skipped["reason"].value_counts().to_string())
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

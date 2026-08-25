@@ -1,14 +1,61 @@
 [project]
 name = "shedding-hub"
-version = "0.1.3"
+version = "0.2.3"
 readme = "README.md"
 description = "Data and statistical models for biomarker shedding."
+# The package is MIT; the datasets under data/ are CC BY 4.0 and are not
+# shipped in the wheel, so only the software licence belongs in this metadata.
+license = "MIT"
+license-files = ["LICENSE"]
+# The package annotates with PEP 604 unions (`int | None`), which the
+# interpreter evaluates as a module is imported, so 3.10 is a hard floor.
+# Every release through 0.2.1 declared no floor at all, so pip on 3.9 installed
+# them and `import shedding_hub` died on the first such annotation with
+# "TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'".
+requires-python = ">=3.10"
 dependencies = [
     "pyaml",
     "requests",
     "pandas",
-    "matplotlib"
+    "matplotlib",
+    "numpy",
+    "scipy"
 ]
 
+# PyPI renders these as the project sidebar. Without them a visitor who arrives
+# from a dependency listing or a search has no route back to the source, the
+# issue tracker or the docs -- the README's own relative links cannot supply it,
+# because on PyPI they resolve against pypi.org.
+[project.urls]
+Homepage = "https://shedding-hub.github.io"
+Documentation = "https://shedding-hub.readthedocs.io/"
+Repository = "https://github.com/shedding-hub/shedding-hub"
+Issues = "https://github.com/shedding-hub/shedding-hub/issues"
+
+[tool.pytest.ini_options]
+# Docstring examples are documentation users copy, so they are tested like any
+# other claim. Six examples predating this setting had never been executed and
+# all six were broken.
+addopts = "--doctest-modules"
+testpaths = ["tests", "shedding_hub"]
+doctest_optionflags = "ELLIPSIS NORMALIZE_WHITESPACE"
+
 [tool.setuptools.packages]
-find = {}
+# Restricted to the package itself. Bare auto-discovery also treats `tests` and
+# `scripts` as importable packages, so installing shedding-hub put a top-level
+# `tests` module into site-packages -- claiming a name any other distribution
+# might also want, and shadowing a user's own. Published wheels up to 0.1.3 all
+# carry it. The build workflow asserts the wheel's top-level contents so this
+# cannot quietly come back.
+find = { include = ["shedding_hub*"] }
+
+[tool.setuptools.package-data]
+shedding_hub = ["data/*.yaml"]
+
+[tool.black]
+# Pinned to the floor in requires-python. Left unset, black 26 targets the
+# newest Python it knows about and then cannot run its own AST safety check on
+# an older interpreter -- CI runs 3.11 and got "Python 3.11 cannot parse code
+# formatted for Python 3.15", meaning the equivalence check that makes
+# reformatting safe was being skipped silently.
+target-version = ["py310"]

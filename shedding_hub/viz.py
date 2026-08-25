@@ -4,7 +4,18 @@ from typing import List, Dict, Any
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from matplotlib.figure import Figure
+from matplotlib.ticker import FuncFormatter
 import logging
+
+from .shedding_models import log10_concentration
+from .shedding_fit import (
+    CT_REFERENCE,
+    _declared_limit,
+    _is_ct_unit,
+    _resolve_censoring_limit,
+    _to_response,
+    prepare_observations,
+)
 
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
@@ -92,6 +103,13 @@ def plot_time_course(
         - Non-numeric values (except "negative"/"positive") are excluded
         - If more than max_nparticipant per specimen, randomly samples participants
         - Axis labels are derived from the reference_event in analyte metadata
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_time_course(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -468,6 +486,13 @@ def plot_time_courses(
         - Datasets are distinguished by color using TABLEAU_COLORS
         - All datasets should ideally measure the same analyte for comparison
         - Time axis and measurement units should be consistent across datasets
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_time_courses([data], specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not datasets or not isinstance(datasets, list):
@@ -851,6 +876,13 @@ def plot_shedding_heatmap(
 
     Raises:
         ValueError: If dataset is missing required keys, is empty, or has no valid data.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_shedding_heatmap(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -1281,6 +1313,13 @@ def plot_mean_trajectory(
 
     Raises:
         ValueError: If dataset is missing required keys, is empty, or has no valid data.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_mean_trajectory(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -1688,6 +1727,13 @@ def plot_value_distribution_by_time(
         - Negative values are excluded from the distribution calculations
         - For CT values, the y-axis is inverted (lower CT = higher viral load)
         - For concentration values, a log scale is used on the y-axis
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_value_distribution_by_time(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -2089,6 +2135,13 @@ def plot_detection_probability(
         - Detection probability is calculated as the proportion of non-negative measurements
         - Confidence intervals use the Wilson score interval for binomial proportions
         - Y-axis is fixed to 0-1 range
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_detection_probability(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -2391,6 +2444,13 @@ def plot_clearance_curve(
         - Clearance time is the time of last positive measurement for each participant
         - Participants whose last measurement is positive are treated as censored
         - Confidence intervals use Greenwood's formula for variance estimation
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_clearance_curve(data, specimen='sputum')
+        >>> type(fig).__name__
+        'Figure'
     """
     # Validate input
     if not dataset or not isinstance(dataset, dict):
@@ -2686,6 +2746,972 @@ def plot_clearance_curve(
         )
 
     ax.legend(loc="best", fontsize=10)
+    ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
+
+
+# ---------------------------------------------------------------------------
+# Fitted-curve plots
+# ---------------------------------------------------------------------------
+
+# Curves start here rather than at zero because the gamma model is undefined at
+# t = 0: c(t) = c0*t^b0*e^(-a0*t) sends the concentration to zero as t -> 0, so
+# log10 diverges. The exponential model is defined there and starts at the same
+# day for one code path.
+CATALOG_FIT_START_DAY = 0.05
+# Bounds on the derived x horizon. A fit does not record its last observed day,
+# so the horizon is inferred; the clamp guards both ends, since a runaway decay
+# would otherwise stretch the axis uselessly and a very fast one would give a
+# panel two days wide.
+CATALOG_FIT_MIN_HORIZON = 7.0
+CATALOG_FIT_MAX_HORIZON = 60.0
+# Five half-lives past the peak puts a curve about 1.5 log10 below it: far
+# enough to show the decline, near enough to avoid a long flat tail.
+CATALOG_FIT_HALF_LIVES_SHOWN = 5.0
+CATALOG_FIT_EXTRAPOLATION_ALPHA = 0.35
+# A panel can hold more curves than its legend has room for — one catalog study
+# contributes 14 stool assays to a single panel. Past this many, the legend is
+# truncated and the remainder counted, so it never reads as the whole panel.
+CATALOG_FIT_MAX_LEGEND_ENTRIES = 6
+
+# Curves are comparable only when they share both axes. The catalog spans five
+# units, so the y axis is not shared across all of it, and five reference
+# events, so t = 0 does not mean the same thing either. Grouping on all four
+# keys keeps a panel an honest comparison.
+CATALOG_FIT_GROUP_KEYS = ("biomarker", "specimen", "unit", "reference_event")
+
+# The linestyle channel carries the model and the colour channel the study,
+# which is why extrapolation is left to opacity. One entry per model in MODELS:
+# a missing one is a KeyError at draw time, which is how gamma_shifted was
+# caught -- by the README doctest against the real catalog, after the synthetic
+# unit tests had passed by only ever building two models.
+CATALOG_FIT_LINESTYLES = {
+    "exponential": "-",
+    "gamma": "--",
+    "gamma_shifted": "-.",
+}
+
+
+def _catalog_fit_horizon(fits) -> float:
+    """Days of x axis a panel needs, from the latest peak and slowest decay."""
+    reach = np.array(
+        [
+            fit.peak_day + CATALOG_FIT_HALF_LIVES_SHOWN * fit.half_life_days
+            for fit in fits
+        ],
+        dtype=float,
+    )
+    # A non-finite reach is a decay too slow, or too ill-determined, to say
+    # where the curve ends. It is treated as unbounded and clipped to the upper
+    # limit rather than dropped, which would let it shrink the axis instead.
+    reach = np.where(np.isfinite(reach), reach, np.inf)
+    return float(np.clip(reach.max(), CATALOG_FIT_MIN_HORIZON, CATALOG_FIT_MAX_HORIZON))
+
+
+def _catalog_fit_spans(times: np.ndarray, split: float, show_extrapolation: bool):
+    """
+    Index spans of one curve, each paired with the opacity to draw it at.
+
+    Everything before a study's ``median_first_observed_day`` is functional form
+    rather than measurement, so it is faded. The two spans share their boundary
+    point, so the curve still reads as continuous.
+    """
+    if not (show_extrapolation and np.isfinite(split) and split > times[0]):
+        return [(slice(None), 1.0)]
+    cut = int(np.searchsorted(times, split))
+    spans = []
+    if cut >= 1:
+        spans.append((slice(0, cut + 1), CATALOG_FIT_EXTRAPOLATION_ALPHA))
+    if times.size - cut >= 2:
+        spans.append((slice(cut, None), 1.0))
+    return spans
+
+
+def plot_catalog_fits(
+    catalog,
+    *,
+    biomarker: str | None = None,
+    specimen: str | None = None,
+    unit: str | None = None,
+    reference_event: str | None = None,
+    dataset_ids=None,
+    n_days: float | None = None,
+    show_extrapolation: bool = True,
+    ncols: int = 3,
+    figsize_per_panel: tuple[float, float] = (4.5, 3.2),
+) -> Figure:
+    """
+    Draw the median individual of every fitted curve, grouped for comparison.
+
+    One panel per ``(biomarker, specimen, unit, reference_event)`` group, because
+    curves that disagree on either axis cannot honestly be overlaid. Panels are
+    ordered by descending study count, so the ones supporting a cross-study read
+    come first; single-study panels are still drawn, being a legitimate view of
+    that study.
+
+    Within a panel, colour identifies the study and linestyle the model — solid
+    for exponential, dashed for gamma — so a study fitted with both contributes
+    two lines of one colour. Where the gamma model was refused, there is simply
+    one line, and the absence is itself informative.
+
+    The curve drawn is the fit's median individual, not the median of a
+    simulated cohort, which is a different quantity and would need sampling.
+
+    Args:
+        catalog (SheddingCatalog | list[SheddingFit]): A ``SheddingCatalog``,
+            or a bare list of ``SheddingFit`` — which keeps this usable on a
+            fresh fit of private data.
+        biomarker: Optional filter, e.g. ``"SARS-CoV-2"``.
+        specimen: Optional filter, e.g. ``"stool"``.
+        unit: Optional filter, e.g. ``"gc/mL"``.
+        reference_event: Optional filter, e.g. ``"symptom onset"``.
+        dataset_ids (list[str] | None): Optional list restricting the plot to
+            named studies.
+        n_days: X horizon for every panel. When ``None`` (default) each panel
+            derives its own from the fits it holds, clamped to ``[7, 60]`` days.
+            Passing a value is also how to put every panel on a common axis.
+        show_extrapolation: When ``True`` (default), the stretch of each curve
+            before that study's ``median_first_observed_day`` is drawn faded,
+            marking where the curve is functional form rather than measurement.
+            Half the catalog's gamma fits peak earlier than their median first
+            observation, so for those the entire rise phase is extrapolated.
+        ncols: Panels per row.
+        figsize_per_panel: Inches per panel, as ``(width, height)``.
+
+    Returns:
+        The figure, with one axis per group. It is closed in the pyplot state so
+        notebooks do not display it twice, matching the convention in
+        ``shedding_peak.py`` and ``shedding_simulate.py``.
+
+    Raises:
+        ValueError: If the catalog holds no fits, or the filters match none — a
+            silently empty figure is worse than a refusal.
+
+    Examples:
+        Narrowed to one biomarker and specimen, matching the figure rendered
+        below: the unfiltered catalog draws a panel per fit, which is a great
+        deal of output to page through.
+
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> fig = sh.plot_catalog_fits(
+        ...     catalog, biomarker='SARS-CoV-2', specimen='stool'
+        ... )
+        >>> type(fig).__name__
+        'Figure'
+    """
+    fits = list(getattr(catalog, "fits", catalog))
+    if not fits:
+        raise ValueError("Cannot plot a catalog with no fits.")
+
+    filters = {
+        "biomarker": biomarker,
+        "specimen": specimen,
+        "unit": unit,
+        "reference_event": reference_event,
+    }
+    filters = {key: value for key, value in filters.items() if value is not None}
+    matches = [
+        fit
+        for fit in fits
+        if all(getattr(fit, key, None) == value for key, value in filters.items())
+    ]
+    if dataset_ids is not None:
+        # A name with no matching fit raises rather than being dropped, which
+        # would silently shrink the figure. This follows ``build_ensemble``.
+        available = {fit.dataset_id for fit in matches}
+        missing = [name for name in dataset_ids if name not in available]
+        if missing:
+            raise ValueError(
+                f"No fit matching {filters} for dataset_id(s) {missing}. "
+                f"Matching studies are {sorted(available)}."
+            )
+        matches = [fit for fit in matches if fit.dataset_id in set(dataset_ids)]
+
+    if not matches:
+        available = sorted(
+            {
+                tuple(str(getattr(fit, key)) for key in CATALOG_FIT_GROUP_KEYS)
+                for fit in fits
+            }
+        )
+        listed = "\n".join("  " + " | ".join(key) for key in available)
+        criteria = dict(filters)
+        if dataset_ids is not None:
+            criteria["dataset_ids"] = list(dataset_ids)
+        raise ValueError(
+            f"No fits match {criteria}. Available "
+            f"({' | '.join(CATALOG_FIT_GROUP_KEYS)}) combinations are:\n{listed}"
+        )
+
+    groups: Dict[tuple, list] = {}
+    for fit in matches:
+        key = tuple(getattr(fit, name) for name in CATALOG_FIT_GROUP_KEYS)
+        groups.setdefault(key, []).append(fit)
+
+    # Descending study count first, so the cross-study panels lead; the key
+    # breaks ties, which keeps the layout reproducible.
+    ordered = sorted(
+        groups.items(),
+        key=lambda item: (
+            -len({fit.dataset_id for fit in item[1]}),
+            tuple(str(part) for part in item[0]),
+        ),
+    )
+
+    n_panels = len(ordered)
+    n_cols = max(1, min(ncols, n_panels))
+    n_rows = int(np.ceil(n_panels / n_cols))
+    fig, axes = plt.subplots(
+        n_rows,
+        n_cols,
+        figsize=(figsize_per_panel[0] * n_cols, figsize_per_panel[1] * n_rows),
+        squeeze=False,
+    )
+    axes = axes.flatten()
+    color_map = list(mcolors.TABLEAU_COLORS.values())
+
+    for index, (key, panel_fits) in enumerate(ordered):
+        ax = axes[index]
+        group_biomarker, group_specimen, group_unit, group_event = key
+        studies = sorted({fit.dataset_id for fit in panel_fits})
+        colors = {
+            study: color_map[position % len(color_map)]
+            for position, study in enumerate(studies)
+        }
+        # A study can contribute several analytes to one panel — the catalog's
+        # worst case is 14 stool assays from one study, whose peaks span over 2
+        # log10. Colour is spent on the study and linestyle on the model, so the
+        # analyte has to be named, or the legend would show one key per curve
+        # all reading the same thing. Named only where it disambiguates, so the
+        # common one-analyte case keeps a short label.
+        multi_analyte = {
+            study
+            for study in studies
+            if len({fit.analyte for fit in panel_fits if fit.dataset_id == study}) > 1
+        }
+
+        horizon = n_days if n_days is not None else _catalog_fit_horizon(panel_fits)
+        times = np.linspace(CATALOG_FIT_START_DAY, horizon, 400)
+
+        # Limits differ between studies, so one shared line would be wrong. Drawn
+        # once per distinct limit, since a study's two models share theirs.
+        panel_limits = sorted(
+            {(fit.dataset_id, fit.censoring_limit) for fit in panel_fits}
+        )
+        for study, limit in panel_limits:
+            ax.axhline(limit, color=colors[study], ls=":", lw=1.0, alpha=0.6)
+        peaks = []
+
+        for fit in sorted(panel_fits, key=lambda f: (f.dataset_id, f.model)):
+            values = log10_concentration(fit.model, fit.median_params[None, :], times)[
+                0
+            ]
+            peaks.append(float(np.nanmax(values)))
+            spans = _catalog_fit_spans(
+                times, fit.median_first_observed_day, show_extrapolation
+            )
+            # The legend entry goes on the segment drawn at full opacity, so a
+            # faded key never stands for a curve that is mostly solid.
+            labelled = max(range(len(spans)), key=lambda i: spans[i][1])
+            name = (
+                f"{fit.dataset_id} {fit.analyte}"
+                if fit.dataset_id in multi_analyte
+                else fit.dataset_id
+            )
+            for position, (span, alpha) in enumerate(spans):
+                ax.plot(
+                    times[span],
+                    values[span],
+                    color=colors[fit.dataset_id],
+                    ls=CATALOG_FIT_LINESTYLES[fit.model],
+                    alpha=alpha,
+                    lw=1.6,
+                    label=(
+                        f"{name} ({fit.model})"
+                        if position == labelled
+                        else "_nolegend_"
+                    ),
+                )
+
+        specimen_display = str(group_specimen).replace("_", " ")
+        ax.set_title(
+            f"{group_biomarker} - {specimen_display}\n{group_unit}, from {group_event}",
+            fontsize=10,
+        )
+        ax.set_xlabel(f"Days after {group_event}")
+        ax.set_ylabel(f"log10 concentration ({group_unit})")
+        ax.set_xlim(0, horizon)
+        # Nothing below every limit in the panel was measurable by anyone, so a
+        # decline continuing to 10^-30 gc/mL is functional form spending the axis
+        # the informative part needs — one panel otherwise gives 85% of its
+        # height to it. The floor still clears the weakest curve's own peak,
+        # since two catalog fits peak below their limit and would vanish.
+        ax.set_ylim(
+            bottom=min(min(limit for _, limit in panel_limits), min(peaks)) - 1.0
+        )
+        ax.grid(alpha=0.3)
+
+        handles, labels = ax.get_legend_handles_labels()
+        if len(handles) > CATALOG_FIT_MAX_LEGEND_ENTRIES:
+            hidden = len(handles) - CATALOG_FIT_MAX_LEGEND_ENTRIES
+            handles = handles[:CATALOG_FIT_MAX_LEGEND_ENTRIES]
+            labels = labels[:CATALOG_FIT_MAX_LEGEND_ENTRIES]
+            handles.append(plt.Line2D([], [], color="none"))
+            labels.append(f"+ {hidden} more")
+        ax.legend(handles, labels, fontsize=7, loc="upper right")
+
+    for index in range(n_panels, len(axes)):
+        fig.delaxes(axes[index])
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
+
+
+# Beyond this many retained subjects, joining each subject's own points hides
+# the scatter it is meant to organize — the largest study in the repository has
+# 455 subjects.
+FIT_DIAGNOSTIC_MAX_SUBJECT_LINES = 40
+
+# Fixed so a page redrawn from the same fit is identical; the band is a summary
+# of the fitted population, not a sample anyone should be reading noise from.
+_FIT_DIAGNOSTIC_BAND_SEED = 20260729
+
+# How far below zero the y axis will follow a band that sets it. A full-range
+# band descends past 10**-30 gc/mL, which is not a concentration anyone needs to
+# see plotted; -3 keeps a decade of headroom under every censoring limit in the
+# repository while leaving the data legible. It never bounds the observations —
+# see the ylim computation, which takes the lower of this and the data.
+FIT_DIAGNOSTIC_YLIM_FLOOR = -3.0
+
+
+def _fit_diagnostic_legend_rows(fit) -> list[str]:
+    """The estimate block: what was estimated, what it means, and its context.
+
+    Context sits beside the estimates because a parameter cannot be judged
+    without it — 6.8 log10 at peak means one thing from 52 subjects and another
+    from 3, and a fit that did not converge disqualifies the rest of the block.
+    """
+    # The analyte leads the block because the title no longer carries it, and
+    # biomarker and specimen alone do not identify a page: 78 of the 159 shipped
+    # concentration fits share a dataset/biomarker/specimen/model with at least
+    # one sibling. natarajan2022gastrointestinal alone has 14 stool analytes
+    # separating gene targets, gRNA from sgRNA, and ddPCR from RT-qPCR.
+    rows = [f"analyte = {fit.analyte}"]
+    rows += [
+        f"{name} = {value:.4g}"
+        for name, value in zip(fit.param_names, fit.median_params)
+    ]
+    # The height is whatever the fit was estimated on. On a Ct fit that is
+    # cycles below CT_REFERENCE, so it is converted back to the Ct the study
+    # reported and labelled as one -- the same conversion the y-axis tick
+    # labels already make. Left unconverted it read "peak log10 = 13.51" on an
+    # axis labelled "Ct (cycle threshold)", which is a contradiction on its own
+    # page and, taken at face value, a concentration ten trillion times too
+    # large.
+    is_ct = getattr(fit, "value_type", "concentration") == "ct"
+    peak_row = (
+        f"peak Ct = {(fit.ct_reference or CT_REFERENCE) - fit.peak_log10:.2f}"
+        if is_ct
+        else f"peak log10 = {fit.peak_log10:.2f}"
+    )
+    rows += [
+        f"peak day = {fit.peak_day:.2f}",
+        peak_row,
+        f"half-life = {fit.half_life_days:.2f} d",
+        f"sigma = {fit.sigma:.3f}",
+        f"subjects = {fit.n_subjects}",
+        f"measurements = {fit.n_measurements}",
+        (
+            f"censored = {100.0 * fit.n_censored / fit.n_measurements:.0f}%"
+            if fit.n_measurements
+            else "censored = n/a"
+        ),
+        f"AIC = {fit.aic:.1f}",
+    ]
+    if not fit.converged:
+        rows.append("DID NOT CONVERGE")
+    return rows
+
+
+def plot_fit_diagnostic(
+    fit,
+    dataset: Dict[str, Any],
+    *,
+    figsize: tuple[float, float] = (9, 6),
+    max_subject_lines: int = FIT_DIAGNOSTIC_MAX_SUBJECT_LINES,
+    show_band: bool = True,
+    dispersion: float = 1.0,
+    band_quantiles: tuple[float, float] = (0.05, 0.95),
+    band_inner_quantiles: tuple[float, float] | None = None,
+    band_sets_ylim: bool = False,
+    band_ylim_floor: float = FIT_DIAGNOSTIC_YLIM_FLOOR,
+    n_simulated: int = 2000,
+    x_from_fitted: bool = False,
+) -> Figure:
+    """
+    Plot one fitted curve against the observations behind it.
+
+    A curve drawn alone shows what the model says, never whether the study
+    agrees. This puts the observations, the fitted median individual, and the
+    parameter estimates on one page, which is what judging a fit requires.
+
+    The points come from the fitter's own ``prepare_observations`` rather than
+    from the dataset's raw measurements, so the page shows exactly what the fit
+    saw: the same resolved censoring limit, and the same excluded subjects.
+    Plotting raw measurements would put points on the page that the curve was
+    never asked to explain. One consequence is worth knowing — ``min_observations``
+    defaults to the parameter count, 2 for exponential and 3 for gamma, so a
+    subject with exactly two readings appears on one model's page and not the
+    other's for the same analyte.
+
+    Censored observations are drawn, as open markers on the censoring limit,
+    which is all the assay established. They are not droppable: across the
+    shipped catalog a median of 40% of measurements are censored and one fit
+    reaches 91%, so a page showing positives alone would flatter every
+    mostly-undetected analyte.
+
+    Args:
+        fit (SheddingFit): The fitted curve to diagnose.
+        dataset: The dataset dictionary the fit came from, from
+            ``load_dataset``.
+        figsize: Figure size in inches.
+        max_subject_lines: Join each subject's own points only when the fit
+            retains at most this many subjects.
+        show_band: Shade the central ``band_quantiles`` of a simulated cohort
+            drawn from the fitted population. The median individual alone says
+            nothing about whether the *spread* is right, which is most of what
+            distinguishes a usable fit from an unusable one.
+        dispersion: Passed to the simulation behind the band, so the page shows
+            the same cohort ``simulate_shedding`` would produce with that
+            setting.
+        band_quantiles: Lower and upper quantiles of the shaded band. ``(0, 1)``
+            shades the full range the simulated cohort took, which is how to see
+            what the fit considers possible rather than typical. Note that a
+            range is not a fixed property of the population: it grows with
+            ``n_simulated``, since drawing more individuals reaches further into
+            the tails.
+        band_inner_quantiles: When given, draw a dashed line at each of these
+            two quantiles inside the band. Useful with a full-range band, which
+            shows the extremes but says nothing about where the mass sits;
+            ``(0.025, 0.975)`` puts the 95% interval back on the page.
+        band_sets_ylim: Let the band widen the y axis to fit. ``False``
+            (default) keeps the axis on the data and the median curve, clipping
+            the band, so the observations stay legible. Set it ``True`` with
+            wide ``band_quantiles``, where a clipped band would fill the panel
+            and show nothing.
+        band_ylim_floor: How far below zero the axis will follow such a band, in
+            log10 units. Only applies when ``band_sets_ylim`` is set. It bounds
+            the band, never the data: an observation below it keeps its place on
+            the axis.
+        n_simulated: Individuals drawn for the band. Fixed seed, so a page is
+            reproducible.
+        x_from_fitted: Let only the fitted readings set the time axis, so that
+            readings the fitter discarded cannot stretch it. Off by default,
+            which keeps every reading on the page. Turn it on where the page has
+            to be legible at a fixed size — the website's dataset figures do —
+            and any dropped reading left outside is counted in the legend rather
+            than disappearing quietly.
+
+    Returns:
+        The figure. It is closed in the pyplot state so notebooks do not display
+        it twice, matching the convention in ``shedding_peak.py``.
+
+    Raises:
+        ValueError: If ``dataset`` does not contain the fit's analyte, which
+            almost always means the wrong dataset was passed.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> catalog = sh.load_shedding_catalog()
+        >>> fit = catalog.select(
+        ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
+        ... )
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_fit_diagnostic(fit, data)
+        >>> type(fig).__name__
+        'Figure'
+    """
+    analytes = dataset.get("analytes") or {}
+    if fit.analyte not in analytes:
+        raise ValueError(
+            f"Dataset {dataset.get('dataset_id', '<unknown>')!r} does not "
+            f"contain analyte {fit.analyte!r}, which fit {fit.dataset_id!r} was "
+            f"fitted to. Available analytes are {sorted(analytes)}."
+        )
+
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    positive = ~observations.censored
+    limit = observations.censoring_limit
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+    if observations.n_subjects <= max_subject_lines:
+        for subject in range(observations.n_subjects):
+            mine = observations.subject_index == subject
+            # Censored readings are joined at the limit, so a subject's line
+            # does not jump over the stretch where it went undetected.
+            times = observations.times[mine]
+            values = np.where(
+                observations.censored[mine], limit, observations.values[mine]
+            )
+            order = np.argsort(times)
+            ax.plot(
+                times[order],
+                values[order],
+                color="tab:blue",
+                lw=0.8,
+                alpha=0.25,
+                label="_subject",
+            )
+
+    ax.scatter(
+        observations.times[positive],
+        observations.values[positive],
+        s=22,
+        color="tab:blue",
+        alpha=0.75,
+        zorder=3,
+        label="Observed",
+    )
+    ax.scatter(
+        observations.times[observations.censored],
+        np.full(int(observations.censored.sum()), limit),
+        s=30,
+        marker="v",
+        facecolors="none",
+        edgecolors="tab:gray",
+        linewidths=0.9,
+        zorder=3,
+        label="Censored",
+    )
+    # The line is drawn at the limit on the fitted scale -- that is where the
+    # censored points sit -- but labelled in the units the reader sees on the
+    # axis. A Ct analyte cut off at 40 resolves to a limit of 0.00 cycles below
+    # the reference, and "Censoring limit (0.00)" on a Ct axis reads as a
+    # cutoff of zero cycles rather than of forty.
+    ct_fit = getattr(fit, "value_type", "concentration") == "ct"
+    limit_label = (
+        f"Censoring limit (Ct {(fit.ct_reference or CT_REFERENCE) - limit:.2f})"
+        if ct_fit
+        else f"Censoring limit ({limit:.2f})"
+    )
+    ax.axhline(
+        limit,
+        ls=":",
+        color="gray",
+        lw=1.2,
+        label=limit_label,
+    )
+
+    # Readings the fitter discarded, marked as excluded rather than shown as
+    # observations: the curve was never asked to explain them. Which readings
+    # those are differs by model -- gamma drops everything at t <= 0, where its
+    # curve is undefined; gamma_shifted drops only the censored ones there; the
+    # cutoff drops anything before -5 days under any model -- so the list comes
+    # from prepare_observations rather than being re-derived here, which would
+    # drift from the fitter the next time a rule changes.
+    dropped_times = observations.dropped_times
+    dropped_values = np.where(
+        np.isnan(observations.dropped_values), limit, observations.dropped_values
+    )
+    if dropped_times.size:
+        ax.scatter(
+            dropped_times,
+            dropped_values,
+            s=26,
+            marker="x",
+            color="tab:orange",
+            alpha=0.55,
+            linewidths=0.9,
+            zorder=2,
+            label="Dropped (not fitted)",
+        )
+
+    horizon = float(observations.times.max())
+    # Drawn over the range the fit was estimated on, which for two of the three
+    # models reaches before the reference event: the exponential model is fitted
+    # to readings back to the -5 day cutoff, and gamma_shifted to detected
+    # readings at and before day 0. Starting at CATALOG_FIT_START_DAY regardless
+    # hid the fitted curve exactly where those readings are.
+    #
+    # No model branch is needed. The gamma model's own readings are all at t > 0,
+    # so the minimum is the start day for it; and where a curve is undefined --
+    # gamma_shifted below its own t0, which can sit above another subject's
+    # earliest reading -- log10_concentration returns NaN and nothing is drawn.
+    # Only gamma_shifted draws before day 0. The exponential model is defined
+    # there but grows without bound going backwards, so continuing it back to
+    # its earliest reading puts an extrapolation nothing constrains on the page:
+    # the simulated band reached 10**76 on arts2023longitudinal, 10**329 on
+    # hakki2022onset symptomatic_cultivable and 10**826 on
+    # lavezzo2020suppression E_symptom, dwarfing the data beside it. The gamma
+    # model's readings are all at t > 0 anyway. The readings themselves are
+    # still plotted either way -- only the model's own lines stop here.
+    start = (
+        min(CATALOG_FIT_START_DAY, float(observations.times.min()))
+        if fit.model == "gamma_shifted"
+        else CATALOG_FIT_START_DAY
+    )
+    times = np.linspace(start, horizon, 400)
+    values = log10_concentration(fit.model, fit.median_params[None, :], times)[0]
+
+    band_bounds = None
+    if show_band:
+        # Drawn from the fitted population rather than smoothed from the points:
+        # the question the band answers is whether the population this fit
+        # implies covers the data, which is not what the observations alone say.
+        rng = np.random.default_rng(_FIT_DIAGNOSTIC_BAND_SEED)
+        drawn, _ = fit.sample_params(rng, n_simulated, dispersion)
+        cohort = log10_concentration(fit.model, drawn, times)
+        lower, upper = np.nanquantile(cohort, band_quantiles, axis=0)
+        band_bounds = (float(np.nanmin(lower)), float(np.nanmax(upper)))
+        if band_inner_quantiles is not None:
+            # A range band shows the extremes but not where the mass sits. These
+            # two dashed lines put an interval back inside it. Only the first is
+            # labelled, so the legend gets one entry for the pair.
+            inner = np.nanquantile(cohort, band_inner_quantiles, axis=0)
+            width = int(
+                round((band_inner_quantiles[1] - band_inner_quantiles[0]) * 100)
+            )
+            for index, edge in enumerate(inner):
+                ax.plot(
+                    times,
+                    edge,
+                    ls="--",
+                    color="tab:red",
+                    lw=1.1,
+                    alpha=0.75,
+                    zorder=2,
+                    label=f"{width}% of individuals" if index == 0 else "_nolegend_",
+                )
+        ax.fill_between(
+            times,
+            lower,
+            upper,
+            color="tab:red",
+            alpha=0.12,
+            lw=0,
+            zorder=1,
+            # A full-range band is labelled by its draw count, not as "100% of
+            # individuals": the extremes it reaches are a property of how many
+            # were drawn as much as of the population, and the page should not
+            # imply otherwise.
+            label=(
+                f"Simulated range, {n_simulated} individuals"
+                if (band_quantiles[0] <= 0.0 and band_quantiles[1] >= 1.0)
+                else (
+                    "Simulated "
+                    f"{int(round((band_quantiles[1] - band_quantiles[0]) * 100))}"
+                    "% of individuals"
+                )
+            ),
+        )
+    # Split at the earliest retained reading, not at median_first_observed_day.
+    # That column is deliberately a median -- one early-enrolled subject should
+    # not make a late-starting study look well-observed -- so it sits later than
+    # the earliest reading whenever enrolment is staggered, which is 26 of the
+    # catalog's 28 rise-and-fall fits. Splitting there drew the faded
+    # "before first observation" stretch straight over real plotted points.
+    # plot_catalog_fits has no observations and must still use the median; it
+    # says so in its label.
+    spans = _catalog_fit_spans(times, float(observations.times.min()), True)
+    for span, alpha in spans:
+        extrapolated = alpha < 1.0
+        ax.plot(
+            times[span],
+            values[span],
+            color="tab:red",
+            lw=2.0,
+            alpha=alpha,
+            zorder=4,
+            label=(
+                "Extrapolated (before first observation)"
+                if extrapolated
+                else "Median individual"
+            ),
+        )
+
+    # Sampling can begin before the reference event, and only the gamma model
+    # drops those readings — an exponential fit is genuinely fitted to them
+    # (kissler2021viral by 323 of them, reaching back to day -53). Starting the
+    # axis at zero would hide data the curve was estimated from. The curve itself
+    # still starts just after zero: the exponential model is defined for negative
+    # times but grows without bound going backwards, so drawing it there would
+    # add an extrapolation nothing constrains.
+    earliest = min(
+        0.0,
+        float(observations.times.min()),
+        (
+            float(dropped_times.min())
+            if dropped_times.size and not x_from_fitted
+            else 0.0
+        ),
+    )
+    n_offscale = 0
+    if x_from_fitted and dropped_times.size:
+        # Excluded readings can sit far earlier than anything the curve was
+        # fitted to -- kissler2021viral drops readings back to day -53 against
+        # observations starting at day 1 -- and letting them set the axis
+        # squeezes the data into a third of the panel. Across the catalog 15
+        # fits are stretched by more than half again. They stay plotted, so
+        # nothing is hidden where the axis does reach; the count of those that
+        # fall outside is reported rather than left to be inferred from a gap.
+        n_offscale = int((dropped_times < earliest).sum())
+    margin = 0.02 * (horizon - earliest)
+    ax.set_xlim(earliest - margin, horizon + margin)
+    # The observations set the y range, but the curve's peak can sit above every
+    # one of them — that is exactly the disagreement this page exists to show —
+    # so both are allowed to claim room. The band deliberately does not: it can
+    # reach far past any observation, and letting it set the axis would squash
+    # the data into a sliver. It is clipped instead, so an over-dispersed fit
+    # reads as a band filling the panel rather than as a flattened plot.
+    top = max(np.nanmax(observations.values[positive]), np.nanmax(values))
+    bottom = min(limit, float(np.nanmin(observations.values[positive])))
+    if band_sets_ylim and band_bounds is not None:
+        # The floor bounds the band, never the data: taking the lower of the two
+        # means an observation below the floor still keeps its place on the axis.
+        bottom = min(bottom, max(band_bounds[0], band_ylim_floor))
+        top = max(top, band_bounds[1])
+    ax.set_ylim(bottom - 0.5, top + 0.5)
+
+    handles, labels = ax.get_legend_handles_labels()
+    if n_offscale:
+        handles.append(plt.Line2D([], [], color="none"))
+        labels.append(f"{n_offscale} dropped reading(s) off-scale")
+    for row in _fit_diagnostic_legend_rows(fit):
+        handles.append(plt.Line2D([], [], color="none"))
+        labels.append(row)
+    ax.legend(handles, labels, fontsize=8, loc="upper right", framealpha=0.9)
+
+    unit = fit.unit or ""
+    ax.set_xlabel(f"Days after {fit.reference_event}")
+    if getattr(fit, "value_type", "concentration") == "ct":
+        # Points are plotted as cycles below CT_REFERENCE, which rises with
+        # viral load, so the curve already reads as a peak and the axis must
+        # NOT be inverted. Only the tick labels need converting back to the Ct
+        # the study actually reported.
+        ax.set_ylabel("Ct (cycle threshold)")
+        ax.yaxis.set_major_formatter(
+            FuncFormatter(lambda value, _: f"{CT_REFERENCE - value:.0f}")
+        )
+    else:
+        ax.set_ylabel(
+            f"log10 concentration ({unit})" if unit else "log10 concentration"
+        )
+    # Unit and reference event are deliberately absent: they are already the y
+    # and x axis labels, and repeating them here crowds the line that identifies
+    # the page. The analyte moves into the legend block rather than being lost.
+    ax.set_title(
+        f"{fit.dataset_id} / {fit.biomarker}_{fit.specimen} / {fit.model}",
+        fontsize=11,
+    )
+    ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.close(fig)
+    return fig
+
+
+def plot_analyte_observations(
+    dataset: Dict[str, Any],
+    analyte: str,
+    *,
+    figsize: tuple[float, float] = (9, 6),
+    max_subject_lines: int = FIT_DIAGNOSTIC_MAX_SUBJECT_LINES,
+) -> Figure:
+    """
+    Plot an analyte's measurements alone, with no fitted curve.
+
+    The companion to ``plot_fit_diagnostic`` for analytes that have no fit. Of
+    the 216 analytes in the repository, 88 have none, and they are not a
+    negligible tail: they include the cross-sectional studies, where one reading
+    per participant means no trajectory exists to fit at any sample size, and
+    the analytes that were never detected at all.
+
+    Reads the dataset directly rather than going through ``prepare_observations``.
+    The fitter refuses 28 of those 88 outright -- ``too_few_subjects``,
+    ``no_positive_measurements``, ``non_pathogen_biomarker`` -- so a page built
+    on its pipeline would leave blank exactly the analytes this function exists
+    to cover. The cost is that the reading-level exclusions the fitter applies
+    are not applied here: this shows what the study measured, not what a fit
+    would have used.
+
+    Layout, axes, markers and censoring line match ``plot_fit_diagnostic``, so
+    the two read as one family on a dataset page that carries both.
+
+    Args:
+        dataset: Dataset dictionary from ``load_dataset``.
+        analyte: Which analyte to draw.
+        figsize: Figure size in inches.
+        max_subject_lines: Join each participant's own points only when the
+            analyte has at most this many participants.
+
+    Returns:
+        The figure. It is closed in the pyplot state so notebooks do not display
+        it twice, matching the convention in ``plot_fit_diagnostic``.
+
+    Raises:
+        ValueError: If ``dataset`` does not contain ``analyte``, or if the
+            analyte has nothing plottable.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> fig = sh.plot_analyte_observations(data, 'stool')
+        >>> type(fig).__name__
+        'Figure'
+    """
+    analytes = dataset.get("analytes") or {}
+    if analyte not in analytes:
+        raise ValueError(
+            f"Dataset {dataset.get('dataset_id', '<unknown>')!r} does not "
+            f"contain analyte {analyte!r}. Available analytes are "
+            f"{sorted(analytes)}."
+        )
+    analyte_spec = analytes[analyte]
+    value_type = "ct" if _is_ct_unit(analyte_spec.get("unit")) else "concentration"
+
+    subjects: list[int] = []
+    times: list[float] = []
+    responses: list[float] = []
+    censored: list[bool] = []
+    n_qualitative = 0
+    for index, participant in enumerate(dataset.get("participants") or []):
+        for measurement in participant.get("measurements") or []:
+            if measurement.get("analyte", analyte) != analyte:
+                continue
+            time = measurement.get("time")
+            if not isinstance(time, (int, float)) or isinstance(time, bool):
+                continue
+            value = measurement.get("value")
+            if isinstance(value, (int, float)) and not isinstance(value, bool):
+                if value <= 0:
+                    continue
+                subjects.append(index)
+                times.append(float(time))
+                responses.append(_to_response(float(value), value_type))
+                censored.append(False)
+            elif value == "negative":
+                subjects.append(index)
+                times.append(float(time))
+                responses.append(float("nan"))
+                censored.append(True)
+            else:
+                # "positive" and "inconclusive" carry no value to place on the y
+                # axis. Counted into the legend rather than dropped in silence.
+                n_qualitative += 1
+
+    if not times:
+        raise ValueError(
+            f"Analyte {analyte!r} of dataset "
+            f"{dataset.get('dataset_id', '<unknown>')!r} has no measurement with "
+            "both a numeric time and a usable value, so there is nothing to plot."
+        )
+
+    subject_index = np.asarray(subjects)
+    time_values = np.asarray(times, dtype=float)
+    response_values = np.asarray(responses, dtype=float)
+    is_censored = np.asarray(censored, dtype=bool)
+    detected = response_values[~is_censored]
+
+    if detected.size:
+        limit = _resolve_censoring_limit(analyte_spec, detected, value_type)
+    else:
+        # Nothing was ever detected, so there is no smallest positive for the
+        # shared fallback to sit under. A declared limit is all there is; with
+        # neither, the censored readings have no anchor and no line is drawn.
+        declared = _declared_limit(analyte_spec)
+        limit = _to_response(declared, value_type) if declared is not None else None
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+    participants = np.unique(subject_index)
+    if participants.size <= max_subject_lines and limit is not None:
+        for subject in participants:
+            mine = subject_index == subject
+            # Censored readings are joined at the limit, so a participant's line
+            # does not jump over the stretch where nothing was detected.
+            joined = np.where(is_censored[mine], limit, response_values[mine])
+            order = np.argsort(time_values[mine])
+            ax.plot(
+                time_values[mine][order],
+                joined[order],
+                color="tab:blue",
+                lw=0.8,
+                alpha=0.25,
+                zorder=1,
+            )
+
+    ax.scatter(
+        time_values[~is_censored],
+        response_values[~is_censored],
+        s=22,
+        color="tab:blue",
+        alpha=0.75,
+        zorder=3,
+        label="Observed",
+    )
+    if is_censored.any() and limit is not None:
+        ax.scatter(
+            time_values[is_censored],
+            np.full(int(is_censored.sum()), limit),
+            s=30,
+            marker="v",
+            facecolors="none",
+            edgecolors="tab:gray",
+            linewidths=0.9,
+            zorder=3,
+            label="Censored",
+        )
+    if limit is not None:
+        limit_label = (
+            f"Censoring limit (Ct {CT_REFERENCE - limit:.2f})"
+            if value_type == "ct"
+            else f"Censoring limit ({limit:.2f})"
+        )
+        ax.axhline(limit, ls=":", color="gray", lw=1.2, label=limit_label)
+
+    handles, labels = ax.get_legend_handles_labels()
+    rows = [
+        f"analyte = {analyte}",
+        f"participants = {participants.size}",
+        f"measurements = {time_values.size + n_qualitative}",
+        f"censored = {100.0 * is_censored.mean():.0f}%",
+    ]
+    if n_qualitative:
+        rows.append(f"not plottable = {n_qualitative}")
+    rows.append("no fit -- observations only")
+    for row in rows:
+        handles.append(plt.Line2D([], [], color="none"))
+        labels.append(row)
+    ax.legend(handles, labels, fontsize=8, loc="upper right", framealpha=0.9)
+
+    ax.set_xlabel(f"Days after {analyte_spec.get('reference_event')}")
+    if value_type == "ct":
+        ax.set_ylabel("Ct (cycle threshold)")
+        ax.yaxis.set_major_formatter(
+            FuncFormatter(lambda value, _: f"{CT_REFERENCE - value:.0f}")
+        )
+    else:
+        unit = analyte_spec.get("unit") or ""
+        ax.set_ylabel(
+            f"log10 concentration ({unit})" if unit else "log10 concentration"
+        )
+    specimen = analyte_spec.get("specimen")
+    if isinstance(specimen, list):
+        specimen = "+".join(specimen)
+    # Same three-part line as a fit page, with the model slot spelled
+    # "observations": the two kinds sit together on a dataset page and a reader
+    # should not have to work out which is which.
+    ax.set_title(
+        f"{dataset.get('dataset_id', 'unknown')} / "
+        f"{analyte_spec.get('biomarker')}_{specimen} / observations",
+        fontsize=11,
+    )
     ax.grid(alpha=0.3)
 
     plt.tight_layout()

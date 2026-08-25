@@ -1,0 +1,478 @@
+title: Viral shedding and immune responses to respiratory syncytial virus infection
+  in older adults
+doi: 10.1093/infdis/jit038
+description: Observational study of RSV infection in adults (Rochester, New York;
+  winters 2005–2008) including outpatients (mild disease) and hospitalized patients
+  (severe disease). RSV RNA was detected by real-time RT-PCR and viral titers were
+  quantified by quantitative RT-PCR and expressed as PFU equivalents per mL. Serial
+  respiratory specimens were collected during illness (daily when possible) until
+  two consecutive RT-PCR negative samples; additional planned follow-ups occurred
+  around days 12–16 and 25–32 after symptom onset. Figure-derived CSV data provide
+  individual-level PFU/mL viral load measurements over time for a subset of participants.
+  The data used here were extracted from Supplementary Figures 3 of "Relating In Vivo
+  Respiratory Syncytial Virus Infection Kinetics to Host Infectiousness in Different
+  Age Groups," which digitized and re-plotted the original viral-load curves from this
+  study.
+analytes:
+  pfu_ml:
+    description: Quantitative RSV viral load expressed as plaque-forming unit (PFU)
+      equivalents per mL of sample, determined by quantitative RSV RT-PCR on respiratory
+      specimens (nasal swab/sputum per methods); CSV provides time-series PFU/mL values
+      including negatives.
+    specimen:
+    - anterior_nares_swab
+    - sputum
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 533.6699231206312
+  - analyte: pfu_ml
+    time: 6
+    value: 811.1308307896873
+  - analyte: pfu_ml
+    time: 9
+    value: 2.310129700083158
+  - analyte: pfu_ml
+    time: 10
+    value: 18.738174228603867
+  - analyte: pfu_ml
+    time: 11
+    value: negative
+  - analyte: pfu_ml
+    time: 13
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 13.89495494373136
+  - analyte: pfu_ml
+    time: 7
+    value: 719.6856730011514
+  - analyte: pfu_ml
+    time: 10
+    value: 1.5505157798326252
+  - analyte: pfu_ml
+    time: 11
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 1730.1957388458943
+  - analyte: pfu_ml
+    time: 7
+    value: 80.308572213915
+  - analyte: pfu_ml
+    time: 8
+    value: 2682.695795279722
+  - analyte: pfu_ml
+    time: 11
+    value: 193.06977288832496
+  - analyte: pfu_ml
+    time: 12
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: 43.28761281083064
+  - analyte: pfu_ml
+    time: 9
+    value: 533.6699231206312
+  - analyte: pfu_ml
+    time: 10
+    value: 100.0
+  - analyte: pfu_ml
+    time: 11
+    value: 12.32846739442066
+  - analyte: pfu_ml
+    time: 14
+    value: 151.99110829529332
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 193.06977288832496
+  - analyte: pfu_ml
+    time: 6
+    value: 1730.1957388458943
+  - analyte: pfu_ml
+    time: 9
+    value: 21.54434690031882
+  - analyte: pfu_ml
+    time: 10
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 2848.0358684357816
+  - analyte: pfu_ml
+    time: 9
+    value: 1873.8174228603716
+  - analyte: pfu_ml
+    time: 10
+    value: 2848.0358684357816
+  - analyte: pfu_ml
+    time: 11
+    value: 533.6699231206296
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: 18.738174228603715
+  - analyte: pfu_ml
+    time: 5
+    value: 65.79332246575659
+  - analyte: pfu_ml
+    time: 8
+    value: 99.99999999999918
+  - analyte: pfu_ml
+    time: 9
+    value: 28.48035868435793
+  - analyte: pfu_ml
+    time: 10
+    value: 1.5199110829529265
+  - analyte: pfu_ml
+    time: 12
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: 1.5199110829529265
+  - analyte: pfu_ml
+    time: 5
+    value: 99.99999999999918
+  - analyte: pfu_ml
+    time: 6
+    value: 811.1308307896855
+  - analyte: pfu_ml
+    time: 7
+    value: 533.6699231206296
+  - analyte: pfu_ml
+    time: 8
+    value: 65.79332246575659
+  - analyte: pfu_ml
+    time: 10
+    value: 18.738174228603715
+  - analyte: pfu_ml
+    time: 12
+    value: 12.328467394420635
+  - analyte: pfu_ml
+    time: 13
+    value: 5.336699231206258
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 3
+    value: 1232.8467394420584
+  - analyte: pfu_ml
+    time: 6
+    value: 2848.0358684357816
+  - analyte: pfu_ml
+    time: 7
+    value: 533.6699231206296
+  - analyte: pfu_ml
+    time: 11
+    value: 99.99999999999918
+  - analyte: pfu_ml
+    time: 12
+    value: 3.5111917342151417
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: 13.89495494373136
+  - analyte: pfu_ml
+    time: 7
+    value: 193.06977288832456
+  - analyte: pfu_ml
+    time: 8
+    value: 4159.562163071826
+  - analyte: pfu_ml
+    time: 10
+    value: 8.961505019465976
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: 193.06977288832616
+  - analyte: pfu_ml
+    time: 5
+    value: 80.30857221391521
+  - analyte: pfu_ml
+    time: 7
+    value: 719.6856730011588
+  - analyte: pfu_ml
+    time: 9
+    value: 3.727593720314953
+  - analyte: pfu_ml
+    time: 10
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 719.6856730011588
+  - analyte: pfu_ml
+    time: 6
+    value: 4159.562163071864
+  - analyte: pfu_ml
+    time: 6
+    value: 1115.88399250776
+  - analyte: pfu_ml
+    time: 7
+    value: 1730.195738845919
+  - analyte: pfu_ml
+    time: 8
+    value: 1115.883992507757
+  - analyte: pfu_ml
+    time: 13
+    value: 8.96150501946612
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: 5.779692884153373
+  - analyte: pfu_ml
+    time: 5
+    value: 15505.157798326349
+  - analyte: pfu_ml
+    time: 6
+    value: 6449.466771037633
+  - analyte: pfu_ml
+    time: 7
+    value: 51.79474679231223
+  - analyte: pfu_ml
+    time: 8
+    value: 719.6856730011588
+  - analyte: pfu_ml
+    time: 9
+    value: 193.06977288832616
+  - analyte: pfu_ml
+    time: 10
+    value: 51.79474679231223
+  - analyte: pfu_ml
+    time: 11
+    value: negative
+  - analyte: pfu_ml
+    time: 12
+    value: 124.51970847350421
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: 51.79474679231223
+  - analyte: pfu_ml
+    time: 5
+    value: 6449.466771037633
+  - analyte: pfu_ml
+    time: 7
+    value: 2682.69579527976
+  - analyte: pfu_ml
+    time: 8
+    value: 15505.157798326349
+  - analyte: pfu_ml
+    time: 11
+    value: 1.5505157798326346
+  - analyte: pfu_ml
+    time: 12
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 24040.99183509984
+  - analyte: pfu_ml
+    time: 6
+    value: 4159.562163071864
+  - analyte: pfu_ml
+    time: 7
+    value: 1730.195738845919
+  - analyte: pfu_ml
+    time: 9
+    value: 719.6856730011588
+  - analyte: pfu_ml
+    time: 10
+    value: 80.30857221391521
+  - analyte: pfu_ml
+    time: 11
+    value: 13.89495494373136
+  - analyte: pfu_ml
+    time: 12
+    value: 13.89495494373136
+  - analyte: pfu_ml
+    time: 13
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 4
+    value: negative
+  - analyte: pfu_ml
+    time: 6
+    value: 80.30857221391521
+  - analyte: pfu_ml
+    time: 8
+    value: 193.06977288832456
+  - analyte: pfu_ml
+    time: 10
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 21.544346900318956
+  - analyte: pfu_ml
+    time: 6
+    value: 124.51970847350522
+  - analyte: pfu_ml
+    time: 7
+    value: 124.51970847350522
+  - analyte: pfu_ml
+    time: 8
+    value: 51.79474679231223
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 1.5505157798326221
+  - analyte: pfu_ml
+    time: 9
+    value: 2682.6957952797384
+  - analyte: pfu_ml
+    time: 10
+    value: 1115.8839925077389
+  - analyte: pfu_ml
+    time: 11
+    value: 13.894954943731474
+  - analyte: pfu_ml
+    time: 12
+    value: 21.544346900318956
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 464.15888336127534
+  - analyte: pfu_ml
+    time: 6
+    value: 1115.883992507757
+  - analyte: pfu_ml
+    time: 7
+    value: 464.15888336127534
+  - analyte: pfu_ml
+    time: 8
+    value: 80.30857221391648
+  - analyte: pfu_ml
+    time: 9
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 2682.6957952797384
+  - analyte: pfu_ml
+    time: 6
+    value: 4159.562163071864
+  - analyte: pfu_ml
+    time: 7
+    value: 6449.466771037633
+  - analyte: pfu_ml
+    time: 10
+    value: 193.06977288832456
+  - analyte: pfu_ml
+    time: 11
+    value: 13.894954943731474
+  - analyte: pfu_ml
+    time: 12
+    value: 33.40484983513258
+  - analyte: pfu_ml
+    time: 13
+    value: 51.79474679231223
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 28.480358684358396
+  - analyte: pfu_ml
+    time: 6
+    value: 811.1308307896956
+  - analyte: pfu_ml
+    time: 9
+    value: 1.5199110829529265
+  - analyte: pfu_ml
+    time: 10
+    value: negative
+- attributes:
+    age_group: elderly
+    symptomatic: true
+  measurements:
+  - analyte: pfu_ml
+    time: 5
+    value: 231.0129700083177
+  - analyte: pfu_ml
+    time: 8
+    value: 811.1308307896956
+  - analyte: pfu_ml
+    time: 9
+    value: 231.0129700083177
+  - analyte: pfu_ml
+    time: 10
+    value: 100.0
+  - analyte: pfu_ml
+    time: 11
+    value: 100.0
+  - analyte: pfu_ml
+    time: 14
+    value: negative

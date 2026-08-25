@@ -2,9 +2,21 @@ import matplotlib
 
 matplotlib.use("Agg")
 
+import numpy as np
+import pandas as pd
 import pytest
 import matplotlib.figure
+import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 import shedding_hub as sh
+from shedding_hub.shedding_fit import (
+    CT_REFERENCE,
+    SheddingDataError,
+    SheddingFit,
+    fit_shedding_model,
+    prepare_observations,
+)
+from shedding_hub.viz import FIT_DIAGNOSTIC_YLIM_FLOOR
 
 
 # Sample minimal datasets for testing
@@ -341,7 +353,7 @@ def test_plot_time_courses_with_real_datasets():
 
 
 @pytest.fixture
-def ct_dataset():
+def ct_value_dataset():
     """Dataset with CT values."""
     return {
         "dataset_id": "test_ct_dataset",
@@ -405,9 +417,9 @@ def test_plot_shedding_heatmap_with_value_concentration(minimal_dataset):
     assert isinstance(fig, matplotlib.figure.Figure)
 
 
-def test_plot_shedding_heatmap_with_value_ct(ct_dataset):
+def test_plot_shedding_heatmap_with_value_ct(ct_value_dataset):
     """Test plot_shedding_heatmap with value='ct'."""
-    fig = sh.plot_shedding_heatmap(ct_dataset, value="ct")
+    fig = sh.plot_shedding_heatmap(ct_value_dataset, value="ct")
     assert fig is not None
     assert isinstance(fig, matplotlib.figure.Figure)
 
@@ -636,9 +648,9 @@ def test_plot_mean_trajectory_with_value_concentration(minimal_dataset):
     assert isinstance(fig, matplotlib.figure.Figure)
 
 
-def test_plot_mean_trajectory_with_value_ct(ct_dataset):
+def test_plot_mean_trajectory_with_value_ct(ct_value_dataset):
     """Test plot_mean_trajectory with value='ct'."""
-    fig = sh.plot_mean_trajectory(ct_dataset, value="ct")
+    fig = sh.plot_mean_trajectory(ct_value_dataset, value="ct")
     assert fig is not None
     assert isinstance(fig, matplotlib.figure.Figure)
 
@@ -766,3 +778,1260 @@ def test_plot_mean_trajectory_with_real_dataset():
     except Exception as e:
         # If loading fails (e.g., network issues), skip this test
         pytest.skip(f"Could not load real dataset: {e}")
+
+
+# ---------------------------------------------------------------------------
+# plot_catalog_fits
+# ---------------------------------------------------------------------------
+
+LN10 = float(np.log(10.0))
+
+
+def _stub_fit(
+    dataset_id="study_a",
+    model="exponential",
+    *,
+    biomarker="SARS-CoV-2",
+    specimen="stool",
+    unit="gc/mL",
+    reference_event="symptom onset",
+    analyte=None,
+    half_life=4.0,
+    peak_day=3.0,
+    peak_log10=7.0,
+    censoring_limit=2.0,
+    median_first_observed_day=float("nan"),
+    n_subjects=20,
+):
+    """A directly-constructed SheddingFit with a hand-chosen median individual.
+
+    ``population_mean`` is built in each model's own population coordinates, so
+    ``half_life``, ``peak_day`` and ``peak_log10`` come back out of the fit as
+    the values passed in. The exponential model only decays, so its peak is at
+    day 0 whatever ``peak_day`` says.
+    """
+    a0 = np.log(2.0) / half_life
+    if model == "exponential":
+        mean = np.array([np.log(a0), np.log(peak_log10 * LN10)])
+    elif model == "gamma_shifted":
+        mean = np.array([np.log(a0), np.log(peak_day), peak_log10, -1.0])
+    else:
+        mean = np.array([np.log(a0), np.log(peak_day), peak_log10])
+    return SheddingFit(
+        model=model,
+        method="mle",
+        population_mean=mean,
+        population_cov=np.diag(np.full(mean.size, 0.04)),
+        sigma=0.3,
+        subject_params=pd.DataFrame(),
+        censoring_limit=censoring_limit,
+        dataset_id=dataset_id,
+        analyte=specimen if analyte is None else analyte,
+        biomarker=biomarker,
+        specimen=specimen,
+        reference_event=reference_event,
+        unit=unit,
+        gene_target=None,
+        dose=None,
+        vaccine_type=None,
+        n_subjects=n_subjects,
+        n_measurements=100,
+        n_censored=10,
+        n_excluded_subjects=0,
+        n_dropped_measurements=0,
+        converged=True,
+        log_likelihood=-1.0,
+        aic=2.0,
+        median_first_observed_day=median_first_observed_day,
+    )
+
+
+def _curves(ax):
+    """The model curves in a panel, one linestyle per model."""
+    return [
+        line for line in ax.get_lines() if line.get_linestyle() in ("-", "--", "-.")
+    ]
+
+
+def _limits(ax):
+    """The dotted censoring-limit lines in a panel."""
+    return [line for line in ax.get_lines() if line.get_linestyle() == ":"]
+
+
+@pytest.fixture
+def catalog_fits():
+    """Five fits spanning four comparability groups, one of which has 2 studies."""
+    return [
+        _stub_fit("study_a"),
+        _stub_fit("study_b"),
+        _stub_fit("study_c", specimen="sputum"),
+        _stub_fit("study_d", biomarker="norovirus", unit="gc/wet gram"),
+        _stub_fit("study_e", reference_event="enrollment"),
+    ]
+
+
+def test_plot_catalog_fits_separates_units():
+    """Curves in different units cannot share a y axis, so cannot share a panel."""
+    fits = [_stub_fit("study_a", unit="gc/mL"), _stub_fit("study_b", unit="pfu/mL")]
+    fig = sh.plot_catalog_fits(fits)
+    assert len(fig.axes) == 2
+
+
+def test_plot_catalog_fits_separates_reference_events():
+    """t=0 means something different per reference event, so panels must not mix them."""
+    fits = [
+        _stub_fit("study_a", reference_event="symptom onset"),
+        _stub_fit("study_b", reference_event="enrollment"),
+    ]
+    fig = sh.plot_catalog_fits(fits)
+    assert len(fig.axes) == 2
+
+
+def test_plot_catalog_fits_draws_both_models_of_a_study_in_one_colour():
+    fits = [
+        _stub_fit("study_a", model="exponential"),
+        _stub_fit("study_a", model="gamma"),
+    ]
+    fig = sh.plot_catalog_fits(fits)
+    assert len(fig.axes) == 1
+    curves = _curves(fig.axes[0])
+    assert len(curves) == 2
+    assert len({curve.get_color() for curve in curves}) == 1
+    assert {curve.get_linestyle() for curve in curves} == {"-", "--"}
+
+
+def test_plot_catalog_fits_draws_every_model_with_its_own_linestyle():
+    """Three models now, and the catalog holds fits of all three.
+
+    Caught by the README doctest against the real catalog, which the synthetic
+    unit tests had missed by only ever building two.
+    """
+    fits = [
+        _stub_fit("study_a", model="exponential"),
+        _stub_fit("study_a", model="gamma"),
+        _stub_fit("study_a", model="gamma_shifted"),
+    ]
+    curves = _curves(sh.plot_catalog_fits(fits).axes[0])
+    assert len(curves) == 3
+    assert {curve.get_linestyle() for curve in curves} == {"-", "--", "-."}
+
+
+def test_plot_catalog_fits_gives_each_study_its_own_colour():
+    fig = sh.plot_catalog_fits([_stub_fit("study_a"), _stub_fit("study_b")])
+    curves = _curves(fig.axes[0])
+    assert len({curve.get_color() for curve in curves}) == 2
+
+
+@pytest.mark.parametrize(
+    "filters, expected_panels",
+    [
+        ({"biomarker": "norovirus"}, 1),
+        ({"specimen": "sputum"}, 1),
+        ({"unit": "gc/mL"}, 3),
+        ({"reference_event": "symptom onset"}, 3),
+    ],
+)
+def test_plot_catalog_fits_filters_reduce_the_panel_count(
+    catalog_fits, filters, expected_panels
+):
+    fig = sh.plot_catalog_fits(catalog_fits, **filters)
+    assert len(fig.axes) == expected_panels
+
+
+def test_plot_catalog_fits_restricts_to_named_datasets(catalog_fits):
+    fig = sh.plot_catalog_fits(catalog_fits, dataset_ids=["study_a"])
+    assert len(fig.axes) == 1
+    assert len(_curves(fig.axes[0])) == 1
+
+
+def test_plot_catalog_fits_accepts_a_catalog(catalog_fits):
+    """A SheddingCatalog and a bare list of fits are both acceptable input."""
+    catalog = sh.SheddingCatalog(fits=catalog_fits)
+    assert len(sh.plot_catalog_fits(catalog).axes) == 4
+
+
+def test_plot_catalog_fits_fades_the_stretch_before_the_median_first_observation():
+    """Deliberately the median, not the earliest.
+
+    plot_catalog_fits receives fits and never the datasets behind them, so
+    median_first_observed_day is the only boundary available to it. That makes
+    its fade approximate -- it can cover readings from early-enrolled subjects
+    -- which is why it carries no legend entry claiming otherwise.
+    plot_fit_diagnostic does have the observations and splits at the earliest.
+    """
+    fit = _stub_fit("study_a", median_first_observed_day=6.0)
+    fig = sh.plot_catalog_fits([fit])
+    curves = _curves(fig.axes[0])
+    assert len(curves) == 2
+    faded, full = sorted(curves, key=lambda curve: curve.get_alpha())
+    assert faded.get_alpha() == pytest.approx(0.35)
+    assert full.get_alpha() == pytest.approx(1.0)
+    assert faded.get_xdata()[-1] == pytest.approx(6.0, abs=0.1)
+    assert full.get_xdata()[0] == pytest.approx(6.0, abs=0.1)
+
+
+def test_plot_catalog_fits_can_disable_the_extrapolation_fade():
+    fit = _stub_fit("study_a", median_first_observed_day=6.0)
+    fig = sh.plot_catalog_fits([fit], show_extrapolation=False)
+    curves = _curves(fig.axes[0])
+    assert len(curves) == 1
+    assert curves[0].get_alpha() == pytest.approx(1.0)
+
+
+def test_plot_catalog_fits_derives_the_horizon_from_peak_and_decay():
+    """Five half-lives past the peak: 3 + 5 x 4 = 23 days."""
+    fit = _stub_fit("study_a", model="gamma", peak_day=3.0, half_life=4.0)
+    fig = sh.plot_catalog_fits([fit])
+    assert max(_curves(fig.axes[0])[0].get_xdata()) == pytest.approx(23.0)
+
+
+def test_plot_catalog_fits_clamps_a_fast_decay_to_seven_days():
+    fit = _stub_fit("study_a", model="exponential", half_life=0.2)
+    fig = sh.plot_catalog_fits([fit])
+    assert max(_curves(fig.axes[0])[0].get_xdata()) == pytest.approx(7.0)
+
+
+def test_plot_catalog_fits_clamps_a_runaway_decay_to_sixty_days():
+    fit = _stub_fit("study_a", model="exponential", half_life=200.0)
+    fig = sh.plot_catalog_fits([fit])
+    assert max(_curves(fig.axes[0])[0].get_xdata()) == pytest.approx(60.0)
+
+
+def test_plot_catalog_fits_n_days_overrides_the_derived_horizon():
+    fit = _stub_fit("study_a", model="exponential", half_life=4.0)
+    fig = sh.plot_catalog_fits([fit], n_days=12.0)
+    assert max(_curves(fig.axes[0])[0].get_xdata()) == pytest.approx(12.0)
+
+
+def test_plot_catalog_fits_starts_after_zero_so_gamma_is_defined():
+    """The gamma curve is undefined at t=0, where log10 diverges."""
+    fit = _stub_fit("study_a", model="gamma")
+    curve = _curves(sh.plot_catalog_fits([fit]).axes[0])[0]
+    assert min(curve.get_xdata()) > 0
+    assert np.isfinite(curve.get_ydata()).all()
+
+
+def test_plot_catalog_fits_draws_each_studys_censoring_limit():
+    """Limits differ between studies, so one shared line would be wrong."""
+    fits = [
+        _stub_fit("study_a", censoring_limit=2.0),
+        _stub_fit("study_b", censoring_limit=3.5),
+    ]
+    ax = sh.plot_catalog_fits(fits).axes[0]
+    drawn = sorted(line.get_ydata()[0] for line in _limits(ax))
+    assert drawn == pytest.approx([2.0, 3.5])
+
+
+def test_plot_catalog_fits_puts_multi_study_panels_first():
+    """Two studies in stool, one in sputum; sputum sorts first alphabetically."""
+    fits = [
+        _stub_fit("study_a", specimen="stool"),
+        _stub_fit("study_b", specimen="stool"),
+        _stub_fit("study_c", specimen="sputum"),
+    ]
+    fig = sh.plot_catalog_fits(fits)
+    assert "stool" in fig.axes[0].get_title()
+    assert "sputum" in fig.axes[1].get_title()
+
+
+def test_plot_catalog_fits_returns_one_closed_axis_per_group(catalog_fits):
+    fig = sh.plot_catalog_fits(catalog_fits)
+    assert isinstance(fig, matplotlib.figure.Figure)
+    assert len(fig.axes) == 4
+    assert fig.number not in plt.get_fignums()
+
+
+def test_plot_catalog_fits_rejects_filters_matching_nothing(catalog_fits):
+    with pytest.raises(ValueError, match="No fits match"):
+        sh.plot_catalog_fits(catalog_fits, biomarker="influenza")
+
+
+def test_plot_catalog_fits_names_the_combinations_that_do_exist(catalog_fits):
+    with pytest.raises(ValueError, match="norovirus"):
+        sh.plot_catalog_fits(catalog_fits, biomarker="influenza")
+
+
+def test_plot_catalog_fits_rejects_an_empty_catalog():
+    with pytest.raises(ValueError, match="no fits"):
+        sh.plot_catalog_fits([])
+
+
+def test_plot_catalog_fits_rejects_an_unmatched_dataset_id(catalog_fits):
+    """Dropping the name silently would shrink the figure without saying so."""
+    with pytest.raises(ValueError, match="study_typo"):
+        sh.plot_catalog_fits(catalog_fits, dataset_ids=["study_a", "study_typo"])
+
+
+def test_plot_catalog_fits_names_the_analyte_when_a_study_contributes_several():
+    """One study can put many analytes in a panel, and they disagree.
+
+    ``natarajan2022gastrointestinal`` contributes 14 stool analytes to one
+    panel, whose peaks span over 2 log10. Labelling them all with the study
+    name alone would claim 14 different curves were the same fit.
+    """
+    fits = [
+        _stub_fit("study_a", analyte="N1-ddPCR", peak_log10=5.0),
+        _stub_fit("study_a", analyte="E-qPCR", peak_log10=3.0),
+    ]
+    labels = sorted(
+        line.get_label() for line in _curves(sh.plot_catalog_fits(fits).axes[0])
+    )
+    assert labels == [
+        "study_a E-qPCR (exponential)",
+        "study_a N1-ddPCR (exponential)",
+    ]
+
+
+def test_plot_catalog_fits_floors_the_y_axis_near_the_censoring_limit():
+    """Decay far below the limit of quantification is not measurable by anyone.
+
+    A panel mixing a slow fit, which stretches the horizon, with a fast one,
+    which then plunges over it, otherwise spends most of its y axis on
+    concentrations no study could have detected, squashing the rest.
+    """
+    fits = [
+        _stub_fit("study_a", half_life=30.0, censoring_limit=2.0),
+        _stub_fit("study_b", half_life=0.5, censoring_limit=2.0),
+    ]
+    ax = sh.plot_catalog_fits(fits).axes[0]
+    assert ax.get_ylim()[0] == pytest.approx(1.0)
+
+
+def test_plot_catalog_fits_keeps_a_curve_peaking_below_its_limit_visible():
+    """Two catalog fits peak below their own limit; flooring at the limit alone
+    would drop them off the bottom of the panel entirely."""
+    fit = _stub_fit("study_a", peak_log10=1.0, censoring_limit=4.0)
+    ax = sh.plot_catalog_fits([fit]).axes[0]
+    assert ax.get_ylim()[0] < 1.0
+
+
+def test_plot_catalog_fits_caps_a_crowded_legend():
+    """A panel holding many curves would otherwise be buried under its own key.
+
+    The overflow is counted rather than dropped, so a truncated legend never
+    reads as the whole panel.
+    """
+    fits = [
+        _stub_fit("study_a", analyte=f"assay_{index}", peak_log10=4.0 + index * 0.1)
+        for index in range(10)
+    ]
+    ax = sh.plot_catalog_fits(fits).axes[0]
+    texts = [text.get_text() for text in ax.get_legend().get_texts()]
+    assert len(texts) == 7
+    assert texts[-1] == "+ 4 more"
+
+
+def test_plot_catalog_fits_lists_every_curve_in_a_small_legend():
+    fits = [_stub_fit("study_a"), _stub_fit("study_b")]
+    ax = sh.plot_catalog_fits(fits).axes[0]
+    texts = [text.get_text() for text in ax.get_legend().get_texts()]
+    assert texts == ["study_a (exponential)", "study_b (exponential)"]
+
+
+def test_plot_catalog_fits_omits_the_analyte_when_a_study_contributes_one():
+    """Both models of one analyte are already told apart by linestyle."""
+    fits = [
+        _stub_fit("study_a", model="exponential"),
+        _stub_fit("study_a", model="gamma"),
+    ]
+    labels = sorted(
+        line.get_label() for line in _curves(sh.plot_catalog_fits(fits).axes[0])
+    )
+    assert labels == ["study_a (exponential)", "study_a (gamma)"]
+
+
+# ---------------------------------------------------------------------------
+# plot_fit_diagnostic
+# ---------------------------------------------------------------------------
+
+
+def _synthetic_gamma_dataset(make_synthetic_dataset, **kwargs):
+    """A dataset whose truth decays below the limit within the sampled window.
+
+    41 of its 168 measurements land below the limit of quantification, so the
+    censored observations this plot has to render honestly actually exist.
+    """
+    return make_synthetic_dataset(
+        "gamma",
+        [0.0, np.log(2.0), np.log(12.0)],
+        np.diag([0.04, 0.04, 0.09]),
+        n_subjects=12,
+        seed=3,
+        **kwargs,
+    )
+
+
+@pytest.fixture
+def fitted_pair(make_synthetic_dataset):
+    """A real fit and the dataset it was fitted to.
+
+    Deliberately a genuine fit rather than a stub: the whole subject of this
+    plot is the relationship between a curve and the data behind it.
+    """
+    dataset = _synthetic_gamma_dataset(make_synthetic_dataset)
+    return fit_shedding_model(dataset, analyte="stool", model="gamma"), dataset
+
+
+def _collection(ax, label):
+    for collection in ax.collections:
+        if collection.get_label() == label:
+            return collection
+    raise AssertionError(f"no collection labelled {label!r} in {ax.collections}")
+
+
+def _rows_sorted(points):
+    points = np.asarray(points, dtype=float)
+    return points[np.lexsort((points[:, 1], points[:, 0]))]
+
+
+def _subject_lines(ax):
+    return [line for line in ax.get_lines() if line.get_label() == "_subject"]
+
+
+def test_plot_fit_diagnostic_plots_the_observed_positives(fitted_pair):
+    fit, dataset = fitted_pair
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+
+    drawn = _collection(ax, "Observed").get_offsets()
+    positive = ~observations.censored
+    expected = np.column_stack(
+        [observations.times[positive], observations.values[positive]]
+    )
+    assert len(drawn) == int(positive.sum())
+    assert np.allclose(_rows_sorted(drawn), _rows_sorted(expected))
+
+
+def test_plot_fit_diagnostic_draws_censored_observations_on_the_limit(fitted_pair):
+    """Censored readings establish only an upper bound, and there are many.
+
+    A median of 40% of the catalog's measurements are censored, so a page
+    showing positives alone would flatter every mostly-undetected analyte.
+    """
+    fit, dataset = fitted_pair
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+
+    drawn = np.asarray(_collection(ax, "Censored").get_offsets(), dtype=float)
+    assert len(drawn) == int(observations.censored.sum()) > 0
+    assert np.allclose(drawn[:, 1], observations.censoring_limit)
+
+
+def test_plot_fit_diagnostic_omits_a_subject_the_fitter_excluded(
+    make_synthetic_dataset,
+):
+    """A subject with no positive reading is dropped before fitting, so its
+    points are not something the curve was ever asked to explain."""
+    dataset = _synthetic_gamma_dataset(make_synthetic_dataset)
+    dataset["participants"].append(
+        {
+            "measurements": [
+                {"analyte": "stool", "time": float(day), "value": "negative"}
+                for day in range(1, 15)
+            ]
+        }
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    observations = prepare_observations(dataset, "stool", "gamma")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+
+    drawn = len(_collection(ax, "Observed").get_offsets()) + len(
+        _collection(ax, "Censored").get_offsets()
+    )
+    raw = sum(len(person["measurements"]) for person in dataset["participants"])
+    assert drawn == observations.values.size
+    assert drawn < raw
+
+
+def test_plot_fit_diagnostic_joins_each_subjects_own_points(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert len(_subject_lines(ax)) == fit.n_subjects
+
+
+def test_plot_fit_diagnostic_suppresses_subject_lines_for_a_large_study(fitted_pair):
+    """The largest study has 455 subjects, where the joins hide the scatter."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset, max_subject_lines=5).axes[0]
+    assert _subject_lines(ax) == []
+
+
+def test_plot_fit_diagnostic_legend_carries_the_estimates(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    legend = "\n".join(text.get_text() for text in ax.get_legend().get_texts())
+
+    for name in fit.param_names:
+        assert f"{name} =" in legend
+    for summary in ("peak day", "peak log10", "half-life", "sigma"):
+        assert summary in legend
+    assert f"{fit.n_subjects}" in legend
+
+
+def test_plot_fit_diagnostic_fades_the_extrapolated_stretch(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    by_label = {line.get_label(): line for line in ax.get_lines()}
+
+    assert by_label["Median individual"].get_alpha() == pytest.approx(1.0)
+    faded = by_label["Extrapolated (before first observation)"]
+    assert faded.get_alpha() == pytest.approx(0.35)
+    assert max(faded.get_xdata()) == pytest.approx(
+        fit.median_first_observed_day, abs=0.2
+    )
+
+
+def test_plot_fit_diagnostic_fade_never_covers_an_observation(
+    make_synthetic_dataset,
+):
+    """The faded stretch is labelled "before first observation" and must be.
+
+    median_first_observed_day is deliberately a median -- one early-enrolled
+    subject should not make a late-starting study look well-observed -- so it
+    sits later than the earliest reading whenever enrolment is staggered, which
+    is 26 of the catalog's 28 rise-and-fall fits. Splitting there put the fade
+    over real plotted points.
+    """
+    # A late peak (b0/a0 = 8 days) so that subjects enrolled on day 4 still
+    # show a rise and the analyte clears the gamma rise gate.
+    dataset = make_synthetic_dataset(
+        "gamma",
+        [np.log(0.3), np.log(2.4), np.log(12.0)],
+        np.diag([0.04, 0.04, 0.09]),
+        n_subjects=12,
+        seed=5,
+        times=np.arange(1.0, 21.0),
+    )
+    for participant in dataset["participants"][2:]:
+        participant["measurements"] = [
+            m for m in participant["measurements"] if m["time"] >= 4
+        ]
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    observations = prepare_observations(dataset, "stool", "gamma")
+    assert fit.median_first_observed_day > observations.times.min()
+
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    faded = [
+        line for line in ax.get_lines() if line.get_label().startswith("Extrapolated")
+    ][0]
+    # the two segments share their boundary point, so allow one grid step
+    step = np.diff(faded.get_xdata())[0]
+    assert max(faded.get_xdata()) <= observations.times.min() + step
+
+
+def test_plot_fit_diagnostic_never_draws_the_exponential_before_day_zero(
+    make_synthetic_dataset,
+):
+    """It is defined there but grows without bound going backwards.
+
+    Drawn back to its earliest reading, the simulated band reached 10**76 for
+    arts2023longitudinal, 10**329 for hakki2022onset symptomatic_cultivable and
+    10**826 for lavezzo2020suppression E_symptom -- an extrapolation nothing
+    constrains, dwarfing the data it was meant to sit beside. The readings
+    themselves are still plotted; only the model's own lines stop at day 0.
+    """
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "exponential",
+            [np.log(0.6), np.log(18.0)],
+            np.diag([0.04, 0.04]),
+            n_subjects=8,
+            seed=4,
+        ),
+        days=(-4.0, -2.0),
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    ax = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), band_inner_quantiles=(0.025, 0.975)
+    ).axes[0]
+
+    modelled = [
+        line
+        for line in ax.get_lines()
+        if line.get_label().startswith(("Median", "Extrapolated", "95%"))
+    ]
+    assert modelled
+    for line in modelled:
+        assert min(line.get_xdata()) >= 0.0
+
+    band = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()][0]
+    assert band.get_paths()[0].vertices[:, 0].min() >= 0.0
+
+    # the observations before day 0 are still shown
+    assert ax.get_xlim()[0] <= -4.0
+    assert min(_collection(ax, "Observed").get_offsets()[:, 0]) < 0.0
+
+
+def test_plot_fit_diagnostic_still_draws_gamma_shifted_before_day_zero(
+    make_synthetic_dataset,
+):
+    """The rise before the reference event is the whole point of that model."""
+    dataset = _with_pre_onset_measurements(
+        _synthetic_gamma_dataset(make_synthetic_dataset), days=(-3.0, -2.0, -1.0)
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma_shifted")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    curve = [line for line in ax.get_lines() if line.get_label().startswith("Median")][
+        0
+    ]
+    assert min(curve.get_xdata()) < 0.0
+
+
+def test_plot_fit_diagnostic_rejects_a_dataset_without_the_analyte(fitted_pair):
+    fit, dataset = fitted_pair
+    mismatched = dict(dataset, analytes={"urine": dataset["analytes"]["stool"]})
+    with pytest.raises(ValueError, match="does not contain analyte"):
+        sh.plot_fit_diagnostic(fit, mismatched)
+
+
+def test_plot_fit_diagnostic_shades_a_simulated_cohort_band(fitted_pair):
+    """The band is the population the fit implies, which is what the data
+    should be compared against — the median individual alone hides whether the
+    spread is right."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    bands = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()]
+    assert len(bands) == 1
+
+
+def test_plot_fit_diagnostic_band_can_be_disabled(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset, show_band=False).axes[0]
+    assert not [c for c in ax.collections if "simulated" in str(c.get_label()).lower()]
+
+
+def test_plot_fit_diagnostic_band_can_span_the_full_simulated_range(fitted_pair):
+    """Quantiles of 0 and 1 shade every value the simulated cohort took."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset, band_quantiles=(0.0, 1.0)).axes[0]
+    band = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()][0]
+    narrow = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    inner = [
+        c for c in narrow.collections if "simulated" in str(c.get_label()).lower()
+    ][0]
+    span = lambda c: np.ptp(c.get_paths()[0].vertices[:, 1])
+    assert span(band) > span(inner)
+
+
+def test_plot_fit_diagnostic_full_range_band_names_the_sample_size(fitted_pair):
+    """A range is a property of the draw count as much as of the population, so
+    the page has to say how many were drawn rather than claim '100%'."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), n_simulated=750
+    ).axes[0]
+    labels = [text.get_text() for text in ax.get_legend().get_texts()]
+    assert any("range" in label.lower() and "750" in label for label in labels)
+
+
+def test_plot_fit_diagnostic_band_can_drive_the_y_axis(fitted_pair):
+    """Otherwise a full-range band is clipped away and shows nothing.
+
+    The default keeps the band clipped so the data stay legible; a reviewer
+    asking what values the fit considers possible needs the opposite.
+    """
+    fit, dataset = fitted_pair
+    clipped = sh.plot_fit_diagnostic(fit, dataset, band_quantiles=(0.0, 1.0)).axes[0]
+    expanded = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), band_sets_ylim=True
+    ).axes[0]
+
+    band = [
+        c for c in expanded.collections if "simulated" in str(c.get_label()).lower()
+    ][0]
+    vertices = band.get_paths()[0].vertices[:, 1]
+    low, high = expanded.get_ylim()
+    # Upward the axis follows the band completely; downward only to the floor,
+    # which is what band_ylim_floor is for.
+    assert high >= np.nanmax(vertices)
+    assert low <= FIT_DIAGNOSTIC_YLIM_FLOOR
+    assert np.ptp(expanded.get_ylim()) > np.ptp(clipped.get_ylim())
+
+    unfloored = sh.plot_fit_diagnostic(
+        fit,
+        dataset,
+        band_quantiles=(0.0, 1.0),
+        band_sets_ylim=True,
+        band_ylim_floor=-np.inf,
+    ).axes[0]
+    assert unfloored.get_ylim()[0] <= np.nanmin(vertices)
+
+
+def test_plot_fit_diagnostic_draws_inner_quantile_lines(fitted_pair):
+    """A range band alone says nothing about where the mass is; two dashed
+    lines give the reader the 95% interval inside it."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(
+        fit, dataset, band_quantiles=(0.0, 1.0), band_inner_quantiles=(0.025, 0.975)
+    ).axes[0]
+
+    inner = [
+        line
+        for line in ax.get_lines()
+        if line.get_linestyle() == "--" and "95%" in line.get_label()
+    ]
+    assert len(inner) == 1  # one labelled; its pair carries no legend entry
+    dashed = [line for line in ax.get_lines() if line.get_linestyle() == "--"]
+    assert len(dashed) == 2
+    lower, upper = sorted(dashed, key=lambda line: np.nanmedian(line.get_ydata()))
+    assert (np.nanmedian(lower.get_ydata())) < np.nanmedian(upper.get_ydata())
+
+
+def test_plot_fit_diagnostic_inner_quantiles_are_off_by_default(fitted_pair):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert not [line for line in ax.get_lines() if line.get_linestyle() == "--"]
+
+
+def test_plot_fit_diagnostic_range_band_floors_the_y_axis(fitted_pair):
+    """A full-range band reaches 10**-30, which is nobody's idea of a
+    concentration; the axis stops at a floor rather than following it down."""
+    fit, dataset = fitted_pair
+    wide = dict(band_quantiles=(0.0, 1.0), band_sets_ylim=True)
+    floored = sh.plot_fit_diagnostic(fit, dataset, **wide).axes[0]
+    unfloored = sh.plot_fit_diagnostic(
+        fit, dataset, band_ylim_floor=-np.inf, **wide
+    ).axes[0]
+
+    assert floored.get_ylim()[0] == pytest.approx(-3.5)  # floor of -3, minus pad
+    assert unfloored.get_ylim()[0] < -10
+
+
+def test_plot_fit_diagnostic_floor_never_hides_an_observation(fitted_pair):
+    """The floor bounds the band, never the data."""
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(
+        fit,
+        dataset,
+        band_quantiles=(0.0, 1.0),
+        band_sets_ylim=True,
+        band_ylim_floor=99.0,
+    ).axes[0]
+    observations = prepare_observations(dataset, fit.analyte, fit.model)
+    lowest = float(np.nanmin(observations.values[~observations.censored]))
+    assert ax.get_ylim()[0] <= lowest
+
+
+def test_plot_fit_diagnostic_shows_observations_before_the_reference_event(
+    make_synthetic_dataset,
+):
+    """13 catalog fits are fitted to measurements at negative times.
+
+    ``prepare_observations`` only drops non-positive times under the gamma
+    model, so an exponential fit is genuinely informed by them —
+    ``kissler2021viral`` by 323 readings reaching back to day -53. An axis
+    starting at zero hides data the curve was fitted to.
+    """
+    dataset = make_synthetic_dataset(
+        "exponential",
+        [np.log(0.6), np.log(18.0)],
+        np.diag([0.04, 0.04]),
+        n_subjects=8,
+        seed=4,
+        times=np.arange(-4.0, 12.0),
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    observations = prepare_observations(dataset, "stool", "exponential")
+    assert observations.times.min() == pytest.approx(-4.0), "fixture lost its past"
+
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert ax.get_xlim()[0] <= -4.0
+
+
+def _with_pre_onset_measurements(dataset, days=(-3.0, -2.0, -1.0, 0.0)):
+    """Give every participant readings at or before the reference event."""
+    for participant in dataset["participants"]:
+        participant["measurements"] = [
+            {"analyte": "stool", "time": day, "value": 5e4} for day in days
+        ] + participant["measurements"]
+    return dataset
+
+
+def test_plot_fit_diagnostic_marks_measurements_the_gamma_model_dropped(
+    make_synthetic_dataset,
+):
+    """The gamma curve is undefined at t <= 0, so the fitter discards those
+    readings — 391 of them for kissler2021viral. Drawing nothing there implies
+    the study never sampled before its reference event, which is false.
+    """
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "gamma",
+            [0.0, np.log(2.0), np.log(12.0)],
+            np.diag([0.04, 0.04, 0.09]),
+            n_subjects=12,
+            seed=3,
+        )
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    observations = prepare_observations(dataset, "stool", "gamma")
+    assert observations.times.min() > 0, "the fitter should have dropped them"
+
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    dropped = _collection(ax, "Dropped (not fitted)")
+    assert len(dropped.get_offsets()) == 12 * 4
+    assert ax.get_xlim()[0] <= -3.0
+
+
+def test_plot_fit_diagnostic_marks_what_gamma_shifted_dropped(
+    make_synthetic_dataset,
+):
+    """gamma_shifted discards censored readings at t <= 0; those must show too.
+
+    The marker is driven by what prepare_observations recorded, so every model
+    reports its own discards without the plot re-deriving anyone's rules.
+    """
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "gamma",
+            [0.0, np.log(2.0), np.log(12.0)],
+            np.diag([0.04, 0.04, 0.09]),
+            n_subjects=12,
+            seed=3,
+        ),
+        days=(-3.0, -2.0, -1.0),
+    )
+    # The first two are censored and get dropped; the detected one at day -1 is
+    # kept, and is what lets the analyte through the pre-event gate at all.
+    for participant in dataset["participants"]:
+        for measurement in participant["measurements"][:2]:
+            measurement["value"] = "negative"
+
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma_shifted")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    dropped = _collection(ax, "Dropped (not fitted)")
+    assert len(dropped.get_offsets()) == 12 * 2
+    # censored discards are drawn on the limit, all that was established
+    assert np.allclose(np.asarray(dropped.get_offsets())[:, 1], fit.censoring_limit)
+
+
+def test_plot_fit_diagnostic_marks_what_the_exponential_cutoff_dropped(
+    make_synthetic_dataset,
+):
+    """The -5 day cutoff discards readings too, and said nothing about it."""
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "exponential",
+            [np.log(0.6), np.log(18.0)],
+            np.diag([0.04, 0.04]),
+            n_subjects=8,
+            seed=4,
+        ),
+        days=(-40.0, -20.0),
+    )
+    for participant in dataset["participants"]:
+        for measurement in participant["measurements"][:2]:
+            measurement["value"] = "negative"
+
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert len(_collection(ax, "Dropped (not fitted)").get_offsets()) == 8 * 2
+    assert ax.get_xlim()[0] <= -40.0
+
+
+def test_plot_fit_diagnostic_does_not_double_draw_exponential_pre_onset_points(
+    make_synthetic_dataset,
+):
+    """The exponential model keeps t <= 0 readings, so they are ordinary
+    observations and must not also appear as dropped."""
+    dataset = _with_pre_onset_measurements(
+        make_synthetic_dataset(
+            "exponential",
+            [np.log(0.6), np.log(18.0)],
+            np.diag([0.04, 0.04]),
+            n_subjects=8,
+            seed=4,
+        )
+    )
+    fit = fit_shedding_model(dataset, analyte="stool", model="exponential")
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert not [c for c in ax.collections if "dropped" in str(c.get_label()).lower()]
+    assert ax.get_xlim()[0] <= -3.0
+
+
+def test_plot_fit_diagnostic_keeps_the_axis_at_zero_without_negative_times(
+    fitted_pair,
+):
+    fit, dataset = fitted_pair
+    ax = sh.plot_fit_diagnostic(fit, dataset).axes[0]
+    assert ax.get_xlim()[0] == pytest.approx(0.0, abs=0.5)
+
+
+def test_plot_fit_diagnostic_band_narrows_with_dispersion(fitted_pair):
+    """The band honours the same dispersion knob simulate_shedding takes."""
+    fit, dataset = fitted_pair
+
+    def height(**kwargs):
+        ax = sh.plot_fit_diagnostic(fit, dataset, **kwargs).axes[0]
+        band = [c for c in ax.collections if "simulated" in str(c.get_label()).lower()][
+            0
+        ]
+        pts = band.get_paths()[0].vertices
+        return pts[:, 1].max() - pts[:, 1].min()
+
+    assert height(dispersion=0.4) < height()
+
+
+def test_plot_fit_diagnostic_returns_one_closed_axis(fitted_pair):
+    fit, dataset = fitted_pair
+    fig = sh.plot_fit_diagnostic(fit, dataset)
+    assert isinstance(fig, matplotlib.figure.Figure)
+    assert len(fig.axes) == 1
+    assert fig.number not in plt.get_fignums()
+
+
+def test_fit_diagnostic_labels_the_ct_axis(ct_dataset):
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    assert fig.axes[0].get_ylabel() == "Ct (cycle threshold)"
+
+
+def test_fit_diagnostic_ct_ticks_read_as_ct_not_as_depth(ct_dataset):
+    # A response of 8.0 is Ct 32. The tick must say 32.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    formatter = fig.axes[0].yaxis.get_major_formatter()
+    assert formatter(8.0, None) == "32"
+
+
+def test_fit_diagnostic_is_not_inverted_for_ct(ct_dataset):
+    # The response already increases with viral load. Inverting would put the
+    # peak at the bottom.
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    bottom, top = fig.axes[0].get_ylim()
+    assert bottom < top
+
+
+def test_fit_diagnostic_concentration_label_unchanged(woelfel_dataset):
+    fit = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, woelfel_dataset)
+    assert "log10 concentration" in fig.axes[0].get_ylabel()
+
+
+def _legend_labels(fig):
+    return [text.get_text() for text in fig.axes[0].get_legend().get_texts()]
+
+
+def test_fit_diagnostic_ct_legend_reports_a_peak_ct_not_a_log10(ct_dataset):
+    """The height is cycles below the reference, so it is shown as the Ct it is.
+
+    "peak log10" on an axis labelled "Ct (cycle threshold)" contradicts its own
+    page, and taken literally claims a concentration ten trillion times too
+    large.
+    """
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    labels = _legend_labels(fig)
+
+    assert not any(label.startswith("peak log10") for label in labels)
+    peak_row = next(label for label in labels if label.startswith("peak Ct"))
+    assert float(peak_row.split("=")[1]) == pytest.approx(
+        CT_REFERENCE - fit.peak_log10, abs=0.01
+    )
+    # The analyte's readings run Ct 25-36, so its peak must land in that range
+    # rather than at the 13-odd cycles the unconverted number would show.
+    assert 20.0 < float(peak_row.split("=")[1]) < 30.0
+
+
+def test_fit_diagnostic_ct_censoring_limit_reads_as_a_ct(ct_dataset):
+    """ct_dataset is cut off at Ct 40, which is 0.00 on the fitted scale.
+
+    "Censoring limit (0.00)" on a Ct axis reads as a cutoff of zero cycles.
+    """
+    fit = fit_shedding_model(ct_dataset, analyte="swab", model="gamma")
+    fig = sh.plot_fit_diagnostic(fit, ct_dataset)
+    assert "Censoring limit (Ct 40.00)" in _legend_labels(fig)
+
+
+def test_fit_diagnostic_concentration_legend_unchanged(woelfel_dataset):
+    """Neither conversion may touch the concentration path."""
+    fit = fit_shedding_model(woelfel_dataset, analyte="stool", model="gamma")
+    labels = _legend_labels(sh.plot_fit_diagnostic(fit, woelfel_dataset))
+
+    assert any(label.startswith("peak log10 =") for label in labels)
+    assert not any("Ct" in label for label in labels)
+    limit_row = next(label for label in labels if label.startswith("Censoring limit"))
+    assert limit_row == f"Censoring limit ({fit.censoring_limit:.2f})"
+
+
+# ---------------------------------------------------------------------------
+# orphaned plotting functions: plot_clearance_curve, plot_detection_probability,
+# plot_value_distribution_by_time
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        "plot_clearance_curve",
+        "plot_detection_probability",
+        "plot_value_distribution_by_time",
+    ],
+)
+def test_orphaned_plots_are_exported(name):
+    """
+    All three are implemented and were documented on the project website, but
+    never exported, so every call in that documentation raised AttributeError.
+    """
+    import shedding_hub as sh
+
+    assert hasattr(sh, name), f"sh.{name} is documented but not exported"
+    assert name in sh.__all__
+
+
+def _step_xy(fig):
+    """The first line's plotted data, as a comparable tuple."""
+    (line,) = fig.axes[0].get_lines()
+    return tuple(line.get_xdata()), tuple(line.get_ydata())
+
+
+def test_plot_clearance_curve_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_clearance_curve(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_clearance_curve_honours_the_specimen_filter(woelfel_dataset):
+    """
+    A filter that is accepted but ignored would leave every specimen showing
+    the pooled curve. Woelfel's sputum and stool clear on different schedules,
+    so the two curves must not be the same data.
+    """
+    import shedding_hub as sh
+
+    sputum = sh.plot_clearance_curve(woelfel_dataset, specimen="sputum")
+    stool = sh.plot_clearance_curve(woelfel_dataset, specimen="stool")
+
+    assert _step_xy(sputum) != _step_xy(stool)
+    assert "sputum" in sputum.axes[0].get_title()
+    assert "stool" in stool.axes[0].get_title()
+
+
+def test_plot_detection_probability_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_detection_probability(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_detection_probability_honours_the_specimen_filter(woelfel_dataset):
+    """
+    The two specimens are detectable over different time spans, so an honoured
+    filter changes both the binned probabilities and the range they cover.
+    """
+    import shedding_hub as sh
+
+    sputum = sh.plot_detection_probability(woelfel_dataset, specimen="sputum")
+    stool = sh.plot_detection_probability(woelfel_dataset, specimen="stool")
+
+    sputum_x, sputum_y = _step_xy(sputum)
+    stool_x, stool_y = _step_xy(stool)
+    assert (sputum_x, sputum_y) != (stool_x, stool_y)
+    # Not merely a reordering of one pooled series: the spans differ outright.
+    assert (min(sputum_x), max(sputum_x)) != (min(stool_x), max(stool_x))
+
+
+def test_plot_value_distribution_by_time_draws(woelfel_dataset):
+    import shedding_hub as sh
+
+    fig = sh.plot_value_distribution_by_time(woelfel_dataset, specimen="sputum")
+    assert isinstance(fig, Figure)
+    assert len(fig.axes) >= 1
+
+
+def test_plot_value_distribution_by_time_honours_the_specimen_filter(woelfel_dataset):
+    """
+    One box is drawn per populated time bin, and the two specimens were
+    sampled over different days, so an honoured filter changes the box count.
+    """
+    import shedding_hub as sh
+
+    sputum = sh.plot_value_distribution_by_time(woelfel_dataset, specimen="sputum")
+    stool = sh.plot_value_distribution_by_time(woelfel_dataset, specimen="stool")
+
+    assert len(sputum.axes[0].patches) != len(stool.axes[0].patches)
+    assert sputum.axes[0].get_xticks().tolist() != stool.axes[0].get_xticks().tolist()
+
+
+@pytest.fixture
+def dataset_with_pre_event_readings(make_synthetic_dataset):
+    """A fittable gamma dataset carrying a reading long before the data.
+
+    Mirrors the real shape: kissler2021viral is fitted to readings from day 1
+    but drops readings back to day -53, and under the gamma model everything at
+    ``t <= 0`` is discarded because ``ln(t)`` is undefined there.
+    """
+    dataset = make_synthetic_dataset(
+        "gamma",
+        np.array([np.log(0.5), np.log(2.0), np.log(12.0)]),
+        np.diag([0.04, 0.04, 0.04]),
+        n_subjects=8,
+        seed=3,
+    )
+    for participant in dataset["participants"]:
+        participant["measurements"].insert(
+            0, {"analyte": "stool", "time": -20.0, "value": "negative"}
+        )
+    return dataset
+
+
+def test_x_from_fitted_keeps_dropped_readings_from_stretching_the_axis(
+    dataset_with_pre_event_readings,
+):
+    """Excluded readings stretch the axis on 15 of the catalog's fits.
+
+    At the fixed width a web page gives a figure, that squeezes the data the
+    curve was actually fitted to into a fraction of the panel.
+    """
+    dataset = dataset_with_pre_event_readings
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    wide = sh.plot_fit_diagnostic(fit, dataset)
+    narrow = sh.plot_fit_diagnostic(fit, dataset, x_from_fitted=True)
+
+    assert wide.axes[0].get_xlim()[0] < -19, "the dropped reading should stretch it"
+    assert narrow.axes[0].get_xlim()[0] > -1, "and x_from_fitted should not"
+
+
+def test_x_from_fitted_reports_what_it_pushed_off_the_axis(
+    dataset_with_pre_event_readings,
+):
+    """Anything left outside is counted, so a missing point is never silent."""
+    dataset = dataset_with_pre_event_readings
+    fit = fit_shedding_model(dataset, analyte="stool", model="gamma")
+    labels = _legend_labels(sh.plot_fit_diagnostic(fit, dataset, x_from_fitted=True))
+    assert "8 dropped reading(s) off-scale" in labels
+
+    # Off by default, so the review PDFs keep every reading on the page.
+    assert not any(
+        "off-scale" in label
+        for label in _legend_labels(sh.plot_fit_diagnostic(fit, dataset))
+    )
+
+
+def test_analyte_observations_matches_the_fit_page_title_format(woelfel_dataset):
+    """Both page kinds sit on one dataset page, so they share the identity line."""
+    fig = sh.plot_analyte_observations(woelfel_dataset, "stool")
+    assert (
+        fig.axes[0].get_title()
+        == "woelfel2020virological / SARS-CoV-2_stool / observations"
+    )
+
+
+def test_analyte_observations_draws_no_fitted_curve(woelfel_dataset):
+    """The whole point: observations without a model on top of them."""
+    fig = sh.plot_analyte_observations(woelfel_dataset, "stool")
+    labels = _legend_labels(fig)
+    assert "no fit -- observations only" in labels
+    assert not any("peak" in label or "half-life" in label for label in labels)
+
+
+def test_analyte_observations_marks_censored_at_the_limit(woelfel_dataset):
+    fig = sh.plot_analyte_observations(woelfel_dataset, "stool")
+    assert any("Censoring limit" in label for label in _legend_labels(fig))
+    assert any("Censored" in label for label in _legend_labels(fig))
+
+
+def test_analyte_observations_labels_a_ct_axis_in_cycles(ct_value_dataset):
+    fig = sh.plot_analyte_observations(ct_value_dataset, "A")
+    assert fig.axes[0].get_ylabel() == "Ct (cycle threshold)"
+    assert any(
+        "Censoring limit (Ct" in label for label in _legend_labels(fig)
+    ), "a Ct page must report its cutoff as a Ct, not as cycles below the reference"
+
+
+def test_analyte_observations_works_where_the_fitter_refuses():
+    """Its reason for existing: the fitter rejects 28 of the 88 unfitted analytes.
+
+    A cross-sectional analyte -- one reading per participant -- is refused as
+    ``too_few_subjects``, so a page built on ``prepare_observations`` would be
+    blank for exactly the analytes this covers.
+    """
+    dataset = {
+        "dataset_id": "cross_sectional",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "norovirus",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_detection": 100,
+                "limit_of_quantification": "unknown",
+            }
+        },
+        "participants": [
+            {"measurements": [{"analyte": "stool", "time": 1, "value": 5000.0}]},
+            {"measurements": [{"analyte": "stool", "time": 2, "value": 8000.0}]},
+            {"measurements": [{"analyte": "stool", "time": 3, "value": "negative"}]},
+        ],
+    }
+    with pytest.raises(SheddingDataError):
+        prepare_observations(dataset, "stool", "exponential")
+
+    fig = sh.plot_analyte_observations(dataset, "stool")
+    assert "participants = 3" in _legend_labels(fig)
+
+
+def test_analyte_observations_handles_an_analyte_never_detected():
+    """No positive means no smallest positive; the declared limit is the anchor."""
+    dataset = {
+        "dataset_id": "all_negative",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_detection": 100,
+                "limit_of_quantification": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": 1, "value": "negative"},
+                    {"analyte": "stool", "time": 2, "value": "negative"},
+                ]
+            }
+        ],
+    }
+    fig = sh.plot_analyte_observations(dataset, "stool")
+    assert "censored = 100%" in _legend_labels(fig)
+    # log10(100) = 2.0, taken from the declared limit rather than from the data.
+    assert any("Censoring limit (2.00)" in label for label in _legend_labels(fig))
+
+
+def test_analyte_observations_counts_qualitative_readings_it_cannot_place():
+    """A "positive" with no number has no y value, and is reported not dropped."""
+    dataset = {
+        "dataset_id": "qualitative",
+        "analytes": {
+            "stool": {
+                "specimen": "stool",
+                "biomarker": "SARS-CoV-2",
+                "reference_event": "symptom onset",
+                "unit": "gc/mL",
+                "limit_of_detection": 100,
+                "limit_of_quantification": "unknown",
+            }
+        },
+        "participants": [
+            {
+                "measurements": [
+                    {"analyte": "stool", "time": 1, "value": 5000.0},
+                    {"analyte": "stool", "time": 2, "value": "positive"},
+                ]
+            }
+        ],
+    }
+    labels = _legend_labels(sh.plot_analyte_observations(dataset, "stool"))
+    assert "not plottable = 1" in labels
+    assert "measurements = 2" in labels
+
+
+def test_analyte_observations_rejects_an_unknown_analyte(woelfel_dataset):
+    with pytest.raises(ValueError, match="does not contain analyte"):
+        sh.plot_analyte_observations(woelfel_dataset, "nope")

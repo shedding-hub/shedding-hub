@@ -1,0 +1,586 @@
+title: Comparison of quantitative reverse transcription-PCR to viral culture for assessment
+  of respiratory syncytial virus shedding
+doi: 10.1128/JCM.41.9.4160-4165.2003
+description: Comparative study of RSV shedding in adult volunteers experimentally
+  challenged with RSV A2, comparing quantitative real-time RT-PCR results with viral
+  culture across multiple postinfection days (0-12 and day 28). CSV-provided measurements
+  represent a time series per subject (PatientID 1-5) with values recorded by day
+  relative to infection/challenge.
+analytes:
+  nasal_respiratory_syncytial_virus_quant_rt_pcr:
+    description: Quantitative real-time RT-PCR measurement of respiratory syncytial
+      virus (RSV) from respiratory specimens collected in an adult RSV A2 challenge
+      study; numeric values provided in CSV (assay details, gene target, and calibration/units
+      not provided in the supplied text/CSV).
+    specimen: nasal_lavage_fluid
+    biomarker: RSV
+    gene_target: F gene
+    limit_of_detection: 10
+    limit_of_quantification: unknown
+    unit: pfu/mL
+    reference_event: inoculation
+participants:
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: 7.450182891366451
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: 9.343241884011864
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: 3952.0445342053686
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 5788.529065182884
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 21518.351072580983
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 377752.25243538595
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 85875.32205959325
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 273.3338502233244
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: 135.06091730320364
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: 1878.8862212175995
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: 97.74900819627464
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: 8.103408577045125
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: 841.8409048935289
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 49084.49305162693
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 1362.4925630762762
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 55.88719962158468
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 632.3660167967626
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: 11.549927621385093
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 2435.2275863183713
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 16234.325532124954
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 24635.911541301255
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 4841.287350976327
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 2065.774301832027
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: 106.35635825729186
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: 150.41323274250834
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: 25.676873112929652
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 3.713918782987283
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 34.82566686547826
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 75.35203264966113
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 480.35713490880534
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 1039.345108679769
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 192.34943239861536
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 389.8603702549084
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 493.38031529814015
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 151.99110829529332
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 10.537249727360747
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: 3.246113018266731
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: 1.8738174228603792
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: 357.96960610421553
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 310.6759909833817
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 7532.22139758624
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 7017.03828670378
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 13276.295892211254
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 333.4854751235144
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: 29.986313485755304
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 1.5105769627345513
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 48.073391491386225
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 104.23174293933036
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 83.34069980222435
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 265.2278028592224
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: 266.9198993289168
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: 157.0018471234385
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 7.836569738997809
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 13.624351205731767
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 227.74234398840696
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 799.1284347108694
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 588.7502093417179
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: 10.234257381336883
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 27.627448760974847
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 19.744882128159347
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 2774.4814032758754
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 64.09411892036017
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative
+- attributes:
+    age_group: adult
+    subtype: RSV A2
+    participant_type: volunteer
+  measurements:
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 0
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 1
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 2
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 3
+    value: 2596.65424372014
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 4
+    value: 33850.61888013662
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 5
+    value: 137753.0183511196
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 6
+    value: 893064.497676208
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 7
+    value: 18547.37718560522
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 8
+    value: 416.3766400612996
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 9
+    value: 14.884860996489072
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 10
+    value: 309.2009150251295
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 11
+    value: 35.42499448697205
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 12
+    value: negative
+  - analyte: nasal_respiratory_syncytial_virus_quant_rt_pcr
+    time: 28
+    value: negative

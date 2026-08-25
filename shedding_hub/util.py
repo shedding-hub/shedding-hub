@@ -1,4 +1,5 @@
 import difflib
+import os
 import pathlib
 import re
 import requests
@@ -6,6 +7,31 @@ import textwrap
 from typing import Optional
 import warnings
 import yaml
+
+# Every network call here gets one. Without it a hung connection blocks until
+# the caller gives up, which in CI means a job sitting at its step timeout
+# rather than failing in seconds with something readable.
+REQUEST_TIMEOUT_SECONDS = 30
+
+
+def _github_api_headers() -> dict:
+    """
+    Authorization for api.github.com, when the environment offers a token.
+
+    The unauthenticated API allows 60 requests an hour per address, which a
+    busy CI account exhausts easily: ``test_load`` resolves a pull request
+    through it, and has twice failed a run with "403 rate limit exceeded".
+    A token raises that to 5,000, and GitHub Actions supplies one to every
+    workflow without any secret needing to be created.
+
+    Read from the environment rather than taken as an argument, because the
+    caller of ``load_dataset`` is usually a test or a notebook that should not
+    have to know about it. Sent only to ``api.github.com`` -- never to
+    ``raw.githubusercontent.com``, which needs no credential and should not be
+    handed one.
+    """
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    return {"Authorization": f"Bearer {token}"} if token else {}
 
 
 def normalize_str(
@@ -19,6 +45,11 @@ def normalize_str(
         dedent: Remove any common leading whitespace.
         strip: Remove leading and trailing whitespace.
         unwrap: Unwrap lines separated by a single line break.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> sh.normalize_str("\\n    line one\\n    line two\\n")
+        'line one line two'
     """
     if dedent:
         value = textwrap.dedent(value)
@@ -51,6 +82,14 @@ def load_dataset(
 
     Returns:
         Loaded dataset.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> data = sh.load_dataset('woelfel2020virological', local='./data')
+        >>> sorted(data.keys())
+        ['analytes', 'dataset_id', 'description', 'doi', 'participants', 'title']
+        >>> data['dataset_id']
+        'woelfel2020virological'
     """
     # Check that at most one of `ref`, `pr`, and `local` is given.
     specified = {"ref": ref, "pr": pr, "local": local}
@@ -70,7 +109,11 @@ def load_dataset(
 
     # If a PR is specified, resolve it so we can get the relevant file.
     if pr:
-        response = requests.get(f"https://api.github.com/repos/{repo}/pulls/{pr}")
+        response = requests.get(
+            f"https://api.github.com/repos/{repo}/pulls/{pr}",
+            headers=_github_api_headers(),
+            timeout=REQUEST_TIMEOUT_SECONDS,
+        )
         response.raise_for_status()
         response = response.json()
         repo = response["head"]["repo"]["full_name"]
@@ -80,13 +123,18 @@ def load_dataset(
 
     # Download the contents and parse the file.
     ref = ref or "main"
+    # No Authorization header on these two: raw.githubusercontent.com serves
+    # public content without one, and a credential should not be sent where it
+    # is not needed.
     response = requests.get(
-        f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}/{dataset}.yaml"
+        f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}/{dataset}.yaml",
+        timeout=REQUEST_TIMEOUT_SECONDS,
     )
     # Backwards compatibility before change of folder structure.
     if response.status_code == 404:
         response = requests.get(
-            f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}.yaml"
+            f"https://raw.githubusercontent.com/{repo}/{ref}/data/{dataset}.yaml",
+            timeout=REQUEST_TIMEOUT_SECONDS,
         )
     response.raise_for_status()
     data = yaml.safe_load(response.text)
@@ -116,6 +164,13 @@ def check_dataset(
         True if the paper is found (exact DOI or exact title match), False
         otherwise.  When a title is provided and no exact match is found, a
         warning is issued for the most similar dataset above the threshold.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> sh.check_dataset(doi='10.1038/s41586-020-2196-x', local='./data')
+        True
+        >>> sh.check_dataset(doi='10.1000/nonexistent-doi', local='./data')
+        False
     """
     if doi is None and title is None:
         raise ValueError("At least one of `doi` or `title` must be specified.")
@@ -200,12 +255,29 @@ def check_dataset(
 class folded_str(str):
     """
     Folded string in yaml representation.
+
+    Examples:
+        >>> import yaml
+        >>> import shedding_hub as sh
+        >>> print(yaml.dump({"description": sh.folded_str("This is a long description that will be wrapped nicely.")}))
+        description: >-
+          This is a long description that will be wrapped nicely.
+        <BLANKLINE>
     """
 
 
 class literal_str(str):
     """
     Literal string in yaml representation.
+
+    Examples:
+        >>> import yaml
+        >>> import shedding_hub as sh
+        >>> print(yaml.dump({"description": sh.literal_str("Line one.\\nLine two.\\n")}))
+        description: |
+          Line one.
+          Line two.
+        <BLANKLINE>
     """
 
 

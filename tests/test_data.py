@@ -1,15 +1,39 @@
 import jsonschema
 import numpy as np
+import os
 from pathlib import Path
 import pytest
 import re
 import requests
+import time
 import yaml
-
 
 DATA_PATHS = list(Path("data").glob("*/*.yaml"))
 VALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("valid_*.yaml"))
 INVALID_EXAMPLE_PATHS = list(Path("tests/examples").glob("invalid_*.yaml"))
+
+# Every dataset's doi is resolved against the publisher, so one run makes as
+# many requests as there are datasets -- 93 and climbing. Publishers drop
+# connections under that, and a single dropped connection failed a whole
+# 9-minute job with "RemoteDisconnected('Remote end closed connection without
+# response')". Retried rather than re-run: a transient refusal says nothing
+# about whether the doi resolves.
+DOI_RETRIES = 3
+DOI_BACKOFF_SECONDS = 2
+REQUEST_TIMEOUT_SECONDS = 30
+
+
+def _get_with_retry(url: str, **kwargs) -> requests.Response:
+    """GET a URL, retrying only transport failures -- never a real HTTP status."""
+    for attempt in range(DOI_RETRIES):
+        try:
+            return requests.get(url, timeout=REQUEST_TIMEOUT_SECONDS, **kwargs)
+        except requests.exceptions.RequestException:
+            # The last attempt raises: a URL that never answers is a genuine
+            # failure of this check, not something to swallow.
+            if attempt == DOI_RETRIES - 1:
+                raise
+            time.sleep(DOI_BACKOFF_SECONDS * (attempt + 1))
 
 
 def load_and_validate(path: Path, skip_filename_check: bool = False):
@@ -34,17 +58,25 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
         data = yaml.safe_load(fp)
     jsonschema.validate(data, schema)
 
-    # If there is a doi, validate it.
+    # If there is a doi, validate it. Resolving it is a network round trip per
+    # dataset, and three CI jobs load this file, so a pull request used to make
+    # that trip three times over. Setting SHEDDING_HUB_SKIP_LINK_CHECKS drops
+    # only the request -- every offline check below still runs, including the
+    # requirement that a doi or url be present at all. The one job that leaves
+    # it unset (data-validation) keeps the guarantee for the whole pull request.
+    skip_link_checks = os.environ.get("SHEDDING_HUB_SKIP_LINK_CHECKS") == "1"
     doi_or_url = False
     doi = data.get("doi")
     if doi:
-        response = requests.get(f"https://doi.org/{doi}", allow_redirects=False)
-        assert response.status_code == 302, f"doi `{doi}` could not be resolved."
+        if not skip_link_checks:
+            response = _get_with_retry(f"https://doi.org/{doi}", allow_redirects=False)
+            assert response.status_code == 302, f"doi `{doi}` could not be resolved."
         doi_or_url = True
     url = data.get("url")
     if url:
-        response = requests.get(url)
-        response.raise_for_status()
+        if not skip_link_checks:
+            response = _get_with_retry(url)
+            response.raise_for_status()
         doi_or_url = True
     assert doi_or_url, "At least one of `doi` or `url` must be given."
 

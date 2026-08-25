@@ -1,0 +1,124 @@
+title: Influenza and respiratory syncytial virus screening for the detection of asymptomatically
+  infected patients in hematology and oncology
+doi: 10.3205/dgkh000314
+description: Retrospective analysis of a prophylactic seasonal RT-PCR screening program
+  (Dec 2016 to Apr 2017) for influenza A/B and RSV among hospitalized asymptomatic
+  patients on pediatric and adult hemato-oncological wards at Hannover Medical School
+  (Germany). Respiratory specimens (mostly nasopharyngeal swabs; some pharyngeal lavage/oral
+  wash) were tested by real-time RT-PCR and viral load changes were assessed semi-quantitatively
+  using PCR cycle threshold (Ct) values. The CSV-provided data include longitudinal
+  Ct values over days after the initial positive screening timepoint for 6 asymptomatic
+  patients (5 influenza A; 1 RSV).
+analytes:
+  respiratory_influenza_ct:
+    description: Semi-quantitative influenza viral load measured as real-time RT-PCR
+      cycle threshold (Ct). RNA extracted (QIAamp Viral RNA Mini Kit on QIAcube).
+      Detection via influenza A/B multiplex real-time RT-PCR (differentiates types
+      A and B). Ct values used for follow-up comparison; Ct decrease by ≥4 interpreted
+      as significant viral load increase.
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_lavage_fluid
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  respiratory_RSV_ct:
+    description: Semi-quantitative RSV viral load measured as real-time RT-PCR cycle
+      threshold (Ct). RNA extracted (QIAamp Viral RNA Mini Kit on QIAcube). Detection
+      via commercially available one-step real-time RT-PCR kit (RSV/hMPV r-gene PCR
+      Kit, bioMérieux). Ct values used for follow-up comparison; Ct decrease by ≥4
+      interpreted as significant viral load increase.
+    specimen:
+    - nasopharyngeal_swab
+    - oropharyngeal_lavage_fluid
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- attributes:
+    subtype: A
+    symptomatic: false
+  measurements:
+  - analyte: respiratory_influenza_ct
+    time: 0
+    value: 39
+  - analyte: respiratory_influenza_ct
+    time: 1
+    value: 33
+  - analyte: respiratory_influenza_ct
+    time: 4
+    value: 36
+- attributes:
+    subtype: A
+    symptomatic: false
+  measurements:
+  - analyte: respiratory_influenza_ct
+    time: 0
+    value: 35
+  - analyte: respiratory_influenza_ct
+    time: 1
+    value: 36
+  - analyte: respiratory_influenza_ct
+    time: 7
+    value: 30
+- attributes:
+    subtype: A
+    symptomatic: false
+  measurements:
+  - analyte: respiratory_influenza_ct
+    time: 0
+    value: 39
+  - analyte: respiratory_influenza_ct
+    time: 2
+    value: 35
+- attributes:
+    subtype: A
+    symptomatic: false
+  measurements:
+  - analyte: respiratory_influenza_ct
+    time: 0
+    value: 39
+  - analyte: respiratory_influenza_ct
+    time: 9
+    value: 30
+  - analyte: respiratory_influenza_ct
+    time: 16
+    value: 39
+- attributes:
+    subtype: A
+    symptomatic: false
+  measurements:
+  - analyte: respiratory_influenza_ct
+    time: 0
+    value: 28
+  - analyte: respiratory_influenza_ct
+    time: 1
+    value: 24
+  - analyte: respiratory_influenza_ct
+    time: 7
+    value: 35
+- attributes:
+    symptomatic: false
+  measurements:
+  - analyte: respiratory_RSV_ct
+    time: 0
+    value: 31
+  - analyte: respiratory_RSV_ct
+    time: 1
+    value: 30
+  - analyte: respiratory_RSV_ct
+    time: 2
+    value: 24
+  - analyte: respiratory_RSV_ct
+    time: 4
+    value: 24
+  - analyte: respiratory_RSV_ct
+    time: 7
+    value: 25
+  - analyte: respiratory_RSV_ct
+    time: 15
+    value: 32
