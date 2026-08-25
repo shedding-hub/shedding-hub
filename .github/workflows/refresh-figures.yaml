@@ -11,11 +11,11 @@ name: Refresh Dataset Figures
 # checks, with enforce_admins on, so GITHUB_TOKEN cannot push to it -- the first
 # version tried and was rejected with GH006.
 #
-# It triggers on data/** alone. Fits are not bit-reproducible across platforms
-# (tests/test_parameter_export.py carries DRIFT_RTOL for the same reason), so a
-# Linux runner re-rendering figures generated elsewhere always finds
-# differences: the first run rewrote 286 files and found four analytes whose
-# optimisation converged here but had not locally. Every code change would
+# It triggers on the dataset files alone. Fits are not bit-reproducible across
+# platforms (tests/test_parameter_export.py carries DRIFT_RTOL for the same
+# reason), so a Linux runner re-rendering figures generated elsewhere always
+# finds differences: the first run rewrote 286 files and found four analytes
+# whose optimisation converged here but had not locally. Every code change would
 # otherwise raise a pull request full of visually identical binaries. Refresh
 # after a code change by hand with workflow_dispatch, once, rather than on each
 # commit.
@@ -24,8 +24,26 @@ on:
   push:
     branches:
       - main
+    # `data/*/*.yaml`, not `data/**`. Everything a figure is drawn from reaches
+    # it through these files: the gate-2 catalogs are built from `data/*/*.yaml`
+    # and the renderer reads the catalogs, nothing else. The rest of data/ --
+    # the digitized CSVs, the extraction notebooks, the source spreadsheets and
+    # PDFs -- cannot move a curve. Neither can `data/.schema.yaml`, which sits
+    # at the top of data/ and so falls outside a pattern that requires a study
+    # directory: adding a biomarker or a treatment to the vocabulary changes no
+    # measurement.
+    #
+    # Under `data/**` each of those merges cost a 45-minute run whose only
+    # output was a pull request full of visually identical binaries. Two of the
+    # five runs between 2026-08-21 and 2026-08-25 were exactly that, both
+    # schema-only.
+    #
+    # Deliberately not narrowed to *added* datasets. Correcting a value in a
+    # study already here changes its curve, and a stale figure is the failure
+    # this workflow exists to prevent -- #192 rewrote eleven viral loads and
+    # genuinely needed the re-render.
     paths:
-      - "data/**"
+      - "data/*/*.yaml"
   workflow_dispatch:
 
 permissions:
