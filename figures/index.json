@@ -133,6 +133,32 @@
    }
   ]
  },
+ "berciaud2012adenovirus": {
+  "analytes": [
+   {
+    "analyte": "stool_gc_wet_gram",
+    "figures": [
+     {
+      "file": "stool_gc_wet_gram__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "biel2000rapid": {
+  "analytes": [
+   {
+    "analyte": "urine_polyomavirus_dna",
+    "figures": [
+     {
+      "file": "urine_polyomavirus_dna__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "brint2017prolonged": {
   "analytes": [
    {
@@ -530,10 +556,6 @@
     "analyte": "nasal_respiratory_syncytial_virus_quant_rt_pcr",
     "figures": [
      {
-      "file": "nasal_respiratory_syncytial_virus_quant_rt_pcr__gamma.png",
-      "model": "gamma"
-     },
-     {
       "file": "nasal_respiratory_syncytial_virus_quant_rt_pcr__exponential.png",
       "model": "exponential"
      }
@@ -575,6 +597,19 @@
      {
       "file": "particles_ml__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "funk2007viral": {
+  "analytes": [
+   {
+    "analyte": "plasma_polyomavirus_viral_load",
+    "figures": [
+     {
+      "file": "plasma_polyomavirus_viral_load__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -947,6 +982,19 @@
    }
   ]
  },
+ "hanaoka2019infectious": {
+  "analytes": [
+   {
+    "analyte": "urine_adenovirus_viral_load",
+    "figures": [
+     {
+      "file": "urine_adenovirus_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "hiramatsu2018rotavirus": {
   "analytes": [
    {
@@ -1037,6 +1085,19 @@
      },
      {
       "file": "stool__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "huh2019prolonged": {
+  "analytes": [
+   {
+    "analyte": "sputum_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "sputum_nasopharyngeal_swab__exponential.png",
       "model": "exponential"
      }
     ]
@@ -1529,12 +1590,75 @@
     "analyte": "stool_lanzhou_lamb_rotavirus_vaccine_pcr",
     "figures": [
      {
-      "file": "stool_lanzhou_lamb_rotavirus_vaccine_pcr__gamma.png",
-      "model": "gamma"
-     },
-     {
       "file": "stool_lanzhou_lamb_rotavirus_vaccine_pcr__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "lion2014adenovirus": {
+  "analytes": [
+   {
+    "analyte": "adv_e_plasma",
+    "figures": [
+     {
+      "file": "adv_e_plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "adv_f_plasma",
+    "figures": [
+     {
+      "file": "adv_f_plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "adv_b_plasma",
+    "figures": [
+     {
+      "file": "adv_b_plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "adv_a_plasma",
+    "figures": [
+     {
+      "file": "adv_a_plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "adv_c_plasma",
+    "figures": [
+     {
+      "file": "adv_c_plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "adv_a_stool",
+    "figures": [
+     {
+      "file": "adv_a_stool__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "adv_c_stool",
+    "figures": [
+     {
+      "file": "adv_c_stool__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -1621,6 +1745,19 @@
     "figures": [
      {
       "file": "saliva_HAV_RNA__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "mattner2008adenovirus": {
+  "analytes": [
+   {
+    "analyte": "stool_adenovirus_detection",
+    "figures": [
+     {
+      "file": "stool_adenovirus_detection__observations.png",
       "model": "observations"
      }
     ]
@@ -1926,6 +2063,10 @@
     "analyte": "NPS_SARS",
     "figures": [
      {
+      "file": "NPS_SARS__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "NPS_SARS__exponential.png",
       "model": "exponential"
      }
@@ -2061,10 +2202,6 @@
    {
     "analyte": "oropharyngeal_gc_ml",
     "figures": [
-     {
-      "file": "oropharyngeal_gc_ml__gamma.png",
-      "model": "gamma"
-     },
      {
       "file": "oropharyngeal_gc_ml__exponential.png",
       "model": "exponential"
@@ -2419,10 +2556,6 @@
     "analyte": "OPS_SARSCoV2",
     "figures": [
      {
-      "file": "OPS_SARSCoV2__gamma.png",
-      "model": "gamma"
-     },
-     {
       "file": "OPS_SARSCoV2__exponential.png",
       "model": "exponential"
      }
@@ -2588,10 +2721,6 @@
     "analyte": "stool_rotavirus_vaccine",
     "figures": [
      {
-      "file": "stool_rotavirus_vaccine__gamma.png",
-      "model": "gamma"
-     },
-     {
       "file": "stool_rotavirus_vaccine__exponential.png",
       "model": "exponential"
      }
@@ -2689,6 +2818,10 @@
     "analyte": "stool_SARSCoV2_N_symptomatic",
     "figures": [
      {
+      "file": "stool_SARSCoV2_N_symptomatic__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "stool_SARSCoV2_N_symptomatic__exponential.png",
       "model": "exponential"
      }
@@ -2772,6 +2905,19 @@
      {
       "file": "urine_SARSCoV2_N_asymptomatic__observations.png",
       "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "zhang2021adenovirus": {
+  "analytes": [
+   {
+    "analyte": "serum_adenovirus_viral_load",
+    "figures": [
+     {
+      "file": "serum_adenovirus_viral_load__exponential.png",
+      "model": "exponential"
      }
     ]
    }
