@@ -1,0 +1,109 @@
+title: Adenovirus viremia may predict adenovirus pneumonia severity in immunocompetent
+  children
+doi: 10.1186/s12879-021-05903-4
+description: Retrospective observational study of immunocompetent children hospitalized
+  with adenovirus pneumonia at Shenzhen Children’s Hospital (Shenzhen, China) between
+  May and August 2019. Serum adenovirus DNA was quantified by commercial fluorescence
+  quantitative PCR (Daan Gene) to assess associations between adenovirus viremia/blood
+  viral load and pneumonia severity; a subset of 7 children had serial blood viral
+  load monitoring during recovery (figure-derived CSV).
+analytes:
+  serum_adenovirus_viral_load:
+    description: Adenovirus DNA quantified in serum using a commercial fluorescence
+      quantitative PCR kit (Daan Gene, Guangzhou, China). Samples transported to laboratory
+      within 4 h and serum stored at −80°C until PCR. LOD reported as 500 copies/mL;
+      values below LOD treated as negative in shedding time series (figure), while
+      the paper notes for some analyses below-LOD values were assigned 0 log10 copies/mL.
+    specimen: serum
+    biomarker: adenovirus
+    limit_of_detection: 500
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- attributes:
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 1221.4531931705856
+  - analyte: serum_adenovirus_viral_load
+    time: 1
+    value: negative
+- attributes:
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 9815.803015612748
+  - analyte: serum_adenovirus_viral_load
+    time: 5
+    value: 379.8827059506291
+- attributes:
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 19906.551533623853
+  - analyte: serum_adenovirus_viral_load
+    time: 3
+    value: 7226.160462481983
+- attributes:
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 40370.695431695625
+  - analyte: serum_adenovirus_viral_load
+    time: 2
+    value: 1326711.1308188417
+  - analyte: serum_adenovirus_viral_load
+    time: 4
+    value: 141440.97277508816
+  - analyte: serum_adenovirus_viral_load
+    time: 11
+    value: negative
+- attributes:
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 52383.84302821094
+  - analyte: serum_adenovirus_viral_load
+    time: 5
+    value: negative
+- attributes:
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 990747.3449680669
+  - analyte: serum_adenovirus_viral_load
+    time: 7
+    value: 77317.4539714654
+- attributes:
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompetent
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 6610038.293046648
+  - analyte: serum_adenovirus_viral_load
+    time: 3
+    value: 2584791.190089823
+  - analyte: serum_adenovirus_viral_load
+    time: 13
+    value: negative
