@@ -1,0 +1,130 @@
+title: Prolonged shedding of type 55 human adenovirus in immunocompetent adults with
+  adenoviral respiratory infections
+doi: 10.1007/s10096-019-03471-9
+description: Prospective study of immunocompetent adults with respiratory infection
+  confirmed as human adenovirus type 55 (HAdV-55) during an outbreak. Consecutive
+  respiratory specimens (sputum or nasopharyngeal swab) were collected every 2 days
+  and adenovirus viral load was measured by real-time quantitative PCR (qPCR), reported
+  as copies per mL relative to symptom onset.
+analytes:
+  sputum_nasopharyngeal_swab:
+    description: Human adenovirus (HAdV-55) viral load in respiratory specimens (sputum
+      or nasopharyngeal swab) measured by real-time quantitative PCR (qPCR), reported
+      as copies/mL and aligned to time (days) relative to symptom onset.
+    specimen:
+    - sputum
+    - nasopharyngeal_swab
+    biomarker: adenovirus
+    limit_of_detection: 2820
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+participants:
+- attributes:
+    genotype: HAdV-55
+    immune_status: immunocompetent
+    treatment: cidofovir
+    age_group: adult
+  measurements:
+  - analyte: sputum_nasopharyngeal_swab
+    time: 0
+    value: 530114.5786516746
+  - analyte: sputum_nasopharyngeal_swab
+    time: 2
+    value: 382995.15258271905
+  - analyte: sputum_nasopharyngeal_swab
+    time: 4
+    value: 13213.212007837581
+  - analyte: sputum_nasopharyngeal_swab
+    time: 6
+    value: 4756.756544519152
+  - analyte: sputum_nasopharyngeal_swab
+    time: 8
+    value: 31197.345819126127
+- attributes:
+    genotype: HAdV-55
+    immune_status: immunocompetent
+    treatment: cidofovir
+    age_group: adult
+  measurements:
+  - analyte: sputum_nasopharyngeal_swab
+    time: -4
+    value: 536304899.6942855
+  - analyte: sputum_nasopharyngeal_swab
+    time: -1
+    value: 523995709.6406107
+  - analyte: sputum_nasopharyngeal_swab
+    time: 1
+    value: 936329208.8239379
+  - analyte: sputum_nasopharyngeal_swab
+    time: 3
+    value: 16474290.607213799
+  - analyte: sputum_nasopharyngeal_swab
+    time: 5
+    value: 4090389.8860932975
+  - analyte: sputum_nasopharyngeal_swab
+    time: 7
+    value: 904279.1574890857
+  - analyte: sputum_nasopharyngeal_swab
+    time: 10
+    value: 47383.8398841708
+- attributes:
+    genotype: HAdV-55
+    immune_status: immunocompetent
+    treatment: cidofovir
+    age_group: adult
+  measurements:
+  - analyte: sputum_nasopharyngeal_swab
+    time: 0
+    value: 202247123.24513516
+  - analyte: sputum_nasopharyngeal_swab
+    time: 5
+    value: 12468043.801493384
+  - analyte: sputum_nasopharyngeal_swab
+    time: 9
+    value: 104348.78459081062
+- attributes:
+    genotype: HAdV-55
+    immune_status: immunocompetent
+    treatment: cidofovir
+    age_group: adult
+  measurements:
+  - analyte: sputum_nasopharyngeal_swab
+    time: 0
+    value: 1357604001.0664062
+  - analyte: sputum_nasopharyngeal_swab
+    time: 2
+    value: 100776981.1360559
+  - analyte: sputum_nasopharyngeal_swab
+    time: 4
+    value: 13681523.280570406
+  - analyte: sputum_nasopharyngeal_swab
+    time: 6
+    value: 2693097.64939793
+  - analyte: sputum_nasopharyngeal_swab
+    time: 8
+    value: 2887381.7136843833
+  - analyte: sputum_nasopharyngeal_swab
+    time: 10
+    value: 166022.92737530946
+- attributes:
+    genotype: HAdV-55
+    immune_status: immunocompetent
+    treatment: cidofovir
+    age_group: adult
+  measurements:
+  - analyte: sputum_nasopharyngeal_swab
+    time: -1
+    value: 5219718220.435641
+  - analyte: sputum_nasopharyngeal_swab
+    time: 1
+    value: 1181051695.8945358
+  - analyte: sputum_nasopharyngeal_swab
+    time: 3
+    value: 18502349.945466127
+  - analyte: sputum_nasopharyngeal_swab
+    time: 5
+    value: 4090389.8860932975
+  - analyte: sputum_nasopharyngeal_swab
+    time: 9
+    value: 90778.5399193754

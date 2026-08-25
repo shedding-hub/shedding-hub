@@ -1,0 +1,433 @@
+title: Infectious human adenoviruses are shed in urine even after disappearance of
+  urethral symptoms
+doi: 10.1371/journal.pone.0212434
+description: Comparative study in Japan (urology STI clinic, June 2014–May 2016) of
+  male patients with acute urethritis and asymptomatic male volunteers. First-void
+  urine (FVU) samples were screened for urethritis-related pathogens including human
+  adenovirus (HAdV). HAdV DNA was detected by real-time and nested PCR and quantified
+  by real-time PCR as copies/mL urine; infectious virus was assessed by culture isolation
+  in A549 cells with confirmation by cytopathic effect and PCR. This extraction captures
+  individual longitudinal urine HAdV DNA measurements (copies/mL) from a CSV derived
+  from figures/tables, timed by days from symptom onset.
+analytes:
+  urine_adenovirus_viral_load:
+    description: Quantification of human adenovirus (HAdV) DNA in first-void urine
+      using real-time PCR (with HAdV detection also performed by real-time and nested
+      PCR in the study). Values reported as copy number per mL urine (copies/mL).
+      Virus isolation in A549 cells was also performed in the study but is not part
+      of this numeric analyte.
+    specimen: urine
+    biomarker: adenovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- patient_id: '92'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 1
+    value: 200000000
+  - analyte: urine_adenovirus_viral_load
+    time: 9
+    value: 7000
+- patient_id: '144'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 4
+    value: 20000000
+  - analyte: urine_adenovirus_viral_load
+    time: 20
+    value: 20000
+- patient_id: '371'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 2
+    value: 300000000
+  - analyte: urine_adenovirus_viral_load
+    time: 12
+    value: 600000
+- patient_id: '544'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 5
+    value: 1000000
+  - analyte: urine_adenovirus_viral_load
+    time: 10
+    value: 900000
+- patient_id: '114'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 1
+    value: 6000000000
+  - analyte: urine_adenovirus_viral_load
+    time: 8
+    value: 7000000
+  - analyte: urine_adenovirus_viral_load
+    time: 29
+    value: 60000
+- patient_id: '131'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 4
+    value: 50000000
+  - analyte: urine_adenovirus_viral_load
+    time: 13
+    value: 80000
+  - analyte: urine_adenovirus_viral_load
+    time: 25
+    value: 6000
+- patient_id: '141'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 3
+    value: 2000000
+  - analyte: urine_adenovirus_viral_load
+    time: 24
+    value: negative
+- patient_id: '313'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 12
+    value: 7000000
+  - analyte: urine_adenovirus_viral_load
+    time: 26
+    value: negative
+  - analyte: urine_adenovirus_viral_load
+    time: 41
+    value: negative
+- patient_id: '394'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 7
+    value: 200000
+  - analyte: urine_adenovirus_viral_load
+    time: 16
+    value: negative
+  - analyte: urine_adenovirus_viral_load
+    time: 31
+    value: negative
+- patient_id: '302'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 3
+    value: 2000000
+  - analyte: urine_adenovirus_viral_load
+    time: 13
+    value: negative
+- patient_id: '439'
+  attributes:
+    sex: male
+    genotype: HAdV-B11
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 5
+    value: 100000
+  - analyte: urine_adenovirus_viral_load
+    time: 12
+    value: 20000
+  - analyte: urine_adenovirus_viral_load
+    time: 21
+    value: 8000
+- patient_id: '467'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 7
+    value: 3000000
+  - analyte: urine_adenovirus_viral_load
+    time: 22
+    value: 50000
+  - analyte: urine_adenovirus_viral_load
+    time: 43
+    value: negative
+- patient_id: '477'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 5
+    value: 40000000
+  - analyte: urine_adenovirus_viral_load
+    time: 12
+    value: 5000000
+  - analyte: urine_adenovirus_viral_load
+    time: 22
+    value: 50000
+- patient_id: '479'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 2
+    value: 100000000
+  - analyte: urine_adenovirus_viral_load
+    time: 16
+    value: 200000
+  - analyte: urine_adenovirus_viral_load
+    time: 30
+    value: negative
+- patient_id: '569'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 2
+    value: 40000000
+  - analyte: urine_adenovirus_viral_load
+    time: 7
+    value: 10000
+  - analyte: urine_adenovirus_viral_load
+    time: 25
+    value: 9000
+- patient_id: '208'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 30
+    value: 5000000
+  - analyte: urine_adenovirus_viral_load
+    time: 42
+    value: 10000
+  - analyte: urine_adenovirus_viral_load
+    time: 56
+    value: negative
+  - analyte: urine_adenovirus_viral_load
+    time: 77
+    value: negative
+- patient_id: '307'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 5
+    value: 30000000
+  - analyte: urine_adenovirus_viral_load
+    time: 12
+    value: 300000
+  - analyte: urine_adenovirus_viral_load
+    time: 28
+    value: 20000
+  - analyte: urine_adenovirus_viral_load
+    time: 47
+    value: negative
+- patient_id: '387'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 6
+    value: 30000000000
+  - analyte: urine_adenovirus_viral_load
+    time: 27
+    value: 10000
+  - analyte: urine_adenovirus_viral_load
+    time: 48
+    value: negative
+  - analyte: urine_adenovirus_viral_load
+    time: 62
+    value: negative
+- patient_id: '137'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 3
+    value: 5000000
+  - analyte: urine_adenovirus_viral_load
+    time: 14
+    value: 200000
+- patient_id: '375'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 3
+    value: 5000000
+  - analyte: urine_adenovirus_viral_load
+    time: 10
+    value: 200000
+  - analyte: urine_adenovirus_viral_load
+    time: 31
+    value: 200
+  - analyte: urine_adenovirus_viral_load
+    time: 45
+    value: negative
+- patient_id: '119'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 4
+    value: 200000000
+  - analyte: urine_adenovirus_viral_load
+    time: 13
+    value: 200000
+  - analyte: urine_adenovirus_viral_load
+    time: 24
+    value: 20000
+  - analyte: urine_adenovirus_viral_load
+    time: 38
+    value: negative
+- patient_id: '386'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 2
+    value: 50000000
+- patient_id: '345'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 4
+    value: 8000000
+- patient_id: '427'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 6
+    value: 300000
+- patient_id: '286'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 2
+    value: 30000000
+- patient_id: '433'
+  attributes:
+    sex: male
+    genotype: HAdV-D37
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 3
+    value: 1000000
+- patient_id: '5'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 6
+    value: 1000000000
+- patient_id: '328'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 1
+    value: 9000000
+- patient_id: '337'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 10
+    value: 100000
+- patient_id: '344'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 7
+    value: 2000000
+- patient_id: '354'
+  attributes:
+    sex: male
+    genotype: HAdV-D56
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 4
+    value: 70000000
+- patient_id: '415'
+  attributes:
+    sex: male
+    genotype: HAdV-D64
+    symptomatic: true
+  measurements:
+  - analyte: urine_adenovirus_viral_load
+    time: 3
+    value: 10000000
