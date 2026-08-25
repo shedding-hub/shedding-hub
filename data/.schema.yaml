@@ -358,10 +358,11 @@ properties:
               type: string
             treatment:
               description: >
-                Antiviral or other pathogen-directed treatment the participant received 
+                Antiviral or other pathogen-directed treatment the participant received
                 that could affect shedding (e.g., 'oseltamivir', 'zanamivir',
-                'remdesivir', 'BMT' for bone marrow transplantation), or 'untreated' when
-                explicitly untreated. Describes the subject, not a separate analyte.
+                'remdesivir', 'cidofovir', 'BMT' for bone marrow transplantation), or
+                'untreated' when explicitly untreated. Describes the subject, not a
+                separate analyte.
               type: string
         measurements:
           type: array
