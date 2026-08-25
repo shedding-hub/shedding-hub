@@ -394,6 +394,82 @@ fits:
   value_type: concentration
   ct_reference: null
   ct_cutoff: null
+- dataset_id: berciaud2012adenovirus
+  analyte: stool_gc_wet_gram
+  biomarker: adenovirus
+  specimen: stool
+  reference_event: treatment
+  unit: gc/wet gram
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.3568670657761954
+  - 10.052430309831662
+  population_cov:
+  - - 0.6620450661160898
+    - -0.2070075119526618
+  - - -0.2070075119526618
+    - 0.7516553920757892
+  sigma: 0.8391494932044538
+  censoring_limit: 3.9755072463768104
+  n_subjects: 4
+  n_measurements: 19
+  n_censored: 0
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 25.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 8
+  converged: true
+  log_likelihood: -23.62181345070015
+  aic: 65.24362690140029
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: biel2000rapid
+  analyte: urine_polyomavirus_dna
+  biomarker: BK polyomavirus
+  specimen: urine
+  reference_event: treatment
+  unit: gc/mL
+  gene_target: VP1
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -2.1508523147852148
+  - 9.366497851100105
+  population_cov:
+  - - 0.1742760577211444
+    - 0.9182018008699924
+  - - 0.9182018008699924
+    - 5.415299984058402
+  sigma: 1.5561309736271884
+  censoring_limit: 3.324494773554866
+  n_subjects: 4
+  n_measurements: 55
+  n_censored: 10
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 8.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -91.55883265259669
+  aic: 201.11766530519338
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: brint2017prolonged
   analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
   biomarker: RSV
@@ -2437,6 +2513,44 @@ fits:
   value_type: concentration
   ct_reference: null
   ct_cutoff: null
+- dataset_id: hanaoka2019infectious
+  analyte: urine_adenovirus_viral_load
+  biomarker: adenovirus
+  specimen: urine
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.8641757593401932
+  - 8.33540029500016
+  population_cov:
+  - - 0.8397405780048371
+    - 0.8255586899442181
+  - - 0.8255586899442181
+    - 3.521453748531293
+  sigma: 0.4447424018377609
+  censoring_limit: 2.2910299956639815
+  n_subjects: 21
+  n_measurements: 61
+  n_censored: 15
+  n_excluded_subjects: 11
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 0.0
+  median_first_observed_day: 4.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -28.706632835447767
+  aic: 143.41326567089553
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: hu2013association
   analyte: oropharyngeal_swab
   biomarker: influenza
@@ -2683,6 +2797,44 @@ fits:
   converged: true
   log_likelihood: -56.62274818859144
   aic: 181.24549637718286
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: huh2019prolonged
+  analyte: sputum_nasopharyngeal_swab
+  biomarker: adenovirus
+  specimen: sputum+nasopharyngeal_swab
+  reference_event: treatment
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.2513007129482344
+  - 8.069635412028124
+  population_cov:
+  - - 0.08521055965391945
+    - 0.3903779948004024
+  - - 0.3903779948004024
+    - 2.0497951138348283
+  sigma: 0.4095730642676788
+  censoring_limit: 3.450249108319361
+  n_subjects: 5
+  n_measurements: 26
+  n_censored: 0
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 0.0
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -13.683591520572165
+  aic: 49.36718304114433
   value_type: concentration
   ct_reference: null
   ct_cutoff: null
@@ -6580,6 +6732,44 @@ fits:
   value_type: concentration
   ct_reference: null
   ct_cutoff: null
+- dataset_id: zhang2021adenovirus
+  analyte: serum_adenovirus_viral_load
+  biomarker: adenovirus
+  specimen: serum
+  reference_event: confirmation date
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.24830841260149714
+  - 5.0397212788293375
+  population_cov:
+  - - 0.9721763914783624
+    - -0.688545637655757
+  - - -0.688545637655757
+    - 2.25229387746374
+  sigma: 0.4514425215962608
+  censoring_limit: 2.6989700043360187
+  n_subjects: 7
+  n_measurements: 17
+  n_censored: 4
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: .nan
+  median_first_observed_day: 0.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -9.065835441207938
+  aic: 48.131670882415875
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: zuo2020alterations
   analyte: stool_SARSCoV2_SymptomOnset
   biomarker: SARS-CoV-2
@@ -6753,6 +6943,42 @@ skipped:
   reason: ct_units
   message: Analyte 'respiratory_RSV_ct' is reported in 'cycle threshold'. Cycle-threshold
     fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: berciaud2012adenovirus
+  analyte: stool_gc_wet_gram
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'stool_gc_wet_gram' does\
+    \ not show one: only 25% of subjects did, against a required 50%. Sampling here\
+    \ appears to begin at or after peak shedding, which leaves b0 unidentifiable \u2014\
+    \ the likelihood is monotone in it until the c0 > 0 constraint binds. Fit the\
+    \ exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: berciaud2012adenovirus
+  analyte: stool_gc_wet_gram
+  model: gamma_shifted
+  reason: too_few_subjects_for_population
+  message: Analyte 'stool_gc_wet_gram' has 2 subject(s) (4 fitted, 2 excluded as degenerate)
+    feeding the population summary of the 'gamma_shifted' model, which has 4 parameters.
+    At least 5 are needed for the between-subject covariance to be estimable rather
+    than rank-deficient; below that the 'population' is an artefact of averaging too
+    few individuals, and simulating from it produces near-identical or wildly extrapolated
+    individuals.
+- dataset_id: biel2000rapid
+  analyte: urine_polyomavirus_dna
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'urine_polyomavirus_dna' has 2 subject(s) (4 fitted, 2 excluded
+    as degenerate) feeding the population summary of the 'gamma' model, which has
+    3 parameters. At least 4 are needed for the between-subject covariance to be estimable
+    rather than rank-deficient; below that the 'population' is an artefact of averaging
+    too few individuals, and simulating from it produces near-identical or wildly
+    extrapolated individuals.
+- dataset_id: biel2000rapid
+  analyte: urine_polyomavirus_dna
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'urine_polyomavirus_dna' has no detected reading at or before its
+    reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: brint2017prolonged
   analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
   model: gamma
@@ -7442,6 +7668,33 @@ skipped:
   message: Analyte 'particles_ml' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: funk2007viral
+  analyte: plasma_polyomavirus_viral_load
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'plasma_polyomavirus_viral_load' produced\
+    \ degenerate fits under the 'exponential' model \u2014 collapsed onto the parameter\
+    \ bounds, or decaying faster than the sampling can resolve \u2014 leaving 0 usable\
+    \ subject(s), too few to estimate a population covariance. This usually means\
+    \ the model is not identifiable from this data: for the gamma model, typically\
+    \ because sampling began after peak shedding, so there is no rise phase from which\
+    \ to estimate b0."
+- dataset_id: funk2007viral
+  analyte: plasma_polyomavirus_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'plasma_polyomavirus_viral_load'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: funk2007viral
+  analyte: plasma_polyomavirus_viral_load
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'plasma_polyomavirus_viral_load' has no detected reading at or
+    before its reference event, so a shifted onset has nothing to locate and would
+    only absorb curve shape. Fit the 'gamma' model instead.
 - dataset_id: gautret2020hydroxychloroquine
   analyte: nasopharyngeal_swab_SARSCoV2_Ct
   model: exponential
@@ -7899,6 +8152,22 @@ skipped:
   message: Analyte 'stool_E' has no detected reading at or before its reference event,
     so a shifted onset has nothing to locate and would only absorb curve shape. Fit
     the 'gamma' model instead.
+- dataset_id: hanaoka2019infectious
+  analyte: urine_adenovirus_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'urine_adenovirus_viral_load'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: hanaoka2019infectious
+  analyte: urine_adenovirus_viral_load
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'urine_adenovirus_viral_load' has no detected reading at or before
+    its reference event, so a shifted onset has nothing to locate and would only absorb
+    curve shape. Fit the 'gamma' model instead.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv5_1
   model: exponential
@@ -8018,6 +8287,24 @@ skipped:
   message: Analyte 'stool' has no detected reading at or before its reference event,
     so a shifted onset has nothing to locate and would only absorb curve shape. Fit
     the 'gamma' model instead.
+- dataset_id: huh2019prolonged
+  analyte: sputum_nasopharyngeal_swab
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'sputum_nasopharyngeal_swab'\
+    \ does not show one: only 0% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: huh2019prolonged
+  analyte: sputum_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'sputum_nasopharyngeal_swab'\
+    \ does not show one: only 25% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
 - dataset_id: iwakiri2009quantitative
   analyte: stool_SaV
   model: gamma
@@ -8696,6 +8983,200 @@ skipped:
   message: Analyte 'stool_lanzhou_lamb_rotavirus_vaccine_pcr' has no detected reading
     at or before its reference event, so a shifted onset has nothing to locate and
     would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: lion2014adenovirus
+  analyte: adv_e_plasma
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_e_plasma' produced degenerate fits\
+    \ under the 'exponential' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_e_plasma
+  model: gamma
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_e_plasma' produced degenerate fits\
+    \ under the 'gamma' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 0 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_e_plasma
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'adv_e_plasma' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: lion2014adenovirus
+  analyte: adv_f_plasma
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'adv_f_plasma' has 1 subject(s) feeding the population summary
+    of the 'exponential' model, which has 2 parameters. At least 3 are needed for
+    the between-subject covariance to be estimable rather than rank-deficient; below
+    that the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: lion2014adenovirus
+  analyte: adv_f_plasma
+  model: gamma
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_f_plasma' produced degenerate fits\
+    \ under the 'gamma' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 0 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_f_plasma
+  model: gamma_shifted
+  reason: too_few_subjects_for_population
+  message: Analyte 'adv_f_plasma' has 1 subject(s) feeding the population summary
+    of the 'gamma_shifted' model, which has 4 parameters. At least 5 are needed for
+    the between-subject covariance to be estimable rather than rank-deficient; below
+    that the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: lion2014adenovirus
+  analyte: adv_b_plasma
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_b_plasma' produced degenerate fits\
+    \ under the 'exponential' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_b_plasma
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'adv_b_plasma' does not\
+    \ show one: no subject had enough readings to judge, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: lion2014adenovirus
+  analyte: adv_b_plasma
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'adv_b_plasma' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: lion2014adenovirus
+  analyte: adv_a_plasma
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'adv_a_plasma' has 1 subject(s) feeding the population summary
+    of the 'exponential' model, which has 2 parameters. At least 3 are needed for
+    the between-subject covariance to be estimable rather than rank-deficient; below
+    that the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: lion2014adenovirus
+  analyte: adv_a_plasma
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'adv_a_plasma' has 1 subject(s) feeding the population summary
+    of the 'gamma' model, which has 3 parameters. At least 4 are needed for the between-subject
+    covariance to be estimable rather than rank-deficient; below that the 'population'
+    is an artefact of averaging too few individuals, and simulating from it produces
+    near-identical or wildly extrapolated individuals.
+- dataset_id: lion2014adenovirus
+  analyte: adv_a_plasma
+  model: gamma_shifted
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_a_plasma' produced degenerate fits\
+    \ under the 'gamma_shifted' model \u2014 collapsed onto the parameter bounds,\
+    \ or decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_c_plasma
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_c_plasma' produced degenerate fits\
+    \ under the 'exponential' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_c_plasma
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'adv_c_plasma' does not\
+    \ show one: no subject had enough readings to judge, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: lion2014adenovirus
+  analyte: adv_c_plasma
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'adv_c_plasma' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: lion2014adenovirus
+  analyte: adv_a_stool
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'adv_a_stool' has 1 subject(s) feeding the population summary of
+    the 'exponential' model, which has 2 parameters. At least 3 are needed for the
+    between-subject covariance to be estimable rather than rank-deficient; below that
+    the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: lion2014adenovirus
+  analyte: adv_a_stool
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'adv_a_stool' does not\
+    \ show one: only 0% of subjects did, against a required 50%. Sampling here appears\
+    \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
+    \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
+    \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: lion2014adenovirus
+  analyte: adv_a_stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'adv_a_stool' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
+- dataset_id: lion2014adenovirus
+  analyte: adv_c_stool
+  model: exponential
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_c_stool' produced degenerate fits under\
+    \ the 'exponential' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 0 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_c_stool
+  model: gamma
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'adv_c_stool' produced degenerate fits under\
+    \ the 'gamma' model \u2014 collapsed onto the parameter bounds, or decaying faster\
+    \ than the sampling can resolve \u2014 leaving 0 usable subject(s), too few to\
+    \ estimate a population covariance. This usually means the model is not identifiable\
+    \ from this data: for the gamma model, typically because sampling began after\
+    \ peak shedding, so there is no rise phase from which to estimate b0."
+- dataset_id: lion2014adenovirus
+  analyte: adv_c_stool
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'adv_c_stool' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: liu2024longitudinal
   analyte: stool_SARSCoV2_N1
   model: gamma_shifted
@@ -8798,6 +9279,21 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'saliva_HAV_RNA'.
+- dataset_id: mattner2008adenovirus
+  analyte: stool_adenovirus_detection
+  model: exponential
+  reason: no_positive_measurements
+  message: Analyte 'stool_adenovirus_detection' has no positive measurements to fit.
+- dataset_id: mattner2008adenovirus
+  analyte: stool_adenovirus_detection
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'stool_adenovirus_detection' has no positive measurements to fit.
+- dataset_id: mattner2008adenovirus
+  analyte: stool_adenovirus_detection
+  model: gamma_shifted
+  reason: no_positive_measurements
+  message: Analyte 'stool_adenovirus_detection' has no positive measurements to fit.
 - dataset_id: mijatovicrustempasic2017shedding
   analyte: stool_rotavirus_vaccine
   model: gamma_shifted
@@ -10484,6 +10980,27 @@ skipped:
   message: Analyte 'urine_SARSCoV2_N_asymptomatic' is reported in 'cycle threshold'.
     Cycle-threshold fits are supported but excluded from the catalog, whose heights
     are log10 concentrations.
+- dataset_id: zhang2021adenovirus
+  analyte: serum_adenovirus_viral_load
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'serum_adenovirus_viral_load'\
+    \ does not show one: no subject had enough readings to judge, against a required\
+    \ 50%. Sampling here appears to begin at or after peak shedding, which leaves\
+    \ b0 unidentifiable \u2014 the likelihood is monotone in it until the c0 > 0 constraint\
+    \ binds. Fit the exponential model instead; it is the appropriate model for post-peak\
+    \ sampling."
+- dataset_id: zhang2021adenovirus
+  analyte: serum_adenovirus_viral_load
+  model: gamma_shifted
+  reason: degenerate_fit
+  message: "1 of 1 subject(s) for analyte 'serum_adenovirus_viral_load' produced degenerate\
+    \ fits under the 'gamma_shifted' model \u2014 collapsed onto the parameter bounds,\
+    \ or decaying faster than the sampling can resolve \u2014 leaving 0 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
 - dataset_id: zuo2020alterations
   analyte: stool_SARSCoV2_SymptomOnset
   model: gamma

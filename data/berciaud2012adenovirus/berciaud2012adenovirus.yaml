@@ -1,0 +1,121 @@
+title: 'Adenovirus infections in Bordeaux University Hospital 2008-2010: clinical
+  and virological features'
+doi: 10.1016/j.jcv.2012.04.009
+description: Retrospective hospital-based study at Bordeaux University Hospital (France)
+  covering 2008-2010 describing clinical characteristics and molecular epidemiology
+  of adenovirus infections. Adenovirus DNA was quantified by qPCR across multiple
+  specimen types and typed by sequencing (hexon and protein VI genes) and PCR product
+  analysis. The extracted figure-derived CSV provides longitudinal stool adenovirus
+  DNA loads (gc/wet gram) for immunocompromised patients treated with cidofovir, with
+  time values as reported in the CSV (days relative to an unspecified reference event
+  in the figure 3 data).
+analytes:
+  stool_gc_wet_gram:
+    description: 'Quantification of adenovirus DNA in stool by qPCR (as described
+      in the study: adenovirus DNA quantification by qPCR; typing performed by sequencing
+      of hexon and protein VI genes). Figure-derived data provide stool viral load
+      values reported as gene copies per wet gram.'
+    specimen: stool
+    biomarker: adenovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+participants:
+- attributes:
+    immune_status: immunocompromised
+    treatment: cidofovir
+  measurements:
+  - analyte: stool_gc_wet_gram
+    time: -17
+    value: negative
+  - analyte: stool_gc_wet_gram
+    time: -11
+    value: 5204106.238764397
+  - analyte: stool_gc_wet_gram
+    time: 3
+    value: 6076504811.937185
+  - analyte: stool_gc_wet_gram
+    time: 20
+    value: 26198065931.172565
+  - analyte: stool_gc_wet_gram
+    time: 31
+    value: 42639066914.70332
+  - analyte: stool_gc_wet_gram
+    time: 45
+    value: 123408806.96075666
+- attributes:
+    immune_status: immunocompromised
+    treatment: cidofovir
+  measurements:
+  - analyte: stool_gc_wet_gram
+    time: -3
+    value: 956480958.3497401
+  - analyte: stool_gc_wet_gram
+    time: 5
+    value: 15955064004.448257
+  - analyte: stool_gc_wet_gram
+    time: 16
+    value: 317991461.6386078
+  - analyte: stool_gc_wet_gram
+    time: 27
+    value: 6337710.061637247
+  - analyte: stool_gc_wet_gram
+    time: 33
+    value: 47460.08398601408
+  - analyte: stool_gc_wet_gram
+    time: 41
+    value: 9671.798642975413
+- attributes:
+    immune_status: immunocompromised
+    treatment: cidofovir
+  measurements:
+  - analyte: stool_gc_wet_gram
+    time: -41
+    value: negative
+  - analyte: stool_gc_wet_gram
+    time: -8
+    value: 1801953517.9245682
+  - analyte: stool_gc_wet_gram
+    time: 9
+    value: 2891050639.0877995
+  - analyte: stool_gc_wet_gram
+    time: 16
+    value: 131901895.5043304
+  - analyte: stool_gc_wet_gram
+    time: 20
+    value: 51268.53964547458
+  - analyte: stool_gc_wet_gram
+    time: 27
+    value: 2238114.6323479237
+- attributes:
+    immune_status: immunocompromised
+    treatment: cidofovir
+  measurements:
+  - analyte: stool_gc_wet_gram
+    time: -116
+    value: negative
+  - analyte: stool_gc_wet_gram
+    time: -98
+    value: 392997.2302785261
+  - analyte: stool_gc_wet_gram
+    time: -91
+    value: 778100.8766850078
+  - analyte: stool_gc_wet_gram
+    time: -20
+    value: 68747.31153048493
+  - analyte: stool_gc_wet_gram
+    time: -4
+    value: 3961456887.5554276
+  - analyte: stool_gc_wet_gram
+    time: 1
+    value: 264985959.53925407
+  - analyte: stool_gc_wet_gram
+    time: 8
+    value: 120948475.64877835
+  - analyte: stool_gc_wet_gram
+    time: 17
+    value: 677033.1939865416
+  - analyte: stool_gc_wet_gram
+    time: 29
+    value: 13157.186459317118

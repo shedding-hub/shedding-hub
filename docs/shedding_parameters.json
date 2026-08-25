@@ -1,6 +1,6 @@
 {
-  "n_fits": 159,
-  "n_datasets": 53,
+  "n_fits": 164,
+  "n_datasets": 58,
   "models": [
     "exponential",
     "gamma",
@@ -555,6 +555,112 @@
       },
       "fit": {
         "aic": 381.9020851872548,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "berciaud2012adenovirus",
+      "analyte": "stool_gc_wet_gram",
+      "model": "exponential",
+      "biomarker": "adenovirus",
+      "specimen": "stool",
+      "unit": "gc/wet gram",
+      "reference_event": "treatment",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.25746613920031697,
+        "c0": 23.146576179779903
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 10.054285255901451,
+        "half_life_days": 2.69218772889065
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.3568670657761954,
+          10.052430309831662
+        ],
+        "covariance": [
+          [
+            0.6620450661160898,
+            -0.2070075119526618
+          ],
+          [
+            -0.2070075119526618,
+            0.7516553920757892
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8391494932044538,
+      "censoring_limit_log10": 3.9755072463768104,
+      "data": {
+        "n_subjects": 4,
+        "n_measurements": 19,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": 25.0
+      },
+      "fit": {
+        "aic": 65.24362690140029,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "biel2000rapid",
+      "analyte": "urine_polyomavirus_dna",
+      "model": "exponential",
+      "biomarker": "BK polyomavirus",
+      "specimen": "urine",
+      "unit": "gc/mL",
+      "reference_event": "treatment",
+      "gene_target": "VP1",
+      "parameters": {
+        "a0": 0.11638491890097007,
+        "c0": 21.567158325503865
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 9.401308533794662,
+        "half_life_days": 5.95564431461891
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -2.1508523147852148,
+          9.366497851100105
+        ],
+        "covariance": [
+          [
+            0.1742760577211444,
+            0.9182018008699924
+          ],
+          [
+            0.9182018008699924,
+            5.415299984058402
+          ]
+        ]
+      },
+      "measurement_error_sd": 1.5561309736271884,
+      "censoring_limit_log10": 3.324494773554866,
+      "data": {
+        "n_subjects": 4,
+        "n_measurements": 55,
+        "pct_censored": 18.181818181818183,
+        "n_degenerate_subjects": 1,
+        "median_first_observed_day": 8.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 201.11766530519338,
         "converged": true
       }
     },
@@ -3409,6 +3515,59 @@
       }
     },
     {
+      "dataset_id": "hanaoka2019infectious",
+      "analyte": "urine_adenovirus_viral_load",
+      "model": "exponential",
+      "biomarker": "adenovirus",
+      "specimen": "urine",
+      "unit": "gc/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.42139874350163303,
+        "c0": 19.19296846340554
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 8.302405080012372,
+        "half_life_days": 1.6448724426660735
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.8641757593401932,
+          8.33540029500016
+        ],
+        "covariance": [
+          [
+            0.8397405780048371,
+            0.8255586899442181
+          ],
+          [
+            0.8255586899442181,
+            3.521453748531293
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.4447424018377609,
+      "censoring_limit_log10": 2.2910299956639815,
+      "data": {
+        "n_subjects": 21,
+        "n_measurements": 61,
+        "pct_censored": 24.59016393442623,
+        "n_degenerate_subjects": 1,
+        "median_first_observed_day": 4.0,
+        "pct_subjects_with_rise": 0.0
+      },
+      "fit": {
+        "aic": 143.41326567089553,
+        "converged": true
+      }
+    },
+    {
       "dataset_id": "hu2013association",
       "analyte": "oropharyngeal_swab",
       "model": "exponential",
@@ -3753,6 +3912,59 @@
       },
       "fit": {
         "aic": 143.10893547527695,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "huh2019prolonged",
+      "analyte": "sputum_nasopharyngeal_swab",
+      "model": "exponential",
+      "biomarker": "adenovirus",
+      "specimen": "sputum+nasopharyngeal_swab",
+      "unit": "gc/mL",
+      "reference_event": "treatment",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.777788445331899,
+        "c0": 18.581022205632824
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 8.091945766260752,
+        "half_life_days": 0.8911770092755293
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.2513007129482344,
+          8.069635412028124
+        ],
+        "covariance": [
+          [
+            0.08521055965391945,
+            0.3903779948004024
+          ],
+          [
+            0.3903779948004024,
+            2.0497951138348283
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.4095730642676788,
+      "censoring_limit_log10": 3.450249108319361,
+      "data": {
+        "n_subjects": 5,
+        "n_measurements": 26,
+        "pct_censored": 0.0,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": 0.0
+      },
+      "fit": {
+        "aic": 49.36718304114433,
         "converged": true
       }
     },
@@ -9186,6 +9398,59 @@
       },
       "fit": {
         "aic": 612.5889496947939,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "zhang2021adenovirus",
+      "analyte": "serum_adenovirus_viral_load",
+      "model": "exponential",
+      "biomarker": "adenovirus",
+      "specimen": "serum",
+      "unit": "gc/mL",
+      "reference_event": "confirmation date",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.780119307547277,
+        "c0": 11.604387089477322
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 5.015102640986852,
+        "half_life_days": 0.8885143257628436
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.24830841260149714,
+          5.0397212788293375
+        ],
+        "covariance": [
+          [
+            0.9721763914783624,
+            -0.688545637655757
+          ],
+          [
+            -0.688545637655757,
+            2.25229387746374
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.4514425215962608,
+      "censoring_limit_log10": 2.6989700043360187,
+      "data": {
+        "n_subjects": 7,
+        "n_measurements": 17,
+        "pct_censored": 23.529411764705884,
+        "n_degenerate_subjects": 1,
+        "median_first_observed_day": 0.0,
+        "pct_subjects_with_rise": null
+      },
+      "fit": {
+        "aic": 48.131670882415875,
         "converged": true
       }
     },
