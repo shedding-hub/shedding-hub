@@ -41,6 +41,12 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The growth curve is read out of the commit log, and the default
+          # fetch-depth of 1 would leave it a single point rather than an
+          # error. build_curation_growth.py refuses a shallow clone, so this
+          # failing is loud, but it should not fail at all.
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -54,6 +60,8 @@ jobs:
           make catalog_ct_gate2
       - name: Render the figures
         run: make figures
+      - name: Rebuild the curation growth curve
+        run: make curation_growth
       - name: Open a pull request if anything changed
         uses: peter-evans/create-pull-request@v7
         with:
@@ -75,6 +83,7 @@ jobs:
           add-paths: |
             figures
             shedding_catalog_ct_gate2.yaml
+            curation_growth.yaml
           branch: figures/refresh
           # Reused rather than accumulating one branch per run: successive
           # refreshes supersede each other, and only the latest is wanted.

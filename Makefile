@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range catalog_gate2 figures
+.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range catalog_gate2 figures curation_growth
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -58,6 +58,14 @@ catalog_gate2 :
 # the dataset YAML, and has no Python to regenerate them with.
 figures :
 	python scripts/build_dataset_figures.py
+
+# The catalogue's growth curve for the website's curation page. Built from
+# this repository's git history, which the website does not have -- it receives
+# data/ as a zip -- and committed beside the figures for the same reason. Needs
+# full history: under a shallow clone the script refuses rather than publishing
+# a one-point curve.
+curation_growth :
+	python scripts/build_curation_growth.py
 
 # Render every catalog fit against the data behind it, one page each, for
 # review. The PDF is regenerable and deliberately untracked.
