@@ -1,0 +1,183 @@
+title: Intrahost viral evolution during chronic sapovirus infections
+doi: 10.1016/j.jcv.2019.02.001
+description: Hospital-based study (January 2010 to September 2018) analyzing stool
+  samples from in-patients for sapovirus RNA by real-time RT-PCR, with sequencing/phylogenetic
+  genotyping in chronic diarrhea cases to investigate intrahost evolution during chronic
+  sapovirus infection in immunocompromised individuals. CSV-provided participant-level
+  longitudinal stool RT-PCR measurements are reported as cycle threshold values over
+  time (days) relative to symptom onset.
+analytes:
+  stool_sapovirus_ct:
+    description: Sapovirus RNA detection in stool by real-time RT-PCR; values are
+      reported as PCR cycle threshold (Ct). Genotyping (GI.2, GII.1, GII.3) was assessed
+      by phylogenetic analysis of the capsid gene (VP1) in chronic cases (used here
+      as participant genotype attribute, not assay target).
+    specimen: stool
+    biomarker: sapovirus
+    gene_target: ORF1/ORF2
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    genotype: GII.1
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_sapovirus_ct
+    time: 2
+    value: 27
+  - analyte: stool_sapovirus_ct
+    time: 10
+    value: 27
+  - analyte: stool_sapovirus_ct
+    time: 24
+    value: 28
+  - analyte: stool_sapovirus_ct
+    time: 41
+    value: 29
+  - analyte: stool_sapovirus_ct
+    time: 51
+    value: 32
+  - analyte: stool_sapovirus_ct
+    time: 60
+    value: 36
+  - analyte: stool_sapovirus_ct
+    time: 66
+    value: 36
+  - analyte: stool_sapovirus_ct
+    time: 72
+    value: negative
+  - analyte: stool_sapovirus_ct
+    time: 86
+    value: negative
+  - analyte: stool_sapovirus_ct
+    time: 94
+    value: negative
+- attributes:
+    sex: female
+    age: 1.0833
+    age_group: child
+    genotype: GII.1
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_sapovirus_ct
+    time: 1
+    value: 20
+  - analyte: stool_sapovirus_ct
+    time: 8
+    value: 23
+  - analyte: stool_sapovirus_ct
+    time: 33
+    value: 27
+  - analyte: stool_sapovirus_ct
+    time: 47
+    value: negative
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    genotype: GII.1
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_sapovirus_ct
+    time: 7
+    value: 21
+  - analyte: stool_sapovirus_ct
+    time: 21
+    value: 24
+  - analyte: stool_sapovirus_ct
+    time: 32
+    value: 25
+  - analyte: stool_sapovirus_ct
+    time: 37
+    value: 23
+  - analyte: stool_sapovirus_ct
+    time: 40
+    value: 21
+  - analyte: stool_sapovirus_ct
+    time: 45
+    value: 27
+  - analyte: stool_sapovirus_ct
+    time: 64
+    value: 25
+  - analyte: stool_sapovirus_ct
+    time: 68
+    value: 25
+  - analyte: stool_sapovirus_ct
+    time: 76
+    value: 21
+- attributes:
+    sex: male
+    age: 65
+    age_group: adult
+    genotype: GI.2
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_sapovirus_ct
+    time: 2
+    value: 23
+  - analyte: stool_sapovirus_ct
+    time: 12
+    value: 22
+  - analyte: stool_sapovirus_ct
+    time: 17
+    value: 28
+  - analyte: stool_sapovirus_ct
+    time: 38
+    value: 27
+  - analyte: stool_sapovirus_ct
+    time: 47
+    value: 37
+- attributes:
+    sex: male
+    age: 57
+    age_group: adult
+    genotype: GII.3
+    immune_status: immunocompromised
+  measurements:
+  - analyte: stool_sapovirus_ct
+    time: 9
+    value: 32
+  - analyte: stool_sapovirus_ct
+    time: 14
+    value: 30
+  - analyte: stool_sapovirus_ct
+    time: 17
+    value: 27
+  - analyte: stool_sapovirus_ct
+    time: 23
+    value: 28
+  - analyte: stool_sapovirus_ct
+    time: 27
+    value: 28
+  - analyte: stool_sapovirus_ct
+    time: 33
+    value: 30
+  - analyte: stool_sapovirus_ct
+    time: 42
+    value: 29
+  - analyte: stool_sapovirus_ct
+    time: 59
+    value: 26
+  - analyte: stool_sapovirus_ct
+    time: 69
+    value: 27
+  - analyte: stool_sapovirus_ct
+    time: 73
+    value: 29
+  - analyte: stool_sapovirus_ct
+    time: 94
+    value: 31
+  - analyte: stool_sapovirus_ct
+    time: 101
+    value: 31
+  - analyte: stool_sapovirus_ct
+    time: 108
+    value: 31
+  - analyte: stool_sapovirus_ct
+    time: 129
+    value: 25

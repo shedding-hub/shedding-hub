@@ -1,0 +1,1162 @@
+title: The role of human Metapneumovirus genetic diversity and nasopharyngeal viral
+  load on symptom severity in adults
+doi: 10.1186/s12985-018-1005-8
+description: Adult outpatient acute upper respiratory tract infection cohort recruited
+  at the University of Malaya Medical Centre (Kuala Lumpur, Malaysia) between February
+  2012 and May 2014. Nasopharyngeal swabs were collected in universal transport media
+  and tested for human metapneumovirus (HMPV). HMPV-positive samples were genotyped/sub-lineaged
+  by sequencing (F and G genes), and viral load was quantified using an improved one-step
+  RT-qPCR assay targeting the HMPV M2 gene. Measurements are reported as RNA copies
+  per microliter of sample, with sampling time in days since symptom onset. CSV-provided
+  data include 75 per-sample viral load measurements with participant-level attributes
+  (genotype/sub-lineage, sex, ethnicity, age).
+analytes:
+  nasopharyngeal_swab_metapneumovirus_viral_load:
+    description: Quantification of HMPV RNA from nasopharyngeal swabs using a quantitative
+      one-step RT-qPCR assay with newly designed primers/probe targeting the conserved
+      M2 gene region; run on ABI ViiA7. Standard curve generated from 10-fold dilution
+      series (2.0×10^1 to 2.0×10^6 RNA copies/μL). Specimens collected in universal
+      transport media (Copan). Lowest quantifiable concentration estimated at ~13
+      RNA copies/μL.
+    specimen: nasopharyngeal_swab
+    biomarker: metapneumovirus
+    gene_target: M2
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- patient_id: MY/U27/2012
+  attributes:
+    sex: female
+    age: 64
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 1
+    value: 127618.1
+- patient_id: MY/U78/2012
+  attributes:
+    sex: male
+    age: 26
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 1
+    value: 4688055.2
+- patient_id: MY/U80/2012
+  attributes:
+    sex: female
+    age: 33
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 1
+    value: 81314.3
+- patient_id: MY/U88/2012
+  attributes:
+    sex: female
+    age: 78
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 1
+    value: 3190317.6
+- patient_id: MY/U134/2012
+  attributes:
+    sex: female
+    age: 27
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 1
+    value: 19719.4
+- patient_id: MY/U167/2012
+  attributes:
+    sex: male
+    age: 54
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 2199396.7
+- patient_id: MY/U178/2012
+  attributes:
+    sex: female
+    age: 25
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 18903066
+- patient_id: MY/U203/2012
+  attributes:
+    sex: female
+    age: 54
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 14050900
+- patient_id: MY/U207/2012
+  attributes:
+    sex: male
+    age: 24
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 406517.9
+- patient_id: MY/U288/2012
+  attributes:
+    sex: female
+    age: 63
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 29285822
+- patient_id: MY/U306/2012
+  attributes:
+    sex: female
+    age: 30
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 276240.3
+- patient_id: MY/U319/2012
+  attributes:
+    sex: female
+    age: 32
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 14
+    value: 32269.9
+- patient_id: MY/U449/2012
+  attributes:
+    sex: female
+    age: 59
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 409013
+- patient_id: MY/U576/2012
+  attributes:
+    sex: female
+    age: 69
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 73714.6
+- patient_id: MY/U663/2012
+  attributes:
+    sex: male
+    age: 86
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 37245.9
+- patient_id: MY/U752/2012
+  attributes:
+    sex: female
+    age: 19
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 433384.8
+- patient_id: MY/U1021/2012
+  attributes:
+    sex: male
+    age: 80
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 8
+    value: 5052912.1
+- patient_id: MY/U1109/2012
+  attributes:
+    sex: male
+    age: 31
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 1539801
+- patient_id: MY/U1122/2012
+  attributes:
+    sex: female
+    age: 23
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 4702193
+- patient_id: MY/U1191/2012
+  attributes:
+    sex: female
+    age: 19
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 161590953
+- patient_id: MY/U1219/2012
+  attributes:
+    sex: female
+    age: 28
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 293412
+- patient_id: MY/U1239/2012
+  attributes:
+    sex: female
+    age: 33
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 6239857
+- patient_id: MY/U1315/2012
+  attributes:
+    sex: female
+    age: 36
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 225972859
+- patient_id: MY/U1455/2012
+  attributes:
+    sex: female
+    age: 46
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 123368672
+- patient_id: MY/U1468/2012
+  attributes:
+    sex: female
+    age: 69
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 148211422
+- patient_id: MY/U1470/2012
+  attributes:
+    sex: female
+    age: 34
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 427307594
+- patient_id: MY/U1560/2012
+  attributes:
+    sex: male
+    age: 22
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 433997
+- patient_id: MY/U1589/2012
+  attributes:
+    sex: female
+    age: 32
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 18232566
+- patient_id: MY/U1601/2012
+  attributes:
+    sex: female
+    age: 44
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 11146397
+- patient_id: MY/U1634/2012
+  attributes:
+    sex: female
+    age: 73
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 327035406
+- patient_id: MY/U1662/2012
+  attributes:
+    sex: female
+    age: 55
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 4615890
+- patient_id: MY/U1692/2012
+  attributes:
+    sex: female
+    age: 35
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 732626
+- patient_id: MY/U1698/2012
+  attributes:
+    sex: female
+    age: 62
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: negative
+- patient_id: MY/U1743/2012
+  attributes:
+    sex: male
+    age: 55
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 296544
+- patient_id: MY/U1784/2013
+  attributes:
+    sex: male
+    age: 23
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 1582926.3
+- patient_id: MY/U1928/2013
+  attributes:
+    sex: female
+    age: 32
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 67444.2
+- patient_id: MY/U2016/2013
+  attributes:
+    sex: male
+    age: 22
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 23689369
+- patient_id: MY/U2054/2013
+  attributes:
+    sex: female
+    age: 74
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 13154
+- patient_id: MY/U2081/2013
+  attributes:
+    sex: female
+    age: 53
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 4655516
+- patient_id: MY/U2125/2013
+  attributes:
+    sex: male
+    age: 59
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 100447
+- patient_id: MY/U2135/2013
+  attributes:
+    sex: female
+    age: 52
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 613325
+- patient_id: MY/U2139/2013
+  attributes:
+    sex: female
+    age: 29
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 51131
+- patient_id: MY/U2151/2013
+  attributes:
+    sex: female
+    age: 55
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 134615
+- patient_id: MY/U2177/2013
+  attributes:
+    sex: male
+    age: 70
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 24742322
+- patient_id: MY/U2281/2013
+  attributes:
+    sex: female
+    age: 42
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 3878815
+- patient_id: MY/U2288/2013
+  attributes:
+    sex: female
+    age: 28
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 65742992
+- patient_id: MY/U2311/2013
+  attributes:
+    sex: female
+    age: 70
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: negative
+- patient_id: MY/U2329/2013
+  attributes:
+    sex: male
+    age: 33
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 14
+    value: 34766
+- patient_id: MY/U2333/2013
+  attributes:
+    sex: female
+    age: 20
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 854278
+- patient_id: MY/U2372/2013
+  attributes:
+    sex: female
+    age: 26
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 32612559
+- patient_id: MY/U2472/2013
+  attributes:
+    sex: female
+    age: 68
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 1369047
+- patient_id: MY/U2514/2013
+  attributes:
+    sex: female
+    age: 62
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 1
+    value: 229908
+- patient_id: MY/U2658/2013
+  attributes:
+    sex: female
+    age: 74
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 681727.6
+- patient_id: MY/U2776/2013
+  attributes:
+    sex: male
+    age: 47
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 121305172
+- patient_id: MY/U2780/2013
+  attributes:
+    sex: female
+    age: 71
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 11052001
+- patient_id: MY/U2830/2013
+  attributes:
+    sex: male
+    age: 30
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 1866268
+- patient_id: MY/U2953/2013
+  attributes:
+    sex: male
+    age: 25
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 8847688.5
+- patient_id: MY/U2988/2013
+  attributes:
+    sex: male
+    age: 75
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 7222648
+- patient_id: MY/U3002/2013
+  attributes:
+    sex: female
+    age: 56
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 14986
+- patient_id: MY/U3021/2013
+  attributes:
+    sex: male
+    age: 34
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 46243234
+- patient_id: MY/U3051/2013
+  attributes:
+    sex: female
+    age: 63
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 683146
+- patient_id: MY/U3059/2013
+  attributes:
+    sex: male
+    age: 51
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 436264781
+- patient_id: MY/U3123/2013
+  attributes:
+    sex: male
+    age: 64
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 59303898
+- patient_id: MY/U3126/2013
+  attributes:
+    sex: female
+    age: 51
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 1771071
+- patient_id: MY/U3142/2013
+  attributes:
+    sex: female
+    age: 22
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 34675
+- patient_id: MY/U3206/2013
+  attributes:
+    sex: female
+    age: 75
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 50904121
+- patient_id: MY/U3280/2013
+  attributes:
+    sex: female
+    age: 22
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 6155402
+- patient_id: MY/U3350/2014
+  attributes:
+    sex: female
+    age: 26
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 1375908
+- patient_id: MY/U3373/2014
+  attributes:
+    sex: male
+    age: 25
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 23446
+- patient_id: MY/U3417/2014
+  attributes:
+    sex: male
+    age: 47
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 731916625
+- patient_id: MY/U3442/2014
+  attributes:
+    sex: male
+    age: 19
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 469040906
+- patient_id: MY/U3466/2014
+  attributes:
+    sex: female
+    age: 21
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 498311062
+- patient_id: MY/U3509/2014
+  attributes:
+    sex: female
+    age: 66
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: negative
+- patient_id: MY/U3645/2014
+  attributes:
+    sex: male
+    age: 56
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 775801.9
+- patient_id: MY/U3700/2014
+  attributes:
+    sex: female
+    age: 25
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 4
+    value: 1568691
+- patient_id: MY/U3711/2014
+  attributes:
+    sex: male
+    age: 37
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 3
+    value: 449996844
+- patient_id: MY/U3730/2014
+  attributes:
+    sex: male
+    age: 70
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 209055219
+- patient_id: MY/U3732/2014
+  attributes:
+    sex: female
+    age: 60
+    age_group: adult
+    lineage: A2b
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 7
+    value: 58324957
+- patient_id: MY/U3735/2014
+  attributes:
+    sex: male
+    age: 55
+    age_group: adult
+    lineage: Unique A2
+    genotype: A
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 14
+    value: 110123
+- patient_id: MY/U3893/2014
+  attributes:
+    sex: male
+    age: 54
+    age_group: adult
+    lineage: B2
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 2
+    value: 111723
+- patient_id: MY/U3925/2014
+  attributes:
+    sex: male
+    age: 44
+    age_group: adult
+    lineage: B1
+    genotype: B
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+  measurements:
+  - analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+    time: 5
+    value: 28361789

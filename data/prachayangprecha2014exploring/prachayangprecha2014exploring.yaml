@@ -1,0 +1,559 @@
+title: Exploring the Potential of Next-Generation Sequencing in Detection of Respiratory
+  Viruses
+doi: 10.1128/JCM.01641-14
+description: Evaluation study of a sequence-independent next-generation sequencing
+  approach versus routine diagnostic real-time RT-PCR for detecting respiratory viruses
+  in nasopharyngeal aspirates from 81 Thai children with respiratory disease. Figure-derived
+  CSV data provide per-patient real-time RT-PCR cycle threshold (Ct) values at a single
+  timepoint (time=0; reference event not specified in the provided excerpt) for rhinovirus,
+  enterovirus, human metapneumovirus, and bocavirus.
+analytes:
+  rhinovirus_ct:
+    description: Real-time RT-PCR cycle threshold (Ct) measurement for rhinovirus
+      from nasopharyngeal aspirate (figure-derived CSV). Assay gene target not specified
+      in provided data excerpt.
+    specimen: nasopharyngeal_aspirate
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  enterovirus_ct:
+    description: Real-time RT-PCR cycle threshold (Ct) measurement for enterovirus
+      from nasopharyngeal aspirate (figure-derived CSV). Assay gene target not specified
+      in provided data excerpt.
+    specimen: nasopharyngeal_aspirate
+    biomarker: enterovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  metapneumovirus_ct:
+    description: Real-time RT-PCR cycle threshold (Ct) measurement for human metapneumovirus
+      from nasopharyngeal aspirate (figure-derived CSV). Assay gene target not specified
+      in provided data excerpt.
+    specimen: nasopharyngeal_aspirate
+    biomarker: metapneumovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  bocavirus_ct:
+    description: Real-time RT-PCR cycle threshold (Ct) measurement for bocavirus from
+      nasopharyngeal aspirate (figure-derived CSV). Assay gene target not specified
+      in provided data excerpt.
+    specimen: nasopharyngeal_aspirate
+    biomarker: bocavirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- patient_id: CU36
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 30.646230697631836
+  - analyte: enterovirus_ct
+    time: 0
+    value: 34.70944595336914
+- patient_id: CU38
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 31.454999923706055
+  - analyte: enterovirus_ct
+    time: 0
+    value: 33.73155212402344
+- patient_id: CU40
+  attributes:
+    sex: male
+    age: 3
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 29.61591911315918
+- patient_id: CU41
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 25.037185668945312
+  - analyte: enterovirus_ct
+    time: 0
+    value: 27.697772979736328
+- patient_id: CU42
+  attributes:
+    sex: female
+    age: 2
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 31.20825958251953
+  - analyte: bocavirus_ct
+    time: 0
+    value: 27.39687728881836
+- patient_id: CU57
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 24.789670944213867
+  - analyte: bocavirus_ct
+    time: 0
+    value: 26.99267578125
+- patient_id: CU62
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 20.4967288970947
+- patient_id: CU71
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 31.469390869140625
+- patient_id: CU72
+  attributes:
+    sex: male
+    age: 2
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 28.49833106994629
+  - analyte: bocavirus_ct
+    time: 0
+    value: 35.51240921020508
+- patient_id: CU106
+  attributes:
+    sex: male
+    age: 2
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 21.307472229003906
+- patient_id: CU134
+  attributes:
+    sex: male
+    age: 2
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 24.58940315246582
+  - analyte: enterovirus_ct
+    time: 0
+    value: 24.326679229736328
+- patient_id: CU171
+  attributes:
+    sex: male
+    age: 0.5
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 22.74134635925293
+  - analyte: enterovirus_ct
+    time: 0
+    value: 20.625734329223633
+- patient_id: CU173
+  attributes:
+    sex: male
+    age: 8
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 32.474727630615234
+- patient_id: CU177
+  attributes:
+    sex: female
+    age: 2
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 20.253799438476562
+  - analyte: enterovirus_ct
+    time: 0
+    value: 32.29651641845703
+- patient_id: CU183
+  attributes:
+    sex: female
+    age: 0.3333
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 29.252962112426758
+- patient_id: CB1
+  attributes:
+    sex: male
+    age: 0.6436
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 19.09
+- patient_id: CB5
+  attributes:
+    sex: male
+    age: 0.5137
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 30.39
+  - analyte: metapneumovirus_ct
+    time: 0
+    value: 31.46745491027832
+- patient_id: CB6
+  attributes:
+    sex: male
+    age: 0.1463
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 37.4
+- patient_id: CB7
+  attributes:
+    sex: male
+    age: 0.1299
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 34.34
+- patient_id: CB14
+  attributes:
+    sex: male
+    age: 12.25
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 16.476316452026367
+- patient_id: CB19
+  attributes:
+    sex: male
+    age: 1.9167
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 12.939092636108398
+- patient_id: CB21
+  attributes:
+    sex: male
+    age: 1.4167
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 29.47
+- patient_id: CB23
+  attributes:
+    sex: female
+    age: 0.9167
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: rhinovirus_ct
+    time: 0
+    value: 20.240575790405273
+- patient_id: CU43
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 29.644973754882812
+  - analyte: bocavirus_ct
+    time: 0
+    value: 32.644203186035156
+- patient_id: CU70
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 22.659154891967773
+- patient_id: CU115
+  attributes:
+    sex: female
+    age: 4
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 27.351463317871094
+- patient_id: CU121
+  attributes:
+    sex: female
+    age: 3
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 30.379236221313477
+  - analyte: bocavirus_ct
+    time: 0
+    value: 32.650814056396484
+- patient_id: CU127
+  attributes:
+    sex: female
+    age: 2
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 29.43589210510254
+  - analyte: metapneumovirus_ct
+    time: 0
+    value: 26.439250946044922
+- patient_id: CU151
+  attributes:
+    sex: male
+    age: 4
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 25.18255615234375
+- patient_id: CB11
+  attributes:
+    sex: female
+    age: 0.1299
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 32.798587799072266
+  - analyte: bocavirus_ct
+    time: 0
+    value: 35.620933532714844
+- patient_id: CB17
+  attributes:
+    sex: female
+    age: 0.25
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 33.36577224731445
+- patient_id: CB22
+  attributes:
+    sex: female
+    age: 1.25
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: enterovirus_ct
+    time: 0
+    value: 31.02586555480957
+  - analyte: metapneumovirus_ct
+    time: 0
+    value: 19.8692722320556
+  - analyte: bocavirus_ct
+    time: 0
+    value: 31.617591857910156
+- patient_id: CU14
+  attributes:
+    sex: male
+    age: 0.8333
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 21.935461044311523
+- patient_id: CU20
+  attributes:
+    sex: male
+    age: 0.9167
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 30.667633056640625
+- patient_id: CU37
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 32.92589569091797
+- patient_id: CU44
+  attributes:
+    sex: male
+    age: 2
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 34.90499496459961
+- patient_id: CU46
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 24.6705322265625
+- patient_id: CU51
+  attributes:
+    sex: female
+    age: 0.1667
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 36.81
+- patient_id: CU52
+  attributes:
+    sex: female
+    age: 13
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 11.360406875610352
+- patient_id: CU56
+  attributes:
+    sex: male
+    age: 3
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 36.985572814941406
+- patient_id: CU58
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 31.12
+- patient_id: CU66
+  attributes:
+    sex: female
+    age: 0.75
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 21.74395751953125
+- patient_id: CU136
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 30.565950393676758
+- patient_id: CU157
+  attributes:
+    sex: male
+    age: 0.5833
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 18.704113006591797
+- patient_id: CU168
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 30.545944213867188
+- patient_id: CB9
+  attributes:
+    sex: male
+    age: 0.8689
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: bocavirus_ct
+    time: 0
+    value: 14.988308906555176

@@ -1,0 +1,206 @@
+title: 'Prospective study of human metapneumovirus infection: diagnosis, typing and
+  virus quantification in nasopharyngeal secretions from pediatric patients'
+doi: 10.1016/j.jcv.2007.08.001
+description: Prospective evaluation (winter-spring 2004-2005 and 2005-2006) of human
+  metapneumovirus (hMPV) detection/typing in pediatric patients using monoclonal antibodies
+  and RT-PCR, with viral load quantification in nasopharyngeal secretions. CSV-extracted
+  figure data provide per-patient day-0 and follow-up measurements (relative to symptom
+  onset) for metapneumovirus and some co-detected respiratory viruses (rhinovirus,
+  influenza, coronavirus).
+analytes:
+  metapneumovirus:
+    description: Quantification of human metapneumovirus (hMPV) RNA in nasopharyngeal
+      secretions by RT-PCR (exact assay details not available in provided text; values
+      provided as viral load).
+    specimen: nasopharyngeal_aspirate
+    biomarker: metapneumovirus
+    limit_of_detection: 1000
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: hospital admission
+  rhinovirus:
+    description: Detection/quantification of rhinovirus RNA in nasopharyngeal secretions
+      by RT-PCR (exact assay details not available in provided text; values provided
+      as viral load).
+    specimen: nasopharyngeal_aspirate
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: hospital admission
+  influenza:
+    description: Detection/quantification of influenza virus in nasopharyngeal secretions
+      by RT-PCR (exact assay details not available in provided text; value reported
+      as negative in CSV).
+    specimen: nasopharyngeal_aspirate
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: hospital admission
+  hCoV_63:
+    description: Detection/quantification of hCoV NL63 in nasopharyngeal secretions
+      by RT-PCR (exact assay details not available in provided text; value reported
+      as negative in CSV).
+    specimen: nasopharyngeal_aspirate
+    biomarker: hCoV NL63 
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: hospital admission
+participants:
+- patient_id: '5'
+  attributes:
+    age: 0.0833
+    age_group: infant
+    subtype: A2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 570000
+  - analyte: metapneumovirus
+    time: 16
+    value: negative
+- patient_id: '6'
+  attributes:
+    age: 3
+    age_group: child
+    subtype: A2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 470000
+  - analyte: metapneumovirus
+    time: 5
+    value: negative
+- patient_id: '7'
+  attributes:
+    age: 0.5833
+    age_group: infant
+    subtype: A2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 1200000
+  - analyte: metapneumovirus
+    time: 19
+    value: negative
+- patient_id: '9'
+  attributes:
+    age: 0.4167
+    age_group: infant
+    subtype: B1
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 2200000
+  - analyte: rhinovirus
+    time: 0
+    value: 1000
+  - analyte: metapneumovirus
+    time: 17
+    value: negative
+- patient_id: '10'
+  attributes:
+    age: 0.5833
+    age_group: infant
+    subtype: A2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 1200000
+  - analyte: rhinovirus
+    time: 0
+    value: 10000
+  - analyte: metapneumovirus
+    time: 12
+    value: negative
+- patient_id: '11'
+  attributes:
+    age: 0.5833
+    age_group: infant
+    subtype: A2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 130000
+  - analyte: metapneumovirus
+    time: 15
+    value: negative
+- patient_id: '13'
+  attributes:
+    age: 3
+    age_group: child
+    subtype: A2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 1700000
+  - analyte: metapneumovirus
+    time: 13
+    value: negative
+- patient_id: '16'
+  attributes:
+    age: 1
+    age_group: child
+    subtype: B2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 190000
+  - analyte: metapneumovirus
+    time: 20
+    value: negative
+- patient_id: '19'
+  attributes:
+    age: 0.5
+    age_group: infant
+    subtype: A2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 2500000
+  - analyte: metapneumovirus
+    time: 13
+    value: negative
+- patient_id: '20'
+  attributes:
+    age: 1
+    age_group: child
+    subtype: B2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 190000
+  - analyte: influenza
+    time: 0
+    value: positive
+  - analyte: metapneumovirus
+    time: 7
+    value: negative
+- patient_id: '21'
+  attributes:
+    age: 0.0833
+    age_group: infant
+    subtype: B2
+    symptomatic: true
+  measurements:
+  - analyte: metapneumovirus
+    time: 0
+    value: 200000
+  - analyte: hCoV_63
+    time: 0
+    value: positive
+  - analyte: metapneumovirus
+    time: 10
+    value: negative

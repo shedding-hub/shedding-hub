@@ -1,0 +1,80 @@
+title: Single detection of human bocavirus 1 with a high viral load in severe respiratory
+  tract infections in previously healthy children
+doi: 10.1186/1471-2334-14-424
+description: Hospital-based study in Chongqing, China (Dec 2009–Aug 2013) investigating
+  human bocavirus 1 (HBoV1) in 1229 children hospitalized with respiratory tract infections.
+  Nasopharyngeal aspirate specimens were collected at symptom onset and tested
+  for respiratory viruses; HBoV1 was quantified by TaqMan real-time qPCR targeting
+  NS1. This extraction captures individual-level HBoV1 viral loads for 7 severe cases
+  (from provided CSV), with time reported in days (as provided) and viral load in
+  copies/mL.
+analytes:
+  nasopharyngeal_aspirate_bocavirus_viral_load:
+    description: Human bocavirus 1 (HBoV1) DNA quantified in nasopharyngeal aspirate
+      specimens using TaqMan real-time fluorescence quantitative PCR with NS1 primers
+      and probe; quantification based on plasmid DNA standard controls run on a StepOne
+      Real-Time PCR instrument.
+    specimen: nasopharyngeal_aspirate
+    biomarker: bocavirus
+    gene_target: NS1
+    limit_of_detection: 500
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: female
+    age: 0.8333
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 7
+    value: 380000000000
+- attributes:
+    sex: male
+    age: 0.25
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 9
+    value: 790000000
+- attributes:
+    sex: female
+    age: 0.75
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 15
+    value: 740000000
+- attributes:
+    sex: male
+    age: 1.8333
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 1
+    value: 25000000
+- attributes:
+    sex: female
+    age: 0.75
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 3
+    value: 6500000000
+- attributes:
+    sex: female
+    age: 0.75
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 4
+    value: 5100000000
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 3
+    value: 840000000

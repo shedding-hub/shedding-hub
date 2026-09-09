@@ -1,0 +1,849 @@
+title: Clinical Impact of Co-pathogens in Children Infected With Influenza C Virus
+  Based on Viral Load in Clinical Specimens
+doi: 10.1097/INF.0000000000004897
+description: Retrospective analysis of pediatric respiratory infection cases in Japan
+  (11 cases in tables; additional figure/CSV patient IDs present) where influenza
+  C virus and co-pathogens were detected from respiratory specimens. Viruses were
+  isolated by cell culture, detected by multiplex real-time PCR and/or targeted PCR,
+  complemented by next-generation sequencing, and viral load quantified by quantitative
+  real-time PCR (Ct and genome copies). Clinical symptoms were reviewed to assess
+  etiologic role of co-pathogens relative to influenza C viral load.
+analytes:
+  ct_influenza_c_virus_nasopharyngeal_swab:
+    description: Quantitative real-time RT-PCR Ct value for influenza C virus from
+      nasopharyngeal (nasal) swab respiratory specimen; influenza C detected by previously
+      described assay (not in multiplex kit).
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_adenovirus_nasopharyngeal_swab:
+    description: Quantitative real-time PCR Ct value for adenovirus from nasopharyngeal
+      (nasal) swab respiratory specimen using previously described primers/probes
+      (hexon control RNA/DNA referenced).
+    specimen: nasopharyngeal_swab
+    biomarker: adenovirus
+    gene_target: hexon
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_rhinovirus_nasopharyngeal_swab:
+    description: Quantitative real-time RT-PCR Ct value for rhinovirus from nasopharyngeal
+      (nasal) swab respiratory specimen using previously described primers/probes.
+    specimen: nasopharyngeal_swab
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_bocavirus_nasopharyngeal_swab:
+    description: Quantitative real-time PCR Ct value for bocavirus from nasopharyngeal
+      (nasal) swab respiratory specimen using previously described primers/probes
+      (NP-1 control referenced).
+    specimen: nasopharyngeal_swab
+    biomarker: bocavirus
+    gene_target: NP-1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_influenza_c_virus_nasopharyngeal_swab:
+    description: Quantitative real-time RT-PCR genome copy concentration (standard
+      curve from serial dilutions; mean of triplicates) for influenza C virus from
+      nasopharyngeal (nasal) swab respiratory specimen.
+    specimen: nasopharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gc_ml_adenovirus_nasopharyngeal_swab:
+    description: Quantitative real-time PCR genome copy concentration (standard curve;
+      mean of triplicates) for adenovirus from nasopharyngeal (nasal) swab respiratory
+      specimen.
+    specimen: nasopharyngeal_swab
+    biomarker: adenovirus
+    gene_target: hexon
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gc_ml_rhinovirus_nasopharyngeal_swab:
+    description: Quantitative real-time RT-PCR genome copy concentration (standard
+      curve; mean of triplicates) for rhinovirus from nasopharyngeal (nasal) swab
+      respiratory specimen.
+    specimen: nasopharyngeal_swab
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gc_ml_bocavirus_nasopharyngeal_swab:
+    description: Quantitative real-time PCR genome copy concentration (standard curve;
+      mean of triplicates) for bocavirus from nasopharyngeal (nasal) swab respiratory
+      specimen.
+    specimen: nasopharyngeal_swab
+    biomarker: bocavirus
+    gene_target: NP-1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  ct_influenza_c_virus_nasal_secretion:
+    description: Quantitative real-time RT-PCR Ct value for influenza C virus from
+      nasal secretion specimen.
+    specimen: nasal_discharge
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_parainfluenza_virus_4_nasal_secretion:
+    description: Quantitative real-time RT-PCR Ct value for parainfluenza virus 4
+      from nasal secretion specimen using previously described primers/probes (NP
+      control referenced).
+    specimen: nasal_discharge
+    biomarker: parainfluenza virus
+    gene_target: NP
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_adenovirus_nasal_secretion:
+    description: Quantitative real-time PCR Ct value for adenovirus from nasal secretion
+      specimen.
+    specimen: nasal_discharge
+    biomarker: adenovirus
+    gene_target: hexon
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_influenza_c_virus_nasal_secretion:
+    description: Quantitative real-time RT-PCR genome copy concentration (standard
+      curve; mean of triplicates) for influenza C virus from nasal secretion specimen.
+    specimen: nasal_discharge
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gc_ml_parainfluenza_virus_4_nasal_secretion:
+    description: Quantitative real-time RT-PCR genome copy concentration (standard
+      curve; mean of triplicates) for parainfluenza virus 4 from nasal secretion specimen.
+    specimen: nasal_discharge
+    biomarker: parainfluenza virus
+    gene_target: NP
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gc_ml_adenovirus_nasal_secretion:
+    description: Quantitative real-time PCR genome copy concentration (standard curve;
+      mean of triplicates) for adenovirus from nasal secretion specimen.
+    specimen: nasal_discharge
+    biomarker: adenovirus
+    gene_target: hexon
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  ct_influenza_c_virus_oropharyngeal_swab:
+    description: Quantitative real-time RT-PCR Ct value for influenza C virus from
+      oropharyngeal (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  ct_adenovirus_oropharyngeal_swab:
+    description: Quantitative real-time PCR Ct value for adenovirus from oropharyngeal
+      (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: adenovirus
+    gene_target: hexon
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  gc_ml_influenza_c_virus_oropharyngeal_swab:
+    description: Quantitative real-time RT-PCR genome copy concentration for influenza
+      C virus from oropharyngeal (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: influenza
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  gc_ml_adenovirus_oropharyngeal_swab:
+    description: Quantitative real-time PCR genome copy concentration for adenovirus
+      from oropharyngeal (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: adenovirus
+    gene_target: hexon
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  ct_rhinovirus_oropharyngeal_swab:
+    description: Quantitative real-time RT-PCR Ct value for rhinovirus from oropharyngeal
+      (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  ct_bocavirus_oropharyngeal_swab:
+    description: Quantitative real-time PCR Ct value for bocavirus from oropharyngeal
+      (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: bocavirus
+    gene_target: NP-1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  gc_ml_rhinovirus_oropharyngeal_swab:
+    description: Quantitative real-time RT-PCR genome copy concentration for rhinovirus
+      from oropharyngeal (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  gc_ml_bocavirus_oropharyngeal_swab:
+    description: Quantitative real-time PCR genome copy concentration for bocavirus
+      from oropharyngeal (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: bocavirus
+    gene_target: NP-1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  ct_rsv_a_nasal_secretion:
+    description: Quantitative real-time RT-PCR Ct value for RSV A from nasal secretion
+      specimen using previously described primers/probes (N gene control referenced).
+    specimen: nasal_discharge
+    biomarker: RSV
+    gene_target: N
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_rsv_a_nasal_secretion:
+    description: Quantitative real-time RT-PCR genome copy concentration for RSV A
+      from nasal secretion specimen.
+    specimen: nasal_discharge
+    biomarker: RSV
+    gene_target: N
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  ct_metapneumovirus_nasopharyngeal_swab:
+    description: Quantitative real-time RT-PCR Ct value for human metapneumovirus
+      from nasopharyngeal (nasal) swab specimen using previously described primers/probes.
+    specimen: nasopharyngeal_swab
+    biomarker: metapneumovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_metapneumovirus_nasopharyngeal_swab:
+    description: Quantitative real-time RT-PCR genome copy concentration for human
+      metapneumovirus from nasopharyngeal (nasal) swab specimen.
+    specimen: nasopharyngeal_swab
+    biomarker: metapneumovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  ct_metapneumovirus_oropharyngeal_swab:
+    description: Quantitative real-time RT-PCR Ct value for human metapneumovirus
+      from oropharyngeal (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: metapneumovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_metapneumovirus_oropharyngeal_swab:
+    description: Quantitative real-time RT-PCR genome copy concentration for human
+      metapneumovirus from oropharyngeal (throat) swab specimen.
+    specimen: oropharyngeal_swab
+    biomarker: metapneumovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  ct_cytomegalovirus_nasopharyngeal_swab:
+    description: Quantitative real-time PCR Ct value for cytomegalovirus (CMV PPS
+      Set) from nasopharyngeal (nasal) swab specimen.
+    specimen: nasopharyngeal_swab
+    biomarker: cytomegalovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_cytomegalovirus_nasopharyngeal_swab:
+    description: Quantitative real-time PCR genome copy concentration for cytomegalovirus
+      (CMV PPS Set) from nasopharyngeal (nasal) swab specimen.
+    specimen: nasopharyngeal_swab
+    biomarker: cytomegalovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  ct_rsv_b_nasal_secretion:
+    description: Quantitative real-time RT-PCR Ct value for RSV B from nasal secretion
+      specimen.
+    specimen: nasal_discharge
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  ct_rhinovirus_nasal_secretion:
+    description: Quantitative real-time RT-PCR Ct value for rhinovirus from nasal
+      secretion specimen.
+    specimen: nasal_discharge
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  gc_ml_rsv_b_nasal_secretion:
+    description: Quantitative real-time RT-PCR genome copy concentration for RSV B
+      from nasal secretion specimen.
+    specimen: nasal_discharge
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  gc_ml_rhinovirus_nasal_secretion:
+    description: Quantitative real-time RT-PCR genome copy concentration for rhinovirus
+      from nasal secretion specimen.
+    specimen: nasal_discharge
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+  ct_enterovirus_oropharyngeal_swab:
+    description: Multiplex real-time PCR Ct value for enterovirus from oropharyngeal
+      (throat) swab specimen (FTD Respiratory Pathogens 21 kit).
+    specimen: oropharyngeal_swab
+    biomarker: enterovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_parainfluenza_virus_1_oropharyngeal_swab:
+    description: Multiplex real-time PCR Ct value for parainfluenza virus 1 from oropharyngeal
+      (throat) swab specimen (FTD Respiratory Pathogens 21 kit).
+    specimen: oropharyngeal_swab
+    biomarker: parainfluenza virus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_coronavirus_nl63_oropharyngeal_swab:
+    description: Multiplex real-time PCR Ct value for coronavirus NL63 from oropharyngeal
+      (throat) swab specimen (FTD Respiratory Pathogens 21 kit).
+    specimen: oropharyngeal_swab
+    biomarker: hCoV NL63
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_enterovirus_oropharyngeal_swab:
+    description: Multiplex real-time PCR genome copy concentration for enterovirus
+      from oropharyngeal (throat) swab specimen (figure/CSV-derived).
+    specimen: oropharyngeal_swab
+    biomarker: enterovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gc_ml_parainfluenza_virus_1_oropharyngeal_swab:
+    description: Multiplex real-time PCR genome copy concentration for parainfluenza
+      virus 1 from oropharyngeal (throat) swab specimen (figure/CSV-derived).
+    specimen: oropharyngeal_swab
+    biomarker: parainfluenza virus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  gc_ml_coronavirus_nl63_oropharyngeal_swab:
+    description: Multiplex real-time PCR genome copy concentration for coronavirus
+      NL63 from oropharyngeal (throat) swab specimen (figure/CSV-derived).
+    specimen: oropharyngeal_swab
+    biomarker: hCoV NL63
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  ct_coronavirus_nl63_nasal_secretion:
+    description: Multiplex real-time PCR Ct value for coronavirus NL63 from nasal
+      secretion specimen (FTD Respiratory Pathogens 21 kit).
+    specimen: nasal_discharge
+    biomarker: hCoV NL63
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_coronavirus_nl63_nasal_secretion:
+    description: Multiplex real-time PCR genome copy concentration for coronavirus
+      NL63 from nasal secretion specimen (figure/CSV-derived).
+    specimen: nasal_discharge
+    biomarker: hCoV NL63
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: female
+    age: 1
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    coinfection: adenovirus; rhinovirus; bocavirus
+  measurements:
+  - analyte: ct_influenza_c_virus_nasopharyngeal_swab
+    time: 10
+    value: 20.6
+  - analyte: ct_adenovirus_nasopharyngeal_swab
+    time: 10
+    value: 28
+  - analyte: ct_rhinovirus_nasopharyngeal_swab
+    time: 10
+    value: 23.5
+  - analyte: ct_bocavirus_nasopharyngeal_swab
+    time: 10
+    value: 37
+  - analyte: gc_ml_influenza_c_virus_nasopharyngeal_swab
+    time: 10
+    value: 470000000
+  - analyte: gc_ml_adenovirus_nasopharyngeal_swab
+    time: 10
+    value: 18000000000
+  - analyte: gc_ml_rhinovirus_nasopharyngeal_swab
+    time: 10
+    value: 210000000
+  - analyte: gc_ml_bocavirus_nasopharyngeal_swab
+    time: 10
+    value: 1000000
+- attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    infant: true
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+    coinfection: parainfluenza virus 4 (HPIV-4); adenovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 23.1
+  - analyte: ct_parainfluenza_virus_4_nasal_secretion
+    time: 0
+    value: 31.5
+  - analyte: ct_adenovirus_nasal_secretion
+    time: 0
+    value: 35
+  - analyte: gc_ml_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 97000000
+  - analyte: gc_ml_parainfluenza_virus_4_nasal_secretion
+    time: 0
+    value: 4700000
+  - analyte: gc_ml_adenovirus_nasal_secretion
+    time: 0
+    value: 4900000
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    coinfection: adenovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 24.9
+  - analyte: ct_adenovirus_oropharyngeal_swab
+    time: 0
+    value: 26.3
+  - analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 29000000
+  - analyte: gc_ml_adenovirus_oropharyngeal_swab
+    time: 0
+    value: 520000000000
+- attributes:
+    sex: male
+    age: 6
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    coinfection: adenovirus; rhinovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_nasopharyngeal_swab
+    time: 0
+    value: 25
+  - analyte: ct_adenovirus_nasopharyngeal_swab
+    time: 0
+    value: 29.1
+  - analyte: ct_rhinovirus_nasopharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: gc_ml_influenza_c_virus_nasopharyngeal_swab
+    time: 0
+    value: 27000000
+  - analyte: gc_ml_adenovirus_nasopharyngeal_swab
+    time: 0
+    value: 6500000000
+  - analyte: gc_ml_rhinovirus_nasopharyngeal_swab
+    time: 0
+    value: negative
+- attributes:
+    sex: female
+    age: 1
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    coinfection: adenovirus; rhinovirus; bocavirus
+  measurements:
+  - analyte: ct_influenza_c_virus_oropharyngeal_swab
+    time: 3
+    value: 25.3
+  - analyte: ct_adenovirus_oropharyngeal_swab
+    time: 3
+    value: 30.2
+  - analyte: ct_rhinovirus_oropharyngeal_swab
+    time: 3
+    value: 32.6
+  - analyte: ct_bocavirus_oropharyngeal_swab
+    time: 3
+    value: 37.2
+  - analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+    time: 3
+    value: 22000000
+  - analyte: gc_ml_adenovirus_oropharyngeal_swab
+    time: 3
+    value: 4500000000
+  - analyte: gc_ml_rhinovirus_oropharyngeal_swab
+    time: 3
+    value: 1200000
+  - analyte: gc_ml_bocavirus_oropharyngeal_swab
+    time: 3
+    value: 930000
+- attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    infant: true
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    coinfection: RSV A
+  measurements:
+  - analyte: ct_influenza_c_virus_nasal_secretion
+    time: 6
+    value: 25.7
+  - analyte: ct_rsv_a_nasal_secretion
+    time: 6
+    value: 29.6
+  - analyte: gc_ml_influenza_c_virus_nasal_secretion
+    time: 6
+    value: 17000000
+  - analyte: gc_ml_rsv_a_nasal_secretion
+    time: 6
+    value: 870000
+- attributes:
+    sex: male
+    age: 3
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    coinfection: human metapneumovirus; adenovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_nasopharyngeal_swab
+    time: 0
+    value: 26.7
+  - analyte: ct_metapneumovirus_nasopharyngeal_swab
+    time: 0
+    value: 24.1
+  - analyte: gc_ml_influenza_c_virus_nasopharyngeal_swab
+    time: 0
+    value: 9900000
+  - analyte: gc_ml_metapneumovirus_nasopharyngeal_swab
+    time: 0
+    value: 41000000
+- attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    infant: true
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+    coinfection: adenovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 27.5
+  - analyte: ct_adenovirus_oropharyngeal_swab
+    time: 0
+    value: 27.5
+  - analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 5200000
+  - analyte: gc_ml_adenovirus_oropharyngeal_swab
+    time: 0
+    value: 230000000000
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+    coinfection: human metapneumovirus; adenovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_oropharyngeal_swab
+    time: 4
+    value: 27.7
+  - analyte: ct_metapneumovirus_oropharyngeal_swab
+    time: 4
+    value: 27.5
+  - analyte: ct_adenovirus_oropharyngeal_swab
+    time: 4
+    value: negative
+  - analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+    time: 4
+    value: 4800000
+  - analyte: gc_ml_metapneumovirus_oropharyngeal_swab
+    time: 4
+    value: 3100000
+  - analyte: gc_ml_adenovirus_oropharyngeal_swab
+    time: 4
+    value: negative
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: false
+    coinfection: cytomegalovirus; human metapneumovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_nasopharyngeal_swab
+    time: 5
+    value: 29.8
+  - analyte: ct_cytomegalovirus_nasopharyngeal_swab
+    time: 5
+    value: 25.3
+  - analyte: gc_ml_influenza_c_virus_nasopharyngeal_swab
+    time: 5
+    value: 1300000
+  - analyte: gc_ml_cytomegalovirus_nasopharyngeal_swab
+    time: 5
+    value: 3700000
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    symptomatic: true
+    participant_type: patient
+    hospitalized: true
+    coinfection: adenovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_oropharyngeal_swab
+    time: 7
+    value: 32
+  - analyte: ct_adenovirus_oropharyngeal_swab
+    time: 7
+    value: 25.4
+  - analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+    time: 7
+    value: 280000
+  - analyte: gc_ml_adenovirus_oropharyngeal_swab
+    time: 7
+    value: 930000000000
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    participant_type: patient
+    coinfection: adenovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 18.6
+  - analyte: ct_adenovirus_nasal_secretion
+    time: 0
+    value: 27
+  - analyte: gc_ml_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 1800000000
+  - analyte: gc_ml_adenovirus_nasal_secretion
+    time: 0
+    value: 33000000000
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    participant_type: patient
+    coinfection: RSV B; rhinovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 21.6
+  - analyte: ct_rsv_b_nasal_secretion
+    time: 0
+    value: 20.8
+  - analyte: ct_rhinovirus_nasal_secretion
+    time: 0
+    value: negative
+  - analyte: gc_ml_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 270000000
+  - analyte: gc_ml_rsv_b_nasal_secretion
+    time: 0
+    value: 170000000
+  - analyte: gc_ml_rhinovirus_nasal_secretion
+    time: 0
+    value: negative
+- attributes:
+    sex: male
+    age: 5
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    participant_type: patient
+    coinfection: enterovirus; parainfluenza virus 1 (HPIV-1); coronavirus NL63 (HCoV-NL63);
+      rhinovirus
+  measurements:
+  - analyte: ct_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 26.7
+  - analyte: ct_enterovirus_oropharyngeal_swab
+    time: 0
+    value: 31.1
+  - analyte: ct_parainfluenza_virus_1_oropharyngeal_swab
+    time: 0
+    value: 25.7
+  - analyte: ct_coronavirus_nl63_oropharyngeal_swab
+    time: 0
+    value: 33.1
+  - analyte: ct_rhinovirus_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 9200000
+  - analyte: gc_ml_enterovirus_oropharyngeal_swab
+    time: 0
+    value: 4300000
+  - analyte: gc_ml_parainfluenza_virus_1_oropharyngeal_swab
+    time: 0
+    value: 5100000
+  - analyte: gc_ml_coronavirus_nl63_oropharyngeal_swab
+    time: 0
+    value: 230000
+  - analyte: gc_ml_rhinovirus_oropharyngeal_swab
+    time: 0
+    value: negative
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+    infant: false
+    subtype: Influenza C
+    participant_type: patient
+    coinfection: adenovirus; coronavirus NL63 (HCoV-NL63)
+  measurements:
+  - analyte: ct_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 28.6
+  - analyte: ct_adenovirus_nasal_secretion
+    time: 0
+    value: 35
+  - analyte: ct_coronavirus_nl63_nasal_secretion
+    time: 0
+    value: 33.3
+  - analyte: gc_ml_influenza_c_virus_nasal_secretion
+    time: 0
+    value: 2600000
+  - analyte: gc_ml_adenovirus_nasal_secretion
+    time: 0
+    value: 6800000
+  - analyte: gc_ml_coronavirus_nl63_nasal_secretion
+    time: 0
+    value: 200000
+- attributes:
+    sex: male
+    age: 0.5833
+    age_group: infant
+    infant: true
+    subtype: Influenza C
+    participant_type: patient
+    coinfection: adenovirus; bocavirus
+  measurements:
+  - analyte: ct_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 29.4
+  - analyte: ct_adenovirus_oropharyngeal_swab
+    time: 0
+    value: 28.3
+  - analyte: ct_bocavirus_oropharyngeal_swab
+    time: 0
+    value: 25.1
+  - analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+    time: 0
+    value: 1500000
+  - analyte: gc_ml_adenovirus_oropharyngeal_swab
+    time: 0
+    value: 150000000000
+  - analyte: gc_ml_bocavirus_oropharyngeal_swab
+    time: 0
+    value: 780000000

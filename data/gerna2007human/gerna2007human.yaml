@@ -1,0 +1,668 @@
+title: The human bocavirus role in acute respiratory tract infections of pediatric
+  patients as defined by viral load quantification
+url: https://pubmed.ncbi.nlm.nih.gov/18080673/
+description: Hospital-based study of acute respiratory tract infection patients testing
+  for human bocavirus (HBoV) and other respiratory viruses using PCR, with HBoV DNA
+  quantified in respiratory samples (nasopharyngeal aspirates per abstract). CSV-derived
+  longitudinal/paired measurements are reported relative to either hospital admission
+  or confirmation date for bocavirus and several co-detected respiratory viruses (RSV,
+  rhinovirus, parainfluenza virus, adenovirus, coronavirus). We could not find a DOI
+  for this paper; it is not available.
+analytes:
+  hospital_admission_bocavirus:
+    description: PCR-based detection/quantification of human bocavirus (HBoV) in respiratory
+      samples; measurements timed relative to hospital admission (day 0 = admission).
+    specimen: nasopharyngeal_aspirate
+    biomarker: bocavirus
+    gene_target: NS1
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: hospital admission
+  hospital_admission_rsv:
+    description: PCR-based detection/quantification of respiratory syncytial virus
+      (RSV) in respiratory samples; measurements timed relative to hospital admission
+      (day 0 = admission).
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: hospital admission
+  hospital_admission_rhinovirus:
+    description: PCR-based detection/quantification of rhinovirus in respiratory samples;
+      measurements timed relative to hospital admission (day 0 = admission).
+    specimen: nasopharyngeal_aspirate
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: hospital admission
+  hospital_admission_parainfluenza_virus:
+    description: PCR-based detection/quantification of parainfluenza virus in respiratory
+      samples; measurements timed relative to hospital admission (day 0 = admission).
+    specimen: nasopharyngeal_aspirate
+    biomarker: parainfluenza virus
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: hospital admission
+  hospital_admission_adenovirus:
+    description: PCR-based detection/quantification of adenovirus in respiratory samples;
+      measurements timed relative to hospital admission (day 0 = admission).
+    specimen: nasopharyngeal_aspirate
+    biomarker: adenovirus
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: hospital admission
+  confirmation_date_bocavirus:
+    description: PCR-based detection/quantification of human bocavirus (HBoV) in respiratory
+      samples; measurements timed relative to confirmation date (day 0 = first positive/confirmation).
+    specimen: nasopharyngeal_aspirate
+    biomarker: bocavirus
+    gene_target: NS1
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: confirmation date
+  confirmation_date_rsv:
+    description: PCR-based detection/quantification of respiratory syncytial virus
+      (RSV) in respiratory samples; measurements timed relative to confirmation date
+      (day 0 = first positive/confirmation).
+    specimen: nasopharyngeal_aspirate
+    biomarker: RSV
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: confirmation date
+  confirmation_date_rhinovirus:
+    description: PCR-based detection/quantification of rhinovirus in respiratory samples;
+      measurements timed relative to confirmation date (day 0 = first positive/confirmation).
+    specimen: nasopharyngeal_aspirate
+    biomarker: rhinovirus
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: confirmation date
+  confirmation_date_coronavirus:
+    description: PCR-based detection/quantification of seasonal human coronavirus
+      in respiratory samples; measurements timed relative to confirmation date (day
+      0 = first positive/confirmation).
+    specimen: nasopharyngeal_aspirate
+    biomarker: coronavirus
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: confirmation date
+  confirmation_date_parainfluenza_virus:
+    description: PCR-based detection/quantification of parainfluenza virus in respiratory
+      samples; measurements timed relative to confirmation date (day 0 = first positive/confirmation).
+    specimen: nasopharyngeal_aspirate
+    biomarker: parainfluenza virus
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: confirmation date
+  confirmation_date_adenovirus:
+    description: PCR-based detection/quantification of adenovirus in respiratory samples;
+      measurements timed relative to confirmation date (day 0 = first positive/confirmation).
+    specimen: nasopharyngeal_aspirate
+    biomarker: adenovirus
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- patient_id: '3'
+  attributes:
+    age: 0.167
+    age_group: infant
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_rsv
+    time: 0
+    value: 18000000
+  - analyte: hospital_admission_bocavirus
+    time: 3
+    value: 1500000
+  - analyte: hospital_admission_rsv
+    time: 3
+    value: 460000
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 1500000
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 460000
+- patient_id: '10'
+  attributes:
+    age: 1.75
+    age_group: child
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_rhinovirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_bocavirus
+    time: 9
+    value: 1700000
+  - analyte: hospital_admission_rhinovirus
+    time: 9
+    value: 2500000
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 1700000
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 2500000
+- patient_id: '11'
+  attributes:
+    age: 0.75
+    age_group: infant
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_rhinovirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_bocavirus
+    time: 5
+    value: 290000
+  - analyte: hospital_admission_rhinovirus
+    time: 5
+    value: 25000000
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 290000
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 25000000
+- patient_id: 18-1
+  attributes:
+    age: 3
+    age_group: child
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_bocavirus
+    time: 7
+    value: 29000
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 29000
+- patient_id: '2'
+  attributes:
+    age: 0.583
+    age_group: infant
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: 1700000
+  - analyte: hospital_admission_rsv
+    time: 0
+    value: 9400000
+  - analyte: hospital_admission_rhinovirus
+    time: 0
+    value: 25000000
+  - analyte: hospital_admission_bocavirus
+    time: 11
+    value: positive
+  - analyte: hospital_admission_rsv
+    time: 11
+    value: 35000
+  - analyte: hospital_admission_rhinovirus
+    time: 11
+    value: positive
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 1700000
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 9400000
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 25000000
+- patient_id: 23-6
+  attributes:
+    age: 0.167
+    age_group: infant
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: 500
+  - analyte: hospital_admission_rsv
+    time: 0
+    value: 370000
+  - analyte: hospital_admission_bocavirus
+    time: 8
+    value: positive
+  - analyte: hospital_admission_rsv
+    time: 8
+    value: 220000
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 370000
+- patient_id: 28-11
+  attributes:
+    age: 0.667
+    age_group: infant
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_rsv
+    time: 0
+    value: 1400000
+  - analyte: hospital_admission_bocavirus
+    time: 7
+    value: positive
+  - analyte: hospital_admission_rsv
+    time: 7
+    value: 100000
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 1400000
+- patient_id: 30-13
+  attributes:
+    age: 5
+    age_group: child
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: 42000
+  - analyte: hospital_admission_parainfluenza_virus
+    time: 0
+    value: 2500000
+  - analyte: hospital_admission_bocavirus
+    time: 6
+    value: positive
+  - analyte: hospital_admission_parainfluenza_virus
+    time: 6
+    value: positive
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 42000
+  - analyte: confirmation_date_parainfluenza_virus
+    time: 0
+    value: 2500000
+- patient_id: 37-20
+  attributes:
+    age: 1.75
+    age_group: child
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: 3400
+  - analyte: hospital_admission_rhinovirus
+    time: 0
+    value: 2500
+  - analyte: hospital_admission_adenovirus
+    time: 0
+    value: 25000
+  - analyte: hospital_admission_bocavirus
+    time: 10
+    value: positive
+  - analyte: hospital_admission_rhinovirus
+    time: 10
+    value: positive
+  - analyte: hospital_admission_adenovirus
+    time: 10
+    value: positive
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 3400
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 2500
+  - analyte: confirmation_date_adenovirus
+    time: 0
+    value: 25000
+- patient_id: 40-23
+  attributes:
+    age: 0.083
+    age_group: infant
+  measurements:
+  - analyte: hospital_admission_bocavirus
+    time: 0
+    value: positive
+  - analyte: hospital_admission_rsv
+    time: 0
+    value: 790000
+  - analyte: hospital_admission_bocavirus
+    time: 6
+    value: positive
+  - analyte: hospital_admission_rsv
+    time: 6
+    value: 3600
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 790000
+- patient_id: '1'
+  attributes:
+    age: 1.417
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 1300000
+- patient_id: '4'
+  attributes:
+    age: 1.25
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 990000000
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 25000
+- patient_id: '5'
+  attributes:
+    age: 0.917
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 2500000000
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 2500
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: positive
+- patient_id: '6'
+  attributes:
+    age: 1.417
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 21000000
+- patient_id: '7'
+  attributes:
+    age: 2.167
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 71000000
+  - analyte: confirmation_date_coronavirus
+    time: 0
+    value: 250000
+- patient_id: '8'
+  attributes:
+    age: 1.25
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 3300000
+- patient_id: '9'
+  attributes:
+    age: 0.833
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 25000000
+- patient_id: '12'
+  attributes:
+    age: 0.5
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 26000000
+- patient_id: '13'
+  attributes:
+    age: 0.417
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 220000
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 25000000
+- patient_id: '14'
+  attributes:
+    age: 0.167
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 5300000
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 8500
+- patient_id: '15'
+  attributes:
+    age: 0.167
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 440000
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 2500000
+- patient_id: '16'
+  attributes:
+    age: 1.167
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 9700000
+- patient_id: '17'
+  attributes:
+    age: 0.583
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 4500000000
+  - analyte: confirmation_date_parainfluenza_virus
+    time: 0
+    value: positive
+- patient_id: 19-2
+  attributes:
+    age: 1.667
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 300
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 2500000
+- patient_id: 20-3
+  attributes:
+    age: 1.333
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 4700
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 410000
+- patient_id: 21-4
+  attributes:
+    age: 1.917
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 7200
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 1200000
+- patient_id: 22-5
+  attributes:
+    age: 3
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 250000
+  - analyte: confirmation_date_adenovirus
+    time: 0
+    value: 25000000
+- patient_id: 24-7
+  attributes:
+    age: 0.167
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 1400000
+- patient_id: 25-8
+  attributes:
+    age: 0.667
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 6300
+- patient_id: 26-9
+  attributes:
+    age: 0.167
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 100000
+- patient_id: 27-10
+  attributes:
+    age: 0.583
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+  - analyte: confirmation_date_rsv
+    time: 0
+    value: 180000
+- patient_id: 29-12
+  attributes:
+    age: 0.75
+    age_group: infant
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 3700
+- patient_id: 31-14
+  attributes:
+    age: 2
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 1400
+- patient_id: 32-15
+  attributes:
+    age: 3
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 29000
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 25000
+- patient_id: 33-16
+  attributes:
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 14000
+- patient_id: 34-17
+  attributes:
+    age: 13
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 2500
+- patient_id: 35-18
+  attributes:
+    age: 1.167
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 16000
+  - analyte: confirmation_date_rhinovirus
+    time: 0
+    value: 2500000
+- patient_id: 36-19
+  attributes:
+    age: 5
+    age_group: child
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 44000
+- patient_id: 38-21
+  attributes:
+    age: 0.049
+    age_group: neonate
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 1400
+- patient_id: 39-22
+  attributes:
+    age: 0.06
+    age_group: neonate
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+- patient_id: 41-24
+  attributes:
+    age: 27
+    age_group: adult
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: positive
+- patient_id: 42-25
+  attributes:
+    age: 42
+    age_group: adult
+  measurements:
+  - analyte: confirmation_date_bocavirus
+    time: 0
+    value: 4700

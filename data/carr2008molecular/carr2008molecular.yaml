@@ -1,0 +1,339 @@
+title: Molecular epidemiology of human metapneumovirus in Ireland
+doi: 10.1002/jmv.21081
+description: Pediatric respiratory specimens collected in Ireland were screened for
+  human metapneumovirus (hMPV). An indirect immunofluorescence assay was validated
+  against a quantitative real-time RT-PCR assay, and viral loads (copies/mL) were
+  quantified for 30 hMPV-positive respiratory specimens; genotypes included A2a, A2b,
+  and B2 subclusters (B2a, B2b).
+analytes:
+  respiratory_metapneumovirus_viral_load:
+    description: Quantitative real-time reverse-transcriptase PCR (real-time RT-PCR)
+      assay used to detect and quantify human metapneumovirus (hMPV) in pediatric
+      respiratory specimens; values reported as copies/mL (quantitative determinations).
+      Indirect immunofluorescence (IF) was also used for screening/validation, but
+      the extracted measurements are RT-PCR viral loads.
+    specimen: nasopharyngeal_aspirate
+    biomarker: metapneumovirus
+    gene_target: N
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- patient_id: IRL/06/4054
+  attributes:
+    sex: male
+    age: 0.8333
+    age_group: infant
+    genotype: A2a
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 37500000
+- patient_id: IRL/06/11649
+  attributes:
+    sex: male
+    age: 0.75
+    age_group: infant
+    genotype: A2a
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 15400000
+- patient_id: IRL/06/3530
+  attributes:
+    sex: male
+    age: 0.8333
+    age_group: infant
+    genotype: A2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 13300000
+- patient_id: IRL/06/3616
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 417000
+- patient_id: IRL/06/3617
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 1010000
+- patient_id: IRL/06/4023
+  attributes:
+    sex: male
+    age: 0.5
+    age_group: infant
+    genotype: A2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 199000
+- patient_id: IRL/06/4333
+  attributes:
+    sex: male
+    age: 0.6667
+    age_group: infant
+    genotype: A2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 1000000
+- patient_id: IRL/06/4494
+  attributes:
+    sex: female
+    age: 0.25
+    age_group: infant
+    genotype: A2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 611000
+- patient_id: IRL/06/4146
+  attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 283000
+- patient_id: IRL/06/11609
+  attributes:
+    sex: male
+    age: 0.3333
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 10100000
+- patient_id: IRL/06/11752
+  attributes:
+    sex: male
+    age: 0.6667
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 3870000
+- patient_id: IRL/06/12304
+  attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 152000
+- patient_id: IRL/06/12354
+  attributes:
+    sex: male
+    age: 0.75
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 676000
+- patient_id: IRL/06/12407
+  attributes:
+    sex: male
+    age: 0.75
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 299000
+- patient_id: IRL/06/12525
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    genotype: A2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 25500000
+- patient_id: IRL/07/524
+  attributes:
+    sex: female
+    age: 0.5833
+    age_group: infant
+    genotype: A2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 28000
+- patient_id: IRL/06/11770
+  attributes:
+    sex: female
+    age: 4.1667
+    age_group: child
+    genotype: B2a
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 18500000
+- patient_id: IRL/06/12173
+  attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    genotype: B2a
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 4160000
+- patient_id: IRL/06/12297
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+    genotype: B2a
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 5850000
+- patient_id: IRL/06/12466
+  attributes:
+    sex: female
+    age: 0.5833
+    age_group: infant
+    genotype: B2a
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 4980000
+- patient_id: IRL/07/387
+  attributes:
+    sex: female
+    age: 0.8333
+    age_group: infant
+    genotype: B2a
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 20800000
+- patient_id: IRL/06/11634
+  attributes:
+    sex: male
+    age: 0.75
+    age_group: infant
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 101000
+- patient_id: IRL/06/11647
+  attributes:
+    sex: male
+    age: 0.5833
+    age_group: infant
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 1160000
+- patient_id: IRL/06/11862
+  attributes:
+    sex: male
+    age: 0.8333
+    age_group: infant
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 5070000
+- patient_id: IRL/07/359
+  attributes:
+    sex: male
+    age: 0.75
+    age_group: infant
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 9820000
+- patient_id: IRL/07/643
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 20000000
+- patient_id: IRL/07/679
+  attributes:
+    sex: male
+    age: 0.5
+    age_group: infant
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 27700000
+- patient_id: IRL/07/758
+  attributes:
+    sex: female
+    age: 0.9167
+    age_group: infant
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 144000000
+- patient_id: IRL/07/925
+  attributes:
+    sex: male
+    age: 0.3333
+    age_group: infant
+    genotype: B2b
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 8160000
+- patient_id: IRL/07/977
+  attributes:
+    sex: female
+    age: 0.25
+    age_group: infant
+    genotype: B2b
+    symptomatic: true
+  measurements:
+  - analyte: respiratory_metapneumovirus_viral_load
+    time: 0
+    value: 293000
