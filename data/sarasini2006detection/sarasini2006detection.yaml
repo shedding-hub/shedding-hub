@@ -1,0 +1,74 @@
+title: Detection and pathogenicity of human metapneumovirus respiratory infection
+  in pediatric Italian patients during a winter–spring season
+doi: 10.1016/j.jcv.2005.05.010
+description: Prospective pediatric respiratory virus surveillance study in Pavia,
+  Italy (winter–spring 2003–2004). Nasopharyngeal aspirates (NPA) from 306 infants/young
+  children with acute respiratory infection were tested for respiratory viruses; human
+  metapneumovirus (hMPV) was detected by RT-PCR. Serial NPA sampling in some hMPV-positive
+  children was used to relate hMPV RNA load to clinical course and estimate duration
+  of excretion. The extracted quantitative time series here come from a CSV derived
+  from Table 3, reporting hMPV RNA copies/mL over follow-up (time in days from first/earliest
+  NPA collection for each patient).
+analytes:
+  nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml:
+    description: Human metapneumovirus (hMPV) RNA semiquantitation in nasopharyngeal
+      aspirate (NPA) samples by RT-PCR, reported as RNA copies/mL (CSV values correspond
+      to antilogged log10 RNA copies/mL from Table 3; negatives/undetectable recorded
+      as negative). RT-PCR assays were optimized to detect at least 10 input plasmid
+      copies; nucleic acids extracted with Nuclisens Iso Kit; products examined on
+      agarose gel. hMPV detection used L gene primers for types A and B plus confirmation/amplification
+      of N gene fragment (Table 1).
+    specimen: nasopharyngeal_aspirate
+    biomarker: metapneumovirus
+    gene_target: L; N
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- patient_id: '43'
+  measurements:
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 0
+    value: 2511886.4315
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 2
+    value: 25118864.3151
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 9
+    value: negative
+- patient_id: '3453'
+  measurements:
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 0
+    value: 25118864.3151
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 6
+    value: 25118.8643
+- patient_id: '3500'
+  measurements:
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 0
+    value: 2511886431.5096
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 10
+    value: 25118864.3151
+- patient_id: '3611'
+  measurements:
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 0
+    value: 398107170.5535
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 3
+    value: 25118864.3151
+- patient_id: '3921'
+  measurements:
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 0
+    value: 25118864.3151
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 32
+    value: 2511.8864
+  - analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+    time: 37
+    value: negative

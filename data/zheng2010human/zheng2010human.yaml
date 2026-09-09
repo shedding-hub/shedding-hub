@@ -1,0 +1,297 @@
+title: Human bocavirus infection in young children with acute respiratory tract infection
+  in Lanzhou, China
+doi: 10.1002/jmv.21689
+description: Prospective 1-year study in Lanzhou, China, enrolling 406 children <14
+  years old with acute respiratory tract infection. Human bocavirus (HBoV) was detected
+  in 29 children by real-time PCR using nasopharyngeal aspirates; viral loads in positives
+  ranged from 5.80×10^2 to 9.72×10^8 copies/mL. Coinfections with other respiratory
+  viruses were common (notably RSV).
+analytes:
+  nasopharyngeal_aspirate_bocavirus_viral_load:
+    description: Human bocavirus (HBoV) genome quantification by real-time PCR in
+      nasopharyngeal aspirates; values reported as genome copies per mL.
+    specimen: nasopharyngeal_aspirate
+    biomarker: bocavirus
+    gene_target: NP-1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: enrollment
+participants:
+- patient_id: Lz1
+  attributes:
+    sex: male
+    age: 6
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 2570
+- patient_id: Lz2
+  attributes:
+    sex: female
+    age: 2.4167
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 17600
+- patient_id: Lz3
+  attributes:
+    sex: male
+    age: 0.0833
+    age_group: infant
+    coinfection: RSV; metapneumovirus
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 34600
+- patient_id: Lz4
+  attributes:
+    sex: male
+    age: 3.4167
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 37400
+- patient_id: Lz13
+  attributes:
+    sex: male
+    age: 6
+    age_group: child
+    coinfection: rhinovirus
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 6760
+- patient_id: Lz25
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 66000000
+- patient_id: Lz28
+  attributes:
+    sex: male
+    age: 2
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 174000
+- patient_id: Lz37
+  attributes:
+    sex: female
+    age: 3.5
+    age_group: child
+    coinfection: metapneumovirus
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 19100
+- patient_id: Lz110
+  attributes:
+    sex: male
+    age: 5
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 5570
+- patient_id: Lz112
+  attributes:
+    sex: female
+    age: 2.75
+    age_group: child
+    coinfection: coronavirus HKU1
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 13900
+- patient_id: Lz118
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    coinfection: rhinovirus
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 12400
+- patient_id: Lz123
+  attributes:
+    sex: male
+    age: 0.0833
+    age_group: infant
+    coinfection: rhinovirus
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 766
+- patient_id: Lz160
+  attributes:
+    sex: male
+    age: 1.5833
+    age_group: child
+    coinfection: RSV
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 7680
+- patient_id: Lz162
+  attributes:
+    sex: male
+    age: 2.1667
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 199000
+- patient_id: Lz166
+  attributes:
+    sex: female
+    age: 0.25
+    age_group: infant
+    coinfection: RSV
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 5670
+- patient_id: Lz169
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    coinfection: RSV
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 10700
+- patient_id: Lz171
+  attributes:
+    sex: female
+    age: 3
+    age_group: child
+    coinfection: RSV
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 580
+- patient_id: Lz173
+  attributes:
+    sex: male
+    age: 2
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 9330
+- patient_id: Lz174
+  attributes:
+    sex: female
+    age: 4
+    age_group: child
+    coinfection: RSV
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 13100
+- patient_id: Lz175
+  attributes:
+    sex: male
+    age: 4
+    age_group: child
+    coinfection: RSV
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 6380
+- patient_id: Lz179
+  attributes:
+    sex: male
+    age: 3
+    age_group: child
+    coinfection: RSV; coronavirus NL63
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 4900
+- patient_id: Lz184
+  attributes:
+    sex: male
+    age: 0.0657
+    age_group: neonate
+    coinfection: rhinovirus
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 48600
+- patient_id: Lz190
+  attributes:
+    sex: female
+    age: 1.25
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 28800
+- patient_id: Lz196
+  attributes:
+    sex: female
+    age: 0.5833
+    age_group: infant
+    coinfection: RSV; influenza virus A
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 15500
+- patient_id: Lz197
+  attributes:
+    sex: female
+    age: 2
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 7710
+- patient_id: Lz263
+  attributes:
+    sex: female
+    age: 3
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 972000000
+- patient_id: Lz285
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    coinfection: parainfluenza virus 1
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 143000000
+- patient_id: Lz302
+  attributes:
+    sex: male
+    age: 9
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 3960
+- patient_id: Lz327
+  attributes:
+    sex: male
+    age: 3
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 226000000

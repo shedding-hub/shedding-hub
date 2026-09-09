@@ -1,0 +1,79 @@
+title: Severe Human Bocavirus 1 Respiratory Tract Infection in an Immunodeficient
+  Child With Fatal Outcome
+doi: 10.1097/INF.0000000000002354
+description: Case report of a fatal lower respiratory tract infection attributed to
+  acute primary human bocavirus 1 (HBoV1) infection in an immunodeficient 6-month-old
+  boy. Serial quantitative PCR measurements of HBoV1 DNA were reported from serum
+  and tracheal secretions over time.
+analytes:
+  serum:
+    description: Human bocavirus 1 (HBoV1) DNA measured in serum by PCR (quantitative
+      values reported as provided in figure-data CSV); other methodological details
+      not available in provided text.
+    specimen: serum
+    biomarker: bocavirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  trachealsecretion:
+    description: Human bocavirus 1 (HBoV1) DNA measured in tracheal secretions by
+      PCR (quantitative values reported as provided in figure-data CSV); other methodological
+      details not available in provided text.
+    specimen: tracheal_aspirate
+    biomarker: bocavirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 0.5
+    age_group: infant
+    immune_status: immunocompromised
+    participant_type: patient
+    symptomatic: true
+  measurements:
+  - analyte: serum
+    time: 13
+    value: negative
+  - analyte: serum
+    time: 20
+    value: 850.7839211128271
+  - analyte: serum
+    time: 33
+    value: 1727.9891383992099
+  - analyte: serum
+    time: 54
+    value: 402.8770734804749
+  - analyte: serum
+    time: 70
+    value: 405.6286572661464
+  - analyte: serum
+    time: 89
+    value: negative
+  - analyte: trachealsecretion
+    time: 14
+    value: 7861.923069819197
+  - analyte: trachealsecretion
+    time: 20
+    value: 2946438504.1943545
+  - analyte: trachealsecretion
+    time: 33
+    value: 5949181.013825655
+  - analyte: trachealsecretion
+    time: 54
+    value: 686754.3352275635
+  - analyte: trachealsecretion
+    time: 70
+    value: 79086.49251505035
+  - analyte: trachealsecretion
+    time: 89
+    value: 47057.52189862078
+  - analyte: trachealsecretion
+    time: 103
+    value: 2528.758687968866
+  - analyte: trachealsecretion
+    time: 125
+    value: 7327.952900221394

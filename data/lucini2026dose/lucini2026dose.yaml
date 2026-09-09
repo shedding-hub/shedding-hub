@@ -1,0 +1,1191 @@
+title: Dose-dependent efficacy of intravenous brincidofovir across adenovirus species
+  in immunocompromised patients
+doi: 10.1016/j.jinf.2026.106835
+description: Phase 2a ATHENA trial in immunocompromised patients with invasive human
+  adenovirus (HAdV) infection treated with intravenous brincidofovir (BCV) in four
+  dosing cohorts. The study monitored adenovirus in blood (serum/plasma) and stool
+  using species-specific qPCR (screening and typing) and next-generation sequencing
+  (NGS) for genotype identification, assessing virological responses and documenting
+  species/genotype diversity including mixed infections. Patients in cohort 1 treated 
+  with intravenous BCV at a dose of 0.2 mg/kg twice weekly (BIW). Patients in cohorts 
+  2 treated with 0.3 mg/kg BIW. Patients in cohort 3 treated  with 0.4 mg/kg BIW. 
+  The only patient where a serum sample was available treated with 0.4 mg/kg once weekly.
+analytes:
+  serum_a:
+    description: Quantitative adenovirus DNA load in serum measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per mL of serum; hexon gene targeted (primer/probe sets reported in
+      supplement).
+    specimen: serum
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: A
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+  serum_b:
+    description: Quantitative adenovirus DNA load in serum measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per mL of serum; hexon gene targeted (primer/probe sets reported in
+      supplement).
+    specimen: serum
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: B
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+  serum_c:
+    description: Quantitative adenovirus DNA load in serum measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per mL of serum; hexon gene targeted (primer/probe sets reported in
+      supplement).
+    specimen: serum
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: C
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+  serum_e:
+    description: Quantitative adenovirus DNA load in serum measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per mL of serum; hexon gene targeted (primer/probe sets reported in
+      supplement).
+    specimen: serum
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: E
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+  serum_f:
+    description: Quantitative adenovirus DNA load in serum measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per mL of serum; hexon gene targeted (primer/probe sets reported in
+      supplement).
+    specimen: serum
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: F
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+  stool_a:
+    description: Quantitative adenovirus DNA load in stool measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per gram of stool; hexon gene targeted (primer/probe sets reported
+      in supplement).
+    specimen: stool
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: A
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+  stool_b:
+    description: Quantitative adenovirus DNA load in stool measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per gram of stool; hexon gene targeted (primer/probe sets reported
+      in supplement).
+    specimen: stool
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: B
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+  stool_c:
+    description: Quantitative adenovirus DNA load in stool measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per gram of stool; hexon gene targeted (primer/probe sets reported
+      in supplement).
+    specimen: stool
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: C
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+  stool_d:
+    description: Quantitative adenovirus DNA load in stool measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per gram of stool; hexon gene targeted (primer/probe sets reported
+      in supplement).
+    specimen: stool
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: D
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+  stool_e:
+    description: Quantitative adenovirus DNA load in stool measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per gram of stool; hexon gene targeted (primer/probe sets reported
+      in supplement).
+    specimen: stool
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: E
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+  stool_f:
+    description: Quantitative adenovirus DNA load in stool measured by a two-step
+      species-specific real-time qPCR approach (screening primers/probes for A/F/C
+      and B/D/E followed by species-specific assays A–F), with viral loads calculated
+      as copies per gram of stool; hexon gene targeted (primer/probe sets reported
+      in supplement).
+    specimen: stool
+    biomarker: adenovirus
+    gene_target: hexon
+    genogroup: F
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+participants:
+- patient_id: '1.1'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_a
+    time: 0
+    value: 4124626.3829013477
+  - analyte: serum_a
+    time: 7
+    value: 985223.2250925549
+  - analyte: serum_a
+    time: 14
+    value: 298072.7259747676
+  - analyte: serum_a
+    time: 21
+    value: 101482.67092634136
+  - analyte: stool_a
+    time: 28
+    value: 42207244183.15904
+- patient_id: '1.2'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_b
+    time: 0
+    value: 10608.18355139446
+  - analyte: serum_b
+    time: 7
+    value: negative
+  - analyte: serum_b
+    time: 14
+    value: negative
+  - analyte: serum_b
+    time: 21
+    value: negative
+  - analyte: serum_b
+    time: 28
+    value: negative
+  - analyte: stool_b
+    time: 0
+    value: negative
+- patient_id: '1.3'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 9999999.99999998
+- patient_id: '1.4'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 2030917.6209047306
+  - analyte: serum_c
+    time: 7
+    value: 302543.3408218377
+  - analyte: serum_c
+    time: 14
+    value: 970.8290253886364
+  - analyte: serum_c
+    time: 21
+    value: 194.2867443820675
+  - analyte: serum_c
+    time: 28
+    value: 289.42661247167575
+  - analyte: stool_c
+    time: 0
+    value: 4867506.067430485
+  - analyte: stool_c
+    time: 14
+    value: 2913374.3000156386
+  - analyte: stool_c
+    time: 21
+    value: 80172.37843683812
+  - analyte: stool_c
+    time: 35
+    value: 407293.16379876627
+- patient_id: '1.5'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 3070290.6297578434
+  - analyte: serum_c
+    time: 7
+    value: 9853899.102890432
+  - analyte: serum_c
+    time: 14
+    value: 2980727.25974767
+  - analyte: serum_c
+    time: 21
+    value: 3945803.726737549
+  - analyte: serum_c
+    time: 28
+    value: 9426684.551178873
+  - analyte: stool_c
+    time: 0
+    value: 493740158.3723535
+  - analyte: stool_c
+    time: 7
+    value: 824913989.458412
+  - analyte: stool_c
+    time: 14
+    value: 978840824.7981774
+  - analyte: stool_c
+    time: 21
+    value: 1940553839.9997923
+  - analyte: stool_c
+    time: 28
+    value: 2976351441.6313252
+  - analyte: stool_c
+    time: 35
+    value: 4190742936.3976526
+- patient_id: '1.6'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 52233.45074266833
+  - analyte: serum_c
+    time: 7
+    value: 30254.334082183774
+  - analyte: serum_c
+    time: 14
+    value: 197167.3774547552
+  - analyte: serum_c
+    time: 21
+    value: 293717.8567078874
+  - analyte: serum_a
+    time: 0
+    value: 106081.8355139446
+  - analyte: serum_a
+    time: 7
+    value: 406436.522142298
+  - analyte: serum_a
+    time: 14
+    value: 507097.5007719014
+  - analyte: serum_a
+    time: 21
+    value: 1942867.4438206712
+  - analyte: stool_c
+    time: 0
+    value: 19130827.076154225
+  - analyte: stool_c
+    time: 7
+    value: 58170913.29374382
+  - analyte: stool_c
+    time: 14
+    value: 3847151764.1434517
+  - analyte: stool_c
+    time: 21
+    value: 58170913.29374382
+  - analyte: stool_a
+    time: 0
+    value: 978840824.7981774
+  - analyte: stool_a
+    time: 7
+    value: 2976351441.6313252
+  - analyte: stool_a
+    time: 14
+    value: 390239538481.6441
+  - analyte: stool_a
+    time: 21
+    value: 32653661662.811787
+- patient_id: '1.7'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 5878.0160722749115
+  - analyte: serum_c
+    time: 7
+    value: 691.4518727829875
+  - analyte: serum_c
+    time: 14
+    value: 400.4307011404385
+  - analyte: serum_c
+    time: 21
+    value: 394.5803726737553
+  - analyte: serum_c
+    time: 28
+    value: 587.8016072274924
+  - analyte: stool_c
+    time: 0
+    value: 295520923.52029
+  - analyte: stool_c
+    time: 7
+    value: 97188772.9646512
+  - analyte: stool_c
+    time: 14
+    value: 493740158.3723535
+  - analyte: stool_c
+    time: 21
+    value: 295520923.52029
+  - analyte: stool_c
+    time: 28
+    value: 192676931.53308028
+  - analyte: stool_c
+    time: 35
+    value: 9649840.250913206
+- patient_id: '1.8'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_b
+    time: 0
+    value: 587801.6072274899
+  - analyte: serum_b
+    time: 7
+    value: 7781.153960986338
+  - analyte: serum_b
+    time: 14
+    value: 86284.77498733175
+  - analyte: stool_b
+    time: 0
+    value: 526456.1811199196
+  - analyte: stool_b
+    time: 7
+    value: 585870805.9666654
+  - analyte: stool_b
+    time: 14
+    value: 741257.3970572369
+  - analyte: stool_b
+    time: 21
+    value: 407293.16379876627
+- patient_id: '2.1'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_b
+    time: 0
+    value: 92178.62488959759
+  - analyte: serum_b
+    time: 7
+    value: 19761.50131922879
+  - analyte: serum_b
+    time: 14
+    value: 92178.62488959759
+  - analyte: serum_b
+    time: 21
+    value: 19761.50131922879
+  - analyte: serum_b
+    time: 28
+    value: 92178.62488959759
+  - analyte: stool_b
+    time: 7
+    value: negative
+- patient_id: '2.2'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 301369.7643055646
+  - analyte: serum_c
+    time: 7
+    value: 57390.821815614385
+  - analyte: serum_c
+    time: 14
+    value: 19761.50131922879
+  - analyte: serum_c
+    time: 21
+    value: 92178.62488959759
+  - analyte: serum_c
+    time: 28
+    value: 18625.007788128423
+  - analyte: stool_c
+    time: 70
+    value: 1445439.770745916
+  - analyte: stool_f
+    time: 70
+    value: 15848931.92461098
+- patient_id: '2.3'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 199083.5469841004
+  - analyte: serum_c
+    time: 7
+    value: 77172.00914126886
+  - analyte: serum_c
+    time: 14
+    value: 19761.50131922879
+  - analyte: serum_c
+    time: 21
+    value: 31740.058074318727
+  - analyte: stool_c
+    time: 56
+    value: 100000.0
+- patient_id: '2.4'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 824895.0809849341
+  - analyte: serum_c
+    time: 7
+    value: 38763629.79781105
+  - analyte: serum_c
+    time: 14
+    value: 3036093.293849805
+  - analyte: serum_c
+    time: 21
+    value: 301369.7643055646
+  - analyte: serum_c
+    time: 28
+    value: 29914.671931054734
+  - analyte: stool_c
+    time: 49
+    value: 6918309709.189306
+- patient_id: '2.5'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 4876440.099825492
+  - analyte: serum_c
+    time: 7
+    value: 7219.729068803675
+  - analyte: serum_c
+    time: 14
+    value: 396.3425867977083
+  - analyte: serum_c
+    time: 21
+    value: 206.59154340830884
+- patient_id: '2.6'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_f
+    time: 0
+    value: 103771.27921314693
+  - analyte: serum_f
+    time: 7
+    value: 29914.671931054734
+  - analyte: serum_f
+    time: 14
+    value: negative
+  - analyte: serum_f
+    time: 21
+    value: negative
+  - analyte: serum_e
+    time: 0
+    value: 5060.344271651814
+  - analyte: serum_e
+    time: 7
+    value: 2081.2678436848305
+  - analyte: serum_e
+    time: 14
+    value: negative
+  - analyte: serum_e
+    time: 21
+    value: negative
+  - analyte: stool_e
+    time: 0
+    value: 1202264434.6174033
+  - analyte: stool_e
+    time: 7
+    value: negative
+  - analyte: stool_e
+    time: 14
+    value: negative
+  - analyte: stool_e
+    time: 21
+    value: negative
+  - analyte: stool_f
+    time: 7
+    value: 1318256738.5563939
+  - analyte: stool_f
+    time: 14
+    value: negative
+  - analyte: stool_f
+    time: 21
+    value: negative
+  - analyte: stool_f
+    time: 28
+    value: negative
+  - analyte: stool_f
+    time: 35
+    value: negative
+  - analyte: stool_f
+    time: 42
+    value: negative
+  - analyte: stool_f
+    time: 49
+    value: negative
+- patient_id: '2.7'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_b
+    time: 0
+    value: 41128977.238646075
+  - analyte: serum_b
+    time: 7
+    value: 405244.4183603488
+  - analyte: serum_b
+    time: 14
+    value: 29914.671931054734
+  - analyte: serum_b
+    time: 21
+    value: 1022.4599421287625
+  - analyte: serum_b
+    time: 28
+    value: 806.774962026876
+  - analyte: stool_f
+    time: 0
+    value: 363078.0547700973
+  - analyte: stool_f
+    time: 21
+    value: 6918.309709189299
+  - analyte: stool_f
+    time: 28
+    value: 57543.993733715426
+- patient_id: '2.8'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: stool_f
+    time: 0
+    value: negative
+  - analyte: stool_f
+    time: 35
+    value: negative
+  - analyte: stool_f
+    time: 42
+    value: 19054.607179632367
+  - analyte: stool_f
+    time: 49
+    value: negative
+  - analyte: stool_f
+    time: 56
+    value: 36307.80547700973
+  - analyte: stool_f
+    time: 63
+    value: negative
+  - analyte: stool_f
+    time: 70
+    value: 30199.517204019943
+  - analyte: stool_c
+    time: 0
+    value: 301995172.04019946
+  - analyte: stool_c
+    time: 7
+    value: 99999999.99999918
+  - analyte: stool_c
+    time: 14
+    value: 524807460.24977124
+  - analyte: stool_c
+    time: 21
+    value: 301995172.04019946
+  - analyte: stool_c
+    time: 28
+    value: 208929613.08540237
+- patient_id: '2.9'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_f
+    time: 0
+    value: 8127.703379600453
+  - analyte: serum_f
+    time: 7
+    value: 6044.362219142604
+  - analyte: serum_f
+    time: 14
+    value: 6044.362219142604
+  - analyte: serum_f
+    time: 21
+    value: 1961.5731199578715
+  - analyte: serum_f
+    time: 28
+    value: 2081.2678436848305
+  - analyte: serum_e
+    time: 0
+    value: 312.73525958153243
+  - analyte: serum_e
+    time: 7
+    value: 312.73525958153243
+  - analyte: serum_e
+    time: 14
+    value: 206.59154340830884
+  - analyte: serum_e
+    time: 21
+    value: 312.73525958153243
+  - analyte: serum_e
+    time: 28
+    value: 420.52731687241425
+  - analyte: stool_e
+    time: 0
+    value: 10964781.961431738
+  - analyte: stool_e
+    time: 7
+    value: 8317637711.026674
+  - analyte: stool_e
+    time: 28
+    value: negative
+  - analyte: stool_e
+    time: 35
+    value: negative
+  - analyte: stool_f
+    time: 7
+    value: 2089296130854.0237
+  - analyte: stool_f
+    time: 14
+    value: 20892961308.540237
+  - analyte: stool_f
+    time: 28
+    value: negative
+  - analyte: stool_f
+    time: 35
+    value: negative
+  - analyte: stool_f
+    time: 42
+    value: negative
+  - analyte: stool_f
+    time: 49
+    value: negative
+- patient_id: '3.1'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_f
+    time: 0
+    value: 6804.5189463314655
+  - analyte: serum_f
+    time: 7
+    value: negative
+  - analyte: serum_f
+    time: 14
+    value: negative
+  - analyte: serum_f
+    time: 21
+    value: negative
+  - analyte: serum_f
+    time: 28
+    value: negative
+  - analyte: stool_f
+    time: 0
+    value: 630957344480.1995
+  - analyte: stool_f
+    time: 7
+    value: 25408686.00815878
+  - analyte: stool_f
+    time: 14
+    value: 3090042.216262144
+  - analyte: stool_f
+    time: 21
+    value: 285160.23764558847
+  - analyte: stool_f
+    time: 42
+    value: negative
+  - analyte: stool_f
+    time: 56
+    value: negative
+  - analyte: stool_f
+    time: 63
+    value: negative
+- patient_id: '3.2'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: stool_a
+    time: 0
+    value: 1445439770745.9163
+  - analyte: stool_a
+    time: 7
+    value: 254086860081.59195
+  - analyte: stool_a
+    time: 14
+    value: 1023544576.8528746
+- patient_id: '3.3'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: stool_c
+    time: 0
+    value: 630957344.4801995
+  - analyte: stool_c
+    time: 7
+    value: 1109129.3718980686
+  - analyte: stool_c
+    time: 14
+    value: 93317783.07115807
+  - analyte: stool_c
+    time: 21
+    value: 375914.4048446412
+  - analyte: stool_c
+    time: 28
+    value: 199493.53480779147
+  - analyte: stool_a
+    time: 0
+    value: 478630.092322638
+  - analyte: stool_a
+    time: 7
+    value: 1011538.0094190525
+  - analyte: stool_a
+    time: 14
+    value: negative
+  - analyte: stool_a
+    time: 21
+    value: negative
+  - analyte: stool_a
+    time: 28
+    value: negative
+- patient_id: '3.4'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_e
+    time: 0
+    value: 806.774962026876
+  - analyte: serum_e
+    time: 7
+    value: 1961.5731199578574
+  - analyte: serum_e
+    time: 14
+    value: negative
+  - analyte: serum_e
+    time: 21
+    value: negative
+  - analyte: serum_e
+    time: 28
+    value: negative
+  - analyte: serum_f
+    time: 0
+    value: 2969.4007254002386
+  - analyte: serum_f
+    time: 7
+    value: 19761.50131922879
+  - analyte: serum_f
+    time: 14
+    value: negative
+  - analyte: serum_f
+    time: 21
+    value: negative
+  - analyte: serum_f
+    time: 28
+    value: negative
+  - analyte: stool_e
+    time: 0
+    value: 91201083935.59116
+  - analyte: stool_e
+    time: 7
+    value: 254086860.0815878
+  - analyte: stool_e
+    time: 14
+    value: negative
+  - analyte: stool_e
+    time: 21
+    value: negative
+  - analyte: stool_e
+    time: 28
+    value: negative
+  - analyte: stool_f
+    time: 7
+    value: 69981332317.77855
+  - analyte: stool_f
+    time: 14
+    value: 4466469.912669229
+  - analyte: stool_f
+    time: 28
+    value: negative
+  - analyte: stool_f
+    time: 42
+    value: negative
+  - analyte: stool_f
+    time: 56
+    value: negative
+  - analyte: stool_f
+    time: 63
+    value: negative
+- patient_id: '3.5'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_b
+    time: 0
+    value: 502.3016794450904
+  - analyte: serum_b
+    time: 7
+    value: negative
+  - analyte: serum_b
+    time: 14
+    value: negative
+  - analyte: serum_b
+    time: 21
+    value: negative
+  - analyte: serum_b
+    time: 28
+    value: negative
+  - analyte: stool_b
+    time: 0
+    value: 5754399.373371543
+  - analyte: stool_b
+    time: 7
+    value: 30547.959517970765
+  - analyte: stool_b
+    time: 14
+    value: negative
+  - analyte: stool_b
+    time: 28
+    value: negative
+  - analyte: stool_b
+    time: 42
+    value: negative
+  - analyte: stool_b
+    time: 56
+    value: negative
+  - analyte: stool_b
+    time: 63
+    value: negative
+- patient_id: '3.6'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_b
+    time: 0
+    value: 199083.54698410403
+  - analyte: serum_b
+    time: 7
+    value: 502.3016794450904
+  - analyte: serum_b
+    time: 14
+    value: negative
+  - analyte: serum_b
+    time: 21
+    value: negative
+  - analyte: serum_b
+    time: 28
+    value: negative
+  - analyte: stool_b
+    time: 0
+    value: 2754228.703338197
+  - analyte: stool_b
+    time: 14
+    value: 194968.48311044727
+  - analyte: stool_b
+    time: 21
+    value: 3126719.829853911
+  - analyte: stool_b
+    time: 28
+    value: 66058.5179094308
+- patient_id: '3.7'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_a
+    time: 0
+    value: 28194.264630747668
+  - analyte: serum_a
+    time: 7
+    value: negative
+  - analyte: serum_a
+    time: 14
+    value: negative
+  - analyte: serum_a
+    time: 21
+    value: negative
+  - analyte: stool_a
+    time: 14
+    value: 4467934127.998325
+  - analyte: stool_a
+    time: 21
+    value: 943944.8453119665
+  - analyte: stool_a
+    time: 28
+    value: 181999.9104832818
+- patient_id: '3.8'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_a
+    time: 0
+    value: 3036093.29384983
+  - analyte: serum_a
+    time: 7
+    value: 381938.6151958461
+  - analyte: serum_a
+    time: 14
+    value: negative
+  - analyte: serum_a
+    time: 21
+    value: negative
+  - analyte: serum_a
+    time: 28
+    value: negative
+  - analyte: stool_a
+    time: 0
+    value: 22916186538.043995
+  - analyte: stool_a
+    time: 21
+    value: 21624.527121220603
+  - analyte: stool_a
+    time: 35
+    value: 201861.44639982047
+  - analyte: stool_a
+    time: 56
+    value: 158489.319246115
+- patient_id: '3.9'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_a
+    time: 0
+    value: 103771.27921314778
+  - analyte: serum_a
+    time: 7
+    value: 199083.54698410403
+  - analyte: serum_a
+    time: 14
+    value: 777454.9645569605
+  - analyte: serum_a
+    time: 21
+    value: 37912.12564974
+  - analyte: serum_a
+    time: 28
+    value: negative
+  - analyte: serum_c
+    time: 0
+    value: 396.34258679771153
+  - analyte: serum_c
+    time: 7
+    value: 95.65493820902444
+  - analyte: serum_c
+    time: 14
+    value: negative
+  - analyte: stool_a
+    time: 7
+    value: 638446565679.8237
+  - analyte: stool_a
+    time: 21
+    value: 653264364277.8461
+  - analyte: stool_c
+    time: 7
+    value: 92253.3629010678
+  - analyte: stool_c
+    time: 21
+    value: 9442542.929382505
+- patient_id: '4.1'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: stool_c
+    time: 0
+    value: 397976238426.8045
+  - analyte: stool_c
+    time: 7
+    value: 101124675929.96913
+  - analyte: stool_c
+    time: 14
+    value: 85085811.02791749
+  - analyte: stool_c
+    time: 21
+    value: 136413434.34363654
+  - analyte: stool_c
+    time: 28
+    value: 199460609.98651838
+  - analyte: stool_c
+    time: 35
+    value: 153058390.74827343
+  - analyte: stool_c
+    time: 42
+    value: 74106643.42720415
+  - analyte: stool_c
+    time: 70
+    value: 2137258942.3501692
+- patient_id: '4.2'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: serum_c
+    time: 0
+    value: 20309.176209047306
+  - analyte: serum_c
+    time: 14
+    value: 5878.016072274972
+  - analyte: stool_c
+    time: 7
+    value: 33485527.350253955
+  - analyte: stool_c
+    time: 21
+    value: 45170733.49949976
+  - analyte: stool_c
+    time: 28
+    value: 10467841.614689486
+  - analyte: stool_c
+    time: 35
+    value: 803261.8531851846
+  - analyte: stool_c
+    time: 42
+    value: 1071166.8968616382
+- patient_id: '4.3'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: stool_d
+    time: 0
+    value: 478472.677283363
+  - analyte: stool_d
+    time: 14
+    value: 850858.1102792027
+- patient_id: '4.4'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: stool_f
+    time: 0
+    value: 275332287433.48334
+  - analyte: stool_f
+    time: 7
+    value: 63805356986.19276
+  - analyte: stool_f
+    time: 21
+    value: 1034.801722257975
+  - analyte: stool_c
+    time: 0
+    value: 397976238426.8045
+  - analyte: stool_c
+    time: 7
+    value: 101124675929.96913
+  - analyte: stool_c
+    time: 14
+    value: 102295.64448944619
+  - analyte: stool_c
+    time: 21
+    value: 1034.801722257975
+- patient_id: '4.5'
+  attributes:
+    participant_type: patient
+    immune_status: immunocompromised
+    treatment: brincidofovir
+  measurements:
+  - analyte: stool_b
+    time: 0
+    value: 17372292.892868683
+  - analyte: stool_b
+    time: 7
+    value: 11088100.224925468
+  - analyte: stool_b
+    time: 14
+    value: 64544188.19895046
+  - analyte: stool_c
+    time: 0
+    value: 190483.40374044
+  - analyte: stool_e
+    time: 0
+    value: 14449.643849272641
+  - analyte: stool_e
+    time: 7
+    value: 16027.181047124534
+  - analyte: stool_e
+    time: 14
+    value: 53685.51737911976

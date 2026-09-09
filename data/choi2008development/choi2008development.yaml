@@ -1,0 +1,126 @@
+title: Development of real-time PCR assays for detection and quantification of human
+  bocavirus
+doi: 10.1016/j.jcv.2008.02.010
+description: Study developing and clinically evaluating TaqMan real-time PCR assays
+  targeting human bocavirus (HBoV) NS1, NP-1, and VP1 genes. Clinical evaluation tested
+  506 nasopharyngeal (nasal) aspirates collected in Korea from Dec 2006 to May 2007
+  from patients with acute respiratory tract infections; 11 patients were positive
+  by all three assays and had quantified viral loads reported as copies per mL of
+  specimen.
+analytes:
+  nasopharyngeal_aspirate_bocavirus_viral_load:
+    description: 'Quantification of human bocavirus (HBoV) in nasal aspirate specimens
+      by TaqMan MGB probe real-time PCR (ABI Prism 7900HT). Three assays targeting
+      NS1, NP-1, and VP1 were run; viral load in clinical positives reported as mean
+      copies/mL across the three primer–probe sets from three replicate tests. DNA
+      extracted from 200 µL specimen using MagNa Pure LC total nucleic acid extraction
+      kit. Real-time PCR reaction: 20 µL with 2 µL extracted DNA, TaqMan Universal
+      PCR Master Mix, 900 nM primers, 250 nM probe; cycling 50°C 2 min (UNG), 95°C
+      10 min, 40 cycles 95°C 15 s and 60°C 1 min.'
+    specimen: nasopharyngeal_aspirate
+    biomarker: bocavirus
+    gene_target: NS1; NP-1; VP1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- patient_id: KNIH0027
+  attributes:
+    sex: male
+    age: 0.75
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 580000000
+- patient_id: KNIH1068
+  attributes:
+    sex: male
+    age: 25
+    age_group: adult
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 82000
+- patient_id: KNIH2673
+  attributes:
+    sex: female
+    age: 47
+    age_group: adult
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 15000000
+- patient_id: KNIH3345
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 4900000
+- patient_id: KNIH3380
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 30000000
+- patient_id: KNIH3550
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 47000000
+- patient_id: KNIH3631
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 140000
+- patient_id: KNIH3755
+  attributes:
+    sex: male
+    age: 0.9167
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 1200000000
+- patient_id: KNIH3850
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 230000000
+- patient_id: KNIH3996
+  attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 8100000000
+- patient_id: KNIH4392
+  attributes:
+    sex: female
+    age: 1
+    age_group: child
+  measurements:
+  - analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+    time: 0
+    value: 1600000

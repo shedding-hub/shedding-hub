@@ -1,0 +1,305 @@
+title: Frequent and prolonged shedding of bocavirus in young children attending daycare
+doi: 10.1086/652405
+description: Prospective longitudinal respiratory illness surveillance study of children
+  attending daycare centers on Fort Lewis Army Base (Washington State, USA; surveillance
+  Feb 2006–Apr 2008). Nasal swabs were collected at enrollment (sometimes asymptomatic)
+  and weekly during respiratory illnesses, then tested retrospectively for human bocavirus
+  (HBoV) by real-time PCR targeting the NP1 gene. Quantitative HBoV results were derived
+  from a standard curve and reported as copies per mL of lysis buffer. CSV-derived
+  measurements here provide longitudinal nasal HBoV quantities/positivity over time
+  (days relative to enrollment baseline in the figure-derived dataset).
+analytes:
+  nasal_hbov_viral_load:
+    description: Human bocavirus (HBoV) real-time PCR targeting the NP1 gene. Study
+      testing provided semiquantitative Ct results; for specimens with sufficient
+      volume, Ct values were compared to a standard curve from a plasmid containing
+      the HBoV amplicon to estimate viral quantity. Quantitative results reported
+      as copies of virus per mL of lysis buffer. The figure-derived CSV contains a
+      mix of numeric quantities and qualitative positive/negative calls.
+    specimen: nasopharyngeal_swab
+    biomarker: bocavirus
+    gene_target: NP1
+    limit_of_detection: 10000
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: enrollment
+participants:
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: 46415.88833612782
+  - analyte: nasal_hbov_viral_load
+    time: 20
+    value: 138949.5494373139
+  - analyte: nasal_hbov_viral_load
+    time: 90
+    value: 8030.85722139152
+  - analyte: nasal_hbov_viral_load
+    time: 106
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 113
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 140
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 142
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 162
+    value: 8030.85722139152
+  - analyte: nasal_hbov_viral_load
+    time: 170
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 182
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 191
+    value: 12451.97084735032
+  - analyte: nasal_hbov_viral_load
+    time: 198
+    value: 2154.4346900318865
+  - analyte: nasal_hbov_viral_load
+    time: 206
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 230
+    value: negative
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 40
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 47
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 54
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 62
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 91
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 98
+    value: 3340.4849835132377
+  - analyte: nasal_hbov_viral_load
+    time: 125
+    value: 17301957.388458908
+  - analyte: nasal_hbov_viral_load
+    time: 144
+    value: 5179.474679231202
+  - analyte: nasal_hbov_viral_load
+    time: 154
+    value: 24040.991835099692
+  - analyte: nasal_hbov_viral_load
+    time: 161
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 173
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 185
+    value: 6449.466771037601
+  - analyte: nasal_hbov_viral_load
+    time: 200
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 242
+    value: negative
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 9
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 21
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 29
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 49
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 57
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 65
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 79
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 86
+    value: 1730.195738845905
+  - analyte: nasal_hbov_viral_load
+    time: 92
+    value: 299357729.47205025
+  - analyte: nasal_hbov_viral_load
+    time: 118
+    value: 1550515.7798326348
+  - analyte: nasal_hbov_viral_load
+    time: 126
+    value: 2404099.183509984
+  - analyte: nasal_hbov_viral_load
+    time: 134
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 160
+    value: negative
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 9
+    value: 4159.562163071864
+  - analyte: nasal_hbov_viral_load
+    time: 27
+    value: 3727593.7203149227
+  - analyte: nasal_hbov_viral_load
+    time: 36
+    value: 19306.977288832615
+  - analyte: nasal_hbov_viral_load
+    time: 42
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 51
+    value: negative
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: 4159.562163071864
+  - analyte: nasal_hbov_viral_load
+    time: 25
+    value: 5779692.884153325
+  - analyte: nasal_hbov_viral_load
+    time: 39
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 49
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 67
+    value: 415956.21630718256
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 8
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 30
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 37
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 43
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 80
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 87
+    value: 517947.46792312653
+  - analyte: nasal_hbov_viral_load
+    time: 95
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 106
+    value: 15505.157798326221
+  - analyte: nasal_hbov_viral_load
+    time: 115
+    value: 10000.0
+  - analyte: nasal_hbov_viral_load
+    time: 179
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 189
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 199
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 218
+    value: negative
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 11
+    value: 138949.54943731474
+  - analyte: nasal_hbov_viral_load
+    time: 24
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 91
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 97
+    value: 29935.772947204783
+- attributes:
+    age_group: child
+  measurements:
+  - analyte: nasal_hbov_viral_load
+    time: 0
+    value: 37275.937203149224
+  - analyte: nasal_hbov_viral_load
+    time: 12
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 35
+    value: 19306.977288832455
+  - analyte: nasal_hbov_viral_load
+    time: 45
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 54
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 63
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 74
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 81
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 95
+    value: 2154.434690031898
+  - analyte: nasal_hbov_viral_load
+    time: 102
+    value: negative
+  - analyte: nasal_hbov_viral_load
+    time: 115
+    value: positive
+  - analyte: nasal_hbov_viral_load
+    time: 132
+    value: negative

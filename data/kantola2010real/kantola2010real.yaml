@@ -1,0 +1,72 @@
+title: Real-time quantitative PCR detection of four human bocaviruses
+doi: 10.1128/JCM.00686-10
+description: Study developing and analytically validating multiplex and singleplex
+  real-time quantitative PCR (qPCR) assays for detecting and quantifying human bocaviruses
+  (HBoV1-4). The assays were applied to stool swab extracts from 250 Finnish patients
+  whose stool samples were submitted for diagnosis of gastrointestinal infection;
+  5 samples were reproducibly positive (4 HBoV2, 1 HBoV3). Table 4/CSV provide individual-level
+  stool bocavirus DNA loads (copies/mL of fecal extract) for the 5 positive patients
+  along with age, sex, and travel history/other findings.
+analytes:
+  stool:
+    description: Human bocavirus (HBoV) DNA quantification in stool extract using
+      multiplex screening real-time qPCR followed by species-discriminating singleplex
+      qPCR assays (HBoV2, HBoV3; HBoV1-4 assay platform described). Stool swabs were
+      suspended in Tris-EDTA buffer, boiled, nucleic acids purified (NucliSENS easyMAG),
+      and eluate tested by TaqMan-based qPCR with FAM-labeled MGB hydrolysis probe
+      targeting the left-hand UTR/beginning of NS1 region. Clinical results reported
+      as copies/mL of fecal extract.
+    specimen: stool
+    biomarker: bocavirus
+    gene_target: left-hand UTR and beginning of NS1 gene region (amplicon within UTR/NS1
+      joint region)
+    limit_of_detection: unknown
+    limit_of_quantification: 1000
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- attributes:
+    sex: female
+    age: 2
+    age_group: child
+    subtype: HBoV2
+  measurements:
+  - analyte: stool
+    time: 0
+    value: 1000000000
+- attributes:
+    sex: male
+    age: 2
+    age_group: child
+    subtype: HBoV2
+  measurements:
+  - analyte: stool
+    time: 0
+    value: 75000
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+    subtype: HBoV2
+  measurements:
+  - analyte: stool
+    time: 0
+    value: 410000
+- attributes:
+    sex: female
+    age: 1
+    age_group: child
+    subtype: HBoV2
+  measurements:
+  - analyte: stool
+    time: 0
+    value: positive
+- attributes:
+    sex: female
+    age: 18
+    age_group: adult
+    subtype: HBoV3
+  measurements:
+  - analyte: stool
+    time: 0
+    value: positive

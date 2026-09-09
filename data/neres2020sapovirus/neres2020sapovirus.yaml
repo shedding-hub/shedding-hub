@@ -1,0 +1,69 @@
+title: Sapovirus detection and quantification in fecal samples from allogeneic hematopoietic
+  stem cell transplant recipients
+doi: 10.1007/s13337-020-00583-1
+description: Longitudinal retrospective monitoring study in Goiás, Brazil (fecal samples
+  collected Oct 2012–Jul 2014) of 19 allogeneic hematopoietic stem cell transplant
+  (allo-HSCT) recipients. Stool (fecal) specimens were processed as 20% suspensions
+  in PBS and tested for sapovirus by RT-qPCR (TaqMan) using Oka et al. 2006 primers/probe
+  targeting the polymerase/capsid junction; viral loads were quantified via standard
+  curve from serial dilutions of a recombinant plasmid. One patient was sapovirus-positive
+  with serial samples; one positive sample was sequenced (Sanger) and typed as GI.1.
+analytes:
+  stool_sapovirus_viral_load:
+    description: Sapovirus RNA detection and quantification in stool using RT-qPCR
+      (TaqMan) with primers SaV124F, SaV1F, SaV1245R and probe SaV124TP (per Oka et
+      al., 2006), targeting the polymerase/capsid junction region; quantification
+      by standard curve with serial dilutions of a recombinant plasmid containing
+      the polymerase/capsid partial region.
+    specimen: stool
+    biomarker: sapovirus
+    gene_target: ORF1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: hospital admission
+participants:
+- attributes:
+    age: 21
+    age_group: adult
+    genotype: GI.1
+    immune_status: immunocompromised
+    treatment: allogeneic hematopoietic stem cell transplant (allo-HSCT)
+    coinfection: adenovirus, bocavirus
+  measurements:
+  - analyte: stool_sapovirus_viral_load
+    time: 6
+    value: negative
+  - analyte: stool_sapovirus_viral_load
+    time: 15
+    value: 8970000
+  - analyte: stool_sapovirus_viral_load
+    time: 18
+    value: 1730000
+  - analyte: stool_sapovirus_viral_load
+    time: 28
+    value: 3570000
+  - analyte: stool_sapovirus_viral_load
+    time: 32
+    value: negative
+  - analyte: stool_sapovirus_viral_load
+    time: 38
+    value: negative
+  - analyte: stool_sapovirus_viral_load
+    time: 43
+    value: negative
+  - analyte: stool_sapovirus_viral_load
+    time: 53
+    value: negative
+  - analyte: stool_sapovirus_viral_load
+    time: 64
+    value: negative
+  - analyte: stool_sapovirus_viral_load
+    time: 65
+    value: 2570000
+  - analyte: stool_sapovirus_viral_load
+    time: 78
+    value: negative
+  - analyte: stool_sapovirus_viral_load
+    time: 108
+    value: negative

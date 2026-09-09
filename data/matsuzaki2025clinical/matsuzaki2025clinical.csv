@@ -1,0 +1,91 @@
+﻿PatientID,time,value,unit,age,sex,biomarker,subtype,specimen,reference_enterovirusent
+1,10,20.6,ct,1,F,influenza C virus,influenza C virus,Nasal swab,symptom onset
+1,10,28,ct,1,F,adenovirus,unknown,Nasal swab,symptom onset
+1,10,23.5,ct,1,F,rhinovirus,unknown,Nasal swab,symptom onset
+1,10,37,ct,1,F,bocavirus,unknown,Nasal swab,symptom onset
+1,10,470000000,gc/mL,1,F,influenza C virus,influenza C virus,Nasal swab,symptom onset
+1,10,18000000000,gc/mL,1,F,adenovirus,unknown,Nasal swab,symptom onset
+1,10,210000000,gc/mL,1,F,rhinovirus,unknown,Nasal swab,symptom onset
+1,10,1000000,gc/mL,1,F,bocavirus,unknown,Nasal swab,symptom onset
+2,0,23.1,ct,0.6667,F,influenza C virus,influenza C virus,Nasal secretion,symptom onset
+2,0,31.5,ct,0.6667,F,parainfluenza virus 4,HPIV-4,Nasal secretion,symptom onset
+2,0,35,ct,0.6667,F,adenovirus,unknown,Nasal secretion,symptom onset
+2,0,97000000,gc/mL,0.6667,F,influenza C virus,unknown,Nasal secretion,symptom onset
+2,0,4700000,gc/mL,0.6667,F,parainfluenza virus 4,unknown,Nasal secretion,symptom onset
+2,0,4900000,gc/mL,0.6667,F,adenovirus,unknown,Nasal secretion,symptom onset
+3,0,24.9,ct,2,M,influenza C virus,unknown,Throat swab,confirmation date
+3,0,26.3,ct,2,M,adenovirus,unknown,Throat swab,confirmation date
+3,0,29000000,gc/mL,2,M,influenza C virus,influenza C virus,Throat swab,confirmation date
+3,0,5.2E+11,gc/mL,2,M,adenovirus,unknown,Throat swab,confirmation date
+4,0,25,ct,6,M,influenza C virus,unknown,Nasal swab,confirmation date
+4,0,29.1,ct,6,M,adenovirus,unknown,Nasal swab,confirmation date
+4,0,negative,ct,6,M,rhinovirus,unknown,Nasal swab,confirmation date
+4,0,27000000,gc/mL,6,M,influenza C virus,influenza C virus,Nasal swab,confirmation date
+4,0,6500000000,gc/mL,6,M,adenovirus,unknown,Nasal swab,confirmation date
+4,0,negative,gc/mL,6,M,rhinovirus,unknown,Nasal swab,confirmation date
+5,3,25.3,ct,1,F,influenza C virus,influenza C virus,Throat swab,confirmation date
+5,3,30.2,ct,1,F,adenovirus,unknown,Throat swab,confirmation date
+5,3,32.6,ct,1,F,rhinovirus,unknown,Throat swab,confirmation date
+5,3,37.2,ct,1,F,bocavirus,unknown,Throat swab,confirmation date
+5,3,22000000,gc/mL,1,F,influenza C virus,influenza C virus,Throat swab,confirmation date
+5,3,4500000000,gc/mL,1,F,adenovirus,unknown,Throat swab,confirmation date
+5,3,1200000,gc/mL,1,F,rhinovirus,unknown,Throat swab,confirmation date
+5,3,930000,gc/mL,1,F,bocavirus,unknown,Throat swab,confirmation date
+6,6,25.7,ct,0.6667,F,influenza C virus,influenza C virus,Nasal secretion,symptom onset
+6,6,29.6,ct,0.6667,F,RSV A,RSV A,Nasal secretion,symptom onset
+6,6,17000000,gc/mL,0.6667,F,influenza C virus,influenza C virus,Nasal secretion,symptom onset
+6,6,870000,gc/mL,0.6667,F,RSV A,RSV A,Nasal secretion,symptom onset
+7,0,26.7,ct,3,M,influenza C virus,influenza C virus,Nasal swab,symptom onset
+7,0,24.1,ct,3,M,metapneumovirus,unknown,Nasal swab,symptom onset
+7,0,9900000,gc/mL,3,M,influenza C virus,influenza C virus,Nasal swab,symptom onset
+7,0,41000000,gc/mL,3,M,metapneumovirus,unknown,Nasal swab,symptom onset
+8,0,27.5,ct,0.6667,F,influenza C virus,influenza C virus,Throat swab,confirmation date
+8,0,27.5,ct,0.6667,F,adenovirus,unknown,Throat swab,confirmation date
+8,0,5200000,gc/mL,0.6667,F,influenza C virus,influenza C virus,Throat swab,confirmation date
+8,0,2.3E+11,gc/mL,0.6667,F,adenovirus,unknown,Throat swab,confirmation date
+9,4,27.7,ct,2,M,influenza C virus,influenza C virus,Throat swab,symptom onset
+9,4,27.5,ct,2,M,metapneumovirus,unknown,Throat swab,symptom onset
+9,4,negative,ct,2,M,adenovirus,unknown,Throat swab,symptom onset
+9,4,4800000,gc/mL,2,M,influenza C virus,influenza C virus,Throat swab,symptom onset
+9,4,3100000,gc/mL,2,M,metapneumovirus,unknown,Throat swab,symptom onset
+9,4,negative,gc/mL,2,M,adenovirus,unknown,Throat swab,symptom onset
+10,5,29.8,ct,1,M,influenza C virus,influenza C virus,Nasal swab,symptom onset
+10,5,25.3,ct,1,M,cytomegalovirus,unknown,Nasal swab,symptom onset
+10,5,1300000,gc/mL,1,M,influenza C virus,influenza C virus,Nasal swab,symptom onset
+10,5,3700000,gc/mL,1,M,cytomegalovirus,unknown,Nasal swab,symptom onset
+11,7,32,ct,1,M,influenza C virus,influenza C virus,Throat swab,symptom onset
+11,7,25.4,ct,1,M,adenovirus,unknown,Throat swab,symptom onset
+11,7,280000,gc/mL,1,M,influenza C virus,influenza C virus,Throat swab,symptom onset
+11,7,9.3E+11,gc/mL,1,M,adenovirus,unknown,Throat swab,symptom onset
+12,0,18.6,ct,1,M,influenza C virus,influenza C virus,Nasal secretion,confirmation date
+12,0,27,ct,1,M,adenovirus,unknown,Nasal secretion,confirmation date
+12,0,1800000000,gc/mL,1,M,influenza C virus,influenza C virus,Nasal secretion,confirmation date
+12,0,33000000000,gc/mL,1,M,adenovirus,unknown,Nasal secretion,confirmation date
+13,0,21.6,ct,2,M,influenza C virus,influenza C virus,Nasal secretion,confirmation date
+13,0,20.8,ct,2,M,RSV B,RSV B,Nasal secretion,confirmation date
+13,0,negative,ct,2,M,rhinovirus,unknown,Nasal secretion,confirmation date
+13,0,270000000,gc/mL,2,M,influenza C virus,influenza C virus,Nasal secretion,confirmation date
+13,0,170000000,gc/mL,2,M,RSV B,RSV B,Nasal secretion,confirmation date
+13,0,negative,gc/mL,2,M,rhinovirus,unknown,Nasal secretion,confirmation date
+14,0,26.7,ct,5,M,influenza C virus,influenza C virus,Throat swab,confirmation date
+14,0,31.1,ct,5,M,enterovirus,unknown,Throat swab,confirmation date
+14,0,25.7,ct,5,M,parainfluenza virus 1,HPIV-1,Throat swab,confirmation date
+14,0,33.1,ct,5,M,coronavirus NL63,HCoV-NL63,Throat swab,confirmation date
+14,0,negative,ct,5,M,rhinovirus,unknown,Throat swab,confirmation date
+14,0,9200000,gc/mL,5,M,influenza C virus,influenza C virus,Throat swab,confirmation date
+14,0,4300000,gc/mL,5,M,enterovirus,unknown,Throat swab,confirmation date
+14,0,5100000,gc/mL,5,M,parainfluenza virus 1,HPIV-1,Throat swab,confirmation date
+14,0,230000,gc/mL,5,M,coronavirus NL63,HCoV-NL63,Throat swab,confirmation date
+14,0,negative,gc/mL,5,M,rhinovirus,unknown,Throat swab,confirmation date
+15,0,28.6,ct,1,M,influenza C virus,influenza C virus,Nasal secretion,confirmation date
+15,0,35,ct,1,M,adenovirus,unknown,Nasal secretion,confirmation date
+15,0,33.3,ct,1,M,coronavirus NL63,HCoV-NL63,Nasal secretion,confirmation date
+15,0,2600000,gc/mL,1,M,influenza C virus,influenza C virus,Nasal secretion,confirmation date
+15,0,6800000,gc/mL,1,M,adenovirus,unknown,Nasal secretion,confirmation date
+15,0,200000,gc/mL,1,M,coronavirus NL63,HCoV-NL63,Nasal secretion,confirmation date
+16,0,29.4,ct,0.5833,M,influenza C virus,influenza C virus,Throat swab,confirmation date
+16,0,28.3,ct,0.5833,M,adenovirus,unknown,Throat swab,confirmation date
+16,0,25.1,ct,0.5833,M,bocavirus,unknown,Throat swab,confirmation date
+16,0,1500000,gc/mL,0.5833,M,influenza C virus,influenza C virus,Throat swab,confirmation date
+16,0,1.5E+11,gc/mL,0.5833,M,adenovirus,unknown,Throat swab,confirmation date
+16,0,780000000,gc/mL,0.5833,M,bocavirus,unknown,Throat swab,confirmation date
