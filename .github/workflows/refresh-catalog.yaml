@@ -101,15 +101,30 @@ jobs:
         run: make doc_counts
 
       - name: Validate the result
-        # The three staleness guards this job exists to satisfy, run before the
-        # commit rather than after the push, so a build that did not actually
-        # fix them fails here instead of on the pull request.
+        # The whole suite, not the staleness guards alone, run before the commit
+        # rather than after the push so a build that did not actually fix them
+        # fails here instead of on the pull request.
+        #
+        # It was the two guards and the doc-count check on the first run, which
+        # proved too narrow to be worth much: three docstring examples under
+        # `shedding_hub/` read the fit count and a peak day straight off the
+        # catalog, and rebuilding moved all three. `testpaths` collects that
+        # tree, but naming test files explicitly skips it, so the stale
+        # doctests reached the pull request and failed Build there -- the exact
+        # failure this step exists to pre-empt. Narrowing it again to save a
+        # few minutes trades away the only thing it is for.
         env:
+          # Mirrors the Build job. test_load resolves a pull request through
+          # api.github.com, rate limited to 60 requests an hour
+          # unauthenticated; the thread pins stop each xdist worker spawning a
+          # BLAS pool per core and fighting the others.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHEDDING_HUB_SKIP_LINK_CHECKS: "1"
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
         run: |
-          pytest -q \
-            tests/test_shedding_catalog.py::test_shipped_catalog_covers_every_dataset \
-            tests/test_parameter_export.py
+          pytest -q -n auto
           python scripts/update_doc_counts.py --check
 
       - name: Summarize what changed
