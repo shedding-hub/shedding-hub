@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range catalog_gate2 figures curation_growth
+.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range catalog_gate2 figures curation_growth doc_counts
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -43,6 +43,12 @@ catalog :
 # catalog. Fits nothing; run it after `make catalog`.
 parameters :
 	python scripts/export_parameter_table.py
+
+# Rewrite the catalog counts quoted in docs/. Reads the shipped catalog and
+# substitutes the numbers in place; run it after `make catalog`. `--check`
+# reports staleness without writing, which is what the test uses.
+doc_counts :
+	python scripts/update_doc_counts.py
 
 # The concentration catalog under a 2 log10 over-extrapolation gate, which is
 # what the website's dataset figures are drawn from. Note that the Ct build's
