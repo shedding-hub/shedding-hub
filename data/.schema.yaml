@@ -90,18 +90,26 @@ $defs:
           - PMMoV
           - crAssphage
           - influenza
+          - parainfluenza virus
           - sapovirus
           - norovirus
           - SARS
+          - coronavirus
+          - hCoV NL63
+          - CoV-HKU1
           - adenovirus
           - RSV
+          - metapneumovirus
           - rhinovirus
+          - enterovirus
           - Lanzhou lamb rotavirus vaccine
           - rotavirus
           - rotavirus vaccine
           - hepatitis A virus
           - hepatitis E virus
           - BK polyomavirus
+          - bocavirus
+          - cytomegalovirus
           - mpox
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
@@ -299,7 +307,8 @@ properties:
                 a specific subtype/lineage designation, never just the pathogen or biomarker
                 name itself (e.g., not 'RSV' or 'SARS-CoV-2'). For influenza, the type and
                 (when reported) subtype or lineage, e.g., 'A(H1N1)pdm09', 'A(H3N2)', 'B',
-                'B/Victoria'. For RSV, 'A' or 'B' when reported per participant.
+                'B/Victoria', 'C'. For RSV, 'A' or 'B' when reported per participant. For parainfluenza virus,
+                'HPIV-1', 'HPIV-2', 'HPIV-3', or 'HPIV-4'.
               type: string
             symptomatic:
               description: >
@@ -360,9 +369,9 @@ properties:
               description: >
                 Antiviral or other pathogen-directed treatment the participant received
                 that could affect shedding (e.g., 'oseltamivir', 'zanamivir',
-                'remdesivir', 'cidofovir', 'BMT' for bone marrow transplantation), or
-                'untreated' when explicitly untreated. Describes the subject, not a
-                separate analyte.
+                'remdesivir', 'cidofovir', 'brincidofovir', 'BMT' for bone marrow
+                transplant), or 'untreated' when explicitly untreated. Describes the subject, 
+                not a separate analyte.
               type: string
         measurements:
           type: array
