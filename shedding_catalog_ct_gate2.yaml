@@ -1017,6 +1017,44 @@ fits:
   value_type: ct
   ct_reference: 40.0
   ct_cutoff: 40.0
+- dataset_id: pietsch2019intrahost
+  analyte: stool_sapovirus_ct
+  biomarker: sapovirus
+  specimen: stool
+  reference_event: symptom onset
+  unit: cycle threshold
+  gene_target: ORF1/ORF2
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_cycles
+  population_mean:
+  - -1.1587758264965207
+  - 18.24225852006517
+  population_cov:
+  - - 2.1081398398660007
+    - 1.6590778620292372
+  - - 1.6590778620292372
+    - 5.2163828486848995
+  sigma: 2.2911569346532095
+  censoring_limit: 0.0
+  n_subjects: 5
+  n_measurements: 42
+  n_censored: 4
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 1
+  pct_subjects_with_rise: 40.0
+  median_first_observed_day: 2.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -88.15997123973825
+  aic: 198.3199424794765
+  value_type: ct
+  ct_reference: 40.0
+  ct_cutoff: 40.0
 - dataset_id: salvatore2020epidemiological
   analyte: N1_probe
   biomarker: SARS-CoV-2
@@ -2346,6 +2384,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'urine_polyomavirus_dna' is reported in 'gc/mL', a concentration,
     and this build admits only ['ct'].
+- dataset_id: brieu2008human
+  analyte: nasopharyngeal_secretions_bocavirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_secretions_bocavirus_viral_load' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: brieu2008human
+  analyte: nasopharyngeal_secretions_bocavirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_secretions_bocavirus_viral_load' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: brieu2008human
+  analyte: nasopharyngeal_secretions_bocavirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_secretions_bocavirus_viral_load' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
 - dataset_id: brint2017prolonged
   analyte: nasal_aspirate_respiratory_syncytial_virus_viral_load
   model: exponential
@@ -2502,6 +2558,24 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte '2'.
+- dataset_id: carr2008molecular
+  analyte: respiratory_metapneumovirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'respiratory_metapneumovirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: carr2008molecular
+  analyte: respiratory_metapneumovirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'respiratory_metapneumovirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: carr2008molecular
+  analyte: respiratory_metapneumovirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'respiratory_metapneumovirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
 - dataset_id: cdc2024nhphrn
   analyte: NP_SARSCoV2_VL
   model: exponential
@@ -2520,6 +2594,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'NP_SARSCoV2_VL' is reported in 'gc/mL', a concentration, and this
     build admits only ['ct'].
+- dataset_id: cheng2008human
+  analyte: stool_bocavirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_bocavirus_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: cheng2008human
+  analyte: stool_bocavirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_bocavirus_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: cheng2008human
+  analyte: stool_bocavirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_bocavirus_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
 - dataset_id: chilengi2020pilot
   analyte: stool_rotavirus_viral_load
   model: exponential
@@ -2538,6 +2630,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'stool_rotavirus_viral_load' is reported in 'gc/wet gram', a concentration,
     and this build admits only ['ct'].
+- dataset_id: choi2008development
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: choi2008development
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: choi2008development
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
 - dataset_id: coppee2023temporal
   analyte: nasopharyngeal_swab_RSV_ct_symptomatic
   model: gamma
@@ -2849,6 +2959,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'respiratory_secretions_RSV_viral_load' is reported in 'pfu/mL',
     a concentration, and this build admits only ['ct'].
+- dataset_id: engelmann2009adenovirus
+  analyte: serum_adenovirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'serum_adenovirus_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: engelmann2009adenovirus
+  analyte: serum_adenovirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'serum_adenovirus_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: engelmann2009adenovirus
+  analyte: serum_adenovirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'serum_adenovirus_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
 - dataset_id: enya2023similarities
   analyte: 1_gc_reaction
   model: exponential
@@ -3279,6 +3407,276 @@ skipped:
   reason: concentration_units
   message: Analyte '4800_emesis' is reported in 'gc/mL', a concentration, and this
     build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_bocavirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'hospital_admission_bocavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_bocavirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'hospital_admission_bocavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_bocavirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'hospital_admission_bocavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_rsv
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'hospital_admission_rsv' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_rsv
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'hospital_admission_rsv' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_rsv
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'hospital_admission_rsv' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_rhinovirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'hospital_admission_rhinovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_rhinovirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'hospital_admission_rhinovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_rhinovirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'hospital_admission_rhinovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_parainfluenza_virus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'hospital_admission_parainfluenza_virus' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_parainfluenza_virus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'hospital_admission_parainfluenza_virus' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_parainfluenza_virus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'hospital_admission_parainfluenza_virus' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_adenovirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'hospital_admission_adenovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_adenovirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'hospital_admission_adenovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: hospital_admission_adenovirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'hospital_admission_adenovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_bocavirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'confirmation_date_bocavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_bocavirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'confirmation_date_bocavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_bocavirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'confirmation_date_bocavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_rsv
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'confirmation_date_rsv' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_rsv
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'confirmation_date_rsv' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_rsv
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'confirmation_date_rsv' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_rhinovirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'confirmation_date_rhinovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_rhinovirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'confirmation_date_rhinovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_rhinovirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'confirmation_date_rhinovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_coronavirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'confirmation_date_coronavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_coronavirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'confirmation_date_coronavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_coronavirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'confirmation_date_coronavirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_parainfluenza_virus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'confirmation_date_parainfluenza_virus' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_parainfluenza_virus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'confirmation_date_parainfluenza_virus' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_parainfluenza_virus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'confirmation_date_parainfluenza_virus' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_adenovirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'confirmation_date_adenovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_adenovirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'confirmation_date_adenovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007human
+  analyte: confirmation_date_adenovirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'confirmation_date_adenovirus' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: metapneumovirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'metapneumovirus' is reported in 'gc/mL', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: metapneumovirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'metapneumovirus' is reported in 'gc/mL', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: metapneumovirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'metapneumovirus' is reported in 'gc/mL', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: rhinovirus
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'rhinovirus' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: rhinovirus
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'rhinovirus' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: rhinovirus
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'rhinovirus' is reported in 'gc/mL', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: influenza
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'influenza' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: influenza
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'influenza' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: influenza
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'influenza' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: hCoV_63
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'hCoV_63' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: hCoV_63
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'hCoV_63' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: gerna2007prospective
+  analyte: hCoV_63
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'hCoV_63' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
 - dataset_id: golantripto2024viral
   analyte: utm_vp_ml_nasopharyngeal_swab
   model: exponential
@@ -3945,6 +4343,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'stool_HAV_viral_load' is reported in 'gc/wet gram', a concentration,
     and this build admits only ['ct'].
+- dataset_id: kantola2010real
+  analyte: stool
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: kantola2010real
+  analyte: stool
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: kantola2010real
+  analyte: stool
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
 - dataset_id: kay2011shedding
   analyte: nasal_lavage_influenza_gc_per_mL
   model: exponential
@@ -4789,6 +5205,204 @@ skipped:
   reason: concentration_units
   message: Analyte 'stool_mtDNA' is reported in 'gc/dry gram', a concentration, and
     this build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_a
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'serum_a' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_a
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'serum_a' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_a
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'serum_a' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_b
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'serum_b' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_b
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'serum_b' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_b
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'serum_b' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_c
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'serum_c' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_c
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'serum_c' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_c
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'serum_c' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_e
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'serum_e' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_e
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'serum_e' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_e
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'serum_e' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_f
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'serum_f' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_f
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'serum_f' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: serum_f
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'serum_f' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_a
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_a' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_a
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_a' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_a
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_a' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_b
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_b' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_b
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_b' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_b
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_b' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_c
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_c' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_c
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_c' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_c
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_c' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_d
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_d' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_d
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_d' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_d
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_d' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_e
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_e' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_e
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_e' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_e
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_e' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_f
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_f' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_f
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_f' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
+- dataset_id: lucini2026dose
+  analyte: stool_f
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_f' is reported in 'gc/wet gram', a concentration, and this
+    build admits only ['ct'].
 - dataset_id: ludwig2008quantitative
   analyte: stool_norovirus_viral_load
   model: exponential
@@ -4861,6 +5475,727 @@ skipped:
   reason: concentration_units
   message: Analyte 'saliva_HAV_RNA' is reported in 'gc/mL', a concentration, and this
     build admits only ['ct'].
+- dataset_id: martin2010frequent
+  analyte: nasal_hbov_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasal_hbov_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: martin2010frequent
+  analyte: nasal_hbov_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasal_hbov_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: martin2010frequent
+  analyte: nasal_hbov_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasal_hbov_viral_load' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_nasopharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_influenza_c_virus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_nasopharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_influenza_c_virus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_influenza_c_virus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_nasopharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_adenovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_nasopharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_adenovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_adenovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_nasopharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_rhinovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_nasopharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_rhinovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_rhinovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_bocavirus_nasopharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_bocavirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_bocavirus_nasopharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_bocavirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_bocavirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_bocavirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_nasopharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_nasopharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_nasopharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_nasopharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_nasopharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_nasopharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_bocavirus_nasopharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_bocavirus_nasopharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_bocavirus_nasopharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_bocavirus_nasopharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_bocavirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_bocavirus_nasopharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_nasal_secretion
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_influenza_c_virus_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_nasal_secretion
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_influenza_c_virus_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_nasal_secretion
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_influenza_c_virus_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_parainfluenza_virus_4_nasal_secretion
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_parainfluenza_virus_4_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_parainfluenza_virus_4_nasal_secretion
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_parainfluenza_virus_4_nasal_secretion' has no positive measurements
+    to fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_parainfluenza_virus_4_nasal_secretion
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_parainfluenza_virus_4_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_nasal_secretion
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_adenovirus_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_nasal_secretion
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_adenovirus_nasal_secretion' has no positive measurements to
+    fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_nasal_secretion
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_adenovirus_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_nasal_secretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_nasal_secretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_nasal_secretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_parainfluenza_virus_4_nasal_secretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_parainfluenza_virus_4_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_parainfluenza_virus_4_nasal_secretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_parainfluenza_virus_4_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_parainfluenza_virus_4_nasal_secretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_parainfluenza_virus_4_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_nasal_secretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_nasal_secretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_nasal_secretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_influenza_c_virus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_oropharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_influenza_c_virus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_influenza_c_virus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_influenza_c_virus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_adenovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_oropharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_adenovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_adenovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_adenovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_influenza_c_virus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_influenza_c_virus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_adenovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_adenovirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_rhinovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_oropharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_rhinovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_rhinovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_bocavirus_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_bocavirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_bocavirus_oropharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_bocavirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_bocavirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_bocavirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_bocavirus_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_bocavirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_bocavirus_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_bocavirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_bocavirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_bocavirus_oropharyngeal_swab' is reported in 'gc/mL', a
+    concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rsv_a_nasal_secretion
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_rsv_a_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rsv_a_nasal_secretion
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_rsv_a_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rsv_a_nasal_secretion
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_rsv_a_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rsv_a_nasal_secretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_rsv_a_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rsv_a_nasal_secretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_rsv_a_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rsv_a_nasal_secretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_rsv_a_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_metapneumovirus_nasopharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_metapneumovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_metapneumovirus_nasopharyngeal_swab
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_metapneumovirus_nasopharyngeal_swab' has no positive measurements
+    to fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_metapneumovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_metapneumovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_metapneumovirus_nasopharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_metapneumovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_metapneumovirus_nasopharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_metapneumovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_metapneumovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_metapneumovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_metapneumovirus_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_metapneumovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_metapneumovirus_oropharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_metapneumovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_metapneumovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_metapneumovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_metapneumovirus_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_metapneumovirus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_metapneumovirus_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_metapneumovirus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_metapneumovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_metapneumovirus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_cytomegalovirus_nasopharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_cytomegalovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_cytomegalovirus_nasopharyngeal_swab
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'ct_cytomegalovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_cytomegalovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_cytomegalovirus_nasopharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_cytomegalovirus_nasopharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_cytomegalovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_cytomegalovirus_nasopharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_cytomegalovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_cytomegalovirus_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_cytomegalovirus_nasopharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rsv_b_nasal_secretion
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_rsv_b_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rsv_b_nasal_secretion
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_rsv_b_nasal_secretion' has no positive measurements to fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rsv_b_nasal_secretion
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_rsv_b_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_nasal_secretion
+  model: exponential
+  reason: no_positive_measurements
+  message: Analyte 'ct_rhinovirus_nasal_secretion' has no positive measurements to
+    fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_nasal_secretion
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_rhinovirus_nasal_secretion' has no positive measurements to
+    fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_rhinovirus_nasal_secretion
+  model: gamma_shifted
+  reason: no_positive_measurements
+  message: Analyte 'ct_rhinovirus_nasal_secretion' has no positive measurements to
+    fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rsv_b_nasal_secretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_rsv_b_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rsv_b_nasal_secretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_rsv_b_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rsv_b_nasal_secretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_rsv_b_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_nasal_secretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_nasal_secretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_rhinovirus_nasal_secretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_rhinovirus_nasal_secretion' is reported in 'gc/mL', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_enterovirus_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_enterovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_enterovirus_oropharyngeal_swab
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_enterovirus_oropharyngeal_swab' has no positive measurements
+    to fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_enterovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_enterovirus_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_parainfluenza_virus_1_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_parainfluenza_virus_1_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_parainfluenza_virus_1_oropharyngeal_swab
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_parainfluenza_virus_1_oropharyngeal_swab' has no positive measurements
+    to fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_parainfluenza_virus_1_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_parainfluenza_virus_1_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_coronavirus_nl63_oropharyngeal_swab
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_coronavirus_nl63_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_coronavirus_nl63_oropharyngeal_swab
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_coronavirus_nl63_oropharyngeal_swab' has no positive measurements
+    to fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_coronavirus_nl63_oropharyngeal_swab
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_coronavirus_nl63_oropharyngeal_swab'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_enterovirus_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_enterovirus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_enterovirus_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_enterovirus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_enterovirus_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_enterovirus_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_parainfluenza_virus_1_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_parainfluenza_virus_1_oropharyngeal_swab' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_parainfluenza_virus_1_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_parainfluenza_virus_1_oropharyngeal_swab' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_parainfluenza_virus_1_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_parainfluenza_virus_1_oropharyngeal_swab' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_coronavirus_nl63_oropharyngeal_swab
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_coronavirus_nl63_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_coronavirus_nl63_oropharyngeal_swab
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_coronavirus_nl63_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_coronavirus_nl63_oropharyngeal_swab
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_coronavirus_nl63_oropharyngeal_swab' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_coronavirus_nl63_nasal_secretion
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'ct_coronavirus_nl63_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_coronavirus_nl63_nasal_secretion
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'ct_coronavirus_nl63_nasal_secretion' has no positive measurements
+    to fit.
+- dataset_id: matsuzaki2025clinical
+  analyte: ct_coronavirus_nl63_nasal_secretion
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'ct_coronavirus_nl63_nasal_secretion'.
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_coronavirus_nl63_nasal_secretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'gc_ml_coronavirus_nl63_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_coronavirus_nl63_nasal_secretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'gc_ml_coronavirus_nl63_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: matsuzaki2025clinical
+  analyte: gc_ml_coronavirus_nl63_nasal_secretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'gc_ml_coronavirus_nl63_nasal_secretion' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
 - dataset_id: mattner2008adenovirus
   analyte: stool_adenovirus_detection
   model: exponential
@@ -5334,6 +6669,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'N1-sgRNA-RT-qPCR-ZY' is reported in 'gc/mL', a concentration,
     and this build admits only ['ct'].
+- dataset_id: neres2020sapovirus
+  analyte: stool_sapovirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'stool_sapovirus_viral_load' is reported in 'gc/wet gram', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: neres2020sapovirus
+  analyte: stool_sapovirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'stool_sapovirus_viral_load' is reported in 'gc/wet gram', a concentration,
+    and this build admits only ['ct'].
+- dataset_id: neres2020sapovirus
+  analyte: stool_sapovirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'stool_sapovirus_viral_load' is reported in 'gc/wet gram', a concentration,
+    and this build admits only ['ct'].
 - dataset_id: newman2016norovirus
   analyte: gec_g
   model: exponential
@@ -5370,6 +6723,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'stool_norovirus' is reported in 'gc/wet gram', a concentration,
     and this build admits only ['ct'].
+- dataset_id: oong2018role
+  analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_swab_metapneumovirus_viral_load' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: oong2018role
+  analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_swab_metapneumovirus_viral_load' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: oong2018role
+  analyte: nasopharyngeal_swab_metapneumovirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_swab_metapneumovirus_viral_load' is reported in
+    'gc/mL', a concentration, and this build admits only ['ct'].
 - dataset_id: pace2024prevalence
   analyte: stool_SARSCoV2
   model: gamma_shifted
@@ -5431,6 +6802,22 @@ skipped:
   reason: concentration_units
   message: Analyte 'nasopharyngeal_aspirate_RSV_viral_load' is reported in 'gc/ng
     hDNA', a concentration, and this build admits only ['ct'].
+- dataset_id: pietsch2019intrahost
+  analyte: stool_sapovirus_ct
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'stool_sapovirus_ct'\
+    \ does not show one: only 40% of subjects did, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: pietsch2019intrahost
+  analyte: stool_sapovirus_ct
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'stool_sapovirus_ct' has no detected reading at or before its reference
+    event, so a shifted onset has nothing to locate and would only absorb curve shape.
+    Fit the 'gamma' model instead.
 - dataset_id: piralla2013different
   analyte: nasopharyngeal_swab
   model: exponential
@@ -5521,6 +6908,66 @@ skipped:
   reason: concentration_units
   message: Analyte 'stool_adenovirus_viral_load' is reported in 'gc/wet gram', a concentration,
     and this build admits only ['ct'].
+- dataset_id: prachayangprecha2014exploring
+  analyte: rhinovirus_ct
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'rhinovirus_ct'.
+- dataset_id: prachayangprecha2014exploring
+  analyte: rhinovirus_ct
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'rhinovirus_ct' has no positive measurements to fit.
+- dataset_id: prachayangprecha2014exploring
+  analyte: rhinovirus_ct
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'rhinovirus_ct'.
+- dataset_id: prachayangprecha2014exploring
+  analyte: enterovirus_ct
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'enterovirus_ct'.
+- dataset_id: prachayangprecha2014exploring
+  analyte: enterovirus_ct
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'enterovirus_ct' has no positive measurements to fit.
+- dataset_id: prachayangprecha2014exploring
+  analyte: enterovirus_ct
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'enterovirus_ct'.
+- dataset_id: prachayangprecha2014exploring
+  analyte: metapneumovirus_ct
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'metapneumovirus_ct'.
+- dataset_id: prachayangprecha2014exploring
+  analyte: metapneumovirus_ct
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'metapneumovirus_ct' has no positive measurements to fit.
+- dataset_id: prachayangprecha2014exploring
+  analyte: metapneumovirus_ct
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'metapneumovirus_ct'.
+- dataset_id: prachayangprecha2014exploring
+  analyte: bocavirus_ct
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'bocavirus_ct'.
+- dataset_id: prachayangprecha2014exploring
+  analyte: bocavirus_ct
+  model: gamma
+  reason: no_positive_measurements
+  message: Analyte 'bocavirus_ct' has no positive measurements to fit.
+- dataset_id: prachayangprecha2014exploring
+  analyte: bocavirus_ct
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'bocavirus_ct'.
 - dataset_id: rodrigues2020influenza
   analyte: respiratory_influenza_viral_load
   model: exponential
@@ -5748,6 +7195,24 @@ skipped:
   message: Analyte 'nasopharyngeal_ct' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: sarasini2006detection
+  analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml' is reported
+    in 'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: sarasini2006detection
+  analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml' is reported
+    in 'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: sarasini2006detection
+  analyte: nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml' is reported
+    in 'gc/mL', a concentration, and this build admits only ['ct'].
 - dataset_id: schumer2026viral
   analyte: gc_ml
   model: exponential
@@ -5906,6 +7371,42 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: tabatabai2019severe
+  analyte: serum
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'serum' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: tabatabai2019severe
+  analyte: serum
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'serum' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: tabatabai2019severe
+  analyte: serum
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'serum' is reported in 'gc/mL', a concentration, and this build
+    admits only ['ct'].
+- dataset_id: tabatabai2019severe
+  analyte: trachealsecretion
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'trachealsecretion' is reported in 'gc/mL', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: tabatabai2019severe
+  analyte: trachealsecretion
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'trachealsecretion' is reported in 'gc/mL', a concentration, and
+    this build admits only ['ct'].
+- dataset_id: tabatabai2019severe
+  analyte: trachealsecretion
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'trachealsecretion' is reported in 'gc/mL', a concentration, and
+    this build admits only ['ct'].
 - dataset_id: takanashi2011characterization
   analyte: stool_norovirus_gc_ml
   model: exponential
@@ -6198,6 +7699,24 @@ skipped:
   reason: concentration_units
   message: Analyte 'oropharyngeal_swab' is reported in 'gc/swab', a concentration,
     and this build admits only ['ct'].
+- dataset_id: woo2005characterization
+  analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml' is reported
+    in 'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: woo2005characterization
+  analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml' is reported
+    in 'gc/mL', a concentration, and this build admits only ['ct'].
+- dataset_id: woo2005characterization
+  analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml' is reported
+    in 'gc/mL', a concentration, and this build admits only ['ct'].
 - dataset_id: xing2020prolonged
   analyte: stool_SARSCoV2
   model: exponential
@@ -6681,6 +8200,42 @@ skipped:
   reason: concentration_units
   message: Analyte 'serum_adenovirus_viral_load' is reported in 'gc/mL', a concentration,
     and this build admits only ['ct'].
+- dataset_id: zheng2010human
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: zheng2010human
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: zheng2010human
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: zhou2014single
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: exponential
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: zhou2014single
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: gamma
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
+- dataset_id: zhou2014single
+  analyte: nasopharyngeal_aspirate_bocavirus_viral_load
+  model: gamma_shifted
+  reason: concentration_units
+  message: Analyte 'nasopharyngeal_aspirate_bocavirus_viral_load' is reported in 'gc/mL',
+    a concentration, and this build admits only ['ct'].
 - dataset_id: zuo2020alterations
   analyte: stool_SARSCoV2_SymptomOnset
   model: exponential

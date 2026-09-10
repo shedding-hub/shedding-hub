@@ -159,6 +159,19 @@
    }
   ]
  },
+ "brieu2008human": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_secretions_bocavirus_viral_load",
+    "figures": [
+     {
+      "file": "nasopharyngeal_secretions_bocavirus_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "brint2017prolonged": {
   "analytes": [
    {
@@ -247,6 +260,19 @@
    }
   ]
  },
+ "carr2008molecular": {
+  "analytes": [
+   {
+    "analyte": "respiratory_metapneumovirus_viral_load",
+    "figures": [
+     {
+      "file": "respiratory_metapneumovirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "cdc2024nhphrn": {
   "analytes": [
    {
@@ -285,6 +311,19 @@
    }
   ]
  },
+ "cheng2008human": {
+  "analytes": [
+   {
+    "analyte": "stool_bocavirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_bocavirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "chilengi2020pilot": {
   "analytes": [
    {
@@ -293,6 +332,19 @@
      {
       "file": "stool_rotavirus_viral_load__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "choi2008development": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_aspirate_bocavirus_viral_load",
+    "figures": [
+     {
+      "file": "nasopharyngeal_aspirate_bocavirus_viral_load__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -460,6 +512,23 @@
     "figures": [
      {
       "file": "respiratory_secretions_RSV_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "engelmann2009adenovirus": {
+  "analytes": [
+   {
+    "analyte": "serum_adenovirus_viral_load",
+    "figures": [
+     {
+      "file": "serum_adenovirus_viral_load__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "serum_adenovirus_viral_load__exponential.png",
       "model": "exponential"
      }
     ]
@@ -748,6 +817,131 @@
     "figures": [
      {
       "file": "4800_emesis__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "gerna2007human": {
+  "analytes": [
+   {
+    "analyte": "hospital_admission_bocavirus",
+    "figures": [
+     {
+      "file": "hospital_admission_bocavirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "hospital_admission_rsv",
+    "figures": [
+     {
+      "file": "hospital_admission_rsv__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "hospital_admission_rhinovirus",
+    "figures": [
+     {
+      "file": "hospital_admission_rhinovirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "hospital_admission_parainfluenza_virus",
+    "figures": [
+     {
+      "file": "hospital_admission_parainfluenza_virus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "hospital_admission_adenovirus",
+    "figures": [
+     {
+      "file": "hospital_admission_adenovirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "confirmation_date_bocavirus",
+    "figures": [
+     {
+      "file": "confirmation_date_bocavirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "confirmation_date_rsv",
+    "figures": [
+     {
+      "file": "confirmation_date_rsv__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "confirmation_date_rhinovirus",
+    "figures": [
+     {
+      "file": "confirmation_date_rhinovirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "confirmation_date_coronavirus",
+    "figures": [
+     {
+      "file": "confirmation_date_coronavirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "confirmation_date_parainfluenza_virus",
+    "figures": [
+     {
+      "file": "confirmation_date_parainfluenza_virus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "confirmation_date_adenovirus",
+    "figures": [
+     {
+      "file": "confirmation_date_adenovirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "gerna2007prospective": {
+  "analytes": [
+   {
+    "analyte": "metapneumovirus",
+    "figures": [
+     {
+      "file": "metapneumovirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "rhinovirus",
+    "figures": [
+     {
+      "file": "rhinovirus__observations.png",
       "model": "observations"
      }
     ]
@@ -1168,6 +1362,19 @@
     "figures": [
      {
       "file": "stool_HAV_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "kantola2010real": {
+  "analytes": [
+   {
+    "analyte": "stool",
+    "figures": [
+     {
+      "file": "stool__observations.png",
       "model": "observations"
      }
     ]
@@ -1699,6 +1906,113 @@
    }
   ]
  },
+ "lucini2026dose": {
+  "analytes": [
+   {
+    "analyte": "serum_a",
+    "figures": [
+     {
+      "file": "serum_a__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_b",
+    "figures": [
+     {
+      "file": "serum_b__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_c",
+    "figures": [
+     {
+      "file": "serum_c__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_e",
+    "figures": [
+     {
+      "file": "serum_e__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "serum_f",
+    "figures": [
+     {
+      "file": "serum_f__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_a",
+    "figures": [
+     {
+      "file": "stool_a__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_b",
+    "figures": [
+     {
+      "file": "stool_b__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_c",
+    "figures": [
+     {
+      "file": "stool_c__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "stool_c__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_d",
+    "figures": [
+     {
+      "file": "stool_d__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_e",
+    "figures": [
+     {
+      "file": "stool_e__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_f",
+    "figures": [
+     {
+      "file": "stool_f__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "ludwig2008quantitative": {
   "analytes": [
    {
@@ -1745,6 +2059,401 @@
     "figures": [
      {
       "file": "saliva_HAV_RNA__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "martin2010frequent": {
+  "analytes": [
+   {
+    "analyte": "nasal_hbov_viral_load",
+    "figures": [
+     {
+      "file": "nasal_hbov_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "matsuzaki2025clinical": {
+  "analytes": [
+   {
+    "analyte": "ct_influenza_c_virus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_influenza_c_virus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_adenovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_adenovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_rhinovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_rhinovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_bocavirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_bocavirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_influenza_c_virus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_influenza_c_virus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_adenovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_adenovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_rhinovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_rhinovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_bocavirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_bocavirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_influenza_c_virus_nasal_secretion",
+    "figures": [
+     {
+      "file": "ct_influenza_c_virus_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_parainfluenza_virus_4_nasal_secretion",
+    "figures": [
+     {
+      "file": "ct_parainfluenza_virus_4_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_adenovirus_nasal_secretion",
+    "figures": [
+     {
+      "file": "ct_adenovirus_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_influenza_c_virus_nasal_secretion",
+    "figures": [
+     {
+      "file": "gc_ml_influenza_c_virus_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_parainfluenza_virus_4_nasal_secretion",
+    "figures": [
+     {
+      "file": "gc_ml_parainfluenza_virus_4_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_adenovirus_nasal_secretion",
+    "figures": [
+     {
+      "file": "gc_ml_adenovirus_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_influenza_c_virus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_influenza_c_virus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_adenovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_adenovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_influenza_c_virus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_influenza_c_virus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_adenovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_adenovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_rhinovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_rhinovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_bocavirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_bocavirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_rhinovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_rhinovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_bocavirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_bocavirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_rsv_a_nasal_secretion",
+    "figures": [
+     {
+      "file": "ct_rsv_a_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_rsv_a_nasal_secretion",
+    "figures": [
+     {
+      "file": "gc_ml_rsv_a_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_metapneumovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_metapneumovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_metapneumovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_metapneumovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_metapneumovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_metapneumovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_metapneumovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_metapneumovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_cytomegalovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_cytomegalovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_cytomegalovirus_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_cytomegalovirus_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_rsv_b_nasal_secretion",
+    "figures": [
+     {
+      "file": "ct_rsv_b_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_rhinovirus_nasal_secretion",
+    "figures": [
+     {
+      "file": "ct_rhinovirus_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_rsv_b_nasal_secretion",
+    "figures": [
+     {
+      "file": "gc_ml_rsv_b_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_rhinovirus_nasal_secretion",
+    "figures": [
+     {
+      "file": "gc_ml_rhinovirus_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_enterovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_enterovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_parainfluenza_virus_1_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_parainfluenza_virus_1_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_coronavirus_nl63_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_coronavirus_nl63_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_enterovirus_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_enterovirus_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_parainfluenza_virus_1_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_parainfluenza_virus_1_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_coronavirus_nl63_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "gc_ml_coronavirus_nl63_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_coronavirus_nl63_nasal_secretion",
+    "figures": [
+     {
+      "file": "ct_coronavirus_nl63_nasal_secretion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_coronavirus_nl63_nasal_secretion",
+    "figures": [
+     {
+      "file": "gc_ml_coronavirus_nl63_nasal_secretion__observations.png",
       "model": "observations"
      }
     ]
@@ -2010,6 +2719,19 @@
    }
   ]
  },
+ "neres2020sapovirus": {
+  "analytes": [
+   {
+    "analyte": "stool_sapovirus_viral_load",
+    "figures": [
+     {
+      "file": "stool_sapovirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "newman2016norovirus": {
   "analytes": [
    {
@@ -2034,6 +2756,19 @@
     "figures": [
      {
       "file": "stool_norovirus__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "oong2018role": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab_metapneumovirus_viral_load",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab_metapneumovirus_viral_load__observations.png",
       "model": "observations"
      }
     ]
@@ -2100,6 +2835,19 @@
    }
   ]
  },
+ "pietsch2019intrahost": {
+  "analytes": [
+   {
+    "analyte": "stool_sapovirus_ct",
+    "figures": [
+     {
+      "file": "stool_sapovirus_ct__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "piralla2013different": {
   "analytes": [
    {
@@ -2151,6 +2899,46 @@
     "figures": [
      {
       "file": "stool_adenovirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "prachayangprecha2014exploring": {
+  "analytes": [
+   {
+    "analyte": "rhinovirus_ct",
+    "figures": [
+     {
+      "file": "rhinovirus_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "enterovirus_ct",
+    "figures": [
+     {
+      "file": "enterovirus_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "metapneumovirus_ct",
+    "figures": [
+     {
+      "file": "metapneumovirus_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "bocavirus_ct",
+    "figures": [
+     {
+      "file": "bocavirus_ct__observations.png",
       "model": "observations"
      }
     ]
@@ -2294,6 +3082,19 @@
    }
   ]
  },
+ "sarasini2006detection": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml",
+    "figures": [
+     {
+      "file": "nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "schumer2026viral": {
   "analytes": [
    {
@@ -2402,6 +3203,28 @@
      {
       "file": "swab_SARSCoV2_N_Ct__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "tabatabai2019severe": {
+  "analytes": [
+   {
+    "analyte": "serum",
+    "figures": [
+     {
+      "file": "serum__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "trachealsecretion",
+    "figures": [
+     {
+      "file": "trachealsecretion__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -2636,6 +3459,19 @@
      {
       "file": "oropharyngeal_swab__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "woo2005characterization": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml",
+    "figures": [
+     {
+      "file": "nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -2918,6 +3754,32 @@
      {
       "file": "serum_adenovirus_viral_load__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "zheng2010human": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_aspirate_bocavirus_viral_load",
+    "figures": [
+     {
+      "file": "nasopharyngeal_aspirate_bocavirus_viral_load__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "zhou2014single": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_aspirate_bocavirus_viral_load",
+    "figures": [
+     {
+      "file": "nasopharyngeal_aspirate_bocavirus_viral_load__observations.png",
+      "model": "observations"
      }
     ]
    }
