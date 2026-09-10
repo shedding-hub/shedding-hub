@@ -17,6 +17,41 @@ from .shedding_fit import (
     prepare_observations,
 )
 
+
+class NothingToPlotError(ValueError):
+    """
+    Raised when an analyte has no measurement that can be drawn.
+
+    A figure needs a numeric time paired with a usable value. An analyte whose
+    every reading is qualitative -- "positive" or "inconclusive", which the
+    schema allows and studies do report -- has neither, and no axes can show
+    it. That is a property of the data, not a fault, so it is raised as its own
+    type: a batch renderer can skip the analyte and keep going, while a genuine
+    plotting bug still surfaces as a failure. `SheddingDataError` does the same
+    job for the fitter, and the catalog builder skips 42 analytes on it without
+    complaint.
+
+    Subclasses ``ValueError`` so callers written against the older behaviour
+    keep working.
+
+    Examples:
+        >>> import shedding_hub as sh
+        >>> dataset = {
+        ...     'analytes': {'flu': {'biomarker': 'influenza',
+        ...                          'specimen': 'nasopharyngeal_aspirate',
+        ...                          'unit': 'gc/mL',
+        ...                          'reference_event': 'hospital admission'}},
+        ...     'participants': [{'measurements': [
+        ...         {'analyte': 'flu', 'time': 0, 'value': 'positive'}]}],
+        ... }
+        >>> try:
+        ...     sh.plot_analyte_observations(dataset, 'flu')
+        ... except sh.NothingToPlotError as error:
+        ...     print(type(error).__name__)
+        NothingToPlotError
+    """
+
+
 # Constants
 DEFAULT_BIOMARKER = "SARS-CoV-2"
 DEFAULT_FIGURE_SIZE = (8, 6)
@@ -3606,7 +3641,7 @@ def plot_analyte_observations(
                 n_qualitative += 1
 
     if not times:
-        raise ValueError(
+        raise NothingToPlotError(
             f"Analyte {analyte!r} of dataset "
             f"{dataset.get('dataset_id', '<unknown>')!r} has no measurement with "
             "both a numeric time and a usable value, so there is nothing to plot."

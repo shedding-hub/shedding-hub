@@ -19,6 +19,7 @@ from .viz import (
     plot_shedding_heatmap,
     plot_mean_trajectory,
     plot_catalog_fits,
+    NothingToPlotError,
     plot_analyte_observations,
     plot_fit_diagnostic,
     # Implemented since before 0.1.3 and documented on the project website, but
@@ -84,6 +85,7 @@ __all__ = [
     "plot_shedding_heatmap",
     "plot_mean_trajectory",
     "plot_catalog_fits",
+    "NothingToPlotError",
     "plot_analyte_observations",
     "plot_fit_diagnostic",
     "plot_clearance_curve",
