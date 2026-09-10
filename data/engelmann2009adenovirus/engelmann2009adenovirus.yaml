@@ -1,0 +1,509 @@
+title: Adenovirus infection and treatment with cidofovir in children after liver transplantation
+doi: 10.1111/j.1399-3046.2008.01014.x
+description: Retrospective study of pediatric liver transplant recipients monitored
+  for adenovirus (ADV) DNAemia by quantitative real-time PCR in serum up to 24 weeks
+  after transplant. The provided CSV contains longitudinal serum ADV PCR results (negative/quantified)
+  at specified days post-transplant for 15 individual patients, with some patients
+  symptomatic and with reported ADV genotypes for a subset (e.g., HAdV-C2, HAdV-C6).
+  The original paper lists patient 9's adenovirus type as "A41", which is a typo --
+  there is no adenovirus type A41. It is unclear whether the intended type was F41 or
+  A31, so genotype is marked unknown rather than guessing.
+analytes:
+  serum_adenovirus_viral_load:
+    description: Quantitative real-time PCR (qPCR) measurement of adenovirus (ADV)
+      DNA in serum from pediatric liver transplant recipients, reported as copies
+      per mL serum.
+    specimen: serum
+    biomarker: adenovirus
+    limit_of_detection: 100
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+participants:
+- attributes:
+    sex: male
+    age: 15
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: 680
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 10
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 10
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 6
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 600
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 7
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 8
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 0.5833
+    age_group: infant
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 3
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: 10000
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 14
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 17
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: 630
+- attributes:
+    sex: female
+    age: 1
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 10
+    age_group: child
+    genotype: HAdV-C2
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 970
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: 1400
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: 1400
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 0.5833
+    age_group: infant
+    genotype: HAdV-C6
+    symptomatic: true
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 9900
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: 870000
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: 420000000
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: 45000
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    genotype: HAdV-C6
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: 1100
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 4
+    age_group: child
+    genotype: HAdV-C2 and HAdV-C6
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: 1500
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: 1100
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: 550
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: 1300
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 3
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 0.6667
+    age_group: infant
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: male
+    age: 17
+    age_group: child
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative
+- attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    symptomatic: false
+    immune_status: immunocompromised
+    treatment: pediatric liver transplant
+  measurements:
+  - analyte: serum_adenovirus_viral_load
+    time: 0
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 14
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 28
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 84
+    value: negative
+  - analyte: serum_adenovirus_viral_load
+    time: 168
+    value: negative

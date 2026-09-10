@@ -1,0 +1,202 @@
+title: Rapid quantification and differentiation of human polyomavirus DNA in undiluted
+  urine from patients after bone marrow transplantation
+doi: 10.1128/JCM.38.10.3689-3695.2000
+description: This paper reports development and use of qualitative seminested PCR
+  (to discriminate BK vs JC virus) and quantitative TaqMan PCR for detecting/quantifying
+  human polyomavirus DNA in urine specimens from patients after bone marrow transplantation.
+  The quantitative assay is reported to be linear from 10^7 to 10^1 copies per assay.
+  CSV-extracted longitudinal urine viral DNA measurements are provided here as time
+  series per patient.
+analytes:
+  urine_polyomavirus_dna:
+    description: Quantitative TaqMan PCR (TM-PCR) assay for general detection/quantification
+      of human polyomavirus (huPoV) DNA in urine; assay linear range reported as 10^7
+      to 10^1 copies per assay. The TM-PCR assay itself does not discriminate BK from
+      JC virus, but per Fig. 8, all four patients shown here were confirmed positive
+      for BKV only (not JCV) throughout the time course by the separate seminested
+      PCR (snPCR) discrimination assay.
+    specimen: urine
+    biomarker: BK polyomavirus
+    gene_target: VP1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+participants:
+- attributes:
+    treatment: BMT
+  measurements:
+  - analyte: urine_polyomavirus_dna
+    time: 0
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 7
+    value: 98973.17615
+  - analyte: urine_polyomavirus_dna
+    time: 14
+    value: 12158830.26
+  - analyte: urine_polyomavirus_dna
+    time: 22
+    value: 472012803.2
+  - analyte: urine_polyomavirus_dna
+    time: 40
+    value: 39803308.09
+  - analyte: urine_polyomavirus_dna
+    time: 41
+    value: 52997236.48
+  - analyte: urine_polyomavirus_dna
+    time: 43
+    value: 49224088.52
+  - analyte: urine_polyomavirus_dna
+    time: 154
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 161
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 175
+    value: negative
+- attributes:
+    treatment: BMT
+  measurements:
+  - analyte: urine_polyomavirus_dna
+    time: 0
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 7
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 14
+    value: 12221035.73
+  - analyte: urine_polyomavirus_dna
+    time: 27
+    value: 172557.4832
+  - analyte: urine_polyomavirus_dna
+    time: 28
+    value: 79880178.08
+  - analyte: urine_polyomavirus_dna
+    time: 29
+    value: 164447726.8
+  - analyte: urine_polyomavirus_dna
+    time: 30
+    value: 293021140.7
+  - analyte: urine_polyomavirus_dna
+    time: 33
+    value: 4447168.898
+  - analyte: urine_polyomavirus_dna
+    time: 34
+    value: 132419279.2
+  - analyte: urine_polyomavirus_dna
+    time: 35
+    value: 18847828.61
+  - analyte: urine_polyomavirus_dna
+    time: 37
+    value: 9155297.767
+  - analyte: urine_polyomavirus_dna
+    time: 42
+    value: 9155297.767
+  - analyte: urine_polyomavirus_dna
+    time: 49
+    value: 55672996.79
+  - analyte: urine_polyomavirus_dna
+    time: 56
+    value: 85861388.91
+- attributes:
+    treatment: BMT
+  measurements:
+  - analyte: urine_polyomavirus_dna
+    time: 8
+    value: 32523338.7
+  - analyte: urine_polyomavirus_dna
+    time: 15
+    value: 45191032588
+  - analyte: urine_polyomavirus_dna
+    time: 22
+    value: 22849937.55
+  - analyte: urine_polyomavirus_dna
+    time: 29
+    value: 547868029.5
+  - analyte: urine_polyomavirus_dna
+    time: 37
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 43
+    value: 14697632.59
+  - analyte: urine_polyomavirus_dna
+    time: 50
+    value: 394292.7715
+  - analyte: urine_polyomavirus_dna
+    time: 57
+    value: 4666481.485
+  - analyte: urine_polyomavirus_dna
+    time: 71
+    value: 17534865.5
+  - analyte: urine_polyomavirus_dna
+    time: 77
+    value: 394292.7715
+  - analyte: urine_polyomavirus_dna
+    time: 89
+    value: 2160.204038
+  - analyte: urine_polyomavirus_dna
+    time: 92
+    value: 27924.99033
+  - analyte: urine_polyomavirus_dna
+    time: 102
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 176
+    value: negative
+  - analyte: urine_polyomavirus_dna
+    time: 183
+    value: negative
+- attributes:
+    treatment: BMT
+  measurements:
+  - analyte: urine_polyomavirus_dna
+    time: 45
+    value: 156965495.7
+  - analyte: urine_polyomavirus_dna
+    time: 46
+    value: 811130830.8
+  - analyte: urine_polyomavirus_dna
+    time: 47
+    value: 308681420.1
+  - analyte: urine_polyomavirus_dna
+    time: 50
+    value: 386734206.9
+  - analyte: urine_polyomavirus_dna
+    time: 51
+    value: 533669923.1
+  - analyte: urine_polyomavirus_dna
+    time: 52
+    value: 36849666.9
+  - analyte: urine_polyomavirus_dna
+    time: 53
+    value: 893406177.4
+  - analyte: urine_polyomavirus_dna
+    time: 54
+    value: 29412468.06
+  - analyte: urine_polyomavirus_dna
+    time: 55
+    value: 29412468.06
+  - analyte: urine_polyomavirus_dna
+    time: 58
+    value: 29412468.06
+  - analyte: urine_polyomavirus_dna
+    time: 60
+    value: 11937766.42
+  - analyte: urine_polyomavirus_dna
+    time: 61
+    value: 7364323.656
+  - analyte: urine_polyomavirus_dna
+    time: 67
+    value: 19351439.95
+  - analyte: urine_polyomavirus_dna
+    time: 68
+    value: 9840269.504
+  - analyte: urine_polyomavirus_dna
+    time: 71
+    value: 8111308.308
+  - analyte: urine_polyomavirus_dna
+    time: 72
+    value: 6070392.648

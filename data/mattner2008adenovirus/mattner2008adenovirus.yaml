@@ -1,0 +1,156 @@
+title: 'An adenovirus type F41 outbreak in a pediatric bone marrow transplant unit:
+  analysis of clinical impact and preventive strategies'
+doi: 10.1097/INF.0b013e3181658c46
+description: Descriptive epidemiologic investigation of an adenovirus cluster affecting
+  8 pediatric patients associated with a bone marrow transplant/hematology department.
+  Adenovirus DNA was detected in feces and blood; molecular typing was performed by
+  partial sequencing of the hexon gene to distinguish probable nosocomial transmission
+  of HAdV-F41 from endogenous reactivations with HAdV-C1/C2. CSV data provide per-patient
+  qualitative fecal shedding results over time (days after symptom onset).
+analytes:
+  stool_adenovirus_detection:
+    description: Qualitative adenovirus detection in stool/feces (reported as positive/negative)
+      from serial sampling; adenovirus typing performed by partial hexon gene sequencing
+      is described in the paper, but CSV rows provide qualitative detection results
+      over time. Time is measured relative to treatment (bone marrow transplantation,
+      BMT) for patients 1-6, who were BMT patients on the BMT ward; patients 7-8
+      were non-BMT children with hospital-acquired infection in other wards.
+    specimen: stool
+    biomarker: adenovirus
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: treatment
+participants:
+- attributes:
+    age: 1.25
+    age_group: child
+    lineage: HAdV-F41
+    treatment: BMT
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 8
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 15
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 22
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 39
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 63
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 73
+    value: positive
+- attributes:
+    age: 3
+    age_group: child
+    lineage: HAdV-F41
+    treatment: BMT
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 17
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 24
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 35
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 60
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 65
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 81
+    value: negative
+- attributes:
+    age: 1.25
+    age_group: child
+    lineage: HAdV-F41
+    treatment: BMT
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 22
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 24
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 38
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 64
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 67
+    value: negative
+- attributes:
+    age: 1.0833
+    age_group: child
+    lineage: HAdV-C2
+    treatment: BMT
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 28
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 80
+    value: negative
+- attributes:
+    age: 6.5833
+    age_group: child
+    lineage: HAdV-C1
+    treatment: BMT
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 26
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 35
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 65
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 70
+    value: positive
+- attributes:
+    age: 16.6667
+    age_group: child
+    lineage: HAdV-F41
+    treatment: BMT
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 18
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 22
+    value: positive
+  - analyte: stool_adenovirus_detection
+    time: 24
+    value: positive
+- attributes:
+    age: 0.14583
+    age_group: infant
+    lineage: HAdV-F41
+    participant_type: non-BMT patient
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 43
+    value: positive
+- attributes:
+    age: 4.41667
+    age_group: child
+    lineage: HAdV-F41
+    participant_type: non-BMT patient
+  measurements:
+  - analyte: stool_adenovirus_detection
+    time: 72
+    value: positive

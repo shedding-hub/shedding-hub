@@ -1,0 +1,48 @@
+title: Characterization and complete genome sequence of a novel coronavirus, coronavirus
+  HKU1, from patients with pneumonia
+doi: 10.1128/JVI.79.2.884-895.2005
+description: Study reporting discovery and characterization of human coronavirus HKU1
+  (CoV-HKU1) associated with pneumonia in Hong Kong. An index case (71-year-old Chinese
+  man) had serial nasopharyngeal aspirates tested by quantitative RT-PCR targeting
+  the coronavirus RNA-dependent RNA polymerase (pol) gene fragment, showing high viral
+  loads early in illness followed by undetectable results later. Screening of 400
+  SARS-CoV-negative nasopharyngeal aspirates from respiratory illness cases during
+  the 2003 SARS period found one additional CoV-HKU1-positive pneumonia case (35-year-old
+  woman).
+analytes:
+  nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml:
+    description: Real-time quantitative RT-PCR (SYBR Green I; Roche LightCycler) for
+      CoV-HKU1 using specific primers amplifying a 440-bp fragment of the RNA-dependent
+      RNA polymerase (pol) gene; quantification via plasmid standard curve and melting
+      curve analysis for specificity.
+    specimen: nasopharyngeal_aspirate
+    biomarker: CoV-HKU1
+    gene_target: pol
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 71
+    age_group: adult
+  measurements:
+  - analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+    time: 2
+    value: 850000
+  - analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+    time: 4
+    value: 9600000
+  - analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+    time: 11
+    value: 150000
+  - analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+    time: 19
+    value: negative
+  - analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+    time: 26
+    value: negative
+  - analyte: nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml
+    time: 37
+    value: negative

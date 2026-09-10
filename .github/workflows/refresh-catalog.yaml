@@ -1,0 +1,175 @@
+name: Refresh Shedding Catalog
+
+# Rebuild the shipped catalog, the exported parameter tables and the counts
+# quoted in docs/, on a branch, on demand.
+#
+# Adding a dataset makes `test_shipped_catalog_covers_every_dataset` fail until
+# the catalog is regenerated, and Build is a required check, so a data pull
+# request cannot merge until someone runs `make catalog`. Doing that on a
+# laptop is the problem this workflow exists to solve: the fits are not
+# reproducible across platforms or across numpy and scipy versions. Rebuilding
+# a 121-dataset catalog on Windows against numpy 2.2.6 and scipy 1.15.3, where
+# CI pins 2.4.6 and 1.17.1, moved every one of the 163 pre-existing fits past
+# the 1e-4 tolerance the parameter export allows, dropped a converged gamma fit
+# from falsey2003comparison and gained one on peiris2003clinical -- a study the
+# batch had not touched. The same class of drift is documented in
+# refresh-figures.yaml, which found four analytes that converged on the runner
+# but had not locally.
+#
+# Building here instead pins the artifact to one environment: ubuntu, Python
+# 3.11, and requirements.txt, which is what the Build job runs and what the
+# wheel is built from.
+#
+# Deliberately workflow_dispatch with a `branch` input rather than a push
+# trigger. Refitting every analyte takes about a quarter of an hour, which is
+# far too slow to sit in the path of every commit, and the result is wanted
+# once per batch rather than once per push. Taking the target as an input, and
+# checking it out explicitly, also means the workflow only has to exist on the
+# default branch -- a data branch cut before this landed can still be refreshed
+# without merging main into it first.
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to rebuild on and push the result back to."
+        required: true
+        type: string
+      dry_run:
+        description: "Build and report the diff, but push nothing."
+        type: boolean
+        default: false
+
+# Only the checkout token below can push. The default token is left read-only
+# so a mistake here cannot write to the repository through the ambient
+# permission.
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    name: Rebuild the catalog on a branch
+    runs-on: ubuntu-latest
+    # The catalog build is roughly a quarter of an hour; the parameter export
+    # and the doc counts fit nothing and take seconds. Bounded well under the
+    # default ceiling so a fit that will not converge cannot burn a day.
+    timeout-minutes: 90
+
+    steps:
+      - name: Refuse to run against a protected branch
+        if: ${{ inputs.branch == 'main' }}
+        run: |
+          echo "::error::main is protected and takes changes through a pull request."
+          exit 1
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+          # Not GITHUB_TOKEN. A push made with it does not trigger workflows,
+          # so Build would never re-run on the commit this job creates and the
+          # pull request would sit on the stale failing check it was meant to
+          # clear. The same personal access token the other dispatch workflows
+          # use pushes as a person, and CI runs.
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          # Equal to the Build job. The catalog is a published artifact -- it
+          # ships inside the wheel -- so it should be produced by the
+          # interpreter that builds the wheel, not merely a compatible one.
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Report the build environment
+        # Printed because the whole point of building here is that the answer
+        # depends on these versions. When a rebuild moves numbers unexpectedly,
+        # this is the first thing worth reading.
+        run: |
+          python -c "import numpy, scipy; print('numpy', numpy.__version__); print('scipy', scipy.__version__)"
+
+      - name: Rebuild the catalog
+        run: make catalog
+
+      - name: Export the parameter tables
+        run: make parameters
+
+      - name: Update the counts quoted in the docs
+        run: make doc_counts
+
+      - name: Validate the result
+        # The whole suite, not the staleness guards alone, run before the commit
+        # rather than after the push so a build that did not actually fix them
+        # fails here instead of on the pull request.
+        #
+        # It was the two guards and the doc-count check on the first run, which
+        # proved too narrow to be worth much: three docstring examples under
+        # `shedding_hub/` read the fit count and a peak day straight off the
+        # catalog, and rebuilding moved all three. `testpaths` collects that
+        # tree, but naming test files explicitly skips it, so the stale
+        # doctests reached the pull request and failed Build there -- the exact
+        # failure this step exists to pre-empt. Narrowing it again to save a
+        # few minutes trades away the only thing it is for.
+        env:
+          # Mirrors the Build job. test_load resolves a pull request through
+          # api.github.com, rate limited to 60 requests an hour
+          # unauthenticated; the thread pins stop each xdist worker spawning a
+          # BLAS pool per core and fighting the others.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHEDDING_HUB_SKIP_LINK_CHECKS: "1"
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
+        run: |
+          pytest -q -n auto
+          python scripts/update_doc_counts.py --check
+
+      - name: Summarize what changed
+        run: |
+          {
+            echo "### Catalog refresh on \`${{ inputs.branch }}\`"
+            echo
+            echo '```'
+            git diff --stat -- shedding_hub/data/shedding_catalog.yaml docs/
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit and push
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Scoped to the generated paths. `git commit -a` would sweep up
+          # anything else the build happened to leave in the tree, and the
+          # review PDFs and gate-2 catalogs at the repository root are exactly
+          # the kind of large binary that would ride along unnoticed.
+          git add \
+            shedding_hub/data/shedding_catalog.yaml \
+            docs/shedding_parameters.json \
+            docs/shedding_parameters.csv \
+            docs/getting-started.md \
+            docs/index.md \
+            docs/modeling-methods.md
+
+          if git diff --cached --quiet; then
+            echo "Catalog and derived files are already current; nothing to push."
+            exit 0
+          fi
+
+          git commit -F - <<EOF
+          catalog: rebuild after a data change
+
+          Regenerated by .github/workflows/refresh-catalog.yaml on
+          ${{ inputs.branch }}, with numpy and scipy as pinned in
+          requirements.txt.
+          EOF
+          git push origin HEAD:"${{ inputs.branch }}"
+
+      - name: Report a dry run
+        if: ${{ inputs.dry_run }}
+        run: |
+          echo "Dry run: built and validated, pushed nothing."

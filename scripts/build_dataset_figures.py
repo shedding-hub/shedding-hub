@@ -32,6 +32,7 @@ REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from shedding_hub import (  # noqa: E402
+    NothingToPlotError,
     load_dataset,
     load_shedding_catalog,
     plot_analyte_observations,
@@ -90,6 +91,11 @@ def main() -> int:
     index: dict[str, dict] = {}
     n_fit = n_obs = 0
     failures: list[tuple[str, str, str]] = []
+    # Kept apart from failures on purpose. An analyte with nothing plottable is
+    # a property of the data, not a defect, and folding the two together is what
+    # let two qualitative-only analytes in gerna2007prospective fail a refresh
+    # that had already rendered 416 figures correctly.
+    skipped: list[tuple[str, str]] = []
 
     for dataset_id in dataset_ids:
         dataset = load_dataset(dataset_id, local=str(data_dir))
@@ -132,6 +138,12 @@ def main() -> int:
                     with warnings.catch_warnings():
                         warnings.simplefilter("ignore", UserWarning)
                         figure = plot_analyte_observations(dataset, analyte)
+                except NothingToPlotError:
+                    # Every reading is qualitative, so there are no axes to draw.
+                    # The analyte gets no figure and no index entry, the same as
+                    # one whose fits are all unusable.
+                    skipped.append((dataset_id, analyte))
+                    continue
                 except Exception as error:  # noqa: BLE001
                     failures.append((dataset_id, analyte, f"observations: {error}"))
                     continue
@@ -152,6 +164,10 @@ def main() -> int:
     total = sum(len(e["figures"]) for d in index.values() for e in d["analytes"])
     print(f"\nwrote {total} figure(s): {n_fit} fit, {n_obs} observations-only")
     print(f"index at {output / 'index.json'}")
+    if skipped:
+        print(f"{len(skipped)} analyte(s) had nothing to plot and were skipped:")
+        for dataset_id, analyte in skipped:
+            print(f"  {dataset_id} / {analyte}")
     if failures:
         print(f"{len(failures)} figure(s) could not be rendered:")
         for dataset_id, analyte, message in failures:

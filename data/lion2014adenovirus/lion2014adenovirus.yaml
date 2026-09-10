@@ -1,0 +1,564 @@
+title: Adenovirus infections in immunocompetent and immunocompromised patients
+doi: 10.1128/CMR.00116-13
+description: Review article summarizing human adenovirus (HAdV) infections in immunocompetent
+  and immunocompromised patients, including diagnostic and treatment considerations.
+  The provided extracted numeric data (CSV) contain longitudinal adenovirus measurements
+  in plasma over time for a single PatientID, stratified by adenovirus species/genogroup
+  (AdV E, AdV F, AdV B).
+analytes:
+  adv_e_plasma:
+    description: Adenovirus (AdV) genogroup/species E measured in plasma; quantitative
+      values provided as CSV time series.
+    specimen: plasma
+    biomarker: adenovirus
+    genogroup: E
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: enrollment
+  adv_f_plasma:
+    description: Adenovirus (AdV) genogroup/species F measured in plasma; quantitative
+      values provided as CSV time series.
+    specimen: plasma
+    biomarker: adenovirus
+    genogroup: F
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: enrollment
+  adv_b_plasma:
+    description: Adenovirus (AdV) genogroup/species B measured in plasma; qualitative/numeric
+      values provided as CSV time series.
+    specimen: plasma
+    biomarker: adenovirus
+    genogroup: B
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: enrollment
+  adv_a_plasma:
+    description: Adenovirus (AdV) genogroup/species A measured in plasma (required
+      analyte key from CSV schema; no rows in this batch).
+    specimen: plasma
+    biomarker: adenovirus
+    genogroup: A
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: enrollment
+  adv_c_plasma:
+    description: Adenovirus (AdV) genogroup/species C measured in plasma (required
+      analyte key from CSV schema; no rows in this batch).
+    specimen: plasma
+    biomarker: adenovirus
+    genogroup: C
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: enrollment
+  adv_a_stool:
+    description: Adenovirus (AdV) genogroup/species A measured in stool (required
+      analyte key from CSV schema; no rows in this batch).
+    specimen: stool
+    biomarker: adenovirus
+    genogroup: A
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: enrollment
+  adv_c_stool:
+    description: Adenovirus (AdV) genogroup/species C measured in stool (required
+      analyte key from CSV schema; no rows in this batch).
+    specimen: stool
+    biomarker: adenovirus
+    genogroup: C
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/wet gram
+    reference_event: enrollment
+participants:
+- measurements:
+  - analyte: adv_e_plasma
+    time: 0
+    value: negative
+  - analyte: adv_e_plasma
+    time: 8
+    value: 932.1452011
+  - analyte: adv_e_plasma
+    time: 14
+    value: 103.2962385
+  - analyte: adv_e_plasma
+    time: 21
+    value: 283.8256514
+  - analyte: adv_e_plasma
+    time: 28
+    value: 579.3096969
+  - analyte: adv_e_plasma
+    time: 35
+    value: 652.4601485
+  - analyte: adv_e_plasma
+    time: 43
+    value: 456.6930612
+  - analyte: adv_e_plasma
+    time: 49
+    value: 283.8256514
+  - analyte: adv_e_plasma
+    time: 56
+    value: 405.4910012
+  - analyte: adv_e_plasma
+    time: 63
+    value: negative
+  - analyte: adv_e_plasma
+    time: 70
+    value: negative
+  - analyte: adv_e_plasma
+    time: 77
+    value: negative
+  - analyte: adv_e_plasma
+    time: 84
+    value: 382.0846798
+  - analyte: adv_e_plasma
+    time: 91
+    value: 283.8256514
+  - analyte: adv_e_plasma
+    time: 98
+    value: 187.1976832
+  - analyte: adv_e_plasma
+    time: 105
+    value: 932.1452011
+  - analyte: adv_e_plasma
+    time: 112
+    value: 97.33362784
+  - analyte: adv_e_plasma
+    time: 119
+    value: 97.33362784
+  - analyte: adv_e_plasma
+    time: 126
+    value: 1902.579106
+  - analyte: adv_e_plasma
+    time: 133
+    value: 579.3096969
+  - analyte: adv_e_plasma
+    time: 140
+    value: 267.4422682
+  - analyte: adv_f_plasma
+    time: 0
+    value: 29318.12217
+  - analyte: adv_f_plasma
+    time: 8
+    value: 297974.0225
+  - analyte: adv_f_plasma
+    time: 14
+    value: 29318.12217
+  - analyte: adv_f_plasma
+    time: 21
+    value: 39467.91021
+  - analyte: adv_f_plasma
+    time: 28
+    value: 80557.00037
+  - analyte: adv_f_plasma
+    time: 35
+    value: 102185.5934
+  - analyte: adv_f_plasma
+    time: 43
+    value: 196529.2651
+  - analyte: adv_f_plasma
+    time: 49
+    value: 85491.88298
+  - analyte: adv_f_plasma
+    time: 56
+    value: 37189.68803
+  - analyte: adv_f_plasma
+    time: 63
+    value: 10054.19763
+  - analyte: adv_f_plasma
+    time: 70
+    value: 5887.800033
+  - analyte: adv_f_plasma
+    time: 77
+    value: 8926.973085
+  - analyte: adv_f_plasma
+    time: 84
+    value: 29318.12217
+  - analyte: adv_f_plasma
+    time: 91
+    value: 29318.12217
+  - analyte: adv_f_plasma
+    time: 98
+    value: 80557.00037
+  - analyte: adv_f_plasma
+    time: 105
+    value: 401131.1467
+  - analyte: adv_f_plasma
+    time: 112
+    value: 932.1452011
+  - analyte: adv_f_plasma
+    time: 119
+    value: 734.8474358
+  - analyte: adv_f_plasma
+    time: 126
+    value: 2142.821107
+  - analyte: adv_f_plasma
+    time: 133
+    value: 37189.68803
+  - analyte: adv_f_plasma
+    time: 140
+    value: 37189.68803
+  - analyte: adv_b_plasma
+    time: 0
+    value: negative
+  - analyte: adv_b_plasma
+    time: 8
+    value: negative
+  - analyte: adv_b_plasma
+    time: 14
+    value: negative
+  - analyte: adv_b_plasma
+    time: 21
+    value: negative
+  - analyte: adv_b_plasma
+    time: 28
+    value: negative
+  - analyte: adv_b_plasma
+    time: 35
+    value: negative
+  - analyte: adv_b_plasma
+    time: 43
+    value: negative
+  - analyte: adv_b_plasma
+    time: 49
+    value: 2413.398886
+  - analyte: adv_b_plasma
+    time: 56
+    value: negative
+  - analyte: adv_b_plasma
+    time: 63
+    value: negative
+  - analyte: adv_b_plasma
+    time: 70
+    value: negative
+  - analyte: adv_b_plasma
+    time: 77
+    value: negative
+  - analyte: adv_b_plasma
+    time: 84
+    value: negative
+  - analyte: adv_b_plasma
+    time: 91
+    value: negative
+  - analyte: adv_b_plasma
+    time: 98
+    value: negative
+  - analyte: adv_b_plasma
+    time: 105
+    value: negative
+  - analyte: adv_b_plasma
+    time: 112
+    value: negative
+  - analyte: adv_b_plasma
+    time: 119
+    value: negative
+  - analyte: adv_b_plasma
+    time: 126
+    value: negative
+  - analyte: adv_b_plasma
+    time: 133
+    value: negative
+  - analyte: adv_b_plasma
+    time: 140
+    value: negative
+- measurements:
+  - analyte: adv_a_plasma
+    time: 0
+    value: 842.4262963
+  - analyte: adv_a_plasma
+    time: 6
+    value: 343.1318193
+  - analyte: adv_a_plasma
+    time: 13
+    value: 410.6531678
+  - analyte: adv_a_plasma
+    time: 20
+    value: 313.6562174
+  - analyte: adv_a_plasma
+    time: 27
+    value: 7272.808087
+  - analyte: adv_a_plasma
+    time: 34
+    value: 643.4438263
+  - analyte: adv_a_plasma
+    time: 41
+    value: 97.5801996
+  - analyte: adv_a_plasma
+    time: 48
+    value: 313.6562174
+  - analyte: adv_a_plasma
+    time: 51
+    value: 449.2439835
+  - analyte: adv_a_plasma
+    time: 55
+    value: 537.6460431
+  - analyte: adv_a_plasma
+    time: 58
+    value: 770.060457
+  - analyte: adv_a_plasma
+    time: 62
+    value: 218.9906295
+  - analyte: adv_a_plasma
+    time: 65
+    value: 218.9906295
+  - analyte: adv_a_plasma
+    time: 69
+    value: 313.6562174
+  - analyte: adv_a_plasma
+    time: 71
+    value: 218.9906295
+  - analyte: adv_a_plasma
+    time: 79
+    value: 3240.696036
+  - analyte: adv_a_plasma
+    time: 86
+    value: 4641.588834
+  - analyte: adv_a_plasma
+    time: 92
+    value: 21369.14933
+  - analyte: adv_a_plasma
+    time: 98
+    value: 1102.943312
+  - analyte: adv_a_plasma
+    time: 104
+    value: 343.1318193
+  - analyte: adv_a_plasma
+    time: 107
+    value: negative
+  - analyte: adv_a_plasma
+    time: 113
+    value: negative
+  - analyte: adv_a_plasma
+    time: 120
+    value: negative
+  - analyte: adv_a_plasma
+    time: 125
+    value: negative
+  - analyte: adv_a_plasma
+    time: 128
+    value: negative
+  - analyte: adv_a_plasma
+    time: 139
+    value: negative
+  - analyte: adv_a_plasma
+    time: 154
+    value: negative
+  - analyte: adv_a_plasma
+    time: 168
+    value: negative
+  - analyte: adv_c_plasma
+    time: 0
+    value: negative
+  - analyte: adv_c_plasma
+    time: 6
+    value: negative
+  - analyte: adv_c_plasma
+    time: 13
+    value: negative
+  - analyte: adv_c_plasma
+    time: 20
+    value: negative
+  - analyte: adv_c_plasma
+    time: 27
+    value: negative
+  - analyte: adv_c_plasma
+    time: 34
+    value: negative
+  - analyte: adv_c_plasma
+    time: 41
+    value: negative
+  - analyte: adv_c_plasma
+    time: 48
+    value: negative
+  - analyte: adv_c_plasma
+    time: 51
+    value: negative
+  - analyte: adv_c_plasma
+    time: 55
+    value: negative
+  - analyte: adv_c_plasma
+    time: 58
+    value: negative
+  - analyte: adv_c_plasma
+    time: 62
+    value: negative
+  - analyte: adv_c_plasma
+    time: 65
+    value: negative
+  - analyte: adv_c_plasma
+    time: 69
+    value: negative
+  - analyte: adv_c_plasma
+    time: 71
+    value: negative
+  - analyte: adv_c_plasma
+    time: 79
+    value: negative
+  - analyte: adv_c_plasma
+    time: 86
+    value: negative
+  - analyte: adv_c_plasma
+    time: 92
+    value: negative
+  - analyte: adv_c_plasma
+    time: 98
+    value: negative
+  - analyte: adv_c_plasma
+    time: 104
+    value: negative
+  - analyte: adv_c_plasma
+    time: 107
+    value: negative
+  - analyte: adv_c_plasma
+    time: 113
+    value: negative
+  - analyte: adv_c_plasma
+    time: 120
+    value: negative
+  - analyte: adv_c_plasma
+    time: 125
+    value: negative
+  - analyte: adv_c_plasma
+    time: 128
+    value: negative
+  - analyte: adv_c_plasma
+    time: 139
+    value: negative
+  - analyte: adv_c_plasma
+    time: 154
+    value: negative
+  - analyte: adv_c_plasma
+    time: 168
+    value: 921.5926598
+  - analyte: adv_a_stool
+    time: 0
+    value: negative
+  - analyte: adv_a_stool
+    time: 14
+    value: negative
+  - analyte: adv_a_stool
+    time: 22
+    value: 63821137286
+  - analyte: adv_a_stool
+    time: 24
+    value: 21720980846
+  - analyte: adv_a_stool
+    time: 28
+    value: 6757518355
+  - analyte: adv_a_stool
+    time: 35
+    value: 9678668223
+  - analyte: adv_a_stool
+    time: 42
+    value: 11583232863
+  - analyte: adv_a_stool
+    time: 49
+    value: 21720980846
+  - analyte: adv_a_stool
+    time: 56
+    value: 222596192
+  - analyte: adv_a_stool
+    time: 63
+    value: 21720980846
+  - analyte: adv_a_stool
+    time: 70
+    value: 856296390.7
+  - analyte: adv_a_stool
+    time: 77
+    value: 3011087696
+  - analyte: adv_a_stool
+    time: 84
+    value: 291433188
+  - analyte: adv_a_stool
+    time: 91
+    value: 856296390.7
+  - analyte: adv_a_stool
+    time: 93
+    value: 1024798068
+  - analyte: adv_a_stool
+    time: 99
+    value: 1024798068
+  - analyte: adv_a_stool
+    time: 104
+    value: 499552987.2
+  - analyte: adv_a_stool
+    time: 109
+    value: 201820.1567
+  - analyte: adv_a_stool
+    time: 140
+    value: 1102.943312
+  - analyte: adv_a_stool
+    time: 150
+    value: 410.6531678
+  - analyte: adv_a_stool
+    time: 163
+    value: negative
+  - analyte: adv_c_stool
+    time: 0
+    value: negative
+  - analyte: adv_c_stool
+    time: 14
+    value: 3240.696036
+  - analyte: adv_c_stool
+    time: 22
+    value: 495490.6469
+  - analyte: adv_c_stool
+    time: 24
+    value: 30606.6363
+  - analyte: adv_c_stool
+    time: 28
+    value: negative
+  - analyte: adv_c_stool
+    time: 35
+    value: negative
+  - analyte: adv_c_stool
+    time: 42
+    value: negative
+  - analyte: adv_c_stool
+    time: 49
+    value: negative
+  - analyte: adv_c_stool
+    time: 56
+    value: negative
+  - analyte: adv_c_stool
+    time: 63
+    value: negative
+  - analyte: adv_c_stool
+    time: 70
+    value: negative
+  - analyte: adv_c_stool
+    time: 77
+    value: negative
+  - analyte: adv_c_stool
+    time: 84
+    value: negative
+  - analyte: adv_c_stool
+    time: 91
+    value: negative
+  - analyte: adv_c_stool
+    time: 93
+    value: negative
+  - analyte: adv_c_stool
+    time: 99
+    value: negative
+  - analyte: adv_c_stool
+    time: 104
+    value: 2281161.474
+  - analyte: adv_c_stool
+    time: 109
+    value: 3267265.276
+  - analyte: adv_c_stool
+    time: 140
+    value: 1016464.46
+  - analyte: adv_c_stool
+    time: 150
+    value: 2085205.857
+  - analyte: adv_c_stool
+    time: 163
+    value: 2986601.679

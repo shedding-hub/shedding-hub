@@ -307,8 +307,9 @@ properties:
                 a specific subtype/lineage designation, never just the pathogen or biomarker
                 name itself (e.g., not 'RSV' or 'SARS-CoV-2'). For influenza, the type and
                 (when reported) subtype or lineage, e.g., 'A(H1N1)pdm09', 'A(H3N2)', 'B',
-                'B/Victoria', 'C'. For RSV, 'A' or 'B' when reported per participant. For parainfluenza virus,
-                'HPIV-1', 'HPIV-2', 'HPIV-3', or 'HPIV-4'.
+                'B/Victoria', 'C'. For RSV, 'A' or 'B' when reported per participant. For parainfluenza virus, 'HPIV-1', 'HPIV-2',
+                'HPIV-3', or 'HPIV-4'. For coronavirus, the specific strain, e.g.,
+                'HCoV-NL63', 'HCoV-OC43', 'HCoV-229E', 'HCoV-HKU1'.
               type: string
             symptomatic:
               description: >
@@ -370,8 +371,9 @@ properties:
                 Antiviral or other pathogen-directed treatment the participant received
                 that could affect shedding (e.g., 'oseltamivir', 'zanamivir',
                 'remdesivir', 'cidofovir', 'brincidofovir', 'BMT' for bone marrow
-                transplant), or 'untreated' when explicitly untreated. Describes the subject, 
-                not a separate analyte.
+                transplant), or
+                'untreated' when explicitly untreated. Describes the subject, not a
+                separate analyte.
               type: string
         measurements:
           type: array

@@ -1,0 +1,215 @@
+title: 'Human Bocavirus in Children Hospitalized for Acute Gastroenteritis: A Case-Control
+  Study'
+doi: 10.1086/589244
+description: Case-control study of children <5 years old in Lanzhou, China (July 2006–September
+  2007) comparing hospitalized acute gastroenteritis cases (n=397) vs asymptomatic
+  controls (n=115). Stool specimens were tested for human bocavirus (HBoV) by conventional
+  PCR (NS1) and quantified by real-time PCR targeting NS1 using plasmid standards;
+  other enteric viruses were also assessed. The provided figure-derived CSV contains
+  individual HBoV stool viral load measurements (copies/mL of extract) for 18 HBoV-positive
+  case and control children at a single timepoint (time=0).
+analytes:
+  stool_bocavirus_viral_load:
+    description: 'Human bocavirus (HBoV) DNA quantification from stool extracts using
+      real-time PCR targeting an 88-bp region of the NS1 gene (primers/probe per Lu
+      et al. 2006). Quantification used serial dilutions of pGEMT Easy vector containing
+      the HBoV NS1 gene as standards on a Rotor-Gene 3000 system. Minimum viral load
+      allowing reproducible quantification: 10 copies per reaction. Reported results
+      in the CSV are in copies/mL of extract.'
+    specimen: stool
+    biomarker: bocavirus
+    gene_target: NS1
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: confirmation date
+participants:
+- patient_id: '49316'
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+    coinfection: rotavirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 926000
+- patient_id: '50383'
+  attributes:
+    sex: male
+    age: 1.3333
+    age_group: child
+    symptomatic: true
+    coinfection: rotavirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 25700
+- patient_id: '50410'
+  attributes:
+    sex: female
+    age: 1.4167
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 1530000
+- patient_id: '50429'
+  attributes:
+    sex: female
+    age: 1.25
+    age_group: child
+    symptomatic: true
+    coinfection: human calicivirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 8540000
+- patient_id: '52756'
+  attributes:
+    sex: male
+    age: 3.3333
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 11900000
+- patient_id: '52762'
+  attributes:
+    sex: male
+    age: 0.8333
+    age_group: infant
+    symptomatic: true
+    coinfection: rotavirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 8700000
+- patient_id: '52772'
+  attributes:
+    sex: male
+    age: 1
+    age_group: child
+    symptomatic: true
+    coinfection: rotavirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 7880000
+- patient_id: '52773'
+  attributes:
+    sex: male
+    age: 0.6667
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 3460000
+- patient_id: '52780'
+  attributes:
+    sex: female
+    age: 1.5
+    age_group: child
+    symptomatic: true
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 7570000
+- patient_id: '52886'
+  attributes:
+    sex: female
+    age: 0.75
+    age_group: infant
+    symptomatic: true
+    coinfection: rotavirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 6090000
+- patient_id: '52914'
+  attributes:
+    sex: female
+    age: 0.5833
+    age_group: infant
+    symptomatic: true
+    coinfection: rotavirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 3630000
+- patient_id: '52924'
+  attributes:
+    sex: male
+    age: 1.3333
+    age_group: child
+    symptomatic: true
+    coinfection: rotavirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 1250000
+- patient_id: '53784'
+  attributes:
+    sex: male
+    age: 0.6667
+    age_group: infant
+    symptomatic: true
+    coinfection: human calicivirus
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 1050000
+- patient_id: '53819'
+  attributes:
+    sex: male
+    age: 0.5
+    age_group: infant
+    symptomatic: true
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 733000
+- patient_id: '53040'
+  attributes:
+    sex: male
+    age: 0.5
+    age_group: infant
+    symptomatic: false
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 1870000
+- patient_id: '53047'
+  attributes:
+    sex: female
+    age: 0.3333
+    age_group: infant
+    symptomatic: false
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 10300000
+- patient_id: '53055'
+  attributes:
+    sex: female
+    age: 0.5
+    age_group: infant
+    symptomatic: false
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 1750000
+- patient_id: '53889'
+  attributes:
+    sex: male
+    age: 0.25
+    age_group: infant
+    symptomatic: false
+  measurements:
+  - analyte: stool_bocavirus_viral_load
+    time: 0
+    value: 1320000000

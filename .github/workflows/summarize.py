@@ -59,8 +59,16 @@ def __main__(argv=None) -> None:
 
         # Summarize changes.
         grouped = measurements.groupby("analyte")
+        # Casting matters when an analyte has no quantitative values at all --
+        # mattner2008adenovirus is the first such dataset. Dropping the qualitative
+        # values then leaves an empty series that still carries the dtype it was
+        # filtered from, and on a string dtype `min` and `max` are valid reductions
+        # while `median` is not, so only the median raised. As floats the empty case
+        # reduces to NaN in all three, which is what the table should show.
         numeric = {
-            key: value.value[value.value.apply(lambda x: not isinstance(x, str))]
+            key: value.value[
+                value.value.apply(lambda x: not isinstance(x, str))
+            ].astype(float)
             for key, value in grouped
         }
         lines.extend(

@@ -1,0 +1,37 @@
+title: 'Viral dynamics in transplant patients: implications for disease'
+doi: 10.1016/S1473-3099(07)70159-7
+description: Review article summarizing viral load kinetics for multiple viruses relevant
+  to transplantation (e.g., CMV, EBV, HHV-6/7, HCV, adenovirus, BK polyomavirus). CSV
+  figure data provide a single transplant patient's longitudinal BK polyomavirus (BKV)
+  plasma viral load series, with mixed qualitative and quantitative results, timed
+  relative to transplantation (treatment).
+analytes:
+  plasma_polyomavirus_viral_load:
+    description: BK polyomavirus (BKV) viral load time series in plasma, extracted
+      from the provided CSV figure data for a single transplant patient; assay method
+      (e.g., qPCR) not further specified in the input.
+    specimen: plasma
+    biomarker: BK polyomavirus
+    limit_of_detection: 480.3020902
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+participants:
+- attributes:
+    treatment: BMT
+  measurements:
+  - analyte: plasma_polyomavirus_viral_load
+    time: 0
+    value: negative
+  - analyte: plasma_polyomavirus_viral_load
+    time: 322
+    value: 4225082.459141869
+  - analyte: plasma_polyomavirus_viral_load
+    time: 518
+    value: 144662.62701276774
+  - analyte: plasma_polyomavirus_viral_load
+    time: 686
+    value: 230690.09783942037
+  - analyte: plasma_polyomavirus_viral_load
+    time: 700
+    value: negative

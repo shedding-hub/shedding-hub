@@ -1,4 +1,4 @@
-.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range catalog_gate2 figures
+.PHONY : backup_data assert_data_unchanged extraction catalog parameters review review_range catalog_ct review_ct review_ct_range catalog_ct_gate2 review_ct_gate2 review_ct_gate2_range catalog_gate2 figures curation_growth doc_counts
 
 EXTRACTION_MARKDOWN = $(wildcard data/*/*-extraction.md)
 EXTRACTION_HTML = ${EXTRACTION_MARKDOWN:.md=.html}
@@ -44,6 +44,12 @@ catalog :
 parameters :
 	python scripts/export_parameter_table.py
 
+# Rewrite the catalog counts quoted in docs/. Reads the shipped catalog and
+# substitutes the numbers in place; run it after `make catalog`. `--check`
+# reports staleness without writing, which is what the test uses.
+doc_counts :
+	python scripts/update_doc_counts.py
+
 # The concentration catalog under a 2 log10 over-extrapolation gate, which is
 # what the website's dataset figures are drawn from. Note that the Ct build's
 # gate of 2 is 2 *cycles*, roughly 0.57 log10, so the two are not a matched
@@ -58,6 +64,14 @@ catalog_gate2 :
 # the dataset YAML, and has no Python to regenerate them with.
 figures :
 	python scripts/build_dataset_figures.py
+
+# The catalogue's growth curve for the website's curation page. Built from
+# this repository's git history, which the website does not have -- it receives
+# data/ as a zip -- and committed beside the figures for the same reason. Needs
+# full history: under a shallow clone the script refuses rather than publishing
+# a one-point curve.
+curation_growth :
+	python scripts/build_curation_growth.py
 
 # Render every catalog fit against the data behind it, one page each, for
 # review. The PDF is regenerable and deliberately untracked.
