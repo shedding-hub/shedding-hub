@@ -2035,3 +2035,36 @@ def test_analyte_observations_counts_qualitative_readings_it_cannot_place():
 def test_analyte_observations_rejects_an_unknown_analyte(woelfel_dataset):
     with pytest.raises(ValueError, match="does not contain analyte"):
         sh.plot_analyte_observations(woelfel_dataset, "nope")
+
+
+def test_analyte_observations_raises_nothing_to_plot_when_only_qualitative():
+    """
+    An analyte whose every reading is qualitative is legitimate data, not a bug.
+
+    The schema allows "positive", "negative" and "inconclusive" as values, and
+    a study may report an analyte that way and no other. There is still nothing
+    to put on a pair of axes, so this stays an error -- but a distinguishable
+    one, so a batch renderer can skip the analyte instead of failing the build.
+    gerna2007prospective carries two such analytes and took the figure refresh
+    down with it when the only signal was a bare ValueError.
+    """
+    dataset = {
+        "analytes": {
+            "flu": {
+                "biomarker": "influenza",
+                "specimen": "nasopharyngeal_aspirate",
+                "unit": "gc/mL",
+                "reference_event": "hospital admission",
+            }
+        },
+        "participants": [
+            {"measurements": [{"analyte": "flu", "time": 0, "value": "positive"}]}
+        ],
+    }
+    with pytest.raises(sh.NothingToPlotError, match="nothing to plot"):
+        sh.plot_analyte_observations(dataset, "flu")
+
+
+def test_nothing_to_plot_is_still_a_value_error():
+    """Callers that predate the type, and catch ValueError, must keep working."""
+    assert issubclass(sh.NothingToPlotError, ValueError)
