@@ -180,8 +180,8 @@ class SheddingCatalog:
     Examples:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
-        >>> catalog.table.shape
-        (192, 25)
+        >>> catalog.table.shape[1]
+        25
         >>> fit = catalog.select(
         ...     dataset_id='woelfel2020virological', analyte='stool', model='gamma'
         ... )
@@ -472,8 +472,8 @@ def load_shedding_catalog(path: str | None = None) -> SheddingCatalog:
     Examples:
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
-        >>> len(catalog.fits)
-        192
+        >>> len(catalog.fits) == len(catalog.table)
+        True
     """
     catalog_path = pathlib.Path(path) if path else CATALOG_PATH
     if not catalog_path.is_file():

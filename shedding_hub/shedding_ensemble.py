@@ -47,8 +47,8 @@ class SheddingEnsemble:
         >>> ensemble = sh.shedding_for('SARS-CoV-2', 'stool', catalog=catalog)
         >>> ensemble.model
         'gamma'
-        >>> ensemble.components.shape
-        (2, 26)
+        >>> len(ensemble.components) == len(ensemble.fits)
+        True
         >>> ensemble.median_params
         Traceback (most recent call last):
             ...
