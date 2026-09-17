@@ -721,6 +721,82 @@ fits:
   value_type: concentration
   ct_reference: null
   ct_cutoff: null
+- dataset_id: colavita2023kinetics
+  analyte: oropharyngeal_swab_gc_ng
+  biomarker: mpox
+  specimen: oropharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/ng
+  gene_target: CrmB
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -2.047919610141644
+  - 2.116491568651488
+  population_cov:
+  - - 2.950816655574774
+    - 4.027453325825042
+  - - 4.027453325825042
+    - 5.589099379826862
+  sigma: 0.6636404100262808
+  censoring_limit: -0.6003262785189618
+  n_subjects: 3
+  n_measurements: 9
+  n_censored: 1
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 5.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -8.234229216287003
+  aic: 30.468458432574007
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: colavita2023kinetics
+  analyte: saliva_gc_ng
+  biomarker: mpox
+  specimen: saliva
+  reference_event: symptom onset
+  unit: gc/ng
+  gene_target: CrmB
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.806083011092106
+  - 3.1156511944801637
+  population_cov:
+  - - 0.30339044630692064
+    - 0.3848958337730183
+  - - 0.3848958337730183
+    - 0.7003170630397025
+  sigma: 0.8998280710000317
+  censoring_limit: -0.6003262785189618
+  n_subjects: 3
+  n_measurements: 9
+  n_censored: 1
+  n_excluded_subjects: 0
+  n_degenerate_subjects: 0
+  pct_subjects_with_rise: 50.0
+  median_first_observed_day: 5.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -10.878798403858116
+  aic: 35.75759680771623
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: cowley2017rotavirus
   analyte: stool_rotavirus_vaccine_dose1
   biomarker: rotavirus vaccine
@@ -6631,6 +6707,241 @@ fits:
   value_type: concentration
   ct_reference: null
   ct_cutoff: null
+- dataset_id: suner2023viral
+  analyte: blood
+  biomarker: mpox
+  specimen: blood
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.443765172311444
+  - 5.925526574292517
+  population_cov:
+  - - 1.2706974303225707
+    - 1.4850808402649598
+  - - 1.4850808402649598
+    - 2.228034652150078
+  sigma: 0.6044593810861678
+  censoring_limit: 4.0
+  n_subjects: 25
+  n_measurements: 125
+  n_censored: 89
+  n_excluded_subjects: 52
+  n_degenerate_subjects: 7
+  pct_subjects_with_rise: 0.0
+  median_first_observed_day: 6.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -52.28410500032018
+  aic: 206.56821000064036
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: suner2023viral
+  analyte: pharynx
+  biomarker: mpox
+  specimen: oropharyngeal_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.8848840308565816
+  - 6.875049911400746
+  population_cov:
+  - - 0.9344104451452653
+    - 1.5526093734816668
+  - - 1.5526093734816668
+    - 4.215715645909967
+  sigma: 0.8222831066360351
+  censoring_limit: 2.8999999999867243
+  n_subjects: 65
+  n_measurements: 356
+  n_censored: 218
+  n_excluded_subjects: 12
+  n_degenerate_subjects: 9
+  pct_subjects_with_rise: 27.77777777777778
+  median_first_observed_day: 7.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -205.18256429522
+  aic: 672.36512859044
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: suner2023viral
+  analyte: rectum
+  biomarker: mpox
+  specimen: rectal_swab
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.8267767468598617
+  - 7.11383293813455
+  population_cov:
+  - - 0.9879474957911171
+    - 1.7933614385405408
+  - - 1.7933614385405408
+    - 5.401490865762088
+  sigma: 0.524627673046589
+  censoring_limit: 2.8999999999867243
+  n_subjects: 55
+  n_measurements: 188
+  n_censored: 117
+  n_excluded_subjects: 21
+  n_degenerate_subjects: 17
+  pct_subjects_with_rise: 0.0
+  median_first_observed_day: 6.5
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -63.91266177319582
+  aic: 349.82532354639164
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: suner2023viral
+  analyte: semen
+  biomarker: mpox
+  specimen: semen
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -1.181891341122886
+  - 6.217829113533017
+  population_cov:
+  - - 1.5396501443671018
+    - 1.8489802350248856
+  - - 1.8489802350248856
+    - 3.715852279184303
+  sigma: 0.4507062146906709
+  censoring_limit: 2.8999999999867243
+  n_subjects: 40
+  n_measurements: 128
+  n_censored: 71
+  n_excluded_subjects: 31
+  n_degenerate_subjects: 12
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 7.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -43.77767828824187
+  aic: 249.55535657648375
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: suner2023viral
+  analyte: semen
+  biomarker: mpox
+  specimen: semen
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: gamma
+  method: mle
+  population_coords:
+  - log_a0
+  - log_peak_day
+  - peak_log10
+  population_mean:
+  - -0.4144958381685918
+  - 0.05529797022360683
+  - 6.454612699097515
+  population_cov:
+  - - 1.0131297646341815
+    - -1.4393073038171564
+    - 1.8969015162914116
+  - - -1.4393073038171564
+    - 2.7235816179823673
+    - -3.1149694216136177
+  - - 1.8969015162914116
+    - -3.1149694216136177
+    - 5.259696442997173
+  sigma: 0.2517526705463794
+  censoring_limit: 2.8999999999867243
+  n_subjects: 31
+  n_measurements: 110
+  n_censored: 64
+  n_excluded_subjects: 40
+  n_degenerate_subjects: 15
+  pct_subjects_with_rise: 100.0
+  median_first_observed_day: 5.5
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -7.8327123175747335
+  aic: 203.66542463514946
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
+- dataset_id: suner2023viral
+  analyte: lesion
+  biomarker: mpox
+  specimen: skin_lesion
+  reference_event: symptom onset
+  unit: gc/mL
+  gene_target: null
+  dose: null
+  vaccine_type: null
+  model: exponential
+  method: mle
+  population_coords:
+  - log_a0
+  - peak_log10
+  population_mean:
+  - -0.688818926311628
+  - 8.824149981833655
+  population_cov:
+  - - 0.5946314871640879
+    - 1.0614240433521407
+  - - 1.0614240433521407
+    - 3.193884214092792
+  sigma: 0.7646703182448839
+  censoring_limit: 2.8999999999867243
+  n_subjects: 75
+  n_measurements: 364
+  n_censored: 151
+  n_excluded_subjects: 2
+  n_degenerate_subjects: 10
+  pct_subjects_with_rise: 27.27272727272727
+  median_first_observed_day: 6.0
+  n_dropped_measurements: 0
+  converged: true
+  log_likelihood: -278.28905835553104
+  aic: 858.5781167110621
+  value_type: concentration
+  ct_reference: null
+  ct_cutoff: null
 - dataset_id: teunis2015shedding
   analyte: stool_norovirus_concentration_symptomatic
   biomarker: norovirus
@@ -7618,6 +7929,153 @@ fits:
   ct_reference: null
   ct_cutoff: null
 skipped:
+- dataset_id: akiyama2024efficacy
+  analyte: ct_blood
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_blood' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_blood
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_blood' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_blood
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_blood' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_lesion
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_lesion' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_lesion
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_lesion' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_lesion
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_lesion' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_semen
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_semen
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: akiyama2024efficacy
+  analyte: ct_semen
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: saliva_symptom_onset
+  model: exponential
+  reason: ct_units
+  message: Analyte 'saliva_symptom_onset' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: saliva_symptom_onset
+  model: gamma
+  reason: ct_units
+  message: Analyte 'saliva_symptom_onset' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: saliva_symptom_onset
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'saliva_symptom_onset' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: saliva_confirmation_date
+  model: exponential
+  reason: ct_units
+  message: Analyte 'saliva_confirmation_date' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: saliva_confirmation_date
+  model: gamma
+  reason: ct_units
+  message: Analyte 'saliva_confirmation_date' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: saliva_confirmation_date
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'saliva_confirmation_date' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: skin_lesion_confirmation_date
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin_lesion_confirmation_date' is reported in 'cycle threshold'.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: skin_lesion_confirmation_date
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin_lesion_confirmation_date' is reported in 'cycle threshold'.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
+- dataset_id: allanblitz2023laboratory
+  analyte: skin_lesion_confirmation_date
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin_lesion_confirmation_date' is reported in 'cycle threshold'.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
 - dataset_id: alsharrah2020clinical
   analyte: NPS_SARSCoV2
   model: exponential
@@ -7651,6 +8109,168 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'saliva_gii'.
+- dataset_id: antinori2022epidemiological
+  analyte: genital_or_rectal_lesions
+  model: exponential
+  reason: ct_units
+  message: Analyte 'genital_or_rectal_lesions' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: genital_or_rectal_lesions
+  model: gamma
+  reason: ct_units
+  message: Analyte 'genital_or_rectal_lesions' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: genital_or_rectal_lesions
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'genital_or_rectal_lesions' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: nasopharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: nasopharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: nasopharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: plasma
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: plasma
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: plasma
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: scab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'scab' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: scab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'scab' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: scab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'scab' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: serum
+  model: exponential
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: serum
+  model: gamma
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: serum
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: seminal_fluid
+  model: exponential
+  reason: ct_units
+  message: Analyte 'seminal_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: seminal_fluid
+  model: gamma
+  reason: ct_units
+  message: Analyte 'seminal_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: seminal_fluid
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'seminal_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: stool
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: stool
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: stool
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: saliva
+  model: exponential
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: saliva
+  model: gamma
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: saliva
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: skin_lesions
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin_lesions' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: skin_lesions
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin_lesions' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: antinori2022epidemiological
+  analyte: skin_lesions
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin_lesions' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: aoki2010duration
   analyte: stool_norovirus
   model: gamma
@@ -7974,6 +8594,78 @@ skipped:
   reason: ct_units
   message: Analyte 'NP_SARSCoV2_CT' is reported in 'cycle threshold'. Cycle-threshold
     fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: vesicle_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'vesicle_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: vesicle_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'vesicle_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: vesicle_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'vesicle_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: urethra_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'urethra_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: urethra_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'urethra_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: urethra_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'urethra_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: rectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: rectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: chen2024clinical
+  analyte: rectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: cheng2008human
   analyte: stool_bocavirus_viral_load
   model: exponential
@@ -8021,6 +8713,218 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'nasopharyngeal_aspirate_bocavirus_viral_load'.
+- dataset_id: colavita2023kinetics
+  analyte: urine_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'urine_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: urine_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'urine_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: urine_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'urine_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: semen_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'semen_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: semen_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'semen_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: semen_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'semen_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: stool_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: stool_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: stool_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: plasma_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: plasma_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: plasma_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: saliva_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'saliva_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: saliva_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'saliva_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: saliva_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'saliva_ct' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: oropharyngeal_swab_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: oropharyngeal_swab_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: oropharyngeal_swab_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: colavita2023kinetics
+  analyte: oropharyngeal_swab_gc_ng
+  model: gamma
+  reason: too_few_subjects_for_population
+  message: Analyte 'oropharyngeal_swab_gc_ng' has 2 subject(s) (3 fitted, 1 excluded
+    as degenerate) feeding the population summary of the 'gamma' model, which has
+    3 parameters. At least 4 are needed for the between-subject covariance to be estimable
+    rather than rank-deficient; below that the 'population' is an artefact of averaging
+    too few individuals, and simulating from it produces near-identical or wildly
+    extrapolated individuals.
+- dataset_id: colavita2023kinetics
+  analyte: oropharyngeal_swab_gc_ng
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'oropharyngeal_swab_gc_ng'.
+- dataset_id: colavita2023kinetics
+  analyte: saliva_gc_ng
+  model: gamma
+  reason: degenerate_fit
+  message: "2 of 3 subject(s) for analyte 'saliva_gc_ng' produced degenerate fits\
+    \ under the 'gamma' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 1 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: colavita2023kinetics
+  analyte: saliva_gc_ng
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'saliva_gc_ng'.
+- dataset_id: colavita2023kinetics
+  analyte: plasma_gc_ng
+  model: exponential
+  reason: degenerate_fit
+  message: "2 of 3 subject(s) for analyte 'plasma_gc_ng' produced degenerate fits\
+    \ under the 'exponential' model \u2014 collapsed onto the parameter bounds, or\
+    \ decaying faster than the sampling can resolve \u2014 leaving 1 usable subject(s),\
+    \ too few to estimate a population covariance. This usually means the model is\
+    \ not identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: colavita2023kinetics
+  analyte: plasma_gc_ng
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'plasma_gc_ng' does not\
+    \ show one: only 0% of subjects did, against a required 50%. Sampling here appears\
+    \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
+    \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
+    \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: colavita2023kinetics
+  analyte: plasma_gc_ng
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'plasma_gc_ng'.
+- dataset_id: colavita2023kinetics
+  analyte: stool_gc_ng
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'stool_gc_ng' has 2 subject(s) feeding the population summary of
+    the 'exponential' model, which has 2 parameters. At least 3 are needed for the
+    between-subject covariance to be estimable rather than rank-deficient; below that
+    the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: colavita2023kinetics
+  analyte: stool_gc_ng
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'stool_gc_ng' does not\
+    \ show one: no subject had enough readings to judge, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: colavita2023kinetics
+  analyte: stool_gc_ng
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'stool_gc_ng'.
+- dataset_id: colavita2023kinetics
+  analyte: semen_gc_ng
+  model: exponential
+  reason: degenerate_fit
+  message: "2 of 3 subject(s) for analyte 'semen_gc_ng' produced degenerate fits under\
+    \ the 'exponential' model \u2014 collapsed onto the parameter bounds, or decaying\
+    \ faster than the sampling can resolve \u2014 leaving 1 usable subject(s), too\
+    \ few to estimate a population covariance. This usually means the model is not\
+    \ identifiable from this data: for the gamma model, typically because sampling\
+    \ began after peak shedding, so there is no rise phase from which to estimate\
+    \ b0."
+- dataset_id: colavita2023kinetics
+  analyte: semen_gc_ng
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'semen_gc_ng' does not\
+    \ show one: no subject had enough readings to judge, against a required 50%. Sampling\
+    \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
+    \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
+    \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: colavita2023kinetics
+  analyte: semen_gc_ng
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'semen_gc_ng'.
 - dataset_id: coppee2023temporal
   analyte: nasopharyngeal_swab_RSV_ct_symptomatic
   model: exponential
@@ -8063,6 +8967,60 @@ skipped:
   message: Analyte 'nasopharyngeal_swab_RSV_ct_asymptomatic' is reported in 'cycle
     threshold'. Cycle-threshold fits are supported but excluded from the catalog,
     whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: plasma
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: plasma
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: plasma
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: saliva
+  model: exponential
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: saliva
+  model: gamma
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: coppens2023alternative
+  analyte: saliva
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: covid2020clinical
   analyte: Stool_SARSCoV2
   model: exponential
@@ -8301,6 +9259,96 @@ skipped:
   message: Analyte 'tracheal_aspirate_influenza_gc_per_mL' has no detected reading
     at or before its reference event, so a shifted onset has nothing to locate and
     would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: de2022retrospective
+  analyte: mpxv_pooled_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'mpxv_pooled_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_pooled_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'mpxv_pooled_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_pooled_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'mpxv_pooled_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_anorectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'mpxv_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_anorectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'mpxv_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_anorectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'mpxv_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'mpxv_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'mpxv_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: mpxv_oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'mpxv_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: orthopox_pooled_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'orthopox_pooled_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: orthopox_pooled_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'orthopox_pooled_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: orthopox_pooled_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'orthopox_pooled_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: orthopox_anorectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'orthopox_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: orthopox_anorectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'orthopox_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: de2022retrospective
+  analyte: orthopox_anorectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'orthopox_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: devincenzo2022safety
   analyte: nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents
   model: exponential
@@ -8572,6 +9620,96 @@ skipped:
   message: Analyte 'plasma_polyomavirus_viral_load' has no detected reading at or
     before its reference event, so a shifted onset has nothing to locate and would
     only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: gaspari2023monkeypox
+  analyte: skin_lesion_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: skin_lesion_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: skin_lesion_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: plasma
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: plasma
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: plasma
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: rectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: rectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: gaspari2023monkeypox
+  analyte: rectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: gautret2020hydroxychloroquine
   analyte: nasopharyngeal_swab_SARSCoV2_Ct
   model: exponential
@@ -9277,6 +10415,39 @@ skipped:
   message: Analyte 'urine_adenovirus_viral_load' has no detected reading at or before
     its reference event, so a shifted onset has nothing to locate and would only absorb
     curve shape. Fit the 'gamma' model instead.
+- dataset_id: hernaez2023monitoring
+  analyte: ct_saliva
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: hernaez2023monitoring
+  analyte: ct_saliva
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: hernaez2023monitoring
+  analyte: ct_saliva
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: hernaez2023monitoring
+  analyte: gc_ml_saliva
+  model: exponential
+  reason: too_few_subjects
+  message: No subject has at least 2 usable measurements for analyte 'gc_ml_saliva'.
+- dataset_id: hernaez2023monitoring
+  analyte: gc_ml_saliva
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'gc_ml_saliva'.
+- dataset_id: hernaez2023monitoring
+  analyte: gc_ml_saliva
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'gc_ml_saliva'.
 - dataset_id: hiramatsu2018rotavirus
   analyte: rv5_1
   model: exponential
@@ -9976,6 +11147,78 @@ skipped:
   message: Analyte 'rv_nasopharyngeal_aspirate_ct' is reported in 'cycle threshold'.
     Cycle-threshold fits are supported but excluded from the catalog, whose heights
     are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: semen
+  model: exponential
+  reason: ct_units
+  message: Analyte 'semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: semen
+  model: gamma
+  reason: ct_units
+  message: Analyte 'semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: semen
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: rash_or_skin_lesion
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rash_or_skin_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: rash_or_skin_lesion
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rash_or_skin_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: rash_or_skin_lesion
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rash_or_skin_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: plasma
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: plasma
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lapa2022monkeypox
+  analyte: plasma
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: lavezzo2020suppression
   analyte: RdRp_first_pos
   model: gamma
@@ -10056,6 +11299,186 @@ skipped:
   message: Analyte 'gc_wet_gram' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: lee2024prolonged
+  analyte: skin
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: skin
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: skin
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: pubis
+  model: exponential
+  reason: ct_units
+  message: Analyte 'pubis' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: pubis
+  model: gamma
+  reason: ct_units
+  message: Analyte 'pubis' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: pubis
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'pubis' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: right_pubis
+  model: exponential
+  reason: ct_units
+  message: Analyte 'right_pubis' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: right_pubis
+  model: gamma
+  reason: ct_units
+  message: Analyte 'right_pubis' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: right_pubis
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'right_pubis' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_forehead
+  model: exponential
+  reason: ct_units
+  message: Analyte 'left_forehead' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_forehead
+  model: gamma
+  reason: ct_units
+  message: Analyte 'left_forehead' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_forehead
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'left_forehead' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_arm
+  model: exponential
+  reason: ct_units
+  message: Analyte 'left_arm' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_arm
+  model: gamma
+  reason: ct_units
+  message: Analyte 'left_arm' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_arm
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'left_arm' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: abdomen
+  model: exponential
+  reason: ct_units
+  message: Analyte 'abdomen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: abdomen
+  model: gamma
+  reason: ct_units
+  message: Analyte 'abdomen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: abdomen
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'abdomen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: penile
+  model: exponential
+  reason: ct_units
+  message: Analyte 'penile' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: penile
+  model: gamma
+  reason: ct_units
+  message: Analyte 'penile' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: penile
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'penile' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_pubis
+  model: exponential
+  reason: ct_units
+  message: Analyte 'left_pubis' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_pubis
+  model: gamma
+  reason: ct_units
+  message: Analyte 'left_pubis' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_pubis
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'left_pubis' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_buttock
+  model: exponential
+  reason: ct_units
+  message: Analyte 'left_buttock' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_buttock
+  model: gamma
+  reason: ct_units
+  message: Analyte 'left_buttock' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: left_buttock
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'left_buttock' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: nose
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nose' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: nose
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nose' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: lee2024prolonged
+  analyte: nose
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nose' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: lescure2020clinical
   analyte: naso_swab_SARSCoV2
   model: gamma
@@ -10097,6 +11520,42 @@ skipped:
   message: Analyte 'stool_lanzhou_lamb_rotavirus_vaccine_pcr' has no detected reading
     at or before its reference event, so a shifted onset has nothing to locate and
     would only absorb curve shape. Fit the 'gamma' model instead.
+- dataset_id: limonta2024mpox
+  analyte: pharynx
+  model: exponential
+  reason: ct_units
+  message: Analyte 'pharynx' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: limonta2024mpox
+  analyte: pharynx
+  model: gamma
+  reason: ct_units
+  message: Analyte 'pharynx' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: limonta2024mpox
+  analyte: pharynx
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'pharynx' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: limonta2024mpox
+  analyte: skin
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: limonta2024mpox
+  analyte: skin
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: limonta2024mpox
+  analyte: skin
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: lion2014adenovirus
   analyte: adv_e_plasma
   model: exponential
@@ -10340,6 +11799,204 @@ skipped:
   message: Analyte 'stool_mtDNA' measures 'mtDNA', a fecal-strength/normalization
     indicator rather than a pathogen shed by infected people. It has no time-since-infection
     trajectory, so neither shedding model applies. Select a pathogen analyte instead.
+- dataset_id: liu2026diagnostic
+  analyte: pus
+  model: exponential
+  reason: ct_units
+  message: Analyte 'pus' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: pus
+  model: gamma
+  reason: ct_units
+  message: Analyte 'pus' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: pus
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'pus' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: nasopharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: nasopharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: nasopharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: vesicular_fluid
+  model: exponential
+  reason: ct_units
+  message: Analyte 'vesicular_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: vesicular_fluid
+  model: gamma
+  reason: ct_units
+  message: Analyte 'vesicular_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: vesicular_fluid
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'vesicular_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: skin_swab_foreskin
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin_swab_foreskin' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: skin_swab_foreskin
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin_swab_foreskin' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: skin_swab_foreskin
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin_swab_foreskin' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: plasma
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: plasma
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: plasma
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: skin_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin_swab' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: skin_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin_swab' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: skin_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin_swab' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: mucosal_swab_oral
+  model: exponential
+  reason: ct_units
+  message: Analyte 'mucosal_swab_oral' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: mucosal_swab_oral
+  model: gamma
+  reason: ct_units
+  message: Analyte 'mucosal_swab_oral' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: liu2026diagnostic
+  analyte: mucosal_swab_oral
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'mucosal_swab_oral' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: skin_lesion_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: skin_lesion_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: skin_lesion_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: nasopharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: nasopharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: nasopharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: blood
+  model: exponential
+  reason: ct_units
+  message: Analyte 'blood' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: blood
+  model: gamma
+  reason: ct_units
+  message: Analyte 'blood' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: loconsole2022monkeypox
+  analyte: blood
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'blood' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: lucini2026dose
   analyte: serum_a
   model: gamma
@@ -11393,6 +13050,61 @@ skipped:
   model: gamma_shifted
   reason: no_positive_measurements
   message: Analyte 'stool_adenovirus_detection' has no positive measurements to fit.
+- dataset_id: mertes2023tecovirimat
+  analyte: anal_lesion_mpxv_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'anal_lesion_mpxv_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mertes2023tecovirimat
+  analyte: anal_lesion_mpxv_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'anal_lesion_mpxv_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mertes2023tecovirimat
+  analyte: anal_lesion_mpxv_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'anal_lesion_mpxv_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mertes2023tecovirimat
+  analyte: plasma_mpxv_ct
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma_mpxv_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mertes2023tecovirimat
+  analyte: plasma_mpxv_ct
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma_mpxv_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mertes2023tecovirimat
+  analyte: plasma_mpxv_ct
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma_mpxv_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mertes2023tecovirimat
+  analyte: plasma_hiv_gc_ml
+  model: exponential
+  reason: too_few_subjects_for_population
+  message: Analyte 'plasma_hiv_gc_ml' has 1 subject(s) feeding the population summary
+    of the 'exponential' model, which has 2 parameters. At least 3 are needed for
+    the between-subject covariance to be estimable rather than rank-deficient; below
+    that the 'population' is an artefact of averaging too few individuals, and simulating
+    from it produces near-identical or wildly extrapolated individuals.
+- dataset_id: mertes2023tecovirimat
+  analyte: plasma_hiv_gc_ml
+  model: gamma
+  reason: too_few_subjects
+  message: No subject has at least 3 usable measurements for analyte 'plasma_hiv_gc_ml'.
+- dataset_id: mertes2023tecovirimat
+  analyte: plasma_hiv_gc_ml
+  model: gamma_shifted
+  reason: too_few_subjects
+  message: No subject has at least 4 usable measurements for analyte 'plasma_hiv_gc_ml'.
 - dataset_id: mijatovicrustempasic2017shedding
   analyte: stool_rotavirus_vaccine
   model: gamma_shifted
@@ -11416,6 +13128,171 @@ skipped:
   message: Analyte 'stool_pcv1_dna' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: mileto2022new
+  analyte: ct_oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_ulcerated_perianal_lesion
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_ulcerated_perianal_lesion' is reported in 'cycle threshold'.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_ulcerated_perianal_lesion
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_ulcerated_perianal_lesion' is reported in 'cycle threshold'.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_ulcerated_perianal_lesion
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_ulcerated_perianal_lesion' is reported in 'cycle threshold'.
+    Cycle-threshold fits are supported but excluded from the catalog, whose heights
+    are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_anorectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_anorectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_anorectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_foot_lesion
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_foot_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_foot_lesion
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_foot_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_foot_lesion
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_foot_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_plasma
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_plasma
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_plasma
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_seminal_fluid
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_seminal_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_seminal_fluid
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_seminal_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_seminal_fluid
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_seminal_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mileto2022new
+  analyte: ct_urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mitsios2024monkeypox
+  analyte: od_tear_wash
+  model: exponential
+  reason: ct_units
+  message: Analyte 'od_tear_wash' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mitsios2024monkeypox
+  analyte: od_tear_wash
+  model: gamma
+  reason: ct_units
+  message: Analyte 'od_tear_wash' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mitsios2024monkeypox
+  analyte: od_tear_wash
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'od_tear_wash' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mitsios2024monkeypox
+  analyte: os_tear_wash
+  model: exponential
+  reason: ct_units
+  message: Analyte 'os_tear_wash' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mitsios2024monkeypox
+  analyte: os_tear_wash
+  model: gamma
+  reason: ct_units
+  message: Analyte 'os_tear_wash' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: mitsios2024monkeypox
+  analyte: os_tear_wash
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'os_tear_wash' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: miura2017rotavirus
   analyte: stool_rotavirus_vaccine_RV1_dose1
   model: exponential
@@ -11537,6 +13414,42 @@ skipped:
   message: Analyte 'stool_norovirus' has no detected reading at or before its reference
     event, so a shifted onset has nothing to locate and would only absorb curve shape.
     Fit the 'gamma' model instead.
+- dataset_id: moschese2022isolation
+  analyte: anorectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: moschese2022isolation
+  analyte: anorectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: moschese2022isolation
+  analyte: anorectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: moschese2022isolation
+  analyte: urethral_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'urethral_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: moschese2022isolation
+  analyte: urethral_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'urethral_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: moschese2022isolation
+  analyte: urethral_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'urethral_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: natarajan2022gastrointestinal
   analyte: E-gRNA-RT-qPCR-ZY
   model: gamma
@@ -11718,6 +13631,132 @@ skipped:
     \ here appears to begin at or after peak shedding, which leaves b0 unidentifiable\
     \ \u2014 the likelihood is monotone in it until the c0 > 0 constraint binds. Fit\
     \ the exponential model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: negru2025severe
+  analyte: serum
+  model: exponential
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: serum
+  model: gamma
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: serum
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: skin
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: skin
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: skin
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: saliva
+  model: exponential
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: saliva
+  model: gamma
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: saliva
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: rectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: rectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: rectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: nasal
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasal' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: nasal
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasal' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: nasal
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasal' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: pharyngeal
+  model: exponential
+  reason: ct_units
+  message: Analyte 'pharyngeal' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: pharyngeal
+  model: gamma
+  reason: ct_units
+  message: Analyte 'pharyngeal' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: negru2025severe
+  analyte: pharyngeal
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'pharyngeal' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: neres2020sapovirus
   analyte: stool_sapovirus_viral_load
   model: exponential
@@ -11825,6 +13864,168 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'NPS_SARS'.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_skin_lesion_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_skin_lesion_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_skin_lesion_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_skin_lesion_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_rectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_rectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_rectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_rectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_tongue_ulcer
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_tongue_ulcer' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_tongue_ulcer
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_tongue_ulcer' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_tongue_ulcer
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_tongue_ulcer' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_oral_lesion
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_oral_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_oral_lesion
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_oral_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_oral_lesion
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_oral_lesion' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_saliva
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_saliva
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_saliva
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_saliva' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_nasopharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_nasopharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_semen
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_semen
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_semen
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_semen' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_stool
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_stool
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: peiromestres2022frequent
+  analyte: ct_stool
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: pereira2022standardization
   analyte: respiratory_influenzaA_viral_load
   model: gamma
@@ -11835,6 +14036,78 @@ skipped:
   model: gamma_shifted
   reason: too_few_subjects
   message: No subject has at least 4 usable measurements for analyte 'respiratory_influenzaA_viral_load'.
+- dataset_id: pesonel2025clinical
+  analyte: oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: anorectal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: anorectal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: anorectal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'anorectal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: skin
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: skin
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: skin
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: plasma
+  model: exponential
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: plasma
+  model: gamma
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: pesonel2025clinical
+  analyte: plasma
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'plasma' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: piccirilli2023respiratory
   analyte: nasopharyngeal_aspirate_RSV_viral_load
   model: gamma
@@ -12029,6 +14302,150 @@ skipped:
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'bocavirus_ct' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_nasopharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_nasopharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_nasopharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_serum
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_serum
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_serum
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_serum' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_urine
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_urine
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_urine
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_urine' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_base
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_lesion_base' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_base
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_lesion_base' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_base
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_lesion_base' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_fluid
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_lesion_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_fluid
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_lesion_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_fluid
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_lesion_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_roof
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_lesion_roof' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_roof
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_lesion_roof' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_roof
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_lesion_roof' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_crust
+  model: exponential
+  reason: ct_units
+  message: Analyte 'ct_lesion_crust' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_crust
+  model: gamma
+  reason: ct_units
+  message: Analyte 'ct_lesion_crust' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: relhan2023clinical
+  analyte: ct_lesion_crust
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'ct_lesion_crust' is reported in 'cycle threshold'. Cycle-threshold
     fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: rodrigues2020influenza
   analyte: respiratory_influenza_viral_load
@@ -12450,6 +14867,77 @@ skipped:
   reason: ct_units
   message: Analyte 'swab_SARSCoV2_N_Ct' is reported in 'cycle threshold'. Cycle-threshold
     fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: suner2023viral
+  analyte: blood
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'blood' does not show\
+    \ one: only 0% of subjects did, against a required 50%. Sampling here appears\
+    \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
+    \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
+    \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: suner2023viral
+  analyte: blood
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'blood' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: suner2023viral
+  analyte: pharynx
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'pharynx' does not show\
+    \ one: only 28% of subjects did, against a required 50%. Sampling here appears\
+    \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
+    \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
+    \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: suner2023viral
+  analyte: pharynx
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'pharynx' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: suner2023viral
+  analyte: rectum
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'rectum' does not show\
+    \ one: only 0% of subjects did, against a required 50%. Sampling here appears\
+    \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
+    \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
+    \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: suner2023viral
+  analyte: rectum
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'rectum' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: suner2023viral
+  analyte: semen
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'semen' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
+- dataset_id: suner2023viral
+  analyte: lesion
+  model: gamma
+  reason: no_rise_observed
+  message: "The gamma model needs a rise to fit, and analyte 'lesion' does not show\
+    \ one: only 27% of subjects did, against a required 50%. Sampling here appears\
+    \ to begin at or after peak shedding, which leaves b0 unidentifiable \u2014 the\
+    \ likelihood is monotone in it until the c0 > 0 constraint binds. Fit the exponential\
+    \ model instead; it is the appropriate model for post-peak sampling."
+- dataset_id: suner2023viral
+  analyte: lesion
+  model: gamma_shifted
+  reason: no_pre_event_readings
+  message: Analyte 'lesion' has no detected reading at or before its reference event,
+    so a shifted onset has nothing to locate and would only absorb curve shape. Fit
+    the 'gamma' model instead.
 - dataset_id: tabatabai2019severe
   analyte: serum
   model: exponential
@@ -12734,6 +15222,24 @@ skipped:
   reason: ct_units
   message: Analyte 'stool_SARSCoV2_N' is reported in 'cycle threshold'. Cycle-threshold
     fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: wang2026clinical
+  analyte: vesicular_fluid
+  model: exponential
+  reason: ct_units
+  message: Analyte 'vesicular_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: wang2026clinical
+  analyte: vesicular_fluid
+  model: gamma
+  reason: ct_units
+  message: Analyte 'vesicular_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: wang2026clinical
+  analyte: vesicular_fluid
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'vesicular_fluid' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: woelfel2020virological
   analyte: stool
   model: gamma_shifted
@@ -12904,6 +15410,96 @@ skipped:
   model: gamma_shifted
   reason: ct_units
   message: Analyte 'lower_resp_tract' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: nasopharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: nasopharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: nasopharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'nasopharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: skin
+  model: exponential
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: skin
+  model: gamma
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: skin
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'skin' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: stool
+  model: exponential
+  reason: ct_units
+  message: Analyte 'stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: stool
+  model: gamma
+  reason: ct_units
+  message: Analyte 'stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: stool
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'stool' is reported in 'cycle threshold'. Cycle-threshold fits
+    are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: anus
+  model: exponential
+  reason: ct_units
+  message: Analyte 'anus' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: anus
+  model: gamma
+  reason: ct_units
+  message: Analyte 'anus' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: anus
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'anus' is reported in 'cycle threshold'. Cycle-threshold fits are
+    supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: oropharyngeal_swab
+  model: exponential
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: oropharyngeal_swab
+  model: gamma
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
+    fits are supported but excluded from the catalog, whose heights are log10 concentrations.
+- dataset_id: yang2024clinical
+  analyte: oropharyngeal_swab
+  model: gamma_shifted
+  reason: ct_units
+  message: Analyte 'oropharyngeal_swab' is reported in 'cycle threshold'. Cycle-threshold
     fits are supported but excluded from the catalog, whose heights are log10 concentrations.
 - dataset_id: yen2011detection
   analyte: stool_rotavirus_vaccine
