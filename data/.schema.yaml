@@ -26,6 +26,7 @@ $defs:
       - stool
       - sputum
       - urine
+      - blood
       - plasma
       - oropharyngeal_swab
       - oropharyngeal_lavage_fluid
@@ -37,6 +38,7 @@ $defs:
       - rectal_swab
       - anorectal_swab
       - genital_swab
+      - urethral_swab
       - unknown
       - bronchoalveolar_lavage_fluid
       - bronchial_aspirate
@@ -45,6 +47,13 @@ $defs:
       - nasal_discharge
       - serum
       - emesis
+      - skin_lesion
+      - scab
+      - genital_or_rectal_lesion
+      - mucosal_lesion_swab
+      - semen
+      - vesicle_swab
+      - tear
   analyte_specification:
     description: Specification of an analyte.
     type: object
@@ -111,6 +120,8 @@ $defs:
           - bocavirus
           - cytomegalovirus
           - mpox
+          - orthopox
+          - HIV
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug
@@ -357,6 +368,15 @@ properties:
               enum:
                 - immunocompetent
                 - immunocompromised
+                - unknown
+            hiv_status:
+              description: >
+                Participant's HIV infection status, when the study reports it as a
+                distinct piece of information from immune_status.
+              type: string
+              enum:
+                - positive
+                - negative
                 - unknown
             coinfection:
               description: >
