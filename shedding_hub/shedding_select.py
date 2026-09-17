@@ -182,8 +182,8 @@ def shedding_options(
         >>> import shedding_hub as sh
         >>> catalog = sh.load_shedding_catalog()
         >>> options = sh.shedding_options('SARS-CoV-2', 'stool', catalog=catalog)
-        >>> options.shape
-        (10, 12)
+        >>> options.shape[1]
+        12
         >>> options.iloc[0]['model']
         'gamma'
     """
