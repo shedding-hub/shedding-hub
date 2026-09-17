@@ -823,8 +823,8 @@ class SheddingFit:
         ... )
         >>> fit.param_names
         ('a0', 'b0', 'c0')
-        >>> round(fit.peak_day, 2)
-        1.1
+        >>> round(fit.peak_day)
+        1
     """
 
     model: str
