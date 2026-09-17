@@ -1,0 +1,233 @@
+title: Epidemiological, clinical and virological characteristics of four cases of
+  monkeypox support transmission through sexual contact, Italy, May 2022
+doi: 10.2807/1560-7917.ES.2022.27.22.2200421
+description: Case series of four mpox (MPXV) infections detected in central Italy
+  in May 2022 in adult men who have sex with men. Multiple specimen types (including
+  genital/rectal lesions, nasopharyngeal swab, serum, plasma, scab, stool/faeces,
+  saliva, and seminal fluid) were tested by real-time PCR for MPXV DNA; results are
+  reported as PCR quantification cycle (Cq) values at specific days after symptom
+  onset.
+analytes:
+  genital_or_rectal_lesions:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for genital or rectal lesion samples. Screening used Real-Star
+      Orthopoxvirus PCR Kit (Altona); confirmatory PCR was G2R_G assay (Li et al.)
+      targeting TNF receptor gene; run on Rotor-Gene Q after nucleic acid extraction
+      with QIAamp Viral RNA Mini Kit.
+    specimen: genital_or_rectal_lesion
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  nasopharyngeal_swab:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for nasopharyngeal swabs. Screening used Real-Star Orthopoxvirus
+      PCR Kit (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF
+      receptor gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp
+      Viral RNA Mini Kit.
+    specimen: nasopharyngeal_swab
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  plasma:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for plasma. Screening used Real-Star Orthopoxvirus PCR Kit
+      (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF receptor
+      gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp Viral RNA
+      Mini Kit.
+    specimen: plasma
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  scab:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for scab material. Screening used Real-Star Orthopoxvirus
+      PCR Kit (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF
+      receptor gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp
+      Viral RNA Mini Kit.
+    specimen: scab
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  serum:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for serum. Screening used Real-Star Orthopoxvirus PCR Kit
+      (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF receptor
+      gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp Viral RNA
+      Mini Kit.
+    specimen: serum
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  seminal_fluid:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for seminal fluid. Screening used Real-Star Orthopoxvirus
+      PCR Kit (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF
+      receptor gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp
+      Viral RNA Mini Kit.
+    specimen: semen
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  stool:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for faeces/stool. Screening used Real-Star Orthopoxvirus PCR
+      Kit (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF receptor
+      gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp Viral RNA
+      Mini Kit.
+    specimen: stool
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  saliva:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for saliva. Screening used Real-Star Orthopoxvirus PCR Kit
+      (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF receptor
+      gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp Viral RNA
+      Mini Kit.
+    specimen: saliva
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  skin_lesions:
+    description: MPXV DNA detection by real-time PCR; results reported as quantification
+      cycle (Cq) values for skin lesion samples. Screening used Real-Star Orthopoxvirus
+      PCR Kit (Altona); confirmatory PCR was G2R_G assay (Li et al.) targeting TNF
+      receptor gene; run on Rotor-Gene Q after nucleic acid extraction with QIAamp
+      Viral RNA Mini Kit.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: G2R_G (TNF receptor gene); Orthopoxvirus-common target (screening
+      kit)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 30s
+    symptomatic: true
+    hiv_status: positive
+  measurements:
+  - analyte: genital_or_rectal_lesions
+    time: 5
+    value: 15.6
+  - analyte: nasopharyngeal_swab
+    time: 5
+    value: 27.6
+  - analyte: plasma
+    time: 5
+    value: 30.2
+  - analyte: scab
+    time: 5
+    value: 13.1
+  - analyte: serum
+    time: 5
+    value: 29.7
+  - analyte: seminal_fluid
+    time: 9
+    value: 30.1
+- attributes:
+    sex: male
+    age: 30s
+    symptomatic: true
+    hiv_status: negative
+  measurements:
+  - analyte: stool
+    time: 3
+    value: 22.6
+  - analyte: genital_or_rectal_lesions
+    time: 3
+    value: 17.5
+  - analyte: nasopharyngeal_swab
+    time: 3
+    value: 30.2
+  - analyte: saliva
+    time: 3
+    value: 27.1
+  - analyte: skin_lesions
+    time: 3
+    value: 30.4
+  - analyte: seminal_fluid
+    time: 5
+    value: 29.4
+  - analyte: seminal_fluid
+    time: 9
+    value: 43.2
+- attributes:
+    sex: male
+    age: 30s
+    symptomatic: true
+    hiv_status: positive
+  measurements:
+  - analyte: genital_or_rectal_lesions
+    time: 5
+    value: 15.3
+  - analyte: scab
+    time: 5
+    value: 20
+  - analyte: skin_lesions
+    time: 5
+    value: 18.2
+  - analyte: stool
+    time: 6
+    value: 26.1
+  - analyte: seminal_fluid
+    time: 6
+    value: 29.3
+  - analyte: skin_lesions
+    time: 6
+    value: 19.4
+  - analyte: seminal_fluid
+    time: 8
+    value: 27.7
+  - analyte: seminal_fluid
+    time: 11
+    value: negative
+- attributes:
+    sex: male
+    age: 30s
+    symptomatic: true
+    hiv_status: negative
+  measurements:
+  - analyte: genital_or_rectal_lesions
+    time: 4
+    value: 14.7
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 30.4
+  - analyte: skin_lesions
+    time: 4
+    value: 17.6

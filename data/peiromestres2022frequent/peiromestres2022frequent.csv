@@ -1,0 +1,148 @@
+PatientID,time,value,unit,specimen,sex,age,HIV_status,vaccinated,symptom_status
+01,6,21.3,Ct,skin lesion swab,M,30s,negative,unknown,symptomatic
+02,5,18.5,Ct,skin lesion swab,M,30s,positive,unknown,symptomatic
+03,1,16.2,Ct,skin lesion swab,M,40s,positive,unknown,symptomatic
+04,7,17.6,Ct,skin lesion swab,M,40s,negative,unknown,symptomatic
+04,7,17.8,Ct,rectal swab,M,40s,negative,unknown,symptomatic
+05,14,23.2,Ct,skin lesion swab,M,40s,negative,smallpox,symptomatic
+06,7,22.1,Ct,skin lesion swab,M,30s,negative,unknown,symptomatic
+06,7,16.1,Ct,rectal swab,M,30s,negative,unknown,symptomatic
+07,4,21.3,Ct,skin lesion swab,M,40s,negative,none,symptomatic
+07,4,19.6,Ct,tongue ulcer,M,40s,negative,none,symptomatic
+08,3,27.8,Ct,skin lesion swab,M,50s,positive,smallpox,symptomatic
+08,3,35.8,Ct,oral lesion,M,50s,positive,smallpox,symptomatic
+09,7,19,Ct,skin lesion swab,M,40s,positive,smallpox,symptomatic
+10,2,19,Ct,skin lesion swab,M,30s,negative,none,symptomatic
+10,2,17.7,Ct,rectal swab,M,30s,negative,none,symptomatic
+11,1,18.8,Ct,skin lesion swab,M,30s,negative,smallpox,unknown
+12,3,21.1,Ct,skin lesion swab,M,30s,negative,none,symptomatic
+12,3,15.6,Ct,rectal swab,M,30s,negative,none,symptomatic
+01,12,35.7,Ct,saliva,M,30s,negative,unknown,symptomatic
+01,12,38.4,Ct,rectal swab,M,30s,negative,unknown,symptomatic
+01,12,34.7,Ct,nasopharyngeal swab,M,30s,negative,unknown,symptomatic
+01,12,negative,Ct,semen,M,30s,negative,unknown,symptomatic
+01,12,negative,Ct,urine,M,30s,negative,unknown,symptomatic
+01,12,23.4,Ct,faeces,M,30s,negative,unknown,symptomatic
+02,11,20.3,Ct,saliva,M,30s,positive,unknown,symptomatic
+02,11,17.6,Ct,rectal swab,M,30s,positive,unknown,symptomatic
+02,11,33.3,Ct,nasopharyngeal swab,M,30s,positive,unknown,symptomatic
+02,11,37.3,Ct,urine,M,30s,positive,unknown,symptomatic
+02,11,negative,Ct,faeces,M,30s,positive,unknown,symptomatic
+03,10,negative,Ct,saliva,M,40s,positive,unknown,symptomatic
+03,10,31.9,Ct,rectal swab,M,40s,positive,unknown,symptomatic
+03,10,negative,Ct,nasopharyngeal swab,M,40s,positive,unknown,symptomatic
+03,10,36,Ct,semen,M,40s,positive,unknown,symptomatic
+03,10,negative,Ct,urine,M,40s,positive,unknown,symptomatic
+03,10,negative,Ct,faeces,M,40s,positive,unknown,symptomatic
+03,13,35.6,Ct,saliva,M,40s,positive,unknown,symptomatic
+03,13,33.3,Ct,rectal swab,M,40s,positive,unknown,symptomatic
+03,13,negative,Ct,nasopharyngeal swab,M,40s,positive,unknown,symptomatic
+03,13,35.7,Ct,semen,M,40s,positive,unknown,symptomatic
+03,13,negative,Ct,urine,M,40s,positive,unknown,symptomatic
+03,13,negative,Ct,faeces,M,40s,positive,unknown,symptomatic
+04,7,35,Ct,saliva,M,40s,negative,unknown,symptomatic
+04,7,19.8,Ct,rectal swab,M,40s,negative,unknown,symptomatic
+04,7,40,Ct,nasopharyngeal swab,M,40s,negative,unknown,symptomatic
+04,7,40,Ct,semen,M,40s,negative,unknown,symptomatic
+04,7,negative,Ct,urine,M,40s,negative,unknown,symptomatic
+04,7,24,Ct,faeces,M,40s,negative,unknown,symptomatic
+04,9,negative,Ct,saliva,M,40s,negative,unknown,symptomatic
+04,9,22.1,Ct,rectal swab,M,40s,negative,unknown,symptomatic
+04,9,negative,Ct,nasopharyngeal swab,M,40s,negative,unknown,symptomatic
+04,9,negative,Ct,semen,M,40s,negative,unknown,symptomatic
+04,9,negative,Ct,urine,M,40s,negative,unknown,symptomatic
+04,9,21.5,Ct,faeces,M,40s,negative,unknown,symptomatic
+05,14,negative,Ct,saliva,M,40s,negative,smallpox,symptomatic
+05,14,20.7,Ct,rectal swab,M,40s,negative,smallpox,symptomatic
+05,14,37.2,Ct,nasopharyngeal swab,M,40s,negative,smallpox,symptomatic
+05,14,31.9,Ct,semen,M,40s,negative,smallpox,symptomatic
+05,14,negative,Ct,urine,M,40s,negative,smallpox,symptomatic
+05,16,37.9,Ct,saliva,M,40s,negative,smallpox,symptomatic
+05,16,21.5,Ct,rectal swab,M,40s,negative,smallpox,symptomatic
+05,16,37.3,Ct,nasopharyngeal swab,M,40s,negative,smallpox,symptomatic
+05,16,30.7,Ct,semen,M,40s,negative,smallpox,symptomatic
+05,16,27,Ct,urine,M,40s,negative,smallpox,symptomatic
+05,16,19.9,Ct,faeces,M,40s,negative,smallpox,symptomatic
+06,11,23.2,Ct,saliva,M,30s,negative,unknown,symptomatic
+06,11,25.4,Ct,rectal swab,M,30s,negative,unknown,symptomatic
+06,11,25.4,Ct,nasopharyngeal swab,M,30s,negative,unknown,symptomatic
+06,11,39.1,Ct,urine,M,30s,negative,unknown,symptomatic
+06,11,24.7,Ct,faeces,M,30s,negative,unknown,symptomatic
+06,12,24.7,Ct,saliva,M,30s,negative,unknown,symptomatic
+06,12,29.8,Ct,rectal swab,M,30s,negative,unknown,symptomatic
+06,12,25.5,Ct,nasopharyngeal swab,M,30s,negative,unknown,symptomatic
+06,12,negative,Ct,urine,M,30s,negative,unknown,symptomatic
+06,12,26.4,Ct,faeces,M,30s,negative,unknown,symptomatic
+06,13,25,Ct,saliva,M,30s,negative,unknown,symptomatic
+06,13,27.1,Ct,rectal swab,M,30s,negative,unknown,symptomatic
+06,13,26.4,Ct,nasopharyngeal swab,M,30s,negative,unknown,symptomatic
+06,13,negative,Ct,urine,M,30s,negative,unknown,symptomatic
+06,13,28.3,Ct,faeces,M,30s,negative,unknown,symptomatic
+07,4,24,Ct,saliva,M,40s,negative,none,symptomatic
+07,4,22,Ct,rectal swab,M,40s,negative,none,symptomatic
+07,4,26.9,Ct,nasopharyngeal swab,M,40s,negative,none,symptomatic
+07,4,39.3,Ct,urine,M,40s,negative,none,symptomatic
+07,4,31.4,Ct,faeces,M,40s,negative,none,symptomatic
+07,6,21.8,Ct,saliva,M,40s,negative,none,symptomatic
+07,6,19,Ct,rectal swab,M,40s,negative,none,symptomatic
+07,6,26.1,Ct,nasopharyngeal swab,M,40s,negative,none,symptomatic
+07,6,negative,Ct,semen,M,40s,negative,none,symptomatic
+07,6,negative,Ct,urine,M,40s,negative,none,symptomatic
+07,6,negative,Ct,faeces,M,40s,negative,none,symptomatic
+08,5,29.1,Ct,saliva,M,50s,positive,smallpox,symptomatic
+08,5,30.5,Ct,rectal swab,M,50s,positive,smallpox,symptomatic
+08,5,32.6,Ct,nasopharyngeal swab,M,50s,positive,smallpox,symptomatic
+08,5,39.4,Ct,urine,M,50s,positive,smallpox,symptomatic
+08,5,negative,Ct,faeces,M,50s,positive,smallpox,symptomatic
+08,8,31.7,Ct,saliva,M,50s,positive,smallpox,symptomatic
+08,8,34.4,Ct,rectal swab,M,50s,positive,smallpox,symptomatic
+08,8,32.9,Ct,nasopharyngeal swab,M,50s,positive,smallpox,symptomatic
+08,8,negative,Ct,urine,M,50s,positive,smallpox,symptomatic
+08,8,negative,Ct,faeces,M,50s,positive,smallpox,symptomatic
+09,7,29.8,Ct,saliva,M,40s,positive,smallpox,symptomatic
+09,7,23.7,Ct,rectal swab,M,40s,positive,smallpox,symptomatic
+09,7,33.5,Ct,nasopharyngeal swab,M,40s,positive,smallpox,symptomatic
+09,7,22.7,Ct,semen,M,40s,positive,smallpox,symptomatic
+09,7,24.4,Ct,urine,M,40s,positive,smallpox,symptomatic
+09,7,30.2,Ct,faeces,M,40s,positive,smallpox,symptomatic
+09,8,25.6,Ct,saliva,M,40s,positive,smallpox,symptomatic
+09,8,20.7,Ct,rectal swab,M,40s,positive,smallpox,symptomatic
+09,8,29.4,Ct,nasopharyngeal swab,M,40s,positive,smallpox,symptomatic
+09,8,20.9,Ct,semen,M,40s,positive,smallpox,symptomatic
+09,8,19.1,Ct,urine,M,40s,positive,smallpox,symptomatic
+09,8,29.8,Ct,faeces,M,40s,positive,smallpox,symptomatic
+10,4,31.2,Ct,saliva,M,30s,negative,none,symptomatic
+10,4,23.4,Ct,rectal swab,M,30s,negative,none,symptomatic
+10,4,29,Ct,nasopharyngeal swab,M,30s,negative,none,symptomatic
+10,4,38.7,Ct,semen,M,30s,negative,none,symptomatic
+10,4,40,Ct,urine,M,30s,negative,none,symptomatic
+10,4,20,Ct,faeces,M,30s,negative,none,symptomatic
+10,7,36,Ct,saliva,M,30s,negative,none,symptomatic
+10,7,26,Ct,rectal swab,M,30s,negative,none,symptomatic
+10,7,36.5,Ct,nasopharyngeal swab,M,30s,negative,none,symptomatic
+10,7,negative,Ct,semen,M,30s,negative,none,symptomatic
+10,7,40,Ct,urine,M,30s,negative,none,symptomatic
+10,7,23.4,Ct,faeces,M,30s,negative,none,symptomatic
+11,1,negative,Ct,rectal swab,M,30s,negative,smallpox,unknown
+11,1,negative,Ct,nasopharyngeal swab,M,30s,negative,smallpox,unknown
+11,1,33,Ct,semen,M,30s,negative,smallpox,unknown
+11,1,31.8,Ct,urine,M,30s,negative,smallpox,unknown
+11,1,negative,Ct,faeces,M,30s,negative,smallpox,unknown
+11,4,36.5,Ct,saliva,M,30s,negative,smallpox,unknown
+11,4,negative,Ct,rectal swab,M,30s,negative,smallpox,unknown
+11,4,negative,Ct,nasopharyngeal swab,M,30s,negative,smallpox,unknown
+11,4,38.1,Ct,semen,M,30s,negative,smallpox,unknown
+11,4,35,Ct,urine,M,30s,negative,smallpox,unknown
+11,4,negative,Ct,faeces,M,30s,negative,smallpox,unknown
+12,4,25.3,Ct,saliva,M,30s,negative,none,symptomatic
+12,4,20.8,Ct,rectal swab,M,30s,negative,none,symptomatic
+12,4,31.1,Ct,nasopharyngeal swab,M,30s,negative,none,symptomatic
+12,4,32.1,Ct,semen,M,30s,negative,none,symptomatic
+12,4,29,Ct,urine,M,30s,negative,none,symptomatic
+12,4,20.9,Ct,faeces,M,30s,negative,none,symptomatic
+12,6,25,Ct,saliva,M,30s,negative,none,symptomatic
+12,6,21.2,Ct,rectal swab,M,30s,negative,none,symptomatic
+12,6,28.8,Ct,nasopharyngeal swab,M,30s,negative,none,symptomatic
+12,6,29.7,Ct,semen,M,30s,negative,none,symptomatic
+12,6,26.7,Ct,urine,M,30s,negative,none,symptomatic
+12,6,17.8,Ct,faeces,M,30s,negative,none,symptomatic

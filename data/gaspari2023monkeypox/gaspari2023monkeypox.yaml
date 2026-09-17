@@ -1,0 +1,612 @@
+title: 'Monkeypox Outbreak 2022: Clinical and Virological Features of 30 Patients
+  at the Sexually Transmitted Diseases Centre of Sant'' Orsola Hospital, Bologna,
+  Northeastern Italy'
+doi: 10.1128/jcm.01365-22
+description: Observational study of 30 laboratory-confirmed mpox (MPXV) patients seen
+  at the Sexually Transmitted Diseases Centre of Sant' Orsola Hospital (University
+  of Bologna) in Bologna, Italy (20 June to 10 August 2022). Multiple specimen types
+  (skin lesion swab, rectal swab, oropharyngeal swab, plasma, urine) were tested for
+  MPXV DNA by real-time PCR and reported here as Ct values (with some negatives) at
+  specific days after symptom onset.
+analytes:
+  skin_lesion_swab:
+    description: MPXV DNA detection by real-time PCR on skin lesion swab specimens;
+      results reported as PCR cycle threshold (Ct).
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  oropharyngeal_swab:
+    description: MPXV DNA detection by real-time PCR on oropharyngeal swab specimens;
+      results reported as PCR cycle threshold (Ct).
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  plasma:
+    description: MPXV DNA detection by real-time PCR on plasma specimens; results
+      reported as PCR cycle threshold (Ct).
+    specimen: plasma
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  urine:
+    description: MPXV DNA detection by real-time PCR on urine specimens; results reported
+      as PCR cycle threshold (Ct).
+    specimen: urine
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  rectal_swab:
+    description: MPXV DNA detection by real-time PCR on rectal swab specimens; results
+      reported as PCR cycle threshold (Ct).
+    specimen: rectal_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 6
+    value: 18
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 39
+  - analyte: plasma
+    time: 6
+    value: negative
+  - analyte: urine
+    time: 6
+    value: 22
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 18
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: 28
+  - analyte: plasma
+    time: 5
+    value: 34
+  - analyte: urine
+    time: 5
+    value: 21
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: urine
+    time: 15
+    value: 24
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 4
+    value: 15
+  - analyte: plasma
+    time: 4
+    value: negative
+  - analyte: urine
+    time: 4
+    value: 27
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 6
+    value: 18
+  - analyte: plasma
+    time: 6
+    value: 34
+  - analyte: urine
+    time: 6
+    value: 19
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 17
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: negative
+  - analyte: plasma
+    time: 5
+    value: 31
+  - analyte: urine
+    time: 5
+    value: negative
+  - analyte: skin_lesion_swab
+    time: 16
+    value: 29
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: plasma
+    time: 16
+    value: negative
+  - analyte: urine
+    time: 16
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 2
+    value: 18
+  - analyte: plasma
+    time: 2
+    value: 31
+  - analyte: urine
+    time: 2
+    value: negative
+  - analyte: skin_lesion_swab
+    time: 36
+    value: negative
+  - analyte: plasma
+    time: 36
+    value: negative
+  - analyte: urine
+    time: 36
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 4
+    value: 21
+  - analyte: plasma
+    time: 4
+    value: 32
+  - analyte: urine
+    time: 4
+    value: 29
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 4
+    value: 19
+  - analyte: plasma
+    time: 4
+    value: 28
+  - analyte: urine
+    time: 4
+    value: 32
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 21
+  - analyte: plasma
+    time: 5
+    value: 29
+  - analyte: urine
+    time: 5
+    value: 22
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 18
+  - analyte: plasma
+    time: 5
+    value: 29
+  - analyte: urine
+    time: 5
+    value: 31
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 21
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: 27
+  - analyte: plasma
+    time: 5
+    value: 28
+  - analyte: urine
+    time: 5
+    value: 30
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 19
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: 30
+  - analyte: plasma
+    time: 5
+    value: 33
+  - analyte: urine
+    time: 5
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 3
+    value: 28
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: plasma
+    time: 3
+    value: negative
+  - analyte: urine
+    time: 3
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 0
+    value: 18
+  - analyte: plasma
+    time: 0
+    value: 36
+  - analyte: urine
+    time: 0
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 4
+    value: 16
+  - analyte: plasma
+    time: 4
+    value: 32
+  - analyte: urine
+    time: 4
+    value: 21
+  - analyte: rectal_swab
+    time: 4
+    value: 18
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 7
+    value: 17
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: plasma
+    time: 7
+    value: negative
+  - analyte: urine
+    time: 7
+    value: 32
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 7
+    value: 18
+  - analyte: plasma
+    time: 7
+    value: negative
+  - analyte: urine
+    time: 7
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 7
+    value: 21
+  - analyte: plasma
+    time: 7
+    value: 22
+  - analyte: urine
+    time: 7
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 2
+    value: 20
+  - analyte: urine
+    time: 2
+    value: negative
+  - analyte: skin_lesion_swab
+    time: 11
+    value: 38
+  - analyte: plasma
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 11
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 3
+    value: 21
+  - analyte: plasma
+    time: 3
+    value: 34
+  - analyte: urine
+    time: 3
+    value: 24
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 20
+  - analyte: skin_lesion_swab
+    time: 21
+    value: negative
+  - analyte: plasma
+    time: 21
+    value: negative
+  - analyte: urine
+    time: 21
+    value: 28
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 6
+    value: 18
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: negative
+  - analyte: plasma
+    time: 6
+    value: negative
+  - analyte: urine
+    time: 6
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 4
+    value: 24
+  - analyte: plasma
+    time: 4
+    value: 33
+  - analyte: urine
+    time: 4
+    value: negative
+  - analyte: plasma
+    time: 19
+    value: negative
+  - analyte: urine
+    time: 19
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 4
+    value: 15
+  - analyte: plasma
+    time: 4
+    value: 33
+  - analyte: urine
+    time: 4
+    value: negative
+  - analyte: skin_lesion_swab
+    time: 38
+    value: negative
+  - analyte: plasma
+    time: 38
+    value: negative
+  - analyte: urine
+    time: 38
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 11
+    value: 17
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 31
+  - analyte: plasma
+    time: 11
+    value: negative
+  - analyte: urine
+    time: 11
+    value: 30
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 3
+    value: 20
+  - analyte: plasma
+    time: 3
+    value: negative
+  - analyte: urine
+    time: 3
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 21
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: 28
+  - analyte: plasma
+    time: 5
+    value: 31
+  - analyte: urine
+    time: 5
+    value: 34
+  - analyte: rectal_swab
+    time: 5
+    value: 33
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 3
+    value: 18
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: 35
+  - analyte: plasma
+    time: 3
+    value: negative
+  - analyte: urine
+    time: 3
+    value: negative
+  - analyte: skin_lesion_swab
+    time: 20
+    value: 29
+  - analyte: plasma
+    time: 20
+    value: negative
+  - analyte: urine
+    time: 20
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 6
+    value: 17
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 30
+  - analyte: plasma
+    time: 6
+    value: 31
+  - analyte: urine
+    time: 6
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 3
+    value: 16
+  - analyte: plasma
+    time: 3
+    value: 32
+  - analyte: rectal_swab
+    time: 3
+    value: 35

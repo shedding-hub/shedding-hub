@@ -1,0 +1,152 @@
+﻿PatientID,time,value,unit,specimen,sex,age,ethnicity
+01,14,negative,Ct,ops,M,34,Indian
+01,18,negative,Ct,ops,M,34,Indian
+01,22,negative,Ct,ops,M,34,Indian
+02,7,37.27,Ct,ops,M,34,Nigerian
+02,11,negative,Ct,ops,M,34,Nigerian
+02,17,negative,Ct,ops,M,34,Nigerian
+02,21,negative,Ct,ops,M,34,Nigerian
+03,10,31.71,Ct,ops,M,35,Nigerian
+03,15,negative,Ct,ops,M,35,Nigerian
+03,20,negative,Ct,ops,M,35,Nigerian
+03,24,negative,Ct,ops,M,35,Nigerian
+04,5,27.37,Ct,ops,F,31,Nigerian
+04,9,38.72,Ct,ops,F,31,Nigerian
+04,13,negative,Ct,ops,F,31,Nigerian
+04,17,negative,Ct,ops,F,31,Nigerian
+05,5,31.85,Ct,ops,F,22,Nigerian
+05,9,31.81,Ct,ops,F,22,Nigerian
+05,13,negative,Ct,ops,F,22,Nigerian
+05,19,negative,Ct,ops,F,22,Nigerian
+05,23,negative,Ct,ops,F,22,Nigerian
+01,14,34.78,Ct,nps,M,34,Indian
+01,18,negative,Ct,nps,M,34,Indian
+01,22,negative,Ct,nps,M,34,Indian
+02,7,35.74,Ct,nps,M,34,Nigerian
+02,11,33.9,Ct,nps,M,34,Nigerian
+02,17,negative,Ct,nps,M,34,Nigerian
+02,21,negative,Ct,nps,M,34,Nigerian
+03,10,31.71,Ct,nps,M,35,Nigerian
+03,15,31.47,Ct,nps,M,35,Nigerian
+03,20,36.24,Ct,nps,M,35,Nigerian
+03,24,negative,Ct,nps,M,35,Nigerian
+04,5,27.37,Ct,nps,F,31,Nigerian
+04,9,37.71,Ct,nps,F,31,Nigerian
+04,13,37.03,Ct,nps,F,31,Nigerian
+04,17,negative,Ct,nps,F,31,Nigerian
+05,5,negative,Ct,nps,F,22,Nigerian
+05,9,32.24,Ct,nps,F,22,Nigerian
+05,13,35.28,Ct,nps,F,22,Nigerian
+05,19,negative,Ct,nps,F,22,Nigerian
+05,23,negative,Ct,nps,F,22,Nigerian
+01,14,negative,Ct,serum,M,34,Indian
+01,18,negative,Ct,serum,M,34,Indian
+01,22,negative,Ct,serum,M,34,Indian
+02,7,negative,Ct,serum,M,34,Nigerian
+02,11,negative,Ct,serum,M,34,Nigerian
+02,17,negative,Ct,serum,M,34,Nigerian
+02,21,negative,Ct,serum,M,34,Nigerian
+03,10,negative,Ct,serum,M,35,Nigerian
+03,15,negative,Ct,serum,M,35,Nigerian
+03,20,negative,Ct,serum,M,35,Nigerian
+03,24,negative,Ct,serum,M,35,Nigerian
+04,5,negative,Ct,serum,F,31,Nigerian
+04,9,negative,Ct,serum,F,31,Nigerian
+04,13,negative,Ct,serum,F,31,Nigerian
+04,17,negative,Ct,serum,F,31,Nigerian
+05,5,negative,Ct,serum,F,22,Nigerian
+05,9,negative,Ct,serum,F,22,Nigerian
+05,13,negative,Ct,serum,F,22,Nigerian
+05,19,negative,Ct,serum,F,22,Nigerian
+05,23,negative,Ct,serum,F,22,Nigerian
+01,18,negative,Ct,urine,M,34,Indian
+01,22,negative,Ct,urine,M,34,Indian
+02,7,29.74,Ct,urine,M,34,Nigerian
+02,11,32.93,Ct,urine,M,34,Nigerian
+02,17,35.71,Ct,urine,M,34,Nigerian
+02,21,negative,Ct,urine,M,34,Nigerian
+03,10,34.52,Ct,urine,M,35,Nigerian
+03,15,33.11,Ct,urine,M,35,Nigerian
+03,20,negative,Ct,urine,M,35,Nigerian
+03,24,negative,Ct,urine,M,35,Nigerian
+04,5,21.6,Ct,urine,F,31,Nigerian
+04,9,27.35,Ct,urine,F,31,Nigerian
+04,17,negative,Ct,urine,F,31,Nigerian
+05,5,30.23,Ct,urine,F,22,Nigerian
+05,9,negative,Ct,urine,F,22,Nigerian
+05,13,negative,Ct,urine,F,22,Nigerian
+05,19,negative,Ct,urine,F,22,Nigerian
+05,23,negative,Ct,urine,F,22,Nigerian
+01,14,34.87,Ct,lesion base,M,34,Indian
+01,18,negative,Ct,lesion base,M,34,Indian
+01,22,negative,Ct,lesion base,M,34,Indian
+02,7,26.26,Ct,lesion base,M,34,Nigerian
+02,17,35.12,Ct,lesion base,M,34,Nigerian
+02,21,negative,Ct,lesion base,M,34,Nigerian
+03,10,26.63,Ct,lesion base,M,35,Nigerian
+03,15,30.49,Ct,lesion base,M,35,Nigerian
+03,20,32.7,Ct,lesion base,M,35,Nigerian
+03,24,negative,Ct,lesion base,M,35,Nigerian
+04,5,24.76,Ct,lesion base,F,31,Nigerian
+04,9,30.72,Ct,lesion base,F,31,Nigerian
+04,13,36.88,Ct,lesion base,F,31,Nigerian
+04,17,negative,Ct,lesion base,F,31,Nigerian
+05,5,29.5,Ct,lesion base,F,22,Nigerian
+05,9,26,Ct,lesion base,F,22,Nigerian
+05,13,29.17,Ct,lesion base,F,22,Nigerian
+05,19,36.62,Ct,lesion base,F,22,Nigerian
+05,23,negative,Ct,lesion base,F,22,Nigerian
+01,14,22.06,Ct,lesion fluid,M,34,Indian
+01,18,negative,Ct,lesion fluid,M,34,Indian
+01,22,negative,Ct,lesion fluid,M,34,Indian
+02,7,27.28,Ct,lesion fluid,M,34,Nigerian
+02,17,32.47,Ct,lesion fluid,M,34,Nigerian
+02,21,negative,Ct,lesion fluid,M,34,Nigerian
+03,10,30.02,Ct,lesion fluid,M,35,Nigerian
+03,15,28.03,Ct,lesion fluid,M,35,Nigerian
+03,20,24.71,Ct,lesion fluid,M,35,Nigerian
+03,24,negative,Ct,lesion fluid,M,35,Nigerian
+04,5,38,Ct,lesion fluid,F,31,Nigerian
+04,9,20.98,Ct,lesion fluid,F,31,Nigerian
+04,13,36.12,Ct,lesion fluid,F,31,Nigerian
+04,17,negative,Ct,lesion fluid,F,31,Nigerian
+05,5,negative,Ct,lesion fluid,F,22,Nigerian
+05,9,17.74,Ct,lesion fluid,F,22,Nigerian
+05,13,25.58,Ct,lesion fluid,F,22,Nigerian
+05,19,negative,Ct,lesion fluid,F,22,Nigerian
+05,23,negative,Ct,lesion fluid,F,22,Nigerian
+01,14,25.56,Ct,lesion roof,M,34,Indian
+01,18,33.03,Ct,lesion roof,M,34,Indian
+02,7,26.99,Ct,lesion roof,M,34,Nigerian
+02,11,26.9,Ct,lesion roof,M,34,Nigerian
+02,17,27.73,Ct,lesion roof,M,34,Nigerian
+02,21,31.3,Ct,lesion roof,M,34,Nigerian
+03,15,27.36,Ct,lesion roof,M,35,Nigerian
+03,20,31.08,Ct,lesion roof,M,35,Nigerian
+03,24,35.3,Ct,lesion roof,M,35,Nigerian
+04,5,26.9,Ct,lesion roof,F,31,Nigerian
+04,9,29.77,Ct,lesion roof,F,31,Nigerian
+04,13,30.52,Ct,lesion roof,F,31,Nigerian
+04,17,negative,Ct,lesion roof,F,31,Nigerian
+05,5,33.58,Ct,lesion roof,F,22,Nigerian
+05,9,22,Ct,lesion roof,F,22,Nigerian
+05,13,31.82,Ct,lesion roof,F,22,Nigerian
+05,19,negative,Ct,lesion roof,F,22,Nigerian
+01,14,25.44,Ct,lesion crust,M,34,Indian
+01,18,26.42,Ct,lesion crust,M,34,Indian
+01,22,negative,Ct,lesion crust,M,34,Indian
+02,11,26.28,Ct,lesion crust,M,34,Nigerian
+02,17,28.81,Ct,lesion crust,M,34,Nigerian
+02,21,28.1,Ct,lesion crust,M,34,Nigerian
+03,10,27.75,Ct,lesion crust,M,35,Nigerian
+03,15,29.18,Ct,lesion crust,M,35,Nigerian
+03,20,29.93,Ct,lesion crust,M,35,Nigerian
+03,24,negative,Ct,lesion crust,M,35,Nigerian
+04,5,26.77,Ct,lesion crust,F,31,Nigerian
+04,9,27.25,Ct,lesion crust,F,31,Nigerian
+04,17,37.14,Ct,lesion crust,F,31,Nigerian
+05,5,30.68,Ct,lesion crust,F,22,Nigerian
+05,9,23.54,Ct,lesion crust,F,22,Nigerian
+05,13,32.98,Ct,lesion crust,F,22,Nigerian
+05,19,32.97,Ct,lesion crust,F,22,Nigerian
+05,23,negative,Ct,lesion crust,F,22,Nigerian

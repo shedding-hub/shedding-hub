@@ -1,0 +1,581 @@
+title: Clinical presentation, viral kinetics, and management of human monkeypox cases
+  from New Delhi, India 2022
+doi: 10.1002/jmv.28249
+description: Case series of five confirmed mpox (MPXV) cases from New Delhi, India
+  (2022) without international travel history, describing clinical presentation and
+  viral kinetics with serial sampling across multiple specimen types. This extraction
+  contains Ct (cycle threshold) measurements from figure-derived CSV for two patients
+  (PatientID 01 and 02) across oropharyngeal swab, nasopharyngeal swab, serum, urine,
+  and lesion specimens at specific post-onset days.
+analytes:
+  ct_oropharyngeal_swab:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in oropharyngeal swab (OPS) specimens; time is post-onset day (POD) of
+      illness.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_nasopharyngeal_swab:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in nasopharyngeal swab (NPS) specimens; time is post-onset day (POD)
+      of illness.
+    specimen: nasopharyngeal_swab
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_serum:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in serum specimens; time is post-onset day (POD) of illness.
+    specimen: serum
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_urine:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in urine specimens; time is post-onset day (POD) of illness.
+    specimen: urine
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_lesion_base:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in lesion base specimens; time is post-onset day (POD) of illness.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_lesion_fluid:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in lesion fluid specimens; time is post-onset day (POD) of illness.
+    specimen: vesicle_swab
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_lesion_roof:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in lesion roof specimens; time is post-onset day (POD) of illness.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_lesion_crust:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      values in lesion crust specimens; time is post-onset day (POD) of illness.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: B6R
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 34
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 14
+    value: 34.78
+  - analyte: ct_nasopharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: ct_serum
+    time: 14
+    value: negative
+  - analyte: ct_serum
+    time: 18
+    value: negative
+  - analyte: ct_serum
+    time: 22
+    value: negative
+  - analyte: ct_urine
+    time: 18
+    value: negative
+  - analyte: ct_urine
+    time: 22
+    value: negative
+  - analyte: ct_lesion_base
+    time: 14
+    value: 34.87
+  - analyte: ct_lesion_base
+    time: 18
+    value: negative
+  - analyte: ct_lesion_base
+    time: 22
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 14
+    value: 22.06
+  - analyte: ct_lesion_fluid
+    time: 18
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 22
+    value: negative
+  - analyte: ct_lesion_roof
+    time: 14
+    value: 25.56
+  - analyte: ct_lesion_roof
+    time: 18
+    value: 33.03
+  - analyte: ct_lesion_crust
+    time: 14
+    value: 25.44
+  - analyte: ct_lesion_crust
+    time: 18
+    value: 26.42
+  - analyte: ct_lesion_crust
+    time: 22
+    value: negative
+- attributes:
+    sex: male
+    age: 34
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: 37.27
+  - analyte: ct_oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 7
+    value: 35.74
+  - analyte: ct_nasopharyngeal_swab
+    time: 11
+    value: 33.9
+  - analyte: ct_nasopharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_serum
+    time: 7
+    value: negative
+  - analyte: ct_serum
+    time: 11
+    value: negative
+  - analyte: ct_serum
+    time: 17
+    value: negative
+  - analyte: ct_serum
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: 29.74
+  - analyte: ct_urine
+    time: 11
+    value: 32.93
+  - analyte: ct_urine
+    time: 17
+    value: 35.71
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_lesion_base
+    time: 7
+    value: 26.26
+  - analyte: ct_lesion_base
+    time: 17
+    value: 35.12
+  - analyte: ct_lesion_base
+    time: 21
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 7
+    value: 27.28
+  - analyte: ct_lesion_fluid
+    time: 17
+    value: 32.47
+  - analyte: ct_lesion_fluid
+    time: 21
+    value: negative
+  - analyte: ct_lesion_roof
+    time: 7
+    value: 26.99
+  - analyte: ct_lesion_roof
+    time: 11
+    value: 26.9
+  - analyte: ct_lesion_roof
+    time: 17
+    value: 27.73
+  - analyte: ct_lesion_roof
+    time: 21
+    value: 31.3
+  - analyte: ct_lesion_crust
+    time: 11
+    value: 26.28
+  - analyte: ct_lesion_crust
+    time: 17
+    value: 28.81
+  - analyte: ct_lesion_crust
+    time: 21
+    value: 28.1
+- attributes:
+    sex: male
+    age: 35
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: 31.71
+  - analyte: ct_oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 20
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 24
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 10
+    value: 31.71
+  - analyte: ct_nasopharyngeal_swab
+    time: 15
+    value: 31.47
+  - analyte: ct_nasopharyngeal_swab
+    time: 20
+    value: 36.24
+  - analyte: ct_nasopharyngeal_swab
+    time: 24
+    value: negative
+  - analyte: ct_serum
+    time: 10
+    value: negative
+  - analyte: ct_serum
+    time: 15
+    value: negative
+  - analyte: ct_serum
+    time: 20
+    value: negative
+  - analyte: ct_serum
+    time: 24
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: 34.52
+  - analyte: ct_urine
+    time: 15
+    value: 33.11
+  - analyte: ct_urine
+    time: 20
+    value: negative
+  - analyte: ct_urine
+    time: 24
+    value: negative
+  - analyte: ct_lesion_base
+    time: 10
+    value: 26.63
+  - analyte: ct_lesion_base
+    time: 15
+    value: 30.49
+  - analyte: ct_lesion_base
+    time: 20
+    value: 32.7
+  - analyte: ct_lesion_base
+    time: 24
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 10
+    value: 30.02
+  - analyte: ct_lesion_fluid
+    time: 15
+    value: 28.03
+  - analyte: ct_lesion_fluid
+    time: 20
+    value: 24.71
+  - analyte: ct_lesion_fluid
+    time: 24
+    value: negative
+  - analyte: ct_lesion_roof
+    time: 15
+    value: 27.36
+  - analyte: ct_lesion_roof
+    time: 20
+    value: 31.08
+  - analyte: ct_lesion_roof
+    time: 24
+    value: 35.3
+  - analyte: ct_lesion_crust
+    time: 10
+    value: 27.75
+  - analyte: ct_lesion_crust
+    time: 15
+    value: 29.18
+  - analyte: ct_lesion_crust
+    time: 20
+    value: 29.93
+  - analyte: ct_lesion_crust
+    time: 24
+    value: negative
+- attributes:
+    sex: female
+    age: 31
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: ct_oropharyngeal_swab
+    time: 5
+    value: 27.37
+  - analyte: ct_oropharyngeal_swab
+    time: 9
+    value: 38.72
+  - analyte: ct_oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 5
+    value: 27.37
+  - analyte: ct_nasopharyngeal_swab
+    time: 9
+    value: 37.71
+  - analyte: ct_nasopharyngeal_swab
+    time: 13
+    value: 37.03
+  - analyte: ct_nasopharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: ct_serum
+    time: 5
+    value: negative
+  - analyte: ct_serum
+    time: 9
+    value: negative
+  - analyte: ct_serum
+    time: 13
+    value: negative
+  - analyte: ct_serum
+    time: 17
+    value: negative
+  - analyte: ct_urine
+    time: 5
+    value: 21.6
+  - analyte: ct_urine
+    time: 9
+    value: 27.35
+  - analyte: ct_urine
+    time: 17
+    value: negative
+  - analyte: ct_lesion_base
+    time: 5
+    value: 24.76
+  - analyte: ct_lesion_base
+    time: 9
+    value: 30.72
+  - analyte: ct_lesion_base
+    time: 13
+    value: 36.88
+  - analyte: ct_lesion_base
+    time: 17
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 5
+    value: 38
+  - analyte: ct_lesion_fluid
+    time: 9
+    value: 20.98
+  - analyte: ct_lesion_fluid
+    time: 13
+    value: 36.12
+  - analyte: ct_lesion_fluid
+    time: 17
+    value: negative
+  - analyte: ct_lesion_roof
+    time: 5
+    value: 26.9
+  - analyte: ct_lesion_roof
+    time: 9
+    value: 29.77
+  - analyte: ct_lesion_roof
+    time: 13
+    value: 30.52
+  - analyte: ct_lesion_roof
+    time: 17
+    value: negative
+  - analyte: ct_lesion_crust
+    time: 5
+    value: 26.77
+  - analyte: ct_lesion_crust
+    time: 9
+    value: 27.25
+  - analyte: ct_lesion_crust
+    time: 17
+    value: 37.14
+- attributes:
+    sex: female
+    age: 22
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: ct_oropharyngeal_swab
+    time: 5
+    value: 31.85
+  - analyte: ct_oropharyngeal_swab
+    time: 9
+    value: 31.81
+  - analyte: ct_oropharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 23
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 5
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 9
+    value: 32.24
+  - analyte: ct_nasopharyngeal_swab
+    time: 13
+    value: 35.28
+  - analyte: ct_nasopharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 23
+    value: negative
+  - analyte: ct_serum
+    time: 5
+    value: negative
+  - analyte: ct_serum
+    time: 9
+    value: negative
+  - analyte: ct_serum
+    time: 13
+    value: negative
+  - analyte: ct_serum
+    time: 19
+    value: negative
+  - analyte: ct_serum
+    time: 23
+    value: negative
+  - analyte: ct_urine
+    time: 5
+    value: 30.23
+  - analyte: ct_urine
+    time: 9
+    value: negative
+  - analyte: ct_urine
+    time: 13
+    value: negative
+  - analyte: ct_urine
+    time: 19
+    value: negative
+  - analyte: ct_urine
+    time: 23
+    value: negative
+  - analyte: ct_lesion_base
+    time: 5
+    value: 29.5
+  - analyte: ct_lesion_base
+    time: 9
+    value: 26
+  - analyte: ct_lesion_base
+    time: 13
+    value: 29.17
+  - analyte: ct_lesion_base
+    time: 19
+    value: 36.62
+  - analyte: ct_lesion_base
+    time: 23
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 5
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 9
+    value: 17.74
+  - analyte: ct_lesion_fluid
+    time: 13
+    value: 25.58
+  - analyte: ct_lesion_fluid
+    time: 19
+    value: negative
+  - analyte: ct_lesion_fluid
+    time: 23
+    value: negative
+  - analyte: ct_lesion_roof
+    time: 5
+    value: 33.58
+  - analyte: ct_lesion_roof
+    time: 9
+    value: 22
+  - analyte: ct_lesion_roof
+    time: 13
+    value: 31.82
+  - analyte: ct_lesion_roof
+    time: 19
+    value: negative
+  - analyte: ct_lesion_crust
+    time: 5
+    value: 30.68
+  - analyte: ct_lesion_crust
+    time: 9
+    value: 23.54
+  - analyte: ct_lesion_crust
+    time: 13
+    value: 32.98
+  - analyte: ct_lesion_crust
+    time: 19
+    value: 32.97
+  - analyte: ct_lesion_crust
+    time: 23
+    value: negative

@@ -1,0 +1,5433 @@
+title: 'Viral dynamics in patients with monkeypox infection: a prospective cohort
+  study in Spain'
+doi: 10.1016/S1473-3099(22)00794-0
+description: Observational, prospective multicentre cohort study of outpatients with
+  confirmed mpox (2022 clade IIb outbreak) in Spain (two hospitals and two sexual
+  health clinics; June 28 to Sept 22, 2022). Participants self-collected longitudinal
+  specimens from multiple body sites; MPXV DNA quantified by qPCR (copies per mL).
+  Figure-derived CSV provides individual longitudinal viral loads (gene copies/mL)
+  aligned to days from symptom onset for blood, pharynx (oropharyngeal swab in VTM),
+  rectum (rectal swab in VTM), semen, and lesion swabs/scrapings (in VTM).
+analytes:
+  blood:
+    description: Mpox virus (MPXV) DNA quantification by qPCR on dried blood spot-derived
+      blood specimen; viral load expressed as DNA copies per mL. Copy number determined
+      using a linear dilution series of quantified MPXV DNA standard (AMPLIRUN Monkeypox
+      virus DNA control, Vircell). Limit of detection stated as 4.0 log10 copies/mL
+      for blood in figure legend (model used 4.04 log10 copies/mL).
+    specimen: blood
+    biomarker: mpox
+    limit_of_detection: 10000
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  pharynx:
+    description: Mpox virus (MPXV) DNA quantification by qPCR from oropharyngeal (pharynx)
+      swab placed in 3 mL viral transport medium; viral load expressed as copies per
+      mL of viral transport medium, using quantified MPXV DNA standard (AMPLIRUN).
+      Limit of detection for non-blood samples stated as 2.9 log10 copies/mL.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: 794.3282347
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  rectum:
+    description: Mpox virus (MPXV) DNA quantification by qPCR from rectal swab placed
+      in 3 mL viral transport medium; viral load expressed as copies per mL of viral
+      transport medium, using quantified MPXV DNA standard (AMPLIRUN). Limit of detection
+      for non-blood samples stated as 2.9 log10 copies/mL.
+    specimen: rectal_swab
+    biomarker: mpox
+    limit_of_detection: 794.3282347
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  semen:
+    description: Mpox virus (MPXV) DNA quantification by qPCR from semen specimen;
+      viral load expressed as DNA copies per mL using quantified MPXV DNA standard
+      (AMPLIRUN). Limit of detection for non-blood samples stated as 2.9 log10 copies/mL.
+    specimen: semen
+    biomarker: mpox
+    limit_of_detection: 794.3282347
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+  lesion:
+    description: Mpox virus (MPXV) DNA quantification by qPCR from skin lesion material
+      (vesicle fluid or dry scraping of scabs/scars) collected with swab and placed
+      in 3 mL viral transport medium; viral load expressed as copies per mL of viral
+      transport medium using quantified MPXV DNA standard (AMPLIRUN). Limit of detection
+      for non-blood samples stated as 2.9 log10 copies/mL.
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: 794.3282347
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- patient_id: movie-002
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: 3090295.433
+  - analyte: blood
+    time: 15
+    value: 42657.95188
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 281838.2931
+  - analyte: pharynx
+    time: 15
+    value: 1174.897555
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 120226.4435
+  - analyte: rectum
+    time: 22
+    value: negative
+  - analyte: rectum
+    time: 36
+    value: 1445.439771
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 8
+    value: 151356.1248
+  - analyte: semen
+    time: 22
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 316227766
+  - analyte: lesion
+    time: 15
+    value: 32359.36569
+  - analyte: lesion
+    time: 22
+    value: negative
+  - analyte: lesion
+    time: 29
+    value: negative
+  - analyte: lesion
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 64
+    value: negative
+- patient_id: movie-003
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: 162181.0097
+  - analyte: blood
+    time: 15
+    value: 141253.7545
+  - analyte: blood
+    time: 29
+    value: 28183.82931
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 660693.448
+  - analyte: pharynx
+    time: 15
+    value: 79432.82347
+  - analyte: pharynx
+    time: 22
+    value: 7413.102413
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 575439.9373
+  - analyte: rectum
+    time: 22
+    value: 9772.37221
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: semen
+    time: 22
+    value: negative
+  - analyte: semen
+    time: 36
+    value: negative
+  - analyte: semen
+    time: 64
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 257039578.3
+  - analyte: lesion
+    time: 15
+    value: 8912509.381
+  - analyte: lesion
+    time: 22
+    value: negative
+- patient_id: movie-004
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: negative
+  - analyte: pharynx
+    time: 14
+    value: negative
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: negative
+  - analyte: rectum
+    time: 21
+    value: negative
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 14
+    value: 1230268.771
+  - analyte: semen
+    time: 35
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 44668359.22
+  - analyte: lesion
+    time: 14
+    value: 426579.5188
+  - analyte: lesion
+    time: 21
+    value: 3630.780548
+  - analyte: lesion
+    time: 28
+    value: 1778.27941
+- patient_id: movie-005
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 10
+    value: 870963.59
+  - analyte: pharynx
+    time: 3
+    value: negative
+  - analyte: pharynx
+    time: 10
+    value: 56234.13252
+  - analyte: pharynx
+    time: 17
+    value: 1698.243652
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: rectum
+    time: 3
+    value: negative
+  - analyte: rectum
+    time: 17
+    value: negative
+  - analyte: lesion
+    time: 3
+    value: 3548133.892
+  - analyte: lesion
+    time: 10
+    value: 102329299.2
+  - analyte: lesion
+    time: 17
+    value: 870963.59
+  - analyte: lesion
+    time: 24
+    value: negative
+- patient_id: movie-006
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 34
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: negative
+  - analyte: pharynx
+    time: 12
+    value: 6760.829754
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: 2238.721139
+  - analyte: pharynx
+    time: 34
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: negative
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 34
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 239883291.9
+  - analyte: lesion
+    time: 12
+    value: 575439.9373
+  - analyte: lesion
+    time: 19
+    value: 2570.395783
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 34
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-007
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 4
+    value: 22387.21139
+  - analyte: blood
+    time: 11
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 4
+    value: 616595.0019
+  - analyte: pharynx
+    time: 11
+    value: 173780.0829
+  - analyte: pharynx
+    time: 18
+    value: 25703.95783
+  - analyte: pharynx
+    time: 25
+    value: 22387.21139
+  - analyte: pharynx
+    time: 29
+    value: 2570.395783
+  - analyte: rectum
+    time: 4
+    value: 416869383.5
+  - analyte: rectum
+    time: 18
+    value: negative
+  - analyte: rectum
+    time: 29
+    value: negative
+  - analyte: semen
+    time: 4
+    value: 812830.5162
+  - analyte: semen
+    time: 29
+    value: 2570.395783
+  - analyte: lesion
+    time: 4
+    value: 63095734.45
+  - analyte: lesion
+    time: 11
+    value: 91201.08394
+  - analyte: lesion
+    time: 18
+    value: negative
+  - analyte: lesion
+    time: 25
+    value: negative
+- patient_id: movie-008
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: 1621810.097
+  - analyte: blood
+    time: 12
+    value: 173780.0829
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 575439.9373
+  - analyte: pharynx
+    time: 12
+    value: 3388.441561
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 58884365.54
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 263026.7992
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 239883291.9
+  - analyte: lesion
+    time: 12
+    value: 5011872.336
+  - analyte: lesion
+    time: 19
+    value: 74131.02413
+  - analyte: lesion
+    time: 26
+    value: 2570.395783
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-009
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 4
+    value: negative
+  - analyte: blood
+    time: 11
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 4
+    value: 346736.8505
+  - analyte: pharynx
+    time: 11
+    value: 1698.243652
+  - analyte: pharynx
+    time: 18
+    value: 1698.243652
+  - analyte: pharynx
+    time: 25
+    value: negative
+  - analyte: pharynx
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 60
+    value: negative
+  - analyte: rectum
+    time: 4
+    value: negative
+  - analyte: rectum
+    time: 18
+    value: 3162.27766
+  - analyte: rectum
+    time: 32
+    value: negative
+  - analyte: rectum
+    time: 60
+    value: negative
+  - analyte: semen
+    time: 4
+    value: 128824955.2
+  - analyte: semen
+    time: 18
+    value: 22387.21139
+  - analyte: semen
+    time: 32
+    value: negative
+  - analyte: semen
+    time: 60
+    value: negative
+  - analyte: lesion
+    time: 4
+    value: 257039578.3
+  - analyte: lesion
+    time: 11
+    value: 213796.209
+  - analyte: lesion
+    time: 18
+    value: 229086.7653
+  - analyte: lesion
+    time: 25
+    value: negative
+  - analyte: lesion
+    time: 32
+    value: negative
+- patient_id: movie-010
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: blood
+    time: 37
+    value: negative
+  - analyte: blood
+    time: 66
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: 6760.829754
+  - analyte: pharynx
+    time: 16
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 66
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: 4073802.778
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: rectum
+    time: 37
+    value: negative
+  - analyte: rectum
+    time: 66
+    value: negative
+  - analyte: semen
+    time: 9
+    value: 29512.09227
+  - analyte: semen
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 66
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 5370317.964
+  - analyte: lesion
+    time: 16
+    value: negative
+  - analyte: lesion
+    time: 31
+    value: negative
+  - analyte: lesion
+    time: 37
+    value: negative
+- patient_id: movie-011
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: blood
+    time: 37
+    value: negative
+  - analyte: blood
+    time: 66
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: 4786.300923
+  - analyte: pharynx
+    time: 16
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 66
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: 85113.80382
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: rectum
+    time: 37
+    value: negative
+  - analyte: rectum
+    time: 66
+    value: negative
+  - analyte: semen
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 66
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 72443596.01
+  - analyte: lesion
+    time: 16
+    value: 3630.780548
+  - analyte: lesion
+    time: 23
+    value: negative
+  - analyte: lesion
+    time: 31
+    value: negative
+  - analyte: lesion
+    time: 37
+    value: negative
+  - analyte: lesion
+    time: 66
+    value: negative
+- patient_id: movie-012
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: 91201.08394
+  - analyte: blood
+    time: 63
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 229086.7653
+  - analyte: pharynx
+    time: 14
+    value: 707945.7844
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: 12022.64435
+  - analyte: pharynx
+    time: 63
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 17782794.1
+  - analyte: rectum
+    time: 21
+    value: negative
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 63
+    value: negative
+  - analyte: semen
+    time: 7
+    value: 6760.829754
+  - analyte: semen
+    time: 21
+    value: negative
+  - analyte: semen
+    time: 35
+    value: negative
+  - analyte: semen
+    time: 63
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 389045145
+  - analyte: lesion
+    time: 14
+    value: 117489755.5
+  - analyte: lesion
+    time: 21
+    value: 104712.8548
+  - analyte: lesion
+    time: 28
+    value: 1698.243652
+  - analyte: lesion
+    time: 35
+    value: negative
+- patient_id: movie-013
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: negative
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 4466.835922
+  - analyte: pharynx
+    time: 15
+    value: negative
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 812830.5162
+  - analyte: rectum
+    time: 22
+    value: 1348.962883
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: semen
+    time: 8
+    value: 2754.228703
+  - analyte: semen
+    time: 22
+    value: negative
+  - analyte: semen
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 89125093.81
+  - analyte: lesion
+    time: 15
+    value: 69183.09709
+  - analyte: lesion
+    time: 22
+    value: negative
+  - analyte: lesion
+    time: 29
+    value: negative
+- patient_id: movie-014
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: 74131.02413
+  - analyte: blood
+    time: 13
+    value: negative
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: blood
+    time: 34
+    value: negative
+  - analyte: blood
+    time: 62
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: 2187761.624
+  - analyte: pharynx
+    time: 13
+    value: negative
+  - analyte: pharynx
+    time: 20
+    value: negative
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 34
+    value: negative
+  - analyte: pharynx
+    time: 62
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: 52480.74602
+  - analyte: rectum
+    time: 20
+    value: negative
+  - analyte: rectum
+    time: 62
+    value: negative
+  - analyte: semen
+    time: 6
+    value: 79432.82347
+  - analyte: semen
+    time: 13
+    value: 1348.962883
+  - analyte: semen
+    time: 20
+    value: negative
+  - analyte: semen
+    time: 62
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 275422870.3
+  - analyte: lesion
+    time: 13
+    value: 758577.575
+  - analyte: lesion
+    time: 20
+    value: negative
+  - analyte: lesion
+    time: 27
+    value: negative
+  - analyte: lesion
+    time: 34
+    value: 2089.296131
+  - analyte: lesion
+    time: 62
+    value: negative
+- patient_id: movie-015
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: blood
+    time: 63
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 1071519.305
+  - analyte: pharynx
+    time: 14
+    value: 245470.8916
+  - analyte: pharynx
+    time: 21
+    value: 52480.74602
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 63
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 23442288.15
+  - analyte: rectum
+    time: 21
+    value: negative
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 63
+    value: negative
+  - analyte: semen
+    time: 7
+    value: negative
+  - analyte: semen
+    time: 21
+    value: negative
+  - analyte: semen
+    time: 35
+    value: negative
+  - analyte: semen
+    time: 63
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 9549925.86
+  - analyte: lesion
+    time: 14
+    value: 812830.5162
+  - analyte: lesion
+    time: 21
+    value: negative
+  - analyte: lesion
+    time: 28
+    value: 1445.439771
+  - analyte: lesion
+    time: 35
+    value: negative
+  - analyte: lesion
+    time: 63
+    value: negative
+- patient_id: movie-016
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 12022.64435
+  - analyte: pharynx
+    time: 12
+    value: negative
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 104712.8548
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: negative
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 245470.8916
+  - analyte: lesion
+    time: 12
+    value: negative
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: 1778.27941
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-018
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 30
+    value: negative
+  - analyte: blood
+    time: 37
+    value: negative
+  - analyte: blood
+    time: 65
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: 1621810.097
+  - analyte: pharynx
+    time: 16
+    value: 37153.52291
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 30
+    value: negative
+  - analyte: pharynx
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 65
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: 257039578.3
+  - analyte: rectum
+    time: 23
+    value: 2089.296131
+  - analyte: rectum
+    time: 37
+    value: negative
+  - analyte: rectum
+    time: 65
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 19054607.18
+  - analyte: lesion
+    time: 16
+    value: 467735.1413
+  - analyte: lesion
+    time: 23
+    value: 263026.7992
+  - analyte: lesion
+    time: 30
+    value: 4466.835922
+  - analyte: lesion
+    time: 37
+    value: negative
+- patient_id: movie-019
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 59
+    value: negative
+  - analyte: pharynx
+    time: 3
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: 151356.1248
+  - analyte: pharynx
+    time: 17
+    value: negative
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 59
+    value: negative
+  - analyte: rectum
+    time: 3
+    value: 977237221
+  - analyte: rectum
+    time: 17
+    value: negative
+  - analyte: rectum
+    time: 59
+    value: 10471.28548
+  - analyte: semen
+    time: 3
+    value: 3388.441561
+  - analyte: semen
+    time: 17
+    value: 9772.37221
+  - analyte: semen
+    time: 32
+    value: negative
+  - analyte: semen
+    time: 59
+    value: 15848.93192
+  - analyte: lesion
+    time: 3
+    value: 316227766
+  - analyte: lesion
+    time: 9
+    value: 6606934.48
+  - analyte: lesion
+    time: 17
+    value: negative
+  - analyte: lesion
+    time: 24
+    value: negative
+  - analyte: lesion
+    time: 32
+    value: negative
+  - analyte: lesion
+    time: 59
+    value: negative
+- patient_id: movie-020
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: 1513561.248
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 5888.436554
+  - analyte: pharynx
+    time: 14
+    value: negative
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 21
+    value: negative
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: semen
+    time: 7
+    value: 1949.8446
+  - analyte: semen
+    time: 21
+    value: 1698.243652
+  - analyte: lesion
+    time: 7
+    value: 12589254.12
+  - analyte: lesion
+    time: 14
+    value: 19054607.18
+  - analyte: lesion
+    time: 21
+    value: 537031.7964
+  - analyte: lesion
+    time: 35
+    value: negative
+- patient_id: movie-021
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: negative
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 48977.88194
+  - analyte: pharynx
+    time: 15
+    value: negative
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: negative
+  - analyte: rectum
+    time: 22
+    value: negative
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: semen
+    time: 15
+    value: negative
+  - analyte: semen
+    time: 22
+    value: negative
+  - analyte: semen
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 616595.0019
+  - analyte: lesion
+    time: 15
+    value: 97723.7221
+  - analyte: lesion
+    time: 22
+    value: 1698.243652
+- patient_id: movie-022
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: negative
+  - analyte: blood
+    time: 13
+    value: negative
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: blood
+    time: 34
+    value: negative
+  - analyte: blood
+    time: 63
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: negative
+  - analyte: pharynx
+    time: 13
+    value: negative
+  - analyte: pharynx
+    time: 20
+    value: negative
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 34
+    value: negative
+  - analyte: pharynx
+    time: 63
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: negative
+  - analyte: rectum
+    time: 20
+    value: 12882.49552
+  - analyte: rectum
+    time: 34
+    value: negative
+  - analyte: rectum
+    time: 63
+    value: negative
+  - analyte: semen
+    time: 6
+    value: negative
+  - analyte: semen
+    time: 34
+    value: negative
+  - analyte: semen
+    time: 63
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 1071519.305
+  - analyte: lesion
+    time: 13
+    value: 1000000
+  - analyte: lesion
+    time: 20
+    value: 16595869.07
+  - analyte: lesion
+    time: 27
+    value: 14791.08388
+  - analyte: lesion
+    time: 34
+    value: negative
+- patient_id: movie-023
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: negative
+  - analyte: blood
+    time: 15
+    value: 45708.81896
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 21877616.24
+  - analyte: pharynx
+    time: 15
+    value: 10471.28548
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 41
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 138038426.5
+  - analyte: rectum
+    time: 22
+    value: negative
+  - analyte: rectum
+    time: 41
+    value: negative
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 8
+    value: negative
+  - analyte: semen
+    time: 22
+    value: negative
+  - analyte: semen
+    time: 41
+    value: negative
+  - analyte: semen
+    time: 64
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 147910838.8
+  - analyte: lesion
+    time: 15
+    value: 10471.28548
+  - analyte: lesion
+    time: 22
+    value: negative
+  - analyte: lesion
+    time: 29
+    value: negative
+- patient_id: movie-024
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 5011872.336
+  - analyte: pharynx
+    time: 12
+    value: 151356.1248
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: 20892.96131
+  - analyte: pharynx
+    time: 33
+    value: 12882.49552
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 109647819.6
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 12
+    value: negative
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 4466.835922
+  - analyte: lesion
+    time: 12
+    value: negative
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-025
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: negative
+  - analyte: pharynx
+    time: 15
+    value: negative
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 2691534.804
+  - analyte: rectum
+    time: 22
+    value: negative
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 8
+    value: 18197.00859
+  - analyte: semen
+    time: 22
+    value: 4786.300923
+  - analyte: semen
+    time: 64
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 33884415.61
+  - analyte: lesion
+    time: 15
+    value: 5128.61384
+  - analyte: lesion
+    time: 22
+    value: 4168.693835
+  - analyte: lesion
+    time: 29
+    value: negative
+  - analyte: lesion
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 64
+    value: negative
+- patient_id: movie-026
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 4
+    value: negative
+  - analyte: blood
+    time: 11
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 32
+    value: negative
+  - analyte: blood
+    time: 60
+    value: negative
+  - analyte: pharynx
+    time: 4
+    value: negative
+  - analyte: pharynx
+    time: 11
+    value: 74131.02413
+  - analyte: pharynx
+    time: 18
+    value: negative
+  - analyte: pharynx
+    time: 25
+    value: negative
+  - analyte: pharynx
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 60
+    value: negative
+  - analyte: rectum
+    time: 4
+    value: negative
+  - analyte: rectum
+    time: 18
+    value: negative
+  - analyte: rectum
+    time: 32
+    value: negative
+  - analyte: rectum
+    time: 60
+    value: negative
+  - analyte: semen
+    time: 4
+    value: 1778279.41
+  - analyte: semen
+    time: 18
+    value: negative
+  - analyte: semen
+    time: 32
+    value: negative
+  - analyte: semen
+    time: 60
+    value: negative
+  - analyte: lesion
+    time: 4
+    value: 26915348.04
+  - analyte: lesion
+    time: 11
+    value: 102329299.2
+  - analyte: lesion
+    time: 18
+    value: 323593.6569
+  - analyte: lesion
+    time: 25
+    value: negative
+  - analyte: lesion
+    time: 32
+    value: 2238.721139
+- patient_id: movie-028
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 30
+    value: negative
+  - analyte: blood
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: 229086.7653
+  - analyte: pharynx
+    time: 16
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 30
+    value: negative
+  - analyte: pharynx
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 65
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: 7943.282347
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: rectum
+    time: 37
+    value: negative
+  - analyte: rectum
+    time: 65
+    value: negative
+  - analyte: semen
+    time: 9
+    value: 933254.3008
+  - analyte: semen
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 37
+    value: negative
+  - analyte: semen
+    time: 65
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 208929613.1
+  - analyte: lesion
+    time: 16
+    value: 501187.2336
+  - analyte: lesion
+    time: 23
+    value: negative
+  - analyte: lesion
+    time: 30
+    value: negative
+  - analyte: lesion
+    time: 37
+    value: negative
+- patient_id: movie-029
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: 467735.1413
+  - analyte: blood
+    time: 14
+    value: 29512.09227
+  - analyte: blood
+    time: 23
+    value: 52480.74602
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 2089.296131
+  - analyte: pharynx
+    time: 14
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 7413.102413
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 23
+    value: 5128.61384
+  - analyte: lesion
+    time: 5
+    value: 47863009.23
+  - analyte: lesion
+    time: 14
+    value: 1230268.771
+  - analyte: lesion
+    time: 23
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+- patient_id: movie-030
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 3630.780548
+  - analyte: pharynx
+    time: 12
+    value: negative
+  - analyte: pharynx
+    time: 19
+    value: 1949.8446
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 3630.780548
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 6309.573445
+  - analyte: lesion
+    time: 12
+    value: 1778.27941
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: 1778.27941
+- patient_id: movie-031
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 3
+    value: negative
+  - analyte: blood
+    time: 10
+    value: negative
+  - analyte: blood
+    time: 17
+    value: negative
+  - analyte: blood
+    time: 24
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: blood
+    time: 59
+    value: negative
+  - analyte: pharynx
+    time: 3
+    value: 870963.59
+  - analyte: pharynx
+    time: 10
+    value: 14454397.71
+  - analyte: pharynx
+    time: 17
+    value: negative
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 59
+    value: negative
+  - analyte: rectum
+    time: 3
+    value: 38904514.5
+  - analyte: rectum
+    time: 17
+    value: 10471.28548
+  - analyte: rectum
+    time: 31
+    value: negative
+  - analyte: rectum
+    time: 59
+    value: negative
+  - analyte: semen
+    time: 3
+    value: 2951.209227
+  - analyte: semen
+    time: 17
+    value: 5495.408739
+  - analyte: semen
+    time: 31
+    value: negative
+  - analyte: semen
+    time: 59
+    value: negative
+  - analyte: lesion
+    time: 3
+    value: 12589254.12
+  - analyte: lesion
+    time: 10
+    value: 67608297.54
+  - analyte: lesion
+    time: 17
+    value: 1258.925412
+  - analyte: lesion
+    time: 24
+    value: negative
+  - analyte: lesion
+    time: 31
+    value: negative
+  - analyte: lesion
+    time: 59
+    value: negative
+- patient_id: movie-032
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: negative
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 10471.28548
+  - analyte: pharynx
+    time: 15
+    value: 4466.835922
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 22387.21139
+  - analyte: rectum
+    time: 22
+    value: negative
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 1621810.097
+  - analyte: lesion
+    time: 15
+    value: 7244359.601
+  - analyte: lesion
+    time: 22
+    value: 29512.09227
+  - analyte: lesion
+    time: 29
+    value: negative
+  - analyte: lesion
+    time: 36
+    value: 69183.09709
+  - analyte: lesion
+    time: 64
+    value: negative
+- patient_id: movie-033
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 11
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 32
+    value: negative
+  - analyte: blood
+    time: 39
+    value: negative
+  - analyte: blood
+    time: 67
+    value: negative
+  - analyte: pharynx
+    time: 11
+    value: 19054607.18
+  - analyte: pharynx
+    time: 18
+    value: 45708.81896
+  - analyte: pharynx
+    time: 25
+    value: 2238.721139
+  - analyte: pharynx
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 39
+    value: negative
+  - analyte: pharynx
+    time: 67
+    value: negative
+  - analyte: rectum
+    time: 11
+    value: 3801893.963
+  - analyte: rectum
+    time: 25
+    value: negative
+  - analyte: rectum
+    time: 39
+    value: negative
+  - analyte: rectum
+    time: 67
+    value: negative
+  - analyte: semen
+    time: 11
+    value: negative
+  - analyte: semen
+    time: 25
+    value: negative
+  - analyte: semen
+    time: 39
+    value: negative
+  - analyte: semen
+    time: 67
+    value: negative
+  - analyte: lesion
+    time: 11
+    value: negative
+  - analyte: lesion
+    time: 39
+    value: negative
+- patient_id: movie-034
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: negative
+  - analyte: blood
+    time: 13
+    value: negative
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: blood
+    time: 62
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: 3630.780548
+  - analyte: pharynx
+    time: 13
+    value: 281838.2931
+  - analyte: pharynx
+    time: 20
+    value: 13803.84265
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 62
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: negative
+  - analyte: rectum
+    time: 20
+    value: negative
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 62
+    value: negative
+  - analyte: semen
+    time: 6
+    value: 1318256.739
+  - analyte: semen
+    time: 20
+    value: 9772.37221
+  - analyte: semen
+    time: 36
+    value: negative
+  - analyte: semen
+    time: 62
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 54954087.39
+  - analyte: lesion
+    time: 13
+    value: 10964781.96
+  - analyte: lesion
+    time: 20
+    value: 2398.832919
+  - analyte: lesion
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 62
+    value: negative
+- patient_id: movie-035
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: blood
+    time: 63
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 1071519.305
+  - analyte: pharynx
+    time: 14
+    value: negative
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: 1778.27941
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 63
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 29512.09227
+  - analyte: rectum
+    time: 21
+    value: negative
+  - analyte: rectum
+    time: 63
+    value: negative
+  - analyte: semen
+    time: 35
+    value: negative
+  - analyte: semen
+    time: 63
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 316227766
+  - analyte: lesion
+    time: 14
+    value: 47863009.23
+  - analyte: lesion
+    time: 21
+    value: 5011872.336
+  - analyte: lesion
+    time: 28
+    value: 8511.380382
+  - analyte: lesion
+    time: 35
+    value: negative
+  - analyte: lesion
+    time: 63
+    value: negative
+- patient_id: movie-036
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: negative
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 426579.5188
+  - analyte: pharynx
+    time: 15
+    value: 2951.209227
+  - analyte: pharynx
+    time: 22
+    value: 3630.780548
+  - analyte: pharynx
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 467735.1413
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 8
+    value: 186208.7137
+  - analyte: semen
+    time: 22
+    value: negative
+  - analyte: semen
+    time: 36
+    value: negative
+  - analyte: semen
+    time: 64
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 223872113.9
+  - analyte: lesion
+    time: 15
+    value: 2344228.815
+  - analyte: lesion
+    time: 22
+    value: 5128.61384
+  - analyte: lesion
+    time: 32
+    value: negative
+  - analyte: lesion
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 64
+    value: 2089.296131
+- patient_id: movie-037
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 30
+    value: negative
+  - analyte: blood
+    time: 43
+    value: negative
+  - analyte: blood
+    time: 65
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: negative
+  - analyte: pharynx
+    time: 16
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 30
+    value: negative
+  - analyte: pharynx
+    time: 43
+    value: negative
+  - analyte: pharynx
+    time: 65
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: 10471.28548
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: rectum
+    time: 43
+    value: negative
+  - analyte: rectum
+    time: 65
+    value: negative
+  - analyte: semen
+    time: 9
+    value: negative
+  - analyte: semen
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 43
+    value: negative
+  - analyte: semen
+    time: 65
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 54954087.39
+  - analyte: lesion
+    time: 16
+    value: 3630.780548
+  - analyte: lesion
+    time: 23
+    value: negative
+  - analyte: lesion
+    time: 30
+    value: negative
+  - analyte: lesion
+    time: 43
+    value: negative
+- patient_id: movie-038
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: blood
+    time: 43
+    value: negative
+  - analyte: blood
+    time: 75
+    value: negative
+  - analyte: pharynx
+    time: 15
+    value: 2884031.503
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: 2570.395783
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 43
+    value: negative
+  - analyte: pharynx
+    time: 75
+    value: negative
+  - analyte: rectum
+    time: 15
+    value: negative
+  - analyte: rectum
+    time: 75
+    value: negative
+  - analyte: semen
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 15
+    value: 5011872.336
+  - analyte: lesion
+    time: 22
+    value: 4365158.322
+  - analyte: lesion
+    time: 26
+    value: 3630.780548
+  - analyte: lesion
+    time: 36
+    value: 8511.380382
+- patient_id: movie-039
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 3
+    value: negative
+  - analyte: blood
+    time: 10
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 24
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: blood
+    time: 59
+    value: negative
+  - analyte: pharynx
+    time: 3
+    value: negative
+  - analyte: pharynx
+    time: 10
+    value: negative
+  - analyte: pharynx
+    time: 18
+    value: negative
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 59
+    value: negative
+  - analyte: rectum
+    time: 3
+    value: negative
+  - analyte: rectum
+    time: 18
+    value: negative
+  - analyte: rectum
+    time: 31
+    value: negative
+  - analyte: rectum
+    time: 59
+    value: negative
+  - analyte: lesion
+    time: 3
+    value: 31622776.6
+  - analyte: lesion
+    time: 10
+    value: 1148153.621
+  - analyte: lesion
+    time: 18
+    value: negative
+- patient_id: movie-040
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: negative
+  - analyte: blood
+    time: 13
+    value: negative
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: blood
+    time: 34
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: 22387.21139
+  - analyte: pharynx
+    time: 13
+    value: 14791.08388
+  - analyte: pharynx
+    time: 20
+    value: 1778.27941
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 34
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: 60255.95861
+  - analyte: rectum
+    time: 20
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 77624711.66
+  - analyte: lesion
+    time: 13
+    value: 112201.8454
+- patient_id: movie-042
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 3
+    value: negative
+  - analyte: blood
+    time: 10
+    value: negative
+  - analyte: blood
+    time: 17
+    value: negative
+  - analyte: blood
+    time: 24
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: blood
+    time: 59
+    value: negative
+  - analyte: pharynx
+    time: 3
+    value: 6165950.019
+  - analyte: pharynx
+    time: 10
+    value: 5888.436554
+  - analyte: pharynx
+    time: 17
+    value: 2398.832919
+  - analyte: pharynx
+    time: 24
+    value: 15848.93192
+  - analyte: pharynx
+    time: 31
+    value: 11220.18454
+  - analyte: pharynx
+    time: 59
+    value: negative
+  - analyte: rectum
+    time: 3
+    value: 38904514.5
+  - analyte: rectum
+    time: 17
+    value: negative
+  - analyte: rectum
+    time: 31
+    value: negative
+  - analyte: rectum
+    time: 59
+    value: negative
+  - analyte: semen
+    time: 3
+    value: negative
+  - analyte: semen
+    time: 17
+    value: negative
+  - analyte: semen
+    time: 31
+    value: negative
+  - analyte: semen
+    time: 59
+    value: negative
+  - analyte: lesion
+    time: 3
+    value: 257039578.3
+  - analyte: lesion
+    time: 10
+    value: 60255.95861
+  - analyte: lesion
+    time: 24
+    value: negative
+  - analyte: lesion
+    time: 59
+    value: negative
+- patient_id: movie-044
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: blood
+    time: 66
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: negative
+  - analyte: pharynx
+    time: 14
+    value: negative
+  - analyte: pharynx
+    time: 21
+    value: 18197.00859
+  - analyte: pharynx
+    time: 28
+    value: 2089.296131
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 66
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 263026.7992
+  - analyte: rectum
+    time: 21
+    value: 5495.408739
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 66
+    value: negative
+  - analyte: semen
+    time: 7
+    value: 28183.82931
+  - analyte: semen
+    time: 21
+    value: 1071519.305
+  - analyte: semen
+    time: 66
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 10964781.96
+  - analyte: lesion
+    time: 14
+    value: 36307805.48
+  - analyte: lesion
+    time: 21
+    value: 2187761.624
+  - analyte: lesion
+    time: 28
+    value: 1148153.621
+  - analyte: lesion
+    time: 35
+    value: 426579.5188
+  - analyte: lesion
+    time: 66
+    value: 11220.18454
+- patient_id: movie-045
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: negative
+  - analyte: pharynx
+    time: 12
+    value: negative
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 2570.395783
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 15488166.19
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 194984460
+  - analyte: lesion
+    time: 12
+    value: 4073802.778
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-046
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 10
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 24
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: blood
+    time: 58
+    value: negative
+  - analyte: pharynx
+    time: 10
+    value: 39810.71706
+  - analyte: pharynx
+    time: 16
+    value: 1258.925412
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 58
+    value: negative
+  - analyte: rectum
+    time: 16
+    value: negative
+  - analyte: rectum
+    time: 31
+    value: negative
+  - analyte: rectum
+    time: 58
+    value: negative
+  - analyte: semen
+    time: 16
+    value: negative
+  - analyte: semen
+    time: 31
+    value: negative
+  - analyte: semen
+    time: 58
+    value: negative
+  - analyte: lesion
+    time: 10
+    value: 3548133.892
+  - analyte: lesion
+    time: 16
+    value: 1174.897555
+  - analyte: lesion
+    time: 24
+    value: negative
+  - analyte: lesion
+    time: 31
+    value: negative
+  - analyte: lesion
+    time: 58
+    value: negative
+- patient_id: movie-048
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: 79432.82347
+  - analyte: blood
+    time: 14
+    value: 79432.82347
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: 23988.32919
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 3801893.963
+  - analyte: pharynx
+    time: 14
+    value: 6309.573445
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: 2238.721139
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 47863009.23
+  - analyte: rectum
+    time: 21
+    value: negative
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 7
+    value: 45708.81896
+  - analyte: semen
+    time: 21
+    value: 2398.832919
+  - analyte: semen
+    time: 35
+    value: negative
+  - analyte: semen
+    time: 64
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 89125093.81
+  - analyte: lesion
+    time: 14
+    value: negative
+  - analyte: lesion
+    time: 21
+    value: 3162.27766
+  - analyte: lesion
+    time: 28
+    value: 2754.228703
+  - analyte: lesion
+    time: 35
+    value: negative
+  - analyte: lesion
+    time: 64
+    value: negative
+- patient_id: movie-049
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 10
+    value: 245470.8916
+  - analyte: blood
+    time: 17
+    value: 25703.95783
+  - analyte: blood
+    time: 30
+    value: negative
+  - analyte: blood
+    time: 38
+    value: negative
+  - analyte: blood
+    time: 66
+    value: negative
+  - analyte: pharynx
+    time: 17
+    value: 9772.37221
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 30
+    value: 2089.296131
+  - analyte: pharynx
+    time: 38
+    value: negative
+  - analyte: rectum
+    time: 24
+    value: negative
+  - analyte: rectum
+    time: 38
+    value: negative
+  - analyte: rectum
+    time: 66
+    value: negative
+  - analyte: semen
+    time: 10
+    value: 74131.02413
+  - analyte: semen
+    time: 24
+    value: 1698.243652
+  - analyte: semen
+    time: 66
+    value: negative
+  - analyte: lesion
+    time: 38
+    value: negative
+- patient_id: movie-050
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: 23988.32919
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 55
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 398107.1706
+  - analyte: pharynx
+    time: 12
+    value: negative
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: 2089.296131
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 55
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: negative
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 55
+    value: negative
+  - analyte: semen
+    time: 5
+    value: negative
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 55
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 36307805.48
+  - analyte: lesion
+    time: 12
+    value: 1949.8446
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 55
+    value: negative
+- patient_id: movie-052
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: 19498.446
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: negative
+  - analyte: pharynx
+    time: 12
+    value: negative
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: negative
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: negative
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 199526.2315
+  - analyte: lesion
+    time: 12
+    value: 758577.575
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-053
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: negative
+  - analyte: blood
+    time: 13
+    value: negative
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: blood
+    time: 62
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: 1698.243652
+  - analyte: pharynx
+    time: 13
+    value: negative
+  - analyte: pharynx
+    time: 20
+    value: negative
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 62
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: negative
+  - analyte: rectum
+    time: 20
+    value: negative
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 62
+    value: negative
+  - analyte: semen
+    time: 35
+    value: negative
+  - analyte: semen
+    time: 62
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 23442288.15
+  - analyte: lesion
+    time: 13
+    value: 239883291.9
+  - analyte: lesion
+    time: 20
+    value: 1905460.718
+  - analyte: lesion
+    time: 27
+    value: 85113.80382
+  - analyte: lesion
+    time: 35
+    value: negative
+  - analyte: lesion
+    time: 62
+    value: negative
+- patient_id: movie-054
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 9772.37221
+  - analyte: pharynx
+    time: 12
+    value: negative
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 128824955.2
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 10471.28548
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 389045145
+  - analyte: lesion
+    time: 12
+    value: 173780.0829
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 29
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-055
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: 112201.8454
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 27
+    value: 52480.74602
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 97723.7221
+  - analyte: pharynx
+    time: 12
+    value: 162181.0097
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 4168.693835
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 85113.80382
+  - analyte: semen
+    time: 19
+    value: 4168.693835
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 1778279.41
+  - analyte: lesion
+    time: 12
+    value: 38904514.5
+  - analyte: lesion
+    time: 19
+    value: 3890.45145
+  - analyte: lesion
+    time: 27
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: 2089.296131
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-056
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: negative
+  - analyte: blood
+    time: 13
+    value: 42657.95188
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: blood
+    time: 34
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: 7585775.75
+  - analyte: pharynx
+    time: 13
+    value: 6309.573445
+  - analyte: pharynx
+    time: 20
+    value: negative
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 34
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: 33884415.61
+  - analyte: rectum
+    time: 20
+    value: 2238.721139
+  - analyte: rectum
+    time: 34
+    value: negative
+  - analyte: semen
+    time: 6
+    value: 1348.962883
+  - analyte: semen
+    time: 20
+    value: 37153.52291
+  - analyte: semen
+    time: 34
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 537031.7964
+  - analyte: lesion
+    time: 13
+    value: 6760.829754
+  - analyte: lesion
+    time: 20
+    value: 1698.243652
+  - analyte: lesion
+    time: 27
+    value: 4466.835922
+- patient_id: movie-057
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: 60255.95861
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 213796.209
+  - analyte: pharynx
+    time: 15
+    value: negative
+  - analyte: pharynx
+    time: 22
+    value: negative
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 65
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 223872113.9
+  - analyte: rectum
+    time: 22
+    value: negative
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 65
+    value: negative
+  - analyte: semen
+    time: 22
+    value: 10471.28548
+  - analyte: semen
+    time: 65
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 36307805.48
+  - analyte: lesion
+    time: 15
+    value: 3801893.963
+  - analyte: lesion
+    time: 22
+    value: 28183.82931
+  - analyte: lesion
+    time: 36
+    value: negative
+- patient_id: movie-058
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 104712.8548
+  - analyte: pharynx
+    time: 12
+    value: 1348.962883
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 102329299.2
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 39810.71706
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 63095734.45
+  - analyte: lesion
+    time: 12
+    value: 16982.43652
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-059
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: negative
+  - analyte: blood
+    time: 13
+    value: negative
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: blood
+    time: 34
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: negative
+  - analyte: pharynx
+    time: 13
+    value: negative
+  - analyte: pharynx
+    time: 20
+    value: negative
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 34
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: negative
+  - analyte: rectum
+    time: 20
+    value: negative
+  - analyte: rectum
+    time: 34
+    value: negative
+  - analyte: semen
+    time: 20
+    value: negative
+  - analyte: semen
+    time: 34
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 301995.172
+  - analyte: lesion
+    time: 13
+    value: 1412537.545
+  - analyte: lesion
+    time: 20
+    value: 3630.780548
+  - analyte: lesion
+    time: 27
+    value: negative
+- patient_id: movie-060
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 8
+    value: negative
+  - analyte: blood
+    time: 15
+    value: negative
+  - analyte: blood
+    time: 22
+    value: negative
+  - analyte: blood
+    time: 29
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 8
+    value: 3311311.215
+  - analyte: pharynx
+    time: 15
+    value: 74131.02413
+  - analyte: pharynx
+    time: 22
+    value: 2754.228703
+  - analyte: pharynx
+    time: 29
+    value: negative
+  - analyte: pharynx
+    time: 36
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 8
+    value: 933254.3008
+  - analyte: rectum
+    time: 22
+    value: 3162.27766
+  - analyte: rectum
+    time: 36
+    value: negative
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 22
+    value: 6309.573445
+  - analyte: semen
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 8
+    value: 158489319.2
+  - analyte: lesion
+    time: 15
+    value: 8912509.381
+  - analyte: lesion
+    time: 22
+    value: 6309.573445
+  - analyte: lesion
+    time: 29
+    value: negative
+  - analyte: lesion
+    time: 36
+    value: negative
+  - analyte: lesion
+    time: 64
+    value: negative
+- patient_id: movie-061
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 85113.80382
+  - analyte: pharynx
+    time: 12
+    value: negative
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 5370317.964
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 21877616.24
+  - analyte: lesion
+    time: 12
+    value: negative
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+- patient_id: movie-062
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 11
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 32
+    value: negative
+  - analyte: blood
+    time: 39
+    value: negative
+  - analyte: blood
+    time: 67
+    value: negative
+  - analyte: pharynx
+    time: 11
+    value: 20417379.45
+  - analyte: pharynx
+    time: 18
+    value: 28183.82931
+  - analyte: pharynx
+    time: 25
+    value: 3388.441561
+  - analyte: pharynx
+    time: 32
+    value: 2187761.624
+  - analyte: pharynx
+    time: 39
+    value: 3311311.215
+  - analyte: pharynx
+    time: 67
+    value: negative
+  - analyte: rectum
+    time: 11
+    value: negative
+  - analyte: rectum
+    time: 25
+    value: negative
+  - analyte: rectum
+    time: 39
+    value: negative
+  - analyte: rectum
+    time: 67
+    value: negative
+  - analyte: semen
+    time: 11
+    value: negative
+  - analyte: semen
+    time: 25
+    value: negative
+  - analyte: semen
+    time: 39
+    value: negative
+  - analyte: semen
+    time: 67
+    value: negative
+  - analyte: lesion
+    time: 11
+    value: 2884031.503
+  - analyte: lesion
+    time: 18
+    value: 173780.0829
+  - analyte: lesion
+    time: 25
+    value: 1778.27941
+  - analyte: lesion
+    time: 32
+    value: negative
+  - analyte: lesion
+    time: 39
+    value: negative
+- patient_id: movie-063
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: 45708.81896
+  - analyte: blood
+    time: 14
+    value: 28183.82931
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 12882.49552
+  - analyte: pharynx
+    time: 14
+    value: negative
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 19054607.18
+  - analyte: rectum
+    time: 21
+    value: 371535.2291
+  - analyte: rectum
+    time: 35
+    value: negative
+  - analyte: semen
+    time: 7
+    value: 3388.441561
+  - analyte: semen
+    time: 21
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 25118864.32
+  - analyte: lesion
+    time: 14
+    value: 69183.09709
+  - analyte: lesion
+    time: 21
+    value: 25703.95783
+  - analyte: lesion
+    time: 28
+    value: negative
+  - analyte: lesion
+    time: 35
+    value: negative
+- patient_id: movie-064
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 10
+    value: negative
+  - analyte: blood
+    time: 17
+    value: negative
+  - analyte: blood
+    time: 24
+    value: negative
+  - analyte: blood
+    time: 30
+    value: negative
+  - analyte: blood
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 10
+    value: 1548.816619
+  - analyte: pharynx
+    time: 17
+    value: negative
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 30
+    value: 3630.780548
+  - analyte: pharynx
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 65
+    value: negative
+  - analyte: rectum
+    time: 10
+    value: 1778279.41
+  - analyte: rectum
+    time: 24
+    value: negative
+  - analyte: rectum
+    time: 37
+    value: negative
+  - analyte: rectum
+    time: 65
+    value: negative
+  - analyte: semen
+    time: 10
+    value: negative
+  - analyte: semen
+    time: 24
+    value: negative
+  - analyte: semen
+    time: 37
+    value: negative
+  - analyte: semen
+    time: 65
+    value: negative
+  - analyte: lesion
+    time: 10
+    value: 1000000
+  - analyte: lesion
+    time: 17
+    value: 34673.68505
+  - analyte: lesion
+    time: 24
+    value: negative
+  - analyte: lesion
+    time: 37
+    value: negative
+  - analyte: lesion
+    time: 65
+    value: negative
+- patient_id: movie-065
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 39
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 42657.95188
+  - analyte: pharynx
+    time: 12
+    value: 5128.61384
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 39
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 194984460
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 39
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: negative
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 39
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 181970085.9
+  - analyte: lesion
+    time: 12
+    value: 3890.45145
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 39
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-066
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 4
+    value: 69183.09709
+  - analyte: blood
+    time: 11
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 32
+    value: negative
+  - analyte: blood
+    time: 60
+    value: negative
+  - analyte: pharynx
+    time: 4
+    value: negative
+  - analyte: pharynx
+    time: 11
+    value: negative
+  - analyte: pharynx
+    time: 18
+    value: negative
+  - analyte: pharynx
+    time: 25
+    value: negative
+  - analyte: pharynx
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 60
+    value: negative
+  - analyte: rectum
+    time: 4
+    value: 52480.74602
+  - analyte: rectum
+    time: 18
+    value: negative
+  - analyte: rectum
+    time: 32
+    value: negative
+  - analyte: rectum
+    time: 60
+    value: negative
+  - analyte: semen
+    time: 4
+    value: negative
+  - analyte: semen
+    time: 18
+    value: negative
+  - analyte: semen
+    time: 32
+    value: negative
+  - analyte: semen
+    time: 60
+    value: negative
+  - analyte: lesion
+    time: 4
+    value: 229086.7653
+  - analyte: lesion
+    time: 11
+    value: negative
+  - analyte: lesion
+    time: 18
+    value: negative
+  - analyte: lesion
+    time: 25
+    value: negative
+  - analyte: lesion
+    time: 32
+    value: negative
+  - analyte: lesion
+    time: 60
+    value: negative
+- patient_id: movie-067
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: 26915348.04
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 64
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 1621810.097
+  - analyte: pharynx
+    time: 14
+    value: 9120.108394
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 64
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 151356.1248
+  - analyte: rectum
+    time: 21
+    value: 4786.300923
+  - analyte: rectum
+    time: 64
+    value: negative
+  - analyte: semen
+    time: 21
+    value: negative
+  - analyte: semen
+    time: 64
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 14454397.71
+  - analyte: lesion
+    time: 14
+    value: 616595.0019
+  - analyte: lesion
+    time: 21
+    value: 4168.693835
+  - analyte: lesion
+    time: 28
+    value: 2089.296131
+- patient_id: movie-068
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: 616595.0019
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 10471.28548
+  - analyte: pharynx
+    time: 12
+    value: 1230268.771
+  - analyte: pharynx
+    time: 19
+    value: 301995.172
+  - analyte: pharynx
+    time: 26
+    value: 3890.45145
+  - analyte: pharynx
+    time: 33
+    value: 1318256.739
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: negative
+  - analyte: rectum
+    time: 19
+    value: 15848.93192
+  - analyte: rectum
+    time: 33
+    value: 2570.395783
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 16982.43652
+  - analyte: semen
+    time: 19
+    value: 346736.8505
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 426579.5188
+  - analyte: lesion
+    time: 12
+    value: 63095734.45
+  - analyte: lesion
+    time: 19
+    value: 1778279.41
+  - analyte: lesion
+    time: 26
+    value: 371535.2291
+  - analyte: lesion
+    time: 33
+    value: 660693.448
+- patient_id: movie-069
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: 29512.09227
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 61
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 79432.82347
+  - analyte: pharynx
+    time: 12
+    value: 1949.8446
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 61
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: negative
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 61
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 1548.816619
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 61
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 301995.172
+  - analyte: lesion
+    time: 12
+    value: 5754399.373
+  - analyte: lesion
+    time: 19
+    value: negative
+  - analyte: lesion
+    time: 26
+    value: negative
+  - analyte: lesion
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 61
+    value: negative
+- patient_id: movie-070
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 10
+    value: 29512.09227
+  - analyte: blood
+    time: 17
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 10
+    value: 2089.296131
+  - analyte: pharynx
+    time: 17
+    value: negative
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: rectum
+    time: 10
+    value: 138038426.5
+  - analyte: rectum
+    time: 24
+    value: negative
+  - analyte: semen
+    time: 10
+    value: 537031.7964
+  - analyte: semen
+    time: 24
+    value: negative
+  - analyte: lesion
+    time: 10
+    value: 19054607.18
+  - analyte: lesion
+    time: 17
+    value: 34673.68505
+  - analyte: lesion
+    time: 24
+    value: negative
+- patient_id: movie-071
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 758577.575
+  - analyte: pharynx
+    time: 12
+    value: 6165950.019
+  - analyte: pharynx
+    time: 19
+    value: 2238.721139
+  - analyte: pharynx
+    time: 26
+    value: 6760.829754
+  - analyte: pharynx
+    time: 33
+    value: 48977.88194
+  - analyte: rectum
+    time: 5
+    value: 47863009.23
+  - analyte: rectum
+    time: 19
+    value: 5888.436554
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 5
+    value: negative
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 12589254.12
+  - analyte: lesion
+    time: 12
+    value: 26915348.04
+  - analyte: lesion
+    time: 19
+    value: 22387.21139
+  - analyte: lesion
+    time: 26
+    value: 3388.441561
+  - analyte: lesion
+    time: 33
+    value: 1258.925412
+- patient_id: movie-074
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 5
+    value: 275422870.3
+  - analyte: pharynx
+    time: 12
+    value: 6309.573445
+  - analyte: pharynx
+    time: 19
+    value: negative
+  - analyte: pharynx
+    time: 26
+    value: negative
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: rectum
+    time: 5
+    value: 14454397.71
+  - analyte: rectum
+    time: 19
+    value: negative
+  - analyte: rectum
+    time: 33
+    value: negative
+  - analyte: semen
+    time: 5
+    value: 25703.95783
+  - analyte: semen
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 33
+    value: negative
+  - analyte: lesion
+    time: 5
+    value: 7244359.601
+  - analyte: lesion
+    time: 12
+    value: 20892.96131
+  - analyte: lesion
+    time: 19
+    value: 1258.925412
+- patient_id: movie-075
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 11
+    value: 97723.7221
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 32
+    value: negative
+  - analyte: blood
+    time: 39
+    value: negative
+  - analyte: pharynx
+    time: 11
+    value: 199526.2315
+  - analyte: pharynx
+    time: 18
+    value: 3630.780548
+  - analyte: pharynx
+    time: 25
+    value: negative
+  - analyte: pharynx
+    time: 32
+    value: 1949.8446
+  - analyte: pharynx
+    time: 39
+    value: negative
+  - analyte: rectum
+    time: 11
+    value: 489778819.4
+  - analyte: rectum
+    time: 25
+    value: negative
+  - analyte: rectum
+    time: 39
+    value: negative
+  - analyte: semen
+    time: 11
+    value: 194984460
+  - analyte: semen
+    time: 25
+    value: negative
+  - analyte: semen
+    time: 39
+    value: negative
+  - analyte: lesion
+    time: 11
+    value: 109647819.6
+  - analyte: lesion
+    time: 18
+    value: 281838.2931
+  - analyte: lesion
+    time: 25
+    value: 245470.8916
+- patient_id: movie-076
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 21
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: 467735.1413
+  - analyte: pharynx
+    time: 14
+    value: 74131.02413
+  - analyte: pharynx
+    time: 21
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 173780.0829
+  - analyte: rectum
+    time: 21
+    value: 3630.780548
+  - analyte: rectum
+    time: 35
+    value: 2089.296131
+  - analyte: semen
+    time: 7
+    value: 15848.93192
+  - analyte: semen
+    time: 21
+    value: negative
+  - analyte: semen
+    time: 35
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 12589254.12
+  - analyte: lesion
+    time: 14
+    value: 346736.8505
+  - analyte: lesion
+    time: 21
+    value: negative
+  - analyte: lesion
+    time: 31
+    value: 6760.829754
+  - analyte: lesion
+    time: 35
+    value: negative
+- patient_id: movie-077
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 4
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: pharynx
+    time: 4
+    value: 173780.0829
+  - analyte: pharynx
+    time: 11
+    value: 16595869.07
+  - analyte: pharynx
+    time: 18
+    value: negative
+  - analyte: pharynx
+    time: 25
+    value: negative
+  - analyte: rectum
+    time: 4
+    value: 38904514.5
+  - analyte: rectum
+    time: 18
+    value: 199526.2315
+  - analyte: semen
+    time: 4
+    value: negative
+  - analyte: semen
+    time: 18
+    value: negative
+  - analyte: lesion
+    time: 4
+    value: 9549925.86
+  - analyte: lesion
+    time: 11
+    value: 6606934.48
+  - analyte: lesion
+    time: 18
+    value: 5495.408739
+  - analyte: lesion
+    time: 25
+    value: negative
+- patient_id: movie-079
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 30
+    value: negative
+  - analyte: blood
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: negative
+  - analyte: pharynx
+    time: 16
+    value: 1949.8446
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 30
+    value: negative
+  - analyte: pharynx
+    time: 37
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: negative
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: rectum
+    time: 37
+    value: negative
+  - analyte: semen
+    time: 9
+    value: 213796.209
+  - analyte: semen
+    time: 23
+    value: 6309.573445
+  - analyte: semen
+    time: 37
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 16595869.07
+  - analyte: lesion
+    time: 16
+    value: 229086.7653
+  - analyte: lesion
+    time: 23
+    value: 104712.8548
+  - analyte: lesion
+    time: 30
+    value: 5888.436554
+- patient_id: movie-080
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 7
+    value: negative
+  - analyte: blood
+    time: 14
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 28
+    value: negative
+  - analyte: blood
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 7
+    value: negative
+  - analyte: pharynx
+    time: 14
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 28
+    value: negative
+  - analyte: pharynx
+    time: 35
+    value: negative
+  - analyte: pharynx
+    time: 63
+    value: negative
+  - analyte: rectum
+    time: 7
+    value: 3388.441561
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: rectum
+    time: 63
+    value: negative
+  - analyte: lesion
+    time: 7
+    value: 794328234.7
+  - analyte: lesion
+    time: 14
+    value: 3090295.433
+  - analyte: lesion
+    time: 23
+    value: 20892.96131
+  - analyte: lesion
+    time: 28
+    value: 3630.780548
+  - analyte: lesion
+    time: 35
+    value: negative
+- patient_id: movie-082
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 10
+    value: negative
+  - analyte: blood
+    time: 17
+    value: negative
+  - analyte: blood
+    time: 24
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 10
+    value: 10471.28548
+  - analyte: pharynx
+    time: 17
+    value: negative
+  - analyte: pharynx
+    time: 24
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 38
+    value: negative
+  - analyte: rectum
+    time: 10
+    value: 3090295.433
+  - analyte: rectum
+    time: 24
+    value: negative
+  - analyte: rectum
+    time: 38
+    value: negative
+  - analyte: semen
+    time: 10
+    value: negative
+  - analyte: semen
+    time: 24
+    value: negative
+  - analyte: semen
+    time: 38
+    value: 3162.27766
+  - analyte: lesion
+    time: 10
+    value: 36307805.48
+  - analyte: lesion
+    time: 17
+    value: 74131.02413
+  - analyte: lesion
+    time: 24
+    value: 4786.300923
+  - analyte: lesion
+    time: 31
+    value: negative
+- patient_id: movie-091
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: 23988.32919
+  - analyte: pharynx
+    time: 16
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 9
+    value: 112201.8454
+  - analyte: semen
+    time: 23
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 25118864.32
+  - analyte: lesion
+    time: 16
+    value: 20892.96131
+  - analyte: lesion
+    time: 23
+    value: 1778.27941
+- patient_id: movie-092
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 19
+    value: negative
+  - analyte: blood
+    time: 26
+    value: negative
+  - analyte: blood
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 12
+    value: 1148153.621
+  - analyte: pharynx
+    time: 19
+    value: 1905460.718
+  - analyte: pharynx
+    time: 26
+    value: 37153.52291
+  - analyte: pharynx
+    time: 33
+    value: negative
+  - analyte: pharynx
+    time: 40
+    value: negative
+  - analyte: rectum
+    time: 12
+    value: negative
+  - analyte: rectum
+    time: 26
+    value: negative
+  - analyte: rectum
+    time: 40
+    value: negative
+  - analyte: semen
+    time: 12
+    value: 660693.448
+  - analyte: semen
+    time: 26
+    value: 2041737.945
+  - analyte: semen
+    time: 40
+    value: negative
+  - analyte: lesion
+    time: 12
+    value: 72443596.01
+  - analyte: lesion
+    time: 19
+    value: 67608297.54
+  - analyte: lesion
+    time: 26
+    value: 58884365.54
+  - analyte: lesion
+    time: 33
+    value: 28183.82931
+- patient_id: movie-093
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 6
+    value: negative
+  - analyte: blood
+    time: 13
+    value: 97723.7221
+  - analyte: blood
+    time: 20
+    value: negative
+  - analyte: blood
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 6
+    value: 20417379.45
+  - analyte: pharynx
+    time: 13
+    value: 112201.8454
+  - analyte: pharynx
+    time: 20
+    value: negative
+  - analyte: pharynx
+    time: 27
+    value: negative
+  - analyte: pharynx
+    time: 34
+    value: negative
+  - analyte: rectum
+    time: 6
+    value: 141253.7545
+  - analyte: rectum
+    time: 20
+    value: negative
+  - analyte: semen
+    time: 6
+    value: negative
+  - analyte: semen
+    time: 20
+    value: negative
+  - analyte: semen
+    time: 34
+    value: negative
+  - analyte: lesion
+    time: 6
+    value: 20417379.45
+  - analyte: lesion
+    time: 13
+    value: 346736.8505
+  - analyte: lesion
+    time: 20
+    value: negative
+  - analyte: lesion
+    time: 27
+    value: negative
+  - analyte: lesion
+    time: 34
+    value: 1445.439771
+- patient_id: movie-095
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: negative
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 30
+    value: negative
+  - analyte: blood
+    time: 37
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: negative
+  - analyte: pharynx
+    time: 16
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 30
+    value: negative
+  - analyte: pharynx
+    time: 37
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: 501187.2336
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: rectum
+    time: 37
+    value: negative
+  - analyte: semen
+    time: 9
+    value: negative
+  - analyte: semen
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 37
+    value: negative
+  - analyte: lesion
+    time: 9
+    value: 4073802.778
+  - analyte: lesion
+    time: 16
+    value: 39810.71706
+  - analyte: lesion
+    time: 30
+    value: negative
+- patient_id: movie-096
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 11
+    value: negative
+  - analyte: blood
+    time: 18
+    value: negative
+  - analyte: blood
+    time: 25
+    value: negative
+  - analyte: blood
+    time: 32
+    value: negative
+  - analyte: blood
+    time: 39
+    value: negative
+  - analyte: pharynx
+    time: 11
+    value: negative
+  - analyte: pharynx
+    time: 18
+    value: negative
+  - analyte: pharynx
+    time: 25
+    value: negative
+  - analyte: pharynx
+    time: 32
+    value: negative
+  - analyte: pharynx
+    time: 39
+    value: negative
+  - analyte: rectum
+    time: 11
+    value: negative
+  - analyte: rectum
+    time: 25
+    value: negative
+  - analyte: rectum
+    time: 39
+    value: negative
+  - analyte: semen
+    time: 11
+    value: negative
+  - analyte: semen
+    time: 25
+    value: 1778.27941
+  - analyte: semen
+    time: 39
+    value: negative
+  - analyte: lesion
+    time: 11
+    value: negative
+  - analyte: lesion
+    time: 18
+    value: 13803.84265
+  - analyte: lesion
+    time: 25
+    value: negative
+  - analyte: lesion
+    time: 32
+    value: negative
+  - analyte: lesion
+    time: 39
+    value: negative
+- patient_id: movie-097
+  attributes:
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: blood
+    time: 9
+    value: 112201.8454
+  - analyte: blood
+    time: 16
+    value: negative
+  - analyte: blood
+    time: 23
+    value: negative
+  - analyte: blood
+    time: 31
+    value: negative
+  - analyte: pharynx
+    time: 9
+    value: 15848.93192
+  - analyte: pharynx
+    time: 16
+    value: negative
+  - analyte: pharynx
+    time: 23
+    value: negative
+  - analyte: pharynx
+    time: 31
+    value: negative
+  - analyte: rectum
+    time: 9
+    value: 323593.6569
+  - analyte: rectum
+    time: 23
+    value: negative
+  - analyte: semen
+    time: 23
+    value: 15848.93192
+  - analyte: lesion
+    time: 9
+    value: 38904514.5
+  - analyte: lesion
+    time: 16
+    value: 6309.573445
+  - analyte: lesion
+    time: 23
+    value: negative
+  - analyte: lesion
+    time: 31
+    value: negative

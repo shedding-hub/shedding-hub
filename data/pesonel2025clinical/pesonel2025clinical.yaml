@@ -1,0 +1,1983 @@
+title: 'Clinical Characterization and Outcomes of Human Clade IIb Mpox Virus Disease:
+  A European Multicenter Mpox Observational Cohort Study (MOSAIC)'
+doi: 10.1093/cid/ciae657
+description: Multicenter observational cohort (MOSAIC) of laboratory-confirmed clade
+  IIb mpox (MPXV) in 6 European countries (enrolled June 2022–July 2023). Participants
+  were followed up to 6 months, with virologic monitoring by MPXV-specific real-time
+  PCR (Ct values) on plasma, skin lesion swabs, oropharyngeal swabs, and anorectal
+  swabs. PCR Ct≥40 was considered negative. CSV figure data provide individual longitudinal
+  Ct measurements by patient and specimen; participants are categorized as treated
+  vs untreated (systemic antivirals within 14 days of first PCR-positive sample) but
+  no individual demographics are provided in the CSV.
+analytes:
+  oropharyngeal_swab:
+    description: MPXV-specific real-time PCR performed per local laboratory procedures;
+      Ct value reported for oropharyngeal (throat) swab samples. Ct≥40 considered
+      negative.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  anorectal_swab:
+    description: MPXV-specific real-time PCR performed per local laboratory procedures;
+      Ct value reported for anorectal swab samples. Ct≥40 considered negative.
+    specimen: anorectal_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  skin:
+    description: MPXV-specific real-time PCR performed per local laboratory procedures;
+      Ct value reported for skin lesion swab samples (reported as 'skin' in CSV).
+      Ct≥40 considered negative.
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  plasma:
+    description: MPXV-specific real-time PCR performed per local laboratory procedures;
+      Ct value reported for plasma samples. Ct≥40 considered negative.
+    specimen: plasma
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- patient_id: CH001-0001
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 37.1
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: 37.1
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: 36.2
+  - analyte: oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: anorectal_swab
+    time: 2
+    value: 21.8
+  - analyte: anorectal_swab
+    time: 3
+    value: 21.7
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+- patient_id: CH001-0010
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: skin
+    time: 6
+    value: 21.5
+  - analyte: skin
+    time: 7
+    value: 21.5
+  - analyte: skin
+    time: 9
+    value: 34.1
+  - analyte: skin
+    time: 19
+    value: 30.7
+  - analyte: skin
+    time: 20
+    value: 36.3
+  - analyte: oropharyngeal_swab
+    time: 20
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 34
+    value: negative
+- patient_id: CH002-0002
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 4
+    value: 37
+  - analyte: plasma
+    time: 5
+    value: 37
+  - analyte: plasma
+    time: 8
+    value: 32.7
+  - analyte: skin
+    time: 4
+    value: 28.5
+  - analyte: skin
+    time: 5
+    value: 28.5
+  - analyte: skin
+    time: 8
+    value: 29
+  - analyte: skin
+    time: 18
+    value: 33
+  - analyte: skin
+    time: 30
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: 39
+  - analyte: oropharyngeal_swab
+    time: 32
+    value: negative
+- patient_id: CH002-0003
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 11
+    value: 35
+  - analyte: skin
+    time: 9
+    value: 17.1
+  - analyte: skin
+    time: 10
+    value: 17.1
+  - analyte: skin
+    time: 16
+    value: 25.4
+  - analyte: skin
+    time: 24
+    value: 26.1
+  - analyte: skin
+    time: 25
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 38.6
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 24
+    value: negative
+- patient_id: F0060-0001
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 14
+    value: negative
+  - analyte: plasma
+    time: 28
+    value: negative
+  - analyte: plasma
+    time: 35
+    value: negative
+  - analyte: plasma
+    time: 42
+    value: negative
+  - analyte: skin
+    time: 27
+    value: 19.1
+  - analyte: skin
+    time: 28
+    value: 23.2
+  - analyte: skin
+    time: 35
+    value: 38.4
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 26.2
+- patient_id: F0060-0002
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 9
+    value: negative
+  - analyte: plasma
+    time: 37
+    value: negative
+  - analyte: skin
+    time: 9
+    value: 18.7
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 33.8
+  - analyte: anorectal_swab
+    time: 9
+    value: 22.7
+- patient_id: F0060-0003
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 9
+    value: 35.2
+  - analyte: plasma
+    time: 22
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 29.7
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: 36
+  - analyte: anorectal_swab
+    time: 9
+    value: 19
+  - analyte: anorectal_swab
+    time: 22
+    value: 31
+  - analyte: anorectal_swab
+    time: 23
+    value: 31.9
+  - analyte: anorectal_swab
+    time: 37
+    value: negative
+- patient_id: F0060-0005
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 9
+    value: 39.7
+  - analyte: plasma
+    time: 23
+    value: negative
+  - analyte: plasma
+    time: 30
+    value: negative
+  - analyte: skin
+    time: 9
+    value: 22.4
+  - analyte: skin
+    time: 20
+    value: 26.1
+  - analyte: skin
+    time: 23
+    value: 28.7
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 27.9
+- patient_id: F0060-0015
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 4
+    value: 35.8
+  - analyte: plasma
+    time: 18
+    value: negative
+  - analyte: plasma
+    time: 32
+    value: negative
+  - analyte: skin
+    time: 4
+    value: 17.4
+  - analyte: skin
+    time: 18
+    value: 25.8
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: negative
+- patient_id: F0060-0022
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: skin
+    time: 15
+    value: 31.7
+  - analyte: skin
+    time: 37
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 37.7
+  - analyte: anorectal_swab
+    time: 15
+    value: 35.1
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: anorectal_swab
+    time: 29
+    value: negative
+  - analyte: anorectal_swab
+    time: 43
+    value: negative
+- patient_id: F0073-0002
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 10
+    value: 39.1
+  - analyte: plasma
+    time: 24
+    value: 37.5
+  - analyte: plasma
+    time: 31
+    value: negative
+  - analyte: plasma
+    time: 38
+    value: negative
+  - analyte: skin
+    time: 10
+    value: 21
+  - analyte: skin
+    time: 24
+    value: 38
+  - analyte: skin
+    time: 25
+    value: 35.9
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 37.5
+  - analyte: oropharyngeal_swab
+    time: 24
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 31
+    value: 25.3
+- patient_id: F0073-0006
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 13
+    value: 37.6
+  - analyte: plasma
+    time: 27
+    value: 33.6
+  - analyte: plasma
+    time: 41
+    value: negative
+  - analyte: skin
+    time: 13
+    value: 22
+  - analyte: skin
+    time: 24
+    value: 38
+  - analyte: skin
+    time: 27
+    value: 35.9
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 29.1
+  - analyte: oropharyngeal_swab
+    time: 27
+    value: 36.8
+- patient_id: F0073-0009
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 7
+    value: 39.9
+  - analyte: plasma
+    time: 21
+    value: negative
+  - analyte: plasma
+    time: 28
+    value: negative
+  - analyte: plasma
+    time: 35
+    value: negative
+  - analyte: skin
+    time: 7
+    value: 19.6
+  - analyte: skin
+    time: 20
+    value: 31.1
+  - analyte: skin
+    time: 21
+    value: 30.7
+  - analyte: skin
+    time: 28
+    value: 34.1
+  - analyte: skin
+    time: 47
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: 33.2
+- patient_id: F0073-0015
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 14
+    value: 33
+  - analyte: plasma
+    time: 28
+    value: negative
+  - analyte: plasma
+    time: 35
+    value: negative
+  - analyte: skin
+    time: 14
+    value: 29.1
+  - analyte: skin
+    time: 28
+    value: 33
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 30.6
+  - analyte: anorectal_swab
+    time: 14
+    value: 23
+- patient_id: F0073-0026
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 1
+    value: 37.1
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: plasma
+    time: 22
+    value: negative
+  - analyte: plasma
+    time: 29
+    value: negative
+  - analyte: skin
+    time: 1
+    value: 20.1
+  - analyte: skin
+    time: 12
+    value: negative
+  - analyte: skin
+    time: 22
+    value: 34.2
+  - analyte: oropharyngeal_swab
+    time: 1
+    value: 29
+- patient_id: F0073-0032
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 5
+    value: 37.3
+  - analyte: plasma
+    time: 19
+    value: negative
+  - analyte: plasma
+    time: 26
+    value: 30.8
+  - analyte: plasma
+    time: 33
+    value: negative
+  - analyte: skin
+    time: 4
+    value: 20
+  - analyte: skin
+    time: 16
+    value: 30.4
+  - analyte: skin
+    time: 19
+    value: 38.5
+  - analyte: skin
+    time: 30
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 4
+    value: 34
+  - analyte: oropharyngeal_swab
+    time: 26
+    value: negative
+- patient_id: F0073-0037
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 3
+    value: 32.3
+  - analyte: plasma
+    time: 17
+    value: negative
+  - analyte: plasma
+    time: 24
+    value: negative
+  - analyte: skin
+    time: 16
+    value: 33.8
+  - analyte: skin
+    time: 31
+    value: 35.2
+  - analyte: anorectal_swab
+    time: 3
+    value: 21
+  - analyte: anorectal_swab
+    time: 16
+    value: 32.9
+  - analyte: anorectal_swab
+    time: 17
+    value: 37.8
+  - analyte: anorectal_swab
+    time: 31
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: 39.7
+- patient_id: F0073-0045
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 4
+    value: negative
+  - analyte: plasma
+    time: 18
+    value: negative
+  - analyte: plasma
+    time: 32
+    value: negative
+  - analyte: skin
+    time: 4
+    value: 21.1
+  - analyte: skin
+    time: 16
+    value: 22.4
+  - analyte: skin
+    time: 18
+    value: 27.2
+  - analyte: skin
+    time: 25
+    value: 30.2
+  - analyte: skin
+    time: 31
+    value: 30.2
+  - analyte: skin
+    time: 32
+    value: 34.7
+  - analyte: oropharyngeal_swab
+    time: 25
+    value: negative
+- patient_id: F0093-0001
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 5
+    value: 32
+  - analyte: plasma
+    time: 9
+    value: 36
+  - analyte: plasma
+    time: 13
+    value: 39.3
+  - analyte: skin
+    time: 5
+    value: 37.4
+  - analyte: skin
+    time: 9
+    value: 21.9
+  - analyte: skin
+    time: 13
+    value: 24.7
+  - analyte: skin
+    time: 34
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 36.3
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 38.8
+  - analyte: anorectal_swab
+    time: 5
+    value: 22.6
+  - analyte: anorectal_swab
+    time: 9
+    value: 20.1
+  - analyte: anorectal_swab
+    time: 13
+    value: 29.6
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: anorectal_swab
+    time: 33
+    value: negative
+- patient_id: IT004-0001
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 11
+    value: negative
+  - analyte: plasma
+    time: 12
+    value: negative
+  - analyte: plasma
+    time: 13
+    value: negative
+  - analyte: plasma
+    time: 14
+    value: negative
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: plasma
+    time: 16
+    value: 34.1
+  - analyte: plasma
+    time: 18
+    value: negative
+  - analyte: skin
+    time: 4
+    value: 21
+  - analyte: skin
+    time: 5
+    value: 19
+  - analyte: skin
+    time: 7
+    value: 18.1
+  - analyte: skin
+    time: 9
+    value: 22.1
+  - analyte: skin
+    time: 11
+    value: 28
+  - analyte: skin
+    time: 13
+    value: 36
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 24.1
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: 29.9
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 32.2
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 32.2
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 31
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 35
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: 38
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: 35
+- patient_id: IT004-0038
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 11
+    value: 37.1
+  - analyte: skin
+    time: 8
+    value: 32
+  - analyte: skin
+    time: 11
+    value: 35
+  - analyte: skin
+    time: 29
+    value: 34.1
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: 27.1
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 35
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: 34.1
+  - analyte: oropharyngeal_swab
+    time: 29
+    value: negative
+- patient_id: IT005-0019
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 14
+    value: 33
+  - analyte: plasma
+    time: 22
+    value: negative
+  - analyte: skin
+    time: 11
+    value: 24.1
+  - analyte: skin
+    time: 22
+    value: 27.1
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 29
+  - analyte: anorectal_swab
+    time: 11
+    value: 15.1
+  - analyte: anorectal_swab
+    time: 22
+    value: 33
+  - analyte: anorectal_swab
+    time: 28
+    value: 36.9
+  - analyte: anorectal_swab
+    time: 37
+    value: negative
+- patient_id: IT005-0027
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 26
+    value: 34.1
+  - analyte: skin
+    time: 16
+    value: 23
+  - analyte: skin
+    time: 26
+    value: 22.1
+  - analyte: skin
+    time: 30
+    value: 26
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 26
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: anorectal_swab
+    time: 26
+    value: 20.1
+  - analyte: anorectal_swab
+    time: 30
+    value: 31
+- patient_id: IT005-0032
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 2
+    value: 31.9
+  - analyte: plasma
+    time: 9
+    value: 34
+  - analyte: skin
+    time: 2
+    value: 19.4
+  - analyte: skin
+    time: 9
+    value: 23
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 28
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 31
+  - analyte: anorectal_swab
+    time: 2
+    value: 20
+  - analyte: anorectal_swab
+    time: 9
+    value: 26
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: 37
+  - analyte: anorectal_swab
+    time: 30
+    value: negative
+- patient_id: IT005-0052
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 8
+    value: 31
+  - analyte: plasma
+    time: 11
+    value: 34
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: plasma
+    time: 23
+    value: negative
+  - analyte: skin
+    time: 11
+    value: 16.1
+  - analyte: skin
+    time: 16
+    value: 14.1
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: 30
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 20
+  - analyte: anorectal_swab
+    time: 5
+    value: 17.1
+  - analyte: anorectal_swab
+    time: 11
+    value: 18.1
+  - analyte: anorectal_swab
+    time: 16
+    value: 35
+  - analyte: anorectal_swab
+    time: 23
+    value: 37
+  - analyte: anorectal_swab
+    time: 30
+    value: negative
+- patient_id: IT005-0054
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 2
+    value: 34.1
+  - analyte: skin
+    time: 2
+    value: 36
+  - analyte: skin
+    time: 10
+    value: 18.1
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 32
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: 34
+  - analyte: oropharyngeal_swab
+    time: 23
+    value: 36
+  - analyte: oropharyngeal_swab
+    time: 31
+    value: negative
+  - analyte: anorectal_swab
+    time: 2
+    value: 18
+  - analyte: anorectal_swab
+    time: 10
+    value: 34
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+- patient_id: IT005-0098
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 10
+    value: 32.1
+  - analyte: plasma
+    time: 25
+    value: negative
+  - analyte: skin
+    time: 3
+    value: 24
+  - analyte: skin
+    time: 10
+    value: 16.1
+  - analyte: skin
+    time: 19
+    value: 32
+  - analyte: skin
+    time: 25
+    value: 35.1
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: 34
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 29.1
+  - analyte: anorectal_swab
+    time: 10
+    value: 27.1
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+- patient_id: IT005-0099
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 3
+    value: 35.9
+  - analyte: skin
+    time: 2
+    value: 28
+  - analyte: skin
+    time: 16
+    value: 24.1
+  - analyte: skin
+    time: 24
+    value: 25
+  - analyte: skin
+    time: 32
+    value: 35.2
+  - analyte: skin
+    time: 38
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: 37.1
+  - analyte: anorectal_swab
+    time: 2
+    value: negative
+  - analyte: anorectal_swab
+    time: 24
+    value: negative
+- patient_id: IT005-0109
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 2
+    value: 38
+  - analyte: plasma
+    time: 8
+    value: 37
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: skin
+    time: 2
+    value: 27.1
+  - analyte: skin
+    time: 8
+    value: 19
+  - analyte: skin
+    time: 14
+    value: 29.1
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 35
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 24.1
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 31.8
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: 31.9
+  - analyte: oropharyngeal_swab
+    time: 29
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 36
+    value: 33
+  - analyte: oropharyngeal_swab
+    time: 43
+    value: negative
+  - analyte: anorectal_swab
+    time: 2
+    value: negative
+- patient_id: IT012-0001
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: untreated
+  measurements:
+  - analyte: plasma
+    time: 5
+    value: negative
+  - analyte: plasma
+    time: 9
+    value: negative
+  - analyte: skin
+    time: 5
+    value: 25.3
+  - analyte: skin
+    time: 9
+    value: 28.4
+  - analyte: skin
+    time: 15
+    value: 29.1
+  - analyte: oropharyngeal_swab
+    time: 5
+    value: 27.1
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: anorectal_swab
+    time: 5
+    value: 24.3
+  - analyte: anorectal_swab
+    time: 9
+    value: 27.3
+  - analyte: anorectal_swab
+    time: 15
+    value: 28.2
+  - analyte: anorectal_swab
+    time: 30
+    value: negative
+- patient_id: CH001-0007
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: anorectal_swab
+    time: 3
+    value: 19
+  - analyte: anorectal_swab
+    time: 4
+    value: 19
+  - analyte: anorectal_swab
+    time: 17
+    value: 36
+  - analyte: skin
+    time: 19
+    value: 36
+- patient_id: CH005-0001
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: plasma
+    time: 10
+    value: 32.3
+  - analyte: plasma
+    time: 21
+    value: negative
+  - analyte: plasma
+    time: 36
+    value: negative
+  - analyte: skin
+    time: 10
+    value: 34
+  - analyte: skin
+    time: 21
+    value: 25.4
+  - analyte: skin
+    time: 36
+    value: 27.3
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 33.4
+- patient_id: CH006-0003
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: skin
+    time: 10
+    value: negative
+  - analyte: skin
+    time: 17
+    value: 27.1
+  - analyte: skin
+    time: 22
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 15.4
+  - analyte: oropharyngeal_swab
+    time: 23
+    value: 34.9
+- patient_id: CH006-0005
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: skin
+    time: 2
+    value: 27.7
+  - analyte: skin
+    time: 21
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 20
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+- patient_id: CH006-0006
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: 15.9
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: 39.7
+  - analyte: oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: skin
+    time: 3
+    value: 35.1
+  - analyte: skin
+    time: 16
+    value: 31
+- patient_id: CH006-0007
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: skin
+    time: 3
+    value: 24
+  - analyte: skin
+    time: 6
+    value: 23.9
+  - analyte: skin
+    time: 11
+    value: 28.9
+  - analyte: skin
+    time: 18
+    value: negative
+- patient_id: CH006-0008
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 37.3
+  - analyte: oropharyngeal_swab
+    time: 33
+    value: negative
+  - analyte: skin
+    time: 11
+    value: 36.3
+  - analyte: skin
+    time: 16
+    value: 39
+  - analyte: skin
+    time: 21
+    value: negative
+- patient_id: F0060-0025
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 23
+    value: 20.8
+  - analyte: anorectal_swab
+    time: 37
+    value: 25.6
+  - analyte: anorectal_swab
+    time: 44
+    value: negative
+  - analyte: anorectal_swab
+    time: 51
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 23
+    value: 24.8
+  - analyte: plasma
+    time: 23
+    value: 36.2
+  - analyte: plasma
+    time: 31
+    value: negative
+  - analyte: plasma
+    time: 37
+    value: negative
+  - analyte: skin
+    time: 23
+    value: 22.7
+  - analyte: skin
+    time: 31
+    value: 25.4
+  - analyte: skin
+    time: 38
+    value: 23.3
+  - analyte: skin
+    time: 43
+    value: 23.8
+  - analyte: skin
+    time: 44
+    value: 28.6
+  - analyte: skin
+    time: 51
+    value: 38.2
+  - analyte: skin
+    time: 57
+    value: 34.9
+- patient_id: F0060-0029
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: 23.4
+  - analyte: anorectal_swab
+    time: 10
+    value: 26
+  - analyte: anorectal_swab
+    time: 11
+    value: 18.6
+  - analyte: anorectal_swab
+    time: 15
+    value: 21
+  - analyte: anorectal_swab
+    time: 21
+    value: 22.3
+  - analyte: anorectal_swab
+    time: 34
+    value: 22.9
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: 23.8
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 24.4
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 27.8
+  - analyte: oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 35
+    value: 35.1
+  - analyte: plasma
+    time: 11
+    value: 29.2
+  - analyte: plasma
+    time: 21
+    value: 38
+  - analyte: plasma
+    time: 35
+    value: 34.7
+  - analyte: skin
+    time: 10
+    value: 20
+  - analyte: skin
+    time: 11
+    value: 23.2
+  - analyte: skin
+    time: 15
+    value: 32.2
+  - analyte: skin
+    time: 20
+    value: 18.6
+  - analyte: skin
+    time: 21
+    value: 20
+  - analyte: skin
+    time: 34
+    value: 17.5
+  - analyte: skin
+    time: 35
+    value: 20.6
+- patient_id: F0073-0008
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 30.4
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 28.6
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: 31.3
+  - analyte: oropharyngeal_swab
+    time: 38
+    value: negative
+  - analyte: plasma
+    time: 14
+    value: 30.3
+  - analyte: plasma
+    time: 18
+    value: negative
+  - analyte: plasma
+    time: 31
+    value: negative
+  - analyte: skin
+    time: 10
+    value: 28.5
+  - analyte: skin
+    time: 12
+    value: 28.5
+  - analyte: skin
+    time: 14
+    value: 30
+  - analyte: skin
+    time: 16
+    value: 30
+  - analyte: skin
+    time: 43
+    value: negative
+- patient_id: F0073-0024
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: plasma
+    time: 9
+    value: 32.8
+  - analyte: plasma
+    time: 23
+    value: negative
+  - analyte: plasma
+    time: 30
+    value: negative
+  - analyte: plasma
+    time: 37
+    value: negative
+  - analyte: skin
+    time: 9
+    value: 28.1
+  - analyte: skin
+    time: 23
+    value: 37
+  - analyte: skin
+    time: 37
+    value: 34.7
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 23.5
+- patient_id: F1072-0003
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 22.3
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: 25.1
+  - analyte: plasma
+    time: 8
+    value: 29.6
+  - analyte: plasma
+    time: 17
+    value: 34.2
+  - analyte: plasma
+    time: 31
+    value: negative
+  - analyte: skin
+    time: 8
+    value: 14.5
+  - analyte: skin
+    time: 17
+    value: 30.1
+- patient_id: IT004-0004
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 36.1
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: 32.1
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 30
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 35
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: 37.2
+  - analyte: oropharyngeal_swab
+    time: 26
+    value: negative
+  - analyte: plasma
+    time: 8
+    value: 33
+  - analyte: plasma
+    time: 9
+    value: 35
+  - analyte: plasma
+    time: 10
+    value: negative
+  - analyte: plasma
+    time: 11
+    value: negative
+  - analyte: plasma
+    time: 12
+    value: negative
+  - analyte: plasma
+    time: 13
+    value: negative
+  - analyte: plasma
+    time: 14
+    value: negative
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: plasma
+    time: 16
+    value: negative
+  - analyte: plasma
+    time: 17
+    value: negative
+  - analyte: skin
+    time: 9
+    value: 30
+  - analyte: skin
+    time: 11
+    value: 19
+  - analyte: skin
+    time: 12
+    value: 19
+  - analyte: skin
+    time: 13
+    value: 21
+  - analyte: skin
+    time: 14
+    value: 23
+  - analyte: skin
+    time: 19
+    value: negative
+  - analyte: skin
+    time: 21
+    value: 36.1
+  - analyte: skin
+    time: 23
+    value: 36.1
+- patient_id: IT004-0035
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 20
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 33
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: plasma
+    time: 13
+    value: negative
+  - analyte: skin
+    time: 2
+    value: 27.1
+- patient_id: IT004-0056
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 16
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 33.1
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 27
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 36.1
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: 35.1
+  - analyte: plasma
+    time: 10
+    value: 32.1
+  - analyte: plasma
+    time: 11
+    value: 30.1
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: skin
+    time: 9
+    value: 20.9
+  - analyte: skin
+    time: 10
+    value: 20.1
+  - analyte: skin
+    time: 11
+    value: 17.1
+  - analyte: skin
+    time: 15
+    value: 31
+- patient_id: IT004-0087
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 23
+  - analyte: oropharyngeal_swab
+    time: 7
+    value: 28
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 16.1
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 17.1
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 23
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 19
+  - analyte: oropharyngeal_swab
+    time: 16
+    value: 29
+  - analyte: oropharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: skin
+    time: 9
+    value: negative
+  - analyte: plasma
+    time: 10
+    value: negative
+  - analyte: plasma
+    time: 12
+    value: negative
+  - analyte: plasma
+    time: 14
+    value: negative
+- patient_id: IT004-0096
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 1
+    value: 34.1
+  - analyte: anorectal_swab
+    time: 10
+    value: 22
+  - analyte: anorectal_swab
+    time: 43
+    value: 38.1
+  - analyte: oropharyngeal_swab
+    time: 1
+    value: 24
+  - analyte: skin
+    time: 1
+    value: 18.1
+- patient_id: IT004-0107
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 30
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 36.1
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 36
+  - analyte: oropharyngeal_swab
+    time: 20
+    value: negative
+  - analyte: skin
+    time: 6
+    value: 15.1
+- patient_id: IT004-0119
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 20.1
+  - analyte: oropharyngeal_swab
+    time: 14
+    value: 35.1
+  - analyte: plasma
+    time: 29
+    value: negative
+  - analyte: skin
+    time: 10
+    value: 18
+- patient_id: IT004-0120
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 6
+    value: 21
+  - analyte: anorectal_swab
+    time: 35
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 33
+  - analyte: oropharyngeal_swab
+    time: 19
+    value: 35.1
+- patient_id: IT005-0023
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 2
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: anorectal_swab
+    time: 23
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 2
+    value: 29.1
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 26
+  - analyte: plasma
+    time: 17
+    value: 36
+  - analyte: skin
+    time: 2
+    value: 15.1
+  - analyte: skin
+    time: 11
+    value: 16
+  - analyte: skin
+    time: 17
+    value: 18
+- patient_id: IT005-0046
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 0
+    value: 15
+  - analyte: anorectal_swab
+    time: 8
+    value: 24
+  - analyte: anorectal_swab
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 30
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 31
+  - analyte: plasma
+    time: 8
+    value: negative
+  - analyte: skin
+    time: 0
+    value: 32
+- patient_id: IT005-0058
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 3
+    value: 32
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: 18.8
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 23
+  - analyte: oropharyngeal_swab
+    time: 34
+    value: negative
+  - analyte: skin
+    time: 3
+    value: 16
+  - analyte: skin
+    time: 10
+    value: 27
+  - analyte: skin
+    time: 16
+    value: 30
+- patient_id: IT005-0081
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 34
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: 26
+  - analyte: plasma
+    time: 8
+    value: 35.9
+  - analyte: skin
+    time: 8
+    value: 14
+  - analyte: skin
+    time: 15
+    value: 21
+- patient_id: IT005-0134
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: anorectal_swab
+    time: 3
+    value: 22
+  - analyte: anorectal_swab
+    time: 14
+    value: 21
+  - analyte: anorectal_swab
+    time: 17
+    value: 30
+  - analyte: anorectal_swab
+    time: 24
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 13
+    value: 38
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: 37
+  - analyte: skin
+    time: 13
+    value: 20
+- patient_id: IT012-0023
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: plasma
+    time: 18
+    value: negative
+  - analyte: skin
+    time: 18
+    value: 30
+  - analyte: skin
+    time: 34
+    value: negative
+- patient_id: RAL01-0127
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: oropharyngeal_swab
+    time: 11
+    value: 26
+  - analyte: plasma
+    time: 11
+    value: 33.2
+  - analyte: skin
+    time: 11
+    value: 21.9
+- patient_id: RAL01-9001
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: skin
+    time: 24
+    value: negative
+  - analyte: plasma
+    time: 10
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 29
+- patient_id: REMRQ-9014
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: plasma
+    time: 1
+    value: 35.2
+  - analyte: plasma
+    time: 9
+    value: negative
+  - analyte: skin
+    time: 1
+    value: 16
+  - analyte: skin
+    time: 9
+    value: 22.6
+  - analyte: skin
+    time: 15
+    value: 30.5
+  - analyte: oropharyngeal_swab
+    time: 1
+    value: 23.1
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 33.3
+- patient_id: RYJ01-0002
+  attributes:
+    age_group: adult
+    subtype: clade IIb MPXV
+    treatment: tecovirimat
+  measurements:
+  - analyte: plasma
+    time: 8
+    value: 24.1
+  - analyte: skin
+    time: 8
+    value: 19.9
+  - analyte: skin
+    time: 9
+    value: 23.3
+  - analyte: oropharyngeal_swab
+    time: 8
+    value: 25.3
+  - analyte: oropharyngeal_swab
+    time: 9
+    value: 28.7

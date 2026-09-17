@@ -1,0 +1,683 @@
+title: Kinetics of viral DNA in body fluids and antibody response in patients with
+  acute Monkeypox virus infection
+doi: 10.1016/j.isci.2023.106102
+description: Case series follow-up study of three mpox (Monkeypox virus, MPXV) cases
+  diagnosed and monitored at the National Institute for Infectious Diseases “Lazzaro
+  Spallanzani” (INMI) in Rome, Italy, during May–June 2022. Longitudinal non-lesion
+  specimens (oropharyngeal swab/OPS, saliva, plasma, urine, stool, semen) were tested
+  for MPXV DNA using rtPCR (Ct values; target CrmB gene, Ct>40 negative), with quantification
+  on a subset by droplet digital PCR (ddPCR) and infectivity assessed by viral culture
+  on Vero E6 cells. CSV figure-derived data here provide per-patient time series of
+  Ct values and MPXV DNA concentration normalized to extracted nucleic acid (gc/ng)
+  at specific days post symptom onset.
+analytes:
+  urine_ct:
+    description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene
+      (Li et al. 2010 assay); Ct>40 considered negative. Ct values used as surrogate
+      of viral DNA load. Measurements are days since symptom onset.
+    specimen: urine
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  semen_ct:
+    description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene
+      (Li et al. 2010 assay); Ct>40 considered negative. Ct values used as surrogate
+      of viral DNA load. Measurements are days since symptom onset.
+    specimen: semen
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  stool_ct:
+    description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene
+      (Li et al. 2010 assay); Ct>40 considered negative. Ct values used as surrogate
+      of viral DNA load. Measurements are days since symptom onset.
+    specimen: stool
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  plasma_ct:
+    description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene
+      (Li et al. 2010 assay); Ct>40 considered negative. Ct values used as surrogate
+      of viral DNA load. Measurements are days since symptom onset.
+    specimen: plasma
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  saliva_ct:
+    description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene
+      (Li et al. 2010 assay); Ct>40 considered negative. Ct values used as surrogate
+      of viral DNA load. Measurements are days since symptom onset.
+    specimen: saliva
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  oropharyngeal_swab_ct:
+    description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene
+      (Li et al. 2010 assay); Ct>40 considered negative. Ct values used as surrogate
+      of viral DNA load. Measurements are days since symptom onset.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  oropharyngeal_swab_gc_ng:
+    description: MPXV DNA quantification by droplet digital PCR (ddPCR) adapted from
+      the rtPCR design targeting the CrmB gene (Bio-Rad QX200 system). Figure CSV
+      reports concentration values as gene copies per ng of extracted nucleic acid
+      (gc/ng). Measurements are days since symptom onset.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 0.251
+    limit_of_quantification: unknown
+    unit: gc/ng
+    reference_event: symptom onset
+  saliva_gc_ng:
+    description: MPXV DNA quantification by droplet digital PCR (ddPCR) adapted from
+      the rtPCR design targeting the CrmB gene (Bio-Rad QX200 system). Figure CSV
+      reports concentration values as gene copies per ng of extracted nucleic acid
+      (gc/ng). Measurements are days since symptom onset.
+    specimen: saliva
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 0.251
+    limit_of_quantification: unknown
+    unit: gc/ng
+    reference_event: symptom onset
+  plasma_gc_ng:
+    description: MPXV DNA quantification by droplet digital PCR (ddPCR) adapted from
+      the rtPCR design targeting the CrmB gene (Bio-Rad QX200 system). Figure CSV
+      reports concentration values as gene copies per ng of extracted nucleic acid
+      (gc/ng). Measurements are days since symptom onset.
+    specimen: plasma
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 0.251
+    limit_of_quantification: unknown
+    unit: gc/ng
+    reference_event: symptom onset
+  stool_gc_ng:
+    description: MPXV DNA quantification by droplet digital PCR (ddPCR) adapted from
+      the rtPCR design targeting the CrmB gene (Bio-Rad QX200 system). Figure CSV
+      reports concentration values as gene copies per ng of extracted nucleic acid
+      (gc/ng). Measurements are days since symptom onset.
+    specimen: stool
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 0.251
+    limit_of_quantification: unknown
+    unit: gc/ng
+    reference_event: symptom onset
+  semen_gc_ng:
+    description: MPXV DNA quantification by droplet digital PCR (ddPCR) adapted from
+      the rtPCR design targeting the CrmB gene (Bio-Rad QX200 system). Figure CSV
+      reports concentration values as gene copies per ng of extracted nucleic acid
+      (gc/ng). Measurements are days since symptom onset.
+    specimen: semen
+    biomarker: mpox
+    gene_target: CrmB
+    limit_of_detection: 0.251
+    limit_of_quantification: unknown
+    unit: gc/ng
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: urine_ct
+    time: 8
+    value: negative
+  - analyte: urine_ct
+    time: 10
+    value: 35.875
+  - analyte: urine_ct
+    time: 12
+    value: 39.5
+  - analyte: urine_ct
+    time: 14
+    value: negative
+  - analyte: urine_ct
+    time: 16
+    value: negative
+  - analyte: urine_ct
+    time: 18
+    value: negative
+  - analyte: urine_ct
+    time: 19
+    value: negative
+  - analyte: semen_ct
+    time: 8
+    value: 29.625
+  - analyte: semen_ct
+    time: 12
+    value: 27.75
+  - analyte: semen_ct
+    time: 13
+    value: 34.99999999999999
+  - analyte: semen_ct
+    time: 15
+    value: 34.625
+  - analyte: semen_ct
+    time: 16
+    value: 24.25
+  - analyte: semen_ct
+    time: 19
+    value: 36.5
+  - analyte: stool_ct
+    time: 8
+    value: 22.625
+  - analyte: stool_ct
+    time: 11
+    value: 22.125
+  - analyte: stool_ct
+    time: 14
+    value: 19.875
+  - analyte: stool_ct
+    time: 17
+    value: 34.25
+  - analyte: stool_ct
+    time: 19
+    value: negative
+  - analyte: plasma_ct
+    time: 8
+    value: 30
+  - analyte: plasma_ct
+    time: 9
+    value: 31.625
+  - analyte: plasma_ct
+    time: 10
+    value: 28.625
+  - analyte: plasma_ct
+    time: 11
+    value: 29.625
+  - analyte: plasma_ct
+    time: 12
+    value: 30.5
+  - analyte: plasma_ct
+    time: 13
+    value: 35.25
+  - analyte: plasma_ct
+    time: 14
+    value: 35.5
+  - analyte: plasma_ct
+    time: 16
+    value: negative
+  - analyte: saliva_ct
+    time: 8
+    value: 27.125
+  - analyte: saliva_ct
+    time: 11
+    value: 17.375
+  - analyte: saliva_ct
+    time: 12
+    value: 19.625
+  - analyte: saliva_ct
+    time: 13
+    value: 20.125000000000004
+  - analyte: saliva_ct
+    time: 14
+    value: 21.5
+  - analyte: saliva_ct
+    time: 15
+    value: 24
+  - analyte: saliva_ct
+    time: 17
+    value: 29.75
+  - analyte: saliva_ct
+    time: 18
+    value: 34
+  - analyte: saliva_ct
+    time: 19
+    value: 35.5
+  - analyte: oropharyngeal_swab_ct
+    time: 8
+    value: 30.25
+  - analyte: oropharyngeal_swab_ct
+    time: 9
+    value: 29.625
+  - analyte: oropharyngeal_swab_ct
+    time: 11
+    value: 23.125
+  - analyte: oropharyngeal_swab_ct
+    time: 12
+    value: 22.875
+  - analyte: oropharyngeal_swab_ct
+    time: 13
+    value: 27.75
+  - analyte: oropharyngeal_swab_ct
+    time: 14
+    value: 35.25
+  - analyte: oropharyngeal_swab_ct
+    time: 15
+    value: 33.75
+  - analyte: oropharyngeal_swab_ct
+    time: 16
+    value: 31.375
+  - analyte: oropharyngeal_swab_ct
+    time: 17
+    value: 33.125
+  - analyte: oropharyngeal_swab_ct
+    time: 18
+    value: negative
+  - analyte: oropharyngeal_swab_ct
+    time: 20
+    value: negative
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 5
+    value: 6.30957344480193
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 12
+    value: 398.1071705534969
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 16
+    value: 1.2589254117941675
+  - analyte: saliva_gc_ng
+    time: 5
+    value: 25.118864315095824
+  - analyte: saliva_gc_ng
+    time: 12
+    value: 2511.8864315095825
+  - analyte: saliva_gc_ng
+    time: 16
+    value: 0.3981071705534973
+  - analyte: plasma_gc_ng
+    time: 5
+    value: 7.943282347242813
+  - analyte: plasma_gc_ng
+    time: 12
+    value: 7.943282347242813
+  - analyte: plasma_gc_ng
+    time: 16
+    value: 0.5011872336272725
+  - analyte: stool_gc_ng
+    time: 5
+    value: 251.1886431509582
+  - analyte: stool_gc_ng
+    time: 12
+    value: 7943.282347242822
+  - analyte: stool_gc_ng
+    time: 16
+    value: negative
+  - analyte: semen_gc_ng
+    time: 5
+    value: 15.84893192461114
+  - analyte: semen_gc_ng
+    time: 12
+    value: 0.5011872336272725
+  - analyte: semen_gc_ng
+    time: 16
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: urine_ct
+    time: 7
+    value: negative
+  - analyte: urine_ct
+    time: 9
+    value: negative
+  - analyte: urine_ct
+    time: 11
+    value: negative
+  - analyte: urine_ct
+    time: 13
+    value: negative
+  - analyte: urine_ct
+    time: 15
+    value: negative
+  - analyte: urine_ct
+    time: 19
+    value: negative
+  - analyte: semen_ct
+    time: 5
+    value: 28.15437158469944
+  - analyte: semen_ct
+    time: 6
+    value: 29.411657559198535
+  - analyte: semen_ct
+    time: 7
+    value: 27.91917122040073
+  - analyte: semen_ct
+    time: 8
+    value: 27.801457194899815
+  - analyte: semen_ct
+    time: 10
+    value: 33.1912568306011
+  - analyte: semen_ct
+    time: 12
+    value: 33.455828779599265
+  - analyte: semen_ct
+    time: 14
+    value: 34.345628415300546
+  - analyte: semen_ct
+    time: 15
+    value: 35.97791438979963
+  - analyte: semen_ct
+    time: 17
+    value: 38.74248633879781
+  - analyte: semen_ct
+    time: 19
+    value: negative
+  - analyte: stool_ct
+    time: 6
+    value: 26.16188524590164
+  - analyte: stool_ct
+    time: 10
+    value: 29.066256830601084
+  - analyte: stool_ct
+    time: 11
+    value: negative
+  - analyte: stool_ct
+    time: 14
+    value: negative
+  - analyte: stool_ct
+    time: 16
+    value: negative
+  - analyte: plasma_ct
+    time: 8
+    value: 34.55145719489982
+  - analyte: plasma_ct
+    time: 11
+    value: 34.57354280510018
+  - analyte: plasma_ct
+    time: 13
+    value: negative
+  - analyte: plasma_ct
+    time: 15
+    value: negative
+  - analyte: plasma_ct
+    time: 17
+    value: negative
+  - analyte: plasma_ct
+    time: 18
+    value: negative
+  - analyte: saliva_ct
+    time: 5
+    value: 24.65437158469944
+  - analyte: saliva_ct
+    time: 7
+    value: 26.66917122040073
+  - analyte: saliva_ct
+    time: 8
+    value: 25.551457194899804
+  - analyte: saliva_ct
+    time: 9
+    value: 29.933970856102
+  - analyte: saliva_ct
+    time: 10
+    value: 30.441029143898
+  - analyte: saliva_ct
+    time: 13
+    value: 29.838114754098363
+  - analyte: saliva_ct
+    time: 14
+    value: 32.970628415300546
+  - analyte: saliva_ct
+    time: 15
+    value: 32.60291438979963
+  - analyte: saliva_ct
+    time: 16
+    value: 33.23520036429873
+  - analyte: saliva_ct
+    time: 17
+    value: 36.99271402550091
+  - analyte: saliva_ct
+    time: 19
+    value: negative
+  - analyte: oropharyngeal_swab_ct
+    time: 5
+    value: 24.15437158469945
+  - analyte: oropharyngeal_swab_ct
+    time: 7
+    value: 23.91917122040073
+  - analyte: oropharyngeal_swab_ct
+    time: 8
+    value: 30.426457194899815
+  - analyte: oropharyngeal_swab_ct
+    time: 9
+    value: 31.80874316939892
+  - analyte: oropharyngeal_swab_ct
+    time: 10
+    value: 32.4412568306011
+  - analyte: oropharyngeal_swab_ct
+    time: 14
+    value: 30.97062841530056
+  - analyte: oropharyngeal_swab_ct
+    time: 15
+    value: 35.60291438979963
+  - analyte: oropharyngeal_swab_ct
+    time: 17
+    value: 37.61771402550091
+  - analyte: oropharyngeal_swab_ct
+    time: 19
+    value: 35.50728597449909
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 5
+    value: 501.18723362727246
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 12
+    value: 1.2589254117941675
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 16
+    value: negative
+  - analyte: saliva_gc_ng
+    time: 5
+    value: 158.48931924611142
+  - analyte: saliva_gc_ng
+    time: 12
+    value: 3.1622776601683795
+  - analyte: saliva_gc_ng
+    time: 16
+    value: negative
+  - analyte: plasma_gc_ng
+    time: 5
+    value: 1.9952623149688788
+  - analyte: plasma_gc_ng
+    time: 16
+    value: negative
+  - analyte: stool_gc_ng
+    time: 5
+    value: 158.48931924611142
+  - analyte: stool_gc_ng
+    time: 12
+    value: 1.584893192461114
+  - analyte: stool_gc_ng
+    time: 16
+    value: negative
+  - analyte: semen_gc_ng
+    time: 5
+    value: 1
+  - analyte: semen_gc_ng
+    time: 12
+    value: negative
+  - analyte: semen_gc_ng
+    time: 16
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: urine_ct
+    time: 4
+    value: negative
+  - analyte: urine_ct
+    time: 6
+    value: negative
+  - analyte: urine_ct
+    time: 8
+    value: negative
+  - analyte: urine_ct
+    time: 10
+    value: negative
+  - analyte: urine_ct
+    time: 12
+    value: 35.40346573411978
+  - analyte: urine_ct
+    time: 14
+    value: negative
+  - analyte: urine_ct
+    time: 16
+    value: negative
+  - analyte: urine_ct
+    time: 17
+    value: negative
+  - analyte: semen_ct
+    time: 4
+    value: negative
+  - analyte: semen_ct
+    time: 6
+    value: 38.65546218487398
+  - analyte: semen_ct
+    time: 15
+    value: 26.90745863562819
+  - analyte: semen_ct
+    time: 16
+    value: 33.0672268907563
+  - analyte: semen_ct
+    time: 17
+    value: negative
+  - analyte: stool_ct
+    time: 10
+    value: negative
+  - analyte: stool_ct
+    time: 13
+    value: negative
+  - analyte: stool_ct
+    time: 17
+    value: negative
+  - analyte: plasma_ct
+    time: 4
+    value: negative
+  - analyte: plasma_ct
+    time: 6
+    value: 37.52100840336138
+  - analyte: plasma_ct
+    time: 8
+    value: 34.20977086486769
+  - analyte: plasma_ct
+    time: 9
+    value: 33.184665170416
+  - analyte: plasma_ct
+    time: 10
+    value: 34.30241661882144
+  - analyte: plasma_ct
+    time: 11
+    value: 37.68907563025209
+  - analyte: plasma_ct
+    time: 12
+    value: 35.52951615428782
+  - analyte: plasma_ct
+    time: 13
+    value: negative
+  - analyte: plasma_ct
+    time: 14
+    value: negative
+  - analyte: plasma_ct
+    time: 15
+    value: negative
+  - analyte: plasma_ct
+    time: 16
+    value: negative
+  - analyte: saliva_ct
+    time: 4
+    value: 25.957774414113487
+  - analyte: saliva_ct
+    time: 9
+    value: 29.02500130486979
+  - analyte: saliva_ct
+    time: 11
+    value: 25.840336134453796
+  - analyte: saliva_ct
+    time: 13
+    value: 31.60525079597059
+  - analyte: saliva_ct
+    time: 15
+    value: 34.4710057936218
+  - analyte: saliva_ct
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab_ct
+    time: 2
+    value: 35.57153296101052
+  - analyte: oropharyngeal_swab_ct
+    time: 7
+    value: 35.48749934756515
+  - analyte: oropharyngeal_swab_ct
+    time: 11
+    value: 36.1764705882353
+  - analyte: oropharyngeal_swab_ct
+    time: 12
+    value: 32.000104389581935
+  - analyte: oropharyngeal_swab_ct
+    time: 14
+    value: 29.8238425805105
+  - analyte: oropharyngeal_swab_ct
+    time: 15
+    value: 34.59653426588028
+  - analyte: oropharyngeal_swab_ct
+    time: 17
+    value: negative
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 5
+    value: 0.7943282347242813
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 12
+    value: 2.5118864315095797
+  - analyte: oropharyngeal_swab_gc_ng
+    time: 16
+    value: 0.3981071705534973
+  - analyte: saliva_gc_ng
+    time: 5
+    value: 39.81071705534969
+  - analyte: saliva_gc_ng
+    time: 12
+    value: 1.9952623149688788
+  - analyte: saliva_gc_ng
+    time: 16
+    value: 0.31622776601683794
+  - analyte: plasma_gc_ng
+    time: 5
+    value: negative
+  - analyte: plasma_gc_ng
+    time: 12
+    value: 1.2589254117941675
+  - analyte: plasma_gc_ng
+    time: 16
+    value: negative
+  - analyte: semen_gc_ng
+    time: 5
+    value: negative
+  - analyte: semen_gc_ng
+    time: 16
+    value: 12.589254117941662

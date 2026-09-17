@@ -1,0 +1,331 @@
+title: 'Clinical features and viral load variations of Mpox: a retrospective study
+  in Chongqing, China'
+doi: 10.1186/s12879-024-09537-0
+description: Retrospective case series of nine PCR-confirmed mpox (MPXV) infections
+  among MSM men admitted to Chongqing Public Health Medical Center (Chongqing, China)
+  from September 2022 to October 2023. MPXV DNA was detected by qPCR (DAAN Gene kit
+  on Bio-Rad CFX96 after EXM6000 magnetic-bead extraction) and results were reported
+  as Ct values across multiple specimen types (skin lesions, oropharyngeal swab, nasopharyngeal
+  swab, anus swab, and feces/stool). CSV figure-derived Ct time series were provided
+  and extracted (70 rows total), with time in days relative to symptom onset.
+analytes:
+  nasopharyngeal_swab:
+    description: MPXV DNA detection by quantitative real-time PCR (qPCR) reported
+      as Ct values from nasopharyngeal swab specimens; DNA extracted using EXM6000
+      magnetic bead method; PCR on Bio-Rad CFX96 using DAAN Gene MPXV nucleic acid
+      testing kit.
+    specimen: nasopharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  skin:
+    description: MPXV DNA detection by quantitative real-time PCR (qPCR) reported
+      as Ct values from skin lesion specimens; DNA extracted using EXM6000 magnetic
+      bead method; PCR on Bio-Rad CFX96 using DAAN Gene MPXV nucleic acid testing
+      kit.
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  stool:
+    description: MPXV DNA detection by quantitative real-time PCR (qPCR) reported
+      as Ct values from feces/stool specimens; DNA extracted using EXM6000 magnetic
+      bead method; PCR on Bio-Rad CFX96 using DAAN Gene MPXV nucleic acid testing
+      kit.
+    specimen: stool
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  anus:
+    description: MPXV DNA detection by quantitative real-time PCR (qPCR) reported
+      as Ct values from anus (anorectal) swab specimens; DNA extracted using EXM6000
+      magnetic bead method; PCR on Bio-Rad CFX96 using DAAN Gene MPXV nucleic acid
+      testing kit.
+    specimen: anorectal_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  oropharyngeal_swab:
+    description: MPXV DNA detection by quantitative real-time PCR (qPCR) reported
+      as Ct values from oropharyngeal (throat) swab specimens; DNA extracted using
+      EXM6000 magnetic bead method; PCR on Bio-Rad CFX96 using DAAN Gene MPXV nucleic
+      acid testing kit.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 29
+    age_group: adult
+    hiv_status: negative
+  measurements:
+  - analyte: nasopharyngeal_swab
+    time: 10
+    value: 36.20812894183602
+  - analyte: nasopharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 16
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 17
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 19
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 20
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 22
+    value: negative
+  - analyte: skin
+    time: 10
+    value: 30.563653352020555
+  - analyte: skin
+    time: 12
+    value: 30.47348750291988
+  - analyte: skin
+    time: 15
+    value: 33.160476524176595
+  - analyte: skin
+    time: 16
+    value: 36.63326325624854
+  - analyte: skin
+    time: 17
+    value: 39.17822938565756
+  - analyte: skin
+    time: 18
+    value: 37.16164447558982
+  - analyte: skin
+    time: 20
+    value: 38.2312543798178
+  - analyte: skin
+    time: 21
+    value: negative
+  - analyte: skin
+    time: 22
+    value: negative
+  - analyte: stool
+    time: 10
+    value: 34.42980612006541
+  - analyte: stool
+    time: 11
+    value: 32.79957953749124
+  - analyte: stool
+    time: 12
+    value: negative
+  - analyte: stool
+    time: 15
+    value: negative
+  - analyte: stool
+    time: 16
+    value: negative
+  - analyte: stool
+    time: 17
+    value: negative
+  - analyte: stool
+    time: 18
+    value: negative
+  - analyte: stool
+    time: 20
+    value: negative
+  - analyte: stool
+    time: 22
+    value: negative
+  - analyte: anus
+    time: 10
+    value: 32.26489138051857
+  - analyte: anus
+    time: 21
+    value: negative
+  - analyte: anus
+    time: 22
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: 28.012380284980143
+  - analyte: oropharyngeal_swab
+    time: 12
+    value: 30.937631394533987
+  - analyte: oropharyngeal_swab
+    time: 15
+    value: 35.0934361130577
+  - analyte: oropharyngeal_swab
+    time: 17
+    value: 38.32796075683252
+  - analyte: oropharyngeal_swab
+    time: 20
+    value: 38.77248306470451
+  - analyte: oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 22
+    value: negative
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: skin
+    time: 6
+    value: 26.243523316062173
+  - analyte: skin
+    time: 10
+    value: negative
+  - analyte: skin
+    time: 12
+    value: negative
+  - analyte: anus
+    time: 6
+    value: 31.60621761658031
+  - analyte: anus
+    time: 10
+    value: negative
+  - analyte: anus
+    time: 12
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 6
+    value: 38.75647668393782
+  - analyte: oropharyngeal_swab
+    time: 10
+    value: negative
+- attributes:
+    sex: male
+    age: 38
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: anus
+    time: -1
+    value: 38.43902439024389
+  - analyte: skin
+    time: 1
+    value: 23.024390243902424
+  - analyte: skin
+    time: 20
+    value: 28.682926829268283
+  - analyte: skin
+    time: 22
+    value: 37.46341463414633
+  - analyte: skin
+    time: 23
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: -1
+    value: 30.24390243902438
+  - analyte: nasopharyngeal_swab
+    time: 13
+    value: 38.53658536585365
+  - analyte: nasopharyngeal_swab
+    time: 19
+    value: negative
+- attributes:
+    sex: male
+    age: 20
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: skin
+    time: 0
+    value: 22.21153846153846
+  - analyte: skin
+    time: 2
+    value: 23.9423076923077
+  - analyte: skin
+    time: 6
+    value: 27.307692307692317
+  - analyte: skin
+    time: 8
+    value: 33.26923076923078
+  - analyte: skin
+    time: 10
+    value: negative
+  - analyte: anus
+    time: 2
+    value: 27.596153846153847
+  - analyte: anus
+    time: 6
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 2
+    value: negative
+  - analyte: nasopharyngeal_swab
+    time: 6
+    value: negative
+- attributes:
+    sex: male
+    age: 24
+    age_group: adult
+    hiv_status: negative
+  measurements:
+  - analyte: skin
+    time: 9
+    value: 23
+- attributes:
+    sex: male
+    age: 41
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: skin
+    time: 6
+    value: 26.48
+- attributes:
+    sex: male
+    age: 25
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: skin
+    time: 0
+    value: 31.47
+- attributes:
+    sex: male
+    age: 30
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: skin
+    time: 5
+    value: 27.07
+  - analyte: nasopharyngeal_swab
+    time: 5
+    value: 24.8
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: skin
+    time: 3
+    value: 17.66
+  - analyte: nasopharyngeal_swab
+    time: 3
+    value: 24.75

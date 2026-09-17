@@ -1,0 +1,175 @@
+title: Prolonged viral shedding in an immunocompromised Korean patient infected with
+  hMPXV, sub-lineage B.1.3, with acquired drug resistant mutations during tecovirimat
+  treatment
+doi: 10.1002/jmv.29536
+description: Case report from South Korea describing prolonged mpox (hMPXV) shedding
+  in a 39-year-old male immunocompromised patient during tecovirimat treatment, with
+  sequencing evidence of tecovirimat-associated resistance mutations (e.g., A290V,
+  A288P) detected in different anatomical lesion/nasal samples over time.
+analytes:
+  skin:
+    description: Mpox virus PCR cycle threshold (Ct) measured from skin lesion-related
+      specimen labeled 'skin' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  pubis:
+    description: Mpox virus PCR cycle threshold (Ct) measured from pubis lesion-related
+      specimen labeled 'Pubis' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  right_pubis:
+    description: Mpox virus PCR cycle threshold (Ct) measured from right pubis lesion-related
+      specimen labeled 'Right Pubis' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  left_forehead:
+    description: Mpox virus PCR cycle threshold (Ct) measured from left forehead lesion-related
+      specimen labeled 'Left Forehead' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  left_arm:
+    description: Mpox virus PCR cycle threshold (Ct) measured from left arm lesion-related
+      specimen labeled 'Left Arm' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  abdomen:
+    description: Mpox virus PCR cycle threshold (Ct) measured from abdomen lesion-related
+      specimen labeled 'Abdomen' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  penile:
+    description: Mpox virus PCR cycle threshold (Ct) measured from penile lesion-related
+      specimen labeled 'Penile' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  left_pubis:
+    description: Mpox virus PCR cycle threshold (Ct) measured from left pubis lesion-related
+      specimen labeled 'Left Pubis' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  left_buttock:
+    description: Mpox virus PCR cycle threshold (Ct) measured from left buttock lesion-related
+      specimen labeled 'Left Buttock' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  nose:
+    description: Mpox virus PCR cycle threshold (Ct) measured from nose lesion-related
+      specimen labeled 'Nose' in figure-derived CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 39
+    age_group: adult
+    treatment: tecovirimat
+    imune_status: immunocompromised
+    hiv_status: positive
+  measurements:
+  - analyte: skin
+    time: 10
+    value: 24.78
+  - analyte: pubis
+    time: 39
+    value: 17.55
+  - analyte: skin
+    time: 39
+    value: 18.45
+  - analyte: right_pubis
+    time: 61
+    value: 16.51
+  - analyte: left_forehead
+    time: 61
+    value: 16.24
+  - analyte: right_pubis
+    time: 71
+    value: 14.87
+  - analyte: left_forehead
+    time: 71
+    value: 15.03
+  - analyte: left_arm
+    time: 71
+    value: 16.91
+  - analyte: abdomen
+    time: 71
+    value: 23.01
+  - analyte: penile
+    time: 71
+    value: 17.95
+  - analyte: right_pubis
+    time: 71
+    value: 20.71
+  - analyte: left_pubis
+    time: 71
+    value: 20.38
+  - analyte: left_buttock
+    time: 71
+    value: 20.63
+  - analyte: left_pubis
+    time: 71
+    value: 13.93
+  - analyte: right_pubis
+    time: 79
+    value: 16.96
+  - analyte: left_pubis
+    time: 79
+    value: 17.44
+  - analyte: skin
+    time: 102
+    value: 33.49
+  - analyte: nose
+    time: 127
+    value: 18.64
+  - analyte: nose
+    time: 127
+    value: 26.3

@@ -1,0 +1,665 @@
+title: Frequent detection of monkeypox virus DNA in saliva, semen, and other clinical
+  samples from 12 patients, Barcelona, Spain, May to June 2022
+doi: 10.2807/1560-7917.ES.2022.27.28.2200503
+description: Observational shedding study of 12 confirmed symptomatic mpox (monkeypox
+  virus) patients in Barcelona, Spain (May–June 2022). Multiple specimen types (skin
+  lesion swab, saliva, rectal swab, nasopharyngeal swab, semen, urine, and faeces/stool)
+  were tested at diagnosis and follow-up time points using real-time PCR, reporting
+  Ct (Cq) values (or negative/NA). Timing is reported as days since symptom onset.
+analytes:
+  ct_skin_lesion_swab:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct). Clinical samples were inactivated 1:1 with
+      cobas omni lysis reagent (Roche) prior to nucleic acid extraction (MagNA Pure
+      Compact; MagNA Pure Compact Nucleic Acid Isolation Kit I—Large Volume). Initial
+      diagnosis used an orthopox generic PCR plus a specific MPX PCR; follow-up samples
+      tested with the specific MPX PCR assay. This analyte corresponds to skin lesion
+      swab specimens.
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_rectal_swab:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct). Samples were inactivated 1:1 with cobas omni
+      lysis reagent (Roche) and extracted on MagNA Pure Compact. Initial diagnosis
+      used orthopox generic PCR plus specific MPX PCR; follow-up used specific MPX
+      PCR. This analyte corresponds to rectal swab specimens.
+    specimen: rectal_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_tongue_ulcer:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct) from a tongue ulcer lesion swab (mucosal lesion).
+      Samples were inactivated 1:1 with cobas omni lysis reagent (Roche) and extracted
+      on MagNA Pure Compact. Initial diagnosis used orthopox generic PCR plus specific
+      MPX PCR; follow-up used specific MPX PCR.
+    specimen: mucosal_lesion_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_oral_lesion:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct) from an oral lesion swab (mucosal lesion). Samples
+      were inactivated 1:1 with cobas omni lysis reagent (Roche) and extracted on
+      MagNA Pure Compact. Initial diagnosis used orthopox generic PCR plus specific
+      MPX PCR; follow-up used specific MPX PCR.
+    specimen: mucosal_lesion_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_saliva:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct) from saliva. Samples were inactivated 1:1 with
+      cobas omni lysis reagent (Roche) and extracted on MagNA Pure Compact. Initial
+      diagnosis used orthopox generic PCR plus specific MPX PCR; follow-up used specific
+      MPX PCR.
+    specimen: saliva
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_nasopharyngeal_swab:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct) from nasopharyngeal swab. Samples were inactivated
+      1:1 with cobas omni lysis reagent (Roche) and extracted on MagNA Pure Compact.
+      Initial diagnosis used orthopox generic PCR plus specific MPX PCR; follow-up
+      used specific MPX PCR.
+    specimen: nasopharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_semen:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct) from semen. Samples were inactivated 1:1 with
+      cobas omni lysis reagent (Roche) and extracted on MagNA Pure Compact. Initial
+      diagnosis used orthopox generic PCR plus specific MPX PCR; follow-up used specific
+      MPX PCR.
+    specimen: semen
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_urine:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct) from urine. Samples were inactivated 1:1 with
+      cobas omni lysis reagent (Roche) and extracted on MagNA Pure Compact. Initial
+      diagnosis used orthopox generic PCR plus specific MPX PCR; follow-up used specific
+      MPX PCR.
+    specimen: urine
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_stool:
+    description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported
+      as quantification cycle (Cq/Ct) from faeces (stool). Stool samples were processed
+      as previously described by the authors (details not provided in the excerpt).
+      Samples were inactivated 1:1 with cobas omni lysis reagent (Roche) and extracted
+      on MagNA Pure Compact. Initial diagnosis used orthopox generic PCR plus specific
+      MPX PCR; follow-up used specific MPX PCR.
+    specimen: stool
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 30s
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 6
+    value: 21.3
+  - analyte: ct_saliva
+    time: 12
+    value: 35.7
+  - analyte: ct_rectal_swab
+    time: 12
+    value: 38.4
+  - analyte: ct_nasopharyngeal_swab
+    time: 12
+    value: 34.7
+  - analyte: ct_semen
+    time: 12
+    value: negative
+  - analyte: ct_urine
+    time: 12
+    value: negative
+  - analyte: ct_stool
+    time: 12
+    value: 23.4
+- attributes:
+    sex: male
+    age: 30s
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive    
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 5
+    value: 18.5
+  - analyte: ct_saliva
+    time: 11
+    value: 20.3
+  - analyte: ct_rectal_swab
+    time: 11
+    value: 17.6
+  - analyte: ct_nasopharyngeal_swab
+    time: 11
+    value: 33.3
+  - analyte: ct_urine
+    time: 11
+    value: 37.3
+  - analyte: ct_stool
+    time: 11
+    value: negative
+- attributes:
+    sex: male
+    age: 40s
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 1
+    value: 16.2
+  - analyte: ct_saliva
+    time: 10
+    value: negative
+  - analyte: ct_rectal_swab
+    time: 10
+    value: 31.9
+  - analyte: ct_nasopharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_semen
+    time: 10
+    value: 36
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_stool
+    time: 10
+    value: negative
+  - analyte: ct_saliva
+    time: 13
+    value: 35.6
+  - analyte: ct_rectal_swab
+    time: 13
+    value: 33.3
+  - analyte: ct_nasopharyngeal_swab
+    time: 13
+    value: negative
+  - analyte: ct_semen
+    time: 13
+    value: 35.7
+  - analyte: ct_urine
+    time: 13
+    value: negative
+  - analyte: ct_stool
+    time: 13
+    value: negative
+- attributes:
+    sex: male
+    age: 40s
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 7
+    value: 17.6
+  - analyte: ct_rectal_swab
+    time: 7
+    value: 17.8
+  - analyte: ct_saliva
+    time: 7
+    value: 35
+  - analyte: ct_rectal_swab
+    time: 7
+    value: 19.8
+  - analyte: ct_nasopharyngeal_swab
+    time: 7
+    value: 40
+  - analyte: ct_semen
+    time: 7
+    value: 40
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_stool
+    time: 7
+    value: 24
+  - analyte: ct_saliva
+    time: 9
+    value: negative
+  - analyte: ct_rectal_swab
+    time: 9
+    value: 22.1
+  - analyte: ct_nasopharyngeal_swab
+    time: 9
+    value: negative
+  - analyte: ct_semen
+    time: 9
+    value: negative
+  - analyte: ct_urine
+    time: 9
+    value: negative
+  - analyte: ct_stool
+    time: 9
+    value: 21.5
+- attributes:
+    sex: male
+    age: 40s
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+    vaccinated: true
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 14
+    value: 23.2
+  - analyte: ct_saliva
+    time: 14
+    value: negative
+  - analyte: ct_rectal_swab
+    time: 14
+    value: 20.7
+  - analyte: ct_nasopharyngeal_swab
+    time: 14
+    value: 37.2
+  - analyte: ct_semen
+    time: 14
+    value: 31.9
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_saliva
+    time: 16
+    value: 37.9
+  - analyte: ct_rectal_swab
+    time: 16
+    value: 21.5
+  - analyte: ct_nasopharyngeal_swab
+    time: 16
+    value: 37.3
+  - analyte: ct_semen
+    time: 16
+    value: 30.7
+  - analyte: ct_urine
+    time: 16
+    value: 27
+  - analyte: ct_stool
+    time: 16
+    value: 19.9
+- attributes:
+    sex: male
+    age: 30s
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 7
+    value: 22.1
+  - analyte: ct_rectal_swab
+    time: 7
+    value: 16.1
+  - analyte: ct_saliva
+    time: 11
+    value: 23.2
+  - analyte: ct_rectal_swab
+    time: 11
+    value: 25.4
+  - analyte: ct_nasopharyngeal_swab
+    time: 11
+    value: 25.4
+  - analyte: ct_urine
+    time: 11
+    value: 39.1
+  - analyte: ct_stool
+    time: 11
+    value: 24.7
+  - analyte: ct_saliva
+    time: 12
+    value: 24.7
+  - analyte: ct_rectal_swab
+    time: 12
+    value: 29.8
+  - analyte: ct_nasopharyngeal_swab
+    time: 12
+    value: 25.5
+  - analyte: ct_urine
+    time: 12
+    value: negative
+  - analyte: ct_stool
+    time: 12
+    value: 26.4
+  - analyte: ct_saliva
+    time: 13
+    value: 25
+  - analyte: ct_rectal_swab
+    time: 13
+    value: 27.1
+  - analyte: ct_nasopharyngeal_swab
+    time: 13
+    value: 26.4
+  - analyte: ct_urine
+    time: 13
+    value: negative
+  - analyte: ct_stool
+    time: 13
+    value: 28.3
+- attributes:
+    sex: male
+    age: 40s
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 4
+    value: 21.3
+  - analyte: ct_tongue_ulcer
+    time: 4
+    value: 19.6
+  - analyte: ct_saliva
+    time: 4
+    value: 24
+  - analyte: ct_rectal_swab
+    time: 4
+    value: 22
+  - analyte: ct_nasopharyngeal_swab
+    time: 4
+    value: 26.9
+  - analyte: ct_urine
+    time: 4
+    value: 39.3
+  - analyte: ct_stool
+    time: 4
+    value: 31.4
+  - analyte: ct_saliva
+    time: 6
+    value: 21.8
+  - analyte: ct_rectal_swab
+    time: 6
+    value: 19
+  - analyte: ct_nasopharyngeal_swab
+    time: 6
+    value: 26.1
+  - analyte: ct_semen
+    time: 6
+    value: negative
+  - analyte: ct_urine
+    time: 6
+    value: negative
+  - analyte: ct_stool
+    time: 6
+    value: negative
+- attributes:
+    sex: male
+    age: 50s
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 3
+    value: 27.8
+  - analyte: ct_oral_lesion
+    time: 3
+    value: 35.8
+  - analyte: ct_saliva
+    time: 5
+    value: 29.1
+  - analyte: ct_rectal_swab
+    time: 5
+    value: 30.5
+  - analyte: ct_nasopharyngeal_swab
+    time: 5
+    value: 32.6
+  - analyte: ct_urine
+    time: 5
+    value: 39.4
+  - analyte: ct_stool
+    time: 5
+    value: negative
+  - analyte: ct_saliva
+    time: 8
+    value: 31.7
+  - analyte: ct_rectal_swab
+    time: 8
+    value: 34.4
+  - analyte: ct_nasopharyngeal_swab
+    time: 8
+    value: 32.9
+  - analyte: ct_urine
+    time: 8
+    value: negative
+  - analyte: ct_stool
+    time: 8
+    value: negative
+- attributes:
+    sex: male
+    age: 40s
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 7
+    value: 19
+  - analyte: ct_saliva
+    time: 7
+    value: 29.8
+  - analyte: ct_rectal_swab
+    time: 7
+    value: 23.7
+  - analyte: ct_nasopharyngeal_swab
+    time: 7
+    value: 33.5
+  - analyte: ct_semen
+    time: 7
+    value: 22.7
+  - analyte: ct_urine
+    time: 7
+    value: 24.4
+  - analyte: ct_stool
+    time: 7
+    value: 30.2
+  - analyte: ct_saliva
+    time: 8
+    value: 25.6
+  - analyte: ct_rectal_swab
+    time: 8
+    value: 20.7
+  - analyte: ct_nasopharyngeal_swab
+    time: 8
+    value: 29.4
+  - analyte: ct_semen
+    time: 8
+    value: 20.9
+  - analyte: ct_urine
+    time: 8
+    value: 19.1
+  - analyte: ct_stool
+    time: 8
+    value: 29.8
+- attributes:
+    sex: male
+    age: 30s
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 2
+    value: 19
+  - analyte: ct_rectal_swab
+    time: 2
+    value: 17.7
+  - analyte: ct_saliva
+    time: 4
+    value: 31.2
+  - analyte: ct_rectal_swab
+    time: 4
+    value: 23.4
+  - analyte: ct_nasopharyngeal_swab
+    time: 4
+    value: 29
+  - analyte: ct_semen
+    time: 4
+    value: 38.7
+  - analyte: ct_urine
+    time: 4
+    value: 40
+  - analyte: ct_stool
+    time: 4
+    value: 20
+  - analyte: ct_saliva
+    time: 7
+    value: 36
+  - analyte: ct_rectal_swab
+    time: 7
+    value: 26
+  - analyte: ct_nasopharyngeal_swab
+    time: 7
+    value: 36.5
+  - analyte: ct_semen
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: 40
+  - analyte: ct_stool
+    time: 7
+    value: 23.4
+- attributes:
+    sex: male
+    age: 30s
+    age_group: adult
+    vaccinated: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 1
+    value: 18.8
+  - analyte: ct_rectal_swab
+    time: 1
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 1
+    value: negative
+  - analyte: ct_semen
+    time: 1
+    value: 33
+  - analyte: ct_urine
+    time: 1
+    value: 31.8
+  - analyte: ct_stool
+    time: 1
+    value: negative
+  - analyte: ct_saliva
+    time: 4
+    value: 36.5
+  - analyte: ct_rectal_swab
+    time: 4
+    value: negative
+  - analyte: ct_nasopharyngeal_swab
+    time: 4
+    value: negative
+  - analyte: ct_semen
+    time: 4
+    value: 38.1
+  - analyte: ct_urine
+    time: 4
+    value: 35
+  - analyte: ct_stool
+    time: 4
+    value: negative
+- attributes:
+    sex: male
+    age: 30s
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_skin_lesion_swab
+    time: 3
+    value: 21.1
+  - analyte: ct_rectal_swab
+    time: 3
+    value: 15.6
+  - analyte: ct_saliva
+    time: 4
+    value: 25.3
+  - analyte: ct_rectal_swab
+    time: 4
+    value: 20.8
+  - analyte: ct_nasopharyngeal_swab
+    time: 4
+    value: 31.1
+  - analyte: ct_semen
+    time: 4
+    value: 32.1
+  - analyte: ct_urine
+    time: 4
+    value: 29
+  - analyte: ct_stool
+    time: 4
+    value: 20.9
+  - analyte: ct_saliva
+    time: 6
+    value: 25
+  - analyte: ct_rectal_swab
+    time: 6
+    value: 21.2
+  - analyte: ct_nasopharyngeal_swab
+    time: 6
+    value: 28.8
+  - analyte: ct_semen
+    time: 6
+    value: 29.7
+  - analyte: ct_urine
+    time: 6
+    value: 26.7
+  - analyte: ct_stool
+    time: 6
+    value: 17.8

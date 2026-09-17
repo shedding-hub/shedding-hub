@@ -1,0 +1,1636 @@
+title: 'Efficacy and viral dynamics of tecovirimat in patients with MPOX: A multicenter
+  open-label, double-arm trial in Japan'
+doi: 10.1016/j.jiac.2023.11.025
+description: Multicenter open-label trial in Japan (Tecopox study) enrolling patients
+  with mpox between June 28, 2022 and April 30, 2023. Nineteen patients were allocated
+  to oral tecovirimat (no control arm enrolled). Serial PCR Ct values were measured
+  from blood, urine, oropharyngeal (throat) swabs, skin lesion specimens, and semen
+  to evaluate viral dynamics and duration of viral detection over time after study
+  inclusion/tecovirimat treatment. The CSV provided contains individual-level Ct (cycle
+  threshold) measurements by patient and day (time) for multiple specimen types; most
+  results are negative at many timepoints.
+analytes:
+  ct_blood:
+    description: Mpox virus PCR cycle threshold (Ct) values from blood samples (CSV
+      figure-derived data). Assay details and gene target not provided in the supplied
+      text/CSV.
+    specimen: blood
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  ct_oropharyngeal_swab:
+    description: Mpox virus PCR cycle threshold (Ct) values from oropharyngeal (throat)
+      swab samples (CSV figure-derived data). Assay details and gene target not provided
+      in the supplied text/CSV.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  ct_urine:
+    description: Mpox virus PCR cycle threshold (Ct) values from urine samples (CSV
+      figure-derived data). Assay details and gene target not provided in the supplied
+      text/CSV.
+    specimen: urine
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  ct_lesion:
+    description: Mpox virus PCR cycle threshold (Ct) values from skin lesion specimens
+      (CSV figure-derived data). Assay details and gene target not provided in the
+      supplied text/CSV.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  ct_semen:
+    description: Mpox virus PCR cycle threshold (Ct) values from semen samples (CSV
+      figure-derived data). Assay details and gene target not provided in the supplied
+      text/CSV.
+    specimen: semen
+    biomarker: mpox
+    gene_target: F3L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+participants:
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 35.15
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 23.28
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: negative
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: negative
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_lesion
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: negative
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: negative
+  - analyte: ct_blood
+    time: 3
+    value: 40.12
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 34.81
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: negative
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 37.56
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 31.29
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 19.83
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 20.4
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 35.58
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: ct_urine
+    time: 0
+    value: 39.52
+  - analyte: ct_lesion
+    time: 0
+    value: 21.94
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 32.61
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 39.23
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: negative
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 29.4
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 32.92
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: negative
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: 39.5
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_lesion
+    time: 21
+    value: 39.79
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_lesion
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: negative
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 37.12
+  - analyte: ct_urine
+    time: 0
+    value: 40.3
+  - analyte: ct_lesion
+    time: 0
+    value: 19.97
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 22.81
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 36.86
+  - analyte: ct_blood
+    time: 10
+    value: 39.02
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: 40.27
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: 40.72
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: 39.66
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 39.15
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 37.22
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 20.32
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 19.87
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 33.24
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: 40
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: negative
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 38.39
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: ct_urine
+    time: 0
+    value: 36.05
+  - analyte: ct_lesion
+    time: 0
+    value: 26.2
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 39.31
+  - analyte: ct_urine
+    time: 3
+    value: 31.67
+  - analyte: ct_lesion
+    time: 3
+    value: 19.28
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: 37.91
+  - analyte: ct_lesion
+    time: 7
+    value: 22.16
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: 25.14
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: 39.32
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 39.93
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: ct_urine
+    time: 0
+    value: 32.55
+  - analyte: ct_lesion
+    time: 0
+    value: 21.74
+  - analyte: ct_blood
+    time: 3
+    value: 40.13
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 24.38
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 27.26
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: 29.07
+  - analyte: ct_blood
+    time: 14
+    value: 37.47
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: 38.64
+  - analyte: ct_urine
+    time: 14
+    value: 38.09
+  - analyte: ct_lesion
+    time: 14
+    value: 37.4
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: 36.57
+  - analyte: ct_urine
+    time: 21
+    value: 38.64
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: negative
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 38.7
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 41.52
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 26.07
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: 38.08
+  - analyte: ct_lesion
+    time: 3
+    value: 21.66
+  - analyte: ct_blood
+    time: 7
+    value: 37.13
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: 36.51
+  - analyte: ct_urine
+    time: 7
+    value: 35.53
+  - analyte: ct_lesion
+    time: 7
+    value: 38.68
+  - analyte: ct_blood
+    time: 10
+    value: 37.46
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: 39.89
+  - analyte: ct_lesion
+    time: 10
+    value: 24.18
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 38.59
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 31.32
+  - analyte: ct_urine
+    time: 0
+    value: 40.23
+  - analyte: ct_lesion
+    time: 0
+    value: negative
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 38.05
+  - analyte: ct_urine
+    time: 3
+    value: 27.92
+  - analyte: ct_lesion
+    time: 3
+    value: 37.43
+  - analyte: ct_blood
+    time: 7
+    value: 37.92
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: 36.37
+  - analyte: ct_urine
+    time: 7
+    value: 36.34
+  - analyte: ct_lesion
+    time: 7
+    value: 26.19
+  - analyte: ct_blood
+    time: 10
+    value: 40.83
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: 39.43
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: 34.01
+  - analyte: ct_blood
+    time: 14
+    value: 38.12
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: 38.75
+  - analyte: ct_urine
+    time: 14
+    value: 41.55
+  - analyte: ct_lesion
+    time: 14
+    value: 36.77
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 34.5
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 37.21
+  - analyte: ct_urine
+    time: 0
+    value: 37.88
+  - analyte: ct_lesion
+    time: 0
+    value: 21.09
+  - analyte: ct_blood
+    time: 3
+    value: 36.5
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 37.41
+  - analyte: ct_urine
+    time: 3
+    value: 37.43
+  - analyte: ct_lesion
+    time: 3
+    value: 37.46
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: 37.94
+  - analyte: ct_lesion
+    time: 7
+    value: 31.88
+  - analyte: ct_blood
+    time: 10
+    value: 39.77
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: 36.37
+  - analyte: ct_urine
+    time: 10
+    value: 38.93
+  - analyte: ct_lesion
+    time: 10
+    value: 36.84
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: 36.71
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_lesion
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: negative
+  - analyte: ct_semen
+    time: 60
+    value: negative
+  - analyte: ct_blood
+    time: 120
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 120
+    value: negative
+  - analyte: ct_urine
+    time: 120
+    value: negative
+  - analyte: ct_semen
+    time: 120
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 33.54
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 38.38
+  - analyte: ct_urine
+    time: 0
+    value: 37.37
+  - analyte: ct_lesion
+    time: 0
+    value: 29.82
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 40.38
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 30.71
+  - analyte: ct_urine
+    time: 0
+    value: 38.87
+  - analyte: ct_lesion
+    time: 0
+    value: 24.65
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 38.55
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 29.48
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 26.68
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: 33.71
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: ct_urine
+    time: 0
+    value: 24.54
+  - analyte: ct_lesion
+    time: 0
+    value: 20.84
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: negative
+  - analyte: ct_urine
+    time: 3
+    value: 39.94
+  - analyte: ct_lesion
+    time: 3
+    value: 26.79
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: 38.72
+  - analyte: ct_lesion
+    time: 7
+    value: 33.56
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: 41.25
+  - analyte: ct_lesion
+    time: 10
+    value: 31.23
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_lesion
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+  - analyte: ct_blood
+    time: 60
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 60
+    value: negative
+  - analyte: ct_urine
+    time: 60
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 43.3
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 29.44
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 35.16
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 36.86
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 25.39
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 39.74
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: 40.04
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_lesion
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 39.6
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 30.9
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 39.278
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 17.45
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: 39.6
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 18.46
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: 26.92
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: 23.38
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: 41.11
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 30.19
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 18.86
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 36.36
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 21.61
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: negative
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 26.07
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: 27.87
+  - analyte: ct_blood
+    time: 21
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 21
+    value: negative
+  - analyte: ct_urine
+    time: 21
+    value: negative
+  - analyte: ct_lesion
+    time: 21
+    value: negative
+  - analyte: ct_blood
+    time: 30
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 30
+    value: negative
+  - analyte: ct_urine
+    time: 30
+    value: negative
+- attributes:
+    sex: male
+    participant_type: patient
+    treatment: tecovirimat
+  measurements:
+  - analyte: ct_blood
+    time: 0
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 0
+    value: 31.72
+  - analyte: ct_urine
+    time: 0
+    value: negative
+  - analyte: ct_lesion
+    time: 0
+    value: 17.91
+  - analyte: ct_blood
+    time: 3
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 3
+    value: 39.36
+  - analyte: ct_urine
+    time: 3
+    value: negative
+  - analyte: ct_lesion
+    time: 3
+    value: 22.43
+  - analyte: ct_blood
+    time: 7
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 7
+    value: 41.66
+  - analyte: ct_urine
+    time: 7
+    value: negative
+  - analyte: ct_lesion
+    time: 7
+    value: 35.94
+  - analyte: ct_blood
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: negative
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_lesion
+    time: 10
+    value: negative
+  - analyte: ct_blood
+    time: 14
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 14
+    value: 39.81
+  - analyte: ct_urine
+    time: 14
+    value: negative
+  - analyte: ct_lesion
+    time: 14
+    value: negative

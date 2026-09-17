@@ -1,0 +1,202 @@
+title: 'Monkeypox Virus Infections in Southern Italy: Is There a Risk for Community
+  Spread?'
+doi: 10.3390/ijerph191811719
+description: Surveillance-based case series of 10 mpox (MPXV) cases identified in
+  the Apulia region (Southern Italy) between 1 June and 1 August 2022. Multiple clinical
+  specimens (skin lesion swab, nasopharyngeal swab, and whole blood) were tested using
+  real-time PCR (Real-Star Orthopoxvirus PCR kit followed by an MPXV-specific confirmatory
+  real-time PCR). The dataset reports quantification cycle (Cq) values or negative
+  results, with sampling times reported as days from symptom onset.
+analytes:
+  skin_lesion_swab:
+    description: Mpox virus DNA real-time PCR quantification cycle (Cq) from skin
+      lesion swab samples (Orthopoxvirus real-time PCR screening using Real-Star Orthopoxvirus
+      PCR Kit with confirmatory MPXV-specific real-time PCR).
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  nasopharyngeal_swab:
+    description: Mpox virus DNA real-time PCR quantification cycle (Cq) from nasopharyngeal
+      swab samples (Orthopoxvirus real-time PCR screening using Real-Star Orthopoxvirus
+      PCR Kit with confirmatory MPXV-specific real-time PCR).
+    specimen: nasopharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  blood:
+    description: Mpox virus DNA real-time PCR quantification cycle (Cq) from whole
+      blood samples (Orthopoxvirus real-time PCR screening using Real-Star Orthopoxvirus
+      PCR Kit with confirmatory MPXV-specific real-time PCR).
+    specimen: blood
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 30s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: false
+    hiv_status: negative
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 9
+    value: 16
+  - analyte: nasopharyngeal_swab
+    time: 9
+    value: 30
+  - analyte: blood
+    time: 9
+    value: 35
+- attributes:
+    sex: male
+    age: 30s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: false
+    hiv_status: positive
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 11
+    value: 17
+  - analyte: nasopharyngeal_swab
+    time: 11
+    value: 30
+  - analyte: blood
+    time: 11
+    value: 32
+- attributes:
+    sex: female
+    age: 70s
+    vaccinated: true
+    symptomatic: true
+    hospitalized: true
+    hiv_status: negative
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 5
+    value: 35
+  - analyte: nasopharyngeal_swab
+    time: 5
+    value: negative
+  - analyte: blood
+    time: 5
+    value: negative
+- attributes:
+    sex: male
+    age: 30s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: false
+    hiv_status: negative
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 7
+    value: 20
+  - analyte: blood
+    time: 7
+    value: 35
+- attributes:
+    sex: male
+    age: 30s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: false
+    hiv_status: positive
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 4
+    value: 20
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 30
+  - analyte: blood
+    time: 4
+    value: 32
+- attributes:
+    sex: male
+    age: 20s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: true
+    hiv_status: positive
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 6
+    value: 17
+  - analyte: nasopharyngeal_swab
+    time: 6
+    value: 31
+  - analyte: blood
+    time: 6
+    value: negative
+- attributes:
+    sex: male
+    age: 30s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: false
+    hiv_status: negative
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 12
+    value: 23
+  - analyte: nasopharyngeal_swab
+    time: 12
+    value: negative
+  - analyte: blood
+    time: 12
+    value: 35
+- attributes:
+    sex: male
+    age: 30s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: true
+    hiv_status: negative
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 2
+    value: 20
+- attributes:
+    sex: male
+    age: 30s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: false
+    hiv_status: positive
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 17
+    value: 21
+  - analyte: nasopharyngeal_swab
+    time: 17
+    value: 40
+  - analyte: blood
+    time: 17
+    value: negative
+- attributes:
+    sex: female
+    age: 20s
+    vaccinated: false
+    symptomatic: true
+    hospitalized: true
+    hiv_status: negative
+  measurements:
+  - analyte: skin_lesion_swab
+    time: 8
+    value: 23
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 32
+  - analyte: blood
+    time: 8
+    value: 33

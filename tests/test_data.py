@@ -52,9 +52,9 @@ def load_and_validate(path: Path, skip_filename_check: bool = False):
             r"[a-z]+\d{4}[a-z]+\.yaml", path.name
         ), "File name must match the pattern `[author][year][first word of title]`."
 
-    with open("data/.schema.yaml") as fp:
+    with open("data/.schema.yaml", encoding="utf-8") as fp:
         schema = yaml.safe_load(fp)
-    with path.open() as fp:
+    with path.open(encoding="utf-8") as fp:
         data = yaml.safe_load(fp)
     jsonschema.validate(data, schema)
 

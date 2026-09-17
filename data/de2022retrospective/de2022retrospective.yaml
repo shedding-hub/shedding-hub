@@ -1,0 +1,143 @@
+title: Retrospective detection of asymptomatic monkeypox virus infections among male
+  sexual health clinic attendees in Belgium
+doi: 10.1038/s41591-022-02004-w
+description: Retrospective study at a Belgian sexual health clinic (Antwerp, Belgium)
+  in May 2022 that screened stored specimens originally collected for gonorrhea/chlamydia
+  testing for MPXV DNA. Leftover DNA extracts from 224 men were tested by MPXV PCR,
+  identifying four MPXV-DNA-positive cases (three asymptomatic at sampling and one
+  with a painful perianal rash). Follow-up anorectal swabs at days 21–37 were PCR
+  negative for asymptomatic cases. Orthopox PCR, viral culture, and serology (orthopox
+  IgG immunofluorescence) were used as confirmatory assays.
+analytes:
+  mpxv_pooled_swab:
+    description: MPXV real-time PCR (Ct values) performed on leftover DNA extract
+      from a pooled sample (combination of first-void urine, oropharyngeal swab, and
+      anorectal swab). PCR used primer sets targeting the MPXV-TNF receptor gene on
+      an Applied Biosystems QuantStudio platform (DNA extraction for GC/CT testing
+      via Abbott m2000sp; repeat extraction described with Maxwell Promega).
+    specimen:
+    - urine
+    - oropharyngeal_swab
+    - anorectal_swab
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  mpxv_anorectal_swab:
+    description: MPXV real-time PCR (Ct values) on anorectal swab-derived material
+      (leftover DNA extract and/or re-extracted original sample) using previously
+      described primer sets targeting the MPXV-TNF receptor gene on an Applied Biosystems
+      QuantStudio platform.
+    specimen: anorectal_swab
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  mpxv_oropharyngeal_swab:
+    description: MPXV real-time PCR result (Ct/qualitative) on oropharyngeal swab-derived
+      material using previously described primer sets targeting the MPXV-TNF receptor
+      gene on an Applied Biosystems QuantStudio platform.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    gene_target: MPXV-TNF receptor gene
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  orthopox_pooled_swab:
+    description: Pan-orthopoxvirus PCR (Ct values) on leftover DNA extract from a
+      pooled sample (combination of first-void urine, oropharyngeal swab, and anorectal
+      swab), performed as previously described in the cited method.
+    specimen:
+    - urine
+    - oropharyngeal_swab
+    - anorectal_swab
+    biomarker: orthopox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  orthopox_anorectal_swab:
+    description: Pan-orthopoxvirus PCR (Ct values) on anorectal swab-derived material,
+      performed as previously described in the cited method.
+    specimen: anorectal_swab
+    biomarker: orthopox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: false
+    hiv_status: positive
+  measurements:
+  - analyte: mpxv_pooled_swab
+    time: 0
+    value: 27.63
+  - analyte: mpxv_anorectal_swab
+    time: 0
+    value: 26.69
+  - analyte: mpxv_oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: orthopox_pooled_swab
+    time: 0
+    value: 30.35
+  - analyte: mpxv_anorectal_swab
+    time: 37
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: false
+    hiv_status: positive
+  measurements:
+  - analyte: mpxv_anorectal_swab
+    time: 0
+    value: 22.25
+  - analyte: mpxv_anorectal_swab
+    time: 0
+    value: 20.05
+  - analyte: orthopox_anorectal_swab
+    time: 0
+    value: 23.5
+  - analyte: mpxv_anorectal_swab
+    time: 21
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    symptomatic: false
+    hiv_status: positive
+  measurements:
+  - analyte: mpxv_anorectal_swab
+    time: 0
+    value: 19.19
+  - analyte: mpxv_anorectal_swab
+    time: 0
+    value: 17.16
+  - analyte: orthopox_anorectal_swab
+    time: 0
+    value: 21.43
+  - analyte: mpxv_anorectal_swab
+    time: 24
+    value: negative
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: mpxv_anorectal_swab
+    time: 0
+    value: 29.06
+  - analyte: mpxv_anorectal_swab
+    time: 0
+    value: 27.38
+  - analyte: orthopox_anorectal_swab
+    time: 0
+    value: 28.3
