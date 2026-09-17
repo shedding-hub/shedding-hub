@@ -1,0 +1,246 @@
+title: A Severe Form of Mpox Infection and the Current Epidemiological Status in Romania
+doi: 10.3390/microorganisms13081814
+description: Retrospective descriptive study of mpox epidemiology in Romania (national
+  surveillance in 2022–2023; 47 confirmed cases in 2022) plus a detailed severe-case
+  longitudinal shedding description from one immunocompromised male patient with AIDS
+  treated with tecovirimat. Monkeypox virus (MPXV) was detected by qPCR (genesig Advanced
+  kit) from multiple specimen types collected serially over ~5 months; the figure-derived
+  CSV provides Ct values over time for serum, skin lesion, saliva, urine, rectal swab,
+  nasal, and pharyngeal specimens for PatientID 1.
+analytes:
+  serum:
+    description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced
+      Kit (Primerdesign, UK) on nucleic acid extracted (QIAamp DSP Virus Kit) from
+      clinical samples collected in viral transport medium (VTM) and run on a Bio-Rad
+      CFX96; CSV values are Ct (cycle threshold) over time.
+    specimen: serum
+    biomarker: mpox
+    limit_of_detection: 40.2
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  skin:
+    description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced
+      Kit (Primerdesign, UK) on nucleic acid extracted (QIAamp DSP Virus Kit) from
+      clinical samples collected in viral transport medium (VTM) and run on a Bio-Rad
+      CFX96; CSV values are Ct (cycle threshold) over time.
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: 40.2
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  saliva:
+    description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced
+      Kit (Primerdesign, UK) on nucleic acid extracted (QIAamp DSP Virus Kit) from
+      clinical samples collected in viral transport medium (VTM) and run on a Bio-Rad
+      CFX96; CSV values are Ct (cycle threshold) over time.
+    specimen: saliva
+    biomarker: mpox
+    limit_of_detection: 40.2
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  urine:
+    description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced
+      Kit (Primerdesign, UK) on nucleic acid extracted (QIAamp DSP Virus Kit) from
+      clinical samples collected in viral transport medium (VTM) and run on a Bio-Rad
+      CFX96; CSV values are Ct (cycle threshold) over time.
+    specimen: urine
+    biomarker: mpox
+    limit_of_detection: 40.2
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  rectal_swab:
+    description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced
+      Kit (Primerdesign, UK) on nucleic acid extracted (QIAamp DSP Virus Kit) from
+      clinical samples collected in viral transport medium (VTM) and run on a Bio-Rad
+      CFX96; CSV values are Ct (cycle threshold) over time.
+    specimen: rectal_swab
+    biomarker: mpox
+    limit_of_detection: 40.2
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  nasal:
+    description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced
+      Kit (Primerdesign, UK) on nucleic acid extracted (QIAamp DSP Virus Kit) from
+      clinical samples collected in viral transport medium (VTM) and run on a Bio-Rad
+      CFX96; CSV values are Ct (cycle threshold) over time.
+    specimen: nasopharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: 40.2
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+  pharyngeal:
+    description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced
+      Kit (Primerdesign, UK) on nucleic acid extracted (QIAamp DSP Virus Kit) from
+      clinical samples collected in viral transport medium (VTM) and run on a Bio-Rad
+      CFX96; CSV values are Ct (cycle threshold) over time.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: 40.2
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: enrollment
+participants:
+- attributes:
+    sex: male
+    age: 34
+    age_group: adult
+    immune_status: immunocompromised
+    treatment: tecovirimat
+    hiv_status: positive
+  measurements:
+  - analyte: serum
+    time: 0
+    value: 36.05210354650923
+  - analyte: serum
+    time: 30
+    value: 29.993889599933944
+  - analyte: serum
+    time: 51
+    value: 21.966310226662813
+  - analyte: serum
+    time: 71
+    value: 28.90590809628009
+  - analyte: serum
+    time: 90
+    value: 33.87638825812312
+  - analyte: serum
+    time: 104
+    value: 36.87725527434871
+  - analyte: serum
+    time: 125
+    value: 39.35320589571034
+  - analyte: serum
+    time: 155
+    value: negative
+  - analyte: skin
+    time: 30
+    value: 17.980760497089303
+  - analyte: skin
+    time: 51
+    value: 15.007885719004172
+  - analyte: skin
+    time: 71
+    value: 17.02407002188184
+  - analyte: skin
+    time: 90
+    value: 18.974856529457917
+  - analyte: skin
+    time: 104
+    value: 23.945088972379345
+  - analyte: skin
+    time: 125
+    value: 28.915569134222373
+  - analyte: skin
+    time: 155
+    value: 37.89017794475868
+  - analyte: saliva
+    time: 30
+    value: 22.050782378927384
+  - analyte: saliva
+    time: 51
+    value: 17.108542174146407
+  - analyte: saliva
+    time: 71
+    value: 25.0328227571116
+  - analyte: saliva
+    time: 90
+    value: 31.972420626728876
+  - analyte: saliva
+    time: 104
+    value: 29.98447628091326
+  - analyte: saliva
+    time: 125
+    value: 35.93939143718262
+  - analyte: saliva
+    time: 155
+    value: 40.1877709425705
+  - analyte: urine
+    time: 30
+    value: 37.01795962181578
+  - analyte: urine
+    time: 51
+    value: 37.91817018289914
+  - analyte: urine
+    time: 71
+    value: 38.42450765864333
+  - analyte: urine
+    time: 90
+    value: 37.880764625738
+  - analyte: urine
+    time: 104
+    value: 39.96259444283886
+  - analyte: urine
+    time: 125
+    value: negative
+  - analyte: urine
+    time: 155
+    value: negative
+  - analyte: rectal_swab
+    time: 30
+    value: 18.96544321043723
+  - analyte: rectal_swab
+    time: 51
+    value: 18.02757937327113
+  - analyte: rectal_swab
+    time: 71
+    value: 21.881838074398253
+  - analyte: rectal_swab
+    time: 90
+    value: 18.974856529457917
+  - analyte: rectal_swab
+    time: 104
+    value: 37.86193798769664
+  - analyte: rectal_swab
+    time: 125
+    value: 39.878370009495896
+  - analyte: rectal_swab
+    time: 155
+    value: negative
+  - analyte: nasal
+    time: 30
+    value: 18.96544321043723
+  - analyte: nasal
+    time: 51
+    value: 15.992568432352096
+  - analyte: nasal
+    time: 71
+    value: 25.951859956236326
+  - analyte: nasal
+    time: 90
+    value: 27.96829197803559
+  - analyte: nasal
+    time: 104
+    value: 28.93390033442055
+  - analyte: nasal
+    time: 125
+    value: 36.92407415053054
+  - analyte: nasal
+    time: 155
+    value: 39.59671359564015
+  - analyte: pharyngeal
+    time: 30
+    value: 29.993889599933944
+  - analyte: pharyngeal
+    time: 51
+    value: 26.955369307625617
+  - analyte: pharyngeal
+    time: 71
+    value: 26.93654266958425
+  - analyte: pharyngeal
+    time: 90
+    value: 35.97704471326536
+  - analyte: pharyngeal
+    time: 104
+    value: 37.86193798769664
+  - analyte: pharyngeal
+    time: 125
+    value: 40.00941331902069
+  - analyte: pharyngeal
+    time: 155
+    value: negative

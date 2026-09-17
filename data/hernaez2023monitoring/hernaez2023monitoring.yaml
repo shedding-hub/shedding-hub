@@ -1,0 +1,638 @@
+title: 'Monitoring monkeypox virus in saliva and air samples in Spain: a cross-sectional
+  study'
+doi: 10.1016/S2666-5247(22)00291-9
+description: Cross-sectional study in Madrid, Spain (two health centres) during the
+  2022 mpox outbreak. Symptomatic patients with PCR-confirmed mpox were sampled within
+  the first week after symptom onset. Monkeypox virus DNA in saliva was measured by
+  qPCR (Ct and genome copies per mL). Infectious virus was assessed by cell culture
+  (BSC-1) in the parent study, but the provided figure-derived CSV contains saliva
+  qPCR Ct and genome copies/mL values at a single timepoint per patient relative to
+  symptom onset (days).
+analytes:
+  ct_saliva:
+    description: Monkeypox virus (MPXV) DNA detection in saliva by quantitative PCR
+      (qPCR). Samples run in triplicate; positivity defined in study as Ct<35 with
+      at least 2/3 replicates positive. CSV provides mean Ct values per participant
+      sample.
+    specimen: saliva
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  gc_ml_saliva:
+    description: Monkeypox virus (MPXV) DNA concentration in saliva quantified by
+      qPCR via Ct interpolation on a plasmid standard curve; reported as genome copies
+      per mL of saliva (gc/mL).
+    specimen: saliva
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 7
+    value: 20.7
+  - analyte: gc_ml_saliva
+    time: 7
+    value: 1830000
+- attributes:
+    sex: male
+    age: 25
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 7
+    value: 26.3
+  - analyte: gc_ml_saliva
+    time: 7
+    value: 20300
+- attributes:
+    sex: male
+    age: 45
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 28.5
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 8760
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 7
+    value: negative
+  - analyte: gc_ml_saliva
+    time: 7
+    value: negative
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 26.6
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 39500
+- attributes:
+    sex: male
+    age: 27
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: inconclusive
+  - analyte: gc_ml_saliva
+    time: 4
+    value: inconclusive
+- attributes:
+    sex: male
+    age: 25
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 2
+    value: 22.6
+  - analyte: gc_ml_saliva
+    time: 2
+    value: 1130000
+- attributes:
+    sex: male
+    age: 49
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 8
+    value: 21.82
+  - analyte: gc_ml_saliva
+    time: 8
+    value: 4220000
+- attributes:
+    sex: male
+    age: 35
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 1
+    value: 28.15
+  - analyte: gc_ml_saliva
+    time: 1
+    value: 22000
+- attributes:
+    sex: male
+    age: 23
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 6
+    value: 18.21
+  - analyte: gc_ml_saliva
+    time: 6
+    value: 76600000
+- attributes:
+    sex: male
+    age: 30
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 3
+    value: 26.04
+  - analyte: gc_ml_saliva
+    time: 3
+    value: 92000
+- attributes:
+    sex: male
+    age: 43
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 8
+    value: 28.31
+  - analyte: gc_ml_saliva
+    time: 8
+    value: 63300
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 7
+    value: negative
+  - analyte: gc_ml_saliva
+    time: 7
+    value: negative
+- attributes:
+    sex: male
+    age: 49
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 5
+    value: 22.46
+  - analyte: gc_ml_saliva
+    time: 5
+    value: 1090000
+- attributes:
+    sex: male
+    age: 37
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 20.17
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 12800000
+- attributes:
+    sex: male
+    age: 52
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 5
+    value: 24.22
+  - analyte: gc_ml_saliva
+    time: 5
+    value: 1140000
+- attributes:
+    sex: male
+    age: 40
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 22.23
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 2750000
+- attributes:
+    sex: male
+    age: 28
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 3
+    value: 29.7
+  - analyte: gc_ml_saliva
+    time: 3
+    value: 17300
+- attributes:
+    sex: male
+    age: 46
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 24.52
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 917000
+- attributes:
+    sex: male
+    age: 38
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 6
+    value: 27.08
+  - analyte: gc_ml_saliva
+    time: 6
+    value: 201000
+- attributes:
+    sex: male
+    age: 34
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 3
+    value: 25.92
+  - analyte: gc_ml_saliva
+    time: 3
+    value: 579000
+- attributes:
+    sex: male
+    age: 36
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 6
+    value: negative
+  - analyte: gc_ml_saliva
+    time: 6
+    value: negative
+- attributes:
+    sex: male
+    age: 33
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 28.49
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 16500
+- attributes:
+    sex: male
+    age: 47
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 5
+    value: 24.31
+  - analyte: gc_ml_saliva
+    time: 5
+    value: 381000
+- attributes:
+    sex: male
+    age: 35
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 8
+    value: 27.7
+  - analyte: gc_ml_saliva
+    time: 8
+    value: 33200
+- attributes:
+    sex: male
+    age: 35
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 8
+    value: 19.75
+  - analyte: gc_ml_saliva
+    time: 8
+    value: 14800000
+- attributes:
+    sex: male
+    age: 42
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 24.07
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 370000
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 7
+    value: 21.86
+  - analyte: gc_ml_saliva
+    time: 7
+    value: 2730000
+- attributes:
+    sex: male
+    age: 33
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 7
+    value: 21.86
+  - analyte: gc_ml_saliva
+    time: 7
+    value: 2710000
+- attributes:
+    sex: male
+    age: 36
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 3
+    value: negative
+  - analyte: gc_ml_saliva
+    time: 3
+    value: negative
+- attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 6
+    value: 27.04
+  - analyte: gc_ml_saliva
+    time: 6
+    value: 67600
+- attributes:
+    sex: male
+    age: 58
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 9
+    value: 31.48
+  - analyte: gc_ml_saliva
+    time: 9
+    value: 1330
+- attributes:
+    sex: male
+    age: 27
+    age_group: adult
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 9
+    value: 23.27
+  - analyte: gc_ml_saliva
+    time: 9
+    value: 450000
+- attributes:
+    sex: male
+    age: 48
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 5
+    value: 20.97
+  - analyte: gc_ml_saliva
+    time: 5
+    value: 2780000
+- attributes:
+    sex: male
+    age: 54
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 2
+    value: 32.25
+  - analyte: gc_ml_saliva
+    time: 2
+    value: 1130
+- attributes:
+    sex: male
+    age: 35
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 5
+    value: 20.2
+  - analyte: gc_ml_saliva
+    time: 5
+    value: 6850000
+- attributes:
+    sex: male
+    symptomatic: true
+    participant_type: patient
+  measurements:
+  - analyte: ct_saliva
+    time: unknown
+    value: negative
+  - analyte: gc_ml_saliva
+    time: unknown
+    value: negative
+- attributes:
+    sex: male
+    age: 34
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: positive
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 21.85
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 7230000
+- attributes:
+    sex: male
+    age: 29
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 3
+    value: 21.71
+  - analyte: gc_ml_saliva
+    time: 3
+    value: 8580000
+- attributes:
+    sex: male
+    age: 44
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 6
+    value: 25.79
+  - analyte: gc_ml_saliva
+    time: 6
+    value: 353000
+- attributes:
+    sex: male
+    age: 33
+    age_group: adult
+    vaccinated: false
+    symptomatic: true
+    participant_type: patient
+    hiv_status: negative
+  measurements:
+  - analyte: ct_saliva
+    time: 4
+    value: 17.67
+  - analyte: gc_ml_saliva
+    time: 4
+    value: 39000000

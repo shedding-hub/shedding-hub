@@ -1,0 +1,28 @@
+﻿PatientID,time,value,specimen,sex,age,HIV_status,vaccinated,symptom_status,hospitalization
+1,9,16,skin lesion swab,M,30s,negative,no,symptomatic,No
+1,9,30,nasopharyngeal swab,M,30s,negative,no,symptomatic,No
+1,9,35,blood,M,30s,negative,no,symptomatic,No
+2,11,17,skin lesion swab,M,30s,positive,no,symptomatic,No
+2,11,30,nasopharyngeal swab,M,30s,positive,no,symptomatic,No
+2,11,32,blood,M,30s,positive,no,symptomatic,No
+3,5,35,skin lesion swab,F,70s,negative,smallpox,symptomatic,Yes
+3,5,negative,nasopharyngeal swab,F,70s,negative,smallpox,symptomatic,Yes
+3,5,negative,blood,F,70s,negative,smallpox,symptomatic,Yes
+4,7,20,skin lesion swab,M,30s,negative,no,symptomatic,No
+4,7,35,blood,M,30s,negative,no,symptomatic,No
+5,4,20,skin lesion swab,M,30s,positive,no,symptomatic,No
+5,4,30,nasopharyngeal swab,M,30s,positive,no,symptomatic,No
+5,4,32,blood,M,30s,positive,no,symptomatic,No
+6,6,17,skin lesion swab,M,20s,positive,no,symptomatic,Yes
+6,6,31,nasopharyngeal swab,M,20s,positive,no,symptomatic,Yes
+6,6,negative,blood,M,20s,positive,no,symptomatic,Yes
+7,12,23,skin lesion swab,M,30s,negative,no,symptomatic,No
+7,12,negative,nasopharyngeal swab,M,30s,negative,no,symptomatic,No
+7,12,35,blood,M,30s,negative,no,symptomatic,No
+8,2,20,skin lesion swab,M,30s,negative,no,symptomatic,Yes
+9,17,21,skin lesion swab,M,30s,positive,no,symptomatic,No
+9,17,40,nasopharyngeal swab,M,30s,positive,no,symptomatic,No
+9,17,negative,blood,M,30s,positive,no,symptomatic,No
+10,8,23,skin lesion swab,F,20s,negative,no,symptomatic,Yes
+10,8,32,nasopharyngeal swab,F,20s,negative,no,symptomatic,Yes
+10,8,33,blood,F,20s,negative,no,symptomatic,Yes

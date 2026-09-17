@@ -1,0 +1,111 @@
+title: Tecovirimat Resistance in an Immunocompromised Patient With Mpox and Prolonged
+  Viral Shedding
+doi: 10.7326/L23-0131
+description: Letter reporting longitudinal PCR measurements in one immunocompromised
+  adult patient with mpox receiving tecovirimat, including MPXV Ct values from an
+  anal lesion and plasma over time, and plasma HIV viral load (gc/mL). Times are provided
+  as day offsets relative to an unspecified reference event in the CSV.
+analytes:
+  anal_lesion_mpxv_ct:
+    description: MPXV PCR cycle threshold (Ct) measured from anal lesion specimen
+      (as labeled in the figure-data CSV). Assay platform/gene target not provided
+      in supplied content.
+    specimen: genital_or_rectal_lesion
+    biomarker: mpox
+    limit_of_detection: 45
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: treatment
+  plasma_mpxv_ct:
+    description: MPXV PCR cycle threshold (Ct) measured in plasma (as labeled in the
+      figure-data CSV). Assay platform/gene target not provided in supplied content.
+    specimen: plasma
+    biomarker: mpox
+    limit_of_detection: 45
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: treatment
+  plasma_hiv_gc_ml:
+    description: HIV viral load quantified in plasma in gene copies per mL (gc/mL),
+      as provided in the figure-data CSV. Assay details not provided in supplied content.
+    specimen: plasma
+    biomarker: HIV
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: gc/mL
+    reference_event: treatment
+participants:
+- attributes:
+    sex: male
+    age: 53
+    age_group: adult
+    vaccinated: true
+    immune_status: immunocompromised
+    treatment: tecovirimat
+  measurements:
+  - analyte: anal_lesion_mpxv_ct
+    time: -87
+    value: 15.11210762331838
+  - analyte: anal_lesion_mpxv_ct
+    time: -9
+    value: 17.66816143497757
+  - analyte: anal_lesion_mpxv_ct
+    time: -2
+    value: 20.089686098654703
+  - analyte: anal_lesion_mpxv_ct
+    time: 5
+    value: 19.82062780269058
+  - analyte: anal_lesion_mpxv_ct
+    time: 11
+    value: 28.4304932735426
+  - analyte: anal_lesion_mpxv_ct
+    time: 16
+    value: 21.973094170403584
+  - analyte: anal_lesion_mpxv_ct
+    time: 25
+    value: 21.83856502242152
+  - analyte: anal_lesion_mpxv_ct
+    time: 31
+    value: 20.35874439461883
+  - analyte: anal_lesion_mpxv_ct
+    time: 48
+    value: 21.70403587443945
+  - analyte: anal_lesion_mpxv_ct
+    time: 61
+    value: 29.506726457399104
+  - analyte: anal_lesion_mpxv_ct
+    time: 88
+    value: 33.81165919282511
+  - analyte: plasma_mpxv_ct
+    time: -80
+    value: 39.59641255605381
+  - analyte: plasma_mpxv_ct
+    time: -4
+    value: 37.98206278026906
+  - analyte: plasma_mpxv_ct
+    time: 2
+    value: 36.09865470852017
+  - analyte: plasma_mpxv_ct
+    time: 11
+    value: 38.78923766816144
+  - analyte: plasma_mpxv_ct
+    time: 16
+    value: 43.22869955156951
+  - analyte: plasma_mpxv_ct
+    time: 25
+    value: negative
+  - analyte: plasma_mpxv_ct
+    time: 48
+    value: negative
+  - analyte: plasma_mpxv_ct
+    time: 88
+    value: negative
+  - analyte: plasma_hiv_gc_ml
+    time: -87
+    value: 523000
+  - analyte: plasma_hiv_gc_ml
+    time: -4
+    value: 99.13810232584649
+  - analyte: plasma_hiv_gc_ml
+    time: 48
+    value: 45.48777947003768

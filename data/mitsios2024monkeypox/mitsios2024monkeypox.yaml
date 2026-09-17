@@ -1,0 +1,61 @@
+title: 'Monkeypox-related ophthalmic disease (MPXROD): Monitoring the antiviral effect
+  of tecovirimat with monkeypox virus detection in tear samples'
+doi: 10.1177/11206721241272199
+description: Case report of mpox-related ophthalmic disease treated with tecovirimat,
+  monitoring mpox virus (MPXV) detection in tear-wash samples using real-time PCR
+  over time in both eyes (OD and OS). One adult male patient (HIV-positive) had serial
+  tear-wash measurements reported at days 0, 7, 14, and 28 relative to treatment initiation
+  (tecovirimat).
+analytes:
+  od_tear_wash:
+    description: MPXV-DNA detection in right-eye (OD) tear-wash sample by real-time
+      PCR (RT-PCR) on tear-wash aspirated after instillation of saline onto the ocular
+      surface; values reported as provided in figure-data CSV.
+    specimen: tear
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: treatment
+  os_tear_wash:
+    description: MPXV-DNA detection in left-eye (OS) tear-wash sample by real-time
+      PCR (RT-PCR) on tear-wash aspirated after instillation of saline onto the ocular
+      surface; values reported as provided in figure-data CSV.
+    specimen: tear
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: treatment
+participants:
+- attributes:
+    sex: male
+    age: 52
+    age_group: adult
+    hiv_status: positive
+    treatment: tecovirimat
+  measurements:
+  - analyte: od_tear_wash
+    time: 0
+    value: 22
+  - analyte: os_tear_wash
+    time: 0
+    value: 33
+  - analyte: od_tear_wash
+    time: 7
+    value: 25
+  - analyte: os_tear_wash
+    time: 7
+    value: negative
+  - analyte: od_tear_wash
+    time: 14
+    value: 33
+  - analyte: os_tear_wash
+    time: 14
+    value: negative
+  - analyte: od_tear_wash
+    time: 28
+    value: negative
+  - analyte: os_tear_wash
+    time: 28
+    value: negative

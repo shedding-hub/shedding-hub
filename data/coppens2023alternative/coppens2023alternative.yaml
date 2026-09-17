@@ -1,0 +1,299 @@
+title: Alternative sampling specimens for the molecular detection of mpox (formerly
+  monkeypox) virus
+doi: 10.1016/j.jcv.2022.105372
+description: Study of 25 patients with MPXV-confirmed skin lesions presenting for
+  initial diagnostic workup at the Institute of Tropical Medicine sexual health clinic
+  (Antwerp, Belgium). EDTA plasma, oropharyngeal swab, and saliva were collected at
+  the same visit and tested by MPXV real-time PCR (generic primers/probe) to compare
+  Ct values and diagnostic sensitivity across specimen types.
+analytes:
+  plasma:
+    description: Mpox virus (MPXV) DNA detection by real-time PCR on EDTA plasma.
+      DNA extracted manually (QIAamp DNA Mini kit; 200 µL input, 100 µL elution) or
+      automatically (Maxwell; 300 µL input, 75 µL elution) with extraction method
+      kept identical within compared pairs; PCR with PerfeCTa FastMix II and MPXV
+      generic primers/probe; QuantStudio 5 instrument. Reported outcome is Ct value.
+    specimen: plasma
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  oropharyngeal_swab:
+    description: Mpox virus (MPXV) DNA detection by real-time PCR on oropharyngeal
+      (throat) swab collected using Copan ESwab containing 1 mL Liquid Amies medium.
+      DNA extracted manually (QIAamp DNA Mini kit; 200 µL input, 100 µL elution) or
+      automatically (Maxwell; 300 µL input, 75 µL elution) with extraction method
+      kept identical within compared pairs; PCR with PerfeCTa FastMix II and MPXV
+      generic primers/probe; QuantStudio 5 instrument. Reported outcome is Ct value.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  saliva:
+    description: Mpox virus (MPXV) DNA detection by real-time PCR on saliva (>=1 mL)
+      self-collected into an OMNIgene·ORAL collection tube containing a proprietary
+      viral DNA stabilizing solution. DNA extracted manually (QIAamp DNA Mini kit;
+      200 µL input, 100 µL elution) or automatically (Maxwell; 300 µL input, 75 µL
+      elution) with extraction method kept identical within compared pairs; PCR with
+      PerfeCTa FastMix II and MPXV generic primers/probe; QuantStudio 5 instrument.
+      Reported outcome is Ct value.
+    specimen: saliva
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 35.54
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 26.77
+  - analyte: saliva
+    time: 0
+    value: 30.94
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 37.72
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: 41.08
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 34.84
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 39.07
+  - analyte: saliva
+    time: 0
+    value: 36.71
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 38.87
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 37.94
+  - analyte: saliva
+    time: 0
+    value: 33.85
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 33.44
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: 37.05
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 37.51
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 25.54
+  - analyte: saliva
+    time: 0
+    value: 25.71
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 39.9
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 32.66
+  - analyte: saliva
+    time: 0
+    value: 33.61
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 38.41
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 35.98
+  - analyte: saliva
+    time: 0
+    value: 23.85
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 37.54
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 33.86
+  - analyte: saliva
+    time: 0
+    value: 25.15
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: negative
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 32.74
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 34.98
+  - analyte: saliva
+    time: 0
+    value: 29.13
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: negative
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 39.16
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: 22.76
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 40.58
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 36.39
+  - analyte: saliva
+    time: 0
+    value: 30.23
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 37.27
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 37.02
+  - analyte: saliva
+    time: 0
+    value: 28.23
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: 37.51
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 36.6
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 36.12
+  - analyte: saliva
+    time: 0
+    value: 35.17
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 36.11
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: 37.32
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 39.77
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 31.09
+  - analyte: saliva
+    time: 0
+    value: 25.43
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 35.41
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: 29.9
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 34.77
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 37.61
+  - analyte: saliva
+    time: 0
+    value: negative
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 36.59
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 31.76
+  - analyte: saliva
+    time: 0
+    value: 23.02
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: 35.83
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 35.16
+  - analyte: saliva
+    time: 0
+    value: 25.64
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: 36.14
+  - analyte: saliva
+    time: 0
+    value: 31.03
+- measurements:
+  - analyte: plasma
+    time: 0
+    value: negative
+  - analyte: oropharyngeal_swab
+    time: 0
+    value: negative
+  - analyte: saliva
+    time: 0
+    value: 31.11

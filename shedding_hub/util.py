@@ -102,7 +102,7 @@ def load_dataset(
     # If we have a local file, just read it.
     if local:
         path = (pathlib.Path(local) / dataset / dataset).with_suffix(".yaml")
-        with path.open() as fp:
+        with path.open(encoding="utf-8") as fp:
             data = yaml.safe_load(fp)
         data["dataset_id"] = dataset
         return data

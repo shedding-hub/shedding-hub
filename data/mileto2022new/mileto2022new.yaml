@@ -1,0 +1,164 @@
+title: 'New challenges in human monkeypox outside Africa: A review and case report
+  from Italy'
+doi: 10.1016/j.tmaid.2022.102386
+description: Case report (with review) describing an Italian adult male diagnosed
+  with mpox (monkeypox virus, MPXV) in Milan, Italy (May 2022). Serial sampling from
+  multiple body sites was tested by real-time PCR (Ct values reported) and viral isolation
+  in Vero E6 cells; Table 1/figure CSV provide Ct time series by days from symptom
+  onset for several specimen types (oropharyngeal swab, ulcerated perianal lesion,
+  rectal/anal swab, foot lesion, plasma, seminal fluid, urine).
+analytes:
+  ct_oropharyngeal_swab:
+    description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)
+      on oropharyngeal swab; Orthopoxvirus screening PCR (RealStar Orthopoxvirus PCR
+      Kit 1.0, altona DIAGNOSTICS, targeting variola virus and non-variola Orthopoxvirus
+      species) with MPXV confirmation by a specific homemade real-time PCR on screening-positive
+      samples. Ct=40 used as PCR negative cut-off.
+    specimen: oropharyngeal_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_ulcerated_perianal_lesion:
+    description: MPXV DNA detection by real-time PCR reported as Ct on ulcerated perianal
+      lesion swab; Orthopoxvirus screening PCR (RealStar Orthopoxvirus PCR Kit 1.0,
+      altona DIAGNOSTICS) with MPXV confirmation by homemade real-time PCR on screening-positive
+      samples. Ct=40 used as PCR negative cut-off.
+    specimen: genital_or_rectal_lesion
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_anorectal_swab:
+    description: MPXV DNA detection by real-time PCR reported as Ct on anal swab;
+      Orthopoxvirus screening PCR (RealStar Orthopoxvirus PCR Kit 1.0, altona
+      DIAGNOSTICS) with MPXV confirmation by homemade real-time PCR on screening-positive
+      samples. Ct=40 used as PCR negative cut-off.
+    specimen: anorectal_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_foot_lesion:
+    description: MPXV DNA detection by real-time PCR reported as Ct on foot lesion
+      sample; Orthopoxvirus screening PCR (RealStar Orthopoxvirus PCR Kit 1.0, altona
+      DIAGNOSTICS) with MPXV confirmation by homemade real-time PCR on screening-positive
+      samples. Ct=40 used as PCR negative cut-off.
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_plasma:
+    description: MPXV DNA detection by real-time PCR reported as Ct in plasma; Orthopoxvirus
+      screening PCR (RealStar Orthopoxvirus PCR Kit 1.0, altona DIAGNOSTICS) with
+      MPXV confirmation by homemade real-time PCR on screening-positive samples. Ct=40
+      used as PCR negative cut-off.
+    specimen: plasma
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_seminal_fluid:
+    description: MPXV DNA detection by real-time PCR reported as Ct in seminal fluid;
+      Orthopoxvirus screening PCR (RealStar Orthopoxvirus PCR Kit 1.0, altona DIAGNOSTICS)
+      with MPXV confirmation by homemade real-time PCR on screening-positive samples.
+      Ct=40 used as PCR negative cut-off.
+    specimen: semen
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  ct_urine:
+    description: MPXV DNA detection by real-time PCR reported as Ct in urine; Orthopoxvirus
+      screening PCR (RealStar Orthopoxvirus PCR Kit 1.0, altona DIAGNOSTICS) with
+      MPXV confirmation by homemade real-time PCR on screening-positive samples. Ct=40
+      used as PCR negative cut-off.
+    specimen: urine
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 33
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: ct_oropharyngeal_swab
+    time: 9
+    value: 23
+  - analyte: ct_ulcerated_perianal_lesion
+    time: 9
+    value: 20
+  - analyte: ct_anorectal_swab
+    time: 9
+    value: 17
+  - analyte: ct_foot_lesion
+    time: 9
+    value: 14
+  - analyte: ct_oropharyngeal_swab
+    time: 10
+    value: 36
+  - analyte: ct_ulcerated_perianal_lesion
+    time: 10
+    value: 20
+  - analyte: ct_plasma
+    time: 10
+    value: 33
+  - analyte: ct_seminal_fluid
+    time: 10
+    value: 31
+  - analyte: ct_urine
+    time: 10
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 11
+    value: 33
+  - analyte: ct_ulcerated_perianal_lesion
+    time: 11
+    value: 22
+  - analyte: ct_plasma
+    time: 11
+    value: 33
+  - analyte: ct_oropharyngeal_swab
+    time: 12
+    value: 33
+  - analyte: ct_anorectal_swab
+    time: 12
+    value: 22
+  - analyte: ct_plasma
+    time: 12
+    value: 34
+  - analyte: ct_oropharyngeal_swab
+    time: 15
+    value: negative
+  - analyte: ct_anorectal_swab
+    time: 15
+    value: negative
+  - analyte: ct_plasma
+    time: 15
+    value: negative
+  - analyte: ct_urine
+    time: 15
+    value: negative
+  - analyte: ct_oropharyngeal_swab
+    time: 19
+    value: 35
+  - analyte: ct_anorectal_swab
+    time: 19
+    value: negative
+  - analyte: ct_plasma
+    time: 19
+    value: negative
+  - analyte: ct_urine
+    time: 19
+    value: negative

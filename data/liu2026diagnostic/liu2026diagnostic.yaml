@@ -1,0 +1,484 @@
+title: Diagnostic performance of a field-deployable iiPCR platform and viral load
+  dynamics of MPXV Clade IIb in a cohort with high prevalence of HIV
+doi: 10.1080/07853890.2026.2705009
+description: Prospective single-center study (Kaohsiung Medical University Hospital,
+  Taiwan) enrolling 24 qPCR-confirmed mpox (MPXV Clade IIb) patients (2023–2024) to
+  evaluate the POCKIT Central MPXV iiPCR platform versus reference qPCR and to describe
+  MPXV viral load dynamics by specimen type using qPCR Ct values relative to days
+  post-symptom onset. Specimens included lesion-derived materials (pus, vesicular
+  fluid, skin/oral swabs), nasopharyngeal swabs, urine, and plasma. qPCR targeted
+  the MPXV G2R (TNF receptor) gene; iiPCR used manufacturer reagents on an automated
+  sample-to-answer platform. CSV-provided data contain per-patient, per-day qPCR Ct
+  measurements (including negatives) for multiple specimen types timed by days post-symptom
+  onset.
+analytes:
+  pus:
+    description: MPXV qPCR cycle threshold (Ct) values measured from lesion-derived
+      pus specimens; qPCR performed after nucleic acid extraction (QIAamp MinElute
+      Virus Spin Kit) using a real-time PCR assay targeting MPXV G2R (TNF receptor
+      gene) on an Mx3000P instrument. Time is reported as days post-symptom onset.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  nasopharyngeal_swab:
+    description: MPXV qPCR cycle threshold (Ct) values measured from nasopharyngeal
+      swab specimens; qPCR performed after nucleic acid extraction (QIAamp MinElute
+      Virus Spin Kit) using a real-time PCR assay targeting MPXV G2R (TNF receptor
+      gene) on an Mx3000P instrument. Time is reported as days post-symptom onset.
+    specimen: nasopharyngeal_swab
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  vesicular_fluid:
+    description: MPXV qPCR cycle threshold (Ct) values measured from lesion-derived
+      vesicular fluid specimens; qPCR performed after nucleic acid extraction (QIAamp
+      MinElute Virus Spin Kit) using a real-time PCR assay targeting MPXV G2R (TNF
+      receptor gene) on an Mx3000P instrument. Time is reported as days post-symptom
+      onset.
+    specimen: vesicle_swab
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  skin_swab_foreskin:
+    description: MPXV qPCR cycle threshold (Ct) values measured from a foreskin skin
+      swab specimen; qPCR performed after nucleic acid extraction (QIAamp MinElute
+      Virus Spin Kit) using a real-time PCR assay targeting MPXV G2R (TNF receptor
+      gene) on an Mx3000P instrument. Time is reported as days post-symptom onset.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  urine:
+    description: MPXV qPCR cycle threshold (Ct) values measured from urine specimens;
+      qPCR performed after nucleic acid extraction (QIAamp MinElute Virus Spin Kit)
+      using a real-time PCR assay targeting MPXV G2R (TNF receptor gene) on an Mx3000P
+      instrument. Time is reported as days post-symptom onset.
+    specimen: urine
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  plasma:
+    description: MPXV qPCR cycle threshold (Ct) values measured from plasma specimens;
+      qPCR performed after nucleic acid extraction (QIAamp MinElute Virus Spin Kit)
+      using a real-time PCR assay targeting MPXV G2R (TNF receptor gene) on an Mx3000P
+      instrument. Time is reported as days post-symptom onset.
+    specimen: plasma
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  skin_swab:
+    description: MPXV qPCR cycle threshold (Ct) values measured from skin swab specimens;
+      qPCR performed after nucleic acid extraction (QIAamp MinElute Virus Spin Kit)
+      using a real-time PCR assay targeting MPXV G2R (TNF receptor gene) on an Mx3000P
+      instrument. Time is reported as days post-symptom onset.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  mucosal_swab_oral:
+    description: MPXV qPCR cycle threshold (Ct) values measured from oral mucosal
+      swab specimens; qPCR performed after nucleic acid extraction (QIAamp MinElute
+      Virus Spin Kit) using a real-time PCR assay targeting MPXV G2R (TNF receptor
+      gene) on an Mx3000P instrument. Time is reported as days post-symptom onset.
+    specimen: mucosal_lesion_swab
+    biomarker: mpox
+    gene_target: G2R (TNF receptor gene)
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 4
+    value: 23.63
+  - analyte: nasopharyngeal_swab
+    time: 4
+    value: 36.04
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 0
+    value: 19
+  - analyte: nasopharyngeal_swab
+    time: 0
+    value: 29
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 10
+    value: 27.56
+  - analyte: nasopharyngeal_swab
+    time: 10
+    value: 33.31
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 2
+    value: 22.73
+  - analyte: vesicular_fluid
+    time: 2
+    value: 24.6
+  - analyte: nasopharyngeal_swab
+    time: 2
+    value: 27.93
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 0
+    value: 32
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 7
+    value: 25.35
+  - analyte: vesicular_fluid
+    time: 7
+    value: 24.73
+  - analyte: nasopharyngeal_swab
+    time: 7
+    value: 39.2
+  - analyte: skin_swab_foreskin
+    time: 8
+    value: 23.47
+  - analyte: skin_swab_foreskin
+    time: 8
+    value: 25.58
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 39.56
+  - analyte: urine
+    time: 8
+    value: 33.67
+  - analyte: plasma
+    time: 8
+    value: 40.96
+  - analyte: urine
+    time: 9
+    value: 32.64
+  - analyte: plasma
+    time: 9
+    value: 42.81
+  - analyte: skin_swab
+    time: 14
+    value: 19.2
+  - analyte: skin_swab
+    time: 14
+    value: 19.56
+  - analyte: skin_swab
+    time: 14
+    value: 22.52
+  - analyte: nasopharyngeal_swab
+    time: 14
+    value: 32.63
+  - analyte: urine
+    time: 14
+    value: 34.1
+  - analyte: plasma
+    time: 14
+    value: negative
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 8
+    value: 24
+  - analyte: vesicular_fluid
+    time: 8
+    value: 20.8
+  - analyte: nasopharyngeal_swab
+    time: 8
+    value: 36
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 7
+    value: 21.9
+  - analyte: vesicular_fluid
+    time: 7
+    value: 31.19
+  - analyte: nasopharyngeal_swab
+    time: 7
+    value: negative
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: vesicular_fluid
+    time: 4
+    value: 26.4
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 1
+    value: 23.5
+  - analyte: vesicular_fluid
+    time: 1
+    value: 36.9
+  - analyte: nasopharyngeal_swab
+    time: 1
+    value: 35.3
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 1
+    value: 25.66
+  - analyte: vesicular_fluid
+    time: 1
+    value: 27.1
+  - analyte: nasopharyngeal_swab
+    time: 1
+    value: 25.4
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 12
+    value: 22.12
+  - analyte: nasopharyngeal_swab
+    time: 12
+    value: negative
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 5
+    value: 21.1
+  - analyte: vesicular_fluid
+    time: 5
+    value: 35
+  - analyte: nasopharyngeal_swab
+    time: 5
+    value: 26.6
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 3
+    value: 27.9
+  - analyte: vesicular_fluid
+    time: 3
+    value: 22.9
+  - analyte: nasopharyngeal_swab
+    time: 3
+    value: 32.3
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 6
+    value: 20.35
+  - analyte: vesicular_fluid
+    time: 6
+    value: 28.8
+  - analyte: nasopharyngeal_swab
+    time: 6
+    value: 34.82
+  - analyte: urine
+    time: 6
+    value: 36.48
+  - analyte: urine
+    time: 11
+    value: 12
+  - analyte: plasma
+    time: 11
+    value: negative
+  - analyte: skin_swab
+    time: 12
+    value: 18.46
+  - analyte: nasopharyngeal_swab
+    time: 12
+    value: 27.45
+  - analyte: skin_swab
+    time: 18
+    value: 30.54
+  - analyte: nasopharyngeal_swab
+    time: 18
+    value: 39.95
+  - analyte: urine
+    time: 18
+    value: negative
+  - analyte: plasma
+    time: 18
+    value: negative
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 14
+    value: 31.46
+  - analyte: vesicular_fluid
+    time: 14
+    value: 33.07
+  - analyte: nasopharyngeal_swab
+    time: 14
+    value: negative
+  - analyte: urine
+    time: 14
+    value: negative
+  - analyte: plasma
+    time: 14
+    value: negative
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 1
+    value: 18
+  - analyte: vesicular_fluid
+    time: 1
+    value: 18.3
+  - analyte: nasopharyngeal_swab
+    time: 1
+    value: 38
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 3
+    value: 24.3
+  - analyte: vesicular_fluid
+    time: 3
+    value: 33.9
+  - analyte: nasopharyngeal_swab
+    time: 3
+    value: 29.9
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 14
+    value: 25.9
+  - analyte: nasopharyngeal_swab
+    time: 14
+    value: 30.6
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 4
+    value: 23.19
+  - analyte: vesicular_fluid
+    time: 4
+    value: 25.7
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: vesicular_fluid
+    time: 3
+    value: 23.2
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: vesicular_fluid
+    time: 3
+    value: 30.987
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 9
+    value: 23.5
+  - analyte: vesicular_fluid
+    time: 9
+    value: 33
+  - analyte: nasopharyngeal_swab
+    time: 9
+    value: negative
+- attributes:
+    sex: male
+    subtype: Clade IIb MPXV
+    participant_type: patient
+  measurements:
+  - analyte: pus
+    time: 9
+    value: 23.43
+  - analyte: vesicular_fluid
+    time: 9
+    value: 24.63
+  - analyte: mucosal_swab_oral
+    time: 9
+    value: 25.69
+  - analyte: nasopharyngeal_swab
+    time: 9
+    value: 37.86
+  - analyte: urine
+    time: 9
+    value: negative

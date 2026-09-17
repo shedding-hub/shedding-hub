@@ -1,6 +1,6 @@
 {
-  "n_fits": 184,
-  "n_datasets": 64,
+  "n_fits": 192,
+  "n_datasets": 66,
   "models": [
     "exponential",
     "gamma",
@@ -1011,6 +1011,112 @@
       },
       "fit": {
         "aic": 175.15708797005612,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "colavita2023kinetics",
+      "analyte": "oropharyngeal_swab_gc_ng",
+      "model": "exponential",
+      "biomarker": "mpox",
+      "specimen": "oropharyngeal_swab",
+      "unit": "gc/ng",
+      "reference_event": "symptom onset",
+      "gene_target": "CrmB",
+      "parameters": {
+        "a0": 0.12900300115267788,
+        "c0": 4.873401935424501
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 2.152693986887437,
+        "half_life_days": 5.373108953795504
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -2.047919610141644,
+          2.116491568651488
+        ],
+        "covariance": [
+          [
+            2.950816655574774,
+            4.027453325825042
+          ],
+          [
+            4.027453325825042,
+            5.589099379826862
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.6636404100262808,
+      "censoring_limit_log10": -0.6003262785189618,
+      "data": {
+        "n_subjects": 3,
+        "n_measurements": 9,
+        "pct_censored": 11.11111111111111,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 5.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 30.468458432574007,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "colavita2023kinetics",
+      "analyte": "saliva_gc_ng",
+      "model": "exponential",
+      "biomarker": "mpox",
+      "specimen": "saliva",
+      "unit": "gc/ng",
+      "reference_event": "symptom onset",
+      "gene_target": "CrmB",
+      "parameters": {
+        "a0": 0.44660398747874364,
+        "c0": 7.174051995379118
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 3.127612888424491,
+        "half_life_days": 1.5520398384103904
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.806083011092106,
+          3.1156511944801637
+        ],
+        "covariance": [
+          [
+            0.30339044630692064,
+            0.3848958337730183
+          ],
+          [
+            0.3848958337730183,
+            0.7003170630397025
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8998280710000317,
+      "censoring_limit_log10": -0.6003262785189618,
+      "data": {
+        "n_subjects": 3,
+        "n_measurements": 9,
+        "pct_censored": 11.11111111111111,
+        "n_degenerate_subjects": 0,
+        "median_first_observed_day": 5.0,
+        "pct_subjects_with_rise": 50.0
+      },
+      "fit": {
+        "aic": 35.75759680771623,
         "converged": true
       }
     },
@@ -9258,6 +9364,334 @@
       },
       "fit": {
         "aic": 72.60405652209451,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "suner2023viral",
+      "analyte": "blood",
+      "model": "exponential",
+      "biomarker": "mpox",
+      "specimen": "blood",
+      "unit": "gc/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.2360373621454061,
+        "c0": 13.644029158106026
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 5.946852318109121,
+        "half_life_days": 2.936599419090889
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.443765172311444,
+          5.925526574292517
+        ],
+        "covariance": [
+          [
+            1.2706974303225707,
+            1.4850808402649598
+          ],
+          [
+            1.4850808402649598,
+            2.228034652150078
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.6044593810861678,
+      "censoring_limit_log10": 4.0,
+      "data": {
+        "n_subjects": 25,
+        "n_measurements": 125,
+        "pct_censored": 71.2,
+        "n_degenerate_subjects": 7,
+        "median_first_observed_day": 6.0,
+        "pct_subjects_with_rise": 0.0
+      },
+      "fit": {
+        "aic": 206.56821000064036,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "suner2023viral",
+      "analyte": "lesion",
+      "model": "exponential",
+      "biomarker": "mpox",
+      "specimen": "skin_lesion",
+      "unit": "gc/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.5021688173347347,
+        "c0": 20.318356206513855
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 8.856689922747844,
+        "half_life_days": 1.3803070932178343
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.688818926311628,
+          8.824149981833655
+        ],
+        "covariance": [
+          [
+            0.5946314871640879,
+            1.0614240433521407
+          ],
+          [
+            1.0614240433521407,
+            3.193884214092792
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.7646703182448839,
+      "censoring_limit_log10": 2.8999999999867243,
+      "data": {
+        "n_subjects": 75,
+        "n_measurements": 364,
+        "pct_censored": 41.48351648351648,
+        "n_degenerate_subjects": 10,
+        "median_first_observed_day": 6.0,
+        "pct_subjects_with_rise": 27.27272727272727
+      },
+      "fit": {
+        "aic": 858.5781167110621,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "suner2023viral",
+      "analyte": "pharynx",
+      "model": "exponential",
+      "biomarker": "mpox",
+      "specimen": "oropharyngeal_swab",
+      "unit": "gc/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.41276203816357265,
+        "c0": 15.830387439581393
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 6.910897413544392,
+        "half_life_days": 1.679290042378508
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.8848840308565816,
+          6.875049911400746
+        ],
+        "covariance": [
+          [
+            0.9344104451452653,
+            1.5526093734816668
+          ],
+          [
+            1.5526093734816668,
+            4.215715645909967
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.8222831066360351,
+      "censoring_limit_log10": 2.8999999999867243,
+      "data": {
+        "n_subjects": 65,
+        "n_measurements": 356,
+        "pct_censored": 61.235955056179776,
+        "n_degenerate_subjects": 9,
+        "median_first_observed_day": 7.0,
+        "pct_subjects_with_rise": 27.77777777777778
+      },
+      "fit": {
+        "aic": 672.36512859044,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "suner2023viral",
+      "analyte": "rectum",
+      "model": "exponential",
+      "biomarker": "mpox",
+      "specimen": "rectal_swab",
+      "unit": "gc/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.43745705112527417,
+        "c0": 16.38020567739865
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 7.1559653174552,
+        "half_life_days": 1.584491960472365
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.8267767468598617,
+          7.11383293813455
+        ],
+        "covariance": [
+          [
+            0.9879474957911171,
+            1.7933614385405408
+          ],
+          [
+            1.7933614385405408,
+            5.401490865762088
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.524627673046589,
+      "censoring_limit_log10": 2.8999999999867243,
+      "data": {
+        "n_subjects": 55,
+        "n_measurements": 188,
+        "pct_censored": 62.234042553191486,
+        "n_degenerate_subjects": 17,
+        "median_first_observed_day": 6.5,
+        "pct_subjects_with_rise": 0.0
+      },
+      "fit": {
+        "aic": 349.82532354639164,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "suner2023viral",
+      "analyte": "semen",
+      "model": "exponential",
+      "biomarker": "mpox",
+      "specimen": "semen",
+      "unit": "gc/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.3066981189346337,
+        "c0": 14.317080627605508
+      },
+      "summary": {
+        "peak_day": 0.0,
+        "peak_log10": 6.247489016279838,
+        "half_life_days": 2.26003075261011
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "peak_log10"
+        ],
+        "mean": [
+          -1.181891341122886,
+          6.217829113533017
+        ],
+        "covariance": [
+          [
+            1.5396501443671018,
+            1.8489802350248856
+          ],
+          [
+            1.8489802350248856,
+            3.715852279184303
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.4507062146906709,
+      "censoring_limit_log10": 2.8999999999867243,
+      "data": {
+        "n_subjects": 40,
+        "n_measurements": 128,
+        "pct_censored": 55.46875,
+        "n_degenerate_subjects": 12,
+        "median_first_observed_day": 7.0,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 249.55535657648375,
+        "converged": true
+      }
+    },
+    {
+      "dataset_id": "suner2023viral",
+      "analyte": "semen",
+      "model": "gamma",
+      "biomarker": "mpox",
+      "specimen": "semen",
+      "unit": "gc/mL",
+      "reference_event": "symptom onset",
+      "gene_target": null,
+      "parameters": {
+        "a0": 0.6606732830067273,
+        "b0": 0.6982361791242195,
+        "c0": 15.521920117673965
+      },
+      "summary": {
+        "peak_day": 1.0568554792264995,
+        "peak_log10": 6.429307581647697,
+        "half_life_days": 1.0491527331110304
+      },
+      "population": {
+        "coordinates": [
+          "log_a0",
+          "log_peak_day",
+          "peak_log10"
+        ],
+        "mean": [
+          -0.4144958381685918,
+          0.05529797022360683,
+          6.454612699097515
+        ],
+        "covariance": [
+          [
+            1.0131297646341815,
+            -1.4393073038171564,
+            1.8969015162914116
+          ],
+          [
+            -1.4393073038171564,
+            2.7235816179823673,
+            -3.1149694216136177
+          ],
+          [
+            1.8969015162914116,
+            -3.1149694216136177,
+            5.259696442997173
+          ]
+        ]
+      },
+      "measurement_error_sd": 0.2517526705463794,
+      "censoring_limit_log10": 2.8999999999867243,
+      "data": {
+        "n_subjects": 31,
+        "n_measurements": 110,
+        "pct_censored": 58.18181818181818,
+        "n_degenerate_subjects": 15,
+        "median_first_observed_day": 5.5,
+        "pct_subjects_with_rise": 100.0
+      },
+      "fit": {
+        "aic": 203.66542463514946,
         "converged": true
       }
     },

@@ -1,0 +1,59 @@
+﻿PatientID,time,value,specimen,age,sex,ethnicity,reference_event,symptom_status
+1,1,27,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+2,unknown,24,Saliva,unknown,Male,unknown, symptom onset,asymptomatic
+3,8,18,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+4,8,22,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+5,15,32,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+6,4,15,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+7,3,23,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+8,2,16,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+9,9,28,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+10,5,21,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+11,8,31,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+12,10,25,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+13,unknown,31,Saliva,unknown,Male,unknown, symptom onset,unknown
+14,unknown,23,Saliva,unknown,Male,unknown, symptom onset,unknown
+15,unknown,28,Saliva,unknown,Male,unknown, symptom onset,unknown
+16,35,17,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+17,13,17,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+18,4,22,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+19,unknown,21,Saliva,unknown,Male,unknown, symptom onset,unknown
+20,unknown,16,Saliva,unknown,Male,unknown, symptom onset,unknown
+21,8,20,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+22,unknown,18,Saliva,unknown,Male,unknown, symptom onset,symptomatic
+LA1,0,28.9,Saliva,29,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA1,6,25.6,Skin lesion,29,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA2,0,30,Saliva,28,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA2,3,29.1,Skin lesion,28,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA3,0,28.4,Saliva,38,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA3,2,28.6,Skin lesion,38,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA4,0,28,Saliva,34,Male,Hispanic/Latino,confirmation date,symptomatic
+LA4,5,34.2,Skin lesion,34,Male,Hispanic/Latino,confirmation date,symptomatic
+LA6,0,26.3,Saliva,20,Male,Black,confirmation date,symptomatic
+LA6,3,27,Skin lesion,20,Male,Black,confirmation date,symptomatic
+LA8,0,22.6,Saliva,43,Male,White,confirmation date,symptomatic
+LA8,3,26.6,Skin lesion,43,Male,White,confirmation date,symptomatic
+LA9,0,26.7,Saliva,38,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA9,0,17.9,Skin lesion,38,Male,White/Hispanic/Latino,confirmation date,symptomatic
+LA10,0,20.3,Saliva,37,Male,Black,confirmation date,symptomatic
+LA10,0,18,Skin lesion,37,Male,Black,confirmation date,symptomatic
+LA11,0,26.6,Saliva,32,Male,Black/Hispanic/Latino,confirmation date,symptomatic
+LA11,2,21.6,Skin lesion,32,Male,Black/Hispanic/Latino,confirmation date,symptomatic
+LA13,0,34.3,Saliva,42,Male,Hispanic,confirmation date,symptomatic
+LA13,3,33.5,Skin lesion,42,Male,Hispanic,confirmation date,symptomatic
+SF1,0,31.4,Saliva,43,Male,Hispanic/Latino,confirmation date,symptomatic
+SF1,0,positive,Skin lesion,43,Male,Hispanic/Latino,confirmation date,symptomatic
+SF4,0,19.2,Saliva,51,Male,White,confirmation date,symptomatic
+SF4,0,positive,Skin lesion,51,Male,White,confirmation date,symptomatic
+SF7,0,32.6,Saliva,26,Male,White,confirmation date,symptomatic
+SF7,0,positive,Skin lesion,26,Male,White,confirmation date,symptomatic
+SF8,0,negative,Saliva,48,Male,Asian,confirmation date,symptomatic
+SF8,0,positive,Skin lesion,48,Male,Asian,confirmation date,symptomatic
+SF9,0,negative,Saliva,29,Male,Asian,confirmation date,symptomatic
+SF9,0,positive,Skin lesion,29,Male,Asian,confirmation date,symptomatic
+SF12,0,20.3,Saliva,40,Male,Hispanic/Latino,confirmation date,symptomatic
+SF12,0,positive,Skin lesion,40,Male,Hispanic/Latino,confirmation date,symptomatic
+SF13,0,29.8,Saliva,55,Male,White,confirmation date,symptomatic
+SF13,0,positive,Skin lesion,55,Male,White,confirmation date,symptomatic
+PS1,0,20.5,Saliva,56,Male,White,confirmation date,symptomatic
+PS1,1,positive,Skin lesion,56,Male,White,confirmation date,symptomatic

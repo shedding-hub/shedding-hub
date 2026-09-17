@@ -1,0 +1,165 @@
+title: 'Clinical and radiological features of severe mpox: a case series of 16 patients
+  in Beijing, China'
+doi: 10.1186/s12879-026-12626-x
+description: Single-center retrospective case series from Beijing Youan Hospital (Beijing,
+  China) including 16 patients with severe mpox and HIV co-infection diagnosed between
+  June 2023 and June 2024. Mpox was confirmed by real-time PCR for MPXV (Ct<40) with
+  vesicular fluid swabs as the primary sample type. Figure-derived CSV provides MPXV
+  PCR Ct values from vesicular fluid at time 0 (reference event not specified in CSV/figure
+  extract; all participants marked symptomatic).
+analytes:
+  vesicular_fluid:
+    description: Real-time PCR (qPCR) for MPXV confirmation (Ct threshold for positivity
+      reported as Ct<40); vesicular fluid swabs were the primary sample type. CSV
+      provides Ct values from vesicular fluid at time 0.
+    specimen: vesicle_swab
+    biomarker: mpox
+    limit_of_detection: 40
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 17.03
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 20.35
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 21.23
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 23.58
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 19.05
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 18.98
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 17.84
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 23.75
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 18.92
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 28.48
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 26.43
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 17.56
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 17
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 23.75
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 21.23
+- attributes:
+    sex: male
+    symptomatic: true
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: vesicular_fluid
+    time: 0
+    value: 18.56

@@ -1,0 +1,442 @@
+title: Laboratory validation and clinical performance of a saliva-based test for monkeypox
+  virus
+doi: 10.1002/jmv.28191
+description: Study reporting laboratory validation and clinical implementation of
+  a saliva-based real-time PCR assay for mpox (monkeypox virus) in California (Los
+  Angeles, San Francisco, Palm Springs). The paper reports analytic sensitivity (limit
+  of detection 250 copies/mL) and clinical performance, including saliva Ct values
+  for 22 saliva-positive cases timed relative to symptom onset (Table 2) and paired
+  saliva/skin lesion PCR results timed relative to confirmation date (Table 3).
+analytes:
+  saliva_symptom_onset:
+    description: Saliva-based TaqMan real-time PCR assay targeting the mpox virus
+      J1L region; Ct values reported for clinical cases, with time referenced to symptom
+      onset (days between symptom onset and positive saliva test). Samples run in
+      triplicate; positives with Ct >=34 repeated for confirmation. Internal control
+      RNase P used.
+    specimen: saliva
+    biomarker: mpox
+    gene_target: J1L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  saliva_confirmation_date:
+    description: Saliva PCR Ct values for mpox reported for patients with paired saliva/lesion
+      testing; time referenced to confirmation date (time=0 at confirmation date,
+      per CSV). Assay described as saliva-based TaqMan real-time PCR targeting mpox
+      J1L with RNase P internal control; triplicate wells per sample; Ct values reported
+      when available.
+    specimen: saliva
+    biomarker: mpox
+    gene_target: J1L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+  skin_lesion_confirmation_date:
+    description: Skin lesion (lesion swab) PCR results for mpox from paired testing;
+      time referenced to confirmation date (days between saliva test and lesion test
+      reported). Lesion testing performed as Monkeypox (Orthopox) DNA PCR test (Labcorp);
+      Ct values available only for Los Angeles patients, while other sites may provide
+      qualitative positive/negative.
+    specimen: skin_lesion
+    biomarker: mpox
+    gene_target: J1L
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: confirmation date
+participants:
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 1
+    value: 27
+- attributes:
+    sex: male
+    symptomatic: false
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: unknown
+    value: 24
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 8
+    value: 18
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 8
+    value: 22
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 15
+    value: 32
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 4
+    value: 15
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 3
+    value: 23
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 2
+    value: 16
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 9
+    value: 28
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 5
+    value: 21
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 8
+    value: 31
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 10
+    value: 25
+- attributes:
+    sex: male
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: unknown
+    value: 31
+- attributes:
+    sex: male
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: unknown
+    value: 23
+- attributes:
+    sex: male
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: unknown
+    value: 28
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 35
+    value: 17
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 13
+    value: 17
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 4
+    value: 22
+- attributes:
+    sex: male
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: unknown
+    value: 21
+- attributes:
+    sex: male
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: unknown
+    value: 16
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: 8
+    value: 20
+- attributes:
+    sex: male
+    symptomatic: true
+  measurements:
+  - analyte: saliva_symptom_onset
+    time: unknown
+    value: 18
+- patient_id: LA1
+  attributes:
+    sex: male
+    age: 29
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 28.9
+  - analyte: skin_lesion_confirmation_date
+    time: 6
+    value: 25.6
+- patient_id: LA2
+  attributes:
+    sex: male
+    age: 28
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 30
+  - analyte: skin_lesion_confirmation_date
+    time: 3
+    value: 29.1
+- patient_id: LA3
+  attributes:
+    sex: male
+    age: 38
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 28.4
+  - analyte: skin_lesion_confirmation_date
+    time: 2
+    value: 28.6
+- patient_id: LA4
+  attributes:
+    sex: male
+    age: 34
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 28
+  - analyte: skin_lesion_confirmation_date
+    time: 5
+    value: 34.2
+- patient_id: LA6
+  attributes:
+    sex: male
+    age: 20
+    age_group: adult
+    race: black
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 26.3
+  - analyte: skin_lesion_confirmation_date
+    time: 3
+    value: 27
+- patient_id: LA8
+  attributes:
+    sex: male
+    age: 43
+    age_group: adult
+    race: white
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 22.6
+  - analyte: skin_lesion_confirmation_date
+    time: 3
+    value: 26.6
+- patient_id: LA9
+  attributes:
+    sex: male
+    age: 38
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 26.7
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: 17.9
+- patient_id: LA10
+  attributes:
+    sex: male
+    age: 37
+    age_group: adult
+    race: black
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 20.3
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: 18
+- patient_id: LA11
+  attributes:
+    sex: male
+    age: 32
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 26.6
+  - analyte: skin_lesion_confirmation_date
+    time: 2
+    value: 21.6
+- patient_id: LA13
+  attributes:
+    sex: male
+    age: 42
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 34.3
+  - analyte: skin_lesion_confirmation_date
+    time: 3
+    value: 33.5
+- patient_id: SF1
+  attributes:
+    sex: male
+    age: 43
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 31.4
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: positive
+- patient_id: SF4
+  attributes:
+    sex: male
+    age: 51
+    age_group: adult
+    race: white
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 19.2
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: positive
+- patient_id: SF7
+  attributes:
+    sex: male
+    age: 26
+    age_group: adult
+    race: white
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 32.6
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: positive
+- patient_id: SF8
+  attributes:
+    sex: male
+    age: 48
+    age_group: adult
+    race: asian
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: negative
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: positive
+- patient_id: SF9
+  attributes:
+    sex: male
+    age: 29
+    age_group: adult
+    race: asian
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: negative
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: positive
+- patient_id: SF12
+  attributes:
+    sex: male
+    age: 40
+    age_group: adult
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 20.3
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: positive
+- patient_id: SF13
+  attributes:
+    sex: male
+    age: 55
+    age_group: adult
+    race: white
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 29.8
+  - analyte: skin_lesion_confirmation_date
+    time: 0
+    value: positive
+- patient_id: PS1
+  attributes:
+    sex: male
+    age: 56
+    age_group: adult
+    race: white
+    symptomatic: true
+  measurements:
+  - analyte: saliva_confirmation_date
+    time: 0
+    value: 20.5
+  - analyte: skin_lesion_confirmation_date
+    time: 1
+    value: positive

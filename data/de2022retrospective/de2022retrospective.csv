@@ -1,0 +1,17 @@
+﻿patient_id,time,value,biomarker,specimen,sex,symptom,vaccination,hiv_status,age_group
+1,0,27.63,MPXV,"urine, oropharyngeal_swab, anorectal_swab",male,asymptomatic,none,positive,adult
+1,0,26.69,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+1,0,negative,MPXV,oropharyngeal_swab,male,asymptomatic,none,positive,adult
+1,0,30.35,orthopox,"urine, oropharyngeal_swab, anorectal_swab",male,asymptomatic,none,positive,adult
+1,37,negative,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+2,0,22.25,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+2,0,20.05,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+2,0,23.5,orthopox,anorectal_swab,male,asymptomatic,none,positive,adult
+2,21,negative,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+3,0,19.19,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+3,0,17.16,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+3,0,21.43,orthopox,anorectal_swab,male,asymptomatic,none,positive,adult
+3,24,negative,MPXV,anorectal_swab,male,asymptomatic,none,positive,adult
+4,0,29.06,MPXV,anorectal_swab,male,symptomatic,unknwon,unknwon,unknwon
+4,0,27.38,MPXV,anorectal_swab,male,symptomatic,unknwon,unknwon,unknwon
+4,0,28.3,orthopox,anorectal_swab,male,symptomatic,unknwon,unknwon,unknwon

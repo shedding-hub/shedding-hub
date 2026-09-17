@@ -1,0 +1,552 @@
+title: Isolation of viable monkeypox virus from anal and urethral swabs, Italy, May
+  to July 2022
+doi: 10.2807/1560-7917.ES.2022.27.36.2200675
+description: Study of 33 laboratory-confirmed mpox cases attending a sexual health
+  clinic in Milan, Italy (15 May–7 July 2022). Anal (rectal) and urethral swabs were
+  tested for MPXV DNA by real-time PCR (reported as Cq) and, when PCR-positive, were
+  inoculated on Vero E6 cells to attempt viral isolation; culture positivity/negativity
+  (and time-to-positivity) were reported in the paper table, while the provided figure
+  CSV contains Cq values over time (days since symptom onset) for anal and urethral
+  swabs.
+analytes:
+  anorectal_swab:
+    description: MPXV DNA real-time PCR quantification cycle (Cq) values from anal
+      (rectal) swabs; swabs collected in Universal Transport Medium (UTM-RT, Copan).
+      Orthopoxvirus screening PCR (RealStar Orthopoxvirus PCR Kit 1.0) with confirmation
+      by an in-house MPXV-specific real-time PCR. Values here are Cq (cycle threshold)
+      reported by the study.
+    specimen: anorectal_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  urethral_swab:
+    description: MPXV DNA real-time PCR quantification cycle (Cq) values from urethral
+      swabs; swabs collected in Universal Transport Medium (UTM-RT, Copan). Orthopoxvirus
+      screening PCR (RealStar Orthopoxvirus PCR Kit 1.0) with confirmation by an in-house
+      MPXV-specific real-time PCR. Values here are Cq (cycle threshold) reported by
+      the study.
+    specimen: urethral_swab
+    biomarker: mpox
+    limit_of_detection: unknown
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 5
+    value: 17
+  - analyte: anorectal_swab
+    time: 12
+    value: 24
+  - analyte: urethral_swab
+    time: 12
+    value: 34
+  - analyte: anorectal_swab
+    time: 19
+    value: 38
+  - analyte: urethral_swab
+    time: 19
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 4
+    value: 18
+  - analyte: urethral_swab
+    time: 4
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: 28
+  - analyte: urethral_swab
+    time: 11
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: urethral_swab
+    time: 8
+    value: 34
+  - analyte: anorectal_swab
+    time: 16
+    value: 33
+  - analyte: urethral_swab
+    time: 16
+    value: 26
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 14
+    value: 35
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 4
+    value: 24
+  - analyte: urethral_swab
+    time: 4
+    value: 34
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: urethral_swab
+    time: 14
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: urethral_swab
+    time: 21
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: 20
+  - analyte: urethral_swab
+    time: 7
+    value: 19
+  - analyte: anorectal_swab
+    time: 14
+    value: 36
+  - analyte: urethral_swab
+    time: 14
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: 35
+  - analyte: urethral_swab
+    time: 21
+    value: 36
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 3
+    value: 35
+  - analyte: urethral_swab
+    time: 3
+    value: 28
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: urethral_swab
+    time: 21
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: urethral_swab
+    time: 10
+    value: 29
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 13
+    value: 37
+  - analyte: urethral_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: urethral_swab
+    time: 19
+    value: 37
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: urethral_swab
+    time: 14
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: 31
+  - analyte: urethral_swab
+    time: 7
+    value: 25
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 2
+    value: negative
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: urethral_swab
+    time: 11
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 6
+    value: 16
+  - analyte: anorectal_swab
+    time: 11
+    value: 21
+  - analyte: urethral_swab
+    time: 11
+    value: 34
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: urethral_swab
+    time: 18
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 1
+    value: 23
+  - analyte: anorectal_swab
+    time: 13
+    value: negative
+  - analyte: urethral_swab
+    time: 13
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    vaccinated: true
+    symptomatic: true
+    participant_type: close contact (secondary case)
+  measurements:
+  - analyte: anorectal_swab
+    time: 3
+    value: negative
+  - analyte: urethral_swab
+    time: 3
+    value: 35
+  - analyte: anorectal_swab
+    time: 9
+    value: negative
+  - analyte: urethral_swab
+    time: 9
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 5
+    value: 34
+  - analyte: urethral_swab
+    time: 5
+    value: 35
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 2
+    value: 34
+  - analyte: urethral_swab
+    time: 2
+    value: 30
+  - analyte: anorectal_swab
+    time: 8
+    value: negative
+  - analyte: urethral_swab
+    time: 8
+    value: 33
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: 19
+  - analyte: urethral_swab
+    time: 7
+    value: 32
+  - analyte: anorectal_swab
+    time: 8
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+    vaccinated: true
+    symptomatic: false
+    participant_type: close contact (secondary case)
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: negative
+  - analyte: urethral_swab
+    time: 7
+    value: 36
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: urethral_swab
+    time: 14
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 11
+    value: 25
+  - analyte: urethral_swab
+    time: 11
+    value: 35
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: urethral_swab
+    time: 21
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: 26
+  - analyte: urethral_swab
+    time: 7
+    value: 28
+  - analyte: anorectal_swab
+    time: 14
+    value: 31
+  - analyte: urethral_swab
+    time: 14
+    value: 35
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: urethral_swab
+    time: 18
+    value: 36
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: urethral_swab
+    time: 10
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: urethral_swab
+    time: 18
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 14
+    value: 22
+  - analyte: urethral_swab
+    time: 14
+    value: negative
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: urethral_swab
+    time: 21
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 6
+    value: 16
+  - analyte: urethral_swab
+    time: 6
+    value: 36
+  - analyte: anorectal_swab
+    time: 13
+    value: 24
+  - analyte: urethral_swab
+    time: 13
+    value: negative
+  - analyte: anorectal_swab
+    time: 20
+    value: 35
+  - analyte: urethral_swab
+    time: 20
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 3
+    value: 24
+  - analyte: urethral_swab
+    time: 3
+    value: negative
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: urethral_swab
+    time: 10
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 14
+    value: 30
+  - analyte: urethral_swab
+    time: 14
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 3
+    value: 19
+  - analyte: urethral_swab
+    time: 3
+    value: 31
+  - analyte: anorectal_swab
+    time: 10
+    value: 17
+  - analyte: urethral_swab
+    time: 10
+    value: 25
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: urethral_swab
+    time: 18
+    value: 28
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 4
+    value: 37
+  - analyte: urethral_swab
+    time: 4
+    value: negative
+  - analyte: anorectal_swab
+    time: 10
+    value: negative
+  - analyte: urethral_swab
+    time: 10
+    value: negative
+  - analyte: anorectal_swab
+    time: 16
+    value: negative
+  - analyte: urethral_swab
+    time: 16
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 2
+    value: negative
+  - analyte: urethral_swab
+    time: 2
+    value: 30
+  - analyte: anorectal_swab
+    time: 11
+    value: negative
+  - analyte: urethral_swab
+    time: 11
+    value: 28
+  - analyte: anorectal_swab
+    time: 21
+    value: negative
+  - analyte: urethral_swab
+    time: 21
+    value: 37
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: urethral_swab
+    time: 14
+    value: 37
+  - analyte: anorectal_swab
+    time: 18
+    value: negative
+  - analyte: urethral_swab
+    time: 18
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: 32
+  - analyte: urethral_swab
+    time: 7
+    value: 30
+  - analyte: anorectal_swab
+    time: 14
+    value: negative
+  - analyte: urethral_swab
+    time: 14
+    value: 37
+  - analyte: anorectal_swab
+    time: 19
+    value: negative
+  - analyte: urethral_swab
+    time: 19
+    value: negative
+- attributes:
+    sex: male
+    age_group: adult
+  measurements:
+  - analyte: anorectal_swab
+    time: 7
+    value: 31
+  - analyte: urethral_swab
+    time: 7
+    value: 25

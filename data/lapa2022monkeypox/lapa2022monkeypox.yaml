@@ -1,0 +1,153 @@
+title: Monkeypox virus isolation from a semen sample collected in the early phase
+  of infection in a patient with prolonged seminal viral shedding
+doi: 10.1016/S1473-3099(22)00513-8
+description: Case report from Rome, Italy (National Institute for Infectious Diseases
+  ‘Lazzaro Spallanzani’) describing longitudinal mpox (monkeypox virus) DNA detection
+  by real-time PCR in plasma, urine, semen, and rash/skin lesions from a single confirmed
+  patient, with sampling days 5–19 after symptom onset. The report includes seminal
+  shedding with Ct/Cq values and notes isolation of replication-competent virus from
+  semen collected on day 6 after symptom onset using Vero E6 cells.
+analytes:
+  semen:
+    description: Mpox virus DNA detection in semen by real-time PCR; values are quantification
+      cycle (Cq) reported for positive results (cutoff cycle threshold 45; thresholds
+      ≥42 retested for confirmation).
+    specimen: semen
+    biomarker: mpox
+    limit_of_detection: 45
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  rash_or_skin_lesion:
+    description: Clinical presence/absence of rash or skin lesions recorded longitudinally
+      (not a PCR Ct measurement).
+    specimen: skin_lesion
+    biomarker: mpox
+    limit_of_detection: 45
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  urine:
+    description: Mpox virus DNA detection in urine by real-time PCR; results reported
+      as negative/not detected (no Cq values provided for urine in CSV).
+    specimen: urine
+    biomarker: mpox
+    limit_of_detection: 45
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+  plasma:
+    description: Mpox virus DNA detection in plasma by real-time PCR; values are quantification
+      cycle (Cq) when positive; otherwise reported as negative.
+    specimen: plasma
+    biomarker: mpox
+    limit_of_detection: 45
+    limit_of_quantification: unknown
+    unit: cycle threshold
+    reference_event: symptom onset
+participants:
+- attributes:
+    sex: male
+    age: 39
+    age_group: adult
+    hiv_status: positive
+  measurements:
+  - analyte: semen
+    time: 5
+    value: 28
+  - analyte: rash_or_skin_lesion
+    time: 5
+    value: positive
+  - analyte: semen
+    time: 6
+    value: 29.3
+  - analyte: rash_or_skin_lesion
+    time: 6
+    value: positive
+  - analyte: urine
+    time: 7
+    value: negative
+  - analyte: semen
+    time: 7
+    value: 27.8
+  - analyte: rash_or_skin_lesion
+    time: 7
+    value: positive
+  - analyte: plasma
+    time: 8
+    value: 34.5
+  - analyte: rash_or_skin_lesion
+    time: 8
+    value: positive
+  - analyte: urine
+    time: 9
+    value: negative
+  - analyte: rash_or_skin_lesion
+    time: 9
+    value: positive
+  - analyte: plasma
+    time: 10
+    value: negative
+  - analyte: rash_or_skin_lesion
+    time: 10
+    value: positive
+  - analyte: urine
+    time: 11
+    value: negative
+  - analyte: rash_or_skin_lesion
+    time: 11
+    value: positive
+  - analyte: plasma
+    time: 13
+    value: negative
+  - analyte: urine
+    time: 13
+    value: negative
+  - analyte: rash_or_skin_lesion
+    time: 13
+    value: positive
+  - analyte: semen
+    time: 14
+    value: 34.3
+  - analyte: rash_or_skin_lesion
+    time: 14
+    value: positive
+  - analyte: plasma
+    time: 15
+    value: negative
+  - analyte: urine
+    time: 15
+    value: negative
+  - analyte: semen
+    time: 15
+    value: 35.6
+  - analyte: rash_or_skin_lesion
+    time: 15
+    value: positive
+  - analyte: plasma
+    time: 16
+    value: negative
+  - analyte: rash_or_skin_lesion
+    time: 16
+    value: positive
+  - analyte: plasma
+    time: 17
+    value: negative
+  - analyte: semen
+    time: 17
+    value: 38.7
+  - analyte: rash_or_skin_lesion
+    time: 17
+    value: positive
+  - analyte: plasma
+    time: 19
+    value: negative
+  - analyte: urine
+    time: 19
+    value: negative
+  - analyte: semen
+    time: 19
+    value: 40.6
+  - analyte: rash_or_skin_lesion
+    time: 19
+    value: negative
