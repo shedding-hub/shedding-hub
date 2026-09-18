@@ -15,7 +15,8 @@ analytes:
       OD 2.5, negative control OD 0.1). Results reported qualitatively/semiquantitatively
       in table (e.g., + (weak positive), ++ (positive), +++ (strongpositive), ++++ (strong positive), N).
     specimen: stool
-    biomarker: Lanzhou lamb rotavirus vaccine
+    biomarker: rotavirus vaccine
+    vaccine_type: Lanzhou lamb rotavirus (LLR)
     limit_of_detection: unknown
     limit_of_quantification: unknown
     unit: gc/wet gram
@@ -25,7 +26,8 @@ analytes:
       stool targeting the NSP3 gene. Quantified using serial dilutions of plasmid-derived
       NSP3 RNA standards and reported as copies per gram of stool.
     specimen: stool
-    biomarker: Lanzhou lamb rotavirus vaccine
+    biomarker: rotavirus vaccine
+    vaccine_type: Lanzhou lamb rotavirus (LLR)
     gene_target: NSP3
     limit_of_detection: 1000
     limit_of_quantification: unknown

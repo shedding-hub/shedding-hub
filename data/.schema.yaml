@@ -102,16 +102,15 @@ $defs:
           - parainfluenza virus
           - sapovirus
           - norovirus
-          - SARS
-          - coronavirus
-          - hCoV NL63
-          - CoV-HKU1
+          - SARS-CoV-1
+          - seasonal human coronavirus
+          - HCoV-NL63
+          - HCoV-HKU1
           - adenovirus
           - RSV
           - metapneumovirus
           - rhinovirus
           - enterovirus
-          - Lanzhou lamb rotavirus vaccine
           - rotavirus
           - rotavirus vaccine
           - hepatitis A virus
@@ -122,6 +121,7 @@ $defs:
           - mpox
           - orthopox
           - HIV
+          - PCV-1
       gene_target:
         description: The gene being targeted in qPCR or ddPCR if a genomic biomarker.
           This field should be left empty for non-genomic biomarkers, e.g., drug

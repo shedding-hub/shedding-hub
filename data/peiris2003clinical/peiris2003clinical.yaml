@@ -12,7 +12,7 @@ analytes:
     description: >
       This analyte indicates the detection of SARS RNA in nasopharyngeal aspirates.
     specimen: nasopharyngeal_swab
-    biomarker: SARS
+    biomarker: SARS-CoV-1
     gene_target: unkonw
     limit_of_quantification: unknown
     limit_of_detection: unknown
