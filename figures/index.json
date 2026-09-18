@@ -1,4 +1,88 @@
 {
+ "akiyama2024efficacy": {
+  "analytes": [
+   {
+    "analyte": "ct_blood",
+    "figures": [
+     {
+      "file": "ct_blood__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_oropharyngeal_swab__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "ct_oropharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_urine",
+    "figures": [
+     {
+      "file": "ct_urine__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_lesion",
+    "figures": [
+     {
+      "file": "ct_lesion__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_semen",
+    "figures": [
+     {
+      "file": "ct_semen__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "allanblitz2023laboratory": {
+  "analytes": [
+   {
+    "analyte": "saliva_symptom_onset",
+    "figures": [
+     {
+      "file": "saliva_symptom_onset__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_confirmation_date",
+    "figures": [
+     {
+      "file": "saliva_confirmation_date__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "skin_lesion_confirmation_date",
+    "figures": [
+     {
+      "file": "skin_lesion_confirmation_date__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "alsharrah2020clinical": {
   "analytes": [
    {
@@ -19,6 +103,91 @@
     "figures": [
      {
       "file": "saliva_gii__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "antinori2022epidemiological": {
+  "analytes": [
+   {
+    "analyte": "genital_or_rectal_lesions",
+    "figures": [
+     {
+      "file": "genital_or_rectal_lesions__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma",
+    "figures": [
+     {
+      "file": "plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "scab",
+    "figures": [
+     {
+      "file": "scab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "serum",
+    "figures": [
+     {
+      "file": "serum__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "seminal_fluid",
+    "figures": [
+     {
+      "file": "seminal_fluid__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool",
+    "figures": [
+     {
+      "file": "stool__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva",
+    "figures": [
+     {
+      "file": "saliva__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "skin_lesions",
+    "figures": [
+     {
+      "file": "skin_lesions__observations.png",
       "model": "observations"
      }
     ]
@@ -311,6 +480,50 @@
    }
   ]
  },
+ "chen2024clinical": {
+  "analytes": [
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "vesicle_swab",
+    "figures": [
+     {
+      "file": "vesicle_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "urethra_swab",
+    "figures": [
+     {
+      "file": "urethra_swab__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "urethra_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "rectal_swab",
+    "figures": [
+     {
+      "file": "rectal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "cheng2008human": {
   "analytes": [
    {
@@ -350,6 +563,109 @@
    }
   ]
  },
+ "colavita2023kinetics": {
+  "analytes": [
+   {
+    "analyte": "urine_ct",
+    "figures": [
+     {
+      "file": "urine_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "semen_ct",
+    "figures": [
+     {
+      "file": "semen_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_ct",
+    "figures": [
+     {
+      "file": "stool_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma_ct",
+    "figures": [
+     {
+      "file": "plasma_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_ct",
+    "figures": [
+     {
+      "file": "saliva_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab_ct",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab_gc_ng",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab_gc_ng__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva_gc_ng",
+    "figures": [
+     {
+      "file": "saliva_gc_ng__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma_gc_ng",
+    "figures": [
+     {
+      "file": "plasma_gc_ng__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool_gc_ng",
+    "figures": [
+     {
+      "file": "stool_gc_ng__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "semen_gc_ng",
+    "figures": [
+     {
+      "file": "semen_gc_ng__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "coppee2023temporal": {
   "analytes": [
    {
@@ -366,6 +682,37 @@
     "figures": [
      {
       "file": "nasopharyngeal_swab_RSV_ct_asymptomatic__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "coppens2023alternative": {
+  "analytes": [
+   {
+    "analyte": "plasma",
+    "figures": [
+     {
+      "file": "plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva",
+    "figures": [
+     {
+      "file": "saliva__observations.png",
       "model": "observations"
      }
     ]
@@ -486,6 +833,55 @@
     "figures": [
      {
       "file": "tracheal_aspirate_influenza_gc_per_mL__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "de2022retrospective": {
+  "analytes": [
+   {
+    "analyte": "mpxv_pooled_swab",
+    "figures": [
+     {
+      "file": "mpxv_pooled_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "mpxv_anorectal_swab",
+    "figures": [
+     {
+      "file": "mpxv_anorectal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "mpxv_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "mpxv_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "orthopox_pooled_swab",
+    "figures": [
+     {
+      "file": "orthopox_pooled_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "orthopox_anorectal_swab",
+    "figures": [
+     {
+      "file": "orthopox_anorectal_swab__observations.png",
       "model": "observations"
      }
     ]
@@ -625,6 +1021,10 @@
     "analyte": "nasal_respiratory_syncytial_virus_quant_rt_pcr",
     "figures": [
      {
+      "file": "nasal_respiratory_syncytial_virus_quant_rt_pcr__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "nasal_respiratory_syncytial_virus_quant_rt_pcr__exponential.png",
       "model": "exponential"
      }
@@ -717,6 +1117,55 @@
      {
       "file": "n__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "gaspari2023monkeypox": {
+  "analytes": [
+   {
+    "analyte": "skin_lesion_swab",
+    "figures": [
+     {
+      "file": "skin_lesion_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma",
+    "figures": [
+     {
+      "file": "plasma__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "urine",
+    "figures": [
+     {
+      "file": "urine__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "rectal_swab",
+    "figures": [
+     {
+      "file": "rectal_swab__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -1184,6 +1633,28 @@
      {
       "file": "urine_adenovirus_viral_load__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "hernaez2023monitoring": {
+  "analytes": [
+   {
+    "analyte": "ct_saliva",
+    "figures": [
+     {
+      "file": "ct_saliva__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "gc_ml_saliva",
+    "figures": [
+     {
+      "file": "gc_ml_saliva__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -1707,6 +2178,46 @@
    }
   ]
  },
+ "lapa2022monkeypox": {
+  "analytes": [
+   {
+    "analyte": "semen",
+    "figures": [
+     {
+      "file": "semen__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "rash_or_skin_lesion",
+    "figures": [
+     {
+      "file": "rash_or_skin_lesion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine",
+    "figures": [
+     {
+      "file": "urine__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma",
+    "figures": [
+     {
+      "file": "plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "lavezzo2020suppression": {
   "analytes": [
    {
@@ -1769,6 +2280,100 @@
    }
   ]
  },
+ "lee2024prolonged": {
+  "analytes": [
+   {
+    "analyte": "skin",
+    "figures": [
+     {
+      "file": "skin__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "pubis",
+    "figures": [
+     {
+      "file": "pubis__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "right_pubis",
+    "figures": [
+     {
+      "file": "right_pubis__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "left_forehead",
+    "figures": [
+     {
+      "file": "left_forehead__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "left_arm",
+    "figures": [
+     {
+      "file": "left_arm__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "abdomen",
+    "figures": [
+     {
+      "file": "abdomen__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "penile",
+    "figures": [
+     {
+      "file": "penile__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "left_pubis",
+    "figures": [
+     {
+      "file": "left_pubis__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "left_buttock",
+    "figures": [
+     {
+      "file": "left_buttock__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "nose",
+    "figures": [
+     {
+      "file": "nose__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "lescure2020clinical": {
   "analytes": [
    {
@@ -1797,7 +2402,33 @@
     "analyte": "stool_lanzhou_lamb_rotavirus_vaccine_pcr",
     "figures": [
      {
+      "file": "stool_lanzhou_lamb_rotavirus_vaccine_pcr__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "stool_lanzhou_lamb_rotavirus_vaccine_pcr__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "limonta2024mpox": {
+  "analytes": [
+   {
+    "analyte": "pharynx",
+    "figures": [
+     {
+      "file": "pharynx__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "skin",
+    "figures": [
+     {
+      "file": "skin__exponential.png",
       "model": "exponential"
      }
     ]
@@ -1906,6 +2537,113 @@
    }
   ]
  },
+ "liu2026diagnostic": {
+  "analytes": [
+   {
+    "analyte": "pus",
+    "figures": [
+     {
+      "file": "pus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "vesicular_fluid",
+    "figures": [
+     {
+      "file": "vesicular_fluid__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "skin_swab_foreskin",
+    "figures": [
+     {
+      "file": "skin_swab_foreskin__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine",
+    "figures": [
+     {
+      "file": "urine__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma",
+    "figures": [
+     {
+      "file": "plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "skin_swab",
+    "figures": [
+     {
+      "file": "skin_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "mucosal_swab_oral",
+    "figures": [
+     {
+      "file": "mucosal_swab_oral__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "loconsole2022monkeypox": {
+  "analytes": [
+   {
+    "analyte": "skin_lesion_swab",
+    "figures": [
+     {
+      "file": "skin_lesion_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "blood",
+    "figures": [
+     {
+      "file": "blood__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "lucini2026dose": {
   "analytes": [
    {
@@ -2006,6 +2744,10 @@
     "analyte": "stool_f",
     "figures": [
      {
+      "file": "stool_f__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "stool_f__exponential.png",
       "model": "exponential"
      }
@@ -2070,6 +2812,10 @@
    {
     "analyte": "nasal_hbov_viral_load",
     "figures": [
+     {
+      "file": "nasal_hbov_viral_load__gamma.png",
+      "model": "gamma"
+     },
      {
       "file": "nasal_hbov_viral_load__exponential.png",
       "model": "exponential"
@@ -2473,6 +3219,37 @@
    }
   ]
  },
+ "mertes2023tecovirimat": {
+  "analytes": [
+   {
+    "analyte": "anal_lesion_mpxv_ct",
+    "figures": [
+     {
+      "file": "anal_lesion_mpxv_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma_mpxv_ct",
+    "figures": [
+     {
+      "file": "plasma_mpxv_ct__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma_hiv_gc_ml",
+    "figures": [
+     {
+      "file": "plasma_hiv_gc_ml__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "mijatovicrustempasic2017shedding": {
   "analytes": [
    {
@@ -2494,6 +3271,95 @@
      {
       "file": "stool_pcv1_dna__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "mileto2022new": {
+  "analytes": [
+   {
+    "analyte": "ct_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_ulcerated_perianal_lesion",
+    "figures": [
+     {
+      "file": "ct_ulcerated_perianal_lesion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_anorectal_swab",
+    "figures": [
+     {
+      "file": "ct_anorectal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_foot_lesion",
+    "figures": [
+     {
+      "file": "ct_foot_lesion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_plasma",
+    "figures": [
+     {
+      "file": "ct_plasma__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_seminal_fluid",
+    "figures": [
+     {
+      "file": "ct_seminal_fluid__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_urine",
+    "figures": [
+     {
+      "file": "ct_urine__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
+ "mitsios2024monkeypox": {
+  "analytes": [
+   {
+    "analyte": "od_tear_wash",
+    "figures": [
+     {
+      "file": "od_tear_wash__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "os_tear_wash",
+    "figures": [
+     {
+      "file": "os_tear_wash__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -2555,6 +3421,32 @@
     "figures": [
      {
       "file": "stool_norovirus__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "moschese2022isolation": {
+  "analytes": [
+   {
+    "analyte": "anorectal_swab",
+    "figures": [
+     {
+      "file": "anorectal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "urethral_swab",
+    "figures": [
+     {
+      "file": "urethral_swab__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "urethral_swab__exponential.png",
       "model": "exponential"
      }
     ]
@@ -2719,6 +3611,73 @@
    }
   ]
  },
+ "negru2025severe": {
+  "analytes": [
+   {
+    "analyte": "serum",
+    "figures": [
+     {
+      "file": "serum__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "skin",
+    "figures": [
+     {
+      "file": "skin__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "saliva",
+    "figures": [
+     {
+      "file": "saliva__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "urine",
+    "figures": [
+     {
+      "file": "urine__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "rectal_swab",
+    "figures": [
+     {
+      "file": "rectal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "nasal",
+    "figures": [
+     {
+      "file": "nasal__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "pharyngeal",
+    "figures": [
+     {
+      "file": "pharyngeal__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "neres2020sapovirus": {
   "analytes": [
    {
@@ -2798,12 +3757,93 @@
     "analyte": "NPS_SARS",
     "figures": [
      {
-      "file": "NPS_SARS__gamma.png",
-      "model": "gamma"
-     },
-     {
       "file": "NPS_SARS__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "peiromestres2022frequent": {
+  "analytes": [
+   {
+    "analyte": "ct_skin_lesion_swab",
+    "figures": [
+     {
+      "file": "ct_skin_lesion_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_rectal_swab",
+    "figures": [
+     {
+      "file": "ct_rectal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_tongue_ulcer",
+    "figures": [
+     {
+      "file": "ct_tongue_ulcer__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_oral_lesion",
+    "figures": [
+     {
+      "file": "ct_oral_lesion__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_saliva",
+    "figures": [
+     {
+      "file": "ct_saliva__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_semen",
+    "figures": [
+     {
+      "file": "ct_semen__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_urine",
+    "figures": [
+     {
+      "file": "ct_urine__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_stool",
+    "figures": [
+     {
+      "file": "ct_stool__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -2816,6 +3856,46 @@
     "figures": [
      {
       "file": "respiratory_influenzaA_viral_load__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "pesonel2025clinical": {
+  "analytes": [
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "anorectal_swab",
+    "figures": [
+     {
+      "file": "anorectal_swab__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "skin",
+    "figures": [
+     {
+      "file": "skin__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "plasma",
+    "figures": [
+     {
+      "file": "plasma__exponential.png",
       "model": "exponential"
      }
     ]
@@ -2945,6 +4025,86 @@
    }
   ]
  },
+ "relhan2023clinical": {
+  "analytes": [
+   {
+    "analyte": "ct_oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "ct_nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_serum",
+    "figures": [
+     {
+      "file": "ct_serum__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_urine",
+    "figures": [
+     {
+      "file": "ct_urine__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_lesion_base",
+    "figures": [
+     {
+      "file": "ct_lesion_base__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_lesion_fluid",
+    "figures": [
+     {
+      "file": "ct_lesion_fluid__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "ct_lesion_fluid__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_lesion_roof",
+    "figures": [
+     {
+      "file": "ct_lesion_roof__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "ct_lesion_crust",
+    "figures": [
+     {
+      "file": "ct_lesion_crust__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "rodrigues2020influenza": {
   "analytes": [
    {
@@ -2990,6 +4150,10 @@
    {
     "analyte": "oropharyngeal_gc_ml",
     "figures": [
+     {
+      "file": "oropharyngeal_gc_ml__gamma.png",
+      "model": "gamma"
+     },
      {
       "file": "oropharyngeal_gc_ml__exponential.png",
       "model": "exponential"
@@ -3208,6 +4372,59 @@
    }
   ]
  },
+ "suner2023viral": {
+  "analytes": [
+   {
+    "analyte": "blood",
+    "figures": [
+     {
+      "file": "blood__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "pharynx",
+    "figures": [
+     {
+      "file": "pharynx__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "rectum",
+    "figures": [
+     {
+      "file": "rectum__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "semen",
+    "figures": [
+     {
+      "file": "semen__gamma.png",
+      "model": "gamma"
+     },
+     {
+      "file": "semen__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   },
+   {
+    "analyte": "lesion",
+    "figures": [
+     {
+      "file": "lesion__exponential.png",
+      "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
  "tabatabai2019severe": {
   "analytes": [
    {
@@ -3379,6 +4596,10 @@
     "analyte": "OPS_SARSCoV2",
     "figures": [
      {
+      "file": "OPS_SARSCoV2__gamma.png",
+      "model": "gamma"
+     },
+     {
       "file": "OPS_SARSCoV2__exponential.png",
       "model": "exponential"
      }
@@ -3424,6 +4645,19 @@
      {
       "file": "stool_SARSCoV2_N__exponential.png",
       "model": "exponential"
+     }
+    ]
+   }
+  ]
+ },
+ "wang2026clinical": {
+  "analytes": [
+   {
+    "analyte": "vesicular_fluid",
+    "figures": [
+     {
+      "file": "vesicular_fluid__observations.png",
+      "model": "observations"
      }
     ]
    }
@@ -3551,11 +4785,64 @@
    }
   ]
  },
+ "yang2024clinical": {
+  "analytes": [
+   {
+    "analyte": "nasopharyngeal_swab",
+    "figures": [
+     {
+      "file": "nasopharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "skin",
+    "figures": [
+     {
+      "file": "skin__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "stool",
+    "figures": [
+     {
+      "file": "stool__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "anus",
+    "figures": [
+     {
+      "file": "anus__observations.png",
+      "model": "observations"
+     }
+    ]
+   },
+   {
+    "analyte": "oropharyngeal_swab",
+    "figures": [
+     {
+      "file": "oropharyngeal_swab__observations.png",
+      "model": "observations"
+     }
+    ]
+   }
+  ]
+ },
  "yen2011detection": {
   "analytes": [
    {
     "analyte": "stool_rotavirus_vaccine",
     "figures": [
+     {
+      "file": "stool_rotavirus_vaccine__gamma.png",
+      "model": "gamma"
+     },
      {
       "file": "stool_rotavirus_vaccine__exponential.png",
       "model": "exponential"
@@ -3653,10 +4940,6 @@
    {
     "analyte": "stool_SARSCoV2_N_symptomatic",
     "figures": [
-     {
-      "file": "stool_SARSCoV2_N_symptomatic__gamma.png",
-      "model": "gamma"
-     },
      {
       "file": "stool_SARSCoV2_N_symptomatic__exponential.png",
       "model": "exponential"
