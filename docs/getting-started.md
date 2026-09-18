@@ -155,7 +155,7 @@ actually gets you — the algebra is exact, the estimates less so.
 
 ## Use fits that are already computed
 
-You do not have to fit anything. The package ships a catalog of **192
+You do not have to fit anything. The package ships a catalog of **186
 converged fits over 66 studies**, each one a censored ML fit with its sample
 size, censoring rate and diagnostics attached.
 

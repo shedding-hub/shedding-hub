@@ -77,7 +77,7 @@ Python 3.10 or newer is required.
 ## Fitted parameters, already computed
 
 You do not have to fit anything to start simulating. The package ships a
-catalog of **192 converged fits over 66 studies**, spanning 15 biomarkers and 23
+catalog of **186 converged fits over 66 studies**, spanning 15 biomarkers and 23
 specimen types, each one a censored ML fit with its sample size, censoring rate
 and diagnostics attached.
 

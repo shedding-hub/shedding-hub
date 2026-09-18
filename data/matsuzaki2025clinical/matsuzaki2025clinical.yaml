@@ -359,7 +359,7 @@ analytes:
     description: Multiplex real-time PCR Ct value for coronavirus NL63 from oropharyngeal
       (throat) swab specimen (FTD Respiratory Pathogens 21 kit).
     specimen: oropharyngeal_swab
-    biomarker: hCoV NL63
+    biomarker: HCoV-NL63
     limit_of_detection: unknown
     limit_of_quantification: unknown
     unit: cycle threshold
@@ -386,7 +386,7 @@ analytes:
     description: Multiplex real-time PCR genome copy concentration for coronavirus
       NL63 from oropharyngeal (throat) swab specimen (figure/CSV-derived).
     specimen: oropharyngeal_swab
-    biomarker: hCoV NL63
+    biomarker: HCoV-NL63
     limit_of_detection: unknown
     limit_of_quantification: unknown
     unit: gc/mL
@@ -395,7 +395,7 @@ analytes:
     description: Multiplex real-time PCR Ct value for coronavirus NL63 from nasal
       secretion specimen (FTD Respiratory Pathogens 21 kit).
     specimen: nasal_discharge
-    biomarker: hCoV NL63
+    biomarker: HCoV-NL63
     limit_of_detection: unknown
     limit_of_quantification: unknown
     unit: cycle threshold
@@ -404,7 +404,7 @@ analytes:
     description: Multiplex real-time PCR genome copy concentration for coronavirus
       NL63 from nasal secretion specimen (figure/CSV-derived).
     specimen: nasal_discharge
-    biomarker: hCoV NL63
+    biomarker: HCoV-NL63
     limit_of_detection: unknown
     limit_of_quantification: unknown
     unit: gc/mL
