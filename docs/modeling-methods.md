@@ -3,8 +3,8 @@
 How the fitted estimates in `shedding_hub/data/shedding_catalog.yaml` are
 produced, what they mean, and where they should not be trusted.
 
-The catalog currently holds **192 fits over 66 studies and 127 analytes**: 126
-exponential, 47 gamma, 19 gamma_shifted, across 15 biomarkers.
+The catalog currently holds **186 fits over 66 studies and 127 analytes**: 126
+exponential, 41 gamma, 19 gamma_shifted, across 15 biomarkers.
 
 ## 1. Models
 
