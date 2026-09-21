@@ -7,6 +7,12 @@ description: Prospective cohort study of 20 infants (four twin pairs and twelve 
   collected daily from vaccination day (day 0) through day 8 after each dose to quantify
   fecal RV1 vaccine-strain shedding by RV1-specific qRT-PCR (reported here as gene
   copies per PCR reaction from figure-derived CSV).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-12'
 analytes:
   1_gc_reaction:
     description: Fecal rotavirus vaccine strain (Rotarix/RV1) RNA shedding quantified

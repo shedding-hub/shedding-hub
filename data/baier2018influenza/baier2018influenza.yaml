@@ -9,6 +9,12 @@ description: Retrospective analysis of a prophylactic seasonal RT-PCR screening 
   using PCR cycle threshold (Ct) values. The CSV-provided data include longitudinal
   Ct values over days after the initial positive screening timepoint for 6 asymptomatic
   patients (5 influenza A; 1 RSV).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-08-12'
 analytes:
   respiratory_influenza_ct:
     description: Semi-quantitative influenza viral load measured as real-time RT-PCR

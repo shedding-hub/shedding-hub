@@ -6,6 +6,12 @@ description: Case series of mpox patients diagnosed at an urban STD/STI center i
   July 2022) followed weekly until negative. MPV DNA detection was performed using
   the RealStar Orthopoxvirus PCR Kit 1.0, reporting Ct values. Longitudinal follow-up
   data are available for 11 men who have sex with men (MSM).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   pharynx:
     description: Mpox virus DNA detected in oropharyngeal (pharynx/throat) swabs using

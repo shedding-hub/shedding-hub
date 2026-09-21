@@ -8,6 +8,12 @@ description: Study of 33 laboratory-confirmed mpox cases attending a sexual heal
   (and time-to-positivity) were reported in the paper table, while the provided figure
   CSV contains Cq values over time (days since symptom onset) for anal and urethral
   swabs.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   anorectal_swab:
     description: MPXV DNA real-time PCR quantification cycle (Cq) values from anal

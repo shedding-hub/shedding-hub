@@ -10,6 +10,12 @@ description: Prospective NICU study (Oct 2014–Dec 2015) assessing fecal sheddi
   samples from unvaccinated infants. The provided CSV contains cycle-threshold (Ct)
   time-series (days after vaccination) extracted from Figure 2 for RV5-vaccinated
   infants.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   rv5_1:
     description: RotaTeq (RV5) vaccine shedding after dose 1 measured by vaccine-strain

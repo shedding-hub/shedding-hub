@@ -7,6 +7,12 @@ description: >
   Clinic. Cycle threshold (Ct) values were obtained using RT-PCR targeting the N gene,
   and viral loads were calculated. Data were obtained from the combined dataset in
   the supplementary materials of Challenger et al. BMC Medicine (2022) 20:25 (https://doi.org/10.1186/s12916-021-02220-0).
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-09-10'
 analytes:
   swab_SARSCoV2_N_Ct:
     description: >

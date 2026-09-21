@@ -5,6 +5,12 @@ description: Review article summarizing human adenovirus (HAdV) infections in im
   The provided extracted numeric data (CSV) contain longitudinal adenovirus measurements
   in plasma over time for a single PatientID, stratified by adenovirus species/genogroup
   (AdV E, AdV F, AdV B).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   adv_e_plasma:
     description: Adenovirus (AdV) genogroup/species E measured in plasma; quantitative

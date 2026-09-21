@@ -10,6 +10,12 @@ description: >
   known COVID-19 disease. Nasopharyngeal swabs, oropharyngeal swabs, sputum, and urine
   were collected from hospitalized participants. Data were obtained from the supplementary
   materials.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2024-09-24'
 analytes:
   Nasopharyngeal_SARSCoV2_N:
     description: >

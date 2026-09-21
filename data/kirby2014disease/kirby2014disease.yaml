@@ -6,6 +6,13 @@ description: Human challenge study characterizing norovirus stool shedding kinet
   virus (SMV; GII.2). Viral stool titers were measured by quantitative real-time RT-PCR
   over time post-challenge (relative to inoculation); symptomatic status is recorded
   per participant.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+    - author_shared
+  extracted_on: '2026-08-24'
 analytes:
   stool_norovirus_gc_wet_gram_gi:
     description: Quantitative real-time RT-PCR measurement of Norwalk virus (NV;

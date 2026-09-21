@@ -7,6 +7,12 @@ description: Study reporting laboratory validation and clinical implementation o
   of detection 250 copies/mL) and clinical performance, including saliva Ct values
   for 22 saliva-positive cases timed relative to symptom onset (Table 2) and paired
   saliva/skin lesion PCR results timed relative to confirmation date (Table 3).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   saliva_symptom_onset:
     description: Saliva-based TaqMan real-time PCR assay targeting the mpox virus

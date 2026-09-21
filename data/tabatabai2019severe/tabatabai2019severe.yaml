@@ -5,6 +5,12 @@ description: Case report of a fatal lower respiratory tract infection attributed
   acute primary human bocavirus 1 (HBoV1) infection in an immunodeficient 6-month-old
   boy. Serial quantitative PCR measurements of HBoV1 DNA were reported from serum
   and tracheal secretions over time.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-09-09'
 analytes:
   serum:
     description: Human bocavirus 1 (HBoV1) DNA measured in serum by PCR (quantitative

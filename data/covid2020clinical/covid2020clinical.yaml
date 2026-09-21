@@ -8,6 +8,13 @@ description: >
   was detected by real-time reverse transcriptase PCR in stool, urine, serum, sputum,
   oropharyngeal and nasopharyngeal swabs for 2 to 3 weeks after symptom onset. Results
   were reported in cycle threshold (Ct) values.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2025-10-22'
 analytes:
   Stool_SARSCoV2:
     description: >

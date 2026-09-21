@@ -7,6 +7,12 @@ description: Case report (with review) describing an Italian adult male diagnose
   in Vero E6 cells; Table 1/figure CSV provide Ct time series by days from symptom
   onset for several specimen types (oropharyngeal swab, ulcerated perianal lesion,
   rectal/anal swab, foot lesion, plasma, seminal fluid, urine).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   ct_oropharyngeal_swab:
     description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)

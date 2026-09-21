@@ -10,6 +10,11 @@ description: >
   swab results were obtained from the combined dataset in the supplementary materials
   of Challenger et al. (2022). Attributes of drug treatments were sourced from the
   supplementary materials of the original paper.
+curation:
+  method: manual
+  data_source:
+    - main_text
+  extracted_on: '2024-11-18'
 analytes:
   nasopharyngeal_swab_SARSCoV2_Ct:
     description: >

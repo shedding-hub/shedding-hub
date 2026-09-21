@@ -10,6 +10,12 @@ description: Virological and immunological study of patients hospitalized in Ho 
   pharyngeal viral loads and frequent detection of viral RNA in blood and rectum in
   H5N1 cases, and elevated plasma cytokine/chemokine levels that correlated with pharyngeal
   viral load.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   nasopharyngeal_swab_influenza_gc_per_mL:
     description: Quantitative real-time PCR detection of influenza A viral RNA (matrix

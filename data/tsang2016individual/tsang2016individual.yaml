@@ -5,6 +5,12 @@ description: >
   The community-based study reports the transmission of Influenza A virus within households
   from February 2008 through December 2012, focusing on viral loads in nasal and throat
   swabs from index cases and their household contacts.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2025-01-29'
 analytes:
   NPSOPS:
     description: >

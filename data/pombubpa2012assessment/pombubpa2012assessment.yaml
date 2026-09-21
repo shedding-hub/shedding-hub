@@ -7,6 +7,12 @@ description: Evaluation study in Thailand assessing the commercial immunochromat
   CSV-provided data include quantitative norovirus concentrations for individual patients
   and genogroups (GI or GII) at specified days after a reference event (not specified
   in provided text/CSV).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-08-24'
 analytes:
   gii:
     description: Quantitative norovirus genogroup II (GII) measurement in stool by

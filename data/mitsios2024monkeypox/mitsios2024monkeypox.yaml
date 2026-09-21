@@ -6,6 +6,12 @@ description: Case report of mpox-related ophthalmic disease treated with tecovir
   over time in both eyes (OD and OS). One adult male patient (HIV-positive) had serial
   tear-wash measurements reported at days 0, 7, 14, and 28 relative to treatment initiation
   (tecovirimat).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   od_tear_wash:
     description: MPXV-DNA detection in right-eye (OD) tear-wash sample by real-time

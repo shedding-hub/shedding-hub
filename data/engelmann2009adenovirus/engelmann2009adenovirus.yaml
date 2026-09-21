@@ -8,6 +8,12 @@ description: Retrospective study of pediatric liver transplant recipients monito
   The original paper lists patient 9's adenovirus type as "A41", which is a typo --
   there is no adenovirus type A41. It is unclear whether the intended type was F41 or
   A31, so genotype is marked unknown rather than guessing.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   serum_adenovirus_viral_load:
     description: Quantitative real-time PCR (qPCR) measurement of adenovirus (ADV)

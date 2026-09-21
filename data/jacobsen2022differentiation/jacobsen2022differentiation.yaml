@@ -10,6 +10,12 @@ description: This study investigates the differentiation between wild-type Group
   that vaccine-like virus was detected in 46 samples, wild-type RVA in 6 samples,
   and mixed infections in 3 samples. The study also explored co-infections with other
   pathogens and the shedding of vaccine strains in immunocompromised patients.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-02-05'
 analytes:
   stool_rotavirus_vaccine_RV1:
     description: Rotarix (RV1) vaccine shedding after vaccination

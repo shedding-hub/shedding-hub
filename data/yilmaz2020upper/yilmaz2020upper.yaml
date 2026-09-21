@@ -8,6 +8,12 @@ description: >
   in patients with mild and severe/critical coronavirus disease 2019 (COVID-19). They
   also investigated whether the duration of symptoms correlated with the duration
   of viral RNA shedding. A total of 56 patients were included.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2025-02-04'
 analytes:
   oropharyngealswab_SARSCoV2:
     description: >

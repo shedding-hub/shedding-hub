@@ -5,6 +5,12 @@ description: Letter reporting longitudinal PCR measurements in one immunocomprom
   adult patient with mpox receiving tecovirimat, including MPXV Ct values from an
   anal lesion and plasma over time, and plasma HIV viral load (gc/mL). Times are provided
   as day offsets relative to an unspecified reference event in the CSV.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-09-17'
 analytes:
   anal_lesion_mpxv_ct:
     description: MPXV PCR cycle threshold (Ct) measured from anal lesion specimen

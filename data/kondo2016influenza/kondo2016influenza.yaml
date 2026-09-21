@@ -10,6 +10,12 @@ description: Study of influenza virus shedding in pediatric patients treated wit
   duration of fever, virus isolation, viral RNA detection rates, and antiviral susceptibility.
   The CSV data provided contain quantitative viral RNA measurements (genome-equivalent
   copies) for a subset of participants.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   nasal_discharge_influenza_gc_per_mL:
     description: Quantitative real-time PCR (TaqMan) targeting the influenza M gene

@@ -6,6 +6,14 @@ description: Human RSV challenge study in adults analyzing high-resolution viral
   (gc/mL) and infectious virus titers (pfu/mL) over days post-exposure for individual
   participants (PatientID). The study report the specimen as nasal samples, and we consider these to 
   be nasopharyngeal aspirates based on the methods description. The study does not provide assay details for the viral RNA or infectious virus measurements.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+    - supplement
+    - data_repository
+  extracted_on: '2026-08-12'
 analytes:
   gc_ml:
     description: RSV viral RNA concentration quantified from respiratory samples;

@@ -8,6 +8,12 @@ description: Study of H1N1pdm09 viral load (VL) in respiratory samples collected
   paper. A subset of 10 hospitalised patients treated with oseltamivir were followed
   longitudinally and serial VL measurements (days of treatment) are provided (Fig.2
   / CSV).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   respiratory_influenza_viral_load:
     description: Quantitative one-step real-time RT-PCR targeting the influenza M

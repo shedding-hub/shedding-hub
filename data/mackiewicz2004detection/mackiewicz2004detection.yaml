@@ -10,6 +10,12 @@ description: This study, conducted from November 2002 to November 2003, investig
   utilized RT-PCR and real-time PCR assays for detection and quantification, with
   a focus on the VP1/2A junction of the HAV genome. The study also included phylogenetic
   analysis to determine HAV genotypes.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-02-05'
 analytes:
   serum_HAV_RNA:
     description: HAV RNA was extracted from 140 μl of serum using the QIAmp viral

@@ -8,6 +8,12 @@ description: Retrospective single-season (2010/2011) cohort study of lung transp
   swabs were performed until virologic results were negative. Study reports Ct values
   from nasopharyngeal swabs (used here as cycle-threshold measurements relative to
   symptom onset). Prolonged viral shedding (>=7 days) was common.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   nasopharyngeal_swab_influenza_CT:
     description: Real-time RT-PCR cycle threshold (Ct) values measured on nasopharyngeal

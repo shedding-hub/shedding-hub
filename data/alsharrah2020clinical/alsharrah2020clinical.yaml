@@ -7,6 +7,12 @@ description: >
   paired oropharyngeal and nasopharyngeal samples from 33 COVID-19 patients in Jaber
   Alahmad Hospital (JAH). Cycle threshold (Ct) value for E and RdRP genes were measured
   using Tib MolBiol's LightMix.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2025-02-17'
 analytes:
   NPS_SARSCoV2:
     description: >

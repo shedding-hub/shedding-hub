@@ -8,6 +8,12 @@ description: Prospective cohort of 25 high-risk contacts of clade IIb monkeypox 
   (targeting the MPXV-TNF receptor gene) on an Applied Biosystems QuantStudio. Study
   documents presymptomatic MPXV DNA detection (Ct values) and culture of replication-competent
   virus from presymptomatic anorectal samples.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   serum:
     description: 'MPXV detected by in-house real-time PCR targeting the MPXV-TNF receptor

@@ -8,6 +8,12 @@ description: >
   A single low Ct (<30) strongly indicates acute infection, and a second PCR within
   48 hours helps tell whether someone is early (proliferation) or late (clearance)
   in infection.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2025-10-28'
 analytes:
   AN_OPS_SARSCoV2_ct:
     description: >

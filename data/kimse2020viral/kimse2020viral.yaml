@@ -4,6 +4,12 @@ doi: 10.1016/j.ijid.2020.04.083
 description: >
   The authors measured SARS-CoV-2 in longitudinal oropharyngeal swab samples collected
   from 71 COVID-19 patients between February 4 and April 7, 2020.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-11-22'
 analytes:
   oropharyngealswab_SARSCoV2_symptomatic:
     description: >

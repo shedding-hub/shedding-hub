@@ -9,6 +9,12 @@ description: Outbreak investigation study in Catalonia (Spain) during 2017–201
   of quantification reported for GI and GII; the figure-derived CSV provided here
   contains individual saliva GII measurements over days relative to symptom onset
   (as used for symptomatic individuals in the paper).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   saliva_gii:
     description: Human norovirus genogroup II (GII) RNA in saliva quantified by RT-qPCR

@@ -95,7 +95,9 @@ def read_sources(path: pathlib.Path | None) -> dict:
     with path.open(encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             study = (row.get("study_id") or "").strip()
-            raw = (row.get("data_source") or row.get("proposed_data_source") or "").strip()
+            raw = (
+                row.get("data_source") or row.get("proposed_data_source") or ""
+            ).strip()
             if not study:
                 continue
             vals = [v.strip() for v in raw.split(";") if v.strip()]
@@ -130,7 +132,7 @@ def main() -> int:
     args = parser.parse_args()
 
     sources = read_sources(args.sources)
-    disagreed, incomplete, written, already = [], [], [], []
+    disagreed, incomplete, written, already, no_main_text = [], [], [], [], []
 
     for path in sorted(DATA.glob("*/*.yaml")):
         study = path.parent.name
@@ -145,9 +147,17 @@ def main() -> int:
         if by_subject != by_date:
             disagreed.append((study, date, by_subject, by_date, subject))
 
-        vals = sources.get(study, [])
-        if "main_text" not in vals:
-            vals = ["main_text"] + vals
+        # main_text is injected only where a curator has said nothing at all.
+        # An explicit value is the curator's judgement and is kept as written:
+        # cdc2024nhphrn is a surveillance network with no paper, so its data
+        # come from a repository and no article text exists to have been read.
+        # Forcing main_text onto it would record something false.
+        if study in sources:
+            vals = list(sources[study])
+            if "main_text" not in vals:
+                no_main_text.append(study)
+        else:
+            vals = ["main_text"]
         vals = [v for v in SOURCE_ORDER if v in vals]
         if vals == ["main_text"]:
             incomplete.append(study)
@@ -157,17 +167,27 @@ def main() -> int:
         if anchor not in text:
             raise SystemExit(f"{study}: no top-level `analytes:` to insert before")
         if not args.check:
-            path.write_text(text.replace(anchor, "\n" + block + "analytes:\n", 1), encoding="utf-8")
+            path.write_text(
+                text.replace(anchor, "\n" + block + "analytes:\n", 1), encoding="utf-8"
+            )
         written.append(study)
 
     print(f"datasets written        : {len(written)}")
     print(f"already had a block     : {len(already)}")
-    print(f"data_source incomplete  : {len(incomplete)} (main_text only, awaiting curator input)")
+    print(
+        f"data_source incomplete  : {len(incomplete)} (main_text only, awaiting curator input)"
+    )
     if incomplete:
         for s in incomplete:
             print(f"    {s}")
+    if no_main_text:
+        print(f"no main_text, as the curator recorded: {len(no_main_text)}")
+        for s in no_main_text:
+            print(f"    {s}")
     if disagreed:
-        print(f"\nERA SIGNALS DISAGREE on {len(disagreed)} dataset(s) -- resolve before trusting:")
+        print(
+            f"\nERA SIGNALS DISAGREE on {len(disagreed)} dataset(s) -- resolve before trusting:"
+        )
         for row in disagreed:
             print(f"    {row}")
         return 1

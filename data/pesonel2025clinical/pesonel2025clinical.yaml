@@ -9,6 +9,13 @@ description: Multicenter observational cohort (MOSAIC) of laboratory-confirmed c
   Ct measurements by patient and specimen; participants are categorized as treated
   vs untreated (systemic antivirals within 14 days of first PCR-positive sample) but
   no individual demographics are provided in the CSV.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2026-09-17'
 analytes:
   oropharyngeal_swab:
     description: MPXV-specific real-time PCR performed per local laboratory procedures;

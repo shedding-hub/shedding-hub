@@ -7,6 +7,12 @@ description: Descriptive epidemiologic investigation of an adenovirus cluster af
   partial sequencing of the hexon gene to distinguish probable nosocomial transmission
   of HAdV-F41 from endogenous reactivations with HAdV-C1/C2. CSV data provide per-patient
   qualitative fecal shedding results over time (days after symptom onset).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   stool_adenovirus_detection:
     description: Qualitative adenovirus detection in stool/feces (reported as positive/negative)
