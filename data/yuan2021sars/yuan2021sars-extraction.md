@@ -138,7 +138,7 @@ Finally, the data is formatted and output as a YAML file.
 ```python
 output_data = {
     "title": "SARS-CoV-2 viral shedding characteristics and potential evidence for the priority for faecal specimen testing in diagnosis",
-    "doi": "10.1016/j.virusres.2020.198147",
+    "doi": "10.1371/journal.pone.0247367",
     "description": folded_str(
         "This study investigates the shedding of SARS-CoV-2 RNA across multiple specimen types-including stool, respiratory secretions, urine, and serum-in both symptomatic and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to clearance across specimen types.\n"
     ),
