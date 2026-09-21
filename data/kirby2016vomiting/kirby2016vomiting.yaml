@@ -10,6 +10,12 @@ description: This study investigates the role of vomiting in norovirus transmiss
   infection and contributes significantly to environmental contamination and transmission
   risk. The study provides quantitative data on virus titers in emesis, which is critical
   for risk assessment and control measures.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2026-02-05'
 analytes:
   emesis_norovirus_GI:
     description: Norovirus GI viral titers in emesis samples measured using strain-specific

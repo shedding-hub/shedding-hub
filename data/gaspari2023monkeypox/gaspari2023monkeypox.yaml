@@ -8,6 +8,12 @@ description: Observational study of 30 laboratory-confirmed mpox (MPXV) patients
   (skin lesion swab, rectal swab, oropharyngeal swab, plasma, urine) were tested for
   MPXV DNA by real-time PCR and reported here as Ct values (with some negatives) at
   specific days after symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   skin_lesion_swab:
     description: MPXV DNA detection by real-time PCR on skin lesion swab specimens;

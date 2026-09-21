@@ -7,6 +7,12 @@ description: Study of pediatric norovirus gastroenteritis cases admitted to Chan
   were characterized by sequencing. CSV figure data provide norovirus concentrations
   over days after symptom onset, reported either as gc/mL (many participants) or gc/wet
   gram (one immunocompromised patient with prolonged shedding).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   gc_ml:
     description: Norovirus RNA concentration measured by SYBR Green-based real-time

@@ -6,6 +6,12 @@ description: Observational study of previously healthy children <2 years old wit
   by fresh quantitative culture over serial hospital days to evaluate viral dynamics
   and associations with disease severity outcomes (eg, length of hospitalization,
   ICU requirement, respiratory failure).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-12'
 analytes:
   respiratory_secretions_RSV_viral_load:
     description: RSV viral load in respiratory secretions measured by fresh quantitative

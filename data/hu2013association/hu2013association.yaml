@@ -8,6 +8,13 @@ description: Study of 14 patients with novel influenza A H7N9 admitted to Shangh
   load after antivirals with improved outcome and reports persistent high viral load
   and emergence of NA Arg292Lys resistance in some patients. The provided CSV contains
   69 measurements from patients with IDs 1, 2, and 3 across the four specimen types.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   oropharyngeal_swab:
     description: Viral RNA quantified by real-time PCR from throat (oropharyngeal)

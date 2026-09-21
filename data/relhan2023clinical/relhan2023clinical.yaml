@@ -7,6 +7,13 @@ description: Case series of five confirmed mpox (MPXV) cases from New Delhi, Ind
   contains Ct (cycle threshold) measurements from figure-derived CSV for two patients
   (PatientID 01 and 02) across oropharyngeal swab, nasopharyngeal swab, serum, urine,
   and lesion specimens at specific post-onset days.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+  extracted_on: '2026-09-17'
 analytes:
   ct_oropharyngeal_swab:
     description: MPXV DNA detection by real-time PCR reported as cycle threshold (Ct)

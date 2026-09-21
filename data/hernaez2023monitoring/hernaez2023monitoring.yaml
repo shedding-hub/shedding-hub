@@ -8,6 +8,12 @@ description: Cross-sectional study in Madrid, Spain (two health centres) during 
   (BSC-1) in the parent study, but the provided figure-derived CSV contains saliva
   qPCR Ct and genome copies/mL values at a single timepoint per patient relative to
   symptom onset (days).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   ct_saliva:
     description: Monkeypox virus (MPXV) DNA detection in saliva by quantitative PCR

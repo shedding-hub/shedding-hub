@@ -7,6 +7,12 @@ description: Prospective evaluation (winter-spring 2004-2005 and 2005-2006) of h
   figure data provide per-patient day-0 and follow-up measurements (relative to symptom
   onset) for metapneumovirus and some co-detected respiratory viruses (rhinovirus,
   influenza, coronavirus).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   metapneumovirus:
     description: Quantification of human metapneumovirus (hMPV) RNA in nasopharyngeal

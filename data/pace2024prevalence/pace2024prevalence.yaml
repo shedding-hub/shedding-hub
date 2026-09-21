@@ -14,6 +14,12 @@ description: >
   3 and 8 wk for healthy group. Since the author didn't provide the specific time
   information in the paper, we adopted mean value of time period as our data (4d for
   2-6d, 11d for 2wk, 18d for 3wk, 25d for 4wk, 53d for 8wk).
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2025-04-21'
 analytes:
   stool_SARSCoV2:
     description: >

@@ -7,6 +7,12 @@ description: Longitudinal RSV viral load study in 51 naturally infected, hospita
   visits up to ~1 month after symptom onset. Viral load was measured using TaqMan-based
   real-time qRT-PCR targeting the RSV N gene with subtype-specific primers (RSV-A
   and RSV-B), and results were reported as plaque-forming unit equivalents per mL.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-12'
 analytes:
   nasal_aspirate_respiratory_syncytial_virus_viral_load:
     description: RSV viral load quantified from nasal aspirate/nasal wash using RNA

@@ -5,6 +5,12 @@ description: Pediatric respiratory specimens collected in Ireland were screened 
   against a quantitative real-time RT-PCR assay, and viral loads (copies/mL) were
   quantified for 30 hMPV-positive respiratory specimens; genotypes included A2a, A2b,
   and B2 subclusters (B2a, B2b).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   respiratory_metapneumovirus_viral_load:
     description: Quantitative real-time reverse-transcriptase PCR (real-time RT-PCR)

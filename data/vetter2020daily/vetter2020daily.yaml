@@ -8,6 +8,14 @@ description: >
   in Geneva, Switzerland, up to days 7 and 19 after symptom onset. Cellular and humoral
   SARS-CoV-2-specific adaptive responses and serology data are currently not included
   in this dataset.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - table
+    - figure
+    - supplement
+  extracted_on: '2024-10-18'
 analytes:
   NPS_SARSCoV2:
     description: >

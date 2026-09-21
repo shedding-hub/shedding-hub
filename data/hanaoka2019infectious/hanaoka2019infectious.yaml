@@ -9,6 +9,14 @@ description: Comparative study in Japan (urology STI clinic, June 2014–May 201
   in A549 cells with confirmation by cytopathic effect and PCR. This extraction captures
   individual longitudinal urine HAdV DNA measurements (copies/mL) from a CSV derived
   from figures/tables, timed by days from symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+    - supplement
+  extracted_on: '2026-08-24'
 analytes:
   urine_adenovirus_viral_load:
     description: Quantification of human adenovirus (HAdV) DNA in first-void urine

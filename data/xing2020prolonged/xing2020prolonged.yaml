@@ -7,6 +7,12 @@ description: >
   and fecal specimens in three children with COVID-19. However, complete specimen
   test value data were available for only one child. A total of 19 oropharyngeal swab
   specimens and 17 fecal specimens were collected.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2025-02-17'
 analytes:
   stool_SARSCoV2:
     description: >

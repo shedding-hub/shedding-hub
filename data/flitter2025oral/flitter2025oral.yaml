@@ -7,6 +7,12 @@ description: Phase 2b randomized, placebo-controlled vaccination and human chall
   shedding in stool and emesis over post-challenge days. This extraction includes
   individual participant stool and emesis shedding measurements from provided figure-derived
   CSV rows for placebo recipients.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2026-08-24'
 analytes:
   emesis:
     description: Norovirus shedding measurement in emesis, from figure-derived CSV

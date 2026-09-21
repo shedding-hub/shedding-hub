@@ -10,6 +10,12 @@ description: >
   the fall of 2020 and spring of 2021) who reported a negative RT-qPCR test result
   in the past 7 days and were either within 24 h of a positive RT-qPCR result or within
   5 days of exposure to someone with a confirmed positive RT-qPCR result.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2024-11-05'
 analytes:
   nasal_SARSCoV2:
     description: >

@@ -8,6 +8,12 @@ description: Case-control study of children <5 years old in Lanzhou, China (July
   other enteric viruses were also assessed. The provided figure-derived CSV contains
   individual HBoV stool viral load measurements (copies/mL of extract) for 18 HBoV-positive
   case and control children at a single timepoint (time=0).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   stool_bocavirus_viral_load:
     description: 'Human bocavirus (HBoV) DNA quantification from stool extracts using

@@ -8,6 +8,12 @@ description: Prospective surveillance in a foster home setting assessing sheddin
   infant (who had been vaccinated prior to enrollment). Quantitative RT-PCR data showed
   a peak RNA load about 1 week after vaccination followed by gradual decrease. Study
   suggests limited transmission of vaccine strains in close-contact environment.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   stool_rotavirus_vaccine_RV1_dose1:
     description: Quantitative real-time RT-PCR measuring rotavirus vaccine (RV1) RNA

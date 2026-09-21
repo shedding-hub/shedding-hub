@@ -7,6 +7,13 @@ description: Evaluation study of a sequence-independent next-generation sequenci
   CSV data provide per-patient real-time RT-PCR cycle threshold (Ct) values at a single
   timepoint (time=0; reference event not specified in the provided excerpt) for rhinovirus,
   enterovirus, human metapneumovirus, and bocavirus.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - supplement
+  extracted_on: '2026-09-09'
 analytes:
   rhinovirus_ct:
     description: Real-time RT-PCR cycle threshold (Ct) measurement for rhinovirus

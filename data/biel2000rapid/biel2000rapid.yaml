@@ -7,6 +7,12 @@ description: This paper reports development and use of qualitative seminested PC
   The quantitative assay is reported to be linear from 10^7 to 10^1 copies per assay.
   CSV-extracted longitudinal urine viral DNA measurements are provided here as time
   series per patient.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   urine_polyomavirus_dna:
     description: Quantitative TaqMan PCR (TM-PCR) assay for general detection/quantification

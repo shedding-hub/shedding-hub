@@ -6,6 +6,13 @@ description: Human norovirus GI.1 challenge study comparing symptomatic vs asymp
   to serum cytokine responses. This extraction contains stool viral shedding measurements
   (GEC/g) digitized from a figure-data CSV (batch 1/4) for 6 symptomatic participants
   (PatientID 1-6), with time in days relative to inoculation/challenge (day 0 = prechallenge).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2026-08-24'
 analytes:
   gec_g:
     description: Stool norovirus GI.1 RNA quantity measured as genome equivalent copies

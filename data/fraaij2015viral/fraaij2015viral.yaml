@@ -8,6 +8,12 @@ description: Observational substudy of the Influenza Resistance Information Stud
   enrolled patients, 29 were influenza RT-PCR positive on day 1 (18 adults, 11 children).
   Resistance (H275Y) was detected in some post-baseline samples; clinical and virological
   outcomes were described.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-07-23'
 analytes:
   particles_ml:
     description: RT-PCR quantification of influenza virus from nasal and throat (nasopharyngeal

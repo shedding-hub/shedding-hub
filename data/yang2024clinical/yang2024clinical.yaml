@@ -8,6 +8,13 @@ description: Retrospective case series of nine PCR-confirmed mpox (MPXV) infecti
   as Ct values across multiple specimen types (skin lesions, oropharyngeal swab, nasopharyngeal
   swab, anus swab, and feces/stool). CSV figure-derived Ct time series were provided
   and extracted (70 rows total), with time in days relative to symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+  extracted_on: '2026-09-17'
 analytes:
   nasopharyngeal_swab:
     description: MPXV DNA detection by quantitative real-time PCR (qPCR) reported

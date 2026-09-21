@@ -8,6 +8,12 @@ description: Prospective birth community-cohort study in Manguinhos, Rio de Jane
   (including F167L mutation). This extraction captures individual Ct values and days
   post-vaccination (or pre-dose/non-vaccinated sampling) from the provided CSV/table
   for Le(a+b+) secretor children.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-08-12'
 analytes:
   '1':
     description: Rotavirus A (vaccine-derived RV1 G1P[8]) RT-qPCR cycle threshold

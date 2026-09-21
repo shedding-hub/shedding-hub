@@ -7,6 +7,12 @@ description: This study investigates the duration of viral shedding in patients 
   two long-term viral shedding cases, revealing several mutations. The findings suggest
   that the long-term carrier state of norovirus infection contributes to the generation
   of escape mutants by host immunoselection.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-02-05'
 analytes:
   stool_norovirus:
     description: Norovirus viral load measured in stool samples using quantitative

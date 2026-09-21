@@ -9,6 +9,12 @@ description: Hospital-based study in Italy during the 2011–2012 influenza seas
   quantitative viral load time series are available for multiple patients by immune
   status and treatment, and Table 1 reports clonal proportions of NA mutations over
   time for two immunocompromised oseltamivir-unresponsive patients (Pavia/14 and Pavia/27).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   nasopharyngeal_swab:
     description: Quantitative influenza A(H3N2) viral load time series from nasal/nasopharyngeal

@@ -7,6 +7,12 @@ description: Single-center retrospective case series from Beijing Youan Hospital
   vesicular fluid swabs as the primary sample type. Figure-derived CSV provides MPXV
   PCR Ct values from vesicular fluid at time 0 (reference event not specified in CSV/figure
   extract; all participants marked symptomatic).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2026-09-17'
 analytes:
   vesicular_fluid:
     description: Real-time PCR (qPCR) for MPXV confirmation (Ct threshold for positivity

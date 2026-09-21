@@ -9,6 +9,12 @@ description: Prospective pediatric respiratory virus surveillance study in Pavia
   of excretion. The extracted quantitative time series here come from a CSV derived
   from Table 3, reporting hMPV RNA copies/mL over follow-up (time in days from first/earliest
   NPA collection for each patient).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   nasopharyngeal_aspirate_metapneumovirus_rna_gc_ml:
     description: Human metapneumovirus (hMPV) RNA semiquantitation in nasopharyngeal

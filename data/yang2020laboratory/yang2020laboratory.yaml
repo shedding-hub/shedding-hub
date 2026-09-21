@@ -6,6 +6,13 @@ description: >
   Guangdong CDC. Oropharyngeal swabs, nasopharyngeal swabs and sputum samples were
   tested for upper respiratory tract infection, while bronchoalveolar lavage fluid
   (BALF) was tested for lower respiratory tract infection.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2025-02-25'
 analytes:
   upper_resp_tract:
     description: >

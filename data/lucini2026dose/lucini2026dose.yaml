@@ -10,6 +10,14 @@ description: Phase 2a ATHENA trial in immunocompromised patients with invasive h
   with intravenous BCV at a dose of 0.2 mg/kg twice weekly (BIW). Patients in cohorts 
   2 treated with 0.3 mg/kg BIW. Patients in cohort 3 treated  with 0.4 mg/kg BIW. 
   The only patient where a serum sample was available treated with 0.4 mg/kg once weekly.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+    - supplement
+  extracted_on: '2026-09-09'
 analytes:
   serum_a:
     description: Quantitative adenovirus DNA load in serum measured by a two-step

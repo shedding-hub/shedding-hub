@@ -8,6 +8,12 @@ description: Hospital-based observational study in adults admitted to Foch hospi
   over time from a figure-derived CSV; symptomatic participants are timed from symptom
   onset, and asymptomatic participants are timed from first positive PCR (confirmation
   date).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-12'
 analytes:
   nasopharyngeal_swab_RSV_ct_symptomatic:
     description: RSV RNA detection in nasopharyngeal swabs (NPS) using Alinity M RESP-4-Plex

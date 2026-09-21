@@ -11,6 +11,13 @@ description: Prospective single-center study (Kaohsiung Medical University Hospi
   sample-to-answer platform. CSV-provided data contain per-patient, per-day qPCR Ct
   measurements (including negatives) for multiple specimen types timed by days post-symptom
   onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - supplement
+  extracted_on: '2026-09-17'
 analytes:
   pus:
     description: MPXV qPCR cycle threshold (Ct) values measured from lesion-derived

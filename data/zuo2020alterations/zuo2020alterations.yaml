@@ -4,6 +4,12 @@ doi: 10.1053/j.gastro.2020.05.048
 description: >
   The author measured SARS-CoV-2 detected by real-time reverse transcriptase PCR in
   fecal samples from 15 hospitalized COVID-19 patients in Hong Kong.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2025-04-14'
 analytes:
   stool_SARSCoV2_SymptomOnset:
     description: >

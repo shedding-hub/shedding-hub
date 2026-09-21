@@ -8,6 +8,12 @@ description: Prospective longitudinal respiratory illness surveillance study of 
   from a standard curve and reported as copies per mL of lysis buffer. CSV-derived
   measurements here provide longitudinal nasal HBoV quantities/positivity over time
   (days relative to enrollment baseline in the figure-derived dataset).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-09-09'
 analytes:
   nasal_hbov_viral_load:
     description: Human bocavirus (HBoV) real-time PCR targeting the NP1 gene. Study

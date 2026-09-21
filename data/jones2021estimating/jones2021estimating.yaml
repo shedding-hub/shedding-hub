@@ -10,6 +10,12 @@ description: >
   'viral-load-with-negatives.tsv' dataset in the GitHub repository of Jones et al.
   (2021). Samples lacking a known onset date or a detected positive test result were
   filtered out.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2025-04-29'
 analytes:
   swab_SARSCoV2_onset:
     description: >

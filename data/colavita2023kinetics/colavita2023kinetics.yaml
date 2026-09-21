@@ -10,6 +10,13 @@ description: Case series follow-up study of three mpox (Monkeypox virus, MPXV) c
   on Vero E6 cells. CSV figure-derived data here provide per-patient time series of
   Ct values and MPXV DNA concentration normalized to extracted nucleic acid (gc/ng)
   at specific days post symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+  extracted_on: '2026-09-17'
 analytes:
   urine_ct:
     description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene

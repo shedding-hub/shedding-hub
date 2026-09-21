@@ -11,6 +11,13 @@ description: Hospital-based observational study in Delft, The Netherlands (Nov 2
   no individual-level TCID50 values were provided in the supplied CSV/table extraction).
   Times in the provided figure-derived CSV are treated as days relative to symptom
   onset (reference event).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+  extracted_on: '2026-08-12'
 analytes:
   rsv_nasopharyngeal_aspirate_ct:
     description: RSV-B RNA detection in infant nasopharyngeal aspirates by qRT-PCR

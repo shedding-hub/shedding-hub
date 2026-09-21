@@ -5,6 +5,12 @@ doi: 10.1016/j.virusres.2020.198147
 description: >
   This study investigates the fecal shedding of SARS-CoV-2 in COVID-19 patients, analyzing
   viral load dynamics, clinical significance, and survival analysis.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2025-03-17'
 analytes:
   stool_SARSCoV2_ORF1ab:
     description: >

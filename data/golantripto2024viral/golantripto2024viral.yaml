@@ -9,6 +9,12 @@ description: 'Prospective cohort study of hospitalized infants (<12 months) with
   per mL, vp/mL) are provided here from figure-derived CSV data, stratified by specimen
   type and transport medium; RSV subtype (A or B) is available per patient in the
   CSV.'
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2026-08-12'
 analytes:
   utm_vp_ml_nasopharyngeal_swab:
     description: Quantitative RT-PCR viral load reported as virus particles per mL

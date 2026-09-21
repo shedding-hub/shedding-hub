@@ -8,6 +8,12 @@ description: Prospective post-marketing study of faecal shedding after oral Lanz
   positive threshold OD=0.21) and by real-time RT-PCR targeting the NSP3 gene (quantified
   by plasmid standard curve). Viral loads in PCR-positive samples ranged from <1.0×10^3
   to 1.9×10^8 copies/g stool. Reference time for all measurements is days post-vaccination.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-07-23'
 analytes:
   stool_lanzhou_lamb_rotavirus_vaccine_EIA:
     description: Enzyme immunoassay (Oxoid Prospect ELISA Kit) detection of rotavirus

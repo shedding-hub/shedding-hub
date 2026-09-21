@@ -8,6 +8,12 @@ description: Hospital-based study of acute respiratory tract infection patients 
   or confirmation date for bocavirus and several co-detected respiratory viruses (RSV,
   rhinovirus, parainfluenza virus, adenovirus, coronavirus). We could not find a DOI
   for this paper; it is not available.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   hospital_admission_bocavirus:
     description: PCR-based detection/quantification of human bocavirus (HBoV) in respiratory

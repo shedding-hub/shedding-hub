@@ -7,6 +7,12 @@ description: >
   types-including stool, respiratory secretions, urine, and serum-in both symptomatic
   and asymptomatic COVID-19 patients. It evaluates viral load dynamics and time to
   clearance across specimen types.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2025-04-02'
 analytes:
   nasopharyngeal_swab_SARSCoV2_ORF1ab_symptomatic:
     description: >

@@ -6,6 +6,12 @@ description: Comparative study of RSV shedding in adult volunteers experimentall
   culture across multiple postinfection days (0-12 and day 28). CSV-provided measurements
   represent a time series per subject (PatientID 1-5) with values recorded by day
   relative to infection/challenge.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-12'
 analytes:
   nasal_respiratory_syncytial_virus_quant_rt_pcr:
     description: Quantitative real-time RT-PCR measurement of respiratory syncytial

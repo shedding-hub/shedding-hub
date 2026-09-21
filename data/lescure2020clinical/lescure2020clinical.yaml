@@ -12,6 +12,13 @@ description: >
   samples only have positive and negative results (currently not included in this
   data). The data was obtained from Goyal et al. 2020 for the nasopharyngeal swab
   results in 4 patients.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2024-09-26'
 analytes:
   naso_swab_SARSCoV2:
     description: >

@@ -6,6 +6,13 @@ description: Case series from Taiwan (2023 mpox outbreak) reporting viral kineti
   swab, urethral swab, rectal swab) in mpox cases, including people with HIV and tecovirimat
   treatment. This extraction covers CSV batch 1/4 with repeated sampling per patient
   over days since a clinical reference timepoint (not specified in the provided excerpt).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - supplement
+  extracted_on: '2026-09-17'
 analytes:
   oropharyngeal_swab:
     description: Mpox virus DNA detection by PCR reported as cycle threshold (Ct)

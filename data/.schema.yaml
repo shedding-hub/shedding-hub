@@ -214,6 +214,66 @@ properties:
   title:
     type: string
     description: Title of the source publication, study, or data repository.
+  curation:
+    type: object
+    description: >
+      How this dataset was obtained, extracted and reviewed. Recorded so a reader can
+      tell an agent-drafted dataset from a hand-curated one, and so an analysis can
+      exclude datasets whose values the authors supplied directly rather than publishing.
+    additionalProperties: false
+    required: [method, extracted_on, data_source]
+    properties:
+      method:
+        description: >
+          Whether the dataset was curated by hand throughout, or drafted by the
+          extraction agent and then reviewed by a person. `ai_assisted` never means
+          unreviewed.
+        type: string
+        enum: [manual, ai_assisted]
+      data_source:
+        description: >
+          Where in the source the values came from. An array because one dataset
+          commonly draws on several: a table for the cohort and a figure for the
+          trajectories, say. `main_text` appears on every dataset, since the article
+          text is always read alongside whichever object carries the numbers.
+          `author_shared` marks values the authors supplied directly, on request, and
+          never published -- those are excluded from the extraction benchmark, because
+          no agent reading the paper could have found them.
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          type: string
+          enum: [main_text, table, figure, supplement, author_shared, data_repository]
+      extracted_on:
+        description: >
+          Date the dataset was first committed, as YYYY-MM-DD. `format` alone would not
+          constrain this: validation runs without a format checker, so the pattern is
+          what actually holds.
+        type: string
+        format: date
+        pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+      pipeline_version:
+        description: >
+          Agent pipeline release tag or commit hash. Meaningful only when method is
+          `ai_assisted`.
+        type: string
+      models:
+        description: >
+          Model identifiers, with versions, for every agent that touched the dataset.
+          Meaningful only when method is `ai_assisted`.
+        type: array
+        items:
+          type: string
+      reviewers:
+        description: >
+          GitHub handles or ORCID iDs of the people who reviewed the dataset. Often
+          absent: per-study reviewer identity was not recorded for datasets curated
+          before this block existed, and it is left empty rather than guessed from the
+          commit author, who is frequently not the reviewer.
+        type: array
+        items:
+          type: string
   analytes:
     type: object
     description: >

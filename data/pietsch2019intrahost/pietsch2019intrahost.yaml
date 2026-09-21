@@ -6,6 +6,13 @@ description: Hospital-based study (January 2010 to September 2018) analyzing sto
   sapovirus infection in immunocompromised individuals. CSV-provided participant-level
   longitudinal stool RT-PCR measurements are reported as cycle threshold values over
   time (days) relative to symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - figure
+  extracted_on: '2026-09-09'
 analytes:
   stool_sapovirus_ct:
     description: Sapovirus RNA detection in stool by real-time RT-PCR; values are

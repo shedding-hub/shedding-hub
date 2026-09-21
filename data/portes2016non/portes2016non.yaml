@@ -8,6 +8,12 @@ description: This study investigates a gastroenteritis outbreak in 2013 in a low
   The study utilized TaqMan real-time PCR to assess viral loads in stool samples,
   revealing high viral loads in patients with adenovirus A12. The research highlights
   the importance of identifying unique viral agents in regions with routine RVA vaccination.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-02-05'
 analytes:
   stool_adenovirus_viral_load:
     description: Viral load of adenovirus in stool samples measured using TaqMan real-time

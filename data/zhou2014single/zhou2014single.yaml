@@ -8,6 +8,12 @@ description: Hospital-based study in Chongqing, China (Dec 2009–Aug 2013) inve
   NS1. This extraction captures individual-level HBoV1 viral loads for 7 severe cases
   (from provided CSV), with time reported in days (as provided) and viral load in
   copies/mL.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   nasopharyngeal_aspirate_bocavirus_viral_load:
     description: Human bocavirus 1 (HBoV1) DNA quantified in nasopharyngeal aspirate
