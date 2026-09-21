@@ -9,6 +9,12 @@ description: Controlled human infection study (Emory University Hospital, Julyâ€
   assay (MDCK cells) in NP swabs, saliva, and nasal lavage fluid. Respiratory particle
   emissions were sampled during breathing and speaking and analyzed by ddPCR for viral
   RNA. Clinical symptom scores and serology (HAI, MN) were also collected.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2026-07-23'
 analytes:
   nasopharyngeal_swab_ct:
     description: Cycle threshold (Ct) values from clinical PCR testing of nasopharyngeal

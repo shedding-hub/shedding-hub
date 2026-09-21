@@ -9,6 +9,12 @@ description: This study investigates a nosocomial outbreak of acute gastroenteri
   viruses. The study identified the circulation of equine-like G3P[8] DS-1-like rotavirus
   and GII.4 Sydney[P16] norovirus. The study emphasizes the importance of active surveillance
   and prevention measures to control nosocomial infections in hospital settings.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-02-05'
 analytes:
   stool_rotavirus_viral_load:
     description: Detection and quantification of rotavirus in stool samples using

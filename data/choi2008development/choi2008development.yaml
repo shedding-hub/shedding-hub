@@ -7,6 +7,12 @@ description: Study developing and clinically evaluating TaqMan real-time PCR ass
   from patients with acute respiratory tract infections; 11 patients were positive
   by all three assays and had quantified viral loads reported as copies per mL of
   specimen.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   nasopharyngeal_aspirate_bocavirus_viral_load:
     description: 'Quantification of human bocavirus (HBoV) in nasal aspirate specimens

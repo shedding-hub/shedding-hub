@@ -10,6 +10,12 @@ description: >
   including at least one with Ct < 35. Ct value were collected using the Roche cobas
   target 1 assay and converted to estimated RNA viral concentrations via a standard
   curve and log-linear transformation.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2025-07-25'
 analytes:
   AN_OPS_SARSCoV2:
     description: >

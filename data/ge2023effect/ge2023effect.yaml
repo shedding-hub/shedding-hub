@@ -7,6 +7,12 @@ description: Secondary analysis of a human norovirus GI.1 challenge study (Clini
   Virus shedding was measured by IMC RT-PCR (qualitative) and qRT-PCR (quantitative
   genomic equivalent copies). This extraction contains digitized fecal shedding measurements
   for dose 4,800 RT-PCR units from the provided figure-data CSV (Batch 1/8).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2026-08-24'
 analytes:
   4800_stool:
     description: Norovirus GI.1 challenge study fecal shedding measurement for participants

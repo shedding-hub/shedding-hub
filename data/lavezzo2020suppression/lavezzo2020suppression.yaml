@@ -6,6 +6,12 @@ description: >
   after first death of pneumonia was reported. Two surveys and virus tests were conducted
   with the first survey near the start of lockdown and the second one at the end of
   lockdown
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-10-31'
 analytes:
   RdRp_first_pos:
     description: >

@@ -6,6 +6,12 @@ description: >
   This study was conducted in Utah and Wisconsin between 23 March and 13 May 2020,
   with testing data collected during a prospective household transmission investigation
   of outpatient and mild coronavirus disease 2019 cases.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-12-02'
 analytes:
   N1_probe:
     description: >

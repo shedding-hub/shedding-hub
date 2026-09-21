@@ -6,6 +6,12 @@ description: >
   Through a prospective, longitudinal, community cohort study that captures the critical
   growth phase and peak of viral replication, the goal is to characterize the window
   of SARS-CoV-2 infectiousness and its temporal relationship with symptom onset.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2025-02-05'
 analytes:
   asymptomatic_PCR:
     description: >

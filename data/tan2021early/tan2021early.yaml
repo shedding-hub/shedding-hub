@@ -6,6 +6,12 @@ description: >
   Measured SARS-CoV-2 viral load in the upper respiratory tract, along with SARS-CoV-2-specific
   antibodies and T cell responses, at multiple time points from acute infection through
   convalescence or until death.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-12-12'
 analytes:
   swab_SARSCoV2_N:
     description: >

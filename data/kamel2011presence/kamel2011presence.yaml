@@ -7,6 +7,12 @@ description: This study conducted a survey of hepatitis A virus (HAV) and hepati
   and the environment. The study involved analyzing patient samples for HAV viral
   load and genotype, as well as measuring bilirubin levels. The reference event for
   the measurements was symptom onset or diagnosis.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-02-05'
 analytes:
   stool_HAV_viral_load:
     description: HAV viral load measured in stool samples using log copy number per

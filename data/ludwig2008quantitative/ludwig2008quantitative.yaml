@@ -6,6 +6,12 @@ description: Retrospective study of nine pediatric patients with hematologic/onc
   measured by one-step real-time PCR and correlating quantitative shedding with clinical
   symptoms. Measurements are reported as fecal norovirus concentrations over time
   (days after symptom onset).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   stool_norovirus_viral_load:
     description: Quantitative norovirus detection/excretion measured in fecal samples

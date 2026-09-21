@@ -9,6 +9,12 @@ description: Multicenter open-label trial in Japan (Tecopox study) enrolling pat
   inclusion/tecovirimat treatment. The CSV provided contains individual-level Ct (cycle
   threshold) measurements by patient and day (time) for multiple specimen types; most
   results are negative at many timepoints.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2026-09-17'
 analytes:
   ct_blood:
     description: Mpox virus PCR cycle threshold (Ct) values from blood samples (CSV

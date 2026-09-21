@@ -9,6 +9,12 @@ description: >
   using Digital PCR assays targeting the N1 genes. The symptom data (e.g., fever,
   cough, short of breath, diarrhea, headache, loss of smell, loss of taste, etc.)
   is currently not included in this data.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-09-05'
 analytes:
   stool_SARSCoV2_N1:
     description: >

@@ -9,6 +9,12 @@ description: This study investigates norovirus (NoV) infections in Toyama Prefec
   the potential for NoV evolution in the gastrointestinal tract, with genetic changes
   occurring during the infectious course. The research was supported by a Health Labor
   Sciences Research Grant from the Japanese Ministry of Health, Labor, and Welfare.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2025-05-20'
 analytes:
   stool_norovirus:
     description: Real-time PCR assay for detecting norovirus GII in stool specimens,

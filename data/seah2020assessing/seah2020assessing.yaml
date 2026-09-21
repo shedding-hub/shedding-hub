@@ -12,6 +12,12 @@ description: >
   and RT-PCR). No evidence of SARS-CoV-2 shedding in tears was observed during the
   course of the disease. In conclusion, the findings suggest that the risk of SARS-CoV-2
   transmission through tears is minimal.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2025-02-25'
 analytes:
   nasopharyngeal_swab_SARSCoV2:
     description: >

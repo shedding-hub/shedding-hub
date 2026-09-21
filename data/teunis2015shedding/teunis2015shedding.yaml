@@ -9,6 +9,12 @@ description: Longitudinal study of norovirus GII.4 faecal shedding during four n
   values). Ct readings were done once and calibrated against an RNA standard; Ct=40
   was considered the diagnostic detection limit. The analysis compared shedding dynamics
   (peak, time-to-peak, duration, AUC) between symptomatic and asymptomatic infections.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - author_shared
+  extracted_on: '2026-02-05'
 analytes:
   stool_norovirus_ct_symptomatic:
     description: Cycle threshold (Ct) values from quantitative real-time RT-PCR for

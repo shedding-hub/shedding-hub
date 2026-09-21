@@ -7,6 +7,12 @@ description: Case report from Rome, Italy (National Institute for Infectious Dis
   patient, with sampling days 5–19 after symptom onset. The report includes seminal
   shedding with Ct/Cq values and notes isolation of replication-competent virus from
   semen collected on day 6 after symptom onset using Vero E6 cells.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   semen:
     description: Mpox virus DNA detection in semen by real-time PCR; values are quantification

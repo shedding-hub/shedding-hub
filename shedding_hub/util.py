@@ -87,7 +87,7 @@ def load_dataset(
         >>> import shedding_hub as sh
         >>> data = sh.load_dataset('woelfel2020virological', local='./data')
         >>> sorted(data.keys())
-        ['analytes', 'dataset_id', 'description', 'doi', 'participants', 'title']
+        ['analytes', 'curation', 'dataset_id', 'description', 'doi', 'participants', 'title']
         >>> data['dataset_id']
         'woelfel2020virological'
     """

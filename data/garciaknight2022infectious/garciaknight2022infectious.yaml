@@ -9,6 +9,13 @@ description: Longitudinal cohort study (San Francisco Bay Area, Sep 2020–Oct 2
   on Vero-hACE2-TMPRSS2 cells assessed infectious virus. Time values are reported
   relative to symptom onset. The provided CSV contains per-participant quantitative
   RT-qPCR measurements for N and E (copies/mL) and vaccination category.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2026-07-23'
 analytes:
   e:
     description: RT-qPCR quantification of SARS-CoV-2 envelope (E) gene from anterior

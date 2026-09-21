@@ -13,6 +13,13 @@ description: Observational study of RSV infection in adults (Rochester, New York
   Respiratory Syncytial Virus Infection Kinetics to Host Infectiousness in Different
   Age Groups," which digitized and re-plotted the original viral-load curves from this
   study.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2026-08-12'
 analytes:
   pfu_ml:
     description: Quantitative RSV viral load expressed as plaque-forming unit (PFU)

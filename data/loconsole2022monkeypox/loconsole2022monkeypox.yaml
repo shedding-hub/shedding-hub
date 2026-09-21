@@ -7,6 +7,12 @@ description: Surveillance-based case series of 10 mpox (MPXV) cases identified i
   real-time PCR (Real-Star Orthopoxvirus PCR kit followed by an MPXV-specific confirmatory
   real-time PCR). The dataset reports quantification cycle (Cq) values or negative
   results, with sampling times reported as days from symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   skin_lesion_swab:
     description: Mpox virus DNA real-time PCR quantification cycle (Cq) from skin

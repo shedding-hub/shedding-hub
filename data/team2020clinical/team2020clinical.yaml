@@ -9,6 +9,12 @@ description: >
   Data for the nasopharyngeal swab results were obtained from the combined dataset
   in the supplementary materials of Challenger et al. (2022), while attributes of
   hospitalized patients were obtained from the original paper.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-11-05'
 analytes:
   naso_swab_SARSCoV2_N_Ct:
     description: >

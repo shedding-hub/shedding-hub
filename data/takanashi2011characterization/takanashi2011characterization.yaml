@@ -7,6 +7,12 @@ description: Study of a norovirus gastroenteritis outbreak in Ohio (January 2010
   (capsid). Real-time RT-PCR was used to detect/quantify norovirus shedding; one immunocompetent
   2-year-old male shed virus up to 30 days. HBGA typing was performed on saliva to
   assess host susceptibility patterns.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   stool_norovirus_gc_ml:
     description: Norovirus genome quantification in stool by real-time reverse transcription

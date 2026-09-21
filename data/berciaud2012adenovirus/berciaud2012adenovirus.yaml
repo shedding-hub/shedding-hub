@@ -9,6 +9,12 @@ description: Retrospective hospital-based study at Bordeaux University Hospital 
   DNA loads (gc/wet gram) for immunocompromised patients treated with cidofovir, with
   time values as reported in the CSV (days relative to an unspecified reference event
   in the figure 3 data).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   stool_gc_wet_gram:
     description: 'Quantification of adenovirus DNA in stool by qPCR (as described

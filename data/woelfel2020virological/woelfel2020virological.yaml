@@ -9,6 +9,13 @@ description: The authors conducted a virological analysis of nine linked cases o
   significant figures far exceeding the performance of the assays. The demographic
   data, including age and sex, are derived from the Challenger et al. BMC Medicine
   (2022) 20:25 https://doi.org/10.1186/s12916-021-02220-0 supplement combined dataset.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - table
+    - figure
+  extracted_on: '2024-09-05'
 analytes:
   stool:
     description: RNA gene copy concentration in stool samples. The authors report

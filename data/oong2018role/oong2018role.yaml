@@ -10,6 +10,12 @@ description: Adult outpatient acute upper respiratory tract infection cohort rec
   per microliter of sample, with sampling time in days since symptom onset. CSV-provided
   data include 75 per-sample viral load measurements with participant-level attributes
   (genotype/sub-lineage, sex, ethnicity, age).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2026-09-09'
 analytes:
   nasopharyngeal_swab_metapneumovirus_viral_load:
     description: Quantification of HMPV RNA from nasopharyngeal swabs using a quantitative

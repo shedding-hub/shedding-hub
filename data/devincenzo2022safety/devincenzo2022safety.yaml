@@ -7,6 +7,13 @@ description: Randomized, single-blind, placebo-controlled RSV-A (Memphis 37b) hu
   daily for 5 days starting ~12 hours after RSV detection or on day 6. RSV viral load
   was monitored in nasal wash samples by Simplexa RT-qPCR; this extraction includes
   individual-level measurements digitized to CSV (PatientID, day, value, treatment).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+    - supplement
+  extracted_on: '2026-08-12'
 analytes:
   nasal_wash_respiratory_syncytial_virus_rna_pcr_pfu_equivalents:
     description: RSV RNA viral load in nasal wash samples measured using a Simplexa

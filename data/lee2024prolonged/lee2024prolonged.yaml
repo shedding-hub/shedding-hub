@@ -6,6 +6,12 @@ description: Case report from South Korea describing prolonged mpox (hMPXV) shed
   in a 39-year-old male immunocompromised patient during tecovirimat treatment, with
   sequencing evidence of tecovirimat-associated resistance mutations (e.g., A290V,
   A288P) detected in different anatomical lesion/nasal samples over time.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-09-17'
 analytes:
   skin:
     description: Mpox virus PCR cycle threshold (Ct) measured from skin lesion-related

@@ -6,6 +6,12 @@ description: Prospective study of immunocompetent adults with respiratory infect
   respiratory specimens (sputum or nasopharyngeal swab) were collected every 2 days
   and adenovirus viral load was measured by real-time quantitative PCR (qPCR), reported
   as copies per mL relative to symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   sputum_nasopharyngeal_swab:
     description: Human adenovirus (HAdV-55) viral load in respiratory specimens (sputum

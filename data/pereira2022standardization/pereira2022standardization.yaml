@@ -9,6 +9,12 @@ description: Methods/assay standardization study that developed and analytically
   hospitalized SARI patients with two collections (timed by days from symptom onset),
   including immunocompetent and immunosuppressed participants, to assess viral-load
   dynamics.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-07-23'
 analytes:
   respiratory_influenzaA_viral_load:
     description: Influenza A viral load by one-step RT-qPCR targeting the influenza

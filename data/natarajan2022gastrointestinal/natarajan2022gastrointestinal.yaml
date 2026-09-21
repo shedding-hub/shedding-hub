@@ -16,6 +16,12 @@ description: 'Fecal samples were collected from 113 participants "in a randomize
 
 
   The reference event for temporal offsets in days is the day of enrollment.'
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2024-09-05'
 analytes:
   E-gRNA-RT-qPCR-OG:
     description: Concentration of genomic RNA of the E gene quantified using RT-qPCR

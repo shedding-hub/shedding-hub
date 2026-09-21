@@ -7,6 +7,12 @@ description: Study developing and analytically validating multiplex and singlepl
   5 samples were reproducibly positive (4 HBoV2, 1 HBoV3). Table 4/CSV provide individual-level
   stool bocavirus DNA loads (copies/mL of fecal extract) for the 5 positive patients
   along with age, sex, and travel history/other findings.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   stool:
     description: Human bocavirus (HBoV) DNA quantification in stool extract using

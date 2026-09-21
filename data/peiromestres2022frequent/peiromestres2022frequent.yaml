@@ -6,6 +6,12 @@ description: Observational shedding study of 12 confirmed symptomatic mpox (monk
   lesion swab, saliva, rectal swab, nasopharyngeal swab, semen, urine, and faeces/stool)
   were tested at diagnosis and follow-up time points using real-time PCR, reporting
   Ct (Cq) values (or negative/NA). Timing is reported as days since symptom onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   ct_skin_lesion_swab:
     description: Monkeypox virus DNA detection by specific real-time PCR (qPCR) reported

@@ -8,6 +8,12 @@ description: Dose-escalation controlled human infection study (Feb 2024–Mar 20
   (plaque assay) viral loads were measured at multiple upper airway sites (nasopharynx,
   anterior nares, buccal, oropharynx, saliva). Study assessed viral shedding kinetics,
   symptom development (MMID), safety, and seroconversion.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - data_repository
+  extracted_on: '2026-07-23'
 analytes:
   nasopharyngeal_gc_ml:
     description: Quantitative molecular detection of influenza viral RNA from nasopharyngeal

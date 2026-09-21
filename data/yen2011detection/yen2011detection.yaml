@@ -10,6 +10,12 @@ description: This study, conducted between May 2008 and February 2009 at the Bro
   rotavirus in stool samples collected over 9 days post-vaccination. The findings
   suggest potential for horizontal transmission of vaccine virus, particularly in
   households with immunocompromised individuals.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-02-05'
 analytes:
   stool_rotavirus_vaccine:
     description: Detection of rotavirus vaccine shedding in stool samples using enzyme

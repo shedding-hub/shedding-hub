@@ -8,6 +8,12 @@ description: This study investigates norovirus genogroup II excretion during an 
   The study aimed to determine the duration of viral excretion and the viral load
   decay rate using quantitative PCR assays. The average duration of viral shedding
   was 28.7 days, with a viral decay rate of 0.76 per day.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-02-05'
 analytes:
   stool_norovirus_viral_load:
     description: Norovirus GII RNA quantified in stool samples using real-time nested

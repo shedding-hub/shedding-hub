@@ -48,10 +48,14 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
             {"dataset": "woelfel2020virological", "local": "data", "pr": 7},
             ValueError,
         ),
-        # Load from local directory.
+        # Load from local directory. This and the first case both describe the
+        # current dataset, but they read different sources: this one the working
+        # tree, that one live `main`. A pull request that edits the dataset makes
+        # them disagree until it merges, so the two hashes are updated in turn --
+        # this one with the change, the remote one once `main` carries it.
         (
             {"dataset": "woelfel2020virological", "local": "data"},
-            "7a7453c9259f1043657f8d19fbfdf2f69aaf5a30",
+            "c213f95ce8cf45d3fb390d6dc2b910b7ddc5dc8a",
         ),
     ],
 )

@@ -6,6 +6,12 @@ description: Study of 25 patients with MPXV-confirmed skin lesions presenting fo
   (Antwerp, Belgium). EDTA plasma, oropharyngeal swab, and saliva were collected at
   the same visit and tested by MPXV real-time PCR (generic primers/probe) to compare
   Ct values and diagnostic sensitivity across specimen types.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   plasma:
     description: Mpox virus (MPXV) DNA detection by real-time PCR on EDTA plasma.

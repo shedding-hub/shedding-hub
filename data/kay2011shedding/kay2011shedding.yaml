@@ -9,6 +9,12 @@ description: Outbreak investigation of pandemic (H1N1) 2009 among hospital-assoc
   RNA detection and culture positivity relative to symptom onset and fever, and found
   RT-PCR detection lasted longer (3–13 days) than culture (3–10 days). All infected
   HCP received oseltamivir early in illness.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-07-23'
 analytes:
   nasal_lavage_influenza_gc_per_mL:
     description: Real-time RT-PCR quantification of influenza (pandemic H1N1 2009)

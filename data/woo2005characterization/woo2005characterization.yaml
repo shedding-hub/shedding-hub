@@ -9,6 +9,12 @@ description: Study reporting discovery and characterization of human coronavirus
   SARS-CoV-negative nasopharyngeal aspirates from respiratory illness cases during
   the 2003 SARS period found one additional CoV-HKU1-positive pneumonia case (35-year-old
   woman).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-09-09'
 analytes:
   nasopharyngeal_aspirate_coronavirus_HKU1_pol_gc_ml:
     description: Real-time quantitative RT-PCR (SYBR Green I; Roche LightCycler) for

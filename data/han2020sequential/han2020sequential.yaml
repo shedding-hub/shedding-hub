@@ -6,6 +6,12 @@ description: The study reports SARS-CoV-2 viral loads in different specimen type
   for a neonate and her mother diagnosed on 2020-03-20. The study includes nasopharyngeal,
   oropharyngeal, stool, plasma, saliva, and urine samples. Viral loads were extracted
   manually from Figure 1 using [WebPlotDigitizer](https://automeris.io).
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2024-10-23'
 analytes:
   nasopharynx_E:
     description: SARS-CoV-2 RNA gene copy concentration in nasopharynx samples.

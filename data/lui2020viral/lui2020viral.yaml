@@ -9,6 +9,12 @@ description: >
 
   Data for other specimen types, including nasopharyngeal swabs, sputum, plasma, and
   urine, are also available in the source but have not yet been included here.
+curation:
+  method: manual
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2024-09-04'
 analytes:
   2019-nCoV_N1:
     description: Gene copies of the N1 gene quantified using RT-qPCR in stool samples.

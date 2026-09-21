@@ -8,6 +8,12 @@ description: Longitudinal retrospective monitoring study in Goiás, Brazil (feca
   targeting the polymerase/capsid junction; viral loads were quantified via standard
   curve from serial dilutions of a recombinant plasmid. One patient was sapovirus-positive
   with serial samples; one positive sample was sequenced (Sanger) and typed as GI.1.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   stool_sapovirus_viral_load:
     description: Sapovirus RNA detection and quantification in stool using RT-qPCR

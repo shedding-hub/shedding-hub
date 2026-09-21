@@ -7,6 +7,12 @@ description: Retrospective descriptive study of mpox epidemiology in Romania (na
   kit) from multiple specimen types collected serially over ~5 months; the figure-derived
   CSV provides Ct values over time for serum, skin lesion, saliva, urine, rectal swab,
   nasal, and pharyngeal specimens for PatientID 1.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-09-17'
 analytes:
   serum:
     description: MPXV genome detection by qPCR using monkeypox virus genesig Advanced

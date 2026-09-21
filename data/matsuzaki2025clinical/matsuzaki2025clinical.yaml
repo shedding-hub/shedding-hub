@@ -8,6 +8,12 @@ description: Retrospective analysis of pediatric respiratory infection cases in 
   complemented by next-generation sequencing, and viral load quantified by quantitative
   real-time PCR (Ct and genome copies). Clinical symptoms were reviewed to assess
   etiologic role of co-pathogens relative to influenza C viral load.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - supplement
+  extracted_on: '2026-09-09'
 analytes:
   ct_influenza_c_virus_nasopharyngeal_swab:
     description: Quantitative real-time RT-PCR Ct value for influenza C virus from

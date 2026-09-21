@@ -5,6 +5,12 @@ description: Review article summarizing viral load kinetics for multiple viruses
   figure data provide a single transplant patient's longitudinal BK polyomavirus (BKV)
   plasma viral load series, with mixed qualitative and quantitative results, timed
   relative to transplantation (treatment).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+  extracted_on: '2026-08-24'
 analytes:
   plasma_polyomavirus_viral_load:
     description: BK polyomavirus (BKV) viral load time series in plasma, extracted

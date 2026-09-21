@@ -9,6 +9,12 @@ description: This study investigated the shedding of porcine circovirus type 1 (
   cases. The study was conducted in Atlanta, Georgia, and involved both full-term
   and preterm infants. The analysis used quantitative real-time RT-PCR and qPCR assays
   to detect viral RNA and DNA in stool samples.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-02-05'
 analytes:
   stool_rotavirus_vaccine:
     description: Detection of Rotarix® Rotavirus group A RNA in stool samples post-vaccination

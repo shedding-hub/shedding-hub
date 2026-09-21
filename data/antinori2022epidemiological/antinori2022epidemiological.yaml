@@ -7,6 +7,12 @@ description: Case series of four mpox (MPXV) infections detected in central Ital
   saliva, and seminal fluid) were tested by real-time PCR for MPXV DNA; results are
   reported as PCR quantification cycle (Cq) values at specific days after symptom
   onset.
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-17'
 analytes:
   genital_or_rectal_lesions:
     description: MPXV DNA detection by real-time PCR; results reported as quantification

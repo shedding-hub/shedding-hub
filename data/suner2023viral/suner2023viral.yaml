@@ -8,6 +8,13 @@ description: Observational, prospective multicentre cohort study of outpatients 
   Figure-derived CSV provides individual longitudinal viral loads (gene copies/mL)
   aligned to days from symptom onset for blood, pharynx (oropharyngeal swab in VTM),
   rectum (rectal swab in VTM), semen, and lesion swabs/scrapings (in VTM).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - figure
+    - supplement
+  extracted_on: '2026-09-17'
 analytes:
   blood:
     description: Mpox virus (MPXV) DNA quantification by qPCR on dried blood spot-derived

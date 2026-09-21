@@ -6,6 +6,12 @@ description: Prospective 1-year study in Lanzhou, China, enrolling 406 children 
   in 29 children by real-time PCR using nasopharyngeal aspirates; viral loads in positives
   ranged from 5.80×10^2 to 9.72×10^8 copies/mL. Coinfections with other respiratory
   viruses were common (notably RSV).
+curation:
+  method: ai_assisted
+  data_source:
+    - main_text
+    - table
+  extracted_on: '2026-09-09'
 analytes:
   nasopharyngeal_aspirate_bocavirus_viral_load:
     description: Human bocavirus (HBoV) genome quantification by real-time PCR in
