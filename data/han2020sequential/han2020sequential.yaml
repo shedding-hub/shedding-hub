@@ -12,6 +12,9 @@ curation:
     - main_text
     - figure
   extracted_on: '2024-10-23'
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - https://orcid.org/0000-0003-4403-0722
 analytes:
   nasopharynx_E:
     description: SARS-CoV-2 RNA gene copy concentration in nasopharynx samples.

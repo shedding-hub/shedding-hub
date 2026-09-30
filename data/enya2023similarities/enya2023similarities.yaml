@@ -13,6 +13,13 @@ curation:
     - main_text
     - figure
   extracted_on: '2026-08-12'
+  pipeline_version: v2
+  models:
+    - gpt-5.2 (extraction)
+    - claude-opus-4-8 (review)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   1_gc_reaction:
     description: Fecal rotavirus vaccine strain (Rotarix/RV1) RNA shedding quantified

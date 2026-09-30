@@ -15,6 +15,9 @@ curation:
     - main_text
     - table
   extracted_on: '2025-05-20'
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - https://orcid.org/0000-0003-4403-0722
 analytes:
   stool_norovirus:
     description: Real-time PCR assay for detecting norovirus GII in stool specimens,

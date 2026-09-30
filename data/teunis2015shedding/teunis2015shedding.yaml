@@ -15,6 +15,12 @@ curation:
     - main_text
     - author_shared
   extracted_on: '2026-02-05'
+  pipeline_version: v1
+  models:
+    - gpt-5-mini (extraction)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   stool_norovirus_ct_symptomatic:
     description: Cycle threshold (Ct) values from quantitative real-time RT-PCR for
