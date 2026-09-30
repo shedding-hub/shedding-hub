@@ -20,10 +20,12 @@ object carries the numbers. A dataset absent from that CSV gets `[main_text]`,
 which is true but incomplete; `--check` lists those so the gap stays visible
 rather than passing for a complete record.
 
-`reviewers` is left empty. The obvious proxy, the commit author, is whoever
+`reviewers` is left empty here. The obvious proxy, the commit author, is whoever
 pushed the branch, which for every agent batch is one person and not the
 reviewer. Recording a confident wrong answer for 107 datasets is worse than
-recording nothing.
+recording nothing. `backfill_curation_review.py` fills it later, together
+with `pipeline_version` and `models`, from assignments the maintainers
+confirmed.
 
 Run via `make curation`.
 """
