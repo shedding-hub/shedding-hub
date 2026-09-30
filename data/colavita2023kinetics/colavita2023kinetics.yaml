@@ -17,6 +17,13 @@ curation:
     - table
     - figure
   extracted_on: '2026-09-17'
+  pipeline_version: v2
+  models:
+    - gpt-5.2 (extraction)
+    - claude-opus-4-8 (review)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   urine_ct:
     description: MPXV DNA detection by real-time PCR (rtPCR) targeting the CrmB gene

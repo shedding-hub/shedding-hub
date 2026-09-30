@@ -55,7 +55,7 @@ def test_normalize_str(value: str, kwargs: dict, expected: str) -> None:
         # this one with the change, the remote one once `main` carries it.
         (
             {"dataset": "woelfel2020virological", "local": "data"},
-            "c213f95ce8cf45d3fb390d6dc2b910b7ddc5dc8a",
+            "82beac1d5ed82ac68f193dddfb3884bf41fe3969",
         ),
     ],
 )
