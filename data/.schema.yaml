@@ -255,22 +255,26 @@ properties:
         pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
       pipeline_version:
         description: >
-          Agent pipeline release tag or commit hash. Meaningful only when method is
-          `ai_assisted`.
+          Version of the agent pipeline that drafted the dataset, `v1` or `v2`, each
+          mapped to a tagged commit of the agent code. `v1` ran extraction only; `v2`
+          added the review agent. Meaningful only when method is `ai_assisted`.
         type: string
       models:
         description: >
-          Model identifiers, with versions, for every agent that touched the dataset.
-          Meaningful only when method is `ai_assisted`.
+          Model for every agent that touched the dataset, each followed by its role in
+          parentheses, e.g. `gpt-5.2 (extraction)`. Names are as the code requested
+          them; dated snapshots were not recorded. Meaningful only when method is
+          `ai_assisted`.
         type: array
         items:
           type: string
       reviewers:
         description: >
-          GitHub handles or ORCID iDs of the people who reviewed the dataset. Often
-          absent: per-study reviewer identity was not recorded for datasets curated
-          before this block existed, and it is left empty rather than guessed from the
-          commit author, who is frequently not the reviewer.
+          The people assigned to review datasets in this curation phase, written as
+          ORCID iD URLs (`https://orcid.org/...`) or, for a reviewer without one, a
+          GitHub handle. This is a phase-level assignment, not a per-dataset review
+          log: it is not derived from the commit author, who is frequently not the
+          reviewer.
         type: array
         items:
           type: string

@@ -15,6 +15,13 @@ curation:
     - main_text
     - figure
   extracted_on: '2026-08-24'
+  pipeline_version: v2
+  models:
+    - gpt-5.2 (extraction)
+    - claude-opus-4-8 (review)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   stool_gc_wet_gram:
     description: 'Quantification of adenovirus DNA in stool by qPCR (as described

@@ -16,6 +16,12 @@ curation:
     - main_text
     - data_repository
   extracted_on: '2026-02-05'
+  pipeline_version: v1
+  models:
+    - gpt-5-mini (extraction)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   emesis_norovirus_GI:
     description: Norovirus GI viral titers in emesis samples measured using strain-specific

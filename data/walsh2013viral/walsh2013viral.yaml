@@ -20,6 +20,13 @@ curation:
     - figure
     - supplement
   extracted_on: '2026-08-12'
+  pipeline_version: v2
+  models:
+    - gpt-5.2 (extraction)
+    - claude-opus-4-8 (review)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   pfu_ml:
     description: Quantitative RSV viral load expressed as plaque-forming unit (PFU)

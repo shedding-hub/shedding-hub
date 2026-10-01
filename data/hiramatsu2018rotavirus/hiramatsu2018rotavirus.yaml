@@ -16,6 +16,13 @@ curation:
     - main_text
     - figure
   extracted_on: '2026-07-23'
+  pipeline_version: v2
+  models:
+    - gpt-5-mini (extraction)
+    - claude-opus-4-8 (review)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   rv5_1:
     description: RotaTeq (RV5) vaccine shedding after dose 1 measured by vaccine-strain

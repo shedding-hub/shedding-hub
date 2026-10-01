@@ -13,6 +13,13 @@ curation:
     - figure
     - supplement
   extracted_on: '2026-08-24'
+  pipeline_version: v2
+  models:
+    - gpt-5.2 (extraction)
+    - claude-opus-4-8 (review)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   gec_g:
     description: Stool norovirus GI.1 RNA quantity measured as genome equivalent copies

@@ -15,6 +15,13 @@ curation:
     - main_text
     - figure
   extracted_on: '2026-07-23'
+  pipeline_version: v2
+  models:
+    - gpt-5-mini (extraction)
+    - claude-opus-4-8 (review)
+  reviewers:
+    - https://orcid.org/0000-0002-9615-7859
+    - hww228
 analytes:
   nasal_lavage_influenza_gc_per_mL:
     description: Real-time RT-PCR quantification of influenza (pandemic H1N1 2009)
