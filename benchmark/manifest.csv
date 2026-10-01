@@ -1,146 +1,146 @@
-study_id,doi,pmid,era,pipeline_version,extraction_model,data_source,has_figure_csv,input_csv_origin,evidence_tier,in_analysis_A,notes
-akiyama2024efficacy,10.1016/j.jiac.2023.11.025,38042298,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,
-allanblitz2023laboratory,10.1002/jmv.28191,36183189,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-alsharrah2020clinical,10.1002/jmv.26684,33219559,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-anfrunsestrada2020detection,10.3390/v12121369,33266188,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-antinori2022epidemiological,10.2807/1560-7917.ES.2022.27.22.2200421,35656836,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-aoki2010duration,10.1016/j.jhin.2009.12.016,20304524,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,
-arts2023longitudinal,10.1128/msphere.00132-23,37338211,manual,,,main_text;supplement,no,none,,yes,
-atmar2008norwalk,10.3201/eid1410.080117,18826818,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,
-baier2018influenza,10.3205/dgkh000314,30460173,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-berciaud2012adenovirus,10.1016/j.jcv.2012.04.009,22608365,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-biel2000rapid,10.1128/JCM.38.10.3689-3695.2000,11015385,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-brieu2008human,10.1097/INF.0b013e31817acfaa,18833027,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-brint2017prolonged,10.1038/pr.2017.173,28723886,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-brosius2023presymptomatic,10.1002/jmv.28769,37212312,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-cantelli2020rotavirus,10.1038/s41598-020-64025-0,32332841,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-carr2008molecular,10.1002/jmv.21081,18205227,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-cdc2024nhphrn,,,manual,,,data_repository,no,data_repository,,yes,no input CSV yet; no PMID
-chen2024clinical,10.1016/j.jmii.2024.08.008,39227237,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,
-cheng2008human,10.1086/589244,18532891,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-chilengi2020pilot,10.1016/j.vaccine.2020.09.023,33032844,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,
-choi2008development,10.1016/j.jcv.2008.02.010,18378492,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-colavita2023kinetics,10.1016/j.isci.2023.106102,36748085,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,
-coppee2023temporal,10.1016/j.virusres.2022.198950,36181977,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-coppens2023alternative,10.1016/j.jcv.2022.105372,36608620,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-covid2020clinical,10.1038/s41591-020-0877-5,32327757,manual,,,main_text;figure;supplement,no,figure_digitized,,yes,no input CSV yet
-cowley2017rotavirus,10.1080/21645515.2017.1323591,28481726,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,
-de2006fatal,10.1038/nm1477,16964257,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-de2022retrospective,10.1038/s41591-022-02004-w,35961373,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-devincenzo2022safety,10.1093/infdis/jiaa716,33216113,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,
-el2011respiratory,10.1093/infdis/jir494,21881113,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-engelmann2009adenovirus,10.1111/j.1399-3046.2008.01014.x,18783361,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-enya2023similarities,10.20407/fmj.2022-039,37554946,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-fajnzylber2020sars,10.1038/s41467-020-19057-5,33127906,manual,,,main_text;supplement,no,none,,yes,
-falsey2003comparison,10.1128/JCM.41.9.4160-4165.2003,12958241,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-flitter2025oral,10.1126/scitranslmed.adh9906,40367195,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,
-fraaij2015viral,10.3851/IMP2957,25849228,ai_assisted,v2,gpt-5-mini,main_text;table,yes,table_supplement,,no,
-funk2007viral,10.1016/S1473-3099(07)70159-7,17597570,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-garciaknight2022infectious,10.1371/journal.ppat.1010802,36095030,ai_assisted,v2,gpt-5-mini,main_text;figure;supplement,yes,figure_digitized,,no,
-gaspari2023monkeypox,10.1128/jcm.01365-22,36598196,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-gautret2020hydroxychloroquine,10.1016/j.ijantimicag.2020.105949,32205204,manual,,,main_text,no,none,,yes,
-ge2023effect,10.3201/eid2907.230117,37347494,ai_assisted,v2,gpt-5.2,main_text;data_repository,yes,data_repository,,no,
-gerna2007human,,18080673,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-gerna2007prospective,10.1016/j.jcv.2007.08.001,17855163,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-golantripto2024viral,10.1007/s00431-024-05614-3,38780651,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,
-gutierrez2021nosocomial,10.1080/21645515.2021.1963169,34402714,ai_assisted,v1,gpt-4o,main_text;table,no,none,,no,
-hakki2022onset,10.1016/S2213-2600(22)00226-0,35988572,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-han2020sequential,10.1093/cid/ciaa447,32297925,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-hanaoka2019infectious,10.1371/journal.pone.0212434,30840641,ai_assisted,v2,gpt-5.2,main_text;table;figure;supplement,yes,figure_digitized,,no,
-hernaez2023monitoring,10.1016/S2666-5247(22)00291-9,36436538,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-hiramatsu2018rotavirus,10.1093/infdis/jix590,29165657,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-hu2013association,10.1016/S0140-6736(13)61125-3,23726392,ai_assisted,v2,gpt-5-mini,main_text;table;figure,yes,figure_digitized,,no,
-huh2019prolonged,10.1007/s10096-019-03471-9,30693422,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-iwakiri2009quantitative,10.1007/s00705-009-0358-0,19301092,manual,,,main_text;table,no,none,,yes,
-jacobsen2022differentiation,10.3390/v14081670,36016292,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,
-kamel2011presence,10.1111/j.1469-0691.2011.03461.x,21375654,ai_assisted,v1,gpt-4o,main_text;table,yes,table_supplement,,no,
-kantola2010real,10.1128/JCM.00686-10,20844210,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-kay2011shedding,10.3201/eid1704.100866,21470453,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-ke2022daily,10.1038/s41564-022-01105-z,35484231,manual,,,main_text;supplement,no,none,,yes,
-kim2020viral,10.3346/jkms.2020.35.e86,32080991,manual,,,main_text;supplement,no,none,,yes,
-kimse2020viral,10.1016/j.ijid.2020.04.083,32376309,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-kirby2014disease,10.1002/jmv.23905,24531909,ai_assisted,v2,gpt-5.2,main_text;figure;author_shared,yes,author_shared,,no,input CSV may mix: author_shared + figure_digitized
-kirby2016vomiting,10.1371/journal.pone.0143759,27116105,ai_assisted,v1,gpt-5-mini,main_text;data_repository,yes,data_repository,,no,
-kissler2021densely,10.1101/2021.02.16.21251535,,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet; no PMID
-kissler2021viral,10.1371/journal.pbio.3001333,34252080,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-kondo2016influenza,10.1620/tjem.238.113,26806610,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-kutter2021small,10.1186/s13756-021-00968-x,34193302,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,
-lapa2022monkeypox,10.1016/S1473-3099(22)00513-8,35931095,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-lavezzo2020suppression,10.1038/s41586-020-2488-1,32604404,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-lee2022clinical,10.1016/j.jmii.2021.10.006,34758910,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-lee2024prolonged,10.1002/jmv.29536,38488495,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-lescure2020clinical,10.1016/S1473-3099(20)30200-0,32224310,manual,,,main_text;figure;supplement,no,figure_digitized,,yes,no input CSV yet
-li2018faecal,10.1038/s41598-018-19469-w,29343800,ai_assisted,v2,gpt-5-mini,main_text;table,no,none,,no,
-limonta2024mpox,10.3390/pathogens13010092,38276165,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-lion2014adenovirus,10.1128/CMR.00116-13,24982316,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-liu2024longitudinal,10.3389/fmed.2024.1417967,39323476,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-liu2026diagnostic,10.1080/07853890.2026.2705009,42596891,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,
-loconsole2022monkeypox,10.3390/ijerph191811719,36141993,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-lucini2026dose,10.1016/j.jinf.2026.106835,42607959,ai_assisted,v2,gpt-5.2,main_text;table;figure;supplement,yes,figure_digitized,,no,
-ludwig2008quantitative,10.1002/jmv.21217,18551595,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-lui2020viral,10.1016/j.jinf.2020.04.014,32315724,manual,,,main_text;table,no,none,,yes,
-mackiewicz2004detection,10.1128/JCM.42.9.4329-4331.2004,15365037,ai_assisted,v1,gpt-4o,main_text;table,no,none,,no,
-martin2010frequent,10.1086/652405,20415535,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-matsuzaki2025clinical,10.1097/INF.0000000000004897,40526871,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,
-mattner2008adenovirus,10.1097/INF.0b013e3181658c46,18382384,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-mertes2023tecovirimat,10.7326/L23-0131,37487213,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-mijatovicrustempasic2017shedding,10.1080/21645515.2016.1255388,27936349,ai_assisted,v1,gpt-4o,main_text;table,yes,table_supplement,,no,
-mileto2022new,10.1016/j.tmaid.2022.102386,35738529,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-mitsios2024monkeypox,10.1177/11206721241272199,39105219,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-miura2017rotavirus,10.1002/jmv.24613,27335144,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-miyoshi2015long,10.1002/jmv.24242,25991049,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,
-moschese2022isolation,10.2807/1560-7917.ES.2022.27.36.2200675,36082684,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-natarajan2022gastrointestinal,10.1016/j.medj.2022.04.001,35434682,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-negru2025severe,10.3390/microorganisms13081814,40871318,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-neres2020sapovirus,10.1007/s13337-020-00583-1,32904858,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-newman2016norovirus,10.1111/cei.12772,26822517,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,
-obara2008single,10.1128/JCM.01932-07,18685011,manual,,,main_text;table,no,none,,yes,
-oong2018role,10.1186/s12985-018-1005-8,29792212,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,
-pace2024prevalence,10.3389/fimmu.2024.1329092,38585272,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-peiris2003clinical,10.1016/S0140-6736(03)13412-5,12781535,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-peiromestres2022frequent,10.2807/1560-7917.ES.2022.27.28.2200503,35837964,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-pereira2022standardization,10.1016/j.jviromet.2021.114439,34942203,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-pesonel2025clinical,10.1093/cid/ciae657,39749987,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,
-piccirilli2023respiratory,10.3390/pathogens12050645,37242316,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-pietsch2019intrahost,10.1016/j.jcv.2019.02.001,30763816,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,
-piralla2013different,10.1016/j.jcv.2013.06.003,23810646,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-pombubpa2012assessment,10.1007/s10096-012-1579-9,22354525,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-portes2016non,10.1590/0074-02760160030,27223654,ai_assisted,v1,gpt-4o,main_text;table,no,none,,no,
-prachayangprecha2014exploring,10.1128/JCM.01641-14,25100822,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,
-relhan2023clinical,10.1002/jmv.28249,36271515,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,
-rodrigues2020influenza,10.1590/0074-02760200009,32428082,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-rouphael2025effective,10.1101/2025.07.23.25332064,40778160,ai_assisted,v2,gpt-5-mini,main_text;data_repository,yes,data_repository,,no,
-salvatore2020epidemiological,10.1093/cid/ciaa1469,32986120,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-sarasini2006detection,10.1016/j.jcv.2005.05.010,16023411,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-schumer2026viral,10.1093/infdis/jiag206,41954922,ai_assisted,v2,gpt-5.2,main_text;figure;supplement;data_repository,yes,data_repository,,no,input CSV may mix: data_repository + figure_digitized
-schuurmans2014clinical,10.1111/tid.12228,24810480,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-seah2020assessing,10.1016/j.ophtha.2020.03.026,32291098,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-shetty2024influenza,10.1128/jvi.01612-24,39589151,ai_assisted,v2,gpt-5-mini,main_text;data_repository,yes,data_repository,,no,
-shrestha2020distribution,10.1093/cid/ciaa886,32594116,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-suner2023viral,10.1016/S1473-3099(22)00794-0,36521505,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,
-tabatabai2019severe,10.1097/INF.0000000000002354,31033910,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-takanashi2011characterization,10.1128/JCM.00305-11,21752978,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-tan2021early,10.1016/j.celrep.2021.108728,33516277,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-team2020clinical,10.1038/s41591-020-0877-5,32327757,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-teunis2015shedding,10.1017/S095026881400274X,25336060,ai_assisted,v1,gpt-5-mini,main_text;author_shared,yes,author_shared,,no,
-tjon2006high,10.1002/jmv.20711,16998883,ai_assisted,v1,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-tsang2016individual,10.1371/journal.pone.0154418,27153194,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-tu2008norovirus,10.1128/JCM.02198-07,18417655,ai_assisted,v1,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,
-vetter2020daily,10.1128/msphere.00827-20,33177214,manual,,,main_text;table;figure;supplement,no,figure_digitized,,yes,no input CSV yet
-walsh2013viral,10.1093/infdis/jit038,23382572,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,
-wang2020fecal,10.1016/j.virusres.2020.198147,32866537,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-wang2026clinical,10.1186/s12879-026-12626-x,41559632,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,
-woelfel2020virological,10.1038/s41586-020-2196-x,32235945,manual,,,main_text;table;figure,no,figure_digitized,,yes,no input CSV yet
-woo2005characterization,10.1128/JVI.79.2.884-895.2005,15613317,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-xing2020prolonged,10.1016/j.jmii.2020.03.021,32276848,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-xu2020characteristics,10.1038/s41591-020-0817-4,32284613,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
-yang2020laboratory,10.1016/j.xinn.2020.100061,33169119,manual,,,main_text;figure;supplement,no,figure_digitized,,yes,no input CSV yet
-yang2024clinical,10.1186/s12879-024-09537-0,38926635,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,
-yen2011detection,10.1016/j.vaccine.2011.03.074,21477676,ai_assisted,v1,gpt-5-mini,main_text;table,no,none,,no,
-yilmaz2020upper,10.1093/infdis/jiaa632,33020822,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-young2020epidemiologic,10.1001/jama.2020.3204,32125362,manual,,,main_text;data_repository,no,data_repository,,yes,no input CSV yet
-yuan2021sars,10.1371/journal.pone.0247367,33617590,manual,,,main_text;supplement,no,none,,yes,
-zhang2021adenovirus,10.1186/s12879-021-05903-4,33632148,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,
-zheng2010human,10.1002/jmv.21689,20029808,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-zhou2014single,10.1186/1471-2334-14-424,25078257,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,
-zuo2020alterations,10.1053/j.gastro.2020.05.048,32442562,manual,,,main_text;figure,no,figure_digitized,,yes,no input CSV yet
+study_id,doi,pmid,era,pipeline_version,extraction_model,data_source,has_figure_csv,input_csv_origin,evidence_tier,in_analysis_A,reference_yaml,notes
+akiyama2024efficacy,10.1016/j.jiac.2023.11.025,38042298,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,data/akiyama2024efficacy/akiyama2024efficacy.yaml,
+allanblitz2023laboratory,10.1002/jmv.28191,36183189,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/allanblitz2023laboratory/allanblitz2023laboratory.yaml,
+alsharrah2020clinical,10.1002/jmv.26684,33219559,manual,,,main_text;data_repository,no,data_repository,,yes,data/alsharrah2020clinical/alsharrah2020clinical.yaml,no input CSV yet
+anfrunsestrada2020detection,10.3390/v12121369,33266188,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/anfrunsestrada2020detection/anfrunsestrada2020detection.yaml,
+antinori2022epidemiological,10.2807/1560-7917.ES.2022.27.22.2200421,35656836,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/antinori2022epidemiological/antinori2022epidemiological.yaml,
+aoki2010duration,10.1016/j.jhin.2009.12.016,20304524,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,data/aoki2010duration/aoki2010duration.yaml,
+arts2023longitudinal,10.1128/msphere.00132-23,37338211,manual,,,main_text;supplement,no,none,,yes,data/arts2023longitudinal/arts2023longitudinal.yaml,
+atmar2008norwalk,10.3201/eid1410.080117,18826818,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,data/atmar2008norwalk/atmar2008norwalk.yaml,
+baier2018influenza,10.3205/dgkh000314,30460173,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/baier2018influenza/baier2018influenza.yaml,
+berciaud2012adenovirus,10.1016/j.jcv.2012.04.009,22608365,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/berciaud2012adenovirus/berciaud2012adenovirus.yaml,
+biel2000rapid,10.1128/JCM.38.10.3689-3695.2000,11015385,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/biel2000rapid/biel2000rapid.yaml,
+brieu2008human,10.1097/INF.0b013e31817acfaa,18833027,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/brieu2008human/brieu2008human.yaml,
+brint2017prolonged,10.1038/pr.2017.173,28723886,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/brint2017prolonged/brint2017prolonged.yaml,
+brosius2023presymptomatic,10.1002/jmv.28769,37212312,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/brosius2023presymptomatic/brosius2023presymptomatic.yaml,
+cantelli2020rotavirus,10.1038/s41598-020-64025-0,32332841,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/cantelli2020rotavirus/cantelli2020rotavirus.yaml,
+carr2008molecular,10.1002/jmv.21081,18205227,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/carr2008molecular/carr2008molecular.yaml,
+cdc2024nhphrn,,,manual,,,data_repository,no,data_repository,,yes,data/cdc2024nhphrn/cdc2024nhphrn.yaml,no input CSV yet; no PMID
+chen2024clinical,10.1016/j.jmii.2024.08.008,39227237,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,data/chen2024clinical/chen2024clinical.yaml,
+cheng2008human,10.1086/589244,18532891,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/cheng2008human/cheng2008human.yaml,
+chilengi2020pilot,10.1016/j.vaccine.2020.09.023,33032844,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,data/chilengi2020pilot/chilengi2020pilot.yaml,
+choi2008development,10.1016/j.jcv.2008.02.010,18378492,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/choi2008development/choi2008development.yaml,
+colavita2023kinetics,10.1016/j.isci.2023.106102,36748085,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,data/colavita2023kinetics/colavita2023kinetics.yaml,
+coppee2023temporal,10.1016/j.virusres.2022.198950,36181977,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/coppee2023temporal/coppee2023temporal.yaml,
+coppens2023alternative,10.1016/j.jcv.2022.105372,36608620,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/coppens2023alternative/coppens2023alternative.yaml,
+covid2020clinical,10.1038/s41591-020-0877-5,32327757,manual,,,main_text;figure;supplement,no,figure_digitized,,yes,data/covid2020clinical/covid2020clinical.yaml,no input CSV yet
+cowley2017rotavirus,10.1080/21645515.2017.1323591,28481726,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,data/cowley2017rotavirus/cowley2017rotavirus.yaml,
+de2006fatal,10.1038/nm1477,16964257,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/de2006fatal/de2006fatal.yaml,
+de2022retrospective,10.1038/s41591-022-02004-w,35961373,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/de2022retrospective/de2022retrospective.yaml,
+devincenzo2022safety,10.1093/infdis/jiaa716,33216113,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,data/devincenzo2022safety/devincenzo2022safety.yaml,
+el2011respiratory,10.1093/infdis/jir494,21881113,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/el2011respiratory/el2011respiratory.yaml,
+engelmann2009adenovirus,10.1111/j.1399-3046.2008.01014.x,18783361,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/engelmann2009adenovirus/engelmann2009adenovirus.yaml,
+enya2023similarities,10.20407/fmj.2022-039,37554946,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/enya2023similarities/enya2023similarities.yaml,
+fajnzylber2020sars,10.1038/s41467-020-19057-5,33127906,manual,,,main_text;supplement,no,none,,yes,data/fajnzylber2020sars/fajnzylber2020sars.yaml,
+falsey2003comparison,10.1128/JCM.41.9.4160-4165.2003,12958241,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/falsey2003comparison/falsey2003comparison.yaml,
+flitter2025oral,10.1126/scitranslmed.adh9906,40367195,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,data/flitter2025oral/flitter2025oral.yaml,
+fraaij2015viral,10.3851/IMP2957,25849228,ai_assisted,v2,gpt-5-mini,main_text;table,yes,table_supplement,,no,data/fraaij2015viral/fraaij2015viral.yaml,
+funk2007viral,10.1016/S1473-3099(07)70159-7,17597570,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/funk2007viral/funk2007viral.yaml,
+garciaknight2022infectious,10.1371/journal.ppat.1010802,36095030,ai_assisted,v2,gpt-5-mini,main_text;figure;supplement,yes,figure_digitized,,no,data/garciaknight2022infectious/garciaknight2022infectious.yaml,
+gaspari2023monkeypox,10.1128/jcm.01365-22,36598196,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/gaspari2023monkeypox/gaspari2023monkeypox.yaml,
+gautret2020hydroxychloroquine,10.1016/j.ijantimicag.2020.105949,32205204,manual,,,main_text,no,none,,yes,data/gautret2020hydroxychloroquine/gautret2020hydroxychloroquine.yaml,
+ge2023effect,10.3201/eid2907.230117,37347494,ai_assisted,v2,gpt-5.2,main_text;data_repository,yes,data_repository,,no,data/ge2023effect/ge2023effect.yaml,
+gerna2007human,,18080673,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/gerna2007human/gerna2007human.yaml,
+gerna2007prospective,10.1016/j.jcv.2007.08.001,17855163,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/gerna2007prospective/gerna2007prospective.yaml,
+golantripto2024viral,10.1007/s00431-024-05614-3,38780651,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,data/golantripto2024viral/golantripto2024viral.yaml,
+gutierrez2021nosocomial,10.1080/21645515.2021.1963169,34402714,ai_assisted,v1,gpt-4o,main_text;table,no,none,,no,data/gutierrez2021nosocomial/gutierrez2021nosocomial.yaml,
+hakki2022onset,10.1016/S2213-2600(22)00226-0,35988572,manual,,,main_text;figure,no,figure_digitized,,yes,data/hakki2022onset/hakki2022onset.yaml,no input CSV yet
+han2020sequential,10.1093/cid/ciaa447,32297925,manual,,,main_text;figure,no,figure_digitized,,yes,data/han2020sequential/han2020sequential.yaml,no input CSV yet
+hanaoka2019infectious,10.1371/journal.pone.0212434,30840641,ai_assisted,v2,gpt-5.2,main_text;table;figure;supplement,yes,figure_digitized,,no,data/hanaoka2019infectious/hanaoka2019infectious.yaml,
+hernaez2023monitoring,10.1016/S2666-5247(22)00291-9,36436538,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/hernaez2023monitoring/hernaez2023monitoring.yaml,
+hiramatsu2018rotavirus,10.1093/infdis/jix590,29165657,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/hiramatsu2018rotavirus/hiramatsu2018rotavirus.yaml,
+hu2013association,10.1016/S0140-6736(13)61125-3,23726392,ai_assisted,v2,gpt-5-mini,main_text;table;figure,yes,figure_digitized,,no,data/hu2013association/hu2013association.yaml,
+huh2019prolonged,10.1007/s10096-019-03471-9,30693422,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/huh2019prolonged/huh2019prolonged.yaml,
+iwakiri2009quantitative,10.1007/s00705-009-0358-0,19301092,manual,,,main_text;table,no,none,,yes,data/iwakiri2009quantitative/iwakiri2009quantitative.yaml,
+jacobsen2022differentiation,10.3390/v14081670,36016292,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,data/jacobsen2022differentiation/jacobsen2022differentiation.yaml,
+kamel2011presence,10.1111/j.1469-0691.2011.03461.x,21375654,ai_assisted,v1,gpt-4o,main_text;table,yes,table_supplement,,no,data/kamel2011presence/kamel2011presence.yaml,
+kantola2010real,10.1128/JCM.00686-10,20844210,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/kantola2010real/kantola2010real.yaml,
+kay2011shedding,10.3201/eid1704.100866,21470453,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/kay2011shedding/kay2011shedding.yaml,
+ke2022daily,10.1038/s41564-022-01105-z,35484231,manual,,,main_text;supplement,no,none,,yes,data/ke2022daily/ke2022daily.yaml,
+kim2020viral,10.3346/jkms.2020.35.e86,32080991,manual,,,main_text;supplement,no,none,,yes,data/kim2020viral/kim2020viral.yaml,
+kimse2020viral,10.1016/j.ijid.2020.04.083,32376309,manual,,,main_text;data_repository,no,data_repository,,yes,data/kimse2020viral/kimse2020viral.yaml,no input CSV yet
+kirby2014disease,10.1002/jmv.23905,24531909,ai_assisted,v2,gpt-5.2,main_text;figure;author_shared,yes,author_shared,,no,data/kirby2014disease/kirby2014disease.yaml,input CSV may mix: author_shared + figure_digitized
+kirby2016vomiting,10.1371/journal.pone.0143759,27116105,ai_assisted,v1,gpt-5-mini,main_text;data_repository,yes,data_repository,,no,data/kirby2016vomiting/kirby2016vomiting.yaml,
+kissler2021densely,10.1101/2021.02.16.21251535,,manual,,,main_text;data_repository,no,data_repository,,yes,data/kissler2021densely/kissler2021densely.yaml,no input CSV yet; no PMID
+kissler2021viral,10.1371/journal.pbio.3001333,34252080,manual,,,main_text;data_repository,no,data_repository,,yes,data/kissler2021viral/kissler2021viral.yaml,no input CSV yet
+kondo2016influenza,10.1620/tjem.238.113,26806610,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/kondo2016influenza/kondo2016influenza.yaml,
+kutter2021small,10.1186/s13756-021-00968-x,34193302,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,data/kutter2021small/kutter2021small.yaml,
+lapa2022monkeypox,10.1016/S1473-3099(22)00513-8,35931095,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/lapa2022monkeypox/lapa2022monkeypox.yaml,
+lavezzo2020suppression,10.1038/s41586-020-2488-1,32604404,manual,,,main_text;data_repository,no,data_repository,,yes,data/lavezzo2020suppression/lavezzo2020suppression.yaml,no input CSV yet
+lee2022clinical,10.1016/j.jmii.2021.10.006,34758910,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/lee2022clinical/lee2022clinical.yaml,
+lee2024prolonged,10.1002/jmv.29536,38488495,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/lee2024prolonged/lee2024prolonged.yaml,
+lescure2020clinical,10.1016/S1473-3099(20)30200-0,32224310,manual,,,main_text;figure;supplement,no,figure_digitized,,yes,data/lescure2020clinical/lescure2020clinical.yaml,no input CSV yet
+li2018faecal,10.1038/s41598-018-19469-w,29343800,ai_assisted,v2,gpt-5-mini,main_text;table,no,none,,no,data/li2018faecal/li2018faecal.yaml,
+limonta2024mpox,10.3390/pathogens13010092,38276165,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/limonta2024mpox/limonta2024mpox.yaml,
+lion2014adenovirus,10.1128/CMR.00116-13,24982316,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/lion2014adenovirus/lion2014adenovirus.yaml,
+liu2024longitudinal,10.3389/fmed.2024.1417967,39323476,manual,,,main_text;data_repository,no,data_repository,,yes,data/liu2024longitudinal/liu2024longitudinal.yaml,no input CSV yet
+liu2026diagnostic,10.1080/07853890.2026.2705009,42596891,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,data/liu2026diagnostic/liu2026diagnostic.yaml,
+loconsole2022monkeypox,10.3390/ijerph191811719,36141993,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/loconsole2022monkeypox/loconsole2022monkeypox.yaml,
+lucini2026dose,10.1016/j.jinf.2026.106835,42607959,ai_assisted,v2,gpt-5.2,main_text;table;figure;supplement,yes,figure_digitized,,no,data/lucini2026dose/lucini2026dose.yaml,
+ludwig2008quantitative,10.1002/jmv.21217,18551595,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/ludwig2008quantitative/ludwig2008quantitative.yaml,
+lui2020viral,10.1016/j.jinf.2020.04.014,32315724,manual,,,main_text;table,no,none,,yes,data/lui2020viral/lui2020viral.yaml,
+mackiewicz2004detection,10.1128/JCM.42.9.4329-4331.2004,15365037,ai_assisted,v1,gpt-4o,main_text;table,no,none,,no,data/mackiewicz2004detection/mackiewicz2004detection.yaml,
+martin2010frequent,10.1086/652405,20415535,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/martin2010frequent/martin2010frequent.yaml,
+matsuzaki2025clinical,10.1097/INF.0000000000004897,40526871,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,data/matsuzaki2025clinical/matsuzaki2025clinical.yaml,
+mattner2008adenovirus,10.1097/INF.0b013e3181658c46,18382384,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/mattner2008adenovirus/mattner2008adenovirus.yaml,
+mertes2023tecovirimat,10.7326/L23-0131,37487213,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/mertes2023tecovirimat/mertes2023tecovirimat.yaml,
+mijatovicrustempasic2017shedding,10.1080/21645515.2016.1255388,27936349,ai_assisted,v1,gpt-4o,main_text;table,yes,table_supplement,,no,data/mijatovicrustempasic2017shedding/mijatovicrustempasic2017shedding.yaml,
+mileto2022new,10.1016/j.tmaid.2022.102386,35738529,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/mileto2022new/mileto2022new.yaml,
+mitsios2024monkeypox,10.1177/11206721241272199,39105219,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/mitsios2024monkeypox/mitsios2024monkeypox.yaml,
+miura2017rotavirus,10.1002/jmv.24613,27335144,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/miura2017rotavirus/miura2017rotavirus.yaml,
+miyoshi2015long,10.1002/jmv.24242,25991049,ai_assisted,v1,gpt-4o,main_text;figure,yes,figure_digitized,,no,data/miyoshi2015long/miyoshi2015long.yaml,
+moschese2022isolation,10.2807/1560-7917.ES.2022.27.36.2200675,36082684,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/moschese2022isolation/moschese2022isolation.yaml,
+natarajan2022gastrointestinal,10.1016/j.medj.2022.04.001,35434682,manual,,,main_text;data_repository,no,data_repository,,yes,data/natarajan2022gastrointestinal/natarajan2022gastrointestinal.yaml,no input CSV yet
+negru2025severe,10.3390/microorganisms13081814,40871318,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/negru2025severe/negru2025severe.yaml,
+neres2020sapovirus,10.1007/s13337-020-00583-1,32904858,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/neres2020sapovirus/neres2020sapovirus.yaml,
+newman2016norovirus,10.1111/cei.12772,26822517,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,data/newman2016norovirus/newman2016norovirus.yaml,
+obara2008single,10.1128/JCM.01932-07,18685011,manual,,,main_text;table,no,none,,yes,archived data/obara2008single/obara2008single.yaml,reference is the archived hand-curated file; the released file was replaced by an AI-assisted re-extraction in PR #149
+oong2018role,10.1186/s12985-018-1005-8,29792212,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,data/oong2018role/oong2018role.yaml,
+pace2024prevalence,10.3389/fimmu.2024.1329092,38585272,manual,,,main_text;figure,no,figure_digitized,,yes,data/pace2024prevalence/pace2024prevalence.yaml,no input CSV yet
+peiris2003clinical,10.1016/S0140-6736(03)13412-5,12781535,manual,,,main_text;figure,no,figure_digitized,,yes,data/peiris2003clinical/peiris2003clinical.yaml,no input CSV yet
+peiromestres2022frequent,10.2807/1560-7917.ES.2022.27.28.2200503,35837964,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/peiromestres2022frequent/peiromestres2022frequent.yaml,
+pereira2022standardization,10.1016/j.jviromet.2021.114439,34942203,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/pereira2022standardization/pereira2022standardization.yaml,
+pesonel2025clinical,10.1093/cid/ciae657,39749987,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,data/pesonel2025clinical/pesonel2025clinical.yaml,
+piccirilli2023respiratory,10.3390/pathogens12050645,37242316,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/piccirilli2023respiratory/piccirilli2023respiratory.yaml,
+pietsch2019intrahost,10.1016/j.jcv.2019.02.001,30763816,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,data/pietsch2019intrahost/pietsch2019intrahost.yaml,
+piralla2013different,10.1016/j.jcv.2013.06.003,23810646,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/piralla2013different/piralla2013different.yaml,
+pombubpa2012assessment,10.1007/s10096-012-1579-9,22354525,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/pombubpa2012assessment/pombubpa2012assessment.yaml,
+portes2016non,10.1590/0074-02760160030,27223654,ai_assisted,v1,gpt-4o,main_text;table,no,none,,no,data/portes2016non/portes2016non.yaml,
+prachayangprecha2014exploring,10.1128/JCM.01641-14,25100822,ai_assisted,v2,gpt-5.2,main_text;table;supplement,yes,table_supplement,,no,data/prachayangprecha2014exploring/prachayangprecha2014exploring.yaml,
+relhan2023clinical,10.1002/jmv.28249,36271515,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,data/relhan2023clinical/relhan2023clinical.yaml,
+rodrigues2020influenza,10.1590/0074-02760200009,32428082,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/rodrigues2020influenza/rodrigues2020influenza.yaml,
+rouphael2025effective,10.1101/2025.07.23.25332064,40778160,ai_assisted,v2,gpt-5-mini,main_text;data_repository,yes,data_repository,,no,data/rouphael2025effective/rouphael2025effective.yaml,
+salvatore2020epidemiological,10.1093/cid/ciaa1469,32986120,manual,,,main_text;data_repository,no,data_repository,,yes,data/salvatore2020epidemiological/salvatore2020epidemiological.yaml,no input CSV yet
+sarasini2006detection,10.1016/j.jcv.2005.05.010,16023411,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/sarasini2006detection/sarasini2006detection.yaml,
+schumer2026viral,10.1093/infdis/jiag206,41954922,ai_assisted,v2,gpt-5.2,main_text;figure;supplement;data_repository,yes,data_repository,,no,data/schumer2026viral/schumer2026viral.yaml,input CSV may mix: data_repository + figure_digitized
+schuurmans2014clinical,10.1111/tid.12228,24810480,ai_assisted,v2,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/schuurmans2014clinical/schuurmans2014clinical.yaml,
+seah2020assessing,10.1016/j.ophtha.2020.03.026,32291098,manual,,,main_text;figure,no,figure_digitized,,yes,data/seah2020assessing/seah2020assessing.yaml,no input CSV yet
+shetty2024influenza,10.1128/jvi.01612-24,39589151,ai_assisted,v2,gpt-5-mini,main_text;data_repository,yes,data_repository,,no,data/shetty2024influenza/shetty2024influenza.yaml,
+shrestha2020distribution,10.1093/cid/ciaa886,32594116,manual,,,main_text;data_repository,no,data_repository,,yes,data/shrestha2020distribution/shrestha2020distribution.yaml,no input CSV yet
+suner2023viral,10.1016/S1473-3099(22)00794-0,36521505,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,data/suner2023viral/suner2023viral.yaml,
+tabatabai2019severe,10.1097/INF.0000000000002354,31033910,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/tabatabai2019severe/tabatabai2019severe.yaml,
+takanashi2011characterization,10.1128/JCM.00305-11,21752978,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/takanashi2011characterization/takanashi2011characterization.yaml,
+tan2021early,10.1016/j.celrep.2021.108728,33516277,manual,,,main_text;data_repository,no,data_repository,,yes,data/tan2021early/tan2021early.yaml,no input CSV yet
+team2020clinical,10.1038/s41591-020-0877-5,32327757,manual,,,main_text;data_repository,no,data_repository,,yes,data/team2020clinical/team2020clinical.yaml,no input CSV yet
+teunis2015shedding,10.1017/S095026881400274X,25336060,ai_assisted,v1,gpt-5-mini,main_text;author_shared,yes,author_shared,,no,data/teunis2015shedding/teunis2015shedding.yaml,
+tjon2006high,10.1002/jmv.20711,16998883,ai_assisted,v1,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/tjon2006high/tjon2006high.yaml,
+tsang2016individual,10.1371/journal.pone.0154418,27153194,manual,,,main_text;data_repository,no,data_repository,,yes,data/tsang2016individual/tsang2016individual.yaml,no input CSV yet
+tu2008norovirus,10.1128/JCM.02198-07,18417655,ai_assisted,v1,gpt-5-mini,main_text;figure,yes,figure_digitized,,no,data/tu2008norovirus/tu2008norovirus.yaml,
+vetter2020daily,10.1128/msphere.00827-20,33177214,manual,,,main_text;table;figure;supplement,no,figure_digitized,,yes,data/vetter2020daily/vetter2020daily.yaml,no input CSV yet
+walsh2013viral,10.1093/infdis/jit038,23382572,ai_assisted,v2,gpt-5.2,main_text;figure;supplement,yes,figure_digitized,,no,data/walsh2013viral/walsh2013viral.yaml,
+wang2020fecal,10.1016/j.virusres.2020.198147,32866537,manual,,,main_text;figure,no,figure_digitized,,yes,data/wang2020fecal/wang2020fecal.yaml,no input CSV yet
+wang2026clinical,10.1186/s12879-026-12626-x,41559632,ai_assisted,v2,gpt-5.2,main_text;supplement,yes,table_supplement,,no,data/wang2026clinical/wang2026clinical.yaml,
+woelfel2020virological,10.1038/s41586-020-2196-x,32235945,manual,,,main_text;table;figure,no,figure_digitized,,yes,data/woelfel2020virological/woelfel2020virological.yaml,no input CSV yet
+woo2005characterization,10.1128/JVI.79.2.884-895.2005,15613317,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/woo2005characterization/woo2005characterization.yaml,
+xing2020prolonged,10.1016/j.jmii.2020.03.021,32276848,manual,,,main_text;figure,no,figure_digitized,,yes,data/xing2020prolonged/xing2020prolonged.yaml,no input CSV yet
+xu2020characteristics,10.1038/s41591-020-0817-4,32284613,manual,,,main_text;figure,no,figure_digitized,,yes,data/xu2020characteristics/xu2020characteristics.yaml,no input CSV yet
+yang2020laboratory,10.1016/j.xinn.2020.100061,33169119,manual,,,main_text;figure;supplement,no,figure_digitized,,yes,data/yang2020laboratory/yang2020laboratory.yaml,no input CSV yet
+yang2024clinical,10.1186/s12879-024-09537-0,38926635,ai_assisted,v2,gpt-5.2,main_text;table;figure,yes,figure_digitized,,no,data/yang2024clinical/yang2024clinical.yaml,
+yen2011detection,10.1016/j.vaccine.2011.03.074,21477676,ai_assisted,v1,gpt-5-mini,main_text;table,no,none,,no,data/yen2011detection/yen2011detection.yaml,
+yilmaz2020upper,10.1093/infdis/jiaa632,33020822,manual,,,main_text;data_repository,no,data_repository,,yes,data/yilmaz2020upper/yilmaz2020upper.yaml,no input CSV yet
+young2020epidemiologic,10.1001/jama.2020.3204,32125362,manual,,,main_text;data_repository,no,data_repository,,yes,data/young2020epidemiologic/young2020epidemiologic.yaml,no input CSV yet
+yuan2021sars,10.1371/journal.pone.0247367,33617590,manual,,,main_text;supplement,no,none,,yes,data/yuan2021sars/yuan2021sars.yaml,
+zhang2021adenovirus,10.1186/s12879-021-05903-4,33632148,ai_assisted,v2,gpt-5.2,main_text;figure,yes,figure_digitized,,no,data/zhang2021adenovirus/zhang2021adenovirus.yaml,
+zheng2010human,10.1002/jmv.21689,20029808,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/zheng2010human/zheng2010human.yaml,
+zhou2014single,10.1186/1471-2334-14-424,25078257,ai_assisted,v2,gpt-5.2,main_text;table,yes,table_supplement,,no,data/zhou2014single/zhou2014single.yaml,
+zuo2020alterations,10.1053/j.gastro.2020.05.048,32442562,manual,,,main_text;figure,no,figure_digitized,,yes,data/zuo2020alterations/zuo2020alterations.yaml,no input CSV yet

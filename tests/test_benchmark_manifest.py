@@ -92,3 +92,14 @@ def test_extraction_model_is_read_from_the_models_list():
 def test_ascii_id_strips_accents():
     assert mf.ascii_id("coppée2023temporal") == "coppee2023temporal"
     assert mf.ascii_id("suñer2023viral") == "suner2023viral"
+
+
+def test_reference_is_the_released_file_unless_overridden():
+    rows = {r["study_id"]: r for r in _rows()}
+    for study, row in rows.items():
+        if study not in mf.REFERENCE_OVERRIDES:
+            assert row["reference_yaml"] == f"data/{study}/{study}.yaml"
+    path, reason = mf.REFERENCE_OVERRIDES["obara2008single"]
+    assert rows["obara2008single"]["reference_yaml"] == path
+    assert reason in rows["obara2008single"]["notes"]
+    assert rows["obara2008single"]["in_analysis_A"] == "yes"

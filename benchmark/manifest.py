@@ -24,6 +24,10 @@ these is flagged in `notes`. A study that has a CSV but none of those sources
 is `table_supplement`: the curator transcribed the paper's tables or
 supplement into the CSV. `none` means the study has no input CSV.
 
+`reference_yaml` is the file the agents' output is scored against. It is the
+released dataset, except where `REFERENCE_OVERRIDES` names another file at
+the same release and says why.
+
 `evidence_tier` is filled when the evidence bundles are built.
 """
 
@@ -59,8 +63,24 @@ COLUMNS = [
     "input_csv_origin",
     "evidence_tier",
     "in_analysis_A",
+    "reference_yaml",
     "notes",
 ]
+
+# study_id -> (path at the release, reason). The reason goes into `notes`.
+#
+# obara2008single was curated by hand in 2025, with an extraction script. The
+# first AI-assisted batch (PR #149, February 2026) replaced the file in `data/`
+# with a re-extraction and moved the hand-curated version, its script and its
+# raw files to `archived data/`. The manual-era benchmark needs a reference no
+# agent drafted, which is the archived file.
+REFERENCE_OVERRIDES = {
+    "obara2008single": (
+        "archived data/obara2008single/obara2008single.yaml",
+        "reference is the archived hand-curated file; the released file was "
+        "replaced by an AI-assisted re-extraction in PR #149",
+    ),
+}
 
 # Highest precedence first.
 CSV_ORIGINS = [
@@ -177,6 +197,11 @@ def manifest_row(study: str, dataset: dict, pmid: str, has_csv: bool) -> dict:
     era = curation["method"]
     notes = []
 
+    reference = f"data/{study}/{study}.yaml"
+    if study in REFERENCE_OVERRIDES:
+        reference, reason = REFERENCE_OVERRIDES[study]
+        notes.append(reason)
+
     present = [origin for source, origin in CSV_ORIGINS if source in sources]
     if len(present) > 1:
         notes.append("input CSV may mix: " + " + ".join(present))
@@ -202,6 +227,7 @@ def manifest_row(study: str, dataset: dict, pmid: str, has_csv: bool) -> dict:
         "input_csv_origin": origin,
         "evidence_tier": "",
         "in_analysis_A": "yes" if era == "manual" else "no",
+        "reference_yaml": reference,
         "notes": "; ".join(notes),
     }
 
@@ -244,6 +270,11 @@ def main() -> int:
     resolve_pmids(datasets, cache, args.refresh_pmids)
     cache = {study: cache[study] for study in datasets}
     write_pmid_cache(cache_path, cache)
+
+    for study, (path, _) in REFERENCE_OVERRIDES.items():
+        if study not in datasets:
+            raise SystemExit(f"reference override for unknown study {study}")
+        git("cat-file", "-e", f"{args.release}:{path}")  # fails if absent
 
     unknown = with_csv - set(datasets) - EXCLUDED
     if unknown:
