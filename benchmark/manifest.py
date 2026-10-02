@@ -12,9 +12,11 @@ carries the same DOI. Results are cached in `benchmark/pmid_lookup.csv`, so a
 rebuild needs no network; `--refresh-pmids` looks up the uncached ones.
 
 `has_figure_csv` records whether a curator-prepared input CSV exists for the
-study. The CSVs live in the private agent repository, so only the list of
-study ids is kept here, in `benchmark/input_csv_studies.txt`.
-`--agents-repo` rewrites that list from a tag of that repository.
+study. For the AI-assisted era the CSVs are the production ones, which live
+in the private agent repository, so only the list of study ids is kept here,
+in `benchmark/input_csv_studies.txt`; `--agents-repo` rewrites that list from
+a tag of that repository. For the manual era the CSVs are built by
+`manual_inputs.py` and stored in `benchmark/manual_inputs/`.
 
 `input_csv_origin` says what kind of data the input CSV carries. It follows
 from `data_source` with a fixed precedence, because the same CSV holds
@@ -28,7 +30,10 @@ supplement into the CSV. `none` means the study has no input CSV.
 released dataset, except where `REFERENCE_OVERRIDES` names another file at
 the same release and says why.
 
-`evidence_tier` is filled when the evidence bundles are built.
+`evidence_tier` says where the article text given to the agents came from
+(`pmc`, `publisher` or `manual-pdf`). It is copied from
+`benchmark/evidence_tiers.csv`, which the evidence builder in the agent
+repository writes, and is empty until that file exists.
 """
 
 import argparse
@@ -48,8 +53,14 @@ import yaml
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 BENCHMARK = REPO_ROOT / "benchmark"
 
-# A population-scale routine-testing dataset, outside the analysis set.
-EXCLUDED = {"jones2021estimating"}
+# Datasets outside the analysis set, and why.
+EXCLUDED = {
+    "jones2021estimating": "population-scale routine-testing dataset",
+    "cdc2024nhphrn": (
+        "public-use data file with no article, so there is no source text for "
+        "the agents to extract from or check against"
+    ),
+}
 
 COLUMNS = [
     "study_id",
@@ -191,7 +202,9 @@ def resolve_pmids(datasets: dict, cache: dict, refresh: bool) -> None:
         cache[study] = {"study_id": study, "doi": doi, **row}
 
 
-def manifest_row(study: str, dataset: dict, pmid: str, has_csv: bool) -> dict:
+def manifest_row(
+    study: str, dataset: dict, pmid: str, has_csv: bool, tier: str = ""
+) -> dict:
     curation = dataset["curation"]
     sources = curation["data_source"]
     era = curation["method"]
@@ -225,7 +238,7 @@ def manifest_row(study: str, dataset: dict, pmid: str, has_csv: bool) -> dict:
         "data_source": ";".join(sources),
         "has_figure_csv": "yes" if has_csv else "no",
         "input_csv_origin": origin,
-        "evidence_tier": "",
+        "evidence_tier": tier,
         "in_analysis_A": "yes" if era == "manual" else "no",
         "reference_yaml": reference,
         "notes": "; ".join(notes),
@@ -258,6 +271,17 @@ def main() -> int:
         studies = input_csv_studies(args.agents_repo, args.agents_ref)
         csv_list.write_text("\n".join(studies) + "\n", encoding="utf-8", newline="\n")
     with_csv = set(csv_list.read_text(encoding="utf-8").split())
+    with_csv |= {
+        path.stem
+        for path in (BENCHMARK / "manual_inputs").glob("*.csv")
+        if path.name != "NOTES.csv"
+    }
+
+    tiers = {}
+    tiers_path = BENCHMARK / "evidence_tiers.csv"
+    if tiers_path.exists():
+        with tiers_path.open(encoding="utf-8", newline="") as fh:
+            tiers = {row["study_id"]: row["tier"] for row in csv.DictReader(fh)}
 
     datasets = {
         study: dataset
@@ -276,12 +300,18 @@ def main() -> int:
             raise SystemExit(f"reference override for unknown study {study}")
         git("cat-file", "-e", f"{args.release}:{path}")  # fails if absent
 
-    unknown = with_csv - set(datasets) - EXCLUDED
+    unknown = with_csv - set(datasets) - set(EXCLUDED)
     if unknown:
         print(f"input CSVs with no dataset in {args.release}: {sorted(unknown)}")
 
     rows = [
-        manifest_row(study, datasets[study], cache[study]["pmid"], study in with_csv)
+        manifest_row(
+            study,
+            datasets[study],
+            cache[study]["pmid"],
+            study in with_csv,
+            tiers.get(study, ""),
+        )
         for study in sorted(datasets)
     ]
     with (BENCHMARK / "manifest.csv").open("w", encoding="utf-8", newline="") as fh:

@@ -108,80 +108,6 @@ def arts2023longitudinal(release):
     return lay_out(table, "ID", "Day", "value"), note
 
 
-def cdc2024nhphrn(release):
-    workbook = raw(
-        release,
-        "cdc2024nhphrn",
-        "NHPHRN INHERENT Public Use Files and Data Dictionary.xlsx",
-    )
-    tests = pd.read_excel(workbook, sheet_name="Case list test results", dtype=str)
-    cases = pd.read_excel(
-        workbook, sheet_name="Case descriptive information", dtype=str
-    )
-    sample_columns = [
-        "study_id",
-        "day",
-        "nh",
-        "outbreak_id",
-        "type",
-        "event",
-        "colldate",
-        "day_v2",
-        "antiviral_start",
-        "antigen",
-        "pcr",
-        "NHConductedPCRTest",
-        "logVL",
-        "VL_status",
-        "variant",
-        "lineage",
-    ]
-    person_columns = [
-        "enr_date",
-        "casedate",
-        "latesdat",
-        "symptom",
-        "age",
-        "gender",
-        "bio_sex",
-        "race",
-        "ethnicity",
-        "paxlovid",
-        "remdesivir",
-        "molnupiravir",
-        "monoclonal",
-        "steroid",
-        "vaccine",
-    ]
-    # The rows that are PCR results: a test that was run, and, for a positive
-    # one, a specimen that was eligible for viral-load testing.
-    tests = tests[tests["pcr"].isin(["Positive", "Negative"])]
-    tests = tests[tests["VL_status"] != "Not eligible for VL testing"]
-    parts = []
-    for column in ("VL", "Ct"):
-        part = tests[sample_columns].copy()
-        part["value"] = tests[column]
-        part["analyte"] = column
-        parts.append(part)
-    table = interleave(parts)
-    table = table.merge(cases[["study_id", *person_columns]], on="study_id", how="left")
-    note = (
-        "Public-use workbook, sheets Case list test results and Case descriptive "
-        "information, joined on study_id. Rows are the tests with pcr Positive or "
-        "Negative, less the one positive test with VL_status 'Not eligible for VL "
-        "testing'; tests marked Not collected or Not tested, or with no pcr "
-        "entry, are left out. One row per test and quantity for the columns VL "
-        "and Ct; the column name is kept in analyte. study_id and day as "
-        "PatientID and time. VL is empty in the sheet for every negative test and "
-        "for positive tests with VL_status 'VL run, not detected'; those rows are "
-        "kept with an empty value, and pcr and VL_status are carried so the "
-        "result is still in the row. The test-level and case-level columns the "
-        "curator read are kept under their raw names. The raw day column is a "
-        "day index the study team supplied; colldate is the collection date."
-    )
-    return lay_out(table, "study_id", "day", "value"), note
-
-
 def ke2022daily(release):
     samples = pd.read_excel(
         raw(release, "ke2022daily", "41564_2022_1105_MOESM4_ESM.xlsx"),
@@ -495,7 +421,6 @@ BUILDERS = {
     f.__name__: f
     for f in (
         arts2023longitudinal,
-        cdc2024nhphrn,
         ke2022daily,
         kissler2021densely,
         lavezzo2020suppression,
