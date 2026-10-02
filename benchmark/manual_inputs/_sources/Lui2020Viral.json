@@ -1,0 +1,272 @@
+{
+    "$schema": "../../schema.json",
+    "key": "Lui et al. 2020",
+    "doi": "10.1016/j.jinf.2020.04.014",
+    "title": "Viral dynamics of SARS-CoV-2 across a spectrum of disease severity in COVID-19",
+    "assay": "2019-nCoV_N1",
+    "loq": 2.8414345581,
+    "unit": "log10 gc/mL",
+    "temporal": "symptoms",
+    "patients": {
+        "n": 11,
+        "positive": 11,
+        "negative": 0,
+        "details": [
+            {
+                "severity": "critical"
+            },
+            {
+                "severity": "critical"
+            },
+            {
+                "severity": "severe"
+            },
+            {
+                "severity": "moderate"
+            },
+            {
+                "severity": "severe"
+            },
+            {
+                "severity": "moderate"
+            },
+            {
+                "severity": "moderate"
+            },
+            {
+                "severity": "moderate"
+            },
+            {
+                "severity": "severe"
+            },
+            {
+                "severity": "mild"
+            },
+            {
+                "severity": "moderate"
+            }
+        ]
+    },
+    "samples": {
+        "n": 43,
+        "positive": 23,
+        "negative": 20
+    },
+    "loads": [
+        {
+            "patient": 0,
+            "day": 15,
+            "value": null
+        },
+        {
+            "patient": 0,
+            "day": 20,
+            "value": 3.586699801624049
+        },
+        {
+            "patient": 0,
+            "day": 21,
+            "value": 4.11882666293329
+        },
+        {
+            "patient": 0,
+            "day": 22,
+            "value": 3.4379090355394983
+        },
+        {
+            "patient": 0,
+            "day": 23,
+            "value": null
+        },
+        {
+            "patient": 0,
+            "day": 25,
+            "value": null
+        },
+        {
+            "patient": 0,
+            "day": 29,
+            "value": null
+        },
+        {
+            "patient": 0,
+            "day": 35,
+            "value": null
+        },
+        {
+            "patient": 1,
+            "day": 16,
+            "value": 5.038218661294813
+        },
+        {
+            "patient": 1,
+            "day": 17,
+            "value": 3.7762652182681093
+        },
+        {
+            "patient": 1,
+            "day": 18,
+            "value": 2.989894563718773
+        },
+        {
+            "patient": 1,
+            "day": 19,
+            "value": 3.210318519826232
+        },
+        {
+            "patient": 1,
+            "day": 20,
+            "value": null
+        },
+        {
+            "patient": 1,
+            "day": 23,
+            "value": null
+        },
+        {
+            "patient": 1,
+            "day": 30,
+            "value": null
+        },
+        {
+            "patient": 2,
+            "day": 19,
+            "value": null
+        },
+        {
+            "patient": 2,
+            "day": 21,
+            "value": null
+        },
+        {
+            "patient": 2,
+            "day": 22,
+            "value": 3.3010299956639813
+        },
+        {
+            "patient": 2,
+            "day": 23,
+            "value": null
+        },
+        {
+            "patient": 3,
+            "day": 14,
+            "value": 3.744918542441353
+        },
+        {
+            "patient": 3,
+            "day": 18,
+            "value": null
+        },
+        {
+            "patient": 3,
+            "day": 19,
+            "value": null
+        },
+        {
+            "patient": 3,
+            "day": 21,
+            "value": null
+        },
+        {
+            "patient": 4,
+            "day": 15,
+            "value": 4.738431714820286
+        },
+        {
+            "patient": 4,
+            "day": 17,
+            "value": 3.7026889681591335
+        },
+        {
+            "patient": 4,
+            "day": 18,
+            "value": null
+        },
+        {
+            "patient": 5,
+            "day": 9,
+            "value": 4.601114372095721
+        },
+        {
+            "patient": 5,
+            "day": 12,
+            "value": 4.498834148837391
+        },
+        {
+            "patient": 5,
+            "day": 14,
+            "value": 3.256717745977487
+        },
+        {
+            "patient": 5,
+            "day": 18,
+            "value": null
+        },
+        {
+            "patient": 5,
+            "day": 20,
+            "value": null
+        },
+        {
+            "patient": 6,
+            "day": 12,
+            "value": 3.513350798805957
+        },
+        {
+            "patient": 6,
+            "day": 13,
+            "value": null
+        },
+        {
+            "patient": 6,
+            "day": 16,
+            "value": null
+        },
+        {
+            "patient": 7,
+            "day": 6,
+            "value": 4.966826673353475
+        },
+        {
+            "patient": 7,
+            "day": 7,
+            "value": 5.196369653167609
+        },
+        {
+            "patient": 7,
+            "day": 8,
+            "value": 4.256669648687233
+        },
+        {
+            "patient": 7,
+            "day": 9,
+            "value": 4.73430366675543
+        },
+        {
+            "patient": 7,
+            "day": 10,
+            "value": 4.104623660435326
+        },
+        {
+            "patient": 8,
+            "day": 19,
+            "value": 6.441390944462272
+        },
+        {
+            "patient": 9,
+            "day": 8,
+            "value": 3.8997110945711446
+        },
+        {
+            "patient": 10,
+            "day": 8,
+            "value": 3.2830749747354715
+        },
+        {
+            "patient": 10,
+            "day": 10,
+            "value": null
+        }
+    ]
+}

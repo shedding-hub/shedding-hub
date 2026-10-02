@@ -25,19 +25,20 @@ def _dataset(method, sources, models=None, version=None):
 def test_manifest_covers_the_analysis_set_once():
     rows = _rows()
     ids = [r["study_id"] for r in rows]
-    assert len(ids) == len(set(ids)) == 145
-    assert "jones2021estimating" not in ids
+    assert len(ids) == len(set(ids)) == 144
+    assert not set(mf.EXCLUDED) & set(ids)
+    assert set(mf.EXCLUDED) == {"jones2021estimating", "cdc2024nhphrn"}
     assert list(rows[0]) == mf.COLUMNS
 
 
 def test_manifest_era_and_pipeline_counts():
     rows = _rows()
     assert collections.Counter(r["era"] for r in rows) == {
-        "manual": 38,
+        "manual": 37,
         "ai_assisted": 107,
     }
     versions = collections.Counter(r["pipeline_version"] for r in rows)
-    assert versions == {"": 38, "v1": 16, "v2": 91}
+    assert versions == {"": 37, "v1": 16, "v2": 91}
     # Analysis A is the manual era, and only it.
     assert all((r["in_analysis_A"] == "yes") == (r["era"] == "manual") for r in rows)
     # A pipeline version and an extraction model go together.
@@ -103,3 +104,9 @@ def test_reference_is_the_released_file_unless_overridden():
     assert rows["obara2008single"]["reference_yaml"] == path
     assert reason in rows["obara2008single"]["notes"]
     assert rows["obara2008single"]["in_analysis_A"] == "yes"
+
+
+def test_every_study_has_full_text_evidence_and_manual_studies_have_a_csv():
+    rows = _rows()
+    assert {r["evidence_tier"] for r in rows} <= {"pmc", "publisher", "manual-pdf"}
+    assert all(r["has_figure_csv"] == "yes" for r in rows if r["era"] == "manual")

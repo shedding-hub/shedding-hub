@@ -1,0 +1,466 @@
+PatientID,time,value,Age,Gender,Race,Hispanic.or.Latin.Origin,Cohort,inpatient,COVID.19.Confirmed.date,analyte,dpcr_result_class
+1,12,219266805.3,44,F,White,No,Breakthrough,Yes,5/9/2021,gc_dryg_mtDNA,Positive
+1,12,116170462,44,F,White,No,Breakthrough,Yes,5/9/2021,gc_dryg_PMMoV,Positive
+1,12,0,44,F,White,No,Breakthrough,Yes,5/9/2021,gc_dryg_N1,Negative
+1,15,141669808,44,F,White,No,Breakthrough,Yes,5/9/2021,gc_dryg_mtDNA,Positive
+1,15,813184698.1,44,F,White,No,Breakthrough,Yes,5/9/2021,gc_dryg_PMMoV,Positive
+1,15,0,44,F,White,No,Breakthrough,Yes,5/9/2021,gc_dryg_N1,Negative
+2,12,243043062.2,56,F,White,No,Breakthrough,Yes,5/12/2021,gc_dryg_mtDNA,Positive
+2,12,938018442.8,56,F,White,No,Breakthrough,Yes,5/12/2021,gc_dryg_PMMoV,Positive
+2,12,0,56,F,White,No,Breakthrough,Yes,5/12/2021,gc_dryg_N1,Negative
+2,49,450997281.6,56,F,White,No,Breakthrough,Yes,5/12/2021,gc_dryg_mtDNA,Positive
+2,49,361364947.6,56,F,White,No,Breakthrough,Yes,5/12/2021,gc_dryg_PMMoV,Positive
+2,49,0,56,F,White,No,Breakthrough,Yes,5/12/2021,gc_dryg_N1,Negative
+3,6,176043082.4,43,F,Black or African American,No,Unvaccinated,Yes,6/2/2021,gc_dryg_mtDNA,Positive
+3,6,3129105.701,43,F,Black or African American,No,Unvaccinated,Yes,6/2/2021,gc_dryg_PMMoV,Positive
+3,6,527432.892,43,F,Black or African American,No,Unvaccinated,Yes,6/2/2021,gc_dryg_N1,Positive
+4,7,448465145.4,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_mtDNA,Positive
+4,7,36013454.2,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_PMMoV,Positive
+4,7,0,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_N1,Negative
+4,35,603359276.8,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_mtDNA,Positive
+4,35,10847289.71,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_PMMoV,Positive
+4,35,0,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_N1,Negative
+4,48,315497003.8,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_mtDNA,Positive
+4,48,41625960.02,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_PMMoV,Positive
+4,48,0,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_N1,Negative
+4,4,440760928.4,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_mtDNA,Positive
+4,4,14508470.9,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_PMMoV,Positive
+4,4,0,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_N1,Negative
+4,11,282112541.6,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_mtDNA,Positive
+4,11,124402637.9,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_PMMoV,Positive
+4,11,0,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_N1,Negative
+4,24,180253040.7,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_mtDNA,Positive
+4,24,1041906240,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_PMMoV,Positive
+4,24,0,27,F,White,No,Breakthrough,Yes,6/4/2021,gc_dryg_N1,Negative
+6,4,2104104235,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_mtDNA,Positive
+6,4,33665.66775,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_PMMoV,Positive
+6,4,527949811.1,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_N1,Positive
+6,2,2576425926,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_mtDNA,Positive
+6,2,37992.08083,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_PMMoV,Positive
+6,2,1754671.289,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_N1,Positive
+6,28,672819268.2,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_mtDNA,Positive
+6,28,303268495.1,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_PMMoV,Positive
+6,28,1018531.191,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_N1,Positive
+6,41,1217135069,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_mtDNA,Positive
+6,41,1206167885,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_PMMoV,Positive
+6,41,1493352.479,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_N1,Positive
+6,16,53170217.63,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_mtDNA,Positive
+6,16,457487571.8,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_PMMoV,Positive
+6,16,15110118.33,30,M,White,No,Breakthrough,Yes,6/28/2021,gc_dryg_N1,Positive
+7,5,47028250.11,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_mtDNA,Positive
+7,5,190226.6296,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_PMMoV,Positive
+7,5,11889.16435,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_N1,Positive
+7,7,41754127.37,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_mtDNA,Positive
+7,7,14933.37802,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_PMMoV,Positive
+7,7,4975.83537,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_N1,Positive
+7,13,4790044966,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_mtDNA,Positive
+7,13,322827.175,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_PMMoV,Positive
+7,13,1185353998,65,M,Black or African American,No,Breakthrough,Yes,7/2/2021,gc_dryg_N1,Positive
+8,1,730103164,27,F,Black or African American,No,Unvaccinated,Yes,7/14/2021,gc_dryg_mtDNA,Positive
+8,1,518293.6401,27,F,Black or African American,No,Unvaccinated,Yes,7/14/2021,gc_dryg_PMMoV,Positive
+8,1,6863197.188,27,F,Black or African American,No,Unvaccinated,Yes,7/14/2021,gc_dryg_N1,Positive
+10,6,38754058632,49,M,White,No,Breakthrough,Yes,7/22/2021,gc_dryg_mtDNA,Positive
+10,6,533386.3192,49,M,White,No,Breakthrough,Yes,7/22/2021,gc_dryg_PMMoV,Positive
+10,6,18715.30945,49,M,White,No,Breakthrough,Yes,7/22/2021,gc_dryg_N1,Positive
+11,16,153698220.6,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_mtDNA,Positive
+11,16,6702491.103,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_PMMoV,Positive
+11,16,0,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_N1,Negative
+11,29,141019999.7,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_mtDNA,Positive
+11,29,185869.6131,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_PMMoV,Positive
+11,29,1561.022652,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_N1,Positive
+11,6,140497804.2,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_mtDNA,Positive
+11,6,1742170.504,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_PMMoV,Positive
+11,6,0,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_N1,Negative
+11,3,572753401,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_mtDNA,Positive
+11,3,22657980.46,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_PMMoV,Positive
+11,3,0,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_N1,Negative
+11,43,195469710.8,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_mtDNA,Positive
+11,43,221189.4096,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_PMMoV,Positive
+11,43,0,62,M,White,No,Unvaccinated,Yes,7/20/2021,gc_dryg_N1,Negative
+12,48,232018613.6,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_mtDNA,Positive
+12,48,37033734.02,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_PMMoV,Positive
+12,48,0,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_N1,Negative
+12,3,465691022.1,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_mtDNA,Positive
+12,3,1641221.757,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_PMMoV,Positive
+12,3,451122.4788,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_N1,Positive
+12,12,81366934.91,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_mtDNA,Positive
+12,12,15445.79735,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_PMMoV,Positive
+12,12,6441469.56,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_N1,Positive
+12,24,61446439.01,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_mtDNA,Positive
+12,24,45431945.88,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_PMMoV,Positive
+12,24,0,48,F,White,No,Breakthrough,Yes,7/23/2021,gc_dryg_N1,Negative
+13,59,92932500.5,44,M,White,No,Unvaccinated,Yes,7/23/2021,gc_dryg_mtDNA,Positive
+13,59,356949.485,44,M,White,No,Unvaccinated,Yes,7/23/2021,gc_dryg_PMMoV,Positive
+13,59,4803.668018,44,M,White,No,Unvaccinated,Yes,7/23/2021,gc_dryg_N1,Positive
+14,14,143141202.9,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_mtDNA,Positive
+14,14,1143570.786,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_PMMoV,Positive
+14,14,4894.026187,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_N1,Positive
+14,32,209063696.2,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_mtDNA,Positive
+14,32,73247.59494,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_PMMoV,Positive
+14,32,0,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_N1,Negative
+14,43,280928628.7,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_mtDNA,Positive
+14,43,639425.1984,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_PMMoV,Positive
+14,43,0,41,M,Black or African American,No,Breakthrough,Yes,7/28/2021,gc_dryg_N1,Negative
+15,3,3023303353,45,F,Black or African American,No,Unvaccinated,Yes,7/31/2021,gc_dryg_mtDNA,Positive
+15,3,1104623.288,45,F,Black or African American,No,Unvaccinated,Yes,7/31/2021,gc_dryg_PMMoV,Positive
+15,3,30585.94832,45,F,Black or African American,No,Unvaccinated,Yes,7/31/2021,gc_dryg_N1,Positive
+16,1,412422804.4,33,F,Black or African American,No,Breakthrough,Yes,8/2/2021,gc_dryg_mtDNA,Positive
+16,1,339252.9231,33,F,Black or African American,No,Breakthrough,Yes,8/2/2021,gc_dryg_PMMoV,Positive
+16,1,1171427.341,33,F,Black or African American,No,Breakthrough,Yes,8/2/2021,gc_dryg_N1,Positive
+17,41,1619175147,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_mtDNA,Positive
+17,41,5907226.916,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_PMMoV,Positive
+17,41,0,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_N1,Negative
+17,28,432291783.2,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_mtDNA,Positive
+17,28,2289559062,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_PMMoV,Positive
+17,28,0,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_N1,Negative
+17,9,297857010.4,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_mtDNA,Positive
+17,9,9759.877769,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_PMMoV,Positive
+17,9,131758.3499,54,F,White,No,Breakthrough,Yes,8/4/2021,gc_dryg_N1,Positive
+18,2,392866245.7,58,M,White,No,Breakthrough,Yes,8/9/2021,gc_dryg_mtDNA,Positive
+18,2,15706400.67,58,M,White,No,Breakthrough,Yes,8/9/2021,gc_dryg_PMMoV,Positive
+18,2,33202.86906,58,M,White,No,Breakthrough,Yes,8/9/2021,gc_dryg_N1,Positive
+18,4,3953876810,58,M,White,No,Breakthrough,Yes,8/9/2021,gc_dryg_mtDNA,Positive
+18,4,1700530.723,58,M,White,No,Breakthrough,Yes,8/9/2021,gc_dryg_PMMoV,Positive
+18,4,0,58,M,White,No,Breakthrough,Yes,8/9/2021,gc_dryg_N1,Negative
+20,23,13598368.8,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_mtDNA,Positive
+20,23,7234476.101,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_PMMoV,Positive
+20,23,0,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_N1,Negative
+20,28,67054389.27,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_mtDNA,Positive
+20,28,5140855.966,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_PMMoV,Positive
+20,28,0,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_N1,Negative
+20,13,119310498,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_mtDNA,Positive
+20,13,125602094.2,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_PMMoV,Positive
+20,13,63203.24959,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_N1,Positive
+20,3,493220111.4,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_mtDNA,Positive
+20,3,405471.8846,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_PMMoV,Positive
+20,3,2153377.166,66,M,Asian,No,Breakthrough,Yes,8/10/2021,gc_dryg_N1,Positive
+21,26,217335404.7,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_mtDNA,Positive
+21,26,23005670.72,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_PMMoV,Positive
+21,26,0,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_N1,Negative
+21,21,204014613.6,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_mtDNA,Positive
+21,21,37317245.9,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_PMMoV,Positive
+21,21,0,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_N1,Negative
+21,11,107680034.5,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_mtDNA,Positive
+21,11,4592374.264,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_PMMoV,Positive
+21,11,52827.10809,65,F,White,No,Breakthrough,Yes,8/12/2021,gc_dryg_N1,Positive
+22,1,8220728.021,31,F,White,No,Unvaccinated,Yes,8/17/2021,gc_dryg_mtDNA,Positive
+22,1,794.4730742,31,F,White,No,Unvaccinated,Yes,8/17/2021,gc_dryg_PMMoV,Positive
+22,1,0,31,F,White,No,Unvaccinated,Yes,8/17/2021,gc_dryg_N1,Negative
+22,6,783738348.1,31,F,White,No,Unvaccinated,Yes,8/17/2021,gc_dryg_mtDNA,Positive
+22,6,2900.745086,31,F,White,No,Unvaccinated,Yes,8/17/2021,gc_dryg_PMMoV,Positive
+22,6,0,31,F,White,No,Unvaccinated,Yes,8/17/2021,gc_dryg_N1,Negative
+23,2,942154760.7,71,F,Black or African American,No,Breakthrough,Yes,8/21/2021,gc_dryg_mtDNA,Positive
+23,2,261509.8774,71,F,Black or African American,No,Breakthrough,Yes,8/21/2021,gc_dryg_PMMoV,Positive
+23,2,52341.93115,71,F,Black or African American,No,Breakthrough,Yes,8/21/2021,gc_dryg_N1,Positive
+24,21,282809214.1,46,F,Black or African American,No,Unvaccinated,Yes,8/23/2021,gc_dryg_mtDNA,Positive
+24,21,1390960188,46,F,Black or African American,No,Unvaccinated,Yes,8/23/2021,gc_dryg_PMMoV,Positive
+24,21,0,46,F,Black or African American,No,Unvaccinated,Yes,8/23/2021,gc_dryg_N1,Negative
+24,49,1400794412,46,F,Black or African American,No,Unvaccinated,Yes,8/23/2021,gc_dryg_mtDNA,Positive
+24,49,3508811007,46,F,Black or African American,No,Unvaccinated,Yes,8/23/2021,gc_dryg_PMMoV,Positive
+24,49,0,46,F,Black or African American,No,Unvaccinated,Yes,8/23/2021,gc_dryg_N1,Negative
+26,14,128952643,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+26,14,411107.8365,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+26,14,277047.3397,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_N1,Positive
+26,2,134523599.3,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+26,2,53857.67046,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+26,2,96863.42225,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_N1,Positive
+26,8,296410900.7,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+26,8,1168058.369,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+26,8,102066.8728,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_N1,Positive
+26,28,67356636.07,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+26,28,2379001.954,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+26,28,114054.3678,32,M,Black or African American,No,Breakthrough,Yes,8/31/2021,gc_dryg_N1,Positive
+27,2,53354555.77,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+27,2,5598170.404,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+27,2,538054.3934,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_N1,Positive
+27,37,93137805.8,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+27,37,17233876.8,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+27,37,138917.4053,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_N1,Positive
+27,23,67027064.23,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+27,23,354554.3772,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+27,23,5637.790449,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_N1,Positive
+27,6,293878886.3,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+27,6,17440.88346,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+27,6,1369109.352,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_N1,Positive
+27,24,76216370.73,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+27,24,100134.1207,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+27,24,0,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_N1,Negative
+27,8,729028969.8,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_mtDNA,Positive
+27,8,23368.16247,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_PMMoV,Positive
+27,8,288207.3371,68,M,Black or African American,No,Unvaccinated,Yes,8/31/2021,gc_dryg_N1,Positive
+29,11,188229720.3,47,F,Black or African American,No,Breakthrough,Yes,9/10/2021,gc_dryg_mtDNA,Positive
+29,11,45250.83768,47,F,Black or African American,No,Breakthrough,Yes,9/10/2021,gc_dryg_PMMoV,Positive
+29,11,0,47,F,Black or African American,No,Breakthrough,Yes,9/10/2021,gc_dryg_N1,Negative
+30,16,199272048,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_mtDNA,Positive
+30,16,107741.3355,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_PMMoV,Positive
+30,16,0,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_N1,Negative
+30,49,66076107.2,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_mtDNA,Positive
+30,49,1344588.359,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_PMMoV,Positive
+30,49,0,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_N1,Negative
+30,36,164279912,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_mtDNA,Positive
+30,36,508434.2285,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_PMMoV,Positive
+30,36,0,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_N1,Negative
+30,21,32409877.9,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_mtDNA,Positive
+30,21,12323978.16,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_PMMoV,Positive
+30,21,0,75,F,White,No,Breakthrough,Yes,9/5/2021,gc_dryg_N1,Negative
+31,11,97438817.33,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_mtDNA,Positive
+31,11,0,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_PMMoV,Negative
+31,11,0,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_N1,Negative
+31,7,222731958.5,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_mtDNA,Positive
+31,7,65721.4977,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_PMMoV,Positive
+31,7,0,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_N1,Negative
+31,4,89225315.45,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_mtDNA,Positive
+31,4,256647.5884,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_PMMoV,Positive
+31,4,43795.74232,55,M,Black or African American,No,Unvaccinated,Yes,9/13/2021,gc_dryg_N1,Positive
+35,40,390579539.6,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_mtDNA,Positive
+35,40,24603435.56,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_PMMoV,Positive
+35,40,0,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_N1,Negative
+35,27,562131719.3,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_mtDNA,Positive
+35,27,628487934.5,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_PMMoV,Positive
+35,27,0,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_N1,Negative
+35,6,290141609.1,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_mtDNA,Positive
+35,6,879104184.8,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_PMMoV,Positive
+35,6,0,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_N1,Negative
+35,7,293449921.5,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_mtDNA,Positive
+35,7,950000437.1,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_PMMoV,Positive
+35,7,0,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_N1,Negative
+35,12,172812198.3,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_mtDNA,Positive
+35,12,287409502.5,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_PMMoV,Positive
+35,12,0,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_N1,Negative
+35,8,264351441.6,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_mtDNA,Positive
+35,8,1945514841,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_PMMoV,Positive
+35,8,0,59,F,White,No,Breakthrough,No,9/22/2021,gc_dryg_N1,Negative
+36,20,185511724.1,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_mtDNA,Positive
+36,20,26138482.76,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_PMMoV,Positive
+36,20,0,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_N1,Negative
+36,55,231720371.5,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_mtDNA,Positive
+36,55,159338303.4,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_PMMoV,Positive
+36,55,0,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_N1,Negative
+36,20,177753015.4,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_mtDNA,Positive
+36,20,11343938.7,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_PMMoV,Positive
+36,20,0,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_N1,Negative
+36,19,296833462.4,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_mtDNA,Positive
+36,19,886956.9208,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_PMMoV,Positive
+36,19,0,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_N1,Negative
+36,25,248558968.8,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_mtDNA,Positive
+36,25,1562272534,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_PMMoV,Positive
+36,25,0,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_N1,Negative
+36,54,109216303.8,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_mtDNA,Positive
+36,54,52134053.75,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_PMMoV,Positive
+36,54,0,31,F,White,No,Breakthrough,No,9/17/2021,gc_dryg_N1,Negative
+38,77,416300857.9,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_mtDNA,Positive
+38,77,101410950.4,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_PMMoV,Positive
+38,77,0,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_N1,Negative
+38,63,1082951375,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_mtDNA,Positive
+38,63,1417732280,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_PMMoV,Positive
+38,63,0,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_N1,Negative
+38,49,410883987.8,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_mtDNA,Positive
+38,49,21925403.21,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_PMMoV,Positive
+38,49,0,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_N1,Negative
+38,70,635526315.8,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_mtDNA,Positive
+38,70,16626315.79,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_PMMoV,Positive
+38,70,0,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_N1,Negative
+38,34,727570248.5,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_mtDNA,Positive
+38,34,16015272.58,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_PMMoV,Positive
+38,34,0,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_N1,Negative
+38,79,590017762.1,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_mtDNA,Positive
+38,79,198574001.5,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_PMMoV,Positive
+38,79,0,57,M,White,No,Unvaccinated,No,9/27/2021,gc_dryg_N1,Negative
+40,44,3616642187,55,M,Black or African American,No,Unvaccinated,No,9/20/2021,gc_dryg_mtDNA,Positive
+40,44,216248104,55,M,Black or African American,No,Unvaccinated,No,9/20/2021,gc_dryg_PMMoV,Positive
+40,44,0,55,M,Black or African American,No,Unvaccinated,No,9/20/2021,gc_dryg_N1,Negative
+40,49,1914694036,55,M,Black or African American,No,Unvaccinated,No,9/20/2021,gc_dryg_mtDNA,Positive
+40,49,457755208,55,M,Black or African American,No,Unvaccinated,No,9/20/2021,gc_dryg_PMMoV,Positive
+40,49,0,55,M,Black or African American,No,Unvaccinated,No,9/20/2021,gc_dryg_N1,Negative
+41,11,244732343.5,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_mtDNA,Positive
+41,11,15233419.28,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_PMMoV,Positive
+41,11,0,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_N1,Negative
+41,47,689816463,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_mtDNA,Positive
+41,47,36771076.37,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_PMMoV,Positive
+41,47,0,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_N1,Negative
+41,10,429774041.6,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_mtDNA,Positive
+41,10,28086825.16,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_PMMoV,Positive
+41,10,0,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_N1,Negative
+41,17,340077500.4,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_mtDNA,Positive
+41,17,2194646.964,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_PMMoV,Positive
+41,17,0,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_N1,Negative
+41,13,320746041.1,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_mtDNA,Positive
+41,13,3064503.207,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_PMMoV,Positive
+41,13,0,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_N1,Negative
+41,33,286693804.8,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_mtDNA,Positive
+41,33,1115083.539,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_PMMoV,Positive
+41,33,0,64,F,White,No,Breakthrough,No,11/19/2021,gc_dryg_N1,Negative
+42,55,425112858.4,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+42,55,243879431.8,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+42,55,0,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+42,50,341572028,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+42,50,257958.042,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+42,50,0,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+42,22,187165610.4,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+42,22,890763147.5,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+42,22,0,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+42,27,168921355.9,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+42,27,27859295.08,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+42,27,0,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+42,48,248334585,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+42,48,12135251.71,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+42,48,0,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+42,22,239447662.7,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+42,22,2221989499,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+42,22,0,38,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+43,49,185322803.5,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+43,49,10330342.85,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+43,49,154901.0288,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Positive
+43,27,341529952.1,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+43,27,92942134.94,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+43,27,4218.551174,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Positive
+43,51,324006141.5,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+43,51,37645624.18,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+43,51,51144.73437,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Positive
+43,30,193277583.5,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+43,30,44879028.06,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+43,30,0,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+43,22,112572335.4,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+43,22,235247316.3,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+43,22,0,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+43,19,176827184.3,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_mtDNA,Positive
+43,19,5491911.912,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_PMMoV,Positive
+43,19,0,NA,F,White,No,Breakthrough,No,11/16/2021,gc_dryg_N1,Negative
+49,21,296473724.3,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_mtDNA,Positive
+49,21,3279618533,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_PMMoV,Positive
+49,21,0,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_N1,Negative
+49,20,699617946.1,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_mtDNA,Positive
+49,20,3315483688,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_PMMoV,Positive
+49,20,0,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_N1,Negative
+49,35,1186306785,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_mtDNA,Positive
+49,35,72395759.17,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_PMMoV,Positive
+49,35,5948.525555,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_N1,Positive
+49,49,258320158,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_mtDNA,Positive
+49,49,2879860259,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_PMMoV,Positive
+49,49,0,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_N1,Negative
+49,42,539004203.6,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_mtDNA,Positive
+49,42,3337755634,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_PMMoV,Positive
+49,42,0,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_N1,Negative
+49,16,356172590.3,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_mtDNA,Positive
+49,16,2329570509,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_PMMoV,Positive
+49,16,0,31,F,White,No,Breakthrough,No,12/28/2021,gc_dryg_N1,Negative
+50,28,187058910.9,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_mtDNA,Positive
+50,28,1801373762,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_PMMoV,Positive
+50,28,0,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_N1,Negative
+50,59,195720716.1,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_mtDNA,Positive
+50,59,14267058.82,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_PMMoV,Positive
+50,59,0,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_N1,Negative
+50,44,198908930.8,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_mtDNA,Positive
+50,44,523554701.2,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_PMMoV,Positive
+50,44,0,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_N1,Negative
+50,14,203851238.6,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_mtDNA,Positive
+50,14,201843038.6,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_PMMoV,Positive
+50,14,0,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_N1,Negative
+50,64,185082926.9,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_mtDNA,Positive
+50,64,84360878.79,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_PMMoV,Positive
+50,64,0,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_N1,Negative
+50,42,499773103.5,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_mtDNA,Positive
+50,42,589435617.6,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_PMMoV,Positive
+50,42,0,31,M,Black or African American,No,Breakthrough,No,1/3/2022,gc_dryg_N1,Negative
+52,34,268529185.7,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_mtDNA,Positive
+52,34,3390585381,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_PMMoV,Positive
+52,34,6719.451357,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_N1,Positive
+52,41,1190452133,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_mtDNA,Positive
+52,41,15127018.54,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_PMMoV,Positive
+52,41,0,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_N1,Negative
+52,69,496509786.7,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_mtDNA,Positive
+52,69,987820.518,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_PMMoV,Positive
+52,69,0,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_N1,Negative
+52,29,448450700.1,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_mtDNA,Positive
+52,29,126963271.9,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_PMMoV,Positive
+52,29,0,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_N1,Negative
+52,55,870413472.3,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_mtDNA,Positive
+52,55,2779121900,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_PMMoV,Positive
+52,55,0,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_N1,Negative
+52,27,308604705.9,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_mtDNA,Positive
+52,27,16912235.29,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_PMMoV,Positive
+52,27,0,26,M,White,No,Unvaccinated,No,1/4/2022,gc_dryg_N1,Negative
+53,91,108851845.6,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_mtDNA,Positive
+53,91,287654079.7,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_PMMoV,Positive
+53,91,0,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_N1,Negative
+53,59,83796929.85,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_mtDNA,Positive
+53,59,137866934.5,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_PMMoV,Positive
+53,59,0,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_N1,Negative
+53,37,60816188.48,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_mtDNA,Positive
+53,37,4049591.623,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_PMMoV,Positive
+53,37,0,25,F,White,No,Breakthrough,No,12/27/2021,gc_dryg_N1,Negative
+64,29,343223187.6,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_mtDNA,Positive
+64,29,29522480.91,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_PMMoV,Positive
+64,29,0,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_N1,Negative
+64,22,203057445.4,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_mtDNA,Positive
+64,22,643037.2914,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_PMMoV,Positive
+64,22,0,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_N1,Negative
+64,23,134053958.1,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_mtDNA,Positive
+64,23,27638810.79,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_PMMoV,Positive
+64,23,0,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_N1,Negative
+64,48,159930007.1,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_mtDNA,Positive
+64,48,6126886.333,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_PMMoV,Positive
+64,48,0,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_N1,Negative
+64,30,145033155.1,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_mtDNA,Positive
+64,30,31580165.29,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_PMMoV,Positive
+64,30,0,27,F,Black or African American,No,Breakthrough,No,1/18/2022,gc_dryg_N1,Negative
+69,35,162983451.1,28,F,White,Yes,Breakthrough,No,1/20/2022,gc_dryg_mtDNA,Positive
+69,35,47357368.23,28,F,White,Yes,Breakthrough,No,1/20/2022,gc_dryg_PMMoV,Positive
+69,35,0,28,F,White,Yes,Breakthrough,No,1/20/2022,gc_dryg_N1,Negative
+69,54,295282571.4,28,F,White,Yes,Breakthrough,No,1/20/2022,gc_dryg_mtDNA,Positive
+69,54,578898912.2,28,F,White,Yes,Breakthrough,No,1/20/2022,gc_dryg_PMMoV,Positive
+69,54,0,28,F,White,Yes,Breakthrough,No,1/20/2022,gc_dryg_N1,Negative
+71,48,332619905.4,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_mtDNA,Positive
+71,48,396336056.1,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_PMMoV,Positive
+71,48,0,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_N1,Negative
+71,68,130758473.4,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_mtDNA,Positive
+71,68,300971083.6,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_PMMoV,Positive
+71,68,0,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_N1,Negative
+71,59,92560686.52,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_mtDNA,Positive
+71,59,24492889.37,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_PMMoV,Positive
+71,59,0,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_N1,Negative
+71,32,175727735.2,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_mtDNA,Positive
+71,32,9376129.13,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_PMMoV,Positive
+71,32,0,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_N1,Negative
+71,29,215832608.4,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_mtDNA,Positive
+71,29,5891302.875,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_PMMoV,Positive
+71,29,0,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_N1,Negative
+71,39,532129399.2,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_mtDNA,Positive
+71,39,62791269.11,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_PMMoV,Positive
+71,39,0,21,M,Black or African American,No,Unvaccinated,No,5/21/2022,gc_dryg_N1,Negative
+72,39,592484064.9,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_mtDNA,Positive
+72,39,79993452.29,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_PMMoV,Positive
+72,39,0,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_N1,Negative
+72,35,194568567.7,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_mtDNA,Positive
+72,35,3195743.52,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_PMMoV,Positive
+72,35,0,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_N1,Negative
+72,40,143514663.3,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_mtDNA,Positive
+72,40,17314336.25,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_PMMoV,Positive
+72,40,0,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_N1,Negative
+72,34,161346780.4,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_mtDNA,Positive
+72,34,13793166.48,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_PMMoV,Positive
+72,34,11515.63064,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_N1,Positive
+72,32,587215627.3,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_mtDNA,Positive
+72,32,52957080.31,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_PMMoV,Positive
+72,32,0,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_N1,Negative
+72,11,164004294.4,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_mtDNA,Positive
+72,11,2293683.248,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_PMMoV,Positive
+72,11,0,36,F,Black or African American,No,Breakthrough,No,5/19/2022,gc_dryg_N1,Negative
+74,26,431218310.3,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_mtDNA,Positive
+74,26,12497584.56,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_PMMoV,Positive
+74,26,0,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_N1,Negative
+74,23,848234160.6,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_mtDNA,Positive
+74,23,47844093.42,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_PMMoV,Positive
+74,23,0,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_N1,Negative
+74,46,1636810007,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_mtDNA,Positive
+74,46,11510668.18,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_PMMoV,Positive
+74,46,0,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_N1,Negative
+74,30,526496066.6,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_mtDNA,Positive
+74,30,1537565.248,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_PMMoV,Positive
+74,30,0,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_N1,Negative
+74,16,131887532.1,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_mtDNA,Positive
+74,16,34626942.24,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_PMMoV,Positive
+74,16,0,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_N1,Negative
+74,40,121317875.7,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_mtDNA,Positive
+74,40,47491509.89,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_PMMoV,Positive
+74,40,0,26,M,White,No,Unvaccinated,No,5/28/2022,gc_dryg_N1,Negative
