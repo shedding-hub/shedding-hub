@@ -14,6 +14,9 @@ What a builder may do is limited to what laying out a CSV requires:
 - reshape to one row per measurement;
 - rename those three columns to `PatientID`, `time` and `value`;
 - carry other raw columns along under their raw names;
+- number participants 1, 2, 3, ... where neither the source file nor the paper
+  gives an identifier, and put anything that describes a participant (mother
+  or neonate, for example) in a column of its own;
 - drop cells that hold no measurement.
 
 It may not change a value. Times are not re-aligned to a reference event,
@@ -56,6 +59,12 @@ def lay_out(table: pd.DataFrame, patient: str, time: str, value: str) -> pd.Data
     renamed = table.rename(columns={patient: "PatientID", time: "time", value: "value"})
     others = [c for c in renamed.columns if c not in ("PatientID", "time", "value")]
     return renamed[["PatientID", "time", "value", *others]]
+
+
+def number_participants(labels) -> list[str]:
+    """Generic ids 1, 2, 3, ... in order of first appearance."""
+    order = {}
+    return [str(order.setdefault(label, len(order) + 1)) for label in labels]
 
 
 def zuo2020alterations(release):

@@ -1,4 +1,4 @@
-from manual_inputs import lay_out, raw
+from manual_inputs import lay_out, number_participants, raw
 
 import json
 
@@ -72,7 +72,7 @@ def han2020sequential(release):
                 time, value = point["value"]
                 rows.append(
                     {
-                        "PatientID": name.removesuffix(".json"),
+                        "participant": name.removesuffix("_project.json"),
                         "time": repr(time),
                         "value": repr(value),
                         "analyte": dataset["name"],
@@ -81,12 +81,16 @@ def han2020sequential(release):
     note = (
         "WebPlotDigitizer project files mother_project.json and "
         "neonate_project.json, digitized from Fig. 1: one row per digitized point, "
-        "with the raw x and y axis values as time and value. PatientID is the "
-        "project file name. analyte is the dataset name the curator gave each "
+        "with the raw x and y axis values as time and value. The source gives no "
+        "participant identifier, so PatientID is 1 and 2 in file order, and the "
+        "participant column holds what each file is named for (mother, neonate). "
+        "analyte is the dataset name the curator gave each "
         "series in the project file, which already names a specimen and a gene "
         "target."
     )
-    return pd.DataFrame(rows), note
+    table = pd.DataFrame(rows)
+    table.insert(0, "PatientID", number_participants(table["participant"]))
+    return table[["PatientID", "time", "value", "participant", "analyte"]], note
 
 
 def lescure2020clinical(release):
@@ -223,11 +227,11 @@ def xing2020prolonged(release):
         40,
     ]
     rows = [
-        {"PatientID": "Case1", "time": t, "value": v, "specimen": "ct_throat"}
+        {"PatientID": "1", "time": t, "value": v, "specimen": "ct_throat"}
         for t, v in zip(time, ct_throat)
     ]
     rows += [
-        {"PatientID": "Case1", "time": t, "value": v, "specimen": "ct_fecal"}
+        {"PatientID": "1", "time": t, "value": v, "specimen": "ct_fecal"}
         for t, v in zip(time[2:], ct_fecal)
     ]
     note = (

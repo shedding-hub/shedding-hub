@@ -20,7 +20,7 @@ from bisect import bisect
 import numpy as np
 import pandas as pd
 
-from manual_inputs import OUT, lay_out, raw
+from manual_inputs import OUT, lay_out, number_participants, raw
 
 
 def lui2020viral(release):
@@ -28,7 +28,7 @@ def lui2020viral(release):
     loads = json.loads(source.read_text(encoding="utf-8"))["loads"]
     table = pd.DataFrame(
         {
-            "patient": [str(entry["patient"]) for entry in loads],
+            "patient": number_participants(entry["patient"] for entry in loads),
             "day": [str(entry["day"]) for entry in loads],
             # A reading the file stores as null stays an empty cell.
             "value": [
@@ -40,8 +40,9 @@ def lui2020viral(release):
     note = (
         "Lui2020Viral.json from the earlier SheddingHub repository (CIDMATH, "
         "commit 31db6f6), the hand-made file this dataset was first curated in: "
-        "one row per entry of loads, with patient, day and value as PatientID, "
-        "time and value. Values are as stored there (the file states log10 "
+        "one row per entry of loads, with day and value as time and value. "
+        "The file numbers patients by position from 0 and the paper gives no "
+        "identifier, so PatientID is 1, 2, 3, ... in the file's order. Values are as stored there (the file states log10 "
         "gc/mL) and day is as stored there (the file states days since "
         "symptoms). Readings stored as null are left empty; the file's notes say "
         "these are negative samples read from the figures. The file's assay, "
@@ -133,11 +134,14 @@ def woelfel2020virological(release):
                 }
             )
     table = pd.DataFrame(rows)
+    table["panel"] = number_participants(table["panel"])
     note = (
         "woelfel2020virological.pdf: marker positions read from the vector "
         "graphics of Fig. 2 with the digitization settings of the extraction "
         "script (panel boundaries, axis limits, and the series each marker "
-        "colour stands for), in axis units. PatientID is the panel index, time "
+        "colour stands for), in axis units. PatientID numbers the nine panels 1 to 9, "
+        "left to right and top to bottom, since the reading step does not recover "
+        "the patient labels printed in the figure; time "
         "is the x-axis reading and value is the y-axis reading; neither is "
         "rounded or converted. The series name is in specimen. The script's "
         "rounding of days, its non-detect threshold and its conversion from "
