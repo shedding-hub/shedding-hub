@@ -169,6 +169,7 @@ def main() -> int:
         "manual_builders_challenger",
         "manual_builders_repository",
         "manual_builders_figure",
+        "manual_builders_legacy",
     ):
         try:
             BUILDERS.update(__import__(module).BUILDERS)
