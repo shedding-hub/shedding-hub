@@ -405,7 +405,8 @@ def test_findings_hit_by_location_and_type():
         ("participant.count_vs_paper", "", ["missing", "participant-count mismatch"]),
         ("value.censored_string", rows["wrong value"]["s0_path"], ["wrong value"]),
         # The right place but a check that cannot speak about the error there.
-        ("analyte.value_vs_paper", rows["wrong value"]["s0_path"], []),
+        ("analyte.value_vs_paper", rows["wrong value"]["s0_path"], ["wrong value"]),
+        ("attr.value_vs_paper", rows["wrong value"]["s0_path"], []),
         # A path that merely starts with the same characters is not an ancestor.
         ("participant.count_vs_paper", "/participant", []),
     ]
@@ -420,8 +421,25 @@ def test_findings_hit_by_location_and_type():
         )
         assert row["hit"] == ("yes" if expected else "no")
         assert row["category"] == "data"
-    wrong_check = out[10]
+    wrong_check = out[11]
     assert wrong_check["same_location_other_type"] == rows["wrong value"]["id"]
+    assert [r["adjudicate"] for r in out] == [
+        "no" if expected else "yes" for _, _, expected in cases
+    ]
+
+
+def test_gene_target_wording_and_extra_attributes_are_listed_but_not_scored():
+    reference = load("tan2021early")
+    draft, where = disguise(reference)
+    draft["analytes"]["renamed_0"]["gene_target"] = "N gene (CDC N1 assay)"
+    draft["participants"][where[0]]["attributes"]["hospitalized"] = True
+    draft["participants"][where[1]]["attributes"]["age"] += 1
+    result = disc.compare("x", draft, reference, align.REPORTED)
+    assert {r["type"]: r["scored"] for r in result.rows} == {
+        "wrong gene_target": "no",
+        "extra attribute": "no",
+        "wrong attribute value": "yes",
+    }
 
 
 def test_schema_gaps_notes_and_unknown_checks_are_not_scored():
@@ -433,7 +451,7 @@ def test_schema_gaps_notes_and_unknown_checks_are_not_scored():
     ]
     out = mf.match("tan2021early", findings, list(rows.values()))
     assert [r["category"] for r in out] == ["schema_gap", "observation", "unmapped"]
-    assert {r["hit"] for r in out} == {"no"}
+    assert {r["hit"] for r in out} == {"no"} == {r["adjudicate"] for r in out}
     assert out[0]["same_location_other_type"] == rows["wrong unit"]["id"]
 
 

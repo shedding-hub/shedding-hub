@@ -20,7 +20,9 @@ Each row carries the JSON pointer of the element in S0 and in S2 where it
 exists. For something absent from S0 (an omission, a missing participant),
 `s0_anchor` is the place in S0 where it would be, so that a review finding
 about that place can be related to it. `n_measurements` is the number of
-measurements the row stands for.
+measurements the row stands for. `scored` is `no` for the two kinds of
+difference that are reported apart from errors: a `gene_target` worded
+differently, and an attribute only the draft records.
 
 Usage (from the repository root), on the outputs of a benchmark run:
     python benchmark/discrepancies.py RUN_DIR --out OUT_DIR [--ref v1.1.0]
@@ -55,7 +57,13 @@ COLUMNS = [
     "s0_value",
     "s2_value",
     "n_measurements",
+    "scored",
 ]
+# Differences that are listed but not counted as errors. `gene_target` is free
+# text, so two correct descriptions rarely match word for word. An attribute
+# the draft records and the reference leaves out is more information, not a
+# mistake.
+NOT_SCORED = {"wrong gene_target", "extra attribute"}
 SUMMARY_COLUMNS = [
     "study_id",
     "draft",
@@ -99,6 +107,7 @@ class Comparison:
                 "s0_value": v0,
                 "s2_value": v2,
                 "n_measurements": n,
+                "scored": "no" if kind in NOT_SCORED else "yes",
             }
         )
 

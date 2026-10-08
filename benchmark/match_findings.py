@@ -12,6 +12,10 @@ Findings from `schema.*` checks are schema gaps and `model.observation`
 findings are notes. Both are listed but not scored against data errors, and
 neither are findings from a check this file has no mapping for.
 
+A scored finding that hits no discrepancy is marked for adjudication. The
+comparison only sees where the draft and the reference differ, so it cannot
+tell a false alarm from a finding about an error they share.
+
 Usage (from the repository root):
     python benchmark/match_findings.py RUN_DIR --out OUT_DIR
 
@@ -39,11 +43,13 @@ ATTRIBUTE_ERRORS = {
 }
 VALUE_ERRORS = {"wrong value", "wrong non-detect status"}
 
-# The first seven rows are the mapping of the analysis plan. The `value.*`
-# rows are rule-based checks that the plan does not list; they speak about a
-# measurement's value.
+# The first seven rows are the mapping of the analysis plan, with one addition:
+# the review agent also uses `analyte.value_vs_paper` for a single reading
+# that differs from the paper, so that check can speak about a measurement's
+# value or time as well as an analyte field. The `value.*` rows are rule-based
+# checks that the plan does not list; they speak about a measurement's value.
 CHECK_TO_TYPES = {
-    "analyte.value_vs_paper": ANALYTE_FIELD_ERRORS,
+    "analyte.value_vs_paper": ANALYTE_FIELD_ERRORS | VALUE_ERRORS | {"wrong time"},
     "attr.value_vs_paper": ATTRIBUTE_ERRORS,
     "attr.misassigned_vs_paper": ATTRIBUTE_ERRORS,
     "analyte.missing_vs_paper": {"missing analyte"},
@@ -74,6 +80,7 @@ COLUMNS = [
     "hit",
     "matched_discrepancies",
     "same_location_other_type",
+    "adjudicate",
 ]
 
 
@@ -118,6 +125,11 @@ def match(study_id: str, findings: list[dict], rows: list[dict]) -> list[dict]:
                 "hit": "yes" if hits else "no",
                 "matched_discrepancies": ";".join(hits),
                 "same_location_other_type": ";".join(others),
+                # A scored finding that hits nothing may still be right: the
+                # draft and the reference can share an error. An adjudicator
+                # decides, so that such a finding is not counted as a false
+                # alarm by default.
+                "adjudicate": "yes" if kind == "data" and not hits else "no",
             }
         )
     return out
