@@ -15,15 +15,26 @@ to the laid-out table by code:
   `inconclusive`) are written that way;
 - logarithms: where the script computes `10 ** value`, so does this module.
 
-Nothing else is taken from the scripts. Times are not rounded or re-aligned,
-units are not converted, standard curves from cycle threshold to concentration
-are not applied, and no label is renamed. Where a script goes on to do one of
-those, the note for the study says so.
+For four studies the script also turns the raw reading into the value it
+reports: a calibration formula or a standard curve from cycles to
+concentration, or a change of volume unit. In production the curator would
+have handed the agent that final value, so those conversions are applied too,
+with the script's own formula, and the raw reading is kept in a column of its
+own so that the script's result can be reproduced from the CSV.
+
+Nothing else is taken from the scripts. Times are not rounded or re-aligned
+and no label is renamed. Where a script goes on to do one of those, the note
+for the study says so.
 
 Each rule returns the table and a sentence for the study's note.
 """
 
+import numpy as np
 import pandas as pd
+
+from manual_inputs import raw
+
+RELEASE = {"tag": "v1.1.0"}  # set by `curate` to the release being built
 
 
 def numbers(table: pd.DataFrame) -> pd.Series:
@@ -43,6 +54,18 @@ def write(table: pd.DataFrame, mask, word: str) -> int:
 def to_linear(table: pd.DataFrame, mask) -> int:
     """10 ** value for the chosen cells, written as Python writes a float."""
     table.loc[mask, "value"] = [repr(10 ** float(v)) for v in table.loc[mask, "value"]]
+    return int(mask.sum())
+
+
+def convert(table: pd.DataFrame, mask, function, kept_as: str) -> int:
+    """Replace the chosen readings by `function(reading)`, keeping the raw one.
+
+    The raw readings of every row go to the column `kept_as`.
+    """
+    table[kept_as] = table["value"]
+    table.loc[mask, "value"] = [
+        repr(float(function(float(v)))) for v in table.loc[mask, "value"]
+    ]
     return int(mask.sum())
 
 
@@ -161,16 +184,24 @@ def iwakiri2009quantitative(table):
 
 def ke2022daily(table):
     value = numbers(table)
-    mask = ((table["analyte"] == "Nasal_CN") & (value == 48)) | (
-        (table["analyte"] == "Saliva_Ct") & (value == 47)
-    )
+    nasal = table["analyte"] == "Nasal_CN"
+    negative = (nasal & (value == 48)) | (~nasal & (value == 47))
+    keep = ~negative & value.notna()
+    table["Nasal_CN_or_Saliva_Ct"] = table["value"]
+    table.loc[keep & nasal, "value"] = [
+        repr(10 ** (11.35 - 0.25 * v)) for v in value[keep & nasal]
+    ]
+    table.loc[keep & ~nasal, "value"] = [
+        repr(10 ** (14.24 - 0.28 * v)) for v in value[keep & ~nasal]
+    ]
+    count = write(table, negative, "negative")
     return table, (
-        coded(
-            write(table, mask, "negative"),
-            "Nasal_CN equal to 48 or Saliva_Ct equal to 47",
-        )
-        + " The script then converts CN and Ct to concentrations with the "
-        "article's calibration formulas; that conversion is not applied."
+        f"Non-detects: {count} cells written as negative (Nasal_CN equal to 48 or "
+        f"Saliva_Ct equal to 47). Conversion: the other {int(keep.sum())} readings "
+        "converted to concentrations with the article's calibration formulas, "
+        "log10(V) = 11.35 - 0.25 CN for nasal samples and log10(V) = 14.24 - 0.28 "
+        "Ct for saliva. Both as the extraction script does. The raw CN or Ct is "
+        "kept in Nasal_CN_or_Saliva_Ct."
     )
 
 
@@ -262,10 +293,15 @@ def lui2020viral(table):
 
 
 def natarajan2022gastrointestinal(table):
+    value = numbers(table)
+    kept = "Viral RNA concentration (copies/\u03bcL)"
+    converted = convert(table, value.notna() & (value != 0), lambda v: 1e3 * v, kept)
+    count = write(table, value == 0, "negative")
     return table, (
-        coded(write(table, numbers(table) == 0, "negative"), "concentration equal to 0")
-        + " The script then multiplies concentrations by 1,000 to go from "
-        "copies per microlitre to copies per millilitre; that is not applied."
+        f"Non-detects: {count} cells written as negative (concentration equal to "
+        f"0). Conversion: the other {converted} concentrations multiplied by 1,000, "
+        "from copies per microlitre to copies per millilitre. Both as the "
+        f"extraction script does. The raw concentration is kept in {kept}."
     )
 
 
@@ -294,20 +330,53 @@ def woelfel2020virological(table):
 
 
 def xu2020characteristics(table):
+    # The four points the authors gave and the script fits its curve to.
+    cycles = np.array([32.04, 28.81, 25.14, 21.54])
+    copies = np.array([5.27e4, 5.27e5, 5.27e6, 5.27e7])
+    slope, intercept = np.polyfit(cycles, np.log10(copies), 1)
     value = numbers(table)
-    count = write(table, (value >= 39) & (value <= 41), "negative")
+    negative = (value >= 39) & (value <= 41)
+    converted = convert(
+        table,
+        value.notna() & ~negative,
+        lambda ct: 10 ** (intercept + slope * ct),
+        "Ct Value",
+    )
+    count = write(table, negative, "negative")
     return table, (
-        coded(count, "a digitized Ct between 39 and 41, which the script reads as 40")
-        + " The script then converts Ct to copies per mL with a standard curve it "
-        "fits; that conversion is not applied."
+        f"Non-detects: {count} cells written as negative (a digitized Ct between "
+        "39 and 41, which the script reads as 40). Conversion: the other "
+        f"{converted} Ct values converted to copies per mL with the standard curve "
+        "the script fits to four points the authors gave, log10(copies per mL) = "
+        f"{intercept:.4f} + ({slope:.4f}) Ct. Both as the extraction script does. "
+        "The raw digitized Ct is kept in Ct Value."
     )
 
 
 def young2020epidemiologic(table):
-    table, note = at_ceiling(38, exact=True)(table)
-    return table, note + (
-        " The script then converts Ct to copies per swab with a standard curve "
-        "it fits; that conversion is not applied."
+    # The script fits its curve to another study's rows of the Goyal et al.
+    # combined file stored with this dataset.
+    goyal = pd.read_csv(
+        raw(RELEASE["tag"], "young2020epidemiologic", "Viral_Loads.csv")
+    )
+    goyal = goyal[(goyal["cov_study"] == 1) & (goyal["Ct"] != 40)]
+    slope, intercept = np.polyfit(goyal["Ct"], goyal["VL"], 1)
+    value = numbers(table)
+    negative = value == 38
+    converted = convert(
+        table,
+        value.notna() & ~negative,
+        lambda ct: 10 ** (intercept + slope * ct),
+        "Ctvalue",
+    )
+    count = write(table, negative, "negative")
+    return table, (
+        f"Non-detects: {count} cells written as negative (Ct equal to 38). "
+        f"Conversion: the other {converted} Ct values converted to copies per swab "
+        "with the standard curve the script fits to the cov_study 1 rows of "
+        "Viral_Loads.csv (Goyal et al.) whose Ct is not 40, log10(copies) = "
+        f"{intercept:.4f} + ({slope:.4f}) Ct. Both as the extraction script does. "
+        "The raw Ct is kept in Ctvalue."
     )
 
 
@@ -364,8 +433,9 @@ RULES = {
 }
 
 
-def curate(study: str, table: pd.DataFrame):
+def curate(study: str, table: pd.DataFrame, release: str = "v1.1.0"):
     """Apply a study's rule. Returns the table and the sentence for its note."""
+    RELEASE["tag"] = release
     table = table.copy()
     table["value"] = table["value"].astype(object)
     return RULES[study](table)

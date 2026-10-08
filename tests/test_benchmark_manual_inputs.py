@@ -43,12 +43,8 @@ import manual_curation as mc  # noqa: E402
 # so their values are not expected to equal the reference's. NOTES.csv says what.
 NOT_REPRODUCED = {
     "hakki2022onset",  # the script drops some rows
-    "ke2022daily",  # calibration formula from CN and Ct to concentration
     "kimse2020viral",  # digitized cycles rounded
     "lavezzo2020suppression",  # dates worked out from the daily swab columns
-    "natarajan2022gastrointestinal",  # copies per microlitre to per millilitre
-    "xu2020characteristics",  # standard curve from Ct to copies per mL
-    "young2020epidemiologic",  # standard curve from Ct to copies per swab
 }
 
 

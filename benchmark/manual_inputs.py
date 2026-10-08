@@ -24,9 +24,8 @@ What a builder may do is limited to what laying out a CSV requires:
   or neonate, for example) in a column of its own;
 - drop cells that hold no measurement.
 
-A builder may not change a value. Beyond the two curation steps, times are
-not re-aligned to a reference event, units are not converted and no label is
-renamed. Nothing is taken from the released YAML.
+A builder may not change a value. Beyond the curation steps, times are not
+re-aligned to a reference event and no label is renamed. Nothing is taken from the released YAML.
 
 Each builder returns the table and a note. The note records which raw columns
 were used and anything in the raw file that already reflects a curator's
@@ -209,7 +208,7 @@ def main() -> int:
 
     for study in selected:
         table, note = BUILDERS[study](args.release)
-        table, curated = curate(study, table)
+        table, curated = curate(study, table, args.release)
         note = f"{note} {curated}"
         table.to_csv(OUT / f"{study}.csv", index=False, lineterminator="\n")
         notes[study] = {
