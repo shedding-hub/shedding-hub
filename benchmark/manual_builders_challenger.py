@@ -16,7 +16,7 @@ import subprocess
 
 import pandas as pd
 
-from manual_inputs import REPO_ROOT, lay_out, raw
+from manual_inputs import LOD_COLUMN, REPO_ROOT, lay_out, raw
 
 # study -> StudyNum in the combined dataset, as each extraction script filters.
 STUDY_NUMBERS = {
@@ -33,7 +33,9 @@ STUDY_NUMBERS = {
 COMBINED_NOTE = (
     "CombinedDataset.xlsx (Challenger et al., a third-party combined dataset "
     "already harmonized across studies), sheet Viral_Load, rows with StudyNum "
-    "{number}: Day and Ctvalue as time and value; Age, Sex and LOD kept; the "
+    "{number}: Day and Ctvalue as time and value; Age and Sex kept; LOD kept as "
+    "LOD_viral_copies_per_mL, since it is in the unit of the sheet's value "
+    "column and not in cycles; the "
     "sheet's own value column (viral copies per mL, 1 below the limit of "
     "detection) kept as CombinedDataset_value. Day is days since symptom onset "
     "as the combined dataset defines it."
@@ -46,7 +48,7 @@ def combined_rows(release: str, study: str, number: int) -> pd.DataFrame:
     )
     table = sheet[sheet["StudyNum"] == str(number)]
     table = table[["PatientID", "Day", "Ctvalue", "Age", "Sex", "LOD", "value"]]
-    table = table.rename(columns={"value": "CombinedDataset_value"})
+    table = table.rename(columns={"value": "CombinedDataset_value", "LOD": LOD_COLUMN})
     return lay_out(table, "PatientID", "Day", "Ctvalue")
 
 
@@ -81,6 +83,10 @@ def kim2020viral(release):
     sheet = pd.read_excel(raw(release, "kim2020viral", "kim2020viral.xlsx"), dtype=str)
     sheet.columns = [c.strip() for c in sheet.columns]
     sheet = sheet.reset_index()
+    # The script writes both of a row's measurements as non-detects when its
+    # Ctvalue reads `ud`; the mark is spread here so the curation step sees it.
+    undetected = sheet["Ctvalue"] == "ud"
+    sheet.loc[undetected & sheet["Value"].notna(), "Value"] = "ud"
     quantities = ["Value", "Ctvalue"]
     keep = ["index", "PatientID", "Day", "Age", "Sex", "Type"]
     table = sheet.melt(

@@ -1,5 +1,5 @@
 PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symptom
-443108,-8,47,B.1.2,,,37,0,Saliva_Ct,-2
+443108,-8,negative,B.1.2,,,37,0,Saliva_Ct,-2
 443108,-4,30.72,B.1.2,,,37,1,Saliva_Ct,-2
 443108,-2,23.32,B.1.2,Pos,3,37,1,Nasal_CN,-2
 443108,-2,19.12,B.1.2,Pos,3,37,1,Saliva_Ct,-2
@@ -8,7 +8,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 443108,0,14.08,B.1.2,Pos,2,37,1,Nasal_CN,-2
 443108,0,22.8,B.1.2,Pos,2,37,1,Saliva_Ct,-2
 443108,1,17.83,B.1.2,Pos,3,37,1,Nasal_CN,-2
-443108,1,47,B.1.2,Pos,3,37,1,Saliva_Ct,-2
+443108,1,negative,B.1.2,Pos,3,37,1,Saliva_Ct,-2
 443108,2,18.35,B.1.2,Pos,3,37,1,Nasal_CN,-2
 443108,2,24.9,B.1.2,Pos,3,37,1,Saliva_Ct,-2
 443108,3,21.44,B.1.2,Pos,3,37,1,Nasal_CN,-2
@@ -27,9 +27,9 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 443108,9,34.41,B.1.2,Neg,5.9,37,1,Saliva_Ct,-2
 443108,10,37.32,B.1.2,Neg,5.9,37,1,Nasal_CN,-2
 443108,10,37.38,B.1.2,Neg,5.9,37,1,Saliva_Ct,-2
-443108,11,48,B.1.2,Neg,5.9,37,1,Nasal_CN,-2
-443108,11,47,B.1.2,Neg,5.9,37,1,Saliva_Ct,-2
-444391,-5,47,B.1.2,,,57,0,Saliva_Ct,-2
+443108,11,negative,B.1.2,Neg,5.9,37,1,Nasal_CN,-2
+443108,11,negative,B.1.2,Neg,5.9,37,1,Saliva_Ct,-2
+444391,-5,negative,B.1.2,,,57,0,Saliva_Ct,-2
 444391,-4,28.73,B.1.2,,,57,1,Saliva_Ct,-2
 444391,-2,23.54,B.1.2,Pos,3,57,1,Nasal_CN,-2
 444391,-2,22.62,B.1.2,Pos,3,57,1,Saliva_Ct,-2
@@ -53,12 +53,12 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444391,8,29.23,B.1.2,Pos,5.9,57,1,Nasal_CN,-2
 444391,8,33.63,B.1.2,Pos,5.9,57,1,Saliva_Ct,-2
 444391,9,31.66,B.1.2,Pos,5.9,57,1,Nasal_CN,-2
-444391,9,47,B.1.2,Pos,5.9,57,1,Saliva_Ct,-2
+444391,9,negative,B.1.2,Pos,5.9,57,1,Saliva_Ct,-2
 444391,10,32.68,B.1.2,Pos,5.9,57,1,Nasal_CN,-2
 444391,10,35.76,B.1.2,Pos,5.9,57,1,Saliva_Ct,-2
 444391,11,40.39,B.1.2,Neg,5.9,57,1,Nasal_CN,-2
-444391,11,47,B.1.2,Neg,5.9,57,1,Saliva_Ct,-2
-445535,-4,47,B.1.1.207,,,40,0,Saliva_Ct,0
+444391,11,negative,B.1.2,Neg,5.9,57,1,Saliva_Ct,-2
+445535,-4,negative,B.1.1.207,,,40,0,Saliva_Ct,0
 445535,-2,27.19,B.1.1.207,,,40,1,Saliva_Ct,0
 445535,0,14.7,B.1.1.207,Pos,3,40,1,Nasal_CN,0
 445535,0,20.59,B.1.1.207,Pos,3,40,1,Saliva_Ct,0
@@ -81,16 +81,16 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 445535,9,29.14,B.1.1.207,Neg,5.9,40,1,Nasal_CN,0
 445535,9,35.26,B.1.1.207,Neg,5.9,40,1,Saliva_Ct,0
 445535,10,34.63,B.1.1.207,Neg,5.9,40,1,Nasal_CN,0
-445535,10,47,B.1.1.207,Neg,5.9,40,1,Saliva_Ct,0
+445535,10,negative,B.1.1.207,Neg,5.9,40,1,Saliva_Ct,0
 445535,11,35.37,B.1.1.207,Neg,5.9,40,1,Nasal_CN,0
-445535,11,47,B.1.1.207,Neg,5.9,40,1,Saliva_Ct,0
-445535,12,48,B.1.1.207,Pos,5.9,40,1,Nasal_CN,0
-445535,12,47,B.1.1.207,Pos,5.9,40,1,Saliva_Ct,0
+445535,11,negative,B.1.1.207,Neg,5.9,40,1,Saliva_Ct,0
+445535,12,negative,B.1.1.207,Pos,5.9,40,1,Nasal_CN,0
+445535,12,negative,B.1.1.207,Pos,5.9,40,1,Saliva_Ct,0
 445535,13,35.62,B.1.1.207,Neg,5.9,40,1,Nasal_CN,0
-445535,13,47,B.1.1.207,Neg,5.9,40,1,Saliva_Ct,0
-435772,-6,47,B.1.1.207,,,22,0,Saliva_Ct,-5
-435772,-4,48,B.1.1.207,Neg,5.9,22,1,Nasal_CN,-5
-435772,-4,47,B.1.1.207,Neg,5.9,22,1,Saliva_Ct,-5
+445535,13,negative,B.1.1.207,Neg,5.9,40,1,Saliva_Ct,0
+435772,-6,negative,B.1.1.207,,,22,0,Saliva_Ct,-5
+435772,-4,negative,B.1.1.207,Neg,5.9,22,1,Nasal_CN,-5
+435772,-4,negative,B.1.1.207,Neg,5.9,22,1,Saliva_Ct,-5
 435772,-3,40.15,B.1.1.207,Neg,5.9,22,1,Nasal_CN,-5
 435772,-3,36.94,B.1.1.207,Neg,5.9,22,1,Saliva_Ct,-5
 435772,-2,22.08,B.1.1.207,Pos,4,22,1,Nasal_CN,-5
@@ -116,10 +116,10 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 435772,7,33.61,B.1.1.207,Neg,5.9,22,1,Nasal_CN,-5
 435772,7,34.08,B.1.1.207,Neg,5.9,22,1,Saliva_Ct,-5
 435772,8,39.64,B.1.1.207,Neg,5.9,22,1,Nasal_CN,-5
-435772,8,47,B.1.1.207,Neg,5.9,22,1,Saliva_Ct,-5
-435772,9,48,B.1.1.207,Neg,5.9,22,1,Nasal_CN,-5
+435772,8,negative,B.1.1.207,Neg,5.9,22,1,Saliva_Ct,-5
+435772,9,negative,B.1.1.207,Neg,5.9,22,1,Nasal_CN,-5
 435772,9,37.36,B.1.1.207,Neg,5.9,22,1,Saliva_Ct,-5
-435805,-10,47,B.1.2,,,23,0,Saliva_Ct,0
+435805,-10,negative,B.1.2,,,23,0,Saliva_Ct,0
 435805,-2,26.94,B.1.2,,,23,1,Saliva_Ct,0
 435805,0,14.35,B.1.2,Pos,2,23,1,Nasal_CN,0
 435805,0,23.71,B.1.2,Pos,2,23,1,Saliva_Ct,0
@@ -149,7 +149,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 435805,12,35.3,B.1.2,Neg,5.9,23,1,Saliva_Ct,0
 435805,13,36.14,B.1.2,Neg,5.9,23,1,Nasal_CN,0
 435805,13,33.83,B.1.2,Neg,5.9,23,1,Saliva_Ct,0
-435985,-14,47,B.1.2,,,47,0,Saliva_Ct,-2
+435985,-14,negative,B.1.2,,,47,0,Saliva_Ct,-2
 435985,-5,33.35,B.1.2,,,47,1,Saliva_Ct,-2
 435985,-3,17.3,B.1.2,,3,47,1,Nasal_CN,-2
 435985,-3,28.6,B.1.2,,3,47,1,Saliva_Ct,-2
@@ -166,20 +166,20 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 435985,3,25.56,B.1.2,Pos,5.9,47,1,Nasal_CN,-2
 435985,3,31.98,B.1.2,Pos,5.9,47,1,Saliva_Ct,-2
 435985,4,35.28,B.1.2,Neg,5.9,47,1,Nasal_CN,-2
-435985,4,47,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
+435985,4,negative,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
 435985,5,28.26,B.1.2,Neg,5.9,47,1,Nasal_CN,-2
 435985,5,32.52,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
 435985,6,36.35,B.1.2,Neg,5.9,47,1,Nasal_CN,-2
-435985,6,47,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
+435985,6,negative,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
 435985,7,32.88,B.1.2,Neg,5,47,1,Nasal_CN,-2
-435985,7,47,B.1.2,Neg,5,47,1,Saliva_Ct,-2
+435985,7,negative,B.1.2,Neg,5,47,1,Saliva_Ct,-2
 435985,8,36.96,B.1.2,Neg,5.9,47,1,Nasal_CN,-2
-435985,8,47,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
+435985,8,negative,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
 435985,9,34.19,B.1.2,Neg,5.9,47,1,Nasal_CN,-2
-435985,9,47,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
-435985,10,48,B.1.2,Neg,5.9,47,1,Nasal_CN,-2
-435985,10,47,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
-450241 *,-7,47,B.1.1.7,,,28,0,Saliva_Ct,-1
+435985,9,negative,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
+435985,10,negative,B.1.2,Neg,5.9,47,1,Nasal_CN,-2
+435985,10,negative,B.1.2,Neg,5.9,47,1,Saliva_Ct,-2
+450241 *,-7,negative,B.1.1.7,,,28,0,Saliva_Ct,-1
 450241 *,-3,37.65,B.1.1.7,,,28,1,Saliva_Ct,-1
 450241 *,-1,17.16,B.1.1.7,Pos,4,28,1,Nasal_CN,-1
 450241 *,-1,25.58,B.1.1.7,Pos,4,28,1,Saliva_Ct,-1
@@ -209,7 +209,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 450241 *,11,34.93,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-1
 450241 *,12,37.84,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-1
 450241 *,12,30.08,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-1
-451479,-5,47,B.1.2,,,20,0,Saliva_Ct,0
+451479,-5,negative,B.1.2,,,20,0,Saliva_Ct,0
 451479,0,19.08,B.1.2,,3,20,1,Nasal_CN,0
 451479,0,25.78,B.1.2,,3,20,1,Saliva_Ct,0
 451479,1,20.98,B.1.2,Pos,3,20,1,Nasal_CN,0
@@ -232,16 +232,16 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 451479,7,39.44,B.1.2,Neg,5.9,20,1,Nasal_CN,0
 451479,7,37.29,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
 451479,8,39.17,B.1.2,Neg,5.9,20,1,Nasal_CN,0
-451479,8,47,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
-451479,9,48,B.1.2,Neg,5.9,20,1,Nasal_CN,0
-451479,9,47,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
-451479,10,48,B.1.2,Neg,5.9,20,1,Nasal_CN,0
+451479,8,negative,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
+451479,9,negative,B.1.2,Neg,5.9,20,1,Nasal_CN,0
+451479,9,negative,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
+451479,10,negative,B.1.2,Neg,5.9,20,1,Nasal_CN,0
 451479,10,33.66,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
-451479,11,48,B.1.2,Neg,5.9,20,1,Nasal_CN,0
-451479,11,47,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
-451479,12,48,B.1.2,Neg,5.9,20,1,Nasal_CN,0
-451479,12,47,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
-441736,-7,47,B.1.2,,,28,0,Saliva_Ct,-3
+451479,11,negative,B.1.2,Neg,5.9,20,1,Nasal_CN,0
+451479,11,negative,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
+451479,12,negative,B.1.2,Neg,5.9,20,1,Nasal_CN,0
+451479,12,negative,B.1.2,Neg,5.9,20,1,Saliva_Ct,0
+441736,-7,negative,B.1.2,,,28,0,Saliva_Ct,-3
 441736,-4,28.85,B.1.2,,,28,1,Saliva_Ct,-3
 441736,-2,17.6,B.1.2,Pos,3,28,1,Nasal_CN,-3
 441736,-2,28.17,B.1.2,Pos,3,28,1,Saliva_Ct,-3
@@ -260,18 +260,18 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 441736,5,29.66,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
 441736,5,32.31,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
 441736,6,32.17,B.1.2,Pos,5.9,28,1,Nasal_CN,-3
-441736,6,47,B.1.2,Pos,5.9,28,1,Saliva_Ct,-3
+441736,6,negative,B.1.2,Pos,5.9,28,1,Saliva_Ct,-3
 441736,7,33.7,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
-441736,7,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
+441736,7,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
 441736,8,36.16,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
-441736,8,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
+441736,8,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
 441736,9,39.47,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
-441736,9,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
-441736,10,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
-441736,10,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
-441736,11,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
-441736,11,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
-451346,-6,47,B.1.1.519,,,52,0,Saliva_Ct,-1
+441736,9,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
+441736,10,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
+441736,10,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
+441736,11,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-3
+441736,11,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-3
+451346,-6,negative,B.1.1.519,,,52,0,Saliva_Ct,-1
 451346,-3,30.82,B.1.1.519,,,52,1,Saliva_Ct,-1
 451346,-1,18.4,B.1.1.519,Pos,2,52,1,Nasal_CN,-1
 451346,-1,26.3,B.1.1.519,Pos,2,52,1,Saliva_Ct,-1
@@ -294,16 +294,16 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 451346,7,35.1,B.1.1.519,Neg,5.9,52,1,Nasal_CN,-1
 451346,7,36.39,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
 451346,8,36.95,B.1.1.519,Neg,5.9,52,1,Nasal_CN,-1
-451346,8,47,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
+451346,8,negative,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
 451346,9,41.14,B.1.1.519,Neg,5.9,52,1,Nasal_CN,-1
-451346,9,47,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
+451346,9,negative,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
 451346,10,36.84,B.1.1.519,Neg,5.9,52,1,Nasal_CN,-1
-451346,10,47,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
+451346,10,negative,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
 451346,11,39.17,B.1.1.519,Neg,5.9,52,1,Nasal_CN,-1
-451346,11,47,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
+451346,11,negative,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
 451346,12,35.47,B.1.1.519,Neg,5.9,52,1,Nasal_CN,-1
-451346,12,47,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
-473107 *,-8,47,B.1.1.7,,,30,0,Saliva_Ct,-5
+451346,12,negative,B.1.1.519,Neg,5.9,52,1,Saliva_Ct,-1
+473107 *,-8,negative,B.1.1.7,,,30,0,Saliva_Ct,-5
 473107 *,-5,22.39,B.1.1.7,Pos,2,30,1,Nasal_CN,-5
 473107 *,-5,25.2,B.1.1.7,Pos,2,30,1,Saliva_Ct,-5
 473107 *,-4,21.81,B.1.1.7,Pos,3,30,1,Nasal_CN,-5
@@ -329,10 +329,10 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 473107 *,6,35.24,B.1.1.7,Neg,5.9,30,1,Nasal_CN,-5
 473107 *,6,39.02,B.1.1.7,Neg,5.9,30,1,Saliva_Ct,-5
 473107 *,7,35.72,B.1.1.7,Neg,5.9,30,1,Nasal_CN,-5
-473107 *,7,47,B.1.1.7,Neg,5.9,30,1,Saliva_Ct,-5
+473107 *,7,negative,B.1.1.7,Neg,5.9,30,1,Saliva_Ct,-5
 473107 *,8,38.58,B.1.1.7,Neg,5.9,30,1,Nasal_CN,-5
 473107 *,8,33.28,B.1.1.7,Neg,5.9,30,1,Saliva_Ct,-5
-441582,-8,47,B.1.2,,,23,0,Saliva_Ct,-3
+441582,-8,negative,B.1.2,,,23,0,Saliva_Ct,-3
 441582,-5,27.08,B.1.2,,,23,1,Saliva_Ct,-3
 441582,-3,21.66,B.1.2,Pos,3,23,1,Nasal_CN,-3
 441582,-3,26.92,B.1.2,Pos,3,23,1,Saliva_Ct,-3
@@ -349,19 +349,19 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 441582,3,27.86,B.1.2,Pos,5.9,23,1,Nasal_CN,-3
 441582,3,35.4,B.1.2,Pos,5.9,23,1,Saliva_Ct,-3
 441582,4,29.11,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
-441582,4,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
+441582,4,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
 441582,5,30.57,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
-441582,5,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
+441582,5,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
 441582,6,37.31,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
-441582,6,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
+441582,6,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
 441582,7,30.91,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
-441582,7,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
-441582,8,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
-441582,8,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
-441582,9,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
-441582,9,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
-441582,10,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
-441582,10,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
+441582,7,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
+441582,8,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
+441582,8,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
+441582,9,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
+441582,9,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
+441582,10,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
+441582,10,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
 442978,-2,22.85,B.1.2,,,27,1,Saliva_Ct,0
 442978,0,18.91,B.1.2,Pos,3,27,1,Nasal_CN,0
 442978,0,22.26,B.1.2,Pos,3,27,1,Saliva_Ct,0
@@ -388,9 +388,9 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 442978,11,31.01,B.1.2,Neg,5.9,27,1,Saliva_Ct,0
 442978,12,39.96,B.1.2,Neg,5.9,27,1,Nasal_CN,0
 442978,12,34.35,B.1.2,Neg,5.9,27,1,Saliva_Ct,0
-442978,13,48,B.1.2,Neg,5.9,27,1,Nasal_CN,0
+442978,13,negative,B.1.2,Neg,5.9,27,1,Nasal_CN,0
 442978,13,33.53,B.1.2,Neg,5.9,27,1,Saliva_Ct,0
-444332,-8,47,B.1.2,,,44,0,Saliva_Ct,-2
+444332,-8,negative,B.1.2,,,44,0,Saliva_Ct,-2
 444332,-4,31.5,B.1.2,,,44,1,Saliva_Ct,-2
 444332,-2,29.38,B.1.2,Neg,5.9,44,1,Nasal_CN,-2
 444332,-2,23.99,B.1.2,Neg,5.9,44,1,Saliva_Ct,-2
@@ -412,7 +412,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444332,6,26.5,B.1.2,Pos,5.9,44,1,Saliva_Ct,-2
 444332,7,17.58,B.1.2,Pos,5.9,44,1,Nasal_CN,-2
 444332,7,29.32,B.1.2,Pos,5.9,44,1,Saliva_Ct,-2
-444332,8,48,B.1.2,Pos,5.9,44,1,Nasal_CN,-2
+444332,8,negative,B.1.2,Pos,5.9,44,1,Nasal_CN,-2
 444332,8,30.59,B.1.2,Pos,5.9,44,1,Saliva_Ct,-2
 444332,9,38.95,B.1.2,Neg,5.9,44,1,Nasal_CN,-2
 444332,9,33.76,B.1.2,Neg,5.9,44,1,Saliva_Ct,-2
@@ -420,7 +420,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444332,10,28.05,B.1.2,Pos,5.9,44,1,Saliva_Ct,-2
 444332,11,24.58,B.1.2,Neg,5.9,44,1,Nasal_CN,-2
 444332,11,27.16,B.1.2,Neg,5.9,44,1,Saliva_Ct,-2
-435786,-8,47,B.1.2,,,30,0,Saliva_Ct,0
+435786,-8,negative,B.1.2,,,30,0,Saliva_Ct,0
 435786,-2,24.34,B.1.2,,,30,1,Saliva_Ct,0
 435786,0,12.58,B.1.2,Neg,2,30,1,Nasal_CN,0
 435786,0,22.35,B.1.2,Neg,2,30,1,Saliva_Ct,0
@@ -434,7 +434,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 435786,4,28.3,B.1.2,Pos,5.9,30,1,Saliva_Ct,0
 435786,5,18.14,B.1.2,Pos,5.9,30,1,Nasal_CN,0
 435786,5,27.94,B.1.2,Pos,5.9,30,1,Saliva_Ct,0
-435786,6,48,B.1.2,Pos,5.9,30,1,Nasal_CN,0
+435786,6,negative,B.1.2,Pos,5.9,30,1,Nasal_CN,0
 435786,6,30.2,B.1.2,Pos,5.9,30,1,Saliva_Ct,0
 435786,7,30.28,B.1.2,Pos,5.9,30,1,Nasal_CN,0
 435786,7,30.05,B.1.2,Pos,5.9,30,1,Saliva_Ct,0
@@ -445,12 +445,12 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 435786,10,32,B.1.2,Neg,5.9,30,1,Nasal_CN,0
 435786,10,26.35,B.1.2,Neg,5.9,30,1,Saliva_Ct,0
 435786,11,35.59,B.1.2,Neg,5.9,30,1,Nasal_CN,0
-435786,11,47,B.1.2,Neg,5.9,30,1,Saliva_Ct,0
+435786,11,negative,B.1.2,Neg,5.9,30,1,Saliva_Ct,0
 435786,12,36.03,B.1.2,Neg,5.9,30,1,Nasal_CN,0
 435786,12,38.96,B.1.2,Neg,5.9,30,1,Saliva_Ct,0
 435786,13,36.91,B.1.2,Neg,5.9,30,1,Nasal_CN,0
-435786,13,47,B.1.2,Neg,5.9,30,1,Saliva_Ct,0
-435794,-8,47,B.1.2,,,35,0,Saliva_Ct,0
+435786,13,negative,B.1.2,Neg,5.9,30,1,Saliva_Ct,0
+435794,-8,negative,B.1.2,,,35,0,Saliva_Ct,0
 435794,-2,26.56,B.1.2,,,35,1,Saliva_Ct,0
 435794,0,11.69,B.1.2,Pos,2,35,1,Nasal_CN,0
 435794,0,21.98,B.1.2,Pos,2,35,1,Saliva_Ct,0
@@ -475,12 +475,12 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 435794,10,37.39,B.1.2,Neg,5.9,35,1,Nasal_CN,0
 435794,10,34,B.1.2,Neg,5.9,35,1,Saliva_Ct,0
 435794,11,38.17,B.1.2,Neg,5.9,35,1,Nasal_CN,0
-435794,11,47,B.1.2,Neg,5.9,35,1,Saliva_Ct,0
+435794,11,negative,B.1.2,Neg,5.9,35,1,Saliva_Ct,0
 435794,12,39.88,B.1.2,Neg,5.9,35,1,Nasal_CN,0
 435794,12,34.02,B.1.2,Neg,5.9,35,1,Saliva_Ct,0
 435794,13,36.56,B.1.2,Neg,5.9,35,1,Nasal_CN,0
-435794,13,47,B.1.2,Neg,5.9,35,1,Saliva_Ct,0
-438577,-10,47,B.1.311,,,37,0,Saliva_Ct,-4
+435794,13,negative,B.1.2,Neg,5.9,35,1,Saliva_Ct,0
+438577,-10,negative,B.1.311,,,37,0,Saliva_Ct,-4
 438577,-5,33.83,B.1.311,,,37,1,Saliva_Ct,-4
 438577,-4,20.09,B.1.311,Pos,,37,1,Nasal_CN,-4
 438577,-4,22.78,B.1.311,Pos,,37,1,Saliva_Ct,-4
@@ -503,12 +503,12 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 438577,5,32.67,B.1.311,Neg,5.9,37,1,Nasal_CN,-4
 438577,5,32.15,B.1.311,Neg,5.9,37,1,Saliva_Ct,-4
 438577,6,35.11,B.1.311,Neg,5.9,37,1,Nasal_CN,-4
-438577,6,47,B.1.311,Neg,5.9,37,1,Saliva_Ct,-4
+438577,6,negative,B.1.311,Neg,5.9,37,1,Saliva_Ct,-4
 438577,7,36.84,B.1.311,Neg,5.9,37,1,Nasal_CN,-4
-438577,7,47,B.1.311,Neg,5.9,37,1,Saliva_Ct,-4
+438577,7,negative,B.1.311,Neg,5.9,37,1,Saliva_Ct,-4
 438577,8,39.3,B.1.311,,,37,1,Nasal_CN,-4
 438577,9,36.44,B.1.311,Neg,5.9,37,1,Saliva_Ct,-4
-444633,-6,47,B.1.2,,,22,0,Saliva_Ct,-3
+444633,-6,negative,B.1.2,,,22,0,Saliva_Ct,-3
 444633,-5,21.94,B.1.2,,,22,1,Saliva_Ct,-3
 444633,-3,23.35,B.1.2,Pos,5.9,22,1,Nasal_CN,-3
 444633,-3,23.12,B.1.2,Pos,5.9,22,1,Saliva_Ct,-3
@@ -538,7 +538,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444633,9,28.31,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 444633,10,37.23,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
 444633,10,31.72,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
-445602,-8,47,B.1.2,,,42,0,Saliva_Ct,-3
+445602,-8,negative,B.1.2,,,42,0,Saliva_Ct,-3
 445602,-5,25.64,B.1.2,,,42,1,Saliva_Ct,-3
 445602,-3,30.28,B.1.2,Pos,5.9,42,1,Nasal_CN,-3
 445602,-3,16.37,B.1.2,Pos,5.9,42,1,Saliva_Ct,-3
@@ -562,13 +562,13 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 445602,6,21.66,B.1.2,Neg,5.9,42,1,Saliva_Ct,-3
 445602,7,31.71,B.1.2,Neg,5.9,42,1,Nasal_CN,-3
 445602,7,31.12,B.1.2,Neg,5.9,42,1,Saliva_Ct,-3
-445602,8,48,B.1.2,Neg,5.9,42,1,Nasal_CN,-3
+445602,8,negative,B.1.2,Neg,5.9,42,1,Nasal_CN,-3
 445602,8,29.54,B.1.2,Neg,5.9,42,1,Saliva_Ct,-3
 445602,9,33.44,B.1.2,Neg,5.9,42,1,Nasal_CN,-3
 445602,9,27.11,B.1.2,Neg,5.9,42,1,Saliva_Ct,-3
-445602,10,48,B.1.2,Neg,5.9,42,1,Nasal_CN,-3
+445602,10,negative,B.1.2,Neg,5.9,42,1,Nasal_CN,-3
 445602,10,30.73,B.1.2,Neg,5.9,42,1,Saliva_Ct,-3
-432192,-7,47,B.1.576,,,22,0,Saliva_Ct,-2
+432192,-7,negative,B.1.576,,,22,0,Saliva_Ct,-2
 432192,-4,29.21,B.1.576,,,22,1,Saliva_Ct,-2
 432192,-2,26.82,B.1.576,Pos,5.9,22,1,Nasal_CN,-2
 432192,-2,29.12,B.1.576,Pos,5.9,22,1,Saliva_Ct,-2
@@ -586,19 +586,19 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 432192,4,31.99,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
 432192,5,32.83,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
 432192,5,33.39,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
-432192,6,48,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
+432192,6,negative,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
 432192,6,38.48,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
 432192,7,31.3,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
-432192,7,47,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
+432192,7,negative,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
 432192,8,36.41,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
 432192,8,31.68,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
-432192,9,48,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
-432192,9,47,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
-432192,10,48,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
+432192,9,negative,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
+432192,9,negative,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
+432192,10,negative,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
 432192,10,34.03,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
-432192,11,48,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
-432192,11,47,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
-444446,-9,47,B.1.361,,,36,0,Saliva_Ct,-1
+432192,11,negative,B.1.576,Neg,5.9,22,1,Nasal_CN,-2
+432192,11,negative,B.1.576,Neg,5.9,22,1,Saliva_Ct,-2
+444446,-9,negative,B.1.361,,,36,0,Saliva_Ct,-1
 444446,-3,24.67,B.1.361,,,36,1,Saliva_Ct,-1
 444446,-1,14.94,B.1.361,Pos,3,36,1,Nasal_CN,-1
 444446,-1,22.46,B.1.361,Pos,3,36,1,Saliva_Ct,-1
@@ -616,7 +616,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444446,5,26.35,B.1.361,Neg,5.9,36,1,Saliva_Ct,-1
 444446,6,31.59,B.1.361,Neg,5.9,36,1,Nasal_CN,-1
 444446,6,26.09,B.1.361,Neg,5.9,36,1,Saliva_Ct,-1
-444446,7,48,B.1.361,Neg,5.9,36,1,Nasal_CN,-1
+444446,7,negative,B.1.361,Neg,5.9,36,1,Nasal_CN,-1
 444446,7,25.96,B.1.361,Neg,5.9,36,1,Saliva_Ct,-1
 444446,8,33.74,B.1.361,Neg,5.9,36,1,Nasal_CN,-1
 444446,8,26.21,B.1.361,Neg,5.9,36,1,Saliva_Ct,-1
@@ -626,13 +626,13 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444446,10,32.94,B.1.361,Neg,5.9,36,1,Saliva_Ct,-1
 444446,11,40.6,B.1.361,Neg,5.9,36,1,Nasal_CN,-1
 444446,11,31.19,B.1.361,Neg,5.9,36,1,Saliva_Ct,-1
-444446,12,48,B.1.361,Neg,5.9,36,1,Nasal_CN,-1
+444446,12,negative,B.1.361,Neg,5.9,36,1,Nasal_CN,-1
 444446,12,30.95,B.1.361,Neg,5.9,36,1,Saliva_Ct,-1
-445534,-5,47,B.1.2,,,28,0,Saliva_Ct,-2
+445534,-5,negative,B.1.2,,,28,0,Saliva_Ct,-2
 445534,-4,24.6,B.1.2,,,28,1,Saliva_Ct,-2
 445534,-2,21.84,B.1.2,Pos,3,28,1,Nasal_CN,-2
 445534,-2,25.63,B.1.2,Pos,3,28,1,Saliva_Ct,-2
-445534,-1,48,B.1.2,Pos,4,28,1,Nasal_CN,-2
+445534,-1,negative,B.1.2,Pos,4,28,1,Nasal_CN,-2
 445534,-1,35.07,B.1.2,Pos,4,28,1,Saliva_Ct,-2
 445534,0,21.14,B.1.2,Pos,3,28,1,Nasal_CN,-2
 445534,0,25.77,B.1.2,Pos,3,28,1,Saliva_Ct,-2
@@ -645,20 +645,20 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 445534,4,38.69,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
 445534,4,31.91,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
 445534,5,36.76,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
-445534,5,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
+445534,5,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
 445534,6,40.53,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
-445534,6,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
+445534,6,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
 445534,7,40.66,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
-445534,7,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
-445534,8,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
-445534,8,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
-445534,9,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
-445534,9,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
-445534,10,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
-445534,10,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
+445534,7,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
+445534,8,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
+445534,8,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
+445534,9,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
+445534,9,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
+445534,10,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
+445534,10,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
 445534,11,39.76,B.1.2,Neg,5.9,28,1,Nasal_CN,-2
-445534,11,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
-451152,-5,47,B.1.1.1,,,22,0,Saliva_Ct,-2
+445534,11,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-2
+451152,-5,negative,B.1.1.1,,,22,0,Saliva_Ct,-2
 451152,-3,28.87,B.1.1.1,,,22,1,Saliva_Ct,-2
 451152,-1,25.5,B.1.1.1,,5.9,22,1,Nasal_CN,-2
 451152,-1,19.82,B.1.1.1,,5.9,22,1,Saliva_Ct,-2
@@ -680,15 +680,15 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 451152,7,24.66,B.1.1.1,Neg,5.9,22,1,Saliva_Ct,-2
 451152,8,34.13,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
 451152,8,28.85,B.1.1.1,Neg,5.9,22,1,Saliva_Ct,-2
-451152,9,48,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
+451152,9,negative,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
 451152,9,31.22,B.1.1.1,Neg,5.9,22,1,Saliva_Ct,-2
-451152,10,48,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
+451152,10,negative,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
 451152,10,32.83,B.1.1.1,Neg,5.9,22,1,Saliva_Ct,-2
-451152,11,48,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
+451152,11,negative,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
 451152,11,32.98,B.1.1.1,Neg,5.9,22,1,Saliva_Ct,-2
 451152,12,40.09,B.1.1.1,Neg,5.9,22,1,Nasal_CN,-2
-451152,12,47,B.1.1.1,Neg,5.9,22,1,Saliva_Ct,-2
-461771 *,-5,47,B.1.1.7,,,20,0,Saliva_Ct,-1
+451152,12,negative,B.1.1.1,Neg,5.9,22,1,Saliva_Ct,-2
+461771 *,-5,negative,B.1.1.7,,,20,0,Saliva_Ct,-1
 461771 *,-3,33.56,B.1.1.7,,,20,1,Saliva_Ct,-1
 461771 *,-1,19.57,B.1.1.7,Pos,2,20,1,Nasal_CN,-1
 461771 *,-1,24.98,B.1.1.7,Pos,2,20,1,Saliva_Ct,-1
@@ -714,11 +714,11 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 461771 *,9,37.75,B.1.1.7,Neg,5.9,20,1,Saliva_Ct,-1
 461771 *,10,40.13,B.1.1.7,Neg,5.9,20,1,Nasal_CN,-1
 461771 *,10,37.7,B.1.1.7,Neg,5.9,20,1,Saliva_Ct,-1
-461771 *,11,48,B.1.1.7,Neg,5.9,20,1,Nasal_CN,-1
-461771 *,11,47,B.1.1.7,Neg,5.9,20,1,Saliva_Ct,-1
+461771 *,11,negative,B.1.1.7,Neg,5.9,20,1,Nasal_CN,-1
+461771 *,11,negative,B.1.1.7,Neg,5.9,20,1,Saliva_Ct,-1
 461771 *,12,36.85,B.1.1.7,Neg,5.9,20,1,Nasal_CN,-1
-461771 *,12,47,B.1.1.7,Neg,5.9,20,1,Saliva_Ct,-1
-471890 *,-4,47,B.1.1.7,,,34,0,Saliva_Ct,0
+461771 *,12,negative,B.1.1.7,Neg,5.9,20,1,Saliva_Ct,-1
+471890 *,-4,negative,B.1.1.7,,,34,0,Saliva_Ct,0
 471890 *,-2,24.89,B.1.1.7,,,34,1,Saliva_Ct,0
 471890 *,0,16.68,B.1.1.7,Pos,3,34,1,Nasal_CN,0
 471890 *,0,26.37,B.1.1.7,Pos,3,34,1,Saliva_Ct,0
@@ -733,22 +733,22 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 471890 *,5,17.3,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
 471890 *,5,32.65,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,6,26.61,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
-471890 *,6,47,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
+471890 *,6,negative,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,7,24.45,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
 471890 *,7,31.15,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,8,29.19,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
-471890 *,8,47,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
+471890 *,8,negative,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,9,30.23,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
-471890 *,9,47,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
+471890 *,9,negative,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,10,20.04,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
-471890 *,10,47,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
+471890 *,10,negative,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,11,28.05,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
-471890 *,11,47,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
+471890 *,11,negative,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,12,26.02,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
-471890 *,12,47,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
+471890 *,12,negative,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
 471890 *,13,31.28,B.1.1.7,Neg,5.9,34,1,Nasal_CN,0
-471890 *,13,47,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
-432662,-5,47,B.1.2,,,21,0,Saliva_Ct,-2
+471890 *,13,negative,B.1.1.7,Neg,5.9,34,1,Saliva_Ct,0
+432662,-5,negative,B.1.2,,,21,0,Saliva_Ct,-2
 432662,-4,34.07,B.1.2,,,21,1,Saliva_Ct,-2
 432662,-2,21.11,B.1.2,Pos,2,21,1,Nasal_CN,-2
 432662,-2,25.04,B.1.2,Pos,2,21,1,Saliva_Ct,-2
@@ -774,9 +774,9 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 432662,8,33.68,B.1.2,Neg,5.9,21,1,Saliva_Ct,-2
 432662,9,37.45,B.1.2,Neg,5.9,21,1,Nasal_CN,-2
 432662,9,33.12,B.1.2,Neg,5.9,21,1,Saliva_Ct,-2
-432662,10,48,B.1.2,Neg,5.9,21,1,Nasal_CN,-2
+432662,10,negative,B.1.2,Neg,5.9,21,1,Nasal_CN,-2
 432662,10,37.8,B.1.2,Neg,5.9,21,1,Saliva_Ct,-2
-432864,-8,47,B.1.1,,,73,0,Saliva_Ct,-4
+432864,-8,negative,B.1.1,,,73,0,Saliva_Ct,-4
 432864,-5,22.41,B.1.1,,,73,1,Saliva_Ct,-4
 432864,-3,22.26,B.1.1,Pos,4,73,1,Nasal_CN,-4
 432864,-3,27.42,B.1.1,Pos,4,73,1,Saliva_Ct,-4
@@ -799,10 +799,10 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 432864,6,33.36,B.1.1,Neg,5.9,73,1,Nasal_CN,-4
 432864,6,36.26,B.1.1,Neg,5.9,73,1,Saliva_Ct,-4
 432864,7,30.45,B.1.1,Neg,5.9,73,1,Nasal_CN,-4
-432864,7,47,B.1.1,Neg,5.9,73,1,Saliva_Ct,-4
+432864,7,negative,B.1.1,Neg,5.9,73,1,Saliva_Ct,-4
 432864,8,30.68,B.1.1,Neg,5.9,73,1,Nasal_CN,-4
 432864,8,38.93,B.1.1,Neg,5.9,73,1,Saliva_Ct,-4
-432870,-6,47,B.1.2,,,23,0,Saliva_Ct,-3
+432870,-6,negative,B.1.2,,,23,0,Saliva_Ct,-3
 432870,-4,34.34,B.1.2,,,23,1,Saliva_Ct,-3
 432870,-3,32.48,B.1.2,Pos,5.9,23,1,Nasal_CN,-3
 432870,-3,21.34,B.1.2,Pos,5.9,23,1,Saliva_Ct,-3
@@ -822,7 +822,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 432870,4,26.63,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
 432870,5,32.48,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
 432870,5,27.72,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
-432870,6,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
+432870,6,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
 432870,6,31.59,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
 432870,7,33.36,B.1.2,Neg,5.9,23,1,Nasal_CN,-3
 432870,7,31.79,B.1.2,Neg,5.9,23,1,Saliva_Ct,-3
@@ -845,19 +845,19 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444349,4,28.61,B.1.2,Pos,5.9,49,1,Saliva_Ct,-1
 444349,5,34.79,B.1.2,Pos,5.9,49,1,Nasal_CN,-1
 444349,5,36.06,B.1.2,Pos,5.9,49,1,Saliva_Ct,-1
-444349,6,48,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
+444349,6,negative,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
 444349,6,29.6,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
-444349,7,48,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
-444349,7,47,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
+444349,7,negative,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
+444349,7,negative,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
 444349,8,40.12,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
-444349,9,48,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
-444349,9,47,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
-444349,10,48,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
+444349,9,negative,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
+444349,9,negative,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
+444349,10,negative,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
 444349,10,35.21,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
-444349,11,48,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
-444349,11,47,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
-444349,12,47,B.1.2,Neg,,49,1,Saliva_Ct,-1
-449507,-6,47,B.1.2,,,21,0,Saliva_Ct,-1
+444349,11,negative,B.1.2,Neg,5.9,49,1,Nasal_CN,-1
+444349,11,negative,B.1.2,Neg,5.9,49,1,Saliva_Ct,-1
+444349,12,negative,B.1.2,Neg,,49,1,Saliva_Ct,-1
+449507,-6,negative,B.1.2,,,21,0,Saliva_Ct,-1
 449507,-3,24.15,B.1.2,,,21,1,Saliva_Ct,-1
 449507,-1,26.87,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
 449507,-1,28.77,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
@@ -872,20 +872,20 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 449507,4,25.59,B.1.2,Neg,5,21,1,Nasal_CN,-1
 449507,4,36.26,B.1.2,Neg,5,21,1,Saliva_Ct,-1
 449507,5,29.67,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
-449507,5,47,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
+449507,5,negative,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
 449507,7,41.81,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
-449507,7,47,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
-449507,8,48,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
-449507,8,47,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
-449507,9,48,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
-449507,9,47,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
-449507,10,48,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
-449507,10,47,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
-449507,11,48,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
+449507,7,negative,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
+449507,8,negative,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
+449507,8,negative,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
+449507,9,negative,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
+449507,9,negative,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
+449507,10,negative,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
+449507,10,negative,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
+449507,11,negative,B.1.2,Neg,5.9,21,1,Nasal_CN,-1
 449507,11,34.46,B.1.2,Neg,5.9,21,1,Saliva_Ct,-1
-449507,12,48,B.1.2,Neg,,21,1,Nasal_CN,-1
-449507,12,47,B.1.2,Neg,,21,1,Saliva_Ct,-1
-432686,-6,47,B.1.2,,,23,0,Saliva_Ct,-1
+449507,12,negative,B.1.2,Neg,,21,1,Nasal_CN,-1
+449507,12,negative,B.1.2,Neg,,21,1,Saliva_Ct,-1
+432686,-6,negative,B.1.2,,,23,0,Saliva_Ct,-1
 432686,-4,30.47,B.1.2,,,23,1,Saliva_Ct,-1
 432686,-1,19.33,B.1.2,Pos,3,23,1,Nasal_CN,-1
 432686,-1,23.42,B.1.2,Pos,3,23,1,Saliva_Ct,-1
@@ -901,11 +901,11 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 432686,4,26.49,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
 432686,5,29.79,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
 432686,5,29.6,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
-432686,6,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
+432686,6,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
 432686,6,32.39,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
 432686,7,37.04,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
 432686,7,32.2,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
-432686,8,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
+432686,8,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
 432686,8,28.31,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
 432686,9,35.66,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
 432686,9,25.79,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
@@ -915,37 +915,37 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 432686,11,33.81,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
 432686,12,40.47,B.1.2,Neg,5.9,23,1,Nasal_CN,-1
 432686,12,33.99,B.1.2,Neg,5.9,23,1,Saliva_Ct,-1
-435729,-3,47,B.1.582,,,42,0,Saliva_Ct,0
+435729,-3,negative,B.1.582,,,42,0,Saliva_Ct,0
 435729,-2,29.13,B.1.582,,,42,1,Saliva_Ct,0
 435729,0,19.52,B.1.582,Pos,2,42,1,Nasal_CN,0
-435729,0,47,B.1.582,Pos,2,42,1,Saliva_Ct,0
+435729,0,negative,B.1.582,Pos,2,42,1,Saliva_Ct,0
 435729,1,19.54,B.1.582,Pos,3,42,1,Nasal_CN,0
 435729,1,27.99,B.1.582,Pos,3,42,1,Saliva_Ct,0
 435729,2,26.4,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,2,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,2,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,3,27.33,B.1.582,Pos,5.9,42,1,Nasal_CN,0
-435729,3,47,B.1.582,Pos,5.9,42,1,Saliva_Ct,0
+435729,3,negative,B.1.582,Pos,5.9,42,1,Saliva_Ct,0
 435729,4,30.64,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,4,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,4,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,5,34.2,B.1.582,Pos,5.9,42,1,Nasal_CN,0
-435729,5,47,B.1.582,Pos,5.9,42,1,Saliva_Ct,0
+435729,5,negative,B.1.582,Pos,5.9,42,1,Saliva_Ct,0
 435729,6,34.21,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,6,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,6,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,7,36.61,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,7,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,7,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,8,30.67,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,8,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,8,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,9,34.29,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,9,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,9,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,10,33.38,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,10,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,10,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,11,37.94,B.1.582,Neg,5.9,42,1,Nasal_CN,0
 435729,11,34.07,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,12,38.98,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,12,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+435729,12,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
 435729,13,38.1,B.1.582,Neg,5.9,42,1,Nasal_CN,0
-435729,13,47,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
-437388,-4,47,B.1.2,,,28,0,Saliva_Ct,-1
+435729,13,negative,B.1.582,Neg,5.9,42,1,Saliva_Ct,0
+437388,-4,negative,B.1.2,,,28,0,Saliva_Ct,-1
 437388,-3,31.85,B.1.2,,,28,1,Saliva_Ct,-1
 437388,-1,23.1,B.1.2,,4,28,1,Nasal_CN,-1
 437388,-1,20.36,B.1.2,,4,28,1,Saliva_Ct,-1
@@ -965,17 +965,17 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 437388,6,29.5,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
 437388,7,39.9,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
 437388,7,29.85,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
-437388,8,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
+437388,8,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
 437388,8,26.91,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
 437388,9,37.78,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
 437388,9,32.88,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
-437388,10,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
+437388,10,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
 437388,10,36.71,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
-437388,11,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
+437388,11,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
 437388,11,37.26,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
-437388,12,48,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
-437388,12,47,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
-469115 *,-6,47,B.1.1.7,,,21,0,Saliva_Ct,-2
+437388,12,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,-1
+437388,12,negative,B.1.2,Neg,5.9,28,1,Saliva_Ct,-1
+469115 *,-6,negative,B.1.1.7,,,21,0,Saliva_Ct,-2
 469115 *,-4,32.92,B.1.1.7,,,21,1,Saliva_Ct,-2
 469115 *,-2,31.03,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-2
 469115 *,-2,26.46,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-2
@@ -998,13 +998,13 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 469115 *,7,34.32,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-2
 469115 *,7,34.88,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-2
 469115 *,8,31.04,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-2
-469115 *,8,47,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-2
+469115 *,8,negative,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-2
 469115 *,9,36.23,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-2
 469115 *,9,32.87,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-2
-469115 *,10,48,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-2
+469115 *,10,negative,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-2
 469115 *,10,33.96,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-2
-469115 *,11,48,B.1.1.7,,,21,1,Nasal_CN,-2
-471467 *,-9,47,B.1.1.7,,,21,0,Saliva_Ct,-3
+469115 *,11,negative,B.1.1.7,,,21,1,Nasal_CN,-2
+471467 *,-9,negative,B.1.1.7,,,21,0,Saliva_Ct,-3
 471467 *,-5,21.72,B.1.1.7,,,21,1,Saliva_Ct,-3
 471467 *,-3,36.71,B.1.1.7,Pos,5.9,21,1,Nasal_CN,-3
 471467 *,-3,15.84,B.1.1.7,Pos,5.9,21,1,Saliva_Ct,-3
@@ -1028,13 +1028,13 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 471467 *,6,36.77,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-3
 471467 *,7,37.93,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-3
 471467 *,7,32.67,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-3
-471467 *,8,48,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-3
+471467 *,8,negative,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-3
 471467 *,8,25.61,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-3
-471467 *,9,48,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-3
+471467 *,9,negative,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-3
 471467 *,9,31.67,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-3
 471467 *,10,39.59,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-3
 471467 *,10,31.97,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-3
-441925,-8,47,B.1.2,,,28,0,Saliva_Ct,0
+441925,-8,negative,B.1.2,,,28,0,Saliva_Ct,0
 441925,-2,23.74,B.1.2,,,28,1,Saliva_Ct,0
 441925,0,16.28,B.1.2,Pos,4,28,1,Nasal_CN,0
 441925,0,25.07,B.1.2,Pos,4,28,1,Saliva_Ct,0
@@ -1060,9 +1060,9 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 441925,10,37.88,B.1.2,Neg,5.9,28,1,Saliva_Ct,0
 441925,11,36.76,B.1.2,Neg,5.9,28,1,Nasal_CN,0
 441925,11,39.19,B.1.2,Neg,5.9,28,1,Saliva_Ct,0
-441925,12,48,B.1.2,Neg,5.9,28,1,Nasal_CN,0
+441925,12,negative,B.1.2,Neg,5.9,28,1,Nasal_CN,0
 441925,12,37.73,B.1.2,Neg,5.9,28,1,Saliva_Ct,0
-450253 *,-11,47,B.1.1.7,,,28,0,Saliva_Ct,-6
+450253 *,-11,negative,B.1.1.7,,,28,0,Saliva_Ct,-6
 450253 *,-7,28.2,B.1.1.7,,,28,1,Saliva_Ct,-6
 450253 *,-5,26.62,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
 450253 *,-5,28.6,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
@@ -1083,16 +1083,16 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 450253 *,3,34.84,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
 450253 *,3,36.72,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
 450253 *,4,36.7,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
-450253 *,4,47,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
-450253 *,5,48,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
-450253 *,5,47,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
+450253 *,4,negative,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
+450253 *,5,negative,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
+450253 *,5,negative,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
 450253 *,6,37.99,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
-450253 *,6,47,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
-450253 *,7,48,B.1.1.7,Pos,5.9,28,1,Nasal_CN,-6
-450253 *,7,47,B.1.1.7,Pos,5.9,28,1,Saliva_Ct,-6
-450253 *,8,48,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
-450253 *,8,47,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
-459597 *,-10,47,B.1.1.7,,,21,0,Saliva_Ct,-6
+450253 *,6,negative,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
+450253 *,7,negative,B.1.1.7,Pos,5.9,28,1,Nasal_CN,-6
+450253 *,7,negative,B.1.1.7,Pos,5.9,28,1,Saliva_Ct,-6
+450253 *,8,negative,B.1.1.7,Neg,5.9,28,1,Nasal_CN,-6
+450253 *,8,negative,B.1.1.7,Neg,5.9,28,1,Saliva_Ct,-6
+459597 *,-10,negative,B.1.1.7,,,21,0,Saliva_Ct,-6
 459597 *,-8,27.87,B.1.1.7,,,21,1,Saliva_Ct,-6
 459597 *,-6,33.52,B.1.1.7,Pos,5.9,21,1,Nasal_CN,-6
 459597 *,-6,25.47,B.1.1.7,Pos,5.9,21,1,Saliva_Ct,-6
@@ -1113,16 +1113,16 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 459597 *,2,25.52,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-6
 459597 *,2,30.95,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
 459597 *,3,31.66,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-6
-459597 *,3,47,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
+459597 *,3,negative,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
 459597 *,4,34.5,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-6
-459597 *,4,47,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
+459597 *,4,negative,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
 459597 *,5,36.84,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-6
-459597 *,5,47,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
+459597 *,5,negative,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
 459597 *,6,39.01,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-6
 459597 *,6,39.91,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
-459597 *,7,48,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-6
+459597 *,7,negative,B.1.1.7,Neg,5.9,21,1,Nasal_CN,-6
 459597 *,7,39.54,B.1.1.7,Neg,5.9,21,1,Saliva_Ct,-6
-461379 *,-7,47,B.1.1.7,,,19,0,Saliva_Ct,-1
+461379 *,-7,negative,B.1.1.7,,,19,0,Saliva_Ct,-1
 461379 *,-3,27.27,B.1.1.7,,,19,1,Saliva_Ct,-1
 461379 *,-1,14.36,B.1.1.7,Pos,3,19,1,Nasal_CN,-1
 461379 *,-1,26.18,B.1.1.7,Pos,3,19,1,Saliva_Ct,-1
@@ -1138,19 +1138,19 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 461379 *,5,35.65,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
 461379 *,6,32.34,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
 461379 *,6,36.73,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
-461379 *,7,48,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
+461379 *,7,negative,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
 461379 *,7,38.02,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
-461379 *,8,48,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
+461379 *,8,negative,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
 461379 *,8,35.52,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
-461379 *,9,48,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
-461379 *,9,47,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
-461379 *,10,48,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
-461379 *,10,47,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
+461379 *,9,negative,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
+461379 *,9,negative,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
+461379 *,10,negative,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
+461379 *,10,negative,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
 461379 *,11,39.2,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
-461379 *,11,47,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
+461379 *,11,negative,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
 461379 *,12,38.45,B.1.1.7,Neg,5.9,19,1,Nasal_CN,-1
-461379 *,12,47,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
-444316,-7,47,B.1.577,,,22,0,Saliva_Ct,-3
+461379 *,12,negative,B.1.1.7,Neg,5.9,19,1,Saliva_Ct,-1
+444316,-7,negative,B.1.577,,,22,0,Saliva_Ct,-3
 444316,-4,30.53,B.1.577,,,22,1,Saliva_Ct,-3
 444316,-2,22.01,B.1.577,Pos,4,22,1,Nasal_CN,-3
 444316,-2,31.29,B.1.577,Pos,4,22,1,Saliva_Ct,-3
@@ -1162,21 +1162,21 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 444316,1,32.21,B.1.577,Pos,5.9,22,1,Saliva_Ct,-3
 444316,2,25.41,B.1.577,Pos,4,22,1,Nasal_CN,-3
 444316,2,35.65,B.1.577,Pos,4,22,1,Saliva_Ct,-3
-444316,4,48,B.1.577,Pos,5.9,22,1,Nasal_CN,-3
+444316,4,negative,B.1.577,Pos,5.9,22,1,Nasal_CN,-3
 444316,4,39.51,B.1.577,Pos,5.9,22,1,Saliva_Ct,-3
 444316,5,39.8,B.1.577,Neg,5.9,22,1,Nasal_CN,-3
-444316,5,47,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
+444316,5,negative,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
 444316,6,32.47,B.1.577,Neg,5.9,22,1,Nasal_CN,-3
-444316,6,47,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
-444316,7,48,B.1.577,Neg,5.9,22,1,Nasal_CN,-3
-444316,7,47,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
+444316,6,negative,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
+444316,7,negative,B.1.577,Neg,5.9,22,1,Nasal_CN,-3
+444316,7,negative,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
 444316,8,40.55,B.1.577,Neg,5.9,22,1,Nasal_CN,-3
-444316,8,47,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
+444316,8,negative,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
 444316,10,36.23,B.1.577,Neg,5.9,22,1,Nasal_CN,-3
-444316,10,47,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
+444316,10,negative,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
 444316,11,37.53,B.1.577,Neg,5.9,22,1,Nasal_CN,-3
-444316,11,47,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
-449527,-10,47,B.1.2,,,22,0,Saliva_Ct,-3
+444316,11,negative,B.1.577,Neg,5.9,22,1,Saliva_Ct,-3
+449527,-10,negative,B.1.2,,,22,0,Saliva_Ct,-3
 449527,-5,27.19,B.1.2,,,22,1,Saliva_Ct,-3
 449527,-3,27.37,B.1.2,Pos,5.9,22,1,Nasal_CN,-3
 449527,-3,28.7,B.1.2,Pos,5.9,22,1,Saliva_Ct,-3
@@ -1190,23 +1190,23 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 449527,1,29.38,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 449527,2,32.66,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
 449527,2,34.24,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
-449527,3,48,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
+449527,3,negative,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
 449527,3,35.11,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
-449527,4,48,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
-449527,4,47,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
+449527,4,negative,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
+449527,4,negative,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 449527,5,33.69,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
-449527,5,47,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
+449527,5,negative,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 449527,6,39.82,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
 449527,6,37.26,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 449527,7,37.4,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
-449527,7,47,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
+449527,7,negative,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 449527,8,36.33,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
-449527,8,47,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
+449527,8,negative,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 449527,9,32.23,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
-449527,9,47,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
+449527,9,negative,B.1.2,Neg,5.9,22,1,Saliva_Ct,-3
 449527,10,34.75,B.1.2,Neg,5.9,22,1,Nasal_CN,-3
-449527,11,47,B.1.2,,,22,1,Saliva_Ct,-3
-449614,-7,47,B.1.243,,,23,0,Saliva_Ct,0
+449527,11,negative,B.1.2,,,22,1,Saliva_Ct,-3
+449614,-7,negative,B.1.243,,,23,0,Saliva_Ct,0
 449614,-2,24.42,B.1.243,,,23,1,Saliva_Ct,0
 449614,0,22.62,B.1.243,Neg,5.9,23,1,Nasal_CN,0
 449614,0,29.5,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
@@ -1218,25 +1218,25 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 449614,3,30.36,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
 449614,4,38.71,B.1.243,Neg,5.9,23,1,Nasal_CN,0
 449614,4,33.58,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
-449614,5,48,B.1.243,Neg,5.9,23,1,Nasal_CN,0
+449614,5,negative,B.1.243,Neg,5.9,23,1,Nasal_CN,0
 449614,5,35.6,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
-449614,6,48,B.1.243,Neg,5.9,23,1,Nasal_CN,0
-449614,6,47,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
-449614,7,48,B.1.243,Neg,5.9,23,1,Nasal_CN,0
+449614,6,negative,B.1.243,Neg,5.9,23,1,Nasal_CN,0
+449614,6,negative,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
+449614,7,negative,B.1.243,Neg,5.9,23,1,Nasal_CN,0
 449614,7,39.64,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
 449614,8,40.02,B.1.243,Neg,5.9,23,1,Nasal_CN,0
-449614,8,47,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
-449614,9,48,B.1.243,Neg,5.9,23,1,Nasal_CN,0
-449614,9,47,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
+449614,8,negative,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
+449614,9,negative,B.1.243,Neg,5.9,23,1,Nasal_CN,0
+449614,9,negative,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
 449614,10,40.9,B.1.243,Neg,5.9,23,1,Nasal_CN,0
-449614,10,47,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
+449614,10,negative,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
 449614,11,39.36,B.1.243,Neg,5.9,23,1,Nasal_CN,0
-449614,11,47,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
+449614,11,negative,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
 449614,12,39.93,B.1.243,Neg,5.9,23,1,Nasal_CN,0
-449614,12,47,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
-449614,13,48,B.1.243,Neg,5.9,23,1,Nasal_CN,0
-449614,13,47,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
-451146 *,-5,47,B.1.1.7,,,25,0,Saliva_Ct,-3
+449614,12,negative,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
+449614,13,negative,B.1.243,Neg,5.9,23,1,Nasal_CN,0
+449614,13,negative,B.1.243,Neg,5.9,23,1,Saliva_Ct,0
+451146 *,-5,negative,B.1.1.7,,,25,0,Saliva_Ct,-3
 451146 *,-4,25.06,B.1.1.7,,,25,1,Saliva_Ct,-3
 451146 *,-2,28.79,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
 451146 *,-2,29.05,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
@@ -1246,40 +1246,40 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 451146 *,0,30.21,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
 451146 *,1,29.24,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
 451146 *,1,34.33,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,2,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,2,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,3,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,3,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,4,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,4,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,5,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,5,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,6,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,6,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,7,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,7,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,8,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,8,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,9,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,9,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,10,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,10,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-451146 *,11,48,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
-451146 *,11,47,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
-453724,-11,47,B.1.2,,,23,0,Saliva_Ct,-9
-453724,-9,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
-453724,-9,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-453724,-8,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
-453724,-8,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-453724,-7,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+451146 *,2,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,2,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,3,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,3,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,4,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,4,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,5,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,5,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,6,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,6,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,7,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,7,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,8,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,8,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,9,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,9,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,10,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,10,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+451146 *,11,negative,B.1.1.7,Neg,5.9,25,1,Nasal_CN,-3
+451146 *,11,negative,B.1.1.7,Neg,5.9,25,1,Saliva_Ct,-3
+453724,-11,negative,B.1.2,,,23,0,Saliva_Ct,-9
+453724,-9,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+453724,-9,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
+453724,-8,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+453724,-8,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
+453724,-7,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
 453724,-7,37.81,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-453724,-7,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+453724,-7,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
 453724,-7,37.81,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-453724,-6,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+453724,-6,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
 453724,-6,27.13,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
 453724,-5,39.34,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
 453724,-5,34.33,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-453724,-4,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+453724,-4,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
 453724,-4,31.41,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
 453724,-3,29.8,B.1.2,Pos,,23,1,Saliva_Ct,-9
 453724,-2,38.6,B.1.2,Pos,5.9,23,1,Nasal_CN,-9
@@ -1289,14 +1289,14 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 453724,0,31.62,B.1.2,Pos,5.9,23,1,Nasal_CN,-9
 453724,0,34.08,B.1.2,Pos,5.9,23,1,Saliva_Ct,-9
 453724,1,35.35,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
-453724,1,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
+453724,1,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
 453724,2,35.92,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
-453724,2,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-453724,3,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
-453724,3,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-453724,4,48,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
-453724,4,47,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
-459589 *,-4,47,B.1.1.7,,,22,0,Saliva_Ct,0
+453724,2,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
+453724,3,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+453724,3,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
+453724,4,negative,B.1.2,Neg,5.9,23,1,Nasal_CN,-9
+453724,4,negative,B.1.2,Neg,5.9,23,1,Saliva_Ct,-9
+459589 *,-4,negative,B.1.1.7,,,22,0,Saliva_Ct,0
 459589 *,-2,19.9,B.1.1.7,,,22,1,Saliva_Ct,0
 459589 *,0,17.47,B.1.1.7,Pos,4,22,1,Nasal_CN,0
 459589 *,0,26.25,B.1.1.7,Pos,4,22,1,Saliva_Ct,0
@@ -1312,26 +1312,26 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 459589 *,6,35.09,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
 459589 *,6,39.49,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
 459589 *,7,38.41,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-459589 *,7,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-459589 *,8,48,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-459589 *,8,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-459589 *,9,48,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-459589 *,9,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-459589 *,10,48,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-459589 *,10,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-459589 *,11,48,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-459589 *,11,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-459589 *,12,48,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-459589 *,12,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-459589 *,13,48,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-459589 *,13,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-470855 **,-6,47,P.1,,,21,0,Saliva_Ct,-4
-470855 **,-4,48,P.1,Neg,5.9,21,1,Nasal_CN,-4
-470855 **,-4,47,P.1,Neg,5.9,21,1,Saliva_Ct,-4
-470855 **,-3,48,P.1,Neg,5.9,21,1,Nasal_CN,-4
+459589 *,7,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+459589 *,8,negative,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
+459589 *,8,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+459589 *,9,negative,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
+459589 *,9,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+459589 *,10,negative,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
+459589 *,10,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+459589 *,11,negative,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
+459589 *,11,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+459589 *,12,negative,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
+459589 *,12,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+459589 *,13,negative,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
+459589 *,13,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+470855 **,-6,negative,P.1,,,21,0,Saliva_Ct,-4
+470855 **,-4,negative,P.1,Neg,5.9,21,1,Nasal_CN,-4
+470855 **,-4,negative,P.1,Neg,5.9,21,1,Saliva_Ct,-4
+470855 **,-3,negative,P.1,Neg,5.9,21,1,Nasal_CN,-4
 470855 **,-3,36.2,P.1,Neg,5.9,21,1,Saliva_Ct,-4
-470855 **,-2,48,P.1,Neg,5.9,21,1,Nasal_CN,-4
-470855 **,-2,47,P.1,Neg,5.9,21,1,Saliva_Ct,-4
+470855 **,-2,negative,P.1,Neg,5.9,21,1,Nasal_CN,-4
+470855 **,-2,negative,P.1,Neg,5.9,21,1,Saliva_Ct,-4
 470855 **,-1,29.42,P.1,Neg,5.9,21,1,Nasal_CN,-4
 470855 **,-1,31.21,P.1,Neg,5.9,21,1,Saliva_Ct,-4
 470855 **,0,16.47,P.1,Neg,3,21,1,Nasal_CN,-4
@@ -1348,13 +1348,13 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 470855 **,5,32.03,P.1,Pos,5.9,21,1,Saliva_Ct,-4
 470855 **,6,34.84,P.1,Pos,5.9,21,1,Nasal_CN,-4
 470855 **,6,36.01,P.1,Pos,5.9,21,1,Saliva_Ct,-4
-470855 **,7,48,P.1,Neg,5.9,21,1,Nasal_CN,-4
-470855 **,7,47,P.1,Neg,5.9,21,1,Saliva_Ct,-4
+470855 **,7,negative,P.1,Neg,5.9,21,1,Nasal_CN,-4
+470855 **,7,negative,P.1,Neg,5.9,21,1,Saliva_Ct,-4
 470855 **,8,38.21,P.1,Neg,5.9,21,1,Nasal_CN,-4
-470855 **,8,47,P.1,Neg,5.9,21,1,Saliva_Ct,-4
-470855 **,9,48,P.1,Neg,5.9,21,1,Nasal_CN,-4
-470855 **,9,47,P.1,Neg,5.9,21,1,Saliva_Ct,-4
-471588 *,-9,47,B.1.1.7,,,23,0,Saliva_Ct,0
+470855 **,8,negative,P.1,Neg,5.9,21,1,Saliva_Ct,-4
+470855 **,9,negative,P.1,Neg,5.9,21,1,Nasal_CN,-4
+470855 **,9,negative,P.1,Neg,5.9,21,1,Saliva_Ct,-4
+471588 *,-9,negative,B.1.1.7,,,23,0,Saliva_Ct,0
 471588 *,-2,24.8,B.1.1.7,,,23,1,Saliva_Ct,0
 471588 *,0,14.5,B.1.1.7,Pos,5.9,23,1,Nasal_CN,0
 471588 *,0,20.58,B.1.1.7,Pos,5.9,23,1,Saliva_Ct,0
@@ -1370,7 +1370,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 471588 *,5,25.1,B.1.1.7,Pos,5.9,23,1,Saliva_Ct,0
 471588 *,6,29.76,B.1.1.7,Pos,,23,1,Nasal_CN,0
 471588 *,6,27.37,B.1.1.7,Pos,,23,1,Saliva_Ct,0
-471588 *,7,48,B.1.1.7,Pos,5.9,23,1,Nasal_CN,0
+471588 *,7,negative,B.1.1.7,Pos,5.9,23,1,Nasal_CN,0
 471588 *,7,26.49,B.1.1.7,Pos,5.9,23,1,Saliva_Ct,0
 471588 *,8,33.4,B.1.1.7,Neg,5.9,23,1,Nasal_CN,0
 471588 *,8,27.45,B.1.1.7,Neg,5.9,23,1,Saliva_Ct,0
@@ -1384,36 +1384,36 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 471588 *,12,34.54,B.1.1.7,Neg,5.9,23,1,Saliva_Ct,0
 471588 *,13,33,B.1.1.7,Neg,5.9,23,1,Nasal_CN,0
 471588 *,13,34.41,B.1.1.7,Neg,5.9,23,1,Saliva_Ct,0
-449474,-8,47,B.1.2,,,29,0,Saliva_Ct,0
+449474,-8,negative,B.1.2,,,29,0,Saliva_Ct,0
 449474,-2,30.89,B.1.2,,,29,1,Saliva_Ct,0
 449474,0,35.68,B.1.2,Pos,5.9,29,1,Nasal_CN,0
 449474,0,31.25,B.1.2,Pos,5.9,29,1,Saliva_Ct,0
-449474,1,47,B.1.2,Pos,,29,1,Saliva_Ct,0
-449474,2,48,B.1.2,Pos,5.9,29,1,Nasal_CN,0
-449474,2,47,B.1.2,Pos,5.9,29,1,Saliva_Ct,0
-449474,3,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,3,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,4,48,B.1.2,Pos,5.9,29,1,Nasal_CN,0
-449474,4,47,B.1.2,Pos,5.9,29,1,Saliva_Ct,0
-449474,5,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,5,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,6,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,6,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,7,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,7,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,8,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,8,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,9,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,9,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,10,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,10,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,11,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,11,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,12,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,12,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-449474,13,48,B.1.2,Neg,5.9,29,1,Nasal_CN,0
-449474,13,47,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
-461764 *,-6,47,B.1.1.7,,,22,0,Saliva_Ct,0
+449474,1,negative,B.1.2,Pos,,29,1,Saliva_Ct,0
+449474,2,negative,B.1.2,Pos,5.9,29,1,Nasal_CN,0
+449474,2,negative,B.1.2,Pos,5.9,29,1,Saliva_Ct,0
+449474,3,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,3,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,4,negative,B.1.2,Pos,5.9,29,1,Nasal_CN,0
+449474,4,negative,B.1.2,Pos,5.9,29,1,Saliva_Ct,0
+449474,5,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,5,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,6,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,6,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,7,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,7,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,8,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,8,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,9,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,9,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,10,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,10,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,11,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,11,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,12,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,12,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+449474,13,negative,B.1.2,Neg,5.9,29,1,Nasal_CN,0
+449474,13,negative,B.1.2,Neg,5.9,29,1,Saliva_Ct,0
+461764 *,-6,negative,B.1.1.7,,,22,0,Saliva_Ct,0
 461764 *,-2,18.64,B.1.1.7,,,22,1,Saliva_Ct,0
 461764 *,0,15.4,B.1.1.7,Pos,4,22,1,Nasal_CN,0
 461764 *,0,24.13,B.1.1.7,Pos,4,22,1,Saliva_Ct,0
@@ -1434,18 +1434,18 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 461764 *,8,37.83,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
 461764 *,8,33.52,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
 461764 *,9,32.88,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-461764 *,9,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+461764 *,9,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
 461764 *,10,35.43,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
 461764 *,10,38.42,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-461764 *,11,48,B.1.1.7,,,22,1,Nasal_CN,0
+461764 *,11,negative,B.1.1.7,,,22,1,Nasal_CN,0
 461764 *,12,34.82,B.1.1.7,Neg,5.9,22,1,Nasal_CN,0
-461764 *,12,47,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
-461764 *,13,48,B.1.1.7,,5.9,22,1,Nasal_CN,0
-435933,-11,47,B.1.2,,,53,0,Saliva_Ct,-6
+461764 *,12,negative,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,0
+461764 *,13,negative,B.1.1.7,,5.9,22,1,Nasal_CN,0
+435933,-11,negative,B.1.2,,,53,0,Saliva_Ct,-6
 435933,-8,26.51,B.1.2,,,53,1,Saliva_Ct,-6
-435933,-6,48,B.1.2,Neg,5.9,53,1,Nasal_CN,-6
+435933,-6,negative,B.1.2,Neg,5.9,53,1,Nasal_CN,-6
 435933,-6,29.57,B.1.2,Neg,5.9,53,1,Saliva_Ct,-6
-435933,-5,48,B.1.2,Neg,5.9,53,1,Nasal_CN,-6
+435933,-5,negative,B.1.2,Neg,5.9,53,1,Nasal_CN,-6
 435933,-5,27.05,B.1.2,Neg,5.9,53,1,Saliva_Ct,-6
 435933,-4,37.05,B.1.2,Pos,5.9,53,1,Nasal_CN,-6
 435933,-4,33.46,B.1.2,Pos,5.9,53,1,Saliva_Ct,-6
@@ -1465,7 +1465,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 435933,3,35.06,B.1.2,Neg,5.9,53,1,Saliva_Ct,-6
 435933,4,38.06,B.1.2,Neg,5.9,53,1,Nasal_CN,-6
 435933,4,38.14,B.1.2,Neg,5.9,53,1,Saliva_Ct,-6
-443176,-7,47,B.1.2,,,22,0,Saliva_Ct,0
+443176,-7,negative,B.1.2,,,22,0,Saliva_Ct,0
 443176,-2,21.97,B.1.2,,,22,1,Saliva_Ct,0
 443176,0,23.82,B.1.2,Pos,5.9,22,1,Nasal_CN,0
 443176,0,26,B.1.2,Pos,5.9,22,1,Saliva_Ct,0
@@ -1483,45 +1483,45 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 443176,6,30.85,B.1.2,Neg,5.9,22,1,Saliva_Ct,0
 443176,7,37.05,B.1.2,Neg,5.9,22,1,Nasal_CN,0
 443176,7,31.87,B.1.2,Neg,5.9,22,1,Saliva_Ct,0
-443176,8,48,B.1.2,Neg,5.9,22,1,Nasal_CN,0
+443176,8,negative,B.1.2,Neg,5.9,22,1,Nasal_CN,0
 443176,8,33.25,B.1.2,Neg,5.9,22,1,Saliva_Ct,0
-443176,9,48,B.1.2,Neg,5.9,22,1,Nasal_CN,0
+443176,9,negative,B.1.2,Neg,5.9,22,1,Nasal_CN,0
 443176,9,33.03,B.1.2,Neg,5.9,22,1,Saliva_Ct,0
-443176,10,48,B.1.2,Neg,5.9,22,1,Nasal_CN,0
+443176,10,negative,B.1.2,Neg,5.9,22,1,Nasal_CN,0
 443176,10,31.44,B.1.2,Neg,5.9,22,1,Saliva_Ct,0
 443176,11,39.77,B.1.2,Neg,5.9,22,1,Nasal_CN,0
 443176,11,36.38,B.1.2,Neg,5.9,22,1,Saliva_Ct,0
-443176,12,48,B.1.2,Neg,5.9,22,1,Nasal_CN,0
+443176,12,negative,B.1.2,Neg,5.9,22,1,Nasal_CN,0
 443176,12,36.8,B.1.2,Neg,5.9,22,1,Saliva_Ct,0
-443240 *,-7,47,B.1.1.7,,,32,0,Saliva_Ct,0
+443240 *,-7,negative,B.1.1.7,,,32,0,Saliva_Ct,0
 443240 *,-2,34.35,B.1.1.7,,,32,1,Saliva_Ct,0
 443240 *,0,35.86,B.1.1.7,Pos,5.9,32,1,Nasal_CN,0
 443240 *,0,34.04,B.1.1.7,Pos,5.9,32,1,Saliva_Ct,0
 443240 *,1,36.05,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,1,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,1,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
 443240 *,2,39.57,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,2,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,3,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,3,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,4,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,4,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,5,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,5,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,6,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,6,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,7,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,7,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,2,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,3,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,3,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,4,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,4,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,5,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,5,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,6,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,6,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,7,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,7,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
 443240 *,8,41.32,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,8,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,9,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,9,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,10,48,B.1.1.7,,5.9,32,1,Nasal_CN,0
-443240 *,11,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,8,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,9,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,9,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,10,negative,B.1.1.7,,5.9,32,1,Nasal_CN,0
+443240 *,11,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
 443240 *,11,36.19,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,12,48,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
-443240 *,12,47,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
-443240 *,13,47,B.1.1.7,Neg,,32,1,Saliva_Ct,0
-473097 *,-6,47,B.1.1.7,,,62,0,Saliva_Ct,0
+443240 *,12,negative,B.1.1.7,Neg,5.9,32,1,Nasal_CN,0
+443240 *,12,negative,B.1.1.7,Neg,5.9,32,1,Saliva_Ct,0
+443240 *,13,negative,B.1.1.7,Neg,,32,1,Saliva_Ct,0
+473097 *,-6,negative,B.1.1.7,,,62,0,Saliva_Ct,0
 473097 *,0,17.35,B.1.1.7,Pos,5.9,62,1,Nasal_CN,0
 473097 *,0,21.8,B.1.1.7,Pos,5.9,62,1,Saliva_Ct,0
 473097 *,1,23.06,B.1.1.7,Pos,5.9,62,1,Nasal_CN,0
@@ -1539,16 +1539,16 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 473097 *,7,36.68,B.1.1.7,Neg,5.9,62,1,Nasal_CN,0
 473097 *,7,31.08,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
 473097 *,8,39.55,B.1.1.7,Neg,5.9,62,1,Nasal_CN,0
-473097 *,8,47,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
+473097 *,8,negative,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
 473097 *,9,39.43,B.1.1.7,Neg,5.9,62,1,Nasal_CN,0
-473097 *,9,47,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
+473097 *,9,negative,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
 473097 *,10,41.06,B.1.1.7,Neg,5.9,62,1,Nasal_CN,0
 473097 *,10,29.77,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
-473097 *,11,48,B.1.1.7,Neg,5.9,62,1,Nasal_CN,0
-473097 *,11,47,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
-473097 *,12,48,B.1.1.7,,,62,1,Nasal_CN,0
-473097 *,13,48,B.1.1.7,,,62,1,Nasal_CN,0
-451231,-8,47,B.1.2,,,50,0,Saliva_Ct,-2
+473097 *,11,negative,B.1.1.7,Neg,5.9,62,1,Nasal_CN,0
+473097 *,11,negative,B.1.1.7,Neg,5.9,62,1,Saliva_Ct,0
+473097 *,12,negative,B.1.1.7,,,62,1,Nasal_CN,0
+473097 *,13,negative,B.1.1.7,,,62,1,Nasal_CN,0
+451231,-8,negative,B.1.2,,,50,0,Saliva_Ct,-2
 451231,-3,29.51,B.1.2,,,50,1,Saliva_Ct,-2
 451231,-1,18.29,B.1.2,Pos,2,50,1,Nasal_CN,-2
 451231,-1,19.83,B.1.2,Pos,2,50,1,Saliva_Ct,-2
@@ -1564,15 +1564,15 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 451231,4,29.87,B.1.2,Neg,,50,1,Saliva_Ct,-2
 451231,5,31.11,B.1.2,Neg,5.9,50,1,Nasal_CN,-2
 451231,5,27.22,B.1.2,Neg,5.9,50,1,Saliva_Ct,-2
-451231,6,48,B.1.2,Neg,5.9,50,1,Nasal_CN,-2
+451231,6,negative,B.1.2,Neg,5.9,50,1,Nasal_CN,-2
 451231,6,26.06,B.1.2,Neg,5.9,50,1,Saliva_Ct,-2
 451231,7,36.4,B.1.2,Neg,5.9,50,1,Nasal_CN,-2
 451231,7,30.33,B.1.2,Neg,5.9,50,1,Saliva_Ct,-2
-451231,8,48,B.1.2,Neg,5.9,50,1,Nasal_CN,-2
+451231,8,negative,B.1.2,Neg,5.9,50,1,Nasal_CN,-2
 451231,8,32.78,B.1.2,Neg,5.9,50,1,Saliva_Ct,-2
 451231,9,36.16,B.1.2,Neg,5.9,50,1,Nasal_CN,-2
 451231,9,35.52,B.1.2,Neg,5.9,50,1,Saliva_Ct,-2
-451709 *,-7,47,B.1.1.7,,,22,0,Saliva_Ct,-2
+451709 *,-7,negative,B.1.1.7,,,22,0,Saliva_Ct,-2
 451709 *,-4,31.55,B.1.1.7,,,22,1,Saliva_Ct,-2
 451709 *,-2,30.2,B.1.1.7,Neg,5.9,22,1,Nasal_CN,-2
 451709 *,-2,24.27,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,-2
@@ -1596,7 +1596,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 451709 *,8,28.85,B.1.1.7,,5.9,22,1,Saliva_Ct,-2
 451709 *,9,34.05,B.1.1.7,Neg,5.9,22,1,Nasal_CN,-2
 451709 *,9,35.88,B.1.1.7,Neg,5.9,22,1,Saliva_Ct,-2
-453058,-4,47,B.1.2,,,49,0,Saliva_Ct,0
+453058,-4,negative,B.1.2,,,49,0,Saliva_Ct,0
 453058,-2,18.23,B.1.2,,,49,1,Saliva_Ct,0
 453058,0,13.45,B.1.2,Pos,3,49,1,Nasal_CN,0
 453058,0,21.13,B.1.2,Pos,3,49,1,Saliva_Ct,0
@@ -1616,7 +1616,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 453058,7,30.36,B.1.2,Pos,5.9,49,1,Saliva_Ct,0
 453058,8,20.28,B.1.2,Pos,5.9,49,1,Nasal_CN,0
 453058,8,31.47,B.1.2,Pos,5.9,49,1,Saliva_Ct,0
-433227,-6,47,B.1.2,,,49,0,Saliva_Ct,-4
+433227,-6,negative,B.1.2,,,49,0,Saliva_Ct,-4
 433227,-5,29.19,B.1.2,,,49,1,Saliva_Ct,-4
 433227,-3,34.62,B.1.2,Neg,5.9,49,1,Nasal_CN,-4
 433227,-3,26.6,B.1.2,Neg,5.9,49,1,Saliva_Ct,-4
@@ -1636,7 +1636,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 433227,4,31.75,B.1.2,Pos,5.9,49,1,Saliva_Ct,-4
 433227,5,25.71,B.1.2,Pos,5.9,49,1,Nasal_CN,-4
 433227,5,27.52,B.1.2,Pos,5.9,49,1,Saliva_Ct,-4
-446645,-3,47,B.1.2,,,28,0,Saliva_Ct,0
+446645,-3,negative,B.1.2,,,28,0,Saliva_Ct,0
 446645,-2,29.97,B.1.2,,,28,1,Saliva_Ct,0
 446645,0,23.23,B.1.2,Pos,5.9,28,1,Nasal_CN,0
 446645,0,27.15,B.1.2,Pos,5.9,28,1,Saliva_Ct,0
@@ -1658,9 +1658,9 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 446645,8,34.38,B.1.2,Pos,5.9,28,1,Saliva_Ct,0
 446645,9,33.9,B.1.2,Neg,5.9,28,1,Nasal_CN,0
 446645,9,33.6,B.1.2,Neg,5.9,28,1,Saliva_Ct,0
-446645,10,48,B.1.2,Pos,5.9,28,1,Nasal_CN,0
-446645,10,47,B.1.2,Pos,5.9,28,1,Saliva_Ct,0
-432568,-3,47,B.1.2,,,34,0,Saliva_Ct,0
+446645,10,negative,B.1.2,Pos,5.9,28,1,Nasal_CN,0
+446645,10,negative,B.1.2,Pos,5.9,28,1,Saliva_Ct,0
+432568,-3,negative,B.1.2,,,34,0,Saliva_Ct,0
 432568,-1,27.93,B.1.2,,,34,1,Saliva_Ct,0
 432568,0,19.1,B.1.2,Neg,5.9,34,1,Nasal_CN,0
 432568,0,20.98,B.1.2,Neg,5.9,34,1,Saliva_Ct,0
@@ -1682,7 +1682,7 @@ PatientID,time,value,Lineage,Antigen,Virus_pos_days,Age,Index,analyte,first_symp
 432568,8,29.11,B.1.2,Pos,5.9,34,1,Saliva_Ct,0
 432568,9,41.12,B.1.2,Neg,5.9,34,1,Nasal_CN,0
 432568,9,33.85,B.1.2,Neg,5.9,34,1,Saliva_Ct,0
-433409,-6,47,B.1.2,,,22,0,Saliva_Ct,-1
+433409,-6,negative,B.1.2,,,22,0,Saliva_Ct,-1
 433409,-3,24.98,B.1.2,,,22,1,Saliva_Ct,-1
 433409,-1,16.8,B.1.2,Pos,2,22,1,Nasal_CN,-1
 433409,-1,24.19,B.1.2,Pos,2,22,1,Saliva_Ct,-1

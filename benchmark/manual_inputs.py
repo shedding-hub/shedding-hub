@@ -7,6 +7,11 @@ other columns the source carried. The manual-era studies never had such a
 file, so the benchmark builds one from the raw files stored with each dataset
 at the frozen release.
 
+A CSV is made in two steps. A builder lays the raw file out, and
+`manual_curation.py` then applies the two things a production curator did
+before handing a file to the agent: writing non-detects as `negative` and
+undoing log10, each by the rule in the study's extraction script.
+
 What a builder may do is limited to what laying out a CSV requires:
 
 - pick the rows that belong to the study and the raw columns that hold the
@@ -19,15 +24,14 @@ What a builder may do is limited to what laying out a CSV requires:
   or neonate, for example) in a column of its own;
 - drop cells that hold no measurement.
 
-It may not change a value. Times are not re-aligned to a reference event,
-units are not converted, logarithms are not undone, non-detects are not
-recoded, and no label is renamed. Those decisions are what the benchmark
-tests, so nothing is taken from the released YAML or from the transformation
-code in an extraction script.
+A builder may not change a value. Beyond the two curation steps, times are
+not re-aligned to a reference event, units are not converted and no label is
+renamed. Nothing is taken from the released YAML.
 
 Each builder returns the table and a note. The note records which raw columns
 were used and anything in the raw file that already reflects a curator's
-judgement. Notes are written to `benchmark/manual_inputs/NOTES.csv`.
+judgement; the curation step adds what it changed. Notes are written to
+`benchmark/manual_inputs/NOTES.csv`.
 """
 
 import argparse
@@ -59,6 +63,11 @@ def lay_out(table: pd.DataFrame, patient: str, time: str, value: str) -> pd.Data
     renamed = table.rename(columns={patient: "PatientID", time: "time", value: "value"})
     others = [c for c in renamed.columns if c not in ("PatientID", "time", "value")]
     return renamed[["PatientID", "time", "value", *others]]
+
+
+# The combined dataset's LOD is in the unit of its own `value` column, viral
+# copies per mL, while the measurements taken from it are cycle thresholds.
+LOD_COLUMN = "LOD_viral_copies_per_mL"
 
 
 def number_participants(labels) -> list[str]:
@@ -146,11 +155,14 @@ def salvatore2020epidemiological(release):
     table = sheet[sheet["StudyNum"] == "17"]
     table = table[["PatientID", "Day", "Ctvalue", "Age", "Sex", "LOD"]]
     table = table[table["Ctvalue"].notna()]
+    table = table.rename(columns={"LOD": LOD_COLUMN})
     note = (
         "CombinedDataset.xlsx (Challenger et al., a third-party combined dataset), "
         "sheet Viral_Load, rows with StudyNum 17: Day and Ctvalue as time and "
-        "value; Age, Sex and LOD kept. The combined dataset was already harmonized "
-        "across studies by its authors."
+        "value; Age and Sex kept, and LOD kept as LOD_viral_copies_per_mL, since "
+        "the combined dataset states its limit of detection in viral copies per "
+        "mL and not in cycles. The combined dataset was already harmonized across "
+        "studies by its authors."
     )
     return lay_out(table, "PatientID", "Day", "Ctvalue"), note
 
@@ -172,6 +184,8 @@ def main() -> int:
     parser.add_argument("studies", nargs="*", help="Studies to build (default: all)")
     parser.add_argument("--release", default="v1.1.0", help="Frozen release tag.")
     args = parser.parse_args()
+
+    from manual_curation import curate
 
     # Builders are grouped by kind of source, one module per group.
     for module in (
@@ -195,6 +209,8 @@ def main() -> int:
 
     for study in selected:
         table, note = BUILDERS[study](args.release)
+        table, curated = curate(study, table)
+        note = f"{note} {curated}"
         table.to_csv(OUT / f"{study}.csv", index=False, lineterminator="\n")
         notes[study] = {
             "study_id": study,

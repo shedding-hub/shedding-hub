@@ -1,7 +1,7 @@
 PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Symptomatic,Index (I) or Household member (H),Vaccination Status
 4512,5,1189.808219,0.094132818,11.5,N_conc (gc/mg-dw),True,,Female,39,Y,H,No
 4512,5,3768.957713,0.094132818,11.5,ORF1a_conc (gc/gm-dw),True,,Female,39,Y,H,No
-4512,5,,0.094132818,11.5,PMMoV_conc (gc/mg-dw),False,,Female,39,Y,H,No
+4512,5,negative,0.094132818,11.5,PMMoV_conc (gc/mg-dw),False,,Female,39,Y,H,No
 4512,5,10546333.02,0.094132818,11.5,crAss_conc,True,True,Female,39,Y,H,No
 4512,6,649.7229877,0.228228,17.5,N_conc (gc/mg-dw),True,,Female,39,Y,H,No
 4512,6,282.8205946,0.228228,17.5,ORF1a_conc (gc/gm-dw),True,,Female,39,Y,H,No
@@ -11,95 +11,95 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4512,7,418.1722846,0.187342,14.4,ORF1a_conc (gc/gm-dw),True,,Female,39,Y,H,No
 4512,7,941.2734082,0.187342,14.4,PMMoV_conc (gc/mg-dw),True,,Female,39,Y,H,No
 4512,7,118932535.7,0.187342,14.4,crAss_conc,True,True,Female,39,Y,H,No
-4514,13,39.32209494,0.135563817,19.9,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,13,39.32209494,0.135563817,19.9,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
-4514,13,84.21926819,0.135563817,19.9,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,13,254.0386893,0.135563817,19.9,crAss_conc,True,False,Female,70,N,H,No
-4514,15,59.18115768,0.13032146,16.7,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,13,negative,0.135563817,19.9,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,13,negative,0.135563817,19.9,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,13,negative,0.135563817,19.9,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,13,positive,0.135563817,19.9,crAss_conc,True,False,Female,70,N,H,No
+4514,15,negative,0.13032146,16.7,N_conc (gc/mg-dw),False,,Female,70,N,H,No
 4514,15,59.18115768,0.13032146,16.7,ORF1a_conc (gc/gm-dw),True,,Female,70,N,H,No
 4514,15,771.9281437,0.13032146,16.7,PMMoV_conc (gc/mg-dw),True,,Female,70,N,H,No
-4514,15,169.8419541,0.13032146,16.7,crAss_conc,True,False,Female,70,N,H,No
-4514,18,19.73616738,0.277901786,22.9,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,18,31.42701812,0.277901786,22.9,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
-4514,18,,0.277901786,22.9,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,18,123.8585429,0.277901786,22.9,crAss_conc,True,False,Female,70,N,H,No
-4514,20,663.1168831,0.099099099,19.6,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,20,663.1168831,0.099099099,19.6,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,15,positive,0.13032146,16.7,crAss_conc,True,False,Female,70,N,H,No
+4514,18,negative,0.277901786,22.9,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,18,negative,0.277901786,22.9,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,18,negative,0.277901786,22.9,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,18,positive,0.277901786,22.9,crAss_conc,True,False,Female,70,N,H,No
+4514,20,negative,0.099099099,19.6,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,20,negative,0.099099099,19.6,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
 4514,20,545320.9647,0.099099099,19.6,PMMoV_conc (gc/mg-dw),True,,Female,70,N,H,No
-4514,20,144.7122772,0.099099099,19.6,crAss_conc,True,False,Female,70,N,H,No
-4514,28,28.68347339,0.240625,15.3,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,28,28.68347339,0.240625,15.3,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,20,positive,0.099099099,19.6,crAss_conc,True,False,Female,70,N,H,No
+4514,28,negative,0.240625,15.3,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,28,negative,0.240625,15.3,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
 4514,28,27.42313895,0.240625,15.3,PMMoV_conc (gc/mg-dw),True,,Female,70,N,H,No
-4514,28,9.929788755,0.240625,15.3,crAss_conc,False,False,Female,70,N,H,No
-4514,4,36.58686717,0.189243028,16.8,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,4,36.58686717,0.189243028,16.8,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
-4514,4,97.12882206,0.189243028,16.8,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,4,10.47523063,0.189243028,16.8,crAss_conc,False,False,Female,70,N,H,No
-4514,8,44.02899916,0.166160081,14.5,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,8,44.02899916,0.166160081,14.5,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,28,negative,0.240625,15.3,crAss_conc,False,False,Female,70,N,H,No
+4514,4,negative,0.189243028,16.8,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,4,negative,0.189243028,16.8,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,4,negative,0.189243028,16.8,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,4,negative,0.189243028,16.8,crAss_conc,False,False,Female,70,N,H,No
+4514,8,negative,0.166160081,14.5,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,8,negative,0.166160081,14.5,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
 4514,8,1786.39529,0.166160081,14.5,PMMoV_conc (gc/mg-dw),True,,Female,70,N,H,No
-4514,8,348.6462012,0.166160081,14.5,crAss_conc,True,False,Female,70,N,H,No
-4514,9,30.18656386,0.221458047,17.4,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,9,30.18656386,0.221458047,17.4,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
-4514,9,80.13764546,0.221458047,17.4,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,9,10.11401578,0.221458047,17.4,crAss_conc,False,False,Female,70,N,H,No
-4514,10,29.52744008,0.186047,14,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,10,29.52744008,0.186047,14,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,8,positive,0.166160081,14.5,crAss_conc,True,False,Female,70,N,H,No
+4514,9,negative,0.221458047,17.4,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,9,negative,0.221458047,17.4,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,9,negative,0.221458047,17.4,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,9,negative,0.221458047,17.4,crAss_conc,False,False,Female,70,N,H,No
+4514,10,negative,0.186047,14,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,10,negative,0.186047,14,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
 4514,10,451.8228188,0.186047,14,PMMoV_conc (gc/mg-dw),True,,Female,70,N,H,No
 4514,10,240.2618951,0.186047,14,crAss_conc,True,True,Female,70,N,H,No
-4514,11,11.16764559,0.17122,16.4,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,11,11.16764559,0.17122,16.4,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,11,negative,0.17122,16.4,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,11,negative,0.17122,16.4,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
 4514,11,101.4743654,0.17122,16.4,PMMoV_conc (gc/mg-dw),True,,Female,70,N,H,No
 4514,11,229.3576856,0.17122,16.4,crAss_conc,True,True,Female,70,N,H,No
-4514,12,62.64206897,0.097323601,17.4,N_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,12,62.64206897,0.097323601,17.4,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
-4514,12,69.06689655,0.097323601,17.4,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
-4514,12,10.89145315,0.097323601,17.4,crAss_conc,False,False,Female,70,N,H,No
-4519,5,1548.283333,0.006932409,12,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
-4519,5,1548.283333,0.006932409,12,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
+4514,12,negative,0.097323601,17.4,N_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,12,negative,0.097323601,17.4,ORF1a_conc (gc/gm-dw),False,,Female,70,N,H,No
+4514,12,negative,0.097323601,17.4,PMMoV_conc (gc/mg-dw),False,,Female,70,N,H,No
+4514,12,negative,0.097323601,17.4,crAss_conc,False,False,Female,70,N,H,No
+4519,5,negative,0.006932409,12,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
+4519,5,negative,0.006932409,12,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
 4519,5,56930.66667,0.006932409,12,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,I,No
-4519,5,13.14807193,0.006932409,12,crAss_conc,False,False,Male,45,Y,I,No
-4519,14,22.14578171,0.231399748,21.2,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
-4519,14,22.14578171,0.231399748,21.2,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
+4519,5,negative,0.006932409,12,crAss_conc,False,False,Male,45,Y,I,No
+4519,14,negative,0.231399748,21.2,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
+4519,14,negative,0.231399748,21.2,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
 4519,14,14872.5721,0.231399748,21.2,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,I,No
-4519,14,238.4608452,0.231399748,21.2,crAss_conc,True,False,Male,45,Y,I,No
-4519,20,112.2333333,0.0499,17,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
-4519,20,112.2333333,0.0499,17,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
+4519,14,positive,0.231399748,21.2,crAss_conc,True,False,Male,45,Y,I,No
+4519,20,negative,0.0499,17,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
+4519,20,negative,0.0499,17,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
 4519,20,658309.8039,0.0499,17,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,I,No
-4519,20,3.377299284,0.0499,17,crAss_conc,False,False,Male,45,Y,I,No
-4519,28,39.04191959,0.142553191,20.9,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
-4519,28,39.04191959,0.142553191,20.9,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
+4519,20,negative,0.0499,17,crAss_conc,False,False,Male,45,Y,I,No
+4519,28,negative,0.142553191,20.9,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
+4519,28,negative,0.142553191,20.9,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
 4519,28,41243733.49,0.142553191,20.9,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,I,No
-4519,28,8.420281082,0.142553191,20.9,crAss_conc,False,False,Male,45,Y,I,No
-4519,8,54.77600813,0.103585657,22.7,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
-4519,8,54.77600813,0.103585657,22.7,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
+4519,28,negative,0.142553191,20.9,crAss_conc,False,False,Male,45,Y,I,No
+4519,8,negative,0.103585657,22.7,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
+4519,8,negative,0.103585657,22.7,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
 4519,8,1306.458828,0.103585657,22.7,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,I,No
-4519,8,6.950522605,0.103585657,22.7,crAss_conc,False,False,Male,45,Y,I,No
-4519,12,42.57677762,0.153796236,16.2,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
-4519,12,42.57677762,0.153796236,16.2,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
+4519,8,negative,0.103585657,22.7,crAss_conc,False,False,Male,45,Y,I,No
+4519,12,negative,0.153796236,16.2,N_conc (gc/mg-dw),False,,Male,45,Y,I,No
+4519,12,negative,0.153796236,16.2,ORF1a_conc (gc/gm-dw),False,,Male,45,Y,I,No
 4519,12,223.4799187,0.153796236,16.2,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,I,No
-4519,12,11.69822746,0.153796236,16.2,crAss_conc,False,False,Male,45,Y,I,No
+4519,12,negative,0.153796236,16.2,crAss_conc,False,False,Male,45,Y,I,No
 4520,3,24847.18879,0.104815864,13.7,N_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,3,3922.067469,0.104815864,13.7,ORF1a_conc (gc/gm-dw),True,,Male,44,Y,H,No
 4520,3,25181.45591,0.104815864,13.7,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
-4520,12,22.94138813,0.3517,11.8,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
-4520,12,22.94138813,0.3517,11.8,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
+4520,12,negative,0.3517,11.8,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
+4520,12,negative,0.3517,11.8,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
 4520,12,45111.63716,0.3517,11.8,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
-4520,12,428.4095693,0.3517,11.8,crAss_conc,True,False,Male,44,Y,H,No
-4520,15,45.12512513,0.166917293,17.1,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
-4520,15,45.12512513,0.166917293,17.1,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
+4520,12,positive,0.3517,11.8,crAss_conc,True,False,Male,44,Y,H,No
+4520,15,negative,0.166917293,17.1,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
+4520,15,negative,0.166917293,17.1,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
 4520,15,728728.7287,0.166917293,17.1,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,15,80434.83555,0.166917293,17.1,crAss_conc,True,True,Male,44,Y,H,No
 4520,4,16388.00522,0.120162933,15.6,N_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,4,5454.132986,0.120162933,15.6,ORF1a_conc (gc/gm-dw),True,,Male,44,Y,H,No
 4520,4,5573.628857,0.120162933,15.6,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,4,47905.81186,0.120162933,15.6,crAss_conc,True,True,Male,44,Y,H,No
-4520,19,44.61421449,0.143213,15,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
+4520,19,negative,0.143213,15,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
 4520,19,44.61421449,0.143213,15,ORF1a_conc (gc/gm-dw),True,,Male,44,Y,H,No
 4520,19,2390.845217,0.143213,15,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,19,4946.03313,0.143213,15,crAss_conc,True,True,Male,44,Y,H,No
-4520,26,23.88794326,0.184193338,24,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
-4520,26,23.88794326,0.184193338,24,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
+4520,26,negative,0.184193338,24,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
+4520,26,negative,0.184193338,24,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
 4520,26,34492742.32,0.184193338,24,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,26,1855.000098,0.184193338,24,crAss_conc,True,True,Male,44,Y,H,No
 4520,5,1053.352922,0.200695048,22.1,N_conc (gc/mg-dw),True,,Male,44,Y,H,No
@@ -110,98 +110,98 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4520,6,1630,0.139,17.2,ORF1a_conc (gc/gm-dw),True,,Male,44,Y,H,No
 4520,6,1480,0.139,17.2,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,6,3579.09689,0.139,17.2,crAss_conc,True,True,Male,44,Y,H,No
-4520,7,47.40963626,0.1128,17.8,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
-4520,7,47.40963626,0.1128,17.8,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
+4520,7,negative,0.1128,17.8,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
+4520,7,negative,0.1128,17.8,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
 4520,7,7481.957722,0.1128,17.8,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,7,576.0169965,0.1128,17.8,crAss_conc,True,True,Male,44,Y,H,No
 4520,8,474.9850048,0.1799,14.7,N_conc (gc/mg-dw),True,,Male,44,Y,H,No
 4520,8,153.6894156,0.1799,14.7,ORF1a_conc (gc/gm-dw),True,,Male,44,Y,H,No
-4520,8,3533.646405,0.1799,14.7,PMMoV_conc (gc/mg-dw),False,,Male,44,Y,H,No
-4520,8,343.8933958,0.1799,14.7,crAss_conc,True,False,Male,44,Y,H,No
-4520,9,38.8416,0.1634,15,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
-4520,9,38.8416,0.1634,15,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
+4520,8,negative,0.1799,14.7,PMMoV_conc (gc/mg-dw),False,,Male,44,Y,H,No
+4520,8,positive,0.1799,14.7,crAss_conc,True,False,Male,44,Y,H,No
+4520,9,negative,0.1634,15,N_conc (gc/mg-dw),False,,Male,44,Y,H,No
+4520,9,negative,0.1634,15,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
 4520,9,4530.432,0.1634,15,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
-4520,9,337.0155279,0.1634,15,crAss_conc,True,False,Male,44,Y,H,No
+4520,9,positive,0.1634,15,crAss_conc,True,False,Male,44,Y,H,No
 4520,11,25.02023327,0.271157168,15.4,N_conc (gc/mg-dw),True,,Male,44,Y,H,No
-4520,11,22.79791546,0.271157168,15.4,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
+4520,11,negative,0.271157168,15.4,ORF1a_conc (gc/gm-dw),False,,Male,44,Y,H,No
 4520,11,513432.0457,0.271157168,15.4,PMMoV_conc (gc/mg-dw),True,,Male,44,Y,H,No
-4520,11,328.2618778,0.271157168,15.4,crAss_conc,True,False,Male,44,Y,H,No
-4521,4,34.72774869,0.15920398,19.1,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
-4521,4,34.72774869,0.15920398,19.1,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
+4520,11,positive,0.271157168,15.4,crAss_conc,True,False,Male,44,Y,H,No
+4521,4,negative,0.15920398,19.1,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,4,negative,0.15920398,19.1,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
 4521,4,1583795.812,0.15920398,19.1,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,4,7.954228689,0.15920398,19.1,crAss_conc,False,False,Female,52,Y,I,No
-4521,17,43.74908265,0.1844,11.8,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
-4521,17,43.74908265,0.1844,11.8,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
+4521,4,negative,0.15920398,19.1,crAss_conc,False,False,Female,52,Y,I,No
+4521,17,negative,0.1844,11.8,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,17,negative,0.1844,11.8,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
 4521,17,48748.97781,0.1844,11.8,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,17,428.4095693,0.1844,11.8,crAss_conc,True,False,Female,52,Y,I,No
-4521,19,60.2989899,0.103189493,15.3,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
-4521,19,60.2989899,0.103189493,15.3,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
+4521,17,positive,0.1844,11.8,crAss_conc,True,False,Female,52,Y,I,No
+4521,19,negative,0.103189493,15.3,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,19,negative,0.103189493,15.3,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
 4521,19,38408.93642,0.103189493,15.3,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,19,3.75255476,0.103189493,15.3,crAss_conc,False,False,Female,52,Y,I,No
-4521,5,61.97404242,0.085526316,24.3,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
-4521,5,61.97404242,0.085526316,24.3,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
+4521,19,negative,0.103189493,15.3,crAss_conc,False,False,Female,52,Y,I,No
+4521,5,negative,0.085526316,24.3,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,5,negative,0.085526316,24.3,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
 4521,5,80065.84362,0.085526316,24.3,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,5,6.492875026,0.085526316,24.3,crAss_conc,False,False,Female,52,Y,I,No
-4521,28,24.8214849,0.223155369,21,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
-4521,28,24.8214849,0.223155369,21,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
+4521,5,negative,0.085526316,24.3,crAss_conc,False,False,Female,52,Y,I,No
+4521,28,negative,0.223155369,21,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,28,negative,0.223155369,21,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
 4521,28,7067465.438,0.223155369,21,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,28,8.380184506,0.223155369,21,crAss_conc,False,False,Female,52,Y,I,No
-4521,6,41.90480176,0.129689175,23.7,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,28,negative,0.223155369,21,crAss_conc,False,False,Female,52,Y,I,No
+4521,6,negative,0.129689175,23.7,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
 4521,6,41.90480176,0.129689175,23.7,ORF1a_conc (gc/gm-dw),True,,Female,52,Y,I,No
 4521,6,26652.49503,0.129689175,23.7,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,6,119.6776638,0.129689175,23.7,crAss_conc,True,False,Female,52,Y,I,No
-4521,10,60.56805272,0.096428571,16.3,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
-4521,10,60.56805272,0.096428571,16.3,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
+4521,6,positive,0.129689175,23.7,crAss_conc,True,False,Female,52,Y,I,No
+4521,10,negative,0.096428571,16.3,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,10,negative,0.096428571,16.3,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
 4521,10,16287.20745,0.096428571,16.3,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,10,3.522336677,0.096428571,16.3,crAss_conc,False,False,Female,52,Y,I,No
-4521,12,81.31216931,0.0796,14.7,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
-4521,12,81.31216931,0.0796,14.7,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
+4521,10,negative,0.096428571,16.3,crAss_conc,False,False,Female,52,Y,I,No
+4521,12,negative,0.0796,14.7,N_conc (gc/mg-dw),False,,Female,52,Y,I,No
+4521,12,negative,0.0796,14.7,ORF1a_conc (gc/gm-dw),False,,Female,52,Y,I,No
 4521,12,9128.82842,0.0796,14.7,PMMoV_conc (gc/mg-dw),True,,Female,52,Y,I,No
-4521,12,3.905720261,0.0796,14.7,crAss_conc,False,False,Female,52,Y,I,No
+4521,12,negative,0.0796,14.7,crAss_conc,False,False,Female,52,Y,I,No
 4525,11,47716.88136,0.19379845,11.8,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,11,26167.32203,0.19379845,11.8,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,11,4134996.61,0.19379845,11.8,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,11,190.3645475,0.19379845,11.8,crAss_conc,True,False,Female,30,Y,I,No
+4525,11,positive,0.19379845,11.8,crAss_conc,True,False,Female,30,Y,I,No
 4525,12,180948.2976,0.197251415,13,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,12,132279.4451,0.197251415,13,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,12,692595.2081,0.197251415,13,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,12,32.15737534,0.197251415,13,crAss_conc,False,False,Female,30,Y,I,No
+4525,12,negative,0.197251415,13,crAss_conc,False,False,Female,30,Y,I,No
 4525,13,102942.2829,0.169141039,13.6,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,13,102942.2829,0.169141039,13.6,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,13,20240.67859,0.169141039,13.6,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,13,165.1692398,0.169141039,13.6,crAss_conc,True,False,Female,30,Y,I,No
+4525,13,positive,0.169141039,13.6,crAss_conc,True,False,Female,30,Y,I,No
 4525,14,74470.83095,0.143880926,22.1,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,14,40.35513947,0.143880926,22.1,ORF1a_conc (gc/gm-dw),False,,Female,30,Y,I,No
+4525,14,negative,0.143880926,22.1,ORF1a_conc (gc/gm-dw),False,,Female,30,Y,I,No
 4525,14,163030.738,0.143880926,22.1,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,14,18.91610314,0.143880926,22.1,crAss_conc,False,False,Female,30,Y,I,No
+4525,14,negative,0.143880926,22.1,crAss_conc,False,False,Female,30,Y,I,No
 4525,17,1202.290685,0.152397,12.4,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,17,2599.318594,0.152397,12.4,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,17,35899383.83,0.152397,12.4,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,17,15.14411841,0.152397,12.4,crAss_conc,False,False,Female,30,Y,I,No
+4525,17,negative,0.152397,12.4,crAss_conc,False,False,Female,30,Y,I,No
 4525,19,233334.8663,0.112514351,14.2,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,19,231331.992,0.112514351,14.2,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,19,13719.68957,0.112514351,14.2,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,19,117.7809687,0.112514351,14.2,crAss_conc,False,False,Female,30,Y,I,No
-4525,5,26.05509444,0.178544061,22.7,N_conc (gc/mg-dw),False,,Female,30,Y,I,No
+4525,19,negative,0.112514351,14.2,crAss_conc,False,False,Female,30,Y,I,No
+4525,5,negative,0.178544061,22.7,N_conc (gc/mg-dw),False,,Female,30,Y,I,No
 4525,5,49.34676977,0.178544061,22.7,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,5,4224083.492,0.178544061,22.7,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,5,6.692765108,0.178544061,22.7,crAss_conc,False,False,Female,30,Y,I,No
+4525,5,negative,0.178544061,22.7,crAss_conc,False,False,Female,30,Y,I,No
 4525,21,26284.125,0.122888,16,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,21,29620.5,0.122888,16,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,21,1000.9125,0.122888,16,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,21,191.3966001,0.122888,16,crAss_conc,True,False,Female,30,Y,I,No
+4525,21,positive,0.122888,16,crAss_conc,True,False,Female,30,Y,I,No
 4525,28,197.4456929,0.186046512,26.7,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,28,210.9737828,0.186046512,26.7,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,28,579775.2809,0.186046512,26.7,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,28,15.65714904,0.186046512,26.7,crAss_conc,False,False,Female,30,Y,I,No
+4525,28,negative,0.186046512,26.7,crAss_conc,False,False,Female,30,Y,I,No
 4525,7,63.2446395,0.233793836,14.5,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,7,37.85238871,0.233793836,14.5,ORF1a_conc (gc/gm-dw),False,,Female,30,Y,I,No
+4525,7,negative,0.233793836,14.5,ORF1a_conc (gc/gm-dw),False,,Female,30,Y,I,No
 4525,7,40873.02821,0.233793836,14.5,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,7,28.8307503,0.233793836,14.5,crAss_conc,False,False,Female,30,Y,I,No
+4525,7,negative,0.233793836,14.5,crAss_conc,False,False,Female,30,Y,I,No
 4525,9,3329.056783,0.202433628,18.4,N_conc (gc/mg-dw),True,,Female,30,Y,I,No
 4525,9,1327.327156,0.202433628,18.4,ORF1a_conc (gc/gm-dw),True,,Female,30,Y,I,No
 4525,9,26331.76526,0.202433628,18.4,PMMoV_conc (gc/mg-dw),True,,Female,30,Y,I,No
-4525,9,122.081612,0.202433628,18.4,crAss_conc,True,False,Female,30,Y,I,No
+4525,9,positive,0.202433628,18.4,crAss_conc,True,False,Female,30,Y,I,No
 4526,11,1572.130906,0.275541796,22.9,N_conc (gc/mg-dw),True,,Male,32,N,H,No
 4526,11,841.8507433,0.275541796,22.9,ORF1a_conc (gc/gm-dw),True,,Male,32,N,H,No
 4526,11,191.1914038,0.275541796,22.9,PMMoV_conc (gc/mg-dw),True,,Male,32,N,H,No
@@ -235,95 +235,95 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4526,7,1370963.733,0.165625,16.7,PMMoV_conc (gc/mg-dw),True,,Male,32,N,H,No
 4526,7,6155194.357,0.165625,16.7,crAss_conc,True,True,Male,32,N,H,No
 4526,8,67.69546208,0.229190422,19.8,N_conc (gc/mg-dw),True,,Male,32,N,H,No
-4526,8,28.27695864,0.229190422,19.8,ORF1a_conc (gc/gm-dw),False,,Male,32,N,H,No
+4526,8,negative,0.229190422,19.8,ORF1a_conc (gc/gm-dw),False,,Male,32,N,H,No
 4526,8,29898.82909,0.229190422,19.8,PMMoV_conc (gc/mg-dw),True,,Male,32,N,H,No
 4526,8,14738043.83,0.229190422,19.8,crAss_conc,True,True,Male,32,N,H,No
 4526,9,647.0754521,0.097736057,16.9,N_conc (gc/mg-dw),True,,Male,32,N,H,No
 4526,9,480.46321,0.097736057,16.9,ORF1a_conc (gc/gm-dw),True,,Male,32,N,H,No
 4526,9,104616.9893,0.097736057,16.9,PMMoV_conc (gc/mg-dw),True,,Male,32,N,H,No
 4526,9,29942975.56,0.097736057,16.9,crAss_conc,True,True,Male,32,N,H,No
-4532,10,40.59125254,0.126658625,21.1,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,10,40.59125254,0.126658625,21.1,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,10,negative,0.126658625,21.1,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,10,negative,0.126658625,21.1,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,10,307.1285037,0.126658625,21.1,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,10,79.26491735,0.126658625,21.1,crAss_conc,False,False,Male,40,Y,I,No
-4532,11,261.36,0.155234657,14,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,11,261.36,0.155234657,14,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,10,negative,0.126658625,21.1,crAss_conc,False,False,Male,40,Y,I,No
+4532,11,negative,0.155234657,14,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,11,negative,0.155234657,14,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,11,11853.02326,0.155234657,14,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,11,486.2592799,0.155234657,14,crAss_conc,True,False,Male,40,Y,I,No
-4532,12,41.59192854,0.105439331,24.7,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,12,41.59192854,0.105439331,24.7,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,11,positive,0.155234657,14,crAss_conc,True,False,Male,40,Y,I,No
+4532,12,negative,0.105439331,24.7,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,12,negative,0.105439331,24.7,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,12,175.7059315,0.105439331,24.7,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,12,70.80156628,0.105439331,24.7,crAss_conc,False,False,Male,40,Y,I,No
-4532,13,234.5,0.129528986,18.7,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,13,234.5,0.129528986,18.7,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,12,negative,0.105439331,24.7,crAss_conc,False,False,Male,40,Y,I,No
+4532,13,negative,0.129528986,18.7,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,13,negative,0.129528986,18.7,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,13,2232.688381,0.129528986,18.7,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,13,364.0443807,0.129528986,18.7,crAss_conc,True,False,Male,40,Y,I,No
-4532,14,34.14945389,0.151991614,20.9,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,14,34.14945389,0.151991614,20.9,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,13,positive,0.129528986,18.7,crAss_conc,True,False,Male,40,Y,I,No
+4532,14,negative,0.151991614,20.9,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,14,negative,0.151991614,20.9,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,14,182331.8924,0.151991614,20.9,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,14,80.02343331,0.151991614,20.9,crAss_conc,False,False,Male,40,Y,I,No
-4532,17,62.89633911,0.148514851,17.3,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,17,100.260501,0.148514851,17.3,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,14,negative,0.151991614,20.9,crAss_conc,False,False,Male,40,Y,I,No
+4532,17,negative,0.148514851,17.3,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,17,negative,0.148514851,17.3,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,17,15568.40077,0.148514851,17.3,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
 4532,17,659.5193153,0.148514851,17.3,crAss_conc,True,True,Male,40,Y,I,No
-4532,19,310.7536232,0.114238411,16,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,19,310.7536232,0.114238411,16,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,19,negative,0.114238411,16,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,19,negative,0.114238411,16,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,19,2801159.42,0.114238411,16,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,19,6.538067186,0.114238411,16,crAss_conc,False,False,Male,40,Y,I,No
-4532,21,66.34233062,0.108849558,15,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,21,66.34233062,0.108849558,15,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,19,negative,0.114238411,16,crAss_conc,False,False,Male,40,Y,I,No
+4532,21,negative,0.108849558,15,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,21,negative,0.108849558,15,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,21,943.6878049,0.108849558,15,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,21,116.5865791,0.108849558,15,crAss_conc,False,False,Male,40,Y,I,No
-4532,28,41.58714286,0.120030008,21.7,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,28,41.58714286,0.120030008,21.7,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,21,negative,0.108849558,15,crAss_conc,False,False,Male,40,Y,I,No
+4532,28,negative,0.120030008,21.7,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,28,negative,0.120030008,21.7,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,28,58541.42857,0.120030008,21.7,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,28,80.58980125,0.120030008,21.7,crAss_conc,False,False,Male,40,Y,I,No
+4532,28,negative,0.120030008,21.7,crAss_conc,False,False,Male,40,Y,I,No
 4532,6,534,0.060386,19.7,N_conc (gc/mg-dw),True,,Male,40,Y,I,No
 4532,6,381.9727919,0.060386,19.7,ORF1a_conc (gc/gm-dw),True,,Male,40,Y,I,No
 4532,6,1869.514721,0.060386,19.7,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,6,2.975006785,0.060386,19.7,crAss_conc,False,False,Male,40,Y,I,No
+4532,6,negative,0.060386,19.7,crAss_conc,False,False,Male,40,Y,I,No
 4532,7,80.71894837,0.107339,17.1,N_conc (gc/mg-dw),True,,Male,40,Y,I,No
 4532,7,80.7,0.107339,17.1,ORF1a_conc (gc/gm-dw),True,,Male,40,Y,I,No
 4532,7,923.9966012,0.107339,17.1,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,7,251.4148256,0.107339,17.1,crAss_conc,True,False,Male,40,Y,I,No
+4532,7,positive,0.107339,17.1,crAss_conc,True,False,Male,40,Y,I,No
 4532,8,85.75291222,0.083434,15.9,N_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,8,70.67680248,0.083434,15.9,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
-4532,8,389.5666758,0.083434,15.9,PMMoV_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,8,3.686014696,0.083434,15.9,crAss_conc,False,False,Male,40,Y,I,No
-4532,9,42.76167738,0.110738,19.8,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
-4532,9,42.76167738,0.110738,19.8,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,8,negative,0.083434,15.9,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
+4532,8,negative,0.083434,15.9,PMMoV_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,8,negative,0.083434,15.9,crAss_conc,False,False,Male,40,Y,I,No
+4532,9,negative,0.110738,19.8,N_conc (gc/mg-dw),False,,Male,40,Y,I,No
+4532,9,negative,0.110738,19.8,ORF1a_conc (gc/gm-dw),False,,Male,40,Y,I,No
 4532,9,135000,0.110738,19.8,PMMoV_conc (gc/mg-dw),True,,Male,40,Y,I,No
-4532,9,2.959981498,0.110738,19.8,crAss_conc,False,False,Male,40,Y,I,No
+4532,9,negative,0.110738,19.8,crAss_conc,False,False,Male,40,Y,I,No
 4533,10,127,0.374494,15.5,N_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,10,63.4,0.374494,15.5,ORF1a_conc (gc/gm-dw),True,,Female,37,Y,H,No
 4533,10,46.6,0.374494,15.5,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,10,183351991.5,0.374494,15.5,crAss_conc,True,True,Female,37,Y,H,No
 4533,11,47.3,0.27214,15.9,N_conc (gc/mg-dw),True,,Female,37,Y,H,No
-4533,11,33.05732012,0.27214,15.9,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
+4533,11,negative,0.27214,15.9,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
 4533,11,2370,0.27214,15.9,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,11,104903643.5,0.27214,15.9,crAss_conc,True,True,Female,37,Y,H,No
-4533,12,45.30267787,0.26533,11.9,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
-4533,12,45.30267787,0.26533,11.9,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
+4533,12,negative,0.26533,11.9,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
+4533,12,negative,0.26533,11.9,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
 4533,12,1880,0.26533,11.9,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,12,107442435.2,0.26533,11.9,crAss_conc,True,True,Female,37,Y,H,No
-4533,13,32.81178263,0.220172,19.8,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
-4533,13,32.81178263,0.220172,19.8,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
+4533,13,negative,0.220172,19.8,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
+4533,13,negative,0.220172,19.8,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
 4533,13,144,0.220172,19.8,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,13,11253518.29,0.220172,19.8,crAss_conc,True,True,Female,37,Y,H,No
-4533,16,24.4985239,0.327517843,13.5,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
-4533,16,24.4985239,0.327517843,13.5,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
+4533,16,negative,0.327517843,13.5,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
+4533,16,negative,0.327517843,13.5,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
 4533,16,81420.5004,0.327517843,13.5,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,16,25776562.52,0.327517843,13.5,crAss_conc,True,True,Female,37,Y,H,No
-4533,18,105.2976827,0.288461538,18.7,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
-4533,18,105.2976827,0.288461538,18.7,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
+4533,18,negative,0.288461538,18.7,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
+4533,18,negative,0.288461538,18.7,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
 4533,18,1984342.246,0.288461538,18.7,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,18,22142842.28,0.288461538,18.7,crAss_conc,True,True,Female,37,Y,H,No
-4533,20,134.8110276,0.280887012,15,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
-4533,20,134.8110276,0.280887012,15,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
+4533,20,negative,0.280887012,15,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
+4533,20,negative,0.280887012,15,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
 4533,20,2521535.84,0.280887012,15,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,20,24192896.74,0.280887012,15,crAss_conc,True,True,Female,37,Y,H,No
-4533,27,40.78065748,0.129760226,20.5,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
-4533,27,40.78065748,0.129760226,20.5,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
+4533,27,negative,0.129760226,20.5,N_conc (gc/mg-dw),False,,Female,37,Y,H,No
+4533,27,negative,0.129760226,20.5,ORF1a_conc (gc/gm-dw),False,,Female,37,Y,H,No
 4533,27,469158.0064,0.129760226,20.5,PMMoV_conc (gc/mg-dw),True,,Female,37,Y,H,No
 4533,27,1619.791773,0.129760226,20.5,crAss_conc,True,True,Female,37,Y,H,No
 4533,5,152.398056,0.379085,14.9,N_conc (gc/mg-dw),True,,Female,37,Y,H,No
@@ -337,43 +337,43 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4534,13,46000,0.173913043,21.6,N_conc (gc/mg-dw),True,,Female,56,Y,H,No
 4534,13,39611.11111,0.173913043,21.6,ORF1a_conc (gc/gm-dw),True,,Female,56,Y,H,No
 4534,13,69851.85185,0.173913043,21.6,PMMoV_conc (gc/mg-dw),True,,Female,56,Y,H,No
-4534,13,77.4300813,0.173913043,21.6,crAss_conc,False,False,Female,56,Y,H,No
+4534,13,negative,0.173913043,21.6,crAss_conc,False,False,Female,56,Y,H,No
 4534,16,356674.7454,0.22124927,22.1,N_conc (gc/mg-dw),True,,Female,56,Y,H,No
 4534,16,295810.9815,0.22124927,22.1,ORF1a_conc (gc/gm-dw),True,,Female,56,Y,H,No
 4534,16,546464.9769,0.22124927,22.1,PMMoV_conc (gc/mg-dw),True,,Female,56,Y,H,No
-4534,16,75.67826951,0.22124927,22.1,crAss_conc,False,False,Female,56,Y,H,No
+4534,16,negative,0.22124927,22.1,crAss_conc,False,False,Female,56,Y,H,No
 4534,18,59939.17297,0.139628733,15.6,N_conc (gc/mg-dw),True,,Female,56,Y,H,No
 4534,18,49655.49133,0.139628733,15.6,ORF1a_conc (gc/gm-dw),True,,Female,56,Y,H,No
 4534,18,39445.26456,0.139628733,15.6,PMMoV_conc (gc/mg-dw),True,,Female,56,Y,H,No
-4534,18,112.1024799,0.139628733,15.6,crAss_conc,False,False,Female,56,Y,H,No
+4534,18,negative,0.139628733,15.6,crAss_conc,False,False,Female,56,Y,H,No
 4534,20,18496.52286,0.196931781,14.1,N_conc (gc/mg-dw),True,,Female,56,Y,H,No
 4534,20,3076.991654,0.196931781,14.1,ORF1a_conc (gc/gm-dw),True,,Female,56,Y,H,No
 4534,20,2224192.469,0.196931781,14.1,PMMoV_conc (gc/mg-dw),True,,Female,56,Y,H,No
-4534,20,118.6162948,0.196931781,14.1,crAss_conc,False,False,Female,56,Y,H,No
+4534,20,negative,0.196931781,14.1,crAss_conc,False,False,Female,56,Y,H,No
 4534,27,92638.00457,0.246190858,18.1,N_conc (gc/mg-dw),True,,Female,56,Y,H,No
 4534,27,46319.00229,0.246190858,18.1,ORF1a_conc (gc/gm-dw),True,,Female,56,Y,H,No
 4534,27,789936.4731,0.246190858,18.1,PMMoV_conc (gc/mg-dw),True,,Female,56,Y,H,No
-4534,27,92.40274896,0.246190858,18.1,crAss_conc,False,False,Female,56,Y,H,No
-4535,14,176.9327666,0.192231076,16.7,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
-4535,14,176.9327666,0.192231076,16.7,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
+4534,27,negative,0.246190858,18.1,crAss_conc,False,False,Female,56,Y,H,No
+4535,14,negative,0.192231076,16.7,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
+4535,14,negative,0.192231076,16.7,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
 4535,14,238.2362322,0.192231076,16.7,PMMoV_conc (gc/mg-dw),True,,Male,56,Y,I,No
-4535,14,407.6425101,0.192231076,16.7,crAss_conc,True,False,Male,56,Y,I,No
-4535,17,191.1054895,0.167919799,17.7,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
-4535,17,191.1054895,0.167919799,17.7,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
+4535,14,positive,0.192231076,16.7,crAss_conc,True,False,Male,56,Y,I,No
+4535,17,negative,0.167919799,17.7,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
+4535,17,negative,0.167919799,17.7,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
 4535,17,100128.51,0.167919799,17.7,PMMoV_conc (gc/mg-dw),True,,Male,56,Y,I,No
-4535,17,384.6118598,0.167919799,17.7,crAss_conc,True,False,Male,56,Y,I,No
-4535,19,178.5436454,0.158273381,20.1,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
-4535,19,178.5436454,0.158273381,20.1,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
+4535,17,positive,0.167919799,17.7,crAss_conc,True,False,Male,56,Y,I,No
+4535,19,negative,0.158273381,20.1,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
+4535,19,negative,0.158273381,20.1,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
 4535,19,9354.68114,0.158273381,20.1,PMMoV_conc (gc/mg-dw),True,,Male,56,Y,I,No
-4535,19,338.6880557,0.158273381,20.1,crAss_conc,True,False,Male,56,Y,I,No
-4535,21,336.0397727,0.132052821,12.8,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
-4535,21,336.0397727,0.132052821,12.8,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
+4535,19,positive,0.158273381,20.1,crAss_conc,True,False,Male,56,Y,I,No
+4535,21,negative,0.132052821,12.8,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
+4535,21,negative,0.132052821,12.8,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
 4535,21,54902.27273,0.132052821,12.8,PMMoV_conc (gc/mg-dw),True,,Male,56,Y,I,No
-4535,21,8.172583982,0.132052821,12.8,crAss_conc,False,False,Male,56,Y,I,No
-4535,28,53.70925926,0.120401338,16.8,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
-4535,28,53.70925926,0.120401338,16.8,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
+4535,21,negative,0.132052821,12.8,crAss_conc,False,False,Male,56,Y,I,No
+4535,28,negative,0.120401338,16.8,N_conc (gc/mg-dw),False,,Male,56,Y,I,No
+4535,28,negative,0.120401338,16.8,ORF1a_conc (gc/gm-dw),False,,Male,56,Y,I,No
 4535,28,43267.98942,0.120401338,16.8,PMMoV_conc (gc/mg-dw),True,,Male,56,Y,I,No
-4535,28,11.28043362,0.120401338,16.8,crAss_conc,False,False,Male,56,Y,I,No
+4535,28,negative,0.120401338,16.8,crAss_conc,False,False,Male,56,Y,I,No
 4536,13,215884.9153,0.293378995,24.1,N_conc (gc/mg-dw),True,,Female,19,Y,H,No
 4536,13,207512.0203,0.293378995,24.1,ORF1a_conc (gc/gm-dw),True,,Female,19,Y,H,No
 4536,13,18080.92739,0.293378995,24.1,PMMoV_conc (gc/mg-dw),True,,Female,19,Y,H,No
@@ -386,178 +386,178 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4538,10,5625.069466,0.32780083,16.4,ORF1a_conc (gc/gm-dw),True,,Female,40,Y,I,No
 4538,10,12351343.01,0.32780083,16.4,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
 4538,10,1154.074089,0.32780083,16.4,crAss_conc,True,True,Female,40,Y,I,No
-4538,12,38.6497561,0.165589661,16.3,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
-4538,12,38.6497561,0.165589661,16.3,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4538,12,negative,0.165589661,16.3,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4538,12,negative,0.165589661,16.3,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4538,12,31832.69789,0.165589661,16.3,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,12,417.6460073,0.165589661,16.3,crAss_conc,True,False,Female,40,Y,I,No
-4538,14,39.62915068,0.18776824,14.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
-4538,14,39.62915068,0.18776824,14.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4538,12,positive,0.165589661,16.3,crAss_conc,True,False,Female,40,Y,I,No
+4538,14,negative,0.18776824,14.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4538,14,negative,0.18776824,14.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4538,14,385785.9883,0.18776824,14.6,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,14,12.98022498,0.18776824,14.6,crAss_conc,False,False,Female,40,Y,I,No
-4538,17,63.84197531,0.140625,18,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4538,14,negative,0.18776824,14.6,crAss_conc,False,False,Female,40,Y,I,No
+4538,17,negative,0.140625,18,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
 4538,17,104.2962963,0.140625,18,ORF1a_conc (gc/gm-dw),True,,Female,40,Y,I,No
 4538,17,764839.5062,0.140625,18,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
 4538,17,3025.891914,0.140625,18,crAss_conc,True,True,Female,40,Y,I,No
-4538,21,33.09116484,0.209832134,15.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
-4538,21,33.09116484,0.209832134,15.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4538,21,negative,0.209832134,15.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4538,21,negative,0.209832134,15.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4538,21,552334.0659,0.209832134,15.6,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,21,112.1024799,0.209832134,15.6,crAss_conc,False,False,Female,40,Y,I,No
+4538,21,negative,0.209832134,15.6,crAss_conc,False,False,Female,40,Y,I,No
 4538,5,21.7249484,0.292849035,16.9,N_conc (gc/mg-dw),True,,Female,40,Y,I,No
 4538,5,72.41649466,0.292849035,16.9,ORF1a_conc (gc/gm-dw),True,,Female,40,Y,I,No
 4538,5,47200.0367,0.292849035,16.9,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,5,12.06509914,0.292849035,16.9,crAss_conc,False,False,Female,40,Y,I,No
-4538,7,73.25433437,0.108726753,13.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
-4538,7,73.25433437,0.108726753,13.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4538,5,negative,0.292849035,16.9,crAss_conc,False,False,Female,40,Y,I,No
+4538,7,negative,0.108726753,13.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4538,7,negative,0.108726753,13.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4538,7,26185448.92,0.108726753,13.6,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,7,128.5881388,0.108726753,13.6,crAss_conc,False,False,Female,40,Y,I,No
+4538,7,negative,0.108726753,13.6,crAss_conc,False,False,Female,40,Y,I,No
 4538,8,33.61887503,0.254937163,15.7,N_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,8,26.0636225,0.254937163,15.7,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4538,8,negative,0.254937163,15.7,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4538,8,21026787.48,0.254937163,15.7,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,8,433.6070012,0.254937163,15.7,crAss_conc,True,False,Female,40,Y,I,No
-4538,9,25.4567044,0.257731959,15.9,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
-4538,9,25.4567044,0.257731959,15.9,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4538,8,positive,0.254937163,15.7,crAss_conc,True,False,Female,40,Y,I,No
+4538,9,negative,0.257731959,15.9,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4538,9,negative,0.257731959,15.9,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4538,9,11244679.25,0.257731959,15.9,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4538,9,428.1528251,0.257731959,15.9,crAss_conc,True,False,Female,40,Y,I,No
+4538,9,positive,0.257731959,15.9,crAss_conc,True,False,Female,40,Y,I,No
 4540,9,36.61899904,0.412924425,18.2,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4540,9,21.92881919,0.412924425,18.2,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4540,9,523736.8467,0.412924425,18.2,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,9,7.040109217,0.412924425,18.2,crAss_conc,False,False,Female,61,Y,H,No
-4540,10,15.0328634,0.377094972,18.6,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
-4540,10,15.0328634,0.377094972,18.6,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,9,negative,0.412924425,18.2,crAss_conc,False,False,Female,61,Y,H,No
+4540,10,negative,0.377094972,18.6,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4540,10,negative,0.377094972,18.6,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,10,823499.8009,0.377094972,18.6,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,10,6.888709019,0.377094972,18.6,crAss_conc,False,False,Female,61,Y,H,No
-4540,11,19.30661633,0.335051546,16.3,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
-4540,11,19.30661633,0.335051546,16.3,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,10,negative,0.377094972,18.6,crAss_conc,False,False,Female,61,Y,H,No
+4540,11,negative,0.335051546,16.3,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4540,11,negative,0.335051546,16.3,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,11,1051756.489,0.335051546,16.3,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,11,7.860735445,0.335051546,16.3,crAss_conc,False,False,Female,61,Y,H,No
-4540,12,15.49857171,0.571698113,11.9,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
-4540,12,15.49857171,0.571698113,11.9,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,11,negative,0.335051546,16.3,crAss_conc,False,False,Female,61,Y,H,No
+4540,12,negative,0.571698113,11.9,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4540,12,negative,0.571698113,11.9,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,12,599717.1146,0.571698113,11.9,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,12,10.76722586,0.571698113,11.9,crAss_conc,False,False,Female,61,Y,H,No
+4540,12,negative,0.571698113,11.9,crAss_conc,False,False,Female,61,Y,H,No
 4540,13,53.28324125,0.109992811,18.1,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,13,52.96177373,0.109992811,18.1,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,13,negative,0.109992811,18.1,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,13,2893207.67,0.109992811,18.1,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,13,7.079004849,0.109992811,18.1,crAss_conc,False,False,Female,61,Y,H,No
-4540,16,20.81753083,0.308464849,14.9,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
-4540,16,20.81753083,0.308464849,14.9,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,13,negative,0.109992811,18.1,crAss_conc,False,False,Female,61,Y,H,No
+4540,16,negative,0.308464849,14.9,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4540,16,negative,0.308464849,14.9,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,16,2809322.304,0.308464849,14.9,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,16,3.791113598,0.308464849,14.9,crAss_conc,False,False,Female,61,Y,H,No
-4540,18,17.67063063,0.365853659,14.8,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
-4540,18,17.67063063,0.365853659,14.8,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,16,negative,0.308464849,14.9,crAss_conc,False,False,Female,61,Y,H,No
+4540,18,negative,0.365853659,14.8,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4540,18,negative,0.365853659,14.8,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,18,67372.97297,0.365853659,14.8,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,18,3.816729231,0.365853659,14.8,crAss_conc,False,False,Female,61,Y,H,No
-4540,20,21.70894309,0.319376826,13.8,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
-4540,20,21.70894309,0.319376826,13.8,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,18,negative,0.365853659,14.8,crAss_conc,False,False,Female,61,Y,H,No
+4540,20,negative,0.319376826,13.8,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4540,20,negative,0.319376826,13.8,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,20,6316.648993,0.319376826,13.8,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,20,4.093303813,0.319376826,13.8,crAss_conc,False,False,Female,61,Y,H,No
-4540,27,15.13984127,0.334378265,18.9,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
-4540,27,15.13984127,0.334378265,18.9,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
+4540,20,negative,0.319376826,13.8,crAss_conc,False,False,Female,61,Y,H,No
+4540,27,negative,0.334378265,18.9,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4540,27,negative,0.334378265,18.9,ORF1a_conc (gc/gm-dw),False,,Female,61,Y,H,No
 4540,27,2683650.794,0.334378265,18.9,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,27,2.988761514,0.334378265,18.9,crAss_conc,False,False,Female,61,Y,H,No
+4540,27,negative,0.334378265,18.9,crAss_conc,False,False,Female,61,Y,H,No
 4540,4,60.91961086,0.270979,12.6,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4540,4,30.50666667,0.270979,12.6,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4540,4,86693.29237,0.270979,12.6,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,4,14.90373558,0.270979,12.6,crAss_conc,False,False,Female,61,Y,H,No
+4540,4,negative,0.270979,12.6,crAss_conc,False,False,Female,61,Y,H,No
 4540,5,157.7776639,0.147297297,17.9,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4540,5,196.6152427,0.147297297,17.9,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4540,5,6371790.272,0.147297297,17.9,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,5,3.155731431,0.147297297,17.9,crAss_conc,False,False,Female,61,Y,H,No
+4540,5,negative,0.147297297,17.9,crAss_conc,False,False,Female,61,Y,H,No
 4540,6,224.8421998,0.253456221,16.2,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4540,6,199.1236813,0.253456221,16.2,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4540,6,4130549.944,0.253456221,16.2,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,6,3.486888433,0.253456221,16.2,crAss_conc,False,False,Female,61,Y,H,No
+4540,6,negative,0.253456221,16.2,crAss_conc,False,False,Female,61,Y,H,No
 4540,7,88.75956168,0.115191987,20.5,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4540,7,110.4412867,0.115191987,20.5,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4540,7,2418867.444,0.115191987,20.5,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,7,2.755492323,0.115191987,20.5,crAss_conc,False,False,Female,61,Y,H,No
+4540,7,negative,0.115191987,20.5,crAss_conc,False,False,Female,61,Y,H,No
 4540,8,160.7905844,0.311740891,12.8,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4540,8,50.9237013,0.311740891,12.8,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4540,8,3624805.195,0.311740891,12.8,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
-4540,8,4.413093173,0.311740891,12.8,crAss_conc,False,False,Female,61,Y,H,No
-4541,10,26.49102835,0.271578947,14.3,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
-4541,10,26.49102835,0.271578947,14.3,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
+4540,8,negative,0.311740891,12.8,crAss_conc,False,False,Female,61,Y,H,No
+4541,10,negative,0.271578947,14.3,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
+4541,10,negative,0.271578947,14.3,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
 4541,10,349368.461,0.271578947,14.3,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,10,3.310826332,0.271578947,14.3,crAss_conc,False,False,Male,68,Y,I,No
-4541,15,32.90633947,0.337078652,16.3,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
-4541,15,32.90633947,0.337078652,16.3,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
+4541,10,negative,0.271578947,14.3,crAss_conc,False,False,Male,68,Y,I,No
+4541,15,negative,0.337078652,16.3,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
+4541,15,negative,0.337078652,16.3,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
 4541,15,233838.8548,0.337078652,16.3,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,15,7.860735445,0.337078652,16.3,crAss_conc,False,False,Male,68,Y,I,No
-4541,17,25.38930041,0.252074689,16.3,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
-4541,17,25.38930041,0.252074689,16.3,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
+4541,15,negative,0.337078652,16.3,crAss_conc,False,False,Male,68,Y,I,No
+4541,17,negative,0.252074689,16.3,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
+4541,17,negative,0.252074689,16.3,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
 4541,17,451711.4797,0.252074689,16.3,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,17,3.465496479,0.252074689,16.3,crAss_conc,False,False,Male,68,Y,I,No
-4541,19,26.16425896,0.212658228,17.8,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
-4541,19,26.16425896,0.212658228,17.8,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
+4541,17,negative,0.252074689,16.3,crAss_conc,False,False,Male,68,Y,I,No
+4541,19,negative,0.212658228,17.8,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
+4541,19,negative,0.212658228,17.8,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
 4541,19,1251150.348,0.212658228,17.8,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,19,80.34066778,0.212658228,17.8,crAss_conc,True,False,Male,68,Y,I,No
-4541,21,30.52348993,0.246262093,14.9,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
+4541,19,positive,0.212658228,17.8,crAss_conc,True,False,Male,68,Y,I,No
+4541,21,negative,0.246262093,14.9,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
 4541,21,38.1979674,0.246262093,14.9,ORF1a_conc (gc/gm-dw),True,,Male,68,Y,I,No
 4541,21,398549.5686,0.246262093,14.9,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,21,24.11766359,0.246262093,14.9,crAss_conc,False,False,Male,68,Y,I,No
-4541,28,34.47294562,0.193921852,17.4,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
-4541,28,34.47294562,0.193921852,17.4,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
+4541,21,negative,0.246262093,14.9,crAss_conc,False,False,Male,68,Y,I,No
+4541,28,negative,0.193921852,17.4,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
+4541,28,negative,0.193921852,17.4,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
 4541,28,559533.3676,0.193921852,17.4,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,28,10.11401578,0.193921852,17.4,crAss_conc,False,False,Male,68,Y,I,No
+4541,28,negative,0.193921852,17.4,crAss_conc,False,False,Male,68,Y,I,No
 4541,5,184.7908257,0.381452318,18,N_conc (gc/mg-dw),True,,Male,68,Y,I,No
 4541,5,196.6752294,0.381452318,18,ORF1a_conc (gc/gm-dw),True,,Male,68,Y,I,No
 4541,5,1582256.881,0.381452318,18,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,5,3.13819959,0.381452318,18,crAss_conc,False,False,Male,68,Y,I,No
+4541,5,negative,0.381452318,18,crAss_conc,False,False,Male,68,Y,I,No
 4541,6,358.5858586,0.277894737,11.4,N_conc (gc/mg-dw),True,,Male,68,Y,I,No
 4541,6,337.3737374,0.277894737,11.4,ORF1a_conc (gc/gm-dw),True,,Male,68,Y,I,No
 4541,6,3515151.515,0.277894737,11.4,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,6,4.955051984,0.277894737,11.4,crAss_conc,False,False,Male,68,Y,I,No
+4541,6,negative,0.277894737,11.4,crAss_conc,False,False,Male,68,Y,I,No
 4541,7,54.97476497,0.216589862,17.2,N_conc (gc/mg-dw),True,,Male,68,Y,I,No
 4541,7,100.5007422,0.216589862,17.2,ORF1a_conc (gc/gm-dw),True,,Male,68,Y,I,No
 4541,7,3337140.03,0.216589862,17.2,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,7,2.752605613,0.216589862,17.2,crAss_conc,False,False,Male,68,Y,I,No
-4541,9,28.98061901,0.255294118,14.1,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
-4541,9,28.98061901,0.255294118,14.1,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
+4541,7,negative,0.216589862,17.2,crAss_conc,False,False,Male,68,Y,I,No
+4541,9,negative,0.255294118,14.1,N_conc (gc/mg-dw),False,,Male,68,Y,I,No
+4541,9,negative,0.255294118,14.1,ORF1a_conc (gc/gm-dw),False,,Male,68,Y,I,No
 4541,9,475602.1832,0.255294118,14.1,PMMoV_conc (gc/mg-dw),True,,Male,68,Y,I,No
-4541,9,4.006212242,0.255294118,14.1,crAss_conc,False,False,Male,68,Y,I,No
-4542,17,43.72788462,0.114695341,20.8,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
-4542,17,43.72788462,0.114695341,20.8,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4541,9,negative,0.255294118,14.1,crAss_conc,False,False,Male,68,Y,I,No
+4542,17,negative,0.114695341,20.8,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4542,17,negative,0.114695341,20.8,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4542,17,13614.66346,0.114695341,20.8,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4542,17,2.715749645,0.114695341,20.8,crAss_conc,False,False,Female,40,Y,I,No
-4542,28,55.62776735,0.128326,15.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
-4542,28,47.31557223,0.128326,15.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
+4542,17,negative,0.114695341,20.8,crAss_conc,False,False,Female,40,Y,I,No
+4542,28,negative,0.128326,15.6,N_conc (gc/mg-dw),False,,Female,40,Y,I,No
+4542,28,negative,0.128326,15.6,ORF1a_conc (gc/gm-dw),False,,Female,40,Y,I,No
 4542,28,7456.998124,0.128326,15.6,PMMoV_conc (gc/mg-dw),True,,Female,40,Y,I,No
-4542,28,3.680390246,0.128326,15.6,crAss_conc,False,False,Female,40,Y,I,No
+4542,28,negative,0.128326,15.6,crAss_conc,False,False,Female,40,Y,I,No
 4544,8,135.4778733,0.22870249,12.6,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,8,184.8939828,0.22870249,12.6,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,8,75512.25724,0.22870249,12.6,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,8,18.58663374,0.22870249,12.6,crAss_conc,False,False,Male,17,Y,H,No
+4544,8,negative,0.22870249,12.6,crAss_conc,False,False,Male,17,Y,H,No
 4544,9,2506.949118,0.363174603,23.9,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,9,1386.195395,0.363174603,23.9,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,9,108388.6824,0.363174603,23.9,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,9,2.114056386,0.363174603,23.9,crAss_conc,False,False,Male,17,Y,H,No
+4544,9,negative,0.363174603,23.9,crAss_conc,False,False,Male,17,Y,H,No
 4544,10,39.57143639,0.304659498,21.5,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,10,56.42593707,0.304659498,21.5,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,10,91600.5472,0.304659498,21.5,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,10,2.350044076,0.304659498,21.5,crAss_conc,False,False,Male,17,Y,H,No
+4544,10,negative,0.304659498,21.5,crAss_conc,False,False,Male,17,Y,H,No
 4544,11,176.0159593,0.235026535,15.2,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,11,120.9269949,0.235026535,15.2,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,11,51953.82003,0.235026535,15.2,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,11,186.2701175,0.235026535,15.2,crAss_conc,True,True,Male,17,Y,H,No
-4544,14,20.8236073,0.25729443,21.8,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
+4544,14,negative,0.25729443,21.8,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
 4544,14,20.8236073,0.25729443,21.8,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,14,5020.486144,0.25729443,21.8,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,14,174.5685948,0.25729443,21.8,crAss_conc,True,True,Male,17,Y,H,No
-4544,16,27.93213671,0.34507,16.6,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
-4544,16,27.93213671,0.34507,16.6,ORF1a_conc (gc/gm-dw),False,,Male,17,Y,H,No
+4544,16,negative,0.34507,16.6,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
+4544,16,negative,0.34507,16.6,ORF1a_conc (gc/gm-dw),False,,Male,17,Y,H,No
 4544,16,653.611999,0.34507,16.6,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,16,73.86023521,0.34507,16.6,crAss_conc,False,False,Male,17,Y,H,No
-4544,18,30.89659607,0.310094,16.7,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
-4544,18,30.89659607,0.310094,16.7,ORF1a_conc (gc/gm-dw),False,,Male,17,Y,H,No
+4544,16,negative,0.34507,16.6,crAss_conc,False,False,Male,17,Y,H,No
+4544,18,negative,0.310094,16.7,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
+4544,18,negative,0.310094,16.7,ORF1a_conc (gc/gm-dw),False,,Male,17,Y,H,No
 4544,18,1248.222481,0.310094,16.7,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,18,73.41795835,0.310094,16.7,crAss_conc,False,False,Male,17,Y,H,No
-4544,25,19.86271711,0.25177305,22.3,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
-4544,25,19.86271711,0.25177305,22.3,ORF1a_conc (gc/gm-dw),False,,Male,17,Y,H,No
+4544,18,negative,0.310094,16.7,crAss_conc,False,False,Male,17,Y,H,No
+4544,25,negative,0.25177305,22.3,N_conc (gc/mg-dw),False,,Male,17,Y,H,No
+4544,25,negative,0.25177305,22.3,ORF1a_conc (gc/gm-dw),False,,Male,17,Y,H,No
 4544,25,163.290343,0.25177305,22.3,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,25,19.61589195,0.25177305,22.3,crAss_conc,False,False,Male,17,Y,H,No
+4544,25,negative,0.25177305,22.3,crAss_conc,False,False,Male,17,Y,H,No
 4544,1,4949.51567,0.202247191,11.7,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,1,4104.311491,0.202247191,11.7,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,1,2637.037037,0.202247191,11.7,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,1,37.38755474,0.202247191,11.7,crAss_conc,False,False,Male,17,Y,H,No
+4544,1,negative,0.202247191,11.7,crAss_conc,False,False,Male,17,Y,H,No
 4544,2,9423.320463,0.243979721,22.2,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,2,6321.600562,0.243979721,22.2,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,2,4106.086346,0.243979721,22.2,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
@@ -565,35 +565,35 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4544,3,5126.355195,0.405280528,13.4,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,3,5656.667801,0.405280528,13.4,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,3,1950.371919,0.405280528,13.4,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,3,17.47698396,0.405280528,13.4,crAss_conc,False,False,Male,17,Y,H,No
+4544,3,negative,0.405280528,13.4,crAss_conc,False,False,Male,17,Y,H,No
 4544,4,15420.20786,0.229899497,15.3,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,4,13373.27762,0.229899497,15.3,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,4,3716.315583,0.229899497,15.3,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,4,28.59048303,0.229899497,15.3,crAss_conc,False,False,Male,17,Y,H,No
+4544,4,negative,0.229899497,15.3,crAss_conc,False,False,Male,17,Y,H,No
 4544,5,10712.39024,0.240469208,20,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,5,2182.441069,0.240469208,20,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,5,5023.512195,0.240469208,20,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,5,11.70957926,0.240469208,20,crAss_conc,False,False,Male,17,Y,H,No
+4544,5,negative,0.240469208,20,crAss_conc,False,False,Male,17,Y,H,No
 4544,6,26604.4166,0.229253112,11.7,N_conc (gc/mg-dw),True,,Male,17,Y,H,No
 4544,6,21534.06814,0.229253112,11.7,ORF1a_conc (gc/gm-dw),True,,Male,17,Y,H,No
 4544,6,4402.255482,0.229253112,11.7,PMMoV_conc (gc/mg-dw),True,,Male,17,Y,H,No
-4544,6,37.38755474,0.229253112,11.7,crAss_conc,False,False,Male,17,Y,H,No
+4544,6,negative,0.229253112,11.7,crAss_conc,False,False,Male,17,Y,H,No
 4545,17,3308.671959,0.263963964,18.1,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,17,2796.296645,0.263963964,18.1,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
 4545,17,519.07303,0.263963964,18.1,PMMoV_conc (gc/mg-dw),True,,Female,11,Y,H,No
-4545,17,6.529028967,0.263963964,18.1,crAss_conc,False,False,Female,11,Y,H,No
+4545,17,negative,0.263963964,18.1,crAss_conc,False,False,Female,11,Y,H,No
 4545,19,11923.82296,0.144217687,10.7,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,19,7340.927526,0.144217687,10.7,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
 4545,19,513.2428143,0.144217687,10.7,PMMoV_conc (gc/mg-dw),True,,Female,11,Y,H,No
-4545,19,40.88171873,0.144217687,10.7,crAss_conc,False,False,Female,11,Y,H,No
+4545,19,negative,0.144217687,10.7,crAss_conc,False,False,Female,11,Y,H,No
 4545,21,479.0131245,0.258661888,16.4,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,21,1689.747085,0.258661888,16.4,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
 4545,21,448.8390695,0.258661888,16.4,PMMoV_conc (gc/mg-dw),True,,Female,11,Y,H,No
-4545,21,7.205818555,0.258661888,16.4,crAss_conc,False,False,Female,11,Y,H,No
+4545,21,negative,0.258661888,16.4,crAss_conc,False,False,Female,11,Y,H,No
 4545,4,1721.815403,0.208391608,20.2,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,4,1957.472257,0.208391608,20.2,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
-4545,4,,0.208391608,20.2,PMMoV_conc (gc/mg-dw),False,,Female,11,Y,H,No
-4545,4,6.343068701,0.208391608,20.2,crAss_conc,False,False,Female,11,Y,H,No
+4545,4,negative,0.208391608,20.2,PMMoV_conc (gc/mg-dw),False,,Female,11,Y,H,No
+4545,4,negative,0.208391608,20.2,crAss_conc,False,False,Female,11,Y,H,No
 4545,5,1178.002902,0.282312925,19.1,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,5,910.9493471,0.282312925,19.1,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
 4545,5,59819996.22,0.282312925,19.1,PMMoV_conc (gc/mg-dw),True,,Female,11,Y,H,No
@@ -605,223 +605,223 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4545,7,20487.04062,0.193216855,15.4,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,7,6452.611219,0.193216855,15.4,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
 4545,7,29198065.76,0.193216855,15.4,PMMoV_conc (gc/mg-dw),True,,Female,11,Y,H,No
-4545,7,28.40483055,0.193216855,15.4,crAss_conc,False,False,Female,11,Y,H,No
+4545,7,negative,0.193216855,15.4,crAss_conc,False,False,Female,11,Y,H,No
 4545,8,2182.441069,0.169734151,18.4,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,8,2182.441069,0.169734151,18.4,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
 4545,8,8196961.76,0.169734151,18.4,PMMoV_conc (gc/mg-dw),True,,Female,11,Y,H,No
-4545,8,12.72780354,0.169734151,18.4,crAss_conc,False,False,Female,11,Y,H,No
+4545,8,negative,0.169734151,18.4,crAss_conc,False,False,Female,11,Y,H,No
 4545,9,33022.71062,0.204188482,14,N_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,9,4399.296703,0.204188482,14,ORF1a_conc (gc/gm-dw),True,,Female,11,Y,H,No
 4545,9,33134652.01,0.204188482,14,PMMoV_conc (gc/mg-dw),True,,Female,11,Y,H,No
 4545,9,759.7343079,0.204188482,14,crAss_conc,True,True,Female,11,Y,H,No
-4546,10,32.94024368,0.241486068,14.1,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,10,negative,0.241486068,14.1,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
 4546,10,40.50569194,0.241486068,14.1,ORF1a_conc (gc/gm-dw),True,,Female,48,Y,I,No
 4546,10,465.6744863,0.241486068,14.1,PMMoV_conc (gc/mg-dw),True,,Female,48,Y,I,No
-4546,10,236.0578286,0.241486068,14.1,crAss_conc,True,False,Female,48,Y,I,No
-4546,11,25.19122886,0.23433386,19,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
-4546,11,25.19122886,0.23433386,19,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
-4546,11,146.2600591,0.23433386,19,PMMoV_conc (gc/mg-dw),False,,Female,48,Y,I,No
-4546,11,2.659260402,0.23433386,19,crAss_conc,False,False,Female,48,Y,I,No
-4546,12,22.11959831,0.227381906,22.3,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
-4546,12,22.11959831,0.227381906,22.3,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
+4546,10,positive,0.241486068,14.1,crAss_conc,True,False,Female,48,Y,I,No
+4546,11,negative,0.23433386,19,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,11,negative,0.23433386,19,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
+4546,11,negative,0.23433386,19,PMMoV_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,11,negative,0.23433386,19,crAss_conc,False,False,Female,48,Y,I,No
+4546,12,negative,0.227381906,22.3,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,12,negative,0.227381906,22.3,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
 4546,12,66548121.01,0.227381906,22.3,PMMoV_conc (gc/mg-dw),True,,Female,48,Y,I,No
-4546,12,2.265737562,0.227381906,22.3,crAss_conc,False,False,Female,48,Y,I,No
-4546,13,24.96908939,0.23608137,19,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,12,negative,0.227381906,22.3,crAss_conc,False,False,Female,48,Y,I,No
+4546,13,negative,0.23608137,19,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
 4546,13,55.64539921,0.23608137,19,ORF1a_conc (gc/gm-dw),True,,Female,48,Y,I,No
 4546,13,84074490.99,0.23608137,19,PMMoV_conc (gc/mg-dw),True,,Female,48,Y,I,No
-4546,13,18.91332566,0.23608137,19,crAss_conc,False,False,Female,48,Y,I,No
-4546,17,20.92086331,0.4,13.9,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
-4546,17,20.92086331,0.4,13.9,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
+4546,13,negative,0.23608137,19,crAss_conc,False,False,Female,48,Y,I,No
+4546,17,negative,0.4,13.9,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,17,negative,0.4,13.9,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
 4546,17,15913669.06,0.4,13.9,PMMoV_conc (gc/mg-dw),True,,Female,48,Y,I,No
-4546,17,12.6607104,0.4,13.9,crAss_conc,False,False,Female,48,Y,I,No
-4546,28,18.61601355,0.334302,15.4,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
-4546,28,18.61601355,0.334302,15.4,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
+4546,17,negative,0.4,13.9,crAss_conc,False,False,Female,48,Y,I,No
+4546,28,negative,0.334302,15.4,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,28,negative,0.334302,15.4,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
 4546,28,503782269.9,0.334302,15.4,PMMoV_conc (gc/mg-dw),True,,Female,48,Y,I,No
-4546,28,12.19396547,0.334302,15.4,crAss_conc,False,False,Female,48,Y,I,No
+4546,28,negative,0.334302,15.4,crAss_conc,False,False,Female,48,Y,I,No
 4546,6,14049.84802,0.251001335,14.7,N_conc (gc/mg-dw),True,,Female,48,Y,I,No
 4546,6,4770.010132,0.251001335,14.7,ORF1a_conc (gc/gm-dw),True,,Female,48,Y,I,No
 4546,6,901.9655522,0.251001335,14.7,PMMoV_conc (gc/mg-dw),True,,Female,48,Y,I,No
-4546,6,226.4228152,0.251001335,14.7,crAss_conc,True,False,Female,48,Y,I,No
+4546,6,positive,0.251001335,14.7,crAss_conc,True,False,Female,48,Y,I,No
 4546,8,9124.767225,0.292244898,15.3,N_conc (gc/mg-dw),True,,Female,48,Y,I,No
 4546,8,7550.297586,0.292244898,15.3,ORF1a_conc (gc/gm-dw),True,,Female,48,Y,I,No
 4546,8,3374.374703,0.292244898,15.3,PMMoV_conc (gc/mg-dw),True,,Female,48,Y,I,No
-4546,8,3.302349519,0.292244898,15.3,crAss_conc,False,False,Female,48,Y,I,No
-4546,9,31.61503802,0.181932246,19.5,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
-4546,9,31.61503802,0.181932246,19.5,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
-4546,9,183.5566401,0.181932246,19.5,PMMoV_conc (gc/mg-dw),False,,Female,48,Y,I,No
-4546,9,2.591074238,0.181932246,19.5,crAss_conc,False,False,Female,48,Y,I,No
+4546,8,negative,0.292244898,15.3,crAss_conc,False,False,Female,48,Y,I,No
+4546,9,negative,0.181932246,19.5,N_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,9,negative,0.181932246,19.5,ORF1a_conc (gc/gm-dw),False,,Female,48,Y,I,No
+4546,9,negative,0.181932246,19.5,PMMoV_conc (gc/mg-dw),False,,Female,48,Y,I,No
+4546,9,negative,0.181932246,19.5,crAss_conc,False,False,Female,48,Y,I,No
 4547,9,1128.366013,0.138461538,17,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,9,842.875817,0.138461538,17,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
-4547,9,1373.071895,0.138461538,17,PMMoV_conc (gc/mg-dw),False,,Female,21,Y,H,No
-4547,9,2.784989209,0.138461538,17,crAss_conc,False,False,Female,21,Y,H,No
+4547,9,negative,0.138461538,17,PMMoV_conc (gc/mg-dw),False,,Female,21,Y,H,No
+4547,9,negative,0.138461538,17,crAss_conc,False,False,Female,21,Y,H,No
 4547,10,67406.10803,0.116604478,13.7,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,10,61496.80584,0.116604478,13.7,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,10,459.7236788,0.116604478,13.7,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,10,139.0514258,0.116604478,13.7,crAss_conc,True,False,Female,21,Y,H,No
+4547,10,positive,0.116604478,13.7,crAss_conc,True,False,Female,21,Y,H,No
 4547,11,4411.282051,0.18972332,15.6,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,11,2697.58547,0.18972332,15.6,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,11,114.0662393,0.18972332,15.6,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,11,122.1156753,0.18972332,15.6,crAss_conc,True,False,Female,21,Y,H,No
+4547,11,positive,0.18972332,15.6,crAss_conc,True,False,Female,21,Y,H,No
 4547,12,584.5343498,0.221967963,23.8,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,12,142.0448757,0.221967963,23.8,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,12,67.84232868,0.221967963,23.8,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,12,7.962659024,0.221967963,23.8,crAss_conc,False,False,Female,21,Y,H,No
+4547,12,negative,0.221967963,23.8,crAss_conc,False,False,Female,21,Y,H,No
 4547,13,663.9008264,0.166508988,16.5,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,13,1508.336088,0.166508988,16.5,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
-4547,13,63.47823691,0.166508988,16.5,PMMoV_conc (gc/mg-dw),False,,Female,21,Y,H,No
-4547,13,11.48553241,0.166508988,16.5,crAss_conc,False,False,Female,21,Y,H,No
+4547,13,negative,0.166508988,16.5,PMMoV_conc (gc/mg-dw),False,,Female,21,Y,H,No
+4547,13,negative,0.166508988,16.5,crAss_conc,False,False,Female,21,Y,H,No
 4547,18,19943.72032,0.127156235,25.3,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,18,22828.34819,0.127156235,25.3,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,18,102.9513742,0.127156235,25.3,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,18,7.490564616,0.127156235,25.3,crAss_conc,False,False,Female,21,Y,H,No
+4547,18,negative,0.127156235,25.3,crAss_conc,False,False,Female,21,Y,H,No
 4547,27,46083.01887,0.165884,17.1,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,27,33391.857,0.165884,17.1,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,27,39991261.17,0.165884,17.1,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,27,10.9816999,0.165884,17.1,crAss_conc,False,False,Female,21,Y,H,No
+4547,27,negative,0.165884,17.1,crAss_conc,False,False,Female,21,Y,H,No
 4547,4,66380.14706,0.10031348,13.6,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,4,37998.52941,0.10031348,13.6,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
-4547,4,236.9044118,0.10031348,13.6,PMMoV_conc (gc/mg-dw),False,,Female,21,Y,H,No
-4547,4,163.6329889,0.10031348,13.6,crAss_conc,True,False,Female,21,Y,H,No
+4547,4,negative,0.10031348,13.6,PMMoV_conc (gc/mg-dw),False,,Female,21,Y,H,No
+4547,4,positive,0.10031348,13.6,crAss_conc,True,False,Female,21,Y,H,No
 4547,5,3919.544073,0.136142626,18.8,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,5,3288.16616,0.136142626,18.8,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,5,183.1621074,0.136142626,18.8,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,5,118.3728005,0.136142626,18.8,crAss_conc,True,False,Female,21,Y,H,No
+4547,5,positive,0.136142626,18.8,crAss_conc,True,False,Female,21,Y,H,No
 4547,6,100.8164277,0.194223827,21,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,6,83.94830944,0.194223827,21,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,6,38992.81289,0.194223827,21,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,6,105.9718404,0.194223827,21,crAss_conc,True,False,Female,21,Y,H,No
+4547,6,positive,0.194223827,21,crAss_conc,True,False,Female,21,Y,H,No
 4547,7,695.2317542,0.272277228,14.2,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,7,997.3265045,0.272277228,14.2,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,7,33189.03969,0.272277228,14.2,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,7,156.7189189,0.272277228,14.2,crAss_conc,True,False,Female,21,Y,H,No
+4547,7,positive,0.272277228,14.2,crAss_conc,True,False,Female,21,Y,H,No
 4547,8,680.1936402,0.224425887,19.6,N_conc (gc/mg-dw),True,,Female,21,Y,H,No
 4547,8,187.326056,0.224425887,19.6,ORF1a_conc (gc/gm-dw),True,,Female,21,Y,H,No
 4547,8,130.2188894,0.224425887,19.6,PMMoV_conc (gc/mg-dw),True,,Female,21,Y,H,No
-4547,8,2.415551865,0.224425887,19.6,crAss_conc,False,False,Female,21,Y,H,No
+4547,8,negative,0.224425887,19.6,crAss_conc,False,False,Female,21,Y,H,No
 4549,12,8384.389291,0.156821378,20.2,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,12,5555.920614,0.156821378,20.2,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,12,23789.4419,0.156821378,20.2,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,12,6.343068701,0.156821378,20.2,crAss_conc,False,False,Male,21,Y,I,No
+4549,12,negative,0.156821378,20.2,crAss_conc,False,False,Male,21,Y,I,No
 4549,13,45156.02484,0.136852395,13.8,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,13,43207.45342,0.136852395,13.8,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,13,51001.73913,0.136852395,13.8,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,13,9.284781722,0.136852395,13.8,crAss_conc,False,False,Male,21,Y,I,No
+4549,13,negative,0.136852395,13.8,crAss_conc,False,False,Male,21,Y,I,No
 4549,14,50288.69705,0.196512408,17,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,14,43727.21943,0.196512408,17,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,14,33430.01004,0.196512408,17,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,14,11.14772263,0.196512408,17,crAss_conc,False,False,Male,21,Y,I,No
+4549,14,negative,0.196512408,17,crAss_conc,False,False,Male,21,Y,I,No
 4549,17,472.2758621,0.271028037,11.9,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,17,299.6372066,0.271028037,11.9,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,17,1458498.986,0.271028037,11.9,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,17,15.92531805,0.271028037,11.9,crAss_conc,False,False,Male,21,Y,I,No
-4549,21,50.59983292,0.208955224,17.1,N_conc (gc/mg-dw),False,,Male,21,Y,I,No
+4549,17,negative,0.271028037,11.9,crAss_conc,False,False,Male,21,Y,I,No
+4549,21,negative,0.208955224,17.1,N_conc (gc/mg-dw),False,,Male,21,Y,I,No
 4549,21,62.69005848,0.208955224,17.1,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,21,5865.998329,0.208955224,17.1,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,21,7.49298174,0.208955224,17.1,crAss_conc,False,False,Male,21,Y,I,No
-4549,28,226.9470476,0.022123894,21,N_conc (gc/mg-dw),False,,Male,21,Y,I,No
-4549,28,226.9470476,0.022123894,21,ORF1a_conc (gc/gm-dw),False,,Male,21,Y,I,No
+4549,21,negative,0.208955224,17.1,crAss_conc,False,False,Male,21,Y,I,No
+4549,28,negative,0.022123894,21,N_conc (gc/mg-dw),False,,Male,21,Y,I,No
+4549,28,negative,0.022123894,21,ORF1a_conc (gc/gm-dw),False,,Male,21,Y,I,No
 4549,28,13740800,0.022123894,21,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,28,6.101427988,0.022123894,21,crAss_conc,False,False,Male,21,Y,I,No
+4549,28,negative,0.022123894,21,crAss_conc,False,False,Male,21,Y,I,No
 4549,5,56.42538741,0.156303972,20.5,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,5,56.42538741,0.156303972,20.5,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,5,87883.78925,0.156303972,20.5,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,5,9.244452916,0.156303972,20.5,crAss_conc,False,False,Male,21,Y,I,No
+4549,5,negative,0.156303972,20.5,crAss_conc,False,False,Male,21,Y,I,No
 4549,6,1642.855686,0.10331384,14.8,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,6,954.3212647,0.10331384,14.8,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,6,40181.94799,0.10331384,14.8,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,6,8.657431605,0.10331384,14.8,crAss_conc,False,False,Male,21,Y,I,No
+4549,6,negative,0.10331384,14.8,crAss_conc,False,False,Male,21,Y,I,No
 4549,7,1614.560567,0.112343967,20.2,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,7,2425.366092,0.112343967,20.2,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,7,796704.5593,0.112343967,20.2,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,7,6.343068701,0.112343967,20.2,crAss_conc,False,False,Male,21,Y,I,No
+4549,7,negative,0.112343967,20.2,crAss_conc,False,False,Male,21,Y,I,No
 4549,8,849.9704658,0.123040752,17.9,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,8,244.820553,0.123040752,17.9,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,8,12204704.12,0.123040752,17.9,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,8,7.158099875,0.123040752,17.9,crAss_conc,False,False,Male,21,Y,I,No
+4549,8,negative,0.123040752,17.9,crAss_conc,False,False,Male,21,Y,I,No
 4549,9,7983.047395,0.092493298,14.8,N_conc (gc/mg-dw),True,,Male,21,Y,I,No
 4549,9,6697.344301,0.092493298,14.8,ORF1a_conc (gc/gm-dw),True,,Male,21,Y,I,No
 4549,9,2127254.211,0.092493298,14.8,PMMoV_conc (gc/mg-dw),True,,Male,21,Y,I,No
-4549,9,8.657431605,0.092493298,14.8,crAss_conc,False,False,Male,21,Y,I,No
-4555,10,22.44016461,0.304568528,16.2,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,10,22.44016461,0.304568528,16.2,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4549,9,negative,0.092493298,14.8,crAss_conc,False,False,Male,21,Y,I,No
+4555,10,negative,0.304568528,16.2,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,10,negative,0.304568528,16.2,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,10,781.5144033,0.304568528,16.2,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,10,16390888.05,0.304568528,16.2,crAss_conc,True,True,Female,29,Y,I,No
-4555,11,33.76834467,0.273234201,12,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,11,33.76834467,0.273234201,12,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,11,negative,0.273234201,12,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,11,negative,0.273234201,12,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,11,20300.04535,0.273234201,12,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,11,35448276.16,0.273234201,12,crAss_conc,True,True,Female,29,Y,I,No
-4555,13,19.21035599,0.283018868,20.6,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,13,19.21035599,0.283018868,20.6,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,13,negative,0.283018868,20.6,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,13,negative,0.283018868,20.6,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,13,806834.9515,0.283018868,20.6,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,13,191044218.7,0.283018868,20.6,crAss_conc,True,True,Female,29,Y,I,No
-4555,14,45.85476776,0.166237,12.3,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,14,45.85476776,0.166237,12.3,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,14,negative,0.166237,12.3,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,14,negative,0.166237,12.3,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,14,79032.96149,0.166237,12.3,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,14,240881717.2,0.166237,12.3,crAss_conc,True,True,Female,29,Y,I,No
-4555,19,24.3099894,0.235174,16.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,19,24.3099894,0.235174,16.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,19,negative,0.235174,16.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,19,negative,0.235174,16.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,19,32400,0.235174,16.4,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,19,112158174.1,0.235174,16.4,crAss_conc,True,True,Female,29,Y,I,No
-4555,6,46.17358699,0.127243067,18.6,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,6,46.17358699,0.127243067,18.6,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,6,negative,0.127243067,18.6,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,6,negative,0.127243067,18.6,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,6,118983.1817,0.127243067,18.6,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,6,13983870.21,0.127243067,18.6,crAss_conc,True,True,Female,29,Y,I,No
-4555,7,146.2597531,0.046728972,16.2,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,7,146.2597531,0.046728972,16.2,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,7,negative,0.046728972,16.2,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,7,negative,0.046728972,16.2,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,7,62773.33333,0.046728972,16.2,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,7,24905062.65,0.046728972,16.2,crAss_conc,True,True,Female,29,Y,I,No
-4555,8,37.62076451,0.180555556,16.3,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,8,37.62076451,0.180555556,16.3,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,8,negative,0.180555556,16.3,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,8,negative,0.180555556,16.3,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,8,42839.83011,0.180555556,16.3,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,8,55786732.24,0.180555556,16.3,crAss_conc,True,True,Female,29,Y,I,No
-4555,9,40.47185174,0.177644711,15.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4555,9,40.47185174,0.177644711,15.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4555,9,negative,0.177644711,15.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4555,9,negative,0.177644711,15.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4555,9,5105.769736,0.177644711,15.4,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4555,9,26003217.25,0.177644711,15.4,crAss_conc,True,True,Female,29,Y,I,No
 4558,13,845.6562416,0.242002782,12.9,N_conc (gc/mg-dw),True,,Male,32,Y,I,No
 4558,13,579.1463958,0.242002782,12.9,ORF1a_conc (gc/gm-dw),True,,Male,32,Y,I,No
 4558,13,49611.83284,0.242002782,12.9,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,13,22.13047228,0.242002782,12.9,crAss_conc,False,False,Male,32,Y,I,No
+4558,13,negative,0.242002782,12.9,crAss_conc,False,False,Male,32,Y,I,No
 4558,15,79.44116859,0.206940063,18.2,N_conc (gc/mg-dw),True,,Male,32,Y,I,No
 4558,15,39.80554811,0.206940063,18.2,ORF1a_conc (gc/gm-dw),True,,Male,32,Y,I,No
 4558,15,247244.7065,0.206940063,18.2,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,15,15.6858842,0.206940063,18.2,crAss_conc,False,False,Male,32,Y,I,No
+4558,15,negative,0.206940063,18.2,crAss_conc,False,False,Male,32,Y,I,No
 4558,16,49.68300139,0.221640489,17,N_conc (gc/mg-dw),True,,Male,32,Y,I,No
 4558,16,39.6190088,0.221640489,17,ORF1a_conc (gc/gm-dw),True,,Male,32,Y,I,No
 4558,16,130789.4396,0.221640489,17,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,16,26.88203839,0.221640489,17,crAss_conc,False,False,Male,32,Y,I,No
-4558,17,35.40102615,0.238747554,13.1,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
+4558,16,negative,0.221640489,17,crAss_conc,False,False,Male,32,Y,I,No
+4558,17,negative,0.238747554,13.1,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
 4558,17,58.83118508,0.238747554,13.1,ORF1a_conc (gc/gm-dw),True,,Male,32,Y,I,No
 4558,17,100780.3779,0.238747554,13.1,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,17,34.88508799,0.238747554,13.1,crAss_conc,False,False,Male,32,Y,I,No
-4558,22,25.51152074,0.35,12.4,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
-4558,22,25.51152074,0.35,12.4,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
+4558,17,negative,0.238747554,13.1,crAss_conc,False,False,Male,32,Y,I,No
+4558,22,negative,0.35,12.4,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
+4558,22,negative,0.35,12.4,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
 4558,22,13013.82488,0.35,12.4,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,22,36.85440748,0.35,12.4,crAss_conc,False,False,Male,32,Y,I,No
-4558,5,22.90021019,0.376607471,12.3,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
-4558,5,22.90021019,0.376607471,12.3,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
+4558,22,negative,0.35,12.4,crAss_conc,False,False,Male,32,Y,I,No
+4558,5,negative,0.376607471,12.3,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
+4558,5,negative,0.376607471,12.3,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
 4558,5,312934.999,0.376607471,12.3,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,5,411.0056843,0.376607471,12.3,crAss_conc,True,False,Male,32,Y,I,No
-4558,24,28.10061587,0.175944334,22.2,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
-4558,24,28.10061587,0.175944334,22.2,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
+4558,5,positive,0.376607471,12.3,crAss_conc,True,False,Male,32,Y,I,No
+4558,24,negative,0.175944334,22.2,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
+4558,24,negative,0.175944334,22.2,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
 4558,24,688178.3478,0.175944334,22.2,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,24,227.7193656,0.175944334,22.2,crAss_conc,True,False,Male,32,Y,I,No
-4558,28,32.30516046,0.191543556,18.1,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
-4558,28,32.30516046,0.191543556,18.1,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
+4558,24,positive,0.175944334,22.2,crAss_conc,True,False,Male,32,Y,I,No
+4558,28,negative,0.191543556,18.1,N_conc (gc/mg-dw),False,,Male,32,Y,I,No
+4558,28,negative,0.191543556,18.1,ORF1a_conc (gc/gm-dw),False,,Male,32,Y,I,No
 4558,28,6922534.383,0.191543556,18.1,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,28,19.85376726,0.191543556,18.1,crAss_conc,False,False,Male,32,Y,I,No
+4558,28,negative,0.191543556,18.1,crAss_conc,False,False,Male,32,Y,I,No
 4558,6,7276.712329,0.255244755,14.3,N_conc (gc/mg-dw),True,,Male,32,Y,I,No
 4558,6,3660.273973,0.255244755,14.3,ORF1a_conc (gc/gm-dw),True,,Male,32,Y,I,No
 4558,6,73205.47945,0.255244755,14.3,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,6,31.95766802,0.255244755,14.3,crAss_conc,False,False,Male,32,Y,I,No
+4558,6,negative,0.255244755,14.3,crAss_conc,False,False,Male,32,Y,I,No
 4558,8,2182.008318,0.271381579,20.4,N_conc (gc/mg-dw),True,,Male,32,Y,I,No
 4558,8,1485.499703,0.271381579,20.4,ORF1a_conc (gc/gm-dw),True,,Male,32,Y,I,No
 4558,8,1352556.15,0.271381579,20.4,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,8,13.99426924,0.271381579,20.4,crAss_conc,False,False,Male,32,Y,I,No
+4558,8,negative,0.271381579,20.4,crAss_conc,False,False,Male,32,Y,I,No
 4558,9,824.1666667,0.160768453,19.2,N_conc (gc/mg-dw),True,,Male,32,Y,I,No
 4558,9,901.918239,0.160768453,19.2,ORF1a_conc (gc/gm-dw),True,,Male,32,Y,I,No
 4558,9,1974889.937,0.160768453,19.2,PMMoV_conc (gc/mg-dw),True,,Male,32,Y,I,No
-4558,9,14.86891107,0.160768453,19.2,crAss_conc,False,False,Male,32,Y,I,No
+4558,9,negative,0.160768453,19.2,crAss_conc,False,False,Male,32,Y,I,No
 4561,10,84321.3913,0.135135135,11.5,N_conc (gc/mg-dw),True,,Male,45,Y,H,No
 4561,10,82159.30435,0.135135135,11.5,ORF1a_conc (gc/gm-dw),True,,Male,45,Y,H,No
 4561,10,44374.26087,0.135135135,11.5,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,H,No
@@ -850,54 +850,54 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4561,9,55970.03344,0.105990783,6.5,ORF1a_conc (gc/gm-dw),True,,Male,45,Y,H,No
 4561,9,54576.58863,0.105990783,6.5,PMMoV_conc (gc/mg-dw),True,,Male,45,Y,H,No
 4561,9,65135.65123,0.105990783,6.5,crAss_conc,True,True,Male,45,Y,H,No
-4564,10,29.63365479,0.234986945,15.9,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,10,29.63365479,0.234986945,15.9,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,10,negative,0.234986945,15.9,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,10,negative,0.234986945,15.9,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,10,196.5584906,0.234986945,15.9,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,10,28.74180206,0.234986945,15.9,crAss_conc,False,False,Female,29,Y,I,No
-4564,11,36.0857547,0.180501931,15.5,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,11,36.0857547,0.180501931,15.5,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,10,negative,0.234986945,15.9,crAss_conc,False,False,Female,29,Y,I,No
+4564,11,negative,0.180501931,15.5,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,11,negative,0.180501931,15.5,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,11,2230.339831,0.180501931,15.5,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,11,15.10913452,0.180501931,15.5,crAss_conc,False,False,Female,29,Y,I,No
-4564,12,26.87880486,0.217948718,18.9,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,12,26.87880486,0.217948718,18.9,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,11,negative,0.180501931,15.5,crAss_conc,False,False,Female,29,Y,I,No
+4564,12,negative,0.217948718,18.9,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,12,negative,0.217948718,18.9,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,12,14138.56209,0.217948718,18.9,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,12,24.17961125,0.217948718,18.9,crAss_conc,False,False,Female,29,Y,I,No
-4564,13,63.31873584,0.2202,12.7,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,13,63.31873584,0.2202,12.7,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,12,negative,0.217948718,18.9,crAss_conc,False,False,Female,29,Y,I,No
+4564,13,negative,0.2202,12.7,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,13,negative,0.2202,12.7,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,13,345.0631,0.2202,12.7,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,13,22.75945154,0.2202,12.7,crAss_conc,False,False,Female,29,Y,I,No
-4564,14,27.78611366,0.186331776,19.5,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,14,27.78611366,0.186331776,19.5,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,13,negative,0.2202,12.7,crAss_conc,False,False,Female,29,Y,I,No
+4564,14,negative,0.186331776,19.5,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,14,negative,0.186331776,19.5,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,14,1646.910698,0.186331776,19.5,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,14,12.00982488,0.186331776,19.5,crAss_conc,False,False,Female,29,Y,I,No
-4564,17,31.9580284,0.206222865,16.8,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,17,31.9580284,0.206222865,16.8,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,14,negative,0.186331776,19.5,crAss_conc,False,False,Female,29,Y,I,No
+4564,17,negative,0.206222865,16.8,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,17,negative,0.206222865,16.8,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,17,8405.146199,0.206222865,16.8,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,17,27.20206266,0.206222865,16.8,crAss_conc,False,False,Female,29,Y,I,No
-4564,19,38.52928461,0.204225352,13.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,19,38.52928461,0.204225352,13.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,17,negative,0.206222865,16.8,crAss_conc,False,False,Female,29,Y,I,No
+4564,19,negative,0.204225352,13.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,19,negative,0.204225352,13.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,19,364829.6449,0.204225352,13.4,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,19,34.10407856,0.204225352,13.4,crAss_conc,False,False,Female,29,Y,I,No
-4564,21,29.0454082,0.221352313,16.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,21,29.0454082,0.221352313,16.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,19,negative,0.204225352,13.4,crAss_conc,False,False,Female,29,Y,I,No
+4564,21,negative,0.221352313,16.4,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,21,negative,0.221352313,16.4,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,21,219493.3731,0.221352313,16.4,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,21,27.8655276,0.221352313,16.4,crAss_conc,False,False,Female,29,Y,I,No
-4564,28,27.4794926,0.235609,17.2,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,28,23.37336152,0.235609,17.2,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,21,negative,0.221352313,16.4,crAss_conc,False,False,Female,29,Y,I,No
+4564,28,negative,0.235609,17.2,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,28,negative,0.235609,17.2,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,28,237681.8182,0.235609,17.2,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,28,3.338028362,0.235609,17.2,crAss_conc,False,False,Female,29,Y,I,No
-4564,5,44.53716507,0.161051767,14.7,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
-4564,5,44.53716507,0.161051767,14.7,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
+4564,28,negative,0.235609,17.2,crAss_conc,False,False,Female,29,Y,I,No
+4564,5,negative,0.161051767,14.7,N_conc (gc/mg-dw),False,,Female,29,Y,I,No
+4564,5,negative,0.161051767,14.7,ORF1a_conc (gc/gm-dw),False,,Female,29,Y,I,No
 4564,5,193.9630709,0.161051767,14.7,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4564,5,31.08807161,0.161051767,14.7,crAss_conc,False,False,Female,29,Y,I,No
-4567,12,60.46063492,0.048442907,36,N_conc (gc/mg-dw),False,,Male,49,Y,I,No
-4567,12,60.46063492,0.048442907,36,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,I,No
+4564,5,negative,0.161051767,14.7,crAss_conc,False,False,Female,29,Y,I,No
+4567,12,negative,0.048442907,36,N_conc (gc/mg-dw),False,,Male,49,Y,I,No
+4567,12,negative,0.048442907,36,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,I,No
 4567,12,63763.49206,0.048442907,36,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,I,No
 4567,12,8482.63254,0.048442907,36,crAss_conc,True,True,Male,49,Y,I,No
-4571,9,26.82844652,0.297782471,14.6,N_conc (gc/mg-dw),False,,Female,25,Y,H,No
-4571,9,26.82844652,0.297782471,14.6,ORF1a_conc (gc/gm-dw),False,,Female,25,Y,H,No
+4571,9,negative,0.297782471,14.6,N_conc (gc/mg-dw),False,,Female,25,Y,H,No
+4571,9,negative,0.297782471,14.6,ORF1a_conc (gc/gm-dw),False,,Female,25,Y,H,No
 4571,9,97156.51414,0.297782471,14.6,PMMoV_conc (gc/mg-dw),True,,Female,25,Y,H,No
-4571,9,3.242795654,0.297782471,14.6,crAss_conc,False,False,Female,25,Y,H,No
+4571,9,negative,0.297782471,14.6,crAss_conc,False,False,Female,25,Y,H,No
 4573,14,2804.965517,0.2419,17.4,N_conc (gc/mg-dw),True,,Female,3,Y,H,No
 4573,14,1630.528736,0.2419,17.4,ORF1a_conc (gc/gm-dw),True,,Female,3,Y,H,No
 4573,14,35309.11877,0.2419,17.4,PMMoV_conc (gc/mg-dw),True,,Female,3,Y,H,No
@@ -909,28 +909,28 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4576,10,4188.890026,0.023760331,13.4,N_conc (gc/mg-dw),True,,Male,61,Y,I,No
 4576,10,2441.043478,0.023760331,13.4,ORF1a_conc (gc/gm-dw),True,,Male,61,Y,I,No
 4576,10,5000.920716,0.023760331,13.4,PMMoV_conc (gc/mg-dw),True,,Male,61,Y,I,No
-4576,10,4.28463342,0.023760331,13.4,crAss_conc,False,False,Male,61,Y,I,No
-4576,14,56.29542387,0.118257261,14.3,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
-4576,14,56.29542387,0.118257261,14.3,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
+4576,10,negative,0.023760331,13.4,crAss_conc,False,False,Male,61,Y,I,No
+4576,14,negative,0.118257261,14.3,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
+4576,14,negative,0.118257261,14.3,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
 4576,14,73751735.98,0.118257261,14.3,PMMoV_conc (gc/mg-dw),True,,Male,61,Y,I,No
 4576,14,4506.256697,0.118257261,14.3,crAss_conc,True,True,Male,61,Y,I,No
-4576,17,20.07257184,0.1557,14.4,crAss_conc,False,False,Male,61,Y,I,No
-4576,19,49.0864076,0.169981917,12.1,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
-4576,19,49.0864076,0.169981917,12.1,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
+4576,17,negative,0.1557,14.4,crAss_conc,False,False,Male,61,Y,I,No
+4576,19,negative,0.169981917,12.1,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
+4576,19,negative,0.169981917,12.1,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
 4576,19,39518.05873,0.169981917,12.1,PMMoV_conc (gc/mg-dw),True,,Male,61,Y,I,No
-4576,19,19.35467645,0.169981917,12.1,crAss_conc,False,False,Male,61,Y,I,No
-4576,21,67.4473151,0.079620853,18.8,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
-4576,21,67.4473151,0.079620853,18.8,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
+4576,19,negative,0.169981917,12.1,crAss_conc,False,False,Male,61,Y,I,No
+4576,21,negative,0.079620853,18.8,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
+4576,21,negative,0.079620853,18.8,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
 4576,21,61354.60993,0.079620853,18.8,PMMoV_conc (gc/mg-dw),True,,Male,61,Y,I,No
-4576,21,12.45699921,0.079620853,18.8,crAss_conc,False,False,Male,61,Y,I,No
-4576,28,40.91450018,0.167695473,17,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
-4576,28,40.91450018,0.167695473,17,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
+4576,21,negative,0.079620853,18.8,crAss_conc,False,False,Male,61,Y,I,No
+4576,28,negative,0.167695473,17,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
+4576,28,negative,0.167695473,17,ORF1a_conc (gc/gm-dw),False,,Male,61,Y,I,No
 4576,28,55506.77734,0.167695473,17,PMMoV_conc (gc/mg-dw),True,,Male,61,Y,I,No
-4576,28,2.784989209,0.167695473,17,crAss_conc,False,False,Male,61,Y,I,No
-4576,9,91.75297236,0.091456077,14.1,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
+4576,28,negative,0.167695473,17,crAss_conc,False,False,Male,61,Y,I,No
+4576,9,negative,0.091456077,14.1,N_conc (gc/mg-dw),False,,Male,61,Y,I,No
 4576,9,109.2477092,0.091456077,14.1,ORF1a_conc (gc/gm-dw),True,,Male,61,Y,I,No
 4576,9,22025747.82,0.091456077,14.1,PMMoV_conc (gc/mg-dw),True,,Male,61,Y,I,No
-4576,9,4.071921123,0.091456077,14.1,crAss_conc,False,False,Male,61,Y,I,No
+4576,9,negative,0.091456077,14.1,crAss_conc,False,False,Male,61,Y,I,No
 4577,10,14231.30272,0.194194194,16.5,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,10,2272.014995,0.194194194,16.5,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
 4577,10,2616.562324,0.194194194,16.5,PMMoV_conc (gc/mg-dw),True,,Male,29,Y,I,No
@@ -945,7 +945,7 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4577,12,487090.5073,0.118243243,19.2,crAss_conc,True,True,Male,29,Y,I,No
 4577,13,5815.222583,0.184284378,13.9,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,13,27670.71541,0.184284378,13.9,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
-4577,13,,0.184284378,13.9,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
+4577,13,negative,0.184284378,13.9,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
 4577,13,1309039.795,0.184284378,13.9,crAss_conc,True,True,Male,29,Y,I,No
 4577,14,329627.907,0.105263158,17.2,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,14,296930.2326,0.105263158,17.2,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
@@ -953,45 +953,45 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4577,14,25940.68417,0.105263158,17.2,crAss_conc,True,True,Male,29,Y,I,No
 4577,17,147392.8295,0.15027027,24.2,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,17,110874.6061,0.15027027,24.2,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
-4577,17,,0.15027027,24.2,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
+4577,17,negative,0.15027027,24.2,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
 4577,17,18684.68996,0.15027027,24.2,crAss_conc,True,True,Male,29,Y,I,No
 4577,19,297215.6863,0.145797599,21.6,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,19,269780.3922,0.145797599,21.6,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
 4577,19,159.5311547,0.145797599,21.6,PMMoV_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,19,9687.397645,0.145797599,21.6,crAss_conc,True,True,Male,29,Y,I,No
 4577,2,603346.1256,0.167148641,16.5,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
-4577,2,36.60686589,0.167148641,16.5,ORF1a_conc (gc/gm-dw),False,,Male,29,Y,I,No
+4577,2,negative,0.167148641,16.5,ORF1a_conc (gc/gm-dw),False,,Male,29,Y,I,No
 4577,2,719374.2267,0.167148641,16.5,PMMoV_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,2,27123.2606,0.167148641,16.5,crAss_conc,True,True,Male,29,Y,I,No
 4577,28,2289.588748,0.290233838,24.8,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
-4577,28,27.78627121,0.290233838,24.8,ORF1a_conc (gc/gm-dw),False,,Male,29,Y,I,No
-4577,28,,0.290233838,24.8,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
+4577,28,negative,0.290233838,24.8,ORF1a_conc (gc/gm-dw),False,,Male,29,Y,I,No
+4577,28,negative,0.290233838,24.8,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
 4577,28,74604.36786,0.290233838,24.8,crAss_conc,True,True,Male,29,Y,I,No
 4577,4,164093.6881,0.0902,12.2,crAss_conc,True,True,Male,29,Y,I,No
 4577,5,3161.403509,0.262893082,18,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,5,615.3748006,0.262893082,18,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
-4577,5,,0.262893082,18,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
+4577,5,negative,0.262893082,18,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
 4577,5,2597728.887,0.262893082,18,crAss_conc,True,True,Male,29,Y,I,No
 4577,6,7393.169492,0.185645933,21.1,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,6,6045.243563,0.185645933,21.1,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
-4577,6,,0.185645933,21.1,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
+4577,6,negative,0.185645933,21.1,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
 4577,6,153891.3659,0.185645933,21.1,crAss_conc,True,True,Male,29,Y,I,No
 4577,7,2182.200284,0.140712946,23.5,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,7,3706.353475,0.140712946,23.5,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
-4577,7,,0.140712946,23.5,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
+4577,7,negative,0.140712946,23.5,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
 4577,7,515682.0714,0.140712946,23.5,crAss_conc,True,True,Male,29,Y,I,No
 4577,8,297.4946871,0.11556829,16.8,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,8,81.17237308,0.11556829,16.8,ORF1a_conc (gc/gm-dw),True,,Male,29,Y,I,No
 4577,8,297.4946871,0.11556829,16.8,PMMoV_conc (gc/mg-dw),True,,Male,29,Y,I,No
 4577,8,250898.8001,0.11556829,16.8,crAss_conc,True,True,Male,29,Y,I,No
 4577,9,152.0659341,0.062388592,31.2,N_conc (gc/mg-dw),True,,Male,29,Y,I,No
-4577,9,102.7472527,0.062388592,31.2,ORF1a_conc (gc/gm-dw),False,,Male,29,Y,I,No
-4577,9,,0.062388592,31.2,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
+4577,9,negative,0.062388592,31.2,ORF1a_conc (gc/gm-dw),False,,Male,29,Y,I,No
+4577,9,negative,0.062388592,31.2,PMMoV_conc (gc/mg-dw),False,,Male,29,Y,I,No
 4577,9,30280.61328,0.062388592,31.2,crAss_conc,True,True,Male,29,Y,I,No
 4579,10,32.43202747,0.154459,12.9,N_conc (gc/mg-dw),True,,Male,2,Y,H,No
-4579,10,16.99216482,0.154459,12.9,ORF1a_conc (gc/gm-dw),False,,Male,2,Y,H,No
-4579,10,114.7594818,0.154459,12.9,PMMoV_conc (gc/mg-dw),False,,Male,2,Y,H,No
-4579,10,95.04495383,0.154459,12.9,crAss_conc,False,False,Male,2,Y,H,No
+4579,10,negative,0.154459,12.9,ORF1a_conc (gc/gm-dw),False,,Male,2,Y,H,No
+4579,10,negative,0.154459,12.9,PMMoV_conc (gc/mg-dw),False,,Male,2,Y,H,No
+4579,10,negative,0.154459,12.9,crAss_conc,False,False,Male,2,Y,H,No
 4579,12,563.8567493,0.223301,13.2,N_conc (gc/mg-dw),True,,Male,2,Y,H,No
 4579,12,633.4234911,0.223301,13.2,ORF1a_conc (gc/gm-dw),True,,Male,2,Y,H,No
 4579,12,114968.1943,0.223301,13.2,PMMoV_conc (gc/mg-dw),True,,Male,2,Y,H,No
@@ -1002,41 +1002,41 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4579,20,32700,0.350043,12.2,N_conc (gc/mg-dw),True,,Male,2,Y,H,No
 4579,20,16700,0.350043,12.2,ORF1a_conc (gc/gm-dw),True,,Male,2,Y,H,No
 4579,20,136,0.350043,12.2,PMMoV_conc (gc/mg-dw),True,,Male,2,Y,H,No
-4579,20,97.71412784,0.350043,12.2,crAss_conc,False,False,Male,2,Y,H,No
+4579,20,negative,0.350043,12.2,crAss_conc,False,False,Male,2,Y,H,No
 4579,27,514214.876,0.210383,17.6,N_conc (gc/mg-dw),True,,Male,2,Y,H,No
 4579,27,484000,0.210383,17.6,ORF1a_conc (gc/gm-dw),True,,Male,2,Y,H,No
 4579,27,1041393.152,0.210383,17.6,PMMoV_conc (gc/mg-dw),True,,Male,2,Y,H,No
-4579,27,67.7336568,0.210383,17.6,crAss_conc,False,False,Male,2,Y,H,No
+4579,27,negative,0.210383,17.6,crAss_conc,False,False,Male,2,Y,H,No
 4579,3,668.4745763,0.117647,13.3,N_conc (gc/mg-dw),True,,Male,2,Y,H,No
 4579,3,437.9661017,0.117647,13.3,ORF1a_conc (gc/gm-dw),True,,Male,2,Y,H,No
 4579,3,198,0.117647,13.3,PMMoV_conc (gc/mg-dw),True,,Male,2,Y,H,No
-4579,3,89.63250825,0.117647,13.3,crAss_conc,False,False,Male,2,Y,H,No
-4579,7,82.08481764,0.157721796,13.1,N_conc (gc/mg-dw),False,,Male,2,Y,H,No
-4579,7,130.8710772,0.157721796,13.1,ORF1a_conc (gc/gm-dw),False,,Male,2,Y,H,No
+4579,3,negative,0.117647,13.3,crAss_conc,False,False,Male,2,Y,H,No
+4579,7,negative,0.157721796,13.1,N_conc (gc/mg-dw),False,,Male,2,Y,H,No
+4579,7,negative,0.157721796,13.1,ORF1a_conc (gc/gm-dw),False,,Male,2,Y,H,No
 4579,7,171.913486,0.157721796,13.1,PMMoV_conc (gc/mg-dw),True,,Male,2,Y,H,No
-4579,7,145.4201934,0.157721796,13.1,crAss_conc,True,False,Male,2,Y,H,No
+4579,7,positive,0.157721796,13.1,crAss_conc,True,False,Male,2,Y,H,No
 4580,5,312009.8026,0.147135,13,N_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4580,5,312009.8026,0.147135,13,ORF1a_conc (gc/gm-dw),True,,Female,29,Y,I,No
 4580,5,197411.0279,0.147135,13,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4580,5,14.4451591,0.147135,13,crAss_conc,False,False,Female,29,Y,I,No
+4580,5,negative,0.147135,13,crAss_conc,False,False,Female,29,Y,I,No
 4580,6,346570.036,0.204636647,21.5,N_conc (gc/mg-dw),True,,Female,29,Y,I,No
 4580,6,233471.105,0.204636647,21.5,ORF1a_conc (gc/gm-dw),True,,Female,29,Y,I,No
 4580,6,869152.5561,0.204636647,21.5,PMMoV_conc (gc/mg-dw),True,,Female,29,Y,I,No
-4580,6,16.71410174,0.204636647,21.5,crAss_conc,False,False,Female,29,Y,I,No
-4585,12,29.93424099,0.295,18.3,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
-4585,12,47.71695841,0.295,18.3,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
+4580,6,negative,0.204636647,21.5,crAss_conc,False,False,Female,29,Y,I,No
+4585,12,negative,0.295,18.3,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
+4585,12,negative,0.295,18.3,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
 4585,12,147892.9332,0.295,18.3,PMMoV_conc (gc/mg-dw),True,,Male,35,Y,I,No
-4585,12,447.7365754,0.295,18.3,crAss_conc,True,False,Male,35,Y,I,No
-4585,17,48.35521236,0.238709677,14,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
-4585,17,77.08108108,0.238709677,14,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
+4585,12,positive,0.295,18.3,crAss_conc,True,False,Male,35,Y,I,No
+4585,17,negative,0.238709677,14,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
+4585,17,negative,0.238709677,14,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
 4585,17,2044.324324,0.238709677,14,PMMoV_conc (gc/mg-dw),True,,Male,35,Y,I,No
 4585,17,2105.765969,0.238709677,14,crAss_conc,True,True,Male,35,Y,I,No
-4585,21,30.48260382,0.167010309,22,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
-4585,21,30.48260382,0.167010309,22,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
+4585,21,negative,0.167010309,22,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
+4585,21,negative,0.167010309,22,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
 4585,21,3191.964085,0.167010309,22,PMMoV_conc (gc/mg-dw),True,,Male,35,Y,I,No
-4585,21,16.33423579,0.167010309,22,crAss_conc,False,False,Male,35,Y,I,No
-4585,28,22.53323887,0.298669891,16,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
-4585,28,22.53323887,0.298669891,16,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
+4585,21,negative,0.167010309,22,crAss_conc,False,False,Male,35,Y,I,No
+4585,28,negative,0.298669891,16,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
+4585,28,negative,0.298669891,16,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
 4585,28,136270.8502,0.298669891,16,PMMoV_conc (gc/mg-dw),True,,Male,35,Y,I,No
 4585,28,2156.794195,0.298669891,16,crAss_conc,True,True,Male,35,Y,I,No
 4585,4,4583.512231,0.269168026,16.6,N_conc (gc/mg-dw),True,,Male,35,Y,I,No
@@ -1048,18 +1048,18 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4585,5,3510012.378,0.248091603,17.4,PMMoV_conc (gc/mg-dw),True,,Male,35,Y,I,No
 4585,5,4549.531501,0.248091603,17.4,crAss_conc,True,True,Male,35,Y,I,No
 4585,6,533.981982,0.096774194,14.8,N_conc (gc/mg-dw),True,,Male,35,Y,I,No
-4585,6,179.8558559,0.096774194,14.8,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
+4585,6,negative,0.096774194,14.8,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
 4585,6,47700.9009,0.096774194,14.8,PMMoV_conc (gc/mg-dw),True,,Male,35,Y,I,No
 4585,6,6065.280688,0.096774194,14.8,crAss_conc,True,True,Male,35,Y,I,No
-4585,9,38.32215735,0.255568581,16.5,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
-4585,9,61.08779539,0.255568581,16.5,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
+4585,9,negative,0.255568581,16.5,N_conc (gc/mg-dw),False,,Male,35,Y,I,No
+4585,9,negative,0.255568581,16.5,ORF1a_conc (gc/gm-dw),False,,Male,35,Y,I,No
 4585,9,26294.31193,0.255568581,16.5,PMMoV_conc (gc/mg-dw),True,,Male,35,Y,I,No
-4585,9,496.5805654,0.255568581,16.5,crAss_conc,True,False,Male,35,Y,I,No
+4585,9,positive,0.255568581,16.5,crAss_conc,True,False,Male,35,Y,I,No
 4586,14,1176.886326,0.299530516,18.7,N_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4586,14,822.6778201,0.299530516,18.7,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4586,14,1756.759928,0.299530516,18.7,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4586,14,11308.85399,0.299530516,18.7,crAss_conc,True,True,Female,61,Y,H,No
-4586,25,54.00964539,0.099051633,19.5,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
+4586,25,negative,0.099051633,19.5,N_conc (gc/mg-dw),False,,Female,61,Y,H,No
 4586,25,300.6978723,0.099051633,19.5,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4586,25,1358524.823,0.099051633,19.5,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4586,25,18313.87768,0.099051633,19.5,crAss_conc,True,True,Female,61,Y,H,No
@@ -1067,200 +1067,200 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4586,2,1686.769518,0.229490022,15.5,ORF1a_conc (gc/gm-dw),True,,Female,61,Y,H,No
 4586,2,25953.76032,0.229490022,15.5,PMMoV_conc (gc/mg-dw),True,,Female,61,Y,H,No
 4586,2,8798.745539,0.229490022,15.5,crAss_conc,True,True,Female,61,Y,H,No
-4587,10,18.99102779,0.307006,19.1,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,10,16.153288,0.307006,19.1,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,10,negative,0.307006,19.1,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,10,negative,0.307006,19.1,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,10,126.6068519,0.307006,19.1,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,10,3.005973185,0.307006,19.1,crAss_conc,False,False,Female,41,Y,I,Yes
-4587,11,31.92278353,0.318220701,10.6,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,11,31.92278353,0.318220701,10.6,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,10,negative,0.307006,19.1,crAss_conc,False,False,Female,41,Y,I,Yes
+4587,11,negative,0.318220701,10.6,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,11,negative,0.318220701,10.6,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,11,382788.801,0.318220701,10.6,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,11,772.9791821,0.318220701,10.6,crAss_conc,True,False,Female,41,Y,I,Yes
-4587,12,11.72525303,0.473381295,19.4,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,12,11.72525303,0.473381295,19.4,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,11,positive,0.318220701,10.6,crAss_conc,True,False,Female,41,Y,I,Yes
+4587,12,negative,0.473381295,19.4,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,12,negative,0.473381295,19.4,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,12,13763.66998,0.473381295,19.4,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
 4587,12,1710.102424,0.473381295,19.4,crAss_conc,True,True,Female,41,Y,I,Yes
-4587,14,13.13534307,0.388518024,21.1,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,14,13.13534307,0.388518024,21.1,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,14,negative,0.388518024,21.1,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,14,negative,0.388518024,21.1,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,14,868.5330858,0.388518024,21.1,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
 4587,14,2403.523831,0.388518024,21.1,crAss_conc,True,True,Female,41,Y,I,Yes
-4587,17,22.50408274,0.298016449,16.7,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,17,22.50408274,0.298016449,16.7,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,17,negative,0.298016449,16.7,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,17,negative,0.298016449,16.7,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,17,1369534.178,0.298016449,16.7,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,17,21.51815494,0.298016449,16.7,crAss_conc,False,False,Female,41,Y,I,Yes
-4587,19,33.81938982,0.264089427,13.4,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,19,33.81938982,0.264089427,13.4,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,17,negative,0.298016449,16.7,crAss_conc,False,False,Female,41,Y,I,Yes
+4587,19,negative,0.264089427,13.4,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,19,negative,0.264089427,13.4,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,19,3264384.954,0.264089427,13.4,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,19,13.13312497,0.264089427,13.4,crAss_conc,False,False,Female,41,Y,I,Yes
-4587,21,27.20624569,0.281986532,15.6,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,21,27.20624569,0.281986532,15.6,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,19,negative,0.264089427,13.4,crAss_conc,False,False,Female,41,Y,I,Yes
+4587,21,negative,0.281986532,15.6,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,21,negative,0.281986532,15.6,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,21,70925.37313,0.281986532,15.6,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,21,11.2810176,0.281986532,15.6,crAss_conc,False,False,Female,41,Y,I,Yes
+4587,21,negative,0.281986532,15.6,crAss_conc,False,False,Female,41,Y,I,Yes
 4587,5,64.28221028,0.224619289,20.5,N_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,5,23.38482569,0.224619289,20.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,5,negative,0.224619289,20.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,5,40862637.45,0.224619289,20.5,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
 4587,5,2165.165191,0.224619289,20.5,crAss_conc,True,True,Female,41,Y,I,Yes
 4587,6,32.80067758,0.273513514,16.8,N_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,6,23.43402974,0.273513514,16.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,6,negative,0.273513514,16.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,6,3760587.239,0.273513514,16.8,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,6,487.7130553,0.273513514,16.8,crAss_conc,True,False,Female,41,Y,I,Yes
-4587,7,26.95663158,0.282527881,12.5,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,7,26.95663158,0.282527881,12.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,6,positive,0.273513514,16.8,crAss_conc,True,False,Female,41,Y,I,Yes
+4587,7,negative,0.282527881,12.5,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,7,negative,0.282527881,12.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,7,1635520,0.282527881,12.5,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,7,4.593127027,0.282527881,12.5,crAss_conc,False,False,Female,41,Y,I,Yes
-4587,8,40.66758621,0.1836,14.2,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,8,40.66758621,0.1836,14.2,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,7,negative,0.282527881,12.5,crAss_conc,False,False,Female,41,Y,I,Yes
+4587,8,negative,0.1836,14.2,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,8,negative,0.1836,14.2,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,8,7798.659543,0.1836,14.2,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,8,20.35528412,0.1836,14.2,crAss_conc,False,False,Female,41,Y,I,Yes
-4587,9,25.09090909,0.336232,13.2,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4587,9,21.34169279,0.336232,13.2,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4587,8,negative,0.1836,14.2,crAss_conc,False,False,Female,41,Y,I,Yes
+4587,9,negative,0.336232,13.2,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4587,9,negative,0.336232,13.2,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4587,9,193.9498433,0.336232,13.2,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4587,9,4.349552109,0.336232,13.2,crAss_conc,False,False,Female,41,Y,I,Yes
-4588,10,22.25960171,0.281368821,15.2,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,10,22.25960171,0.281368821,15.2,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4587,9,negative,0.336232,13.2,crAss_conc,False,False,Female,41,Y,I,Yes
+4588,10,negative,0.281368821,15.2,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,10,negative,0.281368821,15.2,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,10,138795.1636,0.281368821,15.2,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,10,3.777242621,0.281368821,15.2,crAss_conc,False,False,Male,39,N,H,No
-4588,11,49.31300594,0.3005,13.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,11,49.31300594,0.3005,13.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,10,negative,0.281368821,15.2,crAss_conc,False,False,Male,39,N,H,No
+4588,11,negative,0.3005,13.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,11,negative,0.3005,13.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,11,26660.01079,0.3005,13.6,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,11,21.25331136,0.3005,13.6,crAss_conc,False,False,Male,39,N,H,No
-4588,12,39.92775381,0.163793103,18.3,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,12,39.92775381,0.163793103,18.3,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,11,negative,0.3005,13.6,crAss_conc,False,False,Male,39,N,H,No
+4588,12,negative,0.163793103,18.3,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,12,negative,0.163793103,18.3,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,12,1553339.085,0.163793103,18.3,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,12,9.616605171,0.163793103,18.3,crAss_conc,False,False,Male,39,N,H,No
-4588,13,60.13168354,0.157960199,12.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,13,60.13168354,0.157960199,12.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,12,negative,0.163793103,18.3,crAss_conc,False,False,Male,39,N,H,No
+4588,13,negative,0.157960199,12.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,13,negative,0.157960199,12.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,13,119781.0274,0.157960199,12.6,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,13,13.96697418,0.157960199,12.6,crAss_conc,False,False,Male,39,N,H,No
-4588,17,54.92413793,0.187845304,11.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,17,54.92413793,0.187845304,11.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,13,negative,0.157960199,12.6,crAss_conc,False,False,Male,39,N,H,No
+4588,17,negative,0.187845304,11.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,17,negative,0.187845304,11.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,17,13363.89452,0.187845304,11.6,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,17,15.17102367,0.187845304,11.6,crAss_conc,False,False,Male,39,N,H,No
-4588,21,27.9925868,0.268894193,15.9,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,21,27.9925868,0.268894193,15.9,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,17,negative,0.187845304,11.6,crAss_conc,False,False,Male,39,N,H,No
+4588,21,negative,0.268894193,15.9,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,21,negative,0.268894193,15.9,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,21,471.5328793,0.268894193,15.9,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,21,11.06816822,0.268894193,15.9,crAss_conc,False,False,Male,39,N,H,No
-4588,28,29.98130006,0.219330855,18.2,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,28,29.98130006,0.219330855,18.2,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,21,negative,0.268894193,15.9,crAss_conc,False,False,Male,39,N,H,No
+4588,28,negative,0.219330855,18.2,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,28,negative,0.219330855,18.2,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,28,7415161.11,0.219330855,18.2,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,28,9.669443661,0.219330855,18.2,crAss_conc,False,False,Male,39,N,H,No
-4588,6,35.59866716,0.183168317,14.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,6,35.59866716,0.183168317,14.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,28,negative,0.219330855,18.2,crAss_conc,False,False,Male,39,N,H,No
+4588,6,negative,0.183168317,14.6,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,6,negative,0.183168317,14.6,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,6,16333.50611,0.183168317,14.6,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,6,3.932471769,0.183168317,14.6,crAss_conc,False,False,Male,39,N,H,No
-4588,7,40.95269303,0.2557,12,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,7,40.95269303,0.2557,12,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,6,negative,0.183168317,14.6,crAss_conc,False,False,Male,39,N,H,No
+4588,7,negative,0.2557,12,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,7,negative,0.2557,12,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,7,16594.04896,0.2557,12,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,7,24.08708621,0.2557,12,crAss_conc,False,False,Male,39,N,H,No
-4588,8,48.06833913,0.2419,12.7,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,8,48.06833913,0.2419,12.7,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,7,negative,0.2557,12,crAss_conc,False,False,Male,39,N,H,No
+4588,8,negative,0.2419,12.7,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,8,negative,0.2419,12.7,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,8,2353.942501,0.2419,12.7,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,8,22.75945154,0.2419,12.7,crAss_conc,False,False,Male,39,N,H,No
-4588,9,30.61581935,0.215227,16.9,N_conc (gc/mg-dw),False,,Male,39,N,H,No
-4588,9,26.04104174,0.215227,16.9,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
+4588,8,negative,0.2419,12.7,crAss_conc,False,False,Male,39,N,H,No
+4588,9,negative,0.215227,16.9,N_conc (gc/mg-dw),False,,Male,39,N,H,No
+4588,9,negative,0.215227,16.9,ORF1a_conc (gc/gm-dw),False,,Male,39,N,H,No
 4588,9,835.7766775,0.215227,16.9,PMMoV_conc (gc/mg-dw),True,,Male,39,N,H,No
-4588,9,299.1262082,0.215227,16.9,crAss_conc,True,False,Male,39,N,H,No
+4588,9,positive,0.215227,16.9,crAss_conc,True,False,Male,39,N,H,No
 4591,10,20627.84386,0.133263379,18.8,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,10,21394.20338,0.133263379,18.8,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,10,11814.70933,0.133263379,18.8,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,13,79102.79113,0.148558758,17.7,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,13,67541.61396,0.148558758,17.7,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,13,191063.6647,0.148558758,17.7,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,13,30.99664905,0.148558758,17.7,crAss_conc,False,False,Female,17,Y,I,No
+4591,13,negative,0.148558758,17.7,crAss_conc,False,False,Female,17,Y,I,No
 4591,14,58734.98623,0.191512514,16.5,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,14,45418.34711,0.191512514,16.5,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,14,248104.6832,0.191512514,16.5,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,14,115.4548202,0.191512514,16.5,crAss_conc,True,False,Female,17,Y,I,No
+4591,14,positive,0.191512514,16.5,crAss_conc,True,False,Female,17,Y,I,No
 4591,19,3661.783784,0.207253886,14.8,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,19,2389.027027,0.207253886,14.8,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,19,542.4864865,0.207253886,14.8,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,19,96.62593827,0.207253886,14.8,crAss_conc,True,False,Female,17,Y,I,No
+4591,19,positive,0.207253886,14.8,crAss_conc,True,False,Female,17,Y,I,No
 4591,21,1083.009093,0.214606742,19,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,21,1334.141637,0.214606742,19,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,21,184.8178562,0.214606742,19,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,21,75.26652034,0.214606742,19,crAss_conc,True,False,Female,17,Y,I,No
-4591,28,25.58875086,0.280467446,13.8,N_conc (gc/mg-dw),False,,Female,17,Y,I,No
-4591,28,25.58875086,0.280467446,13.8,ORF1a_conc (gc/gm-dw),False,,Female,17,Y,I,No
+4591,21,positive,0.214606742,19,crAss_conc,True,False,Female,17,Y,I,No
+4591,28,negative,0.280467446,13.8,N_conc (gc/mg-dw),False,,Female,17,Y,I,No
+4591,28,negative,0.280467446,13.8,ORF1a_conc (gc/gm-dw),False,,Female,17,Y,I,No
 4591,28,262.9151139,0.280467446,13.8,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,28,33.55416221,0.280467446,13.8,crAss_conc,False,False,Female,17,Y,I,No
+4591,28,negative,0.280467446,13.8,crAss_conc,False,False,Female,17,Y,I,No
 4591,6,95358.55856,0.198019802,11.1,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,6,59908.46847,0.198019802,11.1,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,6,709001.8018,0.198019802,11.1,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,6,171.6220301,0.198019802,11.1,crAss_conc,True,False,Female,17,Y,I,No
+4591,6,positive,0.198019802,11.1,crAss_conc,True,False,Female,17,Y,I,No
 4591,7,231303.4472,0.158444023,14.8,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,7,154202.2981,0.158444023,14.8,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,7,709603.4957,0.158444023,14.8,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,7,128.7165226,0.158444023,14.8,crAss_conc,True,False,Female,17,Y,I,No
+4591,7,positive,0.158444023,14.8,crAss_conc,True,False,Female,17,Y,I,No
 4591,8,32828.09097,0.078972407,18.7,N_conc (gc/mg-dw),True,,Female,17,Y,I,No
 4591,8,25894.10476,0.078972407,18.7,ORF1a_conc (gc/gm-dw),True,,Female,17,Y,I,No
 4591,8,57205.38625,0.078972407,18.7,PMMoV_conc (gc/mg-dw),True,,Female,17,Y,I,No
-4591,8,29.33907424,0.078972407,18.7,crAss_conc,False,False,Female,17,Y,I,No
-4593,10,30.79089631,0.268436578,21.1,N_conc (gc/mg-dw),False,,Male,5,N,I,No
+4591,8,negative,0.078972407,18.7,crAss_conc,False,False,Female,17,Y,I,No
+4593,10,negative,0.268436578,21.1,N_conc (gc/mg-dw),False,,Male,5,N,I,No
 4593,10,4152.533722,0.268436578,21.1,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,10,22627071.51,0.268436578,21.1,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,10,67.77553964,0.268436578,21.1,crAss_conc,True,False,Male,5,N,I,No
+4593,10,positive,0.268436578,21.1,crAss_conc,True,False,Male,5,N,I,No
 4593,11,12818.80328,0.362113402,17.2,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,11,4572.639245,0.362113402,17.2,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,11,16338194.16,0.362113402,17.2,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,11,83.14324921,0.362113402,17.2,crAss_conc,True,False,Male,5,N,I,No
+4593,11,positive,0.362113402,17.2,crAss_conc,True,False,Male,5,N,I,No
 4593,13,820435.7626,0.221612,13.2,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,13,623531.1796,0.221612,13.2,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,13,12142449.29,0.221612,13.2,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,13,92.88484125,0.221612,13.2,crAss_conc,False,False,Male,5,N,I,No
+4593,13,negative,0.221612,13.2,crAss_conc,False,False,Male,5,N,I,No
 4593,14,119827.5868,0.227738377,19.7,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,14,89870.69011,0.227738377,19.7,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,14,1230372.543,0.227738377,19.7,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,14,72.59207545,0.227738377,19.7,crAss_conc,True,False,Male,5,N,I,No
+4593,14,positive,0.227738377,19.7,crAss_conc,True,False,Male,5,N,I,No
 4593,17,36001.58377,0.254413292,16.7,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,17,20410.93975,0.254413292,16.7,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,17,11787129.41,0.254413292,16.7,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,17,85.63256805,0.254413292,16.7,crAss_conc,True,False,Male,5,N,I,No
+4593,17,positive,0.254413292,16.7,crAss_conc,True,False,Male,5,N,I,No
 4593,19,22451.90647,0.172161172,20.2,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,19,7775.352854,0.172161172,20.2,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,19,238321.4662,0.172161172,20.2,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,19,70.7952419,0.172161172,20.2,crAss_conc,True,False,Male,5,N,I,No
-4593,2,53.90601324,0.263029316,12.3,N_conc (gc/mg-dw),False,,Male,5,N,I,No
-4593,2,40.77073768,0.263029316,12.3,ORF1a_conc (gc/gm-dw),False,,Male,5,N,I,No
+4593,19,positive,0.172161172,20.2,crAss_conc,True,False,Male,5,N,I,No
+4593,2,negative,0.263029316,12.3,N_conc (gc/mg-dw),False,,Male,5,N,I,No
+4593,2,negative,0.263029316,12.3,ORF1a_conc (gc/gm-dw),False,,Male,5,N,I,No
 4593,2,312.0614161,0.263029316,12.3,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,2,116.2653566,0.263029316,12.3,crAss_conc,True,False,Male,5,N,I,No
-4593,28,29.0662391,0.382171227,15.7,N_conc (gc/mg-dw),False,,Male,5,N,I,No
-4593,28,29.0662391,0.382171227,15.7,ORF1a_conc (gc/gm-dw),False,,Male,5,N,I,No
+4593,2,positive,0.263029316,12.3,crAss_conc,True,False,Male,5,N,I,No
+4593,28,negative,0.382171227,15.7,N_conc (gc/mg-dw),False,,Male,5,N,I,No
+4593,28,negative,0.382171227,15.7,ORF1a_conc (gc/gm-dw),False,,Male,5,N,I,No
 4593,28,150.3977876,0.382171227,15.7,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,28,91.08687175,0.382171227,15.7,crAss_conc,True,False,Male,5,N,I,No
+4593,28,positive,0.382171227,15.7,crAss_conc,True,False,Male,5,N,I,No
 4593,3,43890.98589,0.179254783,13.3,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,3,29730.43846,0.179254783,13.3,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,3,4321.98699,0.179254783,13.3,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,3,41.25117957,0.179254783,13.3,crAss_conc,False,False,Male,5,N,I,No
+4593,3,negative,0.179254783,13.3,crAss_conc,False,False,Male,5,N,I,No
 4593,5,73091.7226,0.145935357,19.8,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,5,68661.92123,0.145935357,19.8,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,5,2353.331977,0.145935357,19.8,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,5,96.21235021,0.145935357,19.8,crAss_conc,True,False,Male,5,N,I,No
+4593,5,positive,0.145935357,19.8,crAss_conc,True,False,Male,5,N,I,No
 4593,7,275260.5885,0.370146678,21.2,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,7,275260.5885,0.370146678,21.2,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
-4593,7,69.93657914,0.370146678,21.2,PMMoV_conc (gc/mg-dw),False,,Male,5,N,I,No
-4593,7,67.4558437,0.370146678,21.2,crAss_conc,True,False,Male,5,N,I,No
+4593,7,negative,0.370146678,21.2,PMMoV_conc (gc/mg-dw),False,,Male,5,N,I,No
+4593,7,positive,0.370146678,21.2,crAss_conc,True,False,Male,5,N,I,No
 4593,8,332514.5728,0.486220472,19.1,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,8,248093.7745,0.486220472,19.1,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,8,130249.2316,0.486220472,19.1,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,9,64336.13445,0.197492163,13.6,N_conc (gc/mg-dw),True,,Male,5,N,I,No
 4593,9,29725.67694,0.197492163,13.6,ORF1a_conc (gc/gm-dw),True,,Male,5,N,I,No
 4593,9,32525490.2,0.197492163,13.6,PMMoV_conc (gc/mg-dw),True,,Male,5,N,I,No
-4593,9,140.0738628,0.197492163,13.6,crAss_conc,True,False,Male,5,N,I,No
-4596,21,33.84094755,0.375238,12.6,N_conc (gc/mg-dw),False,,Female,43,Y,I,No
-4596,21,33.84094755,0.375238,12.6,ORF1a_conc (gc/gm-dw),False,,Female,43,Y,I,No
+4593,9,positive,0.197492163,13.6,crAss_conc,True,False,Male,5,N,I,No
+4596,21,negative,0.375238,12.6,N_conc (gc/mg-dw),False,,Female,43,Y,I,No
+4596,21,negative,0.375238,12.6,ORF1a_conc (gc/gm-dw),False,,Female,43,Y,I,No
 4596,21,13570.21997,0.375238,12.6,PMMoV_conc (gc/mg-dw),True,,Female,43,Y,I,No
-4596,21,265.69864,0.375238,12.6,crAss_conc,True,False,Female,43,Y,I,No
+4596,21,positive,0.375238,12.6,crAss_conc,True,False,Female,43,Y,I,No
 4596,4,18007.62416,0.265957447,14.9,N_conc (gc/mg-dw),True,,Female,43,Y,I,No
 4596,4,16594.4698,0.265957447,14.9,ORF1a_conc (gc/gm-dw),True,,Female,43,Y,I,No
 4596,4,855967.7852,0.265957447,14.9,PMMoV_conc (gc/mg-dw),True,,Female,43,Y,I,No
-4596,4,95.97744204,0.265957447,14.9,crAss_conc,True,False,Female,43,Y,I,No
+4596,4,positive,0.265957447,14.9,crAss_conc,True,False,Female,43,Y,I,No
 4596,5,16100,0.211624,14.7,N_conc (gc/mg-dw),True,,Female,43,Y,I,No
 4596,5,13800,0.211624,14.7,ORF1a_conc (gc/gm-dw),True,,Female,43,Y,I,No
 4596,5,472000,0.211624,14.7,PMMoV_conc (gc/mg-dw),True,,Female,43,Y,I,No
-4596,5,227.7416914,0.211624,14.7,crAss_conc,True,False,Female,43,Y,I,No
+4596,5,positive,0.211624,14.7,crAss_conc,True,False,Female,43,Y,I,No
 4596,6,15511.06858,0.284482759,19,N_conc (gc/mg-dw),True,,Female,43,Y,I,No
 4596,6,20454.48166,0.284482759,19,ORF1a_conc (gc/gm-dw),True,,Female,43,Y,I,No
 4596,6,529862.8389,0.284482759,19,PMMoV_conc (gc/mg-dw),True,,Female,43,Y,I,No
-4596,6,75.26652034,0.284482759,19,crAss_conc,True,False,Female,43,Y,I,No
+4596,6,positive,0.284482759,19,crAss_conc,True,False,Female,43,Y,I,No
 4596,7,3638.547751,0.298826041,18.1,N_conc (gc/mg-dw),True,,Female,43,Y,I,No
 4596,7,2449.363852,0.298826041,18.1,ORF1a_conc (gc/gm-dw),True,,Female,43,Y,I,No
 4596,7,396394.633,0.298826041,18.1,PMMoV_conc (gc/mg-dw),True,,Female,43,Y,I,No
@@ -1271,136 +1271,136 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4597,5,4260,0.122511,14.3,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,5,2780,0.122511,14.3,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,5,451163.6364,0.122511,14.3,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,5,125.5054073,0.122511,14.3,crAss_conc,True,False,Male,49,Y,H,No
+4597,5,positive,0.122511,14.3,crAss_conc,True,False,Male,49,Y,H,No
 4597,6,3940,0.20229,15.6,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,6,1181.344944,0.20229,15.6,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,6,1911446.541,0.20229,15.6,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,6,74.12166293,0.20229,15.6,crAss_conc,False,False,Male,49,Y,H,No
+4597,6,negative,0.20229,15.6,crAss_conc,False,False,Male,49,Y,H,No
 4597,7,4800,0.175549,16.9,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,7,3120,0.175549,16.9,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,7,524000,0.175549,16.9,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,7,68.41999655,0.175549,16.9,crAss_conc,False,False,Male,49,Y,H,No
+4597,7,negative,0.175549,16.9,crAss_conc,False,False,Male,49,Y,H,No
 4597,11,3200,0.170825,15.5,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,11,3200,0.170825,15.5,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,11,22418.67343,0.170825,15.5,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,11,79.10192932,0.170825,15.5,crAss_conc,False,False,Male,49,Y,H,No
+4597,11,negative,0.170825,15.5,crAss_conc,False,False,Male,49,Y,H,No
 4597,13,17300,0.111663,14,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,13,21600,0.111663,14,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,13,5373333.333,0.111663,14,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,13,18.70604775,0.111663,14,crAss_conc,False,False,Male,49,Y,H,No
+4597,13,negative,0.111663,14,crAss_conc,False,False,Male,49,Y,H,No
 4597,15,10100,0.27955,11.7,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,15,12100,0.27955,11.7,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,15,1850000,0.27955,11.7,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,15,104.7931542,0.27955,11.7,crAss_conc,False,False,Male,49,Y,H,No
-4597,-2,39.2221294,0.175135,13.3,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
-4597,-2,39.2221294,0.175135,13.3,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
+4597,15,negative,0.27955,11.7,crAss_conc,False,False,Male,49,Y,H,No
+4597,-2,negative,0.175135,13.3,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
+4597,-2,negative,0.175135,13.3,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
 4597,-2,444000,0.175135,13.3,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,-2,134.9419041,0.175135,13.3,crAss_conc,True,False,Male,49,Y,H,No
-4597,-1,40.93494574,0.148789,15,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
-4597,-1,40.93494574,0.148789,15,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
+4597,-2,positive,0.175135,13.3,crAss_conc,True,False,Male,49,Y,H,No
+4597,-1,negative,0.148789,15,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
+4597,-1,negative,0.148789,15,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
 4597,-1,1010000,0.148789,15,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,-1,119.6484883,0.148789,15,crAss_conc,True,False,Male,49,Y,H,No
+4597,-1,positive,0.148789,15,crAss_conc,True,False,Male,49,Y,H,No
 4597,0,71.8,0.177355,19.1,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,0,51,0.177355,19.1,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,0,5904102.701,0.177355,19.1,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,0,93.9647814,0.177355,19.1,crAss_conc,True,False,Male,49,Y,H,No
-4597,1,43.20177792,0.274617068,14.7,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
-4597,1,43.20177792,0.274617068,14.7,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
+4597,0,positive,0.177355,19.1,crAss_conc,True,False,Male,49,Y,H,No
+4597,1,negative,0.274617068,14.7,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
+4597,1,negative,0.274617068,14.7,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
 4597,1,1640874.868,0.274617068,14.7,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,1,97.28325758,0.274617068,14.7,crAss_conc,True,False,Male,49,Y,H,No
+4597,1,positive,0.274617068,14.7,crAss_conc,True,False,Male,49,Y,H,No
 4597,2,441.7472252,0.133668342,16.8,N_conc (gc/mg-dw),True,,Male,49,Y,H,No
 4597,2,294.2606516,0.133668342,16.8,ORF1a_conc (gc/gm-dw),True,,Male,49,Y,H,No
 4597,2,232273.541,0.133668342,16.8,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,2,113.393127,0.133668342,16.8,crAss_conc,True,False,Male,49,Y,H,No
-4597,3,45.41407035,0.109589041,19.9,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
-4597,3,45.41407035,0.109589041,19.9,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
+4597,2,positive,0.133668342,16.8,crAss_conc,True,False,Male,49,Y,H,No
+4597,3,negative,0.109589041,19.9,N_conc (gc/mg-dw),False,,Male,49,Y,H,No
+4597,3,negative,0.109589041,19.9,ORF1a_conc (gc/gm-dw),False,,Male,49,Y,H,No
 4597,3,2032261.307,0.109589041,19.9,PMMoV_conc (gc/mg-dw),True,,Male,49,Y,H,No
-4597,3,71.86250685,0.109589041,19.9,crAss_conc,True,False,Male,49,Y,H,No
+4597,3,positive,0.109589041,19.9,crAss_conc,True,False,Male,49,Y,H,No
 4598,7,941000,0.243142,15.8,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,7,625000,0.243142,15.8,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
 4598,7,406.0759494,0.243142,15.8,PMMoV_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,7,24.09593336,0.243142,15.8,crAss_conc,False,False,Male,3,Y,H,No
+4598,7,negative,0.243142,15.8,crAss_conc,False,False,Male,3,Y,H,No
 4598,9,35523.08043,0.119622,15.4,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,9,282000,0.119622,15.4,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
-4598,9,705.2503987,0.119622,15.4,PMMoV_conc (gc/mg-dw),False,,Male,3,Y,H,No
-4598,9,17.00549796,0.119622,15.4,crAss_conc,False,False,Male,3,Y,H,No
+4598,9,negative,0.119622,15.4,PMMoV_conc (gc/mg-dw),False,,Male,3,Y,H,No
+4598,9,negative,0.119622,15.4,crAss_conc,False,False,Male,3,Y,H,No
 4598,10,709000,0.139303,12.6,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,10,768000,0.139303,12.6,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
-4598,10,740.1904762,0.139303,12.6,PMMoV_conc (gc/mg-dw),False,,Male,3,Y,H,No
-4598,10,20.7844975,0.139303,12.6,crAss_conc,False,False,Male,3,Y,H,No
+4598,10,negative,0.139303,12.6,PMMoV_conc (gc/mg-dw),False,,Male,3,Y,H,No
+4598,10,negative,0.139303,12.6,crAss_conc,False,False,Male,3,Y,H,No
 4598,16,112842.1053,0.105556,18,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,16,87600,0.105556,18,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
 4598,16,688,0.105556,18,PMMoV_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,16,14.54914825,0.105556,18,crAss_conc,False,False,Male,3,Y,H,No
+4598,16,negative,0.105556,18,crAss_conc,False,False,Male,3,Y,H,No
 4598,2,898.6675535,0.304393305,15.5,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,2,389.9878062,0.304393305,15.5,ORF1a_conc (gc/gm-dw),False,,Male,3,Y,H,No
+4598,2,negative,0.304393305,15.5,ORF1a_conc (gc/gm-dw),False,,Male,3,Y,H,No
 4598,2,807.105199,0.304393305,15.5,PMMoV_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,2,122.9035183,0.304393305,15.5,crAss_conc,True,False,Male,3,Y,H,No
+4598,2,positive,0.304393305,15.5,crAss_conc,True,False,Male,3,Y,H,No
 4598,3,19994.51655,0.253547777,18.4,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,3,8162.426995,0.253547777,18.4,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
 4598,3,703.0661908,0.253547777,18.4,PMMoV_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,3,34.63501458,0.253547777,18.4,crAss_conc,False,False,Male,3,Y,H,No
+4598,3,negative,0.253547777,18.4,crAss_conc,False,False,Male,3,Y,H,No
 4598,4,744772.8086,0.113910186,21.5,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,4,579485.5098,0.113910186,21.5,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
 4598,4,44817.03041,0.113910186,21.5,PMMoV_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,4,29.64112876,0.113910186,21.5,crAss_conc,False,False,Male,3,Y,H,No
+4598,4,negative,0.113910186,21.5,crAss_conc,False,False,Male,3,Y,H,No
 4598,5,693000,0.081557,17.2,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,5,498438.6892,0.081557,17.2,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
 4598,5,106000,0.081557,17.2,PMMoV_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,5,69.30885812,0.081557,17.2,crAss_conc,False,False,Male,3,Y,H,No
+4598,5,negative,0.081557,17.2,crAss_conc,False,False,Male,3,Y,H,No
 4598,6,2790000,0.126386,12.2,N_conc (gc/mg-dw),True,,Male,3,Y,H,No
 4598,6,1660000,0.126386,12.2,ORF1a_conc (gc/gm-dw),True,,Male,3,Y,H,No
 4598,6,14319.93097,0.126386,12.2,PMMoV_conc (gc/mg-dw),True,,Male,3,Y,H,No
-4598,6,21.46595644,0.126386,12.2,crAss_conc,False,False,Male,3,Y,H,No
-4599,10,22.26186253,0.318756074,15.4,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,10,22.26186253,0.318756074,15.4,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4598,6,negative,0.126386,12.2,crAss_conc,False,False,Male,3,Y,H,No
+4599,10,negative,0.318756074,15.4,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,10,negative,0.318756074,15.4,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,10,295629.7118,0.318756074,15.4,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,10,7.673728851,0.318756074,15.4,crAss_conc,False,False,Male,34,Y,I,No
-4599,11,30.92652286,0.18597561,19,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,11,30.92652286,0.18597561,19,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4599,10,negative,0.318756074,15.4,crAss_conc,False,False,Male,34,Y,I,No
+4599,11,negative,0.18597561,19,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,11,negative,0.18597561,19,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,11,314698.8783,0.18597561,19,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,11,6.219759174,0.18597561,19,crAss_conc,False,False,Male,34,Y,I,No
-4599,17,45.93247146,0.117779445,20.2,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,17,45.93247146,0.117779445,20.2,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4599,11,negative,0.18597561,19,crAss_conc,False,False,Male,34,Y,I,No
+4599,17,negative,0.117779445,20.2,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,17,negative,0.117779445,20.2,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,17,6106395.913,0.117779445,20.2,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,28,75.88888889,0.097959184,14.7,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,28,75.88888889,0.097959184,14.7,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4599,28,negative,0.097959184,14.7,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,28,negative,0.097959184,14.7,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,28,1344444.444,0.097959184,14.7,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,28,8.039144511,0.097959184,14.7,crAss_conc,False,False,Male,34,Y,I,No
-4599,5,45.51640838,0.147865854,15.5,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,5,45.51640838,0.147865854,15.5,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4599,28,negative,0.097959184,14.7,crAss_conc,False,False,Male,34,Y,I,No
+4599,5,negative,0.147865854,15.5,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,5,negative,0.147865854,15.5,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,5,4698242.767,0.147865854,15.5,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,5,3.644360814,0.147865854,15.5,crAss_conc,False,False,Male,34,Y,I,No
-4599,7,40.77073768,0.21603928,19.8,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,7,40.77073768,0.21603928,19.8,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4599,5,negative,0.147865854,15.5,crAss_conc,False,False,Male,34,Y,I,No
+4599,7,negative,0.21603928,19.8,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,7,negative,0.21603928,19.8,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,7,1911362.106,0.21603928,19.8,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,7,72.22544881,0.21603928,19.8,crAss_conc,True,False,Male,34,Y,I,No
-4599,8,14.44685977,0.400226116,18.9,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,8,14.44685977,0.400226116,18.9,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4599,7,positive,0.21603928,19.8,crAss_conc,True,False,Male,34,Y,I,No
+4599,8,negative,0.400226116,18.9,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,8,negative,0.400226116,18.9,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,8,332087.4062,0.400226116,18.9,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,8,6.252667953,0.400226116,18.9,crAss_conc,False,False,Male,34,Y,I,No
-4599,9,41.0351662,0.179937952,14.8,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
-4599,9,41.0351662,0.179937952,14.8,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
+4599,8,negative,0.400226116,18.9,crAss_conc,False,False,Male,34,Y,I,No
+4599,9,negative,0.179937952,14.8,N_conc (gc/mg-dw),False,,Male,34,Y,I,No
+4599,9,negative,0.179937952,14.8,ORF1a_conc (gc/gm-dw),False,,Male,34,Y,I,No
 4599,9,6128.238583,0.179937952,14.8,PMMoV_conc (gc/mg-dw),True,,Male,34,Y,I,No
-4599,9,7.984825967,0.179937952,14.8,crAss_conc,False,False,Male,34,Y,I,No
+4599,9,negative,0.179937952,14.8,crAss_conc,False,False,Male,34,Y,I,No
 4600,7,2728.664112,0.162011173,13.5,N_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,7,609.3772669,0.162011173,13.5,ORF1a_conc (gc/gm-dw),True,,Female,34,Y,H,No
 4600,7,24287.30524,0.162011173,13.5,PMMoV_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,7,22527156.24,0.162011173,13.5,crAss_conc,True,True,Female,34,Y,H,No
-4600,9,47.96828345,0.134786918,17.1,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
-4600,9,47.96828345,0.134786918,17.1,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
+4600,9,negative,0.134786918,17.1,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
+4600,9,negative,0.134786918,17.1,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
 4600,9,23255.24596,0.134786918,17.1,PMMoV_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,9,6384490.05,0.134786918,17.1,crAss_conc,True,True,Female,34,Y,H,No
-4600,10,99.71392405,0.092397661,12,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
-4600,10,99.71392405,0.092397661,12,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
+4600,10,negative,0.092397661,12,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
+4600,10,negative,0.092397661,12,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
 4600,10,31458.22785,0.092397661,12,PMMoV_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,10,13596546.54,0.092397661,12,crAss_conc,True,True,Female,34,Y,H,No
-4600,11,33.93733643,0.147410359,22.1,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
-4600,11,33.93733643,0.147410359,22.1,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
+4600,11,negative,0.147410359,22.1,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
+4600,11,negative,0.147410359,22.1,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
 4600,11,15667164,0.147410359,22.1,PMMoV_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,11,14860816.61,0.147410359,22.1,crAss_conc,True,True,Female,34,Y,H,No
-4600,14,37.19207808,0.171830986,17.3,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
-4600,14,37.19207808,0.171830986,17.3,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
+4600,14,negative,0.171830986,17.3,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
+4600,14,negative,0.171830986,17.3,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
 4600,14,2675030.797,0.171830986,17.3,PMMoV_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,14,68742775.04,0.171830986,17.3,crAss_conc,True,True,Female,34,Y,H,No
 4600,2,93.1,0.176521,18.8,N_conc (gc/mg-dw),True,,Female,34,Y,H,No
@@ -1415,89 +1415,89 @@ PatientID,time,value,solid_frac,extraction_mass_mg,analyte,det,quant,Sex,Age,Sym
 4600,4,7870,0.179348,12.7,ORF1a_conc (gc/gm-dw),True,,Female,34,Y,H,No
 4600,4,941000,0.179348,12.7,PMMoV_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,4,31271594.42,0.179348,12.7,crAss_conc,True,True,Female,34,Y,H,No
-4600,6,4547.639344,0.020100503,12.2,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
-4600,6,4547.639344,0.020100503,12.2,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
+4600,6,negative,0.020100503,12.2,N_conc (gc/mg-dw),False,,Female,34,Y,H,No
+4600,6,negative,0.020100503,12.2,ORF1a_conc (gc/gm-dw),False,,Female,34,Y,H,No
 4600,6,53501.63934,0.020100503,12.2,PMMoV_conc (gc/mg-dw),True,,Female,34,Y,H,No
 4600,6,13499843.06,0.020100503,12.2,crAss_conc,True,True,Female,34,Y,H,No
-4601,18,17.1209294,0.326141079,19.8,N_conc (gc/mg-dw),False,,Female,70,Y,H,Yes
-4601,18,17.1209294,0.326141079,19.8,ORF1a_conc (gc/gm-dw),False,,Female,70,Y,H,Yes
+4601,18,negative,0.326141079,19.8,N_conc (gc/mg-dw),False,,Female,70,Y,H,Yes
+4601,18,negative,0.326141079,19.8,ORF1a_conc (gc/gm-dw),False,,Female,70,Y,H,Yes
 4601,18,117443.1336,0.326141079,19.8,PMMoV_conc (gc/mg-dw),True,,Female,70,Y,H,Yes
-4601,18,30.16572078,0.326141079,19.8,crAss_conc,False,False,Female,70,Y,H,Yes
+4601,18,negative,0.326141079,19.8,crAss_conc,False,False,Female,70,Y,H,Yes
 4601,-3,79.5,0.364835,14.4,N_conc (gc/mg-dw),True,,Female,70,Y,H,Yes
 4601,-3,39.6,0.364835,14.4,ORF1a_conc (gc/gm-dw),True,,Female,70,Y,H,Yes
 4601,-3,304.5515395,0.364835,14.4,PMMoV_conc (gc/mg-dw),True,,Female,70,Y,H,Yes
-4601,-3,18.18643531,0.364835,14.4,crAss_conc,False,False,Female,70,Y,H,Yes
+4601,-3,negative,0.364835,14.4,crAss_conc,False,False,Female,70,Y,H,Yes
 4602,8,457026.5539,0.278404163,21,N_conc (gc/mg-dw),True,,Female,1,Y,H,No
 4602,8,415976.2646,0.278404163,21,ORF1a_conc (gc/gm-dw),True,,Female,1,Y,H,No
 4602,8,2096301.439,0.278404163,21,PMMoV_conc (gc/mg-dw),True,,Female,1,Y,H,No
-4602,8,28.44196531,0.278404163,21,crAss_conc,False,False,Female,1,Y,H,No
+4602,8,negative,0.278404163,21,crAss_conc,False,False,Female,1,Y,H,No
 4602,22,175478.3699,0.16909621,16.5,N_conc (gc/mg-dw),True,,Female,1,Y,H,No
 4602,22,154833.8558,0.16909621,16.5,ORF1a_conc (gc/gm-dw),True,,Female,1,Y,H,No
 4602,22,329.1653083,0.16909621,16.5,PMMoV_conc (gc/mg-dw),True,,Female,1,Y,H,No
 4602,-1,32113.99491,0.1643,13.1,N_conc (gc/mg-dw),True,,Female,1,Y,H,No
 4602,-1,27000,0.1643,13.1,ORF1a_conc (gc/gm-dw),True,,Female,1,Y,H,No
 4602,-1,436,0.1643,13.1,PMMoV_conc (gc/mg-dw),True,,Female,1,Y,H,No
-4602,-1,91.00094349,0.1643,13.1,crAss_conc,False,False,Female,1,Y,H,No
+4602,-1,negative,0.1643,13.1,crAss_conc,False,False,Female,1,Y,H,No
 4602,0,59218.44505,0.223505,19.1,N_conc (gc/mg-dw),True,,Female,1,Y,H,No
 4602,0,40853.23108,0.223505,19.1,ORF1a_conc (gc/gm-dw),True,,Female,1,Y,H,No
 4602,0,344.0666618,0.223505,19.1,PMMoV_conc (gc/mg-dw),True,,Female,1,Y,H,No
-4602,0,19.93276163,0.223505,19.1,crAss_conc,False,False,Female,1,Y,H,No
-4608,12,22.73190711,0.310582822,14.3,N_conc (gc/mg-dw),False,,Female,35,Y,I,No
-4608,12,22.73190711,0.310582822,14.3,ORF1a_conc (gc/gm-dw),False,,Female,35,Y,I,No
+4602,0,negative,0.223505,19.1,crAss_conc,False,False,Female,1,Y,H,No
+4608,12,negative,0.310582822,14.3,N_conc (gc/mg-dw),False,,Female,35,Y,I,No
+4608,12,negative,0.310582822,14.3,ORF1a_conc (gc/gm-dw),False,,Female,35,Y,I,No
 4608,12,51948351.9,0.310582822,14.3,PMMoV_conc (gc/mg-dw),True,,Female,35,Y,I,No
-4608,12,16.37703392,0.310582822,14.3,crAss_conc,False,False,Female,35,Y,I,No
-4608,21,20.35483871,0.2,24.8,N_conc (gc/mg-dw),False,,Female,35,Y,I,No
-4608,21,20.35483871,0.2,24.8,ORF1a_conc (gc/gm-dw),False,,Female,35,Y,I,No
+4608,12,negative,0.310582822,14.3,crAss_conc,False,False,Female,35,Y,I,No
+4608,21,negative,0.2,24.8,N_conc (gc/mg-dw),False,,Female,35,Y,I,No
+4608,21,negative,0.2,24.8,ORF1a_conc (gc/gm-dw),False,,Female,35,Y,I,No
 4608,21,1119354.839,0.2,24.8,PMMoV_conc (gc/mg-dw),True,,Female,35,Y,I,No
-4608,21,9.443209077,0.2,24.8,crAss_conc,False,False,Female,35,Y,I,No
-4608,9,36.71680938,0.213496933,14.9,N_conc (gc/mg-dw),False,,Female,35,Y,I,No
-4608,9,36.71680938,0.213496933,14.9,ORF1a_conc (gc/gm-dw),False,,Female,35,Y,I,No
+4608,21,negative,0.2,24.8,crAss_conc,False,False,Female,35,Y,I,No
+4608,9,negative,0.213496933,14.9,N_conc (gc/mg-dw),False,,Female,35,Y,I,No
+4608,9,negative,0.213496933,14.9,ORF1a_conc (gc/gm-dw),False,,Female,35,Y,I,No
 4608,9,538177.8909,0.213496933,14.9,PMMoV_conc (gc/mg-dw),True,,Female,35,Y,I,No
-4608,9,15.71755605,0.213496933,14.9,crAss_conc,False,False,Female,35,Y,I,No
+4608,9,negative,0.213496933,14.9,crAss_conc,False,False,Female,35,Y,I,No
 4610,21,138056.8283,0.184824903,15.3,N_conc (gc/mg-dw),True,,Male,41,Y,I,Yes
 4610,21,98450.3612,0.184824903,15.3,ORF1a_conc (gc/gm-dw),True,,Male,41,Y,I,Yes
 4610,21,1086348.813,0.184824903,15.3,PMMoV_conc (gc/mg-dw),True,,Male,41,Y,I,Yes
-4610,21,444.943132,0.184824903,15.3,crAss_conc,True,False,Male,41,Y,I,Yes
-4611,12,37.80130233,0.213664596,12.5,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,12,37.80130233,0.213664596,12.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4610,21,positive,0.184824903,15.3,crAss_conc,True,False,Male,41,Y,I,Yes
+4611,12,negative,0.213664596,12.5,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,12,negative,0.213664596,12.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,12,13898418.6,0.213664596,12.5,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,12,18.73532681,0.213664596,12.5,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,13,16.93575298,0.296141814,20.8,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,13,16.93575298,0.296141814,20.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,12,negative,0.213664596,12.5,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,13,negative,0.296141814,20.8,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,13,negative,0.296141814,20.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,13,22987946.91,0.296141814,20.8,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,13,9.802893053,0.296141814,20.8,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,14,38.96423605,0.188544153,14.2,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,14,38.96423605,0.188544153,14.2,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,13,negative,0.296141814,20.8,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,14,negative,0.188544153,14.2,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,14,negative,0.188544153,14.2,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,14,9502014.619,0.188544153,14.2,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,14,14.35916729,0.188544153,14.2,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,17,72.65440624,0.111247,15.5,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,17,72.65440624,0.111247,15.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,14,negative,0.188544153,14.2,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,17,negative,0.111247,15.5,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,17,negative,0.111247,15.5,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,17,48800000,0.111247,15.5,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,17,24.56230626,0.111247,15.5,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,19,44.55776978,0.175727,16,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,19,44.55776978,0.175727,16,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,17,negative,0.111247,15.5,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,19,negative,0.175727,16,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,19,negative,0.175727,16,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,19,97310.07194,0.175727,16,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,19,23.79473419,0.175727,16,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,21,83.85142857,0.106719,14,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,21,83.85142857,0.106719,14,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,19,negative,0.175727,16,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,21,negative,0.106719,14,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,21,negative,0.106719,14,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,21,64700,0.106719,14,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,21,27.19398193,0.106719,14,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,28,43.06376537,0.153925,18.9,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,28,43.06376537,0.153925,18.9,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,21,negative,0.106719,14,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,28,negative,0.153925,18.9,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,28,negative,0.153925,18.9,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,28,122096.4995,0.153925,18.9,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,28,20.14369032,0.153925,18.9,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,6,24.90409976,0.294001967,15.1,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,6,24.90409976,0.294001967,15.1,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,28,negative,0.153925,18.9,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,6,negative,0.294001967,15.1,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,6,negative,0.294001967,15.1,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,6,11280728.26,0.294001967,15.1,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,6,39.55505109,0.294001967,15.1,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,7,61.69255711,0.091900312,18.4,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,7,61.69255711,0.091900312,18.4,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,6,negative,0.294001967,15.1,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,7,negative,0.091900312,18.4,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,7,negative,0.091900312,18.4,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,7,70303021.37,0.091900312,18.4,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,7,11.08153128,0.091900312,18.4,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,8,25.64078289,0.195601852,20.8,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,8,25.64078289,0.195601852,20.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,7,negative,0.091900312,18.4,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,8,negative,0.195601852,20.8,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,8,negative,0.195601852,20.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,8,38815111.52,0.195601852,20.8,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
-4611,8,9.802893053,0.195601852,20.8,crAss_conc,False,False,Female,41,Y,I,Yes
-4611,9,67.91220277,0.152212389,17.8,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
-4611,9,67.91220277,0.152212389,17.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
+4611,8,negative,0.195601852,20.8,crAss_conc,False,False,Female,41,Y,I,Yes
+4611,9,negative,0.152212389,17.8,N_conc (gc/mg-dw),False,,Female,41,Y,I,Yes
+4611,9,negative,0.152212389,17.8,ORF1a_conc (gc/gm-dw),False,,Female,41,Y,I,Yes
 4611,9,540344.9177,0.152212389,17.8,PMMoV_conc (gc/mg-dw),True,,Female,41,Y,I,Yes
