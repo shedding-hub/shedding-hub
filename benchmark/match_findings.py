@@ -100,8 +100,15 @@ def covers(finding_path: str, place: str) -> bool:
 
 
 def compatible(check: str, row: dict) -> bool:
-    return row["type"] in CHECK_TO_TYPES.get(check, ()) and row["level"] in (
-        CHECK_LEVELS.get(check, {row["level"]})
+    """True if the check can speak about this discrepancy and it is an error.
+
+    A difference that is listed but not scored (`scored` is `no`) cannot be
+    hit: a finding about it has not found an error.
+    """
+    return (
+        row.get("scored", "yes") == "yes"
+        and row["type"] in CHECK_TO_TYPES.get(check, ())
+        and row["level"] in CHECK_LEVELS.get(check, {row["level"]})
     )
 
 

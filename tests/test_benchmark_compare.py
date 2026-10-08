@@ -440,6 +440,13 @@ def test_gene_target_wording_and_extra_attributes_are_listed_but_not_scored():
         "extra attribute": "no",
         "wrong attribute value": "yes",
     }
+    # A finding about a difference that is not scored has not found an error.
+    extra = next(r for r in result.rows if r["type"] == "extra attribute")
+    out = mf.match(
+        "x", [_finding("attr.value_vs_paper", extra["s0_path"])], result.rows
+    )
+    assert out[0]["hit"] == "no" and out[0]["adjudicate"] == "yes"
+    assert out[0]["same_location_other_type"] == extra["id"]
 
 
 def test_schema_gaps_notes_and_unknown_checks_are_not_scored():
