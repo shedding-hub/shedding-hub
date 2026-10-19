@@ -24,6 +24,10 @@ measurements the row stands for. `scored` is `no` for the two kinds of
 difference that are reported apart from errors: a `gene_target` worded
 differently, and an attribute only the draft records.
 
+The metrics also need the measurements that agree, so every pair of
+measurements matched on time, or on value at another time, is written to
+`measurement_pairs.csv` with both readings and whether they agree.
+
 Usage (from the repository root), on the outputs of a benchmark run:
     python benchmark/discrepancies.py RUN_DIR --out OUT_DIR [--ref v1.1.0]
 """
@@ -77,7 +81,19 @@ SUMMARY_COLUMNS = [
     "s2_measurements",
     "matched_measurements",
     "correct_measurements",
+    "s2_attributes",
     "discrepancies",
+]
+PAIR_COLUMNS = [
+    "study_id",
+    "s0_path",
+    "s2_path",
+    "unit",
+    "time0",
+    "time2",
+    "value0",
+    "value2",
+    "status",
 ]
 
 
@@ -93,6 +109,27 @@ class Comparison:
     study_id: str
     rows: list[dict] = field(default_factory=list)
     counts: dict = field(default_factory=dict)
+    pairs: list[dict] = field(default_factory=list)
+
+    def pair(self, s0: str, s2: str, unit, m0: dict, m2: dict, status: str):
+        """Record two measurements matched to each other.
+
+        `status` is `agree`, `differs` (same time, values differ) or
+        `shifted` (same value, times differ).
+        """
+        self.pairs.append(
+            {
+                "study_id": self.study_id,
+                "s0_path": s0,
+                "s2_path": s2,
+                "unit": unit,
+                "time0": m0.get("time"),
+                "time2": m2.get("time"),
+                "value0": m0.get("value"),
+                "value2": m2.get("value"),
+                "status": status,
+            }
+        )
 
     def add(self, level, kind, *, s0=None, anchor=None, s2=None, v0="", v2="", n=0):
         self.rows.append(
@@ -244,8 +281,10 @@ def compare(study_id: str, s0, s2: dict, tol: align.Tolerances) -> Comparison:
         )
 
     # Attributes and measurements of matched participants.
-    matched = correct = 0
+    matched = correct = attributes = 0
     for i0, i2 in participant_pairs.items():
+        recorded = p2[i2].get("attributes")
+        attributes += len(recorded) if isinstance(recorded, dict) else 0
         _compare_attributes(out, i0, i2, p0[i0], p2[i2])
         groups0, groups2 = align.by_analyte(p0[i0]), align.by_analyte(p2[i2])
         list0, list2 = align.measurements_of(p0[i0]), align.measurements_of(p2[i2])
@@ -266,6 +305,14 @@ def compare(study_id: str, s0, s2: dict, tol: align.Tolerances) -> Comparison:
             for m0, m2, agree in result.matched:
                 matched += 1
                 correct += agree
+                out.pair(
+                    at0(m0),
+                    at2(m2),
+                    unit,
+                    list0[m0],
+                    list2[m2],
+                    "agree" if agree else "differs",
+                )
                 if agree:
                     continue
                 v0, v2 = list0[m0].get("value"), list2[m2].get("value")
@@ -280,6 +327,7 @@ def compare(study_id: str, s0, s2: dict, tol: align.Tolerances) -> Comparison:
                     n=1,
                 )
             for m0, m2 in result.shifted:
+                out.pair(at0(m0), at2(m2), unit, list0[m0], list2[m2], "shifted")
                 out.add(
                     "measurement",
                     "wrong time",
@@ -321,6 +369,7 @@ def compare(study_id: str, s0, s2: dict, tol: align.Tolerances) -> Comparison:
         "s2_measurements": _count_measurements(p2),
         "matched_measurements": matched,
         "correct_measurements": correct,
+        "s2_attributes": attributes,
         "discrepancies": len(out.rows),
     }
     return out
@@ -410,15 +459,17 @@ def main(argv=None) -> int:
     if not studies:
         raise SystemExit(f"no study folders in {args.run_dir}")
 
-    rows, summary = [], []
+    rows, summary, pairs = [], [], []
     for study_dir in studies:
         result = compare_study(study_dir, manifest[study_dir.name], args.ref)
         rows.extend(result.rows)
         summary.append(result.counts)
+        pairs.extend(result.pairs)
 
     args.out.mkdir(parents=True, exist_ok=True)
     write_csv(args.out / "discrepancies.csv", COLUMNS, rows)
     write_csv(args.out / "comparison_summary.csv", SUMMARY_COLUMNS, summary)
+    write_csv(args.out / "measurement_pairs.csv", PAIR_COLUMNS, pairs)
     print(f"{len(studies)} studies, {len(rows)} discrepancies -> {args.out}")
     return 0
 
