@@ -110,6 +110,11 @@ def test_a_disguised_copy_has_no_discrepancies(study):
         counts = result.counts
         assert counts["correct_measurements"] == counts["s2_measurements"]
         assert counts["matched_participants"] == counts["s2_participants"]
+        assert len(result.pairs) == counts["s2_measurements"]
+        assert {p["status"] for p in result.pairs} <= {"agree"}
+        assert counts["s2_attributes"] == sum(
+            len(p.get("attributes") or {}) for p in reference["participants"]
+        )
 
 
 @pytest.mark.parametrize("study", PERTURBED)
@@ -483,3 +488,22 @@ def test_review_files_are_checked_for_form(tmp_path):
     assert mf.resolves({"a": [{"b": 1}]}, "/a/0/b") and not mf.resolves(
         {"a": []}, "/a/0"
     )
+
+
+@pytest.mark.parametrize("tol", BOTH)
+def test_pairs_record_each_matched_reading_once(tol):
+    reference = load("tan2021early")
+    draft, where = disguise(reference)
+    (i, j), (k, l) = unique_readings(reference, numeric=True)[:2]
+    draft["participants"][where[i]]["measurements"][j]["value"] += 9
+    draft["participants"][where[k]]["measurements"][l]["time"] += 30
+    result = disc.compare("tan2021early", draft, reference, tol)
+    status = {p["s2_path"]: p["status"] for p in result.pairs}
+    assert status[f"/participants/{i}/measurements/{j}"] == "differs"
+    assert status[f"/participants/{k}/measurements/{l}"] == "shifted"
+    assert sum(s == "agree" for s in status.values()) == (
+        result.counts["correct_measurements"]
+    )
+    assert len(status) == len(result.pairs) == result.counts["s2_measurements"]
+    moved = next(p for p in result.pairs if p["status"] == "shifted")
+    assert moved["time0"] == moved["time2"] + 30
