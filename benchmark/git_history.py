@@ -11,7 +11,11 @@ release, so a pull request counts once, at the moment it was merged.
 - The era is `curation.method` in the release.
 - The contributors of a dataset are the people who authored a commit that
   touched its folder, up to and including the merge, with the git identities
-  of one person merged (`ALIASES`).
+  of one person merged (`ALIASES`). An AI-assisted dataset was drafted and
+  reviewed in the agents repository and published here, so when that
+  repository is given (`--agents-repo`), the people who committed a file
+  whose path names the dataset there, on or before the merge date, count
+  too. Paths are compared with accents removed.
 - A post-merge edit is a later commit on `main`, within 90 days of the merge,
   that changes the dataset's YAML file and touches at most 10 dataset
   folders. A commit that touches more is a bulk commit (a schema migration,
@@ -38,6 +42,7 @@ import re
 import statistics
 import subprocess
 import sys
+import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -79,6 +84,7 @@ DATASET_COLUMNS = [
     "measurements",
     "contributors",
     "n_contributors",
+    "contributors_agents_repo",
     "follow_up_days",
     "edits_90d",
     "bulk_commits_90d",
@@ -226,12 +232,59 @@ def contributors(repo: Path, sha: str, study: str) -> list[str]:
     return sorted({p for p in map(person, filter(None, names)) if p})
 
 
+def unaccented(text: str) -> str:
+    decomposed = unicodedata.normalize("NFKD", text)
+    return "".join(c for c in decomposed if not unicodedata.combining(c))
+
+
+class AgentsRepo:
+    """Who committed each dataset's files in the agents repository."""
+
+    def __init__(self, path: Path, ref: str = "main"):
+        self.path, self.ref = path, ref
+        names = git(
+            path,
+            "-c",
+            "core.quotepath=false",
+            "log",
+            ref,
+            # The repository took in older histories by subtree merges, under
+            # other folders, and later moved the files. Without this, a move
+            # lists only the new path and the older commits are not found.
+            "--no-renames",
+            "--name-only",
+            "--format=",
+        )
+        self.paths = sorted({n for n in names.split("\n") if n})
+        self.commit = git(path, "rev-parse", f"{ref}^{{commit}}").strip()
+
+    def files_of(self, study: str) -> list[str]:
+        """Every path, past or present, with the dataset's name in it."""
+        return [p for p in self.paths if study in unaccented(p)]
+
+    def contributors(self, study: str, until: str) -> list[str]:
+        files = self.files_of(study)
+        if not files:
+            return []
+        names = git(
+            self.path,
+            "log",
+            self.ref,
+            f"--until={until}T23:59:59",
+            "--format=%an",
+            "--",
+            *(f":(literal){f}" for f in files),
+        ).split("\n")
+        return sorted({p for p in map(person, filter(None, names)) if p})
+
+
 def history(
     repo: Path,
     ref: str = RELEASE,
     analysis_set: set | None = None,
     bulk_threshold: int = BULK_THRESHOLD,
     window_days: int = WINDOW_DAYS,
+    agents: AgentsRepo | None = None,
 ) -> dict:
     """The tables of Analysis C, as lists of rows."""
     commits = main_line(repo, ref)
@@ -265,7 +318,13 @@ def history(
             for c in later:
                 if c.sha not in bulk_shas:
                     edits.setdefault(c.sha, (c, set()))[1].add(study)
-            people = contributors(repo, commit.sha, study)
+            merged_on = commit.date.date().isoformat()
+            elsewhere = (
+                agents.contributors(study, merged_on)
+                if agents is not None and eras[study] == "ai_assisted"
+                else []
+            )
+            people = sorted(set(contributors(repo, commit.sha, study)) | set(elsewhere))
             rows.append(
                 {
                     "study_id": study,
@@ -276,13 +335,14 @@ def history(
                         else "yes" if study in analysis_set else "no"
                     ),
                     "merge_commit": commit.sha[:7],
-                    "merged_on": commit.date.date().isoformat(),
+                    "merged_on": merged_on,
                     "pull_request": commit.pull_request,
                     "batch_size": len(added),
                     "participants": participants,
                     "measurements": measurements,
                     "contributors": ";".join(people),
                     "n_contributors": len(people),
+                    "contributors_agents_repo": ";".join(elsewhere),
                     "follow_up_days": (end - commit.date).days,
                     "edits_90d": sum(c.sha not in bulk_shas for c in later),
                     "bulk_commits_90d": sum(c.sha in bulk_shas for c in later),
@@ -410,14 +470,22 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--out", type=Path, required=True, help="Folder for the tables")
     ap.add_argument("--ref", default=RELEASE, help="Release whose history to read")
+    ap.add_argument(
+        "--agents-repo", type=Path, help="Local copy of the agents repository"
+    )
+    ap.add_argument("--agents-ref", default="main", help="Branch to read there")
     args = ap.parse_args(argv)
 
     with MANIFEST.open(encoding="utf-8", newline="") as fh:
         analysis_set = {row["study_id"] for row in csv.DictReader(fh)}
-    tables = history(REPO_ROOT, args.ref, analysis_set)
+    agents = AgentsRepo(args.agents_repo, args.agents_ref) if args.agents_repo else None
+    tables = history(REPO_ROOT, args.ref, analysis_set, agents=agents)
     summary = summarize(tables)
     summary["ref"] = args.ref
     summary["commit"] = git(REPO_ROOT, "rev-parse", f"{args.ref}^{{commit}}").strip()
+    summary["agents_repo"] = (
+        {"ref": agents.ref, "commit": agents.commit} if agents else "not read"
+    )
 
     args.out.mkdir(parents=True, exist_ok=True)
     write_csv(args.out / "datasets.csv", DATASET_COLUMNS, tables["datasets"])

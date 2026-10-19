@@ -136,6 +136,7 @@ def tables(tmp_path_factory):
     repo.run("tag", "v9", when=at(260))
 
     out = gh.history(repo.path, "v9", analysis_set={"alpha2020one"}, bulk_threshold=2)
+    out["repo"] = str(repo.path)
     return out, {row["study_id"]: row for row in out["datasets"]}
 
 
@@ -215,3 +216,61 @@ def test_bots_are_not_people():
     assert gh.person("github-actions") is None
     assert gh.person("YouweiHu") == "Youwei Hu"
     assert gh.person("Someone New") == "Someone New"
+
+
+@pytest.fixture(scope="module")
+def agents(tmp_path_factory):
+    """An agents repository that, like the real one, took in an older history
+    by a subtree merge and later moved the files back to the top level."""
+    repo = Repo(tmp_path_factory.mktemp("agents"))
+    (repo.path / "README.md").write_text("x", encoding="utf-8")
+    repo.commit("start", day=0)
+
+    repo.run("switch", "-q", "--orphan", "old")
+    (repo.path / "data").mkdir(exist_ok=True)
+    (repo.path / "data" / "beta2021two.yaml").write_text("draft", encoding="utf-8")
+    repo.commit("draft beta", author="YouweiHu", day=5)
+    repo.run("switch", "-q", "main")
+    repo.run(
+        "merge",
+        "-q",
+        "-s",
+        "ours",
+        "--no-commit",
+        "--allow-unrelated-histories",
+        "old",
+        when=at(6),
+    )
+    repo.run("read-tree", "--prefix=extract/", "-u", "old")
+    repo.commit("Add 'extract/' from commit", day=6)
+    (repo.path / "data").mkdir(exist_ok=True)
+    repo.run("mv", "extract/data/beta2021two.yaml", "data/beta2021two.yaml")
+    repo.commit("lift data to the top level", day=7)
+
+    # An accented file name, and an edit after beta's merge on day 11.
+    (repo.path / "figure_data").mkdir()
+    (repo.path / "figure_data" / "gammá2022three.csv").write_text("t", encoding="utf-8")
+    repo.commit("input for gamma", author="Liv Z", day=9)
+    (repo.path / "data" / "beta2021two.yaml").write_text("late", encoding="utf-8")
+    repo.commit("late change", author="Till Hoffmann", day=20)
+    return gh.AgentsRepo(repo.path, "main")
+
+
+def test_agents_repo_contributors_follow_subtree_merges_and_accents(agents):
+    merged = at(11)[:10]
+    assert agents.contributors("beta2021two", merged) == ["Youwei Hu", "Yuke Wang"]
+    assert agents.contributors("gamma2022three", merged) == ["Liv Zhai"]
+    assert agents.contributors("alpha2020one", merged) == []
+    assert "Till Hoffmann" in agents.contributors("beta2021two", at(30)[:10])
+
+
+def test_agents_repo_contributors_count_for_ai_assisted_datasets_only(tables, agents):
+    out, _ = tables
+    repo = Path(out["repo"])
+    again = gh.history(repo, "v9", bulk_threshold=2, agents=agents)
+    rows = {row["study_id"]: row for row in again["datasets"]}
+    assert rows["beta2021two"]["contributors"] == "Youwei Hu;Yuke Wang"
+    assert rows["beta2021two"]["contributors_agents_repo"] == "Youwei Hu;Yuke Wang"
+    assert rows["gamma2022three"]["contributors"] == "Liv Zhai;Youwei Hu"
+    assert rows["alpha2020one"]["contributors_agents_repo"] == ""
+    assert gh.summarize(again)["eras"]["ai_assisted"]["contributors"] == 3
