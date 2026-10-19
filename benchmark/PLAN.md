@@ -1,14 +1,14 @@
 # Benchmark analysis plan
 
-**Status: DRAFT. Not yet confirmed and not tagged.** This file becomes the pre-specified plan when Yuke Wang confirms the items in section 1 and the commit is tagged `benchmark-plan-v1`. No output of the full benchmark run is compared with released data before that tag exists. Any change after the tag is a documented deviation.
+**Status: confirmed by Yuke Wang on 19 Oct 2026 and tagged `benchmark-plan-v1`.** This is the pre-specified plan. No output of the full benchmark run is compared with released data before that tag exists. Any change after the tag is a documented deviation.
 
-Draft written 8 Oct 2026. Reference data: Shedding Hub release `v1.1.0` (commit `1fe0e92`, DOI `10.5281/zenodo.23088307`).
+Drafted 8 Oct 2026, confirmed 19 Oct 2026, before the full benchmark run. Reference data: Shedding Hub release `v1.1.0` (commit `1fe0e92`, DOI `10.5281/zenodo.23088307`).
 
-## 1. Items to confirm before tagging
+## 1. Decisions confirmed before tagging
 
-Each has a proposed default. The pilot (nine study runs, used for debugging only) informed items 4 to 8.
+The pilot (nine study runs, used for debugging only) informed items 4 to 8.
 
-| # | Item | Proposed default |
+| # | Item | Decision |
 |---|---|---|
 | 1 | Primary outcome | Measurement-level agreement of S0 on the 37 manual-era studies (section 3) |
 | 2 | Tolerances | The values in section 6 |
