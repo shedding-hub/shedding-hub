@@ -38,6 +38,23 @@ agreement are pooled the same way. Per-study recall is also summarized
 pre-specified. Value errors are over pairs matched on time and use the
 reference values as recorded.
 
+The review agent, as an error detector, for each era:
+
+- sensitivity: errors (scored discrepancies whose verdict is an error) with
+  at least one finding that hits them, over all errors, overall and by type
+  of error. Errors the two versions share are found only through findings,
+  so they are left out of sensitivity and counted apart;
+- precision: scored findings that are right, over scored findings whose
+  status is known, with and without low-severity (`info`) findings. A
+  finding is right if it hits an error, or hits nothing and was judged
+  correct. It is wrong if everything it hits was judged not an error, or it
+  hits nothing and was judged incorrect. It is left out if what it hits is a
+  curator's decision, or it hits nothing and was judged "cannot tell" or not
+  adjudicated; those are counted;
+- workload: findings per study and per 100 truth measurements, for scored
+  findings and for all findings. Schema-gap and observation findings are
+  counted, not scored.
+
 When the recheck packets are filled in, Cohen's kappa between the two
 adjudicators is reported for each packet.
 
@@ -455,6 +472,156 @@ def group_metrics(
     return out
 
 
+def finding_status(
+    finding_rows: list[dict], verdict: dict, key: list[dict], answers: dict
+) -> list[dict]:
+    """Each scored finding with `status`: right, wrong or left out."""
+    by_ref = {k["ref_id"]: k for k in key if k["packet"] == "findings"}
+    out = []
+    for row in finding_rows:
+        if row["category"] != "data":
+            continue
+        hits = [
+            verdict.get(h)
+            for h in filter(None, row["matched_discrepancies"].split(";"))
+        ]
+        if hits:
+            if any(v in ERRORS for v in hits):
+                status = "right"
+            elif all(v in EXCLUDED for v in hits):
+                status = "curator"
+            else:
+                status = "wrong"
+        else:
+            item = by_ref.get(f"{row['study_id']}:{row['finding_id']}")
+            outcome = answers.get(item["item_id"]) if item else None
+            status = {"correct": "right", "incorrect": "wrong"}.get(
+                outcome, "cannot tell" if outcome else "not adjudicated"
+            )
+        out.append({**row, "status": status})
+    return out
+
+
+def review_metrics(
+    group: str,
+    studies: list[dict],
+    rows: list[dict],
+    verdict: dict,
+    findings: list[dict],
+    all_findings: list[dict],
+    seed: int = SEED,
+    replicates: int = REPLICATES,
+) -> list[dict]:
+    """Sensitivity, precision and workload of the review agent for a group."""
+    ids = [s["study_id"] for s in studies if s["draft"] == "compared"]
+    if not ids:
+        return []
+    hit = {
+        h for f in findings for h in filter(None, f["matched_discrepancies"].split(";"))
+    }
+    errors = [
+        r for r in rows if r["study_id"] in ids and verdict.get(r["id"]) in ERRORS
+    ]
+    out = []
+
+    def per_study(items, test):
+        return [sum(1 for i in items if i["study_id"] == s and test(i)) for s in ids]
+
+    def sensitivity(label, items):
+        out.append(
+            ratio(
+                group,
+                label,
+                per_study(items, lambda r: r["id"] in hit),
+                per_study(items, lambda r: True),
+                seed,
+                replicates,
+            )
+        )
+
+    sensitivity("review sensitivity", errors)
+    for kind in sorted({r["type"] for r in errors}):
+        sensitivity(
+            f"review sensitivity | {kind}", [r for r in errors if r["type"] == kind]
+        )
+
+    mine = [f for f in findings if f["study_id"] in ids]
+    for label, chosen in (
+        ("review precision", mine),
+        (
+            "review precision, without info",
+            [f for f in mine if f["severity"] != "info"],
+        ),
+    ):
+        known = [f for f in chosen if f["status"] in ("right", "wrong")]
+        out.append(
+            ratio(
+                group,
+                label,
+                per_study(known, lambda f: f["status"] == "right"),
+                per_study(known, lambda f: True),
+                seed,
+                replicates,
+            )
+        )
+    for status in ("curator", "cannot tell", "not adjudicated"):
+        out.append(
+            {
+                "group": group,
+                "metric": f"scored findings left out of precision | {status}",
+                "numerator": sum(f["status"] == status for f in mine),
+                "denominator": len(mine),
+                "studies": len(ids),
+            }
+        )
+
+    truth = sum(s["truth"] for s in studies if s["study_id"] in ids)
+    every = [f for f in all_findings if f["study_id"] in ids]
+    for label, items in (("scored findings", mine), ("all findings", every)):
+        out.append(
+            {
+                "group": group,
+                "metric": f"{label} per study",
+                "numerator": len(items),
+                "denominator": len(ids),
+                "estimate": len(items) / len(ids),
+                "studies": len(ids),
+            }
+        )
+        out.append(
+            {
+                "group": group,
+                "metric": f"{label} per 100 measurements",
+                "numerator": len(items),
+                "denominator": truth,
+                "estimate": 100 * len(items) / truth if truth else math.nan,
+                "studies": len(ids),
+            }
+        )
+    for category, n in sorted(Counter(f["category"] for f in every).items()):
+        out.append(
+            {
+                "group": group,
+                "metric": f"findings | {category}",
+                "numerator": n,
+                "denominator": len(every),
+                "studies": len(ids),
+            }
+        )
+    shared = sum(
+        1 for f in mine if not f["matched_discrepancies"] and f["status"] == "right"
+    )
+    out.append(
+        {
+            "group": group,
+            "metric": "errors shared by draft and reference, found by findings",
+            "numerator": shared,
+            "studies": len(ids),
+        }
+    )
+    return out
+
+
 def kappa(first: list[str], second: list[str]) -> float:
     """Cohen's kappa for two raters over the same items."""
     n = len(first)
@@ -588,6 +755,19 @@ def main(argv=None) -> int:
             label, members, pairs, verdict_by_s2, args.seed, args.replicates
         )
 
+    scored_findings = finding_status(finding_rows, verdict, key, answers)
+    for label, members in groups(studies).items():
+        if "|" not in label:
+            metrics += review_metrics(
+                label,
+                members,
+                rows,
+                verdict,
+                scored_findings,
+                finding_rows,
+                args.seed,
+                args.replicates,
+            )
     metrics += rechecks
     args.out.mkdir(parents=True, exist_ok=True)
     disc.write_csv(args.out / "metrics.csv", METRIC_COLUMNS, metrics)

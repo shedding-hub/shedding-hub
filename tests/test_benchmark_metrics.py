@@ -284,3 +284,101 @@ def test_the_command_line_reads_answers_and_reports_kappa(tmp_path):
     items[0]["outcome"] = "draft"
     disc.write_csv(path, adj.DISCREPANCY_COLUMNS, items)
     assert metrics.main(common + ["--adjudication", str(adj_dir)]) == 1
+
+
+def review(verdict_changes=None, answers=None):
+    """Review metrics for the perturbed study with five findings."""
+    rows, summary, pairs, _ = comparison()
+    verdict = metrics.verdicts(rows, [], {})
+    by_type = {r["type"]: r for r in rows}
+    for kind, v in (verdict_changes or {}).items():
+        verdict[by_type[kind]["id"]] = v
+    agreeing = [p["s0_path"] for p in pairs if p["status"] == "agree"]
+    omitted_at = by_type["omission"]["s0_anchor"].removesuffix("/measurements")
+
+    def finding(id, check, path, severity="warning"):
+        return {
+            "id": id,
+            "check": check,
+            "severity": severity,
+            "path": path,
+            "message": "m",
+        }
+
+    findings = [
+        finding("f1", "analyte.value_vs_paper", by_type["wrong value"]["s0_path"]),
+        finding("f2", "sample.count_vs_paper", omitted_at),
+        finding("f3", "analyte.value_vs_paper", agreeing[0] + "/value"),
+        finding("f4", "schema.missing_field", "/analytes"),
+        finding("f5", "analyte.value_vs_paper", agreeing[1] + "/value", "info"),
+    ]
+    matched = as_csv(mf.match(STUDY, findings, rows), mf.COLUMNS)
+    key = [
+        {"packet": "findings", "ref_id": f"{STUDY}:{f}", "item_id": f}
+        for f in ("f3", "f5")
+    ]
+    status = metrics.finding_status(matched, verdict, key, answers or {})
+    counts = metrics.study_counts(summary, rows, pairs, verdict, [])
+    study = {"study_id": STUDY, **counts}
+    out = metrics.review_metrics(
+        "A", [study], rows, verdict, status, matched, replicates=50
+    )
+    return {r["metric"]: r for r in out}, {f["finding_id"]: f["status"] for f in status}
+
+
+def test_review_sensitivity_counts_errors_hit_by_a_finding():
+    out, status = review()
+    # Five errors: wrong value, omission, extra, flipped non-detect, wrong age.
+    assert (
+        out["review sensitivity"]["numerator"],
+        out["review sensitivity"]["denominator"],
+    ) == (2, 5)
+    assert out["review sensitivity | wrong value"]["estimate"] == 1.0
+    assert out["review sensitivity | extra"]["estimate"] == 0.0
+    # When the draft was right about the value, there is one error fewer, and
+    # the finding about it was a false alarm.
+    out, status = review({"wrong value": "S0"})
+    assert (
+        out["review sensitivity"]["numerator"],
+        out["review sensitivity"]["denominator"],
+    ) == (1, 4)
+    assert status["f1"] == "wrong"
+
+
+def test_review_precision_uses_adjudicated_findings_only():
+    out, status = review()
+    assert status == {
+        "f1": "right",
+        "f2": "right",
+        "f3": "not adjudicated",
+        "f5": "not adjudicated",
+    }
+    assert (
+        out["review precision"]["numerator"],
+        out["review precision"]["denominator"],
+    ) == (2, 2)
+    assert (
+        out["scored findings left out of precision | not adjudicated"]["numerator"] == 2
+    )
+
+    out, status = review(answers={"f3": "correct", "f5": "incorrect"})
+    assert (
+        out["review precision"]["numerator"],
+        out["review precision"]["denominator"],
+    ) == (3, 4)
+    without = out["review precision, without info"]
+    assert (without["numerator"], without["denominator"]) == (3, 3)
+    assert (
+        out["errors shared by draft and reference, found by findings"]["numerator"] == 1
+    )
+
+    out, status = review({"wrong value": "curator"})
+    assert status["f1"] == "curator"
+
+
+def test_review_workload_counts_every_finding():
+    out, _ = review()
+    assert out["scored findings per study"]["numerator"] == 4
+    assert out["all findings per study"]["numerator"] == 5
+    assert out["findings | schema_gap"]["numerator"] == 1
+    assert out["findings | data"]["numerator"] == 4
